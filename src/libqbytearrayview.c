@@ -2,15 +2,11 @@
 #include "libqbytearrayview.h"
 
 QByteArrayView* q_bytearrayview_new(const char* other) {
-    libqt_string other_string = qstring(other);
-
-    return QByteArrayView_new((QByteArrayView*)&other_string);
+    return QByteArrayView_new(qstring(other));
 }
 
 QByteArrayView* q_bytearrayview_new2(const char* other) {
-    libqt_string other_string = qstring(other);
-
-    return QByteArrayView_new2((QByteArrayView*)&other_string);
+    return QByteArrayView_new2(qstring(other));
 }
 
 QByteArrayView* q_bytearrayview_new3() {
@@ -18,9 +14,7 @@ QByteArrayView* q_bytearrayview_new3() {
 }
 
 QByteArrayView* q_bytearrayview_new4(const char* param1) {
-    libqt_string param1_string = qstring(param1);
-
-    return QByteArrayView_new4((QByteArrayView*)&param1_string);
+    return QByteArrayView_new4(qstring(param1));
 }
 
 void q_bytearrayview_copy_assign(void* self, void* other) {
@@ -59,62 +53,72 @@ char q_bytearrayview_at(void* self, int64_t n) {
 }
 
 const char* q_bytearrayview_first(void* self, int64_t n) {
-    QByteArrayView* _str = QByteArrayView_First((QByteArrayView*)self, n);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_First((QByteArrayView*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_last(void* self, int64_t n) {
-    QByteArrayView* _str = QByteArrayView_Last((QByteArrayView*)self, n);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Last((QByteArrayView*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_sliced(void* self, int64_t pos) {
-    QByteArrayView* _str = QByteArrayView_Sliced((QByteArrayView*)self, pos);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Sliced((QByteArrayView*)self, pos);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_sliced2(void* self, int64_t pos, int64_t n) {
-    QByteArrayView* _str = QByteArrayView_Sliced2((QByteArrayView*)self, pos, n);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Sliced2((QByteArrayView*)self, pos, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_slice(void* self, int64_t pos) {
-    QByteArrayView* _str = QByteArrayView_Slice((QByteArrayView*)self, pos);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Slice((QByteArrayView*)self, pos);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_slice2(void* self, int64_t pos, int64_t n) {
-    QByteArrayView* _str = QByteArrayView_Slice2((QByteArrayView*)self, pos, n);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Slice2((QByteArrayView*)self, pos, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_chopped(void* self, int64_t lenVal) {
-    QByteArrayView* _str = QByteArrayView_Chopped((QByteArrayView*)self, lenVal);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Chopped((QByteArrayView*)self, lenVal);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_left(void* self, int64_t n) {
-    QByteArrayView* _str = QByteArrayView_Left((QByteArrayView*)self, n);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Left((QByteArrayView*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_right(void* self, int64_t n) {
-    QByteArrayView* _str = QByteArrayView_Right((QByteArrayView*)self, n);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Right((QByteArrayView*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_bytearrayview_mid(void* self, int64_t pos) {
-    QByteArrayView* _str = QByteArrayView_Mid((QByteArrayView*)self, pos);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Mid((QByteArrayView*)self, pos);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
@@ -127,8 +131,9 @@ void q_bytearrayview_chop(void* self, int64_t n) {
 }
 
 const char* q_bytearrayview_trimmed(void* self) {
-    QByteArrayView* _str = QByteArrayView_Trimmed((QByteArrayView*)self);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Trimmed((QByteArrayView*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
@@ -173,8 +178,7 @@ double q_bytearrayview_to_double(void* self) {
 }
 
 bool q_bytearrayview_starts_with(void* self, const char* other) {
-    libqt_string other_string = qstring(other);
-    return QByteArrayView_StartsWith((QByteArrayView*)self, (QByteArrayView*)&other_string);
+    return QByteArrayView_StartsWith((QByteArrayView*)self, qstring(other));
 }
 
 bool q_bytearrayview_starts_with2(void* self, char c) {
@@ -182,8 +186,7 @@ bool q_bytearrayview_starts_with2(void* self, char c) {
 }
 
 bool q_bytearrayview_ends_with(void* self, const char* other) {
-    libqt_string other_string = qstring(other);
-    return QByteArrayView_EndsWith((QByteArrayView*)self, (QByteArrayView*)&other_string);
+    return QByteArrayView_EndsWith((QByteArrayView*)self, qstring(other));
 }
 
 bool q_bytearrayview_ends_with2(void* self, char c) {
@@ -191,8 +194,7 @@ bool q_bytearrayview_ends_with2(void* self, char c) {
 }
 
 int64_t q_bytearrayview_index_of(void* self, const char* a) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_IndexOf((QByteArrayView*)self, (QByteArrayView*)&a_string);
+    return QByteArrayView_IndexOf((QByteArrayView*)self, qstring(a));
 }
 
 int64_t q_bytearrayview_index_of2(void* self, char ch) {
@@ -200,8 +202,7 @@ int64_t q_bytearrayview_index_of2(void* self, char ch) {
 }
 
 bool q_bytearrayview_contains(void* self, const char* a) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_Contains((QByteArrayView*)self, (QByteArrayView*)&a_string);
+    return QByteArrayView_Contains((QByteArrayView*)self, qstring(a));
 }
 
 bool q_bytearrayview_contains2(void* self, char c) {
@@ -209,13 +210,11 @@ bool q_bytearrayview_contains2(void* self, char c) {
 }
 
 int64_t q_bytearrayview_last_index_of(void* self, const char* a) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_LastIndexOf((QByteArrayView*)self, (QByteArrayView*)&a_string);
+    return QByteArrayView_LastIndexOf((QByteArrayView*)self, qstring(a));
 }
 
 int64_t q_bytearrayview_last_index_of2(void* self, const char* a, int64_t from) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_LastIndexOf2((QByteArrayView*)self, (QByteArrayView*)&a_string, from);
+    return QByteArrayView_LastIndexOf2((QByteArrayView*)self, qstring(a), from);
 }
 
 int64_t q_bytearrayview_last_index_of3(void* self, char ch) {
@@ -223,8 +222,7 @@ int64_t q_bytearrayview_last_index_of3(void* self, char ch) {
 }
 
 int64_t q_bytearrayview_count(void* self, const char* a) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_Count((QByteArrayView*)self, (QByteArrayView*)&a_string);
+    return QByteArrayView_Count((QByteArrayView*)self, qstring(a));
 }
 
 int64_t q_bytearrayview_count2(void* self, char ch) {
@@ -232,8 +230,7 @@ int64_t q_bytearrayview_count2(void* self, char ch) {
 }
 
 int32_t q_bytearrayview_compare(void* self, const char* a) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_Compare((QByteArrayView*)self, (QByteArrayView*)&a_string);
+    return QByteArrayView_Compare((QByteArrayView*)self, qstring(a));
 }
 
 bool q_bytearrayview_is_valid_utf8(void* self) {
@@ -297,8 +294,9 @@ int64_t q_bytearrayview_max_size2() {
 }
 
 const char* q_bytearrayview_mid2(void* self, int64_t pos, int64_t n) {
-    QByteArrayView* _str = QByteArrayView_Mid2((QByteArrayView*)self, pos, n);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QByteArrayView_Mid2((QByteArrayView*)self, pos, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 
@@ -375,8 +373,7 @@ double q_bytearrayview_to_double1(void* self, bool* ok) {
 }
 
 int64_t q_bytearrayview_index_of22(void* self, const char* a, int64_t from) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_IndexOf22((QByteArrayView*)self, (QByteArrayView*)&a_string, from);
+    return QByteArrayView_IndexOf22((QByteArrayView*)self, qstring(a), from);
 }
 
 int64_t q_bytearrayview_index_of23(void* self, char ch, int64_t from) {
@@ -388,8 +385,7 @@ int64_t q_bytearrayview_last_index_of22(void* self, char ch, int64_t from) {
 }
 
 int32_t q_bytearrayview_compare2(void* self, const char* a, int32_t cs) {
-    libqt_string a_string = qstring(a);
-    return QByteArrayView_Compare2((QByteArrayView*)self, (QByteArrayView*)&a_string, cs);
+    return QByteArrayView_Compare2((QByteArrayView*)self, qstring(a), cs);
 }
 
 void q_bytearrayview_delete(void* self) {

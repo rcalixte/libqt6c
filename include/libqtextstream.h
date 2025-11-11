@@ -287,17 +287,21 @@ QTextStream* q_textstream_operator_shift_right6(void* self, int* i);
 /// @param i uint32_t*
 QTextStream* q_textstream_operator_shift_right7(void* self, uint32_t* i);
 
+#if defined(__linux__) || defined(__FreeBSD__)
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
 /// @param self QTextStream*
 /// @param i int64_t*
 QTextStream* q_textstream_operator_shift_right8(void* self, int64_t* i);
+#endif
 
+#if defined(__linux__) || defined(__FreeBSD__)
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
 /// @param self QTextStream*
 /// @param i uint64_t*
 QTextStream* q_textstream_operator_shift_right9(void* self, uint64_t* i);
+#endif
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///

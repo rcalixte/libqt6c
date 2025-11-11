@@ -318,9 +318,11 @@ bool q_sciscintilla_qbase_find_next(void* self) {
     return QsciScintilla_QBaseFindNext((QsciScintilla*)self);
 }
 
+#if defined(__linux__) || defined(__FreeBSD__)
 bool q_sciscintilla_find_matching_brace(void* self, int64_t* brace, int64_t* other, int32_t mode) {
     return QsciScintilla_FindMatchingBrace((QsciScintilla*)self, brace, other, mode);
 }
+#endif
 
 int32_t q_sciscintilla_first_visible_line(void* self) {
     return QsciScintilla_FirstVisibleLine((QsciScintilla*)self);

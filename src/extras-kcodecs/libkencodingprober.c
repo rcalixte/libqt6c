@@ -22,8 +22,7 @@ void k_encodingprober_reset(void* self) {
 }
 
 int32_t k_encodingprober_feed(void* self, const char* data) {
-    libqt_string data_string = qstring(data);
-    return KEncodingProber_Feed((KEncodingProber*)self, (QByteArrayView*)&data_string);
+    return KEncodingProber_Feed((KEncodingProber*)self, qstring(data));
 }
 
 int32_t k_encodingprober_feed2(void* self, const char* data, int64_t lenVal) {

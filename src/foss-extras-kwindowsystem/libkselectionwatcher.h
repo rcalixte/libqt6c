@@ -13,42 +13,52 @@
 
 /// https://api.kde.org/kselectionwatcher.html
 
+#ifdef __linux__
 /// k_selectionwatcher_new constructs a new KSelectionWatcher object.
 ///
 /// @param selection xcb_atom_t
 KSelectionWatcher* k_selectionwatcher_new(xcb_atom_t selection);
+#endif
 
 /// k_selectionwatcher_new2 constructs a new KSelectionWatcher object.
 ///
 /// @param selection const char*
 KSelectionWatcher* k_selectionwatcher_new2(const char* selection);
 
+#ifdef __linux__
 /// k_selectionwatcher_new3 constructs a new KSelectionWatcher object.
 ///
 /// @param selection xcb_atom_t
 /// @param c xcb_connection_t*
 /// @param root xcb_window_t
 KSelectionWatcher* k_selectionwatcher_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root);
+#endif
 
+#ifdef __linux__
 /// k_selectionwatcher_new4 constructs a new KSelectionWatcher object.
 ///
 /// @param selection const char*
 /// @param c xcb_connection_t*
 /// @param root xcb_window_t
 KSelectionWatcher* k_selectionwatcher_new4(const char* selection, xcb_connection_t* c, xcb_window_t root);
+#endif
 
+#ifdef __linux__
 /// k_selectionwatcher_new5 constructs a new KSelectionWatcher object.
 ///
 /// @param selection xcb_atom_t
 /// @param screen int
 KSelectionWatcher* k_selectionwatcher_new5(xcb_atom_t selection, int screen);
+#endif
 
+#ifdef __linux__
 /// k_selectionwatcher_new6 constructs a new KSelectionWatcher object.
 ///
 /// @param selection xcb_atom_t
 /// @param screen int
 /// @param parent QObject*
 KSelectionWatcher* k_selectionwatcher_new6(xcb_atom_t selection, int screen, void* parent);
+#endif
 
 /// k_selectionwatcher_new7 constructs a new KSelectionWatcher object.
 ///
@@ -63,6 +73,7 @@ KSelectionWatcher* k_selectionwatcher_new7(const char* selection, int screen);
 /// @param parent QObject*
 KSelectionWatcher* k_selectionwatcher_new8(const char* selection, int screen, void* parent);
 
+#ifdef __linux__
 /// k_selectionwatcher_new9 constructs a new KSelectionWatcher object.
 ///
 /// @param selection xcb_atom_t
@@ -70,7 +81,9 @@ KSelectionWatcher* k_selectionwatcher_new8(const char* selection, int screen, vo
 /// @param root xcb_window_t
 /// @param parent QObject*
 KSelectionWatcher* k_selectionwatcher_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, void* parent);
+#endif
 
+#ifdef __linux__
 /// k_selectionwatcher_new10 constructs a new KSelectionWatcher object.
 ///
 /// @param selection const char*
@@ -78,6 +91,7 @@ KSelectionWatcher* k_selectionwatcher_new9(xcb_atom_t selection, xcb_connection_
 /// @param root xcb_window_t
 /// @param parent QObject*
 KSelectionWatcher* k_selectionwatcher_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, void* parent);
+#endif
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -115,10 +129,12 @@ int32_t k_selectionwatcher_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_selectionwatcher_tr(const char* s);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionwatcher.html#owner)
 ///
 /// @param self KSelectionWatcher*
 xcb_window_t k_selectionwatcher_owner(void* self);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kselectionwatcher.html#filterEvent)
 ///
@@ -126,17 +142,21 @@ xcb_window_t k_selectionwatcher_owner(void* self);
 /// @param ev_P void*
 void k_selectionwatcher_filter_event(void* self, void* ev_P);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionwatcher.html#newOwner)
 ///
 /// @param self KSelectionWatcher*
 /// @param owner xcb_window_t
 void k_selectionwatcher_new_owner(void* self, xcb_window_t owner);
+#endif
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionwatcher.html#newOwner)
 ///
 /// @param self KSelectionWatcher*
 /// @param callback void func(KSelectionWatcher* self, xcb_window_t owner)
 void k_selectionwatcher_on_new_owner(void* self, void (*callback)(void*, xcb_window_t));
+#endif
 
 /// [Qt documentation](https://api.kde.org/kselectionwatcher.html#lostOwner)
 ///

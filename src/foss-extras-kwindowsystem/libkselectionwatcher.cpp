@@ -12,29 +12,39 @@
 #include "libkselectionwatcher.hpp"
 #include "libkselectionwatcher.hxx"
 
+#ifdef __Q_OS_LINUX__
 KSelectionWatcher* KSelectionWatcher_new(xcb_atom_t selection) {
     return new VirtualKSelectionWatcher(selection);
 }
+#endif
 
 KSelectionWatcher* KSelectionWatcher_new2(const char* selection) {
     return new VirtualKSelectionWatcher(selection);
 }
 
+#ifdef __Q_OS_LINUX__
 KSelectionWatcher* KSelectionWatcher_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionWatcher(selection, c, root);
 }
+#endif
 
+#ifdef __Q_OS_LINUX__
 KSelectionWatcher* KSelectionWatcher_new4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionWatcher(selection, c, root);
 }
+#endif
 
+#ifdef __Q_OS_LINUX__
 KSelectionWatcher* KSelectionWatcher_new5(xcb_atom_t selection, int screen) {
     return new VirtualKSelectionWatcher(selection, static_cast<int>(screen));
 }
+#endif
 
+#ifdef __Q_OS_LINUX__
 KSelectionWatcher* KSelectionWatcher_new6(xcb_atom_t selection, int screen, QObject* parent) {
     return new VirtualKSelectionWatcher(selection, static_cast<int>(screen), parent);
 }
+#endif
 
 KSelectionWatcher* KSelectionWatcher_new7(const char* selection, int screen) {
     return new VirtualKSelectionWatcher(selection, static_cast<int>(screen));
@@ -44,13 +54,17 @@ KSelectionWatcher* KSelectionWatcher_new8(const char* selection, int screen, QOb
     return new VirtualKSelectionWatcher(selection, static_cast<int>(screen), parent);
 }
 
+#ifdef __Q_OS_LINUX__
 KSelectionWatcher* KSelectionWatcher_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionWatcher(selection, c, root, parent);
 }
+#endif
 
+#ifdef __Q_OS_LINUX__
 KSelectionWatcher* KSelectionWatcher_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionWatcher(selection, c, root, parent);
 }
+#endif
 
 QMetaObject* KSelectionWatcher_MetaObject(const KSelectionWatcher* self) {
     return (QMetaObject*)self->metaObject();

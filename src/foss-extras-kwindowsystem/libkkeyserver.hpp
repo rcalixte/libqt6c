@@ -39,8 +39,12 @@ libqt_list /* of int */ KKeyServer_KeyQtToCodeXs(int param1);
 bool KKeyServer_KeyQtToModX(int param1, unsigned int* param2);
 bool KKeyServer_SymXModXToKeyQt(uint32_t param1, uint16_t param2, int* param3);
 bool KKeyServer_ModXToQt(unsigned int param1, int* param2);
+#ifdef __linux__
 bool KKeyServer_XcbKeyPressEventToQt(xcb_generic_event_t* param1, int* param2);
+#endif
+#ifdef __linux__
 bool KKeyServer_XcbKeyPressEventToQt2(xcb_key_press_event_t* param1, int* param2);
+#endif
 
 #ifdef __cplusplus
 } /* extern C */

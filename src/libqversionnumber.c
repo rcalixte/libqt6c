@@ -82,9 +82,11 @@ QVersionNumber* q_versionnumber_from_string(char* stringVal) {
     return QVersionNumber_FromString(stringVal);
 }
 
+#if defined(__linux__) || defined(__FreeBSD__)
 QVersionNumber* q_versionnumber_from_string2(char* stringVal, int64_t* suffixIndex) {
     return QVersionNumber_FromString2(stringVal, suffixIndex);
 }
+#endif
 
 void q_versionnumber_delete(void* self) {
     QVersionNumber_Delete((QVersionNumber*)(self));

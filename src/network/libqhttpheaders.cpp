@@ -80,12 +80,24 @@ void QHttpHeaders_RemoveAt(QHttpHeaders* self, ptrdiff_t i) {
     self->removeAt((qsizetype)(i));
 }
 
-QByteArrayView* QHttpHeaders_Value(const QHttpHeaders* self, char* name) {
-    return new QByteArrayView(self->value(QAnyStringView(name)));
+libqt_string QHttpHeaders_Value(const QHttpHeaders* self, char* name) {
+    QByteArrayView _qb = self->value(QAnyStringView(name));
+    libqt_string _str;
+    _str.len = _qb.length();
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    memcpy((void*)_str.data, _qb.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
 }
 
-QByteArrayView* QHttpHeaders_Value2(const QHttpHeaders* self, int name) {
-    return new QByteArrayView(self->value(static_cast<QHttpHeaders::WellKnownHeader>(name)));
+libqt_string QHttpHeaders_Value2(const QHttpHeaders* self, int name) {
+    QByteArrayView _qb = self->value(static_cast<QHttpHeaders::WellKnownHeader>(name));
+    libqt_string _str;
+    _str.len = _qb.length();
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    memcpy((void*)_str.data, _qb.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
 }
 
 libqt_list /* of libqt_string */ QHttpHeaders_Values(const QHttpHeaders* self, char* name) {
@@ -126,8 +138,14 @@ libqt_list /* of libqt_string */ QHttpHeaders_Values2(const QHttpHeaders* self, 
     return _out;
 }
 
-QByteArrayView* QHttpHeaders_ValueAt(const QHttpHeaders* self, ptrdiff_t i) {
-    return new QByteArrayView(self->valueAt((qsizetype)(i)));
+libqt_string QHttpHeaders_ValueAt(const QHttpHeaders* self, ptrdiff_t i) {
+    QByteArrayView _qb = self->valueAt((qsizetype)(i));
+    libqt_string _str;
+    _str.len = _qb.length();
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    memcpy((void*)_str.data, _qb.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
 }
 
 libqt_string QHttpHeaders_CombinedValue(const QHttpHeaders* self, char* name) {
@@ -162,8 +180,14 @@ bool QHttpHeaders_IsEmpty(const QHttpHeaders* self) {
     return self->isEmpty();
 }
 
-QByteArrayView* QHttpHeaders_WellKnownHeaderName(int name) {
-    return new QByteArrayView(QHttpHeaders::wellKnownHeaderName(static_cast<QHttpHeaders::WellKnownHeader>(name)));
+libqt_string QHttpHeaders_WellKnownHeaderName(int name) {
+    QByteArrayView _qb = QHttpHeaders::wellKnownHeaderName(static_cast<QHttpHeaders::WellKnownHeader>(name));
+    libqt_string _str;
+    _str.len = _qb.length();
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    memcpy((void*)_str.data, _qb.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
 }
 
 libqt_list /* of libqt_pair  tuple of libqt_string and libqt_string  */ QHttpHeaders_ToListOfPairs(const QHttpHeaders* self) {
@@ -200,12 +224,26 @@ libqt_list /* of libqt_pair  tuple of libqt_string and libqt_string  */ QHttpHea
     return _out;
 }
 
-QByteArrayView* QHttpHeaders_Value22(const QHttpHeaders* self, char* name, QByteArrayView* defaultValue) {
-    return new QByteArrayView(self->value(QAnyStringView(name), *defaultValue));
+libqt_string QHttpHeaders_Value22(const QHttpHeaders* self, char* name, libqt_string defaultValue) {
+    QByteArrayView defaultValue_QByteArrayView(defaultValue.data, defaultValue.len);
+    QByteArrayView _qb = self->value(QAnyStringView(name), defaultValue_QByteArrayView);
+    libqt_string _str;
+    _str.len = _qb.length();
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    memcpy((void*)_str.data, _qb.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
 }
 
-QByteArrayView* QHttpHeaders_Value23(const QHttpHeaders* self, int name, QByteArrayView* defaultValue) {
-    return new QByteArrayView(self->value(static_cast<QHttpHeaders::WellKnownHeader>(name), *defaultValue));
+libqt_string QHttpHeaders_Value23(const QHttpHeaders* self, int name, libqt_string defaultValue) {
+    QByteArrayView defaultValue_QByteArrayView(defaultValue.data, defaultValue.len);
+    QByteArrayView _qb = self->value(static_cast<QHttpHeaders::WellKnownHeader>(name), defaultValue_QByteArrayView);
+    libqt_string _str;
+    _str.len = _qb.length();
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    memcpy((void*)_str.data, _qb.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
 }
 
 void QHttpHeaders_Delete(QHttpHeaders* self) {

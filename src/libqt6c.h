@@ -954,27 +954,17 @@
 #include "foss-extras-layershellqt/libwindow.h"
 #include "foss-extras-kglobalaccel/libkglobalaccel.h"
 #include "foss-extras-kglobalaccel/libkglobalshortcutinfo.h"
-#if defined(__linux__)
 #include "foss-extras-kwindowsystem/libkkeyserver.h"
-#endif
-#if defined(__linux__)
 #include "foss-extras-kwindowsystem/libkselectionowner.h"
-#endif
-#if defined(__linux__)
 #include "foss-extras-kwindowsystem/libkselectionwatcher.h"
-#endif
-#if defined(__linux__)
 #include "foss-extras-kwindowsystem/libkstartupinfo.h"
-#endif
 #include "foss-extras-kwindowsystem/libkusertimestamp.h"
 #include "foss-extras-kwindowsystem/libkwaylandextras.h"
 #include "foss-extras-kwindowsystem/libkwindoweffects.h"
 #include "foss-extras-kwindowsystem/libkwindowinfo.h"
 #include "foss-extras-kwindowsystem/libkwindowshadow.h"
 #include "foss-extras-kwindowsystem/libkwindowsystem.h"
-#if defined(__linux__)
 #include "foss-extras-kwindowsystem/libkxmessages.h"
-#endif
 #include "foss-extras-kwindowsystem/libnetwm.h"
 #include "foss-extras-kwindowsystem/libnetwm_def.h"
 #include "foss-extras-packagekitqt/libbitfield.h"

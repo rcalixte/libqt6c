@@ -437,6 +437,7 @@ void q_sciscintilla_on_find_next(void* self, bool (*callback)());
 /// @param self QsciScintilla*
 bool q_sciscintilla_qbase_find_next(void* self);
 
+#if defined(__linux__) || defined(__FreeBSD__)
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
@@ -444,6 +445,7 @@ bool q_sciscintilla_qbase_find_next(void* self);
 /// @param other int64_t*
 /// @param mode enum QsciScintilla__BraceMatch
 bool q_sciscintilla_find_matching_brace(void* self, int64_t* brace, int64_t* other, int32_t mode);
+#endif
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///

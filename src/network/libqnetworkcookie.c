@@ -132,8 +132,7 @@ void q_networkcookie_normalize(void* self, void* url) {
 }
 
 libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* cookieString) {
-    libqt_string cookieString_string = qstring(cookieString);
-    libqt_list _arr = QNetworkCookie_ParseCookies((QByteArrayView*)&cookieString_string);
+    libqt_list _arr = QNetworkCookie_ParseCookies(qstring(cookieString));
     return _arr;
 }
 

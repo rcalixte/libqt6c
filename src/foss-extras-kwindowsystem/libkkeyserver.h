@@ -115,15 +115,19 @@ bool k_keyserver_sym_x_mod_x_to_key_qt(uint32_t param1, uint16_t param2, int* pa
 /// @param param2 int*
 bool k_keyserver_mod_x_to_qt(uint32_t param1, int* param2);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kkeyserver.html#xcbKeyPressEventToQt)
 ///
 /// @param param1 xcb_generic_event_t*
 /// @param param2 int*
 bool k_keyserver_xcb_key_press_event_to_qt(xcb_generic_event_t* param1, int* param2);
+#endif
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kkeyserver.html#xcbKeyPressEventToQt)
 ///
 /// @param param1 xcb_key_press_event_t*
 /// @param param2 int*
 bool k_keyserver_xcb_key_press_event_to_qt2(xcb_key_press_event_t* param1, int* param2);
+#endif
 #endif

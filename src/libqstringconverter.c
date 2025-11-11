@@ -97,13 +97,11 @@ int64_t q_stringdecoder_required_space(void* self, int64_t inputLength) {
 }
 
 QChar* q_stringdecoder_append_to_buffer(void* self, void* out, const char* ba) {
-    libqt_string ba_string = qstring(ba);
-    return QStringDecoder_AppendToBuffer((QStringDecoder*)self, (QChar*)out, (QByteArrayView*)&ba_string);
+    return QStringDecoder_AppendToBuffer((QStringDecoder*)self, (QChar*)out, qstring(ba));
 }
 
 QStringDecoder* q_stringdecoder_decoder_for_html(const char* data) {
-    libqt_string data_string = qstring(data);
-    return QStringDecoder_DecoderForHtml((QByteArrayView*)&data_string);
+    return QStringDecoder_DecoderForHtml(qstring(data));
 }
 
 bool q_stringdecoder_is_valid(void* self) {

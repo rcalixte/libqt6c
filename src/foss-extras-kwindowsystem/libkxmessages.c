@@ -9,9 +9,11 @@ KXMessages* k_xmessages_new() {
     return KXMessages_new();
 }
 
+#ifdef __linux__
 KXMessages* k_xmessages_new2(xcb_connection_t* connection, xcb_window_t rootWindow) {
     return KXMessages_new2(connection, rootWindow);
 }
+#endif
 
 KXMessages* k_xmessages_new3(const char* accept_broadcast) {
     return KXMessages_new3(accept_broadcast);
@@ -21,13 +23,17 @@ KXMessages* k_xmessages_new4(const char* accept_broadcast, void* parent) {
     return KXMessages_new4(accept_broadcast, (QObject*)parent);
 }
 
+#ifdef __linux__
 KXMessages* k_xmessages_new5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast) {
     return KXMessages_new5(connection, rootWindow, accept_broadcast);
 }
+#endif
 
+#ifdef __linux__
 KXMessages* k_xmessages_new6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, void* parent) {
     return KXMessages_new6(connection, rootWindow, accept_broadcast, (QObject*)parent);
 }
+#endif
 
 const QMetaObject* k_xmessages_meta_object(void* self) {
     return KXMessages_MetaObject((KXMessages*)self);
@@ -60,9 +66,11 @@ void k_xmessages_broadcast_message(void* self, const char* msg_type, const char*
     KXMessages_BroadcastMessage((KXMessages*)self, msg_type, qstring(message));
 }
 
+#ifdef __linux__
 bool k_xmessages_broadcast_message_x(xcb_connection_t* c, const char* msg_type, const char* message, int screenNumber) {
     return KXMessages_BroadcastMessageX(c, msg_type, qstring(message), screenNumber);
 }
+#endif
 
 void k_xmessages_got_message(void* self, const char* message) {
     KXMessages_GotMessage((KXMessages*)self, qstring(message));

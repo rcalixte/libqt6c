@@ -17,11 +17,13 @@
 ///
 KXMessages* k_xmessages_new();
 
+#ifdef __linux__
 /// k_xmessages_new2 constructs a new KXMessages object.
 ///
 /// @param connection xcb_connection_t*
 /// @param rootWindow xcb_window_t
 KXMessages* k_xmessages_new2(xcb_connection_t* connection, xcb_window_t rootWindow);
+#endif
 
 /// k_xmessages_new3 constructs a new KXMessages object.
 ///
@@ -34,13 +36,16 @@ KXMessages* k_xmessages_new3(const char* accept_broadcast);
 /// @param parent QObject*
 KXMessages* k_xmessages_new4(const char* accept_broadcast, void* parent);
 
+#ifdef __linux__
 /// k_xmessages_new5 constructs a new KXMessages object.
 ///
 /// @param connection xcb_connection_t*
 /// @param rootWindow xcb_window_t
 /// @param accept_broadcast const char*
 KXMessages* k_xmessages_new5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast);
+#endif
 
+#ifdef __linux__
 /// k_xmessages_new6 constructs a new KXMessages object.
 ///
 /// @param connection xcb_connection_t*
@@ -48,6 +53,7 @@ KXMessages* k_xmessages_new5(xcb_connection_t* connection, xcb_window_t rootWind
 /// @param accept_broadcast const char*
 /// @param parent QObject*
 KXMessages* k_xmessages_new6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, void* parent);
+#endif
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -92,6 +98,7 @@ const char* k_xmessages_tr(const char* s);
 /// @param message const char*
 void k_xmessages_broadcast_message(void* self, const char* msg_type, const char* message);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kxmessages.html#broadcastMessageX)
 ///
 /// @param c xcb_connection_t*
@@ -99,6 +106,7 @@ void k_xmessages_broadcast_message(void* self, const char* msg_type, const char*
 /// @param message const char*
 /// @param screenNumber int
 bool k_xmessages_broadcast_message_x(xcb_connection_t* c, const char* msg_type, const char* message, int screenNumber);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kxmessages.html#gotMessage)
 ///

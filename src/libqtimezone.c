@@ -73,8 +73,7 @@ QTimeZone* q_timezone_as_backend_zone(void* self) {
 }
 
 bool q_timezone_has_alternative_name(void* self, const char* alias) {
-    libqt_string alias_string = qstring(alias);
-    return QTimeZone_HasAlternativeName((QTimeZone*)self, (QByteArrayView*)&alias_string);
+    return QTimeZone_HasAlternativeName((QTimeZone*)self, qstring(alias));
 }
 
 char* q_timezone_id(void* self) {

@@ -54,23 +54,8 @@ pub fn build(b: *std.Build) !void {
                     continue;
                 if ((is_macos or is_windows) and std.mem.eql(u8, basename, "qopenglcontext_platform"))
                     continue;
-                if (is_windows and (std.mem.eql(u8, basename, "qhashfunctions") or std.mem.eql(u8, basename, "qprocess") or std.mem.eql(u8, basename, "qtextstream")))
+                if (is_windows and (std.mem.eql(u8, basename, "qhashfunctions") or std.mem.eql(u8, basename, "qprocess")))
                     continue;
-                if (is_bsd_family) {
-                    const bsd_skips = [_][]const u8{
-                        "kkeyserver",
-                        "kselectionowner",
-                        "kselectionwatcher",
-                        "kstartupinfo",
-                        "kxmessages",
-                    };
-                    var i: usize = 0;
-                    while (i < bsd_skips.len) : (i += 1) {
-                        if (std.mem.eql(u8, basename, bsd_skips[i])) {
-                            break :entry_loop;
-                        }
-                    }
-                }
 
                 inline for (prefixes) |prefix| {
                     if (std.mem.startsWith(u8, entry.path, prefix)) {

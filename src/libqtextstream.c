@@ -205,13 +205,17 @@ QTextStream* q_textstream_operator_shift_right7(void* self, uint32_t* i) {
     return QTextStream_OperatorShiftRight7((QTextStream*)self, i);
 }
 
+#if defined(__linux__) || defined(__FreeBSD__)
 QTextStream* q_textstream_operator_shift_right8(void* self, int64_t* i) {
     return QTextStream_OperatorShiftRight8((QTextStream*)self, i);
 }
+#endif
 
+#if defined(__linux__) || defined(__FreeBSD__)
 QTextStream* q_textstream_operator_shift_right9(void* self, uint64_t* i) {
     return QTextStream_OperatorShiftRight9((QTextStream*)self, i);
 }
+#endif
 
 QTextStream* q_textstream_operator_shift_right10(void* self, long long* i) {
     return QTextStream_OperatorShiftRight10((QTextStream*)self, i);

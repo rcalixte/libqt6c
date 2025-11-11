@@ -146,7 +146,9 @@ func applyTypedefs_Method(m *CppMethod, className string) {
 		transformed := applyTypedefs(p, className)
 		m.Parameters[k] = transformed
 
-		if LinuxWindowsCompatCheck(transformed) {
+		if FossCompatCheck(transformed) {
+			m.FossOnly = true
+		} else if LinuxCompatCheck(transformed) {
 			m.LinuxOnly = true
 		}
 	}
@@ -154,7 +156,9 @@ func applyTypedefs_Method(m *CppMethod, className string) {
 	m.ReturnType = applyTypedefs(m.ReturnType, className)
 
 	// Also apply OS compatibility rules
-	if LinuxWindowsCompatCheck(m.ReturnType) {
+	if FossCompatCheck(m.ReturnType) {
+		m.FossOnly = true
+	} else if LinuxCompatCheck(m.ReturnType) {
 		m.LinuxOnly = true
 	}
 }

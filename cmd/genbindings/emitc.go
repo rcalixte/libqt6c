@@ -670,7 +670,8 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		p.ParameterName = "_" + p.ParameterName
 	}
 
-	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "SignOn::MethodName" {
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" ||
+		p.ParameterType == "QByteArrayView" || p.ParameterType == "SignOn::MethodName" {
 		// Return the C string struct without allocation since the
 		// temporary libqt_string is passed by value
 		rvalue = "qstring(" + nameprefix + ")"
@@ -678,7 +679,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 	} else if p.ParameterType == "QAnyStringView" {
 		rvalue = nameprefix
 
-	} else if p.ParameterType == "QByteArrayView" || p.ParameterType == "QStringView" {
+	} else if p.ParameterType == "QStringView" {
 		// Take the address of the pointer and cast it to the expected type
 		preamble += "libqt_string " + nameprefix + "_string = qstring(" + p.ParameterName + ");\n"
 		rvalue = "(" + p.ParameterType + "*)&" + nameprefix + "_string"
@@ -764,8 +765,9 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		return rvalue + ";" + maybeCleanups
 	} else if (rt.ParameterType == "void" || rt.ParameterType == "GLvoid") && rt.Pointer {
 		return assignExpr + maybePointer + rvalue + ";"
-	} else if rt.ParameterType == "QString" || rt.ParameterType == "SignOn::MethodName" ||
-		rt.ParameterType == "QStringView" || rt.ParameterType == "QByteArray" {
+	} else if rt.ParameterType == "QString" || rt.ParameterType == "QStringView" ||
+		rt.ParameterType == "QByteArray" || rt.ParameterType == "QByteArrayView" ||
+		rt.ParameterType == "SignOn::MethodName" {
 		shouldReturn := "libqt_string " + namePrefix + "_str = "
 		afterword += cfs.checkAndClearAllocCleanups(false)
 		afterword += "char* " + namePrefix + "_ret = qstring_to_char(" + namePrefix + "_str);\n"
@@ -781,13 +783,6 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		afterword += assignExpr + " " + namePrefix + "_ret;\n"
 		return shouldReturn + rvalue + ";\n" + afterword
-
-	} else if rt.ParameterType == "QByteArrayView" {
-		shouldReturn := rt.ParameterType + "* " + namePrefix + "_str = "
-		afterword += "const char* " + namePrefix + "_ret = " + rt.ParameterType + "_Data(" + namePrefix + "_str);\n"
-
-		afterword += assignExpr + " " + namePrefix + "_ret;\n"
-		return shouldReturn + " " + rvalue + ";\n" + afterword
 
 	} else if rt.ParameterType == "QAnyStringView" {
 		shouldReturn := "libqt_string " + namePrefix + "_str = "
@@ -1005,6 +1000,14 @@ var (
 		"QFileDevice_Close":        {},
 		"QPaintDevice_PaintEngine": {},
 	}
+
+	// These functions are not portable to all platforms
+	platformFunctions = map[string]struct{}{
+		"QsciScintilla_FindMatchingBrace": {},
+		"QTextStream_OperatorShiftRight8": {},
+		"QTextStream_OperatorShiftRight9": {},
+		"QVersionNumber_FromString2":      {},
+	}
 )
 
 func emitH(src *CppParsedHeader, headerName, packageName string) (string, error) {
@@ -1093,16 +1096,21 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			var maybeMoveCtor string
+			var maybeMoveCtor, maybeMacro, maybeEndMacro string
 
 			if ctor.IsMoveCtor {
 				maybeMoveCtor = " object and invalidates the source " + c.ClassName
 			}
 
+			if ctor.LinuxOnly {
+				maybeMacro = "#ifdef __linux__\n"
+				maybeEndMacro = "#endif\n"
+			}
+
 			cfs.castType = cStructName
-			ret.WriteString("\n\n/// " + cMethodPrefix + "_new" + maybeSuffix(i) + " constructs a new " + c.ClassName + maybeMoveCtor +
+			ret.WriteString("\n\n" + maybeMacro + "/// " + cMethodPrefix + "_new" + maybeSuffix(i) + " constructs a new " + c.ClassName + maybeMoveCtor +
 				" object.\n///" + cfs.emitCommentParametersC(ctor.Parameters, false) + "\n" +
-				cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + ");\n\n")
+				cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + ");\n" + maybeEndMacro + "\n\n")
 		}
 
 		if c.HasTrivialCopyAssign {
@@ -1226,6 +1234,15 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				inheritedFrom = "\n    /// Inherited from " + m.InheritedInClass + "\n    ///"
 			}
 
+			needsPlatformMacro := false
+			if _, ok := platformFunctions[cmdStructName+"_"+mSafeMethodName]; ok && !m.FossOnly && !m.LinuxOnly {
+				needsPlatformMacro = true
+				ret.WriteString("\n#if defined(__linux__) || defined(__FreeBSD__)")
+			} else if m.LinuxOnly {
+				needsPlatformMacro = true
+				ret.WriteString("\n#ifdef __linux__")
+			}
+
 			ret.WriteString(inheritedFrom)
 
 			var docCommentUrl string
@@ -1283,6 +1300,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			ret.WriteString(commentParam + cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment +
 				returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
 
+			if needsPlatformMacro {
+				ret.WriteString("#endif\n")
+			}
+
 			// Add Connect() wrappers for signal functions
 			if m.IsSignal {
 				addConnect := true
@@ -1294,12 +1315,18 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 
 				if addConnect {
+					var maybeMacro, maybeEndMacro string
 					slotComma := ifv(len(m.Parameters) != 0, ", ", "")
-					ret.WriteString(inheritedFrom + docCommentUrl + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
+					if m.LinuxOnly {
+						maybeMacro = "\n#ifdef __linux__"
+						maybeEndMacro = "#endif\n"
+					}
+
+					ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
 						cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n")
 
 					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
-						slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
+						slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 				}
 			}
 
@@ -1313,7 +1340,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-				var maybeCommentStruct, maybeVoid, maybeComma string
+				var maybeCommentStruct, maybeVoid, maybeComma, maybeMacro, maybeEndMacro string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
@@ -1328,21 +1355,25 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeCommentStruct = cStructName + "* self" + maybeComma
 					maybeVoid = "void*"
 				}
+				if m.LinuxOnly {
+					maybeMacro = "\n#ifdef __linux__"
+					maybeEndMacro = "#endif\n"
+				}
 
 				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
 
-				ret.WriteString(inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
+				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
 					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " func(" + maybeCommentStruct +
 					cfs.emitCommentParametersC(m.Parameters, true) + ")\n" +
 					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
-					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
+					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 
 				qbaseDocComment := "\n/// Base class method implementation\n    ///"
 				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
 
-				ret.WriteString(inheritedFrom + docCommentUrl + qbaseDocComment +
+				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + qbaseDocComment +
 					commentParam + cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment +
-					returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
+					returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n" + maybeEndMacro + "\n\n")
 			}
 		}
 
@@ -1759,19 +1790,26 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				ctorRet += "return _out;"
 			}
 
-			if ctor.LinuxOnly {
+			if ctor.FossOnly {
 				ret.WriteString(cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + `) {
-        #ifndef __linux__
+        #if !defined(__linux__) && !defined(__FreeBSD__)
 		    fprintf(stderr, "Error: Unsupported operating system\n");
             abort();
         #endif
 
 ` + ctorRet + "}\n\n")
 			} else {
+				var maybeMacro, maybeEndMacro string
+
+				if ctor.LinuxOnly {
+					maybeMacro = "#ifdef __linux__\n"
+					maybeEndMacro = "#endif\n"
+				}
+
 				preamble = ifv(preamble != "", preamble+"\n", "")
 
-				ret.WriteString(cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + ") {\n" +
-					preamble + ctorRet + "\n}\n\n")
+				ret.WriteString(maybeMacro + cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + ") {\n" +
+					preamble + ctorRet + "\n}\n" + maybeEndMacro + "\n\n")
 			}
 		}
 
@@ -1909,22 +1947,37 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				method = safeMethodName + "("
 			}
 
+			needsPlatformMacro := false
+			if _, ok := platformFunctions[cmdStructName+"_"+mSafeMethodName]; ok && !m.FossOnly && !m.LinuxOnly {
+				needsPlatformMacro = true
+				ret.WriteString("\n#if defined(__linux__) || defined(__FreeBSD__)\n")
+			} else if m.LinuxOnly {
+				needsPlatformMacro = true
+				ret.WriteString("\n#ifdef __linux__\n")
+			}
+
 			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
 
-			if m.LinuxOnly {
+			if m.FossOnly {
 				ret.WriteString(`
-    #ifndef __linux__
+    #if !defined(__linux__) && !defined(__FreeBSD__)
         fprintf(stderr, "Error: Unsupported operating system\n");
         abort();
     #endif
 `)
 			}
 
-			ret.WriteString("\n" + preamble + returnFunc + "\n}\n\n")
+			ret.WriteString("\n" + preamble + returnFunc + "\n}\n")
+
+			if needsPlatformMacro {
+				ret.WriteString("#endif\n")
+			}
+
+			ret.WriteString("\n")
 
 			// Add Connect() wrappers for signal functions
 			if m.IsSignal {
-				var slotComma string
+				var slotComma, maybeMacro, maybeEndMacro string
 				if len(m.Parameters) != 0 {
 					slotComma = ", "
 				}
@@ -1938,9 +1991,13 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 
 				if addConnect {
-					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
+					if m.LinuxOnly {
+						maybeMacro = "#ifdef __linux__\n"
+						maybeEndMacro = "#endif\n"
+					}
+					ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
-						cmdStructName + "_Connect_" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
+						cmdStructName + "_Connect_" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 				}
 			}
 
@@ -1954,7 +2011,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-				var maybeVoid, maybeComma string
+				var maybeVoid, maybeComma, maybeMacro, maybeEndMacro string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
@@ -1967,28 +2024,32 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if showHiddenParams && len(m.HiddenParams) != 0 {
 					maybeVoid = "void*"
 				}
+				if m.LinuxOnly {
+					maybeMacro = "#ifdef __linux__\n"
+					maybeEndMacro = "#endif\n"
+				}
 
-				ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
+				ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
-					cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
+					cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 
 				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
 				baseCallTarget := cmdStructName + "_QBase" + mSafeMethodName + "(" + forwarding + ")"
 				basereturnFunc := cfs.emitCabiToC("return ", m.ReturnType, baseCallTarget)
 				cfs.checkAndClearAllocCleanups(true)
 
-				ret.WriteString(returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
+				ret.WriteString(maybeMacro + returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
 
-				if m.LinuxOnly {
+				if m.FossOnly {
 					ret.WriteString(`
-#ifndef __linux__
+#if !defined(__linux__) && !defined(__FreeBSD__)
     fprintf(stderr, "Error: Unsupported operating system\n");
     abort();
 #endif
 `)
 				}
 
-				ret.WriteString("\n" + preamble + basereturnFunc + "\n}\n\n")
+				ret.WriteString("\n" + preamble + basereturnFunc + "\n}\n" + maybeEndMacro + "\n\n")
 			}
 		}
 
@@ -2053,11 +2114,16 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
+			var maybeMacro, maybeEndMacro string
+			if m.LinuxOnly {
+				maybeMacro = "#ifdef __linux__\n"
+				maybeEndMacro = "#endif\n"
+			}
 			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_QBase"+mSafeMethodName+"("+forwarding+")")
 			cfs.checkAndClearAllocCleanups(true)
 
-			ret.WriteString(returnTypeDecl + " " + cmdMethodName + "_qbase" + safeMethodName + "(void* self" + commaParams + cfsParams + ") {\n    " +
-				preamble + returnFunc + "\n}\n\n")
+			ret.WriteString(maybeMacro + returnTypeDecl + " " + cmdMethodName + "_qbase" + safeMethodName + "(void* self" + commaParams + cfsParams + ") {\n    " +
+				preamble + returnFunc + "\n}\n" + maybeEndMacro + "\n\n")
 
 			var maybeVoid string
 			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
@@ -2070,9 +2136,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				maybeVoid = "void*"
 			}
 
-			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
+			ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
-				cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
+				cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 		}
 
 		for _, m := range privateSignals {

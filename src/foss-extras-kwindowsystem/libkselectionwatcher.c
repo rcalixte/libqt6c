@@ -5,29 +5,39 @@
 #include "libkselectionwatcher.hpp"
 #include "libkselectionwatcher.h"
 
+#ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new(xcb_atom_t selection) {
     return KSelectionWatcher_new(selection);
 }
+#endif
 
 KSelectionWatcher* k_selectionwatcher_new2(const char* selection) {
     return KSelectionWatcher_new2(selection);
 }
 
+#ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
     return KSelectionWatcher_new3(selection, c, root);
 }
+#endif
 
+#ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
     return KSelectionWatcher_new4(selection, c, root);
 }
+#endif
 
+#ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new5(xcb_atom_t selection, int screen) {
     return KSelectionWatcher_new5(selection, screen);
 }
+#endif
 
+#ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new6(xcb_atom_t selection, int screen, void* parent) {
     return KSelectionWatcher_new6(selection, screen, (QObject*)parent);
 }
+#endif
 
 KSelectionWatcher* k_selectionwatcher_new7(const char* selection, int screen) {
     return KSelectionWatcher_new7(selection, screen);
@@ -37,13 +47,17 @@ KSelectionWatcher* k_selectionwatcher_new8(const char* selection, int screen, vo
     return KSelectionWatcher_new8(selection, screen, (QObject*)parent);
 }
 
+#ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
     return KSelectionWatcher_new9(selection, c, root, (QObject*)parent);
 }
+#endif
 
+#ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
     return KSelectionWatcher_new10(selection, c, root, (QObject*)parent);
 }
+#endif
 
 const QMetaObject* k_selectionwatcher_meta_object(void* self) {
     return KSelectionWatcher_MetaObject((KSelectionWatcher*)self);
@@ -72,21 +86,27 @@ const char* k_selectionwatcher_tr(const char* s) {
     return _ret;
 }
 
+#ifdef __linux__
 xcb_window_t k_selectionwatcher_owner(void* self) {
     return (int)KSelectionWatcher_Owner((KSelectionWatcher*)self);
 }
+#endif
 
 void k_selectionwatcher_filter_event(void* self, void* ev_P) {
     KSelectionWatcher_FilterEvent((KSelectionWatcher*)self, ev_P);
 }
 
+#ifdef __linux__
 void k_selectionwatcher_new_owner(void* self, xcb_window_t owner) {
     KSelectionWatcher_NewOwner((KSelectionWatcher*)self, owner);
 }
+#endif
 
+#ifdef __linux__
 void k_selectionwatcher_on_new_owner(void* self, void (*callback)(void*, xcb_window_t)) {
     KSelectionWatcher_Connect_NewOwner((KSelectionWatcher*)self, (intptr_t)callback);
 }
+#endif
 
 void k_selectionwatcher_lost_owner(void* self) {
     KSelectionWatcher_LostOwner((KSelectionWatcher*)self);

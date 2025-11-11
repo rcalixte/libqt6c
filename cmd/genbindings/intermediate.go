@@ -319,6 +319,7 @@ type CppMethod struct {
 	VariableFieldName  string
 
 	// Special quirks
+	FossOnly                 bool
 	LinuxOnly                bool
 	BecomesNonConstInVersion *string // "6,7"
 }

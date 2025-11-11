@@ -64,8 +64,7 @@ char* q_url_to_encoded(void* self) {
 }
 
 QUrl* q_url_from_encoded(const char* input) {
-    libqt_string input_string = qstring(input);
-    return QUrl_FromEncoded((QByteArrayView*)&input_string);
+    return QUrl_FromEncoded(qstring(input));
 }
 
 QUrl* q_url_from_user_input(const char* userInput) {
@@ -354,8 +353,7 @@ void q_url_set_url2(void* self, const char* url, int32_t mode) {
 }
 
 QUrl* q_url_from_encoded2(const char* input, int32_t mode) {
-    libqt_string input_string = qstring(input);
-    return QUrl_FromEncoded2((QByteArrayView*)&input_string, mode);
+    return QUrl_FromEncoded2(qstring(input), mode);
 }
 
 QUrl* q_url_from_user_input2(const char* userInput, const char* workingDirectory) {

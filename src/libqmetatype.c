@@ -191,8 +191,7 @@ QMetaType* q_metatype_underlying_type(void* self) {
 }
 
 QMetaType* q_metatype_from_name(const char* name) {
-    libqt_string name_string = qstring(name);
-    return QMetaType_FromName((QByteArrayView*)&name_string);
+    return QMetaType_FromName(qstring(name));
 }
 
 bool q_metatype_debug_stream(void* self, void* dbg, void* rhs) {
