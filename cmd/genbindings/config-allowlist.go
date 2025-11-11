@@ -996,10 +996,10 @@ func AllowInheritedClass(className string) ([]string, bool) {
 	return nil, false
 }
 
-// LinuxWindowsCompatCheck checks if the parameter is incompatible between the
+// FossCompatCheck checks if the parameter is incompatible between the
 // generated headers (generated on Linux) with other OSes such as Windows.
-// These methods will be blocked on non-Linux OSes.
-func LinuxWindowsCompatCheck(p CppParameter) bool {
+// These methods will be blocked on non-Linux and non-BSD OSes.
+func FossCompatCheck(p CppParameter) bool {
 	if p.GetQtCppType().ParameterType == "Q_PID" {
 		return true // int64 on Linux, _PROCESS_INFORMATION* on Windows
 	}
@@ -1008,6 +1008,13 @@ func LinuxWindowsCompatCheck(p CppParameter) bool {
 		return true // uintptr_t-compatible on Linux, void* on Windows
 	}
 	return false
+}
+
+// LinuxCompatCheck checks if the parameter is incompatible between the
+// generated headers (generated on Linux) with BSD variants.
+// These methods will be blocked.
+func LinuxCompatCheck(p CppParameter) bool {
+	return strings.HasPrefix(p.GetQtCppType().ParameterType, "xcb_")
 }
 
 func ApplyQuirks(className string, mm *CppMethod) {
