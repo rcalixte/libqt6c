@@ -46,7 +46,8 @@ func getUnionType(t CppParameter) (unionType, castType, lParen, rParen string) {
 }
 
 func (p CppParameter) RenderTypeCabi(isSlot bool) string {
-	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "SignOn::MethodName" {
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" ||
+		p.ParameterType == "QByteArrayView" || p.ParameterType == "SignOn::MethodName" {
 		if isSlot {
 			return "const char*"
 		} else {
@@ -300,7 +301,7 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 		}
 		return preamble, maybePointer + nameprefix + "_QString"
 
-	} else if p.ParameterType == "QByteArray" {
+	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
 		if isSlot {
 			preamble += indent + p.ParameterType + " " + nameprefix + "_" + p.ParameterType + "(" + p.ParameterName + ");\n"
 		} else {
@@ -620,7 +621,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		afterCall += indent + assignExpression + "(char*)" + namePrefix + "_str.data;\n"
 		return indent + shouldReturn + rvalue + ";\n" + afterCall
 
-	} else if p.ParameterType == "QByteArray" {
+	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
 
 		// C++ has given us a QByteArray. CABI needs this as a libqt_string
 		// Do not free the data, the caller will free it
@@ -669,7 +670,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		shouldReturn = p.RenderTypeQtCpp() + " " + namePrefix + "_ret = "
 
 		if isSignal && cType == "libqt_string" {
-			maybeMethod := ifv(t.ParameterType == "QByteArray", "", ".toUtf8()")
+			maybeMethod := ifv(strings.HasPrefix(t.ParameterType, "QByteArray"), "", ".toUtf8()")
 
 			afterCall = indent + "// Convert QString from UTF-16 in C++ RAII memory to null-terminated UTF-8 chars in manually-managed C memory\n"
 			afterCall += indent + "const char** " + namePrefix + "_arr = static_cast<const char**>(malloc(sizeof(const char*) * (" + namePrefix + "_ret" + memberRef + "size() + 1)));\n"
@@ -1499,7 +1500,13 @@ extern "C" {
 				continue
 			}
 
-			ret.WriteString(fmt.Sprintf("%s %s_new%s(%s);\n", methodPrefixName+"*", methodPrefixName, maybeSuffix(i), emitParametersCabi(ctor, "")))
+			var maybeMacro, maybeEndMacro string
+			if ctor.LinuxOnly {
+				maybeMacro = "#ifdef __linux__\n"
+				maybeEndMacro = "#endif\n"
+			}
+
+			ret.WriteString(fmt.Sprintf("%s%s %s_new%s(%s);\n%s", maybeMacro, methodPrefixName+"*", methodPrefixName, maybeSuffix(i), emitParametersCabi(ctor, ""), maybeEndMacro))
 		}
 
 		if c.HasTrivialCopyAssign {
@@ -1534,6 +1541,7 @@ extern "C" {
 
 			returnCabi := m.ReturnType.RenderTypeCabi(false)
 
+			var maybeMacro, maybeEndMacro string
 			maybeConst := ifv(m.IsConst, "const ", "")
 
 			if m.ReturnType.BecomesConstInVersion != nil {
@@ -1544,7 +1552,12 @@ extern "C" {
 					fmt.Sprintf("%s %s_%s(%s);\n", returnCabi, methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*")) +
 					"#endif\n")
 			} else {
-				ret.WriteString(fmt.Sprintf("%s %s_%s(%s);\n", returnCabi, methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*")))
+				if m.LinuxOnly {
+					maybeMacro = "#ifdef __linux__\n"
+					maybeEndMacro = "#endif\n"
+				}
+
+				ret.WriteString(fmt.Sprintf("%s%s %s_%s(%s);\n%s", maybeMacro, returnCabi, methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*"), maybeEndMacro))
 			}
 
 			if m.IsSignal {
@@ -1587,16 +1600,21 @@ extern "C" {
 				baseMethod = true
 			}
 
+			var maybeMacro, maybeEndMacro string
 			maybeConst := ifv(m.IsConst, "const ", "")
 
 			if !baseMethod {
 				ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_" + mSafeMethodName + "(" +
 					emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n")
 			}
+			if m.LinuxOnly {
+				maybeMacro = "#ifdef __linux__\n"
+				maybeEndMacro = "#endif\n"
+			}
 
-			ret.WriteString("void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n")
-			ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" +
-				emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n")
+			ret.WriteString(maybeMacro + "void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n" + maybeEndMacro)
+			ret.WriteString(maybeMacro + m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" +
+				emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n" + maybeEndMacro)
 		}
 
 		for _, m := range c.PrivateSignals {
@@ -1719,13 +1737,18 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			// The returned ctor needs to return a C++ pointer for the class itself
 			preamble, forwarding := emitParametersCABI2CppForwarding(ctor.Parameters, "\t", c.ClassName)
 
-			if ctor.LinuxOnly {
+			if ctor.FossOnly {
+				voidCasts := ""
+				for _, p := range ctor.Parameters {
+					voidCasts += "\t(void)" + p.ParameterName + "; // Suppress unused parameter warning\n"
+				}
+
 				ret.WriteString(fmt.Sprintf(
 					"%s* %s_new%s(%s) {\n"+
-						"#ifdef Q_OS_LINUX\n"+
+						"#if defined(Q_OS_LINUX) || defined(Q_OS_BSD4)\n"+
 						"%s"+
 						"\treturn new %s(%s);\n"+
-						"#else\n"+
+						"#else\n%s"+
 						"\treturn nullptr;\n"+
 						"#endif\n"+
 						"}\n"+
@@ -1735,11 +1758,11 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					maybeSuffix(i),
 					emitParametersCabi(ctor, ""),
 					preamble,
-					c.ClassName, forwarding,
+					c.ClassName, forwarding, voidCasts,
 				))
 
 			} else {
-				var virtualName, ctorReturn, maybeMoveCtor, maybeCloseMoveCtor string
+				var virtualName, ctorReturn, maybeMoveCtor, maybeCloseMoveCtor, maybeMacro, maybeEndMacro string
 				if virtualEligible {
 					for _, m := range virtualMethods {
 						if (m.IsProtected || m.IsVirtual) && len(virtualMethods) > 0 {
@@ -1757,13 +1780,18 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					maybeCloseMoveCtor = ")"
 				}
 
+				if ctor.LinuxOnly {
+					maybeMacro = "#ifdef __Q_OS_LINUX__\n"
+					maybeEndMacro = "#endif\n"
+				}
+
 				cClassName := ifv(virtualName != "", strings.ReplaceAll(c.ClassName, "::", ""), c.ClassName)
 				baseReturn := "new " + virtualName + cClassName + "(" + maybeMoveCtor + forwarding + maybeCloseMoveCtor + ")"
 				ctorReturn = "\t return " + baseReturn
 
-				ret.WriteString(methodPrefixName + "* " + methodPrefixName + "_new" +
+				ret.WriteString(maybeMacro + methodPrefixName + "* " + methodPrefixName + "_new" +
 					maybeSuffix(i) + "(" + emitParametersCabi(ctor, "") +
-					") {\n" + preamble + ctorReturn + ";\n}\n\n")
+					") {\n" + preamble + ctorReturn + ";\n}\n" + maybeEndMacro + "\n\n")
 			}
 		}
 
@@ -1838,15 +1866,21 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = false
 			}
 
+			var maybeMacro, maybeEndMacro string
 			maybeConst := ifv(m.IsConst, "const ", "")
 
-			if m.LinuxOnly {
+			if m.FossOnly {
+				voidCasts := "\t(void)self; // Suppress unused parameter warning\n"
+				for _, p := range m.Parameters {
+					voidCasts += "\t(void)" + p.ParameterName + "; // Suppress unused parameter warning\n"
+				}
+
 				ret.WriteString(fmt.Sprintf(
 					"%s %s_%s(%s) {\n"+
-						"#ifdef Q_OS_LINUX\n"+
+						"#if defined(Q_OS_LINUX) || defined(Q_OS_BSD4)\n"+
 						"%s"+
 						"%s"+
-						"#else\n"+
+						"#else\n%s"+
 						"\treturn {};\n"+
 						"#endif\n"+
 						"}\n"+
@@ -1854,6 +1888,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					m.ReturnType.RenderTypeCabi(false), methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*"),
 					preamble,
 					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget),
+					voidCasts,
 				))
 
 			} else if m.BecomesNonConstInVersion != nil {
@@ -1896,6 +1931,11 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 						goto writeString
 					}
 
+					if m.LinuxOnly {
+						maybeMacro = "#ifdef __Q_OS_LINUX__\n"
+						maybeEndMacro = "#endif\n"
+					}
+
 					virtualCallTarget = ifv(m.IsPrivate || m.IsProtected, vVar+"->", "((Virtual"+cppClassName+"*)self)->")
 					vVarTarget = vVar + "->" + m.CppCallTarget() + "(" + forwarding + ")"
 					virtualCallTarget += m.CppCallTarget() + "(" + forwarding + ")"
@@ -1926,10 +1966,10 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					continue
 				}
 
-				ret.WriteString(returnCabi + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
+				ret.WriteString(maybeMacro + returnCabi + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					preamble + virtualStart +
 					emitAssignCppToCabi("\treturn ", m.ReturnType, returnCallTarget) +
-					virtualClose + emptyReturn + "}\n\n")
+					virtualClose + emptyReturn + "}\n" + maybeEndMacro + "\n\n")
 			}
 
 			if m.IsSignal {
