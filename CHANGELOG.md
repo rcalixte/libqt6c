@@ -1,4 +1,12 @@
 
+### 6.8.2 rev44 (16 November 2025)
+
+* Add [KIdleTime](https://api.kde.org/kidletime-index.html) (#81)
+* Project QByteArrayView as native types and update platform compatibility (#80)
+* Add [SignOn](https://accounts-sso.gitlab.io/) plus various fixes (#79)
+* Enforce non-null pointer types (#78)
+* Add [Accounts](https://accounts-sso.gitlab.io/) (#77)
+
 ### 6.8.2 rev43 (24 October 2025)
 
 * Minor tweaks and fixes (#76)
@@ -20,7 +28,7 @@
 
 * **BREAKING CHANGE:** Update for Qt 6.10 (#71)
 * Unblock additional types that inherit from templates (#70)
-* Add QCustomPlot (#69)
+* Add [QCustomPlot](https://www.qcustomplot.com/) (#69)
 
 ### 6.8.2 rev38 (7 October 2025)
 
