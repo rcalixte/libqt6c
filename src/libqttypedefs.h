@@ -316,6 +316,7 @@ typedef struct KIconEngine KIconEngine;
 typedef struct KIconLoader KIconLoader;
 typedef struct KIconTheme KIconTheme;
 typedef struct KIconUtils KIconUtils;
+typedef struct KIdleTime KIdleTime;
 typedef struct KImageFilePreview KImageFilePreview;
 typedef struct KJob KJob;
 typedef struct KJobTrackerInterface KJobTrackerInterface;
