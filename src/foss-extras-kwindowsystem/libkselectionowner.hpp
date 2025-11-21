@@ -51,7 +51,6 @@ KSelectionOwner* KSelectionOwner_new10(const char* selection, xcb_connection_t* 
 QMetaObject* KSelectionOwner_MetaObject(const KSelectionOwner* self);
 void* KSelectionOwner_Metacast(KSelectionOwner* self, const char* param1);
 int KSelectionOwner_Metacall(KSelectionOwner* self, int param1, int param2, void** param3);
-libqt_string KSelectionOwner_Tr(const char* s);
 void KSelectionOwner_Claim(KSelectionOwner* self, bool force);
 void KSelectionOwner_Release(KSelectionOwner* self);
 #ifdef __linux__
@@ -72,8 +71,6 @@ bool KSelectionOwner_GenericReply(KSelectionOwner* self, xcb_atom_t target, xcb_
 void KSelectionOwner_ReplyTargets(KSelectionOwner* self, xcb_atom_t property, xcb_window_t requestor);
 #endif
 void KSelectionOwner_GetAtoms(KSelectionOwner* self);
-libqt_string KSelectionOwner_Tr2(const char* s, const char* c);
-libqt_string KSelectionOwner_Tr3(const char* s, const char* c, int n);
 void KSelectionOwner_Claim2(KSelectionOwner* self, bool force, bool force_kill);
 void KSelectionOwner_OnMetacall(KSelectionOwner* self, intptr_t slot);
 int KSelectionOwner_QBaseMetacall(KSelectionOwner* self, int param1, int param2, void** param3);

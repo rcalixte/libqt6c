@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_OPENGLQT6C_LIBQOPENGLWINDOW_H
-#define SRC_OPENGLQT6C_LIBQOPENGLWINDOW_H
+#ifndef SRC_OPENGL_QT6C_LIBQOPENGLWINDOW_H
+#define SRC_OPENGL_QT6C_LIBQOPENGLWINDOW_H
 
 #include <stdbool.h>
 #include <stddef.h>

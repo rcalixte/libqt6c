@@ -73,7 +73,7 @@ int32_t q_webenginepage_qbase_metacall(void* self, int32_t param1, int param2, v
 }
 
 const char* q_webenginepage_tr(const char* s) {
-    libqt_string _str = QWebEnginePage_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -781,14 +781,14 @@ bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int3
 }
 
 const char* q_webenginepage_tr2(const char* s, const char* c) {
-    libqt_string _str = QWebEnginePage_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_webenginepage_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QWebEnginePage_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

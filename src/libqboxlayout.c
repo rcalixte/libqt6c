@@ -39,7 +39,7 @@ int32_t q_boxlayout_qbase_metacall(void* self, int32_t param1, int param2, void*
 }
 
 const char* q_boxlayout_tr(const char* s) {
-    libqt_string _str = QBoxLayout_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -298,14 +298,14 @@ void q_boxlayout_qbase_set_geometry(void* self, void* geometry) {
 }
 
 const char* q_boxlayout_tr2(const char* s, const char* c) {
-    libqt_string _str = QBoxLayout_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_boxlayout_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QBoxLayout_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -955,21 +955,21 @@ int32_t q_hboxlayout_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_hboxlayout_tr(const char* s) {
-    libqt_string _str = QHBoxLayout_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_hboxlayout_tr2(const char* s, const char* c) {
-    libqt_string _str = QHBoxLayout_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_hboxlayout_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QHBoxLayout_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1871,21 +1871,21 @@ int32_t q_vboxlayout_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_vboxlayout_tr(const char* s) {
-    libqt_string _str = QVBoxLayout_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_vboxlayout_tr2(const char* s, const char* c) {
-    libqt_string _str = QVBoxLayout_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_vboxlayout_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QVBoxLayout_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_SVGQT6C_LIBQSVGRENDERER_H
-#define SRC_SVGQT6C_LIBQSVGRENDERER_H
+#ifndef SRC_SVG_QT6C_LIBQSVGRENDERER_H
+#define SRC_SVG_QT6C_LIBQSVGRENDERER_H
 
 #include <stdbool.h>
 #include <stddef.h>

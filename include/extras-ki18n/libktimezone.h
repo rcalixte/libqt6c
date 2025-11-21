@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KI18NQT6C_LIBKTIMEZONE_H
-#define SRC_EXTRAS_KI18NQT6C_LIBKTIMEZONE_H
+#ifndef SRC_EXTRAS_KI18N_QT6C_LIBKTIMEZONE_H
+#define SRC_EXTRAS_KI18N_QT6C_LIBKTIMEZONE_H
 
 #include <stdbool.h>
 #include <stddef.h>

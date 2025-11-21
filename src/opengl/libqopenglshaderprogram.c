@@ -41,7 +41,7 @@ int32_t q_openglshader_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_openglshader_tr(const char* s) {
-    libqt_string _str = QOpenGLShader_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -94,14 +94,14 @@ bool q_openglshader_has_open_g_l_shaders(int32_t type) {
 }
 
 const char* q_openglshader_tr2(const char* s, const char* c) {
-    libqt_string _str = QOpenGLShader_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_openglshader_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QOpenGLShader_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -451,7 +451,7 @@ int32_t q_openglshaderprogram_qbase_metacall(void* self, int32_t param1, int par
 }
 
 const char* q_openglshaderprogram_tr(const char* s) {
-    libqt_string _str = QOpenGLShaderProgram_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -936,14 +936,14 @@ bool q_openglshaderprogram_has_open_g_l_shader_programs() {
 }
 
 const char* q_openglshaderprogram_tr2(const char* s, const char* c) {
-    libqt_string _str = QOpenGLShaderProgram_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_openglshaderprogram_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QOpenGLShaderProgram_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

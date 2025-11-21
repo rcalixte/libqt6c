@@ -36,7 +36,7 @@ int32_t q_gesture_qbase_metacall(void* self, int32_t param1, int param2, void* p
 }
 
 const char* q_gesture_tr(const char* s) {
-    libqt_string _str = QGesture_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -75,14 +75,14 @@ int32_t q_gesture_gesture_cancel_policy(void* self) {
 }
 
 const char* q_gesture_tr2(const char* s, const char* c) {
-    libqt_string _str = QGesture_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_gesture_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QGesture_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -428,7 +428,7 @@ int32_t q_pangesture_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_pangesture_tr(const char* s) {
-    libqt_string _str = QPanGesture_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -463,14 +463,14 @@ void q_pangesture_set_acceleration(void* self, double value) {
 }
 
 const char* q_pangesture_tr2(const char* s, const char* c) {
-    libqt_string _str = QPanGesture_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_pangesture_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QPanGesture_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -848,7 +848,7 @@ int32_t q_pinchgesture_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_pinchgesture_tr(const char* s) {
-    libqt_string _str = QPinchGesture_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -943,14 +943,14 @@ void q_pinchgesture_set_rotation_angle(void* self, double value) {
 }
 
 const char* q_pinchgesture_tr2(const char* s, const char* c) {
-    libqt_string _str = QPinchGesture_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_pinchgesture_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QPinchGesture_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1328,7 +1328,7 @@ int32_t q_swipegesture_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_swipegesture_tr(const char* s) {
-    libqt_string _str = QSwipeGesture_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1351,14 +1351,14 @@ void q_swipegesture_set_swipe_angle(void* self, double value) {
 }
 
 const char* q_swipegesture_tr2(const char* s, const char* c) {
-    libqt_string _str = QSwipeGesture_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_swipegesture_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QSwipeGesture_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1736,7 +1736,7 @@ int32_t q_tapgesture_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_tapgesture_tr(const char* s) {
-    libqt_string _str = QTapGesture_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1751,14 +1751,14 @@ void q_tapgesture_set_position(void* self, void* pos) {
 }
 
 const char* q_tapgesture_tr2(const char* s, const char* c) {
-    libqt_string _str = QTapGesture_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_tapgesture_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QTapGesture_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2136,7 +2136,7 @@ int32_t q_tapandholdgesture_qbase_metacall(void* self, int32_t param1, int param
 }
 
 const char* q_tapandholdgesture_tr(const char* s) {
-    libqt_string _str = QTapAndHoldGesture_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2159,14 +2159,14 @@ int32_t q_tapandholdgesture_timeout() {
 }
 
 const char* q_tapandholdgesture_tr2(const char* s, const char* c) {
-    libqt_string _str = QTapAndHoldGesture_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_tapandholdgesture_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QTapAndHoldGesture_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

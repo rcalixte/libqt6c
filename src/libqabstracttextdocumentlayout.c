@@ -41,7 +41,7 @@ int32_t q_abstracttextdocumentlayout_qbase_metacall(void* self, int32_t param1, 
 }
 
 const char* q_abstracttextdocumentlayout_tr(const char* s) {
-    libqt_string _str = QAbstractTextDocumentLayout_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -270,14 +270,14 @@ QTextCharFormat* q_abstracttextdocumentlayout_qbase_format(void* self, int pos) 
 }
 
 const char* q_abstracttextdocumentlayout_tr2(const char* s, const char* c) {
-    libqt_string _str = QAbstractTextDocumentLayout_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_abstracttextdocumentlayout_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QAbstractTextDocumentLayout_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

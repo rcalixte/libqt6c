@@ -56,7 +56,7 @@ int32_t k_xmessages_qbase_metacall(void* self, int32_t param1, int param2, void*
 }
 
 const char* k_xmessages_tr(const char* s) {
-    libqt_string _str = KXMessages_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -81,14 +81,14 @@ void k_xmessages_on_got_message(void* self, void (*callback)(void*, const char*)
 }
 
 const char* k_xmessages_tr2(const char* s, const char* c) {
-    libqt_string _str = KXMessages_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_xmessages_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KXMessages_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

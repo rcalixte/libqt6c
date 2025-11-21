@@ -1,5 +1,6 @@
 #include "libqiodevice.hpp"
 #include "libqimage.hpp"
+#include "libqobject.hpp"
 #include "libqimagewriter.hpp"
 #include "libqimagewriter.h"
 
@@ -20,7 +21,7 @@ QImageWriter* q_imagewriter_new4(const char* fileName, const char* format) {
 }
 
 const char* q_imagewriter_tr(const char* sourceText) {
-    libqt_string _str = QImageWriter_Tr(sourceText);
+    libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -211,14 +212,14 @@ const char** q_imagewriter_image_formats_for_mime_type(const char* mimeType) {
 }
 
 const char* q_imagewriter_tr2(const char* sourceText, const char* disambiguation) {
-    libqt_string _str = QImageWriter_Tr2(sourceText, disambiguation);
+    libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_imagewriter_tr3(const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = QImageWriter_Tr3(sourceText, disambiguation, n);
+    libqt_string _str = QObject_Tr3(sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

@@ -54,7 +54,7 @@ int32_t q_graphicssvgitem_qbase_metacall(void* self, int32_t param1, int param2,
 }
 
 const char* q_graphicssvgitem_tr(const char* s) {
-    libqt_string _str = QGraphicsSvgItem_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -132,14 +132,14 @@ int32_t q_graphicssvgitem_qbase_type(void* self) {
 }
 
 const char* q_graphicssvgitem_tr2(const char* s, const char* c) {
-    libqt_string _str = QGraphicsSvgItem_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_graphicssvgitem_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QGraphicsSvgItem_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

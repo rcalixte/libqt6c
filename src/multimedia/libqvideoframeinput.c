@@ -45,7 +45,7 @@ int32_t q_videoframeinput_qbase_metacall(void* self, int32_t param1, int param2,
 }
 
 const char* q_videoframeinput_tr(const char* s) {
-    libqt_string _str = QVideoFrameInput_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -72,14 +72,14 @@ void q_videoframeinput_on_ready_to_send_video_frame(void* self, void (*callback)
 }
 
 const char* q_videoframeinput_tr2(const char* s, const char* c) {
-    libqt_string _str = QVideoFrameInput_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_videoframeinput_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QVideoFrameInput_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

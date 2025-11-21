@@ -39,7 +39,7 @@ int32_t q_formlayout_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_formlayout_tr(const char* s) {
-    libqt_string _str = QFormLayout_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -374,14 +374,14 @@ int32_t q_formlayout_row_count(void* self) {
 }
 
 const char* q_formlayout_tr2(const char* s, const char* c) {
-    libqt_string _str = QFormLayout_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_formlayout_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QFormLayout_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

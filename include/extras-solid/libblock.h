@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_SOLIDQT6C_LIBBLOCK_H
-#define SRC_EXTRAS_SOLIDQT6C_LIBBLOCK_H
+#ifndef SRC_EXTRAS_SOLID_QT6C_LIBBLOCK_H
+#define SRC_EXTRAS_SOLID_QT6C_LIBBLOCK_H
 
 #include <stdbool.h>
 #include <stddef.h>

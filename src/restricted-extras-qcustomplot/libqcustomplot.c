@@ -1444,7 +1444,7 @@ int32_t q_cplayer_qbase_metacall(void* self, int32_t param1, int param2, void* p
 }
 
 const char* q_cplayer_tr(const char* s) {
-    libqt_string _str = QCPLayer_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1539,14 +1539,14 @@ void q_cplayer_qbase_remove_child(void* self, void* layerable) {
 }
 
 const char* q_cplayer_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPLayer_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cplayer_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPLayer_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1891,7 +1891,7 @@ int32_t q_cplayerable_qbase_metacall(void* self, int32_t param1, int param2, voi
 }
 
 const char* q_cplayerable_tr(const char* s) {
-    libqt_string _str = QCPLayerable_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2150,14 +2150,14 @@ void q_cplayerable_qbase_apply_antialiasing_hint(void* self, void* painter, bool
 }
 
 const char* q_cplayerable_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPLayerable_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cplayerable_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPLayerable_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2824,7 +2824,7 @@ int32_t q_cpselectionrect_qbase_metacall(void* self, int32_t param1, int param2,
 }
 
 const char* q_cpselectionrect_tr(const char* s) {
-    libqt_string _str = QCPSelectionRect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2967,14 +2967,14 @@ void q_cpselectionrect_qbase_draw(void* self, void* painter) {
 }
 
 const char* q_cpselectionrect_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPSelectionRect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpselectionrect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPSelectionRect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -3544,7 +3544,7 @@ int32_t q_cpmargingroup_qbase_metacall(void* self, int32_t param1, int param2, v
 }
 
 const char* q_cpmargingroup_tr(const char* s) {
-    libqt_string _str = QCPMarginGroup_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -3600,14 +3600,14 @@ void q_cpmargingroup_qbase_remove_child(void* self, int32_t side, void* element)
 }
 
 const char* q_cpmargingroup_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPMarginGroup_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpmargingroup_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPMarginGroup_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -3953,7 +3953,7 @@ int32_t q_cplayoutelement_qbase_metacall(void* self, int32_t param1, int param2,
 }
 
 const char* q_cplayoutelement_tr(const char* s) {
-    libqt_string _str = QCPLayoutElement_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -4166,14 +4166,14 @@ void q_cplayoutelement_qbase_parent_plot_initialized(void* self, void* parentPlo
 }
 
 const char* q_cplayoutelement_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPLayoutElement_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cplayoutelement_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPLayoutElement_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -4719,7 +4719,7 @@ int32_t q_cplayout_qbase_metacall(void* self, int32_t param1, int param2, void* 
 }
 
 const char* q_cplayout_tr(const char* s) {
-    libqt_string _str = QCPLayout_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -4886,14 +4886,14 @@ libqt_list /* of int */ q_cplayout_qbase_get_section_sizes(void* self, libqt_lis
 }
 
 const char* q_cplayout_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPLayout_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cplayout_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPLayout_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -5619,7 +5619,7 @@ int32_t q_cplayoutgrid_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_cplayoutgrid_tr(const char* s) {
-    libqt_string _str = QCPLayoutGrid_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -5862,14 +5862,14 @@ void q_cplayoutgrid_qbase_get_maximum_row_col_sizes(void* self, libqt_list maxCo
 }
 
 const char* q_cplayoutgrid_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPLayoutGrid_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cplayoutgrid_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPLayoutGrid_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -6649,7 +6649,7 @@ int32_t q_cplayoutinset_qbase_metacall(void* self, int32_t param1, int param2, v
 }
 
 const char* q_cplayoutinset_tr(const char* s) {
-    libqt_string _str = QCPLayoutInset_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -6772,14 +6772,14 @@ void q_cplayoutinset_add_element2(void* self, void* element, void* rect) {
 }
 
 const char* q_cplayoutinset_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPLayoutInset_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cplayoutinset_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPLayoutInset_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -9547,7 +9547,7 @@ int32_t q_cpgrid_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 }
 
 const char* q_cpgrid_tr(const char* s) {
-    libqt_string _str = QCPGrid_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -9650,14 +9650,14 @@ void q_cpgrid_qbase_draw_sub_grid_lines(void* self, void* painter) {
 }
 
 const char* q_cpgrid_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPGrid_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpgrid_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPGrid_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -10227,7 +10227,7 @@ int32_t q_cpaxis_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 }
 
 const char* q_cpaxis_tr(const char* s) {
-    libqt_string _str = QCPAxis_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -10911,14 +10911,14 @@ QColor* q_cpaxis_qbase_get_label_color(void* self) {
 }
 
 const char* q_cpaxis_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPAxis_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpaxis_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPAxis_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -11620,7 +11620,7 @@ int32_t q_cpabstractplottable_qbase_metacall(void* self, int32_t param1, int par
 }
 
 const char* q_cpabstractplottable_tr(const char* s) {
-    libqt_string _str = QCPAbstractPlottable_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -11926,14 +11926,14 @@ void q_cpabstractplottable_qbase_apply_scatters_antialiasing_hint(void* self, vo
 }
 
 const char* q_cpabstractplottable_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPAbstractPlottable_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpabstractplottable_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPAbstractPlottable_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -12741,7 +12741,7 @@ int32_t q_cpabstractitem_qbase_metacall(void* self, int32_t param1, int param2, 
 }
 
 const char* q_cpabstractitem_tr(const char* s) {
-    libqt_string _str = QCPAbstractItem_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -12950,14 +12950,14 @@ QCPItemAnchor* q_cpabstractitem_qbase_create_anchor(void* self, const char* name
 }
 
 const char* q_cpabstractitem_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPAbstractItem_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpabstractitem_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPAbstractItem_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -13471,7 +13471,7 @@ int32_t q_customplot_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_customplot_tr(const char* s) {
-    libqt_string _str = QCustomPlot_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -14366,14 +14366,14 @@ void q_customplot_qbase_free_open_gl(void* self) {
 }
 
 const char* q_customplot_tr2(const char* s, const char* c) {
-    libqt_string _str = QCustomPlot_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_customplot_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCustomPlot_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -16903,7 +16903,7 @@ int32_t q_cpaxisrect_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_cpaxisrect_tr(const char* s) {
-    libqt_string _str = QCPAxisRect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -17272,14 +17272,14 @@ void q_cpaxisrect_qbase_update_axes_offset(void* self, int32_t type) {
 }
 
 const char* q_cpaxisrect_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPAxisRect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpaxisrect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPAxisRect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -17925,7 +17925,7 @@ int32_t q_cpabstractlegenditem_qbase_metacall(void* self, int32_t param1, int pa
 }
 
 const char* q_cpabstractlegenditem_tr(const char* s) {
-    libqt_string _str = QCPAbstractLegendItem_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -18084,14 +18084,14 @@ void q_cpabstractlegenditem_qbase_deselect_event(void* self, bool* selectionStat
 }
 
 const char* q_cpabstractlegenditem_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPAbstractLegendItem_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpabstractlegenditem_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPAbstractLegendItem_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -18759,7 +18759,7 @@ int32_t q_cpplottablelegenditem_qbase_metacall(void* self, int32_t param1, int p
 }
 
 const char* q_cpplottablelegenditem_tr(const char* s) {
-    libqt_string _str = QCPPlottableLegendItem_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -18830,14 +18830,14 @@ QFont* q_cpplottablelegenditem_qbase_get_font(void* self) {
 }
 
 const char* q_cpplottablelegenditem_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPPlottableLegendItem_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpplottablelegenditem_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPPlottableLegendItem_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -19633,7 +19633,7 @@ int32_t q_cplegend_qbase_metacall(void* self, int32_t param1, int param2, void* 
 }
 
 const char* q_cplegend_tr(const char* s) {
-    libqt_string _str = QCPLegend_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -19921,14 +19921,14 @@ QBrush* q_cplegend_qbase_get_brush(void* self) {
 }
 
 const char* q_cplegend_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPLegend_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cplegend_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPLegend_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -20876,7 +20876,7 @@ int32_t q_cptextelement_qbase_metacall(void* self, int32_t param1, int param2, v
 }
 
 const char* q_cptextelement_tr(const char* s) {
-    libqt_string _str = QCPTextElement_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -21126,14 +21126,14 @@ QColor* q_cptextelement_qbase_main_text_color(void* self) {
 }
 
 const char* q_cptextelement_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPTextElement_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cptextelement_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPTextElement_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -21765,7 +21765,7 @@ int32_t q_cpcolorscale_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_cpcolorscale_tr(const char* s) {
-    libqt_string _str = QCPColorScale_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -21948,14 +21948,14 @@ void q_cpcolorscale_qbase_wheel_event(void* self, void* event) {
 }
 
 const char* q_cpcolorscale_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPColorScale_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpcolorscale_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPColorScale_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -22707,7 +22707,7 @@ int32_t q_cpgraph_qbase_metacall(void* self, int32_t param1, int param2, void* p
 }
 
 const char* q_cpgraph_tr(const char* s) {
-    libqt_string _str = QCPGraph_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -23068,14 +23068,14 @@ int32_t q_cpgraph_qbase_find_index_above_y(void* self, libqt_list data, double y
 }
 
 const char* q_cpgraph_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPGraph_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpgraph_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPGraph_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -24052,7 +24052,7 @@ int32_t q_cpcurve_qbase_metacall(void* self, int32_t param1, int param2, void* p
 }
 
 const char* q_cpcurve_tr(const char* s) {
-    libqt_string _str = QCPCurve_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -24289,14 +24289,14 @@ void q_cpcurve_qbase_get_traverse_corner_points(void* self, int prevRegion, int 
 }
 
 const char* q_cpcurve_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPCurve_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpcurve_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPCurve_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -25193,7 +25193,7 @@ int32_t q_cpbarsgroup_qbase_metacall(void* self, int32_t param1, int param2, voi
 }
 
 const char* q_cpbarsgroup_tr(const char* s) {
-    libqt_string _str = QCPBarsGroup_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -25301,14 +25301,14 @@ double q_cpbarsgroup_qbase_get_pixel_spacing(void* self, void* bars, double keyC
 }
 
 const char* q_cpbarsgroup_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPBarsGroup_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpbarsgroup_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPBarsGroup_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -25722,7 +25722,7 @@ int32_t q_cpbars_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 }
 
 const char* q_cpbars_tr(const char* s) {
-    libqt_string _str = QCPBars_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -25929,14 +25929,14 @@ void q_cpbars_qbase_connect_bars(void* self, void* lower, void* upper) {
 }
 
 const char* q_cpbars_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPBars_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpbars_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPBars_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -26910,7 +26910,7 @@ int32_t q_cpstatisticalbox_qbase_metacall(void* self, int32_t param1, int param2
 }
 
 const char* q_cpstatisticalbox_tr(const char* s) {
-    libqt_string _str = QCPStatisticalBox_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -27057,14 +27057,14 @@ void q_cpstatisticalbox_qbase_draw_legend_icon(void* self, void* painter, void* 
 }
 
 const char* q_cpstatisticalbox_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPStatisticalBox_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpstatisticalbox_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPStatisticalBox_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -28069,7 +28069,7 @@ int32_t q_cpcolormap_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_cpcolormap_tr(const char* s) {
-    libqt_string _str = QCPColorMap_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -28236,14 +28236,14 @@ void q_cpcolormap_qbase_draw_legend_icon(void* self, void* painter, void* rect) 
 }
 
 const char* q_cpcolormap_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPColorMap_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpcolormap_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPColorMap_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -29120,7 +29120,7 @@ int32_t q_cpfinancial_qbase_metacall(void* self, int32_t param1, int param2, voi
 }
 
 const char* q_cpfinancial_tr(const char* s) {
-    libqt_string _str = QCPFinancial_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -29287,14 +29287,14 @@ double q_cpfinancial_qbase_get_pixel_width(void* self, double key, double keyPix
 }
 
 const char* q_cpfinancial_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPFinancial_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpfinancial_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPFinancial_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -30231,7 +30231,7 @@ int32_t q_cperrorbars_qbase_metacall(void* self, int32_t param1, int param2, voi
 }
 
 const char* q_cperrorbars_tr(const char* s) {
-    libqt_string _str = QCPErrorBars_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -30522,14 +30522,14 @@ bool q_cperrorbars_qbase_rect_intersects_line(void* self, void* pixelRect, void*
 }
 
 const char* q_cperrorbars_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPErrorBars_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cperrorbars_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPErrorBars_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -31286,7 +31286,7 @@ int32_t q_cpitemstraightline_qbase_metacall(void* self, int32_t param1, int para
 }
 
 const char* q_cpitemstraightline_tr(const char* s) {
-    libqt_string _str = QCPItemStraightLine_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -31365,14 +31365,14 @@ QPen* q_cpitemstraightline_qbase_main_pen(void* self) {
 }
 
 const char* q_cpitemstraightline_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemStraightLine_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitemstraightline_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemStraightLine_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -32060,7 +32060,7 @@ int32_t q_cpitemline_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_cpitemline_tr(const char* s) {
-    libqt_string _str = QCPItemLine_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -32155,14 +32155,14 @@ QPen* q_cpitemline_qbase_main_pen(void* self) {
 }
 
 const char* q_cpitemline_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemLine_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitemline_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemLine_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -32850,7 +32850,7 @@ int32_t q_cpitemcurve_qbase_metacall(void* self, int32_t param1, int param2, voi
 }
 
 const char* q_cpitemcurve_tr(const char* s) {
-    libqt_string _str = QCPItemCurve_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -32941,14 +32941,14 @@ QPen* q_cpitemcurve_qbase_main_pen(void* self) {
 }
 
 const char* q_cpitemcurve_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemCurve_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitemcurve_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemCurve_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -33636,7 +33636,7 @@ int32_t q_cpitemrect_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_cpitemrect_tr(const char* s) {
-    libqt_string _str = QCPItemRect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -33767,14 +33767,14 @@ QBrush* q_cpitemrect_qbase_main_brush(void* self) {
 }
 
 const char* q_cpitemrect_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemRect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitemrect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemRect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -34450,7 +34450,7 @@ int32_t q_cpitemtext_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_cpitemtext_tr(const char* s) {
-    libqt_string _str = QCPItemText_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -34696,14 +34696,14 @@ QBrush* q_cpitemtext_qbase_main_brush(void* self) {
 }
 
 const char* q_cpitemtext_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemText_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitemtext_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemText_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -35375,7 +35375,7 @@ int32_t q_cpitemellipse_qbase_metacall(void* self, int32_t param1, int param2, v
 }
 
 const char* q_cpitemellipse_tr(const char* s) {
-    libqt_string _str = QCPItemEllipse_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -35518,14 +35518,14 @@ QBrush* q_cpitemellipse_qbase_main_brush(void* self) {
 }
 
 const char* q_cpitemellipse_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemEllipse_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitemellipse_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemEllipse_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -36201,7 +36201,7 @@ int32_t q_cpitempixmap_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_cpitempixmap_tr(const char* s) {
-    libqt_string _str = QCPItemPixmap_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -36352,14 +36352,14 @@ QPen* q_cpitempixmap_qbase_main_pen(void* self) {
 }
 
 const char* q_cpitempixmap_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemPixmap_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitempixmap_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemPixmap_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -37103,7 +37103,7 @@ int32_t q_cpitemtracer_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_cpitemtracer_tr(const char* s) {
-    libqt_string _str = QCPItemTracer_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -37238,14 +37238,14 @@ QBrush* q_cpitemtracer_qbase_main_brush(void* self) {
 }
 
 const char* q_cpitemtracer_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemTracer_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitemtracer_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemTracer_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -37929,7 +37929,7 @@ int32_t q_cpitembracket_qbase_metacall(void* self, int32_t param1, int param2, v
 }
 
 const char* q_cpitembracket_tr(const char* s) {
-    libqt_string _str = QCPItemBracket_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -38028,14 +38028,14 @@ QPen* q_cpitembracket_qbase_main_pen(void* self) {
 }
 
 const char* q_cpitembracket_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPItemBracket_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cpitembracket_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPItemBracket_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -38711,7 +38711,7 @@ int32_t q_cppolaraxisradial_qbase_metacall(void* self, int32_t param1, int param
 }
 
 const char* q_cppolaraxisradial_tr(const char* s) {
-    libqt_string _str = QCPPolarAxisRadial_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -39369,14 +39369,14 @@ QColor* q_cppolaraxisradial_qbase_get_label_color(void* self) {
 }
 
 const char* q_cppolaraxisradial_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPPolarAxisRadial_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cppolaraxisradial_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPPolarAxisRadial_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -39862,7 +39862,7 @@ int32_t q_cppolaraxisangular_qbase_metacall(void* self, int32_t param1, int para
 }
 
 const char* q_cppolaraxisangular_tr(const char* s) {
-    libqt_string _str = QCPPolarAxisAngular_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -40630,14 +40630,14 @@ QColor* q_cppolaraxisangular_qbase_get_label_color(void* self) {
 }
 
 const char* q_cppolaraxisangular_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPPolarAxisAngular_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cppolaraxisangular_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPPolarAxisAngular_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -41291,7 +41291,7 @@ int32_t q_cppolargrid_qbase_metacall(void* self, int32_t param1, int param2, voi
 }
 
 const char* q_cppolargrid_tr(const char* s) {
-    libqt_string _str = QCPPolarGrid_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -41426,14 +41426,14 @@ void q_cppolargrid_qbase_draw_angular_grid(void* self, void* painter, void* cent
 }
 
 const char* q_cppolargrid_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPPolarGrid_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cppolargrid_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPPolarGrid_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -42015,7 +42015,7 @@ int32_t q_cppolarlegenditem_qbase_metacall(void* self, int32_t param1, int param
 }
 
 const char* q_cppolarlegenditem_tr(const char* s) {
-    libqt_string _str = QCPPolarLegendItem_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -42086,14 +42086,14 @@ QFont* q_cppolarlegenditem_qbase_get_font(void* self) {
 }
 
 const char* q_cppolarlegenditem_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPPolarLegendItem_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cppolarlegenditem_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPPolarLegendItem_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -42889,7 +42889,7 @@ int32_t q_cppolargraph_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_cppolargraph_tr(const char* s) {
-    libqt_string _str = QCPPolarGraph_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -43333,14 +43333,14 @@ libqt_list /* of QPointF* */ q_cppolargraph_qbase_data_to_lines(void* self, libq
 }
 
 const char* q_cppolargraph_tr2(const char* s, const char* c) {
-    libqt_string _str = QCPPolarGraph_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cppolargraph_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QCPPolarGraph_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

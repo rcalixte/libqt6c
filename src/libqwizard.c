@@ -49,7 +49,7 @@ int32_t q_wizard_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 }
 
 const char* q_wizard_tr(const char* s) {
-    libqt_string _str = QWizard_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -369,14 +369,14 @@ void q_wizard_qbase_cleanup_page(void* self, int id) {
 }
 
 const char* q_wizard_tr2(const char* s, const char* c) {
-    libqt_string _str = QWizard_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_wizard_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QWizard_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2492,7 +2492,7 @@ int32_t q_wizardpage_qbase_metacall(void* self, int32_t param1, int param2, void
 }
 
 const char* q_wizardpage_tr(const char* s) {
-    libqt_string _str = QWizardPage_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2672,14 +2672,14 @@ QWizard* q_wizardpage_qbase_wizard(void* self) {
 }
 
 const char* q_wizardpage_tr2(const char* s, const char* c) {
-    libqt_string _str = QWizardPage_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_wizardpage_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QWizardPage_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

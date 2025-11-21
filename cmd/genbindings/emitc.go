@@ -1018,7 +1018,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	ret := strings.Builder{}
 
 	srcFilename := filepath.Base(src.Filename)
-	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
+	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "_QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
 
@@ -1701,6 +1701,21 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		ret.WriteString(`#include "libqtermwidget_interface.hpp"` + "\n")
 	}
 
+	// workaround for tr
+	switch headerName {
+	case "libkcharsets.h",
+		"libkconfigloader.h",
+		"libkencodingprober.h",
+		"libqcommandlineparser.h",
+		"libqimagereader.h",
+		"libqimagewriter.h",
+		"libqsystemsemaphore.h":
+		ret.WriteString(`#include "` + parentInclude + `libqobject.hpp"` + "\n")
+
+	case "libkemailsettings.h":
+		ret.WriteString(`#include "../libqobject.hpp"` + "\n")
+	}
+
 	ret.WriteString(`%%_IMPORTLIBS_%%#include "` + headerName + `pp"
 #include "` + headerName + `"
 `)
@@ -1919,10 +1934,11 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			cmdStructName := cStructName
+			overrideTr := (m.MethodName == "tr" || m.OverrideMethodName == "tr") && cStructName != "QMetaObject"
+			cmdStructName := ifv(overrideTr, "QObject", cStructName)
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
-			if m.InheritedFrom != "" {
+			if m.InheritedFrom != "" && !overrideTr {
 				cmdStructName = cabiClassName(m.InheritedFrom)
 			}
 

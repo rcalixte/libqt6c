@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORKQT6C_LIBQSSLCIPHER_H
-#define SRC_NETWORKQT6C_LIBQSSLCIPHER_H
+#ifndef SRC_NETWORK_QT6C_LIBQSSLCIPHER_H
+#define SRC_NETWORK_QT6C_LIBQSSLCIPHER_H
 
 #include <stdbool.h>
 #include <stddef.h>

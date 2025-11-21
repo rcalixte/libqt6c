@@ -39,15 +39,12 @@ KXMessages* KXMessages_new6(xcb_connection_t* connection, xcb_window_t rootWindo
 QMetaObject* KXMessages_MetaObject(const KXMessages* self);
 void* KXMessages_Metacast(KXMessages* self, const char* param1);
 int KXMessages_Metacall(KXMessages* self, int param1, int param2, void** param3);
-libqt_string KXMessages_Tr(const char* s);
 void KXMessages_BroadcastMessage(KXMessages* self, const char* msg_type, const libqt_string message);
 #ifdef __linux__
 bool KXMessages_BroadcastMessageX(xcb_connection_t* c, const char* msg_type, const libqt_string message, int screenNumber);
 #endif
 void KXMessages_GotMessage(KXMessages* self, const libqt_string message);
 void KXMessages_Connect_GotMessage(KXMessages* self, intptr_t slot);
-libqt_string KXMessages_Tr2(const char* s, const char* c);
-libqt_string KXMessages_Tr3(const char* s, const char* c, int n);
 void KXMessages_BroadcastMessage3(KXMessages* self, const char* msg_type, const libqt_string message, int screen);
 void KXMessages_OnMetacall(KXMessages* self, intptr_t slot);
 int KXMessages_QBaseMetacall(KXMessages* self, int param1, int param2, void** param3);

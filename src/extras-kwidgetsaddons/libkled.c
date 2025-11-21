@@ -59,7 +59,7 @@ int32_t k_led_qbase_metacall(void* self, int32_t param1, int param2, void* param
 }
 
 const char* k_led_tr(const char* s) {
-    libqt_string _str = KLed_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -166,14 +166,14 @@ void k_led_qbase_resize_event(void* self, void* param1) {
 }
 
 const char* k_led_tr2(const char* s, const char* c) {
-    libqt_string _str = KLed_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_led_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KLed_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

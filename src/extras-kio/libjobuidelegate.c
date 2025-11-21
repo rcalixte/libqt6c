@@ -23,7 +23,7 @@ int32_t k_io__jobuidelegate_metacall(void* self, int32_t param1, int param2, voi
 }
 
 const char* k_io__jobuidelegate_tr(const char* s) {
-    libqt_string _str = KIO__JobUiDelegate_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -46,14 +46,14 @@ void k_io__jobuidelegate_update_url_in_clipboard(void* self, void* src, void* de
 }
 
 const char* k_io__jobuidelegate_tr2(const char* s, const char* c) {
-    libqt_string _str = KIO__JobUiDelegate_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_io__jobuidelegate_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KIO__JobUiDelegate_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

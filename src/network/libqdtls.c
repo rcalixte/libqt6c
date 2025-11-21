@@ -40,7 +40,7 @@ int32_t q_dtlsclientverifier_qbase_metacall(void* self, int32_t param1, int para
 }
 
 const char* q_dtlsclientverifier_tr(const char* s) {
-    libqt_string _str = QDtlsClientVerifier_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -77,14 +77,14 @@ const char* q_dtlsclientverifier_dtls_error_string(void* self) {
 }
 
 const char* q_dtlsclientverifier_tr2(const char* s, const char* c) {
-    libqt_string _str = QDtlsClientVerifier_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_dtlsclientverifier_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QDtlsClientVerifier_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -430,7 +430,7 @@ int32_t q_dtls_qbase_metacall(void* self, int32_t param1, int param2, void* para
 }
 
 const char* q_dtls_tr(const char* s) {
-    libqt_string _str = QDtls_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -571,14 +571,14 @@ void q_dtls_on_handshake_timeout(void* self, void (*callback)(void*)) {
 }
 
 const char* q_dtls_tr2(const char* s, const char* c) {
-    libqt_string _str = QDtls_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_dtls_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QDtls_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

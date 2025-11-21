@@ -45,7 +45,7 @@ int32_t q_propertyanimation_qbase_metacall(void* self, int32_t param1, int param
 }
 
 const char* q_propertyanimation_tr(const char* s) {
-    libqt_string _str = QPropertyAnimation_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -107,14 +107,14 @@ void q_propertyanimation_qbase_update_state(void* self, int32_t newState, int32_
 }
 
 const char* q_propertyanimation_tr2(const char* s, const char* c) {
-    libqt_string _str = QPropertyAnimation_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_propertyanimation_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QPropertyAnimation_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

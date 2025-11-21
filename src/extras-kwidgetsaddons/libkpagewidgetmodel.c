@@ -43,7 +43,7 @@ int32_t k_pagewidgetitem_qbase_metacall(void* self, int32_t param1, int param2, 
 }
 
 const char* k_pagewidgetitem_tr(const char* s) {
-    libqt_string _str = KPageWidgetItem_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -149,14 +149,14 @@ void k_pagewidgetitem_on_actions_changed(void* self, void (*callback)(void*)) {
 }
 
 const char* k_pagewidgetitem_tr2(const char* s, const char* c) {
-    libqt_string _str = KPageWidgetItem_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_pagewidgetitem_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KPageWidgetItem_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -502,7 +502,7 @@ int32_t k_pagewidgetmodel_qbase_metacall(void* self, int32_t param1, int param2,
 }
 
 const char* k_pagewidgetmodel_tr(const char* s) {
-    libqt_string _str = KPageWidgetModel_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -637,14 +637,14 @@ void k_pagewidgetmodel_on_toggled(void* self, void (*callback)(void*, void*, boo
 }
 
 const char* k_pagewidgetmodel_tr2(const char* s, const char* c) {
-    libqt_string _str = KPageWidgetModel_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_pagewidgetmodel_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KPageWidgetModel_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

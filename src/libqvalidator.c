@@ -36,7 +36,7 @@ int32_t q_validator_qbase_metacall(void* self, int32_t param1, int param2, void*
 }
 
 const char* q_validator_tr(const char* s) {
-    libqt_string _str = QValidator_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -83,14 +83,14 @@ void q_validator_on_changed(void* self, void (*callback)(void*)) {
 }
 
 const char* q_validator_tr2(const char* s, const char* c) {
-    libqt_string _str = QValidator_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_validator_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QValidator_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -444,7 +444,7 @@ int32_t q_intvalidator_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_intvalidator_tr(const char* s) {
-    libqt_string _str = QIntValidator_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -511,14 +511,14 @@ void q_intvalidator_on_top_changed(void* self, void (*callback)(void*, int)) {
 }
 
 const char* q_intvalidator_tr2(const char* s, const char* c) {
-    libqt_string _str = QIntValidator_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_intvalidator_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QIntValidator_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -888,7 +888,7 @@ int32_t q_doublevalidator_qbase_metacall(void* self, int32_t param1, int param2,
 }
 
 const char* q_doublevalidator_tr(const char* s) {
-    libqt_string _str = QDoubleValidator_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -991,14 +991,14 @@ void q_doublevalidator_on_notation_changed(void* self, void (*callback)(void*, i
 }
 
 const char* q_doublevalidator_tr2(const char* s, const char* c) {
-    libqt_string _str = QDoubleValidator_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_doublevalidator_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QDoubleValidator_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1368,7 +1368,7 @@ int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int32_t param1, 
 }
 
 const char* q_regularexpressionvalidator_tr(const char* s) {
-    libqt_string _str = QRegularExpressionValidator_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1403,14 +1403,14 @@ void q_regularexpressionvalidator_on_regular_expression_changed(void* self, void
 }
 
 const char* q_regularexpressionvalidator_tr2(const char* s, const char* c) {
-    libqt_string _str = QRegularExpressionValidator_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_regularexpressionvalidator_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QRegularExpressionValidator_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

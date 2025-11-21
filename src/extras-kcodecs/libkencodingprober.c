@@ -1,4 +1,5 @@
 #include "../libqbytearrayview.hpp"
+#include "../libqobject.hpp"
 #include "libkencodingprober.hpp"
 #include "libkencodingprober.h"
 
@@ -11,7 +12,7 @@ KEncodingProber* k_encodingprober_new2(int32_t proberType) {
 }
 
 const char* k_encodingprober_tr(const char* sourceText) {
-    libqt_string _str = KEncodingProber_Tr(sourceText);
+    libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -64,14 +65,14 @@ const char* k_encodingprober_name_for_prober_type(int32_t proberType) {
 }
 
 const char* k_encodingprober_tr2(const char* sourceText, const char* disambiguation) {
-    libqt_string _str = KEncodingProber_Tr2(sourceText, disambiguation);
+    libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_encodingprober_tr3(const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = KEncodingProber_Tr3(sourceText, disambiguation, n);
+    libqt_string _str = QObject_Tr3(sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

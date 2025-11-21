@@ -1,4 +1,5 @@
 #include "libqtipccommon.hpp"
+#include "libqobject.hpp"
 #include "libqsystemsemaphore.hpp"
 #include "libqsystemsemaphore.h"
 
@@ -27,7 +28,7 @@ QSystemSemaphore* q_systemsemaphore_new6(const char* key, int initialValue, int3
 }
 
 const char* q_systemsemaphore_tr(const char* sourceText) {
-    libqt_string _str = QSystemSemaphore_Tr(sourceText);
+    libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -88,14 +89,14 @@ QNativeIpcKey* q_systemsemaphore_legacy_native_key(const char* key) {
 }
 
 const char* q_systemsemaphore_tr2(const char* sourceText, const char* disambiguation) {
-    libqt_string _str = QSystemSemaphore_Tr2(sourceText, disambiguation);
+    libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_systemsemaphore_tr3(const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = QSystemSemaphore_Tr3(sourceText, disambiguation, n);
+    libqt_string _str = QObject_Tr3(sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

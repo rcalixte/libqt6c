@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_MULTIMEDIAQT6C_LIBQTVIDEO_H
-#define SRC_MULTIMEDIAQT6C_LIBQTVIDEO_H
+#ifndef SRC_MULTIMEDIA_QT6C_LIBQTVIDEO_H
+#define SRC_MULTIMEDIA_QT6C_LIBQTVIDEO_H
 
 #include <stdbool.h>
 #include <stddef.h>

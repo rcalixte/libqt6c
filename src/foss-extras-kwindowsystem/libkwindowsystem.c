@@ -18,7 +18,7 @@ int32_t k_windowsystem_metacall(void* self, int32_t param1, int param2, void* pa
 }
 
 const char* k_windowsystem_tr(const char* s) {
-    libqt_string _str = KWindowSystem_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -77,14 +77,14 @@ void k_windowsystem_on_showing_desktop_changed(void* self, void (*callback)(void
 }
 
 const char* k_windowsystem_tr2(const char* s, const char* c) {
-    libqt_string _str = KWindowSystem_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_windowsystem_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KWindowSystem_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

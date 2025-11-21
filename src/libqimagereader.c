@@ -3,6 +3,7 @@
 #include "libqimage.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
+#include "libqobject.hpp"
 #include "libqimagereader.hpp"
 #include "libqimagereader.h"
 
@@ -27,7 +28,7 @@ QImageReader* q_imagereader_new5(const char* fileName, const char* format) {
 }
 
 const char* q_imagereader_tr(const char* sourceText) {
-    libqt_string _str = QImageReader_Tr(sourceText);
+    libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -330,14 +331,14 @@ void q_imagereader_set_allocation_limit(int mbLimit) {
 }
 
 const char* q_imagereader_tr2(const char* sourceText, const char* disambiguation) {
-    libqt_string _str = QImageReader_Tr2(sourceText, disambiguation);
+    libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_imagereader_tr3(const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = QImageReader_Tr3(sourceText, disambiguation, n);
+    libqt_string _str = QObject_Tr3(sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
