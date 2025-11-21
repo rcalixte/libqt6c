@@ -45,7 +45,7 @@ int32_t q_spinbox_qbase_metacall(void* self, int32_t param1, int param2, void* p
 }
 
 const char* q_spinbox_tr(const char* s) {
-    libqt_string _str = QSpinBox_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -215,14 +215,14 @@ void q_spinbox_on_text_changed(void* self, void (*callback)(void*, const char*))
 }
 
 const char* q_spinbox_tr2(const char* s, const char* c) {
-    libqt_string _str = QSpinBox_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_spinbox_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QSpinBox_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2468,7 +2468,7 @@ int32_t q_doublespinbox_qbase_metacall(void* self, int32_t param1, int param2, v
 }
 
 const char* q_doublespinbox_tr(const char* s) {
-    libqt_string _str = QDoubleSpinBox_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2626,14 +2626,14 @@ void q_doublespinbox_on_text_changed(void* self, void (*callback)(void*, const c
 }
 
 const char* q_doublespinbox_tr2(const char* s, const char* c) {
-    libqt_string _str = QDoubleSpinBox_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_doublespinbox_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QDoubleSpinBox_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

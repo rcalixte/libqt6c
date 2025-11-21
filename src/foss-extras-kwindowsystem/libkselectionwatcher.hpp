@@ -51,7 +51,6 @@ KSelectionWatcher* KSelectionWatcher_new10(const char* selection, xcb_connection
 QMetaObject* KSelectionWatcher_MetaObject(const KSelectionWatcher* self);
 void* KSelectionWatcher_Metacast(KSelectionWatcher* self, const char* param1);
 int KSelectionWatcher_Metacall(KSelectionWatcher* self, int param1, int param2, void** param3);
-libqt_string KSelectionWatcher_Tr(const char* s);
 #ifdef __linux__
 xcb_window_t KSelectionWatcher_Owner(KSelectionWatcher* self);
 #endif
@@ -62,8 +61,6 @@ void KSelectionWatcher_NewOwner(KSelectionWatcher* self, xcb_window_t owner);
 void KSelectionWatcher_Connect_NewOwner(KSelectionWatcher* self, intptr_t slot);
 void KSelectionWatcher_LostOwner(KSelectionWatcher* self);
 void KSelectionWatcher_Connect_LostOwner(KSelectionWatcher* self, intptr_t slot);
-libqt_string KSelectionWatcher_Tr2(const char* s, const char* c);
-libqt_string KSelectionWatcher_Tr3(const char* s, const char* c, int n);
 void KSelectionWatcher_OnMetacall(KSelectionWatcher* self, intptr_t slot);
 int KSelectionWatcher_QBaseMetacall(KSelectionWatcher* self, int param1, int param2, void** param3);
 bool KSelectionWatcher_Event(KSelectionWatcher* self, QEvent* event);

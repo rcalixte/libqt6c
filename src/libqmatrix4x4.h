@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCQT6C_LIBQMATRIX4X4_H
-#define SRCQT6C_LIBQMATRIX4X4_H
+#ifndef SRC_QT6C_LIBQMATRIX4X4_H
+#define SRC_QT6C_LIBQMATRIX4X4_H
 
 #include <stdbool.h>
 #include <stddef.h>

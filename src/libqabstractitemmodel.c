@@ -302,7 +302,7 @@ int32_t q_abstractitemmodel_qbase_metacall(void* self, int32_t param1, int param
 }
 
 const char* q_abstractitemmodel_tr(const char* s) {
-    libqt_string _str = QAbstractItemModel_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1103,14 +1103,14 @@ libqt_list /* of QModelIndex* */ q_abstractitemmodel_qbase_persistent_index_list
 }
 
 const char* q_abstractitemmodel_tr2(const char* s, const char* c) {
-    libqt_string _str = QAbstractItemModel_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_abstractitemmodel_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QAbstractItemModel_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1584,7 +1584,7 @@ int32_t q_abstracttablemodel_qbase_metacall(void* self, int32_t param1, int para
 }
 
 const char* q_abstracttablemodel_tr(const char* s) {
-    libqt_string _str = QAbstractTableModel_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1639,14 +1639,14 @@ int32_t q_abstracttablemodel_qbase_flags(void* self, void* index) {
 }
 
 const char* q_abstracttablemodel_tr2(const char* s, const char* c) {
-    libqt_string _str = QAbstractTableModel_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_abstracttablemodel_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QAbstractTableModel_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2842,7 +2842,7 @@ int32_t q_abstractlistmodel_qbase_metacall(void* self, int32_t param1, int param
 }
 
 const char* q_abstractlistmodel_tr(const char* s) {
-    libqt_string _str = QAbstractListModel_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2897,14 +2897,14 @@ int32_t q_abstractlistmodel_qbase_flags(void* self, void* index) {
 }
 
 const char* q_abstractlistmodel_tr2(const char* s, const char* c) {
-    libqt_string _str = QAbstractListModel_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_abstractlistmodel_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QAbstractListModel_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

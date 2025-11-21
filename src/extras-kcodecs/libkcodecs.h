@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KCODECSQT6C_LIBKCODECS_H
-#define SRC_EXTRAS_KCODECSQT6C_LIBKCODECS_H
+#ifndef SRC_EXTRAS_KCODECS_QT6C_LIBKCODECS_H
+#define SRC_EXTRAS_KCODECS_QT6C_LIBKCODECS_H
 
 #include <stdbool.h>
 #include <stddef.h>

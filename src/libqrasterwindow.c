@@ -44,7 +44,7 @@ int32_t q_rasterwindow_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_rasterwindow_tr(const char* s) {
-    libqt_string _str = QRasterWindow_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -87,14 +87,14 @@ void q_rasterwindow_qbase_resize_event(void* self, void* event) {
 }
 
 const char* q_rasterwindow_tr2(const char* s, const char* c) {
-    libqt_string _str = QRasterWindow_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_rasterwindow_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QRasterWindow_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

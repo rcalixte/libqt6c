@@ -35,7 +35,7 @@ int32_t q_abstractanimation_qbase_metacall(void* self, int32_t param1, int param
 }
 
 const char* q_abstractanimation_tr(const char* s) {
-    libqt_string _str = QAbstractAnimation_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -198,14 +198,14 @@ void q_abstractanimation_qbase_update_direction(void* self, int32_t direction) {
 }
 
 const char* q_abstractanimation_tr2(const char* s, const char* c) {
-    libqt_string _str = QAbstractAnimation_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_abstractanimation_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QAbstractAnimation_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -543,7 +543,7 @@ int32_t q_animationdriver_qbase_metacall(void* self, int32_t param1, int param2,
 }
 
 const char* q_animationdriver_tr(const char* s) {
-    libqt_string _str = QAnimationDriver_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -638,14 +638,14 @@ void q_animationdriver_qbase_stop(void* self) {
 }
 
 const char* q_animationdriver_tr2(const char* s, const char* c) {
-    libqt_string _str = QAnimationDriver_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_animationdriver_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QAnimationDriver_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

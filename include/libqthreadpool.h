@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCQT6C_LIBQTHREADPOOL_H
-#define SRCQT6C_LIBQTHREADPOOL_H
+#ifndef SRC_QT6C_LIBQTHREADPOOL_H
+#define SRC_QT6C_LIBQTHREADPOOL_H
 
 #include <stdbool.h>
 #include <stddef.h>

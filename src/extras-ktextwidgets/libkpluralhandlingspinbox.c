@@ -47,7 +47,7 @@ int32_t k_pluralhandlingspinbox_qbase_metacall(void* self, int32_t param1, int p
 }
 
 const char* k_pluralhandlingspinbox_tr(const char* s) {
-    libqt_string _str = KPluralHandlingSpinBox_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -58,14 +58,14 @@ void k_pluralhandlingspinbox_set_suffix(void* self, void* suffix) {
 }
 
 const char* k_pluralhandlingspinbox_tr2(const char* s, const char* c) {
-    libqt_string _str = KPluralHandlingSpinBox_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_pluralhandlingspinbox_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KPluralHandlingSpinBox_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

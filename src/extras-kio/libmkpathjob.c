@@ -21,7 +21,7 @@ int32_t k_io__mkpathjob_metacall(void* self, int32_t param1, int param2, void* p
 }
 
 const char* k_io__mkpathjob_tr(const char* s) {
-    libqt_string _str = KIO__MkpathJob_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -36,14 +36,14 @@ void k_io__mkpathjob_on_directory_created(void* self, void (*callback)(void*, vo
 }
 
 const char* k_io__mkpathjob_tr2(const char* s, const char* c) {
-    libqt_string _str = KIO__MkpathJob_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_io__mkpathjob_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KIO__MkpathJob_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

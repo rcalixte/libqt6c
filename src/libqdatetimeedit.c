@@ -73,7 +73,7 @@ int32_t q_datetimeedit_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_datetimeedit_tr(const char* s) {
-    libqt_string _str = QDateTimeEdit_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -500,14 +500,14 @@ void q_datetimeedit_qbase_init_style_option(void* self, void* option) {
 }
 
 const char* q_datetimeedit_tr2(const char* s, const char* c) {
-    libqt_string _str = QDateTimeEdit_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_datetimeedit_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QDateTimeEdit_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2629,7 +2629,7 @@ int32_t q_timeedit_qbase_metacall(void* self, int32_t param1, int param2, void* 
 }
 
 const char* q_timeedit_tr(const char* s) {
-    libqt_string _str = QTimeEdit_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2644,14 +2644,14 @@ void q_timeedit_on_user_time_changed(void* self, void (*callback)(void*, void*))
 }
 
 const char* q_timeedit_tr2(const char* s, const char* c) {
-    libqt_string _str = QTimeEdit_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_timeedit_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QTimeEdit_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -5193,7 +5193,7 @@ int32_t q_dateedit_qbase_metacall(void* self, int32_t param1, int param2, void* 
 }
 
 const char* q_dateedit_tr(const char* s) {
-    libqt_string _str = QDateEdit_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -5208,14 +5208,14 @@ void q_dateedit_on_user_date_changed(void* self, void (*callback)(void*, void*))
 }
 
 const char* q_dateedit_tr2(const char* s, const char* c) {
-    libqt_string _str = QDateEdit_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_dateedit_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QDateEdit_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

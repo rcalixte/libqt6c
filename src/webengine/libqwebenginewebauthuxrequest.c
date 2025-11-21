@@ -17,7 +17,7 @@ int32_t q_webenginewebauthuxrequest_metacall(void* self, int32_t param1, int par
 }
 
 const char* q_webenginewebauthuxrequest_tr(const char* s) {
-    libqt_string _str = QWebEngineWebAuthUxRequest_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -86,14 +86,14 @@ void q_webenginewebauthuxrequest_set_pin(void* self, const char* pin) {
 }
 
 const char* q_webenginewebauthuxrequest_tr2(const char* s, const char* c) {
-    libqt_string _str = QWebEngineWebAuthUxRequest_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_webenginewebauthuxrequest_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QWebEngineWebAuthUxRequest_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

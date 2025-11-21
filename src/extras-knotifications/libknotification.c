@@ -43,7 +43,7 @@ int32_t k_notificationaction_qbase_metacall(void* self, int32_t param1, int para
 }
 
 const char* k_notificationaction_tr(const char* s) {
-    libqt_string _str = KNotificationAction_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -77,14 +77,14 @@ void k_notificationaction_on_label_changed(void* self, void (*callback)(void*, c
 }
 
 const char* k_notificationaction_tr2(const char* s, const char* c) {
-    libqt_string _str = KNotificationAction_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_notificationaction_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KNotificationAction_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -434,7 +434,7 @@ int32_t k_notification_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* k_notification_tr(const char* s) {
-    libqt_string _str = KNotification_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -751,14 +751,14 @@ void k_notification_beep() {
 }
 
 const char* k_notification_tr2(const char* s, const char* c) {
-    libqt_string _str = KNotification_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_notification_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KNotification_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

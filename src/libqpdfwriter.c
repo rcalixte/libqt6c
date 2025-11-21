@@ -46,7 +46,7 @@ int32_t q_pdfwriter_qbase_metacall(void* self, int32_t param1, int param2, void*
 }
 
 const char* q_pdfwriter_tr(const char* s) {
-    libqt_string _str = QPdfWriter_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -166,14 +166,14 @@ int32_t q_pdfwriter_qbase_metric(void* self, int32_t id) {
 }
 
 const char* q_pdfwriter_tr2(const char* s, const char* c) {
-    libqt_string _str = QPdfWriter_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_pdfwriter_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QPdfWriter_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

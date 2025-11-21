@@ -19,7 +19,7 @@ int32_t q_keychain__job_metacall(void* self, int32_t param1, int param2, void* p
 }
 
 const char* q_keychain__job_tr(const char* s) {
-    libqt_string _str = QKeychain__Job_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -99,14 +99,14 @@ void q_keychain__job_on_finished(void* self, void (*callback)(void*, void*)) {
 }
 
 const char* q_keychain__job_tr2(const char* s, const char* c) {
-    libqt_string _str = QKeychain__Job_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_keychain__job_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QKeychain__Job_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -328,7 +328,7 @@ int32_t q_keychain__readpasswordjob_qbase_metacall(void* self, int32_t param1, i
 }
 
 const char* q_keychain__readpasswordjob_tr(const char* s) {
-    libqt_string _str = QKeychain__ReadPasswordJob_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -349,14 +349,14 @@ const char* q_keychain__readpasswordjob_text_data(void* self) {
 }
 
 const char* q_keychain__readpasswordjob_tr2(const char* s, const char* c) {
-    libqt_string _str = QKeychain__ReadPasswordJob_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_keychain__readpasswordjob_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QKeychain__ReadPasswordJob_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -787,7 +787,7 @@ int32_t q_keychain__writepasswordjob_qbase_metacall(void* self, int32_t param1, 
 }
 
 const char* q_keychain__writepasswordjob_tr(const char* s) {
-    libqt_string _str = QKeychain__WritePasswordJob_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -802,14 +802,14 @@ void q_keychain__writepasswordjob_set_text_data(void* self, const char* data) {
 }
 
 const char* q_keychain__writepasswordjob_tr2(const char* s, const char* c) {
-    libqt_string _str = QKeychain__WritePasswordJob_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_keychain__writepasswordjob_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QKeychain__WritePasswordJob_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1240,21 +1240,21 @@ int32_t q_keychain__deletepasswordjob_qbase_metacall(void* self, int32_t param1,
 }
 
 const char* q_keychain__deletepasswordjob_tr(const char* s) {
-    libqt_string _str = QKeychain__DeletePasswordJob_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_keychain__deletepasswordjob_tr2(const char* s, const char* c) {
-    libqt_string _str = QKeychain__DeletePasswordJob_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_keychain__deletepasswordjob_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QKeychain__DeletePasswordJob_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

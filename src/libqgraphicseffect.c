@@ -40,7 +40,7 @@ int32_t q_graphicseffect_qbase_metacall(void* self, int32_t param1, int param2, 
 }
 
 const char* q_graphicseffect_tr(const char* s) {
-    libqt_string _str = QGraphicsEffect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -167,14 +167,14 @@ QPixmap* q_graphicseffect_qbase_source_pixmap(void* self) {
 }
 
 const char* q_graphicseffect_tr2(const char* s, const char* c) {
-    libqt_string _str = QGraphicsEffect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_graphicseffect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QGraphicsEffect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -568,7 +568,7 @@ int32_t q_graphicscolorizeeffect_qbase_metacall(void* self, int32_t param1, int 
 }
 
 const char* q_graphicscolorizeeffect_tr(const char* s) {
-    libqt_string _str = QGraphicsColorizeEffect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -619,14 +619,14 @@ void q_graphicscolorizeeffect_qbase_draw(void* self, void* painter) {
 }
 
 const char* q_graphicscolorizeeffect_tr2(const char* s, const char* c) {
-    libqt_string _str = QGraphicsColorizeEffect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_graphicscolorizeeffect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QGraphicsColorizeEffect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1080,7 +1080,7 @@ int32_t q_graphicsblureffect_qbase_metacall(void* self, int32_t param1, int para
 }
 
 const char* q_graphicsblureffect_tr(const char* s) {
-    libqt_string _str = QGraphicsBlurEffect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1143,14 +1143,14 @@ void q_graphicsblureffect_qbase_draw(void* self, void* painter) {
 }
 
 const char* q_graphicsblureffect_tr2(const char* s, const char* c) {
-    libqt_string _str = QGraphicsBlurEffect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_graphicsblureffect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QGraphicsBlurEffect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1592,7 +1592,7 @@ int32_t q_graphicsdropshadoweffect_qbase_metacall(void* self, int32_t param1, in
 }
 
 const char* q_graphicsdropshadoweffect_tr(const char* s) {
-    libqt_string _str = QGraphicsDropShadowEffect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1695,14 +1695,14 @@ void q_graphicsdropshadoweffect_qbase_draw(void* self, void* painter) {
 }
 
 const char* q_graphicsdropshadoweffect_tr2(const char* s, const char* c) {
-    libqt_string _str = QGraphicsDropShadowEffect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_graphicsdropshadoweffect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QGraphicsDropShadowEffect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2144,7 +2144,7 @@ int32_t q_graphicsopacityeffect_qbase_metacall(void* self, int32_t param1, int p
 }
 
 const char* q_graphicsopacityeffect_tr(const char* s) {
-    libqt_string _str = QGraphicsOpacityEffect_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -2195,14 +2195,14 @@ void q_graphicsopacityeffect_qbase_draw(void* self, void* painter) {
 }
 
 const char* q_graphicsopacityeffect_tr2(const char* s, const char* c) {
-    libqt_string _str = QGraphicsOpacityEffect_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_graphicsopacityeffect_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QGraphicsOpacityEffect_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

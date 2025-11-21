@@ -1,3 +1,4 @@
+#include "../libqobject.hpp"
 #include "libkemailsettings.hpp"
 #include "libkemailsettings.h"
 
@@ -6,7 +7,7 @@ KEMailSettings* k_emailsettings_new() {
 }
 
 const char* k_emailsettings_tr(const char* sourceText) {
-    libqt_string _str = KEMailSettings_Tr(sourceText);
+    libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -58,14 +59,14 @@ void k_emailsettings_set_setting(void* self, int32_t s, const char* v) {
 }
 
 const char* k_emailsettings_tr2(const char* sourceText, const char* disambiguation) {
-    libqt_string _str = KEMailSettings_Tr2(sourceText, disambiguation);
+    libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_emailsettings_tr3(const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = KEMailSettings_Tr3(sourceText, disambiguation, n);
+    libqt_string _str = QObject_Tr3(sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

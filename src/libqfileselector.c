@@ -35,7 +35,7 @@ int32_t q_fileselector_qbase_metacall(void* self, int32_t param1, int param2, vo
 }
 
 const char* q_fileselector_tr(const char* s) {
-    libqt_string _str = QFileSelector_Tr(s);
+    libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -106,14 +106,14 @@ const char** q_fileselector_all_selectors(void* self) {
 }
 
 const char* q_fileselector_tr2(const char* s, const char* c) {
-    libqt_string _str = QFileSelector_Tr2(s, c);
+    libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_fileselector_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = QFileSelector_Tr3(s, c, n);
+    libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

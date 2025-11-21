@@ -1,5 +1,6 @@
 #include "libqcommandlineoption.hpp"
 #include "libqcoreapplication.hpp"
+#include "libqobject.hpp"
 #include "libqcommandlineparser.hpp"
 #include "libqcommandlineparser.h"
 
@@ -8,7 +9,7 @@ QCommandLineParser* q_commandlineparser_new() {
 }
 
 const char* q_commandlineparser_tr(const char* sourceText) {
-    libqt_string _str = QCommandLineParser_Tr(sourceText);
+    libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -232,14 +233,14 @@ const char* q_commandlineparser_help_text(void* self) {
 }
 
 const char* q_commandlineparser_tr2(const char* sourceText, const char* disambiguation) {
-    libqt_string _str = QCommandLineParser_Tr2(sourceText, disambiguation);
+    libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_commandlineparser_tr3(const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = QCommandLineParser_Tr3(sourceText, disambiguation, n);
+    libqt_string _str = QObject_Tr3(sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

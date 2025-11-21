@@ -1,9 +1,10 @@
 #include "../libqchar.hpp"
+#include "../libqobject.hpp"
 #include "libkcharsets.hpp"
 #include "libkcharsets.h"
 
 const char* k_charsets_tr(const char* sourceText) {
-    libqt_string _str = KCharsets_Tr(sourceText);
+    libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -78,14 +79,14 @@ const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName
 }
 
 const char* k_charsets_tr2(const char* sourceText, const char* disambiguation) {
-    libqt_string _str = KCharsets_Tr2(sourceText, disambiguation);
+    libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* k_charsets_tr3(const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = KCharsets_Tr3(sourceText, disambiguation, n);
+    libqt_string _str = QObject_Tr3(sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
