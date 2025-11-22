@@ -1,0 +1,231 @@
+// lupdate-c parses a C header or source file based on libqt6c and generates a
+// translation (*.ts) file for use with either Qt's lrelease tool and/or Qt
+// Linguist.
+package main
+
+import (
+	"encoding/xml"
+	"flag"
+	"fmt"
+	"os"
+	"path/filepath"
+	"regexp"
+	"strconv"
+	"strings"
+)
+
+const (
+	DefaultComments  bool   = false
+	DefaultKeep      bool   = false
+	DefaultLanguage  string = ""
+	DefaultNoRecurse bool   = false
+)
+
+var (
+	FoundCounter int
+	NewCounter   int
+)
+
+type FlagOptions struct {
+	AddComments     bool
+	ExistingContext []Context
+	KeepObsolete    bool
+	SkipEmpty       bool
+}
+
+func lupdateExec() error {
+	var inPath, lang, outT string
+	var comments, keep, noRecurse bool
+
+	inUsage := "Input file (.c, .h) or directory"
+	outTUsage := "(Optional) Path to .ts output file; if omitted, inferred from the input file or directory path"
+	commentsUsage := "(Optional) Include code comments in the output file, defaults to false"
+	keepUsage := "(Optional) Keep obsolete and vanished strings, defaults to false"
+	languageUsage := "(Optional) Language code, defaults to empty"
+	noRecurseUsage := "(Optional) Disable recursively parsing all subdirectories, defaults to recurse if input is a directory"
+	shorthandUsage := " (shorthand)"
+
+	flag.StringVar(&inPath, "input_file", "", inUsage)
+	flag.StringVar(&inPath, "i", "", inUsage+shorthandUsage)
+	flag.StringVar(&outT, "output_file", "", outTUsage)
+	flag.StringVar(&outT, "o", "", outTUsage+shorthandUsage)
+	flag.BoolVar(&comments, "comments", DefaultComments, commentsUsage)
+	flag.BoolVar(&comments, "c", DefaultComments, commentsUsage+shorthandUsage)
+	flag.BoolVar(&keep, "keep_obsolete", DefaultKeep, keepUsage)
+	flag.BoolVar(&keep, "k", DefaultKeep, keepUsage+shorthandUsage)
+	flag.StringVar(&lang, "language", DefaultLanguage, languageUsage)
+	flag.StringVar(&lang, "l", DefaultLanguage, languageUsage+shorthandUsage)
+	flag.BoolVar(&noRecurse, "no_recursive", DefaultNoRecurse, noRecurseUsage)
+	flag.BoolVar(&noRecurse, "n", DefaultNoRecurse, noRecurseUsage+shorthandUsage)
+	flag.Parse()
+
+	switch inPath {
+	case "":
+		flag.Usage()
+		os.Exit(1)
+	case ".":
+		absPath, err := filepath.Abs(".")
+		if err != nil {
+			return fmt.Errorf("error getting current directory: %w", err)
+		}
+		inPath = absPath
+	}
+
+	info, err := os.Stat(inPath)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return fmt.Errorf("input file '%s' not found", inPath)
+		}
+		return fmt.Errorf("error checking '%s'", inPath)
+	}
+
+	var inputFiles []string
+
+	generate := "lupdate-c -i " + strconv.Quote(inPath)
+
+	if info.IsDir() {
+		if noRecurse {
+			files, err := os.ReadDir(inPath)
+			if err != nil {
+				return fmt.Errorf("error reading directory '%s'", inPath)
+			}
+			for _, file := range files {
+				if strings.HasSuffix(file.Name(), ".c") || strings.HasSuffix(file.Name(), ".h") {
+					inputFiles = append(inputFiles, filepath.Join(inPath, file.Name()))
+				}
+			}
+			generate += " -n"
+
+		} else {
+			err = filepath.Walk(inPath, func(path string, info os.FileInfo, err error) error {
+				if err != nil {
+					return err
+				}
+
+				if info.IsDir() {
+					return nil
+				}
+
+				if strings.HasSuffix(path, ".c") || strings.HasSuffix(path, ".h") {
+					inputFiles = append(inputFiles, path)
+				}
+				return nil
+			})
+			if err != nil {
+				return err
+			}
+		}
+
+	} else {
+		if !strings.HasSuffix(inPath, ".c") && !strings.HasSuffix(inPath, ".h") {
+			return fmt.Errorf("input file '%s' must be a .c or .h file", inPath)
+		}
+		inputFiles = append(inputFiles, inPath)
+		noRecurse = true
+	}
+
+	if outT != "" && strings.HasSuffix(outT, ".ts") {
+		generate += " -o " + strconv.Quote(outT)
+	} else {
+		if !info.IsDir() {
+			outT = strings.TrimSuffix(inPath, ".c")
+			outT = strings.TrimSuffix(outT, ".h") + ".ts"
+		} else {
+			outT = strings.TrimSuffix(inPath, "/") + ".ts"
+		}
+	}
+
+	if comments {
+		generate += " -c"
+	}
+
+	options := FlagOptions{
+		AddComments:  comments,
+		KeepObsolete: keep,
+	}
+
+	var langGen, langHeader string
+	if lang != "" {
+		regexp.MustCompile("^(?i)[a-z]{2,3}(?:_[a-z]{2,3})?$").MatchString(lang)
+		if err != nil {
+			return fmt.Errorf("error parsing language code: %w", err)
+		}
+		langGen = " -l " + strconv.Quote(lang)
+		langHeader = ` language="` + lang + `"`
+	}
+
+	if keep {
+		generate += " -k"
+
+		if _, err := os.Stat(outT); err == nil {
+			existingContext, err := os.ReadFile(outT)
+			if err != nil {
+				return fmt.Errorf("error reading existing output file: %w", err)
+			}
+			imported := TS{}
+			if err := xml.Unmarshal(existingContext, &imported); err != nil {
+				return fmt.Errorf("error parsing existing context: %w", err)
+			}
+			options.ExistingContext = imported.Contexts
+			for _, context := range options.ExistingContext {
+				for range context.Messages {
+					FoundCounter++
+				}
+			}
+			if imported.Language != "" {
+				langGen = " -l " + strconv.Quote(imported.Language)
+				langHeader = ` language="` + imported.Language + `"`
+			}
+		}
+	}
+
+	generate += langGen
+
+	context, err := parse(inputFiles, options)
+	if err != nil {
+		return fmt.Errorf("error parsing input files: %w", err)
+	}
+
+	rccToStr := strings.Builder{}
+	rccToStr.WriteString(`<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated by lupdate-c. To update this file, run the 'lupdate-c' command below. -->
+<!-- ` + generate + ` -->
+<!DOCTYPE TS>
+<TS version="2.1"` + langHeader + `>
+` + context + `
+</TS>
+`)
+
+	if err = os.WriteFile(outT, []byte(rccToStr.String()), 0644); err != nil {
+		return fmt.Errorf("error writing to '%s': %w", outT, err)
+	} else {
+		fmt.Println("Wrote to: " + outT + "\n    Found " + strconv.Itoa(FoundCounter+NewCounter) + " source text(s) " +
+			"(" + strconv.Itoa(NewCounter) + " new, " + strconv.Itoa(FoundCounter) + " already existing)")
+	}
+
+	return nil
+}
+
+func (t *Translation) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	type Alias Translation
+	aux := &struct {
+		*Alias
+	}{
+		Alias: (*Alias)(t),
+	}
+
+	if err := d.DecodeElement(aux, &start); err != nil {
+		return err
+	}
+
+	t.Text = strings.TrimSpace(t.Text)
+	return nil
+}
+
+func main() {
+	err := lupdateExec()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "lupdate-c: %s\n", err.Error())
+		os.Exit(1)
+	}
+}
