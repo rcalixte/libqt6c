@@ -9,15 +9,17 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 )
 
 const (
 	DefaultVariableName string = "_resource_rcc_"
-	DefaultRccBinary    string = "rcc"
 	DefaultUpper        bool   = false
 )
+
+var DefaultRccBinary string = "rcc"
 
 func QrcExec() error {
 	// Parse arguments
@@ -50,14 +52,18 @@ func QrcExec() error {
 
 	// Check if input file exists
 	if _, err := os.Stat(inFile); os.IsNotExist(err) {
-		return fmt.Errorf("Input file '%s' not found\n", inFile)
+		return fmt.Errorf("input file '%s' not found", inFile)
 	}
 
 	// Figure out regeneration command and fill in default output names, if not specified
 	generate := "qrc-c" + " -i " + strconv.Quote(inFile)
 
 	if outH != "" && strings.HasSuffix(outH, ".h") {
-		generate += " -o " + strconv.Quote(filepath.Base(outH))
+		if strings.HasPrefix(outH, ".") {
+			generate += " -o " + strconv.Quote(outH)
+		} else {
+			generate += " -o " + strconv.Quote(filepath.Base(outH))
+		}
 	} else {
 		outH = strings.TrimSuffix(inFile, ".qrc") + ".h"
 	}
@@ -124,7 +130,7 @@ bool qrc_` + methodName + `_delete() {
 `)
 
 	if err = os.WriteFile(outH, []byte(rccToStr.String()), 0644); err != nil {
-		return fmt.Errorf("Error writing to '%s': %w", outH, err)
+		return fmt.Errorf("error writing to '%s': %w", outH, err)
 	}
 	if err = os.Remove(outRcc); err != nil {
 		return err
@@ -134,6 +140,15 @@ bool qrc_` + methodName + `_delete() {
 }
 
 func main() {
+	switch runtime.GOOS {
+	case "darwin":
+		DefaultRccBinary = "/opt/homebrew/share/qt/libexec/rcc"
+	case "freebsd":
+		DefaultRccBinary = "/usr/local/libexec/qt6/rcc"
+	case "windows":
+		DefaultRccBinary = "C:\\Qt\\6.8.3\\llvm-mingw_64\\bin\\rcc.exe"
+	}
+
 	err := QrcExec()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "qrc-c: %s\n", err.Error())
