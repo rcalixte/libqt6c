@@ -37,6 +37,18 @@ Valid and supported syntax from the code file(s) containing libqt6c methods
 are processed into Qt translation files for use with Qt's internationalization
 tools.
 
+Comments are supported with [similar syntax natively supported by Qt](https://doc.qt.io/qt-6/i18n-source-translation.html):
+
+```c
+// an ignored/private comment
+
+/* an ignored/private comment block */
+
+//: a comment for translators
+
+/*: an included comment block for translators */
+```
+
 To see the full options that are available, run `./lupdate-c -h`.
 
 Execution design
