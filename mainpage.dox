@@ -1,0 +1,29 @@
+/// @mainpage Qt 6 for C
+///
+/// @section intro Introduction
+///
+/// This library provides Qt 6 bindings and wrappers for C. This online
+/// documentation is meant to simplify browsing the user-facing API for C,
+/// augmenting the official Qt documentation as well as auxiliary libraries
+/// that provide online documentation. The goal of this library is to
+/// facilitate single-language, cross-platform native desktop application
+/// development.
+///
+/// This online documentation also includes third-party libraries in the Qt
+/// ecosystem such as [QCustomPlot](https://www.qcustomplot.com), [QScintilla](https://riverbankcomputing.com/software/qscintilla),
+/// various [KDE Frameworks](https://develop.kde.org/products/frameworks/), and others.
+///
+/// For the [library tooling](https://github.com/rcalixte/libqt6c?tab=readme-ov-file#tools), the documentation for each tool
+/// is available next to the tool's source code.
+///
+/// @section getting-started Getting Started
+///
+/// The main library documentation is outlined in the
+/// [table of contents](https://github.com/rcalixte/libqt6c?tab=readme-ov-file#table-of-contents).
+///
+/// Full examples are available in the [examples](https://github.com/rcalixte/libqt6c-examples) repository.
+///
+/// There is also a [demo application](https://github.com/rcalixte/libqt6c-demo) that demonstrates the use of the library
+/// with a simpler build system than the examples, while also demonstrating a
+/// more realistic use of the library for a single application. The demo also
+/// includes exercises designed to help developers onboard to the library.
