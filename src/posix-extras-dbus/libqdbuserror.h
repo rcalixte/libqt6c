@@ -33,58 +33,58 @@ QDBusError* q_dbuserror_new3(int32_t error, const char* message);
 /// @param other QDBusError*
 QDBusError* q_dbuserror_new4(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
 ///
 /// @param self QDBusError*
 /// @param other QDBusError*
 void q_dbuserror_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
 ///
 /// @param self QDBusError*
 /// @param msg QDBusMessage*
 void q_dbuserror_operator_assign2(void* self, void* msg);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#swap)
 ///
 /// @param self QDBusError*
 /// @param other QDBusError*
 void q_dbuserror_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#type)
 ///
 /// @param self QDBusError*
 ///
 /// @return enum QDBusError__ErrorType
 int32_t q_dbuserror_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusError*
 const char* q_dbuserror_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#message)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#message)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusError*
 const char* q_dbuserror_message(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#isValid)
 ///
 /// @param self QDBusError*
 bool q_dbuserror_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param error enum QDBusError__ErrorType
 const char* q_dbuserror_error_string(int32_t error);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#dtor.QDBusError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#dtor.QDBusError)
 ///
 /// Delete this object from C++ memory.
 ///

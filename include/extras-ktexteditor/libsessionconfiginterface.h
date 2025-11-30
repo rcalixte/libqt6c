@@ -17,13 +17,13 @@
 ///
 KTextEditor__SessionConfigInterface* k_texteditor__sessionconfiginterface_new();
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-sessionconfiginterface.html#readSessionConfig)
+/// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#readSessionConfig)
 ///
 /// @param self KTextEditor__SessionConfigInterface*
 /// @param config KConfigGroup*
 void k_texteditor__sessionconfiginterface_read_session_config(void* self, void* config);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-sessionconfiginterface.html#readSessionConfig)
+/// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#readSessionConfig)
 ///
 /// Allows for overriding the related default method
 ///
@@ -31,7 +31,7 @@ void k_texteditor__sessionconfiginterface_read_session_config(void* self, void* 
 /// @param callback void func(KTextEditor__SessionConfigInterface* self, KConfigGroup* config)
 void k_texteditor__sessionconfiginterface_on_read_session_config(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-sessionconfiginterface.html#readSessionConfig)
+/// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#readSessionConfig)
 ///
 /// Base class method implementation
 ///
@@ -39,13 +39,13 @@ void k_texteditor__sessionconfiginterface_on_read_session_config(void* self, voi
 /// @param config KConfigGroup*
 void k_texteditor__sessionconfiginterface_qbase_read_session_config(void* self, void* config);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
+/// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
 ///
 /// @param self KTextEditor__SessionConfigInterface*
 /// @param config KConfigGroup*
 void k_texteditor__sessionconfiginterface_write_session_config(void* self, void* config);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
+/// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
 ///
 /// Allows for overriding the related default method
 ///
@@ -53,7 +53,7 @@ void k_texteditor__sessionconfiginterface_write_session_config(void* self, void*
 /// @param callback void func(KTextEditor__SessionConfigInterface* self, KConfigGroup* config)
 void k_texteditor__sessionconfiginterface_on_write_session_config(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
+/// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
 ///
 /// Base class method implementation
 ///

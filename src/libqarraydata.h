@@ -13,67 +13,67 @@
 
 /// https://doc.qt.io/qt-6/qarraydata.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
 ///
 /// @param self QArrayData*
 ///
 /// @return flag of enum QArrayData__ArrayOption
 int32_t q_arraydata_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
 ///
 /// @param self QArrayData*
 /// @param flags flag of enum QArrayData__ArrayOption
 void q_arraydata_set_flags(void* self, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
 ///
 /// @param self QArrayData*
 int64_t q_arraydata_alloc(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
 ///
 /// @param self QArrayData*
 /// @param alloc int64_t
 void q_arraydata_set_alloc(void* self, int64_t alloc);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#allocatedCapacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#allocatedCapacity)
 ///
 /// @param self QArrayData*
 int64_t q_arraydata_allocated_capacity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#constAllocatedCapacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#constAllocatedCapacity)
 ///
 /// @param self QArrayData*
 int64_t q_arraydata_const_allocated_capacity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#ref)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#ref)
 ///
 /// @param self QArrayData*
 bool q_arraydata_ref(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#deref)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#deref)
 ///
 /// @param self QArrayData*
 bool q_arraydata_deref(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#isShared)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#isShared)
 ///
 /// @param self QArrayData*
 bool q_arraydata_is_shared(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#needsDetach)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#needsDetach)
 ///
 /// @param self QArrayData*
 bool q_arraydata_needs_detach(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#detachCapacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#detachCapacity)
 ///
 /// @param self QArrayData*
 /// @param newSize int64_t
 int64_t q_arraydata_detach_capacity(void* self, int64_t newSize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#reallocateUnaligned)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#reallocateUnaligned)
 ///
 /// @param data QArrayData*
 /// @param dataPointer void*
@@ -82,14 +82,14 @@ int64_t q_arraydata_detach_capacity(void* self, int64_t newSize);
 /// @param option enum QArrayData__AllocationOption
 libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned(void* data, void* dataPointer, int64_t objectSize, int64_t newCapacity, int32_t option);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#deallocate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#deallocate)
 ///
 /// @param data QArrayData*
 /// @param objectSize int64_t
 /// @param alignment int64_t
 void q_arraydata_deallocate(void* data, int64_t objectSize, int64_t alignment);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#dtor.QArrayData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#dtor.QArrayData)
 ///
 /// Delete this object from C++ memory.
 ///

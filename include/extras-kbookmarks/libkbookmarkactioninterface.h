@@ -23,12 +23,12 @@ KBookmarkActionInterface* k_bookmarkactioninterface_new(void* bk);
 /// @param param1 KBookmarkActionInterface*
 KBookmarkActionInterface* k_bookmarkactioninterface_new2(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kbookmarkactioninterface.html#bookmark)
+/// [Upstream resources](https://api.kde.org/kbookmarkactioninterface.html#bookmark)
 ///
 /// @param self KBookmarkActionInterface*
 const KBookmark* k_bookmarkactioninterface_bookmark(void* self);
 
-/// [Qt documentation](https://api.kde.org/kbookmarkactioninterface.html#dtor.KBookmarkActionInterface)
+/// [Upstream resources](https://api.kde.org/kbookmarkactioninterface.html#dtor.KBookmarkActionInterface)
 ///
 /// Delete this object from C++ memory.
 ///

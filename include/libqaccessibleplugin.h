@@ -22,7 +22,7 @@ QAccessiblePlugin* q_accessibleplugin_new();
 /// @param parent QObject*
 QAccessiblePlugin* q_accessibleplugin_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QAccessiblePlugin*
 const QMetaObject* q_accessibleplugin_meta_object(void* self);
@@ -51,21 +51,21 @@ void q_accessibleplugin_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t q_accessibleplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_accessibleplugin_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleplugin.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleplugin.html#create)
 ///
 /// @param self QAccessiblePlugin*
 /// @param key const char*
 /// @param object QObject*
 QAccessibleInterface* q_accessibleplugin_create(void* self, const char* key, void* object);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleplugin.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleplugin.html#create)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,7 +73,7 @@ QAccessibleInterface* q_accessibleplugin_create(void* self, const char* key, voi
 /// @param callback QAccessibleInterface* func(QAccessiblePlugin* self, const char* key, QObject* object)
 void q_accessibleplugin_on_create(void* self, QAccessibleInterface* (*callback)(void*, const char*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleplugin.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleplugin.html#create)
 ///
 /// Base class method implementation
 ///
@@ -82,7 +82,7 @@ void q_accessibleplugin_on_create(void* self, QAccessibleInterface* (*callback)(
 /// @param object QObject*
 QAccessibleInterface* q_accessibleplugin_qbase_create(void* self, const char* key, void* object);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -90,7 +90,7 @@ QAccessibleInterface* q_accessibleplugin_qbase_create(void* self, const char* ke
 /// @param c const char*
 const char* q_accessibleplugin_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -101,7 +101,7 @@ const char* q_accessibleplugin_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -110,7 +110,7 @@ const char* q_accessibleplugin_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAccessiblePlugin*
 /// @param name char*
@@ -118,35 +118,35 @@ void q_accessibleplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QAccessiblePlugin*
 bool q_accessibleplugin_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QAccessiblePlugin*
 bool q_accessibleplugin_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QAccessiblePlugin*
 bool q_accessibleplugin_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QAccessiblePlugin*
 bool q_accessibleplugin_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QAccessiblePlugin*
 /// @param b bool
@@ -154,14 +154,14 @@ bool q_accessibleplugin_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QAccessiblePlugin*
 QThread* q_accessibleplugin_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAccessiblePlugin*
 /// @param thread QThread*
@@ -169,7 +169,7 @@ bool q_accessibleplugin_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAccessiblePlugin*
 /// @param interval int
@@ -177,7 +177,7 @@ int32_t q_accessibleplugin_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAccessiblePlugin*
 /// @param id int
@@ -185,7 +185,7 @@ void q_accessibleplugin_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAccessiblePlugin*
 /// @param id enum Qt__TimerId
@@ -193,14 +193,14 @@ void q_accessibleplugin_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QAccessiblePlugin*
 libqt_list /* of QObject* */ q_accessibleplugin_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QAccessiblePlugin*
 /// @param parent QObject*
@@ -208,7 +208,7 @@ void q_accessibleplugin_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QAccessiblePlugin*
 /// @param filterObj QObject*
@@ -216,7 +216,7 @@ void q_accessibleplugin_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QAccessiblePlugin*
 /// @param obj QObject*
@@ -224,7 +224,7 @@ void q_accessibleplugin_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -234,7 +234,7 @@ QMetaObject__Connection* q_accessibleplugin_connect(void* sender, void* signal, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAccessiblePlugin*
 /// @param sender QObject*
@@ -244,7 +244,7 @@ QMetaObject__Connection* q_accessibleplugin_connect2(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -254,28 +254,28 @@ bool q_accessibleplugin_disconnect(void* sender, void* signal, void* receiver, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_accessibleplugin_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QAccessiblePlugin*
 void q_accessibleplugin_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QAccessiblePlugin*
 void q_accessibleplugin_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QAccessiblePlugin*
 /// @param name const char*
@@ -284,7 +284,7 @@ bool q_accessibleplugin_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QAccessiblePlugin*
 /// @param name const char*
@@ -292,7 +292,7 @@ QVariant* q_accessibleplugin_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -301,28 +301,28 @@ const char** q_accessibleplugin_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAccessiblePlugin*
 QBindingStorage* q_accessibleplugin_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAccessiblePlugin*
 const QBindingStorage* q_accessibleplugin_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAccessiblePlugin*
 void q_accessibleplugin_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAccessiblePlugin*
 /// @param callback void func(QAccessiblePlugin* self)
@@ -330,14 +330,14 @@ void q_accessibleplugin_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QAccessiblePlugin*
 QObject* q_accessibleplugin_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QAccessiblePlugin*
 /// @param classname const char*
@@ -345,14 +345,14 @@ bool q_accessibleplugin_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QAccessiblePlugin*
 void q_accessibleplugin_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAccessiblePlugin*
 /// @param thread QThread*
@@ -361,7 +361,7 @@ bool q_accessibleplugin_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAccessiblePlugin*
 /// @param interval int
@@ -370,7 +370,7 @@ int32_t q_accessibleplugin_start_timer22(void* self, int interval, int32_t timer
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -381,7 +381,7 @@ QMetaObject__Connection* q_accessibleplugin_connect5(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAccessiblePlugin*
 /// @param sender QObject*
@@ -392,7 +392,7 @@ QMetaObject__Connection* q_accessibleplugin_connect4(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAccessiblePlugin*
 /// @param param1 QObject*
@@ -400,7 +400,7 @@ void q_accessibleplugin_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAccessiblePlugin*
 /// @param callback void func(QAccessiblePlugin* self, QObject* param1)
@@ -408,7 +408,7 @@ void q_accessibleplugin_on_destroyed1(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -418,7 +418,7 @@ bool q_accessibleplugin_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -428,7 +428,7 @@ bool q_accessibleplugin_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -438,7 +438,7 @@ void q_accessibleplugin_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -449,7 +449,7 @@ bool q_accessibleplugin_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -460,7 +460,7 @@ bool q_accessibleplugin_qbase_event_filter(void* self, void* watched, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -470,7 +470,7 @@ void q_accessibleplugin_on_event_filter(void* self, bool (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -480,7 +480,7 @@ void q_accessibleplugin_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -490,7 +490,7 @@ void q_accessibleplugin_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -500,7 +500,7 @@ void q_accessibleplugin_on_timer_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -510,7 +510,7 @@ void q_accessibleplugin_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -520,7 +520,7 @@ void q_accessibleplugin_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -530,7 +530,7 @@ void q_accessibleplugin_on_child_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -540,7 +540,7 @@ void q_accessibleplugin_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -550,7 +550,7 @@ void q_accessibleplugin_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -560,7 +560,7 @@ void q_accessibleplugin_on_custom_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -570,7 +570,7 @@ void q_accessibleplugin_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -580,7 +580,7 @@ void q_accessibleplugin_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -590,7 +590,7 @@ void q_accessibleplugin_on_connect_notify(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -600,7 +600,7 @@ void q_accessibleplugin_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -610,7 +610,7 @@ void q_accessibleplugin_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -620,7 +620,7 @@ void q_accessibleplugin_on_disconnect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -629,7 +629,7 @@ QObject* q_accessibleplugin_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -638,7 +638,7 @@ QObject* q_accessibleplugin_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -648,7 +648,7 @@ void q_accessibleplugin_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -657,7 +657,7 @@ int32_t q_accessibleplugin_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -666,7 +666,7 @@ int32_t q_accessibleplugin_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -676,7 +676,7 @@ void q_accessibleplugin_on_sender_signal_index(void* self, int32_t (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -686,7 +686,7 @@ int32_t q_accessibleplugin_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -696,7 +696,7 @@ int32_t q_accessibleplugin_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -706,7 +706,7 @@ void q_accessibleplugin_on_receivers(void* self, int32_t (*callback)(void*, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -716,7 +716,7 @@ bool q_accessibleplugin_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -726,7 +726,7 @@ bool q_accessibleplugin_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -736,7 +736,7 @@ void q_accessibleplugin_on_is_signal_connected(void* self, bool (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -744,7 +744,7 @@ void q_accessibleplugin_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param callback void func(QAccessiblePlugin* self, const char* objectName)
 void q_accessibleplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleplugin.html#dtor.QAccessiblePlugin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleplugin.html#dtor.QAccessiblePlugin)
 ///
 /// Delete this object from C++ memory.
 ///

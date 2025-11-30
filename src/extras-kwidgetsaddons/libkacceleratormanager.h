@@ -35,35 +35,35 @@ void k_acceleratormanager_copy_assign(void* self, void* other);
 /// @param other KAcceleratorManager*
 void k_acceleratormanager_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#manage)
+/// [Upstream resources](https://api.kde.org/kacceleratormanager.html#manage)
 ///
 /// @param widget QWidget*
 void k_acceleratormanager_manage(void* widget);
 
-/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#last_manage)
+/// [Upstream resources](https://api.kde.org/kacceleratormanager.html#last_manage)
 ///
 /// @param added const char*
 /// @param changed const char*
 /// @param removed const char*
 void k_acceleratormanager_last_manage(const char* added, const char* changed, const char* removed);
 
-/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#setNoAccel)
+/// [Upstream resources](https://api.kde.org/kacceleratormanager.html#setNoAccel)
 ///
 /// @param widget QWidget*
 void k_acceleratormanager_set_no_accel(void* widget);
 
-/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#addStandardActionNames)
+/// [Upstream resources](https://api.kde.org/kacceleratormanager.html#addStandardActionNames)
 ///
 /// @param names const char**
 void k_acceleratormanager_add_standard_action_names(const char* names[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#manage)
+/// [Upstream resources](https://api.kde.org/kacceleratormanager.html#manage)
 ///
 /// @param widget QWidget*
 /// @param programmers_mode bool
 void k_acceleratormanager_manage2(void* widget, bool programmers_mode);
 
-/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#dtor.KAcceleratorManager)
+/// [Upstream resources](https://api.kde.org/kacceleratormanager.html#dtor.KAcceleratorManager)
 ///
 /// Delete this object from C++ memory.
 ///

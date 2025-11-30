@@ -13,149 +13,149 @@
 
 /// https://api.kde.org/kstandardguiitem.html
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#guiItem)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#guiItem)
 ///
 /// @param param1 enum KStandardGuiItem__StandardItem
 KGuiItem* k_standardguiitem_gui_item(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#standardItem)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#standardItem)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardGuiItem__StandardItem
 const char* k_standardguiitem_standard_item(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#ok)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#ok)
 ///
 KGuiItem* k_standardguiitem_ok();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#cancel)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#cancel)
 ///
 KGuiItem* k_standardguiitem_cancel();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#insert)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#insert)
 ///
 KGuiItem* k_standardguiitem_insert();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#discard)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#discard)
 ///
 KGuiItem* k_standardguiitem_discard();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#save)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#save)
 ///
 KGuiItem* k_standardguiitem_save();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#help)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#help)
 ///
 KGuiItem* k_standardguiitem_help();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#dontSave)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#dontSave)
 ///
 KGuiItem* k_standardguiitem_dont_save();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#saveAs)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#saveAs)
 ///
 KGuiItem* k_standardguiitem_save_as();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#apply)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#apply)
 ///
 KGuiItem* k_standardguiitem_apply();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#clear)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#clear)
 ///
 KGuiItem* k_standardguiitem_clear();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#defaults)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#defaults)
 ///
 KGuiItem* k_standardguiitem_defaults();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#close)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#close)
 ///
 KGuiItem* k_standardguiitem_close();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#closeWindow)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#closeWindow)
 ///
 KGuiItem* k_standardguiitem_close_window();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#closeDocument)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#closeDocument)
 ///
 KGuiItem* k_standardguiitem_close_document();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#print)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#print)
 ///
 KGuiItem* k_standardguiitem_print();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#properties)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#properties)
 ///
 KGuiItem* k_standardguiitem_properties();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#reset)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#reset)
 ///
 KGuiItem* k_standardguiitem_reset();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#overwrite)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#overwrite)
 ///
 KGuiItem* k_standardguiitem_overwrite();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#adminMode)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#adminMode)
 ///
 KGuiItem* k_standardguiitem_admin_mode();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#cont)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#cont)
 ///
 KGuiItem* k_standardguiitem_cont();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#del)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#del)
 ///
 KGuiItem* k_standardguiitem_del();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#open)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#open)
 ///
 KGuiItem* k_standardguiitem_open();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#back)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#back)
 ///
 /// @param param1 enum KStandardGuiItem__BidiMode
 KGuiItem* k_standardguiitem_back(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#forward)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#forward)
 ///
 /// @param param1 enum KStandardGuiItem__BidiMode
 KGuiItem* k_standardguiitem_forward(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#configure)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#configure)
 ///
 KGuiItem* k_standardguiitem_configure();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#backAndForward)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#backAndForward)
 ///
 libqt_pair /* tuple of KGuiItem* and KGuiItem* */ k_standardguiitem_back_and_forward();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#quit)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#quit)
 ///
 KGuiItem* k_standardguiitem_quit();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#find)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#find)
 ///
 KGuiItem* k_standardguiitem_find();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#stop)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#stop)
 ///
 KGuiItem* k_standardguiitem_stop();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#add)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#add)
 ///
 KGuiItem* k_standardguiitem_add();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#remove)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#remove)
 ///
 KGuiItem* k_standardguiitem_remove();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#test)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#test)
 ///
 KGuiItem* k_standardguiitem_test();
 
-/// [Qt documentation](https://api.kde.org/kstandardguiitem.html#assign)
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#assign)
 ///
 /// @param param1 QPushButton*
 /// @param param2 enum KStandardGuiItem__StandardItem

@@ -13,36 +13,36 @@
 
 /// https://doc.qt.io/qt-6/qsurface.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
 ///
 /// @param self QSurface*
 ///
 /// @return enum QSurface__SurfaceClass
 int32_t q_surface_surface_class(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#format)
 ///
 /// @param self QSurface*
 QSurfaceFormat* q_surface_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#surfaceType)
 ///
 /// @param self QSurface*
 ///
 /// @return enum QSurface__SurfaceType
 int32_t q_surface_surface_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
 ///
 /// @param self QSurface*
 bool q_surface_supports_open_g_l(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#size)
 ///
 /// @param self QSurface*
 QSize* q_surface_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#dtor.QSurface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#dtor.QSurface)
 ///
 /// Delete this object from C++ memory.
 ///

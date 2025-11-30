@@ -13,49 +13,49 @@
 
 /// https://doc.qt.io/qt-6/qprintengine.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#setProperty)
 ///
 /// @param self QPrintEngine*
 /// @param key enum QPrintEngine__PrintEnginePropertyKey
 /// @param value QVariant*
 void q_printengine_set_property(void* self, int32_t key, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#property)
 ///
 /// @param self QPrintEngine*
 /// @param key enum QPrintEngine__PrintEnginePropertyKey
 QVariant* q_printengine_property(void* self, int32_t key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#newPage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#newPage)
 ///
 /// @param self QPrintEngine*
 bool q_printengine_new_page(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#abort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#abort)
 ///
 /// @param self QPrintEngine*
 bool q_printengine_abort(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#metric)
 ///
 /// @param self QPrintEngine*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_printengine_metric(void* self, int32_t param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#printerState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#printerState)
 ///
 /// @param self QPrintEngine*
 ///
 /// @return enum QPrinter__PrinterState
 int32_t q_printengine_printer_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#operator-eq)
 ///
 /// @param self QPrintEngine*
 /// @param param1 QPrintEngine*
 void q_printengine_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#dtor.QPrintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#dtor.QPrintEngine)
 ///
 /// Delete this object from C++ memory.
 ///

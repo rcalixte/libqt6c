@@ -35,18 +35,18 @@ void q_stylefactory_copy_assign(void* self, void* other);
 /// @param other QStyleFactory*
 void q_stylefactory_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstylefactory.html#keys)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstylefactory.html#keys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** q_stylefactory_keys();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstylefactory.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstylefactory.html#create)
 ///
 /// @param param1 const char*
 QStyle* q_stylefactory_create(const char* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstylefactory.html#dtor.QStyleFactory)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstylefactory.html#dtor.QStyleFactory)
 ///
 /// Delete this object from C++ memory.
 ///

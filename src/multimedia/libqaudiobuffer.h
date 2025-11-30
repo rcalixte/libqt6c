@@ -48,59 +48,59 @@ QAudioBuffer* q_audiobuffer_new5(const char* data, void* format, long long start
 /// @param startTime long long
 QAudioBuffer* q_audiobuffer_new6(int numFrames, void* format, long long startTime);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#operator-eq)
 ///
 /// @param self QAudioBuffer*
 /// @param other QAudioBuffer*
 void q_audiobuffer_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#swap)
 ///
 /// @param self QAudioBuffer*
 /// @param other QAudioBuffer*
 void q_audiobuffer_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#isValid)
 ///
 /// @param self QAudioBuffer*
 bool q_audiobuffer_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#detach)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#detach)
 ///
 /// @param self QAudioBuffer*
 void q_audiobuffer_detach(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#format)
 ///
 /// @param self QAudioBuffer*
 QAudioFormat* q_audiobuffer_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#frameCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#frameCount)
 ///
 /// @param self QAudioBuffer*
 int64_t q_audiobuffer_frame_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#sampleCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#sampleCount)
 ///
 /// @param self QAudioBuffer*
 int64_t q_audiobuffer_sample_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#byteCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#byteCount)
 ///
 /// @param self QAudioBuffer*
 int64_t q_audiobuffer_byte_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#duration)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#duration)
 ///
 /// @param self QAudioBuffer*
 long long q_audiobuffer_duration(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#startTime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#startTime)
 ///
 /// @param self QAudioBuffer*
 long long q_audiobuffer_start_time(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#dtor.QAudioBuffer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#dtor.QAudioBuffer)
 ///
 /// Delete this object from C++ memory.
 ///

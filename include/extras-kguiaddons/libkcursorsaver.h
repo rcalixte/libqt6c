@@ -18,12 +18,12 @@
 /// @param shape enum Qt__CursorShape
 KCursorSaver* k_cursorsaver_new(int32_t shape);
 
-/// [Qt documentation](https://api.kde.org/kcursorsaver.html#restoreCursor)
+/// [Upstream resources](https://api.kde.org/kcursorsaver.html#restoreCursor)
 ///
 /// @param self KCursorSaver*
 void k_cursorsaver_restore_cursor(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcursorsaver.html#dtor.KCursorSaver)
+/// [Upstream resources](https://api.kde.org/kcursorsaver.html#dtor.KCursorSaver)
 ///
 /// Delete this object from C++ memory.
 ///

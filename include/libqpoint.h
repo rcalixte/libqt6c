@@ -50,101 +50,101 @@ void q_point_copy_assign(void* self, void* other);
 /// @param other QPoint*
 void q_point_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#isNull)
 ///
 /// @param self QPoint*
 bool q_point_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#x)
 ///
 /// @param self QPoint*
 int32_t q_point_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#y)
 ///
 /// @param self QPoint*
 int32_t q_point_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#setX)
 ///
 /// @param self QPoint*
 /// @param x int
 void q_point_set_x(void* self, int x);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#setY)
 ///
 /// @param self QPoint*
 /// @param y int
 void q_point_set_y(void* self, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#manhattanLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#manhattanLength)
 ///
 /// @param self QPoint*
 int32_t q_point_manhattan_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#transposed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#transposed)
 ///
 /// @param self QPoint*
 QPoint* q_point_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#rx)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#rx)
 ///
 /// @param self QPoint*
 int* q_point_rx(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#ry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#ry)
 ///
 /// @param self QPoint*
 int* q_point_ry(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#operator-2b-eq)
 ///
 /// @param self QPoint*
 /// @param p QPoint*
 QPoint* q_point_operator_plus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#operator--eq)
 ///
 /// @param self QPoint*
 /// @param p QPoint*
 QPoint* q_point_operator_minus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
 ///
 /// @param self QPoint*
 /// @param factor float
 QPoint* q_point_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
 ///
 /// @param self QPoint*
 /// @param factor double
 QPoint* q_point_operator_multiply_assign2(void* self, double factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
 ///
 /// @param self QPoint*
 /// @param factor int
 QPoint* q_point_operator_multiply_assign3(void* self, int factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#operator-2f-eq)
 ///
 /// @param self QPoint*
 /// @param divisor double
 QPoint* q_point_operator_divide_assign(void* self, double divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#dotProduct)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#dotProduct)
 ///
 /// @param p1 QPoint*
 /// @param p2 QPoint*
 int32_t q_point_dot_product(void* p1, void* p2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#toPointF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#toPointF)
 ///
 /// @param self QPoint*
 QPointF* q_point_to_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#dtor.QPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#dtor.QPoint)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -195,89 +195,89 @@ void q_pointf_copy_assign(void* self, void* other);
 /// @param other QPointF*
 void q_pointf_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#manhattanLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#manhattanLength)
 ///
 /// @param self QPointF*
 double q_pointf_manhattan_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#isNull)
 ///
 /// @param self QPointF*
 bool q_pointf_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#x)
 ///
 /// @param self QPointF*
 double q_pointf_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#y)
 ///
 /// @param self QPointF*
 double q_pointf_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#setX)
 ///
 /// @param self QPointF*
 /// @param x double
 void q_pointf_set_x(void* self, double x);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#setY)
 ///
 /// @param self QPointF*
 /// @param y double
 void q_pointf_set_y(void* self, double y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#transposed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#transposed)
 ///
 /// @param self QPointF*
 QPointF* q_pointf_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#rx)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#rx)
 ///
 /// @param self QPointF*
 double* q_pointf_rx(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#ry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#ry)
 ///
 /// @param self QPointF*
 double* q_pointf_ry(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#operator-2b-eq)
 ///
 /// @param self QPointF*
 /// @param p QPointF*
 QPointF* q_pointf_operator_plus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#operator--eq)
 ///
 /// @param self QPointF*
 /// @param p QPointF*
 QPointF* q_pointf_operator_minus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#operator-2a-eq)
 ///
 /// @param self QPointF*
 /// @param c double
 QPointF* q_pointf_operator_multiply_assign(void* self, double c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#operator-2f-eq)
 ///
 /// @param self QPointF*
 /// @param c double
 QPointF* q_pointf_operator_divide_assign(void* self, double c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#dotProduct)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#dotProduct)
 ///
 /// @param p1 QPointF*
 /// @param p2 QPointF*
 double q_pointf_dot_product(void* p1, void* p2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#toPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#toPoint)
 ///
 /// @param self QPointF*
 QPoint* q_pointf_to_point(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#dtor.QPointF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html#dtor.QPointF)
 ///
 /// Delete this object from C++ memory.
 ///

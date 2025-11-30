@@ -22,103 +22,103 @@ QWebEngineScript* q_webenginescript_new();
 /// @param other QWebEngineScript*
 QWebEngineScript* q_webenginescript_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#operator-eq)
 ///
 /// @param self QWebEngineScript*
 /// @param other QWebEngineScript*
 void q_webenginescript_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineScript*
 const char* q_webenginescript_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#setName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#setName)
 ///
 /// @param self QWebEngineScript*
 /// @param name const char*
 void q_webenginescript_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#sourceUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#sourceUrl)
 ///
 /// @param self QWebEngineScript*
 QUrl* q_webenginescript_source_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#setSourceUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#setSourceUrl)
 ///
 /// @param self QWebEngineScript*
 /// @param url QUrl*
 void q_webenginescript_set_source_url(void* self, void* url);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#sourceCode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#sourceCode)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineScript*
 const char* q_webenginescript_source_code(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#setSourceCode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#setSourceCode)
 ///
 /// @param self QWebEngineScript*
 /// @param sourceCode const char*
 void q_webenginescript_set_source_code(void* self, const char* sourceCode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#injectionPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#injectionPoint)
 ///
 /// @param self QWebEngineScript*
 ///
 /// @return enum QWebEngineScript__InjectionPoint
 int32_t q_webenginescript_injection_point(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#setInjectionPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#setInjectionPoint)
 ///
 /// @param self QWebEngineScript*
 /// @param injectionPoint enum QWebEngineScript__InjectionPoint
 void q_webenginescript_set_injection_point(void* self, int32_t injectionPoint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#worldId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#worldId)
 ///
 /// @param self QWebEngineScript*
 uint32_t q_webenginescript_world_id(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#setWorldId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#setWorldId)
 ///
 /// @param self QWebEngineScript*
 /// @param worldId uint32_t
 void q_webenginescript_set_world_id(void* self, uint32_t worldId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#runsOnSubFrames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#runsOnSubFrames)
 ///
 /// @param self QWebEngineScript*
 bool q_webenginescript_runs_on_sub_frames(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#setRunsOnSubFrames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#setRunsOnSubFrames)
 ///
 /// @param self QWebEngineScript*
 /// @param on bool
 void q_webenginescript_set_runs_on_sub_frames(void* self, bool on);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#operator-eq-eq)
 ///
 /// @param self QWebEngineScript*
 /// @param other QWebEngineScript*
 bool q_webenginescript_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#operator-not-eq)
 ///
 /// @param self QWebEngineScript*
 /// @param other QWebEngineScript*
 bool q_webenginescript_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#swap)
 ///
 /// @param self QWebEngineScript*
 /// @param other QWebEngineScript*
 void q_webenginescript_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#dtor.QWebEngineScript)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#dtor.QWebEngineScript)
 ///
 /// Delete this object from C++ memory.
 ///

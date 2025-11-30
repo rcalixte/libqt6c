@@ -69,50 +69,50 @@ QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[stati
 /// @param flags flag of enum QDirIterator__IteratorFlag
 QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[static 1], int32_t filters, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#next)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#next)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 const char* q_diriterator_next(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#nextFileInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#nextFileInfo)
 ///
 /// @param self QDirIterator*
 QFileInfo* q_diriterator_next_file_info(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#hasNext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#hasNext)
 ///
 /// @param self QDirIterator*
 bool q_diriterator_has_next(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#fileName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#fileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 const char* q_diriterator_file_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#filePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#filePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 const char* q_diriterator_file_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#fileInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#fileInfo)
 ///
 /// @param self QDirIterator*
 QFileInfo* q_diriterator_file_info(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#path)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#path)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 const char* q_diriterator_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#dtor.QDirIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#dtor.QDirIterator)
 ///
 /// Delete this object from C++ memory.
 ///

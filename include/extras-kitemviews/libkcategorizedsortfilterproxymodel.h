@@ -22,7 +22,7 @@ KCategorizedSortFilterProxyModel* k_categorizedsortfilterproxymodel_new();
 /// @param parent QObject*
 KCategorizedSortFilterProxyModel* k_categorizedsortfilterproxymodel_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 const QMetaObject* k_categorizedsortfilterproxymodel_meta_object(void* self);
@@ -51,21 +51,21 @@ void k_categorizedsortfilterproxymodel_on_metacall(void* self, int32_t (*callbac
 /// @param param3 void*
 int32_t k_categorizedsortfilterproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_categorizedsortfilterproxymodel_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
 void k_categorizedsortfilterproxymodel_sort(void* self, int column, int32_t order);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,7 +73,7 @@ void k_categorizedsortfilterproxymodel_sort(void* self, int column, int32_t orde
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, int column, enum Qt__SortOrder order)
 void k_categorizedsortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// Base class method implementation
 ///
@@ -82,48 +82,48 @@ void k_categorizedsortfilterproxymodel_on_sort(void* self, void (*callback)(void
 /// @param order enum Qt__SortOrder
 void k_categorizedsortfilterproxymodel_qbase_sort(void* self, int column, int32_t order);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#isCategorizedModel)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#isCategorizedModel)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_is_categorized_model(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setCategorizedModel)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setCategorizedModel)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param categorizedModel bool
 void k_categorizedsortfilterproxymodel_set_categorized_model(void* self, bool categorizedModel);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortColumn)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 int32_t k_categorizedsortfilterproxymodel_sort_column(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortOrder)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortOrder)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 /// @return enum Qt__SortOrder
 int32_t k_categorizedsortfilterproxymodel_sort_order(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setSortCategoriesByNaturalComparison)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setSortCategoriesByNaturalComparison)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sortCategoriesByNaturalComparison bool
 void k_categorizedsortfilterproxymodel_set_sort_categories_by_natural_comparison(void* self, bool sortCategoriesByNaturalComparison);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortCategoriesByNaturalComparison)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortCategoriesByNaturalComparison)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_sort_categories_by_natural_comparison(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Allows for overriding the related default method
 ///
@@ -131,7 +131,7 @@ bool k_categorizedsortfilterproxymodel_less_than(void* self, void* left, void* r
 /// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Base class method implementation
 ///
@@ -140,14 +140,14 @@ void k_categorizedsortfilterproxymodel_on_less_than(void* self, bool (*callback)
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_qbase_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_sub_sort_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
 ///
 /// Allows for overriding the related default method
 ///
@@ -155,7 +155,7 @@ bool k_categorizedsortfilterproxymodel_sub_sort_less_than(void* self, void* left
 /// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
 ///
 /// Base class method implementation
 ///
@@ -164,14 +164,14 @@ void k_categorizedsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_qbase_sub_sort_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 int32_t k_categorizedsortfilterproxymodel_compare_categories(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// Allows for overriding the related default method
 ///
@@ -179,7 +179,7 @@ int32_t k_categorizedsortfilterproxymodel_compare_categories(void* self, void* l
 /// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_compare_categories(void* self, int32_t (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// Base class method implementation
 ///
@@ -188,7 +188,7 @@ void k_categorizedsortfilterproxymodel_on_compare_categories(void* self, int32_t
 /// @param right QModelIndex*
 int32_t k_categorizedsortfilterproxymodel_qbase_compare_categories(void* self, void* left, void* right);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -196,7 +196,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_compare_categories(void* self, v
 /// @param c const char*
 const char* k_categorizedsortfilterproxymodel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -207,21 +207,21 @@ const char* k_categorizedsortfilterproxymodel_tr3(const char* s, const char* c, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRegularExpression)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 QRegularExpression* k_categorizedsortfilterproxymodel_filter_regular_expression(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterKeyColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterKeyColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 int32_t k_categorizedsortfilterproxymodel_filter_key_column(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterKeyColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterKeyColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param column int
@@ -229,7 +229,7 @@ void k_categorizedsortfilterproxymodel_set_filter_key_column(void* self, int col
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivity)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 ///
@@ -238,7 +238,7 @@ int32_t k_categorizedsortfilterproxymodel_filter_case_sensitivity(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterCaseSensitivity)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param cs enum Qt__CaseSensitivity
@@ -246,7 +246,7 @@ void k_categorizedsortfilterproxymodel_set_filter_case_sensitivity(void* self, i
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivity)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 ///
@@ -255,7 +255,7 @@ int32_t k_categorizedsortfilterproxymodel_sort_case_sensitivity(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortCaseSensitivity)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param cs enum Qt__CaseSensitivity
@@ -263,14 +263,14 @@ void k_categorizedsortfilterproxymodel_set_sort_case_sensitivity(void* self, int
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isSortLocaleAware)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isSortLocaleAware)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_is_sort_locale_aware(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortLocaleAware)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortLocaleAware)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param on bool
@@ -278,14 +278,14 @@ void k_categorizedsortfilterproxymodel_set_sort_locale_aware(void* self, bool on
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilter)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_dynamic_sort_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setDynamicSortFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setDynamicSortFilter)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param enable bool
@@ -293,14 +293,14 @@ void k_categorizedsortfilterproxymodel_set_dynamic_sort_filter(void* self, bool 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRole)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 int32_t k_categorizedsortfilterproxymodel_sort_role(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortRole)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param role int
@@ -308,14 +308,14 @@ void k_categorizedsortfilterproxymodel_set_sort_role(void* self, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRole)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 int32_t k_categorizedsortfilterproxymodel_filter_role(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRole)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param role int
@@ -323,14 +323,14 @@ void k_categorizedsortfilterproxymodel_set_filter_role(void* self, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isRecursiveFilteringEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isRecursiveFilteringEnabled)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_is_recursive_filtering_enabled(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setRecursiveFilteringEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setRecursiveFilteringEnabled)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param recursive bool
@@ -338,14 +338,14 @@ void k_categorizedsortfilterproxymodel_set_recursive_filtering_enabled(void* sel
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRows)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_auto_accept_child_rows(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setAutoAcceptChildRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setAutoAcceptChildRows)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param accept bool
@@ -353,7 +353,7 @@ void k_categorizedsortfilterproxymodel_set_auto_accept_child_rows(void* self, bo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param pattern const char*
@@ -361,7 +361,7 @@ void k_categorizedsortfilterproxymodel_set_filter_regular_expression(void* self,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param regularExpression QRegularExpression*
@@ -369,7 +369,7 @@ void k_categorizedsortfilterproxymodel_set_filter_regular_expression2(void* self
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterWildcard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterWildcard)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param pattern const char*
@@ -377,7 +377,7 @@ void k_categorizedsortfilterproxymodel_set_filter_wildcard(void* self, const cha
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterFixedString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterFixedString)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param pattern const char*
@@ -385,14 +385,14 @@ void k_categorizedsortfilterproxymodel_set_filter_fixed_string(void* self, const
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidate)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_invalidate(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param dynamicSortFilter bool
@@ -400,7 +400,7 @@ void k_categorizedsortfilterproxymodel_dynamic_sort_filter_changed(void* self, b
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, bool dynamicSortFilter)
@@ -408,7 +408,7 @@ void k_categorizedsortfilterproxymodel_on_dynamic_sort_filter_changed(void* self
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param filterCaseSensitivity enum Qt__CaseSensitivity
@@ -416,7 +416,7 @@ void k_categorizedsortfilterproxymodel_filter_case_sensitivity_changed(void* sel
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, enum Qt__CaseSensitivity filterCaseSensitivity)
@@ -424,7 +424,7 @@ void k_categorizedsortfilterproxymodel_on_filter_case_sensitivity_changed(void* 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sortCaseSensitivity enum Qt__CaseSensitivity
@@ -432,7 +432,7 @@ void k_categorizedsortfilterproxymodel_sort_case_sensitivity_changed(void* self,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, enum Qt__CaseSensitivity sortCaseSensitivity)
@@ -440,7 +440,7 @@ void k_categorizedsortfilterproxymodel_on_sort_case_sensitivity_changed(void* se
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sortLocaleAware bool
@@ -448,7 +448,7 @@ void k_categorizedsortfilterproxymodel_sort_locale_aware_changed(void* self, boo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, bool sortLocaleAware)
@@ -456,7 +456,7 @@ void k_categorizedsortfilterproxymodel_on_sort_locale_aware_changed(void* self, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sortRole int
@@ -464,7 +464,7 @@ void k_categorizedsortfilterproxymodel_sort_role_changed(void* self, int sortRol
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, int sortRole)
@@ -472,7 +472,7 @@ void k_categorizedsortfilterproxymodel_on_sort_role_changed(void* self, void (*c
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param filterRole int
@@ -480,7 +480,7 @@ void k_categorizedsortfilterproxymodel_filter_role_changed(void* self, int filte
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, int filterRole)
@@ -488,7 +488,7 @@ void k_categorizedsortfilterproxymodel_on_filter_role_changed(void* self, void (
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param recursiveFilteringEnabled bool
@@ -496,7 +496,7 @@ void k_categorizedsortfilterproxymodel_recursive_filtering_enabled_changed(void*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, bool recursiveFilteringEnabled)
@@ -504,7 +504,7 @@ void k_categorizedsortfilterproxymodel_on_recursive_filtering_enabled_changed(vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param autoAcceptChildRows bool
@@ -512,7 +512,7 @@ void k_categorizedsortfilterproxymodel_auto_accept_child_rows_changed(void* self
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, bool autoAcceptChildRows)
@@ -520,14 +520,14 @@ void k_categorizedsortfilterproxymodel_on_auto_accept_child_rows_changed(void* s
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 QAbstractItemModel* k_categorizedsortfilterproxymodel_source_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param row int
@@ -536,7 +536,7 @@ bool k_categorizedsortfilterproxymodel_has_index(void* self, int row, int column
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param row int
@@ -544,7 +544,7 @@ bool k_categorizedsortfilterproxymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param column int
@@ -552,7 +552,7 @@ bool k_categorizedsortfilterproxymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param row int
@@ -560,7 +560,7 @@ bool k_categorizedsortfilterproxymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param column int
@@ -568,7 +568,7 @@ bool k_categorizedsortfilterproxymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sourceParent QModelIndex*
@@ -579,7 +579,7 @@ bool k_categorizedsortfilterproxymodel_move_row(void* self, void* sourceParent, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sourceParent QModelIndex*
@@ -590,7 +590,7 @@ bool k_categorizedsortfilterproxymodel_move_column(void* self, void* sourceParen
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param index QModelIndex*
@@ -598,7 +598,7 @@ bool k_categorizedsortfilterproxymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param topLeft QModelIndex*
@@ -607,7 +607,7 @@ void k_categorizedsortfilterproxymodel_data_changed(void* self, void* topLeft, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
@@ -615,7 +615,7 @@ void k_categorizedsortfilterproxymodel_on_data_changed(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param orientation enum Qt__Orientation
@@ -625,7 +625,7 @@ void k_categorizedsortfilterproxymodel_header_data_changed(void* self, int32_t o
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, enum Qt__Orientation orientation, int first, int last)
@@ -633,14 +633,14 @@ void k_categorizedsortfilterproxymodel_on_header_data_changed(void* self, void (
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self)
@@ -648,14 +648,14 @@ void k_categorizedsortfilterproxymodel_on_layout_changed(void* self, void (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self)
@@ -663,7 +663,7 @@ void k_categorizedsortfilterproxymodel_on_layout_about_to_be_changed(void* self,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param row int
@@ -673,7 +673,7 @@ bool k_categorizedsortfilterproxymodel_has_index3(void* self, int row, int colum
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param row int
@@ -682,7 +682,7 @@ bool k_categorizedsortfilterproxymodel_insert_row2(void* self, int row, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param column int
@@ -691,7 +691,7 @@ bool k_categorizedsortfilterproxymodel_insert_column2(void* self, int column, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param row int
@@ -700,7 +700,7 @@ bool k_categorizedsortfilterproxymodel_remove_row2(void* self, int row, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param column int
@@ -709,7 +709,7 @@ bool k_categorizedsortfilterproxymodel_remove_column2(void* self, int column, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param index QModelIndex*
@@ -718,7 +718,7 @@ bool k_categorizedsortfilterproxymodel_check_index2(void* self, void* index, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param topLeft QModelIndex*
@@ -728,7 +728,7 @@ void k_categorizedsortfilterproxymodel_data_changed3(void* self, void* topLeft, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
@@ -736,7 +736,7 @@ void k_categorizedsortfilterproxymodel_on_data_changed3(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -744,7 +744,7 @@ void k_categorizedsortfilterproxymodel_layout_changed1(void* self, libqt_list pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, QPersistentModelIndex** parents)
@@ -752,7 +752,7 @@ void k_categorizedsortfilterproxymodel_on_layout_changed1(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -761,7 +761,7 @@ void k_categorizedsortfilterproxymodel_layout_changed2(void* self, libqt_list pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -769,7 +769,7 @@ void k_categorizedsortfilterproxymodel_on_layout_changed2(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -777,7 +777,7 @@ void k_categorizedsortfilterproxymodel_layout_about_to_be_changed1(void* self, l
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, QPersistentModelIndex** parents)
@@ -785,7 +785,7 @@ void k_categorizedsortfilterproxymodel_on_layout_about_to_be_changed1(void* self
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -794,7 +794,7 @@ void k_categorizedsortfilterproxymodel_layout_about_to_be_changed2(void* self, l
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -802,7 +802,7 @@ void k_categorizedsortfilterproxymodel_on_layout_about_to_be_changed2(void* self
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -811,7 +811,7 @@ const char* k_categorizedsortfilterproxymodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param name char*
@@ -819,35 +819,35 @@ void k_categorizedsortfilterproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param b bool
@@ -855,14 +855,14 @@ bool k_categorizedsortfilterproxymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 QThread* k_categorizedsortfilterproxymodel_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param thread QThread*
@@ -870,7 +870,7 @@ bool k_categorizedsortfilterproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param interval int
@@ -878,7 +878,7 @@ int32_t k_categorizedsortfilterproxymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param id int
@@ -886,7 +886,7 @@ void k_categorizedsortfilterproxymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param id enum Qt__TimerId
@@ -894,14 +894,14 @@ void k_categorizedsortfilterproxymodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 libqt_list /* of QObject* */ k_categorizedsortfilterproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param parent QObject*
@@ -909,7 +909,7 @@ void k_categorizedsortfilterproxymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param filterObj QObject*
@@ -917,7 +917,7 @@ void k_categorizedsortfilterproxymodel_install_event_filter(void* self, void* fi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param obj QObject*
@@ -925,7 +925,7 @@ void k_categorizedsortfilterproxymodel_remove_event_filter(void* self, void* obj
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -935,7 +935,7 @@ QMetaObject__Connection* k_categorizedsortfilterproxymodel_connect(void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sender QObject*
@@ -945,7 +945,7 @@ QMetaObject__Connection* k_categorizedsortfilterproxymodel_connect2(void* self, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -955,28 +955,28 @@ bool k_categorizedsortfilterproxymodel_disconnect(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_categorizedsortfilterproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param name const char*
@@ -985,7 +985,7 @@ bool k_categorizedsortfilterproxymodel_set_property(void* self, const char* name
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param name const char*
@@ -993,7 +993,7 @@ QVariant* k_categorizedsortfilterproxymodel_property(void* self, const char* nam
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1002,28 +1002,28 @@ const char** k_categorizedsortfilterproxymodel_dynamic_property_names(void* self
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 QBindingStorage* k_categorizedsortfilterproxymodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 const QBindingStorage* k_categorizedsortfilterproxymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self)
@@ -1031,7 +1031,7 @@ void k_categorizedsortfilterproxymodel_on_destroyed(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param classname const char*
@@ -1039,14 +1039,14 @@ bool k_categorizedsortfilterproxymodel_inherits(void* self, const char* classnam
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param thread QThread*
@@ -1055,7 +1055,7 @@ bool k_categorizedsortfilterproxymodel_move_to_thread2(void* self, void* thread,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param interval int
@@ -1064,7 +1064,7 @@ int32_t k_categorizedsortfilterproxymodel_start_timer22(void* self, int interval
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1075,7 +1075,7 @@ QMetaObject__Connection* k_categorizedsortfilterproxymodel_connect5(void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sender QObject*
@@ -1086,7 +1086,7 @@ QMetaObject__Connection* k_categorizedsortfilterproxymodel_connect4(void* self, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param param1 QObject*
@@ -1094,7 +1094,7 @@ void k_categorizedsortfilterproxymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, QObject* param1)
@@ -1102,7 +1102,7 @@ void k_categorizedsortfilterproxymodel_on_destroyed1(void* self, void (*callback
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1112,7 +1112,7 @@ void k_categorizedsortfilterproxymodel_set_source_model(void* self, void* source
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1122,7 +1122,7 @@ void k_categorizedsortfilterproxymodel_qbase_set_source_model(void* self, void* 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1132,7 +1132,7 @@ void k_categorizedsortfilterproxymodel_on_set_source_model(void* self, void (*ca
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1142,7 +1142,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_map_to_source(void* self, void* p
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1152,7 +1152,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_map_to_source(void* self, v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1162,7 +1162,7 @@ void k_categorizedsortfilterproxymodel_on_map_to_source(void* self, QModelIndex*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1172,7 +1172,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_map_from_source(void* self, void*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1182,7 +1182,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_map_from_source(void* self,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1192,7 +1192,7 @@ void k_categorizedsortfilterproxymodel_on_map_from_source(void* self, QModelInde
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1202,7 +1202,7 @@ QItemSelection* k_categorizedsortfilterproxymodel_map_selection_to_source(void* 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1212,7 +1212,7 @@ QItemSelection* k_categorizedsortfilterproxymodel_qbase_map_selection_to_source(
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1222,7 +1222,7 @@ void k_categorizedsortfilterproxymodel_on_map_selection_to_source(void* self, QI
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1232,7 +1232,7 @@ QItemSelection* k_categorizedsortfilterproxymodel_map_selection_from_source(void
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1242,7 +1242,7 @@ QItemSelection* k_categorizedsortfilterproxymodel_qbase_map_selection_from_sourc
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1252,7 +1252,7 @@ void k_categorizedsortfilterproxymodel_on_map_selection_from_source(void* self, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1263,7 +1263,7 @@ bool k_categorizedsortfilterproxymodel_filter_accepts_row(void* self, int source
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1274,7 +1274,7 @@ bool k_categorizedsortfilterproxymodel_qbase_filter_accepts_row(void* self, int 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1284,7 +1284,7 @@ void k_categorizedsortfilterproxymodel_on_filter_accepts_row(void* self, bool (*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1295,7 +1295,7 @@ bool k_categorizedsortfilterproxymodel_filter_accepts_column(void* self, int sou
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1306,7 +1306,7 @@ bool k_categorizedsortfilterproxymodel_qbase_filter_accepts_column(void* self, i
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1316,7 +1316,7 @@ void k_categorizedsortfilterproxymodel_on_filter_accepts_column(void* self, bool
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1328,7 +1328,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_index(void* self, int row, int co
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1340,7 +1340,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_index(void* self, int row, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1350,7 +1350,7 @@ void k_categorizedsortfilterproxymodel_on_index(void* self, QModelIndex* (*callb
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1360,7 +1360,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_parent(void* self, void* child);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1370,7 +1370,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_parent(void* self, void* ch
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1380,7 +1380,7 @@ void k_categorizedsortfilterproxymodel_on_parent(void* self, QModelIndex* (*call
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1392,7 +1392,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_sibling(void* self, int row, int 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1404,7 +1404,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_sibling(void* self, int row
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1414,7 +1414,7 @@ void k_categorizedsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*cal
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1424,7 +1424,7 @@ int32_t k_categorizedsortfilterproxymodel_row_count(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1434,7 +1434,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_row_count(void* self, void* pare
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1444,7 +1444,7 @@ void k_categorizedsortfilterproxymodel_on_row_count(void* self, int32_t (*callba
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1454,7 +1454,7 @@ int32_t k_categorizedsortfilterproxymodel_column_count(void* self, void* parent)
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1464,7 +1464,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_column_count(void* self, void* p
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1474,7 +1474,7 @@ void k_categorizedsortfilterproxymodel_on_column_count(void* self, int32_t (*cal
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1484,7 +1484,7 @@ bool k_categorizedsortfilterproxymodel_has_children(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1494,7 +1494,7 @@ bool k_categorizedsortfilterproxymodel_qbase_has_children(void* self, void* pare
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1504,7 +1504,7 @@ void k_categorizedsortfilterproxymodel_on_has_children(void* self, bool (*callba
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1515,7 +1515,7 @@ QVariant* k_categorizedsortfilterproxymodel_data(void* self, void* index, int ro
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1526,7 +1526,7 @@ QVariant* k_categorizedsortfilterproxymodel_qbase_data(void* self, void* index, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1536,7 +1536,7 @@ void k_categorizedsortfilterproxymodel_on_data(void* self, QVariant* (*callback)
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1548,7 +1548,7 @@ bool k_categorizedsortfilterproxymodel_set_data(void* self, void* index, void* v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1560,7 +1560,7 @@ bool k_categorizedsortfilterproxymodel_qbase_set_data(void* self, void* index, v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1570,7 +1570,7 @@ void k_categorizedsortfilterproxymodel_on_set_data(void* self, bool (*callback)(
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1582,7 +1582,7 @@ QVariant* k_categorizedsortfilterproxymodel_header_data(void* self, int section,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1594,7 +1594,7 @@ QVariant* k_categorizedsortfilterproxymodel_qbase_header_data(void* self, int se
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1604,7 +1604,7 @@ void k_categorizedsortfilterproxymodel_on_header_data(void* self, QVariant* (*ca
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1617,7 +1617,7 @@ bool k_categorizedsortfilterproxymodel_set_header_data(void* self, int section, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1630,7 +1630,7 @@ bool k_categorizedsortfilterproxymodel_qbase_set_header_data(void* self, int sec
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1640,7 +1640,7 @@ void k_categorizedsortfilterproxymodel_on_set_header_data(void* self, bool (*cal
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1650,7 +1650,7 @@ QMimeData* k_categorizedsortfilterproxymodel_mime_data(void* self, libqt_list in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1660,7 +1660,7 @@ QMimeData* k_categorizedsortfilterproxymodel_qbase_mime_data(void* self, libqt_l
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1670,7 +1670,7 @@ void k_categorizedsortfilterproxymodel_on_mime_data(void* self, QMimeData* (*cal
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1684,7 +1684,7 @@ bool k_categorizedsortfilterproxymodel_drop_mime_data(void* self, void* data, in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1698,7 +1698,7 @@ bool k_categorizedsortfilterproxymodel_qbase_drop_mime_data(void* self, void* da
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1708,7 +1708,7 @@ void k_categorizedsortfilterproxymodel_on_drop_mime_data(void* self, bool (*call
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1720,7 +1720,7 @@ bool k_categorizedsortfilterproxymodel_insert_rows(void* self, int row, int coun
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1732,7 +1732,7 @@ bool k_categorizedsortfilterproxymodel_qbase_insert_rows(void* self, int row, in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1742,7 +1742,7 @@ void k_categorizedsortfilterproxymodel_on_insert_rows(void* self, bool (*callbac
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1754,7 +1754,7 @@ bool k_categorizedsortfilterproxymodel_insert_columns(void* self, int column, in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1766,7 +1766,7 @@ bool k_categorizedsortfilterproxymodel_qbase_insert_columns(void* self, int colu
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1776,7 +1776,7 @@ void k_categorizedsortfilterproxymodel_on_insert_columns(void* self, bool (*call
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1788,7 +1788,7 @@ bool k_categorizedsortfilterproxymodel_remove_rows(void* self, int row, int coun
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1800,7 +1800,7 @@ bool k_categorizedsortfilterproxymodel_qbase_remove_rows(void* self, int row, in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1810,7 +1810,7 @@ void k_categorizedsortfilterproxymodel_on_remove_rows(void* self, bool (*callbac
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1822,7 +1822,7 @@ bool k_categorizedsortfilterproxymodel_remove_columns(void* self, int column, in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1834,7 +1834,7 @@ bool k_categorizedsortfilterproxymodel_qbase_remove_columns(void* self, int colu
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1844,7 +1844,7 @@ void k_categorizedsortfilterproxymodel_on_remove_columns(void* self, bool (*call
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1854,7 +1854,7 @@ void k_categorizedsortfilterproxymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1864,7 +1864,7 @@ void k_categorizedsortfilterproxymodel_qbase_fetch_more(void* self, void* parent
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1874,7 +1874,7 @@ void k_categorizedsortfilterproxymodel_on_fetch_more(void* self, void (*callback
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1884,7 +1884,7 @@ bool k_categorizedsortfilterproxymodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1894,7 +1894,7 @@ bool k_categorizedsortfilterproxymodel_qbase_can_fetch_more(void* self, void* pa
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1904,7 +1904,7 @@ void k_categorizedsortfilterproxymodel_on_can_fetch_more(void* self, bool (*call
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1916,7 +1916,7 @@ int32_t k_categorizedsortfilterproxymodel_flags(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1928,7 +1928,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1938,7 +1938,7 @@ void k_categorizedsortfilterproxymodel_on_flags(void* self, int32_t (*callback)(
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1948,7 +1948,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_buddy(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1958,7 +1958,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_buddy(void* self, void* ind
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1968,7 +1968,7 @@ void k_categorizedsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callb
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1982,7 +1982,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_match(void* s
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1996,7 +1996,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_qbase_match(v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2006,7 +2006,7 @@ void k_categorizedsortfilterproxymodel_on_match(void* self, QModelIndex** (*call
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2016,7 +2016,7 @@ QSize* k_categorizedsortfilterproxymodel_span(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2026,7 +2026,7 @@ QSize* k_categorizedsortfilterproxymodel_qbase_span(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2036,7 +2036,7 @@ void k_categorizedsortfilterproxymodel_on_span(void* self, QSize* (*callback)(vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2047,7 +2047,7 @@ const char** k_categorizedsortfilterproxymodel_mime_types(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2058,7 +2058,7 @@ const char** k_categorizedsortfilterproxymodel_qbase_mime_types(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2068,7 +2068,7 @@ void k_categorizedsortfilterproxymodel_on_mime_types(void* self, const char** (*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2079,7 +2079,7 @@ int32_t k_categorizedsortfilterproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2090,7 +2090,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_supported_drop_actions(void* sel
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2100,7 +2100,7 @@ void k_categorizedsortfilterproxymodel_on_supported_drop_actions(void* self, int
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2109,7 +2109,7 @@ bool k_categorizedsortfilterproxymodel_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2118,7 +2118,7 @@ bool k_categorizedsortfilterproxymodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2128,7 +2128,7 @@ void k_categorizedsortfilterproxymodel_on_submit(void* self, bool (*callback)())
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2137,7 +2137,7 @@ void k_categorizedsortfilterproxymodel_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2146,7 +2146,7 @@ void k_categorizedsortfilterproxymodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2156,7 +2156,7 @@ void k_categorizedsortfilterproxymodel_on_revert(void* self, void (*callback)())
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2166,7 +2166,7 @@ libqt_map /* of int to QVariant* */ k_categorizedsortfilterproxymodel_item_data(
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2176,7 +2176,7 @@ libqt_map /* of int to QVariant* */ k_categorizedsortfilterproxymodel_qbase_item
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2186,7 +2186,7 @@ void k_categorizedsortfilterproxymodel_on_item_data(void* self, libqt_map /* of 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2197,7 +2197,7 @@ bool k_categorizedsortfilterproxymodel_set_item_data(void* self, void* index, li
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2208,7 +2208,7 @@ bool k_categorizedsortfilterproxymodel_qbase_set_item_data(void* self, void* ind
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2218,7 +2218,7 @@ void k_categorizedsortfilterproxymodel_on_set_item_data(void* self, bool (*callb
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2228,7 +2228,7 @@ bool k_categorizedsortfilterproxymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2238,7 +2238,7 @@ bool k_categorizedsortfilterproxymodel_qbase_clear_item_data(void* self, void* i
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2248,7 +2248,7 @@ void k_categorizedsortfilterproxymodel_on_clear_item_data(void* self, bool (*cal
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2262,7 +2262,7 @@ bool k_categorizedsortfilterproxymodel_can_drop_mime_data(void* self, void* data
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2276,7 +2276,7 @@ bool k_categorizedsortfilterproxymodel_qbase_can_drop_mime_data(void* self, void
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2286,7 +2286,7 @@ void k_categorizedsortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2297,7 +2297,7 @@ int32_t k_categorizedsortfilterproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2308,7 +2308,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_supported_drag_actions(void* sel
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2318,7 +2318,7 @@ void k_categorizedsortfilterproxymodel_on_supported_drag_actions(void* self, int
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2327,7 +2327,7 @@ libqt_map /* of int to char* */ k_categorizedsortfilterproxymodel_role_names(voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2336,7 +2336,7 @@ libqt_map /* of int to char* */ k_categorizedsortfilterproxymodel_qbase_role_nam
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2346,7 +2346,7 @@ void k_categorizedsortfilterproxymodel_on_role_names(void* self, libqt_map /* of
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2360,7 +2360,7 @@ bool k_categorizedsortfilterproxymodel_move_rows(void* self, void* sourceParent,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2374,7 +2374,7 @@ bool k_categorizedsortfilterproxymodel_qbase_move_rows(void* self, void* sourceP
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2384,7 +2384,7 @@ void k_categorizedsortfilterproxymodel_on_move_rows(void* self, bool (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2398,7 +2398,7 @@ bool k_categorizedsortfilterproxymodel_move_columns(void* self, void* sourcePare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2412,7 +2412,7 @@ bool k_categorizedsortfilterproxymodel_qbase_move_columns(void* self, void* sour
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2422,7 +2422,7 @@ void k_categorizedsortfilterproxymodel_on_move_columns(void* self, bool (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2433,7 +2433,7 @@ void k_categorizedsortfilterproxymodel_multi_data(void* self, void* index, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2444,7 +2444,7 @@ void k_categorizedsortfilterproxymodel_qbase_multi_data(void* self, void* index,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2454,7 +2454,7 @@ void k_categorizedsortfilterproxymodel_on_multi_data(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2463,7 +2463,7 @@ void k_categorizedsortfilterproxymodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2472,7 +2472,7 @@ void k_categorizedsortfilterproxymodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2482,7 +2482,7 @@ void k_categorizedsortfilterproxymodel_on_reset_internal_data(void* self, void (
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2492,7 +2492,7 @@ bool k_categorizedsortfilterproxymodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2502,7 +2502,7 @@ bool k_categorizedsortfilterproxymodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2512,7 +2512,7 @@ void k_categorizedsortfilterproxymodel_on_event(void* self, bool (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2523,7 +2523,7 @@ bool k_categorizedsortfilterproxymodel_event_filter(void* self, void* watched, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2534,7 +2534,7 @@ bool k_categorizedsortfilterproxymodel_qbase_event_filter(void* self, void* watc
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2544,7 +2544,7 @@ void k_categorizedsortfilterproxymodel_on_event_filter(void* self, bool (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2554,7 +2554,7 @@ void k_categorizedsortfilterproxymodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2564,7 +2564,7 @@ void k_categorizedsortfilterproxymodel_qbase_timer_event(void* self, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2574,7 +2574,7 @@ void k_categorizedsortfilterproxymodel_on_timer_event(void* self, void (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2584,7 +2584,7 @@ void k_categorizedsortfilterproxymodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2594,7 +2594,7 @@ void k_categorizedsortfilterproxymodel_qbase_child_event(void* self, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2604,7 +2604,7 @@ void k_categorizedsortfilterproxymodel_on_child_event(void* self, void (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2614,7 +2614,7 @@ void k_categorizedsortfilterproxymodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2624,7 +2624,7 @@ void k_categorizedsortfilterproxymodel_qbase_custom_event(void* self, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2634,7 +2634,7 @@ void k_categorizedsortfilterproxymodel_on_custom_event(void* self, void (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2644,7 +2644,7 @@ void k_categorizedsortfilterproxymodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2654,7 +2654,7 @@ void k_categorizedsortfilterproxymodel_qbase_connect_notify(void* self, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2664,7 +2664,7 @@ void k_categorizedsortfilterproxymodel_on_connect_notify(void* self, void (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2674,7 +2674,7 @@ void k_categorizedsortfilterproxymodel_disconnect_notify(void* self, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2684,7 +2684,7 @@ void k_categorizedsortfilterproxymodel_qbase_disconnect_notify(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2694,7 +2694,7 @@ void k_categorizedsortfilterproxymodel_on_disconnect_notify(void* self, void (*c
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2703,7 +2703,7 @@ void k_categorizedsortfilterproxymodel_invalidate_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2712,7 +2712,7 @@ void k_categorizedsortfilterproxymodel_qbase_invalidate_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2722,7 +2722,7 @@ void k_categorizedsortfilterproxymodel_on_invalidate_filter(void* self, void (*c
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2731,7 +2731,7 @@ void k_categorizedsortfilterproxymodel_invalidate_rows_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2740,7 +2740,7 @@ void k_categorizedsortfilterproxymodel_qbase_invalidate_rows_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2750,7 +2750,7 @@ void k_categorizedsortfilterproxymodel_on_invalidate_rows_filter(void* self, voi
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2759,7 +2759,7 @@ void k_categorizedsortfilterproxymodel_invalidate_columns_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2768,7 +2768,7 @@ void k_categorizedsortfilterproxymodel_qbase_invalidate_columns_filter(void* sel
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2778,7 +2778,7 @@ void k_categorizedsortfilterproxymodel_on_invalidate_columns_filter(void* self, 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2790,7 +2790,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_create_source_index(void* self, i
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2802,7 +2802,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_create_source_index(void* s
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2812,7 +2812,7 @@ void k_categorizedsortfilterproxymodel_on_create_source_index(void* self, QModel
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2823,7 +2823,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_create_index(void* self, int row,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2834,7 +2834,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_create_index(void* self, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2844,7 +2844,7 @@ void k_categorizedsortfilterproxymodel_on_create_index(void* self, QModelIndex* 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2855,7 +2855,7 @@ void k_categorizedsortfilterproxymodel_encode_data(void* self, libqt_list indexe
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2866,7 +2866,7 @@ void k_categorizedsortfilterproxymodel_qbase_encode_data(void* self, libqt_list 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2876,7 +2876,7 @@ void k_categorizedsortfilterproxymodel_on_encode_data(void* self, void (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2889,7 +2889,7 @@ bool k_categorizedsortfilterproxymodel_decode_data(void* self, int row, int colu
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2902,7 +2902,7 @@ bool k_categorizedsortfilterproxymodel_qbase_decode_data(void* self, int row, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2912,7 +2912,7 @@ void k_categorizedsortfilterproxymodel_on_decode_data(void* self, bool (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2924,7 +2924,7 @@ void k_categorizedsortfilterproxymodel_begin_insert_rows(void* self, void* paren
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2936,7 +2936,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_insert_rows(void* self, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2946,7 +2946,7 @@ void k_categorizedsortfilterproxymodel_on_begin_insert_rows(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2955,7 +2955,7 @@ void k_categorizedsortfilterproxymodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2964,7 +2964,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2974,7 +2974,7 @@ void k_categorizedsortfilterproxymodel_on_end_insert_rows(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2986,7 +2986,7 @@ void k_categorizedsortfilterproxymodel_begin_remove_rows(void* self, void* paren
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2998,7 +2998,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_remove_rows(void* self, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3008,7 +3008,7 @@ void k_categorizedsortfilterproxymodel_on_begin_remove_rows(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3017,7 +3017,7 @@ void k_categorizedsortfilterproxymodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3026,7 +3026,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3036,7 +3036,7 @@ void k_categorizedsortfilterproxymodel_on_end_remove_rows(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3050,7 +3050,7 @@ bool k_categorizedsortfilterproxymodel_begin_move_rows(void* self, void* sourceP
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3064,7 +3064,7 @@ bool k_categorizedsortfilterproxymodel_qbase_begin_move_rows(void* self, void* s
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3074,7 +3074,7 @@ void k_categorizedsortfilterproxymodel_on_begin_move_rows(void* self, bool (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3083,7 +3083,7 @@ void k_categorizedsortfilterproxymodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3092,7 +3092,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3102,7 +3102,7 @@ void k_categorizedsortfilterproxymodel_on_end_move_rows(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3114,7 +3114,7 @@ void k_categorizedsortfilterproxymodel_begin_insert_columns(void* self, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3126,7 +3126,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_insert_columns(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3136,7 +3136,7 @@ void k_categorizedsortfilterproxymodel_on_begin_insert_columns(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3145,7 +3145,7 @@ void k_categorizedsortfilterproxymodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3154,7 +3154,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3164,7 +3164,7 @@ void k_categorizedsortfilterproxymodel_on_end_insert_columns(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3176,7 +3176,7 @@ void k_categorizedsortfilterproxymodel_begin_remove_columns(void* self, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3188,7 +3188,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_remove_columns(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3198,7 +3198,7 @@ void k_categorizedsortfilterproxymodel_on_begin_remove_columns(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3207,7 +3207,7 @@ void k_categorizedsortfilterproxymodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3216,7 +3216,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3226,7 +3226,7 @@ void k_categorizedsortfilterproxymodel_on_end_remove_columns(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3240,7 +3240,7 @@ bool k_categorizedsortfilterproxymodel_begin_move_columns(void* self, void* sour
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3254,7 +3254,7 @@ bool k_categorizedsortfilterproxymodel_qbase_begin_move_columns(void* self, void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3264,7 +3264,7 @@ void k_categorizedsortfilterproxymodel_on_begin_move_columns(void* self, bool (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3273,7 +3273,7 @@ void k_categorizedsortfilterproxymodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3282,7 +3282,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3292,7 +3292,7 @@ void k_categorizedsortfilterproxymodel_on_end_move_columns(void* self, void (*ca
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3301,7 +3301,7 @@ void k_categorizedsortfilterproxymodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3310,7 +3310,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3320,7 +3320,7 @@ void k_categorizedsortfilterproxymodel_on_begin_reset_model(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3329,7 +3329,7 @@ void k_categorizedsortfilterproxymodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3338,7 +3338,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3348,7 +3348,7 @@ void k_categorizedsortfilterproxymodel_on_end_reset_model(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3359,7 +3359,7 @@ void k_categorizedsortfilterproxymodel_change_persistent_index(void* self, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3370,7 +3370,7 @@ void k_categorizedsortfilterproxymodel_qbase_change_persistent_index(void* self,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3380,7 +3380,7 @@ void k_categorizedsortfilterproxymodel_on_change_persistent_index(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3391,7 +3391,7 @@ void k_categorizedsortfilterproxymodel_change_persistent_index_list(void* self, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3402,7 +3402,7 @@ void k_categorizedsortfilterproxymodel_qbase_change_persistent_index_list(void* 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3412,7 +3412,7 @@ void k_categorizedsortfilterproxymodel_on_change_persistent_index_list(void* sel
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3421,7 +3421,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_persistent_in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3430,7 +3430,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_qbase_persist
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3440,7 +3440,7 @@ void k_categorizedsortfilterproxymodel_on_persistent_index_list(void* self, QMod
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3449,7 +3449,7 @@ QObject* k_categorizedsortfilterproxymodel_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3458,7 +3458,7 @@ QObject* k_categorizedsortfilterproxymodel_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3468,7 +3468,7 @@ void k_categorizedsortfilterproxymodel_on_sender(void* self, QObject* (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3477,7 +3477,7 @@ int32_t k_categorizedsortfilterproxymodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3486,7 +3486,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3496,7 +3496,7 @@ void k_categorizedsortfilterproxymodel_on_sender_signal_index(void* self, int32_
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3506,7 +3506,7 @@ int32_t k_categorizedsortfilterproxymodel_receivers(void* self, const char* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3516,7 +3516,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_receivers(void* self, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3526,7 +3526,7 @@ void k_categorizedsortfilterproxymodel_on_receivers(void* self, int32_t (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3536,7 +3536,7 @@ bool k_categorizedsortfilterproxymodel_is_signal_connected(void* self, void* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3546,7 +3546,7 @@ bool k_categorizedsortfilterproxymodel_qbase_is_signal_connected(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3556,7 +3556,7 @@ void k_categorizedsortfilterproxymodel_on_is_signal_connected(void* self, bool (
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModelChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModelChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3566,7 +3566,7 @@ void k_categorizedsortfilterproxymodel_on_source_model_changed(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3576,7 +3576,7 @@ void k_categorizedsortfilterproxymodel_on_rows_about_to_be_inserted(void* self, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3586,7 +3586,7 @@ void k_categorizedsortfilterproxymodel_on_rows_inserted(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3596,7 +3596,7 @@ void k_categorizedsortfilterproxymodel_on_rows_about_to_be_removed(void* self, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3606,7 +3606,7 @@ void k_categorizedsortfilterproxymodel_on_rows_removed(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3616,7 +3616,7 @@ void k_categorizedsortfilterproxymodel_on_columns_about_to_be_inserted(void* sel
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3626,7 +3626,7 @@ void k_categorizedsortfilterproxymodel_on_columns_inserted(void* self, void (*ca
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3636,7 +3636,7 @@ void k_categorizedsortfilterproxymodel_on_columns_about_to_be_removed(void* self
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3646,7 +3646,7 @@ void k_categorizedsortfilterproxymodel_on_columns_removed(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3656,7 +3656,7 @@ void k_categorizedsortfilterproxymodel_on_model_about_to_be_reset(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3666,7 +3666,7 @@ void k_categorizedsortfilterproxymodel_on_model_reset(void* self, void (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3676,7 +3676,7 @@ void k_categorizedsortfilterproxymodel_on_rows_about_to_be_moved(void* self, voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3686,7 +3686,7 @@ void k_categorizedsortfilterproxymodel_on_rows_moved(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3696,7 +3696,7 @@ void k_categorizedsortfilterproxymodel_on_columns_about_to_be_moved(void* self, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3706,7 +3706,7 @@ void k_categorizedsortfilterproxymodel_on_columns_moved(void* self, void (*callb
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3714,7 +3714,7 @@ void k_categorizedsortfilterproxymodel_on_columns_moved(void* self, void (*callb
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, const char* objectName)
 void k_categorizedsortfilterproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#dtor.KCategorizedSortFilterProxyModel)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#dtor.KCategorizedSortFilterProxyModel)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -18,49 +18,49 @@
 /// @param other QWebEngineLoadingInfo*
 QWebEngineLoadingInfo* q_webengineloadinginfo_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#operator-eq)
 ///
 /// @param self QWebEngineLoadingInfo*
 /// @param other QWebEngineLoadingInfo*
 void q_webengineloadinginfo_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#url)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#url)
 ///
 /// @param self QWebEngineLoadingInfo*
 QUrl* q_webengineloadinginfo_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#isErrorPage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#isErrorPage)
 ///
 /// @param self QWebEngineLoadingInfo*
 bool q_webengineloadinginfo_is_error_page(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#status)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#status)
 ///
 /// @param self QWebEngineLoadingInfo*
 ///
 /// @return enum QWebEngineLoadingInfo__LoadStatus
 int32_t q_webengineloadinginfo_status(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineLoadingInfo*
 const char* q_webengineloadinginfo_error_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorDomain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorDomain)
 ///
 /// @param self QWebEngineLoadingInfo*
 ///
 /// @return enum QWebEngineLoadingInfo__ErrorDomain
 int32_t q_webengineloadinginfo_error_domain(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorCode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorCode)
 ///
 /// @param self QWebEngineLoadingInfo*
 int32_t q_webengineloadinginfo_error_code(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#dtor.QWebEngineLoadingInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#dtor.QWebEngineLoadingInfo)
 ///
 /// Delete this object from C++ memory.
 ///

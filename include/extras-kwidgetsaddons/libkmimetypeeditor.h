@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kmimetypeeditor.html
 
-/// [Qt documentation](https://api.kde.org/kmimetypeeditor.html#editMimeType)
+/// [Upstream resources](https://api.kde.org/kmimetypeeditor.html#editMimeType)
 ///
 /// @param param1 const char*
 /// @param param2 QWidget*

@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kcrash.html
 
-/// [Qt documentation](https://api.kde.org/kcrash.html#defaultCrashHandler)
+/// [Upstream resources](https://api.kde.org/kcrash.html#defaultCrashHandler)
 ///
 /// @param param1 int
 void k_crash_default_crash_handler(int param1);
@@ -64,51 +64,51 @@ KAboutPerson* k_aboutperson_new6(const char* name, const char* task, const char*
 /// @param avatarUrl QUrl*
 KAboutPerson* k_aboutperson_new7(const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#operator-eq)
 ///
 /// @param self KAboutPerson*
 /// @param other KAboutPerson*
 void k_aboutperson_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#name)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 const char* k_aboutperson_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#task)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#task)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 const char* k_aboutperson_task(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#emailAddress)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#emailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 const char* k_aboutperson_email_address(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#webAddress)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#webAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 const char* k_aboutperson_web_address(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#avatarUrl)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#avatarUrl)
 ///
 /// @param self KAboutPerson*
 QUrl* k_aboutperson_avatar_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#fromJSON)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#fromJSON)
 ///
 /// @param obj QJsonObject*
 KAboutPerson* k_aboutperson_from_j_s_o_n(void* obj);
 
-/// [Qt documentation](https://api.kde.org/kaboutperson.html#dtor.KAboutPerson)
+/// [Upstream resources](https://api.kde.org/kaboutperson.html#dtor.KAboutPerson)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -126,46 +126,46 @@ KAboutLicense* k_aboutlicense_new();
 /// @param other KAboutLicense*
 KAboutLicense* k_aboutlicense_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#operator-eq)
 ///
 /// @param self KAboutLicense*
 /// @param other KAboutLicense*
 void k_aboutlicense_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#text)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutLicense*
 const char* k_aboutlicense_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#name)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutLicense*
 const char* k_aboutlicense_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#key)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#key)
 ///
 /// @param self KAboutLicense*
 ///
 /// @return enum KAboutLicense__LicenseKey
 int32_t k_aboutlicense_key(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#spdx)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#spdx)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutLicense*
 const char* k_aboutlicense_spdx(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#byKeyword)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#byKeyword)
 ///
 /// @param keyword const char*
 KAboutLicense* k_aboutlicense_by_keyword(const char* keyword);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#name)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -173,7 +173,7 @@ KAboutLicense* k_aboutlicense_by_keyword(const char* keyword);
 /// @param formatName enum KAboutLicense__NameFormat
 const char* k_aboutlicense_name1(void* self, int32_t formatName);
 
-/// [Qt documentation](https://api.kde.org/kaboutlicense.html#dtor.KAboutLicense)
+/// [Upstream resources](https://api.kde.org/kaboutlicense.html#dtor.KAboutLicense)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -235,46 +235,46 @@ KAboutComponent* k_aboutcomponent_new7(const char* name, const char* description
 /// @param licenseType enum KAboutLicense__LicenseKey
 KAboutComponent* k_aboutcomponent_new8(const char* name, const char* description, const char* version, const char* webAddress, int32_t licenseType);
 
-/// [Qt documentation](https://api.kde.org/kaboutcomponent.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kaboutcomponent.html#operator-eq)
 ///
 /// @param self KAboutComponent*
 /// @param other KAboutComponent*
 void k_aboutcomponent_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kaboutcomponent.html#name)
+/// [Upstream resources](https://api.kde.org/kaboutcomponent.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 const char* k_aboutcomponent_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutcomponent.html#description)
+/// [Upstream resources](https://api.kde.org/kaboutcomponent.html#description)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 const char* k_aboutcomponent_description(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutcomponent.html#version)
+/// [Upstream resources](https://api.kde.org/kaboutcomponent.html#version)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 const char* k_aboutcomponent_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutcomponent.html#webAddress)
+/// [Upstream resources](https://api.kde.org/kaboutcomponent.html#webAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 const char* k_aboutcomponent_web_address(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutcomponent.html#license)
+/// [Upstream resources](https://api.kde.org/kaboutcomponent.html#license)
 ///
 /// @param self KAboutComponent*
 KAboutLicense* k_aboutcomponent_license(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutcomponent.html#dtor.KAboutComponent)
+/// [Upstream resources](https://api.kde.org/kaboutcomponent.html#dtor.KAboutComponent)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -365,34 +365,34 @@ KAboutData* k_aboutdata_new9(const char* componentName, const char* displayName)
 /// @param version const char*
 KAboutData* k_aboutdata_new10(const char* componentName, const char* displayName, const char* version);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#applicationData)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#applicationData)
 ///
 KAboutData* k_aboutdata_application_data();
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setApplicationData)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setApplicationData)
 ///
 /// @param aboutData KAboutData*
 void k_aboutdata_set_application_data(void* aboutData);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#operator-eq)
 ///
 /// @param self KAboutData*
 /// @param other KAboutData*
 void k_aboutdata_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addAuthor)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param author KAboutPerson*
 KAboutData* k_aboutdata_add_author(void* self, void* author);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addAuthor)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 KAboutData* k_aboutdata_add_author2(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addAuthor)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -402,19 +402,19 @@ KAboutData* k_aboutdata_add_author2(void* self, const char* name);
 /// @param kdeStoreUsername const char*
 KAboutData* k_aboutdata_add_author3(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, const char* kdeStoreUsername);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addCredit)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
 /// @param self KAboutData*
 /// @param person KAboutPerson*
 KAboutData* k_aboutdata_add_credit(void* self, void* person);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addCredit)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 KAboutData* k_aboutdata_add_credit2(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addCredit)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -424,26 +424,26 @@ KAboutData* k_aboutdata_add_credit2(void* self, const char* name);
 /// @param kdeStoreUsername const char*
 KAboutData* k_aboutdata_add_credit3(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, const char* kdeStoreUsername);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setTranslator)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setTranslator)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 /// @param emailAddress const char*
 KAboutData* k_aboutdata_set_translator(void* self, const char* name, const char* emailAddress);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addComponent)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
 /// @param self KAboutData*
 /// @param component KAboutComponent*
 KAboutData* k_aboutdata_add_component(void* self, void* component);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addComponent)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 KAboutData* k_aboutdata_add_component2(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addComponent)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -453,320 +453,320 @@ KAboutData* k_aboutdata_add_component2(void* self, const char* name);
 /// @param pathToLicenseFile const char*
 KAboutData* k_aboutdata_add_component3(void* self, const char* name, const char* description, const char* version, const char* webAddress, const char* pathToLicenseFile);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setLicenseText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setLicenseText)
 ///
 /// @param self KAboutData*
 /// @param license const char*
 KAboutData* k_aboutdata_set_license_text(void* self, const char* license);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addLicenseText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addLicenseText)
 ///
 /// @param self KAboutData*
 /// @param license const char*
 KAboutData* k_aboutdata_add_license_text(void* self, const char* license);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setLicenseTextFile)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setLicenseTextFile)
 ///
 /// @param self KAboutData*
 /// @param file const char*
 KAboutData* k_aboutdata_set_license_text_file(void* self, const char* file);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addLicenseTextFile)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addLicenseTextFile)
 ///
 /// @param self KAboutData*
 /// @param file const char*
 KAboutData* k_aboutdata_add_license_text_file(void* self, const char* file);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setComponentName)
 ///
 /// @param self KAboutData*
 /// @param componentName const char*
 KAboutData* k_aboutdata_set_component_name(void* self, const char* componentName);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setDisplayName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setDisplayName)
 ///
 /// @param self KAboutData*
 /// @param displayName const char*
 KAboutData* k_aboutdata_set_display_name(void* self, const char* displayName);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setProgramLogo)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setProgramLogo)
 ///
 /// @param self KAboutData*
 /// @param image QVariant*
 KAboutData* k_aboutdata_set_program_logo(void* self, void* image);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setVersion)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setVersion)
 ///
 /// @param self KAboutData*
 /// @param version const char*
 KAboutData* k_aboutdata_set_version(void* self, const char* version);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setShortDescription)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setShortDescription)
 ///
 /// @param self KAboutData*
 /// @param shortDescription const char*
 KAboutData* k_aboutdata_set_short_description(void* self, const char* shortDescription);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setLicense)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setLicense)
 ///
 /// @param self KAboutData*
 /// @param licenseKey enum KAboutLicense__LicenseKey
 KAboutData* k_aboutdata_set_license(void* self, int32_t licenseKey);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setLicense)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setLicense)
 ///
 /// @param self KAboutData*
 /// @param licenseKey enum KAboutLicense__LicenseKey
 /// @param versionRestriction enum KAboutLicense__VersionRestriction
 KAboutData* k_aboutdata_set_license2(void* self, int32_t licenseKey, int32_t versionRestriction);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addLicense)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addLicense)
 ///
 /// @param self KAboutData*
 /// @param licenseKey enum KAboutLicense__LicenseKey
 KAboutData* k_aboutdata_add_license(void* self, int32_t licenseKey);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addLicense)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addLicense)
 ///
 /// @param self KAboutData*
 /// @param licenseKey enum KAboutLicense__LicenseKey
 /// @param versionRestriction enum KAboutLicense__VersionRestriction
 KAboutData* k_aboutdata_add_license2(void* self, int32_t licenseKey, int32_t versionRestriction);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setCopyrightStatement)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setCopyrightStatement)
 ///
 /// @param self KAboutData*
 /// @param copyrightStatement const char*
 KAboutData* k_aboutdata_set_copyright_statement(void* self, const char* copyrightStatement);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setOtherText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setOtherText)
 ///
 /// @param self KAboutData*
 /// @param otherText const char*
 KAboutData* k_aboutdata_set_other_text(void* self, const char* otherText);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setHomepage)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setHomepage)
 ///
 /// @param self KAboutData*
 /// @param homepage const char*
 KAboutData* k_aboutdata_set_homepage(void* self, const char* homepage);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setBugAddress)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setBugAddress)
 ///
 /// @param self KAboutData*
 /// @param bugAddress const char*
 KAboutData* k_aboutdata_set_bug_address(void* self, const char* bugAddress);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setOrganizationDomain)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setOrganizationDomain)
 ///
 /// @param self KAboutData*
 /// @param domain const char*
 KAboutData* k_aboutdata_set_organization_domain(void* self, const char* domain);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setProductName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setProductName)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 KAboutData* k_aboutdata_set_product_name(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#componentName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_component_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#productName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#productName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_product_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#internalProductName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProductName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_internal_product_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#displayName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#displayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_display_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#organizationDomain)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#organizationDomain)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_organization_domain(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#internalProgramName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProgramName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_internal_program_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#programLogo)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#programLogo)
 ///
 /// @param self KAboutData*
 QVariant* k_aboutdata_program_logo(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#version)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#version)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#internalVersion)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#internalVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_internal_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#shortDescription)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#shortDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_short_description(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#homepage)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#homepage)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_homepage(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#bugAddress)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#bugAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_bug_address(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#internalBugAddress)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#internalBugAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_internal_bug_address(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#authors)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#authors)
 ///
 /// @param self KAboutData*
 libqt_list /* of KAboutPerson* */ k_aboutdata_authors(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#credits)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#credits)
 ///
 /// @param self KAboutData*
 libqt_list /* of KAboutPerson* */ k_aboutdata_credits(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#translators)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#translators)
 ///
 /// @param self KAboutData*
 libqt_list /* of KAboutPerson* */ k_aboutdata_translators(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#aboutTranslationTeam)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#aboutTranslationTeam)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* k_aboutdata_about_translation_team();
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#components)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#components)
 ///
 /// @param self KAboutData*
 libqt_list /* of KAboutComponent* */ k_aboutdata_components(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#otherText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#otherText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_other_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#licenses)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#licenses)
 ///
 /// @param self KAboutData*
 libqt_list /* of KAboutLicense* */ k_aboutdata_licenses(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#copyrightStatement)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#copyrightStatement)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_copyright_statement(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#customAuthorPlainText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorPlainText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_custom_author_plain_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#customAuthorRichText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorRichText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_custom_author_rich_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#customAuthorTextEnabled)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorTextEnabled)
 ///
 /// @param self KAboutData*
 bool k_aboutdata_custom_author_text_enabled(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setCustomAuthorText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setCustomAuthorText)
 ///
 /// @param self KAboutData*
 /// @param plainText const char*
 /// @param richText const char*
 KAboutData* k_aboutdata_set_custom_author_text(void* self, const char* plainText, const char* richText);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#unsetCustomAuthorText)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#unsetCustomAuthorText)
 ///
 /// @param self KAboutData*
 KAboutData* k_aboutdata_unset_custom_author_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setupCommandLine)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setupCommandLine)
 ///
 /// @param self KAboutData*
 /// @param parser QCommandLineParser*
 bool k_aboutdata_setup_command_line(void* self, void* parser);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#processCommandLine)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#processCommandLine)
 ///
 /// @param self KAboutData*
 /// @param parser QCommandLineParser*
 void k_aboutdata_process_command_line(void* self, void* parser);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#setDesktopFileName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#setDesktopFileName)
 ///
 /// @param self KAboutData*
 /// @param desktopFileName const char*
 KAboutData* k_aboutdata_set_desktop_file_name(void* self, const char* desktopFileName);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#desktopFileName)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#desktopFileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 const char* k_aboutdata_desktop_file_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addAuthor)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 /// @param task const char*
 KAboutData* k_aboutdata_add_author22(void* self, const char* name, const char* task);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addAuthor)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -774,7 +774,7 @@ KAboutData* k_aboutdata_add_author22(void* self, const char* name, const char* t
 /// @param emailAddress const char*
 KAboutData* k_aboutdata_add_author32(void* self, const char* name, const char* task, const char* emailAddress);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addAuthor)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -783,7 +783,7 @@ KAboutData* k_aboutdata_add_author32(void* self, const char* name, const char* t
 /// @param webAddress const char*
 KAboutData* k_aboutdata_add_author4(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addAuthor)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -793,14 +793,14 @@ KAboutData* k_aboutdata_add_author4(void* self, const char* name, const char* ta
 /// @param avatarUrl QUrl*
 KAboutData* k_aboutdata_add_author5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addCredit)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 /// @param task const char*
 KAboutData* k_aboutdata_add_credit22(void* self, const char* name, const char* task);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addCredit)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -808,7 +808,7 @@ KAboutData* k_aboutdata_add_credit22(void* self, const char* name, const char* t
 /// @param emailAddress const char*
 KAboutData* k_aboutdata_add_credit32(void* self, const char* name, const char* task, const char* emailAddress);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addCredit)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -817,7 +817,7 @@ KAboutData* k_aboutdata_add_credit32(void* self, const char* name, const char* t
 /// @param webAddress const char*
 KAboutData* k_aboutdata_add_credit4(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addCredit)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -827,14 +827,14 @@ KAboutData* k_aboutdata_add_credit4(void* self, const char* name, const char* ta
 /// @param avatarUrl QUrl*
 KAboutData* k_aboutdata_add_credit5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addComponent)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
 /// @param self KAboutData*
 /// @param name const char*
 /// @param description const char*
 KAboutData* k_aboutdata_add_component22(void* self, const char* name, const char* description);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addComponent)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -842,7 +842,7 @@ KAboutData* k_aboutdata_add_component22(void* self, const char* name, const char
 /// @param version const char*
 KAboutData* k_aboutdata_add_component32(void* self, const char* name, const char* description, const char* version);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addComponent)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -851,7 +851,7 @@ KAboutData* k_aboutdata_add_component32(void* self, const char* name, const char
 /// @param webAddress const char*
 KAboutData* k_aboutdata_add_component4(void* self, const char* name, const char* description, const char* version, const char* webAddress);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#addComponent)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
 /// @param self KAboutData*
 /// @param name const char*
@@ -861,7 +861,7 @@ KAboutData* k_aboutdata_add_component4(void* self, const char* name, const char*
 /// @param licenseKey enum KAboutLicense__LicenseKey
 KAboutData* k_aboutdata_add_component5(void* self, const char* name, const char* description, const char* version, const char* webAddress, int32_t licenseKey);
 
-/// [Qt documentation](https://api.kde.org/kaboutdata.html#dtor.KAboutData)
+/// [Upstream resources](https://api.kde.org/kaboutdata.html#dtor.KAboutData)
 ///
 /// Delete this object from C++ memory.
 ///

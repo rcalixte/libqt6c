@@ -39,37 +39,37 @@ QOpenGLVersionStatus* q_openglversionstatus_new4(int majorVersion, int minorVers
 /// @param param1 QOpenGLVersionStatus*
 QOpenGLVersionStatus* q_openglversionstatus_new5(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionstatus.html#version-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#version-var)
 ///
 /// @param self QOpenGLVersionStatus*
 libqt_pair /* tuple of int and int */ q_openglversionstatus_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionstatus.html#version-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#version-var)
 ///
 /// @param self QOpenGLVersionStatus*
 /// @param version libqt_pair /* tuple of int and int */
 void q_openglversionstatus_set_version(void* self, libqt_pair /* tuple of int and int */ version);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionstatus.html#status-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#status-var)
 ///
 /// @param self QOpenGLVersionStatus*
 ///
 /// @return enum QOpenGLVersionStatus__OpenGLStatus
 int32_t q_openglversionstatus_status(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionstatus.html#status-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#status-var)
 ///
 /// @param self QOpenGLVersionStatus*
 /// @param status enum QOpenGLVersionStatus__OpenGLStatus
 void q_openglversionstatus_set_status(void* self, int32_t status);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionstatus.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#operator-eq)
 ///
 /// @param self QOpenGLVersionStatus*
 /// @param param1 QOpenGLVersionStatus*
 void q_openglversionstatus_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionstatus.html#dtor.QOpenGLVersionStatus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#dtor.QOpenGLVersionStatus)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -78,18 +78,18 @@ void q_openglversionstatus_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLVersionFunctionsBackend*
 QOpenGLContext* q_openglversionfunctionsbackend_context(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLVersionFunctionsBackend*
 /// @param context QOpenGLContext*
 void q_openglversionfunctionsbackend_set_context(void* self, void* context);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#dtor.QOpenGLVersionFunctionsBackend)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#dtor.QOpenGLVersionFunctionsBackend)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -98,12 +98,12 @@ void q_openglversionfunctionsbackend_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qabstractopenglfunctions.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractopenglfunctions.html#initializeOpenGLFunctions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractopenglfunctions.html#initializeOpenGLFunctions)
 ///
 /// @param self QAbstractOpenGLFunctions*
 bool q_abstractopenglfunctions_initialize_open_g_l_functions(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractopenglfunctions.html#dtor.QAbstractOpenGLFunctions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractopenglfunctions.html#dtor.QAbstractOpenGLFunctions)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -114,14 +114,14 @@ void q_abstractopenglfunctions_delete(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_0_CoreBackend*
 QOpenGLContext* q_openglfunctions_1_0_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_0_CoreBackend*
 /// @param context QOpenGLContext*
@@ -131,14 +131,14 @@ void q_openglfunctions_1_0_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_1_CoreBackend*
 QOpenGLContext* q_openglfunctions_1_1_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_1_CoreBackend*
 /// @param context QOpenGLContext*
@@ -148,14 +148,14 @@ void q_openglfunctions_1_1_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_2_CoreBackend*
 QOpenGLContext* q_openglfunctions_1_2_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_2_CoreBackend*
 /// @param context QOpenGLContext*
@@ -165,14 +165,14 @@ void q_openglfunctions_1_2_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_3_CoreBackend*
 QOpenGLContext* q_openglfunctions_1_3_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_3_CoreBackend*
 /// @param context QOpenGLContext*
@@ -182,14 +182,14 @@ void q_openglfunctions_1_3_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_4_CoreBackend*
 QOpenGLContext* q_openglfunctions_1_4_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_4_CoreBackend*
 /// @param context QOpenGLContext*
@@ -199,14 +199,14 @@ void q_openglfunctions_1_4_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_5_CoreBackend*
 QOpenGLContext* q_openglfunctions_1_5_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_5_CoreBackend*
 /// @param context QOpenGLContext*
@@ -216,14 +216,14 @@ void q_openglfunctions_1_5_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_2_0_CoreBackend*
 QOpenGLContext* q_openglfunctions_2_0_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_2_0_CoreBackend*
 /// @param context QOpenGLContext*
@@ -233,14 +233,14 @@ void q_openglfunctions_2_0_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_2_1_CoreBackend*
 QOpenGLContext* q_openglfunctions_2_1_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_2_1_CoreBackend*
 /// @param context QOpenGLContext*
@@ -250,14 +250,14 @@ void q_openglfunctions_2_1_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_0_CoreBackend*
 QOpenGLContext* q_openglfunctions_3_0_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_0_CoreBackend*
 /// @param context QOpenGLContext*
@@ -267,14 +267,14 @@ void q_openglfunctions_3_0_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_1_CoreBackend*
 QOpenGLContext* q_openglfunctions_3_1_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_1_CoreBackend*
 /// @param context QOpenGLContext*
@@ -284,14 +284,14 @@ void q_openglfunctions_3_1_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_2_CoreBackend*
 QOpenGLContext* q_openglfunctions_3_2_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_2_CoreBackend*
 /// @param context QOpenGLContext*
@@ -301,14 +301,14 @@ void q_openglfunctions_3_2_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_3_CoreBackend*
 QOpenGLContext* q_openglfunctions_3_3_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_3_CoreBackend*
 /// @param context QOpenGLContext*
@@ -318,14 +318,14 @@ void q_openglfunctions_3_3_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_0_CoreBackend*
 QOpenGLContext* q_openglfunctions_4_0_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_0_CoreBackend*
 /// @param context QOpenGLContext*
@@ -335,14 +335,14 @@ void q_openglfunctions_4_0_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_1_CoreBackend*
 QOpenGLContext* q_openglfunctions_4_1_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_1_CoreBackend*
 /// @param context QOpenGLContext*
@@ -352,14 +352,14 @@ void q_openglfunctions_4_1_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_2_CoreBackend*
 QOpenGLContext* q_openglfunctions_4_2_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_2_CoreBackend*
 /// @param context QOpenGLContext*
@@ -369,14 +369,14 @@ void q_openglfunctions_4_2_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_3_CoreBackend*
 QOpenGLContext* q_openglfunctions_4_3_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_3_CoreBackend*
 /// @param context QOpenGLContext*
@@ -386,14 +386,14 @@ void q_openglfunctions_4_3_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_4_CoreBackend*
 QOpenGLContext* q_openglfunctions_4_4_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_4_CoreBackend*
 /// @param context QOpenGLContext*
@@ -403,14 +403,14 @@ void q_openglfunctions_4_4_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_5_CoreBackend*
 QOpenGLContext* q_openglfunctions_4_5_corebackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_5_CoreBackend*
 /// @param context QOpenGLContext*
@@ -420,14 +420,14 @@ void q_openglfunctions_4_5_corebackend_set_context(void* self, void* context);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_0_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_1_0_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_0_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -437,14 +437,14 @@ void q_openglfunctions_1_0_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_1_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_1_1_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_1_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -454,14 +454,14 @@ void q_openglfunctions_1_1_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_2_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_1_2_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_2_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -471,14 +471,14 @@ void q_openglfunctions_1_2_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_3_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_1_3_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_3_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -488,14 +488,14 @@ void q_openglfunctions_1_3_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_4_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_1_4_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_1_4_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -505,14 +505,14 @@ void q_openglfunctions_1_4_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_2_0_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_2_0_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_2_0_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -522,14 +522,14 @@ void q_openglfunctions_2_0_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_0_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_3_0_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_0_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -539,14 +539,14 @@ void q_openglfunctions_3_0_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_3_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_3_3_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_3_3_DeprecatedBackend*
 /// @param context QOpenGLContext*
@@ -556,14 +556,14 @@ void q_openglfunctions_3_3_deprecatedbackend_set_context(void* self, void* conte
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_5_DeprecatedBackend*
 QOpenGLContext* q_openglfunctions_4_5_deprecatedbackend_context(void* self);
 
 /// Inherited from QOpenGLVersionFunctionsBackend
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)
 ///
 /// @param self QOpenGLFunctions_4_5_DeprecatedBackend*
 /// @param context QOpenGLContext*

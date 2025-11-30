@@ -27,35 +27,35 @@ KIO__ThumbnailRequest* k_io__thumbnailrequest_new(void* url, void* targetSize, c
 /// @param param1 KIO__ThumbnailRequest*
 KIO__ThumbnailRequest* k_io__thumbnailrequest_new2(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailrequest.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailrequest.html#operator-eq)
 ///
 /// @param self KIO__ThumbnailRequest*
 /// @param param1 KIO__ThumbnailRequest*
 void k_io__thumbnailrequest_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailrequest.html#url)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailrequest.html#url)
 ///
 /// @param self KIO__ThumbnailRequest*
 QUrl* k_io__thumbnailrequest_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailrequest.html#targetSize)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailrequest.html#targetSize)
 ///
 /// @param self KIO__ThumbnailRequest*
 QSize* k_io__thumbnailrequest_target_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailrequest.html#mimeType)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailrequest.html#mimeType)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ThumbnailRequest*
 const char* k_io__thumbnailrequest_mime_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailrequest.html#devicePixelRatio)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailrequest.html#devicePixelRatio)
 ///
 /// @param self KIO__ThumbnailRequest*
 double k_io__thumbnailrequest_device_pixel_ratio(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailrequest.html#sequenceIndex)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailrequest.html#sequenceIndex)
 ///
 /// @param self KIO__ThumbnailRequest*
 float k_io__thumbnailrequest_sequence_index(void* self);
@@ -72,39 +72,39 @@ void k_io__thumbnailrequest_delete(void* self);
 /// @param param1 KIO__ThumbnailResult*
 KIO__ThumbnailResult* k_io__thumbnailresult_new(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailresult.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailresult.html#operator-eq)
 ///
 /// @param self KIO__ThumbnailResult*
 /// @param param1 KIO__ThumbnailResult*
 void k_io__thumbnailresult_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailresult.html#image)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailresult.html#image)
 ///
 /// @param self KIO__ThumbnailResult*
 QImage* k_io__thumbnailresult_image(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailresult.html#isValid)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailresult.html#isValid)
 ///
 /// @param self KIO__ThumbnailResult*
 bool k_io__thumbnailresult_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailresult.html#sequenceIndexWraparoundPoint)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailresult.html#sequenceIndexWraparoundPoint)
 ///
 /// @param self KIO__ThumbnailResult*
 float k_io__thumbnailresult_sequence_index_wraparound_point(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailresult.html#setSequenceIndexWraparoundPoint)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailresult.html#setSequenceIndexWraparoundPoint)
 ///
 /// @param self KIO__ThumbnailResult*
 /// @param wraparoundPoint float
 void k_io__thumbnailresult_set_sequence_index_wraparound_point(void* self, float wraparoundPoint);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailresult.html#pass)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailresult.html#pass)
 ///
 /// @param image QImage*
 KIO__ThumbnailResult* k_io__thumbnailresult_pass(void* image);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailresult.html#fail)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailresult.html#fail)
 ///
 KIO__ThumbnailResult* k_io__thumbnailresult_fail();
 
@@ -121,7 +121,7 @@ void k_io__thumbnailresult_delete(void* self);
 /// @param args libqt_list /* of QVariant* */
 KIO__ThumbnailCreator* k_io__thumbnailcreator_new(void* parent, libqt_list args);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__ThumbnailCreator*
 const QMetaObject* k_io__thumbnailcreator_meta_object(void* self);
@@ -150,20 +150,20 @@ void k_io__thumbnailcreator_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_io__thumbnailcreator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_io__thumbnailcreator_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailcreator.html#create)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailcreator.html#create)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param request KIO__ThumbnailRequest*
 KIO__ThumbnailResult* k_io__thumbnailcreator_create(void* self, void* request);
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailcreator.html#create)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailcreator.html#create)
 ///
 /// Allows for overriding the related default method
 ///
@@ -171,7 +171,7 @@ KIO__ThumbnailResult* k_io__thumbnailcreator_create(void* self, void* request);
 /// @param callback KIO__ThumbnailResult* func(KIO__ThumbnailCreator* self, KIO__ThumbnailRequest* request)
 void k_io__thumbnailcreator_on_create(void* self, KIO__ThumbnailResult* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kio-thumbnailcreator.html#create)
+/// [Upstream resources](https://api.kde.org/kio-thumbnailcreator.html#create)
 ///
 /// Base class method implementation
 ///
@@ -179,7 +179,7 @@ void k_io__thumbnailcreator_on_create(void* self, KIO__ThumbnailResult* (*callba
 /// @param request KIO__ThumbnailRequest*
 KIO__ThumbnailResult* k_io__thumbnailcreator_qbase_create(void* self, void* request);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -187,7 +187,7 @@ KIO__ThumbnailResult* k_io__thumbnailcreator_qbase_create(void* self, void* requ
 /// @param c const char*
 const char* k_io__thumbnailcreator_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -198,7 +198,7 @@ const char* k_io__thumbnailcreator_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -207,7 +207,7 @@ const char* k_io__thumbnailcreator_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param name char*
@@ -215,35 +215,35 @@ void k_io__thumbnailcreator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KIO__ThumbnailCreator*
 bool k_io__thumbnailcreator_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KIO__ThumbnailCreator*
 bool k_io__thumbnailcreator_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KIO__ThumbnailCreator*
 bool k_io__thumbnailcreator_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KIO__ThumbnailCreator*
 bool k_io__thumbnailcreator_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param b bool
@@ -251,14 +251,14 @@ bool k_io__thumbnailcreator_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KIO__ThumbnailCreator*
 QThread* k_io__thumbnailcreator_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param thread QThread*
@@ -266,7 +266,7 @@ bool k_io__thumbnailcreator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param interval int
@@ -274,7 +274,7 @@ int32_t k_io__thumbnailcreator_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param id int
@@ -282,7 +282,7 @@ void k_io__thumbnailcreator_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param id enum Qt__TimerId
@@ -290,14 +290,14 @@ void k_io__thumbnailcreator_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KIO__ThumbnailCreator*
 libqt_list /* of QObject* */ k_io__thumbnailcreator_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param parent QObject*
@@ -305,7 +305,7 @@ void k_io__thumbnailcreator_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param filterObj QObject*
@@ -313,7 +313,7 @@ void k_io__thumbnailcreator_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param obj QObject*
@@ -321,7 +321,7 @@ void k_io__thumbnailcreator_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -331,7 +331,7 @@ QMetaObject__Connection* k_io__thumbnailcreator_connect(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param sender QObject*
@@ -341,7 +341,7 @@ QMetaObject__Connection* k_io__thumbnailcreator_connect2(void* self, void* sende
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -351,28 +351,28 @@ bool k_io__thumbnailcreator_disconnect(void* sender, void* signal, void* receive
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_io__thumbnailcreator_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KIO__ThumbnailCreator*
 void k_io__thumbnailcreator_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KIO__ThumbnailCreator*
 void k_io__thumbnailcreator_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param name const char*
@@ -381,7 +381,7 @@ bool k_io__thumbnailcreator_set_property(void* self, const char* name, void* val
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param name const char*
@@ -389,7 +389,7 @@ QVariant* k_io__thumbnailcreator_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -398,28 +398,28 @@ const char** k_io__thumbnailcreator_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__ThumbnailCreator*
 QBindingStorage* k_io__thumbnailcreator_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__ThumbnailCreator*
 const QBindingStorage* k_io__thumbnailcreator_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ThumbnailCreator*
 void k_io__thumbnailcreator_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param callback void func(KIO__ThumbnailCreator* self)
@@ -427,14 +427,14 @@ void k_io__thumbnailcreator_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KIO__ThumbnailCreator*
 QObject* k_io__thumbnailcreator_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param classname const char*
@@ -442,14 +442,14 @@ bool k_io__thumbnailcreator_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KIO__ThumbnailCreator*
 void k_io__thumbnailcreator_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param thread QThread*
@@ -458,7 +458,7 @@ bool k_io__thumbnailcreator_move_to_thread2(void* self, void* thread, void* para
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param interval int
@@ -467,7 +467,7 @@ int32_t k_io__thumbnailcreator_start_timer22(void* self, int interval, int32_t t
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -478,7 +478,7 @@ QMetaObject__Connection* k_io__thumbnailcreator_connect5(void* sender, void* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param sender QObject*
@@ -489,7 +489,7 @@ QMetaObject__Connection* k_io__thumbnailcreator_connect4(void* self, void* sende
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param param1 QObject*
@@ -497,7 +497,7 @@ void k_io__thumbnailcreator_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ThumbnailCreator*
 /// @param callback void func(KIO__ThumbnailCreator* self, QObject* param1)
@@ -505,7 +505,7 @@ void k_io__thumbnailcreator_on_destroyed1(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -515,7 +515,7 @@ bool k_io__thumbnailcreator_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -525,7 +525,7 @@ bool k_io__thumbnailcreator_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -535,7 +535,7 @@ void k_io__thumbnailcreator_on_event(void* self, bool (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -546,7 +546,7 @@ bool k_io__thumbnailcreator_event_filter(void* self, void* watched, void* event)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -557,7 +557,7 @@ bool k_io__thumbnailcreator_qbase_event_filter(void* self, void* watched, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -567,7 +567,7 @@ void k_io__thumbnailcreator_on_event_filter(void* self, bool (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -577,7 +577,7 @@ void k_io__thumbnailcreator_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -587,7 +587,7 @@ void k_io__thumbnailcreator_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -597,7 +597,7 @@ void k_io__thumbnailcreator_on_timer_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -607,7 +607,7 @@ void k_io__thumbnailcreator_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -617,7 +617,7 @@ void k_io__thumbnailcreator_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -627,7 +627,7 @@ void k_io__thumbnailcreator_on_child_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -637,7 +637,7 @@ void k_io__thumbnailcreator_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -647,7 +647,7 @@ void k_io__thumbnailcreator_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -657,7 +657,7 @@ void k_io__thumbnailcreator_on_custom_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -667,7 +667,7 @@ void k_io__thumbnailcreator_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -677,7 +677,7 @@ void k_io__thumbnailcreator_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -687,7 +687,7 @@ void k_io__thumbnailcreator_on_connect_notify(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -697,7 +697,7 @@ void k_io__thumbnailcreator_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -707,7 +707,7 @@ void k_io__thumbnailcreator_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -717,7 +717,7 @@ void k_io__thumbnailcreator_on_disconnect_notify(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -726,7 +726,7 @@ QObject* k_io__thumbnailcreator_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -735,7 +735,7 @@ QObject* k_io__thumbnailcreator_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -745,7 +745,7 @@ void k_io__thumbnailcreator_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -754,7 +754,7 @@ int32_t k_io__thumbnailcreator_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -763,7 +763,7 @@ int32_t k_io__thumbnailcreator_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -773,7 +773,7 @@ void k_io__thumbnailcreator_on_sender_signal_index(void* self, int32_t (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -783,7 +783,7 @@ int32_t k_io__thumbnailcreator_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -793,7 +793,7 @@ int32_t k_io__thumbnailcreator_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -803,7 +803,7 @@ void k_io__thumbnailcreator_on_receivers(void* self, int32_t (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -813,7 +813,7 @@ bool k_io__thumbnailcreator_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -823,7 +823,7 @@ bool k_io__thumbnailcreator_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -833,7 +833,7 @@ void k_io__thumbnailcreator_on_is_signal_connected(void* self, bool (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

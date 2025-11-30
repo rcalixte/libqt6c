@@ -27,285 +27,285 @@ QFutureInterfaceBase* q_futureinterfacebase_new2(void* other);
 /// @param initialState enum QFutureInterfaceBase__State
 QFutureInterfaceBase* q_futureinterfacebase_new3(int32_t initialState);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param other QFutureInterfaceBase*
 void q_futureinterfacebase_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportStarted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportStarted)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_report_started(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportFinished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportFinished)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_report_finished(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportCanceled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportCanceled)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_report_canceled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportResultsReady)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportResultsReady)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param beginIndex int
 /// @param endIndex int
 void q_futureinterfacebase_report_results_ready(void* self, int beginIndex, int endIndex);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setRunnable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setRunnable)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param runnable QRunnable*
 void q_futureinterfacebase_set_runnable(void* self, void* runnable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setThreadPool)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setThreadPool)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param pool QThreadPool*
 void q_futureinterfacebase_set_thread_pool(void* self, void* pool);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#threadPool)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#threadPool)
 ///
 /// @param self QFutureInterfaceBase*
 QThreadPool* q_futureinterfacebase_thread_pool(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setFilterMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setFilterMode)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param enable bool
 void q_futureinterfacebase_set_filter_mode(void* self, bool enable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setProgressRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setProgressRange)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param minimum int
 /// @param maximum int
 void q_futureinterfacebase_set_progress_range(void* self, int minimum, int maximum);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressMinimum)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressMinimum)
 ///
 /// @param self QFutureInterfaceBase*
 int32_t q_futureinterfacebase_progress_minimum(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressMaximum)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressMaximum)
 ///
 /// @param self QFutureInterfaceBase*
 int32_t q_futureinterfacebase_progress_maximum(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isProgressUpdateNeeded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isProgressUpdateNeeded)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_progress_update_needed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setProgressValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setProgressValue)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param progressValue int
 void q_futureinterfacebase_set_progress_value(void* self, int progressValue);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressValue)
 ///
 /// @param self QFutureInterfaceBase*
 int32_t q_futureinterfacebase_progress_value(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setProgressValueAndText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setProgressValueAndText)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param progressValue int
 /// @param progressText const char*
 void q_futureinterfacebase_set_progress_value_and_text(void* self, int progressValue, const char* progressText);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QFutureInterfaceBase*
 const char* q_futureinterfacebase_progress_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setExpectedResultCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setExpectedResultCount)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param resultCount int
 void q_futureinterfacebase_set_expected_result_count(void* self, int resultCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#expectedResultCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#expectedResultCount)
 ///
 /// @param self QFutureInterfaceBase*
 int32_t q_futureinterfacebase_expected_result_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#resultCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#resultCount)
 ///
 /// @param self QFutureInterfaceBase*
 int32_t q_futureinterfacebase_result_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#queryState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#queryState)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param state enum QFutureInterfaceBase__State
 bool q_futureinterfacebase_query_state(void* self, int32_t state);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isRunning)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isRunning)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_running(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isStarted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isStarted)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_started(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isCanceled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isCanceled)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_canceled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isFinished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isFinished)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_finished(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isPaused)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isPaused)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_paused(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setPaused)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setPaused)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param paused bool
 void q_futureinterfacebase_set_paused(void* self, bool paused);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#togglePaused)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#togglePaused)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_toggle_paused(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isSuspending)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isSuspending)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_suspending(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isSuspended)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isSuspended)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_suspended(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isThrottled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isThrottled)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_throttled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isResultReadyAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isResultReadyAt)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param index int
 bool q_futureinterfacebase_is_result_ready_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isValid)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#loadState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#loadState)
 ///
 /// @param self QFutureInterfaceBase*
 int32_t q_futureinterfacebase_load_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#cancel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#cancel)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_cancel(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#cancelAndFinish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#cancelAndFinish)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_cancel_and_finish(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setSuspended)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setSuspended)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param suspendVal bool
 void q_futureinterfacebase_set_suspended(void* self, bool suspendVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#toggleSuspended)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#toggleSuspended)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_toggle_suspended(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportSuspended)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportSuspended)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_report_suspended(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setThrottled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#setThrottled)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param enable bool
 void q_futureinterfacebase_set_throttled(void* self, bool enable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForFinished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForFinished)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_wait_for_finished(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForNextResult)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForNextResult)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_wait_for_next_result(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForResult)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForResult)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param resultIndex int
 void q_futureinterfacebase_wait_for_result(void* self, int resultIndex);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForResume)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#waitForResume)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_wait_for_resume(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#suspendIfRequested)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#suspendIfRequested)
 ///
 /// @param self QFutureInterfaceBase*
 void q_futureinterfacebase_suspend_if_requested(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#mutex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#mutex)
 ///
 /// @param self QFutureInterfaceBase*
 QMutex* q_futureinterfacebase_mutex(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#hasException)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#hasException)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_has_exception(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq-eq)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param other QFutureInterfaceBase*
 bool q_futureinterfacebase_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-not-eq)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param other QFutureInterfaceBase*
 bool q_futureinterfacebase_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#swap)
 ///
 /// @param self QFutureInterfaceBase*
 /// @param other QFutureInterfaceBase*
 void q_futureinterfacebase_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isChainCanceled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isChainCanceled)
 ///
 /// @param self QFutureInterfaceBase*
 bool q_futureinterfacebase_is_chain_canceled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#dtor.QFutureInterfaceBase)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#dtor.QFutureInterfaceBase)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/solid-storagedrive.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Solid__StorageDrive*
 const QMetaObject* k_solid__storagedrive_meta_object(void* self);
@@ -28,64 +28,64 @@ void* k_solid__storagedrive_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_solid__storagedrive_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_solid__storagedrive_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#deviceInterfaceType)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#deviceInterfaceType)
 ///
 ///
 /// @return enum Solid__DeviceInterface__Type
 int32_t k_solid__storagedrive_device_interface_type();
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#bus)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#bus)
 ///
 /// @param self Solid__StorageDrive*
 ///
 /// @return enum Solid__StorageDrive__Bus
 int32_t k_solid__storagedrive_bus(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#driveType)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#driveType)
 ///
 /// @param self Solid__StorageDrive*
 ///
 /// @return enum Solid__StorageDrive__DriveType
 int32_t k_solid__storagedrive_drive_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#isRemovable)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#isRemovable)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_is_removable(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#isHotpluggable)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#isHotpluggable)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_is_hotpluggable(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#size)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#size)
 ///
 /// @param self Solid__StorageDrive*
 uint64_t k_solid__storagedrive_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#isInUse)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#isInUse)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_is_in_use(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#timeDetected)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#timeDetected)
 ///
 /// @param self Solid__StorageDrive*
 QDateTime* k_solid__storagedrive_time_detected(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-storagedrive.html#timeMediaDetected)
+/// [Upstream resources](https://api.kde.org/solid-storagedrive.html#timeMediaDetected)
 ///
 /// @param self Solid__StorageDrive*
 QDateTime* k_solid__storagedrive_time_media_detected(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -93,7 +93,7 @@ QDateTime* k_solid__storagedrive_time_media_detected(void* self);
 /// @param c const char*
 const char* k_solid__storagedrive_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -104,14 +104,14 @@ const char* k_solid__storagedrive_tr3(const char* s, const char* c, int n);
 
 /// Inherited from Solid::DeviceInterface
 ///
-/// [Qt documentation](https://api.kde.org/solid-deviceinterface.html#isValid)
+/// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#isValid)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_is_valid(void* self);
 
 /// Inherited from Solid::DeviceInterface
 ///
-/// [Qt documentation](https://api.kde.org/solid-deviceinterface.html#typeToString)
+/// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -120,7 +120,7 @@ const char* k_solid__storagedrive_type_to_string(int32_t type);
 
 /// Inherited from Solid::DeviceInterface
 ///
-/// [Qt documentation](https://api.kde.org/solid-deviceinterface.html#stringToType)
+/// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#stringToType)
 ///
 /// @param type const char*
 ///
@@ -129,7 +129,7 @@ int32_t k_solid__storagedrive_string_to_type(const char* type);
 
 /// Inherited from Solid::DeviceInterface
 ///
-/// [Qt documentation](https://api.kde.org/solid-deviceinterface.html#typeDescription)
+/// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -138,7 +138,7 @@ const char* k_solid__storagedrive_type_description(int32_t type);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self Solid__StorageDrive*
 /// @param event QEvent*
@@ -146,7 +146,7 @@ bool k_solid__storagedrive_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self Solid__StorageDrive*
 /// @param watched QObject*
@@ -155,7 +155,7 @@ bool k_solid__storagedrive_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -164,7 +164,7 @@ const char* k_solid__storagedrive_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Solid__StorageDrive*
 /// @param name char*
@@ -172,35 +172,35 @@ void k_solid__storagedrive_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self Solid__StorageDrive*
 bool k_solid__storagedrive_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self Solid__StorageDrive*
 /// @param b bool
@@ -208,14 +208,14 @@ bool k_solid__storagedrive_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self Solid__StorageDrive*
 QThread* k_solid__storagedrive_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self Solid__StorageDrive*
 /// @param thread QThread*
@@ -223,7 +223,7 @@ bool k_solid__storagedrive_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self Solid__StorageDrive*
 /// @param interval int
@@ -231,7 +231,7 @@ int32_t k_solid__storagedrive_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self Solid__StorageDrive*
 /// @param id int
@@ -239,7 +239,7 @@ void k_solid__storagedrive_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self Solid__StorageDrive*
 /// @param id enum Qt__TimerId
@@ -247,14 +247,14 @@ void k_solid__storagedrive_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self Solid__StorageDrive*
 libqt_list /* of QObject* */ k_solid__storagedrive_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self Solid__StorageDrive*
 /// @param parent QObject*
@@ -262,7 +262,7 @@ void k_solid__storagedrive_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self Solid__StorageDrive*
 /// @param filterObj QObject*
@@ -270,7 +270,7 @@ void k_solid__storagedrive_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self Solid__StorageDrive*
 /// @param obj QObject*
@@ -278,7 +278,7 @@ void k_solid__storagedrive_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -288,7 +288,7 @@ QMetaObject__Connection* k_solid__storagedrive_connect(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self Solid__StorageDrive*
 /// @param sender QObject*
@@ -298,7 +298,7 @@ QMetaObject__Connection* k_solid__storagedrive_connect2(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -308,28 +308,28 @@ bool k_solid__storagedrive_disconnect(void* sender, void* signal, void* receiver
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_solid__storagedrive_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self Solid__StorageDrive*
 void k_solid__storagedrive_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self Solid__StorageDrive*
 void k_solid__storagedrive_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self Solid__StorageDrive*
 /// @param name const char*
@@ -338,7 +338,7 @@ bool k_solid__storagedrive_set_property(void* self, const char* name, void* valu
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self Solid__StorageDrive*
 /// @param name const char*
@@ -346,7 +346,7 @@ QVariant* k_solid__storagedrive_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -355,28 +355,28 @@ const char** k_solid__storagedrive_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Solid__StorageDrive*
 QBindingStorage* k_solid__storagedrive_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Solid__StorageDrive*
 const QBindingStorage* k_solid__storagedrive_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Solid__StorageDrive*
 void k_solid__storagedrive_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Solid__StorageDrive*
 /// @param callback void func(Solid__StorageDrive* self)
@@ -384,14 +384,14 @@ void k_solid__storagedrive_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self Solid__StorageDrive*
 QObject* k_solid__storagedrive_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self Solid__StorageDrive*
 /// @param classname const char*
@@ -399,14 +399,14 @@ bool k_solid__storagedrive_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self Solid__StorageDrive*
 void k_solid__storagedrive_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self Solid__StorageDrive*
 /// @param thread QThread*
@@ -415,7 +415,7 @@ bool k_solid__storagedrive_move_to_thread2(void* self, void* thread, void* param
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self Solid__StorageDrive*
 /// @param interval int
@@ -424,7 +424,7 @@ int32_t k_solid__storagedrive_start_timer22(void* self, int interval, int32_t ti
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -435,7 +435,7 @@ QMetaObject__Connection* k_solid__storagedrive_connect5(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self Solid__StorageDrive*
 /// @param sender QObject*
@@ -446,7 +446,7 @@ QMetaObject__Connection* k_solid__storagedrive_connect4(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Solid__StorageDrive*
 /// @param param1 QObject*
@@ -454,7 +454,7 @@ void k_solid__storagedrive_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Solid__StorageDrive*
 /// @param callback void func(Solid__StorageDrive* self, QObject* param1)
@@ -462,7 +462,7 @@ void k_solid__storagedrive_on_destroyed1(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

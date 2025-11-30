@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kio-sslui.html
 
-/// [Qt documentation](https://api.kde.org/kio-sslui.html#askIgnoreSslErrors)
+/// [Upstream resources](https://api.kde.org/kio-sslui.html#askIgnoreSslErrors)
 ///
 /// @param param1 KSslErrorUiData*
 /// @param param2 enum KIO__SslUi__RulesStorage

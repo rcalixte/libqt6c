@@ -13,11 +13,11 @@
 
 /// https://api.kde.org/kusertimestamp.html
 
-/// [Qt documentation](https://api.kde.org/kusertimestamp.html#userTimestamp)
+/// [Upstream resources](https://api.kde.org/kusertimestamp.html#userTimestamp)
 ///
 uint64_t k_usertimestamp_user_timestamp();
 
-/// [Qt documentation](https://api.kde.org/kusertimestamp.html#updateUserTimestamp)
+/// [Upstream resources](https://api.kde.org/kusertimestamp.html#updateUserTimestamp)
 ///
 /// @param param1 uint64_t
 void k_usertimestamp_update_user_timestamp(uint64_t param1);

@@ -35,71 +35,71 @@ void q_accessible_copy_assign(void* self, void* other);
 /// @param other QAccessible*
 void q_accessible_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#installActivationObserver)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#installActivationObserver)
 ///
 /// @param param1 QAccessible__ActivationObserver*
 void q_accessible_install_activation_observer(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#removeActivationObserver)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#removeActivationObserver)
 ///
 /// @param param1 QAccessible__ActivationObserver*
 void q_accessible_remove_activation_observer(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#queryAccessibleInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#queryAccessibleInterface)
 ///
 /// @param param1 QObject*
 QAccessibleInterface* q_accessible_query_accessible_interface(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#uniqueId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#uniqueId)
 ///
 /// @param iface QAccessibleInterface*
 uint32_t q_accessible_unique_id(void* iface);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#accessibleInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#accessibleInterface)
 ///
 /// @param uniqueId uint32_t
 QAccessibleInterface* q_accessible_accessible_interface(uint32_t uniqueId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#registerAccessibleInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#registerAccessibleInterface)
 ///
 /// @param iface QAccessibleInterface*
 uint32_t q_accessible_register_accessible_interface(void* iface);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#deleteAccessibleInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#deleteAccessibleInterface)
 ///
 /// @param uniqueId uint32_t
 void q_accessible_delete_accessible_interface(uint32_t uniqueId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#updateAccessibility)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#updateAccessibility)
 ///
 /// @param event QAccessibleEvent*
 void q_accessible_update_accessibility(void* event);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#isActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#isActive)
 ///
 bool q_accessible_is_active();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#setActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#setActive)
 ///
 /// @param active bool
 void q_accessible_set_active(bool active);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#setRootObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#setRootObject)
 ///
 /// @param object QObject*
 void q_accessible_set_root_object(void* object);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#cleanup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#cleanup)
 ///
 void q_accessible_cleanup();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#qAccessibleTextBoundaryHelper)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#qAccessibleTextBoundaryHelper)
 ///
 /// @param cursor QTextCursor*
 /// @param boundaryType enum QAccessible__TextBoundaryType
 libqt_pair /* tuple of int and int */ q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#dtor.QAccessible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#dtor.QAccessible)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -134,408 +134,408 @@ void q_accessible__state_copy_assign(void* self, void* other);
 /// @param other QAccessible__State*
 void q_accessible__state_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#disabled-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#disabled-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_disabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#disabled-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#disabled-var)
 ///
 /// @param self QAccessible__State*
 /// @param disabled uint64_t
 void q_accessible__state_set_disabled(void* self, uint64_t disabled);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selected-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selected-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_selected(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selected-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selected-var)
 ///
 /// @param self QAccessible__State*
 /// @param selected uint64_t
 void q_accessible__state_set_selected(void* self, uint64_t selected);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#focusable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focusable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_focusable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#focusable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focusable-var)
 ///
 /// @param self QAccessible__State*
 /// @param focusable uint64_t
 void q_accessible__state_set_focusable(void* self, uint64_t focusable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#focused-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focused-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_focused(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#focused-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focused-var)
 ///
 /// @param self QAccessible__State*
 /// @param focused uint64_t
 void q_accessible__state_set_focused(void* self, uint64_t focused);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#pressed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#pressed-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_pressed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#pressed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#pressed-var)
 ///
 /// @param self QAccessible__State*
 /// @param pressed uint64_t
 void q_accessible__state_set_pressed(void* self, uint64_t pressed);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#checkable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_checkable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#checkable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkable-var)
 ///
 /// @param self QAccessible__State*
 /// @param checkable uint64_t
 void q_accessible__state_set_checkable(void* self, uint64_t checkable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#checked-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checked-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_checked(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#checked-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checked-var)
 ///
 /// @param self QAccessible__State*
 /// @param checked uint64_t
 void q_accessible__state_set_checked(void* self, uint64_t checked);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#checkStateMixed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkStateMixed-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_check_state_mixed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#checkStateMixed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkStateMixed-var)
 ///
 /// @param self QAccessible__State*
 /// @param checkStateMixed uint64_t
 void q_accessible__state_set_check_state_mixed(void* self, uint64_t checkStateMixed);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#readOnly-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#readOnly-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_read_only(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#readOnly-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#readOnly-var)
 ///
 /// @param self QAccessible__State*
 /// @param readOnly uint64_t
 void q_accessible__state_set_read_only(void* self, uint64_t readOnly);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#hotTracked-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hotTracked-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_hot_tracked(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#hotTracked-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hotTracked-var)
 ///
 /// @param self QAccessible__State*
 /// @param hotTracked uint64_t
 void q_accessible__state_set_hot_tracked(void* self, uint64_t hotTracked);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#defaultButton-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#defaultButton-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_default_button(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#defaultButton-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#defaultButton-var)
 ///
 /// @param self QAccessible__State*
 /// @param defaultButton uint64_t
 void q_accessible__state_set_default_button(void* self, uint64_t defaultButton);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#expanded-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expanded-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_expanded(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#expanded-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expanded-var)
 ///
 /// @param self QAccessible__State*
 /// @param expanded uint64_t
 void q_accessible__state_set_expanded(void* self, uint64_t expanded);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#collapsed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#collapsed-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_collapsed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#collapsed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#collapsed-var)
 ///
 /// @param self QAccessible__State*
 /// @param collapsed uint64_t
 void q_accessible__state_set_collapsed(void* self, uint64_t collapsed);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#busy-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#busy-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_busy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#busy-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#busy-var)
 ///
 /// @param self QAccessible__State*
 /// @param busy uint64_t
 void q_accessible__state_set_busy(void* self, uint64_t busy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#expandable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expandable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_expandable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#expandable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expandable-var)
 ///
 /// @param self QAccessible__State*
 /// @param expandable uint64_t
 void q_accessible__state_set_expandable(void* self, uint64_t expandable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#marqueed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#marqueed-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_marqueed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#marqueed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#marqueed-var)
 ///
 /// @param self QAccessible__State*
 /// @param marqueed uint64_t
 void q_accessible__state_set_marqueed(void* self, uint64_t marqueed);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#animated-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#animated-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_animated(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#animated-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#animated-var)
 ///
 /// @param self QAccessible__State*
 /// @param animated uint64_t
 void q_accessible__state_set_animated(void* self, uint64_t animated);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#invisible-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invisible-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_invisible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#invisible-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invisible-var)
 ///
 /// @param self QAccessible__State*
 /// @param invisible uint64_t
 void q_accessible__state_set_invisible(void* self, uint64_t invisible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#offscreen-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#offscreen-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_offscreen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#offscreen-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#offscreen-var)
 ///
 /// @param self QAccessible__State*
 /// @param offscreen uint64_t
 void q_accessible__state_set_offscreen(void* self, uint64_t offscreen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#sizeable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#sizeable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_sizeable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#sizeable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#sizeable-var)
 ///
 /// @param self QAccessible__State*
 /// @param sizeable uint64_t
 void q_accessible__state_set_sizeable(void* self, uint64_t sizeable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#movable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#movable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_movable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#movable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#movable-var)
 ///
 /// @param self QAccessible__State*
 /// @param movable uint64_t
 void q_accessible__state_set_movable(void* self, uint64_t movable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selfVoicing-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selfVoicing-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_self_voicing(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selfVoicing-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selfVoicing-var)
 ///
 /// @param self QAccessible__State*
 /// @param selfVoicing uint64_t
 void q_accessible__state_set_self_voicing(void* self, uint64_t selfVoicing);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selectable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_selectable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selectable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectable-var)
 ///
 /// @param self QAccessible__State*
 /// @param selectable uint64_t
 void q_accessible__state_set_selectable(void* self, uint64_t selectable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#linked-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#linked-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_linked(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#linked-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#linked-var)
 ///
 /// @param self QAccessible__State*
 /// @param linked uint64_t
 void q_accessible__state_set_linked(void* self, uint64_t linked);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#traversed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#traversed-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_traversed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#traversed-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#traversed-var)
 ///
 /// @param self QAccessible__State*
 /// @param traversed uint64_t
 void q_accessible__state_set_traversed(void* self, uint64_t traversed);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#multiSelectable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiSelectable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_multi_selectable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#multiSelectable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiSelectable-var)
 ///
 /// @param self QAccessible__State*
 /// @param multiSelectable uint64_t
 void q_accessible__state_set_multi_selectable(void* self, uint64_t multiSelectable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#extSelectable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#extSelectable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_ext_selectable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#extSelectable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#extSelectable-var)
 ///
 /// @param self QAccessible__State*
 /// @param extSelectable uint64_t
 void q_accessible__state_set_ext_selectable(void* self, uint64_t extSelectable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#passwordEdit-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#passwordEdit-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_password_edit(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#passwordEdit-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#passwordEdit-var)
 ///
 /// @param self QAccessible__State*
 /// @param passwordEdit uint64_t
 void q_accessible__state_set_password_edit(void* self, uint64_t passwordEdit);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#hasPopup-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hasPopup-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_has_popup(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#hasPopup-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hasPopup-var)
 ///
 /// @param self QAccessible__State*
 /// @param hasPopup uint64_t
 void q_accessible__state_set_has_popup(void* self, uint64_t hasPopup);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#modal-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#modal-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_modal(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#modal-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#modal-var)
 ///
 /// @param self QAccessible__State*
 /// @param modal uint64_t
 void q_accessible__state_set_modal(void* self, uint64_t modal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#active-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#active-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_active(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#active-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#active-var)
 ///
 /// @param self QAccessible__State*
 /// @param active uint64_t
 void q_accessible__state_set_active(void* self, uint64_t active);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#invalid-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invalid-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_invalid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#invalid-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invalid-var)
 ///
 /// @param self QAccessible__State*
 /// @param invalid uint64_t
 void q_accessible__state_set_invalid(void* self, uint64_t invalid);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#editable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#editable-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_editable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#editable-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#editable-var)
 ///
 /// @param self QAccessible__State*
 /// @param editable uint64_t
 void q_accessible__state_set_editable(void* self, uint64_t editable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#multiLine-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiLine-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_multi_line(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#multiLine-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiLine-var)
 ///
 /// @param self QAccessible__State*
 /// @param multiLine uint64_t
 void q_accessible__state_set_multi_line(void* self, uint64_t multiLine);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selectableText-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectableText-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_selectable_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#selectableText-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectableText-var)
 ///
 /// @param self QAccessible__State*
 /// @param selectableText uint64_t
 void q_accessible__state_set_selectable_text(void* self, uint64_t selectableText);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#supportsAutoCompletion-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#supportsAutoCompletion-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_supports_auto_completion(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#supportsAutoCompletion-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#supportsAutoCompletion-var)
 ///
 /// @param self QAccessible__State*
 /// @param supportsAutoCompletion uint64_t
 void q_accessible__state_set_supports_auto_completion(void* self, uint64_t supportsAutoCompletion);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#searchEdit-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#searchEdit-var)
 ///
 /// @param self QAccessible__State*
 uint64_t q_accessible__state_search_edit(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-state.html#searchEdit-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#searchEdit-var)
 ///
 /// @param self QAccessible__State*
 /// @param searchEdit uint64_t
@@ -548,13 +548,13 @@ void q_accessible__state_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qaccessible-activationobserver.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#accessibilityActiveChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#accessibilityActiveChanged)
 ///
 /// @param self QAccessible__ActivationObserver*
 /// @param active bool
 void q_accessible__activationobserver_accessibility_active_changed(void* self, bool active);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#operator-eq)
 ///
 /// @param self QAccessible__ActivationObserver*
 /// @param param1 QAccessible__ActivationObserver*

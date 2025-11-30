@@ -22,20 +22,20 @@ Attica__PrivateData* k_attica__privatedata_new();
 /// @param other Attica__PrivateData*
 Attica__PrivateData* k_attica__privatedata_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-privatedata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/attica-privatedata.html#operator-eq)
 ///
 /// @param self Attica__PrivateData*
 /// @param other Attica__PrivateData*
 void k_attica__privatedata_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-privatedata.html#setAttribute)
+/// [Upstream resources](https://api.kde.org/attica-privatedata.html#setAttribute)
 ///
 /// @param self Attica__PrivateData*
 /// @param key const char*
 /// @param value const char*
 void k_attica__privatedata_set_attribute(void* self, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/attica-privatedata.html#attribute)
+/// [Upstream resources](https://api.kde.org/attica-privatedata.html#attribute)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -43,20 +43,20 @@ void k_attica__privatedata_set_attribute(void* self, const char* key, const char
 /// @param key const char*
 const char* k_attica__privatedata_attribute(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/attica-privatedata.html#setTimestamp)
+/// [Upstream resources](https://api.kde.org/attica-privatedata.html#setTimestamp)
 ///
 /// @param self Attica__PrivateData*
 /// @param key const char*
 /// @param when QDateTime*
 void k_attica__privatedata_set_timestamp(void* self, const char* key, void* when);
 
-/// [Qt documentation](https://api.kde.org/attica-privatedata.html#timestamp)
+/// [Upstream resources](https://api.kde.org/attica-privatedata.html#timestamp)
 ///
 /// @param self Attica__PrivateData*
 /// @param key const char*
 QDateTime* k_attica__privatedata_timestamp(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/attica-privatedata.html#keys)
+/// [Upstream resources](https://api.kde.org/attica-privatedata.html#keys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -44,41 +44,41 @@ void q_sslellipticcurve_copy_assign(void* self, void* other);
 /// @param other QSslEllipticCurve*
 void q_sslellipticcurve_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#fromShortName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#fromShortName)
 ///
 /// @param name const char*
 QSslEllipticCurve* q_sslellipticcurve_from_short_name(const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#fromLongName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#fromLongName)
 ///
 /// @param name const char*
 QSslEllipticCurve* q_sslellipticcurve_from_long_name(const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#shortName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#shortName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslEllipticCurve*
 const char* q_sslellipticcurve_short_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#longName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#longName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslEllipticCurve*
 const char* q_sslellipticcurve_long_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#isValid)
 ///
 /// @param self QSslEllipticCurve*
 bool q_sslellipticcurve_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#isTlsNamedCurve)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#isTlsNamedCurve)
 ///
 /// @param self QSslEllipticCurve*
 bool q_sslellipticcurve_is_tls_named_curve(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#dtor.QSslEllipticCurve)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#dtor.QSslEllipticCurve)
 ///
 /// Delete this object from C++ memory.
 ///

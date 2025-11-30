@@ -22,31 +22,31 @@ QCapturableWindow* q_capturablewindow_new();
 /// @param other QCapturableWindow*
 QCapturableWindow* q_capturablewindow_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#operator-eq)
 ///
 /// @param self QCapturableWindow*
 /// @param other QCapturableWindow*
 void q_capturablewindow_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#swap)
 ///
 /// @param self QCapturableWindow*
 /// @param other QCapturableWindow*
 void q_capturablewindow_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#isValid)
 ///
 /// @param self QCapturableWindow*
 bool q_capturablewindow_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#description)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#description)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCapturableWindow*
 const char* q_capturablewindow_description(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#dtor.QCapturableWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#dtor.QCapturableWindow)
 ///
 /// Delete this object from C++ memory.
 ///

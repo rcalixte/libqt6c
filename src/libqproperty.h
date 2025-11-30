@@ -17,7 +17,7 @@
 ///
 QScopedPropertyUpdateGroup* q_scopedpropertyupdategroup_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpropertyupdategroup.html#dtor.QScopedPropertyUpdateGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscopedpropertyupdategroup.html#dtor.QScopedPropertyUpdateGroup)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -57,55 +57,55 @@ void q_propertybindingsourcelocation_copy_assign(void* self, void* other);
 /// @param other QPropertyBindingSourceLocation*
 void q_propertybindingsourcelocation_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QPropertyBindingSourceLocation*
 const char* q_propertybindingsourcelocation_file_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
 ///
 /// @param self QPropertyBindingSourceLocation*
 /// @param fileName const char*
 void q_propertybindingsourcelocation_set_file_name(void* self, const char* fileName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QPropertyBindingSourceLocation*
 const char* q_propertybindingsourcelocation_function_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
 ///
 /// @param self QPropertyBindingSourceLocation*
 /// @param functionName const char*
 void q_propertybindingsourcelocation_set_function_name(void* self, const char* functionName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
 ///
 /// @param self QPropertyBindingSourceLocation*
 uint32_t q_propertybindingsourcelocation_line(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
 ///
 /// @param self QPropertyBindingSourceLocation*
 /// @param line uint32_t
 void q_propertybindingsourcelocation_set_line(void* self, uint32_t line);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
 ///
 /// @param self QPropertyBindingSourceLocation*
 uint32_t q_propertybindingsourcelocation_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
 ///
 /// @param self QPropertyBindingSourceLocation*
 /// @param column uint32_t
 void q_propertybindingsourcelocation_set_column(void* self, uint32_t column);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#dtor.QPropertyBindingSourceLocation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#dtor.QPropertyBindingSourceLocation)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -134,32 +134,32 @@ QPropertyBindingError* q_propertybindingerror_new3(void* other);
 /// @param description const char*
 QPropertyBindingError* q_propertybindingerror_new4(int32_t type, const char* description);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#operator-eq)
 ///
 /// @param self QPropertyBindingError*
 /// @param other QPropertyBindingError*
 void q_propertybindingerror_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#hasError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#hasError)
 ///
 /// @param self QPropertyBindingError*
 bool q_propertybindingerror_has_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#type)
 ///
 /// @param self QPropertyBindingError*
 ///
 /// @return enum QPropertyBindingError__Type
 int32_t q_propertybindingerror_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#description)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#description)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QPropertyBindingError*
 const char* q_propertybindingerror_description(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#dtor.QPropertyBindingError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#dtor.QPropertyBindingError)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -177,28 +177,28 @@ QUntypedPropertyBinding* q_untypedpropertybinding_new();
 /// @param other QUntypedPropertyBinding*
 QUntypedPropertyBinding* q_untypedpropertybinding_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#operator-eq)
 ///
 /// @param self QUntypedPropertyBinding*
 /// @param other QUntypedPropertyBinding*
 void q_untypedpropertybinding_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#isNull)
 ///
 /// @param self QUntypedPropertyBinding*
 bool q_untypedpropertybinding_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#error)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#error)
 ///
 /// @param self QUntypedPropertyBinding*
 QPropertyBindingError* q_untypedpropertybinding_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#valueMetaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#valueMetaType)
 ///
 /// @param self QUntypedPropertyBinding*
 QMetaType* q_untypedpropertybinding_value_meta_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#dtor.QUntypedPropertyBinding)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#dtor.QUntypedPropertyBinding)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -216,7 +216,7 @@ QPropertyObserverBase* q_propertyobserverbase_new();
 /// @param param1 QPropertyObserverBase*
 QPropertyObserverBase* q_propertyobserverbase_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyobserverbase.html#dtor.QPropertyObserverBase)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserverbase.html#dtor.QPropertyObserverBase)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -229,7 +229,7 @@ void q_propertyobserverbase_delete(void* self);
 ///
 QPropertyObserver* q_propertyobserver_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyobserver.html#dtor.QPropertyObserver)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserver.html#dtor.QPropertyObserver)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -242,7 +242,7 @@ void q_propertyobserver_delete(void* self);
 ///
 QPropertyNotifier* q_propertynotifier_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertynotifier.html#dtor.QPropertyNotifier)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertynotifier.html#dtor.QPropertyNotifier)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -282,65 +282,65 @@ void q_untypedbindable_copy_assign(void* self, void* other);
 /// @param other QUntypedBindable*
 void q_untypedbindable_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#isValid)
 ///
 /// @param self QUntypedBindable*
 bool q_untypedbindable_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#isBindable)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#isBindable)
 ///
 /// @param self QUntypedBindable*
 bool q_untypedbindable_is_bindable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#isReadOnly)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#isReadOnly)
 ///
 /// @param self QUntypedBindable*
 bool q_untypedbindable_is_read_only(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#makeBinding)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#makeBinding)
 ///
 /// @param self QUntypedBindable*
 QUntypedPropertyBinding* q_untypedbindable_make_binding(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#takeBinding)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#takeBinding)
 ///
 /// @param self QUntypedBindable*
 QUntypedPropertyBinding* q_untypedbindable_take_binding(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#observe)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#observe)
 ///
 /// @param self QUntypedBindable*
 /// @param observer QPropertyObserver*
 void q_untypedbindable_observe(void* self, void* observer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#binding)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#binding)
 ///
 /// @param self QUntypedBindable*
 QUntypedPropertyBinding* q_untypedbindable_binding(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#setBinding)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#setBinding)
 ///
 /// @param self QUntypedBindable*
 /// @param binding QUntypedPropertyBinding*
 bool q_untypedbindable_set_binding(void* self, void* binding);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#hasBinding)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#hasBinding)
 ///
 /// @param self QUntypedBindable*
 bool q_untypedbindable_has_binding(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#metaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#metaType)
 ///
 /// @param self QUntypedBindable*
 QMetaType* q_untypedbindable_meta_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#makeBinding)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#makeBinding)
 ///
 /// @param self QUntypedBindable*
 /// @param location QPropertyBindingSourceLocation*
 QUntypedPropertyBinding* q_untypedbindable_make_binding1(void* self, void* location);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#dtor.QUntypedBindable)
+/// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#dtor.QUntypedBindable)
 ///
 /// Delete this object from C++ memory.
 ///

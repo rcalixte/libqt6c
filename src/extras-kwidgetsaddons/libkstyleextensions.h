@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kstyleextensions.html
 
-/// [Qt documentation](https://api.kde.org/kstyleextensions.html#customControlElement)
+/// [Upstream resources](https://api.kde.org/kstyleextensions.html#customControlElement)
 ///
 /// @param param1 const char*
 /// @param param2 QWidget*
@@ -21,7 +21,7 @@
 /// @return enum QStyle__ControlElement
 int64_t k_styleextensions_custom_control_element(const char* param1, void* param2);
 
-/// [Qt documentation](https://api.kde.org/kstyleextensions.html#customStyleHint)
+/// [Upstream resources](https://api.kde.org/kstyleextensions.html#customStyleHint)
 ///
 /// @param param1 const char*
 /// @param param2 QWidget*
@@ -29,7 +29,7 @@ int64_t k_styleextensions_custom_control_element(const char* param1, void* param
 /// @return enum QStyle__StyleHint
 int64_t k_styleextensions_custom_style_hint(const char* param1, void* param2);
 
-/// [Qt documentation](https://api.kde.org/kstyleextensions.html#customSubElement)
+/// [Upstream resources](https://api.kde.org/kstyleextensions.html#customSubElement)
 ///
 /// @param param1 const char*
 /// @param param2 QWidget*

@@ -23,30 +23,30 @@ KCompletionMatches* k_completionmatches_new(bool sort);
 /// @param param1 KCompletionMatches*
 KCompletionMatches* k_completionmatches_new2(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kcompletionmatches.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html#operator-eq)
 ///
 /// @param self KCompletionMatches*
 /// @param param1 KCompletionMatches*
 void k_completionmatches_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kcompletionmatches.html#removeDuplicates)
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html#removeDuplicates)
 ///
 /// @param self KCompletionMatches*
 void k_completionmatches_remove_duplicates(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletionmatches.html#list)
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html#list)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletionMatches*
 const char** k_completionmatches_list(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletionmatches.html#sorting)
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html#sorting)
 ///
 /// @param self KCompletionMatches*
 bool k_completionmatches_sorting(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletionmatches.html#list)
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html#list)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -54,7 +54,7 @@ bool k_completionmatches_sorting(void* self);
 /// @param sort bool
 const char** k_completionmatches_list1(void* self, bool sort);
 
-/// [Qt documentation](https://api.kde.org/kcompletionmatches.html#dtor.KCompletionMatches)
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html#dtor.KCompletionMatches)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qaudio.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudio.html#convertVolume)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html#convertVolume)
 ///
 /// @param param1 float
 /// @param param2 enum QAudio__VolumeScale

@@ -35,18 +35,18 @@ void q_scopedpointerpoddeleter_copy_assign(void* self, void* other);
 /// @param other QScopedPointerPodDeleter*
 void q_scopedpointerpoddeleter_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#cleanup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#cleanup)
 ///
 /// @param pointer void*
 void q_scopedpointerpoddeleter_cleanup(void* pointer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#operator-28-29)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#operator-28-29)
 ///
 /// @param self QScopedPointerPodDeleter*
 /// @param pointer void*
 void q_scopedpointerpoddeleter_operator_call(void* self, void* pointer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#dtor.QScopedPointerPodDeleter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#dtor.QScopedPointerPodDeleter)
 ///
 /// Delete this object from C++ memory.
 ///

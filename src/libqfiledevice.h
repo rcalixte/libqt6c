@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qfiledevice.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QFileDevice*
 const QMetaObject* q_filedevice_meta_object(void* self);
@@ -28,119 +28,119 @@ void* q_filedevice_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_filedevice_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_filedevice_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#error)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#error)
 ///
 /// @param self QFileDevice*
 ///
 /// @return enum QFileDevice__FileError
 int32_t q_filedevice_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#unsetError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#unsetError)
 ///
 /// @param self QFileDevice*
 void q_filedevice_unset_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#close)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#close)
 ///
 /// @param self QFileDevice*
 void q_filedevice_close(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_sequential(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#handle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#handle)
 ///
 /// @param self QFileDevice*
 int32_t q_filedevice_handle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#fileName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#fileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QFileDevice*
 const char* q_filedevice_file_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#pos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#pos)
 ///
 /// @param self QFileDevice*
 long long q_filedevice_pos(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#seek)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#seek)
 ///
 /// @param self QFileDevice*
 /// @param offset long long
 bool q_filedevice_seek(void* self, long long offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_at_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#flush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#flush)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_flush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#size)
 ///
 /// @param self QFileDevice*
 long long q_filedevice_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#resize)
 ///
 /// @param self QFileDevice*
 /// @param sz long long
 bool q_filedevice_resize(void* self, long long sz);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#permissions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#permissions)
 ///
 /// @param self QFileDevice*
 ///
 /// @return flag of enum QFileDevice__Permission
 int32_t q_filedevice_permissions(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#setPermissions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#setPermissions)
 ///
 /// @param self QFileDevice*
 /// @param permissionSpec flag of enum QFileDevice__Permission
 bool q_filedevice_set_permissions(void* self, int32_t permissionSpec);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#map)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self QFileDevice*
 /// @param offset long long
 /// @param size long long
 unsigned char* q_filedevice_map(void* self, long long offset, long long size);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#unmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#unmap)
 ///
 /// @param self QFileDevice*
 /// @param address unsigned char*
 bool q_filedevice_unmap(void* self, unsigned char* address);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#fileTime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#fileTime)
 ///
 /// @param self QFileDevice*
 /// @param time enum QFileDevice__FileTime
 QDateTime* q_filedevice_file_time(void* self, int32_t time);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#setFileTime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#setFileTime)
 ///
 /// @param self QFileDevice*
 /// @param newDate QDateTime*
 /// @param fileTime enum QFileDevice__FileTime
 bool q_filedevice_set_file_time(void* self, void* newDate, int32_t fileTime);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -148,7 +148,7 @@ bool q_filedevice_set_file_time(void* self, void* newDate, int32_t fileTime);
 /// @param c const char*
 const char* q_filedevice_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -157,7 +157,7 @@ const char* q_filedevice_tr2(const char* s, const char* c);
 /// @param n int
 const char* q_filedevice_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#map)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self QFileDevice*
 /// @param offset long long
@@ -167,7 +167,7 @@ unsigned char* q_filedevice_map3(void* self, long long offset, long long size, i
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#openMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QFileDevice*
 ///
@@ -176,7 +176,7 @@ int32_t q_filedevice_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setTextModeEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setTextModeEnabled)
 ///
 /// @param self QFileDevice*
 /// @param enabled bool
@@ -184,56 +184,56 @@ void q_filedevice_set_text_mode_enabled(void* self, bool enabled);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_text_mode_enabled(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_open(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_readable(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_writable(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
 /// @param self QFileDevice*
 int32_t q_filedevice_read_channel_count(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
 /// @param self QFileDevice*
 int32_t q_filedevice_write_channel_count(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
 /// @param self QFileDevice*
 int32_t q_filedevice_current_read_channel(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setCurrentReadChannel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setCurrentReadChannel)
 ///
 /// @param self QFileDevice*
 /// @param channel int
@@ -241,14 +241,14 @@ void q_filedevice_set_current_read_channel(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
 /// @param self QFileDevice*
 int32_t q_filedevice_current_write_channel(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setCurrentWriteChannel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setCurrentWriteChannel)
 ///
 /// @param self QFileDevice*
 /// @param channel int
@@ -256,7 +256,7 @@ void q_filedevice_set_current_write_channel(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#open)
 ///
 /// @param self QFileDevice*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
@@ -264,28 +264,28 @@ bool q_filedevice_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_reset(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
 /// @param self QFileDevice*
 long long q_filedevice_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
 /// @param self QFileDevice*
 long long q_filedevice_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// @param self QFileDevice*
 /// @param data char*
@@ -294,7 +294,7 @@ long long q_filedevice_read(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -304,7 +304,7 @@ char* q_filedevice_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readAll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -313,7 +313,7 @@ char* q_filedevice_read_all(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
 /// @param self QFileDevice*
 /// @param data char*
@@ -322,7 +322,7 @@ long long q_filedevice_read_line(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -331,42 +331,42 @@ char* q_filedevice_read_line2(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_can_read_line(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#startTransaction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#startTransaction)
 ///
 /// @param self QFileDevice*
 void q_filedevice_start_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#commitTransaction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#commitTransaction)
 ///
 /// @param self QFileDevice*
 void q_filedevice_commit_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#rollbackTransaction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#rollbackTransaction)
 ///
 /// @param self QFileDevice*
 void q_filedevice_rollback_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_transaction_started(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QFileDevice*
 /// @param data const char*
@@ -375,7 +375,7 @@ long long q_filedevice_write(void* self, const char* data, long long lenVal);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QFileDevice*
 /// @param data const char*
@@ -383,7 +383,7 @@ long long q_filedevice_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QFileDevice*
 /// @param data const char*
@@ -391,7 +391,7 @@ long long q_filedevice_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// @param self QFileDevice*
 /// @param data char*
@@ -400,7 +400,7 @@ long long q_filedevice_peek(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -410,7 +410,7 @@ char* q_filedevice_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QFileDevice*
 /// @param maxSize long long
@@ -418,7 +418,7 @@ long long q_filedevice_skip(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
 ///
 /// @param self QFileDevice*
 /// @param msecs int
@@ -426,7 +426,7 @@ bool q_filedevice_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
 ///
 /// @param self QFileDevice*
 /// @param msecs int
@@ -434,7 +434,7 @@ bool q_filedevice_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#ungetChar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#ungetChar)
 ///
 /// @param self QFileDevice*
 /// @param c char
@@ -442,7 +442,7 @@ void q_filedevice_unget_char(void* self, char c);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#putChar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#putChar)
 ///
 /// @param self QFileDevice*
 /// @param c char
@@ -450,7 +450,7 @@ bool q_filedevice_put_char(void* self, char c);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#getChar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#getChar)
 ///
 /// @param self QFileDevice*
 /// @param c char*
@@ -458,7 +458,7 @@ bool q_filedevice_get_char(void* self, char* c);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -467,14 +467,14 @@ const char* q_filedevice_error_string(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QFileDevice*
 void q_filedevice_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self)
@@ -482,7 +482,7 @@ void q_filedevice_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QFileDevice*
 /// @param channel int
@@ -490,7 +490,7 @@ void q_filedevice_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self, int channel)
@@ -498,7 +498,7 @@ void q_filedevice_on_channel_ready_read(void* self, void (*callback)(void*, int)
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QFileDevice*
 /// @param bytes long long
@@ -506,7 +506,7 @@ void q_filedevice_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self, long long bytes)
@@ -514,7 +514,7 @@ void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, long long
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QFileDevice*
 /// @param channel int
@@ -523,7 +523,7 @@ void q_filedevice_channel_bytes_written(void* self, int channel, long long bytes
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self, int channel, long long bytes)
@@ -531,14 +531,14 @@ void q_filedevice_on_channel_bytes_written(void* self, void (*callback)(void*, i
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QFileDevice*
 void q_filedevice_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self)
@@ -546,14 +546,14 @@ void q_filedevice_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QFileDevice*
 void q_filedevice_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self)
@@ -561,7 +561,7 @@ void q_filedevice_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -571,7 +571,7 @@ char* q_filedevice_read_line1(void* self, long long maxlen);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QFileDevice*
 /// @param event QEvent*
@@ -579,7 +579,7 @@ bool q_filedevice_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QFileDevice*
 /// @param watched QObject*
@@ -588,7 +588,7 @@ bool q_filedevice_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -597,7 +597,7 @@ const char* q_filedevice_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QFileDevice*
 /// @param name char*
@@ -605,35 +605,35 @@ void q_filedevice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QFileDevice*
 bool q_filedevice_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QFileDevice*
 /// @param b bool
@@ -641,14 +641,14 @@ bool q_filedevice_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QFileDevice*
 QThread* q_filedevice_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QFileDevice*
 /// @param thread QThread*
@@ -656,7 +656,7 @@ bool q_filedevice_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QFileDevice*
 /// @param interval int
@@ -664,7 +664,7 @@ int32_t q_filedevice_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QFileDevice*
 /// @param id int
@@ -672,7 +672,7 @@ void q_filedevice_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QFileDevice*
 /// @param id enum Qt__TimerId
@@ -680,14 +680,14 @@ void q_filedevice_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QFileDevice*
 libqt_list /* of QObject* */ q_filedevice_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QFileDevice*
 /// @param parent QObject*
@@ -695,7 +695,7 @@ void q_filedevice_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QFileDevice*
 /// @param filterObj QObject*
@@ -703,7 +703,7 @@ void q_filedevice_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QFileDevice*
 /// @param obj QObject*
@@ -711,7 +711,7 @@ void q_filedevice_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -721,7 +721,7 @@ QMetaObject__Connection* q_filedevice_connect(void* sender, void* signal, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QFileDevice*
 /// @param sender QObject*
@@ -731,7 +731,7 @@ QMetaObject__Connection* q_filedevice_connect2(void* self, void* sender, const c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -741,28 +741,28 @@ bool q_filedevice_disconnect(void* sender, void* signal, void* receiver, void* m
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_filedevice_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QFileDevice*
 void q_filedevice_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QFileDevice*
 void q_filedevice_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QFileDevice*
 /// @param name const char*
@@ -771,7 +771,7 @@ bool q_filedevice_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QFileDevice*
 /// @param name const char*
@@ -779,7 +779,7 @@ QVariant* q_filedevice_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -788,28 +788,28 @@ const char** q_filedevice_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QFileDevice*
 QBindingStorage* q_filedevice_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QFileDevice*
 const QBindingStorage* q_filedevice_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileDevice*
 void q_filedevice_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self)
@@ -817,14 +817,14 @@ void q_filedevice_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QFileDevice*
 QObject* q_filedevice_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QFileDevice*
 /// @param classname const char*
@@ -832,14 +832,14 @@ bool q_filedevice_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QFileDevice*
 void q_filedevice_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QFileDevice*
 /// @param thread QThread*
@@ -848,7 +848,7 @@ bool q_filedevice_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QFileDevice*
 /// @param interval int
@@ -857,7 +857,7 @@ int32_t q_filedevice_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -868,7 +868,7 @@ QMetaObject__Connection* q_filedevice_connect5(void* sender, void* signal, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QFileDevice*
 /// @param sender QObject*
@@ -879,7 +879,7 @@ QMetaObject__Connection* q_filedevice_connect4(void* self, void* sender, const c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileDevice*
 /// @param param1 QObject*
@@ -887,7 +887,7 @@ void q_filedevice_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileDevice*
 /// @param callback void func(QFileDevice* self, QObject* param1)
@@ -895,7 +895,7 @@ void q_filedevice_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -903,7 +903,7 @@ void q_filedevice_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(QFileDevice* self, const char* objectName)
 void q_filedevice_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#dtor.QFileDevice)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#dtor.QFileDevice)
 ///
 /// Delete this object from C++ memory.
 ///

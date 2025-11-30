@@ -13,14 +13,14 @@
 
 /// https://api.kde.org/kbackup.html
 
-/// [Qt documentation](https://api.kde.org/kbackup.html#simpleBackupFile)
+/// [Upstream resources](https://api.kde.org/kbackup.html#simpleBackupFile)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
 /// @param param3 const char*
 bool k_backup_simple_backup_file(const char* param1, const char* param2, const char* param3);
 
-/// [Qt documentation](https://api.kde.org/kbackup.html#numberedBackupFile)
+/// [Upstream resources](https://api.kde.org/kbackup.html#numberedBackupFile)
 ///
 /// @param param1 const char*
 /// @param param2 const char*

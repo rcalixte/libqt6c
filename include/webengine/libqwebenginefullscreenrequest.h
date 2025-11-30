@@ -18,33 +18,33 @@
 /// @param other QWebEngineFullScreenRequest*
 QWebEngineFullScreenRequest* q_webenginefullscreenrequest_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#operator-eq)
 ///
 /// @param self QWebEngineFullScreenRequest*
 /// @param other QWebEngineFullScreenRequest*
 void q_webenginefullscreenrequest_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#reject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#reject)
 ///
 /// @param self QWebEngineFullScreenRequest*
 void q_webenginefullscreenrequest_reject(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#accept)
 ///
 /// @param self QWebEngineFullScreenRequest*
 void q_webenginefullscreenrequest_accept(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#toggleOn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#toggleOn)
 ///
 /// @param self QWebEngineFullScreenRequest*
 bool q_webenginefullscreenrequest_toggle_on(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#origin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#origin)
 ///
 /// @param self QWebEngineFullScreenRequest*
 QUrl* q_webenginefullscreenrequest_origin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#dtor.QWebEngineFullScreenRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#dtor.QWebEngineFullScreenRequest)
 ///
 /// Delete this object from C++ memory.
 ///

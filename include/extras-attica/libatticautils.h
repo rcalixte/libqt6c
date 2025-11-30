@@ -35,12 +35,12 @@ void k_attica__utils_copy_assign(void* self, void* other);
 /// @param other Attica__Utils*
 void k_attica__utils_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-utils.html#parseQtDateTimeIso8601)
+/// [Upstream resources](https://api.kde.org/attica-utils.html#parseQtDateTimeIso8601)
 ///
 /// @param str const char*
 QDateTime* k_attica__utils_parse_qt_date_time_iso8601(const char* str);
 
-/// [Qt documentation](https://api.kde.org/attica-utils.html#toString)
+/// [Upstream resources](https://api.kde.org/attica-utils.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

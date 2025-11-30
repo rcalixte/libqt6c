@@ -13,53 +13,53 @@
 
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// @param self QsciCommand*
 ///
 /// @return enum QsciCommand__Command
 int32_t q_scicommand_command(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// @param self QsciCommand*
 void q_scicommand_execute(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// @param self QsciCommand*
 /// @param key int
 void q_scicommand_set_key(void* self, int key);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// @param self QsciCommand*
 /// @param altkey int
 void q_scicommand_set_alternate_key(void* self, int altkey);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// @param self QsciCommand*
 int32_t q_scicommand_key(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// @param self QsciCommand*
 int32_t q_scicommand_alternate_key(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// @param key int
 bool q_scicommand_valid_key(int key);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciCommand*
 const char* q_scicommand_description(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -34,35 +34,35 @@ KConfigGroup* k_configgroup_new3(void* master, const char* group);
 /// @param param1 KConfigGroup*
 KConfigGroup* k_configgroup_new4(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#operator-eq)
 ///
 /// @param self KConfigGroup*
 /// @param param1 KConfigGroup*
 void k_configgroup_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isValid)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isValid)
 ///
 /// @param self KConfigGroup*
 bool k_configgroup_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#name)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 const char* k_configgroup_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#exists)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#exists)
 ///
 /// @param self KConfigGroup*
 bool k_configgroup_exists(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#sync)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#sync)
 ///
 /// @param self KConfigGroup*
 bool k_configgroup_sync(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#sync)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#sync)
 ///
 /// Allows for overriding the related default method
 ///
@@ -70,19 +70,19 @@ bool k_configgroup_sync(void* self);
 /// @param callback bool func()
 void k_configgroup_on_sync(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#sync)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#sync)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigGroup*
 bool k_configgroup_qbase_sync(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#markAsClean)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#markAsClean)
 ///
 /// @param self KConfigGroup*
 void k_configgroup_mark_as_clean(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#markAsClean)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#markAsClean)
 ///
 /// Allows for overriding the related default method
 ///
@@ -90,21 +90,21 @@ void k_configgroup_mark_as_clean(void* self);
 /// @param callback void func()
 void k_configgroup_on_mark_as_clean(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#markAsClean)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#markAsClean)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigGroup*
 void k_configgroup_qbase_mark_as_clean(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#accessMode)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#accessMode)
 ///
 /// @param self KConfigGroup*
 ///
 /// @return enum KConfigBase__AccessMode
 int32_t k_configgroup_access_mode(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#accessMode)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#accessMode)
 ///
 /// Allows for overriding the related default method
 ///
@@ -112,7 +112,7 @@ int32_t k_configgroup_access_mode(void* self);
 /// @param callback int32_t func()
 void k_configgroup_on_access_mode(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#accessMode)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#accessMode)
 ///
 /// Base class method implementation
 ///
@@ -121,54 +121,54 @@ void k_configgroup_on_access_mode(void* self, int32_t (*callback)());
 /// @return enum KConfigBase__AccessMode
 int32_t k_configgroup_qbase_access_mode(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#config)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#config)
 ///
 /// @param self KConfigGroup*
 KConfig* k_configgroup_config(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#config)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#config)
 ///
 /// @param self KConfigGroup*
 const KConfig* k_configgroup_config2(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#copyTo)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#copyTo)
 ///
 /// @param self KConfigGroup*
 /// @param other KConfigBase*
 void k_configgroup_copy_to(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#reparent)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#reparent)
 ///
 /// @param self KConfigGroup*
 /// @param parent KConfigBase*
 void k_configgroup_reparent(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#moveValuesTo)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
 /// @param self KConfigGroup*
 /// @param keys libqt_list /* of const char* */
 /// @param other KConfigGroup*
 void k_configgroup_move_values_to(void* self, libqt_list /* of const char* */ keys, void* other);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#moveValuesTo)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
 /// @param self KConfigGroup*
 /// @param other KConfigGroup*
 void k_configgroup_move_values_to2(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#parent)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#parent)
 ///
 /// @param self KConfigGroup*
 KConfigGroup* k_configgroup_parent(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupList)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 const char** k_configgroup_group_list(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupList)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
 /// Allows for overriding the related default method
 ///
@@ -176,40 +176,40 @@ const char** k_configgroup_group_list(void* self);
 /// @param callback const char** func()
 void k_configgroup_on_group_list(void* self, const char** (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupList)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigGroup*
 const char** k_configgroup_qbase_group_list(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#keyList)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#keyList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 const char** k_configgroup_key_list(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteGroup)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroup)
 ///
 /// @param self KConfigGroup*
 void k_configgroup_delete_group(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param aDefault QVariant*
 QVariant* k_configgroup_read_entry(void* self, const char* key, void* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param aDefault QVariant*
 QVariant* k_configgroup_read_entry2(void* self, const char* key, void* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -218,7 +218,7 @@ QVariant* k_configgroup_read_entry2(void* self, const char* key, void* aDefault)
 /// @param aDefault const char*
 const char* k_configgroup_read_entry3(void* self, const char* key, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -227,7 +227,7 @@ const char* k_configgroup_read_entry3(void* self, const char* key, const char* a
 /// @param aDefault const char*
 const char* k_configgroup_read_entry4(void* self, const char* key, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -235,7 +235,7 @@ const char* k_configgroup_read_entry4(void* self, const char* key, const char* a
 /// @param key const char*
 const char* k_configgroup_read_entry5(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -243,21 +243,21 @@ const char* k_configgroup_read_entry5(void* self, const char* key);
 /// @param key const char*
 const char* k_configgroup_read_entry6(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param aDefault libqt_list /* of QVariant* */
 libqt_list /* of QVariant* */ k_configgroup_read_entry7(void* self, const char* key, libqt_list aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param aDefault libqt_list /* of QVariant* */
 libqt_list /* of QVariant* */ k_configgroup_read_entry8(void* self, const char* key, libqt_list aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -266,7 +266,7 @@ libqt_list /* of QVariant* */ k_configgroup_read_entry8(void* self, const char* 
 /// @param aDefault const char**
 const char** k_configgroup_read_entry9(void* self, const char* key, const char* aDefault[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -275,7 +275,7 @@ const char** k_configgroup_read_entry9(void* self, const char* key, const char* 
 /// @param aDefault const char**
 const char** k_configgroup_read_entry10(void* self, const char* key, const char* aDefault[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -283,7 +283,7 @@ const char** k_configgroup_read_entry10(void* self, const char* key, const char*
 /// @param pKey const char*
 const char** k_configgroup_read_xdg_list_entry(void* self, const char* pKey);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -291,7 +291,7 @@ const char** k_configgroup_read_xdg_list_entry(void* self, const char* pKey);
 /// @param key const char*
 const char** k_configgroup_read_xdg_list_entry2(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readPathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -300,7 +300,7 @@ const char** k_configgroup_read_xdg_list_entry2(void* self, const char* key);
 /// @param aDefault const char*
 const char* k_configgroup_read_path_entry(void* self, const char* pKey, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readPathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -309,7 +309,7 @@ const char* k_configgroup_read_path_entry(void* self, const char* pKey, const ch
 /// @param aDefault const char*
 const char* k_configgroup_read_path_entry2(void* self, const char* key, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readPathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -318,7 +318,7 @@ const char* k_configgroup_read_path_entry2(void* self, const char* key, const ch
 /// @param aDefault const char**
 const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const char* aDefault[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readPathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -327,7 +327,7 @@ const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const 
 /// @param aDefault const char**
 const char** k_configgroup_read_path_entry4(void* self, const char* key, const char* aDefault[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -335,7 +335,7 @@ const char** k_configgroup_read_path_entry4(void* self, const char* key, const c
 /// @param pKey const char*
 const char* k_configgroup_read_entry_untranslated(void* self, const char* pKey);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -343,162 +343,162 @@ const char* k_configgroup_read_entry_untranslated(void* self, const char* pKey);
 /// @param key const char*
 const char* k_configgroup_read_entry_untranslated2(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value QVariant*
 void k_configgroup_write_entry(void* self, const char* key, void* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value QVariant*
 void k_configgroup_write_entry2(void* self, const char* key, void* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char*
 void k_configgroup_write_entry3(void* self, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char*
 void k_configgroup_write_entry4(void* self, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char*
 void k_configgroup_write_entry5(void* self, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char*
 void k_configgroup_write_entry6(void* self, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char*
 void k_configgroup_write_entry7(void* self, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char*
 void k_configgroup_write_entry8(void* self, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char**
 void k_configgroup_write_entry9(void* self, const char* key, const char* value[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char**
 void k_configgroup_write_entry10(void* self, const char* key, const char* value[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value libqt_list /* of QVariant* */
 void k_configgroup_write_entry11(void* self, const char* key, libqt_list value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value libqt_list /* of QVariant* */
 void k_configgroup_write_entry12(void* self, const char* key, libqt_list value);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
 /// @param value const char**
 void k_configgroup_write_xdg_list_entry(void* self, const char* pKey, const char* value[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char**
 void k_configgroup_write_xdg_list_entry2(void* self, const char* key, const char* value[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
 /// @param path const char*
 void k_configgroup_write_path_entry(void* self, const char* pKey, const char* path);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param Key const char*
 /// @param path const char*
 void k_configgroup_write_path_entry2(void* self, const char* Key, const char* path);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
 /// @param value const char**
 void k_configgroup_write_path_entry3(void* self, const char* pKey, const char* value[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param value const char**
 void k_configgroup_write_path_entry4(void* self, const char* key, const char* value[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
 void k_configgroup_delete_entry(void* self, const char* pKey);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 void k_configgroup_delete_entry2(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#hasKey)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasKey)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 bool k_configgroup_has_key(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#hasKey)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasKey)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 bool k_configgroup_has_key2(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isImmutable)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isImmutable)
 ///
 /// @param self KConfigGroup*
 bool k_configgroup_is_immutable(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isImmutable)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isImmutable)
 ///
 /// Allows for overriding the related default method
 ///
@@ -506,61 +506,61 @@ bool k_configgroup_is_immutable(void* self);
 /// @param callback bool func()
 void k_configgroup_on_is_immutable(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isImmutable)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isImmutable)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigGroup*
 bool k_configgroup_qbase_is_immutable(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isEntryImmutable)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isEntryImmutable)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 bool k_configgroup_is_entry_immutable(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isEntryImmutable)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isEntryImmutable)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 bool k_configgroup_is_entry_immutable2(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#revertToDefault)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#revertToDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 void k_configgroup_revert_to_default(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#revertToDefault)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#revertToDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 void k_configgroup_revert_to_default2(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#hasDefault)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 bool k_configgroup_has_default(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#hasDefault)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 bool k_configgroup_has_default2(void* self, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#entryMap)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#entryMap)
 ///
 /// @param self KConfigGroup*
 libqt_map /* of const char* to const char* */ k_configgroup_entry_map(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
 /// @param self KConfigGroup*
 /// @param groupName const char*
 bool k_configgroup_has_group_impl(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -568,7 +568,7 @@ bool k_configgroup_has_group_impl(void* self, const char* groupName);
 /// @param callback bool func(KConfigGroup* self, const char* groupName)
 void k_configgroup_on_has_group_impl(void* self, bool (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
 /// Base class method implementation
 ///
@@ -576,13 +576,13 @@ void k_configgroup_on_has_group_impl(void* self, bool (*callback)(void*, const c
 /// @param groupName const char*
 bool k_configgroup_qbase_has_group_impl(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
 /// @param self KConfigGroup*
 /// @param groupName const char*
 KConfigGroup* k_configgroup_group_impl(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -590,7 +590,7 @@ KConfigGroup* k_configgroup_group_impl(void* self, const char* groupName);
 /// @param callback KConfigGroup* func(KConfigGroup* self, const char* groupName)
 void k_configgroup_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
 /// Base class method implementation
 ///
@@ -598,13 +598,13 @@ void k_configgroup_on_group_impl(void* self, KConfigGroup* (*callback)(void*, co
 /// @param groupName const char*
 KConfigGroup* k_configgroup_qbase_group_impl(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
 /// @param self KConfigGroup*
 /// @param groupName const char*
 const KConfigGroup* k_configgroup_group_impl2(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -612,7 +612,7 @@ const KConfigGroup* k_configgroup_group_impl2(void* self, const char* groupName)
 /// @param callback const KConfigGroup* func(KConfigGroup* self, const char* groupName)
 void k_configgroup_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
 /// Base class method implementation
 ///
@@ -620,14 +620,14 @@ void k_configgroup_on_group_impl2(void* self, const KConfigGroup* (*callback)(vo
 /// @param groupName const char*
 const KConfigGroup* k_configgroup_qbase_group_impl2(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
 ///
 /// @param self KConfigGroup*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -635,7 +635,7 @@ void k_configgroup_delete_group_impl(void* self, const char* groupName, int32_t 
 /// @param callback void func(KConfigGroup* self, const char* groupName, flag of enum KConfigBase__WriteConfigFlag flags)
 void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
 ///
 /// Base class method implementation
 ///
@@ -644,13 +644,13 @@ void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, cons
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
 /// @param self KConfigGroup*
 /// @param groupName const char*
 bool k_configgroup_is_group_immutable_impl(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -658,7 +658,7 @@ bool k_configgroup_is_group_immutable_impl(void* self, const char* groupName);
 /// @param callback bool func(KConfigGroup* self, const char* groupName)
 void k_configgroup_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
 /// Base class method implementation
 ///
@@ -666,21 +666,21 @@ void k_configgroup_on_is_group_immutable_impl(void* self, bool (*callback)(void*
 /// @param groupName const char*
 bool k_configgroup_qbase_is_group_immutable_impl(void* self, const char* groupName);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#copyTo)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#copyTo)
 ///
 /// @param self KConfigGroup*
 /// @param other KConfigBase*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_copy_to2(void* self, void* other, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#reparent)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#reparent)
 ///
 /// @param self KConfigGroup*
 /// @param parent KConfigBase*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_reparent2(void* self, void* parent, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#moveValuesTo)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
 /// @param self KConfigGroup*
 /// @param keys libqt_list /* of const char* */
@@ -688,20 +688,20 @@ void k_configgroup_reparent2(void* self, void* parent, int32_t pFlags);
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_move_values_to3(void* self, libqt_list /* of const char* */ keys, void* other, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#moveValuesTo)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
 /// @param self KConfigGroup*
 /// @param other KConfigGroup*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_move_values_to22(void* self, void* other, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteGroup)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroup)
 ///
 /// @param self KConfigGroup*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_delete_group1(void* self, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -710,7 +710,7 @@ void k_configgroup_delete_group1(void* self, int32_t pFlags);
 /// @param aDefault const char*
 const char* k_configgroup_read_entry22(void* self, const char* key, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -719,7 +719,7 @@ const char* k_configgroup_read_entry22(void* self, const char* key, const char* 
 /// @param aDefault const char*
 const char* k_configgroup_read_entry23(void* self, const char* key, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -728,7 +728,7 @@ const char* k_configgroup_read_entry23(void* self, const char* key, const char* 
 /// @param aDefault const char**
 const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, const char* aDefault[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -737,7 +737,7 @@ const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, c
 /// @param aDefault const char**
 const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, const char* aDefault[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -746,7 +746,7 @@ const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, co
 /// @param aDefault const char*
 const char* k_configgroup_read_entry_untranslated22(void* self, const char* pKey, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -755,7 +755,7 @@ const char* k_configgroup_read_entry_untranslated22(void* self, const char* pKey
 /// @param aDefault const char*
 const char* k_configgroup_read_entry_untranslated23(void* self, const char* key, const char* aDefault);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -763,7 +763,7 @@ const char* k_configgroup_read_entry_untranslated23(void* self, const char* key,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry32(void* self, const char* key, void* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -771,7 +771,7 @@ void k_configgroup_write_entry32(void* self, const char* key, void* value, int32
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry33(void* self, const char* key, void* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -779,7 +779,7 @@ void k_configgroup_write_entry33(void* self, const char* key, void* value, int32
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry34(void* self, const char* key, const char* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -787,7 +787,7 @@ void k_configgroup_write_entry34(void* self, const char* key, const char* value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry35(void* self, const char* key, const char* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -795,7 +795,7 @@ void k_configgroup_write_entry35(void* self, const char* key, const char* value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry36(void* self, const char* key, const char* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -803,7 +803,7 @@ void k_configgroup_write_entry36(void* self, const char* key, const char* value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry37(void* self, const char* key, const char* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -811,7 +811,7 @@ void k_configgroup_write_entry37(void* self, const char* key, const char* value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry38(void* self, const char* key, const char* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -819,7 +819,7 @@ void k_configgroup_write_entry38(void* self, const char* key, const char* value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry39(void* self, const char* key, const char* value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -827,7 +827,7 @@ void k_configgroup_write_entry39(void* self, const char* key, const char* value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry310(void* self, const char* key, const char* value[static 1], int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -835,7 +835,7 @@ void k_configgroup_write_entry310(void* self, const char* key, const char* value
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry311(void* self, const char* key, const char* value[static 1], int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -843,7 +843,7 @@ void k_configgroup_write_entry311(void* self, const char* key, const char* value
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry312(void* self, const char* key, libqt_list value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -851,7 +851,7 @@ void k_configgroup_write_entry312(void* self, const char* key, libqt_list value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_entry313(void* self, const char* key, libqt_list value, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -859,7 +859,7 @@ void k_configgroup_write_entry313(void* self, const char* key, libqt_list value,
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const char* value[static 1], int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -867,7 +867,7 @@ void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const cha
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const char* value[static 1], int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -875,7 +875,7 @@ void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const cha
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_path_entry32(void* self, const char* pKey, const char* path, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param Key const char*
@@ -883,7 +883,7 @@ void k_configgroup_write_path_entry32(void* self, const char* pKey, const char* 
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_path_entry33(void* self, const char* Key, const char* path, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -891,7 +891,7 @@ void k_configgroup_write_path_entry33(void* self, const char* Key, const char* p
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* value[static 1], int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#writePathEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#writePathEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -899,28 +899,28 @@ void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* 
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_write_path_entry35(void* self, const char* key, const char* value[static 1], int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_delete_entry22(void* self, const char* pKey, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#deleteEntry)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_delete_entry23(void* self, const char* key, int32_t pFlags);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#revertToDefault)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#revertToDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param pFlag flag of enum KConfigBase__WriteConfigFlag
 void k_configgroup_revert_to_default22(void* self, const char* key, int32_t pFlag);
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#revertToDefault)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#revertToDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -929,7 +929,7 @@ void k_configgroup_revert_to_default23(void* self, const char* key, int32_t pFla
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#hasGroup)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#hasGroup)
 ///
 /// @param self KConfigGroup*
 /// @param group const char*
@@ -937,7 +937,7 @@ bool k_configgroup_has_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#group)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
 /// @param self KConfigGroup*
 /// @param group const char*
@@ -945,7 +945,7 @@ KConfigGroup* k_configgroup_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#group)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
 /// @param self KConfigGroup*
 /// @param group const char*
@@ -953,7 +953,7 @@ const KConfigGroup* k_configgroup_group2(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#isGroupImmutable)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#isGroupImmutable)
 ///
 /// @param self KConfigGroup*
 /// @param group const char*
@@ -961,7 +961,7 @@ bool k_configgroup_is_group_immutable(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#deleteGroup)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
 /// @param self KConfigGroup*
 /// @param group const char*
@@ -970,7 +970,7 @@ void k_configgroup_delete_group2(void* self, const char* group, int32_t flags);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#virtual_hook)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#virtual_hook)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -981,7 +981,7 @@ void k_configgroup_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#virtual_hook)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#virtual_hook)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -992,7 +992,7 @@ void k_configgroup_qbase_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#virtual_hook)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#virtual_hook)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1000,7 +1000,7 @@ void k_configgroup_qbase_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(KConfigGroup* self, int id, void* data)
 void k_configgroup_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfiggroup.html#dtor.KConfigGroup)
+/// [Upstream resources](https://api.kde.org/kconfiggroup.html#dtor.KConfigGroup)
 ///
 /// Delete this object from C++ memory.
 ///

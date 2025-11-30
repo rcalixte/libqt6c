@@ -43,7 +43,7 @@ QDBusInterface* q_dbusinterface_new3(const char* service, const char* path, cons
 /// @param parent QObject*
 QDBusInterface* q_dbusinterface_new4(const char* service, const char* path, const char* interface, void* connection, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QDBusInterface*
 const QMetaObject* q_dbusinterface_meta_object(void* self);
@@ -74,7 +74,7 @@ int32_t q_dbusinterface_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -83,21 +83,21 @@ const char* q_dbusinterface_tr(const char* s);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#isValid)
 ///
 /// @param self QDBusInterface*
 bool q_dbusinterface_is_valid(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connection)
 ///
 /// @param self QDBusInterface*
 QDBusConnection* q_dbusinterface_connection(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#service)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#service)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -106,7 +106,7 @@ const char* q_dbusinterface_service(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#path)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#path)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -115,7 +115,7 @@ const char* q_dbusinterface_path(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#interface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#interface)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -124,14 +124,14 @@ const char* q_dbusinterface_interface(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#lastError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#lastError)
 ///
 /// @param self QDBusInterface*
 QDBusError* q_dbusinterface_last_error(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#setTimeout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#setTimeout)
 ///
 /// @param self QDBusInterface*
 /// @param timeout int
@@ -139,14 +139,14 @@ void q_dbusinterface_set_timeout(void* self, int timeout);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#timeout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#timeout)
 ///
 /// @param self QDBusInterface*
 int32_t q_dbusinterface_timeout(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#setInteractiveAuthorizationAllowed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#setInteractiveAuthorizationAllowed)
 ///
 /// @param self QDBusInterface*
 /// @param enable bool
@@ -154,14 +154,14 @@ void q_dbusinterface_set_interactive_authorization_allowed(void* self, bool enab
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#isInteractiveAuthorizationAllowed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#isInteractiveAuthorizationAllowed)
 ///
 /// @param self QDBusInterface*
 bool q_dbusinterface_is_interactive_authorization_allowed(void* self);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#call)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#call)
 ///
 /// @param self QDBusInterface*
 /// @param method const char*
@@ -169,7 +169,7 @@ QDBusMessage* q_dbusinterface_call(void* self, const char* method);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#call)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#call)
 ///
 /// @param self QDBusInterface*
 /// @param mode enum QDBus__CallMode
@@ -178,7 +178,7 @@ QDBusMessage* q_dbusinterface_call2(void* self, int32_t mode, const char* method
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#callWithArgumentList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#callWithArgumentList)
 ///
 /// @param self QDBusInterface*
 /// @param mode enum QDBus__CallMode
@@ -188,7 +188,7 @@ QDBusMessage* q_dbusinterface_call_with_argument_list(void* self, int32_t mode, 
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#asyncCall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#asyncCall)
 ///
 /// @param self QDBusInterface*
 /// @param method const char*
@@ -196,7 +196,7 @@ QDBusPendingCall* q_dbusinterface_async_call(void* self, const char* method);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#asyncCallWithArgumentList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#asyncCallWithArgumentList)
 ///
 /// @param self QDBusInterface*
 /// @param method const char*
@@ -205,7 +205,7 @@ QDBusPendingCall* q_dbusinterface_async_call_with_argument_list(void* self, cons
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -215,7 +215,7 @@ const char* q_dbusinterface_tr2(const char* s, const char* c);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -226,7 +226,7 @@ const char* q_dbusinterface_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -235,7 +235,7 @@ const char* q_dbusinterface_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDBusInterface*
 /// @param name char*
@@ -243,35 +243,35 @@ void q_dbusinterface_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QDBusInterface*
 bool q_dbusinterface_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QDBusInterface*
 bool q_dbusinterface_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QDBusInterface*
 bool q_dbusinterface_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QDBusInterface*
 bool q_dbusinterface_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QDBusInterface*
 /// @param b bool
@@ -279,14 +279,14 @@ bool q_dbusinterface_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QDBusInterface*
 QThread* q_dbusinterface_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QDBusInterface*
 /// @param thread QThread*
@@ -294,7 +294,7 @@ bool q_dbusinterface_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDBusInterface*
 /// @param interval int
@@ -302,7 +302,7 @@ int32_t q_dbusinterface_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QDBusInterface*
 /// @param id int
@@ -310,7 +310,7 @@ void q_dbusinterface_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QDBusInterface*
 /// @param id enum Qt__TimerId
@@ -318,14 +318,14 @@ void q_dbusinterface_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QDBusInterface*
 libqt_list /* of QObject* */ q_dbusinterface_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QDBusInterface*
 /// @param parent QObject*
@@ -333,7 +333,7 @@ void q_dbusinterface_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QDBusInterface*
 /// @param filterObj QObject*
@@ -341,7 +341,7 @@ void q_dbusinterface_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QDBusInterface*
 /// @param obj QObject*
@@ -349,7 +349,7 @@ void q_dbusinterface_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -359,7 +359,7 @@ QMetaObject__Connection* q_dbusinterface_connect(void* sender, void* signal, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QDBusInterface*
 /// @param sender QObject*
@@ -369,7 +369,7 @@ QMetaObject__Connection* q_dbusinterface_connect2(void* self, void* sender, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -379,28 +379,28 @@ bool q_dbusinterface_disconnect(void* sender, void* signal, void* receiver, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_dbusinterface_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QDBusInterface*
 void q_dbusinterface_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QDBusInterface*
 void q_dbusinterface_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QDBusInterface*
 /// @param name const char*
@@ -409,7 +409,7 @@ bool q_dbusinterface_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QDBusInterface*
 /// @param name const char*
@@ -417,7 +417,7 @@ QVariant* q_dbusinterface_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -426,28 +426,28 @@ const char** q_dbusinterface_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QDBusInterface*
 QBindingStorage* q_dbusinterface_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QDBusInterface*
 const QBindingStorage* q_dbusinterface_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDBusInterface*
 void q_dbusinterface_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDBusInterface*
 /// @param callback void func(QDBusInterface* self)
@@ -455,14 +455,14 @@ void q_dbusinterface_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QDBusInterface*
 QObject* q_dbusinterface_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QDBusInterface*
 /// @param classname const char*
@@ -470,14 +470,14 @@ bool q_dbusinterface_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QDBusInterface*
 void q_dbusinterface_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QDBusInterface*
 /// @param thread QThread*
@@ -486,7 +486,7 @@ bool q_dbusinterface_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDBusInterface*
 /// @param interval int
@@ -495,7 +495,7 @@ int32_t q_dbusinterface_start_timer22(void* self, int interval, int32_t timerTyp
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -506,7 +506,7 @@ QMetaObject__Connection* q_dbusinterface_connect5(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QDBusInterface*
 /// @param sender QObject*
@@ -517,7 +517,7 @@ QMetaObject__Connection* q_dbusinterface_connect4(void* self, void* sender, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDBusInterface*
 /// @param param1 QObject*
@@ -525,7 +525,7 @@ void q_dbusinterface_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDBusInterface*
 /// @param callback void func(QDBusInterface* self, QObject* param1)
@@ -533,7 +533,7 @@ void q_dbusinterface_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -543,7 +543,7 @@ void q_dbusinterface_connect_notify(void* self, void* signal);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -553,7 +553,7 @@ void q_dbusinterface_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -563,7 +563,7 @@ void q_dbusinterface_on_connect_notify(void* self, void (*callback)(void*, void*
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -573,7 +573,7 @@ void q_dbusinterface_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -583,7 +583,7 @@ void q_dbusinterface_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -593,7 +593,7 @@ void q_dbusinterface_on_disconnect_notify(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -603,7 +603,7 @@ bool q_dbusinterface_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -613,7 +613,7 @@ bool q_dbusinterface_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -623,7 +623,7 @@ void q_dbusinterface_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -634,7 +634,7 @@ bool q_dbusinterface_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -645,7 +645,7 @@ bool q_dbusinterface_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -655,7 +655,7 @@ void q_dbusinterface_on_event_filter(void* self, bool (*callback)(void*, void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -665,7 +665,7 @@ void q_dbusinterface_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -675,7 +675,7 @@ void q_dbusinterface_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -685,7 +685,7 @@ void q_dbusinterface_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -695,7 +695,7 @@ void q_dbusinterface_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -705,7 +705,7 @@ void q_dbusinterface_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,7 +715,7 @@ void q_dbusinterface_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -725,7 +725,7 @@ void q_dbusinterface_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -735,7 +735,7 @@ void q_dbusinterface_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -745,7 +745,7 @@ void q_dbusinterface_on_custom_event(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropGet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropGet)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -755,7 +755,7 @@ QVariant* q_dbusinterface_internal_prop_get(void* self, const char* propname);
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropGet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropGet)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -765,7 +765,7 @@ QVariant* q_dbusinterface_qbase_internal_prop_get(void* self, const char* propna
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropGet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropGet)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -775,7 +775,7 @@ void q_dbusinterface_on_internal_prop_get(void* self, QVariant* (*callback)(void
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropSet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropSet)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -786,7 +786,7 @@ void q_dbusinterface_internal_prop_set(void* self, const char* propname, void* v
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropSet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropSet)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -797,7 +797,7 @@ void q_dbusinterface_qbase_internal_prop_set(void* self, const char* propname, v
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropSet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropSet)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -807,7 +807,7 @@ void q_dbusinterface_on_internal_prop_set(void* self, void (*callback)(void*, co
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalConstCall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalConstCall)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -818,7 +818,7 @@ QDBusMessage* q_dbusinterface_internal_const_call(void* self, int32_t mode, cons
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalConstCall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalConstCall)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -829,7 +829,7 @@ QDBusMessage* q_dbusinterface_qbase_internal_const_call(void* self, int32_t mode
 
 /// Inherited from QDBusAbstractInterface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalConstCall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalConstCall)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -839,7 +839,7 @@ void q_dbusinterface_on_internal_const_call(void* self, QDBusMessage* (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -848,7 +848,7 @@ QObject* q_dbusinterface_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -857,7 +857,7 @@ QObject* q_dbusinterface_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -867,7 +867,7 @@ void q_dbusinterface_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -876,7 +876,7 @@ int32_t q_dbusinterface_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -885,7 +885,7 @@ int32_t q_dbusinterface_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -895,7 +895,7 @@ void q_dbusinterface_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -905,7 +905,7 @@ int32_t q_dbusinterface_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -915,7 +915,7 @@ int32_t q_dbusinterface_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -925,7 +925,7 @@ void q_dbusinterface_on_receivers(void* self, int32_t (*callback)(void*, const c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -935,7 +935,7 @@ bool q_dbusinterface_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -945,7 +945,7 @@ bool q_dbusinterface_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -955,7 +955,7 @@ void q_dbusinterface_on_is_signal_connected(void* self, bool (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -963,7 +963,7 @@ void q_dbusinterface_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param callback void func(QDBusInterface* self, const char* objectName)
 void q_dbusinterface_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusinterface.html#dtor.QDBusInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusinterface.html#dtor.QDBusInterface)
 ///
 /// Delete this object from C++ memory.
 ///

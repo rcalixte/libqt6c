@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qsessionmanager.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QSessionManager*
 const QMetaObject* q_sessionmanager_meta_object(void* self);
@@ -28,111 +28,111 @@ void* q_sessionmanager_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_sessionmanager_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_sessionmanager_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#sessionId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#sessionId)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSessionManager*
 const char* q_sessionmanager_session_id(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#sessionKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#sessionKey)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSessionManager*
 const char* q_sessionmanager_session_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#allowsInteraction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#allowsInteraction)
 ///
 /// @param self QSessionManager*
 bool q_sessionmanager_allows_interaction(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#allowsErrorInteraction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#allowsErrorInteraction)
 ///
 /// @param self QSessionManager*
 bool q_sessionmanager_allows_error_interaction(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#release)
 ///
 /// @param self QSessionManager*
 void q_sessionmanager_release(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#cancel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#cancel)
 ///
 /// @param self QSessionManager*
 void q_sessionmanager_cancel(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#setRestartHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#setRestartHint)
 ///
 /// @param self QSessionManager*
 /// @param restartHint enum QSessionManager__RestartHint
 void q_sessionmanager_set_restart_hint(void* self, int32_t restartHint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#restartHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#restartHint)
 ///
 /// @param self QSessionManager*
 ///
 /// @return enum QSessionManager__RestartHint
 int32_t q_sessionmanager_restart_hint(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#setRestartCommand)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#setRestartCommand)
 ///
 /// @param self QSessionManager*
 /// @param restartCommand const char**
 void q_sessionmanager_set_restart_command(void* self, const char* restartCommand[static 1]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#restartCommand)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#restartCommand)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSessionManager*
 const char** q_sessionmanager_restart_command(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#setDiscardCommand)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#setDiscardCommand)
 ///
 /// @param self QSessionManager*
 /// @param discardCommand const char**
 void q_sessionmanager_set_discard_command(void* self, const char* discardCommand[static 1]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#discardCommand)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#discardCommand)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSessionManager*
 const char** q_sessionmanager_discard_command(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#setManagerProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#setManagerProperty)
 ///
 /// @param self QSessionManager*
 /// @param name const char*
 /// @param value const char*
 void q_sessionmanager_set_manager_property(void* self, const char* name, const char* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#setManagerProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#setManagerProperty)
 ///
 /// @param self QSessionManager*
 /// @param name const char*
 /// @param value const char**
 void q_sessionmanager_set_manager_property2(void* self, const char* name, const char* value[static 1]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#isPhase2)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#isPhase2)
 ///
 /// @param self QSessionManager*
 bool q_sessionmanager_is_phase2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#requestPhase2)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsessionmanager.html#requestPhase2)
 ///
 /// @param self QSessionManager*
 void q_sessionmanager_request_phase2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -140,7 +140,7 @@ void q_sessionmanager_request_phase2(void* self);
 /// @param c const char*
 const char* q_sessionmanager_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -151,7 +151,7 @@ const char* q_sessionmanager_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QSessionManager*
 /// @param event QEvent*
@@ -159,7 +159,7 @@ bool q_sessionmanager_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QSessionManager*
 /// @param watched QObject*
@@ -168,7 +168,7 @@ bool q_sessionmanager_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -177,7 +177,7 @@ const char* q_sessionmanager_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QSessionManager*
 /// @param name char*
@@ -185,35 +185,35 @@ void q_sessionmanager_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QSessionManager*
 bool q_sessionmanager_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QSessionManager*
 bool q_sessionmanager_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QSessionManager*
 bool q_sessionmanager_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QSessionManager*
 bool q_sessionmanager_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QSessionManager*
 /// @param b bool
@@ -221,14 +221,14 @@ bool q_sessionmanager_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QSessionManager*
 QThread* q_sessionmanager_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QSessionManager*
 /// @param thread QThread*
@@ -236,7 +236,7 @@ bool q_sessionmanager_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QSessionManager*
 /// @param interval int
@@ -244,7 +244,7 @@ int32_t q_sessionmanager_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QSessionManager*
 /// @param id int
@@ -252,7 +252,7 @@ void q_sessionmanager_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QSessionManager*
 /// @param id enum Qt__TimerId
@@ -260,14 +260,14 @@ void q_sessionmanager_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QSessionManager*
 libqt_list /* of QObject* */ q_sessionmanager_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QSessionManager*
 /// @param parent QObject*
@@ -275,7 +275,7 @@ void q_sessionmanager_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QSessionManager*
 /// @param filterObj QObject*
@@ -283,7 +283,7 @@ void q_sessionmanager_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QSessionManager*
 /// @param obj QObject*
@@ -291,7 +291,7 @@ void q_sessionmanager_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -301,7 +301,7 @@ QMetaObject__Connection* q_sessionmanager_connect(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QSessionManager*
 /// @param sender QObject*
@@ -311,7 +311,7 @@ QMetaObject__Connection* q_sessionmanager_connect2(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -321,28 +321,28 @@ bool q_sessionmanager_disconnect(void* sender, void* signal, void* receiver, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_sessionmanager_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QSessionManager*
 void q_sessionmanager_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QSessionManager*
 void q_sessionmanager_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QSessionManager*
 /// @param name const char*
@@ -351,7 +351,7 @@ bool q_sessionmanager_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QSessionManager*
 /// @param name const char*
@@ -359,7 +359,7 @@ QVariant* q_sessionmanager_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -368,28 +368,28 @@ const char** q_sessionmanager_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QSessionManager*
 QBindingStorage* q_sessionmanager_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QSessionManager*
 const QBindingStorage* q_sessionmanager_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSessionManager*
 void q_sessionmanager_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSessionManager*
 /// @param callback void func(QSessionManager* self)
@@ -397,14 +397,14 @@ void q_sessionmanager_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QSessionManager*
 QObject* q_sessionmanager_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QSessionManager*
 /// @param classname const char*
@@ -412,14 +412,14 @@ bool q_sessionmanager_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QSessionManager*
 void q_sessionmanager_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QSessionManager*
 /// @param thread QThread*
@@ -428,7 +428,7 @@ bool q_sessionmanager_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QSessionManager*
 /// @param interval int
@@ -437,7 +437,7 @@ int32_t q_sessionmanager_start_timer22(void* self, int interval, int32_t timerTy
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -448,7 +448,7 @@ QMetaObject__Connection* q_sessionmanager_connect5(void* sender, void* signal, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QSessionManager*
 /// @param sender QObject*
@@ -459,7 +459,7 @@ QMetaObject__Connection* q_sessionmanager_connect4(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSessionManager*
 /// @param param1 QObject*
@@ -467,7 +467,7 @@ void q_sessionmanager_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSessionManager*
 /// @param callback void func(QSessionManager* self, QObject* param1)
@@ -475,7 +475,7 @@ void q_sessionmanager_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

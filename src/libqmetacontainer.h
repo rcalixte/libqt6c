@@ -44,151 +44,151 @@ void q_metacontainer_copy_assign(void* self, void* other);
 /// @param other QMetaContainer*
 void q_metacontainer_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasInputIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasInputIterator)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_has_input_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasForwardIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasForwardIterator)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_has_forward_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasBidirectionalIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasBidirectionalIterator)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_has_bidirectional_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasRandomAccessIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasRandomAccessIterator)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_has_random_access_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasSize)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_has_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#size)
 ///
 /// @param self QMetaContainer*
 /// @param container void*
 int64_t q_metacontainer_size(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#canClear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#canClear)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_can_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#clear)
 ///
 /// @param self QMetaContainer*
 /// @param container void*
 void q_metacontainer_clear(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasIterator)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_has_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#begin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#begin)
 ///
 /// @param self QMetaContainer*
 /// @param container void*
 void* q_metacontainer_begin(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#end)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#end)
 ///
 /// @param self QMetaContainer*
 /// @param container void*
 void* q_metacontainer_end(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#destroyIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#destroyIterator)
 ///
 /// @param self QMetaContainer*
 /// @param iterator void*
 void q_metacontainer_destroy_iterator(void* self, void* iterator);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#compareIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#compareIterator)
 ///
 /// @param self QMetaContainer*
 /// @param i void*
 /// @param j void*
 bool q_metacontainer_compare_iterator(void* self, void* i, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#copyIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#copyIterator)
 ///
 /// @param self QMetaContainer*
 /// @param target void*
 /// @param source void*
 void q_metacontainer_copy_iterator(void* self, void* target, void* source);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#advanceIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#advanceIterator)
 ///
 /// @param self QMetaContainer*
 /// @param iterator void*
 /// @param step int64_t
 void q_metacontainer_advance_iterator(void* self, void* iterator, int64_t step);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#diffIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffIterator)
 ///
 /// @param self QMetaContainer*
 /// @param i void*
 /// @param j void*
 int64_t q_metacontainer_diff_iterator(void* self, void* i, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasConstIterator)
 ///
 /// @param self QMetaContainer*
 bool q_metacontainer_has_const_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#constBegin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#constBegin)
 ///
 /// @param self QMetaContainer*
 /// @param container void*
 void* q_metacontainer_const_begin(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#constEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#constEnd)
 ///
 /// @param self QMetaContainer*
 /// @param container void*
 void* q_metacontainer_const_end(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#destroyConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#destroyConstIterator)
 ///
 /// @param self QMetaContainer*
 /// @param iterator void*
 void q_metacontainer_destroy_const_iterator(void* self, void* iterator);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#compareConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#compareConstIterator)
 ///
 /// @param self QMetaContainer*
 /// @param i void*
 /// @param j void*
 bool q_metacontainer_compare_const_iterator(void* self, void* i, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#copyConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#copyConstIterator)
 ///
 /// @param self QMetaContainer*
 /// @param target void*
 /// @param source void*
 void q_metacontainer_copy_const_iterator(void* self, void* target, void* source);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#advanceConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#advanceConstIterator)
 ///
 /// @param self QMetaContainer*
 /// @param iterator void*
 /// @param step int64_t
 void q_metacontainer_advance_const_iterator(void* self, void* iterator, int64_t step);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#diffConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffConstIterator)
 ///
 /// @param self QMetaContainer*
 /// @param i void*
 /// @param j void*
 int64_t q_metacontainer_diff_const_iterator(void* self, void* i, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#dtor.QMetaContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#dtor.QMetaContainer)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -223,68 +223,68 @@ void q_metasequence_copy_assign(void* self, void* other);
 /// @param other QMetaSequence*
 void q_metasequence_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#valueMetaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#valueMetaType)
 ///
 /// @param self QMetaSequence*
 QMetaType* q_metasequence_value_meta_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#isSortable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#isSortable)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_is_sortable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canAddValueAtBegin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canAddValueAtBegin)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_add_value_at_begin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#addValueAtBegin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#addValueAtBegin)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
 /// @param value void*
 void q_metasequence_add_value_at_begin(void* self, void* container, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canAddValueAtEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canAddValueAtEnd)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_add_value_at_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#addValueAtEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#addValueAtEnd)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
 /// @param value void*
 void q_metasequence_add_value_at_end(void* self, void* container, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canRemoveValueAtBegin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canRemoveValueAtBegin)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_remove_value_at_begin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#removeValueAtBegin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#removeValueAtBegin)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
 void q_metasequence_remove_value_at_begin(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canRemoveValueAtEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canRemoveValueAtEnd)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_remove_value_at_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#removeValueAtEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#removeValueAtEnd)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
 void q_metasequence_remove_value_at_end(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canGetValueAtIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canGetValueAtIndex)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_get_value_at_index(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#valueAtIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#valueAtIndex)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -292,12 +292,12 @@ bool q_metasequence_can_get_value_at_index(void* self);
 /// @param result void*
 void q_metasequence_value_at_index(void* self, void* container, int64_t index, void* result);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canSetValueAtIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canSetValueAtIndex)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_set_value_at_index(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#setValueAtIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#setValueAtIndex)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -305,59 +305,59 @@ bool q_metasequence_can_set_value_at_index(void* self);
 /// @param value void*
 void q_metasequence_set_value_at_index(void* self, void* container, int64_t index, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canAddValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canAddValue)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_add_value(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#addValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#addValue)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
 /// @param value void*
 void q_metasequence_add_value(void* self, void* container, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canRemoveValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canRemoveValue)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_remove_value(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#removeValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#removeValue)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
 void q_metasequence_remove_value(void* self, void* container);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canGetValueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canGetValueAtIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_get_value_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#valueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#valueAtIterator)
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
 /// @param result void*
 void q_metasequence_value_at_iterator(void* self, void* iterator, void* result);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canSetValueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canSetValueAtIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_set_value_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#setValueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#setValueAtIterator)
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
 /// @param value void*
 void q_metasequence_set_value_at_iterator(void* self, void* iterator, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canInsertValueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canInsertValueAtIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_insert_value_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#insertValueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#insertValueAtIterator)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -365,24 +365,24 @@ bool q_metasequence_can_insert_value_at_iterator(void* self);
 /// @param value void*
 void q_metasequence_insert_value_at_iterator(void* self, void* container, void* iterator, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canEraseValueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canEraseValueAtIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_erase_value_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#eraseValueAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#eraseValueAtIterator)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
 /// @param iterator void*
 void q_metasequence_erase_value_at_iterator(void* self, void* container, void* iterator);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canEraseRangeAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canEraseRangeAtIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_erase_range_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#eraseRangeAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#eraseRangeAtIterator)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -390,12 +390,12 @@ bool q_metasequence_can_erase_range_at_iterator(void* self);
 /// @param iterator2 void*
 void q_metasequence_erase_range_at_iterator(void* self, void* container, void* iterator1, void* iterator2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#canGetValueAtConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canGetValueAtConstIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_get_value_at_const_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#valueAtConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#valueAtConstIterator)
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
@@ -404,42 +404,42 @@ void q_metasequence_value_at_const_iterator(void* self, void* iterator, void* re
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasInputIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasInputIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_has_input_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasForwardIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasForwardIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_has_forward_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasBidirectionalIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasBidirectionalIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_has_bidirectional_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasRandomAccessIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasRandomAccessIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_has_random_access_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasSize)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_has_size(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#size)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -447,14 +447,14 @@ int64_t q_metasequence_size(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#canClear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#canClear)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_can_clear(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#clear)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -462,14 +462,14 @@ void q_metasequence_clear(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_has_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#begin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#begin)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -477,7 +477,7 @@ void* q_metasequence_begin(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#end)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#end)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -485,7 +485,7 @@ void* q_metasequence_end(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#destroyIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#destroyIterator)
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
@@ -493,7 +493,7 @@ void q_metasequence_destroy_iterator(void* self, void* iterator);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#compareIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#compareIterator)
 ///
 /// @param self QMetaSequence*
 /// @param i void*
@@ -502,7 +502,7 @@ bool q_metasequence_compare_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#copyIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#copyIterator)
 ///
 /// @param self QMetaSequence*
 /// @param target void*
@@ -511,7 +511,7 @@ void q_metasequence_copy_iterator(void* self, void* target, void* source);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#advanceIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#advanceIterator)
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
@@ -520,7 +520,7 @@ void q_metasequence_advance_iterator(void* self, void* iterator, int64_t step);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#diffIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffIterator)
 ///
 /// @param self QMetaSequence*
 /// @param i void*
@@ -529,14 +529,14 @@ int64_t q_metasequence_diff_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasConstIterator)
 ///
 /// @param self QMetaSequence*
 bool q_metasequence_has_const_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#constBegin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#constBegin)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -544,7 +544,7 @@ void* q_metasequence_const_begin(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#constEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#constEnd)
 ///
 /// @param self QMetaSequence*
 /// @param container void*
@@ -552,7 +552,7 @@ void* q_metasequence_const_end(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#destroyConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#destroyConstIterator)
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
@@ -560,7 +560,7 @@ void q_metasequence_destroy_const_iterator(void* self, void* iterator);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#compareConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#compareConstIterator)
 ///
 /// @param self QMetaSequence*
 /// @param i void*
@@ -569,7 +569,7 @@ bool q_metasequence_compare_const_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#copyConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#copyConstIterator)
 ///
 /// @param self QMetaSequence*
 /// @param target void*
@@ -578,7 +578,7 @@ void q_metasequence_copy_const_iterator(void* self, void* target, void* source);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#advanceConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#advanceConstIterator)
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
@@ -587,14 +587,14 @@ void q_metasequence_advance_const_iterator(void* self, void* iterator, int64_t s
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#diffConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffConstIterator)
 ///
 /// @param self QMetaSequence*
 /// @param i void*
 /// @param j void*
 int64_t q_metasequence_diff_const_iterator(void* self, void* i, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#dtor.QMetaSequence)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#dtor.QMetaSequence)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -629,58 +629,58 @@ void q_metaassociation_copy_assign(void* self, void* other);
 /// @param other QMetaAssociation*
 void q_metaassociation_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#keyMetaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#keyMetaType)
 ///
 /// @param self QMetaAssociation*
 QMetaType* q_metaassociation_key_meta_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#mappedMetaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#mappedMetaType)
 ///
 /// @param self QMetaAssociation*
 QMetaType* q_metaassociation_mapped_meta_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canInsertKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canInsertKey)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_insert_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#insertKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#insertKey)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
 /// @param key void*
 void q_metaassociation_insert_key(void* self, void* container, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canRemoveKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canRemoveKey)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_remove_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#removeKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#removeKey)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
 /// @param key void*
 void q_metaassociation_remove_key(void* self, void* container, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canContainsKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canContainsKey)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_contains_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#containsKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#containsKey)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
 /// @param key void*
 bool q_metaassociation_contains_key(void* self, void* container, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canGetMappedAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canGetMappedAtKey)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_get_mapped_at_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#mappedAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#mappedAtKey)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -688,12 +688,12 @@ bool q_metaassociation_can_get_mapped_at_key(void* self);
 /// @param mapped void*
 void q_metaassociation_mapped_at_key(void* self, void* container, void* key, void* mapped);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canSetMappedAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canSetMappedAtKey)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_set_mapped_at_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#setMappedAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#setMappedAtKey)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -701,84 +701,84 @@ bool q_metaassociation_can_set_mapped_at_key(void* self);
 /// @param mapped void*
 void q_metaassociation_set_mapped_at_key(void* self, void* container, void* key, void* mapped);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canGetKeyAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canGetKeyAtIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_get_key_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#keyAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#keyAtIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
 /// @param key void*
 void q_metaassociation_key_at_iterator(void* self, void* iterator, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canGetKeyAtConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canGetKeyAtConstIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_get_key_at_const_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#keyAtConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#keyAtConstIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
 /// @param key void*
 void q_metaassociation_key_at_const_iterator(void* self, void* iterator, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canGetMappedAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canGetMappedAtIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_get_mapped_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#mappedAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#mappedAtIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
 /// @param mapped void*
 void q_metaassociation_mapped_at_iterator(void* self, void* iterator, void* mapped);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canGetMappedAtConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canGetMappedAtConstIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_get_mapped_at_const_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#mappedAtConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#mappedAtConstIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
 /// @param mapped void*
 void q_metaassociation_mapped_at_const_iterator(void* self, void* iterator, void* mapped);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canSetMappedAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canSetMappedAtIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_set_mapped_at_iterator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#setMappedAtIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#setMappedAtIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
 /// @param mapped void*
 void q_metaassociation_set_mapped_at_iterator(void* self, void* iterator, void* mapped);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canCreateIteratorAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canCreateIteratorAtKey)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_create_iterator_at_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#createIteratorAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#createIteratorAtKey)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
 /// @param key void*
 void* q_metaassociation_create_iterator_at_key(void* self, void* container, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#canCreateConstIteratorAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#canCreateConstIteratorAtKey)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_create_const_iterator_at_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#createConstIteratorAtKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#createConstIteratorAtKey)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -787,42 +787,42 @@ void* q_metaassociation_create_const_iterator_at_key(void* self, void* container
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasInputIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasInputIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_has_input_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasForwardIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasForwardIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_has_forward_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasBidirectionalIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasBidirectionalIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_has_bidirectional_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasRandomAccessIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasRandomAccessIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_has_random_access_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasSize)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_has_size(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#size)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -830,14 +830,14 @@ int64_t q_metaassociation_size(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#canClear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#canClear)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_can_clear(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#clear)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -845,14 +845,14 @@ void q_metaassociation_clear(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_has_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#begin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#begin)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -860,7 +860,7 @@ void* q_metaassociation_begin(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#end)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#end)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -868,7 +868,7 @@ void* q_metaassociation_end(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#destroyIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#destroyIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
@@ -876,7 +876,7 @@ void q_metaassociation_destroy_iterator(void* self, void* iterator);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#compareIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#compareIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param i void*
@@ -885,7 +885,7 @@ bool q_metaassociation_compare_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#copyIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#copyIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param target void*
@@ -894,7 +894,7 @@ void q_metaassociation_copy_iterator(void* self, void* target, void* source);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#advanceIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#advanceIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
@@ -903,7 +903,7 @@ void q_metaassociation_advance_iterator(void* self, void* iterator, int64_t step
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#diffIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param i void*
@@ -912,14 +912,14 @@ int64_t q_metaassociation_diff_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#hasConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasConstIterator)
 ///
 /// @param self QMetaAssociation*
 bool q_metaassociation_has_const_iterator(void* self);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#constBegin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#constBegin)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -927,7 +927,7 @@ void* q_metaassociation_const_begin(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#constEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#constEnd)
 ///
 /// @param self QMetaAssociation*
 /// @param container void*
@@ -935,7 +935,7 @@ void* q_metaassociation_const_end(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#destroyConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#destroyConstIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
@@ -943,7 +943,7 @@ void q_metaassociation_destroy_const_iterator(void* self, void* iterator);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#compareConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#compareConstIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param i void*
@@ -952,7 +952,7 @@ bool q_metaassociation_compare_const_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#copyConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#copyConstIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param target void*
@@ -961,7 +961,7 @@ void q_metaassociation_copy_const_iterator(void* self, void* target, void* sourc
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#advanceConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#advanceConstIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
@@ -970,14 +970,14 @@ void q_metaassociation_advance_const_iterator(void* self, void* iterator, int64_
 
 /// Inherited from QMetaContainer
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#diffConstIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffConstIterator)
 ///
 /// @param self QMetaAssociation*
 /// @param i void*
 /// @param j void*
 int64_t q_metaassociation_diff_const_iterator(void* self, void* i, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#dtor.QMetaAssociation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#dtor.QMetaAssociation)
 ///
 /// Delete this object from C++ memory.
 ///

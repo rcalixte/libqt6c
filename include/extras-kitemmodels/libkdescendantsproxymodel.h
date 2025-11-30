@@ -22,7 +22,7 @@ KDescendantsProxyModel* k_descendantsproxymodel_new();
 /// @param parent QObject*
 KDescendantsProxyModel* k_descendantsproxymodel_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KDescendantsProxyModel*
 const QMetaObject* k_descendantsproxymodel_meta_object(void* self);
@@ -51,20 +51,20 @@ void k_descendantsproxymodel_on_metacall(void* self, int32_t (*callback)(void*, 
 /// @param param3 void*
 int32_t k_descendantsproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_descendantsproxymodel_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#setSourceModel)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#setSourceModel)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param model QAbstractItemModel*
 void k_descendantsproxymodel_set_source_model(void* self, void* model);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#setSourceModel)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#setSourceModel)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ void k_descendantsproxymodel_set_source_model(void* self, void* model);
 /// @param callback void func(KDescendantsProxyModel* self, QAbstractItemModel* model)
 void k_descendantsproxymodel_on_set_source_model(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#setSourceModel)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#setSourceModel)
 ///
 /// Base class method implementation
 ///
@@ -80,37 +80,37 @@ void k_descendantsproxymodel_on_set_source_model(void* self, void (*callback)(vo
 /// @param model QAbstractItemModel*
 void k_descendantsproxymodel_qbase_set_source_model(void* self, void* model);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#setDisplayAncestorData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#setDisplayAncestorData)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param display bool
 void k_descendantsproxymodel_set_display_ancestor_data(void* self, bool display);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#displayAncestorData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#displayAncestorData)
 ///
 /// @param self KDescendantsProxyModel*
 bool k_descendantsproxymodel_display_ancestor_data(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#setAncestorSeparator)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#setAncestorSeparator)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param separator const char*
 void k_descendantsproxymodel_set_ancestor_separator(void* self, const char* separator);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#ancestorSeparator)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#ancestorSeparator)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDescendantsProxyModel*
 const char* k_descendantsproxymodel_ancestor_separator(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mapFromSource)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mapFromSource)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceIndex QModelIndex*
 QModelIndex* k_descendantsproxymodel_map_from_source(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mapFromSource)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mapFromSource)
 ///
 /// Allows for overriding the related default method
 ///
@@ -118,7 +118,7 @@ QModelIndex* k_descendantsproxymodel_map_from_source(void* self, void* sourceInd
 /// @param callback QModelIndex* func(KDescendantsProxyModel* self, QModelIndex* sourceIndex)
 void k_descendantsproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mapFromSource)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
 ///
@@ -126,13 +126,13 @@ void k_descendantsproxymodel_on_map_from_source(void* self, QModelIndex* (*callb
 /// @param sourceIndex QModelIndex*
 QModelIndex* k_descendantsproxymodel_qbase_map_from_source(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mapToSource)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mapToSource)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param proxyIndex QModelIndex*
 QModelIndex* k_descendantsproxymodel_map_to_source(void* self, void* proxyIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mapToSource)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mapToSource)
 ///
 /// Allows for overriding the related default method
 ///
@@ -140,7 +140,7 @@ QModelIndex* k_descendantsproxymodel_map_to_source(void* self, void* proxyIndex)
 /// @param callback QModelIndex* func(KDescendantsProxyModel* self, QModelIndex* proxyIndex)
 void k_descendantsproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mapToSource)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mapToSource)
 ///
 /// Base class method implementation
 ///
@@ -148,7 +148,7 @@ void k_descendantsproxymodel_on_map_to_source(void* self, QModelIndex* (*callbac
 /// @param proxyIndex QModelIndex*
 QModelIndex* k_descendantsproxymodel_qbase_map_to_source(void* self, void* proxyIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#flags)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#flags)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param index QModelIndex*
@@ -156,7 +156,7 @@ QModelIndex* k_descendantsproxymodel_qbase_map_to_source(void* self, void* proxy
 /// @return flag of enum Qt__ItemFlag
 int32_t k_descendantsproxymodel_flags(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#flags)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
@@ -164,7 +164,7 @@ int32_t k_descendantsproxymodel_flags(void* self, void* index);
 /// @param callback int32_t func(KDescendantsProxyModel* self, QModelIndex* index)
 void k_descendantsproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#flags)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#flags)
 ///
 /// Base class method implementation
 ///
@@ -174,14 +174,14 @@ void k_descendantsproxymodel_on_flags(void* self, int32_t (*callback)(void*, voi
 /// @return flag of enum Qt__ItemFlag
 int32_t k_descendantsproxymodel_qbase_flags(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#data)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#data)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param index QModelIndex*
 /// @param role int
 QVariant* k_descendantsproxymodel_data(void* self, void* index, int role);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#data)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#data)
 ///
 /// Allows for overriding the related default method
 ///
@@ -189,7 +189,7 @@ QVariant* k_descendantsproxymodel_data(void* self, void* index, int role);
 /// @param callback QVariant* func(KDescendantsProxyModel* self, QModelIndex* index, int role)
 void k_descendantsproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#data)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#data)
 ///
 /// Base class method implementation
 ///
@@ -198,13 +198,13 @@ void k_descendantsproxymodel_on_data(void* self, QVariant* (*callback)(void*, vo
 /// @param role int
 QVariant* k_descendantsproxymodel_qbase_data(void* self, void* index, int role);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#rowCount)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param parent QModelIndex*
 int32_t k_descendantsproxymodel_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -212,7 +212,7 @@ int32_t k_descendantsproxymodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KDescendantsProxyModel* self, QModelIndex* parent)
 void k_descendantsproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
@@ -220,7 +220,7 @@ void k_descendantsproxymodel_on_row_count(void* self, int32_t (*callback)(void*,
 /// @param parent QModelIndex*
 int32_t k_descendantsproxymodel_qbase_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#headerData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#headerData)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param section int
@@ -228,7 +228,7 @@ int32_t k_descendantsproxymodel_qbase_row_count(void* self, void* parent);
 /// @param role int
 QVariant* k_descendantsproxymodel_header_data(void* self, int section, int32_t orientation, int role);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#headerData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#headerData)
 ///
 /// Allows for overriding the related default method
 ///
@@ -236,7 +236,7 @@ QVariant* k_descendantsproxymodel_header_data(void* self, int section, int32_t o
 /// @param callback QVariant* func(KDescendantsProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 void k_descendantsproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#headerData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#headerData)
 ///
 /// Base class method implementation
 ///
@@ -246,13 +246,13 @@ void k_descendantsproxymodel_on_header_data(void* self, QVariant* (*callback)(vo
 /// @param role int
 QVariant* k_descendantsproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mimeData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mimeData)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 QMimeData* k_descendantsproxymodel_mime_data(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mimeData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
@@ -260,7 +260,7 @@ QMimeData* k_descendantsproxymodel_mime_data(void* self, libqt_list indexes);
 /// @param callback QMimeData* func(KDescendantsProxyModel* self, QModelIndex** indexes)
 void k_descendantsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mimeData)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mimeData)
 ///
 /// Base class method implementation
 ///
@@ -268,14 +268,14 @@ void k_descendantsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(voi
 /// @param indexes libqt_list /* of QModelIndex* */
 QMimeData* k_descendantsproxymodel_qbase_mime_data(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mimeTypes)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDescendantsProxyModel*
 const char** k_descendantsproxymodel_mime_types(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mimeTypes)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mimeTypes)
 ///
 /// Allows for overriding the related default method
 ///
@@ -283,20 +283,20 @@ const char** k_descendantsproxymodel_mime_types(void* self);
 /// @param callback const char** func()
 void k_descendantsproxymodel_on_mime_types(void* self, const char** (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#mimeTypes)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mimeTypes)
 ///
 /// Base class method implementation
 ///
 /// @param self KDescendantsProxyModel*
 const char** k_descendantsproxymodel_qbase_mime_types(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#hasChildren)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param parent QModelIndex*
 bool k_descendantsproxymodel_has_children(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#hasChildren)
 ///
 /// Allows for overriding the related default method
 ///
@@ -304,7 +304,7 @@ bool k_descendantsproxymodel_has_children(void* self, void* parent);
 /// @param callback bool func(KDescendantsProxyModel* self, QModelIndex* parent)
 void k_descendantsproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#hasChildren)
 ///
 /// Base class method implementation
 ///
@@ -312,7 +312,7 @@ void k_descendantsproxymodel_on_has_children(void* self, bool (*callback)(void*,
 /// @param parent QModelIndex*
 bool k_descendantsproxymodel_qbase_has_children(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#index)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#index)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param param1 int
@@ -320,7 +320,7 @@ bool k_descendantsproxymodel_qbase_has_children(void* self, void* parent);
 /// @param parent QModelIndex*
 QModelIndex* k_descendantsproxymodel_index(void* self, int param1, int param2, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#index)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#index)
 ///
 /// Allows for overriding the related default method
 ///
@@ -328,7 +328,7 @@ QModelIndex* k_descendantsproxymodel_index(void* self, int param1, int param2, v
 /// @param callback QModelIndex* func(KDescendantsProxyModel* self, int param1, int param2, QModelIndex* parent)
 void k_descendantsproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#index)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#index)
 ///
 /// Base class method implementation
 ///
@@ -338,13 +338,13 @@ void k_descendantsproxymodel_on_index(void* self, QModelIndex* (*callback)(void*
 /// @param parent QModelIndex*
 QModelIndex* k_descendantsproxymodel_qbase_index(void* self, int param1, int param2, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#parent)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#parent)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param param1 QModelIndex*
 QModelIndex* k_descendantsproxymodel_parent(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#parent)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -352,7 +352,7 @@ QModelIndex* k_descendantsproxymodel_parent(void* self, void* param1);
 /// @param callback QModelIndex* func(KDescendantsProxyModel* self, QModelIndex* param1)
 void k_descendantsproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#parent)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#parent)
 ///
 /// Base class method implementation
 ///
@@ -360,13 +360,13 @@ void k_descendantsproxymodel_on_parent(void* self, QModelIndex* (*callback)(void
 /// @param param1 QModelIndex*
 QModelIndex* k_descendantsproxymodel_qbase_parent(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#columnCount)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param index QModelIndex*
 int32_t k_descendantsproxymodel_column_count(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#columnCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -374,7 +374,7 @@ int32_t k_descendantsproxymodel_column_count(void* self, void* index);
 /// @param callback int32_t func(KDescendantsProxyModel* self, QModelIndex* index)
 void k_descendantsproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#columnCount)
 ///
 /// Base class method implementation
 ///
@@ -382,12 +382,12 @@ void k_descendantsproxymodel_on_column_count(void* self, int32_t (*callback)(voi
 /// @param index QModelIndex*
 int32_t k_descendantsproxymodel_qbase_column_count(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#roleNames)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#roleNames)
 ///
 /// @param self KDescendantsProxyModel*
 libqt_map /* of int to char* */ k_descendantsproxymodel_role_names(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#roleNames)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#roleNames)
 ///
 /// Allows for overriding the related default method
 ///
@@ -395,56 +395,56 @@ libqt_map /* of int to char* */ k_descendantsproxymodel_role_names(void* self);
 /// @param callback libqt_map /* of int to char* */ func()
 void k_descendantsproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#roleNames)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#roleNames)
 ///
 /// Base class method implementation
 ///
 /// @param self KDescendantsProxyModel*
 libqt_map /* of int to char* */ k_descendantsproxymodel_qbase_role_names(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#setExpandsByDefault)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#setExpandsByDefault)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param expand bool
 void k_descendantsproxymodel_set_expands_by_default(void* self, bool expand);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#expandsByDefault)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#expandsByDefault)
 ///
 /// @param self KDescendantsProxyModel*
 bool k_descendantsproxymodel_expands_by_default(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#isSourceIndexExpanded)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#isSourceIndexExpanded)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceIndex QModelIndex*
 bool k_descendantsproxymodel_is_source_index_expanded(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#isSourceIndexVisible)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#isSourceIndexVisible)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceIndex QModelIndex*
 bool k_descendantsproxymodel_is_source_index_visible(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#expandSourceIndex)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#expandSourceIndex)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceIndex QModelIndex*
 void k_descendantsproxymodel_expand_source_index(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#collapseSourceIndex)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#collapseSourceIndex)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceIndex QModelIndex*
 void k_descendantsproxymodel_collapse_source_index(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#supportedDropActions)
 ///
 /// @param self KDescendantsProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 int32_t k_descendantsproxymodel_supported_drop_actions(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
@@ -452,7 +452,7 @@ int32_t k_descendantsproxymodel_supported_drop_actions(void* self);
 /// @param callback int32_t func()
 void k_descendantsproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#supportedDropActions)
 ///
 /// Base class method implementation
 ///
@@ -461,7 +461,7 @@ void k_descendantsproxymodel_on_supported_drop_actions(void* self, int32_t (*cal
 /// @return flag of enum Qt__DropAction
 int32_t k_descendantsproxymodel_qbase_supported_drop_actions(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#match)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#match)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param start QModelIndex*
@@ -471,7 +471,7 @@ int32_t k_descendantsproxymodel_qbase_supported_drop_actions(void* self);
 /// @param flags flag of enum Qt__MatchFlag
 libqt_list /* of QModelIndex* */ k_descendantsproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#match)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#match)
 ///
 /// Allows for overriding the related default method
 ///
@@ -479,7 +479,7 @@ libqt_list /* of QModelIndex* */ k_descendantsproxymodel_match(void* self, void*
 /// @param callback QModelIndex** func(KDescendantsProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void k_descendantsproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#match)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#match)
 ///
 /// Base class method implementation
 ///
@@ -491,76 +491,76 @@ void k_descendantsproxymodel_on_match(void* self, QModelIndex** (*callback)(void
 /// @param flags flag of enum Qt__MatchFlag
 libqt_list /* of QModelIndex* */ k_descendantsproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#sourceModelChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#sourceModelChanged)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_source_model_changed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#sourceModelChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#sourceModelChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self)
 void k_descendantsproxymodel_on_source_model_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#displayAncestorDataChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#displayAncestorDataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_display_ancestor_data_changed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#displayAncestorDataChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#displayAncestorDataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self)
 void k_descendantsproxymodel_on_display_ancestor_data_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#ancestorSeparatorChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#ancestorSeparatorChanged)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_ancestor_separator_changed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#ancestorSeparatorChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#ancestorSeparatorChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self)
 void k_descendantsproxymodel_on_ancestor_separator_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#expandsByDefaultChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#expandsByDefaultChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param expands bool
 void k_descendantsproxymodel_expands_by_default_changed(void* self, bool expands);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#expandsByDefaultChanged)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#expandsByDefaultChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, bool expands)
 void k_descendantsproxymodel_on_expands_by_default_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexExpanded)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexExpanded)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceIndex QModelIndex*
 void k_descendantsproxymodel_source_index_expanded(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexExpanded)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexExpanded)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QModelIndex* sourceIndex)
 void k_descendantsproxymodel_on_source_index_expanded(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexCollapsed)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexCollapsed)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceIndex QModelIndex*
 void k_descendantsproxymodel_source_index_collapsed(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexCollapsed)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#sourceIndexCollapsed)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QModelIndex* sourceIndex)
 void k_descendantsproxymodel_on_source_index_collapsed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -568,7 +568,7 @@ void k_descendantsproxymodel_on_source_index_collapsed(void* self, void (*callba
 /// @param c const char*
 const char* k_descendantsproxymodel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -579,14 +579,14 @@ const char* k_descendantsproxymodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
 /// @param self KDescendantsProxyModel*
 QAbstractItemModel* k_descendantsproxymodel_source_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param row int
@@ -595,7 +595,7 @@ bool k_descendantsproxymodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param row int
@@ -603,7 +603,7 @@ bool k_descendantsproxymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param column int
@@ -611,7 +611,7 @@ bool k_descendantsproxymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param row int
@@ -619,7 +619,7 @@ bool k_descendantsproxymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param column int
@@ -627,7 +627,7 @@ bool k_descendantsproxymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceParent QModelIndex*
@@ -638,7 +638,7 @@ bool k_descendantsproxymodel_move_row(void* self, void* sourceParent, int source
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sourceParent QModelIndex*
@@ -649,7 +649,7 @@ bool k_descendantsproxymodel_move_column(void* self, void* sourceParent, int sou
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param index QModelIndex*
@@ -657,7 +657,7 @@ bool k_descendantsproxymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param topLeft QModelIndex*
@@ -666,7 +666,7 @@ void k_descendantsproxymodel_data_changed(void* self, void* topLeft, void* botto
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
@@ -674,7 +674,7 @@ void k_descendantsproxymodel_on_data_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param orientation enum Qt__Orientation
@@ -684,7 +684,7 @@ void k_descendantsproxymodel_header_data_changed(void* self, int32_t orientation
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, enum Qt__Orientation orientation, int first, int last)
@@ -692,14 +692,14 @@ void k_descendantsproxymodel_on_header_data_changed(void* self, void (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self)
@@ -707,14 +707,14 @@ void k_descendantsproxymodel_on_layout_changed(void* self, void (*callback)(void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self)
@@ -722,7 +722,7 @@ void k_descendantsproxymodel_on_layout_about_to_be_changed(void* self, void (*ca
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param row int
@@ -732,7 +732,7 @@ bool k_descendantsproxymodel_has_index3(void* self, int row, int column, void* p
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param row int
@@ -741,7 +741,7 @@ bool k_descendantsproxymodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param column int
@@ -750,7 +750,7 @@ bool k_descendantsproxymodel_insert_column2(void* self, int column, void* parent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param row int
@@ -759,7 +759,7 @@ bool k_descendantsproxymodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param column int
@@ -768,7 +768,7 @@ bool k_descendantsproxymodel_remove_column2(void* self, int column, void* parent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param index QModelIndex*
@@ -777,7 +777,7 @@ bool k_descendantsproxymodel_check_index2(void* self, void* index, int32_t optio
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param topLeft QModelIndex*
@@ -787,7 +787,7 @@ void k_descendantsproxymodel_data_changed3(void* self, void* topLeft, void* bott
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
@@ -795,7 +795,7 @@ void k_descendantsproxymodel_on_data_changed3(void* self, void (*callback)(void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -803,7 +803,7 @@ void k_descendantsproxymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QPersistentModelIndex** parents)
@@ -811,7 +811,7 @@ void k_descendantsproxymodel_on_layout_changed1(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -820,7 +820,7 @@ void k_descendantsproxymodel_layout_changed2(void* self, libqt_list parents, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -828,7 +828,7 @@ void k_descendantsproxymodel_on_layout_changed2(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -836,7 +836,7 @@ void k_descendantsproxymodel_layout_about_to_be_changed1(void* self, libqt_list 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QPersistentModelIndex** parents)
@@ -844,7 +844,7 @@ void k_descendantsproxymodel_on_layout_about_to_be_changed1(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -853,7 +853,7 @@ void k_descendantsproxymodel_layout_about_to_be_changed2(void* self, libqt_list 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -861,7 +861,7 @@ void k_descendantsproxymodel_on_layout_about_to_be_changed2(void* self, void (*c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -870,7 +870,7 @@ const char* k_descendantsproxymodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param name char*
@@ -878,35 +878,35 @@ void k_descendantsproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KDescendantsProxyModel*
 bool k_descendantsproxymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KDescendantsProxyModel*
 bool k_descendantsproxymodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KDescendantsProxyModel*
 bool k_descendantsproxymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KDescendantsProxyModel*
 bool k_descendantsproxymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param b bool
@@ -914,14 +914,14 @@ bool k_descendantsproxymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KDescendantsProxyModel*
 QThread* k_descendantsproxymodel_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param thread QThread*
@@ -929,7 +929,7 @@ bool k_descendantsproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param interval int
@@ -937,7 +937,7 @@ int32_t k_descendantsproxymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param id int
@@ -945,7 +945,7 @@ void k_descendantsproxymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param id enum Qt__TimerId
@@ -953,14 +953,14 @@ void k_descendantsproxymodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KDescendantsProxyModel*
 libqt_list /* of QObject* */ k_descendantsproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param parent QObject*
@@ -968,7 +968,7 @@ void k_descendantsproxymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param filterObj QObject*
@@ -976,7 +976,7 @@ void k_descendantsproxymodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param obj QObject*
@@ -984,7 +984,7 @@ void k_descendantsproxymodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -994,7 +994,7 @@ QMetaObject__Connection* k_descendantsproxymodel_connect(void* sender, void* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sender QObject*
@@ -1004,7 +1004,7 @@ QMetaObject__Connection* k_descendantsproxymodel_connect2(void* self, void* send
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1014,28 +1014,28 @@ bool k_descendantsproxymodel_disconnect(void* sender, void* signal, void* receiv
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_descendantsproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param name const char*
@@ -1044,7 +1044,7 @@ bool k_descendantsproxymodel_set_property(void* self, const char* name, void* va
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param name const char*
@@ -1052,7 +1052,7 @@ QVariant* k_descendantsproxymodel_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1061,28 +1061,28 @@ const char** k_descendantsproxymodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KDescendantsProxyModel*
 QBindingStorage* k_descendantsproxymodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KDescendantsProxyModel*
 const QBindingStorage* k_descendantsproxymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self)
@@ -1090,7 +1090,7 @@ void k_descendantsproxymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param classname const char*
@@ -1098,14 +1098,14 @@ bool k_descendantsproxymodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KDescendantsProxyModel*
 void k_descendantsproxymodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param thread QThread*
@@ -1114,7 +1114,7 @@ bool k_descendantsproxymodel_move_to_thread2(void* self, void* thread, void* par
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param interval int
@@ -1123,7 +1123,7 @@ int32_t k_descendantsproxymodel_start_timer22(void* self, int interval, int32_t 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1134,7 +1134,7 @@ QMetaObject__Connection* k_descendantsproxymodel_connect5(void* sender, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param sender QObject*
@@ -1145,7 +1145,7 @@ QMetaObject__Connection* k_descendantsproxymodel_connect4(void* self, void* send
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param param1 QObject*
@@ -1153,7 +1153,7 @@ void k_descendantsproxymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDescendantsProxyModel*
 /// @param callback void func(KDescendantsProxyModel* self, QObject* param1)
@@ -1161,7 +1161,7 @@ void k_descendantsproxymodel_on_destroyed1(void* self, void (*callback)(void*, v
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1171,7 +1171,7 @@ QItemSelection* k_descendantsproxymodel_map_selection_to_source(void* self, void
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1181,7 +1181,7 @@ QItemSelection* k_descendantsproxymodel_qbase_map_selection_to_source(void* self
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1191,7 +1191,7 @@ void k_descendantsproxymodel_on_map_selection_to_source(void* self, QItemSelecti
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1201,7 +1201,7 @@ QItemSelection* k_descendantsproxymodel_map_selection_from_source(void* self, vo
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1211,7 +1211,7 @@ QItemSelection* k_descendantsproxymodel_qbase_map_selection_from_source(void* se
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1221,7 +1221,7 @@ void k_descendantsproxymodel_on_map_selection_from_source(void* self, QItemSelec
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1230,7 +1230,7 @@ bool k_descendantsproxymodel_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1239,7 +1239,7 @@ bool k_descendantsproxymodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1249,7 +1249,7 @@ void k_descendantsproxymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1258,7 +1258,7 @@ void k_descendantsproxymodel_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1267,7 +1267,7 @@ void k_descendantsproxymodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1277,7 +1277,7 @@ void k_descendantsproxymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1287,7 +1287,7 @@ libqt_map /* of int to QVariant* */ k_descendantsproxymodel_item_data(void* self
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1297,7 +1297,7 @@ libqt_map /* of int to QVariant* */ k_descendantsproxymodel_qbase_item_data(void
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1307,7 +1307,7 @@ void k_descendantsproxymodel_on_item_data(void* self, libqt_map /* of int to QVa
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1319,7 +1319,7 @@ bool k_descendantsproxymodel_set_data(void* self, void* index, void* value, int 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1331,7 +1331,7 @@ bool k_descendantsproxymodel_qbase_set_data(void* self, void* index, void* value
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1341,7 +1341,7 @@ void k_descendantsproxymodel_on_set_data(void* self, bool (*callback)(void*, voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1352,7 +1352,7 @@ bool k_descendantsproxymodel_set_item_data(void* self, void* index, libqt_map /*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1363,7 +1363,7 @@ bool k_descendantsproxymodel_qbase_set_item_data(void* self, void* index, libqt_
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1373,7 +1373,7 @@ void k_descendantsproxymodel_on_set_item_data(void* self, bool (*callback)(void*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1386,7 +1386,7 @@ bool k_descendantsproxymodel_set_header_data(void* self, int section, int32_t or
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1399,7 +1399,7 @@ bool k_descendantsproxymodel_qbase_set_header_data(void* self, int section, int3
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1409,7 +1409,7 @@ void k_descendantsproxymodel_on_set_header_data(void* self, bool (*callback)(voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1419,7 +1419,7 @@ bool k_descendantsproxymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1429,7 +1429,7 @@ bool k_descendantsproxymodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1439,7 +1439,7 @@ void k_descendantsproxymodel_on_clear_item_data(void* self, bool (*callback)(voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1449,7 +1449,7 @@ QModelIndex* k_descendantsproxymodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1459,7 +1459,7 @@ QModelIndex* k_descendantsproxymodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1469,7 +1469,7 @@ void k_descendantsproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1479,7 +1479,7 @@ bool k_descendantsproxymodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1489,7 +1489,7 @@ bool k_descendantsproxymodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1499,7 +1499,7 @@ void k_descendantsproxymodel_on_can_fetch_more(void* self, bool (*callback)(void
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1509,7 +1509,7 @@ void k_descendantsproxymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1519,7 +1519,7 @@ void k_descendantsproxymodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1529,7 +1529,7 @@ void k_descendantsproxymodel_on_fetch_more(void* self, void (*callback)(void*, v
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1540,7 +1540,7 @@ void k_descendantsproxymodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1551,7 +1551,7 @@ void k_descendantsproxymodel_qbase_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1561,7 +1561,7 @@ void k_descendantsproxymodel_on_sort(void* self, void (*callback)(void*, int, in
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1571,7 +1571,7 @@ QSize* k_descendantsproxymodel_span(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1581,7 +1581,7 @@ QSize* k_descendantsproxymodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1591,7 +1591,7 @@ void k_descendantsproxymodel_on_span(void* self, QSize* (*callback)(void*, void*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sibling)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1603,7 +1603,7 @@ QModelIndex* k_descendantsproxymodel_sibling(void* self, int row, int column, vo
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sibling)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1615,7 +1615,7 @@ QModelIndex* k_descendantsproxymodel_qbase_sibling(void* self, int row, int colu
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sibling)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1625,7 +1625,7 @@ void k_descendantsproxymodel_on_sibling(void* self, QModelIndex* (*callback)(voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1639,7 +1639,7 @@ bool k_descendantsproxymodel_can_drop_mime_data(void* self, void* data, int32_t 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1653,7 +1653,7 @@ bool k_descendantsproxymodel_qbase_can_drop_mime_data(void* self, void* data, in
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1663,7 +1663,7 @@ void k_descendantsproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1677,7 +1677,7 @@ bool k_descendantsproxymodel_drop_mime_data(void* self, void* data, int32_t acti
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1691,7 +1691,7 @@ bool k_descendantsproxymodel_qbase_drop_mime_data(void* self, void* data, int32_
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1701,7 +1701,7 @@ void k_descendantsproxymodel_on_drop_mime_data(void* self, bool (*callback)(void
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1712,7 +1712,7 @@ int32_t k_descendantsproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1723,7 +1723,7 @@ int32_t k_descendantsproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1733,7 +1733,7 @@ void k_descendantsproxymodel_on_supported_drag_actions(void* self, int32_t (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1745,7 +1745,7 @@ bool k_descendantsproxymodel_insert_rows(void* self, int row, int count, void* p
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1757,7 +1757,7 @@ bool k_descendantsproxymodel_qbase_insert_rows(void* self, int row, int count, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1767,7 +1767,7 @@ void k_descendantsproxymodel_on_insert_rows(void* self, bool (*callback)(void*, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1779,7 +1779,7 @@ bool k_descendantsproxymodel_insert_columns(void* self, int column, int count, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1791,7 +1791,7 @@ bool k_descendantsproxymodel_qbase_insert_columns(void* self, int column, int co
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1801,7 +1801,7 @@ void k_descendantsproxymodel_on_insert_columns(void* self, bool (*callback)(void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1813,7 +1813,7 @@ bool k_descendantsproxymodel_remove_rows(void* self, int row, int count, void* p
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1825,7 +1825,7 @@ bool k_descendantsproxymodel_qbase_remove_rows(void* self, int row, int count, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1835,7 +1835,7 @@ void k_descendantsproxymodel_on_remove_rows(void* self, bool (*callback)(void*, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1847,7 +1847,7 @@ bool k_descendantsproxymodel_remove_columns(void* self, int column, int count, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1859,7 +1859,7 @@ bool k_descendantsproxymodel_qbase_remove_columns(void* self, int column, int co
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1869,7 +1869,7 @@ void k_descendantsproxymodel_on_remove_columns(void* self, bool (*callback)(void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1883,7 +1883,7 @@ bool k_descendantsproxymodel_move_rows(void* self, void* sourceParent, int sourc
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1897,7 +1897,7 @@ bool k_descendantsproxymodel_qbase_move_rows(void* self, void* sourceParent, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1907,7 +1907,7 @@ void k_descendantsproxymodel_on_move_rows(void* self, bool (*callback)(void*, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1921,7 +1921,7 @@ bool k_descendantsproxymodel_move_columns(void* self, void* sourceParent, int so
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1935,7 +1935,7 @@ bool k_descendantsproxymodel_qbase_move_columns(void* self, void* sourceParent, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1945,7 +1945,7 @@ void k_descendantsproxymodel_on_move_columns(void* self, bool (*callback)(void*,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1956,7 +1956,7 @@ void k_descendantsproxymodel_multi_data(void* self, void* index, void* roleDataS
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1967,7 +1967,7 @@ void k_descendantsproxymodel_qbase_multi_data(void* self, void* index, void* rol
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1977,7 +1977,7 @@ void k_descendantsproxymodel_on_multi_data(void* self, void (*callback)(void*, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1986,7 +1986,7 @@ void k_descendantsproxymodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1995,7 +1995,7 @@ void k_descendantsproxymodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2005,7 +2005,7 @@ void k_descendantsproxymodel_on_reset_internal_data(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2015,7 +2015,7 @@ bool k_descendantsproxymodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2025,7 +2025,7 @@ bool k_descendantsproxymodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2035,7 +2035,7 @@ void k_descendantsproxymodel_on_event(void* self, bool (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2046,7 +2046,7 @@ bool k_descendantsproxymodel_event_filter(void* self, void* watched, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2057,7 +2057,7 @@ bool k_descendantsproxymodel_qbase_event_filter(void* self, void* watched, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2067,7 +2067,7 @@ void k_descendantsproxymodel_on_event_filter(void* self, bool (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2077,7 +2077,7 @@ void k_descendantsproxymodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2087,7 +2087,7 @@ void k_descendantsproxymodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2097,7 +2097,7 @@ void k_descendantsproxymodel_on_timer_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2107,7 +2107,7 @@ void k_descendantsproxymodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2117,7 +2117,7 @@ void k_descendantsproxymodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2127,7 +2127,7 @@ void k_descendantsproxymodel_on_child_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2137,7 +2137,7 @@ void k_descendantsproxymodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2147,7 +2147,7 @@ void k_descendantsproxymodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2157,7 +2157,7 @@ void k_descendantsproxymodel_on_custom_event(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2167,7 +2167,7 @@ void k_descendantsproxymodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2177,7 +2177,7 @@ void k_descendantsproxymodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2187,7 +2187,7 @@ void k_descendantsproxymodel_on_connect_notify(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2197,7 +2197,7 @@ void k_descendantsproxymodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2207,7 +2207,7 @@ void k_descendantsproxymodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2217,7 +2217,7 @@ void k_descendantsproxymodel_on_disconnect_notify(void* self, void (*callback)(v
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2229,7 +2229,7 @@ QModelIndex* k_descendantsproxymodel_create_source_index(void* self, int row, in
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2241,7 +2241,7 @@ QModelIndex* k_descendantsproxymodel_qbase_create_source_index(void* self, int r
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2251,7 +2251,7 @@ void k_descendantsproxymodel_on_create_source_index(void* self, QModelIndex* (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2262,7 +2262,7 @@ QModelIndex* k_descendantsproxymodel_create_index(void* self, int row, int colum
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2273,7 +2273,7 @@ QModelIndex* k_descendantsproxymodel_qbase_create_index(void* self, int row, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2283,7 +2283,7 @@ void k_descendantsproxymodel_on_create_index(void* self, QModelIndex* (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2294,7 +2294,7 @@ void k_descendantsproxymodel_encode_data(void* self, libqt_list indexes, void* s
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2305,7 +2305,7 @@ void k_descendantsproxymodel_qbase_encode_data(void* self, libqt_list indexes, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2315,7 +2315,7 @@ void k_descendantsproxymodel_on_encode_data(void* self, void (*callback)(void*, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2328,7 +2328,7 @@ bool k_descendantsproxymodel_decode_data(void* self, int row, int column, void* 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2341,7 +2341,7 @@ bool k_descendantsproxymodel_qbase_decode_data(void* self, int row, int column, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2351,7 +2351,7 @@ void k_descendantsproxymodel_on_decode_data(void* self, bool (*callback)(void*, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2363,7 +2363,7 @@ void k_descendantsproxymodel_begin_insert_rows(void* self, void* parent, int fir
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2375,7 +2375,7 @@ void k_descendantsproxymodel_qbase_begin_insert_rows(void* self, void* parent, i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2385,7 +2385,7 @@ void k_descendantsproxymodel_on_begin_insert_rows(void* self, void (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2394,7 +2394,7 @@ void k_descendantsproxymodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2403,7 +2403,7 @@ void k_descendantsproxymodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2413,7 +2413,7 @@ void k_descendantsproxymodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2425,7 +2425,7 @@ void k_descendantsproxymodel_begin_remove_rows(void* self, void* parent, int fir
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2437,7 +2437,7 @@ void k_descendantsproxymodel_qbase_begin_remove_rows(void* self, void* parent, i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2447,7 +2447,7 @@ void k_descendantsproxymodel_on_begin_remove_rows(void* self, void (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2456,7 +2456,7 @@ void k_descendantsproxymodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2465,7 +2465,7 @@ void k_descendantsproxymodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2475,7 +2475,7 @@ void k_descendantsproxymodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2489,7 +2489,7 @@ bool k_descendantsproxymodel_begin_move_rows(void* self, void* sourceParent, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2503,7 +2503,7 @@ bool k_descendantsproxymodel_qbase_begin_move_rows(void* self, void* sourceParen
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2513,7 +2513,7 @@ void k_descendantsproxymodel_on_begin_move_rows(void* self, bool (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2522,7 +2522,7 @@ void k_descendantsproxymodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2531,7 +2531,7 @@ void k_descendantsproxymodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2541,7 +2541,7 @@ void k_descendantsproxymodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2553,7 +2553,7 @@ void k_descendantsproxymodel_begin_insert_columns(void* self, void* parent, int 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2565,7 +2565,7 @@ void k_descendantsproxymodel_qbase_begin_insert_columns(void* self, void* parent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2575,7 +2575,7 @@ void k_descendantsproxymodel_on_begin_insert_columns(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2584,7 +2584,7 @@ void k_descendantsproxymodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2593,7 +2593,7 @@ void k_descendantsproxymodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2603,7 +2603,7 @@ void k_descendantsproxymodel_on_end_insert_columns(void* self, void (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2615,7 +2615,7 @@ void k_descendantsproxymodel_begin_remove_columns(void* self, void* parent, int 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2627,7 +2627,7 @@ void k_descendantsproxymodel_qbase_begin_remove_columns(void* self, void* parent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2637,7 +2637,7 @@ void k_descendantsproxymodel_on_begin_remove_columns(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2646,7 +2646,7 @@ void k_descendantsproxymodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2655,7 +2655,7 @@ void k_descendantsproxymodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2665,7 +2665,7 @@ void k_descendantsproxymodel_on_end_remove_columns(void* self, void (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2679,7 +2679,7 @@ bool k_descendantsproxymodel_begin_move_columns(void* self, void* sourceParent, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2693,7 +2693,7 @@ bool k_descendantsproxymodel_qbase_begin_move_columns(void* self, void* sourcePa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2703,7 +2703,7 @@ void k_descendantsproxymodel_on_begin_move_columns(void* self, bool (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2712,7 +2712,7 @@ void k_descendantsproxymodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2721,7 +2721,7 @@ void k_descendantsproxymodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2731,7 +2731,7 @@ void k_descendantsproxymodel_on_end_move_columns(void* self, void (*callback)())
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2740,7 +2740,7 @@ void k_descendantsproxymodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2749,7 +2749,7 @@ void k_descendantsproxymodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2759,7 +2759,7 @@ void k_descendantsproxymodel_on_begin_reset_model(void* self, void (*callback)()
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2768,7 +2768,7 @@ void k_descendantsproxymodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2777,7 +2777,7 @@ void k_descendantsproxymodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2787,7 +2787,7 @@ void k_descendantsproxymodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2798,7 +2798,7 @@ void k_descendantsproxymodel_change_persistent_index(void* self, void* from, voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2809,7 +2809,7 @@ void k_descendantsproxymodel_qbase_change_persistent_index(void* self, void* fro
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2819,7 +2819,7 @@ void k_descendantsproxymodel_on_change_persistent_index(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2830,7 +2830,7 @@ void k_descendantsproxymodel_change_persistent_index_list(void* self, libqt_list
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2841,7 +2841,7 @@ void k_descendantsproxymodel_qbase_change_persistent_index_list(void* self, libq
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2851,7 +2851,7 @@ void k_descendantsproxymodel_on_change_persistent_index_list(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2860,7 +2860,7 @@ libqt_list /* of QModelIndex* */ k_descendantsproxymodel_persistent_index_list(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2869,7 +2869,7 @@ libqt_list /* of QModelIndex* */ k_descendantsproxymodel_qbase_persistent_index_
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2879,7 +2879,7 @@ void k_descendantsproxymodel_on_persistent_index_list(void* self, QModelIndex** 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2888,7 +2888,7 @@ QObject* k_descendantsproxymodel_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2897,7 +2897,7 @@ QObject* k_descendantsproxymodel_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2907,7 +2907,7 @@ void k_descendantsproxymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2916,7 +2916,7 @@ int32_t k_descendantsproxymodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2925,7 +2925,7 @@ int32_t k_descendantsproxymodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2935,7 +2935,7 @@ void k_descendantsproxymodel_on_sender_signal_index(void* self, int32_t (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2945,7 +2945,7 @@ int32_t k_descendantsproxymodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2955,7 +2955,7 @@ int32_t k_descendantsproxymodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2965,7 +2965,7 @@ void k_descendantsproxymodel_on_receivers(void* self, int32_t (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2975,7 +2975,7 @@ bool k_descendantsproxymodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2985,7 +2985,7 @@ bool k_descendantsproxymodel_qbase_is_signal_connected(void* self, void* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2995,7 +2995,7 @@ void k_descendantsproxymodel_on_is_signal_connected(void* self, bool (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3005,7 +3005,7 @@ void k_descendantsproxymodel_on_rows_about_to_be_inserted(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3015,7 +3015,7 @@ void k_descendantsproxymodel_on_rows_inserted(void* self, void (*callback)(void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3025,7 +3025,7 @@ void k_descendantsproxymodel_on_rows_about_to_be_removed(void* self, void (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3035,7 +3035,7 @@ void k_descendantsproxymodel_on_rows_removed(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3045,7 +3045,7 @@ void k_descendantsproxymodel_on_columns_about_to_be_inserted(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3055,7 +3055,7 @@ void k_descendantsproxymodel_on_columns_inserted(void* self, void (*callback)(vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3065,7 +3065,7 @@ void k_descendantsproxymodel_on_columns_about_to_be_removed(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3075,7 +3075,7 @@ void k_descendantsproxymodel_on_columns_removed(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3085,7 +3085,7 @@ void k_descendantsproxymodel_on_model_about_to_be_reset(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3095,7 +3095,7 @@ void k_descendantsproxymodel_on_model_reset(void* self, void (*callback)(void*))
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3105,7 +3105,7 @@ void k_descendantsproxymodel_on_rows_about_to_be_moved(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3115,7 +3115,7 @@ void k_descendantsproxymodel_on_rows_moved(void* self, void (*callback)(void*, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3125,7 +3125,7 @@ void k_descendantsproxymodel_on_columns_about_to_be_moved(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3135,7 +3135,7 @@ void k_descendantsproxymodel_on_columns_moved(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3143,7 +3143,7 @@ void k_descendantsproxymodel_on_columns_moved(void* self, void (*callback)(void*
 /// @param callback void func(KDescendantsProxyModel* self, const char* objectName)
 void k_descendantsproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kdescendantsproxymodel.html#dtor.KDescendantsProxyModel)
+/// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#dtor.KDescendantsProxyModel)
 ///
 /// Delete this object from C++ memory.
 ///

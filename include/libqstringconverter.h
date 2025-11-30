@@ -39,7 +39,7 @@ QStringEncoder* q_stringencoder_new4(int32_t encoding, int32_t flags);
 /// @param flags flag of enum QStringConverterBase__Flag
 QStringEncoder* q_stringencoder_new5(char* name, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringencoder.html#requiredSpace)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html#requiredSpace)
 ///
 /// @param self QStringEncoder*
 /// @param inputLength int64_t
@@ -47,28 +47,28 @@ int64_t q_stringencoder_required_space(void* self, int64_t inputLength);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
 /// @param self QStringEncoder*
 bool q_stringencoder_is_valid(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
 ///
 /// @param self QStringEncoder*
 void q_stringencoder_reset_state(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
 /// @param self QStringEncoder*
 bool q_stringencoder_has_error(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -77,7 +77,7 @@ const char* q_stringencoder_name(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -86,13 +86,13 @@ const char* q_stringencoder_name_for_encoding(int32_t e);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** q_stringencoder_available_codecs();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringencoder.html#dtor.QStringEncoder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html#dtor.QStringEncoder)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -127,48 +127,48 @@ QStringDecoder* q_stringdecoder_new4(int32_t encoding, int32_t flags);
 /// @param f flag of enum QStringConverterBase__Flag
 QStringDecoder* q_stringdecoder_new5(char* name, int32_t f);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#requiredSpace)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#requiredSpace)
 ///
 /// @param self QStringDecoder*
 /// @param inputLength int64_t
 int64_t q_stringdecoder_required_space(void* self, int64_t inputLength);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#appendToBuffer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#appendToBuffer)
 ///
 /// @param self QStringDecoder*
 /// @param out QChar*
 /// @param ba const char*
 QChar* q_stringdecoder_append_to_buffer(void* self, void* out, const char* ba);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#decoderForHtml)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#decoderForHtml)
 ///
 /// @param data const char*
 QStringDecoder* q_stringdecoder_decoder_for_html(const char* data);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
 /// @param self QStringDecoder*
 bool q_stringdecoder_is_valid(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
 ///
 /// @param self QStringDecoder*
 void q_stringdecoder_reset_state(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
 /// @param self QStringDecoder*
 bool q_stringdecoder_has_error(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -177,7 +177,7 @@ const char* q_stringdecoder_name(void* self);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -186,13 +186,13 @@ const char* q_stringdecoder_name_for_encoding(int32_t e);
 
 /// Inherited from QStringConverter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** q_stringdecoder_available_codecs();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#dtor.QStringDecoder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#dtor.QStringDecoder)
 ///
 /// Delete this object from C++ memory.
 ///

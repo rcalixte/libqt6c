@@ -18,7 +18,7 @@
 /// @param parent QObject*
 KTextEditor__CodeCompletionModel* k_texteditor__codecompletionmodel_new(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 const QMetaObject* k_texteditor__codecompletionmodel_meta_object(void* self);
@@ -47,20 +47,20 @@ void k_texteditor__codecompletionmodel_on_metacall(void* self, int32_t (*callbac
 /// @param param3 void*
 int32_t k_texteditor__codecompletionmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_texteditor__codecompletionmodel_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#setRowCount)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setRowCount)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param rowCount int
 void k_texteditor__codecompletionmodel_set_row_count(void* self, int rowCount);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param view KTextEditor__View*
@@ -68,7 +68,7 @@ void k_texteditor__codecompletionmodel_set_row_count(void* self, int rowCount);
 /// @param invocationType enum KTextEditor__CodeCompletionModel__InvocationType
 void k_texteditor__codecompletionmodel_completion_invoked(void* self, void* view, void* range, int32_t invocationType);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -76,7 +76,7 @@ void k_texteditor__codecompletionmodel_completion_invoked(void* self, void* view
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, KTextEditor__View* view, KTextEditor__Range* range, enum KTextEditor__CodeCompletionModel__InvocationType invocationType)
 void k_texteditor__codecompletionmodel_on_completion_invoked(void* self, void (*callback)(void*, void*, void*, int32_t));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
 ///
 /// Base class method implementation
 ///
@@ -86,7 +86,7 @@ void k_texteditor__codecompletionmodel_on_completion_invoked(void* self, void (*
 /// @param invocationType enum KTextEditor__CodeCompletionModel__InvocationType
 void k_texteditor__codecompletionmodel_qbase_completion_invoked(void* self, void* view, void* range, int32_t invocationType);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param view KTextEditor__View*
@@ -94,7 +94,7 @@ void k_texteditor__codecompletionmodel_qbase_completion_invoked(void* self, void
 /// @param index QModelIndex*
 void k_texteditor__codecompletionmodel_execute_completion_item(void* self, void* view, void* word, void* index);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
 ///
 /// Allows for overriding the related default method
 ///
@@ -102,7 +102,7 @@ void k_texteditor__codecompletionmodel_execute_completion_item(void* self, void*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, KTextEditor__View* view, KTextEditor__Range* word, QModelIndex* index)
 void k_texteditor__codecompletionmodel_on_execute_completion_item(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
 ///
 /// Base class method implementation
 ///
@@ -112,13 +112,13 @@ void k_texteditor__codecompletionmodel_on_execute_completion_item(void* self, vo
 /// @param index QModelIndex*
 void k_texteditor__codecompletionmodel_qbase_execute_completion_item(void* self, void* view, void* word, void* index);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
 int32_t k_texteditor__codecompletionmodel_column_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -126,7 +126,7 @@ int32_t k_texteditor__codecompletionmodel_column_count(void* self, void* parent)
 /// @param callback int32_t func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent)
 void k_texteditor__codecompletionmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
 ///
 /// Base class method implementation
 ///
@@ -134,7 +134,7 @@ void k_texteditor__codecompletionmodel_on_column_count(void* self, int32_t (*cal
 /// @param parent QModelIndex*
 int32_t k_texteditor__codecompletionmodel_qbase_column_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
@@ -142,7 +142,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_column_count(void* self, void* p
 /// @param parent QModelIndex*
 QModelIndex* k_texteditor__codecompletionmodel_index(void* self, int row, int column, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
 ///
 /// Allows for overriding the related default method
 ///
@@ -150,7 +150,7 @@ QModelIndex* k_texteditor__codecompletionmodel_index(void* self, int row, int co
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, int row, int column, QModelIndex* parent)
 void k_texteditor__codecompletionmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
 ///
 /// Base class method implementation
 ///
@@ -160,13 +160,13 @@ void k_texteditor__codecompletionmodel_on_index(void* self, QModelIndex* (*callb
 /// @param parent QModelIndex*
 QModelIndex* k_texteditor__codecompletionmodel_qbase_index(void* self, int row, int column, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_item_data(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
 ///
 /// Allows for overriding the related default method
 ///
@@ -174,7 +174,7 @@ libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_item_data(
 /// @param callback libqt_map /* of int to QVariant* */ func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
 void k_texteditor__codecompletionmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
 ///
 /// Base class method implementation
 ///
@@ -182,13 +182,13 @@ void k_texteditor__codecompletionmodel_on_item_data(void* self, libqt_map /* of 
 /// @param index QModelIndex*
 libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_qbase_item_data(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 QModelIndex* k_texteditor__codecompletionmodel_parent(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -196,7 +196,7 @@ QModelIndex* k_texteditor__codecompletionmodel_parent(void* self, void* index);
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
 void k_texteditor__codecompletionmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
 ///
 /// Base class method implementation
 ///
@@ -204,13 +204,13 @@ void k_texteditor__codecompletionmodel_on_parent(void* self, QModelIndex* (*call
 /// @param index QModelIndex*
 QModelIndex* k_texteditor__codecompletionmodel_qbase_parent(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
 int32_t k_texteditor__codecompletionmodel_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -218,7 +218,7 @@ int32_t k_texteditor__codecompletionmodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent)
 void k_texteditor__codecompletionmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
@@ -226,42 +226,42 @@ void k_texteditor__codecompletionmodel_on_row_count(void* self, int32_t (*callba
 /// @param parent QModelIndex*
 int32_t k_texteditor__codecompletionmodel_qbase_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroups)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroups)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 bool k_texteditor__codecompletionmodel_has_groups(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#waitForReset)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#waitForReset)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 void k_texteditor__codecompletionmodel_wait_for_reset(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#waitForReset)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#waitForReset)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
 void k_texteditor__codecompletionmodel_on_wait_for_reset(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroupsChanged)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroupsChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param model KTextEditor__CodeCompletionModel*
 /// @param hasGroups bool
 void k_texteditor__codecompletionmodel_has_groups_changed(void* self, void* model, bool hasGroups);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroupsChanged)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroupsChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, KTextEditor__CodeCompletionModel* model, bool hasGroups)
 void k_texteditor__codecompletionmodel_on_has_groups_changed(void* self, void (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param hasGroups bool
 void k_texteditor__codecompletionmodel_set_has_groups(void* self, bool hasGroups);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
 ///
 /// Allows for overriding the related default method
 ///
@@ -269,7 +269,7 @@ void k_texteditor__codecompletionmodel_set_has_groups(void* self, bool hasGroups
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, bool hasGroups)
 void k_texteditor__codecompletionmodel_on_set_has_groups(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
 ///
 /// Base class method implementation
 ///
@@ -277,7 +277,7 @@ void k_texteditor__codecompletionmodel_on_set_has_groups(void* self, void (*call
 /// @param hasGroups bool
 void k_texteditor__codecompletionmodel_qbase_set_has_groups(void* self, bool hasGroups);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -285,7 +285,7 @@ void k_texteditor__codecompletionmodel_qbase_set_has_groups(void* self, bool has
 /// @param c const char*
 const char* k_texteditor__codecompletionmodel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -296,7 +296,7 @@ const char* k_texteditor__codecompletionmodel_tr3(const char* s, const char* c, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
@@ -305,7 +305,7 @@ bool k_texteditor__codecompletionmodel_has_index(void* self, int row, int column
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
@@ -313,7 +313,7 @@ bool k_texteditor__codecompletionmodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
@@ -321,7 +321,7 @@ bool k_texteditor__codecompletionmodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
@@ -329,7 +329,7 @@ bool k_texteditor__codecompletionmodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
@@ -337,7 +337,7 @@ bool k_texteditor__codecompletionmodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param sourceParent QModelIndex*
@@ -348,7 +348,7 @@ bool k_texteditor__codecompletionmodel_move_row(void* self, void* sourceParent, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param sourceParent QModelIndex*
@@ -359,7 +359,7 @@ bool k_texteditor__codecompletionmodel_move_column(void* self, void* sourceParen
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
@@ -367,7 +367,7 @@ bool k_texteditor__codecompletionmodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param topLeft QModelIndex*
@@ -376,7 +376,7 @@ void k_texteditor__codecompletionmodel_data_changed(void* self, void* topLeft, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
@@ -384,7 +384,7 @@ void k_texteditor__codecompletionmodel_on_data_changed(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param orientation enum Qt__Orientation
@@ -394,7 +394,7 @@ void k_texteditor__codecompletionmodel_header_data_changed(void* self, int32_t o
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, enum Qt__Orientation orientation, int first, int last)
@@ -402,14 +402,14 @@ void k_texteditor__codecompletionmodel_on_header_data_changed(void* self, void (
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 void k_texteditor__codecompletionmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
@@ -417,14 +417,14 @@ void k_texteditor__codecompletionmodel_on_layout_changed(void* self, void (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 void k_texteditor__codecompletionmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
@@ -432,7 +432,7 @@ void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed(void* self,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
@@ -442,7 +442,7 @@ bool k_texteditor__codecompletionmodel_has_index3(void* self, int row, int colum
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
@@ -451,7 +451,7 @@ bool k_texteditor__codecompletionmodel_insert_row2(void* self, int row, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
@@ -460,7 +460,7 @@ bool k_texteditor__codecompletionmodel_insert_column2(void* self, int column, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
@@ -469,7 +469,7 @@ bool k_texteditor__codecompletionmodel_remove_row2(void* self, int row, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
@@ -478,7 +478,7 @@ bool k_texteditor__codecompletionmodel_remove_column2(void* self, int column, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
@@ -487,7 +487,7 @@ bool k_texteditor__codecompletionmodel_check_index2(void* self, void* index, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param topLeft QModelIndex*
@@ -497,7 +497,7 @@ void k_texteditor__codecompletionmodel_data_changed3(void* self, void* topLeft, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
@@ -505,7 +505,7 @@ void k_texteditor__codecompletionmodel_on_data_changed3(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -513,7 +513,7 @@ void k_texteditor__codecompletionmodel_layout_changed1(void* self, libqt_list pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents)
@@ -521,7 +521,7 @@ void k_texteditor__codecompletionmodel_on_layout_changed1(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -530,7 +530,7 @@ void k_texteditor__codecompletionmodel_layout_changed2(void* self, libqt_list pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -538,7 +538,7 @@ void k_texteditor__codecompletionmodel_on_layout_changed2(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -546,7 +546,7 @@ void k_texteditor__codecompletionmodel_layout_about_to_be_changed1(void* self, l
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents)
@@ -554,7 +554,7 @@ void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed1(void* self
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -563,7 +563,7 @@ void k_texteditor__codecompletionmodel_layout_about_to_be_changed2(void* self, l
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -571,7 +571,7 @@ void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed2(void* self
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -580,7 +580,7 @@ const char* k_texteditor__codecompletionmodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param name char*
@@ -588,35 +588,35 @@ void k_texteditor__codecompletionmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 bool k_texteditor__codecompletionmodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 bool k_texteditor__codecompletionmodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 bool k_texteditor__codecompletionmodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 bool k_texteditor__codecompletionmodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param b bool
@@ -624,14 +624,14 @@ bool k_texteditor__codecompletionmodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 QThread* k_texteditor__codecompletionmodel_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param thread QThread*
@@ -639,7 +639,7 @@ bool k_texteditor__codecompletionmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param interval int
@@ -647,7 +647,7 @@ int32_t k_texteditor__codecompletionmodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param id int
@@ -655,7 +655,7 @@ void k_texteditor__codecompletionmodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param id enum Qt__TimerId
@@ -663,14 +663,14 @@ void k_texteditor__codecompletionmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 libqt_list /* of QObject* */ k_texteditor__codecompletionmodel_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QObject*
@@ -678,7 +678,7 @@ void k_texteditor__codecompletionmodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param filterObj QObject*
@@ -686,7 +686,7 @@ void k_texteditor__codecompletionmodel_install_event_filter(void* self, void* fi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param obj QObject*
@@ -694,7 +694,7 @@ void k_texteditor__codecompletionmodel_remove_event_filter(void* self, void* obj
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -704,7 +704,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect(void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param sender QObject*
@@ -714,7 +714,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect2(void* self, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -724,28 +724,28 @@ bool k_texteditor__codecompletionmodel_disconnect(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_texteditor__codecompletionmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 void k_texteditor__codecompletionmodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 void k_texteditor__codecompletionmodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param name const char*
@@ -754,7 +754,7 @@ bool k_texteditor__codecompletionmodel_set_property(void* self, const char* name
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param name const char*
@@ -762,7 +762,7 @@ QVariant* k_texteditor__codecompletionmodel_property(void* self, const char* nam
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -771,28 +771,28 @@ const char** k_texteditor__codecompletionmodel_dynamic_property_names(void* self
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 QBindingStorage* k_texteditor__codecompletionmodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 const QBindingStorage* k_texteditor__codecompletionmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 void k_texteditor__codecompletionmodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
@@ -800,7 +800,7 @@ void k_texteditor__codecompletionmodel_on_destroyed(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param classname const char*
@@ -808,14 +808,14 @@ bool k_texteditor__codecompletionmodel_inherits(void* self, const char* classnam
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 void k_texteditor__codecompletionmodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param thread QThread*
@@ -824,7 +824,7 @@ bool k_texteditor__codecompletionmodel_move_to_thread2(void* self, void* thread,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param interval int
@@ -833,7 +833,7 @@ int32_t k_texteditor__codecompletionmodel_start_timer22(void* self, int interval
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -844,7 +844,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect5(void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param sender QObject*
@@ -855,7 +855,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect4(void* self, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param param1 QObject*
@@ -863,7 +863,7 @@ void k_texteditor__codecompletionmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QObject* param1)
@@ -871,7 +871,7 @@ void k_texteditor__codecompletionmodel_on_destroyed1(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -883,7 +883,7 @@ QModelIndex* k_texteditor__codecompletionmodel_sibling(void* self, int row, int 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -895,7 +895,7 @@ QModelIndex* k_texteditor__codecompletionmodel_qbase_sibling(void* self, int row
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -905,7 +905,7 @@ void k_texteditor__codecompletionmodel_on_sibling(void* self, QModelIndex* (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -915,7 +915,7 @@ bool k_texteditor__codecompletionmodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -925,7 +925,7 @@ bool k_texteditor__codecompletionmodel_qbase_has_children(void* self, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -935,7 +935,7 @@ void k_texteditor__codecompletionmodel_on_has_children(void* self, bool (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#data)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -946,7 +946,7 @@ QVariant* k_texteditor__codecompletionmodel_data(void* self, void* index, int ro
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#data)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -957,7 +957,7 @@ QVariant* k_texteditor__codecompletionmodel_qbase_data(void* self, void* index, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#data)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -967,7 +967,7 @@ void k_texteditor__codecompletionmodel_on_data(void* self, QVariant* (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -979,7 +979,7 @@ bool k_texteditor__codecompletionmodel_set_data(void* self, void* index, void* v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -991,7 +991,7 @@ bool k_texteditor__codecompletionmodel_qbase_set_data(void* self, void* index, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1001,7 +1001,7 @@ void k_texteditor__codecompletionmodel_on_set_data(void* self, bool (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1013,7 +1013,7 @@ QVariant* k_texteditor__codecompletionmodel_header_data(void* self, int section,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1025,7 +1025,7 @@ QVariant* k_texteditor__codecompletionmodel_qbase_header_data(void* self, int se
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1035,7 +1035,7 @@ void k_texteditor__codecompletionmodel_on_header_data(void* self, QVariant* (*ca
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1048,7 +1048,7 @@ bool k_texteditor__codecompletionmodel_set_header_data(void* self, int section, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1061,7 +1061,7 @@ bool k_texteditor__codecompletionmodel_qbase_set_header_data(void* self, int sec
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1071,7 +1071,7 @@ void k_texteditor__codecompletionmodel_on_set_header_data(void* self, bool (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1082,7 +1082,7 @@ bool k_texteditor__codecompletionmodel_set_item_data(void* self, void* index, li
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1093,7 +1093,7 @@ bool k_texteditor__codecompletionmodel_qbase_set_item_data(void* self, void* ind
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1103,7 +1103,7 @@ void k_texteditor__codecompletionmodel_on_set_item_data(void* self, bool (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1113,7 +1113,7 @@ bool k_texteditor__codecompletionmodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1123,7 +1123,7 @@ bool k_texteditor__codecompletionmodel_qbase_clear_item_data(void* self, void* i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1133,7 +1133,7 @@ void k_texteditor__codecompletionmodel_on_clear_item_data(void* self, bool (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1144,7 +1144,7 @@ const char** k_texteditor__codecompletionmodel_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1155,7 +1155,7 @@ const char** k_texteditor__codecompletionmodel_qbase_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1165,7 +1165,7 @@ void k_texteditor__codecompletionmodel_on_mime_types(void* self, const char** (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1175,7 +1175,7 @@ QMimeData* k_texteditor__codecompletionmodel_mime_data(void* self, libqt_list in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1185,7 +1185,7 @@ QMimeData* k_texteditor__codecompletionmodel_qbase_mime_data(void* self, libqt_l
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1195,7 +1195,7 @@ void k_texteditor__codecompletionmodel_on_mime_data(void* self, QMimeData* (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1209,7 +1209,7 @@ bool k_texteditor__codecompletionmodel_can_drop_mime_data(void* self, void* data
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1223,7 +1223,7 @@ bool k_texteditor__codecompletionmodel_qbase_can_drop_mime_data(void* self, void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1233,7 +1233,7 @@ void k_texteditor__codecompletionmodel_on_can_drop_mime_data(void* self, bool (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1247,7 +1247,7 @@ bool k_texteditor__codecompletionmodel_drop_mime_data(void* self, void* data, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1261,7 +1261,7 @@ bool k_texteditor__codecompletionmodel_qbase_drop_mime_data(void* self, void* da
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1271,7 +1271,7 @@ void k_texteditor__codecompletionmodel_on_drop_mime_data(void* self, bool (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1282,7 +1282,7 @@ int32_t k_texteditor__codecompletionmodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1293,7 +1293,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_supported_drop_actions(void* sel
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1303,7 +1303,7 @@ void k_texteditor__codecompletionmodel_on_supported_drop_actions(void* self, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1314,7 +1314,7 @@ int32_t k_texteditor__codecompletionmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1325,7 +1325,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_supported_drag_actions(void* sel
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1335,7 +1335,7 @@ void k_texteditor__codecompletionmodel_on_supported_drag_actions(void* self, int
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1347,7 +1347,7 @@ bool k_texteditor__codecompletionmodel_insert_rows(void* self, int row, int coun
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1359,7 +1359,7 @@ bool k_texteditor__codecompletionmodel_qbase_insert_rows(void* self, int row, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1369,7 +1369,7 @@ void k_texteditor__codecompletionmodel_on_insert_rows(void* self, bool (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1381,7 +1381,7 @@ bool k_texteditor__codecompletionmodel_insert_columns(void* self, int column, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1393,7 +1393,7 @@ bool k_texteditor__codecompletionmodel_qbase_insert_columns(void* self, int colu
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1403,7 +1403,7 @@ void k_texteditor__codecompletionmodel_on_insert_columns(void* self, bool (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1415,7 +1415,7 @@ bool k_texteditor__codecompletionmodel_remove_rows(void* self, int row, int coun
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1427,7 +1427,7 @@ bool k_texteditor__codecompletionmodel_qbase_remove_rows(void* self, int row, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1437,7 +1437,7 @@ void k_texteditor__codecompletionmodel_on_remove_rows(void* self, bool (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1449,7 +1449,7 @@ bool k_texteditor__codecompletionmodel_remove_columns(void* self, int column, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1461,7 +1461,7 @@ bool k_texteditor__codecompletionmodel_qbase_remove_columns(void* self, int colu
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1471,7 +1471,7 @@ void k_texteditor__codecompletionmodel_on_remove_columns(void* self, bool (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1485,7 +1485,7 @@ bool k_texteditor__codecompletionmodel_move_rows(void* self, void* sourceParent,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1499,7 +1499,7 @@ bool k_texteditor__codecompletionmodel_qbase_move_rows(void* self, void* sourceP
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1509,7 +1509,7 @@ void k_texteditor__codecompletionmodel_on_move_rows(void* self, bool (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1523,7 +1523,7 @@ bool k_texteditor__codecompletionmodel_move_columns(void* self, void* sourcePare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1537,7 +1537,7 @@ bool k_texteditor__codecompletionmodel_qbase_move_columns(void* self, void* sour
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1547,7 +1547,7 @@ void k_texteditor__codecompletionmodel_on_move_columns(void* self, bool (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1557,7 +1557,7 @@ void k_texteditor__codecompletionmodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1567,7 +1567,7 @@ void k_texteditor__codecompletionmodel_qbase_fetch_more(void* self, void* parent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1577,7 +1577,7 @@ void k_texteditor__codecompletionmodel_on_fetch_more(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1587,7 +1587,7 @@ bool k_texteditor__codecompletionmodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1597,7 +1597,7 @@ bool k_texteditor__codecompletionmodel_qbase_can_fetch_more(void* self, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1607,7 +1607,7 @@ void k_texteditor__codecompletionmodel_on_can_fetch_more(void* self, bool (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1619,7 +1619,7 @@ int32_t k_texteditor__codecompletionmodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1631,7 +1631,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1641,7 +1641,7 @@ void k_texteditor__codecompletionmodel_on_flags(void* self, int32_t (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1652,7 +1652,7 @@ void k_texteditor__codecompletionmodel_sort(void* self, int column, int32_t orde
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1663,7 +1663,7 @@ void k_texteditor__codecompletionmodel_qbase_sort(void* self, int column, int32_
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1673,7 +1673,7 @@ void k_texteditor__codecompletionmodel_on_sort(void* self, void (*callback)(void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1683,7 +1683,7 @@ QModelIndex* k_texteditor__codecompletionmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1693,7 +1693,7 @@ QModelIndex* k_texteditor__codecompletionmodel_qbase_buddy(void* self, void* ind
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1703,7 +1703,7 @@ void k_texteditor__codecompletionmodel_on_buddy(void* self, QModelIndex* (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1717,7 +1717,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_match(void* s
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1731,7 +1731,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_match(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1741,7 +1741,7 @@ void k_texteditor__codecompletionmodel_on_match(void* self, QModelIndex** (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1751,7 +1751,7 @@ QSize* k_texteditor__codecompletionmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1761,7 +1761,7 @@ QSize* k_texteditor__codecompletionmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1771,7 +1771,7 @@ void k_texteditor__codecompletionmodel_on_span(void* self, QSize* (*callback)(vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1780,7 +1780,7 @@ libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_role_names(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1789,7 +1789,7 @@ libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_qbase_role_nam
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1799,7 +1799,7 @@ void k_texteditor__codecompletionmodel_on_role_names(void* self, libqt_map /* of
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1810,7 +1810,7 @@ void k_texteditor__codecompletionmodel_multi_data(void* self, void* index, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1821,7 +1821,7 @@ void k_texteditor__codecompletionmodel_qbase_multi_data(void* self, void* index,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1831,7 +1831,7 @@ void k_texteditor__codecompletionmodel_on_multi_data(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1840,7 +1840,7 @@ bool k_texteditor__codecompletionmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1849,7 +1849,7 @@ bool k_texteditor__codecompletionmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1859,7 +1859,7 @@ void k_texteditor__codecompletionmodel_on_submit(void* self, bool (*callback)())
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1868,7 +1868,7 @@ void k_texteditor__codecompletionmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1877,7 +1877,7 @@ void k_texteditor__codecompletionmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1887,7 +1887,7 @@ void k_texteditor__codecompletionmodel_on_revert(void* self, void (*callback)())
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1896,7 +1896,7 @@ void k_texteditor__codecompletionmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1905,7 +1905,7 @@ void k_texteditor__codecompletionmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1915,7 +1915,7 @@ void k_texteditor__codecompletionmodel_on_reset_internal_data(void* self, void (
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1925,7 +1925,7 @@ bool k_texteditor__codecompletionmodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1935,7 +1935,7 @@ bool k_texteditor__codecompletionmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1945,7 +1945,7 @@ void k_texteditor__codecompletionmodel_on_event(void* self, bool (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1956,7 +1956,7 @@ bool k_texteditor__codecompletionmodel_event_filter(void* self, void* watched, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1967,7 +1967,7 @@ bool k_texteditor__codecompletionmodel_qbase_event_filter(void* self, void* watc
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1977,7 +1977,7 @@ void k_texteditor__codecompletionmodel_on_event_filter(void* self, bool (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1987,7 +1987,7 @@ void k_texteditor__codecompletionmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1997,7 +1997,7 @@ void k_texteditor__codecompletionmodel_qbase_timer_event(void* self, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2007,7 +2007,7 @@ void k_texteditor__codecompletionmodel_on_timer_event(void* self, void (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2017,7 +2017,7 @@ void k_texteditor__codecompletionmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2027,7 +2027,7 @@ void k_texteditor__codecompletionmodel_qbase_child_event(void* self, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2037,7 +2037,7 @@ void k_texteditor__codecompletionmodel_on_child_event(void* self, void (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2047,7 +2047,7 @@ void k_texteditor__codecompletionmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2057,7 +2057,7 @@ void k_texteditor__codecompletionmodel_qbase_custom_event(void* self, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2067,7 +2067,7 @@ void k_texteditor__codecompletionmodel_on_custom_event(void* self, void (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2077,7 +2077,7 @@ void k_texteditor__codecompletionmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2087,7 +2087,7 @@ void k_texteditor__codecompletionmodel_qbase_connect_notify(void* self, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2097,7 +2097,7 @@ void k_texteditor__codecompletionmodel_on_connect_notify(void* self, void (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2107,7 +2107,7 @@ void k_texteditor__codecompletionmodel_disconnect_notify(void* self, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2117,7 +2117,7 @@ void k_texteditor__codecompletionmodel_qbase_disconnect_notify(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2127,7 +2127,7 @@ void k_texteditor__codecompletionmodel_on_disconnect_notify(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2138,7 +2138,7 @@ QModelIndex* k_texteditor__codecompletionmodel_create_index(void* self, int row,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2149,7 +2149,7 @@ QModelIndex* k_texteditor__codecompletionmodel_qbase_create_index(void* self, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2159,7 +2159,7 @@ void k_texteditor__codecompletionmodel_on_create_index(void* self, QModelIndex* 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2170,7 +2170,7 @@ void k_texteditor__codecompletionmodel_encode_data(void* self, libqt_list indexe
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2181,7 +2181,7 @@ void k_texteditor__codecompletionmodel_qbase_encode_data(void* self, libqt_list 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2191,7 +2191,7 @@ void k_texteditor__codecompletionmodel_on_encode_data(void* self, void (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2204,7 +2204,7 @@ bool k_texteditor__codecompletionmodel_decode_data(void* self, int row, int colu
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2217,7 +2217,7 @@ bool k_texteditor__codecompletionmodel_qbase_decode_data(void* self, int row, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2227,7 +2227,7 @@ void k_texteditor__codecompletionmodel_on_decode_data(void* self, bool (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2239,7 +2239,7 @@ void k_texteditor__codecompletionmodel_begin_insert_rows(void* self, void* paren
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2251,7 +2251,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_insert_rows(void* self, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2261,7 +2261,7 @@ void k_texteditor__codecompletionmodel_on_begin_insert_rows(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2270,7 +2270,7 @@ void k_texteditor__codecompletionmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2279,7 +2279,7 @@ void k_texteditor__codecompletionmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2289,7 +2289,7 @@ void k_texteditor__codecompletionmodel_on_end_insert_rows(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2301,7 +2301,7 @@ void k_texteditor__codecompletionmodel_begin_remove_rows(void* self, void* paren
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2313,7 +2313,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_remove_rows(void* self, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2323,7 +2323,7 @@ void k_texteditor__codecompletionmodel_on_begin_remove_rows(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2332,7 +2332,7 @@ void k_texteditor__codecompletionmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2341,7 +2341,7 @@ void k_texteditor__codecompletionmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2351,7 +2351,7 @@ void k_texteditor__codecompletionmodel_on_end_remove_rows(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2365,7 +2365,7 @@ bool k_texteditor__codecompletionmodel_begin_move_rows(void* self, void* sourceP
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2379,7 +2379,7 @@ bool k_texteditor__codecompletionmodel_qbase_begin_move_rows(void* self, void* s
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2389,7 +2389,7 @@ void k_texteditor__codecompletionmodel_on_begin_move_rows(void* self, bool (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2398,7 +2398,7 @@ void k_texteditor__codecompletionmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2407,7 +2407,7 @@ void k_texteditor__codecompletionmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2417,7 +2417,7 @@ void k_texteditor__codecompletionmodel_on_end_move_rows(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2429,7 +2429,7 @@ void k_texteditor__codecompletionmodel_begin_insert_columns(void* self, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2441,7 +2441,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_insert_columns(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2451,7 +2451,7 @@ void k_texteditor__codecompletionmodel_on_begin_insert_columns(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2460,7 +2460,7 @@ void k_texteditor__codecompletionmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2469,7 +2469,7 @@ void k_texteditor__codecompletionmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2479,7 +2479,7 @@ void k_texteditor__codecompletionmodel_on_end_insert_columns(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2491,7 +2491,7 @@ void k_texteditor__codecompletionmodel_begin_remove_columns(void* self, void* pa
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2503,7 +2503,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_remove_columns(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2513,7 +2513,7 @@ void k_texteditor__codecompletionmodel_on_begin_remove_columns(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2522,7 +2522,7 @@ void k_texteditor__codecompletionmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2531,7 +2531,7 @@ void k_texteditor__codecompletionmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2541,7 +2541,7 @@ void k_texteditor__codecompletionmodel_on_end_remove_columns(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2555,7 +2555,7 @@ bool k_texteditor__codecompletionmodel_begin_move_columns(void* self, void* sour
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2569,7 +2569,7 @@ bool k_texteditor__codecompletionmodel_qbase_begin_move_columns(void* self, void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2579,7 +2579,7 @@ void k_texteditor__codecompletionmodel_on_begin_move_columns(void* self, bool (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2588,7 +2588,7 @@ void k_texteditor__codecompletionmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2597,7 +2597,7 @@ void k_texteditor__codecompletionmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2607,7 +2607,7 @@ void k_texteditor__codecompletionmodel_on_end_move_columns(void* self, void (*ca
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2616,7 +2616,7 @@ void k_texteditor__codecompletionmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2625,7 +2625,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2635,7 +2635,7 @@ void k_texteditor__codecompletionmodel_on_begin_reset_model(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2644,7 +2644,7 @@ void k_texteditor__codecompletionmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2653,7 +2653,7 @@ void k_texteditor__codecompletionmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2663,7 +2663,7 @@ void k_texteditor__codecompletionmodel_on_end_reset_model(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2674,7 +2674,7 @@ void k_texteditor__codecompletionmodel_change_persistent_index(void* self, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2685,7 +2685,7 @@ void k_texteditor__codecompletionmodel_qbase_change_persistent_index(void* self,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2695,7 +2695,7 @@ void k_texteditor__codecompletionmodel_on_change_persistent_index(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2706,7 +2706,7 @@ void k_texteditor__codecompletionmodel_change_persistent_index_list(void* self, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2717,7 +2717,7 @@ void k_texteditor__codecompletionmodel_qbase_change_persistent_index_list(void* 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2727,7 +2727,7 @@ void k_texteditor__codecompletionmodel_on_change_persistent_index_list(void* sel
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2736,7 +2736,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_persistent_in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2745,7 +2745,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_persist
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2755,7 +2755,7 @@ void k_texteditor__codecompletionmodel_on_persistent_index_list(void* self, QMod
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2764,7 +2764,7 @@ QObject* k_texteditor__codecompletionmodel_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2773,7 +2773,7 @@ QObject* k_texteditor__codecompletionmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2783,7 +2783,7 @@ void k_texteditor__codecompletionmodel_on_sender(void* self, QObject* (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2792,7 +2792,7 @@ int32_t k_texteditor__codecompletionmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2801,7 +2801,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2811,7 +2811,7 @@ void k_texteditor__codecompletionmodel_on_sender_signal_index(void* self, int32_
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2821,7 +2821,7 @@ int32_t k_texteditor__codecompletionmodel_receivers(void* self, const char* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2831,7 +2831,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_receivers(void* self, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2841,7 +2841,7 @@ void k_texteditor__codecompletionmodel_on_receivers(void* self, int32_t (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2851,7 +2851,7 @@ bool k_texteditor__codecompletionmodel_is_signal_connected(void* self, void* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2861,7 +2861,7 @@ bool k_texteditor__codecompletionmodel_qbase_is_signal_connected(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2871,7 +2871,7 @@ void k_texteditor__codecompletionmodel_on_is_signal_connected(void* self, bool (
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2881,7 +2881,7 @@ void k_texteditor__codecompletionmodel_on_rows_about_to_be_inserted(void* self, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2891,7 +2891,7 @@ void k_texteditor__codecompletionmodel_on_rows_inserted(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2901,7 +2901,7 @@ void k_texteditor__codecompletionmodel_on_rows_about_to_be_removed(void* self, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2911,7 +2911,7 @@ void k_texteditor__codecompletionmodel_on_rows_removed(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2921,7 +2921,7 @@ void k_texteditor__codecompletionmodel_on_columns_about_to_be_inserted(void* sel
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2931,7 +2931,7 @@ void k_texteditor__codecompletionmodel_on_columns_inserted(void* self, void (*ca
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2941,7 +2941,7 @@ void k_texteditor__codecompletionmodel_on_columns_about_to_be_removed(void* self
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2951,7 +2951,7 @@ void k_texteditor__codecompletionmodel_on_columns_removed(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2961,7 +2961,7 @@ void k_texteditor__codecompletionmodel_on_model_about_to_be_reset(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2971,7 +2971,7 @@ void k_texteditor__codecompletionmodel_on_model_reset(void* self, void (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2981,7 +2981,7 @@ void k_texteditor__codecompletionmodel_on_rows_about_to_be_moved(void* self, voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2991,7 +2991,7 @@ void k_texteditor__codecompletionmodel_on_rows_moved(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3001,7 +3001,7 @@ void k_texteditor__codecompletionmodel_on_columns_about_to_be_moved(void* self, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3011,7 +3011,7 @@ void k_texteditor__codecompletionmodel_on_columns_moved(void* self, void (*callb
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

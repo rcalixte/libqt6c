@@ -90,41 +90,41 @@ QKeySequence* q_keysequence_new12(void* k1, void* k2, void* k3);
 /// @param k4 QKeyCombination*
 QKeySequence* q_keysequence_new13(void* k1, void* k2, void* k3, void* k4);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#count)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#count)
 ///
 /// @param self QKeySequence*
 int32_t q_keysequence_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#isEmpty)
 ///
 /// @param self QKeySequence*
 bool q_keysequence_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequence*
 const char* q_keysequence_to_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#fromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#fromString)
 ///
 /// @param str const char*
 QKeySequence* q_keysequence_from_string(const char* str);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listFromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listFromString)
 ///
 /// @param str const char*
 libqt_list /* of QKeySequence* */ q_keysequence_list_from_string(const char* str);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param list libqt_list /* of QKeySequence* */
 const char* q_keysequence_list_to_string(libqt_list list);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#matches)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#matches)
 ///
 /// @param self QKeySequence*
 /// @param seq QKeySequence*
@@ -132,81 +132,81 @@ const char* q_keysequence_list_to_string(libqt_list list);
 /// @return enum QKeySequence__SequenceMatch
 int32_t q_keysequence_matches(void* self, void* seq);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#mnemonic)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#mnemonic)
 ///
 /// @param text const char*
 QKeySequence* q_keysequence_mnemonic(const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#keyBindings)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#keyBindings)
 ///
 /// @param key enum QKeySequence__StandardKey
 libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int32_t key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator)
 ///
 /// @param self QKeySequence*
 QVariant* q_keysequence_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-5b-5d)
 ///
 /// @param self QKeySequence*
 /// @param i uint32_t
 QKeyCombination* q_keysequence_operator_subscript(void* self, uint32_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-eq)
 ///
 /// @param self QKeySequence*
 /// @param other QKeySequence*
 void q_keysequence_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#swap)
 ///
 /// @param self QKeySequence*
 /// @param other QKeySequence*
 void q_keysequence_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-eq-eq)
 ///
 /// @param self QKeySequence*
 /// @param other QKeySequence*
 bool q_keysequence_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-not-eq)
 ///
 /// @param self QKeySequence*
 /// @param other QKeySequence*
 bool q_keysequence_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-lt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-lt)
 ///
 /// @param self QKeySequence*
 /// @param ks QKeySequence*
 bool q_keysequence_operator_lesser(void* self, void* ks);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-gt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-gt)
 ///
 /// @param self QKeySequence*
 /// @param other QKeySequence*
 bool q_keysequence_operator_greater(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-lt-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-lt-eq)
 ///
 /// @param self QKeySequence*
 /// @param other QKeySequence*
 bool q_keysequence_operator_lesser_or_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-gt-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-gt-eq)
 ///
 /// @param self QKeySequence*
 /// @param other QKeySequence*
 bool q_keysequence_operator_greater_or_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#isDetached)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#isDetached)
 ///
 /// @param self QKeySequence*
 bool q_keysequence_is_detached(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -214,19 +214,19 @@ bool q_keysequence_is_detached(void* self);
 /// @param format enum QKeySequence__SequenceFormat
 const char* q_keysequence_to_string1(void* self, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#fromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#fromString)
 ///
 /// @param str const char*
 /// @param format enum QKeySequence__SequenceFormat
 QKeySequence* q_keysequence_from_string2(const char* str, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listFromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listFromString)
 ///
 /// @param str const char*
 /// @param format enum QKeySequence__SequenceFormat
 libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* str, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -234,7 +234,7 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* st
 /// @param format enum QKeySequence__SequenceFormat
 const char* q_keysequence_list_to_string2(libqt_list list, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#dtor.QKeySequence)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#dtor.QKeySequence)
 ///
 /// Delete this object from C++ memory.
 ///

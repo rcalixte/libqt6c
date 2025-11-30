@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qnetworkinformation.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QNetworkInformation*
 const QMetaObject* q_networkinformation_meta_object(void* self);
@@ -28,130 +28,130 @@ void* q_networkinformation_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_networkinformation_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_networkinformation_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#reachability)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#reachability)
 ///
 /// @param self QNetworkInformation*
 ///
 /// @return enum QNetworkInformation__Reachability
 int32_t q_networkinformation_reachability(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortal)
 ///
 /// @param self QNetworkInformation*
 bool q_networkinformation_is_behind_captive_portal(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMedium)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMedium)
 ///
 /// @param self QNetworkInformation*
 ///
 /// @return enum QNetworkInformation__TransportMedium
 int32_t q_networkinformation_transport_medium(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMetered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isMetered)
 ///
 /// @param self QNetworkInformation*
 bool q_networkinformation_is_metered(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#backendName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#backendName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkInformation*
 const char* q_networkinformation_backend_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#supports)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#supports)
 ///
 /// @param self QNetworkInformation*
 /// @param features flag of enum QNetworkInformation__Feature
 bool q_networkinformation_supports(void* self, int32_t features);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#supportedFeatures)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#supportedFeatures)
 ///
 /// @param self QNetworkInformation*
 ///
 /// @return flag of enum QNetworkInformation__Feature
 int32_t q_networkinformation_supported_features(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#loadDefaultBackend)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#loadDefaultBackend)
 ///
 bool q_networkinformation_load_default_backend();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#loadBackendByFeatures)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#loadBackendByFeatures)
 ///
 /// @param features flag of enum QNetworkInformation__Feature
 bool q_networkinformation_load_backend_by_features(int32_t features);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#load)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#load)
 ///
 /// @param features flag of enum QNetworkInformation__Feature
 bool q_networkinformation_load2(int32_t features);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#availableBackends)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#availableBackends)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** q_networkinformation_available_backends();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#instance)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#instance)
 ///
 QNetworkInformation* q_networkinformation_instance();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#reachabilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#reachabilityChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param newReachability enum QNetworkInformation__Reachability
 void q_networkinformation_reachability_changed(void* self, int32_t newReachability);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#reachabilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#reachabilityChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void func(QNetworkInformation* self, enum QNetworkInformation__Reachability newReachability)
 void q_networkinformation_on_reachability_changed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param state bool
 void q_networkinformation_is_behind_captive_portal_changed(void* self, bool state);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void func(QNetworkInformation* self, bool state)
 void q_networkinformation_on_is_behind_captive_portal_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param current enum QNetworkInformation__TransportMedium
 void q_networkinformation_transport_medium_changed(void* self, int32_t current);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void func(QNetworkInformation* self, enum QNetworkInformation__TransportMedium current)
 void q_networkinformation_on_transport_medium_changed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param isMetered bool
 void q_networkinformation_is_metered_changed(void* self, bool isMetered);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void func(QNetworkInformation* self, bool isMetered)
 void q_networkinformation_on_is_metered_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -159,7 +159,7 @@ void q_networkinformation_on_is_metered_changed(void* self, void (*callback)(voi
 /// @param c const char*
 const char* q_networkinformation_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -170,7 +170,7 @@ const char* q_networkinformation_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QNetworkInformation*
 /// @param event QEvent*
@@ -178,7 +178,7 @@ bool q_networkinformation_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QNetworkInformation*
 /// @param watched QObject*
@@ -187,7 +187,7 @@ bool q_networkinformation_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -196,7 +196,7 @@ const char* q_networkinformation_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QNetworkInformation*
 /// @param name char*
@@ -204,35 +204,35 @@ void q_networkinformation_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QNetworkInformation*
 bool q_networkinformation_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QNetworkInformation*
 bool q_networkinformation_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QNetworkInformation*
 bool q_networkinformation_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QNetworkInformation*
 bool q_networkinformation_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QNetworkInformation*
 /// @param b bool
@@ -240,14 +240,14 @@ bool q_networkinformation_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QNetworkInformation*
 QThread* q_networkinformation_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QNetworkInformation*
 /// @param thread QThread*
@@ -255,7 +255,7 @@ bool q_networkinformation_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QNetworkInformation*
 /// @param interval int
@@ -263,7 +263,7 @@ int32_t q_networkinformation_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QNetworkInformation*
 /// @param id int
@@ -271,7 +271,7 @@ void q_networkinformation_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QNetworkInformation*
 /// @param id enum Qt__TimerId
@@ -279,14 +279,14 @@ void q_networkinformation_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QNetworkInformation*
 libqt_list /* of QObject* */ q_networkinformation_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QNetworkInformation*
 /// @param parent QObject*
@@ -294,7 +294,7 @@ void q_networkinformation_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QNetworkInformation*
 /// @param filterObj QObject*
@@ -302,7 +302,7 @@ void q_networkinformation_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QNetworkInformation*
 /// @param obj QObject*
@@ -310,7 +310,7 @@ void q_networkinformation_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -320,7 +320,7 @@ QMetaObject__Connection* q_networkinformation_connect(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QNetworkInformation*
 /// @param sender QObject*
@@ -330,7 +330,7 @@ QMetaObject__Connection* q_networkinformation_connect2(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -340,28 +340,28 @@ bool q_networkinformation_disconnect(void* sender, void* signal, void* receiver,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_networkinformation_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QNetworkInformation*
 void q_networkinformation_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QNetworkInformation*
 void q_networkinformation_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QNetworkInformation*
 /// @param name const char*
@@ -370,7 +370,7 @@ bool q_networkinformation_set_property(void* self, const char* name, void* value
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QNetworkInformation*
 /// @param name const char*
@@ -378,7 +378,7 @@ QVariant* q_networkinformation_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -387,28 +387,28 @@ const char** q_networkinformation_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QNetworkInformation*
 QBindingStorage* q_networkinformation_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QNetworkInformation*
 const QBindingStorage* q_networkinformation_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkInformation*
 void q_networkinformation_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void func(QNetworkInformation* self)
@@ -416,14 +416,14 @@ void q_networkinformation_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QNetworkInformation*
 QObject* q_networkinformation_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QNetworkInformation*
 /// @param classname const char*
@@ -431,14 +431,14 @@ bool q_networkinformation_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QNetworkInformation*
 void q_networkinformation_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QNetworkInformation*
 /// @param thread QThread*
@@ -447,7 +447,7 @@ bool q_networkinformation_move_to_thread2(void* self, void* thread, void* param2
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QNetworkInformation*
 /// @param interval int
@@ -456,7 +456,7 @@ int32_t q_networkinformation_start_timer22(void* self, int interval, int32_t tim
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -467,7 +467,7 @@ QMetaObject__Connection* q_networkinformation_connect5(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QNetworkInformation*
 /// @param sender QObject*
@@ -478,7 +478,7 @@ QMetaObject__Connection* q_networkinformation_connect4(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkInformation*
 /// @param param1 QObject*
@@ -486,7 +486,7 @@ void q_networkinformation_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void func(QNetworkInformation* self, QObject* param1)
@@ -494,7 +494,7 @@ void q_networkinformation_on_destroyed1(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

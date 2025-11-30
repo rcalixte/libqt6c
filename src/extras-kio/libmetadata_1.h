@@ -32,30 +32,30 @@ KIO__MetaData* k_io__metadata_new3(libqt_map /* of const char* to QVariant* */ p
 /// @param param1 KIO__MetaData*
 KIO__MetaData* k_io__metadata_new4(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio-metadata.html#operator-2b-eq)
+/// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-2b-eq)
 ///
 /// @param self KIO__MetaData*
 /// @param metaData libqt_map /* of const char* to const char* */
 KIO__MetaData* k_io__metadata_operator_plus_assign(void* self, libqt_map /* of const char* to const char* */ metaData);
 
-/// [Qt documentation](https://api.kde.org/kio-metadata.html#operator-2b-eq)
+/// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-2b-eq)
 ///
 /// @param self KIO__MetaData*
 /// @param metaData libqt_map /* of const char* to QVariant* */
 KIO__MetaData* k_io__metadata_operator_plus_assign2(void* self, libqt_map /* of const char* to QVariant* */ metaData);
 
-/// [Qt documentation](https://api.kde.org/kio-metadata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-eq)
 ///
 /// @param self KIO__MetaData*
 /// @param metaData libqt_map /* of const char* to QVariant* */
 void k_io__metadata_operator_assign(void* self, libqt_map /* of const char* to QVariant* */ metaData);
 
-/// [Qt documentation](https://api.kde.org/kio-metadata.html#toVariant)
+/// [Upstream resources](https://api.kde.org/kio-metadata.html#toVariant)
 ///
 /// @param self KIO__MetaData*
 QVariant* k_io__metadata_to_variant(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-metadata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-eq)
 ///
 /// @param self KIO__MetaData*
 /// @param param1 KIO__MetaData*

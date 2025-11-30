@@ -57,135 +57,135 @@ void q_sizepolicy_copy_assign(void* self, void* other);
 /// @param other QSizePolicy*
 void q_sizepolicy_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#horizontalPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#horizontalPolicy)
 ///
 /// @param self QSizePolicy*
 ///
 /// @return enum QSizePolicy__Policy
 int32_t q_sizepolicy_horizontal_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#verticalPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#verticalPolicy)
 ///
 /// @param self QSizePolicy*
 ///
 /// @return enum QSizePolicy__Policy
 int32_t q_sizepolicy_vertical_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#controlType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#controlType)
 ///
 /// @param self QSizePolicy*
 ///
 /// @return enum QSizePolicy__ControlType
 int32_t q_sizepolicy_control_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setHorizontalPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setHorizontalPolicy)
 ///
 /// @param self QSizePolicy*
 /// @param d enum QSizePolicy__Policy
 void q_sizepolicy_set_horizontal_policy(void* self, int32_t d);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setVerticalPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setVerticalPolicy)
 ///
 /// @param self QSizePolicy*
 /// @param d enum QSizePolicy__Policy
 void q_sizepolicy_set_vertical_policy(void* self, int32_t d);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setControlType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setControlType)
 ///
 /// @param self QSizePolicy*
 /// @param type enum QSizePolicy__ControlType
 void q_sizepolicy_set_control_type(void* self, int32_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#expandingDirections)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#expandingDirections)
 ///
 /// @param self QSizePolicy*
 ///
 /// @return flag of enum Qt__Orientation
 int32_t q_sizepolicy_expanding_directions(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setHeightForWidth)
 ///
 /// @param self QSizePolicy*
 /// @param b bool
 void q_sizepolicy_set_height_for_width(void* self, bool b);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#hasHeightForWidth)
 ///
 /// @param self QSizePolicy*
 bool q_sizepolicy_has_height_for_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setWidthForHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setWidthForHeight)
 ///
 /// @param self QSizePolicy*
 /// @param b bool
 void q_sizepolicy_set_width_for_height(void* self, bool b);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#hasWidthForHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#hasWidthForHeight)
 ///
 /// @param self QSizePolicy*
 bool q_sizepolicy_has_width_for_height(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator-eq-eq)
 ///
 /// @param self QSizePolicy*
 /// @param s QSizePolicy*
 bool q_sizepolicy_operator_equal(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator-not-eq)
 ///
 /// @param self QSizePolicy*
 /// @param s QSizePolicy*
 bool q_sizepolicy_operator_not_equal(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator)
 ///
 /// @param self QSizePolicy*
 QVariant* q_sizepolicy_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#horizontalStretch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#horizontalStretch)
 ///
 /// @param self QSizePolicy*
 int32_t q_sizepolicy_horizontal_stretch(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#verticalStretch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#verticalStretch)
 ///
 /// @param self QSizePolicy*
 int32_t q_sizepolicy_vertical_stretch(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setHorizontalStretch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setHorizontalStretch)
 ///
 /// @param self QSizePolicy*
 /// @param stretchFactor int
 void q_sizepolicy_set_horizontal_stretch(void* self, int stretchFactor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setVerticalStretch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setVerticalStretch)
 ///
 /// @param self QSizePolicy*
 /// @param stretchFactor int
 void q_sizepolicy_set_vertical_stretch(void* self, int stretchFactor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#retainSizeWhenHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#retainSizeWhenHidden)
 ///
 /// @param self QSizePolicy*
 bool q_sizepolicy_retain_size_when_hidden(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setRetainSizeWhenHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setRetainSizeWhenHidden)
 ///
 /// @param self QSizePolicy*
 /// @param retainSize bool
 void q_sizepolicy_set_retain_size_when_hidden(void* self, bool retainSize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#transpose)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#transpose)
 ///
 /// @param self QSizePolicy*
 void q_sizepolicy_transpose(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#transposed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#transposed)
 ///
 /// @param self QSizePolicy*
 QSizePolicy* q_sizepolicy_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#dtor.QSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#dtor.QSizePolicy)
 ///
 /// Delete this object from C++ memory.
 ///

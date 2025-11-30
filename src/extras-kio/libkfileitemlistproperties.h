@@ -27,73 +27,73 @@ KFileItemListProperties* k_fileitemlistproperties_new2(void* items);
 /// @param param1 KFileItemListProperties*
 KFileItemListProperties* k_fileitemlistproperties_new3(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#operator-eq)
 ///
 /// @param self KFileItemListProperties*
 /// @param other KFileItemListProperties*
 void k_fileitemlistproperties_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#setItems)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#setItems)
 ///
 /// @param self KFileItemListProperties*
 /// @param items KFileItemList*
 void k_fileitemlistproperties_set_items(void* self, void* items);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#supportsReading)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsReading)
 ///
 /// @param self KFileItemListProperties*
 bool k_fileitemlistproperties_supports_reading(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#supportsDeleting)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsDeleting)
 ///
 /// @param self KFileItemListProperties*
 bool k_fileitemlistproperties_supports_deleting(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#supportsWriting)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsWriting)
 ///
 /// @param self KFileItemListProperties*
 bool k_fileitemlistproperties_supports_writing(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#supportsMoving)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsMoving)
 ///
 /// @param self KFileItemListProperties*
 bool k_fileitemlistproperties_supports_moving(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#isLocal)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#isLocal)
 ///
 /// @param self KFileItemListProperties*
 bool k_fileitemlistproperties_is_local(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#urlList)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#urlList)
 ///
 /// @param self KFileItemListProperties*
 libqt_list /* of QUrl* */ k_fileitemlistproperties_url_list(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#isDirectory)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#isDirectory)
 ///
 /// @param self KFileItemListProperties*
 bool k_fileitemlistproperties_is_directory(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#isFile)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#isFile)
 ///
 /// @param self KFileItemListProperties*
 bool k_fileitemlistproperties_is_file(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#mimeType)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#mimeType)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItemListProperties*
 const char* k_fileitemlistproperties_mime_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#mimeGroup)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#mimeGroup)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItemListProperties*
 const char* k_fileitemlistproperties_mime_group(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfileitemlistproperties.html#dtor.KFileItemListProperties)
+/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#dtor.KFileItemListProperties)
 ///
 /// Delete this object from C++ memory.
 ///

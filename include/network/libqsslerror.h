@@ -33,50 +33,50 @@ QSslError* q_sslerror_new3(int32_t error, void* certificate);
 /// @param other QSslError*
 QSslError* q_sslerror_new4(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#swap)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
 void q_sslerror_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#operator-eq)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
 void q_sslerror_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#operator-eq-eq)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
 bool q_sslerror_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#operator-not-eq)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
 bool q_sslerror_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#error)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#error)
 ///
 /// @param self QSslError*
 ///
 /// @return enum QSslError__SslError
 int32_t q_sslerror_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslError*
 const char* q_sslerror_error_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#certificate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#certificate)
 ///
 /// @param self QSslError*
 QSslCertificate* q_sslerror_certificate(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#dtor.QSslError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#dtor.QSslError)
 ///
 /// Delete this object from C++ memory.
 ///

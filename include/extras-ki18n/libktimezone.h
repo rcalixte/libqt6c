@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/ktimezone.html
 
-/// [Qt documentation](https://api.kde.org/ktimezone.html#fromLocation)
+/// [Upstream resources](https://api.kde.org/ktimezone.html#fromLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -21,7 +21,7 @@
 /// @param param2 float
 const char* k_timezone_from_location(float param1, float param2);
 
-/// [Qt documentation](https://api.kde.org/ktimezone.html#country)
+/// [Upstream resources](https://api.kde.org/ktimezone.html#country)
 ///
 /// @param param1 const char*
 KCountry* k_timezone_country(const char* param1);

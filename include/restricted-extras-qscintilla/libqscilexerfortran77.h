@@ -22,7 +22,7 @@ QsciLexerFortran77* q_scilexerfortran77_new();
 /// @param parent QObject*
 QsciLexerFortran77* q_scilexerfortran77_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QsciLexerFortran77*
 const QMetaObject* q_scilexerfortran77_meta_object(void* self);
@@ -51,57 +51,57 @@ void q_scilexerfortran77_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t q_scilexerfortran77_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_scilexerfortran77_tr(const char* s);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerFortran77*
 const char* q_scilexerfortran77_language(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerFortran77*
 const char* q_scilexerfortran77_lexer(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 int32_t q_scilexerfortran77_brace_style(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param style int
 QColor* q_scilexerfortran77_default_color(void* self, int style);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param style int
 bool q_scilexerfortran77_default_eol_fill(void* self, int style);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param style int
 QFont* q_scilexerfortran77_default_font(void* self, int style);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param style int
 QColor* q_scilexerfortran77_default_paper(void* self, int style);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -109,7 +109,7 @@ QColor* q_scilexerfortran77_default_paper(void* self, int style);
 /// @param set int
 const char* q_scilexerfortran77_keywords(void* self, int set);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -117,23 +117,23 @@ const char* q_scilexerfortran77_keywords(void* self, int set);
 /// @param style int
 const char* q_scilexerfortran77_description(void* self, int style);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 void q_scilexerfortran77_refresh_properties(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 bool q_scilexerfortran77_fold_compact(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param fold bool
 void q_scilexerfortran77_set_fold_compact(void* self, bool fold);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Allows for overriding the related default method
 ///
@@ -141,7 +141,7 @@ void q_scilexerfortran77_set_fold_compact(void* self, bool fold);
 /// @param callback void func(QsciLexerFortran77* self, bool fold)
 void q_scilexerfortran77_on_set_fold_compact(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Base class method implementation
 ///
@@ -149,14 +149,14 @@ void q_scilexerfortran77_on_set_fold_compact(void* self, void (*callback)(void*,
 /// @param fold bool
 void q_scilexerfortran77_qbase_set_fold_compact(void* self, bool fold);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param qs QSettings*
 /// @param prefix const char*
 bool q_scilexerfortran77_read_properties(void* self, void* qs, const char* prefix);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Allows for overriding the related default method
 ///
@@ -164,7 +164,7 @@ bool q_scilexerfortran77_read_properties(void* self, void* qs, const char* prefi
 /// @param callback bool func(QsciLexerFortran77* self, QSettings* qs, const char* prefix)
 void q_scilexerfortran77_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Base class method implementation
 ///
@@ -173,14 +173,14 @@ void q_scilexerfortran77_on_read_properties(void* self, bool (*callback)(void*, 
 /// @param prefix const char*
 bool q_scilexerfortran77_qbase_read_properties(void* self, void* qs, const char* prefix);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param qs QSettings*
 /// @param prefix const char*
 bool q_scilexerfortran77_write_properties(void* self, void* qs, const char* prefix);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Allows for overriding the related default method
 ///
@@ -188,7 +188,7 @@ bool q_scilexerfortran77_write_properties(void* self, void* qs, const char* pref
 /// @param callback bool func(QsciLexerFortran77* self, QSettings* qs, const char* prefix)
 void q_scilexerfortran77_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Base class method implementation
 ///
@@ -197,7 +197,7 @@ void q_scilexerfortran77_on_write_properties(void* self, bool (*callback)(void*,
 /// @param prefix const char*
 bool q_scilexerfortran77_qbase_write_properties(void* self, void* qs, const char* prefix);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -205,7 +205,7 @@ bool q_scilexerfortran77_qbase_write_properties(void* self, void* qs, const char
 /// @param c const char*
 const char* q_scilexerfortran77_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -216,28 +216,28 @@ const char* q_scilexerfortran77_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 QsciAbstractAPIs* q_scilexerfortran77_apis(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 int32_t q_scilexerfortran77_auto_indent_style(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 QsciScintilla* q_scilexerfortran77_editor(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param apis QsciAbstractAPIs*
@@ -245,7 +245,7 @@ void q_scilexerfortran77_set_a_p_is(void* self, void* apis);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param c QColor*
@@ -253,7 +253,7 @@ void q_scilexerfortran77_set_default_color(void* self, void* c);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param f QFont*
@@ -261,7 +261,7 @@ void q_scilexerfortran77_set_default_font(void* self, void* f);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param c QColor*
@@ -269,7 +269,7 @@ void q_scilexerfortran77_set_default_paper(void* self, void* c);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param qs QSettings*
@@ -277,7 +277,7 @@ bool q_scilexerfortran77_read_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param qs QSettings*
@@ -285,7 +285,7 @@ bool q_scilexerfortran77_write_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param c QColor*
@@ -294,7 +294,7 @@ void q_scilexerfortran77_color_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param callback void func(QsciLexerFortran77* self, QColor* c, int style)
@@ -302,7 +302,7 @@ void q_scilexerfortran77_on_color_changed(void* self, void (*callback)(void*, vo
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param eolfilled bool
@@ -311,7 +311,7 @@ void q_scilexerfortran77_eol_fill_changed(void* self, bool eolfilled, int style)
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param callback void func(QsciLexerFortran77* self, bool eolfilled, int style)
@@ -319,7 +319,7 @@ void q_scilexerfortran77_on_eol_fill_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param f QFont*
@@ -328,7 +328,7 @@ void q_scilexerfortran77_font_changed(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param callback void func(QsciLexerFortran77* self, QFont* f, int style)
@@ -336,7 +336,7 @@ void q_scilexerfortran77_on_font_changed(void* self, void (*callback)(void*, voi
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param c QColor*
@@ -345,7 +345,7 @@ void q_scilexerfortran77_paper_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param callback void func(QsciLexerFortran77* self, QColor* c, int style)
@@ -353,7 +353,7 @@ void q_scilexerfortran77_on_paper_changed(void* self, void (*callback)(void*, vo
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param prop const char*
@@ -362,7 +362,7 @@ void q_scilexerfortran77_property_changed(void* self, const char* prop, const ch
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param callback void func(QsciLexerFortran77* self, const char* prop, const char* val)
@@ -370,7 +370,7 @@ void q_scilexerfortran77_on_property_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param qs QSettings*
@@ -379,7 +379,7 @@ bool q_scilexerfortran77_read_settings2(void* self, void* qs, const char* prefix
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerFortran77*
 /// @param qs QSettings*
@@ -388,7 +388,7 @@ bool q_scilexerfortran77_write_settings2(void* self, void* qs, const char* prefi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -397,7 +397,7 @@ const char* q_scilexerfortran77_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciLexerFortran77*
 /// @param name char*
@@ -405,35 +405,35 @@ void q_scilexerfortran77_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QsciLexerFortran77*
 bool q_scilexerfortran77_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QsciLexerFortran77*
 bool q_scilexerfortran77_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QsciLexerFortran77*
 bool q_scilexerfortran77_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QsciLexerFortran77*
 bool q_scilexerfortran77_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QsciLexerFortran77*
 /// @param b bool
@@ -441,14 +441,14 @@ bool q_scilexerfortran77_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QsciLexerFortran77*
 QThread* q_scilexerfortran77_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QsciLexerFortran77*
 /// @param thread QThread*
@@ -456,7 +456,7 @@ bool q_scilexerfortran77_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QsciLexerFortran77*
 /// @param interval int
@@ -464,7 +464,7 @@ int32_t q_scilexerfortran77_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QsciLexerFortran77*
 /// @param id int
@@ -472,7 +472,7 @@ void q_scilexerfortran77_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QsciLexerFortran77*
 /// @param id enum Qt__TimerId
@@ -480,14 +480,14 @@ void q_scilexerfortran77_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QsciLexerFortran77*
 libqt_list /* of QObject* */ q_scilexerfortran77_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QsciLexerFortran77*
 /// @param parent QObject*
@@ -495,7 +495,7 @@ void q_scilexerfortran77_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QsciLexerFortran77*
 /// @param filterObj QObject*
@@ -503,7 +503,7 @@ void q_scilexerfortran77_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QsciLexerFortran77*
 /// @param obj QObject*
@@ -511,7 +511,7 @@ void q_scilexerfortran77_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -521,7 +521,7 @@ QMetaObject__Connection* q_scilexerfortran77_connect(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QsciLexerFortran77*
 /// @param sender QObject*
@@ -531,7 +531,7 @@ QMetaObject__Connection* q_scilexerfortran77_connect2(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -541,28 +541,28 @@ bool q_scilexerfortran77_disconnect(void* sender, void* signal, void* receiver, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_scilexerfortran77_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QsciLexerFortran77*
 void q_scilexerfortran77_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QsciLexerFortran77*
 void q_scilexerfortran77_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QsciLexerFortran77*
 /// @param name const char*
@@ -571,7 +571,7 @@ bool q_scilexerfortran77_set_property(void* self, const char* name, void* value)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QsciLexerFortran77*
 /// @param name const char*
@@ -579,7 +579,7 @@ QVariant* q_scilexerfortran77_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -588,28 +588,28 @@ const char** q_scilexerfortran77_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QsciLexerFortran77*
 QBindingStorage* q_scilexerfortran77_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QsciLexerFortran77*
 const QBindingStorage* q_scilexerfortran77_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerFortran77*
 void q_scilexerfortran77_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerFortran77*
 /// @param callback void func(QsciLexerFortran77* self)
@@ -617,14 +617,14 @@ void q_scilexerfortran77_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QsciLexerFortran77*
 QObject* q_scilexerfortran77_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QsciLexerFortran77*
 /// @param classname const char*
@@ -632,14 +632,14 @@ bool q_scilexerfortran77_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QsciLexerFortran77*
 void q_scilexerfortran77_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QsciLexerFortran77*
 /// @param thread QThread*
@@ -648,7 +648,7 @@ bool q_scilexerfortran77_move_to_thread2(void* self, void* thread, void* param2)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QsciLexerFortran77*
 /// @param interval int
@@ -657,7 +657,7 @@ int32_t q_scilexerfortran77_start_timer22(void* self, int interval, int32_t time
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -668,7 +668,7 @@ QMetaObject__Connection* q_scilexerfortran77_connect5(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QsciLexerFortran77*
 /// @param sender QObject*
@@ -679,7 +679,7 @@ QMetaObject__Connection* q_scilexerfortran77_connect4(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerFortran77*
 /// @param param1 QObject*
@@ -687,7 +687,7 @@ void q_scilexerfortran77_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerFortran77*
 /// @param callback void func(QsciLexerFortran77* self, QObject* param1)
@@ -695,7 +695,7 @@ void q_scilexerfortran77_on_destroyed1(void* self, void (*callback)(void*, void*
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -704,7 +704,7 @@ int32_t q_scilexerfortran77_lexer_id(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -713,7 +713,7 @@ int32_t q_scilexerfortran77_qbase_lexer_id(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -723,7 +723,7 @@ void q_scilexerfortran77_on_lexer_id(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -734,7 +734,7 @@ const char* q_scilexerfortran77_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -745,7 +745,7 @@ const char* q_scilexerfortran77_qbase_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -755,7 +755,7 @@ void q_scilexerfortran77_on_auto_completion_fillups(void* self, const char* (*ca
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -766,7 +766,7 @@ const char** q_scilexerfortran77_auto_completion_word_separators(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -777,7 +777,7 @@ const char** q_scilexerfortran77_qbase_auto_completion_word_separators(void* sel
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -787,7 +787,7 @@ void q_scilexerfortran77_on_auto_completion_word_separators(void* self, const ch
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -799,7 +799,7 @@ const char* q_scilexerfortran77_block_end(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -811,7 +811,7 @@ const char* q_scilexerfortran77_qbase_block_end(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -821,7 +821,7 @@ void q_scilexerfortran77_on_block_end(void* self, const char* (*callback)(void*,
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -830,7 +830,7 @@ int32_t q_scilexerfortran77_block_lookback(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -839,7 +839,7 @@ int32_t q_scilexerfortran77_qbase_block_lookback(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -849,7 +849,7 @@ void q_scilexerfortran77_on_block_lookback(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -861,7 +861,7 @@ const char* q_scilexerfortran77_block_start(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -873,7 +873,7 @@ const char* q_scilexerfortran77_qbase_block_start(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -883,7 +883,7 @@ void q_scilexerfortran77_on_block_start(void* self, const char* (*callback)(void
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -895,7 +895,7 @@ const char* q_scilexerfortran77_block_start_keyword(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -907,7 +907,7 @@ const char* q_scilexerfortran77_qbase_block_start_keyword(void* self, int* style
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -917,7 +917,7 @@ void q_scilexerfortran77_on_block_start_keyword(void* self, const char* (*callba
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -926,7 +926,7 @@ bool q_scilexerfortran77_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -935,7 +935,7 @@ bool q_scilexerfortran77_qbase_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -945,7 +945,7 @@ void q_scilexerfortran77_on_case_sensitive(void* self, bool (*callback)());
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -955,7 +955,7 @@ QColor* q_scilexerfortran77_color(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -965,7 +965,7 @@ QColor* q_scilexerfortran77_qbase_color(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -975,7 +975,7 @@ void q_scilexerfortran77_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -985,7 +985,7 @@ bool q_scilexerfortran77_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -995,7 +995,7 @@ bool q_scilexerfortran77_qbase_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1005,7 +1005,7 @@ void q_scilexerfortran77_on_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1015,7 +1015,7 @@ QFont* q_scilexerfortran77_font(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1025,7 +1025,7 @@ QFont* q_scilexerfortran77_qbase_font(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1035,7 +1035,7 @@ void q_scilexerfortran77_on_font(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1044,7 +1044,7 @@ int32_t q_scilexerfortran77_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1053,7 +1053,7 @@ int32_t q_scilexerfortran77_qbase_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1063,7 +1063,7 @@ void q_scilexerfortran77_on_indentation_guide_view(void* self, int32_t (*callbac
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1072,7 +1072,7 @@ int32_t q_scilexerfortran77_default_style(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1081,7 +1081,7 @@ int32_t q_scilexerfortran77_qbase_default_style(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1091,7 +1091,7 @@ void q_scilexerfortran77_on_default_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1101,7 +1101,7 @@ QColor* q_scilexerfortran77_paper(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1111,7 +1111,7 @@ QColor* q_scilexerfortran77_qbase_paper(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1121,7 +1121,7 @@ void q_scilexerfortran77_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1131,7 +1131,7 @@ QColor* q_scilexerfortran77_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1141,7 +1141,7 @@ QColor* q_scilexerfortran77_qbase_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1151,7 +1151,7 @@ void q_scilexerfortran77_on_default_color2(void* self, QColor* (*callback)(void*
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1161,7 +1161,7 @@ QFont* q_scilexerfortran77_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1171,7 +1171,7 @@ QFont* q_scilexerfortran77_qbase_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1181,7 +1181,7 @@ void q_scilexerfortran77_on_default_font2(void* self, QFont* (*callback)(void*, 
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1191,7 +1191,7 @@ QColor* q_scilexerfortran77_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1201,7 +1201,7 @@ QColor* q_scilexerfortran77_qbase_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1211,7 +1211,7 @@ void q_scilexerfortran77_on_default_paper2(void* self, QColor* (*callback)(void*
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1221,7 +1221,7 @@ void q_scilexerfortran77_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1231,7 +1231,7 @@ void q_scilexerfortran77_qbase_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1241,7 +1241,7 @@ void q_scilexerfortran77_on_set_editor(void* self, void (*callback)(void*, void*
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1250,7 +1250,7 @@ int32_t q_scilexerfortran77_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1259,7 +1259,7 @@ int32_t q_scilexerfortran77_qbase_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1269,7 +1269,7 @@ void q_scilexerfortran77_on_style_bits_needed(void* self, int32_t (*callback)())
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1280,7 +1280,7 @@ const char* q_scilexerfortran77_word_characters(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1291,7 +1291,7 @@ const char* q_scilexerfortran77_qbase_word_characters(void* self);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1301,7 +1301,7 @@ void q_scilexerfortran77_on_word_characters(void* self, const char* (*callback)(
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1311,7 +1311,7 @@ void q_scilexerfortran77_set_auto_indent_style(void* self, int autoindentstyle);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1321,7 +1321,7 @@ void q_scilexerfortran77_qbase_set_auto_indent_style(void* self, int autoindents
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1331,7 +1331,7 @@ void q_scilexerfortran77_on_set_auto_indent_style(void* self, void (*callback)(v
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1342,7 +1342,7 @@ void q_scilexerfortran77_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1353,7 +1353,7 @@ void q_scilexerfortran77_qbase_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1363,7 +1363,7 @@ void q_scilexerfortran77_on_set_color(void* self, void (*callback)(void*, void*,
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1374,7 +1374,7 @@ void q_scilexerfortran77_set_eol_fill(void* self, bool eoffill, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1385,7 +1385,7 @@ void q_scilexerfortran77_qbase_set_eol_fill(void* self, bool eoffill, int style)
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1395,7 +1395,7 @@ void q_scilexerfortran77_on_set_eol_fill(void* self, void (*callback)(void*, boo
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1406,7 +1406,7 @@ void q_scilexerfortran77_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1417,7 +1417,7 @@ void q_scilexerfortran77_qbase_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1427,7 +1427,7 @@ void q_scilexerfortran77_on_set_font(void* self, void (*callback)(void*, void*, 
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1438,7 +1438,7 @@ void q_scilexerfortran77_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1449,7 +1449,7 @@ void q_scilexerfortran77_qbase_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1459,7 +1459,7 @@ void q_scilexerfortran77_on_set_paper(void* self, void (*callback)(void*, void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1469,7 +1469,7 @@ bool q_scilexerfortran77_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1479,7 +1479,7 @@ bool q_scilexerfortran77_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1489,7 +1489,7 @@ void q_scilexerfortran77_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1500,7 +1500,7 @@ bool q_scilexerfortran77_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1511,7 +1511,7 @@ bool q_scilexerfortran77_qbase_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1521,7 +1521,7 @@ void q_scilexerfortran77_on_event_filter(void* self, bool (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1531,7 +1531,7 @@ void q_scilexerfortran77_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1541,7 +1541,7 @@ void q_scilexerfortran77_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1551,7 +1551,7 @@ void q_scilexerfortran77_on_timer_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1561,7 +1561,7 @@ void q_scilexerfortran77_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1571,7 +1571,7 @@ void q_scilexerfortran77_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1581,7 +1581,7 @@ void q_scilexerfortran77_on_child_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1591,7 +1591,7 @@ void q_scilexerfortran77_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1601,7 +1601,7 @@ void q_scilexerfortran77_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1611,7 +1611,7 @@ void q_scilexerfortran77_on_custom_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1621,7 +1621,7 @@ void q_scilexerfortran77_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1631,7 +1631,7 @@ void q_scilexerfortran77_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1641,7 +1641,7 @@ void q_scilexerfortran77_on_connect_notify(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1651,7 +1651,7 @@ void q_scilexerfortran77_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1661,7 +1661,7 @@ void q_scilexerfortran77_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1671,7 +1671,7 @@ void q_scilexerfortran77_on_disconnect_notify(void* self, void (*callback)(void*
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1683,7 +1683,7 @@ char* q_scilexerfortran77_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1695,7 +1695,7 @@ char* q_scilexerfortran77_qbase_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1705,7 +1705,7 @@ void q_scilexerfortran77_on_text_as_bytes(void* self, char* (*callback)(void*, c
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1718,7 +1718,7 @@ const char* q_scilexerfortran77_bytes_as_text(void* self, const char* bytes, int
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1731,7 +1731,7 @@ const char* q_scilexerfortran77_qbase_bytes_as_text(void* self, const char* byte
 
 /// Inherited from QsciLexer
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1741,7 +1741,7 @@ void q_scilexerfortran77_on_bytes_as_text(void* self, const char* (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1750,7 +1750,7 @@ QObject* q_scilexerfortran77_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1759,7 +1759,7 @@ QObject* q_scilexerfortran77_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1769,7 +1769,7 @@ void q_scilexerfortran77_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1778,7 +1778,7 @@ int32_t q_scilexerfortran77_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1787,7 +1787,7 @@ int32_t q_scilexerfortran77_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1797,7 +1797,7 @@ void q_scilexerfortran77_on_sender_signal_index(void* self, int32_t (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1807,7 +1807,7 @@ int32_t q_scilexerfortran77_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1817,7 +1817,7 @@ int32_t q_scilexerfortran77_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1827,7 +1827,7 @@ void q_scilexerfortran77_on_receivers(void* self, int32_t (*callback)(void*, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1837,7 +1837,7 @@ bool q_scilexerfortran77_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1847,7 +1847,7 @@ bool q_scilexerfortran77_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1857,7 +1857,7 @@ void q_scilexerfortran77_on_is_signal_connected(void* self, bool (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1865,7 +1865,7 @@ void q_scilexerfortran77_on_is_signal_connected(void* self, bool (*callback)(voi
 /// @param callback void func(QsciLexerFortran77* self, const char* objectName)
 void q_scilexerfortran77_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
 /// Delete this object from C++ memory.
 ///

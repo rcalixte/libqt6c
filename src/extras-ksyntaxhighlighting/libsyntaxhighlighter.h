@@ -27,7 +27,7 @@ KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_
 /// @param parent QObject*
 KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_new3(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_meta_object(void* self);
@@ -56,20 +56,20 @@ void k_syntaxhighlighting__syntaxhighlighter_on_metacall(void* self, int32_t (*c
 /// @param param3 void*
 int32_t k_syntaxhighlighting__syntaxhighlighter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_syntaxhighlighting__syntaxhighlighter_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setDefinition)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setDefinition)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param def KSyntaxHighlighting__Definition*
 void k_syntaxhighlighting__syntaxhighlighter_set_definition(void* self, void* def);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setDefinition)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setDefinition)
 ///
 /// Allows for overriding the related default method
 ///
@@ -77,7 +77,7 @@ void k_syntaxhighlighting__syntaxhighlighter_set_definition(void* self, void* de
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, KSyntaxHighlighting__Definition* def)
 void k_syntaxhighlighting__syntaxhighlighter_on_set_definition(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setDefinition)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setDefinition)
 ///
 /// Base class method implementation
 ///
@@ -85,13 +85,13 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_definition(void* self, void 
 /// @param def KSyntaxHighlighting__Definition*
 void k_syntaxhighlighting__syntaxhighlighter_qbase_set_definition(void* self, void* def);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setTheme)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setTheme)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param theme KSyntaxHighlighting__Theme*
 void k_syntaxhighlighting__syntaxhighlighter_set_theme(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setTheme)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setTheme)
 ///
 /// Allows for overriding the related default method
 ///
@@ -99,7 +99,7 @@ void k_syntaxhighlighting__syntaxhighlighter_set_theme(void* self, void* theme);
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, KSyntaxHighlighting__Theme* theme)
 void k_syntaxhighlighting__syntaxhighlighter_on_set_theme(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setTheme)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setTheme)
 ///
 /// Base class method implementation
 ///
@@ -107,25 +107,25 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_theme(void* self, void (*cal
 /// @param theme KSyntaxHighlighting__Theme*
 void k_syntaxhighlighting__syntaxhighlighter_qbase_set_theme(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#startsFoldingRegion)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#startsFoldingRegion)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param startBlock QTextBlock*
 bool k_syntaxhighlighting__syntaxhighlighter_starts_folding_region(void* self, void* startBlock);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#findFoldingRegionEnd)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#findFoldingRegionEnd)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param startBlock QTextBlock*
 QTextBlock* k_syntaxhighlighting__syntaxhighlighter_find_folding_region_end(void* self, void* startBlock);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#highlightBlock)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#highlightBlock)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param text const char*
 void k_syntaxhighlighting__syntaxhighlighter_highlight_block(void* self, const char* text);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#highlightBlock)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#highlightBlock)
 ///
 /// Allows for overriding the related default method
 ///
@@ -133,7 +133,7 @@ void k_syntaxhighlighting__syntaxhighlighter_highlight_block(void* self, const c
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, const char* text)
 void k_syntaxhighlighting__syntaxhighlighter_on_highlight_block(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#highlightBlock)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#highlightBlock)
 ///
 /// Base class method implementation
 ///
@@ -141,7 +141,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_highlight_block(void* self, void
 /// @param text const char*
 void k_syntaxhighlighting__syntaxhighlighter_qbase_highlight_block(void* self, const char* text);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFormat)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFormat)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param offset int
@@ -149,7 +149,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_highlight_block(void* self, c
 /// @param format KSyntaxHighlighting__Format*
 void k_syntaxhighlighting__syntaxhighlighter_apply_format(void* self, int offset, int length, void* format);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFormat)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFormat)
 ///
 /// Allows for overriding the related default method
 ///
@@ -157,7 +157,7 @@ void k_syntaxhighlighting__syntaxhighlighter_apply_format(void* self, int offset
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, int offset, int length, KSyntaxHighlighting__Format* format)
 void k_syntaxhighlighting__syntaxhighlighter_on_apply_format(void* self, void (*callback)(void*, int, int, void*));
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFormat)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFormat)
 ///
 /// Base class method implementation
 ///
@@ -167,7 +167,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_apply_format(void* self, void (*
 /// @param format KSyntaxHighlighting__Format*
 void k_syntaxhighlighting__syntaxhighlighter_qbase_apply_format(void* self, int offset, int length, void* format);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFolding)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFolding)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param offset int
@@ -175,7 +175,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_apply_format(void* self, int 
 /// @param region KSyntaxHighlighting__FoldingRegion*
 void k_syntaxhighlighting__syntaxhighlighter_apply_folding(void* self, int offset, int length, void* region);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFolding)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFolding)
 ///
 /// Allows for overriding the related default method
 ///
@@ -183,7 +183,7 @@ void k_syntaxhighlighting__syntaxhighlighter_apply_folding(void* self, int offse
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, int offset, int length, KSyntaxHighlighting__FoldingRegion* region)
 void k_syntaxhighlighting__syntaxhighlighter_on_apply_folding(void* self, void (*callback)(void*, int, int, void*));
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFolding)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFolding)
 ///
 /// Base class method implementation
 ///
@@ -193,7 +193,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_apply_folding(void* self, void (
 /// @param region KSyntaxHighlighting__FoldingRegion*
 void k_syntaxhighlighting__syntaxhighlighter_qbase_apply_folding(void* self, int offset, int length, void* region);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -201,7 +201,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_apply_folding(void* self, int
 /// @param c const char*
 const char* k_syntaxhighlighting__syntaxhighlighter_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -212,7 +212,7 @@ const char* k_syntaxhighlighting__syntaxhighlighter_tr3(const char* s, const cha
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setDocument)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setDocument)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param doc QTextDocument*
@@ -220,21 +220,21 @@ void k_syntaxhighlighting__syntaxhighlighter_set_document(void* self, void* doc)
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#document)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#document)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 QTextDocument* k_syntaxhighlighting__syntaxhighlighter_document(void* self);
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#rehighlight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#rehighlight)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 void k_syntaxhighlighting__syntaxhighlighter_rehighlight(void* self);
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#rehighlightBlock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#rehighlightBlock)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param block QTextBlock*
@@ -242,7 +242,7 @@ void k_syntaxhighlighting__syntaxhighlighter_rehighlight_block(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -251,7 +251,7 @@ const char* k_syntaxhighlighting__syntaxhighlighter_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param name char*
@@ -259,35 +259,35 @@ void k_syntaxhighlighting__syntaxhighlighter_set_object_name(void* self, char* n
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 bool k_syntaxhighlighting__syntaxhighlighter_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 bool k_syntaxhighlighting__syntaxhighlighter_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 bool k_syntaxhighlighting__syntaxhighlighter_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 bool k_syntaxhighlighting__syntaxhighlighter_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param b bool
@@ -295,14 +295,14 @@ bool k_syntaxhighlighting__syntaxhighlighter_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 QThread* k_syntaxhighlighting__syntaxhighlighter_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param thread QThread*
@@ -310,7 +310,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_move_to_thread(void* self, void* th
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param interval int
@@ -318,7 +318,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_start_timer(void* self, int inte
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param id int
@@ -326,7 +326,7 @@ void k_syntaxhighlighting__syntaxhighlighter_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param id enum Qt__TimerId
@@ -334,14 +334,14 @@ void k_syntaxhighlighting__syntaxhighlighter_kill_timer2(void* self, int32_t id)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 libqt_list /* of QObject* */ k_syntaxhighlighting__syntaxhighlighter_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param parent QObject*
@@ -349,7 +349,7 @@ void k_syntaxhighlighting__syntaxhighlighter_set_parent(void* self, void* parent
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param filterObj QObject*
@@ -357,7 +357,7 @@ void k_syntaxhighlighting__syntaxhighlighter_install_event_filter(void* self, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param obj QObject*
@@ -365,7 +365,7 @@ void k_syntaxhighlighting__syntaxhighlighter_remove_event_filter(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -375,7 +375,7 @@ QMetaObject__Connection* k_syntaxhighlighting__syntaxhighlighter_connect(void* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param sender QObject*
@@ -385,7 +385,7 @@ QMetaObject__Connection* k_syntaxhighlighting__syntaxhighlighter_connect2(void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -395,28 +395,28 @@ bool k_syntaxhighlighting__syntaxhighlighter_disconnect(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_syntaxhighlighting__syntaxhighlighter_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 void k_syntaxhighlighting__syntaxhighlighter_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 void k_syntaxhighlighting__syntaxhighlighter_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param name const char*
@@ -425,7 +425,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_set_property(void* self, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param name const char*
@@ -433,7 +433,7 @@ QVariant* k_syntaxhighlighting__syntaxhighlighter_property(void* self, const cha
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -442,28 +442,28 @@ const char** k_syntaxhighlighting__syntaxhighlighter_dynamic_property_names(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 QBindingStorage* k_syntaxhighlighting__syntaxhighlighter_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 const QBindingStorage* k_syntaxhighlighting__syntaxhighlighter_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 void k_syntaxhighlighting__syntaxhighlighter_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self)
@@ -471,14 +471,14 @@ void k_syntaxhighlighting__syntaxhighlighter_on_destroyed(void* self, void (*cal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 QObject* k_syntaxhighlighting__syntaxhighlighter_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param classname const char*
@@ -486,14 +486,14 @@ bool k_syntaxhighlighting__syntaxhighlighter_inherits(void* self, const char* cl
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 void k_syntaxhighlighting__syntaxhighlighter_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param thread QThread*
@@ -502,7 +502,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_move_to_thread2(void* self, void* t
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param interval int
@@ -511,7 +511,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_start_timer22(void* self, int in
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -522,7 +522,7 @@ QMetaObject__Connection* k_syntaxhighlighting__syntaxhighlighter_connect5(void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param sender QObject*
@@ -533,7 +533,7 @@ QMetaObject__Connection* k_syntaxhighlighting__syntaxhighlighter_connect4(void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param param1 QObject*
@@ -541,7 +541,7 @@ void k_syntaxhighlighting__syntaxhighlighter_destroyed1(void* self, void* param1
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, QObject* param1)
@@ -549,21 +549,21 @@ void k_syntaxhighlighting__syntaxhighlighter_on_destroyed1(void* self, void (*ca
 
 /// Inherited from KSyntaxHighlighting::AbstractHighlighter
 ///
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#definition)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#definition)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 KSyntaxHighlighting__Definition* k_syntaxhighlighting__syntaxhighlighter_definition(void* self);
 
 /// Inherited from KSyntaxHighlighting::AbstractHighlighter
 ///
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#theme)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#theme)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 KSyntaxHighlighting__Theme* k_syntaxhighlighting__syntaxhighlighter_theme(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -573,7 +573,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -583,7 +583,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_qbase_event(void* self, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -593,7 +593,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_event(void* self, bool (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -604,7 +604,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_event_filter(void* self, void* watc
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -615,7 +615,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_qbase_event_filter(void* self, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -625,7 +625,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_event_filter(void* self, bool (*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -635,7 +635,7 @@ void k_syntaxhighlighting__syntaxhighlighter_timer_event(void* self, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -645,7 +645,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_timer_event(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -655,7 +655,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_timer_event(void* self, void (*c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -665,7 +665,7 @@ void k_syntaxhighlighting__syntaxhighlighter_child_event(void* self, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -675,7 +675,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_child_event(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -685,7 +685,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_child_event(void* self, void (*c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -695,7 +695,7 @@ void k_syntaxhighlighting__syntaxhighlighter_custom_event(void* self, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -705,7 +705,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_custom_event(void* self, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,7 +715,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_custom_event(void* self, void (*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -725,7 +725,7 @@ void k_syntaxhighlighting__syntaxhighlighter_connect_notify(void* self, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -735,7 +735,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_connect_notify(void* self, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -745,7 +745,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_connect_notify(void* self, void 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -755,7 +755,7 @@ void k_syntaxhighlighting__syntaxhighlighter_disconnect_notify(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -765,7 +765,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_disconnect_notify(void* self,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -775,7 +775,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_disconnect_notify(void* self, vo
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -787,7 +787,7 @@ void k_syntaxhighlighting__syntaxhighlighter_set_format(void* self, int start, i
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -799,7 +799,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_set_format(void* self, int st
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -809,7 +809,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_format(void* self, void (*ca
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -819,7 +819,7 @@ QTextCharFormat* k_syntaxhighlighting__syntaxhighlighter_format(void* self, int 
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -829,7 +829,7 @@ QTextCharFormat* k_syntaxhighlighting__syntaxhighlighter_qbase_format(void* self
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -839,7 +839,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_format(void* self, QTextCharForm
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -848,7 +848,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_previous_block_state(void* self)
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -857,7 +857,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_qbase_previous_block_state(void*
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -867,7 +867,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_previous_block_state(void* self,
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -876,7 +876,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_current_block_state(void* self);
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -885,7 +885,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_qbase_current_block_state(void* 
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -895,7 +895,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_current_block_state(void* self, 
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -905,7 +905,7 @@ void k_syntaxhighlighting__syntaxhighlighter_set_current_block_state(void* self,
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -915,7 +915,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_set_current_block_state(void*
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -925,7 +925,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_current_block_state(void* se
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -935,7 +935,7 @@ void k_syntaxhighlighting__syntaxhighlighter_set_current_block_user_data(void* s
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -945,7 +945,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_set_current_block_user_data(v
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -955,7 +955,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_current_block_user_data(void
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -964,7 +964,7 @@ QTextBlockUserData* k_syntaxhighlighting__syntaxhighlighter_current_block_user_d
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -973,7 +973,7 @@ QTextBlockUserData* k_syntaxhighlighting__syntaxhighlighter_qbase_current_block_
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -983,7 +983,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_current_block_user_data(void* se
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -992,7 +992,7 @@ QTextBlock* k_syntaxhighlighting__syntaxhighlighter_current_block(void* self);
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1001,7 +1001,7 @@ QTextBlock* k_syntaxhighlighting__syntaxhighlighter_qbase_current_block(void* se
 
 /// Inherited from QSyntaxHighlighter
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1011,7 +1011,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_current_block(void* self, QTextB
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1020,7 +1020,7 @@ QObject* k_syntaxhighlighting__syntaxhighlighter_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1029,7 +1029,7 @@ QObject* k_syntaxhighlighting__syntaxhighlighter_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1039,7 +1039,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_sender(void* self, QObject* (*ca
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1048,7 +1048,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1057,7 +1057,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_qbase_sender_signal_index(void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1067,7 +1067,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_sender_signal_index(void* self, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1077,7 +1077,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_receivers(void* self, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1087,7 +1087,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_qbase_receivers(void* self, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1097,7 +1097,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_receivers(void* self, int32_t (*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1107,7 +1107,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_is_signal_connected(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1117,7 +1117,7 @@ bool k_syntaxhighlighting__syntaxhighlighter_qbase_is_signal_connected(void* sel
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1127,7 +1127,7 @@ void k_syntaxhighlighting__syntaxhighlighter_on_is_signal_connected(void* self, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

@@ -22,7 +22,7 @@ KIO__OpenFileManagerWindowJob* k_io__openfilemanagerwindowjob_new();
 /// @param parent QObject*
 KIO__OpenFileManagerWindowJob* k_io__openfilemanagerwindowjob_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 const QMetaObject* k_io__openfilemanagerwindowjob_meta_object(void* self);
@@ -51,43 +51,43 @@ void k_io__openfilemanagerwindowjob_on_metacall(void* self, int32_t (*callback)(
 /// @param param3 void*
 int32_t k_io__openfilemanagerwindowjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_io__openfilemanagerwindowjob_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kio-openfilemanagerwindowjob.html#highlightUrls)
+/// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#highlightUrls)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 libqt_list /* of QUrl* */ k_io__openfilemanagerwindowjob_highlight_urls(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-openfilemanagerwindowjob.html#setHighlightUrls)
+/// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#setHighlightUrls)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param highlightUrls libqt_list /* of QUrl* */
 void k_io__openfilemanagerwindowjob_set_highlight_urls(void* self, libqt_list highlightUrls);
 
-/// [Qt documentation](https://api.kde.org/kio-openfilemanagerwindowjob.html#startupId)
+/// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#startupId)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 char* k_io__openfilemanagerwindowjob_startup_id(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-openfilemanagerwindowjob.html#setStartupId)
+/// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#setStartupId)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param startupId const char*
 void k_io__openfilemanagerwindowjob_set_startup_id(void* self, const char* startupId);
 
-/// [Qt documentation](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
+/// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 void k_io__openfilemanagerwindowjob_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
+/// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
 ///
 /// Allows for overriding the related default method
 ///
@@ -95,14 +95,14 @@ void k_io__openfilemanagerwindowjob_start(void* self);
 /// @param callback void func()
 void k_io__openfilemanagerwindowjob_on_start(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
+/// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 void k_io__openfilemanagerwindowjob_qbase_start(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -110,7 +110,7 @@ void k_io__openfilemanagerwindowjob_qbase_start(void* self);
 /// @param c const char*
 const char* k_io__openfilemanagerwindowjob_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -121,7 +121,7 @@ const char* k_io__openfilemanagerwindowjob_tr3(const char* s, const char* c, int
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setUiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#setUiDelegate)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param delegate KJobUiDelegate*
@@ -129,14 +129,14 @@ void k_io__openfilemanagerwindowjob_set_ui_delegate(void* self, void* delegate);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#uiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 KJobUiDelegate* k_io__openfilemanagerwindowjob_ui_delegate(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#capabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
@@ -145,49 +145,49 @@ int32_t k_io__openfilemanagerwindowjob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isSuspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_is_suspended(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspend)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resume)
+/// [Upstream resources](https://api.kde.org/kjob.html#resume)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#exec)
+/// [Upstream resources](https://api.kde.org/kjob.html#exec)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#error)
+/// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 int32_t k_io__openfilemanagerwindowjob_error(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -196,7 +196,7 @@ const char* k_io__openfilemanagerwindowjob_error_text(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param unit enum KJob__Unit
@@ -204,7 +204,7 @@ uint64_t k_io__openfilemanagerwindowjob_processed_amount(void* self, int32_t uni
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param unit enum KJob__Unit
@@ -212,14 +212,14 @@ uint64_t k_io__openfilemanagerwindowjob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percent)
+/// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 uint64_t k_io__openfilemanagerwindowjob_percent(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#setAutoDelete)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param autodelete bool
@@ -227,42 +227,42 @@ void k_io__openfilemanagerwindowjob_set_auto_delete(void* self, bool autodelete)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_is_auto_delete(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 void k_io__openfilemanagerwindowjob_set_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_is_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isStartedWithExec)
+/// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_is_started_with_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#elapsedTime)
+/// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 long long k_io__openfilemanagerwindowjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param job KJob*
@@ -271,7 +271,7 @@ void k_io__openfilemanagerwindowjob_info_message(void* self, void* job, const ch
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param callback void func(KIO__OpenFileManagerWindowJob* self, KJob* job, const char* message)
@@ -279,7 +279,7 @@ void k_io__openfilemanagerwindowjob_on_info_message(void* self, void (*callback)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param job KJob*
@@ -288,7 +288,7 @@ void k_io__openfilemanagerwindowjob_warning(void* self, void* job, const char* m
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param callback void func(KIO__OpenFileManagerWindowJob* self, KJob* job, const char* message)
@@ -296,7 +296,7 @@ void k_io__openfilemanagerwindowjob_on_warning(void* self, void (*callback)(void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param job KJob*
@@ -305,7 +305,7 @@ void k_io__openfilemanagerwindowjob_total_size(void* self, void* job, uint64_t s
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param callback void func(KIO__OpenFileManagerWindowJob* self, KJob* job, uint64_t size)
@@ -313,7 +313,7 @@ void k_io__openfilemanagerwindowjob_on_total_size(void* self, void (*callback)(v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param job KJob*
@@ -322,7 +322,7 @@ void k_io__openfilemanagerwindowjob_processed_size(void* self, void* job, uint64
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param callback void func(KIO__OpenFileManagerWindowJob* self, KJob* job, uint64_t size)
@@ -330,7 +330,7 @@ void k_io__openfilemanagerwindowjob_on_processed_size(void* self, void (*callbac
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param job KJob*
@@ -339,7 +339,7 @@ void k_io__openfilemanagerwindowjob_speed(void* self, void* job, uint64_t speed)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param callback void func(KIO__OpenFileManagerWindowJob* self, KJob* job, uint64_t speed)
@@ -347,7 +347,7 @@ void k_io__openfilemanagerwindowjob_on_speed(void* self, void (*callback)(void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param verbosity enum KJob__KillVerbosity
@@ -355,7 +355,7 @@ bool k_io__openfilemanagerwindowjob_kill1(void* self, int32_t verbosity);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param hide bool
@@ -363,7 +363,7 @@ void k_io__openfilemanagerwindowjob_set_finished_notification_hidden1(void* self
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -372,7 +372,7 @@ const char* k_io__openfilemanagerwindowjob_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param name char*
@@ -380,35 +380,35 @@ void k_io__openfilemanagerwindowjob_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 bool k_io__openfilemanagerwindowjob_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param b bool
@@ -416,14 +416,14 @@ bool k_io__openfilemanagerwindowjob_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 QThread* k_io__openfilemanagerwindowjob_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param thread QThread*
@@ -431,7 +431,7 @@ bool k_io__openfilemanagerwindowjob_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param interval int
@@ -439,7 +439,7 @@ int32_t k_io__openfilemanagerwindowjob_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param id int
@@ -447,7 +447,7 @@ void k_io__openfilemanagerwindowjob_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param id enum Qt__TimerId
@@ -455,14 +455,14 @@ void k_io__openfilemanagerwindowjob_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 libqt_list /* of QObject* */ k_io__openfilemanagerwindowjob_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param parent QObject*
@@ -470,7 +470,7 @@ void k_io__openfilemanagerwindowjob_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param filterObj QObject*
@@ -478,7 +478,7 @@ void k_io__openfilemanagerwindowjob_install_event_filter(void* self, void* filte
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param obj QObject*
@@ -486,7 +486,7 @@ void k_io__openfilemanagerwindowjob_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -496,7 +496,7 @@ QMetaObject__Connection* k_io__openfilemanagerwindowjob_connect(void* sender, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param sender QObject*
@@ -506,7 +506,7 @@ QMetaObject__Connection* k_io__openfilemanagerwindowjob_connect2(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -516,28 +516,28 @@ bool k_io__openfilemanagerwindowjob_disconnect(void* sender, void* signal, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_io__openfilemanagerwindowjob_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 void k_io__openfilemanagerwindowjob_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 void k_io__openfilemanagerwindowjob_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param name const char*
@@ -546,7 +546,7 @@ bool k_io__openfilemanagerwindowjob_set_property(void* self, const char* name, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param name const char*
@@ -554,7 +554,7 @@ QVariant* k_io__openfilemanagerwindowjob_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -563,28 +563,28 @@ const char** k_io__openfilemanagerwindowjob_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 QBindingStorage* k_io__openfilemanagerwindowjob_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 const QBindingStorage* k_io__openfilemanagerwindowjob_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 void k_io__openfilemanagerwindowjob_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param callback void func(KIO__OpenFileManagerWindowJob* self)
@@ -592,14 +592,14 @@ void k_io__openfilemanagerwindowjob_on_destroyed(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 QObject* k_io__openfilemanagerwindowjob_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param classname const char*
@@ -607,14 +607,14 @@ bool k_io__openfilemanagerwindowjob_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 void k_io__openfilemanagerwindowjob_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param thread QThread*
@@ -623,7 +623,7 @@ bool k_io__openfilemanagerwindowjob_move_to_thread2(void* self, void* thread, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param interval int
@@ -632,7 +632,7 @@ int32_t k_io__openfilemanagerwindowjob_start_timer22(void* self, int interval, i
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -643,7 +643,7 @@ QMetaObject__Connection* k_io__openfilemanagerwindowjob_connect5(void* sender, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param sender QObject*
@@ -654,7 +654,7 @@ QMetaObject__Connection* k_io__openfilemanagerwindowjob_connect4(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param param1 QObject*
@@ -662,7 +662,7 @@ void k_io__openfilemanagerwindowjob_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param callback void func(KIO__OpenFileManagerWindowJob* self, QObject* param1)
@@ -670,7 +670,7 @@ void k_io__openfilemanagerwindowjob_on_destroyed1(void* self, void (*callback)(v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
+/// [Upstream resources](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -679,7 +679,7 @@ bool k_io__openfilemanagerwindowjob_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
+/// [Upstream resources](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -688,7 +688,7 @@ bool k_io__openfilemanagerwindowjob_qbase_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
+/// [Upstream resources](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -698,7 +698,7 @@ void k_io__openfilemanagerwindowjob_on_do_kill(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -707,7 +707,7 @@ bool k_io__openfilemanagerwindowjob_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -716,7 +716,7 @@ bool k_io__openfilemanagerwindowjob_qbase_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -726,7 +726,7 @@ void k_io__openfilemanagerwindowjob_on_do_suspend(void* self, bool (*callback)()
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
+/// [Upstream resources](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -735,7 +735,7 @@ bool k_io__openfilemanagerwindowjob_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
+/// [Upstream resources](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -744,7 +744,7 @@ bool k_io__openfilemanagerwindowjob_qbase_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
+/// [Upstream resources](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -754,7 +754,7 @@ void k_io__openfilemanagerwindowjob_on_do_resume(void* self, bool (*callback)())
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -765,7 +765,7 @@ const char* k_io__openfilemanagerwindowjob_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -776,7 +776,7 @@ const char* k_io__openfilemanagerwindowjob_qbase_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -786,7 +786,7 @@ void k_io__openfilemanagerwindowjob_on_error_string(void* self, const char* (*ca
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -796,7 +796,7 @@ bool k_io__openfilemanagerwindowjob_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -806,7 +806,7 @@ bool k_io__openfilemanagerwindowjob_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -816,7 +816,7 @@ void k_io__openfilemanagerwindowjob_on_event(void* self, bool (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -827,7 +827,7 @@ bool k_io__openfilemanagerwindowjob_event_filter(void* self, void* watched, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -838,7 +838,7 @@ bool k_io__openfilemanagerwindowjob_qbase_event_filter(void* self, void* watched
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -848,7 +848,7 @@ void k_io__openfilemanagerwindowjob_on_event_filter(void* self, bool (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -858,7 +858,7 @@ void k_io__openfilemanagerwindowjob_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -868,7 +868,7 @@ void k_io__openfilemanagerwindowjob_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -878,7 +878,7 @@ void k_io__openfilemanagerwindowjob_on_timer_event(void* self, void (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -888,7 +888,7 @@ void k_io__openfilemanagerwindowjob_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -898,7 +898,7 @@ void k_io__openfilemanagerwindowjob_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -908,7 +908,7 @@ void k_io__openfilemanagerwindowjob_on_child_event(void* self, void (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -918,7 +918,7 @@ void k_io__openfilemanagerwindowjob_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -928,7 +928,7 @@ void k_io__openfilemanagerwindowjob_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -938,7 +938,7 @@ void k_io__openfilemanagerwindowjob_on_custom_event(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -948,7 +948,7 @@ void k_io__openfilemanagerwindowjob_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -958,7 +958,7 @@ void k_io__openfilemanagerwindowjob_qbase_connect_notify(void* self, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -968,7 +968,7 @@ void k_io__openfilemanagerwindowjob_on_connect_notify(void* self, void (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -978,7 +978,7 @@ void k_io__openfilemanagerwindowjob_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -988,7 +988,7 @@ void k_io__openfilemanagerwindowjob_qbase_disconnect_notify(void* self, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -998,7 +998,7 @@ void k_io__openfilemanagerwindowjob_on_disconnect_notify(void* self, void (*call
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1008,7 +1008,7 @@ void k_io__openfilemanagerwindowjob_set_capabilities(void* self, int32_t capabil
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1018,7 +1018,7 @@ void k_io__openfilemanagerwindowjob_qbase_set_capabilities(void* self, int32_t c
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1028,7 +1028,7 @@ void k_io__openfilemanagerwindowjob_on_set_capabilities(void* self, void (*callb
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1037,7 +1037,7 @@ bool k_io__openfilemanagerwindowjob_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1046,7 +1046,7 @@ bool k_io__openfilemanagerwindowjob_qbase_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1056,7 +1056,7 @@ void k_io__openfilemanagerwindowjob_on_is_finished(void* self, bool (*callback)(
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setError)
+/// [Upstream resources](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1066,7 +1066,7 @@ void k_io__openfilemanagerwindowjob_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setError)
+/// [Upstream resources](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1076,7 +1076,7 @@ void k_io__openfilemanagerwindowjob_qbase_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setError)
+/// [Upstream resources](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1086,7 +1086,7 @@ void k_io__openfilemanagerwindowjob_on_set_error(void* self, void (*callback)(vo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1096,7 +1096,7 @@ void k_io__openfilemanagerwindowjob_set_error_text(void* self, const char* error
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1106,7 +1106,7 @@ void k_io__openfilemanagerwindowjob_qbase_set_error_text(void* self, const char*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1116,7 +1116,7 @@ void k_io__openfilemanagerwindowjob_on_set_error_text(void* self, void (*callbac
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1127,7 +1127,7 @@ void k_io__openfilemanagerwindowjob_set_processed_amount(void* self, int32_t uni
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1138,7 +1138,7 @@ void k_io__openfilemanagerwindowjob_qbase_set_processed_amount(void* self, int32
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1148,7 +1148,7 @@ void k_io__openfilemanagerwindowjob_on_set_processed_amount(void* self, void (*c
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1159,7 +1159,7 @@ void k_io__openfilemanagerwindowjob_set_total_amount(void* self, int32_t unit, u
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1170,7 +1170,7 @@ void k_io__openfilemanagerwindowjob_qbase_set_total_amount(void* self, int32_t u
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1180,7 +1180,7 @@ void k_io__openfilemanagerwindowjob_on_set_total_amount(void* self, void (*callb
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1190,7 +1190,7 @@ void k_io__openfilemanagerwindowjob_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1200,7 +1200,7 @@ void k_io__openfilemanagerwindowjob_qbase_set_progress_unit(void* self, int32_t 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1210,7 +1210,7 @@ void k_io__openfilemanagerwindowjob_on_set_progress_unit(void* self, void (*call
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1220,7 +1220,7 @@ void k_io__openfilemanagerwindowjob_set_percent(void* self, uint64_t percentage)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1230,7 +1230,7 @@ void k_io__openfilemanagerwindowjob_qbase_set_percent(void* self, uint64_t perce
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1240,7 +1240,7 @@ void k_io__openfilemanagerwindowjob_on_set_percent(void* self, void (*callback)(
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1249,7 +1249,7 @@ void k_io__openfilemanagerwindowjob_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1258,7 +1258,7 @@ void k_io__openfilemanagerwindowjob_qbase_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1268,7 +1268,7 @@ void k_io__openfilemanagerwindowjob_on_emit_result(void* self, void (*callback)(
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1279,7 +1279,7 @@ void k_io__openfilemanagerwindowjob_emit_percent(void* self, uint64_t processedA
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1290,7 +1290,7 @@ void k_io__openfilemanagerwindowjob_qbase_emit_percent(void* self, uint64_t proc
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1300,7 +1300,7 @@ void k_io__openfilemanagerwindowjob_on_emit_percent(void* self, void (*callback)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1310,7 +1310,7 @@ void k_io__openfilemanagerwindowjob_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1320,7 +1320,7 @@ void k_io__openfilemanagerwindowjob_qbase_emit_speed(void* self, uint64_t speed)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1330,7 +1330,7 @@ void k_io__openfilemanagerwindowjob_on_emit_speed(void* self, void (*callback)(v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
+/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1339,7 +1339,7 @@ void k_io__openfilemanagerwindowjob_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
+/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1348,7 +1348,7 @@ void k_io__openfilemanagerwindowjob_qbase_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
+/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1358,7 +1358,7 @@ void k_io__openfilemanagerwindowjob_on_start_elapsed_timer(void* self, void (*ca
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1367,7 +1367,7 @@ QObject* k_io__openfilemanagerwindowjob_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1376,7 +1376,7 @@ QObject* k_io__openfilemanagerwindowjob_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1386,7 +1386,7 @@ void k_io__openfilemanagerwindowjob_on_sender(void* self, QObject* (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1395,7 +1395,7 @@ int32_t k_io__openfilemanagerwindowjob_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1404,7 +1404,7 @@ int32_t k_io__openfilemanagerwindowjob_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1414,7 +1414,7 @@ void k_io__openfilemanagerwindowjob_on_sender_signal_index(void* self, int32_t (
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1424,7 +1424,7 @@ int32_t k_io__openfilemanagerwindowjob_receivers(void* self, const char* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1434,7 +1434,7 @@ int32_t k_io__openfilemanagerwindowjob_qbase_receivers(void* self, const char* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1444,7 +1444,7 @@ void k_io__openfilemanagerwindowjob_on_receivers(void* self, int32_t (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1454,7 +1454,7 @@ bool k_io__openfilemanagerwindowjob_is_signal_connected(void* self, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1464,7 +1464,7 @@ bool k_io__openfilemanagerwindowjob_qbase_is_signal_connected(void* self, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1474,7 +1474,7 @@ void k_io__openfilemanagerwindowjob_on_is_signal_connected(void* self, bool (*ca
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#finished)
+/// [Upstream resources](https://api.kde.org/kjob.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1484,7 +1484,7 @@ void k_io__openfilemanagerwindowjob_on_finished(void* self, void (*callback)(voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspended)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1494,7 +1494,7 @@ void k_io__openfilemanagerwindowjob_on_suspended(void* self, void (*callback)(vo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resumed)
+/// [Upstream resources](https://api.kde.org/kjob.html#resumed)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1504,7 +1504,7 @@ void k_io__openfilemanagerwindowjob_on_resumed(void* self, void (*callback)(void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#result)
+/// [Upstream resources](https://api.kde.org/kjob.html#result)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1514,7 +1514,7 @@ void k_io__openfilemanagerwindowjob_on_result(void* self, void (*callback)(void*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1524,7 +1524,7 @@ void k_io__openfilemanagerwindowjob_on_total_amount_changed(void* self, void (*c
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1534,7 +1534,7 @@ void k_io__openfilemanagerwindowjob_on_processed_amount_changed(void* self, void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percentChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#percentChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1544,7 +1544,7 @@ void k_io__openfilemanagerwindowjob_on_percent_changed(void* self, void (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1559,7 +1559,7 @@ void k_io__openfilemanagerwindowjob_delete(void* self);
 
 /// https://api.kde.org/kio.html
 
-/// [Qt documentation](https://api.kde.org/kio.html#highlightInFileManager)
+/// [Upstream resources](https://api.kde.org/kio.html#highlightInFileManager)
 ///
 /// @param param1 libqt_list /* of QUrl* */
 /// @param param2 const char*

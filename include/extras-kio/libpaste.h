@@ -13,12 +13,12 @@
 
 /// https://api.kde.org/kio.html
 
-/// [Qt documentation](https://api.kde.org/kio.html#canPasteMimeData)
+/// [Upstream resources](https://api.kde.org/kio.html#canPasteMimeData)
 ///
 /// @param param1 QMimeData*
 bool k_io_can_paste_mime_data(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#pasteActionText)
+/// [Upstream resources](https://api.kde.org/kio.html#pasteActionText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -27,13 +27,13 @@ bool k_io_can_paste_mime_data(void* param1);
 /// @param param3 KFileItem*
 const char* k_io_paste_action_text(void* param1, bool* param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/kio.html#setClipboardDataCut)
+/// [Upstream resources](https://api.kde.org/kio.html#setClipboardDataCut)
 ///
 /// @param param1 QMimeData*
 /// @param param2 bool
 void k_io_set_clipboard_data_cut(void* param1, bool param2);
 
-/// [Qt documentation](https://api.kde.org/kio.html#isClipboardDataCut)
+/// [Upstream resources](https://api.kde.org/kio.html#isClipboardDataCut)
 ///
 /// @param param1 QMimeData*
 bool k_io_is_clipboard_data_cut(void* param1);

@@ -13,21 +13,21 @@
 
 /// https://api.kde.org/krecentdirs.html
 
-/// [Qt documentation](https://api.kde.org/krecentdirs.html#list)
+/// [Upstream resources](https://api.kde.org/krecentdirs.html#list)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char** k_recentdirs_list(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/krecentdirs.html#dir)
+/// [Upstream resources](https://api.kde.org/krecentdirs.html#dir)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_recentdirs_dir(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/krecentdirs.html#add)
+/// [Upstream resources](https://api.kde.org/krecentdirs.html#add)
 ///
 /// @param param1 const char*
 /// @param param2 const char*

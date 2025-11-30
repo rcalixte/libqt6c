@@ -13,33 +13,33 @@
 
 /// https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#fromNative)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#fromNative)
 ///
 /// @param context void*
 /// @param display void*
 QOpenGLContext* q_nativeinterface__qeglcontext_from_native(void* context, void* display);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#nativeContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#nativeContext)
 ///
 /// @param self QNativeInterface__QEGLContext*
 void* q_nativeinterface__qeglcontext_native_context(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#config)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#config)
 ///
 /// @param self QNativeInterface__QEGLContext*
 void* q_nativeinterface__qeglcontext_config(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#display)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#display)
 ///
 /// @param self QNativeInterface__QEGLContext*
 void* q_nativeinterface__qeglcontext_display(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#invalidateContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#invalidateContext)
 ///
 /// @param self QNativeInterface__QEGLContext*
 void q_nativeinterface__qeglcontext_invalidate_context(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#fromNative)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#fromNative)
 ///
 /// @param context void*
 /// @param display void*

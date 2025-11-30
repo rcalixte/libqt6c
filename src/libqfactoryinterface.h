@@ -13,14 +13,14 @@
 
 /// https://doc.qt.io/qt-6/qfactoryinterface.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#keys)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfactoryinterface.html#keys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QFactoryInterface*
 const char** q_factoryinterface_keys(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#dtor.QFactoryInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfactoryinterface.html#dtor.QFactoryInterface)
 ///
 /// Delete this object from C++ memory.
 ///

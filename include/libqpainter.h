@@ -22,183 +22,183 @@ QPainter* q_painter_new();
 /// @param param1 QPaintDevice*
 QPainter* q_painter_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#device)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#device)
 ///
 /// @param self QPainter*
 QPaintDevice* q_painter_device(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#begin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#begin)
 ///
 /// @param self QPainter*
 /// @param param1 QPaintDevice*
 bool q_painter_begin(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#end)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#end)
 ///
 /// @param self QPainter*
 bool q_painter_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#isActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#isActive)
 ///
 /// @param self QPainter*
 bool q_painter_is_active(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setCompositionMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setCompositionMode)
 ///
 /// @param self QPainter*
 /// @param mode enum QPainter__CompositionMode
 void q_painter_set_composition_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#compositionMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#compositionMode)
 ///
 /// @param self QPainter*
 ///
 /// @return enum QPainter__CompositionMode
 int32_t q_painter_composition_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#font)
 ///
 /// @param self QPainter*
 const QFont* q_painter_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setFont)
 ///
 /// @param self QPainter*
 /// @param f QFont*
 void q_painter_set_font(void* self, void* f);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fontMetrics)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fontMetrics)
 ///
 /// @param self QPainter*
 QFontMetrics* q_painter_font_metrics(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fontInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fontInfo)
 ///
 /// @param self QPainter*
 QFontInfo* q_painter_font_info(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setPen)
 ///
 /// @param self QPainter*
 /// @param color QColor*
 void q_painter_set_pen(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setPen)
 ///
 /// @param self QPainter*
 /// @param pen QPen*
 void q_painter_set_pen2(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setPen)
 ///
 /// @param self QPainter*
 /// @param style enum Qt__PenStyle
 void q_painter_set_pen3(void* self, int32_t style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#pen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#pen)
 ///
 /// @param self QPainter*
 const QPen* q_painter_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setBrush)
 ///
 /// @param self QPainter*
 /// @param brush QBrush*
 void q_painter_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setBrush)
 ///
 /// @param self QPainter*
 /// @param style enum Qt__BrushStyle
 void q_painter_set_brush2(void* self, int32_t style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#brush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#brush)
 ///
 /// @param self QPainter*
 const QBrush* q_painter_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBackgroundMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setBackgroundMode)
 ///
 /// @param self QPainter*
 /// @param mode enum Qt__BGMode
 void q_painter_set_background_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#backgroundMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#backgroundMode)
 ///
 /// @param self QPainter*
 ///
 /// @return enum Qt__BGMode
 int32_t q_painter_background_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#brushOrigin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#brushOrigin)
 ///
 /// @param self QPainter*
 QPoint* q_painter_brush_origin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBrushOrigin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setBrushOrigin)
 ///
 /// @param self QPainter*
 /// @param x int
 /// @param y int
 void q_painter_set_brush_origin(void* self, int x, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBrushOrigin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setBrushOrigin)
 ///
 /// @param self QPainter*
 /// @param brushOrigin QPoint*
 void q_painter_set_brush_origin2(void* self, void* brushOrigin);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBrushOrigin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setBrushOrigin)
 ///
 /// @param self QPainter*
 /// @param brushOrigin QPointF*
 void q_painter_set_brush_origin3(void* self, void* brushOrigin);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBackground)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setBackground)
 ///
 /// @param self QPainter*
 /// @param bg QBrush*
 void q_painter_set_background(void* self, void* bg);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#background)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#background)
 ///
 /// @param self QPainter*
 const QBrush* q_painter_background(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#opacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#opacity)
 ///
 /// @param self QPainter*
 double q_painter_opacity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setOpacity)
 ///
 /// @param self QPainter*
 /// @param opacity double
 void q_painter_set_opacity(void* self, double opacity);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#clipRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#clipRegion)
 ///
 /// @param self QPainter*
 QRegion* q_painter_clip_region(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#clipPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#clipPath)
 ///
 /// @param self QPainter*
 QPainterPath* q_painter_clip_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRectF*
 void q_painter_set_clip_rect(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
 void q_painter_set_clip_rect2(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -207,143 +207,143 @@ void q_painter_set_clip_rect2(void* self, void* param1);
 /// @param h int
 void q_painter_set_clip_rect3(void* self, int x, int y, int w, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRegion)
 ///
 /// @param self QPainter*
 /// @param param1 QRegion*
 void q_painter_set_clip_region(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipPath)
 ///
 /// @param self QPainter*
 /// @param path QPainterPath*
 void q_painter_set_clip_path(void* self, void* path);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipping)
 ///
 /// @param self QPainter*
 /// @param enable bool
 void q_painter_set_clipping(void* self, bool enable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#hasClipping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#hasClipping)
 ///
 /// @param self QPainter*
 bool q_painter_has_clipping(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#clipBoundingRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#clipBoundingRect)
 ///
 /// @param self QPainter*
 QRectF* q_painter_clip_bounding_rect(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#save)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#save)
 ///
 /// @param self QPainter*
 void q_painter_save(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#restore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#restore)
 ///
 /// @param self QPainter*
 void q_painter_restore(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setTransform)
 ///
 /// @param self QPainter*
 /// @param transform QTransform*
 void q_painter_set_transform(void* self, void* transform);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#transform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#transform)
 ///
 /// @param self QPainter*
 const QTransform* q_painter_transform(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#deviceTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#deviceTransform)
 ///
 /// @param self QPainter*
 const QTransform* q_painter_device_transform(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#resetTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#resetTransform)
 ///
 /// @param self QPainter*
 void q_painter_reset_transform(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setWorldTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setWorldTransform)
 ///
 /// @param self QPainter*
 /// @param matrix QTransform*
 void q_painter_set_world_transform(void* self, void* matrix);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#worldTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#worldTransform)
 ///
 /// @param self QPainter*
 const QTransform* q_painter_world_transform(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#combinedTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#combinedTransform)
 ///
 /// @param self QPainter*
 QTransform* q_painter_combined_transform(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setWorldMatrixEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setWorldMatrixEnabled)
 ///
 /// @param self QPainter*
 /// @param enabled bool
 void q_painter_set_world_matrix_enabled(void* self, bool enabled);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#worldMatrixEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#worldMatrixEnabled)
 ///
 /// @param self QPainter*
 bool q_painter_world_matrix_enabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#scale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#scale)
 ///
 /// @param self QPainter*
 /// @param sx double
 /// @param sy double
 void q_painter_scale(void* self, double sx, double sy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#shear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#shear)
 ///
 /// @param self QPainter*
 /// @param sh double
 /// @param sv double
 void q_painter_shear(void* self, double sh, double sv);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#rotate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#rotate)
 ///
 /// @param self QPainter*
 /// @param a double
 void q_painter_rotate(void* self, double a);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#translate)
 ///
 /// @param self QPainter*
 /// @param offset QPointF*
 void q_painter_translate(void* self, void* offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#translate)
 ///
 /// @param self QPainter*
 /// @param offset QPoint*
 void q_painter_translate2(void* self, void* offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#translate)
 ///
 /// @param self QPainter*
 /// @param dx double
 /// @param dy double
 void q_painter_translate3(void* self, double dx, double dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#window)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#window)
 ///
 /// @param self QPainter*
 QRect* q_painter_window(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setWindow)
 ///
 /// @param self QPainter*
 /// @param window QRect*
 void q_painter_set_window(void* self, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setWindow)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -352,18 +352,18 @@ void q_painter_set_window(void* self, void* window);
 /// @param h int
 void q_painter_set_window2(void* self, int x, int y, int w, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#viewport)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#viewport)
 ///
 /// @param self QPainter*
 QRect* q_painter_viewport(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setViewport)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setViewport)
 ///
 /// @param self QPainter*
 /// @param viewport QRect*
 void q_painter_set_viewport(void* self, void* viewport);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setViewport)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setViewport)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -372,83 +372,83 @@ void q_painter_set_viewport(void* self, void* viewport);
 /// @param h int
 void q_painter_set_viewport2(void* self, int x, int y, int w, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setViewTransformEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setViewTransformEnabled)
 ///
 /// @param self QPainter*
 /// @param enable bool
 void q_painter_set_view_transform_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#viewTransformEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#viewTransformEnabled)
 ///
 /// @param self QPainter*
 bool q_painter_view_transform_enabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#strokePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#strokePath)
 ///
 /// @param self QPainter*
 /// @param path QPainterPath*
 /// @param pen QPen*
 void q_painter_stroke_path(void* self, void* path, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillPath)
 ///
 /// @param self QPainter*
 /// @param path QPainterPath*
 /// @param brush QBrush*
 void q_painter_fill_path(void* self, void* path, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPath)
 ///
 /// @param self QPainter*
 /// @param path QPainterPath*
 void q_painter_draw_path(void* self, void* path);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoint)
 ///
 /// @param self QPainter*
 /// @param pt QPointF*
 void q_painter_draw_point(void* self, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoint)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
 void q_painter_draw_point2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoint)
 ///
 /// @param self QPainter*
 /// @param x int
 /// @param y int
 void q_painter_draw_point3(void* self, int x, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
 ///
 /// @param self QPainter*
 /// @param points QPointF*
 /// @param pointCount int
 void q_painter_draw_points(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
 ///
 /// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 void q_painter_draw_points3(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLine)
 ///
 /// @param self QPainter*
 /// @param line QLineF*
 void q_painter_draw_line(void* self, void* line);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLine)
 ///
 /// @param self QPainter*
 /// @param line QLine*
 void q_painter_draw_line2(void* self, void* line);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLine)
 ///
 /// @param self QPainter*
 /// @param x1 int
@@ -457,79 +457,79 @@ void q_painter_draw_line2(void* self, void* line);
 /// @param y2 int
 void q_painter_draw_line3(void* self, int x1, int y1, int x2, int y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLine)
 ///
 /// @param self QPainter*
 /// @param p1 QPoint*
 /// @param p2 QPoint*
 void q_painter_draw_line4(void* self, void* p1, void* p2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLine)
 ///
 /// @param self QPainter*
 /// @param p1 QPointF*
 /// @param p2 QPointF*
 void q_painter_draw_line5(void* self, void* p1, void* p2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param lines QLineF*
 /// @param lineCount int
 void q_painter_draw_lines(void* self, void* lines, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param lines libqt_list /* of QLineF* */
 void q_painter_draw_lines2(void* self, libqt_list lines);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param pointPairs QPointF*
 /// @param lineCount int
 void q_painter_draw_lines3(void* self, void* pointPairs, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param pointPairs libqt_list /* of QPointF* */
 void q_painter_draw_lines4(void* self, libqt_list pointPairs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param lines QLine*
 /// @param lineCount int
 void q_painter_draw_lines5(void* self, void* lines, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param lines libqt_list /* of QLine* */
 void q_painter_draw_lines6(void* self, libqt_list lines);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param pointPairs QPoint*
 /// @param lineCount int
 void q_painter_draw_lines7(void* self, void* pointPairs, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QPainter*
 /// @param pointPairs libqt_list /* of QPoint* */
 void q_painter_draw_lines8(void* self, libqt_list pointPairs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRect)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
 void q_painter_draw_rect(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRect)
 ///
 /// @param self QPainter*
 /// @param x1 int
@@ -538,51 +538,51 @@ void q_painter_draw_rect(void* self, void* rect);
 /// @param h int
 void q_painter_draw_rect2(void* self, int x1, int y1, int w, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRect)
 ///
 /// @param self QPainter*
 /// @param rect QRect*
 void q_painter_draw_rect3(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QPainter*
 /// @param rects QRectF*
 /// @param rectCount int
 void q_painter_draw_rects(void* self, void* rects, int rectCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QPainter*
 /// @param rectangles libqt_list /* of QRectF* */
 void q_painter_draw_rects2(void* self, libqt_list rectangles);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QPainter*
 /// @param rects QRect*
 /// @param rectCount int
 void q_painter_draw_rects3(void* self, void* rects, int rectCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QPainter*
 /// @param rectangles libqt_list /* of QRect* */
 void q_painter_draw_rects4(void* self, libqt_list rectangles);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 void q_painter_draw_ellipse(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 void q_painter_draw_ellipse2(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -591,7 +591,7 @@ void q_painter_draw_ellipse2(void* self, void* r);
 /// @param h int
 void q_painter_draw_ellipse3(void* self, int x, int y, int w, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
 ///
 /// @param self QPainter*
 /// @param center QPointF*
@@ -599,7 +599,7 @@ void q_painter_draw_ellipse3(void* self, int x, int y, int w, int h);
 /// @param ry double
 void q_painter_draw_ellipse4(void* self, void* center, double rx, double ry);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
 ///
 /// @param self QPainter*
 /// @param center QPoint*
@@ -607,49 +607,49 @@ void q_painter_draw_ellipse4(void* self, void* center, double rx, double ry);
 /// @param ry int
 void q_painter_draw_ellipse5(void* self, void* center, int rx, int ry);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
 ///
 /// @param self QPainter*
 /// @param points QPointF*
 /// @param pointCount int
 void q_painter_draw_polyline(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
 ///
 /// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 void q_painter_draw_polyline3(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QPainter*
 /// @param points QPointF*
 /// @param pointCount int
 void q_painter_draw_polygon(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 void q_painter_draw_polygon3(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
 ///
 /// @param self QPainter*
 /// @param points QPointF*
 /// @param pointCount int
 void q_painter_draw_convex_polygon(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
 ///
 /// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 void q_painter_draw_convex_polygon3(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawArc)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawArc)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -657,7 +657,7 @@ void q_painter_draw_convex_polygon3(void* self, void* points, int pointCount);
 /// @param alen int
 void q_painter_draw_arc(void* self, void* rect, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawArc)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawArc)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
@@ -665,7 +665,7 @@ void q_painter_draw_arc(void* self, void* rect, int a, int alen);
 /// @param alen int
 void q_painter_draw_arc2(void* self, void* param1, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawArc)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawArc)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -676,7 +676,7 @@ void q_painter_draw_arc2(void* self, void* param1, int a, int alen);
 /// @param alen int
 void q_painter_draw_arc3(void* self, int x, int y, int w, int h, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPie)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPie)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -684,7 +684,7 @@ void q_painter_draw_arc3(void* self, int x, int y, int w, int h, int a, int alen
 /// @param alen int
 void q_painter_draw_pie(void* self, void* rect, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPie)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPie)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -695,7 +695,7 @@ void q_painter_draw_pie(void* self, void* rect, int a, int alen);
 /// @param alen int
 void q_painter_draw_pie2(void* self, int x, int y, int w, int h, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPie)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPie)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
@@ -703,7 +703,7 @@ void q_painter_draw_pie2(void* self, int x, int y, int w, int h, int a, int alen
 /// @param alen int
 void q_painter_draw_pie3(void* self, void* param1, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawChord)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawChord)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -711,7 +711,7 @@ void q_painter_draw_pie3(void* self, void* param1, int a, int alen);
 /// @param alen int
 void q_painter_draw_chord(void* self, void* rect, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawChord)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawChord)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -722,7 +722,7 @@ void q_painter_draw_chord(void* self, void* rect, int a, int alen);
 /// @param alen int
 void q_painter_draw_chord2(void* self, int x, int y, int w, int h, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawChord)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawChord)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
@@ -730,7 +730,7 @@ void q_painter_draw_chord2(void* self, int x, int y, int w, int h, int a, int al
 /// @param alen int
 void q_painter_draw_chord3(void* self, void* param1, int a, int alen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -738,7 +738,7 @@ void q_painter_draw_chord3(void* self, void* param1, int a, int alen);
 /// @param yRadius double
 void q_painter_draw_rounded_rect(void* self, void* rect, double xRadius, double yRadius);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -749,7 +749,7 @@ void q_painter_draw_rounded_rect(void* self, void* rect, double xRadius, double 
 /// @param yRadius double
 void q_painter_draw_rounded_rect2(void* self, int x, int y, int w, int h, double xRadius, double yRadius);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
 /// @param self QPainter*
 /// @param rect QRect*
@@ -757,14 +757,14 @@ void q_painter_draw_rounded_rect2(void* self, int x, int y, int w, int h, double
 /// @param yRadius double
 void q_painter_draw_rounded_rect3(void* self, void* rect, double xRadius, double yRadius);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
 /// @param pm QPixmap*
 void q_painter_draw_tiled_pixmap(void* self, void* rect, void* pm);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -774,21 +774,21 @@ void q_painter_draw_tiled_pixmap(void* self, void* rect, void* pm);
 /// @param param5 QPixmap*
 void q_painter_draw_tiled_pixmap2(void* self, int x, int y, int w, int h, void* param5);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
 /// @param param2 QPixmap*
 void q_painter_draw_tiled_pixmap3(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPicture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPicture)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
 /// @param picture QPicture*
 void q_painter_draw_picture(void* self, void* p, void* picture);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPicture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPicture)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -796,14 +796,14 @@ void q_painter_draw_picture(void* self, void* p, void* picture);
 /// @param picture QPicture*
 void q_painter_draw_picture2(void* self, int x, int y, void* picture);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPicture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPicture)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
 /// @param picture QPicture*
 void q_painter_draw_picture3(void* self, void* p, void* picture);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param targetRect QRectF*
@@ -811,7 +811,7 @@ void q_painter_draw_picture3(void* self, void* p, void* picture);
 /// @param sourceRect QRectF*
 void q_painter_draw_pixmap(void* self, void* targetRect, void* pixmap, void* sourceRect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param targetRect QRect*
@@ -819,7 +819,7 @@ void q_painter_draw_pixmap(void* self, void* targetRect, void* pixmap, void* sou
 /// @param sourceRect QRect*
 void q_painter_draw_pixmap2(void* self, void* targetRect, void* pixmap, void* sourceRect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -833,7 +833,7 @@ void q_painter_draw_pixmap2(void* self, void* targetRect, void* pixmap, void* so
 /// @param sh int
 void q_painter_draw_pixmap3(void* self, int x, int y, int w, int h, void* pm, int sx, int sy, int sw, int sh);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -845,7 +845,7 @@ void q_painter_draw_pixmap3(void* self, int x, int y, int w, int h, void* pm, in
 /// @param sh int
 void q_painter_draw_pixmap4(void* self, int x, int y, void* pm, int sx, int sy, int sw, int sh);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
@@ -853,7 +853,7 @@ void q_painter_draw_pixmap4(void* self, int x, int y, void* pm, int sx, int sy, 
 /// @param sr QRectF*
 void q_painter_draw_pixmap5(void* self, void* p, void* pm, void* sr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
@@ -861,21 +861,21 @@ void q_painter_draw_pixmap5(void* self, void* p, void* pm, void* sr);
 /// @param sr QRect*
 void q_painter_draw_pixmap6(void* self, void* p, void* pm, void* sr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
 /// @param pm QPixmap*
 void q_painter_draw_pixmap7(void* self, void* p, void* pm);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
 /// @param pm QPixmap*
 void q_painter_draw_pixmap8(void* self, void* p, void* pm);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -883,14 +883,14 @@ void q_painter_draw_pixmap8(void* self, void* p, void* pm);
 /// @param pm QPixmap*
 void q_painter_draw_pixmap9(void* self, int x, int y, void* pm);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param pm QPixmap*
 void q_painter_draw_pixmap10(void* self, void* r, void* pm);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmap)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -900,7 +900,7 @@ void q_painter_draw_pixmap10(void* self, void* r, void* pm);
 /// @param pm QPixmap*
 void q_painter_draw_pixmap11(void* self, int x, int y, int w, int h, void* pm);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmapFragments)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmapFragments)
 ///
 /// @param self QPainter*
 /// @param fragments QPainter__PixmapFragment*
@@ -908,7 +908,7 @@ void q_painter_draw_pixmap11(void* self, int x, int y, int w, int h, void* pm);
 /// @param pixmap QPixmap*
 void q_painter_draw_pixmap_fragments(void* self, void* fragments, int fragmentCount, void* pixmap);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param targetRect QRectF*
@@ -916,7 +916,7 @@ void q_painter_draw_pixmap_fragments(void* self, void* fragments, int fragmentCo
 /// @param sourceRect QRectF*
 void q_painter_draw_image(void* self, void* targetRect, void* image, void* sourceRect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param targetRect QRect*
@@ -924,7 +924,7 @@ void q_painter_draw_image(void* self, void* targetRect, void* image, void* sourc
 /// @param sourceRect QRect*
 void q_painter_draw_image2(void* self, void* targetRect, void* image, void* sourceRect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
@@ -932,7 +932,7 @@ void q_painter_draw_image2(void* self, void* targetRect, void* image, void* sour
 /// @param sr QRectF*
 void q_painter_draw_image3(void* self, void* p, void* image, void* sr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
@@ -940,35 +940,35 @@ void q_painter_draw_image3(void* self, void* p, void* image, void* sr);
 /// @param sr QRect*
 void q_painter_draw_image4(void* self, void* p, void* image, void* sr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param image QImage*
 void q_painter_draw_image5(void* self, void* r, void* image);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param image QImage*
 void q_painter_draw_image6(void* self, void* r, void* image);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
 /// @param image QImage*
 void q_painter_draw_image7(void* self, void* p, void* image);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
 /// @param image QImage*
 void q_painter_draw_image8(void* self, void* p, void* image);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -976,41 +976,41 @@ void q_painter_draw_image8(void* self, void* p, void* image);
 /// @param image QImage*
 void q_painter_draw_image9(void* self, int x, int y, void* image);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setLayoutDirection)
 ///
 /// @param self QPainter*
 /// @param direction enum Qt__LayoutDirection
 void q_painter_set_layout_direction(void* self, int32_t direction);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#layoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#layoutDirection)
 ///
 /// @param self QPainter*
 ///
 /// @return enum Qt__LayoutDirection
 int32_t q_painter_layout_direction(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawGlyphRun)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawGlyphRun)
 ///
 /// @param self QPainter*
 /// @param position QPointF*
 /// @param glyphRun QGlyphRun*
 void q_painter_draw_glyph_run(void* self, void* position, void* glyphRun);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawStaticText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawStaticText)
 ///
 /// @param self QPainter*
 /// @param topLeftPosition QPointF*
 /// @param staticText QStaticText*
 void q_painter_draw_static_text(void* self, void* topLeftPosition, void* staticText);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawStaticText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawStaticText)
 ///
 /// @param self QPainter*
 /// @param topLeftPosition QPoint*
 /// @param staticText QStaticText*
 void q_painter_draw_static_text2(void* self, void* topLeftPosition, void* staticText);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawStaticText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawStaticText)
 ///
 /// @param self QPainter*
 /// @param left int
@@ -1018,21 +1018,21 @@ void q_painter_draw_static_text2(void* self, void* topLeftPosition, void* static
 /// @param staticText QStaticText*
 void q_painter_draw_static_text3(void* self, int left, int top, void* staticText);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
 /// @param s const char*
 void q_painter_draw_text(void* self, void* p, const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
 /// @param s const char*
 void q_painter_draw_text2(void* self, void* p, const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1040,7 +1040,7 @@ void q_painter_draw_text2(void* self, void* p, const char* s);
 /// @param s const char*
 void q_painter_draw_text3(void* self, int x, int y, const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
@@ -1049,7 +1049,7 @@ void q_painter_draw_text3(void* self, int x, int y, const char* s);
 /// @param justificationPadding int
 void q_painter_draw_text4(void* self, void* p, const char* str, int tf, int justificationPadding);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
@@ -1057,7 +1057,7 @@ void q_painter_draw_text4(void* self, void* p, const char* str, int tf, int just
 /// @param text const char*
 void q_painter_draw_text5(void* self, void* r, int flags, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param r QRect*
@@ -1065,7 +1065,7 @@ void q_painter_draw_text5(void* self, void* r, int flags, const char* text);
 /// @param text const char*
 void q_painter_draw_text6(void* self, void* r, int flags, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1076,14 +1076,14 @@ void q_painter_draw_text6(void* self, void* r, int flags, const char* text);
 /// @param text const char*
 void q_painter_draw_text7(void* self, int x, int y, int w, int h, int flags, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param text const char*
 void q_painter_draw_text8(void* self, void* r, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -1091,7 +1091,7 @@ void q_painter_draw_text8(void* self, void* r, const char* text);
 /// @param text const char*
 QRectF* q_painter_bounding_rect(void* self, void* rect, int flags, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
 ///
 /// @param self QPainter*
 /// @param rect QRect*
@@ -1099,7 +1099,7 @@ QRectF* q_painter_bounding_rect(void* self, void* rect, int flags, const char* t
 /// @param text const char*
 QRect* q_painter_bounding_rect2(void* self, void* rect, int flags, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1110,21 +1110,21 @@ QRect* q_painter_bounding_rect2(void* self, void* rect, int flags, const char* t
 /// @param text const char*
 QRect* q_painter_bounding_rect3(void* self, int x, int y, int w, int h, int flags, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
 /// @param text const char*
 QRectF* q_painter_bounding_rect4(void* self, void* rect, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTextItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTextItem)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
 /// @param ti QTextItem*
 void q_painter_draw_text_item(void* self, void* p, void* ti);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTextItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTextItem)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1132,21 +1132,21 @@ void q_painter_draw_text_item(void* self, void* p, void* ti);
 /// @param ti QTextItem*
 void q_painter_draw_text_item2(void* self, int x, int y, void* ti);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTextItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTextItem)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
 /// @param ti QTextItem*
 void q_painter_draw_text_item3(void* self, void* p, void* ti);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRectF*
 /// @param param2 QBrush*
 void q_painter_fill_rect(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1156,21 +1156,21 @@ void q_painter_fill_rect(void* self, void* param1, void* param2);
 /// @param param5 QBrush*
 void q_painter_fill_rect2(void* self, int x, int y, int w, int h, void* param5);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
 /// @param param2 QBrush*
 void q_painter_fill_rect3(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRectF*
 /// @param color QColor*
 void q_painter_fill_rect4(void* self, void* param1, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1180,14 +1180,14 @@ void q_painter_fill_rect4(void* self, void* param1, void* color);
 /// @param color QColor*
 void q_painter_fill_rect5(void* self, int x, int y, int w, int h, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
 /// @param color QColor*
 void q_painter_fill_rect6(void* self, void* param1, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1197,21 +1197,21 @@ void q_painter_fill_rect6(void* self, void* param1, void* color);
 /// @param c enum Qt__GlobalColor
 void q_painter_fill_rect7(void* self, int x, int y, int w, int h, int32_t c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param c enum Qt__GlobalColor
 void q_painter_fill_rect8(void* self, void* r, int32_t c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param c enum Qt__GlobalColor
 void q_painter_fill_rect9(void* self, void* r, int32_t c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1221,21 +1221,21 @@ void q_painter_fill_rect9(void* self, void* r, int32_t c);
 /// @param style enum Qt__BrushStyle
 void q_painter_fill_rect10(void* self, int x, int y, int w, int h, int32_t style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param style enum Qt__BrushStyle
 void q_painter_fill_rect11(void* self, void* r, int32_t style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param style enum Qt__BrushStyle
 void q_painter_fill_rect12(void* self, void* r, int32_t style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1245,27 +1245,27 @@ void q_painter_fill_rect12(void* self, void* r, int32_t style);
 /// @param preset enum QGradient__Preset
 void q_painter_fill_rect13(void* self, int x, int y, int w, int h, int32_t preset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param preset enum QGradient__Preset
 void q_painter_fill_rect14(void* self, void* r, int32_t preset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param preset enum QGradient__Preset
 void q_painter_fill_rect15(void* self, void* r, int32_t preset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#eraseRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#eraseRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRectF*
 void q_painter_erase_rect(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#eraseRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#eraseRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1274,67 +1274,67 @@ void q_painter_erase_rect(void* self, void* param1);
 /// @param h int
 void q_painter_erase_rect2(void* self, int x, int y, int w, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#eraseRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#eraseRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
 void q_painter_erase_rect3(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setRenderHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setRenderHint)
 ///
 /// @param self QPainter*
 /// @param hint enum QPainter__RenderHint
 void q_painter_set_render_hint(void* self, int32_t hint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setRenderHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setRenderHints)
 ///
 /// @param self QPainter*
 /// @param hints flag of enum QPainter__RenderHint
 void q_painter_set_render_hints(void* self, int32_t hints);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#renderHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#renderHints)
 ///
 /// @param self QPainter*
 ///
 /// @return flag of enum QPainter__RenderHint
 int32_t q_painter_render_hints(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#testRenderHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#testRenderHint)
 ///
 /// @param self QPainter*
 /// @param hint enum QPainter__RenderHint
 bool q_painter_test_render_hint(void* self, int32_t hint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#paintEngine)
 ///
 /// @param self QPainter*
 QPaintEngine* q_painter_paint_engine(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#beginNativePainting)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#beginNativePainting)
 ///
 /// @param self QPainter*
 void q_painter_begin_native_painting(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#endNativePainting)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#endNativePainting)
 ///
 /// @param self QPainter*
 void q_painter_end_native_painting(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRectF*
 /// @param op enum Qt__ClipOperation
 void q_painter_set_clip_rect22(void* self, void* param1, int32_t op);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
 /// @param op enum Qt__ClipOperation
 void q_painter_set_clip_rect23(void* self, void* param1, int32_t op);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1344,35 +1344,35 @@ void q_painter_set_clip_rect23(void* self, void* param1, int32_t op);
 /// @param op enum Qt__ClipOperation
 void q_painter_set_clip_rect5(void* self, int x, int y, int w, int h, int32_t op);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipRegion)
 ///
 /// @param self QPainter*
 /// @param param1 QRegion*
 /// @param op enum Qt__ClipOperation
 void q_painter_set_clip_region2(void* self, void* param1, int32_t op);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setClipPath)
 ///
 /// @param self QPainter*
 /// @param path QPainterPath*
 /// @param op enum Qt__ClipOperation
 void q_painter_set_clip_path2(void* self, void* path, int32_t op);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setTransform)
 ///
 /// @param self QPainter*
 /// @param transform QTransform*
 /// @param combine bool
 void q_painter_set_transform2(void* self, void* transform, bool combine);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setWorldTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setWorldTransform)
 ///
 /// @param self QPainter*
 /// @param matrix QTransform*
 /// @param combine bool
 void q_painter_set_world_transform2(void* self, void* matrix, bool combine);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QPainter*
 /// @param points QPointF*
@@ -1380,7 +1380,7 @@ void q_painter_set_world_transform2(void* self, void* matrix, bool combine);
 /// @param fillRule enum Qt__FillRule
 void q_painter_draw_polygon32(void* self, void* points, int pointCount, int32_t fillRule);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QPainter*
 /// @param points QPoint*
@@ -1388,7 +1388,7 @@ void q_painter_draw_polygon32(void* self, void* points, int pointCount, int32_t 
 /// @param fillRule enum Qt__FillRule
 void q_painter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -1397,7 +1397,7 @@ void q_painter_draw_polygon33(void* self, void* points, int pointCount, int32_t 
 /// @param mode enum Qt__SizeMode
 void q_painter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1409,7 +1409,7 @@ void q_painter_draw_rounded_rect4(void* self, void* rect, double xRadius, double
 /// @param mode enum Qt__SizeMode
 void q_painter_draw_rounded_rect7(void* self, int x, int y, int w, int h, double xRadius, double yRadius, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
 /// @param self QPainter*
 /// @param rect QRect*
@@ -1418,7 +1418,7 @@ void q_painter_draw_rounded_rect7(void* self, int x, int y, int w, int h, double
 /// @param mode enum Qt__SizeMode
 void q_painter_draw_rounded_rect42(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -1426,7 +1426,7 @@ void q_painter_draw_rounded_rect42(void* self, void* rect, double xRadius, doubl
 /// @param offset QPointF*
 void q_painter_draw_tiled_pixmap32(void* self, void* rect, void* pm, void* offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1437,7 +1437,7 @@ void q_painter_draw_tiled_pixmap32(void* self, void* rect, void* pm, void* offse
 /// @param sx int
 void q_painter_draw_tiled_pixmap6(void* self, int x, int y, int w, int h, void* param5, int sx);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1449,7 +1449,7 @@ void q_painter_draw_tiled_pixmap6(void* self, int x, int y, int w, int h, void* 
 /// @param sy int
 void q_painter_draw_tiled_pixmap7(void* self, int x, int y, int w, int h, void* param5, int sx, int sy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
@@ -1457,7 +1457,7 @@ void q_painter_draw_tiled_pixmap7(void* self, int x, int y, int w, int h, void* 
 /// @param param3 QPoint*
 void q_painter_draw_tiled_pixmap33(void* self, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPixmapFragments)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPixmapFragments)
 ///
 /// @param self QPainter*
 /// @param fragments QPainter__PixmapFragment*
@@ -1466,7 +1466,7 @@ void q_painter_draw_tiled_pixmap33(void* self, void* param1, void* param2, void*
 /// @param hints flag of enum QPainter__PixmapFragmentHint
 void q_painter_draw_pixmap_fragments4(void* self, void* fragments, int fragmentCount, void* pixmap, int32_t hints);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param targetRect QRectF*
@@ -1475,7 +1475,7 @@ void q_painter_draw_pixmap_fragments4(void* self, void* fragments, int fragmentC
 /// @param flags flag of enum Qt__ImageConversionFlag
 void q_painter_draw_image42(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param targetRect QRect*
@@ -1484,7 +1484,7 @@ void q_painter_draw_image42(void* self, void* targetRect, void* image, void* sou
 /// @param flags flag of enum Qt__ImageConversionFlag
 void q_painter_draw_image43(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param p QPointF*
@@ -1493,7 +1493,7 @@ void q_painter_draw_image43(void* self, void* targetRect, void* image, void* sou
 /// @param flags flag of enum Qt__ImageConversionFlag
 void q_painter_draw_image44(void* self, void* p, void* image, void* sr, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param p QPoint*
@@ -1502,7 +1502,7 @@ void q_painter_draw_image44(void* self, void* p, void* image, void* sr, int32_t 
 /// @param flags flag of enum Qt__ImageConversionFlag
 void q_painter_draw_image45(void* self, void* p, void* image, void* sr, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1511,7 +1511,7 @@ void q_painter_draw_image45(void* self, void* p, void* image, void* sr, int32_t 
 /// @param sx int
 void q_painter_draw_image46(void* self, int x, int y, void* image, int sx);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1521,7 +1521,7 @@ void q_painter_draw_image46(void* self, int x, int y, void* image, int sx);
 /// @param sy int
 void q_painter_draw_image52(void* self, int x, int y, void* image, int sx, int sy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1532,7 +1532,7 @@ void q_painter_draw_image52(void* self, int x, int y, void* image, int sx, int s
 /// @param sw int
 void q_painter_draw_image62(void* self, int x, int y, void* image, int sx, int sy, int sw);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1544,7 +1544,7 @@ void q_painter_draw_image62(void* self, int x, int y, void* image, int sx, int s
 /// @param sh int
 void q_painter_draw_image72(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawImage)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1557,7 +1557,7 @@ void q_painter_draw_image72(void* self, int x, int y, void* image, int sx, int s
 /// @param flags flag of enum Qt__ImageConversionFlag
 void q_painter_draw_image82(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
@@ -1566,7 +1566,7 @@ void q_painter_draw_image82(void* self, int x, int y, void* image, int sx, int s
 /// @param br QRectF*
 void q_painter_draw_text42(void* self, void* r, int flags, const char* text, void* br);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param r QRect*
@@ -1575,7 +1575,7 @@ void q_painter_draw_text42(void* self, void* r, int flags, const char* text, voi
 /// @param br QRect*
 void q_painter_draw_text43(void* self, void* r, int flags, const char* text, void* br);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param x int
@@ -1587,7 +1587,7 @@ void q_painter_draw_text43(void* self, void* r, int flags, const char* text, voi
 /// @param br QRect*
 void q_painter_draw_text72(void* self, int x, int y, int w, int h, int flags, const char* text, void* br);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawText)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
@@ -1595,7 +1595,7 @@ void q_painter_draw_text72(void* self, int x, int y, int w, int h, int flags, co
 /// @param o QTextOption*
 void q_painter_draw_text32(void* self, void* r, const char* text, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#boundingRect)
 ///
 /// @param self QPainter*
 /// @param rect QRectF*
@@ -1603,21 +1603,21 @@ void q_painter_draw_text32(void* self, void* r, const char* text, void* o);
 /// @param o QTextOption*
 QRectF* q_painter_bounding_rect32(void* self, void* rect, const char* text, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setRenderHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setRenderHint)
 ///
 /// @param self QPainter*
 /// @param hint enum QPainter__RenderHint
 /// @param on bool
 void q_painter_set_render_hint2(void* self, int32_t hint, bool on);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setRenderHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#setRenderHints)
 ///
 /// @param self QPainter*
 /// @param hints flag of enum QPainter__RenderHint
 /// @param on bool
 void q_painter_set_render_hints2(void* self, int32_t hints, bool on);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#dtor.QPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#dtor.QPainter)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -1635,130 +1635,130 @@ QPainter__PixmapFragment* q_painter__pixmapfragment_new();
 /// @param param1 QPainter__PixmapFragment*
 QPainter__PixmapFragment* q_painter__pixmapfragment_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#x-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#x-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#x-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#x-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param x double
 void q_painter__pixmapfragment_set_x(void* self, double x);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#y-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#y-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#y-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#y-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param y double
 void q_painter__pixmapfragment_set_y(void* self, double y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceLeft-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceLeft-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_source_left(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceLeft-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceLeft-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param sourceLeft double
 void q_painter__pixmapfragment_set_source_left(void* self, double sourceLeft);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceTop-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceTop-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_source_top(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceTop-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceTop-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param sourceTop double
 void q_painter__pixmapfragment_set_source_top(void* self, double sourceTop);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#width-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#width-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#width-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#width-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param width double
 void q_painter__pixmapfragment_set_width(void* self, double width);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#height-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#height-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_height(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#height-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#height-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param height double
 void q_painter__pixmapfragment_set_height(void* self, double height);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleX-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleX-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_scale_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleX-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleX-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param scaleX double
 void q_painter__pixmapfragment_set_scale_x(void* self, double scaleX);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleY-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleY-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_scale_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleY-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleY-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param scaleY double
 void q_painter__pixmapfragment_set_scale_y(void* self, double scaleY);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#rotation-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#rotation-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_rotation(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#rotation-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#rotation-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param rotation double
 void q_painter__pixmapfragment_set_rotation(void* self, double rotation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#opacity-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#opacity-var)
 ///
 /// @param self QPainter__PixmapFragment*
 double q_painter__pixmapfragment_opacity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#opacity-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#opacity-var)
 ///
 /// @param self QPainter__PixmapFragment*
 /// @param opacity double
 void q_painter__pixmapfragment_set_opacity(void* self, double opacity);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
 ///
 /// @param pos QPointF*
 /// @param sourceRect QRectF*
 QPainter__PixmapFragment* q_painter__pixmapfragment_create(void* pos, void* sourceRect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
 ///
 /// @param pos QPointF*
 /// @param sourceRect QRectF*
 /// @param scaleX double
 QPainter__PixmapFragment* q_painter__pixmapfragment_create3(void* pos, void* sourceRect, double scaleX);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
 ///
 /// @param pos QPointF*
 /// @param sourceRect QRectF*
@@ -1766,7 +1766,7 @@ QPainter__PixmapFragment* q_painter__pixmapfragment_create3(void* pos, void* sou
 /// @param scaleY double
 QPainter__PixmapFragment* q_painter__pixmapfragment_create4(void* pos, void* sourceRect, double scaleX, double scaleY);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
 ///
 /// @param pos QPointF*
 /// @param sourceRect QRectF*
@@ -1775,7 +1775,7 @@ QPainter__PixmapFragment* q_painter__pixmapfragment_create4(void* pos, void* sou
 /// @param rotation double
 QPainter__PixmapFragment* q_painter__pixmapfragment_create5(void* pos, void* sourceRect, double scaleX, double scaleY, double rotation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
 ///
 /// @param pos QPointF*
 /// @param sourceRect QRectF*

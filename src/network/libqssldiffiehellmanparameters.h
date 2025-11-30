@@ -22,69 +22,69 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new();
 /// @param other QSslDiffieHellmanParameters*
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#defaultParameters)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#defaultParameters)
 ///
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_default_parameters();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#operator-eq)
 ///
 /// @param self QSslDiffieHellmanParameters*
 /// @param other QSslDiffieHellmanParameters*
 void q_ssldiffiehellmanparameters_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#swap)
 ///
 /// @param self QSslDiffieHellmanParameters*
 /// @param other QSslDiffieHellmanParameters*
 void q_ssldiffiehellmanparameters_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// @param encoded const char*
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(const char* encoded);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// @param device QIODevice*
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(void* device);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isEmpty)
 ///
 /// @param self QSslDiffieHellmanParameters*
 bool q_ssldiffiehellmanparameters_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isValid)
 ///
 /// @param self QSslDiffieHellmanParameters*
 bool q_ssldiffiehellmanparameters_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#error)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#error)
 ///
 /// @param self QSslDiffieHellmanParameters*
 ///
 /// @return enum QSslDiffieHellmanParameters__Error
 int32_t q_ssldiffiehellmanparameters_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslDiffieHellmanParameters*
 const char* q_ssldiffiehellmanparameters_error_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// @param encoded const char*
 /// @param format enum QSsl__EncodingFormat
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// @param device QIODevice*
 /// @param format enum QSsl__EncodingFormat
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#dtor.QSslDiffieHellmanParameters)
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#dtor.QSslDiffieHellmanParameters)
 ///
 /// Delete this object from C++ memory.
 ///

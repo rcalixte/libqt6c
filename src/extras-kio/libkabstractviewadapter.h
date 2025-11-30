@@ -18,12 +18,12 @@
 /// @param parent QObject*
 KAbstractViewAdapter* k_abstractviewadapter_new(void* parent);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#model)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#model)
 ///
 /// @param self KAbstractViewAdapter*
 QAbstractItemModel* k_abstractviewadapter_model(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#model)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#model)
 ///
 /// Allows for overriding the related default method
 ///
@@ -31,19 +31,19 @@ QAbstractItemModel* k_abstractviewadapter_model(void* self);
 /// @param callback QAbstractItemModel* func()
 void k_abstractviewadapter_on_model(void* self, QAbstractItemModel* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#model)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#model)
 ///
 /// Base class method implementation
 ///
 /// @param self KAbstractViewAdapter*
 QAbstractItemModel* k_abstractviewadapter_qbase_model(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#iconSize)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#iconSize)
 ///
 /// @param self KAbstractViewAdapter*
 QSize* k_abstractviewadapter_icon_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#iconSize)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#iconSize)
 ///
 /// Allows for overriding the related default method
 ///
@@ -51,19 +51,19 @@ QSize* k_abstractviewadapter_icon_size(void* self);
 /// @param callback QSize* func()
 void k_abstractviewadapter_on_icon_size(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#iconSize)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#iconSize)
 ///
 /// Base class method implementation
 ///
 /// @param self KAbstractViewAdapter*
 QSize* k_abstractviewadapter_qbase_icon_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#palette)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#palette)
 ///
 /// @param self KAbstractViewAdapter*
 QPalette* k_abstractviewadapter_palette(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#palette)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#palette)
 ///
 /// Allows for overriding the related default method
 ///
@@ -71,19 +71,19 @@ QPalette* k_abstractviewadapter_palette(void* self);
 /// @param callback QPalette* func()
 void k_abstractviewadapter_on_palette(void* self, QPalette* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#palette)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#palette)
 ///
 /// Base class method implementation
 ///
 /// @param self KAbstractViewAdapter*
 QPalette* k_abstractviewadapter_qbase_palette(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#visibleArea)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visibleArea)
 ///
 /// @param self KAbstractViewAdapter*
 QRect* k_abstractviewadapter_visible_area(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#visibleArea)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visibleArea)
 ///
 /// Allows for overriding the related default method
 ///
@@ -91,20 +91,20 @@ QRect* k_abstractviewadapter_visible_area(void* self);
 /// @param callback QRect* func()
 void k_abstractviewadapter_on_visible_area(void* self, QRect* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#visibleArea)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visibleArea)
 ///
 /// Base class method implementation
 ///
 /// @param self KAbstractViewAdapter*
 QRect* k_abstractviewadapter_qbase_visible_area(void* self);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#visualRect)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visualRect)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param index QModelIndex*
 QRect* k_abstractviewadapter_visual_rect(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#visualRect)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visualRect)
 ///
 /// Allows for overriding the related default method
 ///
@@ -112,7 +112,7 @@ QRect* k_abstractviewadapter_visual_rect(void* self, void* index);
 /// @param callback QRect* func(KAbstractViewAdapter* self, QModelIndex* index)
 void k_abstractviewadapter_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#visualRect)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visualRect)
 ///
 /// Base class method implementation
 ///
@@ -120,7 +120,7 @@ void k_abstractviewadapter_on_visual_rect(void* self, QRect* (*callback)(void*, 
 /// @param index QModelIndex*
 QRect* k_abstractviewadapter_qbase_visual_rect(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#connect)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#connect)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param signal enum KAbstractViewAdapter__Signal
@@ -128,7 +128,7 @@ QRect* k_abstractviewadapter_qbase_visual_rect(void* self, void* index);
 /// @param slot const char*
 void k_abstractviewadapter_connect(void* self, int32_t signal, void* receiver, const char* slot);
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#connect)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#connect)
 ///
 /// Allows for overriding the related default method
 ///
@@ -136,7 +136,7 @@ void k_abstractviewadapter_connect(void* self, int32_t signal, void* receiver, c
 /// @param callback void func(KAbstractViewAdapter* self, enum KAbstractViewAdapter__Signal signal, QObject* receiver, const char* slot)
 void k_abstractviewadapter_on_connect(void* self, void (*callback)(void*, int32_t, void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#connect)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#connect)
 ///
 /// Base class method implementation
 ///
@@ -148,7 +148,7 @@ void k_abstractviewadapter_qbase_connect(void* self, int32_t signal, void* recei
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KAbstractViewAdapter*
 const QMetaObject* k_abstractviewadapter_meta_object(void* self);
@@ -161,7 +161,7 @@ void* k_abstractviewadapter_metacast(void* self, const char* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -170,7 +170,7 @@ const char* k_abstractviewadapter_tr(const char* s);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -179,7 +179,7 @@ const char* k_abstractviewadapter_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param name char*
@@ -187,35 +187,35 @@ void k_abstractviewadapter_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KAbstractViewAdapter*
 bool k_abstractviewadapter_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KAbstractViewAdapter*
 bool k_abstractviewadapter_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KAbstractViewAdapter*
 bool k_abstractviewadapter_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KAbstractViewAdapter*
 bool k_abstractviewadapter_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param b bool
@@ -223,14 +223,14 @@ bool k_abstractviewadapter_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KAbstractViewAdapter*
 QThread* k_abstractviewadapter_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param thread QThread*
@@ -238,7 +238,7 @@ bool k_abstractviewadapter_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param interval int
@@ -246,7 +246,7 @@ int32_t k_abstractviewadapter_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param id int
@@ -254,7 +254,7 @@ void k_abstractviewadapter_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param id enum Qt__TimerId
@@ -262,14 +262,14 @@ void k_abstractviewadapter_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KAbstractViewAdapter*
 libqt_list /* of QObject* */ k_abstractviewadapter_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param parent QObject*
@@ -277,7 +277,7 @@ void k_abstractviewadapter_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param filterObj QObject*
@@ -285,7 +285,7 @@ void k_abstractviewadapter_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param obj QObject*
@@ -293,7 +293,7 @@ void k_abstractviewadapter_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param sender QObject*
@@ -303,7 +303,7 @@ QMetaObject__Connection* k_abstractviewadapter_connect2(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -313,28 +313,28 @@ bool k_abstractviewadapter_disconnect(void* sender, void* signal, void* receiver
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_abstractviewadapter_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KAbstractViewAdapter*
 void k_abstractviewadapter_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KAbstractViewAdapter*
 void k_abstractviewadapter_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param name const char*
@@ -343,7 +343,7 @@ bool k_abstractviewadapter_set_property(void* self, const char* name, void* valu
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param name const char*
@@ -351,7 +351,7 @@ QVariant* k_abstractviewadapter_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -360,28 +360,28 @@ const char** k_abstractviewadapter_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KAbstractViewAdapter*
 QBindingStorage* k_abstractviewadapter_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KAbstractViewAdapter*
 const QBindingStorage* k_abstractviewadapter_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractViewAdapter*
 void k_abstractviewadapter_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param callback void func(KAbstractViewAdapter* self)
@@ -389,14 +389,14 @@ void k_abstractviewadapter_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KAbstractViewAdapter*
 QObject* k_abstractviewadapter_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param classname const char*
@@ -404,14 +404,14 @@ bool k_abstractviewadapter_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KAbstractViewAdapter*
 void k_abstractviewadapter_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -421,7 +421,7 @@ const char* k_abstractviewadapter_tr2(const char* s, const char* c);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -432,7 +432,7 @@ const char* k_abstractviewadapter_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param thread QThread*
@@ -441,7 +441,7 @@ bool k_abstractviewadapter_move_to_thread2(void* self, void* thread, void* param
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param interval int
@@ -450,7 +450,7 @@ int32_t k_abstractviewadapter_start_timer22(void* self, int interval, int32_t ti
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -461,7 +461,7 @@ QMetaObject__Connection* k_abstractviewadapter_connect5(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param sender QObject*
@@ -472,7 +472,7 @@ QMetaObject__Connection* k_abstractviewadapter_connect4(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param param1 QObject*
@@ -480,7 +480,7 @@ void k_abstractviewadapter_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractViewAdapter*
 /// @param callback void func(KAbstractViewAdapter* self, QObject* param1)
@@ -488,7 +488,7 @@ void k_abstractviewadapter_on_destroyed1(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -500,7 +500,7 @@ int32_t k_abstractviewadapter_metacall(void* self, int32_t param1, int param2, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -512,7 +512,7 @@ int32_t k_abstractviewadapter_qbase_metacall(void* self, int32_t param1, int par
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -522,7 +522,7 @@ void k_abstractviewadapter_on_metacall(void* self, int32_t (*callback)(void*, in
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -532,7 +532,7 @@ bool k_abstractviewadapter_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -542,7 +542,7 @@ bool k_abstractviewadapter_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -552,7 +552,7 @@ void k_abstractviewadapter_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -563,7 +563,7 @@ bool k_abstractviewadapter_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -574,7 +574,7 @@ bool k_abstractviewadapter_qbase_event_filter(void* self, void* watched, void* e
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -584,7 +584,7 @@ void k_abstractviewadapter_on_event_filter(void* self, bool (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -594,7 +594,7 @@ void k_abstractviewadapter_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -604,7 +604,7 @@ void k_abstractviewadapter_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -614,7 +614,7 @@ void k_abstractviewadapter_on_timer_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -624,7 +624,7 @@ void k_abstractviewadapter_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -634,7 +634,7 @@ void k_abstractviewadapter_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -644,7 +644,7 @@ void k_abstractviewadapter_on_child_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -654,7 +654,7 @@ void k_abstractviewadapter_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -664,7 +664,7 @@ void k_abstractviewadapter_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -674,7 +674,7 @@ void k_abstractviewadapter_on_custom_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -684,7 +684,7 @@ void k_abstractviewadapter_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -694,7 +694,7 @@ void k_abstractviewadapter_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -704,7 +704,7 @@ void k_abstractviewadapter_on_connect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -714,7 +714,7 @@ void k_abstractviewadapter_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -724,7 +724,7 @@ void k_abstractviewadapter_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -734,7 +734,7 @@ void k_abstractviewadapter_on_disconnect_notify(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -743,7 +743,7 @@ QObject* k_abstractviewadapter_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -752,7 +752,7 @@ QObject* k_abstractviewadapter_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -762,7 +762,7 @@ void k_abstractviewadapter_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -771,7 +771,7 @@ int32_t k_abstractviewadapter_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -780,7 +780,7 @@ int32_t k_abstractviewadapter_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -790,7 +790,7 @@ void k_abstractviewadapter_on_sender_signal_index(void* self, int32_t (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -800,7 +800,7 @@ int32_t k_abstractviewadapter_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -810,7 +810,7 @@ int32_t k_abstractviewadapter_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -820,7 +820,7 @@ void k_abstractviewadapter_on_receivers(void* self, int32_t (*callback)(void*, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -830,7 +830,7 @@ bool k_abstractviewadapter_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -840,7 +840,7 @@ bool k_abstractviewadapter_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -850,7 +850,7 @@ void k_abstractviewadapter_on_is_signal_connected(void* self, bool (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -858,7 +858,7 @@ void k_abstractviewadapter_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KAbstractViewAdapter* self, const char* objectName)
 void k_abstractviewadapter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kabstractviewadapter.html#dtor.KAbstractViewAdapter)
+/// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#dtor.KAbstractViewAdapter)
 ///
 /// Delete this object from C++ memory.
 ///

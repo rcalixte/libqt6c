@@ -13,81 +13,81 @@
 
 /// https://api.kde.org/kmountpoint.html
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#possibleMountPoints)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#possibleMountPoints)
 ///
 KMountPoint__List* k_mountpoint_possible_mount_points();
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#currentMountPoints)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#currentMountPoints)
 ///
 KMountPoint__List* k_mountpoint_current_mount_points();
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#mountedFrom)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#mountedFrom)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 const char* k_mountpoint_mounted_from(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#isOnNetwork)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#isOnNetwork)
 ///
 /// @param self KMountPoint*
 bool k_mountpoint_is_on_network(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#deviceId)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#deviceId)
 ///
 /// @param self KMountPoint*
 dev_t k_mountpoint_device_id(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#realDeviceName)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#realDeviceName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 const char* k_mountpoint_real_device_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#mountPoint)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#mountPoint)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 const char* k_mountpoint_mount_point(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#mountType)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#mountType)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 const char* k_mountpoint_mount_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#mountOptions)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#mountOptions)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 const char** k_mountpoint_mount_options(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#probablySlow)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#probablySlow)
 ///
 /// @param self KMountPoint*
 bool k_mountpoint_probably_slow(void* self);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#testFileSystemFlag)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#testFileSystemFlag)
 ///
 /// @param self KMountPoint*
 /// @param flag enum KMountPoint__FileSystemFlag
 bool k_mountpoint_test_file_system_flag(void* self, int32_t flag);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#possibleMountPoints)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#possibleMountPoints)
 ///
 /// @param infoNeeded flag of enum KMountPoint__DetailsNeededFlag
 KMountPoint__List* k_mountpoint_possible_mount_points1(int32_t infoNeeded);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#currentMountPoints)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#currentMountPoints)
 ///
 /// @param infoNeeded flag of enum KMountPoint__DetailsNeededFlag
 KMountPoint__List* k_mountpoint_current_mount_points1(int32_t infoNeeded);
 
-/// [Qt documentation](https://api.kde.org/kmountpoint.html#dtor.KMountPoint)
+/// [Upstream resources](https://api.kde.org/kmountpoint.html#dtor.KMountPoint)
 ///
 /// Delete this object from C++ memory.
 ///

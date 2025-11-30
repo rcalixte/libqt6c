@@ -17,7 +17,7 @@
 ///
 KCompletion* k_completion_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCompletion*
 const QMetaObject* k_completion_meta_object(void* self);
@@ -46,14 +46,14 @@ void k_completion_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_completion_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_completion_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#substringCompletion)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#substringCompletion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -61,14 +61,14 @@ const char* k_completion_tr(const char* s);
 /// @param stringVal const char*
 const char** k_completion_substring_completion(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#lastMatch)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char* k_completion_last_match(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#lastMatch)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
 /// Allows for overriding the related default method
 ///
@@ -76,32 +76,32 @@ const char* k_completion_last_match(void* self);
 /// @param callback const char* func()
 void k_completion_on_last_match(void* self, const char* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#lastMatch)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletion*
 const char* k_completion_qbase_last_match(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#items)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char** k_completion_items(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#isEmpty)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#isEmpty)
 ///
 /// @param self KCompletion*
 bool k_completion_is_empty(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setCompletionMode)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setCompletionMode)
 ///
 /// @param self KCompletion*
 /// @param mode enum KCompletion__CompletionMode
 void k_completion_set_completion_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setCompletionMode)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setCompletionMode)
 ///
 /// Allows for overriding the related default method
 ///
@@ -109,7 +109,7 @@ void k_completion_set_completion_mode(void* self, int32_t mode);
 /// @param callback void func(KCompletion* self, enum KCompletion__CompletionMode mode)
 void k_completion_on_set_completion_mode(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setCompletionMode)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setCompletionMode)
 ///
 /// Base class method implementation
 ///
@@ -117,20 +117,20 @@ void k_completion_on_set_completion_mode(void* self, void (*callback)(void*, int
 /// @param mode enum KCompletion__CompletionMode
 void k_completion_qbase_set_completion_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#completionMode)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#completionMode)
 ///
 /// @param self KCompletion*
 ///
 /// @return enum KCompletion__CompletionMode
 int32_t k_completion_completion_mode(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setOrder)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setOrder)
 ///
 /// @param self KCompletion*
 /// @param order enum KCompletion__CompOrder
 void k_completion_set_order(void* self, int32_t order);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setOrder)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setOrder)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,7 +138,7 @@ void k_completion_set_order(void* self, int32_t order);
 /// @param callback void func(KCompletion* self, enum KCompletion__CompOrder order)
 void k_completion_on_set_order(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setOrder)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setOrder)
 ///
 /// Base class method implementation
 ///
@@ -146,20 +146,20 @@ void k_completion_on_set_order(void* self, void (*callback)(void*, int32_t));
 /// @param order enum KCompletion__CompOrder
 void k_completion_qbase_set_order(void* self, int32_t order);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#order)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#order)
 ///
 /// @param self KCompletion*
 ///
 /// @return enum KCompletion__CompOrder
 int32_t k_completion_order(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setIgnoreCase)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setIgnoreCase)
 ///
 /// @param self KCompletion*
 /// @param ignoreCase bool
 void k_completion_set_ignore_case(void* self, bool ignoreCase);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setIgnoreCase)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setIgnoreCase)
 ///
 /// Allows for overriding the related default method
 ///
@@ -167,7 +167,7 @@ void k_completion_set_ignore_case(void* self, bool ignoreCase);
 /// @param callback void func(KCompletion* self, bool ignoreCase)
 void k_completion_on_set_ignore_case(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setIgnoreCase)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setIgnoreCase)
 ///
 /// Base class method implementation
 ///
@@ -175,24 +175,24 @@ void k_completion_on_set_ignore_case(void* self, void (*callback)(void*, bool));
 /// @param ignoreCase bool
 void k_completion_qbase_set_ignore_case(void* self, bool ignoreCase);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#ignoreCase)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#ignoreCase)
 ///
 /// @param self KCompletion*
 bool k_completion_ignore_case(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#shouldAutoSuggest)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#shouldAutoSuggest)
 ///
 /// @param self KCompletion*
 bool k_completion_should_auto_suggest(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#allMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#allMatches)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char** k_completion_all_matches(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#allMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#allMatches)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -200,24 +200,24 @@ const char** k_completion_all_matches(void* self);
 /// @param stringVal const char*
 const char** k_completion_all_matches2(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#allWeightedMatches)
 ///
 /// @param self KCompletion*
 KCompletionMatches* k_completion_all_weighted_matches(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#allWeightedMatches)
 ///
 /// @param self KCompletion*
 /// @param stringVal const char*
 KCompletionMatches* k_completion_all_weighted_matches2(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setSoundsEnabled)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
 /// @param self KCompletion*
 /// @param enable bool
 void k_completion_set_sounds_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setSoundsEnabled)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -225,7 +225,7 @@ void k_completion_set_sounds_enabled(void* self, bool enable);
 /// @param callback void func(KCompletion* self, bool enable)
 void k_completion_on_set_sounds_enabled(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setSoundsEnabled)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
 /// Base class method implementation
 ///
@@ -233,17 +233,17 @@ void k_completion_on_set_sounds_enabled(void* self, void (*callback)(void*, bool
 /// @param enable bool
 void k_completion_qbase_set_sounds_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#soundsEnabled)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#soundsEnabled)
 ///
 /// @param self KCompletion*
 bool k_completion_sounds_enabled(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#hasMultipleMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#hasMultipleMatches)
 ///
 /// @param self KCompletion*
 bool k_completion_has_multiple_matches(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#makeCompletion)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#makeCompletion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -251,7 +251,7 @@ bool k_completion_has_multiple_matches(void* self);
 /// @param stringVal const char*
 const char* k_completion_make_completion(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#makeCompletion)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#makeCompletion)
 ///
 /// Allows for overriding the related default method
 ///
@@ -259,7 +259,7 @@ const char* k_completion_make_completion(void* self, const char* stringVal);
 /// @param callback const char* func(KCompletion* self, const char* stringVal)
 void k_completion_on_make_completion(void* self, const char* (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#makeCompletion)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#makeCompletion)
 ///
 /// Base class method implementation
 ///
@@ -267,33 +267,33 @@ void k_completion_on_make_completion(void* self, const char* (*callback)(void*, 
 /// @param stringVal const char*
 const char* k_completion_qbase_make_completion(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#previousMatch)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#previousMatch)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char* k_completion_previous_match(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#nextMatch)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#nextMatch)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char* k_completion_next_match(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#insertItems)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#insertItems)
 ///
 /// @param self KCompletion*
 /// @param items const char**
 void k_completion_insert_items(void* self, const char* items[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setItems)
 ///
 /// @param self KCompletion*
 /// @param itemList const char**
 void k_completion_set_items(void* self, const char* itemList[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setItems)
 ///
 /// Allows for overriding the related default method
 ///
@@ -301,7 +301,7 @@ void k_completion_set_items(void* self, const char* itemList[static 1]);
 /// @param callback void func(KCompletion* self, const char** itemList)
 void k_completion_on_set_items(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setItems)
 ///
 /// Base class method implementation
 ///
@@ -309,31 +309,31 @@ void k_completion_on_set_items(void* self, void (*callback)(void*, const char**)
 /// @param itemList const char**
 void k_completion_qbase_set_items(void* self, const char* itemList[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#addItem)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#addItem)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 void k_completion_add_item(void* self, const char* item);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#addItem)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#addItem)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 /// @param weight uint32_t
 void k_completion_add_item2(void* self, const char* item, uint32_t weight);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#removeItem)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#removeItem)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 void k_completion_remove_item(void* self, const char* item);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#clear)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#clear)
 ///
 /// @param self KCompletion*
 void k_completion_clear(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#clear)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#clear)
 ///
 /// Allows for overriding the related default method
 ///
@@ -341,55 +341,55 @@ void k_completion_clear(void* self);
 /// @param callback void func()
 void k_completion_on_clear(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#clear)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#clear)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletion*
 void k_completion_qbase_clear(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#match)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#match)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 void k_completion_match(void* self, const char* item);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#match)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#match)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, const char* item)
 void k_completion_on_match(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#matches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#matches)
 ///
 /// @param self KCompletion*
 /// @param matchlist const char**
 void k_completion_matches(void* self, const char* matchlist[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#matches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#matches)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, const char** matchlist)
 void k_completion_on_matches(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#multipleMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#multipleMatches)
 ///
 /// @param self KCompletion*
 void k_completion_multiple_matches(void* self);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#multipleMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#multipleMatches)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self)
 void k_completion_on_multiple_matches(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// @param self KCompletion*
 /// @param matchList const char**
 void k_completion_post_process_matches(void* self, const char* matchList[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// Allows for overriding the related default method
 ///
@@ -397,7 +397,7 @@ void k_completion_post_process_matches(void* self, const char* matchList[static 
 /// @param callback void func(KCompletion* self, const char** matchList)
 void k_completion_on_post_process_matches(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// Base class method implementation
 ///
@@ -405,13 +405,13 @@ void k_completion_on_post_process_matches(void* self, void (*callback)(void*, co
 /// @param matchList const char**
 void k_completion_qbase_post_process_matches(void* self, const char* matchList[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// @param self KCompletion*
 /// @param matches KCompletionMatches*
 void k_completion_post_process_matches2(void* self, void* matches);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// Allows for overriding the related default method
 ///
@@ -419,7 +419,7 @@ void k_completion_post_process_matches2(void* self, void* matches);
 /// @param callback void func(KCompletion* self, KCompletionMatches* matches)
 void k_completion_on_post_process_matches2(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// Base class method implementation
 ///
@@ -427,13 +427,13 @@ void k_completion_on_post_process_matches2(void* self, void (*callback)(void*, v
 /// @param matches KCompletionMatches*
 void k_completion_qbase_post_process_matches2(void* self, void* matches);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
 ///
 /// @param self KCompletion*
 /// @param shouldAutosuggest bool
 void k_completion_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
 ///
 /// Allows for overriding the related default method
 ///
@@ -441,7 +441,7 @@ void k_completion_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 /// @param callback void func(KCompletion* self, bool shouldAutosuggest)
 void k_completion_on_set_should_auto_suggest(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
 ///
 /// Base class method implementation
 ///
@@ -449,7 +449,7 @@ void k_completion_on_set_should_auto_suggest(void* self, void (*callback)(void*,
 /// @param shouldAutosuggest bool
 void k_completion_qbase_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -457,7 +457,7 @@ void k_completion_qbase_set_should_auto_suggest(void* self, bool shouldAutosugge
 /// @param c const char*
 const char* k_completion_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -468,7 +468,7 @@ const char* k_completion_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -477,7 +477,7 @@ const char* k_completion_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KCompletion*
 /// @param name char*
@@ -485,35 +485,35 @@ void k_completion_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KCompletion*
 bool k_completion_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KCompletion*
 bool k_completion_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KCompletion*
 bool k_completion_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KCompletion*
 bool k_completion_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KCompletion*
 /// @param b bool
@@ -521,14 +521,14 @@ bool k_completion_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KCompletion*
 QThread* k_completion_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KCompletion*
 /// @param thread QThread*
@@ -536,7 +536,7 @@ bool k_completion_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KCompletion*
 /// @param interval int
@@ -544,7 +544,7 @@ int32_t k_completion_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KCompletion*
 /// @param id int
@@ -552,7 +552,7 @@ void k_completion_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KCompletion*
 /// @param id enum Qt__TimerId
@@ -560,14 +560,14 @@ void k_completion_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KCompletion*
 libqt_list /* of QObject* */ k_completion_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KCompletion*
 /// @param parent QObject*
@@ -575,7 +575,7 @@ void k_completion_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KCompletion*
 /// @param filterObj QObject*
@@ -583,7 +583,7 @@ void k_completion_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KCompletion*
 /// @param obj QObject*
@@ -591,7 +591,7 @@ void k_completion_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -601,7 +601,7 @@ QMetaObject__Connection* k_completion_connect(void* sender, void* signal, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KCompletion*
 /// @param sender QObject*
@@ -611,7 +611,7 @@ QMetaObject__Connection* k_completion_connect2(void* self, void* sender, const c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -621,28 +621,28 @@ bool k_completion_disconnect(void* sender, void* signal, void* receiver, void* m
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_completion_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KCompletion*
 void k_completion_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KCompletion*
 void k_completion_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KCompletion*
 /// @param name const char*
@@ -651,7 +651,7 @@ bool k_completion_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KCompletion*
 /// @param name const char*
@@ -659,7 +659,7 @@ QVariant* k_completion_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -668,28 +668,28 @@ const char** k_completion_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KCompletion*
 QBindingStorage* k_completion_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KCompletion*
 const QBindingStorage* k_completion_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCompletion*
 void k_completion_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self)
@@ -697,14 +697,14 @@ void k_completion_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KCompletion*
 QObject* k_completion_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KCompletion*
 /// @param classname const char*
@@ -712,14 +712,14 @@ bool k_completion_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KCompletion*
 void k_completion_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KCompletion*
 /// @param thread QThread*
@@ -728,7 +728,7 @@ bool k_completion_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KCompletion*
 /// @param interval int
@@ -737,7 +737,7 @@ int32_t k_completion_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -748,7 +748,7 @@ QMetaObject__Connection* k_completion_connect5(void* sender, void* signal, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KCompletion*
 /// @param sender QObject*
@@ -759,7 +759,7 @@ QMetaObject__Connection* k_completion_connect4(void* self, void* sender, const c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCompletion*
 /// @param param1 QObject*
@@ -767,7 +767,7 @@ void k_completion_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, QObject* param1)
@@ -775,7 +775,7 @@ void k_completion_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -785,7 +785,7 @@ bool k_completion_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -795,7 +795,7 @@ bool k_completion_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -805,7 +805,7 @@ void k_completion_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -816,7 +816,7 @@ bool k_completion_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -827,7 +827,7 @@ bool k_completion_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -837,7 +837,7 @@ void k_completion_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -847,7 +847,7 @@ void k_completion_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -857,7 +857,7 @@ void k_completion_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -867,7 +867,7 @@ void k_completion_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -877,7 +877,7 @@ void k_completion_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -887,7 +887,7 @@ void k_completion_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -897,7 +897,7 @@ void k_completion_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -907,7 +907,7 @@ void k_completion_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -917,7 +917,7 @@ void k_completion_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -927,7 +927,7 @@ void k_completion_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -937,7 +937,7 @@ void k_completion_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -947,7 +947,7 @@ void k_completion_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -957,7 +957,7 @@ void k_completion_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -967,7 +967,7 @@ void k_completion_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -977,7 +977,7 @@ void k_completion_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -987,7 +987,7 @@ void k_completion_on_disconnect_notify(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -996,7 +996,7 @@ QObject* k_completion_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1005,7 +1005,7 @@ QObject* k_completion_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1015,7 +1015,7 @@ void k_completion_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1024,7 +1024,7 @@ int32_t k_completion_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1033,7 +1033,7 @@ int32_t k_completion_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1043,7 +1043,7 @@ void k_completion_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1053,7 +1053,7 @@ int32_t k_completion_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1063,7 +1063,7 @@ int32_t k_completion_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1073,7 +1073,7 @@ void k_completion_on_receivers(void* self, int32_t (*callback)(void*, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1083,7 +1083,7 @@ bool k_completion_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1093,7 +1093,7 @@ bool k_completion_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1103,7 +1103,7 @@ void k_completion_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1111,7 +1111,7 @@ void k_completion_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param callback void func(KCompletion* self, const char* objectName)
 void k_completion_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kcompletion.html#dtor.KCompletion)
+/// [Upstream resources](https://api.kde.org/kcompletion.html#dtor.KCompletion)
 ///
 /// Delete this object from C++ memory.
 ///

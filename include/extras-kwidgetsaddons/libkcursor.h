@@ -35,35 +35,35 @@ void k_cursor_copy_assign(void* self, void* other);
 /// @param other KCursor*
 void k_cursor_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kcursor.html#setAutoHideCursor)
+/// [Upstream resources](https://api.kde.org/kcursor.html#setAutoHideCursor)
 ///
 /// @param w QWidget*
 /// @param enable bool
 void k_cursor_set_auto_hide_cursor(void* w, bool enable);
 
-/// [Qt documentation](https://api.kde.org/kcursor.html#setHideCursorDelay)
+/// [Upstream resources](https://api.kde.org/kcursor.html#setHideCursorDelay)
 ///
 /// @param ms int
 void k_cursor_set_hide_cursor_delay(int ms);
 
-/// [Qt documentation](https://api.kde.org/kcursor.html#hideCursorDelay)
+/// [Upstream resources](https://api.kde.org/kcursor.html#hideCursorDelay)
 ///
 int32_t k_cursor_hide_cursor_delay();
 
-/// [Qt documentation](https://api.kde.org/kcursor.html#autoHideEventFilter)
+/// [Upstream resources](https://api.kde.org/kcursor.html#autoHideEventFilter)
 ///
 /// @param param1 QObject*
 /// @param param2 QEvent*
 void k_cursor_auto_hide_event_filter(void* param1, void* param2);
 
-/// [Qt documentation](https://api.kde.org/kcursor.html#setAutoHideCursor)
+/// [Upstream resources](https://api.kde.org/kcursor.html#setAutoHideCursor)
 ///
 /// @param w QWidget*
 /// @param enable bool
 /// @param customEventFilter bool
 void k_cursor_set_auto_hide_cursor3(void* w, bool enable, bool customEventFilter);
 
-/// [Qt documentation](https://api.kde.org/kcursor.html#dtor.KCursor)
+/// [Upstream resources](https://api.kde.org/kcursor.html#dtor.KCursor)
 ///
 /// Delete this object from C++ memory.
 ///

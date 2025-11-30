@@ -13,40 +13,40 @@
 
 /// https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param touchId int
 /// @param pt QPoint*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_press(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param touchId int
 /// @param pt QPoint*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_move(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param touchId int
 /// @param pt QPoint*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_release(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#stationary)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#stationary)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param touchId int
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_stationary(void* self, int touchId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#commit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#commit)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param processEvents bool
 bool q_test__qtoucheventsequence_commit(void* self, bool processEvents);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param touchId int
@@ -54,7 +54,7 @@ bool q_test__qtoucheventsequence_commit(void* self, bool processEvents);
 /// @param window QWindow*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_press3(void* self, int touchId, void* pt, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param touchId int
@@ -62,7 +62,7 @@ QTest__QTouchEventSequence* q_test__qtoucheventsequence_press3(void* self, int t
 /// @param window QWindow*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_move3(void* self, int touchId, void* pt, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
 ///
 /// @param self QTest__QTouchEventSequence*
 /// @param touchId int

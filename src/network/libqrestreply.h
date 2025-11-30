@@ -18,66 +18,66 @@
 /// @param reply QNetworkReply*
 QRestReply* q_restreply_new(void* reply);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#swap)
 ///
 /// @param self QRestReply*
 /// @param other QRestReply*
 void q_restreply_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#networkReply)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#networkReply)
 ///
 /// @param self QRestReply*
 QNetworkReply* q_restreply_network_reply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#readBody)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readBody)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRestReply*
 char* q_restreply_read_body(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#readText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRestReply*
 const char* q_restreply_read_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#isSuccess)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#isSuccess)
 ///
 /// @param self QRestReply*
 bool q_restreply_is_success(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#httpStatus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#httpStatus)
 ///
 /// @param self QRestReply*
 int32_t q_restreply_http_status(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#isHttpStatusSuccess)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#isHttpStatusSuccess)
 ///
 /// @param self QRestReply*
 bool q_restreply_is_http_status_success(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#hasError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#hasError)
 ///
 /// @param self QRestReply*
 bool q_restreply_has_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#error)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#error)
 ///
 /// @param self QRestReply*
 ///
 /// @return enum QNetworkReply__NetworkError
 int32_t q_restreply_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRestReply*
 const char* q_restreply_error_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#dtor.QRestReply)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#dtor.QRestReply)
 ///
 /// Delete this object from C++ memory.
 ///

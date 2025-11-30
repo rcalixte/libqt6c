@@ -13,13 +13,13 @@
 
 /// https://api.kde.org/kcoreaddons.html
 
-/// [Qt documentation](https://api.kde.org/kcoreaddons.html#versionString)
+/// [Upstream resources](https://api.kde.org/kcoreaddons.html#versionString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* k_coreaddons_version_string();
 
-/// [Qt documentation](https://api.kde.org/kcoreaddons.html#version)
+/// [Upstream resources](https://api.kde.org/kcoreaddons.html#version)
 ///
 uint32_t k_coreaddons_version();
 #endif

@@ -35,22 +35,22 @@ void q_openglversionfunctionsfactory_copy_assign(void* self, void* other);
 /// @param other QOpenGLVersionFunctionsFactory*
 void q_openglversionfunctionsfactory_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#get)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#get)
 ///
 QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#get)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#get)
 ///
 /// @param versionProfile QOpenGLVersionProfile*
 QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get1(void* versionProfile);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#get)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#get)
 ///
 /// @param versionProfile QOpenGLVersionProfile*
 /// @param context QOpenGLContext*
 QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get2(void* versionProfile, void* context);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#dtor.QOpenGLVersionFunctionsFactory)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#dtor.QOpenGLVersionFunctionsFactory)
 ///
 /// Delete this object from C++ memory.
 ///

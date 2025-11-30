@@ -14,7 +14,7 @@ extern "C" {
 /// This executes the callback immediately in the current
 /// thread which is not necessarily the main thread.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -28,7 +28,7 @@ void q_threading_exec_now(void* self, void (*callback)(void*));
 /// If the signal is in a different thread, this will
 /// be the same as `q_threading_async`.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -39,7 +39,7 @@ void q_threading_exec(void* self, void (*callback)(void*));
 /// This runs the callback only if it does not duplicate
 /// the signal emission.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -49,7 +49,7 @@ void q_threading_exec_unique(void* self, void (*callback)(void*));
 ///
 /// This runs the callback only once.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -61,7 +61,7 @@ void q_threading_exec_once(void* self, void (*callback)(void*));
 /// You should use this whenever you need to
 /// access the main Qt GUI from a non-GUI thread.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -72,7 +72,7 @@ void q_threading_async(void* self, void (*callback)(void*));
 /// This runs the callback only if it does not duplicate
 /// the signal emission.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -82,7 +82,7 @@ void q_threading_async_unique(void* self, void (*callback)(void*));
 ///
 /// This runs the callback only once.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -93,7 +93,7 @@ void q_threading_async_once(void* self, void (*callback)(void*));
 /// This runs the callback only once if it does not duplicate
 /// the signal emission.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -120,7 +120,7 @@ void q_threading_async_unique_once(void* self, void (*callback)(void*));
 ///
 /// This is not recommended for most cases.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -132,7 +132,7 @@ void q_threading_sync(void* self, void (*callback)(void*));
 /// the signal emission. All of the cautions from `q_threading_sync`
 /// apply here as well.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -143,7 +143,7 @@ void q_threading_sync_unique(void* self, void (*callback)(void*));
 /// This runs the callback only once. All of the cautions from
 /// `q_threading_sync` apply here as well.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)
@@ -155,7 +155,7 @@ void q_threading_sync_once(void* self, void (*callback)(void*));
 /// the signal emission. All of the cautions from `q_threading_sync`
 /// apply here as well.
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
 /// @param callback void func(void* self)

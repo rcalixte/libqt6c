@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/ktexttohtml.html
 
-/// [Qt documentation](https://api.kde.org/ktexttohtml.html#convertToHtml)
+/// [Upstream resources](https://api.kde.org/ktexttohtml.html#convertToHtml)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

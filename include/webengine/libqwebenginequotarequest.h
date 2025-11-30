@@ -39,39 +39,39 @@ void q_webenginequotarequest_copy_assign(void* self, void* other);
 /// @param other QWebEngineQuotaRequest*
 void q_webenginequotarequest_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#accept)
 ///
 /// @param self QWebEngineQuotaRequest*
 void q_webenginequotarequest_accept(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#reject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#reject)
 ///
 /// @param self QWebEngineQuotaRequest*
 void q_webenginequotarequest_reject(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#origin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#origin)
 ///
 /// @param self QWebEngineQuotaRequest*
 QUrl* q_webenginequotarequest_origin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#requestedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#requestedSize)
 ///
 /// @param self QWebEngineQuotaRequest*
 long long q_webenginequotarequest_requested_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-eq-eq)
 ///
 /// @param self QWebEngineQuotaRequest*
 /// @param param1 QWebEngineQuotaRequest*
 bool q_webenginequotarequest_operator_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-not-eq)
 ///
 /// @param self QWebEngineQuotaRequest*
 /// @param param1 QWebEngineQuotaRequest*
 bool q_webenginequotarequest_operator_not_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#dtor.QWebEngineQuotaRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#dtor.QWebEngineQuotaRequest)
 ///
 /// Delete this object from C++ memory.
 ///

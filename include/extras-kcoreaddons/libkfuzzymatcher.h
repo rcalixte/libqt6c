@@ -35,23 +35,23 @@ void k_fuzzymatcher__result_copy_assign(void* self, void* other);
 /// @param other KFuzzyMatcher__Result*
 void k_fuzzymatcher__result_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-result.html#score-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#score-var)
 ///
 /// @param self KFuzzyMatcher__Result*
 int32_t k_fuzzymatcher__result_score(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-result.html#score-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#score-var)
 ///
 /// @param self KFuzzyMatcher__Result*
 /// @param score int
 void k_fuzzymatcher__result_set_score(void* self, int score);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-result.html#matched-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#matched-var)
 ///
 /// @param self KFuzzyMatcher__Result*
 bool k_fuzzymatcher__result_matched(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-result.html#matched-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#matched-var)
 ///
 /// @param self KFuzzyMatcher__Result*
 /// @param matched bool
@@ -73,23 +73,23 @@ KFuzzyMatcher__Range* k_fuzzymatcher__range_new();
 /// @param param1 KFuzzyMatcher__Range*
 KFuzzyMatcher__Range* k_fuzzymatcher__range_new2(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-range.html#start-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#start-var)
 ///
 /// @param self KFuzzyMatcher__Range*
 int32_t k_fuzzymatcher__range_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-range.html#start-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#start-var)
 ///
 /// @param self KFuzzyMatcher__Range*
 /// @param start int
 void k_fuzzymatcher__range_set_start(void* self, int start);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-range.html#length-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#length-var)
 ///
 /// @param self KFuzzyMatcher__Range*
 int32_t k_fuzzymatcher__range_length(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfuzzymatcher-range.html#length-var)
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#length-var)
 ///
 /// @param self KFuzzyMatcher__Range*
 /// @param length int

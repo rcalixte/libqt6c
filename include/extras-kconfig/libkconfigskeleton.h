@@ -28,7 +28,7 @@ KConfigSkeleton* k_configskeleton_new2(const char* configname);
 /// @param parent QObject*
 KConfigSkeleton* k_configskeleton_new3(const char* configname, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KConfigSkeleton*
 const QMetaObject* k_configskeleton_meta_object(void* self);
@@ -57,28 +57,28 @@ void k_configskeleton_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_configskeleton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_configskeleton_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#addItemColor)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemColor)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
 /// @param reference QColor*
 KConfigSkeleton__ItemColor* k_configskeleton_add_item_color(void* self, const char* name, void* reference);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#addItemFont)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemFont)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
 /// @param reference QFont*
 KConfigSkeleton__ItemFont* k_configskeleton_add_item_font(void* self, const char* name, void* reference);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -86,7 +86,7 @@ KConfigSkeleton__ItemFont* k_configskeleton_add_item_font(void* self, const char
 /// @param c const char*
 const char* k_configskeleton_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -95,7 +95,7 @@ const char* k_configskeleton_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_configskeleton_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#addItemColor)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemColor)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -103,7 +103,7 @@ const char* k_configskeleton_tr3(const char* s, const char* c, int n);
 /// @param defaultValue QColor*
 KConfigSkeleton__ItemColor* k_configskeleton_add_item_color3(void* self, const char* name, void* reference, void* defaultValue);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#addItemColor)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemColor)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -112,7 +112,7 @@ KConfigSkeleton__ItemColor* k_configskeleton_add_item_color3(void* self, const c
 /// @param key const char*
 KConfigSkeleton__ItemColor* k_configskeleton_add_item_color4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#addItemFont)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemFont)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -120,7 +120,7 @@ KConfigSkeleton__ItemColor* k_configskeleton_add_item_color4(void* self, const c
 /// @param defaultValue QFont*
 KConfigSkeleton__ItemFont* k_configskeleton_add_item_font3(void* self, const char* name, void* reference, void* defaultValue);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#addItemFont)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemFont)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -131,35 +131,35 @@ KConfigSkeleton__ItemFont* k_configskeleton_add_item_font4(void* self, const cha
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#load)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#load)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_load(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#read)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#read)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_read(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#isDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isDefaults)
 ///
 /// @param self KConfigSkeleton*
 bool k_configskeleton_is_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#isSaveNeeded)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isSaveNeeded)
 ///
 /// @param self KConfigSkeleton*
 bool k_configskeleton_is_save_needed(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setCurrentGroup)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setCurrentGroup)
 ///
 /// @param self KConfigSkeleton*
 /// @param group const char*
@@ -167,7 +167,7 @@ void k_configskeleton_set_current_group(void* self, const char* group);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#currentGroup)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#currentGroup)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -176,7 +176,7 @@ const char* k_configskeleton_current_group(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItem)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItem)
 ///
 /// @param self KConfigSkeleton*
 /// @param item KConfigSkeletonItem*
@@ -184,7 +184,7 @@ void k_configskeleton_add_item(void* self, void* item);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -193,7 +193,7 @@ KCoreConfigSkeleton__ItemString* k_configskeleton_add_item_string(void* self, co
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -202,7 +202,7 @@ KCoreConfigSkeleton__ItemPassword* k_configskeleton_add_item_password(void* self
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -211,7 +211,7 @@ KCoreConfigSkeleton__ItemPath* k_configskeleton_add_item_path(void* self, const 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -220,7 +220,7 @@ KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property(void* self
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -229,7 +229,7 @@ KCoreConfigSkeleton__ItemBool* k_configskeleton_add_item_bool(void* self, const 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -238,7 +238,7 @@ KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int(void* self, const ch
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -247,7 +247,7 @@ KCoreConfigSkeleton__ItemUInt* k_configskeleton_add_item_u_int(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -256,7 +256,7 @@ KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long(void* sel
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -265,7 +265,7 @@ KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long(void* 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -274,7 +274,7 @@ KCoreConfigSkeleton__ItemDouble* k_configskeleton_add_item_double(void* self, co
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -283,7 +283,7 @@ KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect(void* self, const 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -292,7 +292,7 @@ KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f(void* self, con
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -301,7 +301,7 @@ KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point(void* self, cons
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -310,7 +310,7 @@ KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f(void* self, c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -319,7 +319,7 @@ KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size(void* self, const 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -328,7 +328,7 @@ KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f(void* self, con
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -337,7 +337,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time(void* sel
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -346,7 +346,7 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list(void*
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -355,28 +355,28 @@ KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list(void* self,
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#config)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
 /// @param self KConfigSkeleton*
 KConfig* k_configskeleton_config(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#config)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
 /// @param self KConfigSkeleton*
 const KConfig* k_configskeleton_config2(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#items)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#items)
 ///
 /// @param self KConfigSkeleton*
 libqt_list /* of KConfigSkeletonItem* */ k_configskeleton_items(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#removeItem)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#removeItem)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -384,14 +384,14 @@ void k_configskeleton_remove_item(void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#clearItems)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#clearItems)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_clear_items(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#isImmutable)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isImmutable)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -399,7 +399,7 @@ bool k_configskeleton_is_immutable(void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#findItem)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#findItem)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -407,21 +407,21 @@ KConfigSkeletonItem* k_configskeleton_find_item(void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#save)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#save)
 ///
 /// @param self KConfigSkeleton*
 bool k_configskeleton_save(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#configChanged)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#configChanged)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_config_changed(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#configChanged)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#configChanged)
 ///
 /// @param self KConfigSkeleton*
 /// @param callback void func(KConfigSkeleton* self)
@@ -429,7 +429,7 @@ void k_configskeleton_on_config_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItem)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItem)
 ///
 /// @param self KConfigSkeleton*
 /// @param item KConfigSkeletonItem*
@@ -438,7 +438,7 @@ void k_configskeleton_add_item2(void* self, void* item, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -448,7 +448,7 @@ KCoreConfigSkeleton__ItemString* k_configskeleton_add_item_string3(void* self, c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -459,7 +459,7 @@ KCoreConfigSkeleton__ItemString* k_configskeleton_add_item_string4(void* self, c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -469,7 +469,7 @@ KCoreConfigSkeleton__ItemPassword* k_configskeleton_add_item_password3(void* sel
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -480,7 +480,7 @@ KCoreConfigSkeleton__ItemPassword* k_configskeleton_add_item_password4(void* sel
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -490,7 +490,7 @@ KCoreConfigSkeleton__ItemPath* k_configskeleton_add_item_path3(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -501,7 +501,7 @@ KCoreConfigSkeleton__ItemPath* k_configskeleton_add_item_path4(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -511,7 +511,7 @@ KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property3(void* sel
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -522,7 +522,7 @@ KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property4(void* sel
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -532,7 +532,7 @@ KCoreConfigSkeleton__ItemBool* k_configskeleton_add_item_bool3(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -543,7 +543,7 @@ KCoreConfigSkeleton__ItemBool* k_configskeleton_add_item_bool4(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -553,7 +553,7 @@ KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int3(void* self, const c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -564,7 +564,7 @@ KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int4(void* self, const c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -574,7 +574,7 @@ KCoreConfigSkeleton__ItemUInt* k_configskeleton_add_item_u_int3(void* self, cons
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -585,7 +585,7 @@ KCoreConfigSkeleton__ItemUInt* k_configskeleton_add_item_u_int4(void* self, cons
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -595,7 +595,7 @@ KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long3(void* se
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -606,7 +606,7 @@ KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long4(void* se
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -616,7 +616,7 @@ KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long3(void*
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -627,7 +627,7 @@ KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long4(void*
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -637,7 +637,7 @@ KCoreConfigSkeleton__ItemDouble* k_configskeleton_add_item_double3(void* self, c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -648,7 +648,7 @@ KCoreConfigSkeleton__ItemDouble* k_configskeleton_add_item_double4(void* self, c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -658,7 +658,7 @@ KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect3(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -669,7 +669,7 @@ KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect4(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -679,7 +679,7 @@ KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f3(void* self, co
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -690,7 +690,7 @@ KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f4(void* self, co
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -700,7 +700,7 @@ KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point3(void* self, con
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -711,7 +711,7 @@ KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point4(void* self, con
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -721,7 +721,7 @@ KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f3(void* self, 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -732,7 +732,7 @@ KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f4(void* self, 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -742,7 +742,7 @@ KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size3(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -753,7 +753,7 @@ KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size4(void* self, const
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -763,7 +763,7 @@ KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f3(void* self, co
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -774,7 +774,7 @@ KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f4(void* self, co
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -784,7 +784,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time3(void* se
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -795,7 +795,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time4(void* se
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -805,7 +805,7 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list3(void
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -816,7 +816,7 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list4(void
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -826,7 +826,7 @@ KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list3(void* self
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -837,7 +837,7 @@ KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list4(void* self
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -846,7 +846,7 @@ const char* k_configskeleton_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KConfigSkeleton*
 /// @param name char*
@@ -854,35 +854,35 @@ void k_configskeleton_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KConfigSkeleton*
 bool k_configskeleton_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KConfigSkeleton*
 bool k_configskeleton_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KConfigSkeleton*
 bool k_configskeleton_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KConfigSkeleton*
 bool k_configskeleton_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KConfigSkeleton*
 /// @param b bool
@@ -890,14 +890,14 @@ bool k_configskeleton_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KConfigSkeleton*
 QThread* k_configskeleton_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KConfigSkeleton*
 /// @param thread QThread*
@@ -905,7 +905,7 @@ bool k_configskeleton_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KConfigSkeleton*
 /// @param interval int
@@ -913,7 +913,7 @@ int32_t k_configskeleton_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KConfigSkeleton*
 /// @param id int
@@ -921,7 +921,7 @@ void k_configskeleton_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KConfigSkeleton*
 /// @param id enum Qt__TimerId
@@ -929,14 +929,14 @@ void k_configskeleton_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KConfigSkeleton*
 libqt_list /* of QObject* */ k_configskeleton_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KConfigSkeleton*
 /// @param parent QObject*
@@ -944,7 +944,7 @@ void k_configskeleton_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KConfigSkeleton*
 /// @param filterObj QObject*
@@ -952,7 +952,7 @@ void k_configskeleton_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KConfigSkeleton*
 /// @param obj QObject*
@@ -960,7 +960,7 @@ void k_configskeleton_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -970,7 +970,7 @@ QMetaObject__Connection* k_configskeleton_connect(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KConfigSkeleton*
 /// @param sender QObject*
@@ -980,7 +980,7 @@ QMetaObject__Connection* k_configskeleton_connect2(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -990,28 +990,28 @@ bool k_configskeleton_disconnect(void* sender, void* signal, void* receiver, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_configskeleton_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -1020,7 +1020,7 @@ bool k_configskeleton_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
@@ -1028,7 +1028,7 @@ QVariant* k_configskeleton_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1037,28 +1037,28 @@ const char** k_configskeleton_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KConfigSkeleton*
 QBindingStorage* k_configskeleton_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KConfigSkeleton*
 const QBindingStorage* k_configskeleton_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigSkeleton*
 /// @param callback void func(KConfigSkeleton* self)
@@ -1066,14 +1066,14 @@ void k_configskeleton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KConfigSkeleton*
 QObject* k_configskeleton_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KConfigSkeleton*
 /// @param classname const char*
@@ -1081,14 +1081,14 @@ bool k_configskeleton_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KConfigSkeleton*
 void k_configskeleton_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KConfigSkeleton*
 /// @param thread QThread*
@@ -1097,7 +1097,7 @@ bool k_configskeleton_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KConfigSkeleton*
 /// @param interval int
@@ -1106,7 +1106,7 @@ int32_t k_configskeleton_start_timer22(void* self, int interval, int32_t timerTy
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1117,7 +1117,7 @@ QMetaObject__Connection* k_configskeleton_connect5(void* sender, void* signal, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KConfigSkeleton*
 /// @param sender QObject*
@@ -1128,7 +1128,7 @@ QMetaObject__Connection* k_configskeleton_connect4(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigSkeleton*
 /// @param param1 QObject*
@@ -1136,7 +1136,7 @@ void k_configskeleton_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigSkeleton*
 /// @param callback void func(KConfigSkeleton* self, QObject* param1)
@@ -1144,7 +1144,7 @@ void k_configskeleton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1153,7 +1153,7 @@ void k_configskeleton_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1162,7 +1162,7 @@ void k_configskeleton_qbase_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1172,7 +1172,7 @@ void k_configskeleton_on_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1182,7 +1182,7 @@ bool k_configskeleton_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1192,7 +1192,7 @@ bool k_configskeleton_qbase_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1202,7 +1202,7 @@ void k_configskeleton_on_use_defaults(void* self, bool (*callback)(void*, bool))
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1212,7 +1212,7 @@ bool k_configskeleton_usr_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1222,7 +1222,7 @@ bool k_configskeleton_qbase_usr_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1232,7 +1232,7 @@ void k_configskeleton_on_usr_use_defaults(void* self, bool (*callback)(void*, bo
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1241,7 +1241,7 @@ void k_configskeleton_usr_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1250,7 +1250,7 @@ void k_configskeleton_qbase_usr_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1260,7 +1260,7 @@ void k_configskeleton_on_usr_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1269,7 +1269,7 @@ void k_configskeleton_usr_read(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1278,7 +1278,7 @@ void k_configskeleton_qbase_usr_read(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1288,7 +1288,7 @@ void k_configskeleton_on_usr_read(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1297,7 +1297,7 @@ bool k_configskeleton_usr_save(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1306,7 +1306,7 @@ bool k_configskeleton_qbase_usr_save(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
+/// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1316,7 +1316,7 @@ void k_configskeleton_on_usr_save(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1326,7 +1326,7 @@ bool k_configskeleton_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1336,7 +1336,7 @@ bool k_configskeleton_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1346,7 +1346,7 @@ void k_configskeleton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1357,7 +1357,7 @@ bool k_configskeleton_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1368,7 +1368,7 @@ bool k_configskeleton_qbase_event_filter(void* self, void* watched, void* event)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1378,7 +1378,7 @@ void k_configskeleton_on_event_filter(void* self, bool (*callback)(void*, void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1388,7 +1388,7 @@ void k_configskeleton_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1398,7 +1398,7 @@ void k_configskeleton_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1408,7 +1408,7 @@ void k_configskeleton_on_timer_event(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1418,7 +1418,7 @@ void k_configskeleton_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1428,7 +1428,7 @@ void k_configskeleton_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1438,7 +1438,7 @@ void k_configskeleton_on_child_event(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1448,7 +1448,7 @@ void k_configskeleton_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1458,7 +1458,7 @@ void k_configskeleton_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1468,7 +1468,7 @@ void k_configskeleton_on_custom_event(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1478,7 +1478,7 @@ void k_configskeleton_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1488,7 +1488,7 @@ void k_configskeleton_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1498,7 +1498,7 @@ void k_configskeleton_on_connect_notify(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1508,7 +1508,7 @@ void k_configskeleton_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1518,7 +1518,7 @@ void k_configskeleton_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1528,7 +1528,7 @@ void k_configskeleton_on_disconnect_notify(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1537,7 +1537,7 @@ QObject* k_configskeleton_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1546,7 +1546,7 @@ QObject* k_configskeleton_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1556,7 +1556,7 @@ void k_configskeleton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1565,7 +1565,7 @@ int32_t k_configskeleton_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1574,7 +1574,7 @@ int32_t k_configskeleton_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1584,7 +1584,7 @@ void k_configskeleton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1594,7 +1594,7 @@ int32_t k_configskeleton_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1604,7 +1604,7 @@ int32_t k_configskeleton_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1614,7 +1614,7 @@ void k_configskeleton_on_receivers(void* self, int32_t (*callback)(void*, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1624,7 +1624,7 @@ bool k_configskeleton_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1634,7 +1634,7 @@ bool k_configskeleton_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1644,7 +1644,7 @@ void k_configskeleton_on_is_signal_connected(void* self, bool (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1652,7 +1652,7 @@ void k_configskeleton_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param callback void func(KConfigSkeleton* self, const char* objectName)
 void k_configskeleton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#dtor.KConfigSkeleton)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#dtor.KConfigSkeleton)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -1676,13 +1676,13 @@ KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new(const char* _group, 
 /// @param defaultValue QColor*
 KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#readConfig)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#readConfig)
 ///
 /// @param self KConfigSkeleton__ItemColor*
 /// @param config KConfig*
 void k_configskeleton__itemcolor_read_config(void* self, void* config);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#readConfig)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#readConfig)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1690,7 +1690,7 @@ void k_configskeleton__itemcolor_read_config(void* self, void* config);
 /// @param callback void func(KConfigSkeleton__ItemColor* self, KConfig* config)
 void k_configskeleton__itemcolor_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#readConfig)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#readConfig)
 ///
 /// Base class method implementation
 ///
@@ -1698,13 +1698,13 @@ void k_configskeleton__itemcolor_on_read_config(void* self, void (*callback)(voi
 /// @param config KConfig*
 void k_configskeleton__itemcolor_qbase_read_config(void* self, void* config);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
 ///
 /// @param self KConfigSkeleton__ItemColor*
 /// @param p QVariant*
 void k_configskeleton__itemcolor_set_property(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1712,7 +1712,7 @@ void k_configskeleton__itemcolor_set_property(void* self, void* p);
 /// @param callback void func(KConfigSkeleton__ItemColor* self, QVariant* p)
 void k_configskeleton__itemcolor_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
 ///
 /// Base class method implementation
 ///
@@ -1720,13 +1720,13 @@ void k_configskeleton__itemcolor_on_set_property(void* self, void (*callback)(vo
 /// @param p QVariant*
 void k_configskeleton__itemcolor_qbase_set_property(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
 ///
 /// @param self KConfigSkeleton__ItemColor*
 /// @param p QVariant*
 bool k_configskeleton__itemcolor_is_equal(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1734,7 +1734,7 @@ bool k_configskeleton__itemcolor_is_equal(void* self, void* p);
 /// @param callback bool func(KConfigSkeleton__ItemColor* self, QVariant* p)
 void k_configskeleton__itemcolor_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
 ///
 /// Base class method implementation
 ///
@@ -1742,12 +1742,12 @@ void k_configskeleton__itemcolor_on_is_equal(void* self, bool (*callback)(void*,
 /// @param p QVariant*
 bool k_configskeleton__itemcolor_qbase_is_equal(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
 ///
 /// @param self KConfigSkeleton__ItemColor*
 QVariant* k_configskeleton__itemcolor_property(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1755,7 +1755,7 @@ QVariant* k_configskeleton__itemcolor_property(void* self);
 /// @param callback QVariant* func()
 void k_configskeleton__itemcolor_on_property(void* self, QVariant* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
 ///
 /// Base class method implementation
 ///
@@ -1784,13 +1784,13 @@ KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new(const char* _group, co
 /// @param defaultValue QFont*
 KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#readConfig)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#readConfig)
 ///
 /// @param self KConfigSkeleton__ItemFont*
 /// @param config KConfig*
 void k_configskeleton__itemfont_read_config(void* self, void* config);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#readConfig)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#readConfig)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1798,7 +1798,7 @@ void k_configskeleton__itemfont_read_config(void* self, void* config);
 /// @param callback void func(KConfigSkeleton__ItemFont* self, KConfig* config)
 void k_configskeleton__itemfont_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#readConfig)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#readConfig)
 ///
 /// Base class method implementation
 ///
@@ -1806,13 +1806,13 @@ void k_configskeleton__itemfont_on_read_config(void* self, void (*callback)(void
 /// @param config KConfig*
 void k_configskeleton__itemfont_qbase_read_config(void* self, void* config);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
 ///
 /// @param self KConfigSkeleton__ItemFont*
 /// @param p QVariant*
 void k_configskeleton__itemfont_set_property(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1820,7 +1820,7 @@ void k_configskeleton__itemfont_set_property(void* self, void* p);
 /// @param callback void func(KConfigSkeleton__ItemFont* self, QVariant* p)
 void k_configskeleton__itemfont_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
 ///
 /// Base class method implementation
 ///
@@ -1828,13 +1828,13 @@ void k_configskeleton__itemfont_on_set_property(void* self, void (*callback)(voi
 /// @param p QVariant*
 void k_configskeleton__itemfont_qbase_set_property(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
 ///
 /// @param self KConfigSkeleton__ItemFont*
 /// @param p QVariant*
 bool k_configskeleton__itemfont_is_equal(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1842,7 +1842,7 @@ bool k_configskeleton__itemfont_is_equal(void* self, void* p);
 /// @param callback bool func(KConfigSkeleton__ItemFont* self, QVariant* p)
 void k_configskeleton__itemfont_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
 ///
 /// Base class method implementation
 ///
@@ -1850,12 +1850,12 @@ void k_configskeleton__itemfont_on_is_equal(void* self, bool (*callback)(void*, 
 /// @param p QVariant*
 bool k_configskeleton__itemfont_qbase_is_equal(void* self, void* p);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#property)
 ///
 /// @param self KConfigSkeleton__ItemFont*
 QVariant* k_configskeleton__itemfont_property(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#property)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1863,7 +1863,7 @@ QVariant* k_configskeleton__itemfont_property(void* self);
 /// @param callback QVariant* func()
 void k_configskeleton__itemfont_on_property(void* self, QVariant* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfigskeleton-itemfont.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#property)
 ///
 /// Base class method implementation
 ///

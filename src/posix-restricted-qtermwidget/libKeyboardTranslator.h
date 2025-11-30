@@ -23,64 +23,64 @@ Konsole__KeyboardTranslator* k_onsole__keyboardtranslator_new(const char* name);
 /// @param param1 Konsole__KeyboardTranslator*
 Konsole__KeyboardTranslator* k_onsole__keyboardtranslator_new2(void* param1);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslator*
 const char* k_onsole__keyboardtranslator_name(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 /// @param name const char*
 void k_onsole__keyboardtranslator_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslator*
 const char* k_onsole__keyboardtranslator_description(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 /// @param description const char*
 void k_onsole__keyboardtranslator_set_description(void* self, const char* description);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 /// @param keyCode int
 /// @param modifiers flag of enum Qt__KeyboardModifier
 Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry(void* self, int keyCode, int64_t modifiers);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 /// @param entry Konsole__KeyboardTranslator__Entry*
 void k_onsole__keyboardtranslator_add_entry(void* self, void* entry);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 /// @param existing Konsole__KeyboardTranslator__Entry*
 /// @param replacement Konsole__KeyboardTranslator__Entry*
 void k_onsole__keyboardtranslator_replace_entry(void* self, void* existing, void* replacement);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 /// @param entry Konsole__KeyboardTranslator__Entry*
 void k_onsole__keyboardtranslator_remove_entry(void* self, void* entry);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 libqt_list /* of Konsole__KeyboardTranslator__Entry* */ k_onsole__keyboardtranslator_entries(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
 /// @param keyCode int
@@ -100,29 +100,29 @@ void k_onsole__keyboardtranslator_delete(void* self);
 /// @param source QIODevice*
 Konsole__KeyboardTranslatorReader* k_onsole__keyboardtranslatorreader_new(void* source);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslatorReader*
 const char* k_onsole__keyboardtranslatorreader_description(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorReader*
 bool k_onsole__keyboardtranslatorreader_has_next_entry(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorReader*
 Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslatorreader_next_entry(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorReader*
 bool k_onsole__keyboardtranslatorreader_parse_error(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param condition const char*
 /// @param result const char*
@@ -140,13 +140,13 @@ void k_onsole__keyboardtranslatorreader_delete(void* self);
 /// @param destination QIODevice*
 Konsole__KeyboardTranslatorWriter* k_onsole__keyboardtranslatorwriter_new(void* destination);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorWriter*
 /// @param description const char*
 void k_onsole__keyboardtranslatorwriter_write_header(void* self, const char* description);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorWriter*
 /// @param entry Konsole__KeyboardTranslator__Entry*
@@ -163,37 +163,37 @@ void k_onsole__keyboardtranslatorwriter_delete(void* self);
 ///
 Konsole__KeyboardTranslatorManager* k_onsole__keyboardtranslatormanager_new();
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorManager*
 /// @param translator Konsole__KeyboardTranslator*
 void k_onsole__keyboardtranslatormanager_add_translator(void* self, void* translator);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorManager*
 /// @param name const char*
 bool k_onsole__keyboardtranslatormanager_delete_translator(void* self, const char* name);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorManager*
 const Konsole__KeyboardTranslator* k_onsole__keyboardtranslatormanager_default_translator(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslatorManager*
 /// @param name const char*
 const Konsole__KeyboardTranslator* k_onsole__keyboardtranslatormanager_find_translator(void* self, const char* name);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslatorManager*
 const char** k_onsole__keyboardtranslatormanager_all_translators(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 Konsole__KeyboardTranslatorManager* k_onsole__keyboardtranslatormanager_instance();
 
@@ -204,7 +204,7 @@ void k_onsole__keyboardtranslatormanager_delete(void* self);
 
 /// https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param param1 int
 int32_t k_onsole_one_or_zero(int param1);
@@ -220,122 +220,122 @@ Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator__entry_new();
 /// @param param1 Konsole__KeyboardTranslator__Entry*
 Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator__entry_new2(void* param1);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 bool k_onsole__keyboardtranslator__entry_is_null(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
 /// @return enum Konsole__KeyboardTranslator__Command
 int32_t k_onsole__keyboardtranslator__entry_command(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param command enum Konsole__KeyboardTranslator__Command
 void k_onsole__keyboardtranslator__entry_set_command(void* self, int32_t command);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 char* k_onsole__keyboardtranslator__entry_text(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param text const char*
 void k_onsole__keyboardtranslator__entry_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 char* k_onsole__keyboardtranslator__entry_escaped_text(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 int32_t k_onsole__keyboardtranslator__entry_key_code(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param keyCode int
 void k_onsole__keyboardtranslator__entry_set_key_code(void* self, int keyCode);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 int64_t k_onsole__keyboardtranslator__entry_modifiers(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 int64_t k_onsole__keyboardtranslator__entry_modifier_mask(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 void k_onsole__keyboardtranslator__entry_set_modifiers(void* self, int64_t modifiers);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 void k_onsole__keyboardtranslator__entry_set_modifier_mask(void* self, int64_t modifiers);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
 /// @return flag of enum Konsole__KeyboardTranslator__State
 int32_t k_onsole__keyboardtranslator__entry_state(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
 /// @return flag of enum Konsole__KeyboardTranslator__State
 int32_t k_onsole__keyboardtranslator__entry_state_mask(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param state flag of enum Konsole__KeyboardTranslator__State
 void k_onsole__keyboardtranslator__entry_set_state(void* self, int32_t state);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param mask flag of enum Konsole__KeyboardTranslator__State
 void k_onsole__keyboardtranslator__entry_set_state_mask(void* self, int32_t mask);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 const char* k_onsole__keyboardtranslator__entry_condition_to_string(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 const char* k_onsole__keyboardtranslator__entry_result_to_string(void* self);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param keyCode int
@@ -343,13 +343,13 @@ const char* k_onsole__keyboardtranslator__entry_result_to_string(void* self);
 /// @param flags flag of enum Konsole__KeyboardTranslator__State
 bool k_onsole__keyboardtranslator__entry_matches(void* self, int keyCode, int64_t modifiers, int32_t flags);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param rhs Konsole__KeyboardTranslator__Entry*
 bool k_onsole__keyboardtranslator__entry_operator_equal(void* self, void* rhs);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -357,7 +357,7 @@ bool k_onsole__keyboardtranslator__entry_operator_equal(void* self, void* rhs);
 /// @param expandWildCards bool
 char* k_onsole__keyboardtranslator__entry_text1(void* self, bool expandWildCards);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -366,7 +366,7 @@ char* k_onsole__keyboardtranslator__entry_text1(void* self, bool expandWildCards
 /// @param modifiers flag of enum Qt__KeyboardModifier
 char* k_onsole__keyboardtranslator__entry_text2(void* self, bool expandWildCards, int64_t modifiers);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -374,7 +374,7 @@ char* k_onsole__keyboardtranslator__entry_text2(void* self, bool expandWildCards
 /// @param expandWildCards bool
 char* k_onsole__keyboardtranslator__entry_escaped_text1(void* self, bool expandWildCards);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -383,7 +383,7 @@ char* k_onsole__keyboardtranslator__entry_escaped_text1(void* self, bool expandW
 /// @param modifiers flag of enum Qt__KeyboardModifier
 char* k_onsole__keyboardtranslator__entry_escaped_text2(void* self, bool expandWildCards, int64_t modifiers);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -391,7 +391,7 @@ char* k_onsole__keyboardtranslator__entry_escaped_text2(void* self, bool expandW
 /// @param expandWildCards bool
 const char* k_onsole__keyboardtranslator__entry_result_to_string1(void* self, bool expandWildCards);
 
-/// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

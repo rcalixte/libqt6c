@@ -62,51 +62,51 @@ QPalette* q_palette_new6(void* windowText, void* window, void* light, void* dark
 /// @param palette QPalette*
 QPalette* q_palette_new7(void* palette);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#operator-eq)
 ///
 /// @param self QPalette*
 /// @param palette QPalette*
 void q_palette_operator_assign(void* self, void* palette);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#swap)
 ///
 /// @param self QPalette*
 /// @param other QPalette*
 void q_palette_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#operator)
 ///
 /// @param self QPalette*
 QVariant* q_palette_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#currentColorGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#currentColorGroup)
 ///
 /// @param self QPalette*
 ///
 /// @return enum QPalette__ColorGroup
 int32_t q_palette_current_color_group(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setCurrentColorGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setCurrentColorGroup)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
 void q_palette_set_current_color_group(void* self, int32_t cg);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#color)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#color)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
 const QColor* q_palette_color(void* self, int32_t cg, int32_t cr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#brush)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
 const QBrush* q_palette_brush(void* self, int32_t cg, int32_t cr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setColor)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
@@ -114,28 +114,28 @@ const QBrush* q_palette_brush(void* self, int32_t cg, int32_t cr);
 /// @param color QColor*
 void q_palette_set_color(void* self, int32_t cg, int32_t cr, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setColor)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
 /// @param color QColor*
 void q_palette_set_color2(void* self, int32_t cr, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setBrush)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
 /// @param brush QBrush*
 void q_palette_set_brush(void* self, int32_t cr, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#isBrushSet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#isBrushSet)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
 bool q_palette_is_brush_set(void* self, int32_t cg, int32_t cr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setBrush)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
@@ -143,7 +143,7 @@ bool q_palette_is_brush_set(void* self, int32_t cg, int32_t cr);
 /// @param brush QBrush*
 void q_palette_set_brush2(void* self, int32_t cg, int32_t cr, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setColorGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setColorGroup)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorGroup
@@ -158,171 +158,171 @@ void q_palette_set_brush2(void* self, int32_t cg, int32_t cr, void* brush);
 /// @param window QBrush*
 void q_palette_set_color_group(void* self, int32_t cr, void* windowText, void* button, void* light, void* dark, void* mid, void* text, void* bright_text, void* base, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#isEqual)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#isEqual)
 ///
 /// @param self QPalette*
 /// @param cr1 enum QPalette__ColorGroup
 /// @param cr2 enum QPalette__ColorGroup
 bool q_palette_is_equal(void* self, int32_t cr1, int32_t cr2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#color)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#color)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
 const QColor* q_palette_color2(void* self, int32_t cr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#brush)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
 const QBrush* q_palette_brush2(void* self, int32_t cr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#windowText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#windowText)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_window_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#button)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#button)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_button(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#light)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#light)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_light(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#dark)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#dark)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_dark(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#mid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#mid)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_mid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#text)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#base)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#base)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_base(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#alternateBase)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#alternateBase)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_alternate_base(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#toolTipBase)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#toolTipBase)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_tool_tip_base(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#toolTipText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#toolTipText)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_tool_tip_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#window)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#window)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_window(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#midlight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#midlight)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_midlight(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brightText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#brightText)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_bright_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#buttonText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#buttonText)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_button_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#shadow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#shadow)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_shadow(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#highlight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#highlight)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_highlight(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#highlightedText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#highlightedText)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_highlighted_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#link)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#link)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_link(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#linkVisited)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#linkVisited)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_link_visited(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#placeholderText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#placeholderText)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_placeholder_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#accent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#accent)
 ///
 /// @param self QPalette*
 const QBrush* q_palette_accent(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#operator-eq-eq)
 ///
 /// @param self QPalette*
 /// @param p QPalette*
 bool q_palette_operator_equal(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#operator-not-eq)
 ///
 /// @param self QPalette*
 /// @param p QPalette*
 bool q_palette_operator_not_equal(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#isCopyOf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#isCopyOf)
 ///
 /// @param self QPalette*
 /// @param p QPalette*
 bool q_palette_is_copy_of(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#cacheKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#cacheKey)
 ///
 /// @param self QPalette*
 long long q_palette_cache_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#resolve)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#resolve)
 ///
 /// @param self QPalette*
 /// @param other QPalette*
 QPalette* q_palette_resolve(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#resolveMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#resolveMask)
 ///
 /// @param self QPalette*
 uint64_t q_palette_resolve_mask(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setResolveMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setResolveMask)
 ///
 /// @param self QPalette*
 /// @param mask uint64_t
 void q_palette_set_resolve_mask(void* self, uint64_t mask);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#dtor.QPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#dtor.QPalette)
 ///
 /// Delete this object from C++ memory.
 ///

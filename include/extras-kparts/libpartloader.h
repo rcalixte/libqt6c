@@ -13,24 +13,24 @@
 
 /// https://api.kde.org/kparts.html
 
-/// [Qt documentation](https://api.kde.org/kparts.html#qt_getEnumMetaObject)
+/// [Upstream resources](https://api.kde.org/kparts.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum KParts__PartCapability
 const QMetaObject* k_parts_get_enum_meta_object(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kparts.html#qt_getEnumName)
+/// [Upstream resources](https://api.kde.org/kparts.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KParts__PartCapability
 const char* k_parts_get_enum_name(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kparts.html#qt_getEnumMetaObject)
+/// [Upstream resources](https://api.kde.org/kparts.html#qt_getEnumMetaObject)
 ///
 /// @param param1 flag of enum KParts__PartCapability
 const QMetaObject* k_parts_get_enum_meta_object2(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kparts.html#qt_getEnumName)
+/// [Upstream resources](https://api.kde.org/kparts.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -39,14 +39,14 @@ const char* k_parts_get_enum_name2(int32_t param1);
 
 /// https://api.kde.org/kparts-partloader.html
 
-/// [Qt documentation](https://api.kde.org/kparts-partloader.html#partCapabilities)
+/// [Upstream resources](https://api.kde.org/kparts-partloader.html#partCapabilities)
 ///
 /// @param param1 KPluginMetaData*
 ///
 /// @return flag of enum KParts__PartCapability
 int32_t k_parts__partloader_part_capabilities(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kparts-partloader.html#partsForMimeType)
+/// [Upstream resources](https://api.kde.org/kparts-partloader.html#partsForMimeType)
 ///
 /// @param param1 const char*
 libqt_list /* of KPluginMetaData* */ k_parts__partloader_parts_for_mime_type(const char* param1);

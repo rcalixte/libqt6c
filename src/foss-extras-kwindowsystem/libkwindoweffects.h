@@ -13,19 +13,19 @@
 
 /// https://api.kde.org/kwindoweffects.html
 
-/// [Qt documentation](https://api.kde.org/kwindoweffects.html#isEffectAvailable)
+/// [Upstream resources](https://api.kde.org/kwindoweffects.html#isEffectAvailable)
 ///
 /// @param param1 enum KWindowEffects__Effect
 bool k_windoweffects_is_effect_available(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kwindoweffects.html#enableBlurBehind)
+/// [Upstream resources](https://api.kde.org/kwindoweffects.html#enableBlurBehind)
 ///
 /// @param param1 QWindow*
 /// @param param2 bool
 /// @param param3 QRegion*
 void k_windoweffects_enable_blur_behind(void* param1, bool param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/kwindoweffects.html#enableBackgroundContrast)
+/// [Upstream resources](https://api.kde.org/kwindoweffects.html#enableBackgroundContrast)
 ///
 /// @param param1 QWindow*
 /// @param param2 bool
@@ -35,7 +35,7 @@ void k_windoweffects_enable_blur_behind(void* param1, bool param2, void* param3)
 /// @param param6 QRegion*
 void k_windoweffects_enable_background_contrast(void* param1, bool param2, double param3, double param4, double param5, void* param6);
 
-/// [Qt documentation](https://api.kde.org/kwindoweffects.html#slideWindow)
+/// [Upstream resources](https://api.kde.org/kwindoweffects.html#slideWindow)
 ///
 /// @param param1 QWindow*
 /// @param param2 enum KWindowEffects__SlideFromLocation

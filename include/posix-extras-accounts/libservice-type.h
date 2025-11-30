@@ -22,69 +22,69 @@ Accounts__ServiceType* q_accounts__servicetype_new();
 /// @param other Accounts__ServiceType*
 Accounts__ServiceType* q_accounts__servicetype_new2(void* other);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @param self Accounts__ServiceType*
 /// @param other Accounts__ServiceType*
 void q_accounts__servicetype_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @param self Accounts__ServiceType*
 bool q_accounts__servicetype_is_valid(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__ServiceType*
 const char* q_accounts__servicetype_name(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__ServiceType*
 const char* q_accounts__servicetype_description(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__ServiceType*
 const char* q_accounts__servicetype_display_name(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__ServiceType*
 const char* q_accounts__servicetype_tr_catalog(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__ServiceType*
 const char* q_accounts__servicetype_icon_name(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @param self Accounts__ServiceType*
 /// @param tag const char*
 bool q_accounts__servicetype_has_tag(void* self, const char* tag);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @param self Accounts__ServiceType*
 libqt_list /* of const char* */ q_accounts__servicetype_tags(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @param self Accounts__ServiceType*
 const QDomDocument* q_accounts__servicetype_dom_document(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// Delete this object from C++ memory.
 ///

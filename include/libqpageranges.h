@@ -22,80 +22,80 @@ QPageRanges* q_pageranges_new();
 /// @param other QPageRanges*
 QPageRanges* q_pageranges_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#operator-eq)
 ///
 /// @param self QPageRanges*
 /// @param other QPageRanges*
 void q_pageranges_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#swap)
 ///
 /// @param self QPageRanges*
 /// @param other QPageRanges*
 void q_pageranges_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#addPage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#addPage)
 ///
 /// @param self QPageRanges*
 /// @param pageNumber int
 void q_pageranges_add_page(void* self, int pageNumber);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#addRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#addRange)
 ///
 /// @param self QPageRanges*
 /// @param from int
 /// @param to int
 void q_pageranges_add_range(void* self, int from, int to);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#toRangeList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#toRangeList)
 ///
 /// @param self QPageRanges*
 libqt_list /* of QPageRanges__Range* */ q_pageranges_to_range_list(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#clear)
 ///
 /// @param self QPageRanges*
 void q_pageranges_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QPageRanges*
 const char* q_pageranges_to_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#fromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#fromString)
 ///
 /// @param ranges const char*
 QPageRanges* q_pageranges_from_string(const char* ranges);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#contains)
 ///
 /// @param self QPageRanges*
 /// @param pageNumber int
 bool q_pageranges_contains(void* self, int pageNumber);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#isEmpty)
 ///
 /// @param self QPageRanges*
 bool q_pageranges_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#firstPage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#firstPage)
 ///
 /// @param self QPageRanges*
 int32_t q_pageranges_first_page(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#lastPage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#lastPage)
 ///
 /// @param self QPageRanges*
 int32_t q_pageranges_last_page(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#detach)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#detach)
 ///
 /// @param self QPageRanges*
 void q_pageranges_detach(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#dtor.QPageRanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#dtor.QPageRanges)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -135,29 +135,29 @@ void q_pageranges__range_copy_assign(void* self, void* other);
 /// @param other QPageRanges__Range*
 void q_pageranges__range_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#from-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html#from-var)
 ///
 /// @param self QPageRanges__Range*
 int32_t q_pageranges__range_from(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#from-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html#from-var)
 ///
 /// @param self QPageRanges__Range*
 /// @param from int
 void q_pageranges__range_set_from(void* self, int from);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#to-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html#to-var)
 ///
 /// @param self QPageRanges__Range*
 int32_t q_pageranges__range_to(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#to-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html#to-var)
 ///
 /// @param self QPageRanges__Range*
 /// @param to int
 void q_pageranges__range_set_to(void* self, int to);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html#contains)
 ///
 /// @param self QPageRanges__Range*
 /// @param pageNumber int

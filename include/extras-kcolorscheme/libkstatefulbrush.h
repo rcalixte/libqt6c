@@ -51,25 +51,25 @@ KStatefulBrush* k_statefulbrush_new6(void* param1, void* background);
 /// @param param1 KStatefulBrush*
 KStatefulBrush* k_statefulbrush_new7(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kstatefulbrush.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kstatefulbrush.html#operator-eq)
 ///
 /// @param self KStatefulBrush*
 /// @param param1 KStatefulBrush*
 void k_statefulbrush_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kstatefulbrush.html#brush)
+/// [Upstream resources](https://api.kde.org/kstatefulbrush.html#brush)
 ///
 /// @param self KStatefulBrush*
 /// @param param1 enum QPalette__ColorGroup
 QBrush* k_statefulbrush_brush(void* self, int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kstatefulbrush.html#brush)
+/// [Upstream resources](https://api.kde.org/kstatefulbrush.html#brush)
 ///
 /// @param self KStatefulBrush*
 /// @param param1 QPalette*
 QBrush* k_statefulbrush_brush2(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kstatefulbrush.html#dtor.KStatefulBrush)
+/// [Upstream resources](https://api.kde.org/kstatefulbrush.html#dtor.KStatefulBrush)
 ///
 /// Delete this object from C++ memory.
 ///

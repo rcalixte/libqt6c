@@ -40,91 +40,91 @@ QVersionNumber* q_versionnumber_new4(int maj, int min);
 /// @param mic int
 QVersionNumber* q_versionnumber_new5(int maj, int min, int mic);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isNull)
 ///
 /// @param self QVersionNumber*
 bool q_versionnumber_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#isNormalized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isNormalized)
 ///
 /// @param self QVersionNumber*
 bool q_versionnumber_is_normalized(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#majorVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#majorVersion)
 ///
 /// @param self QVersionNumber*
 int32_t q_versionnumber_major_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#minorVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#minorVersion)
 ///
 /// @param self QVersionNumber*
 int32_t q_versionnumber_minor_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#microVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#microVersion)
 ///
 /// @param self QVersionNumber*
 int32_t q_versionnumber_micro_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#normalized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#normalized)
 ///
 /// @param self QVersionNumber*
 QVersionNumber* q_versionnumber_normalized(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#segments)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segments)
 ///
 /// @param self QVersionNumber*
 libqt_list /* of int */ q_versionnumber_segments(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#segmentAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segmentAt)
 ///
 /// @param self QVersionNumber*
 /// @param index int64_t
 int32_t q_versionnumber_segment_at(void* self, int64_t index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#segmentCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segmentCount)
 ///
 /// @param self QVersionNumber*
 int64_t q_versionnumber_segment_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#isPrefixOf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isPrefixOf)
 ///
 /// @param self QVersionNumber*
 /// @param other QVersionNumber*
 bool q_versionnumber_is_prefix_of(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#compare)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#compare)
 ///
 /// @param v1 QVersionNumber*
 /// @param v2 QVersionNumber*
 int32_t q_versionnumber_compare(void* v1, void* v2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#commonPrefix)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#commonPrefix)
 ///
 /// @param v1 QVersionNumber*
 /// @param v2 QVersionNumber*
 QVersionNumber* q_versionnumber_common_prefix(void* v1, void* v2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QVersionNumber*
 const char* q_versionnumber_to_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
 /// @param stringVal char*
 QVersionNumber* q_versionnumber_from_string(char* stringVal);
 
 #if defined(__linux__) || defined(__FreeBSD__)
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
 /// @param stringVal char*
 /// @param suffixIndex int64_t*
 QVersionNumber* q_versionnumber_from_string2(char* stringVal, int64_t* suffixIndex);
 #endif
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#dtor.QVersionNumber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#dtor.QVersionNumber)
 ///
 /// Delete this object from C++ memory.
 ///

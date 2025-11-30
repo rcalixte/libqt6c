@@ -18,21 +18,21 @@
 /// @param param1 KNSCore__CategoryMetadata*
 KNSCore__CategoryMetadata* k_nscore__categorymetadata_new(void* param1);
 
-/// [Qt documentation](https://api.kde.org/knscore-categorymetadata.html#id)
+/// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#id)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__CategoryMetadata*
 const char* k_nscore__categorymetadata_id(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-categorymetadata.html#name)
+/// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__CategoryMetadata*
 const char* k_nscore__categorymetadata_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-categorymetadata.html#displayName)
+/// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#displayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

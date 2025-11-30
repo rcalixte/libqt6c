@@ -35,38 +35,38 @@ void q_jsonparseerror_copy_assign(void* self, void* other);
 /// @param other QJsonParseError*
 void q_jsonparseerror_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QJsonParseError*
 const char* q_jsonparseerror_error_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#offset-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html#offset-var)
 ///
 /// @param self QJsonParseError*
 int32_t q_jsonparseerror_offset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#offset-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html#offset-var)
 ///
 /// @param self QJsonParseError*
 /// @param offset int
 void q_jsonparseerror_set_offset(void* self, int offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#error-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html#error-var)
 ///
 /// @param self QJsonParseError*
 ///
 /// @return enum QJsonParseError__ParseError
 int32_t q_jsonparseerror_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#error-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html#error-var)
 ///
 /// @param self QJsonParseError*
 /// @param error enum QJsonParseError__ParseError
 void q_jsonparseerror_set_error(void* self, int32_t error);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#dtor.QJsonParseError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html#dtor.QJsonParseError)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -94,101 +94,101 @@ QJsonDocument* q_jsondocument_new3(void* array);
 /// @param other QJsonDocument*
 QJsonDocument* q_jsondocument_new4(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-eq)
 ///
 /// @param self QJsonDocument*
 /// @param other QJsonDocument*
 void q_jsondocument_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#swap)
 ///
 /// @param self QJsonDocument*
 /// @param other QJsonDocument*
 void q_jsondocument_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#fromVariant)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#fromVariant)
 ///
 /// @param variant QVariant*
 QJsonDocument* q_jsondocument_from_variant(void* variant);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#toVariant)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toVariant)
 ///
 /// @param self QJsonDocument*
 QVariant* q_jsondocument_to_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
 /// @param json const char*
 QJsonDocument* q_jsondocument_from_json(const char* json);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QJsonDocument*
 char* q_jsondocument_to_json(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#isEmpty)
 ///
 /// @param self QJsonDocument*
 bool q_jsondocument_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isArray)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#isArray)
 ///
 /// @param self QJsonDocument*
 bool q_jsondocument_is_array(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#isObject)
 ///
 /// @param self QJsonDocument*
 bool q_jsondocument_is_object(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#object)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#object)
 ///
 /// @param self QJsonDocument*
 QJsonObject* q_jsondocument_object(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#array)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#array)
 ///
 /// @param self QJsonDocument*
 QJsonArray* q_jsondocument_array(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#setObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#setObject)
 ///
 /// @param self QJsonDocument*
 /// @param object QJsonObject*
 void q_jsondocument_set_object(void* self, void* object);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#setArray)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#setArray)
 ///
 /// @param self QJsonDocument*
 /// @param array QJsonArray*
 void q_jsondocument_set_array(void* self, void* array);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
 /// @param self QJsonDocument*
 /// @param key const char*
 const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
 /// @param self QJsonDocument*
 /// @param i int64_t
 const QJsonValue* q_jsondocument_operator_subscript4(void* self, int64_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#isNull)
 ///
 /// @param self QJsonDocument*
 bool q_jsondocument_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
 /// @param json const char*
 /// @param error QJsonParseError*
 QJsonDocument* q_jsondocument_from_json2(const char* json, void* error);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -196,7 +196,7 @@ QJsonDocument* q_jsondocument_from_json2(const char* json, void* error);
 /// @param format enum QJsonDocument__JsonFormat
 char* q_jsondocument_to_json1(void* self, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#dtor.QJsonDocument)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#dtor.QJsonDocument)
 ///
 /// Delete this object from C++ memory.
 ///

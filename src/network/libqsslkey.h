@@ -93,79 +93,79 @@ QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t
 /// @param type enum QSsl__KeyType
 QSslKey* q_sslkey_new12(void* handle, int32_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#operator-eq)
 ///
 /// @param self QSslKey*
 /// @param other QSslKey*
 void q_sslkey_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#swap)
 ///
 /// @param self QSslKey*
 /// @param other QSslKey*
 void q_sslkey_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#isNull)
 ///
 /// @param self QSslKey*
 bool q_sslkey_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#clear)
 ///
 /// @param self QSslKey*
 void q_sslkey_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#length)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#length)
 ///
 /// @param self QSslKey*
 int32_t q_sslkey_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#type)
 ///
 /// @param self QSslKey*
 ///
 /// @return enum QSsl__KeyType
 int32_t q_sslkey_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#algorithm)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#algorithm)
 ///
 /// @param self QSslKey*
 ///
 /// @return enum QSsl__KeyAlgorithm
 int32_t q_sslkey_algorithm(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#toPem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toPem)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslKey*
 char* q_sslkey_to_pem(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#toDer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toDer)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslKey*
 char* q_sslkey_to_der(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#handle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#handle)
 ///
 /// @param self QSslKey*
 void* q_sslkey_handle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#operator-eq-eq)
 ///
 /// @param self QSslKey*
 /// @param key QSslKey*
 bool q_sslkey_operator_equal(void* self, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#operator-not-eq)
 ///
 /// @param self QSslKey*
 /// @param key QSslKey*
 bool q_sslkey_operator_not_equal(void* self, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#toPem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toPem)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -173,7 +173,7 @@ bool q_sslkey_operator_not_equal(void* self, void* key);
 /// @param passPhrase const char*
 char* q_sslkey_to_pem1(void* self, const char* passPhrase);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#toDer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toDer)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -181,7 +181,7 @@ char* q_sslkey_to_pem1(void* self, const char* passPhrase);
 /// @param passPhrase const char*
 char* q_sslkey_to_der1(void* self, const char* passPhrase);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#dtor.QSslKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#dtor.QSslKey)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qwebengineurlrequestjob.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QWebEngineUrlRequestJob*
 const QMetaObject* q_webengineurlrequestjob_meta_object(void* self);
@@ -28,55 +28,55 @@ void* q_webengineurlrequestjob_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_webengineurlrequestjob_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_webengineurlrequestjob_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestUrl)
 ///
 /// @param self QWebEngineUrlRequestJob*
 QUrl* q_webengineurlrequestjob_request_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestMethod)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestMethod)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineUrlRequestJob*
 char* q_webengineurlrequestjob_request_method(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#initiator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#initiator)
 ///
 /// @param self QWebEngineUrlRequestJob*
 QUrl* q_webengineurlrequestjob_initiator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestBody)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestBody)
 ///
 /// @param self QWebEngineUrlRequestJob*
 QIODevice* q_webengineurlrequestjob_request_body(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#reply)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#reply)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param contentType const char*
 /// @param device QIODevice*
 void q_webengineurlrequestjob_reply(void* self, const char* contentType, void* device);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#fail)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#fail)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param error enum QWebEngineUrlRequestJob__Error
 void q_webengineurlrequestjob_fail(void* self, int32_t error);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#redirect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#redirect)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param url QUrl*
 void q_webengineurlrequestjob_redirect(void* self, void* url);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -84,7 +84,7 @@ void q_webengineurlrequestjob_redirect(void* self, void* url);
 /// @param c const char*
 const char* q_webengineurlrequestjob_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -95,7 +95,7 @@ const char* q_webengineurlrequestjob_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param event QEvent*
@@ -103,7 +103,7 @@ bool q_webengineurlrequestjob_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param watched QObject*
@@ -112,7 +112,7 @@ bool q_webengineurlrequestjob_event_filter(void* self, void* watched, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -121,7 +121,7 @@ const char* q_webengineurlrequestjob_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param name char*
@@ -129,35 +129,35 @@ void q_webengineurlrequestjob_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QWebEngineUrlRequestJob*
 bool q_webengineurlrequestjob_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QWebEngineUrlRequestJob*
 bool q_webengineurlrequestjob_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QWebEngineUrlRequestJob*
 bool q_webengineurlrequestjob_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QWebEngineUrlRequestJob*
 bool q_webengineurlrequestjob_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param b bool
@@ -165,14 +165,14 @@ bool q_webengineurlrequestjob_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QWebEngineUrlRequestJob*
 QThread* q_webengineurlrequestjob_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param thread QThread*
@@ -180,7 +180,7 @@ bool q_webengineurlrequestjob_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param interval int
@@ -188,7 +188,7 @@ int32_t q_webengineurlrequestjob_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param id int
@@ -196,7 +196,7 @@ void q_webengineurlrequestjob_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param id enum Qt__TimerId
@@ -204,14 +204,14 @@ void q_webengineurlrequestjob_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QWebEngineUrlRequestJob*
 libqt_list /* of QObject* */ q_webengineurlrequestjob_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param parent QObject*
@@ -219,7 +219,7 @@ void q_webengineurlrequestjob_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param filterObj QObject*
@@ -227,7 +227,7 @@ void q_webengineurlrequestjob_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param obj QObject*
@@ -235,7 +235,7 @@ void q_webengineurlrequestjob_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -245,7 +245,7 @@ QMetaObject__Connection* q_webengineurlrequestjob_connect(void* sender, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param sender QObject*
@@ -255,7 +255,7 @@ QMetaObject__Connection* q_webengineurlrequestjob_connect2(void* self, void* sen
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -265,28 +265,28 @@ bool q_webengineurlrequestjob_disconnect(void* sender, void* signal, void* recei
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_webengineurlrequestjob_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QWebEngineUrlRequestJob*
 void q_webengineurlrequestjob_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QWebEngineUrlRequestJob*
 void q_webengineurlrequestjob_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param name const char*
@@ -295,7 +295,7 @@ bool q_webengineurlrequestjob_set_property(void* self, const char* name, void* v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param name const char*
@@ -303,7 +303,7 @@ QVariant* q_webengineurlrequestjob_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -312,28 +312,28 @@ const char** q_webengineurlrequestjob_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QWebEngineUrlRequestJob*
 QBindingStorage* q_webengineurlrequestjob_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QWebEngineUrlRequestJob*
 const QBindingStorage* q_webengineurlrequestjob_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestJob*
 void q_webengineurlrequestjob_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param callback void func(QWebEngineUrlRequestJob* self)
@@ -341,14 +341,14 @@ void q_webengineurlrequestjob_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QWebEngineUrlRequestJob*
 QObject* q_webengineurlrequestjob_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param classname const char*
@@ -356,14 +356,14 @@ bool q_webengineurlrequestjob_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QWebEngineUrlRequestJob*
 void q_webengineurlrequestjob_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param thread QThread*
@@ -372,7 +372,7 @@ bool q_webengineurlrequestjob_move_to_thread2(void* self, void* thread, void* pa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param interval int
@@ -381,7 +381,7 @@ int32_t q_webengineurlrequestjob_start_timer22(void* self, int interval, int32_t
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -392,7 +392,7 @@ QMetaObject__Connection* q_webengineurlrequestjob_connect5(void* sender, void* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param sender QObject*
@@ -403,7 +403,7 @@ QMetaObject__Connection* q_webengineurlrequestjob_connect4(void* self, void* sen
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param param1 QObject*
@@ -411,7 +411,7 @@ void q_webengineurlrequestjob_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestJob*
 /// @param callback void func(QWebEngineUrlRequestJob* self, QObject* param1)
@@ -419,7 +419,7 @@ void q_webengineurlrequestjob_on_destroyed1(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -427,7 +427,7 @@ void q_webengineurlrequestjob_on_destroyed1(void* self, void (*callback)(void*, 
 /// @param callback void func(QWebEngineUrlRequestJob* self, const char* objectName)
 void q_webengineurlrequestjob_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#dtor.QWebEngineUrlRequestJob)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#dtor.QWebEngineUrlRequestJob)
 ///
 /// Delete this object from C++ memory.
 ///

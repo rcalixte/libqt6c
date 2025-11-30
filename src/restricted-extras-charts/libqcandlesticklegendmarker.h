@@ -26,7 +26,7 @@ QCandlestickLegendMarker* q_candlesticklegendmarker_new(void* series, void* lege
 /// @param parent QObject*
 QCandlestickLegendMarker* q_candlesticklegendmarker_new2(void* series, void* legend, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QCandlestickLegendMarker*
 const QMetaObject* q_candlesticklegendmarker_meta_object(void* self);
@@ -55,21 +55,21 @@ void q_candlesticklegendmarker_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param3 void*
 int32_t q_candlesticklegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_candlesticklegendmarker_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#type)
 ///
 /// @param self QCandlestickLegendMarker*
 ///
 /// @return enum QLegendMarker__LegendMarkerType
 int32_t q_candlesticklegendmarker_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
@@ -77,7 +77,7 @@ int32_t q_candlesticklegendmarker_type(void* self);
 /// @param callback int32_t func()
 void q_candlesticklegendmarker_on_type(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
@@ -86,12 +86,12 @@ void q_candlesticklegendmarker_on_type(void* self, int32_t (*callback)());
 /// @return enum QLegendMarker__LegendMarkerType
 int32_t q_candlesticklegendmarker_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#series)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#series)
 ///
 /// @param self QCandlestickLegendMarker*
 QCandlestickSeries* q_candlesticklegendmarker_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#series)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#series)
 ///
 /// Allows for overriding the related default method
 ///
@@ -99,14 +99,14 @@ QCandlestickSeries* q_candlesticklegendmarker_series(void* self);
 /// @param callback QCandlestickSeries* func()
 void q_candlesticklegendmarker_on_series(void* self, QCandlestickSeries* (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#series)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#series)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickLegendMarker*
 QCandlestickSeries* q_candlesticklegendmarker_qbase_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -114,7 +114,7 @@ QCandlestickSeries* q_candlesticklegendmarker_qbase_series(void* self);
 /// @param c const char*
 const char* q_candlesticklegendmarker_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -125,7 +125,7 @@ const char* q_candlesticklegendmarker_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#label)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#label)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -134,7 +134,7 @@ const char* q_candlesticklegendmarker_label(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setLabel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setLabel)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param label const char*
@@ -142,14 +142,14 @@ void q_candlesticklegendmarker_set_label(void* self, const char* label);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrush)
 ///
 /// @param self QCandlestickLegendMarker*
 QBrush* q_candlesticklegendmarker_label_brush(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setLabelBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setLabelBrush)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param brush QBrush*
@@ -157,14 +157,14 @@ void q_candlesticklegendmarker_set_label_brush(void* self, void* brush);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#font)
 ///
 /// @param self QCandlestickLegendMarker*
 QFont* q_candlesticklegendmarker_font(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setFont)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param font QFont*
@@ -172,14 +172,14 @@ void q_candlesticklegendmarker_set_font(void* self, void* font);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#pen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#pen)
 ///
 /// @param self QCandlestickLegendMarker*
 QPen* q_candlesticklegendmarker_pen(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setPen)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param pen QPen*
@@ -187,14 +187,14 @@ void q_candlesticklegendmarker_set_pen(void* self, void* pen);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#brush)
 ///
 /// @param self QCandlestickLegendMarker*
 QBrush* q_candlesticklegendmarker_brush(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setBrush)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param brush QBrush*
@@ -202,14 +202,14 @@ void q_candlesticklegendmarker_set_brush(void* self, void* brush);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#isVisible)
 ///
 /// @param self QCandlestickLegendMarker*
 bool q_candlesticklegendmarker_is_visible(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setVisible)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param visible bool
@@ -217,7 +217,7 @@ void q_candlesticklegendmarker_set_visible(void* self, bool visible);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#shape)
 ///
 /// @param self QCandlestickLegendMarker*
 ///
@@ -226,7 +226,7 @@ int32_t q_candlesticklegendmarker_shape(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setShape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setShape)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param shape enum QLegend__MarkerShape
@@ -234,14 +234,14 @@ void q_candlesticklegendmarker_set_shape(void* self, int32_t shape);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_clicked(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -249,7 +249,7 @@ void q_candlesticklegendmarker_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param status bool
@@ -257,7 +257,7 @@ void q_candlesticklegendmarker_hovered(void* self, bool status);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self, bool status)
@@ -265,14 +265,14 @@ void q_candlesticklegendmarker_on_hovered(void* self, void (*callback)(void*, bo
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_label_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -280,14 +280,14 @@ void q_candlesticklegendmarker_on_label_changed(void* self, void (*callback)(voi
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_label_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -295,14 +295,14 @@ void q_candlesticklegendmarker_on_label_brush_changed(void* self, void (*callbac
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_font_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -310,14 +310,14 @@ void q_candlesticklegendmarker_on_font_changed(void* self, void (*callback)(void
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_pen_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -325,14 +325,14 @@ void q_candlesticklegendmarker_on_pen_changed(void* self, void (*callback)(void*
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -340,14 +340,14 @@ void q_candlesticklegendmarker_on_brush_changed(void* self, void (*callback)(voi
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_visible_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -355,14 +355,14 @@ void q_candlesticklegendmarker_on_visible_changed(void* self, void (*callback)(v
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_shape_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -370,7 +370,7 @@ void q_candlesticklegendmarker_on_shape_changed(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -379,7 +379,7 @@ const char* q_candlesticklegendmarker_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param name char*
@@ -387,35 +387,35 @@ void q_candlesticklegendmarker_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QCandlestickLegendMarker*
 bool q_candlesticklegendmarker_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QCandlestickLegendMarker*
 bool q_candlesticklegendmarker_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QCandlestickLegendMarker*
 bool q_candlesticklegendmarker_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QCandlestickLegendMarker*
 bool q_candlesticklegendmarker_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param b bool
@@ -423,14 +423,14 @@ bool q_candlesticklegendmarker_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QCandlestickLegendMarker*
 QThread* q_candlesticklegendmarker_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param thread QThread*
@@ -438,7 +438,7 @@ bool q_candlesticklegendmarker_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param interval int
@@ -446,7 +446,7 @@ int32_t q_candlesticklegendmarker_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param id int
@@ -454,7 +454,7 @@ void q_candlesticklegendmarker_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param id enum Qt__TimerId
@@ -462,14 +462,14 @@ void q_candlesticklegendmarker_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QCandlestickLegendMarker*
 libqt_list /* of QObject* */ q_candlesticklegendmarker_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param parent QObject*
@@ -477,7 +477,7 @@ void q_candlesticklegendmarker_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param filterObj QObject*
@@ -485,7 +485,7 @@ void q_candlesticklegendmarker_install_event_filter(void* self, void* filterObj)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param obj QObject*
@@ -493,7 +493,7 @@ void q_candlesticklegendmarker_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -503,7 +503,7 @@ QMetaObject__Connection* q_candlesticklegendmarker_connect(void* sender, void* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param sender QObject*
@@ -513,7 +513,7 @@ QMetaObject__Connection* q_candlesticklegendmarker_connect2(void* self, void* se
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -523,28 +523,28 @@ bool q_candlesticklegendmarker_disconnect(void* sender, void* signal, void* rece
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_candlesticklegendmarker_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param name const char*
@@ -553,7 +553,7 @@ bool q_candlesticklegendmarker_set_property(void* self, const char* name, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param name const char*
@@ -561,7 +561,7 @@ QVariant* q_candlesticklegendmarker_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -570,28 +570,28 @@ const char** q_candlesticklegendmarker_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QCandlestickLegendMarker*
 QBindingStorage* q_candlesticklegendmarker_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QCandlestickLegendMarker*
 const QBindingStorage* q_candlesticklegendmarker_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self)
@@ -599,14 +599,14 @@ void q_candlesticklegendmarker_on_destroyed(void* self, void (*callback)(void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QCandlestickLegendMarker*
 QObject* q_candlesticklegendmarker_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param classname const char*
@@ -614,14 +614,14 @@ bool q_candlesticklegendmarker_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QCandlestickLegendMarker*
 void q_candlesticklegendmarker_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param thread QThread*
@@ -630,7 +630,7 @@ bool q_candlesticklegendmarker_move_to_thread2(void* self, void* thread, void* p
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param interval int
@@ -639,7 +639,7 @@ int32_t q_candlesticklegendmarker_start_timer22(void* self, int interval, int32_
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -650,7 +650,7 @@ QMetaObject__Connection* q_candlesticklegendmarker_connect5(void* sender, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param sender QObject*
@@ -661,7 +661,7 @@ QMetaObject__Connection* q_candlesticklegendmarker_connect4(void* self, void* se
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param param1 QObject*
@@ -669,7 +669,7 @@ void q_candlesticklegendmarker_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickLegendMarker*
 /// @param callback void func(QCandlestickLegendMarker* self, QObject* param1)
@@ -677,7 +677,7 @@ void q_candlesticklegendmarker_on_destroyed1(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -687,7 +687,7 @@ bool q_candlesticklegendmarker_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -697,7 +697,7 @@ bool q_candlesticklegendmarker_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -707,7 +707,7 @@ void q_candlesticklegendmarker_on_event(void* self, bool (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -718,7 +718,7 @@ bool q_candlesticklegendmarker_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -729,7 +729,7 @@ bool q_candlesticklegendmarker_qbase_event_filter(void* self, void* watched, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -739,7 +739,7 @@ void q_candlesticklegendmarker_on_event_filter(void* self, bool (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -749,7 +749,7 @@ void q_candlesticklegendmarker_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -759,7 +759,7 @@ void q_candlesticklegendmarker_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -769,7 +769,7 @@ void q_candlesticklegendmarker_on_timer_event(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -779,7 +779,7 @@ void q_candlesticklegendmarker_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -789,7 +789,7 @@ void q_candlesticklegendmarker_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -799,7 +799,7 @@ void q_candlesticklegendmarker_on_child_event(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -809,7 +809,7 @@ void q_candlesticklegendmarker_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -819,7 +819,7 @@ void q_candlesticklegendmarker_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -829,7 +829,7 @@ void q_candlesticklegendmarker_on_custom_event(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -839,7 +839,7 @@ void q_candlesticklegendmarker_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -849,7 +849,7 @@ void q_candlesticklegendmarker_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -859,7 +859,7 @@ void q_candlesticklegendmarker_on_connect_notify(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -869,7 +869,7 @@ void q_candlesticklegendmarker_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -879,7 +879,7 @@ void q_candlesticklegendmarker_qbase_disconnect_notify(void* self, void* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -889,7 +889,7 @@ void q_candlesticklegendmarker_on_disconnect_notify(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -898,7 +898,7 @@ QObject* q_candlesticklegendmarker_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -907,7 +907,7 @@ QObject* q_candlesticklegendmarker_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -917,7 +917,7 @@ void q_candlesticklegendmarker_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -926,7 +926,7 @@ int32_t q_candlesticklegendmarker_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -935,7 +935,7 @@ int32_t q_candlesticklegendmarker_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -945,7 +945,7 @@ void q_candlesticklegendmarker_on_sender_signal_index(void* self, int32_t (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -955,7 +955,7 @@ int32_t q_candlesticklegendmarker_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -965,7 +965,7 @@ int32_t q_candlesticklegendmarker_qbase_receivers(void* self, const char* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -975,7 +975,7 @@ void q_candlesticklegendmarker_on_receivers(void* self, int32_t (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -985,7 +985,7 @@ bool q_candlesticklegendmarker_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -995,7 +995,7 @@ bool q_candlesticklegendmarker_qbase_is_signal_connected(void* self, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1005,7 +1005,7 @@ void q_candlesticklegendmarker_on_is_signal_connected(void* self, bool (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1013,7 +1013,7 @@ void q_candlesticklegendmarker_on_is_signal_connected(void* self, bool (*callbac
 /// @param callback void func(QCandlestickLegendMarker* self, const char* objectName)
 void q_candlesticklegendmarker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#dtor.QCandlestickLegendMarker)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html#dtor.QCandlestickLegendMarker)
 ///
 /// Delete this object from C++ memory.
 ///

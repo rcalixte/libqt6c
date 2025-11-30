@@ -22,143 +22,143 @@ KSyntaxHighlighting__Format* k_syntaxhighlighting__format_new();
 /// @param other KSyntaxHighlighting__Format*
 KSyntaxHighlighting__Format* k_syntaxhighlighting__format_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#operator-eq)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param other KSyntaxHighlighting__Format*
 void k_syntaxhighlighting__format_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#isValid)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#isValid)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#name)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Format*
 const char* k_syntaxhighlighting__format_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#id)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#id)
 ///
 /// @param self KSyntaxHighlighting__Format*
 int32_t k_syntaxhighlighting__format_id(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#textStyle)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#textStyle)
 ///
 /// @param self KSyntaxHighlighting__Format*
 ///
 /// @return enum KSyntaxHighlighting__Theme__TextStyle
 int32_t k_syntaxhighlighting__format_text_style(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#isDefaultTextStyle)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#isDefaultTextStyle)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__format_is_default_text_style(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasTextColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasTextColor)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__format_has_text_color(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#textColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#textColor)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 QColor* k_syntaxhighlighting__format_text_color(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#selectedTextColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#selectedTextColor)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 QColor* k_syntaxhighlighting__format_selected_text_color(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasBackgroundColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasBackgroundColor)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__format_has_background_color(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#backgroundColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#backgroundColor)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 QColor* k_syntaxhighlighting__format_background_color(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#selectedBackgroundColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#selectedBackgroundColor)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 QColor* k_syntaxhighlighting__format_selected_background_color(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#isBold)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#isBold)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__format_is_bold(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#isItalic)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#isItalic)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__format_is_italic(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#isUnderline)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#isUnderline)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__format_is_underline(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#isStrikeThrough)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#isStrikeThrough)
 ///
 /// @param self KSyntaxHighlighting__Format*
 /// @param theme KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__format_is_strike_through(void* self, void* theme);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#spellCheck)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#spellCheck)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_spell_check(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasBoldOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasBoldOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_bold_override(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasItalicOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasItalicOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_italic_override(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasUnderlineOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasUnderlineOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_underline_override(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasStrikeThroughOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasStrikeThroughOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_strike_through_override(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasTextColorOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasTextColorOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_text_color_override(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasBackgroundColorOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasBackgroundColorOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_background_color_override(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasSelectedTextColorOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasSelectedTextColorOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_selected_text_color_override(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-format.html#hasSelectedBackgroundColorOverride)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#hasSelectedBackgroundColorOverride)
 ///
 /// @param self KSyntaxHighlighting__Format*
 bool k_syntaxhighlighting__format_has_selected_background_color_override(void* self);

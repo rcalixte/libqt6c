@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kio-jobuidelegateextension.html
 
-/// [Qt documentation](https://api.kde.org/kio-jobuidelegateextension.html#askDeleteConfirmation)
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#askDeleteConfirmation)
 ///
 /// @param self KIO__JobUiDelegateExtension*
 /// @param urls libqt_list /* of QUrl* */
@@ -21,7 +21,7 @@
 /// @param confirmationType enum KIO__JobUiDelegateExtension__ConfirmationType
 bool k_io__jobuidelegateextension_ask_delete_confirmation(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType);
 
-/// [Qt documentation](https://api.kde.org/kio-jobuidelegateextension.html#updateUrlInClipboard)
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#updateUrlInClipboard)
 ///
 /// @param self KIO__JobUiDelegateExtension*
 /// @param src QUrl*
@@ -30,11 +30,11 @@ void k_io__jobuidelegateextension_update_url_in_clipboard(void* self, void* src,
 
 /// https://api.kde.org/kio.html
 
-/// [Qt documentation](https://api.kde.org/kio.html#defaultJobUiDelegateExtension)
+/// [Upstream resources](https://api.kde.org/kio.html#defaultJobUiDelegateExtension)
 ///
 KIO__JobUiDelegateExtension* k_io_default_job_ui_delegate_extension();
 
-/// [Qt documentation](https://api.kde.org/kio.html#setDefaultJobUiDelegateExtension)
+/// [Upstream resources](https://api.kde.org/kio.html#setDefaultJobUiDelegateExtension)
 ///
 /// @param param1 KIO__JobUiDelegateExtension*
 void k_io_set_default_job_ui_delegate_extension(void* param1);

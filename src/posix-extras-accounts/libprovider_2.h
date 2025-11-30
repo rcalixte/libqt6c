@@ -22,88 +22,88 @@ Accounts__Provider* q_accounts__provider_new();
 /// @param other Accounts__Provider*
 Accounts__Provider* q_accounts__provider_new2(void* other);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// @param self Accounts__Provider*
 /// @param other Accounts__Provider*
 void q_accounts__provider_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// @param self Accounts__Provider*
 bool q_accounts__provider_is_valid(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Provider*
 const char* q_accounts__provider_name(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Provider*
 const char* q_accounts__provider_display_name(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Provider*
 const char* q_accounts__provider_description(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Provider*
 const char* q_accounts__provider_plugin_name(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Provider*
 const char* q_accounts__provider_tr_catalog(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Provider*
 const char* q_accounts__provider_icon_name(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Provider*
 const char* q_accounts__provider_domains_reg_exp(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// @param self Accounts__Provider*
 bool q_accounts__provider_is_single_account(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// @param self Accounts__Provider*
 /// @param tag const char*
 bool q_accounts__provider_has_tag(void* self, const char* tag);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// @param self Accounts__Provider*
 libqt_list /* of const char* */ q_accounts__provider_tags(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// @param self Accounts__Provider*
 const QDomDocument* q_accounts__provider_dom_document(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///
 /// Delete this object from C++ memory.
 ///

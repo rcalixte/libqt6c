@@ -13,12 +13,12 @@
 
 /// https://doc.qt.io/qt-6/qtvideo.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtvideo.html#qt_getEnumMetaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtvideo.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QtVideo__Rotation
 const QMetaObject* q_tvideo_get_enum_meta_object(int32_t param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtvideo.html#qt_getEnumName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtvideo.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

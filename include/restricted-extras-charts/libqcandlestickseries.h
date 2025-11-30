@@ -22,7 +22,7 @@ QCandlestickSeries* q_candlestickseries_new();
 /// @param parent QObject*
 QCandlestickSeries* q_candlestickseries_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QCandlestickSeries*
 const QMetaObject* q_candlestickseries_meta_object(void* self);
@@ -51,73 +51,73 @@ void q_candlestickseries_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t q_candlestickseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_candlestickseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#append)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#append)
 ///
 /// @param self QCandlestickSeries*
 /// @param set QCandlestickSet*
 bool q_candlestickseries_append(void* self, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#remove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#remove)
 ///
 /// @param self QCandlestickSeries*
 /// @param set QCandlestickSet*
 bool q_candlestickseries_remove(void* self, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#append)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#append)
 ///
 /// @param self QCandlestickSeries*
 /// @param sets libqt_list /* of QCandlestickSet* */
 bool q_candlestickseries_append2(void* self, libqt_list sets);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#remove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#remove)
 ///
 /// @param self QCandlestickSeries*
 /// @param sets libqt_list /* of QCandlestickSet* */
 bool q_candlestickseries_remove2(void* self, libqt_list sets);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#insert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#insert)
 ///
 /// @param self QCandlestickSeries*
 /// @param index int
 /// @param set QCandlestickSet*
 bool q_candlestickseries_insert(void* self, int index, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#take)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#take)
 ///
 /// @param self QCandlestickSeries*
 /// @param set QCandlestickSet*
 bool q_candlestickseries_take(void* self, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#clear)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#sets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#sets)
 ///
 /// @param self QCandlestickSeries*
 libqt_list /* of QCandlestickSet* */ q_candlestickseries_sets(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#count)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#count)
 ///
 /// @param self QCandlestickSeries*
 int32_t q_candlestickseries_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#type)
 ///
 /// @param self QCandlestickSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 int32_t q_candlestickseries_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
@@ -125,7 +125,7 @@ int32_t q_candlestickseries_type(void* self);
 /// @param callback int32_t func()
 void q_candlestickseries_on_type(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
@@ -134,323 +134,323 @@ void q_candlestickseries_on_type(void* self, int32_t (*callback)());
 /// @return enum QAbstractSeries__SeriesType
 int32_t q_candlestickseries_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setMaximumColumnWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setMaximumColumnWidth)
 ///
 /// @param self QCandlestickSeries*
 /// @param maximumColumnWidth double
 void q_candlestickseries_set_maximum_column_width(void* self, double maximumColumnWidth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#maximumColumnWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#maximumColumnWidth)
 ///
 /// @param self QCandlestickSeries*
 double q_candlestickseries_maximum_column_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setMinimumColumnWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setMinimumColumnWidth)
 ///
 /// @param self QCandlestickSeries*
 /// @param minimumColumnWidth double
 void q_candlestickseries_set_minimum_column_width(void* self, double minimumColumnWidth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#minimumColumnWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#minimumColumnWidth)
 ///
 /// @param self QCandlestickSeries*
 double q_candlestickseries_minimum_column_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setBodyWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setBodyWidth)
 ///
 /// @param self QCandlestickSeries*
 /// @param bodyWidth double
 void q_candlestickseries_set_body_width(void* self, double bodyWidth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyWidth)
 ///
 /// @param self QCandlestickSeries*
 double q_candlestickseries_body_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setBodyOutlineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setBodyOutlineVisible)
 ///
 /// @param self QCandlestickSeries*
 /// @param bodyOutlineVisible bool
 void q_candlestickseries_set_body_outline_visible(void* self, bool bodyOutlineVisible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyOutlineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyOutlineVisible)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_body_outline_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setCapsWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setCapsWidth)
 ///
 /// @param self QCandlestickSeries*
 /// @param capsWidth double
 void q_candlestickseries_set_caps_width(void* self, double capsWidth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsWidth)
 ///
 /// @param self QCandlestickSeries*
 double q_candlestickseries_caps_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setCapsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setCapsVisible)
 ///
 /// @param self QCandlestickSeries*
 /// @param capsVisible bool
 void q_candlestickseries_set_caps_visible(void* self, bool capsVisible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsVisible)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_caps_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setIncreasingColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setIncreasingColor)
 ///
 /// @param self QCandlestickSeries*
 /// @param increasingColor QColor*
 void q_candlestickseries_set_increasing_color(void* self, void* increasingColor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#increasingColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#increasingColor)
 ///
 /// @param self QCandlestickSeries*
 QColor* q_candlestickseries_increasing_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setDecreasingColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setDecreasingColor)
 ///
 /// @param self QCandlestickSeries*
 /// @param decreasingColor QColor*
 void q_candlestickseries_set_decreasing_color(void* self, void* decreasingColor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#decreasingColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#decreasingColor)
 ///
 /// @param self QCandlestickSeries*
 QColor* q_candlestickseries_decreasing_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setBrush)
 ///
 /// @param self QCandlestickSeries*
 /// @param brush QBrush*
 void q_candlestickseries_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#brush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#brush)
 ///
 /// @param self QCandlestickSeries*
 QBrush* q_candlestickseries_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#setPen)
 ///
 /// @param self QCandlestickSeries*
 /// @param pen QPen*
 void q_candlestickseries_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#pen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#pen)
 ///
 /// @param self QCandlestickSeries*
 QPen* q_candlestickseries_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#clicked)
 ///
 /// @param self QCandlestickSeries*
 /// @param set QCandlestickSet*
 void q_candlestickseries_clicked(void* self, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#clicked)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, QCandlestickSet* set)
 void q_candlestickseries_on_clicked(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#hovered)
 ///
 /// @param self QCandlestickSeries*
 /// @param status bool
 /// @param set QCandlestickSet*
 void q_candlestickseries_hovered(void* self, bool status, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#hovered)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, bool status, QCandlestickSet* set)
 void q_candlestickseries_on_hovered(void* self, void (*callback)(void*, bool, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#pressed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#pressed)
 ///
 /// @param self QCandlestickSeries*
 /// @param set QCandlestickSet*
 void q_candlestickseries_pressed(void* self, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#pressed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#pressed)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, QCandlestickSet* set)
 void q_candlestickseries_on_pressed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#released)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#released)
 ///
 /// @param self QCandlestickSeries*
 /// @param set QCandlestickSet*
 void q_candlestickseries_released(void* self, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#released)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#released)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, QCandlestickSet* set)
 void q_candlestickseries_on_released(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#doubleClicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QCandlestickSeries*
 /// @param set QCandlestickSet*
 void q_candlestickseries_double_clicked(void* self, void* set);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#doubleClicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, QCandlestickSet* set)
 void q_candlestickseries_on_double_clicked(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsAdded)
 ///
 /// @param self QCandlestickSeries*
 /// @param sets libqt_list /* of QCandlestickSet* */
 void q_candlestickseries_candlestick_sets_added(void* self, libqt_list sets);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsAdded)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, QCandlestickSet** sets)
 void q_candlestickseries_on_candlestick_sets_added(void* self, void (*callback)(void*, QCandlestickSet**));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsRemoved)
 ///
 /// @param self QCandlestickSeries*
 /// @param sets libqt_list /* of QCandlestickSet* */
 void q_candlestickseries_candlestick_sets_removed(void* self, libqt_list sets);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsRemoved)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, QCandlestickSet** sets)
 void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*callback)(void*, QCandlestickSet**));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#countChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#countChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_count_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#countChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#countChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_count_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#maximumColumnWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#maximumColumnWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_maximum_column_width_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#maximumColumnWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#maximumColumnWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_maximum_column_width_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#minimumColumnWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#minimumColumnWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_minimum_column_width_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#minimumColumnWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#minimumColumnWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_minimum_column_width_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_body_width_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_body_width_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyOutlineVisibilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyOutlineVisibilityChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_body_outline_visibility_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyOutlineVisibilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#bodyOutlineVisibilityChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_body_outline_visibility_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_caps_width_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsWidthChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_caps_width_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsVisibilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsVisibilityChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_caps_visibility_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsVisibilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#capsVisibilityChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_caps_visibility_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#increasingColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#increasingColorChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_increasing_color_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#increasingColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#increasingColorChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_increasing_color_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#decreasingColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#decreasingColorChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_decreasing_color_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#decreasingColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#decreasingColorChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_decreasing_color_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#brushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#brushChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_brush_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#brushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#brushChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_brush_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#penChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#penChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_pen_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#penChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#penChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
 void q_candlestickseries_on_pen_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -458,7 +458,7 @@ void q_candlestickseries_on_pen_changed(void* self, void (*callback)(void*));
 /// @param c const char*
 const char* q_candlestickseries_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -469,7 +469,7 @@ const char* q_candlestickseries_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setName)
 ///
 /// @param self QCandlestickSeries*
 /// @param name const char*
@@ -477,7 +477,7 @@ void q_candlestickseries_set_name(void* self, const char* name);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -486,28 +486,28 @@ const char* q_candlestickseries_name(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_set_visible(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_is_visible(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
 /// @param self QCandlestickSeries*
 double q_candlestickseries_opacity(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setOpacity)
 ///
 /// @param self QCandlestickSeries*
 /// @param opacity double
@@ -515,28 +515,28 @@ void q_candlestickseries_set_opacity(void* self, double opacity);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_set_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#chart)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
 /// @param self QCandlestickSeries*
 QChart* q_candlestickseries_chart(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachAxis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#attachAxis)
 ///
 /// @param self QCandlestickSeries*
 /// @param axis QAbstractAxis*
@@ -544,7 +544,7 @@ bool q_candlestickseries_attach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#detachAxis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#detachAxis)
 ///
 /// @param self QCandlestickSeries*
 /// @param axis QAbstractAxis*
@@ -552,35 +552,35 @@ bool q_candlestickseries_detach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
 ///
 /// @param self QCandlestickSeries*
 libqt_list /* of QAbstractAxis* */ q_candlestickseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#show)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_show(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#hide)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_hide(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
@@ -588,14 +588,14 @@ void q_candlestickseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
@@ -603,14 +603,14 @@ void q_candlestickseries_on_visible_changed(void* self, void (*callback)(void*))
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
@@ -618,14 +618,14 @@ void q_candlestickseries_on_opacity_changed(void* self, void (*callback)(void*))
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
@@ -633,7 +633,7 @@ void q_candlestickseries_on_use_open_g_l_changed(void* self, void (*callback)(vo
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
 ///
 /// @param self QCandlestickSeries*
 /// @param visible bool
@@ -641,7 +641,7 @@ void q_candlestickseries_set_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
 ///
 /// @param self QCandlestickSeries*
 /// @param enable bool
@@ -649,7 +649,7 @@ void q_candlestickseries_set_use_open_g_l1(void* self, bool enable);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -658,7 +658,7 @@ const char* q_candlestickseries_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCandlestickSeries*
 /// @param name char*
@@ -666,35 +666,35 @@ void q_candlestickseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QCandlestickSeries*
 bool q_candlestickseries_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QCandlestickSeries*
 /// @param b bool
@@ -702,14 +702,14 @@ bool q_candlestickseries_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QCandlestickSeries*
 QThread* q_candlestickseries_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QCandlestickSeries*
 /// @param thread QThread*
@@ -717,7 +717,7 @@ bool q_candlestickseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCandlestickSeries*
 /// @param interval int
@@ -725,7 +725,7 @@ int32_t q_candlestickseries_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCandlestickSeries*
 /// @param id int
@@ -733,7 +733,7 @@ void q_candlestickseries_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCandlestickSeries*
 /// @param id enum Qt__TimerId
@@ -741,14 +741,14 @@ void q_candlestickseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QCandlestickSeries*
 libqt_list /* of QObject* */ q_candlestickseries_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QCandlestickSeries*
 /// @param parent QObject*
@@ -756,7 +756,7 @@ void q_candlestickseries_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QCandlestickSeries*
 /// @param filterObj QObject*
@@ -764,7 +764,7 @@ void q_candlestickseries_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QCandlestickSeries*
 /// @param obj QObject*
@@ -772,7 +772,7 @@ void q_candlestickseries_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -782,7 +782,7 @@ QMetaObject__Connection* q_candlestickseries_connect(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QCandlestickSeries*
 /// @param sender QObject*
@@ -792,7 +792,7 @@ QMetaObject__Connection* q_candlestickseries_connect2(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -802,28 +802,28 @@ bool q_candlestickseries_disconnect(void* sender, void* signal, void* receiver, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_candlestickseries_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QCandlestickSeries*
 /// @param name const char*
@@ -832,7 +832,7 @@ bool q_candlestickseries_set_property(void* self, const char* name, void* value)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QCandlestickSeries*
 /// @param name const char*
@@ -840,7 +840,7 @@ QVariant* q_candlestickseries_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -849,28 +849,28 @@ const char** q_candlestickseries_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QCandlestickSeries*
 QBindingStorage* q_candlestickseries_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QCandlestickSeries*
 const QBindingStorage* q_candlestickseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self)
@@ -878,14 +878,14 @@ void q_candlestickseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QCandlestickSeries*
 QObject* q_candlestickseries_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QCandlestickSeries*
 /// @param classname const char*
@@ -893,14 +893,14 @@ bool q_candlestickseries_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QCandlestickSeries*
 void q_candlestickseries_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QCandlestickSeries*
 /// @param thread QThread*
@@ -909,7 +909,7 @@ bool q_candlestickseries_move_to_thread2(void* self, void* thread, void* param2)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCandlestickSeries*
 /// @param interval int
@@ -918,7 +918,7 @@ int32_t q_candlestickseries_start_timer22(void* self, int interval, int32_t time
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -929,7 +929,7 @@ QMetaObject__Connection* q_candlestickseries_connect5(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QCandlestickSeries*
 /// @param sender QObject*
@@ -940,7 +940,7 @@ QMetaObject__Connection* q_candlestickseries_connect4(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickSeries*
 /// @param param1 QObject*
@@ -948,7 +948,7 @@ void q_candlestickseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCandlestickSeries*
 /// @param callback void func(QCandlestickSeries* self, QObject* param1)
@@ -956,7 +956,7 @@ void q_candlestickseries_on_destroyed1(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -966,7 +966,7 @@ bool q_candlestickseries_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -976,7 +976,7 @@ bool q_candlestickseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -986,7 +986,7 @@ void q_candlestickseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -997,7 +997,7 @@ bool q_candlestickseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1008,7 +1008,7 @@ bool q_candlestickseries_qbase_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1018,7 +1018,7 @@ void q_candlestickseries_on_event_filter(void* self, bool (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1028,7 +1028,7 @@ void q_candlestickseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1038,7 +1038,7 @@ void q_candlestickseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1048,7 +1048,7 @@ void q_candlestickseries_on_timer_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1058,7 +1058,7 @@ void q_candlestickseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1068,7 +1068,7 @@ void q_candlestickseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1078,7 +1078,7 @@ void q_candlestickseries_on_child_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1088,7 +1088,7 @@ void q_candlestickseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1098,7 +1098,7 @@ void q_candlestickseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1108,7 +1108,7 @@ void q_candlestickseries_on_custom_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1118,7 +1118,7 @@ void q_candlestickseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1128,7 +1128,7 @@ void q_candlestickseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1138,7 +1138,7 @@ void q_candlestickseries_on_connect_notify(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1148,7 +1148,7 @@ void q_candlestickseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1158,7 +1158,7 @@ void q_candlestickseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1168,7 +1168,7 @@ void q_candlestickseries_on_disconnect_notify(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1177,7 +1177,7 @@ QObject* q_candlestickseries_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1186,7 +1186,7 @@ QObject* q_candlestickseries_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1196,7 +1196,7 @@ void q_candlestickseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1205,7 +1205,7 @@ int32_t q_candlestickseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1214,7 +1214,7 @@ int32_t q_candlestickseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1224,7 +1224,7 @@ void q_candlestickseries_on_sender_signal_index(void* self, int32_t (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1234,7 +1234,7 @@ int32_t q_candlestickseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1244,7 +1244,7 @@ int32_t q_candlestickseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1254,7 +1254,7 @@ void q_candlestickseries_on_receivers(void* self, int32_t (*callback)(void*, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1264,7 +1264,7 @@ bool q_candlestickseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1274,7 +1274,7 @@ bool q_candlestickseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1284,7 +1284,7 @@ void q_candlestickseries_on_is_signal_connected(void* self, bool (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1292,7 +1292,7 @@ void q_candlestickseries_on_is_signal_connected(void* self, bool (*callback)(voi
 /// @param callback void func(QCandlestickSeries* self, const char* objectName)
 void q_candlestickseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#dtor.QCandlestickSeries)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#dtor.QCandlestickSeries)
 ///
 /// Delete this object from C++ memory.
 ///

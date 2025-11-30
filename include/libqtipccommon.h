@@ -38,73 +38,73 @@ QNativeIpcKey* q_nativeipckey_new4(void* other);
 /// @param type enum QNativeIpcKey__Type
 QNativeIpcKey* q_nativeipckey_new5(const char* k, uint16_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#legacyDefaultTypeForOs)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#legacyDefaultTypeForOs)
 ///
 ///
 /// @return enum QNativeIpcKey__Type
 uint16_t q_nativeipckey_legacy_default_type_for_os();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#operator-eq)
 ///
 /// @param self QNativeIpcKey*
 /// @param other QNativeIpcKey*
 void q_nativeipckey_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#swap)
 ///
 /// @param self QNativeIpcKey*
 /// @param other QNativeIpcKey*
 void q_nativeipckey_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#isEmpty)
 ///
 /// @param self QNativeIpcKey*
 bool q_nativeipckey_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#isValid)
 ///
 /// @param self QNativeIpcKey*
 bool q_nativeipckey_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#type)
 ///
 /// @param self QNativeIpcKey*
 ///
 /// @return enum QNativeIpcKey__Type
 uint16_t q_nativeipckey_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#setType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#setType)
 ///
 /// @param self QNativeIpcKey*
 /// @param type enum QNativeIpcKey__Type
 void q_nativeipckey_set_type(void* self, uint16_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#nativeKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#nativeKey)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QNativeIpcKey*
 const char* q_nativeipckey_native_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#setNativeKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#setNativeKey)
 ///
 /// @param self QNativeIpcKey*
 /// @param newKey const char*
 void q_nativeipckey_set_native_key(void* self, const char* newKey);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QNativeIpcKey*
 const char* q_nativeipckey_to_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#fromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#fromString)
 ///
 /// @param stringVal const char*
 QNativeIpcKey* q_nativeipckey_from_string(const char* stringVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#dtor.QNativeIpcKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#dtor.QNativeIpcKey)
 ///
 /// Delete this object from C++ memory.
 ///

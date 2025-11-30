@@ -22,31 +22,31 @@ Attica__Distribution* k_attica__distribution_new();
 /// @param other Attica__Distribution*
 Attica__Distribution* k_attica__distribution_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-distribution.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/attica-distribution.html#operator-eq)
 ///
 /// @param self Attica__Distribution*
 /// @param other Attica__Distribution*
 void k_attica__distribution_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-distribution.html#id)
+/// [Upstream resources](https://api.kde.org/attica-distribution.html#id)
 ///
 /// @param self Attica__Distribution*
 uint32_t k_attica__distribution_id(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-distribution.html#setId)
+/// [Upstream resources](https://api.kde.org/attica-distribution.html#setId)
 ///
 /// @param self Attica__Distribution*
 /// @param id uint32_t
 void k_attica__distribution_set_id(void* self, uint32_t id);
 
-/// [Qt documentation](https://api.kde.org/attica-distribution.html#name)
+/// [Upstream resources](https://api.kde.org/attica-distribution.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Distribution*
 const char* k_attica__distribution_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-distribution.html#setName)
+/// [Upstream resources](https://api.kde.org/attica-distribution.html#setName)
 ///
 /// @param self Attica__Distribution*
 /// @param name const char*

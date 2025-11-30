@@ -22,210 +22,210 @@ Attica__Provider* k_attica__provider_new();
 /// @param other Attica__Provider*
 Attica__Provider* k_attica__provider_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#operator-eq)
 ///
 /// @param self Attica__Provider*
 /// @param other Attica__Provider*
 void k_attica__provider_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#isValid)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#isValid)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#isEnabled)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#isEnabled)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_is_enabled(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#setEnabled)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#setEnabled)
 ///
 /// @param self Attica__Provider*
 /// @param enabled bool
 void k_attica__provider_set_enabled(void* self, bool enabled);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#setAdditionalAgentInformation)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#setAdditionalAgentInformation)
 ///
 /// @param self Attica__Provider*
 /// @param additionalInformation const char*
 void k_attica__provider_set_additional_agent_information(void* self, const char* additionalInformation);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#additionalAgentInformation)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#additionalAgentInformation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_additional_agent_information(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#baseUrl)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#baseUrl)
 ///
 /// @param self Attica__Provider*
 QUrl* k_attica__provider_base_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#name)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#icon)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#icon)
 ///
 /// @param self Attica__Provider*
 QUrl* k_attica__provider_icon(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasPersonService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasPersonService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_person_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#personServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#personServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_person_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasFriendService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasFriendService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_friend_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#friendServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#friendServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_friend_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasMessageService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasMessageService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_message_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#messageServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#messageServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_message_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasAchievementService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasAchievementService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_achievement_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#achievementServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#achievementServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_achievement_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasActivityService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasActivityService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_activity_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#activityServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#activityServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_activity_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasContentService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasContentService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_content_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#contentServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#contentServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_content_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasFanService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasFanService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_fan_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#fanServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#fanServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_fan_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasForumService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasForumService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_forum_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#forumServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#forumServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_forum_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasKnowledgebaseService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasKnowledgebaseService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_knowledgebase_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#knowledgebaseServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#knowledgebaseServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_knowledgebase_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasCommentService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasCommentService)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_comment_service(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#commentServiceVersion)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#commentServiceVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_comment_service_version(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasCredentials)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasCredentials)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_credentials(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#hasCredentials)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#hasCredentials)
 ///
 /// @param self Attica__Provider*
 bool k_attica__provider_has_credentials2(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#loadCredentials)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#loadCredentials)
 ///
 /// @param self Attica__Provider*
 /// @param user const char*
 /// @param password const char*
 bool k_attica__provider_load_credentials(void* self, const char* user, const char* password);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#saveCredentials)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#saveCredentials)
 ///
 /// @param self Attica__Provider*
 /// @param user const char*
 /// @param password const char*
 bool k_attica__provider_save_credentials(void* self, const char* user, const char* password);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#checkLogin)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#checkLogin)
 ///
 /// @param self Attica__Provider*
 /// @param user const char*
 /// @param password const char*
 Attica__PostJob* k_attica__provider_check_login(void* self, const char* user, const char* password);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#registerAccount)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#registerAccount)
 ///
 /// @param self Attica__Provider*
 /// @param id const char*
@@ -235,14 +235,14 @@ Attica__PostJob* k_attica__provider_check_login(void* self, const char* user, co
 /// @param lastName const char*
 Attica__PostJob* k_attica__provider_register_account(void* self, const char* id, const char* password, const char* mail, const char* firstName, const char* lastName);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#postLocation)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#postLocation)
 ///
 /// @param self Attica__Provider*
 /// @param latitude double
 /// @param longitude double
 Attica__PostJob* k_attica__provider_post_location(void* self, double latitude, double longitude);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#setPrivateData)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#setPrivateData)
 ///
 /// @param self Attica__Provider*
 /// @param app const char*
@@ -250,38 +250,38 @@ Attica__PostJob* k_attica__provider_post_location(void* self, double latitude, d
 /// @param value const char*
 Attica__PostJob* k_attica__provider_set_private_data(void* self, const char* app, const char* key, const char* value);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#inviteFriend)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#inviteFriend)
 ///
 /// @param self Attica__Provider*
 /// @param to const char*
 /// @param message const char*
 Attica__PostJob* k_attica__provider_invite_friend(void* self, const char* to, const char* message);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#approveFriendship)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#approveFriendship)
 ///
 /// @param self Attica__Provider*
 /// @param to const char*
 Attica__PostJob* k_attica__provider_approve_friendship(void* self, const char* to);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#declineFriendship)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#declineFriendship)
 ///
 /// @param self Attica__Provider*
 /// @param to const char*
 Attica__PostJob* k_attica__provider_decline_friendship(void* self, const char* to);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#cancelFriendship)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#cancelFriendship)
 ///
 /// @param self Attica__Provider*
 /// @param to const char*
 Attica__PostJob* k_attica__provider_cancel_friendship(void* self, const char* to);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#postMessage)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#postMessage)
 ///
 /// @param self Attica__Provider*
 /// @param message Attica__Message*
 Attica__PostJob* k_attica__provider_post_message(void* self, void* message);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#editAchievement)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#editAchievement)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
@@ -289,14 +289,14 @@ Attica__PostJob* k_attica__provider_post_message(void* self, void* message);
 /// @param achievement Attica__Achievement*
 Attica__PutJob* k_attica__provider_edit_achievement(void* self, const char* contentId, const char* achievementId, void* achievement);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#deleteAchievement)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#deleteAchievement)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
 /// @param achievementId const char*
 Attica__DeleteJob* k_attica__provider_delete_achievement(void* self, const char* contentId, const char* achievementId);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#setAchievementProgress)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#setAchievementProgress)
 ///
 /// @param self Attica__Provider*
 /// @param id const char*
@@ -304,81 +304,81 @@ Attica__DeleteJob* k_attica__provider_delete_achievement(void* self, const char*
 /// @param timestamp QDateTime*
 Attica__PostJob* k_attica__provider_set_achievement_progress(void* self, const char* id, void* progress, void* timestamp);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#resetAchievementProgress)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#resetAchievementProgress)
 ///
 /// @param self Attica__Provider*
 /// @param id const char*
 Attica__DeleteJob* k_attica__provider_reset_achievement_progress(void* self, const char* id);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#postActivity)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#postActivity)
 ///
 /// @param self Attica__Provider*
 /// @param message const char*
 Attica__PostJob* k_attica__provider_post_activity(void* self, const char* message);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#createProject)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#createProject)
 ///
 /// @param self Attica__Provider*
 /// @param project Attica__Project*
 Attica__PostJob* k_attica__provider_create_project(void* self, void* project);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#deleteProject)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#deleteProject)
 ///
 /// @param self Attica__Provider*
 /// @param project Attica__Project*
 Attica__PostJob* k_attica__provider_delete_project(void* self, void* project);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#editProject)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#editProject)
 ///
 /// @param self Attica__Provider*
 /// @param project Attica__Project*
 Attica__PostJob* k_attica__provider_edit_project(void* self, void* project);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#savePublisherField)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#savePublisherField)
 ///
 /// @param self Attica__Provider*
 /// @param project Attica__Project*
 /// @param field Attica__PublisherField*
 Attica__PostJob* k_attica__provider_save_publisher_field(void* self, void* project, void* field);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#publishBuildJob)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#publishBuildJob)
 ///
 /// @param self Attica__Provider*
 /// @param buildjob Attica__BuildServiceJob*
 /// @param publisher Attica__Publisher*
 Attica__PostJob* k_attica__provider_publish_build_job(void* self, void* buildjob, void* publisher);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#createBuildServiceJob)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#createBuildServiceJob)
 ///
 /// @param self Attica__Provider*
 /// @param job Attica__BuildServiceJob*
 Attica__PostJob* k_attica__provider_create_build_service_job(void* self, void* job);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#cancelBuildServiceJob)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#cancelBuildServiceJob)
 ///
 /// @param self Attica__Provider*
 /// @param job Attica__BuildServiceJob*
 Attica__PostJob* k_attica__provider_cancel_build_service_job(void* self, void* job);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#deleteRemoteAccount)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#deleteRemoteAccount)
 ///
 /// @param self Attica__Provider*
 /// @param id const char*
 Attica__PostJob* k_attica__provider_delete_remote_account(void* self, const char* id);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#createRemoteAccount)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#createRemoteAccount)
 ///
 /// @param self Attica__Provider*
 /// @param account Attica__RemoteAccount*
 Attica__PostJob* k_attica__provider_create_remote_account(void* self, void* account);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#editRemoteAccount)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#editRemoteAccount)
 ///
 /// @param self Attica__Provider*
 /// @param account Attica__RemoteAccount*
 Attica__PostJob* k_attica__provider_edit_remote_account(void* self, void* account);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#uploadTarballToBuildService)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#uploadTarballToBuildService)
 ///
 /// @param self Attica__Provider*
 /// @param projectId const char*
@@ -386,20 +386,20 @@ Attica__PostJob* k_attica__provider_edit_remote_account(void* self, void* accoun
 /// @param payload const char*
 Attica__PostJob* k_attica__provider_upload_tarball_to_build_service(void* self, const char* projectId, const char* fileName, const char* payload);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#voteForContent)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#voteForContent)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
 /// @param rating uint32_t
 Attica__PostJob* k_attica__provider_vote_for_content(void* self, const char* contentId, uint32_t rating);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#deleteContent)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#deleteContent)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
 Attica__PostJob* k_attica__provider_delete_content(void* self, const char* contentId);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#setDownloadFile)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#setDownloadFile)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
@@ -407,7 +407,7 @@ Attica__PostJob* k_attica__provider_delete_content(void* self, const char* conte
 /// @param payload QIODevice*
 Attica__PostJob* k_attica__provider_set_download_file(void* self, const char* contentId, const char* fileName, void* payload);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#setDownloadFile)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#setDownloadFile)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
@@ -415,13 +415,13 @@ Attica__PostJob* k_attica__provider_set_download_file(void* self, const char* co
 /// @param payload const char*
 Attica__PostJob* k_attica__provider_set_download_file2(void* self, const char* contentId, const char* fileName, const char* payload);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#deleteDownloadFile)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#deleteDownloadFile)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
 Attica__PostJob* k_attica__provider_delete_download_file(void* self, const char* contentId);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#setPreviewImage)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#setPreviewImage)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
@@ -430,27 +430,27 @@ Attica__PostJob* k_attica__provider_delete_download_file(void* self, const char*
 /// @param image const char*
 Attica__PostJob* k_attica__provider_set_preview_image(void* self, const char* contentId, const char* previewId, const char* fileName, const char* image);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#deletePreviewImage)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#deletePreviewImage)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
 /// @param previewId const char*
 Attica__PostJob* k_attica__provider_delete_preview_image(void* self, const char* contentId, const char* previewId);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#voteForComment)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#voteForComment)
 ///
 /// @param self Attica__Provider*
 /// @param id const char*
 /// @param rating uint32_t
 Attica__PostJob* k_attica__provider_vote_for_comment(void* self, const char* id, uint32_t rating);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#becomeFan)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#becomeFan)
 ///
 /// @param self Attica__Provider*
 /// @param contentId const char*
 Attica__PostJob* k_attica__provider_become_fan(void* self, const char* contentId);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#postTopic)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#postTopic)
 ///
 /// @param self Attica__Provider*
 /// @param forumId const char*
@@ -458,14 +458,14 @@ Attica__PostJob* k_attica__provider_become_fan(void* self, const char* contentId
 /// @param content const char*
 Attica__PostJob* k_attica__provider_post_topic(void* self, const char* forumId, const char* subject, const char* content);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#getRegisterAccountUrl)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#getRegisterAccountUrl)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 const char* k_attica__provider_get_register_account_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#postLocation)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#postLocation)
 ///
 /// @param self Attica__Provider*
 /// @param latitude double
@@ -473,7 +473,7 @@ const char* k_attica__provider_get_register_account_url(void* self);
 /// @param city const char*
 Attica__PostJob* k_attica__provider_post_location3(void* self, double latitude, double longitude, const char* city);
 
-/// [Qt documentation](https://api.kde.org/attica-provider.html#postLocation)
+/// [Upstream resources](https://api.kde.org/attica-provider.html#postLocation)
 ///
 /// @param self Attica__Provider*
 /// @param latitude double

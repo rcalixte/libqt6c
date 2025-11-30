@@ -35,53 +35,53 @@ void q_libraryinfo_copy_assign(void* self, void* other);
 /// @param other QLibraryInfo*
 void q_libraryinfo_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#build)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#build)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_libraryinfo_build();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#isDebugBuild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#isDebugBuild)
 ///
 bool q_libraryinfo_is_debug_build();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#isSharedBuild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#isSharedBuild)
 ///
 bool q_libraryinfo_is_shared_build();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#version)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#version)
 ///
 QVersionNumber* q_libraryinfo_version();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#path)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#path)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param p enum QLibraryInfo__LibraryPath
 const char* q_libraryinfo_path(int32_t p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#paths)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#paths)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param p enum QLibraryInfo__LibraryPath
 const char** q_libraryinfo_paths(int32_t p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param location enum QLibraryInfo__LibraryPath
 const char* q_libraryinfo_location(int32_t location);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#platformPluginArguments)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#platformPluginArguments)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param platformName const char*
 const char** q_libraryinfo_platform_plugin_arguments(const char* platformName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#dtor.QLibraryInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#dtor.QLibraryInfo)
 ///
 /// Delete this object from C++ memory.
 ///

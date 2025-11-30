@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/khelpclient.html
 
-/// [Qt documentation](https://api.kde.org/khelpclient.html#invokeHelp)
+/// [Upstream resources](https://api.kde.org/khelpclient.html#invokeHelp)
 ///
 /// @param param1 const char*
 /// @param param2 const char*

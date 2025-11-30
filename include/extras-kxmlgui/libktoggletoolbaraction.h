@@ -20,7 +20,7 @@
 /// @param parent QObject*
 KToggleToolBarAction* k_toggletoolbaraction_new(void* toolBar, const char* text, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KToggleToolBarAction*
 const QMetaObject* k_toggletoolbaraction_meta_object(void* self);
@@ -49,26 +49,26 @@ void k_toggletoolbaraction_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_toggletoolbaraction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_toggletoolbaraction_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#toolBar)
+/// [Upstream resources](https://api.kde.org/ktoggletoolbaraction.html#toolBar)
 ///
 /// @param self KToggleToolBarAction*
 KToolBar* k_toggletoolbaraction_tool_bar(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
 ///
 /// @param self KToggleToolBarAction*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_toggletoolbaraction_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -76,7 +76,7 @@ bool k_toggletoolbaraction_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KToggleToolBarAction* self, QObject* watched, QEvent* event)
 void k_toggletoolbaraction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -85,7 +85,7 @@ void k_toggletoolbaraction_on_event_filter(void* self, bool (*callback)(void*, v
 /// @param event QEvent*
 bool k_toggletoolbaraction_qbase_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -93,7 +93,7 @@ bool k_toggletoolbaraction_qbase_event_filter(void* self, void* watched, void* e
 /// @param c const char*
 const char* k_toggletoolbaraction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -104,7 +104,7 @@ const char* k_toggletoolbaraction_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KToggleAction
 ///
-/// [Qt documentation](https://api.kde.org/ktoggleaction.html#setCheckedState)
+/// [Upstream resources](https://api.kde.org/ktoggleaction.html#setCheckedState)
 ///
 /// @param self KToggleToolBarAction*
 /// @param checkedItem KGuiItem*
@@ -112,14 +112,14 @@ void k_toggletoolbaraction_set_checked_state(void* self, void* checkedItem);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
 ///
 /// @param self KToggleToolBarAction*
 libqt_list /* of QObject* */ k_toggletoolbaraction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setActionGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setActionGroup)
 ///
 /// @param self KToggleToolBarAction*
 /// @param group QActionGroup*
@@ -127,14 +127,14 @@ void k_toggletoolbaraction_set_action_group(void* self, void* group);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#actionGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#actionGroup)
 ///
 /// @param self KToggleToolBarAction*
 QActionGroup* k_toggletoolbaraction_action_group(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIcon)
 ///
 /// @param self KToggleToolBarAction*
 /// @param icon QIcon*
@@ -142,14 +142,14 @@ void k_toggletoolbaraction_set_icon(void* self, void* icon);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#icon)
 ///
 /// @param self KToggleToolBarAction*
 QIcon* k_toggletoolbaraction_icon(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setText)
 ///
 /// @param self KToggleToolBarAction*
 /// @param text const char*
@@ -157,7 +157,7 @@ void k_toggletoolbaraction_set_text(void* self, const char* text);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -166,7 +166,7 @@ const char* k_toggletoolbaraction_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIconText)
 ///
 /// @param self KToggleToolBarAction*
 /// @param text const char*
@@ -174,7 +174,7 @@ void k_toggletoolbaraction_set_icon_text(void* self, const char* text);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#iconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -183,7 +183,7 @@ const char* k_toggletoolbaraction_icon_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setToolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setToolTip)
 ///
 /// @param self KToggleToolBarAction*
 /// @param tip const char*
@@ -191,7 +191,7 @@ void k_toggletoolbaraction_set_tool_tip(void* self, const char* tip);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -200,7 +200,7 @@ const char* k_toggletoolbaraction_tool_tip(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setStatusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setStatusTip)
 ///
 /// @param self KToggleToolBarAction*
 /// @param statusTip const char*
@@ -208,7 +208,7 @@ void k_toggletoolbaraction_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#statusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -217,7 +217,7 @@ const char* k_toggletoolbaraction_status_tip(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setWhatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setWhatsThis)
 ///
 /// @param self KToggleToolBarAction*
 /// @param what const char*
@@ -225,7 +225,7 @@ void k_toggletoolbaraction_set_whats_this(void* self, const char* what);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#whatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -234,7 +234,7 @@ const char* k_toggletoolbaraction_whats_this(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setPriority)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setPriority)
 ///
 /// @param self KToggleToolBarAction*
 /// @param priority enum QAction__Priority
@@ -242,7 +242,7 @@ void k_toggletoolbaraction_set_priority(void* self, int32_t priority);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#priority)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#priority)
 ///
 /// @param self KToggleToolBarAction*
 ///
@@ -251,7 +251,7 @@ int32_t k_toggletoolbaraction_priority(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setSeparator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setSeparator)
 ///
 /// @param self KToggleToolBarAction*
 /// @param b bool
@@ -259,14 +259,14 @@ void k_toggletoolbaraction_set_separator(void* self, bool b);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isSeparator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isSeparator)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_separator(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcut)
 ///
 /// @param self KToggleToolBarAction*
 /// @param shortcut QKeySequence*
@@ -274,14 +274,14 @@ void k_toggletoolbaraction_set_shortcut(void* self, void* shortcut);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcut)
 ///
 /// @param self KToggleToolBarAction*
 QKeySequence* k_toggletoolbaraction_shortcut(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KToggleToolBarAction*
 /// @param shortcuts libqt_list /* of QKeySequence* */
@@ -289,7 +289,7 @@ void k_toggletoolbaraction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KToggleToolBarAction*
 /// @param shortcuts enum QKeySequence__StandardKey
@@ -297,14 +297,14 @@ void k_toggletoolbaraction_set_shortcuts2(void* self, int32_t shortcuts);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
 /// @param self KToggleToolBarAction*
 libqt_list /* of QKeySequence* */ k_toggletoolbaraction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcutContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcutContext)
 ///
 /// @param self KToggleToolBarAction*
 /// @param context enum Qt__ShortcutContext
@@ -312,7 +312,7 @@ void k_toggletoolbaraction_set_shortcut_context(void* self, int32_t context);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
 ///
 /// @param self KToggleToolBarAction*
 ///
@@ -321,7 +321,7 @@ int32_t k_toggletoolbaraction_shortcut_context(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setAutoRepeat)
 ///
 /// @param self KToggleToolBarAction*
 /// @param autoRepeat bool
@@ -329,14 +329,14 @@ void k_toggletoolbaraction_set_auto_repeat(void* self, bool autoRepeat);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_auto_repeat(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setFont)
 ///
 /// @param self KToggleToolBarAction*
 /// @param font QFont*
@@ -344,14 +344,14 @@ void k_toggletoolbaraction_set_font(void* self, void* font);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#font)
 ///
 /// @param self KToggleToolBarAction*
 QFont* k_toggletoolbaraction_font(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setCheckable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setCheckable)
 ///
 /// @param self KToggleToolBarAction*
 /// @param checkable bool
@@ -359,21 +359,21 @@ void k_toggletoolbaraction_set_checkable(void* self, bool checkable);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isCheckable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isCheckable)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_checkable(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#data)
 ///
 /// @param self KToggleToolBarAction*
 QVariant* k_toggletoolbaraction_data(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self KToggleToolBarAction*
 /// @param varVal QVariant*
@@ -381,28 +381,28 @@ void k_toggletoolbaraction_set_data(void* self, void* varVal);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isChecked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isChecked)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_checked(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isEnabled)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_enabled(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isVisible)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_visible(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#activate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#activate)
 ///
 /// @param self KToggleToolBarAction*
 /// @param event enum QAction__ActionEvent
@@ -410,7 +410,7 @@ void k_toggletoolbaraction_activate(void* self, int32_t event);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setMenuRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setMenuRole)
 ///
 /// @param self KToggleToolBarAction*
 /// @param menuRole enum QAction__MenuRole
@@ -418,7 +418,7 @@ void k_toggletoolbaraction_set_menu_role(void* self, int32_t menuRole);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#menuRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#menuRole)
 ///
 /// @param self KToggleToolBarAction*
 ///
@@ -427,7 +427,7 @@ int32_t k_toggletoolbaraction_menu_role(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIconVisibleInMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIconVisibleInMenu)
 ///
 /// @param self KToggleToolBarAction*
 /// @param visible bool
@@ -435,14 +435,14 @@ void k_toggletoolbaraction_set_icon_visible_in_menu(void* self, bool visible);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_icon_visible_in_menu(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcutVisibleInContextMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcutVisibleInContextMenu)
 ///
 /// @param self KToggleToolBarAction*
 /// @param show bool
@@ -450,35 +450,35 @@ void k_toggletoolbaraction_set_shortcut_visible_in_context_menu(void* self, bool
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_shortcut_visible_in_context_menu(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#showStatusText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#showStatusText)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_show_status_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#trigger)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#trigger)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_trigger(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hover)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hover)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_hover(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setChecked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setChecked)
 ///
 /// @param self KToggleToolBarAction*
 /// @param checked bool
@@ -486,14 +486,14 @@ void k_toggletoolbaraction_set_checked(void* self, bool checked);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggle)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_toggle(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setEnabled)
 ///
 /// @param self KToggleToolBarAction*
 /// @param enabled bool
@@ -501,14 +501,14 @@ void k_toggletoolbaraction_set_enabled(void* self, bool enabled);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#resetEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#resetEnabled)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_reset_enabled(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setDisabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setDisabled)
 ///
 /// @param self KToggleToolBarAction*
 /// @param b bool
@@ -516,7 +516,7 @@ void k_toggletoolbaraction_set_disabled(void* self, bool b);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setVisible)
 ///
 /// @param self KToggleToolBarAction*
 /// @param visible bool
@@ -524,14 +524,14 @@ void k_toggletoolbaraction_set_visible(void* self, bool visible);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_changed(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self)
@@ -539,7 +539,7 @@ void k_toggletoolbaraction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToggleToolBarAction*
 /// @param enabled bool
@@ -547,7 +547,7 @@ void k_toggletoolbaraction_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self, bool enabled)
@@ -555,7 +555,7 @@ void k_toggletoolbaraction_on_enabled_changed(void* self, void (*callback)(void*
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToggleToolBarAction*
 /// @param checkable bool
@@ -563,7 +563,7 @@ void k_toggletoolbaraction_checkable_changed(void* self, bool checkable);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self, bool checkable)
@@ -571,14 +571,14 @@ void k_toggletoolbaraction_on_checkable_changed(void* self, void (*callback)(voi
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_visible_changed(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self)
@@ -586,14 +586,14 @@ void k_toggletoolbaraction_on_visible_changed(void* self, void (*callback)(void*
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_triggered(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self)
@@ -601,14 +601,14 @@ void k_toggletoolbaraction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_hovered(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self)
@@ -616,7 +616,7 @@ void k_toggletoolbaraction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToggleToolBarAction*
 /// @param param1 bool
@@ -624,7 +624,7 @@ void k_toggletoolbaraction_toggled(void* self, bool param1);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self, bool param1)
@@ -632,7 +632,7 @@ void k_toggletoolbaraction_on_toggled(void* self, void (*callback)(void*, bool))
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#showStatusText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#showStatusText)
 ///
 /// @param self KToggleToolBarAction*
 /// @param object QObject*
@@ -640,7 +640,7 @@ bool k_toggletoolbaraction_show_status_text1(void* self, void* object);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToggleToolBarAction*
 /// @param checked bool
@@ -648,7 +648,7 @@ void k_toggletoolbaraction_triggered1(void* self, bool checked);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self, bool checked)
@@ -656,7 +656,7 @@ void k_toggletoolbaraction_on_triggered1(void* self, void (*callback)(void*, boo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -665,7 +665,7 @@ const char* k_toggletoolbaraction_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KToggleToolBarAction*
 /// @param name char*
@@ -673,35 +673,35 @@ void k_toggletoolbaraction_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KToggleToolBarAction*
 bool k_toggletoolbaraction_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KToggleToolBarAction*
 /// @param b bool
@@ -709,14 +709,14 @@ bool k_toggletoolbaraction_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KToggleToolBarAction*
 QThread* k_toggletoolbaraction_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KToggleToolBarAction*
 /// @param thread QThread*
@@ -724,7 +724,7 @@ bool k_toggletoolbaraction_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KToggleToolBarAction*
 /// @param interval int
@@ -732,7 +732,7 @@ int32_t k_toggletoolbaraction_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KToggleToolBarAction*
 /// @param id int
@@ -740,7 +740,7 @@ void k_toggletoolbaraction_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KToggleToolBarAction*
 /// @param id enum Qt__TimerId
@@ -748,14 +748,14 @@ void k_toggletoolbaraction_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KToggleToolBarAction*
 libqt_list /* of QObject* */ k_toggletoolbaraction_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KToggleToolBarAction*
 /// @param parent QObject*
@@ -763,7 +763,7 @@ void k_toggletoolbaraction_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KToggleToolBarAction*
 /// @param filterObj QObject*
@@ -771,7 +771,7 @@ void k_toggletoolbaraction_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KToggleToolBarAction*
 /// @param obj QObject*
@@ -779,7 +779,7 @@ void k_toggletoolbaraction_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -789,7 +789,7 @@ QMetaObject__Connection* k_toggletoolbaraction_connect(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KToggleToolBarAction*
 /// @param sender QObject*
@@ -799,7 +799,7 @@ QMetaObject__Connection* k_toggletoolbaraction_connect2(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -809,28 +809,28 @@ bool k_toggletoolbaraction_disconnect(void* sender, void* signal, void* receiver
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_toggletoolbaraction_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KToggleToolBarAction*
 /// @param name const char*
@@ -839,7 +839,7 @@ bool k_toggletoolbaraction_set_property(void* self, const char* name, void* valu
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KToggleToolBarAction*
 /// @param name const char*
@@ -847,7 +847,7 @@ QVariant* k_toggletoolbaraction_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -856,28 +856,28 @@ const char** k_toggletoolbaraction_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KToggleToolBarAction*
 QBindingStorage* k_toggletoolbaraction_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KToggleToolBarAction*
 const QBindingStorage* k_toggletoolbaraction_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self)
@@ -885,14 +885,14 @@ void k_toggletoolbaraction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KToggleToolBarAction*
 QObject* k_toggletoolbaraction_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KToggleToolBarAction*
 /// @param classname const char*
@@ -900,14 +900,14 @@ bool k_toggletoolbaraction_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KToggleToolBarAction*
 void k_toggletoolbaraction_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KToggleToolBarAction*
 /// @param thread QThread*
@@ -916,7 +916,7 @@ bool k_toggletoolbaraction_move_to_thread2(void* self, void* thread, void* param
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KToggleToolBarAction*
 /// @param interval int
@@ -925,7 +925,7 @@ int32_t k_toggletoolbaraction_start_timer22(void* self, int interval, int32_t ti
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -936,7 +936,7 @@ QMetaObject__Connection* k_toggletoolbaraction_connect5(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KToggleToolBarAction*
 /// @param sender QObject*
@@ -947,7 +947,7 @@ QMetaObject__Connection* k_toggletoolbaraction_connect4(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToggleToolBarAction*
 /// @param param1 QObject*
@@ -955,7 +955,7 @@ void k_toggletoolbaraction_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToggleToolBarAction*
 /// @param callback void func(KToggleToolBarAction* self, QObject* param1)
@@ -963,7 +963,7 @@ void k_toggletoolbaraction_on_destroyed1(void* self, void (*callback)(void*, voi
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -973,7 +973,7 @@ bool k_toggletoolbaraction_event(void* self, void* param1);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -983,7 +983,7 @@ bool k_toggletoolbaraction_qbase_event(void* self, void* param1);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -993,7 +993,7 @@ void k_toggletoolbaraction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1003,7 +1003,7 @@ void k_toggletoolbaraction_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1013,7 +1013,7 @@ void k_toggletoolbaraction_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1023,7 +1023,7 @@ void k_toggletoolbaraction_on_timer_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1033,7 +1033,7 @@ void k_toggletoolbaraction_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1043,7 +1043,7 @@ void k_toggletoolbaraction_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1053,7 +1053,7 @@ void k_toggletoolbaraction_on_child_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1063,7 +1063,7 @@ void k_toggletoolbaraction_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1073,7 +1073,7 @@ void k_toggletoolbaraction_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1083,7 +1083,7 @@ void k_toggletoolbaraction_on_custom_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1093,7 +1093,7 @@ void k_toggletoolbaraction_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1103,7 +1103,7 @@ void k_toggletoolbaraction_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1113,7 +1113,7 @@ void k_toggletoolbaraction_on_connect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1123,7 +1123,7 @@ void k_toggletoolbaraction_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1133,7 +1133,7 @@ void k_toggletoolbaraction_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1143,7 +1143,7 @@ void k_toggletoolbaraction_on_disconnect_notify(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1152,7 +1152,7 @@ QObject* k_toggletoolbaraction_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1161,7 +1161,7 @@ QObject* k_toggletoolbaraction_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1171,7 +1171,7 @@ void k_toggletoolbaraction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1180,7 +1180,7 @@ int32_t k_toggletoolbaraction_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1189,7 +1189,7 @@ int32_t k_toggletoolbaraction_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1199,7 +1199,7 @@ void k_toggletoolbaraction_on_sender_signal_index(void* self, int32_t (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1209,7 +1209,7 @@ int32_t k_toggletoolbaraction_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1219,7 +1219,7 @@ int32_t k_toggletoolbaraction_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1229,7 +1229,7 @@ void k_toggletoolbaraction_on_receivers(void* self, int32_t (*callback)(void*, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1239,7 +1239,7 @@ bool k_toggletoolbaraction_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1249,7 +1249,7 @@ bool k_toggletoolbaraction_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1259,7 +1259,7 @@ void k_toggletoolbaraction_on_is_signal_connected(void* self, bool (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1267,7 +1267,7 @@ void k_toggletoolbaraction_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KToggleToolBarAction* self, const char* objectName)
 void k_toggletoolbaraction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#dtor.KToggleToolBarAction)
+/// [Upstream resources](https://api.kde.org/ktoggletoolbaraction.html#dtor.KToggleToolBarAction)
 ///
 /// Delete this object from C++ memory.
 ///

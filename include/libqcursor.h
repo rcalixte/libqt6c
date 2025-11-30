@@ -66,102 +66,102 @@ QCursor* q_cursor_new8(void* pixmap, int hotX);
 /// @param hotY int
 QCursor* q_cursor_new9(void* pixmap, int hotX, int hotY);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#operator-eq)
 ///
 /// @param self QCursor*
 /// @param cursor QCursor*
 void q_cursor_operator_assign(void* self, void* cursor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#swap)
 ///
 /// @param self QCursor*
 /// @param other QCursor*
 void q_cursor_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#operator)
 ///
 /// @param self QCursor*
 QVariant* q_cursor_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#shape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#shape)
 ///
 /// @param self QCursor*
 ///
 /// @return enum Qt__CursorShape
 int32_t q_cursor_shape(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setShape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#setShape)
 ///
 /// @param self QCursor*
 /// @param newShape enum Qt__CursorShape
 void q_cursor_set_shape(void* self, int32_t newShape);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#bitmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#bitmap)
 ///
 /// @param self QCursor*
 /// @param param1 enum Qt__ReturnByValueConstant
 QBitmap* q_cursor_bitmap(void* self, int32_t param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#mask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#mask)
 ///
 /// @param self QCursor*
 /// @param param1 enum Qt__ReturnByValueConstant
 QBitmap* q_cursor_mask(void* self, int32_t param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#bitmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#bitmap)
 ///
 /// @param self QCursor*
 QBitmap* q_cursor_bitmap2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#mask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#mask)
 ///
 /// @param self QCursor*
 QBitmap* q_cursor_mask2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#pixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#pixmap)
 ///
 /// @param self QCursor*
 QPixmap* q_cursor_pixmap(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#hotSpot)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#hotSpot)
 ///
 /// @param self QCursor*
 QPoint* q_cursor_hot_spot(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#pos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#pos)
 ///
 QPoint* q_cursor_pos();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#pos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#pos)
 ///
 /// @param screen QScreen*
 QPoint* q_cursor_pos2(void* screen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setPos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#setPos)
 ///
 /// @param x int
 /// @param y int
 void q_cursor_set_pos(int x, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setPos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#setPos)
 ///
 /// @param screen QScreen*
 /// @param x int
 /// @param y int
 void q_cursor_set_pos2(void* screen, int x, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setPos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#setPos)
 ///
 /// @param p QPoint*
 void q_cursor_set_pos3(void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setPos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#setPos)
 ///
 /// @param screen QScreen*
 /// @param p QPoint*
 void q_cursor_set_pos4(void* screen, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#dtor.QCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#dtor.QCursor)
 ///
 /// Delete this object from C++ memory.
 ///

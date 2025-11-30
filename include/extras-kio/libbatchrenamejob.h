@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kio-batchrenamejob.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__BatchRenameJob*
 const QMetaObject* k_io__batchrenamejob_meta_object(void* self);
@@ -28,27 +28,27 @@ void* k_io__batchrenamejob_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_io__batchrenamejob_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_io__batchrenamejob_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kio-batchrenamejob.html#fileRenamed)
+/// [Upstream resources](https://api.kde.org/kio-batchrenamejob.html#fileRenamed)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param oldUrl QUrl*
 /// @param newUrl QUrl*
 void k_io__batchrenamejob_file_renamed(void* self, void* oldUrl, void* newUrl);
 
-/// [Qt documentation](https://api.kde.org/kio-batchrenamejob.html#fileRenamed)
+/// [Upstream resources](https://api.kde.org/kio-batchrenamejob.html#fileRenamed)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, QUrl* oldUrl, QUrl* newUrl)
 void k_io__batchrenamejob_on_file_renamed(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -56,7 +56,7 @@ void k_io__batchrenamejob_on_file_renamed(void* self, void (*callback)(void*, vo
 /// @param c const char*
 const char* k_io__batchrenamejob_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -67,21 +67,21 @@ const char* k_io__batchrenamejob_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#start)
+/// [Upstream resources](https://api.kde.org/kio-job.html#start)
 ///
 /// @param self KIO__BatchRenameJob*
 void k_io__batchrenamejob_start(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#uiDelegateExtension)
+/// [Upstream resources](https://api.kde.org/kio-job.html#uiDelegateExtension)
 ///
 /// @param self KIO__BatchRenameJob*
 KIO__JobUiDelegateExtension* k_io__batchrenamejob_ui_delegate_extension(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#setUiDelegateExtension)
+/// [Upstream resources](https://api.kde.org/kio-job.html#setUiDelegateExtension)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param extension KIO__JobUiDelegateExtension*
@@ -89,7 +89,7 @@ void k_io__batchrenamejob_set_ui_delegate_extension(void* self, void* extension)
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#errorString)
+/// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -98,7 +98,7 @@ const char* k_io__batchrenamejob_error_string(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#detailedErrorStrings)
+/// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -107,7 +107,7 @@ const char** k_io__batchrenamejob_detailed_error_strings(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#setParentJob)
+/// [Upstream resources](https://api.kde.org/kio-job.html#setParentJob)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param parentJob KIO__Job*
@@ -115,14 +115,14 @@ void k_io__batchrenamejob_set_parent_job(void* self, void* parentJob);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#parentJob)
+/// [Upstream resources](https://api.kde.org/kio-job.html#parentJob)
 ///
 /// @param self KIO__BatchRenameJob*
 KIO__Job* k_io__batchrenamejob_parent_job(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#setMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#setMetaData)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param metaData KIO__MetaData*
@@ -130,7 +130,7 @@ void k_io__batchrenamejob_set_meta_data(void* self, void* metaData);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#addMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param key const char*
@@ -139,7 +139,7 @@ void k_io__batchrenamejob_add_meta_data(void* self, const char* key, const char*
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#addMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param values libqt_map /* of const char* to const char* */
@@ -147,7 +147,7 @@ void k_io__batchrenamejob_add_meta_data2(void* self, libqt_map /* of const char*
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#mergeMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param values libqt_map /* of const char* to const char* */
@@ -155,21 +155,21 @@ void k_io__batchrenamejob_merge_meta_data(void* self, libqt_map /* of const char
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#outgoingMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#outgoingMetaData)
 ///
 /// @param self KIO__BatchRenameJob*
 KIO__MetaData* k_io__batchrenamejob_outgoing_meta_data(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#metaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#metaData)
 ///
 /// @param self KIO__BatchRenameJob*
 KIO__MetaData* k_io__batchrenamejob_meta_data(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#queryMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#queryMetaData)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -179,7 +179,7 @@ const char* k_io__batchrenamejob_query_meta_data(void* self, const char* key);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#connected)
+/// [Upstream resources](https://api.kde.org/kio-job.html#connected)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param job KIO__Job*
@@ -187,7 +187,7 @@ void k_io__batchrenamejob_connected(void* self, void* job);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#connected)
+/// [Upstream resources](https://api.kde.org/kio-job.html#connected)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, KIO__Job* job)
@@ -195,7 +195,7 @@ void k_io__batchrenamejob_on_connected(void* self, void (*callback)(void*, void*
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#detailedErrorStrings)
+/// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -205,7 +205,7 @@ const char** k_io__batchrenamejob_detailed_error_strings1(void* self, void* reqU
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#detailedErrorStrings)
+/// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -216,7 +216,7 @@ const char** k_io__batchrenamejob_detailed_error_strings2(void* self, void* reqU
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setUiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#setUiDelegate)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param delegate KJobUiDelegate*
@@ -224,14 +224,14 @@ void k_io__batchrenamejob_set_ui_delegate(void* self, void* delegate);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#uiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
 /// @param self KIO__BatchRenameJob*
 KJobUiDelegate* k_io__batchrenamejob_ui_delegate(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#capabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
 /// @param self KIO__BatchRenameJob*
 ///
@@ -240,49 +240,49 @@ int32_t k_io__batchrenamejob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isSuspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_is_suspended(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspend)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resume)
+/// [Upstream resources](https://api.kde.org/kjob.html#resume)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#exec)
+/// [Upstream resources](https://api.kde.org/kjob.html#exec)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#error)
+/// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
 /// @param self KIO__BatchRenameJob*
 int32_t k_io__batchrenamejob_error(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -291,7 +291,7 @@ const char* k_io__batchrenamejob_error_text(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param unit enum KJob__Unit
@@ -299,7 +299,7 @@ uint64_t k_io__batchrenamejob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param unit enum KJob__Unit
@@ -307,14 +307,14 @@ uint64_t k_io__batchrenamejob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percent)
+/// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
 /// @param self KIO__BatchRenameJob*
 uint64_t k_io__batchrenamejob_percent(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#setAutoDelete)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param autodelete bool
@@ -322,42 +322,42 @@ void k_io__batchrenamejob_set_auto_delete(void* self, bool autodelete);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_is_auto_delete(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__BatchRenameJob*
 void k_io__batchrenamejob_set_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_is_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isStartedWithExec)
+/// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_is_started_with_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#elapsedTime)
+/// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
 /// @param self KIO__BatchRenameJob*
 long long k_io__batchrenamejob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param job KJob*
@@ -366,7 +366,7 @@ void k_io__batchrenamejob_info_message(void* self, void* job, const char* messag
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, KJob* job, const char* message)
@@ -374,7 +374,7 @@ void k_io__batchrenamejob_on_info_message(void* self, void (*callback)(void*, vo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param job KJob*
@@ -383,7 +383,7 @@ void k_io__batchrenamejob_warning(void* self, void* job, const char* message);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, KJob* job, const char* message)
@@ -391,7 +391,7 @@ void k_io__batchrenamejob_on_warning(void* self, void (*callback)(void*, void*, 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param job KJob*
@@ -400,7 +400,7 @@ void k_io__batchrenamejob_total_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, KJob* job, uint64_t size)
@@ -408,7 +408,7 @@ void k_io__batchrenamejob_on_total_size(void* self, void (*callback)(void*, void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param job KJob*
@@ -417,7 +417,7 @@ void k_io__batchrenamejob_processed_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, KJob* job, uint64_t size)
@@ -425,7 +425,7 @@ void k_io__batchrenamejob_on_processed_size(void* self, void (*callback)(void*, 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param job KJob*
@@ -434,7 +434,7 @@ void k_io__batchrenamejob_speed(void* self, void* job, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, KJob* job, uint64_t speed)
@@ -442,7 +442,7 @@ void k_io__batchrenamejob_on_speed(void* self, void (*callback)(void*, void*, ui
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param verbosity enum KJob__KillVerbosity
@@ -450,7 +450,7 @@ bool k_io__batchrenamejob_kill1(void* self, int32_t verbosity);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param hide bool
@@ -458,7 +458,7 @@ void k_io__batchrenamejob_set_finished_notification_hidden1(void* self, bool hid
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param event QEvent*
@@ -466,7 +466,7 @@ bool k_io__batchrenamejob_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param watched QObject*
@@ -475,7 +475,7 @@ bool k_io__batchrenamejob_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -484,7 +484,7 @@ const char* k_io__batchrenamejob_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param name char*
@@ -492,35 +492,35 @@ void k_io__batchrenamejob_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KIO__BatchRenameJob*
 bool k_io__batchrenamejob_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param b bool
@@ -528,14 +528,14 @@ bool k_io__batchrenamejob_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KIO__BatchRenameJob*
 QThread* k_io__batchrenamejob_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param thread QThread*
@@ -543,7 +543,7 @@ bool k_io__batchrenamejob_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param interval int
@@ -551,7 +551,7 @@ int32_t k_io__batchrenamejob_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param id int
@@ -559,7 +559,7 @@ void k_io__batchrenamejob_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param id enum Qt__TimerId
@@ -567,14 +567,14 @@ void k_io__batchrenamejob_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KIO__BatchRenameJob*
 libqt_list /* of QObject* */ k_io__batchrenamejob_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param parent QObject*
@@ -582,7 +582,7 @@ void k_io__batchrenamejob_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param filterObj QObject*
@@ -590,7 +590,7 @@ void k_io__batchrenamejob_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param obj QObject*
@@ -598,7 +598,7 @@ void k_io__batchrenamejob_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -608,7 +608,7 @@ QMetaObject__Connection* k_io__batchrenamejob_connect(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param sender QObject*
@@ -618,7 +618,7 @@ QMetaObject__Connection* k_io__batchrenamejob_connect2(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -628,28 +628,28 @@ bool k_io__batchrenamejob_disconnect(void* sender, void* signal, void* receiver,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_io__batchrenamejob_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KIO__BatchRenameJob*
 void k_io__batchrenamejob_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KIO__BatchRenameJob*
 void k_io__batchrenamejob_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param name const char*
@@ -658,7 +658,7 @@ bool k_io__batchrenamejob_set_property(void* self, const char* name, void* value
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param name const char*
@@ -666,7 +666,7 @@ QVariant* k_io__batchrenamejob_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -675,28 +675,28 @@ const char** k_io__batchrenamejob_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__BatchRenameJob*
 QBindingStorage* k_io__batchrenamejob_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__BatchRenameJob*
 const QBindingStorage* k_io__batchrenamejob_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__BatchRenameJob*
 void k_io__batchrenamejob_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self)
@@ -704,14 +704,14 @@ void k_io__batchrenamejob_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KIO__BatchRenameJob*
 QObject* k_io__batchrenamejob_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param classname const char*
@@ -719,14 +719,14 @@ bool k_io__batchrenamejob_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KIO__BatchRenameJob*
 void k_io__batchrenamejob_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param thread QThread*
@@ -735,7 +735,7 @@ bool k_io__batchrenamejob_move_to_thread2(void* self, void* thread, void* param2
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param interval int
@@ -744,7 +744,7 @@ int32_t k_io__batchrenamejob_start_timer22(void* self, int interval, int32_t tim
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -755,7 +755,7 @@ QMetaObject__Connection* k_io__batchrenamejob_connect5(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param sender QObject*
@@ -766,7 +766,7 @@ QMetaObject__Connection* k_io__batchrenamejob_connect4(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param param1 QObject*
@@ -774,7 +774,7 @@ void k_io__batchrenamejob_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__BatchRenameJob*
 /// @param callback void func(KIO__BatchRenameJob* self, QObject* param1)
@@ -782,7 +782,7 @@ void k_io__batchrenamejob_on_destroyed1(void* self, void (*callback)(void*, void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#finished)
+/// [Upstream resources](https://api.kde.org/kjob.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -792,7 +792,7 @@ void k_io__batchrenamejob_on_finished(void* self, void (*callback)(void*, void*)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspended)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -802,7 +802,7 @@ void k_io__batchrenamejob_on_suspended(void* self, void (*callback)(void*, void*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resumed)
+/// [Upstream resources](https://api.kde.org/kjob.html#resumed)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -812,7 +812,7 @@ void k_io__batchrenamejob_on_resumed(void* self, void (*callback)(void*, void*))
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#result)
+/// [Upstream resources](https://api.kde.org/kjob.html#result)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -822,7 +822,7 @@ void k_io__batchrenamejob_on_result(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -832,7 +832,7 @@ void k_io__batchrenamejob_on_total_amount_changed(void* self, void (*callback)(v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -842,7 +842,7 @@ void k_io__batchrenamejob_on_processed_amount_changed(void* self, void (*callbac
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percentChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#percentChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -852,7 +852,7 @@ void k_io__batchrenamejob_on_percent_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -867,7 +867,7 @@ void k_io__batchrenamejob_delete(void* self);
 
 /// https://api.kde.org/kio.html
 
-/// [Qt documentation](https://api.kde.org/kio.html#batchRename)
+/// [Upstream resources](https://api.kde.org/kio.html#batchRename)
 ///
 /// @param param1 libqt_list /* of QUrl* */
 /// @param param2 const char*

@@ -62,103 +62,103 @@ Solid__Predicate* k_solid__predicate_new7(int32_t* ifaceType, const char* proper
 /// @param compOperator enum Solid__Predicate__ComparisonOperator
 Solid__Predicate* k_solid__predicate_new8(const char* ifaceName, const char* property, void* value, int32_t compOperator);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#operator-eq)
 ///
 /// @param self Solid__Predicate*
 /// @param other Solid__Predicate*
 void k_solid__predicate_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#operator-and)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#operator-and)
 ///
 /// @param self Solid__Predicate*
 /// @param other Solid__Predicate*
 Solid__Predicate* k_solid__predicate_operator_bitwise_and(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#operator-and-eq)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#operator-and-eq)
 ///
 /// @param self Solid__Predicate*
 /// @param other Solid__Predicate*
 void k_solid__predicate_operator_bitwise_and_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#operator-7c)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#operator-7c)
 ///
 /// @param self Solid__Predicate*
 /// @param other Solid__Predicate*
 Solid__Predicate* k_solid__predicate_operator_bitwise_or(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#operator-7c-eq)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#operator-7c-eq)
 ///
 /// @param self Solid__Predicate*
 /// @param other Solid__Predicate*
 void k_solid__predicate_operator_bitwise_or_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#isValid)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#isValid)
 ///
 /// @param self Solid__Predicate*
 bool k_solid__predicate_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#matches)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#matches)
 ///
 /// @param self Solid__Predicate*
 /// @param device Solid__Device*
 bool k_solid__predicate_matches(void* self, void* device);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#usedTypes)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#usedTypes)
 ///
 /// @param self Solid__Predicate*
 libqt_list /* of int32_t */ k_solid__predicate_used_types(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#toString)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Predicate*
 const char* k_solid__predicate_to_string(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#fromString)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#fromString)
 ///
 /// @param predicate const char*
 Solid__Predicate* k_solid__predicate_from_string(const char* predicate);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#type)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#type)
 ///
 /// @param self Solid__Predicate*
 ///
 /// @return enum Solid__Predicate__Type
 int32_t k_solid__predicate_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#interfaceType)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#interfaceType)
 ///
 /// @param self Solid__Predicate*
 ///
 /// @return enum Solid__DeviceInterface__Type
 int32_t k_solid__predicate_interface_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#propertyName)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#propertyName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Predicate*
 const char* k_solid__predicate_property_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#matchingValue)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#matchingValue)
 ///
 /// @param self Solid__Predicate*
 QVariant* k_solid__predicate_matching_value(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#comparisonOperator)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#comparisonOperator)
 ///
 /// @param self Solid__Predicate*
 ///
 /// @return enum Solid__Predicate__ComparisonOperator
 int32_t k_solid__predicate_comparison_operator(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#firstOperand)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#firstOperand)
 ///
 /// @param self Solid__Predicate*
 Solid__Predicate* k_solid__predicate_first_operand(void* self);
 
-/// [Qt documentation](https://api.kde.org/solid-predicate.html#secondOperand)
+/// [Upstream resources](https://api.kde.org/solid-predicate.html#secondOperand)
 ///
 /// @param self Solid__Predicate*
 Solid__Predicate* k_solid__predicate_second_operand(void* self);

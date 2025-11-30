@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QWebEngineContextMenuRequest*
 const QMetaObject* q_webenginecontextmenurequest_meta_object(void* self);
@@ -28,94 +28,94 @@ void* q_webenginecontextmenurequest_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_webenginecontextmenurequest_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_webenginecontextmenurequest_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#position)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#position)
 ///
 /// @param self QWebEngineContextMenuRequest*
 QPoint* q_webenginecontextmenurequest_position(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#selectedText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#selectedText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 const char* q_webenginecontextmenurequest_selected_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#linkText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#linkText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 const char* q_webenginecontextmenurequest_link_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#linkUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#linkUrl)
 ///
 /// @param self QWebEngineContextMenuRequest*
 QUrl* q_webenginecontextmenurequest_link_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaUrl)
 ///
 /// @param self QWebEngineContextMenuRequest*
 QUrl* q_webenginecontextmenurequest_media_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaType)
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
 /// @return enum QWebEngineContextMenuRequest__MediaType
 int32_t q_webenginecontextmenurequest_media_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#isContentEditable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#isContentEditable)
 ///
 /// @param self QWebEngineContextMenuRequest*
 bool q_webenginecontextmenurequest_is_content_editable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#misspelledWord)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#misspelledWord)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 const char* q_webenginecontextmenurequest_misspelled_word(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#spellCheckerSuggestions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#spellCheckerSuggestions)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 const char** q_webenginecontextmenurequest_spell_checker_suggestions(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#isAccepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#isAccepted)
 ///
 /// @param self QWebEngineContextMenuRequest*
 bool q_webenginecontextmenurequest_is_accepted(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#setAccepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#setAccepted)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param accepted bool
 void q_webenginecontextmenurequest_set_accepted(void* self, bool accepted);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaFlags)
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
 /// @return flag of enum QWebEngineContextMenuRequest__MediaFlag
 int32_t q_webenginecontextmenurequest_media_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#editFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#editFlags)
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
 /// @return flag of enum QWebEngineContextMenuRequest__EditFlag
 int32_t q_webenginecontextmenurequest_edit_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -123,7 +123,7 @@ int32_t q_webenginecontextmenurequest_edit_flags(void* self);
 /// @param c const char*
 const char* q_webenginecontextmenurequest_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -134,7 +134,7 @@ const char* q_webenginecontextmenurequest_tr3(const char* s, const char* c, int 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param event QEvent*
@@ -142,7 +142,7 @@ bool q_webenginecontextmenurequest_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param watched QObject*
@@ -151,7 +151,7 @@ bool q_webenginecontextmenurequest_event_filter(void* self, void* watched, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -160,7 +160,7 @@ const char* q_webenginecontextmenurequest_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param name char*
@@ -168,35 +168,35 @@ void q_webenginecontextmenurequest_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QWebEngineContextMenuRequest*
 bool q_webenginecontextmenurequest_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QWebEngineContextMenuRequest*
 bool q_webenginecontextmenurequest_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QWebEngineContextMenuRequest*
 bool q_webenginecontextmenurequest_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QWebEngineContextMenuRequest*
 bool q_webenginecontextmenurequest_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param b bool
@@ -204,14 +204,14 @@ bool q_webenginecontextmenurequest_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QWebEngineContextMenuRequest*
 QThread* q_webenginecontextmenurequest_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param thread QThread*
@@ -219,7 +219,7 @@ bool q_webenginecontextmenurequest_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param interval int
@@ -227,7 +227,7 @@ int32_t q_webenginecontextmenurequest_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param id int
@@ -235,7 +235,7 @@ void q_webenginecontextmenurequest_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param id enum Qt__TimerId
@@ -243,14 +243,14 @@ void q_webenginecontextmenurequest_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QWebEngineContextMenuRequest*
 libqt_list /* of QObject* */ q_webenginecontextmenurequest_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param parent QObject*
@@ -258,7 +258,7 @@ void q_webenginecontextmenurequest_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param filterObj QObject*
@@ -266,7 +266,7 @@ void q_webenginecontextmenurequest_install_event_filter(void* self, void* filter
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param obj QObject*
@@ -274,7 +274,7 @@ void q_webenginecontextmenurequest_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -284,7 +284,7 @@ QMetaObject__Connection* q_webenginecontextmenurequest_connect(void* sender, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param sender QObject*
@@ -294,7 +294,7 @@ QMetaObject__Connection* q_webenginecontextmenurequest_connect2(void* self, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -304,28 +304,28 @@ bool q_webenginecontextmenurequest_disconnect(void* sender, void* signal, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_webenginecontextmenurequest_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QWebEngineContextMenuRequest*
 void q_webenginecontextmenurequest_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QWebEngineContextMenuRequest*
 void q_webenginecontextmenurequest_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param name const char*
@@ -334,7 +334,7 @@ bool q_webenginecontextmenurequest_set_property(void* self, const char* name, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param name const char*
@@ -342,7 +342,7 @@ QVariant* q_webenginecontextmenurequest_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -351,28 +351,28 @@ const char** q_webenginecontextmenurequest_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QWebEngineContextMenuRequest*
 QBindingStorage* q_webenginecontextmenurequest_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QWebEngineContextMenuRequest*
 const QBindingStorage* q_webenginecontextmenurequest_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineContextMenuRequest*
 void q_webenginecontextmenurequest_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param callback void func(QWebEngineContextMenuRequest* self)
@@ -380,14 +380,14 @@ void q_webenginecontextmenurequest_on_destroyed(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QWebEngineContextMenuRequest*
 QObject* q_webenginecontextmenurequest_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param classname const char*
@@ -395,14 +395,14 @@ bool q_webenginecontextmenurequest_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QWebEngineContextMenuRequest*
 void q_webenginecontextmenurequest_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param thread QThread*
@@ -411,7 +411,7 @@ bool q_webenginecontextmenurequest_move_to_thread2(void* self, void* thread, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param interval int
@@ -420,7 +420,7 @@ int32_t q_webenginecontextmenurequest_start_timer22(void* self, int interval, in
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -431,7 +431,7 @@ QMetaObject__Connection* q_webenginecontextmenurequest_connect5(void* sender, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param sender QObject*
@@ -442,7 +442,7 @@ QMetaObject__Connection* q_webenginecontextmenurequest_connect4(void* self, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param param1 QObject*
@@ -450,7 +450,7 @@ void q_webenginecontextmenurequest_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineContextMenuRequest*
 /// @param callback void func(QWebEngineContextMenuRequest* self, QObject* param1)
@@ -458,7 +458,7 @@ void q_webenginecontextmenurequest_on_destroyed1(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -466,7 +466,7 @@ void q_webenginecontextmenurequest_on_destroyed1(void* self, void (*callback)(vo
 /// @param callback void func(QWebEngineContextMenuRequest* self, const char* objectName)
 void q_webenginecontextmenurequest_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#dtor.QWebEngineContextMenuRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#dtor.QWebEngineContextMenuRequest)
 ///
 /// Delete this object from C++ memory.
 ///

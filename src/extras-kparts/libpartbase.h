@@ -17,20 +17,20 @@
 ///
 KParts__PartBase* k_parts__partbase_new();
 
-/// [Qt documentation](https://api.kde.org/kparts-partbase.html#setPartObject)
+/// [Upstream resources](https://api.kde.org/kparts-partbase.html#setPartObject)
 ///
 /// @param self KParts__PartBase*
 /// @param object QObject*
 void k_parts__partbase_set_part_object(void* self, void* object);
 
-/// [Qt documentation](https://api.kde.org/kparts-partbase.html#partObject)
+/// [Upstream resources](https://api.kde.org/kparts-partbase.html#partObject)
 ///
 /// @param self KParts__PartBase*
 QObject* k_parts__partbase_part_object(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// @param self KParts__PartBase*
 /// @param name const char*
@@ -38,7 +38,7 @@ QAction* k_parts__partbase_action(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
 ///
 /// @param self KParts__PartBase*
 /// @param doc QDomDocument*
@@ -46,14 +46,14 @@ void k_parts__partbase_set_x_m_l_g_u_i_build_document(void* self, void* doc);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
 /// @param self KParts__PartBase*
 QDomDocument* k_parts__partbase_xmlgui_build_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setFactory)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setFactory)
 ///
 /// @param self KParts__PartBase*
 /// @param factory KXMLGUIFactory*
@@ -61,21 +61,21 @@ void k_parts__partbase_set_factory(void* self, void* factory);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#factory)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#factory)
 ///
 /// @param self KParts__PartBase*
 KXMLGUIFactory* k_parts__partbase_factory(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#parentClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
 /// @param self KParts__PartBase*
 KXMLGUIClient* k_parts__partbase_parent_client(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#insertChildClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#insertChildClient)
 ///
 /// @param self KParts__PartBase*
 /// @param child KXMLGUIClient*
@@ -83,7 +83,7 @@ void k_parts__partbase_insert_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#removeChildClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#removeChildClient)
 ///
 /// @param self KParts__PartBase*
 /// @param child KXMLGUIClient*
@@ -91,14 +91,14 @@ void k_parts__partbase_remove_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#childClients)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#childClients)
 ///
 /// @param self KParts__PartBase*
 libqt_list /* of KXMLGUIClient* */ k_parts__partbase_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
 ///
 /// @param self KParts__PartBase*
 /// @param builder KXMLGUIBuilder*
@@ -106,21 +106,21 @@ void k_parts__partbase_set_client_builder(void* self, void* builder);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#clientBuilder)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
 /// @param self KParts__PartBase*
 KXMLGUIBuilder* k_parts__partbase_client_builder(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#reloadXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#reloadXML)
 ///
 /// @param self KParts__PartBase*
 void k_parts__partbase_reload_x_m_l(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#plugActionList)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#plugActionList)
 ///
 /// @param self KParts__PartBase*
 /// @param name const char*
@@ -129,7 +129,7 @@ void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#unplugActionList)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#unplugActionList)
 ///
 /// @param self KParts__PartBase*
 /// @param name const char*
@@ -137,7 +137,7 @@ void k_parts__partbase_unplug_action_list(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -147,7 +147,7 @@ const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[stat
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
 ///
 /// @param self KParts__PartBase*
 /// @param state const char*
@@ -156,7 +156,7 @@ void k_parts__partbase_add_state_action_enabled(void* self, const char* state, c
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionDisabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#addStateActionDisabled)
 ///
 /// @param self KParts__PartBase*
 /// @param state const char*
@@ -165,7 +165,7 @@ void k_parts__partbase_add_state_action_disabled(void* self, const char* state, 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#getActionsToChangeForState)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#getActionsToChangeForState)
 ///
 /// @param self KParts__PartBase*
 /// @param state const char*
@@ -173,7 +173,7 @@ KXMLGUIClient__StateChange* k_parts__partbase_get_actions_to_change_for_state(vo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#beginXMLPlug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#beginXMLPlug)
 ///
 /// @param self KParts__PartBase*
 /// @param param1 QWidget*
@@ -181,14 +181,14 @@ void k_parts__partbase_begin_x_m_l_plug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
 ///
 /// @param self KParts__PartBase*
 void k_parts__partbase_end_x_m_l_plug(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#prepareXMLUnplug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#prepareXMLUnplug)
 ///
 /// @param self KParts__PartBase*
 /// @param param1 QWidget*
@@ -196,7 +196,7 @@ void k_parts__partbase_prepare_x_m_l_unplug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KParts__PartBase*
 /// @param xmlfile const char*
@@ -205,7 +205,7 @@ void k_parts__partbase_replace_x_m_l_file(void* self, const char* xmlfile, const
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -214,7 +214,7 @@ const char* k_parts__partbase_find_version_number(const char* xml);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KParts__PartBase*
 /// @param xmlfile const char*
@@ -224,7 +224,7 @@ void k_parts__partbase_replace_x_m_l_file3(void* self, const char* xmlfile, cons
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -234,7 +234,7 @@ QAction* k_parts__partbase_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -244,7 +244,7 @@ QAction* k_parts__partbase_qbase_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -254,7 +254,7 @@ void k_parts__partbase_on_action2(void* self, QAction* (*callback)(void*, void*)
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -263,7 +263,7 @@ KActionCollection* k_parts__partbase_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -272,7 +272,7 @@ KActionCollection* k_parts__partbase_qbase_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -282,7 +282,7 @@ void k_parts__partbase_on_action_collection(void* self, KActionCollection* (*cal
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -293,7 +293,7 @@ const char* k_parts__partbase_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -304,7 +304,7 @@ const char* k_parts__partbase_qbase_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -314,7 +314,7 @@ void k_parts__partbase_on_component_name(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -323,7 +323,7 @@ QDomDocument* k_parts__partbase_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -332,7 +332,7 @@ QDomDocument* k_parts__partbase_qbase_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -342,7 +342,7 @@ void k_parts__partbase_on_dom_document(void* self, QDomDocument* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -353,7 +353,7 @@ const char* k_parts__partbase_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -364,7 +364,7 @@ const char* k_parts__partbase_qbase_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -374,7 +374,7 @@ void k_parts__partbase_on_xml_file(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -385,7 +385,7 @@ const char* k_parts__partbase_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -396,7 +396,7 @@ const char* k_parts__partbase_qbase_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -406,7 +406,7 @@ void k_parts__partbase_on_local_x_m_l_file(void* self, const char* (*callback)()
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -417,7 +417,7 @@ void k_parts__partbase_set_component_name(void* self, const char* componentName,
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -428,7 +428,7 @@ void k_parts__partbase_qbase_set_component_name(void* self, const char* componen
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -438,7 +438,7 @@ void k_parts__partbase_on_set_component_name(void* self, void (*callback)(void*,
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -450,7 +450,7 @@ void k_parts__partbase_set_x_m_l_file(void* self, const char* file, bool merge, 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -462,7 +462,7 @@ void k_parts__partbase_qbase_set_x_m_l_file(void* self, const char* file, bool m
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -472,7 +472,7 @@ void k_parts__partbase_on_set_x_m_l_file(void* self, void (*callback)(void*, con
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -482,7 +482,7 @@ void k_parts__partbase_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -492,7 +492,7 @@ void k_parts__partbase_qbase_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -502,7 +502,7 @@ void k_parts__partbase_on_set_local_x_m_l_file(void* self, void (*callback)(void
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -513,7 +513,7 @@ void k_parts__partbase_set_x_m_l(void* self, const char* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -524,7 +524,7 @@ void k_parts__partbase_qbase_set_x_m_l(void* self, const char* document, bool me
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -534,7 +534,7 @@ void k_parts__partbase_on_set_x_m_l(void* self, void (*callback)(void*, const ch
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -545,7 +545,7 @@ void k_parts__partbase_set_d_o_m_document(void* self, void* document, bool merge
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -556,7 +556,7 @@ void k_parts__partbase_qbase_set_d_o_m_document(void* self, void* document, bool
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -566,7 +566,7 @@ void k_parts__partbase_on_set_d_o_m_document(void* self, void (*callback)(void*,
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -577,7 +577,7 @@ void k_parts__partbase_state_changed(void* self, const char* newstate, int32_t r
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -588,7 +588,7 @@ void k_parts__partbase_qbase_state_changed(void* self, const char* newstate, int
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -598,7 +598,7 @@ void k_parts__partbase_on_state_changed(void* self, void (*callback)(void*, cons
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -609,7 +609,7 @@ const char* k_parts__partbase_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -620,7 +620,7 @@ const char* k_parts__partbase_qbase_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -630,7 +630,7 @@ void k_parts__partbase_on_standards_xml_file_location(void* self, const char* (*
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -639,7 +639,7 @@ void k_parts__partbase_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -648,7 +648,7 @@ void k_parts__partbase_qbase_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///

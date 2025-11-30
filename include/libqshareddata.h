@@ -22,7 +22,7 @@ QSharedData* q_shareddata_new();
 /// @param param1 QSharedData*
 QSharedData* q_shareddata_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qshareddata.html#dtor.QSharedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qshareddata.html#dtor.QSharedData)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -57,7 +57,7 @@ void q_adoptshareddatatag_copy_assign(void* self, void* other);
 /// @param other QAdoptSharedDataTag*
 void q_adoptshareddatatag_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qadoptshareddatatag.html#dtor.QAdoptSharedDataTag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qadoptshareddatatag.html#dtor.QAdoptSharedDataTag)
 ///
 /// Delete this object from C++ memory.
 ///

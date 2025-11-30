@@ -22,7 +22,7 @@ KPluralHandlingSpinBox* k_pluralhandlingspinbox_new(void* parent);
 ///
 KPluralHandlingSpinBox* k_pluralhandlingspinbox_new2();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPluralHandlingSpinBox*
 const QMetaObject* k_pluralhandlingspinbox_meta_object(void* self);
@@ -51,20 +51,20 @@ void k_pluralhandlingspinbox_on_metacall(void* self, int32_t (*callback)(void*, 
 /// @param param3 void*
 int32_t k_pluralhandlingspinbox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_pluralhandlingspinbox_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kpluralhandlingspinbox.html#setSuffix)
+/// [Upstream resources](https://api.kde.org/kpluralhandlingspinbox.html#setSuffix)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param suffix KLocalizedString*
 void k_pluralhandlingspinbox_set_suffix(void* self, void* suffix);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -72,7 +72,7 @@ void k_pluralhandlingspinbox_set_suffix(void* self, void* suffix);
 /// @param c const char*
 const char* k_pluralhandlingspinbox_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -83,14 +83,14 @@ const char* k_pluralhandlingspinbox_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#value)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#value)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_value(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#prefix)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#prefix)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -99,7 +99,7 @@ const char* k_pluralhandlingspinbox_prefix(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setPrefix)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setPrefix)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param prefix const char*
@@ -107,7 +107,7 @@ void k_pluralhandlingspinbox_set_prefix(void* self, const char* prefix);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#suffix)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#suffix)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -116,7 +116,7 @@ const char* k_pluralhandlingspinbox_suffix(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#cleanText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#cleanText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -125,14 +125,14 @@ const char* k_pluralhandlingspinbox_clean_text(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#singleStep)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#singleStep)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_single_step(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setSingleStep)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setSingleStep)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param val int
@@ -140,14 +140,14 @@ void k_pluralhandlingspinbox_set_single_step(void* self, int val);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#minimum)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#minimum)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_minimum(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setMinimum)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setMinimum)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param min int
@@ -155,14 +155,14 @@ void k_pluralhandlingspinbox_set_minimum(void* self, int min);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#maximum)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#maximum)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_maximum(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setMaximum)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setMaximum)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param max int
@@ -170,7 +170,7 @@ void k_pluralhandlingspinbox_set_maximum(void* self, int max);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setRange)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param min int
@@ -179,7 +179,7 @@ void k_pluralhandlingspinbox_set_range(void* self, int min, int max);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#stepType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#stepType)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -188,7 +188,7 @@ int32_t k_pluralhandlingspinbox_step_type(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setStepType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setStepType)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param stepType enum QAbstractSpinBox__StepType
@@ -196,14 +196,14 @@ void k_pluralhandlingspinbox_set_step_type(void* self, int32_t stepType);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#displayIntegerBase)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#displayIntegerBase)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_display_integer_base(void* self);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setDisplayIntegerBase)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setDisplayIntegerBase)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param base int
@@ -211,7 +211,7 @@ void k_pluralhandlingspinbox_set_display_integer_base(void* self, int base);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#setValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#setValue)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param val int
@@ -219,7 +219,7 @@ void k_pluralhandlingspinbox_set_value(void* self, int val);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#valueChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#valueChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 int
@@ -227,7 +227,7 @@ void k_pluralhandlingspinbox_value_changed(void* self, int param1);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#valueChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#valueChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, int param1)
@@ -235,7 +235,7 @@ void k_pluralhandlingspinbox_on_value_changed(void* self, void (*callback)(void*
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#textChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 const char*
@@ -243,7 +243,7 @@ void k_pluralhandlingspinbox_text_changed(void* self, const char* param1);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#textChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, const char* param1)
@@ -251,7 +251,7 @@ void k_pluralhandlingspinbox_on_text_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#buttonSymbols)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#buttonSymbols)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -260,7 +260,7 @@ int32_t k_pluralhandlingspinbox_button_symbols(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setButtonSymbols)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setButtonSymbols)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param bs enum QAbstractSpinBox__ButtonSymbols
@@ -268,7 +268,7 @@ void k_pluralhandlingspinbox_set_button_symbols(void* self, int32_t bs);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setCorrectionMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setCorrectionMode)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param cm enum QAbstractSpinBox__CorrectionMode
@@ -276,7 +276,7 @@ void k_pluralhandlingspinbox_set_correction_mode(void* self, int32_t cm);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#correctionMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#correctionMode)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -285,14 +285,14 @@ int32_t k_pluralhandlingspinbox_correction_mode(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hasAcceptableInput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasAcceptableInput)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_has_acceptable_input(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -301,7 +301,7 @@ const char* k_pluralhandlingspinbox_text(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -310,7 +310,7 @@ const char* k_pluralhandlingspinbox_special_value_text(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setSpecialValueText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setSpecialValueText)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param txt const char*
@@ -318,14 +318,14 @@ void k_pluralhandlingspinbox_set_special_value_text(void* self, const char* txt)
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#wrapping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wrapping)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_wrapping(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setWrapping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setWrapping)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param w bool
@@ -333,7 +333,7 @@ void k_pluralhandlingspinbox_set_wrapping(void* self, bool w);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setReadOnly)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setReadOnly)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param r bool
@@ -341,14 +341,14 @@ void k_pluralhandlingspinbox_set_read_only(void* self, bool r);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#isReadOnly)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isReadOnly)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_read_only(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setKeyboardTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setKeyboardTracking)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param kt bool
@@ -356,14 +356,14 @@ void k_pluralhandlingspinbox_set_keyboard_tracking(void* self, bool kt);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyboardTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyboardTracking)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_keyboard_tracking(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setAlignment)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setAlignment)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param flag flag of enum Qt__AlignmentFlag
@@ -371,7 +371,7 @@ void k_pluralhandlingspinbox_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#alignment)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#alignment)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -380,7 +380,7 @@ int32_t k_pluralhandlingspinbox_alignment(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setFrame)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setFrame)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param frame bool
@@ -388,14 +388,14 @@ void k_pluralhandlingspinbox_set_frame(void* self, bool frame);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hasFrame)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasFrame)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_has_frame(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setAccelerated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setAccelerated)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param on bool
@@ -403,14 +403,14 @@ void k_pluralhandlingspinbox_set_accelerated(void* self, bool on);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#isAccelerated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isAccelerated)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_accelerated(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setGroupSeparatorShown)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setGroupSeparatorShown)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param shown bool
@@ -418,49 +418,49 @@ void k_pluralhandlingspinbox_set_group_separator_shown(void* self, bool shown);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#isGroupSeparatorShown)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isGroupSeparatorShown)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_group_separator_shown(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#interpretText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#interpretText)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_interpret_text(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepUp)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepUp)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_step_up(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepDown)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepDown)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_step_down(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#selectAll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#selectAll)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_select_all(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_editing_finished(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self)
@@ -468,42 +468,42 @@ void k_pluralhandlingspinbox_on_editing_finished(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPluralHandlingSpinBox*
 uintptr_t k_pluralhandlingspinbox_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KPluralHandlingSpinBox*
 uintptr_t k_pluralhandlingspinbox_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KPluralHandlingSpinBox*
 uintptr_t k_pluralhandlingspinbox_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KPluralHandlingSpinBox*
 QStyle* k_pluralhandlingspinbox_style(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param style QStyle*
@@ -511,28 +511,28 @@ void k_pluralhandlingspinbox_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -541,7 +541,7 @@ int32_t k_pluralhandlingspinbox_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param windowModality enum Qt__WindowModality
@@ -549,14 +549,14 @@ void k_pluralhandlingspinbox_set_window_modality(void* self, int32_t windowModal
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QWidget*
@@ -564,7 +564,7 @@ bool k_pluralhandlingspinbox_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param enabled bool
@@ -572,7 +572,7 @@ void k_pluralhandlingspinbox_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param disabled bool
@@ -580,7 +580,7 @@ void k_pluralhandlingspinbox_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param windowModified bool
@@ -588,140 +588,140 @@ void k_pluralhandlingspinbox_set_window_modified(void* self, bool windowModified
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRect* k_pluralhandlingspinbox_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KPluralHandlingSpinBox*
 const QRect* k_pluralhandlingspinbox_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRect* k_pluralhandlingspinbox_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_x(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_y(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KPluralHandlingSpinBox*
 QPoint* k_pluralhandlingspinbox_pos(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 QSize* k_pluralhandlingspinbox_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KPluralHandlingSpinBox*
 QSize* k_pluralhandlingspinbox_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRect* k_pluralhandlingspinbox_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRect* k_pluralhandlingspinbox_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRegion* k_pluralhandlingspinbox_children_region(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 QSize* k_pluralhandlingspinbox_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 QSize* k_pluralhandlingspinbox_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param minimumSize QSize*
@@ -729,7 +729,7 @@ void k_pluralhandlingspinbox_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param minw int
@@ -738,7 +738,7 @@ void k_pluralhandlingspinbox_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param maximumSize QSize*
@@ -746,7 +746,7 @@ void k_pluralhandlingspinbox_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param maxw int
@@ -755,7 +755,7 @@ void k_pluralhandlingspinbox_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param minw int
@@ -763,7 +763,7 @@ void k_pluralhandlingspinbox_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param minh int
@@ -771,7 +771,7 @@ void k_pluralhandlingspinbox_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param maxw int
@@ -779,7 +779,7 @@ void k_pluralhandlingspinbox_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param maxh int
@@ -787,14 +787,14 @@ void k_pluralhandlingspinbox_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KPluralHandlingSpinBox*
 QSize* k_pluralhandlingspinbox_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param sizeIncrement QSize*
@@ -802,7 +802,7 @@ void k_pluralhandlingspinbox_set_size_increment(void* self, void* sizeIncrement)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param w int
@@ -811,14 +811,14 @@ void k_pluralhandlingspinbox_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 QSize* k_pluralhandlingspinbox_base_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param baseSize QSize*
@@ -826,7 +826,7 @@ void k_pluralhandlingspinbox_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param basew int
@@ -835,7 +835,7 @@ void k_pluralhandlingspinbox_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param fixedSize QSize*
@@ -843,7 +843,7 @@ void k_pluralhandlingspinbox_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param w int
@@ -852,7 +852,7 @@ void k_pluralhandlingspinbox_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param w int
@@ -860,7 +860,7 @@ void k_pluralhandlingspinbox_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param h int
@@ -868,7 +868,7 @@ void k_pluralhandlingspinbox_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPointF*
@@ -876,7 +876,7 @@ QPointF* k_pluralhandlingspinbox_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPoint*
@@ -884,7 +884,7 @@ QPoint* k_pluralhandlingspinbox_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPointF*
@@ -892,7 +892,7 @@ QPointF* k_pluralhandlingspinbox_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPoint*
@@ -900,7 +900,7 @@ QPoint* k_pluralhandlingspinbox_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPointF*
@@ -908,7 +908,7 @@ QPointF* k_pluralhandlingspinbox_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPoint*
@@ -916,7 +916,7 @@ QPoint* k_pluralhandlingspinbox_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPointF*
@@ -924,7 +924,7 @@ QPointF* k_pluralhandlingspinbox_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPoint*
@@ -932,7 +932,7 @@ QPoint* k_pluralhandlingspinbox_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QWidget*
@@ -941,7 +941,7 @@ QPointF* k_pluralhandlingspinbox_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QWidget*
@@ -950,7 +950,7 @@ QPoint* k_pluralhandlingspinbox_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QWidget*
@@ -959,7 +959,7 @@ QPointF* k_pluralhandlingspinbox_map_from(void* self, void* param1, void* param2
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QWidget*
@@ -968,35 +968,35 @@ QPoint* k_pluralhandlingspinbox_map_from2(void* self, void* param1, void* param2
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KPluralHandlingSpinBox*
 const QPalette* k_pluralhandlingspinbox_palette(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param palette QPalette*
@@ -1004,7 +1004,7 @@ void k_pluralhandlingspinbox_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param backgroundRole enum QPalette__ColorRole
@@ -1012,7 +1012,7 @@ void k_pluralhandlingspinbox_set_background_role(void* self, int32_t backgroundR
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1021,7 +1021,7 @@ int32_t k_pluralhandlingspinbox_background_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param foregroundRole enum QPalette__ColorRole
@@ -1029,7 +1029,7 @@ void k_pluralhandlingspinbox_set_foreground_role(void* self, int32_t foregroundR
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1038,14 +1038,14 @@ int32_t k_pluralhandlingspinbox_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KPluralHandlingSpinBox*
 const QFont* k_pluralhandlingspinbox_font(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param font QFont*
@@ -1053,28 +1053,28 @@ void k_pluralhandlingspinbox_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KPluralHandlingSpinBox*
 QFontMetrics* k_pluralhandlingspinbox_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KPluralHandlingSpinBox*
 QFontInfo* k_pluralhandlingspinbox_font_info(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KPluralHandlingSpinBox*
 QCursor* k_pluralhandlingspinbox_cursor(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param cursor QCursor*
@@ -1082,14 +1082,14 @@ void k_pluralhandlingspinbox_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param enable bool
@@ -1097,21 +1097,21 @@ void k_pluralhandlingspinbox_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param enable bool
@@ -1119,14 +1119,14 @@ void k_pluralhandlingspinbox_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param mask QBitmap*
@@ -1134,7 +1134,7 @@ void k_pluralhandlingspinbox_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param mask QRegion*
@@ -1142,21 +1142,21 @@ void k_pluralhandlingspinbox_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRegion* k_pluralhandlingspinbox_mask(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param target QPaintDevice*
@@ -1164,7 +1164,7 @@ void k_pluralhandlingspinbox_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param painter QPainter*
@@ -1172,21 +1172,21 @@ void k_pluralhandlingspinbox_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KPluralHandlingSpinBox*
 QPixmap* k_pluralhandlingspinbox_grab(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KPluralHandlingSpinBox*
 QGraphicsEffect* k_pluralhandlingspinbox_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param effect QGraphicsEffect*
@@ -1194,7 +1194,7 @@ void k_pluralhandlingspinbox_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param type enum Qt__GestureType
@@ -1202,7 +1202,7 @@ void k_pluralhandlingspinbox_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param type enum Qt__GestureType
@@ -1210,7 +1210,7 @@ void k_pluralhandlingspinbox_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param windowTitle const char*
@@ -1218,7 +1218,7 @@ void k_pluralhandlingspinbox_set_window_title(void* self, const char* windowTitl
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param styleSheet const char*
@@ -1226,7 +1226,7 @@ void k_pluralhandlingspinbox_set_style_sheet(void* self, const char* styleSheet)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1235,7 +1235,7 @@ const char* k_pluralhandlingspinbox_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1244,7 +1244,7 @@ const char* k_pluralhandlingspinbox_window_title(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param icon QIcon*
@@ -1252,14 +1252,14 @@ void k_pluralhandlingspinbox_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KPluralHandlingSpinBox*
 QIcon* k_pluralhandlingspinbox_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param windowIconText const char*
@@ -1267,7 +1267,7 @@ void k_pluralhandlingspinbox_set_window_icon_text(void* self, const char* window
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1276,7 +1276,7 @@ const char* k_pluralhandlingspinbox_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param windowRole const char*
@@ -1284,7 +1284,7 @@ void k_pluralhandlingspinbox_set_window_role(void* self, const char* windowRole)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1293,7 +1293,7 @@ const char* k_pluralhandlingspinbox_window_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param filePath const char*
@@ -1301,7 +1301,7 @@ void k_pluralhandlingspinbox_set_window_file_path(void* self, const char* filePa
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1310,7 +1310,7 @@ const char* k_pluralhandlingspinbox_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param level double
@@ -1318,21 +1318,21 @@ void k_pluralhandlingspinbox_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KPluralHandlingSpinBox*
 double k_pluralhandlingspinbox_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param toolTip const char*
@@ -1340,7 +1340,7 @@ void k_pluralhandlingspinbox_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1349,7 +1349,7 @@ const char* k_pluralhandlingspinbox_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param msec int
@@ -1357,14 +1357,14 @@ void k_pluralhandlingspinbox_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param statusTip const char*
@@ -1372,7 +1372,7 @@ void k_pluralhandlingspinbox_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1381,7 +1381,7 @@ const char* k_pluralhandlingspinbox_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param whatsThis const char*
@@ -1389,7 +1389,7 @@ void k_pluralhandlingspinbox_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1398,7 +1398,7 @@ const char* k_pluralhandlingspinbox_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1407,7 +1407,7 @@ const char* k_pluralhandlingspinbox_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param name const char*
@@ -1415,7 +1415,7 @@ void k_pluralhandlingspinbox_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1424,7 +1424,7 @@ const char* k_pluralhandlingspinbox_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param description const char*
@@ -1432,7 +1432,7 @@ void k_pluralhandlingspinbox_set_accessible_description(void* self, const char* 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param direction enum Qt__LayoutDirection
@@ -1440,7 +1440,7 @@ void k_pluralhandlingspinbox_set_layout_direction(void* self, int32_t direction)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1449,14 +1449,14 @@ int32_t k_pluralhandlingspinbox_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param locale QLocale*
@@ -1464,63 +1464,63 @@ void k_pluralhandlingspinbox_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KPluralHandlingSpinBox*
 QLocale* k_pluralhandlingspinbox_locale(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param reason enum Qt__FocusReason
@@ -1528,7 +1528,7 @@ void k_pluralhandlingspinbox_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1537,7 +1537,7 @@ int32_t k_pluralhandlingspinbox_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param policy enum Qt__FocusPolicy
@@ -1545,14 +1545,14 @@ void k_pluralhandlingspinbox_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
@@ -1560,7 +1560,7 @@ void k_pluralhandlingspinbox_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param focusProxy QWidget*
@@ -1568,14 +1568,14 @@ void k_pluralhandlingspinbox_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1584,7 +1584,7 @@ int32_t k_pluralhandlingspinbox_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param policy enum Qt__ContextMenuPolicy
@@ -1592,14 +1592,14 @@ void k_pluralhandlingspinbox_set_context_menu_policy(void* self, int32_t policy)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QCursor*
@@ -1607,28 +1607,28 @@ void k_pluralhandlingspinbox_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param key QKeySequence*
@@ -1636,7 +1636,7 @@ int32_t k_pluralhandlingspinbox_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param id int
@@ -1644,7 +1644,7 @@ void k_pluralhandlingspinbox_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param id int
@@ -1652,7 +1652,7 @@ void k_pluralhandlingspinbox_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param id int
@@ -1660,26 +1660,26 @@ void k_pluralhandlingspinbox_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
 ///
 QWidget* k_pluralhandlingspinbox_mouse_grabber();
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
 QWidget* k_pluralhandlingspinbox_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param enable bool
@@ -1687,28 +1687,28 @@ void k_pluralhandlingspinbox_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KPluralHandlingSpinBox*
 QGraphicsProxyWidget* k_pluralhandlingspinbox_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_update(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_repaint(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param x int
@@ -1719,7 +1719,7 @@ void k_pluralhandlingspinbox_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QRect*
@@ -1727,7 +1727,7 @@ void k_pluralhandlingspinbox_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QRegion*
@@ -1735,7 +1735,7 @@ void k_pluralhandlingspinbox_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param x int
@@ -1746,7 +1746,7 @@ void k_pluralhandlingspinbox_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QRect*
@@ -1754,7 +1754,7 @@ void k_pluralhandlingspinbox_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QRegion*
@@ -1762,7 +1762,7 @@ void k_pluralhandlingspinbox_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param hidden bool
@@ -1770,70 +1770,70 @@ void k_pluralhandlingspinbox_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_show(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_hide(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_close(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_raise(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_lower(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QWidget*
@@ -1841,7 +1841,7 @@ void k_pluralhandlingspinbox_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param x int
@@ -1850,7 +1850,7 @@ void k_pluralhandlingspinbox_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QPoint*
@@ -1858,7 +1858,7 @@ void k_pluralhandlingspinbox_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param w int
@@ -1867,7 +1867,7 @@ void k_pluralhandlingspinbox_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QSize*
@@ -1875,7 +1875,7 @@ void k_pluralhandlingspinbox_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param x int
@@ -1886,7 +1886,7 @@ void k_pluralhandlingspinbox_set_geometry(void* self, int x, int y, int w, int h
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param geometry QRect*
@@ -1894,7 +1894,7 @@ void k_pluralhandlingspinbox_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1903,7 +1903,7 @@ char* k_pluralhandlingspinbox_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param geometry const char*
@@ -1911,21 +1911,21 @@ bool k_pluralhandlingspinbox_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QWidget*
@@ -1933,35 +1933,35 @@ bool k_pluralhandlingspinbox_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1970,7 +1970,7 @@ int32_t k_pluralhandlingspinbox_window_state(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param state flag of enum Qt__WindowState
@@ -1978,7 +1978,7 @@ void k_pluralhandlingspinbox_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param state flag of enum Qt__WindowState
@@ -1986,14 +1986,14 @@ void k_pluralhandlingspinbox_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KPluralHandlingSpinBox*
 QSizePolicy* k_pluralhandlingspinbox_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param sizePolicy QSizePolicy*
@@ -2001,7 +2001,7 @@ void k_pluralhandlingspinbox_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param horizontal enum QSizePolicy__Policy
@@ -2010,14 +2010,14 @@ void k_pluralhandlingspinbox_set_size_policy2(void* self, int32_t horizontal, in
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRegion* k_pluralhandlingspinbox_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param left int
@@ -2028,7 +2028,7 @@ void k_pluralhandlingspinbox_set_contents_margins(void* self, int left, int top,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param margins QMargins*
@@ -2036,28 +2036,28 @@ void k_pluralhandlingspinbox_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KPluralHandlingSpinBox*
 QMargins* k_pluralhandlingspinbox_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KPluralHandlingSpinBox*
 QRect* k_pluralhandlingspinbox_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KPluralHandlingSpinBox*
 QLayout* k_pluralhandlingspinbox_layout(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param layout QLayout*
@@ -2065,14 +2065,14 @@ void k_pluralhandlingspinbox_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param parent QWidget*
@@ -2080,7 +2080,7 @@ void k_pluralhandlingspinbox_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param parent QWidget*
@@ -2089,7 +2089,7 @@ void k_pluralhandlingspinbox_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param dx int
@@ -2098,7 +2098,7 @@ void k_pluralhandlingspinbox_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param dx int
@@ -2108,35 +2108,35 @@ void k_pluralhandlingspinbox_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param on bool
@@ -2144,7 +2144,7 @@ void k_pluralhandlingspinbox_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param action QAction*
@@ -2152,7 +2152,7 @@ void k_pluralhandlingspinbox_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param actions libqt_list /* of QAction* */
@@ -2160,7 +2160,7 @@ void k_pluralhandlingspinbox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param before QAction*
@@ -2169,7 +2169,7 @@ void k_pluralhandlingspinbox_insert_actions(void* self, void* before, libqt_list
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param before QAction*
@@ -2178,7 +2178,7 @@ void k_pluralhandlingspinbox_insert_action(void* self, void* before, void* actio
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param action QAction*
@@ -2186,14 +2186,14 @@ void k_pluralhandlingspinbox_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KPluralHandlingSpinBox*
 libqt_list /* of QAction* */ k_pluralhandlingspinbox_actions(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param text const char*
@@ -2201,7 +2201,7 @@ QAction* k_pluralhandlingspinbox_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param icon QIcon*
@@ -2210,7 +2210,7 @@ QAction* k_pluralhandlingspinbox_add_action3(void* self, void* icon, const char*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param text const char*
@@ -2219,7 +2219,7 @@ QAction* k_pluralhandlingspinbox_add_action4(void* self, const char* text, void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param icon QIcon*
@@ -2229,14 +2229,14 @@ QAction* k_pluralhandlingspinbox_add_action5(void* self, void* icon, const char*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWidget* k_pluralhandlingspinbox_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param type flag of enum Qt__WindowType
@@ -2244,7 +2244,7 @@ void k_pluralhandlingspinbox_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -2253,7 +2253,7 @@ int64_t k_pluralhandlingspinbox_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum Qt__WindowType
@@ -2261,7 +2261,7 @@ void k_pluralhandlingspinbox_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param type flag of enum Qt__WindowType
@@ -2269,7 +2269,7 @@ void k_pluralhandlingspinbox_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -2278,14 +2278,14 @@ int64_t k_pluralhandlingspinbox_window_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
 QWidget* k_pluralhandlingspinbox_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param x int
@@ -2294,7 +2294,7 @@ QWidget* k_pluralhandlingspinbox_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param p QPoint*
@@ -2302,7 +2302,7 @@ QWidget* k_pluralhandlingspinbox_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param p QPointF*
@@ -2310,7 +2310,7 @@ QWidget* k_pluralhandlingspinbox_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2318,7 +2318,7 @@ void k_pluralhandlingspinbox_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2326,14 +2326,14 @@ bool k_pluralhandlingspinbox_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param child QWidget*
@@ -2341,14 +2341,14 @@ bool k_pluralhandlingspinbox_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param enabled bool
@@ -2356,28 +2356,28 @@ void k_pluralhandlingspinbox_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KPluralHandlingSpinBox*
 QBackingStore* k_pluralhandlingspinbox_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KPluralHandlingSpinBox*
 QWindow* k_pluralhandlingspinbox_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KPluralHandlingSpinBox*
 QScreen* k_pluralhandlingspinbox_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param screen QScreen*
@@ -2385,14 +2385,14 @@ void k_pluralhandlingspinbox_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 QWidget* k_pluralhandlingspinbox_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param title const char*
@@ -2400,7 +2400,7 @@ void k_pluralhandlingspinbox_window_title_changed(void* self, const char* title)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, const char* title)
@@ -2408,7 +2408,7 @@ void k_pluralhandlingspinbox_on_window_title_changed(void* self, void (*callback
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param icon QIcon*
@@ -2416,7 +2416,7 @@ void k_pluralhandlingspinbox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, QIcon* icon)
@@ -2424,7 +2424,7 @@ void k_pluralhandlingspinbox_on_window_icon_changed(void* self, void (*callback)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param iconText const char*
@@ -2432,7 +2432,7 @@ void k_pluralhandlingspinbox_window_icon_text_changed(void* self, const char* ic
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, const char* iconText)
@@ -2440,7 +2440,7 @@ void k_pluralhandlingspinbox_on_window_icon_text_changed(void* self, void (*call
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param pos QPoint*
@@ -2448,7 +2448,7 @@ void k_pluralhandlingspinbox_custom_context_menu_requested(void* self, void* pos
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, QPoint* pos)
@@ -2456,7 +2456,7 @@ void k_pluralhandlingspinbox_on_custom_context_menu_requested(void* self, void (
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -2465,7 +2465,7 @@ int64_t k_pluralhandlingspinbox_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param hints flag of enum Qt__InputMethodHint
@@ -2473,7 +2473,7 @@ void k_pluralhandlingspinbox_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param target QPaintDevice*
@@ -2482,7 +2482,7 @@ void k_pluralhandlingspinbox_render22(void* self, void* target, void* targetOffs
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param target QPaintDevice*
@@ -2492,7 +2492,7 @@ void k_pluralhandlingspinbox_render3(void* self, void* target, void* targetOffse
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param target QPaintDevice*
@@ -2503,7 +2503,7 @@ void k_pluralhandlingspinbox_render4(void* self, void* target, void* targetOffse
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param painter QPainter*
@@ -2512,7 +2512,7 @@ void k_pluralhandlingspinbox_render23(void* self, void* painter, void* targetOff
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param painter QPainter*
@@ -2522,7 +2522,7 @@ void k_pluralhandlingspinbox_render32(void* self, void* painter, void* targetOff
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param painter QPainter*
@@ -2533,7 +2533,7 @@ void k_pluralhandlingspinbox_render42(void* self, void* painter, void* targetOff
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param rectangle QRect*
@@ -2541,7 +2541,7 @@ QPixmap* k_pluralhandlingspinbox_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param type enum Qt__GestureType
@@ -2550,7 +2550,7 @@ void k_pluralhandlingspinbox_grab_gesture2(void* self, int64_t type, int32_t fla
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param key QKeySequence*
@@ -2559,7 +2559,7 @@ int32_t k_pluralhandlingspinbox_grab_shortcut2(void* self, void* key, int32_t co
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param id int
@@ -2568,7 +2568,7 @@ void k_pluralhandlingspinbox_set_shortcut_enabled2(void* self, int id, bool enab
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param id int
@@ -2577,7 +2577,7 @@ void k_pluralhandlingspinbox_set_shortcut_auto_repeat2(void* self, int id, bool 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum Qt__WindowType
@@ -2586,7 +2586,7 @@ void k_pluralhandlingspinbox_set_window_flag2(void* self, int64_t param1, bool o
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2595,7 +2595,7 @@ void k_pluralhandlingspinbox_set_attribute2(void* self, int32_t param1, bool on)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
@@ -2603,7 +2603,7 @@ QWidget* k_pluralhandlingspinbox_create_window_container2(void* window, void* pa
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
@@ -2612,7 +2612,7 @@ QWidget* k_pluralhandlingspinbox_create_window_container3(void* window, void* pa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2621,7 +2621,7 @@ const char* k_pluralhandlingspinbox_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param name char*
@@ -2629,35 +2629,35 @@ void k_pluralhandlingspinbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param b bool
@@ -2665,14 +2665,14 @@ bool k_pluralhandlingspinbox_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KPluralHandlingSpinBox*
 QThread* k_pluralhandlingspinbox_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param thread QThread*
@@ -2680,7 +2680,7 @@ bool k_pluralhandlingspinbox_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param interval int
@@ -2688,7 +2688,7 @@ int32_t k_pluralhandlingspinbox_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param id int
@@ -2696,7 +2696,7 @@ void k_pluralhandlingspinbox_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param id enum Qt__TimerId
@@ -2704,14 +2704,14 @@ void k_pluralhandlingspinbox_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KPluralHandlingSpinBox*
 libqt_list /* of QObject* */ k_pluralhandlingspinbox_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param filterObj QObject*
@@ -2719,7 +2719,7 @@ void k_pluralhandlingspinbox_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param obj QObject*
@@ -2727,7 +2727,7 @@ void k_pluralhandlingspinbox_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -2737,7 +2737,7 @@ QMetaObject__Connection* k_pluralhandlingspinbox_connect(void* sender, void* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param sender QObject*
@@ -2747,7 +2747,7 @@ QMetaObject__Connection* k_pluralhandlingspinbox_connect2(void* self, void* send
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -2757,28 +2757,28 @@ bool k_pluralhandlingspinbox_disconnect(void* sender, void* signal, void* receiv
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_pluralhandlingspinbox_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param name const char*
@@ -2787,7 +2787,7 @@ bool k_pluralhandlingspinbox_set_property(void* self, const char* name, void* va
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param name const char*
@@ -2795,7 +2795,7 @@ QVariant* k_pluralhandlingspinbox_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2804,28 +2804,28 @@ const char** k_pluralhandlingspinbox_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KPluralHandlingSpinBox*
 QBindingStorage* k_pluralhandlingspinbox_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KPluralHandlingSpinBox*
 const QBindingStorage* k_pluralhandlingspinbox_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self)
@@ -2833,14 +2833,14 @@ void k_pluralhandlingspinbox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KPluralHandlingSpinBox*
 QObject* k_pluralhandlingspinbox_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param classname const char*
@@ -2848,14 +2848,14 @@ bool k_pluralhandlingspinbox_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KPluralHandlingSpinBox*
 void k_pluralhandlingspinbox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param thread QThread*
@@ -2864,7 +2864,7 @@ bool k_pluralhandlingspinbox_move_to_thread2(void* self, void* thread, void* par
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param interval int
@@ -2873,7 +2873,7 @@ int32_t k_pluralhandlingspinbox_start_timer22(void* self, int interval, int32_t 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -2884,7 +2884,7 @@ QMetaObject__Connection* k_pluralhandlingspinbox_connect5(void* sender, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param sender QObject*
@@ -2895,7 +2895,7 @@ QMetaObject__Connection* k_pluralhandlingspinbox_connect4(void* self, void* send
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QObject*
@@ -2903,7 +2903,7 @@ void k_pluralhandlingspinbox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, QObject* param1)
@@ -2911,90 +2911,90 @@ void k_pluralhandlingspinbox_on_destroyed1(void* self, void (*callback)(void*, v
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KPluralHandlingSpinBox*
 bool k_pluralhandlingspinbox_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KPluralHandlingSpinBox*
 double k_pluralhandlingspinbox_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KPluralHandlingSpinBox*
 double k_pluralhandlingspinbox_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KPluralHandlingSpinBox*
 int32_t k_pluralhandlingspinbox_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
 ///
 double k_pluralhandlingspinbox_device_pixel_ratio_f_scale();
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
@@ -3002,7 +3002,7 @@ int32_t k_pluralhandlingspinbox_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3012,7 +3012,7 @@ bool k_pluralhandlingspinbox_event(void* self, void* event);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3022,7 +3022,7 @@ bool k_pluralhandlingspinbox_qbase_event(void* self, void* event);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3032,7 +3032,7 @@ void k_pluralhandlingspinbox_on_event(void* self, bool (*callback)(void*, void*)
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#validate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#validate)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3045,7 +3045,7 @@ int32_t k_pluralhandlingspinbox_validate(void* self, const char* input, int* pos
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#validate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#validate)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3058,7 +3058,7 @@ int32_t k_pluralhandlingspinbox_qbase_validate(void* self, const char* input, in
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#validate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#validate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3068,7 +3068,7 @@ void k_pluralhandlingspinbox_on_validate(void* self, int32_t (*callback)(void*, 
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3078,7 +3078,7 @@ int32_t k_pluralhandlingspinbox_value_from_text(void* self, const char* text);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3088,7 +3088,7 @@ int32_t k_pluralhandlingspinbox_qbase_value_from_text(void* self, const char* te
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3098,7 +3098,7 @@ void k_pluralhandlingspinbox_on_value_from_text(void* self, int32_t (*callback)(
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3110,7 +3110,7 @@ const char* k_pluralhandlingspinbox_text_from_value(void* self, int val);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3122,7 +3122,7 @@ const char* k_pluralhandlingspinbox_qbase_text_from_value(void* self, int val);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3132,7 +3132,7 @@ void k_pluralhandlingspinbox_on_text_from_value(void* self, const char* (*callba
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#fixup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#fixup)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3142,7 +3142,7 @@ void k_pluralhandlingspinbox_fixup(void* self, const char* str);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#fixup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#fixup)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3152,7 +3152,7 @@ void k_pluralhandlingspinbox_qbase_fixup(void* self, const char* str);
 
 /// Inherited from QSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#fixup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#fixup)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3162,7 +3162,7 @@ void k_pluralhandlingspinbox_on_fixup(void* self, void (*callback)(void*, const 
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3171,7 +3171,7 @@ QSize* k_pluralhandlingspinbox_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3180,7 +3180,7 @@ QSize* k_pluralhandlingspinbox_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3190,7 +3190,7 @@ void k_pluralhandlingspinbox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3199,7 +3199,7 @@ QSize* k_pluralhandlingspinbox_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3208,7 +3208,7 @@ QSize* k_pluralhandlingspinbox_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3218,7 +3218,7 @@ void k_pluralhandlingspinbox_on_minimum_size_hint(void* self, QSize* (*callback)
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3228,7 +3228,7 @@ QVariant* k_pluralhandlingspinbox_input_method_query(void* self, int64_t param1)
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3238,7 +3238,7 @@ QVariant* k_pluralhandlingspinbox_qbase_input_method_query(void* self, int64_t p
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3248,7 +3248,7 @@ void k_pluralhandlingspinbox_on_input_method_query(void* self, QVariant* (*callb
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3258,7 +3258,7 @@ void k_pluralhandlingspinbox_step_by(void* self, int steps);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3268,7 +3268,7 @@ void k_pluralhandlingspinbox_qbase_step_by(void* self, int steps);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3278,7 +3278,7 @@ void k_pluralhandlingspinbox_on_step_by(void* self, void (*callback)(void*, int)
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3287,7 +3287,7 @@ void k_pluralhandlingspinbox_clear(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3296,7 +3296,7 @@ void k_pluralhandlingspinbox_qbase_clear(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3306,7 +3306,7 @@ void k_pluralhandlingspinbox_on_clear(void* self, void (*callback)());
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3316,7 +3316,7 @@ void k_pluralhandlingspinbox_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3326,7 +3326,7 @@ void k_pluralhandlingspinbox_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3336,7 +3336,7 @@ void k_pluralhandlingspinbox_on_resize_event(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3346,7 +3346,7 @@ void k_pluralhandlingspinbox_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3356,7 +3356,7 @@ void k_pluralhandlingspinbox_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3366,7 +3366,7 @@ void k_pluralhandlingspinbox_on_key_press_event(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3376,7 +3376,7 @@ void k_pluralhandlingspinbox_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3386,7 +3386,7 @@ void k_pluralhandlingspinbox_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3396,7 +3396,7 @@ void k_pluralhandlingspinbox_on_key_release_event(void* self, void (*callback)(v
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3406,7 +3406,7 @@ void k_pluralhandlingspinbox_wheel_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3416,7 +3416,7 @@ void k_pluralhandlingspinbox_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3426,7 +3426,7 @@ void k_pluralhandlingspinbox_on_wheel_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3436,7 +3436,7 @@ void k_pluralhandlingspinbox_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3446,7 +3446,7 @@ void k_pluralhandlingspinbox_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3456,7 +3456,7 @@ void k_pluralhandlingspinbox_on_focus_in_event(void* self, void (*callback)(void
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3466,7 +3466,7 @@ void k_pluralhandlingspinbox_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3476,7 +3476,7 @@ void k_pluralhandlingspinbox_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3486,7 +3486,7 @@ void k_pluralhandlingspinbox_on_focus_out_event(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3496,7 +3496,7 @@ void k_pluralhandlingspinbox_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3506,7 +3506,7 @@ void k_pluralhandlingspinbox_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3516,7 +3516,7 @@ void k_pluralhandlingspinbox_on_context_menu_event(void* self, void (*callback)(
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3526,7 +3526,7 @@ void k_pluralhandlingspinbox_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3536,7 +3536,7 @@ void k_pluralhandlingspinbox_qbase_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3546,7 +3546,7 @@ void k_pluralhandlingspinbox_on_change_event(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3556,7 +3556,7 @@ void k_pluralhandlingspinbox_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3566,7 +3566,7 @@ void k_pluralhandlingspinbox_qbase_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3576,7 +3576,7 @@ void k_pluralhandlingspinbox_on_close_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3586,7 +3586,7 @@ void k_pluralhandlingspinbox_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3596,7 +3596,7 @@ void k_pluralhandlingspinbox_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3606,7 +3606,7 @@ void k_pluralhandlingspinbox_on_hide_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3616,7 +3616,7 @@ void k_pluralhandlingspinbox_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3626,7 +3626,7 @@ void k_pluralhandlingspinbox_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3636,7 +3636,7 @@ void k_pluralhandlingspinbox_on_mouse_press_event(void* self, void (*callback)(v
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3646,7 +3646,7 @@ void k_pluralhandlingspinbox_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3656,7 +3656,7 @@ void k_pluralhandlingspinbox_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3666,7 +3666,7 @@ void k_pluralhandlingspinbox_on_mouse_release_event(void* self, void (*callback)
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3676,7 +3676,7 @@ void k_pluralhandlingspinbox_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3686,7 +3686,7 @@ void k_pluralhandlingspinbox_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3696,7 +3696,7 @@ void k_pluralhandlingspinbox_on_mouse_move_event(void* self, void (*callback)(vo
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3706,7 +3706,7 @@ void k_pluralhandlingspinbox_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3716,7 +3716,7 @@ void k_pluralhandlingspinbox_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3726,7 +3726,7 @@ void k_pluralhandlingspinbox_on_timer_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3736,7 +3736,7 @@ void k_pluralhandlingspinbox_paint_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3746,7 +3746,7 @@ void k_pluralhandlingspinbox_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3756,7 +3756,7 @@ void k_pluralhandlingspinbox_on_paint_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3766,7 +3766,7 @@ void k_pluralhandlingspinbox_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3776,7 +3776,7 @@ void k_pluralhandlingspinbox_qbase_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3786,7 +3786,7 @@ void k_pluralhandlingspinbox_on_show_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3796,7 +3796,7 @@ void k_pluralhandlingspinbox_init_style_option(void* self, void* option);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3806,7 +3806,7 @@ void k_pluralhandlingspinbox_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3816,7 +3816,7 @@ void k_pluralhandlingspinbox_on_init_style_option(void* self, void (*callback)(v
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3827,7 +3827,7 @@ int32_t k_pluralhandlingspinbox_step_enabled(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3838,7 +3838,7 @@ int32_t k_pluralhandlingspinbox_qbase_step_enabled(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3848,7 +3848,7 @@ void k_pluralhandlingspinbox_on_step_enabled(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3857,7 +3857,7 @@ int32_t k_pluralhandlingspinbox_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3866,7 +3866,7 @@ int32_t k_pluralhandlingspinbox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3876,7 +3876,7 @@ void k_pluralhandlingspinbox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3886,7 +3886,7 @@ void k_pluralhandlingspinbox_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3896,7 +3896,7 @@ void k_pluralhandlingspinbox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3906,7 +3906,7 @@ void k_pluralhandlingspinbox_on_set_visible(void* self, void (*callback)(void*, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3916,7 +3916,7 @@ int32_t k_pluralhandlingspinbox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3926,7 +3926,7 @@ int32_t k_pluralhandlingspinbox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3936,7 +3936,7 @@ void k_pluralhandlingspinbox_on_height_for_width(void* self, int32_t (*callback)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3945,7 +3945,7 @@ bool k_pluralhandlingspinbox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3954,7 +3954,7 @@ bool k_pluralhandlingspinbox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3964,7 +3964,7 @@ void k_pluralhandlingspinbox_on_has_height_for_width(void* self, bool (*callback
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3973,7 +3973,7 @@ QPaintEngine* k_pluralhandlingspinbox_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3982,7 +3982,7 @@ QPaintEngine* k_pluralhandlingspinbox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3992,7 +3992,7 @@ void k_pluralhandlingspinbox_on_paint_engine(void* self, QPaintEngine* (*callbac
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4002,7 +4002,7 @@ void k_pluralhandlingspinbox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4012,7 +4012,7 @@ void k_pluralhandlingspinbox_qbase_mouse_double_click_event(void* self, void* ev
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4022,7 +4022,7 @@ void k_pluralhandlingspinbox_on_mouse_double_click_event(void* self, void (*call
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4032,7 +4032,7 @@ void k_pluralhandlingspinbox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4042,7 +4042,7 @@ void k_pluralhandlingspinbox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4052,7 +4052,7 @@ void k_pluralhandlingspinbox_on_enter_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4062,7 +4062,7 @@ void k_pluralhandlingspinbox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4072,7 +4072,7 @@ void k_pluralhandlingspinbox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4082,7 +4082,7 @@ void k_pluralhandlingspinbox_on_leave_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4092,7 +4092,7 @@ void k_pluralhandlingspinbox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4102,7 +4102,7 @@ void k_pluralhandlingspinbox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4112,7 +4112,7 @@ void k_pluralhandlingspinbox_on_move_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4122,7 +4122,7 @@ void k_pluralhandlingspinbox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4132,7 +4132,7 @@ void k_pluralhandlingspinbox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4142,7 +4142,7 @@ void k_pluralhandlingspinbox_on_tablet_event(void* self, void (*callback)(void*,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4152,7 +4152,7 @@ void k_pluralhandlingspinbox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4162,7 +4162,7 @@ void k_pluralhandlingspinbox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4172,7 +4172,7 @@ void k_pluralhandlingspinbox_on_action_event(void* self, void (*callback)(void*,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4182,7 +4182,7 @@ void k_pluralhandlingspinbox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4192,7 +4192,7 @@ void k_pluralhandlingspinbox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4202,7 +4202,7 @@ void k_pluralhandlingspinbox_on_drag_enter_event(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4212,7 +4212,7 @@ void k_pluralhandlingspinbox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4222,7 +4222,7 @@ void k_pluralhandlingspinbox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4232,7 +4232,7 @@ void k_pluralhandlingspinbox_on_drag_move_event(void* self, void (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4242,7 +4242,7 @@ void k_pluralhandlingspinbox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4252,7 +4252,7 @@ void k_pluralhandlingspinbox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4262,7 +4262,7 @@ void k_pluralhandlingspinbox_on_drag_leave_event(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4272,7 +4272,7 @@ void k_pluralhandlingspinbox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4282,7 +4282,7 @@ void k_pluralhandlingspinbox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4292,7 +4292,7 @@ void k_pluralhandlingspinbox_on_drop_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4304,7 +4304,7 @@ bool k_pluralhandlingspinbox_native_event(void* self, const char* eventType, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4316,7 +4316,7 @@ bool k_pluralhandlingspinbox_qbase_native_event(void* self, const char* eventTyp
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4326,7 +4326,7 @@ void k_pluralhandlingspinbox_on_native_event(void* self, bool (*callback)(void*,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4336,7 +4336,7 @@ int32_t k_pluralhandlingspinbox_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4346,7 +4346,7 @@ int32_t k_pluralhandlingspinbox_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4356,7 +4356,7 @@ void k_pluralhandlingspinbox_on_metric(void* self, int32_t (*callback)(void*, in
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4366,7 +4366,7 @@ void k_pluralhandlingspinbox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4376,7 +4376,7 @@ void k_pluralhandlingspinbox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4386,7 +4386,7 @@ void k_pluralhandlingspinbox_on_init_painter(void* self, void (*callback)(void*,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4396,7 +4396,7 @@ QPaintDevice* k_pluralhandlingspinbox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4406,7 +4406,7 @@ QPaintDevice* k_pluralhandlingspinbox_qbase_redirected(void* self, void* offset)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4416,7 +4416,7 @@ void k_pluralhandlingspinbox_on_redirected(void* self, QPaintDevice* (*callback)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4425,7 +4425,7 @@ QPainter* k_pluralhandlingspinbox_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4434,7 +4434,7 @@ QPainter* k_pluralhandlingspinbox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4444,7 +4444,7 @@ void k_pluralhandlingspinbox_on_shared_painter(void* self, QPainter* (*callback)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4454,7 +4454,7 @@ void k_pluralhandlingspinbox_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4464,7 +4464,7 @@ void k_pluralhandlingspinbox_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4474,7 +4474,7 @@ void k_pluralhandlingspinbox_on_input_method_event(void* self, void (*callback)(
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4484,7 +4484,7 @@ bool k_pluralhandlingspinbox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4494,7 +4494,7 @@ bool k_pluralhandlingspinbox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4504,7 +4504,7 @@ void k_pluralhandlingspinbox_on_focus_next_prev_child(void* self, bool (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4515,7 +4515,7 @@ bool k_pluralhandlingspinbox_event_filter(void* self, void* watched, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4526,7 +4526,7 @@ bool k_pluralhandlingspinbox_qbase_event_filter(void* self, void* watched, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4536,7 +4536,7 @@ void k_pluralhandlingspinbox_on_event_filter(void* self, bool (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4546,7 +4546,7 @@ void k_pluralhandlingspinbox_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4556,7 +4556,7 @@ void k_pluralhandlingspinbox_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4566,7 +4566,7 @@ void k_pluralhandlingspinbox_on_child_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4576,7 +4576,7 @@ void k_pluralhandlingspinbox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4586,7 +4586,7 @@ void k_pluralhandlingspinbox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4596,7 +4596,7 @@ void k_pluralhandlingspinbox_on_custom_event(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4606,7 +4606,7 @@ void k_pluralhandlingspinbox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4616,7 +4616,7 @@ void k_pluralhandlingspinbox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4626,7 +4626,7 @@ void k_pluralhandlingspinbox_on_connect_notify(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4636,7 +4636,7 @@ void k_pluralhandlingspinbox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4646,7 +4646,7 @@ void k_pluralhandlingspinbox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4656,7 +4656,7 @@ void k_pluralhandlingspinbox_on_disconnect_notify(void* self, void (*callback)(v
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4665,7 +4665,7 @@ QLineEdit* k_pluralhandlingspinbox_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4674,7 +4674,7 @@ QLineEdit* k_pluralhandlingspinbox_qbase_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4684,7 +4684,7 @@ void k_pluralhandlingspinbox_on_line_edit(void* self, QLineEdit* (*callback)());
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4694,7 +4694,7 @@ void k_pluralhandlingspinbox_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4704,7 +4704,7 @@ void k_pluralhandlingspinbox_qbase_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4714,7 +4714,7 @@ void k_pluralhandlingspinbox_on_set_line_edit(void* self, void (*callback)(void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4723,7 +4723,7 @@ void k_pluralhandlingspinbox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4732,7 +4732,7 @@ void k_pluralhandlingspinbox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4742,7 +4742,7 @@ void k_pluralhandlingspinbox_on_update_micro_focus(void* self, void (*callback)(
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4751,7 +4751,7 @@ void k_pluralhandlingspinbox_create(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4760,7 +4760,7 @@ void k_pluralhandlingspinbox_qbase_create(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4770,7 +4770,7 @@ void k_pluralhandlingspinbox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4779,7 +4779,7 @@ void k_pluralhandlingspinbox_destroy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4788,7 +4788,7 @@ void k_pluralhandlingspinbox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4798,7 +4798,7 @@ void k_pluralhandlingspinbox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4807,7 +4807,7 @@ bool k_pluralhandlingspinbox_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4816,7 +4816,7 @@ bool k_pluralhandlingspinbox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4826,7 +4826,7 @@ void k_pluralhandlingspinbox_on_focus_next_child(void* self, bool (*callback)())
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4835,7 +4835,7 @@ bool k_pluralhandlingspinbox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4844,7 +4844,7 @@ bool k_pluralhandlingspinbox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4854,7 +4854,7 @@ void k_pluralhandlingspinbox_on_focus_previous_child(void* self, bool (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4863,7 +4863,7 @@ QObject* k_pluralhandlingspinbox_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4872,7 +4872,7 @@ QObject* k_pluralhandlingspinbox_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4882,7 +4882,7 @@ void k_pluralhandlingspinbox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4891,7 +4891,7 @@ int32_t k_pluralhandlingspinbox_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4900,7 +4900,7 @@ int32_t k_pluralhandlingspinbox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4910,7 +4910,7 @@ void k_pluralhandlingspinbox_on_sender_signal_index(void* self, int32_t (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4920,7 +4920,7 @@ int32_t k_pluralhandlingspinbox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4930,7 +4930,7 @@ int32_t k_pluralhandlingspinbox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4940,7 +4940,7 @@ void k_pluralhandlingspinbox_on_receivers(void* self, int32_t (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4950,7 +4950,7 @@ bool k_pluralhandlingspinbox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4960,7 +4960,7 @@ bool k_pluralhandlingspinbox_qbase_is_signal_connected(void* self, void* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4970,7 +4970,7 @@ void k_pluralhandlingspinbox_on_is_signal_connected(void* self, bool (*callback)
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4981,7 +4981,7 @@ double k_pluralhandlingspinbox_get_decoded_metric_f(void* self, int32_t metricA,
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4992,7 +4992,7 @@ double k_pluralhandlingspinbox_qbase_get_decoded_metric_f(void* self, int32_t me
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5002,7 +5002,7 @@ void k_pluralhandlingspinbox_on_get_decoded_metric_f(void* self, double (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -5010,7 +5010,7 @@ void k_pluralhandlingspinbox_on_get_decoded_metric_f(void* self, double (*callba
 /// @param callback void func(KPluralHandlingSpinBox* self, const char* objectName)
 void k_pluralhandlingspinbox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kpluralhandlingspinbox.html#dtor.KPluralHandlingSpinBox)
+/// [Upstream resources](https://api.kde.org/kpluralhandlingspinbox.html#dtor.KPluralHandlingSpinBox)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -22,31 +22,31 @@ Attica__HomePageType* k_attica__homepagetype_new();
 /// @param other Attica__HomePageType*
 Attica__HomePageType* k_attica__homepagetype_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-homepagetype.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/attica-homepagetype.html#operator-eq)
 ///
 /// @param self Attica__HomePageType*
 /// @param other Attica__HomePageType*
 void k_attica__homepagetype_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-homepagetype.html#id)
+/// [Upstream resources](https://api.kde.org/attica-homepagetype.html#id)
 ///
 /// @param self Attica__HomePageType*
 uint32_t k_attica__homepagetype_id(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-homepagetype.html#setId)
+/// [Upstream resources](https://api.kde.org/attica-homepagetype.html#setId)
 ///
 /// @param self Attica__HomePageType*
 /// @param id uint32_t
 void k_attica__homepagetype_set_id(void* self, uint32_t id);
 
-/// [Qt documentation](https://api.kde.org/attica-homepagetype.html#name)
+/// [Upstream resources](https://api.kde.org/attica-homepagetype.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__HomePageType*
 const char* k_attica__homepagetype_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-homepagetype.html#setName)
+/// [Upstream resources](https://api.kde.org/attica-homepagetype.html#setName)
 ///
 /// @param self Attica__HomePageType*
 /// @param name const char*

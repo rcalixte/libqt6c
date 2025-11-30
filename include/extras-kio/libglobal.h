@@ -13,42 +13,42 @@
 
 /// https://api.kde.org/kio.html
 
-/// [Qt documentation](https://api.kde.org/kio.html#convertSize)
+/// [Upstream resources](https://api.kde.org/kio.html#convertSize)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
 const char* k_io_convert_size(uint64_t param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#number)
+/// [Upstream resources](https://api.kde.org/kio.html#number)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
 const char* k_io_number(uint64_t param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#convertSizeFromKiB)
+/// [Upstream resources](https://api.kde.org/kio.html#convertSizeFromKiB)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
 const char* k_io_convert_size_from_ki_b(uint64_t param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#calculateRemainingSeconds)
+/// [Upstream resources](https://api.kde.org/kio.html#calculateRemainingSeconds)
 ///
 /// @param param1 uint64_t
 /// @param param2 uint64_t
 /// @param param3 uint64_t
 uint32_t k_io_calculate_remaining_seconds(uint64_t param1, uint64_t param2, uint64_t param3);
 
-/// [Qt documentation](https://api.kde.org/kio.html#convertSeconds)
+/// [Upstream resources](https://api.kde.org/kio.html#convertSeconds)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint32_t
 const char* k_io_convert_seconds(uint32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#itemsSummaryString)
+/// [Upstream resources](https://api.kde.org/kio.html#itemsSummaryString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -59,56 +59,56 @@ const char* k_io_convert_seconds(uint32_t param1);
 /// @param param5 bool
 const char* k_io_items_summary_string(uint32_t param1, uint32_t param2, uint32_t param3, uint64_t param4, bool param5);
 
-/// [Qt documentation](https://api.kde.org/kio.html#encodeFileName)
+/// [Upstream resources](https://api.kde.org/kio.html#encodeFileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_io_encode_file_name(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#decodeFileName)
+/// [Upstream resources](https://api.kde.org/kio.html#decodeFileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_io_decode_file_name(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#parseCacheControl)
+/// [Upstream resources](https://api.kde.org/kio.html#parseCacheControl)
 ///
 /// @param param1 const char*
 ///
 /// @return enum KIO__CacheControl
 int32_t k_io_parse_cache_control(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#getCacheControlString)
+/// [Upstream resources](https://api.kde.org/kio.html#getCacheControlString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KIO__CacheControl
 const char* k_io_get_cache_control_string(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#favIconForUrl)
+/// [Upstream resources](https://api.kde.org/kio.html#favIconForUrl)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
 const char* k_io_fav_icon_for_url(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#convertPermissions)
+/// [Upstream resources](https://api.kde.org/kio.html#convertPermissions)
 ///
 /// @param param1 int
 ///
 /// @return flag of enum QFileDevice__Permission
 int32_t k_io_convert_permissions(int param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#iconNameForUrl)
+/// [Upstream resources](https://api.kde.org/kio.html#iconNameForUrl)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
 const char* k_io_icon_name_for_url(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio.html#upUrl)
+/// [Upstream resources](https://api.kde.org/kio.html#upUrl)
 ///
 /// @param param1 QUrl*
 QUrl* k_io_up_url(void* param1);

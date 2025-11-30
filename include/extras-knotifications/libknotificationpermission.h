@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/knotificationpermission.html
 
-/// [Qt documentation](https://api.kde.org/knotificationpermission.html#checkPermission)
+/// [Upstream resources](https://api.kde.org/knotificationpermission.html#checkPermission)
 ///
 ///
 /// @return enum Qt__PermissionStatus

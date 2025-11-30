@@ -18,33 +18,33 @@
 /// @param param1 KNSCore__SearchPreset*
 KNSCore__SearchPreset* k_nscore__searchpreset_new(void* param1);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchpreset.html#request)
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#request)
 ///
 /// @param self KNSCore__SearchPreset*
 KNSCore__SearchRequest* k_nscore__searchpreset_request(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchpreset.html#displayName)
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#displayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchPreset*
 const char* k_nscore__searchpreset_display_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchpreset.html#iconName)
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#iconName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchPreset*
 const char* k_nscore__searchpreset_icon_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchpreset.html#type)
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#type)
 ///
 /// @param self KNSCore__SearchPreset*
 ///
 /// @return enum KNSCore__SearchPreset__Type
 int32_t k_nscore__searchpreset_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchpreset.html#providerId)
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#providerId)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

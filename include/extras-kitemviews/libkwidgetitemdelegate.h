@@ -24,7 +24,7 @@ KWidgetItemDelegate* k_widgetitemdelegate_new(void* itemView);
 /// @param parent QObject*
 KWidgetItemDelegate* k_widgetitemdelegate_new2(void* itemView, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KWidgetItemDelegate*
 const QMetaObject* k_widgetitemdelegate_meta_object(void* self);
@@ -53,35 +53,35 @@ void k_widgetitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_widgetitemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_widgetitemdelegate_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#itemView)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#itemView)
 ///
 /// @param self KWidgetItemDelegate*
 QAbstractItemView* k_widgetitemdelegate_item_view(void* self);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#focusedIndex)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#focusedIndex)
 ///
 /// @param self KWidgetItemDelegate*
 QPersistentModelIndex* k_widgetitemdelegate_focused_index(void* self);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#resetModel)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#resetModel)
 ///
 /// @param self KWidgetItemDelegate*
 void k_widgetitemdelegate_reset_model(void* self);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param index QModelIndex*
 libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
 /// Allows for overriding the related default method
 ///
@@ -89,7 +89,7 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(void* self
 /// @param callback QWidget** func(KWidgetItemDelegate* self, QModelIndex* index)
 void k_widgetitemdelegate_on_create_item_widgets(void* self, QWidget** (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
 /// Base class method implementation
 ///
@@ -97,7 +97,7 @@ void k_widgetitemdelegate_on_create_item_widgets(void* self, QWidget** (*callbac
 /// @param index QModelIndex*
 libqt_list /* of QWidget* */ k_widgetitemdelegate_qbase_create_item_widgets(void* self, void* index);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widgets libqt_list /* of QWidget* */
@@ -105,7 +105,7 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_qbase_create_item_widgets(void
 /// @param index QPersistentModelIndex*
 void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// Allows for overriding the related default method
 ///
@@ -113,7 +113,7 @@ void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, vo
 /// @param callback void func(KWidgetItemDelegate* self, QWidget** widgets, QStyleOptionViewItem* option, QPersistentModelIndex* index)
 void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, QWidget**, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// Base class method implementation
 ///
@@ -123,14 +123,14 @@ void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(vo
 /// @param index QPersistentModelIndex*
 void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widget QWidget*
 /// @param types libqt_list /* of enum QEvent__Type */
 void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list types);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,7 +138,7 @@ void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libq
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* widget, libqt_list /* of enum QEvent__Type */ /* of enum QEvent__Type */)
 void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list));
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// Base class method implementation
 ///
@@ -147,7 +147,7 @@ void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback
 /// @param types libqt_list /* of enum QEvent__Type */
 void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list types);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widget QWidget*
@@ -155,7 +155,7 @@ void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget
 /// @return libqt_list of enum QEvent__Type
 libqt_list /* of int32_t */ k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
@@ -163,7 +163,7 @@ libqt_list /* of int32_t */ k_widgetitemdelegate_blocked_event_types(void* self,
 /// @param callback int* func(KWidgetItemDelegate* self, QWidget* widget)
 void k_widgetitemdelegate_on_blocked_event_types(void* self, int* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
 /// Base class method implementation
 ///
@@ -173,7 +173,7 @@ void k_widgetitemdelegate_on_blocked_event_types(void* self, int* (*callback)(vo
 /// @return libqt_list of enum QEvent__Type
 libqt_list /* of int32_t */ k_widgetitemdelegate_qbase_blocked_event_types(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -181,7 +181,7 @@ libqt_list /* of int32_t */ k_widgetitemdelegate_qbase_blocked_event_types(void*
 /// @param c const char*
 const char* k_widgetitemdelegate_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -192,7 +192,7 @@ const char* k_widgetitemdelegate_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param editor QWidget*
@@ -200,7 +200,7 @@ void k_widgetitemdelegate_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* editor)
@@ -208,7 +208,7 @@ void k_widgetitemdelegate_on_commit_data(void* self, void (*callback)(void*, voi
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param editor QWidget*
@@ -216,7 +216,7 @@ void k_widgetitemdelegate_close_editor(void* self, void* editor);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* editor)
@@ -224,7 +224,7 @@ void k_widgetitemdelegate_on_close_editor(void* self, void (*callback)(void*, vo
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param param1 QModelIndex*
@@ -232,7 +232,7 @@ void k_widgetitemdelegate_size_hint_changed(void* self, void* param1);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QModelIndex* param1)
@@ -240,7 +240,7 @@ void k_widgetitemdelegate_on_size_hint_changed(void* self, void (*callback)(void
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param editor QWidget*
@@ -249,7 +249,7 @@ void k_widgetitemdelegate_close_editor2(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint)
@@ -257,7 +257,7 @@ void k_widgetitemdelegate_on_close_editor2(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -266,7 +266,7 @@ const char* k_widgetitemdelegate_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param name char*
@@ -274,35 +274,35 @@ void k_widgetitemdelegate_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KWidgetItemDelegate*
 bool k_widgetitemdelegate_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KWidgetItemDelegate*
 bool k_widgetitemdelegate_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KWidgetItemDelegate*
 bool k_widgetitemdelegate_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KWidgetItemDelegate*
 bool k_widgetitemdelegate_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param b bool
@@ -310,14 +310,14 @@ bool k_widgetitemdelegate_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KWidgetItemDelegate*
 QThread* k_widgetitemdelegate_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param thread QThread*
@@ -325,7 +325,7 @@ bool k_widgetitemdelegate_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param interval int
@@ -333,7 +333,7 @@ int32_t k_widgetitemdelegate_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param id int
@@ -341,7 +341,7 @@ void k_widgetitemdelegate_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param id enum Qt__TimerId
@@ -349,14 +349,14 @@ void k_widgetitemdelegate_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KWidgetItemDelegate*
 libqt_list /* of QObject* */ k_widgetitemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param parent QObject*
@@ -364,7 +364,7 @@ void k_widgetitemdelegate_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param filterObj QObject*
@@ -372,7 +372,7 @@ void k_widgetitemdelegate_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param obj QObject*
@@ -380,7 +380,7 @@ void k_widgetitemdelegate_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -390,7 +390,7 @@ QMetaObject__Connection* k_widgetitemdelegate_connect(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param sender QObject*
@@ -400,7 +400,7 @@ QMetaObject__Connection* k_widgetitemdelegate_connect2(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -410,28 +410,28 @@ bool k_widgetitemdelegate_disconnect(void* sender, void* signal, void* receiver,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_widgetitemdelegate_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KWidgetItemDelegate*
 void k_widgetitemdelegate_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KWidgetItemDelegate*
 void k_widgetitemdelegate_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param name const char*
@@ -440,7 +440,7 @@ bool k_widgetitemdelegate_set_property(void* self, const char* name, void* value
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param name const char*
@@ -448,7 +448,7 @@ QVariant* k_widgetitemdelegate_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -457,28 +457,28 @@ const char** k_widgetitemdelegate_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KWidgetItemDelegate*
 QBindingStorage* k_widgetitemdelegate_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KWidgetItemDelegate*
 const QBindingStorage* k_widgetitemdelegate_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KWidgetItemDelegate*
 void k_widgetitemdelegate_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self)
@@ -486,14 +486,14 @@ void k_widgetitemdelegate_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KWidgetItemDelegate*
 QObject* k_widgetitemdelegate_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param classname const char*
@@ -501,14 +501,14 @@ bool k_widgetitemdelegate_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KWidgetItemDelegate*
 void k_widgetitemdelegate_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param thread QThread*
@@ -517,7 +517,7 @@ bool k_widgetitemdelegate_move_to_thread2(void* self, void* thread, void* param2
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param interval int
@@ -526,7 +526,7 @@ int32_t k_widgetitemdelegate_start_timer22(void* self, int interval, int32_t tim
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -537,7 +537,7 @@ QMetaObject__Connection* k_widgetitemdelegate_connect5(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param sender QObject*
@@ -548,7 +548,7 @@ QMetaObject__Connection* k_widgetitemdelegate_connect4(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param param1 QObject*
@@ -556,7 +556,7 @@ void k_widgetitemdelegate_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QObject* param1)
@@ -564,7 +564,7 @@ void k_widgetitemdelegate_on_destroyed1(void* self, void (*callback)(void*, void
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -576,7 +576,7 @@ void k_widgetitemdelegate_paint(void* self, void* painter, void* option, void* i
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -588,7 +588,7 @@ void k_widgetitemdelegate_qbase_paint(void* self, void* painter, void* option, v
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -598,7 +598,7 @@ void k_widgetitemdelegate_on_paint(void* self, void (*callback)(void*, void*, vo
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -609,7 +609,7 @@ QSize* k_widgetitemdelegate_size_hint(void* self, void* option, void* index);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -620,7 +620,7 @@ QSize* k_widgetitemdelegate_qbase_size_hint(void* self, void* option, void* inde
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -630,7 +630,7 @@ void k_widgetitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, voi
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -642,7 +642,7 @@ QWidget* k_widgetitemdelegate_create_editor(void* self, void* parent, void* opti
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -654,7 +654,7 @@ QWidget* k_widgetitemdelegate_qbase_create_editor(void* self, void* parent, void
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -664,7 +664,7 @@ void k_widgetitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -675,7 +675,7 @@ void k_widgetitemdelegate_destroy_editor(void* self, void* editor, void* index);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -686,7 +686,7 @@ void k_widgetitemdelegate_qbase_destroy_editor(void* self, void* editor, void* i
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -696,7 +696,7 @@ void k_widgetitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, 
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -707,7 +707,7 @@ void k_widgetitemdelegate_set_editor_data(void* self, void* editor, void* index)
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -718,7 +718,7 @@ void k_widgetitemdelegate_qbase_set_editor_data(void* self, void* editor, void* 
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -728,7 +728,7 @@ void k_widgetitemdelegate_on_set_editor_data(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -740,7 +740,7 @@ void k_widgetitemdelegate_set_model_data(void* self, void* editor, void* model, 
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -752,7 +752,7 @@ void k_widgetitemdelegate_qbase_set_model_data(void* self, void* editor, void* m
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -762,7 +762,7 @@ void k_widgetitemdelegate_on_set_model_data(void* self, void (*callback)(void*, 
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -774,7 +774,7 @@ void k_widgetitemdelegate_update_editor_geometry(void* self, void* editor, void*
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -786,7 +786,7 @@ void k_widgetitemdelegate_qbase_update_editor_geometry(void* self, void* editor,
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -796,7 +796,7 @@ void k_widgetitemdelegate_on_update_editor_geometry(void* self, void (*callback)
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -809,7 +809,7 @@ bool k_widgetitemdelegate_editor_event(void* self, void* event, void* model, voi
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -822,7 +822,7 @@ bool k_widgetitemdelegate_qbase_editor_event(void* self, void* event, void* mode
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -832,7 +832,7 @@ void k_widgetitemdelegate_on_editor_event(void* self, bool (*callback)(void*, vo
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -845,7 +845,7 @@ bool k_widgetitemdelegate_help_event(void* self, void* event, void* view, void* 
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -858,7 +858,7 @@ bool k_widgetitemdelegate_qbase_help_event(void* self, void* event, void* view, 
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -868,7 +868,7 @@ void k_widgetitemdelegate_on_help_event(void* self, bool (*callback)(void*, void
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -877,7 +877,7 @@ libqt_list /* of int */ k_widgetitemdelegate_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -886,7 +886,7 @@ libqt_list /* of int */ k_widgetitemdelegate_qbase_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -896,7 +896,7 @@ void k_widgetitemdelegate_on_painting_roles(void* self, int* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -906,7 +906,7 @@ bool k_widgetitemdelegate_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -916,7 +916,7 @@ bool k_widgetitemdelegate_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -926,7 +926,7 @@ void k_widgetitemdelegate_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -937,7 +937,7 @@ bool k_widgetitemdelegate_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -948,7 +948,7 @@ bool k_widgetitemdelegate_qbase_event_filter(void* self, void* watched, void* ev
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -958,7 +958,7 @@ void k_widgetitemdelegate_on_event_filter(void* self, bool (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -968,7 +968,7 @@ void k_widgetitemdelegate_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -978,7 +978,7 @@ void k_widgetitemdelegate_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -988,7 +988,7 @@ void k_widgetitemdelegate_on_timer_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -998,7 +998,7 @@ void k_widgetitemdelegate_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1008,7 +1008,7 @@ void k_widgetitemdelegate_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1018,7 +1018,7 @@ void k_widgetitemdelegate_on_child_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1028,7 +1028,7 @@ void k_widgetitemdelegate_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1038,7 +1038,7 @@ void k_widgetitemdelegate_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1048,7 +1048,7 @@ void k_widgetitemdelegate_on_custom_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1058,7 +1058,7 @@ void k_widgetitemdelegate_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1068,7 +1068,7 @@ void k_widgetitemdelegate_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1078,7 +1078,7 @@ void k_widgetitemdelegate_on_connect_notify(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1088,7 +1088,7 @@ void k_widgetitemdelegate_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1098,7 +1098,7 @@ void k_widgetitemdelegate_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1108,7 +1108,7 @@ void k_widgetitemdelegate_on_disconnect_notify(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1117,7 +1117,7 @@ QObject* k_widgetitemdelegate_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1126,7 +1126,7 @@ QObject* k_widgetitemdelegate_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1136,7 +1136,7 @@ void k_widgetitemdelegate_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1145,7 +1145,7 @@ int32_t k_widgetitemdelegate_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1154,7 +1154,7 @@ int32_t k_widgetitemdelegate_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1164,7 +1164,7 @@ void k_widgetitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1174,7 +1174,7 @@ int32_t k_widgetitemdelegate_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1184,7 +1184,7 @@ int32_t k_widgetitemdelegate_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1194,7 +1194,7 @@ void k_widgetitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, co
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1204,7 +1204,7 @@ bool k_widgetitemdelegate_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1214,7 +1214,7 @@ bool k_widgetitemdelegate_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1224,7 +1224,7 @@ void k_widgetitemdelegate_on_is_signal_connected(void* self, bool (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1232,7 +1232,7 @@ void k_widgetitemdelegate_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KWidgetItemDelegate* self, const char* objectName)
 void k_widgetitemdelegate_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#dtor.KWidgetItemDelegate)
+/// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#dtor.KWidgetItemDelegate)
 ///
 /// Delete this object from C++ memory.
 ///

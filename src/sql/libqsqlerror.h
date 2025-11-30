@@ -48,71 +48,71 @@ QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int
 /// @param errorCode const char*
 QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int32_t type, const char* errorCode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
 void q_sqlerror_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq-eq)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
 bool q_sqlerror_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-not-eq)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
 bool q_sqlerror_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#swap)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
 void q_sqlerror_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#driverText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#driverText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 const char* q_sqlerror_driver_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#databaseText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#databaseText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 const char* q_sqlerror_database_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#type)
 ///
 /// @param self QSqlError*
 ///
 /// @return enum QSqlError__ErrorType
 int32_t q_sqlerror_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#nativeErrorCode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#nativeErrorCode)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 const char* q_sqlerror_native_error_code(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 const char* q_sqlerror_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#isValid)
 ///
 /// @param self QSqlError*
 bool q_sqlerror_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#dtor.QSqlError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#dtor.QSqlError)
 ///
 /// Delete this object from C++ memory.
 ///

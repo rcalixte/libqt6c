@@ -18,7 +18,7 @@
 /// @param other KWordWrap*
 KWordWrap* k_wordwrap_new(void* other);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#formatText)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#formatText)
 ///
 /// @param fm QFontMetrics*
 /// @param r QRect*
@@ -26,26 +26,26 @@ KWordWrap* k_wordwrap_new(void* other);
 /// @param str const char*
 KWordWrap* k_wordwrap_format_text(void* fm, void* r, int flags, const char* str);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#boundingRect)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#boundingRect)
 ///
 /// @param self KWordWrap*
 QRect* k_wordwrap_bounding_rect(void* self);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#wrappedString)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#wrappedString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KWordWrap*
 const char* k_wordwrap_wrapped_string(void* self);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#truncatedString)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#truncatedString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KWordWrap*
 const char* k_wordwrap_truncated_string(void* self);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#drawText)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#drawText)
 ///
 /// @param self KWordWrap*
 /// @param painter QPainter*
@@ -53,13 +53,13 @@ const char* k_wordwrap_truncated_string(void* self);
 /// @param y int
 void k_wordwrap_draw_text(void* self, void* painter, int x, int y);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#operator-eq)
 ///
 /// @param self KWordWrap*
 /// @param other KWordWrap*
 void k_wordwrap_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#drawFadeoutText)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#drawFadeoutText)
 ///
 /// @param p QPainter*
 /// @param x int
@@ -68,7 +68,7 @@ void k_wordwrap_operator_assign(void* self, void* other);
 /// @param t const char*
 void k_wordwrap_draw_fadeout_text(void* p, int x, int y, int maxW, const char* t);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#drawTruncateText)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#drawTruncateText)
 ///
 /// @param p QPainter*
 /// @param x int
@@ -77,7 +77,7 @@ void k_wordwrap_draw_fadeout_text(void* p, int x, int y, int maxW, const char* t
 /// @param t const char*
 void k_wordwrap_draw_truncate_text(void* p, int x, int y, int maxW, const char* t);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#formatText)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#formatText)
 ///
 /// @param fm QFontMetrics*
 /// @param r QRect*
@@ -86,7 +86,7 @@ void k_wordwrap_draw_truncate_text(void* p, int x, int y, int maxW, const char* 
 /// @param lenVal int
 KWordWrap* k_wordwrap_format_text5(void* fm, void* r, int flags, const char* str, int lenVal);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#truncatedString)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#truncatedString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -94,7 +94,7 @@ KWordWrap* k_wordwrap_format_text5(void* fm, void* r, int flags, const char* str
 /// @param dots bool
 const char* k_wordwrap_truncated_string1(void* self, bool dots);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#drawText)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#drawText)
 ///
 /// @param self KWordWrap*
 /// @param painter QPainter*
@@ -103,7 +103,7 @@ const char* k_wordwrap_truncated_string1(void* self, bool dots);
 /// @param flags int
 void k_wordwrap_draw_text4(void* self, void* painter, int x, int y, int flags);
 
-/// [Qt documentation](https://api.kde.org/kwordwrap.html#dtor.KWordWrap)
+/// [Upstream resources](https://api.kde.org/kwordwrap.html#dtor.KWordWrap)
 ///
 /// Delete this object from C++ memory.
 ///

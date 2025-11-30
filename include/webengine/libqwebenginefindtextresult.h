@@ -22,23 +22,23 @@ QWebEngineFindTextResult* q_webenginefindtextresult_new();
 /// @param other QWebEngineFindTextResult*
 QWebEngineFindTextResult* q_webenginefindtextresult_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#numberOfMatches)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#numberOfMatches)
 ///
 /// @param self QWebEngineFindTextResult*
 int32_t q_webenginefindtextresult_number_of_matches(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#activeMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#activeMatch)
 ///
 /// @param self QWebEngineFindTextResult*
 int32_t q_webenginefindtextresult_active_match(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#operator-eq)
 ///
 /// @param self QWebEngineFindTextResult*
 /// @param other QWebEngineFindTextResult*
 void q_webenginefindtextresult_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#dtor.QWebEngineFindTextResult)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#dtor.QWebEngineFindTextResult)
 ///
 /// Delete this object from C++ memory.
 ///

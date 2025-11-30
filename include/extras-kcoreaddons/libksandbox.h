@@ -13,24 +13,24 @@
 
 /// https://api.kde.org/ksandbox.html
 
-/// [Qt documentation](https://api.kde.org/ksandbox.html#isInside)
+/// [Upstream resources](https://api.kde.org/ksandbox.html#isInside)
 ///
 bool k_sandbox_is_inside();
 
-/// [Qt documentation](https://api.kde.org/ksandbox.html#isFlatpak)
+/// [Upstream resources](https://api.kde.org/ksandbox.html#isFlatpak)
 ///
 bool k_sandbox_is_flatpak();
 
-/// [Qt documentation](https://api.kde.org/ksandbox.html#isSnap)
+/// [Upstream resources](https://api.kde.org/ksandbox.html#isSnap)
 ///
 bool k_sandbox_is_snap();
 
-/// [Qt documentation](https://api.kde.org/ksandbox.html#makeHostContext)
+/// [Upstream resources](https://api.kde.org/ksandbox.html#makeHostContext)
 ///
 /// @param param1 QProcess*
 KSandbox__ProcessContext* k_sandbox_make_host_context(void* param1);
 
-/// [Qt documentation](https://api.kde.org/ksandbox.html#startHostProcess)
+/// [Upstream resources](https://api.kde.org/ksandbox.html#startHostProcess)
 ///
 /// @param param1 QProcess*
 /// @param param2 flag of enum QIODeviceBase__OpenModeFlag

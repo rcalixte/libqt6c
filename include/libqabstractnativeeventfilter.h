@@ -17,7 +17,7 @@
 ///
 QAbstractNativeEventFilter* q_abstractnativeeventfilter_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
 ///
 /// @param self QAbstractNativeEventFilter*
 /// @param eventType const char*
@@ -25,7 +25,7 @@ QAbstractNativeEventFilter* q_abstractnativeeventfilter_new();
 /// @param result intptr_t*
 bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -33,7 +33,7 @@ bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eve
 /// @param callback bool func(QAbstractNativeEventFilter* self, const char* eventType, void* message, intptr_t* result)
 void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
 ///
 /// Base class method implementation
 ///
@@ -43,7 +43,7 @@ void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callb
 /// @param result intptr_t*
 bool q_abstractnativeeventfilter_qbase_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#dtor.QAbstractNativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#dtor.QAbstractNativeEventFilter)
 ///
 /// Delete this object from C++ memory.
 ///

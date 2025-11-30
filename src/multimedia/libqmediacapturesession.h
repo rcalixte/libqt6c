@@ -22,7 +22,7 @@ QMediaCaptureSession* q_mediacapturesession_new();
 /// @param parent QObject*
 QMediaCaptureSession* q_mediacapturesession_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QMediaCaptureSession*
 const QMetaObject* q_mediacapturesession_meta_object(void* self);
@@ -51,245 +51,245 @@ void q_mediacapturesession_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t q_mediacapturesession_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_mediacapturesession_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioInput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioInput)
 ///
 /// @param self QMediaCaptureSession*
 QAudioInput* q_mediacapturesession_audio_input(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setAudioInput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setAudioInput)
 ///
 /// @param self QMediaCaptureSession*
 /// @param input QAudioInput*
 void q_mediacapturesession_set_audio_input(void* self, void* input);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInput)
 ///
 /// @param self QMediaCaptureSession*
 QAudioBufferInput* q_mediacapturesession_audio_buffer_input(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setAudioBufferInput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setAudioBufferInput)
 ///
 /// @param self QMediaCaptureSession*
 /// @param input QAudioBufferInput*
 void q_mediacapturesession_set_audio_buffer_input(void* self, void* input);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#camera)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#camera)
 ///
 /// @param self QMediaCaptureSession*
 QCamera* q_mediacapturesession_camera(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setCamera)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setCamera)
 ///
 /// @param self QMediaCaptureSession*
 /// @param camera QCamera*
 void q_mediacapturesession_set_camera(void* self, void* camera);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#imageCapture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#imageCapture)
 ///
 /// @param self QMediaCaptureSession*
 QImageCapture* q_mediacapturesession_image_capture(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setImageCapture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setImageCapture)
 ///
 /// @param self QMediaCaptureSession*
 /// @param imageCapture QImageCapture*
 void q_mediacapturesession_set_image_capture(void* self, void* imageCapture);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCapture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCapture)
 ///
 /// @param self QMediaCaptureSession*
 QScreenCapture* q_mediacapturesession_screen_capture(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setScreenCapture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setScreenCapture)
 ///
 /// @param self QMediaCaptureSession*
 /// @param screenCapture QScreenCapture*
 void q_mediacapturesession_set_screen_capture(void* self, void* screenCapture);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCapture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCapture)
 ///
 /// @param self QMediaCaptureSession*
 QWindowCapture* q_mediacapturesession_window_capture(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setWindowCapture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setWindowCapture)
 ///
 /// @param self QMediaCaptureSession*
 /// @param windowCapture QWindowCapture*
 void q_mediacapturesession_set_window_capture(void* self, void* windowCapture);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInput)
 ///
 /// @param self QMediaCaptureSession*
 QVideoFrameInput* q_mediacapturesession_video_frame_input(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setVideoFrameInput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setVideoFrameInput)
 ///
 /// @param self QMediaCaptureSession*
 /// @param input QVideoFrameInput*
 void q_mediacapturesession_set_video_frame_input(void* self, void* input);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#recorder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#recorder)
 ///
 /// @param self QMediaCaptureSession*
 QMediaRecorder* q_mediacapturesession_recorder(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setRecorder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setRecorder)
 ///
 /// @param self QMediaCaptureSession*
 /// @param recorder QMediaRecorder*
 void q_mediacapturesession_set_recorder(void* self, void* recorder);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setVideoOutput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setVideoOutput)
 ///
 /// @param self QMediaCaptureSession*
 /// @param output QObject*
 void q_mediacapturesession_set_video_output(void* self, void* output);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoOutput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#videoOutput)
 ///
 /// @param self QMediaCaptureSession*
 QObject* q_mediacapturesession_video_output(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setVideoSink)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setVideoSink)
 ///
 /// @param self QMediaCaptureSession*
 /// @param sink QVideoSink*
 void q_mediacapturesession_set_video_sink(void* self, void* sink);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoSink)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#videoSink)
 ///
 /// @param self QMediaCaptureSession*
 QVideoSink* q_mediacapturesession_video_sink(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setAudioOutput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#setAudioOutput)
 ///
 /// @param self QMediaCaptureSession*
 /// @param output QAudioOutput*
 void q_mediacapturesession_set_audio_output(void* self, void* output);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioOutput)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioOutput)
 ///
 /// @param self QMediaCaptureSession*
 QAudioOutput* q_mediacapturesession_audio_output(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioInputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioInputChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_audio_input_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioInputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioInputChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_audio_input_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInputChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_audio_buffer_input_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInputChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_audio_buffer_input_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#cameraChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#cameraChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_camera_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#cameraChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#cameraChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_camera_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCaptureChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCaptureChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_screen_capture_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCaptureChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCaptureChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_screen_capture_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCaptureChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCaptureChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_window_capture_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCaptureChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCaptureChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_window_capture_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInputChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_video_frame_input_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInputChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_video_frame_input_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#imageCaptureChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#imageCaptureChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_image_capture_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#imageCaptureChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#imageCaptureChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_image_capture_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#recorderChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#recorderChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_recorder_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#recorderChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#recorderChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_recorder_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoOutputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#videoOutputChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_video_output_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoOutputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#videoOutputChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_video_output_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioOutputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioOutputChanged)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_audio_output_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioOutputChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#audioOutputChanged)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
 void q_mediacapturesession_on_audio_output_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -297,7 +297,7 @@ void q_mediacapturesession_on_audio_output_changed(void* self, void (*callback)(
 /// @param c const char*
 const char* q_mediacapturesession_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -308,7 +308,7 @@ const char* q_mediacapturesession_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -317,7 +317,7 @@ const char* q_mediacapturesession_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QMediaCaptureSession*
 /// @param name char*
@@ -325,35 +325,35 @@ void q_mediacapturesession_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QMediaCaptureSession*
 bool q_mediacapturesession_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QMediaCaptureSession*
 bool q_mediacapturesession_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QMediaCaptureSession*
 bool q_mediacapturesession_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QMediaCaptureSession*
 bool q_mediacapturesession_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QMediaCaptureSession*
 /// @param b bool
@@ -361,14 +361,14 @@ bool q_mediacapturesession_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QMediaCaptureSession*
 QThread* q_mediacapturesession_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QMediaCaptureSession*
 /// @param thread QThread*
@@ -376,7 +376,7 @@ bool q_mediacapturesession_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QMediaCaptureSession*
 /// @param interval int
@@ -384,7 +384,7 @@ int32_t q_mediacapturesession_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QMediaCaptureSession*
 /// @param id int
@@ -392,7 +392,7 @@ void q_mediacapturesession_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QMediaCaptureSession*
 /// @param id enum Qt__TimerId
@@ -400,14 +400,14 @@ void q_mediacapturesession_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QMediaCaptureSession*
 libqt_list /* of QObject* */ q_mediacapturesession_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QMediaCaptureSession*
 /// @param parent QObject*
@@ -415,7 +415,7 @@ void q_mediacapturesession_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QMediaCaptureSession*
 /// @param filterObj QObject*
@@ -423,7 +423,7 @@ void q_mediacapturesession_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QMediaCaptureSession*
 /// @param obj QObject*
@@ -431,7 +431,7 @@ void q_mediacapturesession_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -441,7 +441,7 @@ QMetaObject__Connection* q_mediacapturesession_connect(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QMediaCaptureSession*
 /// @param sender QObject*
@@ -451,7 +451,7 @@ QMetaObject__Connection* q_mediacapturesession_connect2(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -461,28 +461,28 @@ bool q_mediacapturesession_disconnect(void* sender, void* signal, void* receiver
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_mediacapturesession_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QMediaCaptureSession*
 /// @param name const char*
@@ -491,7 +491,7 @@ bool q_mediacapturesession_set_property(void* self, const char* name, void* valu
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QMediaCaptureSession*
 /// @param name const char*
@@ -499,7 +499,7 @@ QVariant* q_mediacapturesession_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -508,28 +508,28 @@ const char** q_mediacapturesession_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QMediaCaptureSession*
 QBindingStorage* q_mediacapturesession_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QMediaCaptureSession*
 const QBindingStorage* q_mediacapturesession_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self)
@@ -537,14 +537,14 @@ void q_mediacapturesession_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QMediaCaptureSession*
 QObject* q_mediacapturesession_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QMediaCaptureSession*
 /// @param classname const char*
@@ -552,14 +552,14 @@ bool q_mediacapturesession_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QMediaCaptureSession*
 void q_mediacapturesession_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QMediaCaptureSession*
 /// @param thread QThread*
@@ -568,7 +568,7 @@ bool q_mediacapturesession_move_to_thread2(void* self, void* thread, void* param
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QMediaCaptureSession*
 /// @param interval int
@@ -577,7 +577,7 @@ int32_t q_mediacapturesession_start_timer22(void* self, int interval, int32_t ti
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -588,7 +588,7 @@ QMetaObject__Connection* q_mediacapturesession_connect5(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QMediaCaptureSession*
 /// @param sender QObject*
@@ -599,7 +599,7 @@ QMetaObject__Connection* q_mediacapturesession_connect4(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaCaptureSession*
 /// @param param1 QObject*
@@ -607,7 +607,7 @@ void q_mediacapturesession_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaCaptureSession*
 /// @param callback void func(QMediaCaptureSession* self, QObject* param1)
@@ -615,7 +615,7 @@ void q_mediacapturesession_on_destroyed1(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -625,7 +625,7 @@ bool q_mediacapturesession_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -635,7 +635,7 @@ bool q_mediacapturesession_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -645,7 +645,7 @@ void q_mediacapturesession_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -656,7 +656,7 @@ bool q_mediacapturesession_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -667,7 +667,7 @@ bool q_mediacapturesession_qbase_event_filter(void* self, void* watched, void* e
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -677,7 +677,7 @@ void q_mediacapturesession_on_event_filter(void* self, bool (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -687,7 +687,7 @@ void q_mediacapturesession_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -697,7 +697,7 @@ void q_mediacapturesession_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -707,7 +707,7 @@ void q_mediacapturesession_on_timer_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -717,7 +717,7 @@ void q_mediacapturesession_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -727,7 +727,7 @@ void q_mediacapturesession_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -737,7 +737,7 @@ void q_mediacapturesession_on_child_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -747,7 +747,7 @@ void q_mediacapturesession_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -757,7 +757,7 @@ void q_mediacapturesession_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -767,7 +767,7 @@ void q_mediacapturesession_on_custom_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -777,7 +777,7 @@ void q_mediacapturesession_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -787,7 +787,7 @@ void q_mediacapturesession_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -797,7 +797,7 @@ void q_mediacapturesession_on_connect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -807,7 +807,7 @@ void q_mediacapturesession_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -817,7 +817,7 @@ void q_mediacapturesession_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -827,7 +827,7 @@ void q_mediacapturesession_on_disconnect_notify(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -836,7 +836,7 @@ QObject* q_mediacapturesession_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -845,7 +845,7 @@ QObject* q_mediacapturesession_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -855,7 +855,7 @@ void q_mediacapturesession_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -864,7 +864,7 @@ int32_t q_mediacapturesession_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -873,7 +873,7 @@ int32_t q_mediacapturesession_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -883,7 +883,7 @@ void q_mediacapturesession_on_sender_signal_index(void* self, int32_t (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -893,7 +893,7 @@ int32_t q_mediacapturesession_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -903,7 +903,7 @@ int32_t q_mediacapturesession_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -913,7 +913,7 @@ void q_mediacapturesession_on_receivers(void* self, int32_t (*callback)(void*, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -923,7 +923,7 @@ bool q_mediacapturesession_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -933,7 +933,7 @@ bool q_mediacapturesession_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -943,7 +943,7 @@ void q_mediacapturesession_on_is_signal_connected(void* self, bool (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -951,7 +951,7 @@ void q_mediacapturesession_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(QMediaCaptureSession* self, const char* objectName)
 void q_mediacapturesession_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#dtor.QMediaCaptureSession)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediacapturesession.html#dtor.QMediaCaptureSession)
 ///
 /// Delete this object from C++ memory.
 ///

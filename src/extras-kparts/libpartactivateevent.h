@@ -20,29 +20,29 @@
 /// @param widget QWidget*
 KParts__PartActivateEvent* k_parts__partactivateevent_new(bool activated, void* part, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kparts-partactivateevent.html#activated)
+/// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#activated)
 ///
 /// @param self KParts__PartActivateEvent*
 bool k_parts__partactivateevent_activated(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partactivateevent.html#part)
+/// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#part)
 ///
 /// @param self KParts__PartActivateEvent*
 KParts__Part* k_parts__partactivateevent_part(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partactivateevent.html#widget)
+/// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#widget)
 ///
 /// @param self KParts__PartActivateEvent*
 QWidget* k_parts__partactivateevent_widget(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partactivateevent.html#test)
+/// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#test)
 ///
 /// @param event QEvent*
 bool k_parts__partactivateevent_test(void* event);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
 /// @param self KParts__PartActivateEvent*
 ///
@@ -51,69 +51,69 @@ int32_t k_parts__partactivateevent_type(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
 /// @param self KParts__PartActivateEvent*
 bool k_parts__partactivateevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
 /// @param self KParts__PartActivateEvent*
 bool k_parts__partactivateevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
 /// @param self KParts__PartActivateEvent*
 void k_parts__partactivateevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
 /// @param self KParts__PartActivateEvent*
 void k_parts__partactivateevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
 /// @param self KParts__PartActivateEvent*
 bool k_parts__partactivateevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
 /// @param self KParts__PartActivateEvent*
 bool k_parts__partactivateevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
 /// @param self KParts__PartActivateEvent*
 bool k_parts__partactivateevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
 int32_t k_parts__partactivateevent_register_event_type();
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
 /// @param hint int
 int32_t k_parts__partactivateevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -123,7 +123,7 @@ void k_parts__partactivateevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -133,7 +133,7 @@ void k_parts__partactivateevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -143,7 +143,7 @@ void k_parts__partactivateevent_on_set_accepted(void* self, void (*callback)(voi
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -152,7 +152,7 @@ QEvent* k_parts__partactivateevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -161,7 +161,7 @@ QEvent* k_parts__partactivateevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///

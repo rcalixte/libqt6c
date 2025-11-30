@@ -23,42 +23,42 @@ KTextEditor__InlineNote* k_texteditor__inlinenote_new(void* other);
 /// @param other KTextEditor__InlineNote*
 KTextEditor__InlineNote* k_texteditor__inlinenote_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#width)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#width)
 ///
 /// @param self KTextEditor__InlineNote*
 double k_texteditor__inlinenote_width(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#provider)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#provider)
 ///
 /// @param self KTextEditor__InlineNote*
 KTextEditor__InlineNoteProvider* k_texteditor__inlinenote_provider(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#view)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#view)
 ///
 /// @param self KTextEditor__InlineNote*
 const KTextEditor__View* k_texteditor__inlinenote_view(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#position)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#position)
 ///
 /// @param self KTextEditor__InlineNote*
 KTextEditor__Cursor* k_texteditor__inlinenote_position(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#index)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#index)
 ///
 /// @param self KTextEditor__InlineNote*
 int32_t k_texteditor__inlinenote_index(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#underMouse)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#underMouse)
 ///
 /// @param self KTextEditor__InlineNote*
 bool k_texteditor__inlinenote_under_mouse(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#font)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#font)
 ///
 /// @param self KTextEditor__InlineNote*
 QFont* k_texteditor__inlinenote_font(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-inlinenote.html#lineHeight)
+/// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#lineHeight)
 ///
 /// @param self KTextEditor__InlineNote*
 int32_t k_texteditor__inlinenote_line_height(void* self);

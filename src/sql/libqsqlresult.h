@@ -13,12 +13,12 @@
 
 /// https://doc.qt.io/qt-6/qsqlresult.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlresult.html#handle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html#handle)
 ///
 /// @param self QSqlResult*
 QVariant* q_sqlresult_handle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsqlresult.html#dtor.QSqlResult)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html#dtor.QSqlResult)
 ///
 /// Delete this object from C++ memory.
 ///

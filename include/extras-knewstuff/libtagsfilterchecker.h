@@ -18,7 +18,7 @@
 /// @param tagFilter const char**
 KNSCore__TagsFilterChecker* k_nscore__tagsfilterchecker_new(const char* tagFilter[static 1]);
 
-/// [Qt documentation](https://api.kde.org/knscore-tagsfilterchecker.html#filterAccepts)
+/// [Upstream resources](https://api.kde.org/knscore-tagsfilterchecker.html#filterAccepts)
 ///
 /// @param self KNSCore__TagsFilterChecker*
 /// @param tags const char**

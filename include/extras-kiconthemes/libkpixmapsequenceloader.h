@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kpixmapsequenceloader.html
 
-/// [Qt documentation](https://api.kde.org/kpixmapsequenceloader.html#load)
+/// [Upstream resources](https://api.kde.org/kpixmapsequenceloader.html#load)
 ///
 /// @param param1 const char*
 /// @param param2 int

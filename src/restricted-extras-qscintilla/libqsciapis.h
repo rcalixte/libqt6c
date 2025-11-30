@@ -18,7 +18,7 @@
 /// @param lexer QsciLexer*
 QsciAPIs* q_sciapis_new(void* lexer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QsciAPIs*
 const QMetaObject* q_sciapis_meta_object(void* self);
@@ -47,76 +47,76 @@ void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
 /// @param param3 void*
 int32_t q_sciapis_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_sciapis_tr(const char* s);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param entry const char*
 void q_sciapis_add(void* self, const char* entry);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_clear(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param filename const char*
 bool q_sciapis_load(void* self, const char* filename);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param entry const char*
 void q_sciapis_remove(void* self, const char* entry);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_prepare(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_cancel_preparation(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciAPIs*
 const char* q_sciapis_default_prepared_name(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 bool q_sciapis_is_prepared(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 bool q_sciapis_load_prepared(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 bool q_sciapis_save_prepared(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param context const char**
 /// @param list const char**
 void q_sciapis_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
@@ -124,7 +124,7 @@ void q_sciapis_update_auto_completion_list(void* self, const char* context[stati
 /// @param callback void func(QsciAPIs* self, const char** context, const char** list)
 void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char**, const char**));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
@@ -133,13 +133,13 @@ void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*
 /// @param list const char**
 void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param sel const char*
 void q_sciapis_auto_completion_selected(void* self, const char* sel);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
@@ -147,7 +147,7 @@ void q_sciapis_auto_completion_selected(void* self, const char* sel);
 /// @param callback void func(QsciAPIs* self, const char* sel)
 void q_sciapis_on_auto_completion_selected(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
@@ -155,7 +155,7 @@ void q_sciapis_on_auto_completion_selected(void* self, void (*callback)(void*, c
 /// @param sel const char*
 void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -166,7 +166,7 @@ void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel);
 /// @param shifts libqt_list /* of int */
 const char** q_sciapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
@@ -174,7 +174,7 @@ const char** q_sciapis_call_tips(void* self, const char* context[static 1], int 
 /// @param callback const char** func(QsciAPIs* self, const char** context, int commas, enum QsciScintilla__CallTipsStyle style, int* /* of int */)
 void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, int*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
@@ -185,13 +185,13 @@ void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const ch
 /// @param shifts libqt_list /* of int */
 const char** q_sciapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param e QEvent*
 bool q_sciapis_event(void* self, void* e);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
@@ -199,7 +199,7 @@ bool q_sciapis_event(void* self, void* e);
 /// @param callback bool func(QsciAPIs* self, QEvent* e)
 void q_sciapis_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
@@ -207,47 +207,47 @@ void q_sciapis_on_event(void* self, bool (*callback)(void*, void*));
 /// @param e QEvent*
 bool q_sciapis_qbase_event(void* self, void* e);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciAPIs*
 const char** q_sciapis_installed_a_p_i_files(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_api_preparation_cancelled(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param callback void func(QsciAPIs* self)
 void q_sciapis_on_api_preparation_cancelled(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_api_preparation_started(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param callback void func(QsciAPIs* self)
 void q_sciapis_on_api_preparation_started(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_api_preparation_finished(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param callback void func(QsciAPIs* self)
 void q_sciapis_on_api_preparation_finished(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -255,7 +255,7 @@ void q_sciapis_on_api_preparation_finished(void* self, void (*callback)(void*));
 /// @param c const char*
 const char* q_sciapis_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -264,19 +264,19 @@ const char* q_sciapis_tr2(const char* s, const char* c);
 /// @param n int
 const char* q_sciapis_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param filename const char*
 bool q_sciapis_is_prepared1(void* self, const char* filename);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param filename const char*
 bool q_sciapis_load_prepared1(void* self, const char* filename);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// @param self QsciAPIs*
 /// @param filename const char*
@@ -284,14 +284,14 @@ bool q_sciapis_save_prepared1(void* self, const char* filename);
 
 /// Inherited from QsciAbstractAPIs
 ///
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
 /// @param self QsciAPIs*
 QsciLexer* q_sciapis_lexer(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -300,7 +300,7 @@ const char* q_sciapis_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciAPIs*
 /// @param name char*
@@ -308,35 +308,35 @@ void q_sciapis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QsciAPIs*
 bool q_sciapis_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QsciAPIs*
 bool q_sciapis_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QsciAPIs*
 bool q_sciapis_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QsciAPIs*
 bool q_sciapis_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QsciAPIs*
 /// @param b bool
@@ -344,14 +344,14 @@ bool q_sciapis_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QsciAPIs*
 QThread* q_sciapis_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QsciAPIs*
 /// @param thread QThread*
@@ -359,7 +359,7 @@ bool q_sciapis_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QsciAPIs*
 /// @param interval int
@@ -367,7 +367,7 @@ int32_t q_sciapis_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QsciAPIs*
 /// @param id int
@@ -375,7 +375,7 @@ void q_sciapis_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QsciAPIs*
 /// @param id enum Qt__TimerId
@@ -383,14 +383,14 @@ void q_sciapis_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QsciAPIs*
 libqt_list /* of QObject* */ q_sciapis_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QsciAPIs*
 /// @param parent QObject*
@@ -398,7 +398,7 @@ void q_sciapis_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QsciAPIs*
 /// @param filterObj QObject*
@@ -406,7 +406,7 @@ void q_sciapis_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QsciAPIs*
 /// @param obj QObject*
@@ -414,7 +414,7 @@ void q_sciapis_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -424,7 +424,7 @@ QMetaObject__Connection* q_sciapis_connect(void* sender, void* signal, void* rec
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QsciAPIs*
 /// @param sender QObject*
@@ -434,7 +434,7 @@ QMetaObject__Connection* q_sciapis_connect2(void* self, void* sender, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -444,28 +444,28 @@ bool q_sciapis_disconnect(void* sender, void* signal, void* receiver, void* memb
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_sciapis_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QsciAPIs*
 /// @param name const char*
@@ -474,7 +474,7 @@ bool q_sciapis_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QsciAPIs*
 /// @param name const char*
@@ -482,7 +482,7 @@ QVariant* q_sciapis_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -491,28 +491,28 @@ const char** q_sciapis_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QsciAPIs*
 QBindingStorage* q_sciapis_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QsciAPIs*
 const QBindingStorage* q_sciapis_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciAPIs*
 /// @param callback void func(QsciAPIs* self)
@@ -520,14 +520,14 @@ void q_sciapis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QsciAPIs*
 QObject* q_sciapis_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QsciAPIs*
 /// @param classname const char*
@@ -535,14 +535,14 @@ bool q_sciapis_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QsciAPIs*
 void q_sciapis_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QsciAPIs*
 /// @param thread QThread*
@@ -551,7 +551,7 @@ bool q_sciapis_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QsciAPIs*
 /// @param interval int
@@ -560,7 +560,7 @@ int32_t q_sciapis_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -571,7 +571,7 @@ QMetaObject__Connection* q_sciapis_connect5(void* sender, void* signal, void* re
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QsciAPIs*
 /// @param sender QObject*
@@ -582,7 +582,7 @@ QMetaObject__Connection* q_sciapis_connect4(void* self, void* sender, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciAPIs*
 /// @param param1 QObject*
@@ -590,7 +590,7 @@ void q_sciapis_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciAPIs*
 /// @param callback void func(QsciAPIs* self, QObject* param1)
@@ -598,7 +598,7 @@ void q_sciapis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -609,7 +609,7 @@ bool q_sciapis_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -620,7 +620,7 @@ bool q_sciapis_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -630,7 +630,7 @@ void q_sciapis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -640,7 +640,7 @@ void q_sciapis_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -650,7 +650,7 @@ void q_sciapis_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -660,7 +660,7 @@ void q_sciapis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -670,7 +670,7 @@ void q_sciapis_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -680,7 +680,7 @@ void q_sciapis_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -690,7 +690,7 @@ void q_sciapis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -700,7 +700,7 @@ void q_sciapis_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -710,7 +710,7 @@ void q_sciapis_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -720,7 +720,7 @@ void q_sciapis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -730,7 +730,7 @@ void q_sciapis_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -740,7 +740,7 @@ void q_sciapis_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -750,7 +750,7 @@ void q_sciapis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -760,7 +760,7 @@ void q_sciapis_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -770,7 +770,7 @@ void q_sciapis_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -780,7 +780,7 @@ void q_sciapis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -789,7 +789,7 @@ QObject* q_sciapis_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -798,7 +798,7 @@ QObject* q_sciapis_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -808,7 +808,7 @@ void q_sciapis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -817,7 +817,7 @@ int32_t q_sciapis_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -826,7 +826,7 @@ int32_t q_sciapis_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -836,7 +836,7 @@ void q_sciapis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -846,7 +846,7 @@ int32_t q_sciapis_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -856,7 +856,7 @@ int32_t q_sciapis_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -866,7 +866,7 @@ void q_sciapis_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -876,7 +876,7 @@ bool q_sciapis_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -886,7 +886,7 @@ bool q_sciapis_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -896,7 +896,7 @@ void q_sciapis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -904,7 +904,7 @@ void q_sciapis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)
 /// @param callback void func(QsciAPIs* self, const char* objectName)
 void q_sciapis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Delete this object from C++ memory.
 ///

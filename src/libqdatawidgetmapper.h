@@ -22,7 +22,7 @@ QDataWidgetMapper* q_datawidgetmapper_new();
 /// @param parent QObject*
 QDataWidgetMapper* q_datawidgetmapper_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QDataWidgetMapper*
 const QMetaObject* q_datawidgetmapper_meta_object(void* self);
@@ -51,80 +51,80 @@ void q_datawidgetmapper_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t q_datawidgetmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_datawidgetmapper_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setModel)
 ///
 /// @param self QDataWidgetMapper*
 /// @param model QAbstractItemModel*
 void q_datawidgetmapper_set_model(void* self, void* model);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#model)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#model)
 ///
 /// @param self QDataWidgetMapper*
 QAbstractItemModel* q_datawidgetmapper_model(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setItemDelegate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setItemDelegate)
 ///
 /// @param self QDataWidgetMapper*
 /// @param delegate QAbstractItemDelegate*
 void q_datawidgetmapper_set_item_delegate(void* self, void* delegate);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#itemDelegate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#itemDelegate)
 ///
 /// @param self QDataWidgetMapper*
 QAbstractItemDelegate* q_datawidgetmapper_item_delegate(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setRootIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setRootIndex)
 ///
 /// @param self QDataWidgetMapper*
 /// @param index QModelIndex*
 void q_datawidgetmapper_set_root_index(void* self, void* index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#rootIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#rootIndex)
 ///
 /// @param self QDataWidgetMapper*
 QModelIndex* q_datawidgetmapper_root_index(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setOrientation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setOrientation)
 ///
 /// @param self QDataWidgetMapper*
 /// @param aOrientation enum Qt__Orientation
 void q_datawidgetmapper_set_orientation(void* self, int32_t aOrientation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#orientation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#orientation)
 ///
 /// @param self QDataWidgetMapper*
 ///
 /// @return enum Qt__Orientation
 int32_t q_datawidgetmapper_orientation(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setSubmitPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setSubmitPolicy)
 ///
 /// @param self QDataWidgetMapper*
 /// @param policy enum QDataWidgetMapper__SubmitPolicy
 void q_datawidgetmapper_set_submit_policy(void* self, int32_t policy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#submitPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#submitPolicy)
 ///
 /// @param self QDataWidgetMapper*
 ///
 /// @return enum QDataWidgetMapper__SubmitPolicy
 int32_t q_datawidgetmapper_submit_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#addMapping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#addMapping)
 ///
 /// @param self QDataWidgetMapper*
 /// @param widget QWidget*
 /// @param section int
 void q_datawidgetmapper_add_mapping(void* self, void* widget, int section);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#addMapping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#addMapping)
 ///
 /// @param self QDataWidgetMapper*
 /// @param widget QWidget*
@@ -132,19 +132,19 @@ void q_datawidgetmapper_add_mapping(void* self, void* widget, int section);
 /// @param propertyName const char*
 void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, const char* propertyName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#removeMapping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#removeMapping)
 ///
 /// @param self QDataWidgetMapper*
 /// @param widget QWidget*
 void q_datawidgetmapper_remove_mapping(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedSection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedSection)
 ///
 /// @param self QDataWidgetMapper*
 /// @param widget QWidget*
 int32_t q_datawidgetmapper_mapped_section(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedPropertyName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedPropertyName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -152,59 +152,59 @@ int32_t q_datawidgetmapper_mapped_section(void* self, void* widget);
 /// @param widget QWidget*
 char* q_datawidgetmapper_mapped_property_name(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedWidgetAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedWidgetAt)
 ///
 /// @param self QDataWidgetMapper*
 /// @param section int
 QWidget* q_datawidgetmapper_mapped_widget_at(void* self, int section);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#clearMapping)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#clearMapping)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_clear_mapping(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndex)
 ///
 /// @param self QDataWidgetMapper*
 int32_t q_datawidgetmapper_current_index(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#revert)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_revert(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#submit)
 ///
 /// @param self QDataWidgetMapper*
 bool q_datawidgetmapper_submit(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toFirst)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toFirst)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_to_first(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toLast)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toLast)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_to_last(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toNext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toNext)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_to_next(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toPrevious)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#toPrevious)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_to_previous(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
 ///
 /// @param self QDataWidgetMapper*
 /// @param index int
 void q_datawidgetmapper_set_current_index(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
 ///
 /// Allows for overriding the related default method
 ///
@@ -212,7 +212,7 @@ void q_datawidgetmapper_set_current_index(void* self, int index);
 /// @param callback void func(QDataWidgetMapper* self, int index)
 void q_datawidgetmapper_on_set_current_index(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
 ///
 /// Base class method implementation
 ///
@@ -220,25 +220,25 @@ void q_datawidgetmapper_on_set_current_index(void* self, void (*callback)(void*,
 /// @param index int
 void q_datawidgetmapper_qbase_set_current_index(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentModelIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentModelIndex)
 ///
 /// @param self QDataWidgetMapper*
 /// @param index QModelIndex*
 void q_datawidgetmapper_set_current_model_index(void* self, void* index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndexChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndexChanged)
 ///
 /// @param self QDataWidgetMapper*
 /// @param index int
 void q_datawidgetmapper_current_index_changed(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndexChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndexChanged)
 ///
 /// @param self QDataWidgetMapper*
 /// @param callback void func(QDataWidgetMapper* self, int index)
 void q_datawidgetmapper_on_current_index_changed(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -246,7 +246,7 @@ void q_datawidgetmapper_on_current_index_changed(void* self, void (*callback)(vo
 /// @param c const char*
 const char* q_datawidgetmapper_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -257,7 +257,7 @@ const char* q_datawidgetmapper_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -266,7 +266,7 @@ const char* q_datawidgetmapper_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDataWidgetMapper*
 /// @param name char*
@@ -274,35 +274,35 @@ void q_datawidgetmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QDataWidgetMapper*
 bool q_datawidgetmapper_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QDataWidgetMapper*
 bool q_datawidgetmapper_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QDataWidgetMapper*
 bool q_datawidgetmapper_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QDataWidgetMapper*
 bool q_datawidgetmapper_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QDataWidgetMapper*
 /// @param b bool
@@ -310,14 +310,14 @@ bool q_datawidgetmapper_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QDataWidgetMapper*
 QThread* q_datawidgetmapper_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QDataWidgetMapper*
 /// @param thread QThread*
@@ -325,7 +325,7 @@ bool q_datawidgetmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDataWidgetMapper*
 /// @param interval int
@@ -333,7 +333,7 @@ int32_t q_datawidgetmapper_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QDataWidgetMapper*
 /// @param id int
@@ -341,7 +341,7 @@ void q_datawidgetmapper_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QDataWidgetMapper*
 /// @param id enum Qt__TimerId
@@ -349,14 +349,14 @@ void q_datawidgetmapper_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QDataWidgetMapper*
 libqt_list /* of QObject* */ q_datawidgetmapper_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QDataWidgetMapper*
 /// @param parent QObject*
@@ -364,7 +364,7 @@ void q_datawidgetmapper_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QDataWidgetMapper*
 /// @param filterObj QObject*
@@ -372,7 +372,7 @@ void q_datawidgetmapper_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QDataWidgetMapper*
 /// @param obj QObject*
@@ -380,7 +380,7 @@ void q_datawidgetmapper_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -390,7 +390,7 @@ QMetaObject__Connection* q_datawidgetmapper_connect(void* sender, void* signal, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QDataWidgetMapper*
 /// @param sender QObject*
@@ -400,7 +400,7 @@ QMetaObject__Connection* q_datawidgetmapper_connect2(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -410,28 +410,28 @@ bool q_datawidgetmapper_disconnect(void* sender, void* signal, void* receiver, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_datawidgetmapper_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QDataWidgetMapper*
 /// @param name const char*
@@ -440,7 +440,7 @@ bool q_datawidgetmapper_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QDataWidgetMapper*
 /// @param name const char*
@@ -448,7 +448,7 @@ QVariant* q_datawidgetmapper_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -457,28 +457,28 @@ const char** q_datawidgetmapper_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QDataWidgetMapper*
 QBindingStorage* q_datawidgetmapper_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QDataWidgetMapper*
 const QBindingStorage* q_datawidgetmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDataWidgetMapper*
 /// @param callback void func(QDataWidgetMapper* self)
@@ -486,14 +486,14 @@ void q_datawidgetmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QDataWidgetMapper*
 QObject* q_datawidgetmapper_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QDataWidgetMapper*
 /// @param classname const char*
@@ -501,14 +501,14 @@ bool q_datawidgetmapper_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QDataWidgetMapper*
 void q_datawidgetmapper_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QDataWidgetMapper*
 /// @param thread QThread*
@@ -517,7 +517,7 @@ bool q_datawidgetmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDataWidgetMapper*
 /// @param interval int
@@ -526,7 +526,7 @@ int32_t q_datawidgetmapper_start_timer22(void* self, int interval, int32_t timer
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -537,7 +537,7 @@ QMetaObject__Connection* q_datawidgetmapper_connect5(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QDataWidgetMapper*
 /// @param sender QObject*
@@ -548,7 +548,7 @@ QMetaObject__Connection* q_datawidgetmapper_connect4(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDataWidgetMapper*
 /// @param param1 QObject*
@@ -556,7 +556,7 @@ void q_datawidgetmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDataWidgetMapper*
 /// @param callback void func(QDataWidgetMapper* self, QObject* param1)
@@ -564,7 +564,7 @@ void q_datawidgetmapper_on_destroyed1(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -574,7 +574,7 @@ bool q_datawidgetmapper_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -584,7 +584,7 @@ bool q_datawidgetmapper_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -594,7 +594,7 @@ void q_datawidgetmapper_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -605,7 +605,7 @@ bool q_datawidgetmapper_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -616,7 +616,7 @@ bool q_datawidgetmapper_qbase_event_filter(void* self, void* watched, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -626,7 +626,7 @@ void q_datawidgetmapper_on_event_filter(void* self, bool (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -636,7 +636,7 @@ void q_datawidgetmapper_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -646,7 +646,7 @@ void q_datawidgetmapper_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -656,7 +656,7 @@ void q_datawidgetmapper_on_timer_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -666,7 +666,7 @@ void q_datawidgetmapper_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -676,7 +676,7 @@ void q_datawidgetmapper_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -686,7 +686,7 @@ void q_datawidgetmapper_on_child_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -696,7 +696,7 @@ void q_datawidgetmapper_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -706,7 +706,7 @@ void q_datawidgetmapper_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -716,7 +716,7 @@ void q_datawidgetmapper_on_custom_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -726,7 +726,7 @@ void q_datawidgetmapper_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -736,7 +736,7 @@ void q_datawidgetmapper_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -746,7 +746,7 @@ void q_datawidgetmapper_on_connect_notify(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -756,7 +756,7 @@ void q_datawidgetmapper_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -766,7 +766,7 @@ void q_datawidgetmapper_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -776,7 +776,7 @@ void q_datawidgetmapper_on_disconnect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -785,7 +785,7 @@ QObject* q_datawidgetmapper_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -794,7 +794,7 @@ QObject* q_datawidgetmapper_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -804,7 +804,7 @@ void q_datawidgetmapper_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -813,7 +813,7 @@ int32_t q_datawidgetmapper_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -822,7 +822,7 @@ int32_t q_datawidgetmapper_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -832,7 +832,7 @@ void q_datawidgetmapper_on_sender_signal_index(void* self, int32_t (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -842,7 +842,7 @@ int32_t q_datawidgetmapper_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -852,7 +852,7 @@ int32_t q_datawidgetmapper_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -862,7 +862,7 @@ void q_datawidgetmapper_on_receivers(void* self, int32_t (*callback)(void*, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -872,7 +872,7 @@ bool q_datawidgetmapper_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -882,7 +882,7 @@ bool q_datawidgetmapper_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -892,7 +892,7 @@ void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -900,7 +900,7 @@ void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param callback void func(QDataWidgetMapper* self, const char* objectName)
 void q_datawidgetmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#dtor.QDataWidgetMapper)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#dtor.QDataWidgetMapper)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -22,125 +22,125 @@ QNetworkAddressEntry* q_networkaddressentry_new();
 /// @param other QNetworkAddressEntry*
 QNetworkAddressEntry* q_networkaddressentry_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-eq)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param other QNetworkAddressEntry*
 void q_networkaddressentry_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#swap)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param other QNetworkAddressEntry*
 void q_networkaddressentry_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-eq-eq)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param other QNetworkAddressEntry*
 bool q_networkaddressentry_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-not-eq)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param other QNetworkAddressEntry*
 bool q_networkaddressentry_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#dnsEligibility)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#dnsEligibility)
 ///
 /// @param self QNetworkAddressEntry*
 ///
 /// @return enum QNetworkAddressEntry__DnsEligibilityStatus
 int8_t q_networkaddressentry_dns_eligibility(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setDnsEligibility)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setDnsEligibility)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param status enum QNetworkAddressEntry__DnsEligibilityStatus
 void q_networkaddressentry_set_dns_eligibility(void* self, int8_t status);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#ip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#ip)
 ///
 /// @param self QNetworkAddressEntry*
 QHostAddress* q_networkaddressentry_ip(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setIp)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setIp)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param newIp QHostAddress*
 void q_networkaddressentry_set_ip(void* self, void* newIp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#netmask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#netmask)
 ///
 /// @param self QNetworkAddressEntry*
 QHostAddress* q_networkaddressentry_netmask(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setNetmask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setNetmask)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param newNetmask QHostAddress*
 void q_networkaddressentry_set_netmask(void* self, void* newNetmask);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#prefixLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#prefixLength)
 ///
 /// @param self QNetworkAddressEntry*
 int32_t q_networkaddressentry_prefix_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setPrefixLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setPrefixLength)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param length int
 void q_networkaddressentry_set_prefix_length(void* self, int length);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#broadcast)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#broadcast)
 ///
 /// @param self QNetworkAddressEntry*
 QHostAddress* q_networkaddressentry_broadcast(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setBroadcast)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setBroadcast)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param newBroadcast QHostAddress*
 void q_networkaddressentry_set_broadcast(void* self, void* newBroadcast);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#isLifetimeKnown)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#isLifetimeKnown)
 ///
 /// @param self QNetworkAddressEntry*
 bool q_networkaddressentry_is_lifetime_known(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#preferredLifetime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#preferredLifetime)
 ///
 /// @param self QNetworkAddressEntry*
 QDeadlineTimer* q_networkaddressentry_preferred_lifetime(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#validityLifetime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#validityLifetime)
 ///
 /// @param self QNetworkAddressEntry*
 QDeadlineTimer* q_networkaddressentry_validity_lifetime(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setAddressLifetime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setAddressLifetime)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param preferred QDeadlineTimer*
 /// @param validity QDeadlineTimer*
 void q_networkaddressentry_set_address_lifetime(void* self, void* preferred, void* validity);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#clearAddressLifetime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#clearAddressLifetime)
 ///
 /// @param self QNetworkAddressEntry*
 void q_networkaddressentry_clear_address_lifetime(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#isPermanent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#isPermanent)
 ///
 /// @param self QNetworkAddressEntry*
 bool q_networkaddressentry_is_permanent(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#isTemporary)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#isTemporary)
 ///
 /// @param self QNetworkAddressEntry*
 bool q_networkaddressentry_is_temporary(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#dtor.QNetworkAddressEntry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaddressentry.html#dtor.QNetworkAddressEntry)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -158,104 +158,104 @@ QNetworkInterface* q_networkinterface_new();
 /// @param other QNetworkInterface*
 QNetworkInterface* q_networkinterface_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#operator-eq)
 ///
 /// @param self QNetworkInterface*
 /// @param other QNetworkInterface*
 void q_networkinterface_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#swap)
 ///
 /// @param self QNetworkInterface*
 /// @param other QNetworkInterface*
 void q_networkinterface_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#isValid)
 ///
 /// @param self QNetworkInterface*
 bool q_networkinterface_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#index)
 ///
 /// @param self QNetworkInterface*
 int32_t q_networkinterface_index(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#maximumTransmissionUnit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#maximumTransmissionUnit)
 ///
 /// @param self QNetworkInterface*
 int32_t q_networkinterface_maximum_transmission_unit(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkInterface*
 const char* q_networkinterface_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#humanReadableName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#humanReadableName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkInterface*
 const char* q_networkinterface_human_readable_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#flags)
 ///
 /// @param self QNetworkInterface*
 ///
 /// @return flag of enum QNetworkInterface__InterfaceFlag
 int32_t q_networkinterface_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#type)
 ///
 /// @param self QNetworkInterface*
 ///
 /// @return enum QNetworkInterface__InterfaceType
 int32_t q_networkinterface_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#hardwareAddress)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#hardwareAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkInterface*
 const char* q_networkinterface_hardware_address(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#addressEntries)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#addressEntries)
 ///
 /// @param self QNetworkInterface*
 libqt_list /* of QNetworkAddressEntry* */ q_networkinterface_address_entries(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceIndexFromName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceIndexFromName)
 ///
 /// @param name const char*
 int32_t q_networkinterface_interface_index_from_name(const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceFromName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceFromName)
 ///
 /// @param name const char*
 QNetworkInterface* q_networkinterface_interface_from_name(const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceFromIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceFromIndex)
 ///
 /// @param index int
 QNetworkInterface* q_networkinterface_interface_from_index(int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceNameFromIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceNameFromIndex)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param index int
 const char* q_networkinterface_interface_name_from_index(int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#allInterfaces)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#allInterfaces)
 ///
 libqt_list /* of QNetworkInterface* */ q_networkinterface_all_interfaces();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#allAddresses)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#allAddresses)
 ///
 libqt_list /* of QHostAddress* */ q_networkinterface_all_addresses();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#dtor.QNetworkInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#dtor.QNetworkInterface)
 ///
 /// Delete this object from C++ memory.
 ///

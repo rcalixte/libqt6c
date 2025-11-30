@@ -29,183 +29,183 @@ QOpenGLTexture* q_opengltexture_new2(void* image);
 /// @param genMipMaps enum QOpenGLTexture__MipMapGeneration
 QOpenGLTexture* q_opengltexture_new3(void* image, int32_t genMipMaps);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#target)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#target)
 ///
 /// @param self QOpenGLTexture*
 ///
 /// @return enum QOpenGLTexture__Target
 int32_t q_opengltexture_target(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#create)
 ///
 /// @param self QOpenGLTexture*
 bool q_opengltexture_create(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#destroy)
 ///
 /// @param self QOpenGLTexture*
 void q_opengltexture_destroy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#isCreated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#isCreated)
 ///
 /// @param self QOpenGLTexture*
 bool q_opengltexture_is_created(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#textureId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#textureId)
 ///
 /// @param self QOpenGLTexture*
 uint32_t q_opengltexture_texture_id(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#bind)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#bind)
 ///
 /// @param self QOpenGLTexture*
 void q_opengltexture_bind(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#bind)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#bind)
 ///
 /// @param self QOpenGLTexture*
 /// @param unit uint32_t
 void q_opengltexture_bind2(void* self, uint32_t unit);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#release)
 ///
 /// @param self QOpenGLTexture*
 void q_opengltexture_release(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#release)
 ///
 /// @param self QOpenGLTexture*
 /// @param unit uint32_t
 void q_opengltexture_release2(void* self, uint32_t unit);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#isBound)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#isBound)
 ///
 /// @param self QOpenGLTexture*
 bool q_opengltexture_is_bound(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#isBound)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#isBound)
 ///
 /// @param self QOpenGLTexture*
 /// @param unit uint32_t
 bool q_opengltexture_is_bound2(void* self, uint32_t unit);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#boundTextureId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#boundTextureId)
 ///
 /// @param target enum QOpenGLTexture__BindingTarget
 uint32_t q_opengltexture_bound_texture_id(int32_t target);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#boundTextureId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#boundTextureId)
 ///
 /// @param unit uint32_t
 /// @param target enum QOpenGLTexture__BindingTarget
 uint32_t q_opengltexture_bound_texture_id2(uint32_t unit, int32_t target);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setFormat)
 ///
 /// @param self QOpenGLTexture*
 /// @param format enum QOpenGLTexture__TextureFormat
 void q_opengltexture_set_format(void* self, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#format)
 ///
 /// @param self QOpenGLTexture*
 ///
 /// @return enum QOpenGLTexture__TextureFormat
 int32_t q_opengltexture_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setSize)
 ///
 /// @param self QOpenGLTexture*
 /// @param width int
 void q_opengltexture_set_size(void* self, int width);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#width)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#height)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#height)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_height(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#depth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#depth)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_depth(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMipLevels)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMipLevels)
 ///
 /// @param self QOpenGLTexture*
 /// @param levels int
 void q_opengltexture_set_mip_levels(void* self, int levels);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#mipLevels)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#mipLevels)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_mip_levels(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#maximumMipLevels)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#maximumMipLevels)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_maximum_mip_levels(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setLayers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setLayers)
 ///
 /// @param self QOpenGLTexture*
 /// @param layers int
 void q_opengltexture_set_layers(void* self, int layers);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#layers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#layers)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_layers(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#faces)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#faces)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_faces(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setSamples)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setSamples)
 ///
 /// @param self QOpenGLTexture*
 /// @param samples int
 void q_opengltexture_set_samples(void* self, int samples);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#samples)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#samples)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_samples(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setFixedSamplePositions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setFixedSamplePositions)
 ///
 /// @param self QOpenGLTexture*
 /// @param fixed bool
 void q_opengltexture_set_fixed_sample_positions(void* self, bool fixed);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#isFixedSamplePositions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#isFixedSamplePositions)
 ///
 /// @param self QOpenGLTexture*
 bool q_opengltexture_is_fixed_sample_positions(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#allocateStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#allocateStorage)
 ///
 /// @param self QOpenGLTexture*
 void q_opengltexture_allocate_storage(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#allocateStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#allocateStorage)
 ///
 /// @param self QOpenGLTexture*
 /// @param pixelFormat enum QOpenGLTexture__PixelFormat
 /// @param pixelType enum QOpenGLTexture__PixelType
 void q_opengltexture_allocate_storage2(void* self, int32_t pixelFormat, int32_t pixelType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#isStorageAllocated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#isStorageAllocated)
 ///
 /// @param self QOpenGLTexture*
 bool q_opengltexture_is_storage_allocated(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#createTextureView)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#createTextureView)
 ///
 /// @param self QOpenGLTexture*
 /// @param target enum QOpenGLTexture__Target
@@ -216,12 +216,12 @@ bool q_opengltexture_is_storage_allocated(void* self);
 /// @param maximumLayer int
 QOpenGLTexture* q_opengltexture_create_texture_view(void* self, int32_t target, int32_t viewFormat, int minimumMipmapLevel, int maximumMipmapLevel, int minimumLayer, int maximumLayer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#isTextureView)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#isTextureView)
 ///
 /// @param self QOpenGLTexture*
 bool q_opengltexture_is_texture_view(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -232,7 +232,7 @@ bool q_opengltexture_is_texture_view(void* self);
 /// @param data void*
 void q_opengltexture_set_data(void* self, int mipLevel, int layer, int32_t cubeFace, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -244,7 +244,7 @@ void q_opengltexture_set_data(void* self, int mipLevel, int layer, int32_t cubeF
 /// @param data void*
 void q_opengltexture_set_data2(void* self, int mipLevel, int layer, int layerCount, int32_t cubeFace, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -254,7 +254,7 @@ void q_opengltexture_set_data2(void* self, int mipLevel, int layer, int layerCou
 /// @param data void*
 void q_opengltexture_set_data3(void* self, int mipLevel, int layer, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -263,7 +263,7 @@ void q_opengltexture_set_data3(void* self, int mipLevel, int layer, int32_t sour
 /// @param data void*
 void q_opengltexture_set_data4(void* self, int mipLevel, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param sourceFormat enum QOpenGLTexture__PixelFormat
@@ -271,7 +271,7 @@ void q_opengltexture_set_data4(void* self, int mipLevel, int32_t sourceFormat, i
 /// @param data void*
 void q_opengltexture_set_data5(void* self, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -285,7 +285,7 @@ void q_opengltexture_set_data5(void* self, int32_t sourceFormat, int32_t sourceT
 /// @param data void*
 void q_opengltexture_set_data6(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -300,7 +300,7 @@ void q_opengltexture_set_data6(void* self, int xOffset, int yOffset, int zOffset
 /// @param data void*
 void q_opengltexture_set_data7(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -316,7 +316,7 @@ void q_opengltexture_set_data7(void* self, int xOffset, int yOffset, int zOffset
 /// @param data void*
 void q_opengltexture_set_data8(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int layer, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -333,7 +333,7 @@ void q_opengltexture_set_data8(void* self, int xOffset, int yOffset, int zOffset
 /// @param data void*
 void q_opengltexture_set_data9(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int layer, int32_t cubeFace, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -351,7 +351,7 @@ void q_opengltexture_set_data9(void* self, int xOffset, int yOffset, int zOffset
 /// @param data void*
 void q_opengltexture_set_data10(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int layer, int32_t cubeFace, int layerCount, int32_t sourceFormat, int32_t sourceType, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -361,7 +361,7 @@ void q_opengltexture_set_data10(void* self, int xOffset, int yOffset, int zOffse
 /// @param data void*
 void q_opengltexture_set_compressed_data(void* self, int mipLevel, int layer, int32_t cubeFace, int dataSize, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -372,7 +372,7 @@ void q_opengltexture_set_compressed_data(void* self, int mipLevel, int layer, in
 /// @param data void*
 void q_opengltexture_set_compressed_data2(void* self, int mipLevel, int layer, int layerCount, int32_t cubeFace, int dataSize, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -381,7 +381,7 @@ void q_opengltexture_set_compressed_data2(void* self, int mipLevel, int layer, i
 /// @param data void*
 void q_opengltexture_set_compressed_data3(void* self, int mipLevel, int layer, int dataSize, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -389,88 +389,88 @@ void q_opengltexture_set_compressed_data3(void* self, int mipLevel, int layer, i
 /// @param data void*
 void q_opengltexture_set_compressed_data4(void* self, int mipLevel, int dataSize, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param dataSize int
 /// @param data void*
 void q_opengltexture_set_compressed_data5(void* self, int dataSize, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param image QImage*
 void q_opengltexture_set_data11(void* self, void* image);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#hasFeature)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#hasFeature)
 ///
 /// @param feature enum QOpenGLTexture__Feature
 bool q_opengltexture_has_feature(int32_t feature);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMipBaseLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMipBaseLevel)
 ///
 /// @param self QOpenGLTexture*
 /// @param baseLevel int
 void q_opengltexture_set_mip_base_level(void* self, int baseLevel);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#mipBaseLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#mipBaseLevel)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_mip_base_level(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMipMaxLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMipMaxLevel)
 ///
 /// @param self QOpenGLTexture*
 /// @param maxLevel int
 void q_opengltexture_set_mip_max_level(void* self, int maxLevel);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#mipMaxLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#mipMaxLevel)
 ///
 /// @param self QOpenGLTexture*
 int32_t q_opengltexture_mip_max_level(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMipLevelRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMipLevelRange)
 ///
 /// @param self QOpenGLTexture*
 /// @param baseLevel int
 /// @param maxLevel int
 void q_opengltexture_set_mip_level_range(void* self, int baseLevel, int maxLevel);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#mipLevelRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#mipLevelRange)
 ///
 /// @param self QOpenGLTexture*
 libqt_pair /* tuple of int and int */ q_opengltexture_mip_level_range(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setAutoMipMapGenerationEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setAutoMipMapGenerationEnabled)
 ///
 /// @param self QOpenGLTexture*
 /// @param enabled bool
 void q_opengltexture_set_auto_mip_map_generation_enabled(void* self, bool enabled);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#isAutoMipMapGenerationEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#isAutoMipMapGenerationEnabled)
 ///
 /// @param self QOpenGLTexture*
 bool q_opengltexture_is_auto_mip_map_generation_enabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#generateMipMaps)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#generateMipMaps)
 ///
 /// @param self QOpenGLTexture*
 void q_opengltexture_generate_mip_maps(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#generateMipMaps)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#generateMipMaps)
 ///
 /// @param self QOpenGLTexture*
 /// @param baseLevel int
 void q_opengltexture_generate_mip_maps2(void* self, int baseLevel);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setSwizzleMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setSwizzleMask)
 ///
 /// @param self QOpenGLTexture*
 /// @param component enum QOpenGLTexture__SwizzleComponent
 /// @param value enum QOpenGLTexture__SwizzleValue
 void q_opengltexture_set_swizzle_mask(void* self, int32_t component, int32_t value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setSwizzleMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setSwizzleMask)
 ///
 /// @param self QOpenGLTexture*
 /// @param r enum QOpenGLTexture__SwizzleValue
@@ -479,7 +479,7 @@ void q_opengltexture_set_swizzle_mask(void* self, int32_t component, int32_t val
 /// @param a enum QOpenGLTexture__SwizzleValue
 void q_opengltexture_set_swizzle_mask2(void* self, int32_t r, int32_t g, int32_t b, int32_t a);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#swizzleMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#swizzleMask)
 ///
 /// @param self QOpenGLTexture*
 /// @param component enum QOpenGLTexture__SwizzleComponent
@@ -487,108 +487,108 @@ void q_opengltexture_set_swizzle_mask2(void* self, int32_t r, int32_t g, int32_t
 /// @return enum QOpenGLTexture__SwizzleValue
 int32_t q_opengltexture_swizzle_mask(void* self, int32_t component);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setDepthStencilMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setDepthStencilMode)
 ///
 /// @param self QOpenGLTexture*
 /// @param mode enum QOpenGLTexture__DepthStencilMode
 void q_opengltexture_set_depth_stencil_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#depthStencilMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#depthStencilMode)
 ///
 /// @param self QOpenGLTexture*
 ///
 /// @return enum QOpenGLTexture__DepthStencilMode
 int32_t q_opengltexture_depth_stencil_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setComparisonFunction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setComparisonFunction)
 ///
 /// @param self QOpenGLTexture*
 /// @param function enum QOpenGLTexture__ComparisonFunction
 void q_opengltexture_set_comparison_function(void* self, int32_t function);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#comparisonFunction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#comparisonFunction)
 ///
 /// @param self QOpenGLTexture*
 ///
 /// @return enum QOpenGLTexture__ComparisonFunction
 int32_t q_opengltexture_comparison_function(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setComparisonMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setComparisonMode)
 ///
 /// @param self QOpenGLTexture*
 /// @param mode enum QOpenGLTexture__ComparisonMode
 void q_opengltexture_set_comparison_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#comparisonMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#comparisonMode)
 ///
 /// @param self QOpenGLTexture*
 ///
 /// @return enum QOpenGLTexture__ComparisonMode
 int32_t q_opengltexture_comparison_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMinificationFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMinificationFilter)
 ///
 /// @param self QOpenGLTexture*
 /// @param filter enum QOpenGLTexture__Filter
 void q_opengltexture_set_minification_filter(void* self, int32_t filter);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#minificationFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#minificationFilter)
 ///
 /// @param self QOpenGLTexture*
 ///
 /// @return enum QOpenGLTexture__Filter
 int32_t q_opengltexture_minification_filter(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMagnificationFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMagnificationFilter)
 ///
 /// @param self QOpenGLTexture*
 /// @param filter enum QOpenGLTexture__Filter
 void q_opengltexture_set_magnification_filter(void* self, int32_t filter);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#magnificationFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#magnificationFilter)
 ///
 /// @param self QOpenGLTexture*
 ///
 /// @return enum QOpenGLTexture__Filter
 int32_t q_opengltexture_magnification_filter(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMinMagFilters)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMinMagFilters)
 ///
 /// @param self QOpenGLTexture*
 /// @param minificationFilter enum QOpenGLTexture__Filter
 /// @param magnificationFilter enum QOpenGLTexture__Filter
 void q_opengltexture_set_min_mag_filters(void* self, int32_t minificationFilter, int32_t magnificationFilter);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#minMagFilters)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#minMagFilters)
 ///
 /// @param self QOpenGLTexture*
 libqt_pair /* tuple of int32_t and int32_t */ q_opengltexture_min_mag_filters(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMaximumAnisotropy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMaximumAnisotropy)
 ///
 /// @param self QOpenGLTexture*
 /// @param anisotropy float
 void q_opengltexture_set_maximum_anisotropy(void* self, float anisotropy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#maximumAnisotropy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#maximumAnisotropy)
 ///
 /// @param self QOpenGLTexture*
 float q_opengltexture_maximum_anisotropy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setWrapMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setWrapMode)
 ///
 /// @param self QOpenGLTexture*
 /// @param mode enum QOpenGLTexture__WrapMode
 void q_opengltexture_set_wrap_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setWrapMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setWrapMode)
 ///
 /// @param self QOpenGLTexture*
 /// @param direction enum QOpenGLTexture__CoordinateDirection
 /// @param mode enum QOpenGLTexture__WrapMode
 void q_opengltexture_set_wrap_mode2(void* self, int32_t direction, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#wrapMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#wrapMode)
 ///
 /// @param self QOpenGLTexture*
 /// @param direction enum QOpenGLTexture__CoordinateDirection
@@ -596,13 +596,13 @@ void q_opengltexture_set_wrap_mode2(void* self, int32_t direction, int32_t mode)
 /// @return enum QOpenGLTexture__WrapMode
 int32_t q_opengltexture_wrap_mode(void* self, int32_t direction);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
 ///
 /// @param self QOpenGLTexture*
 /// @param color QColor*
 void q_opengltexture_set_border_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
 ///
 /// @param self QOpenGLTexture*
 /// @param r float
@@ -611,7 +611,7 @@ void q_opengltexture_set_border_color(void* self, void* color);
 /// @param a float
 void q_opengltexture_set_border_color2(void* self, float r, float g, float b, float a);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
 ///
 /// @param self QOpenGLTexture*
 /// @param r int
@@ -620,7 +620,7 @@ void q_opengltexture_set_border_color2(void* self, float r, float g, float b, fl
 /// @param a int
 void q_opengltexture_set_border_color3(void* self, int r, int g, int b, int a);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setBorderColor)
 ///
 /// @param self QOpenGLTexture*
 /// @param r uint32_t
@@ -629,96 +629,96 @@ void q_opengltexture_set_border_color3(void* self, int r, int g, int b, int a);
 /// @param a uint32_t
 void q_opengltexture_set_border_color4(void* self, uint32_t r, uint32_t g, uint32_t b, uint32_t a);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
 ///
 /// @param self QOpenGLTexture*
 QColor* q_opengltexture_border_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
 ///
 /// @param self QOpenGLTexture*
 /// @param border float*
 void q_opengltexture_border_color2(void* self, float* border);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
 ///
 /// @param self QOpenGLTexture*
 /// @param border int*
 void q_opengltexture_border_color3(void* self, int* border);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#borderColor)
 ///
 /// @param self QOpenGLTexture*
 /// @param border uint32_t*
 void q_opengltexture_border_color4(void* self, uint32_t* border);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMinimumLevelOfDetail)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMinimumLevelOfDetail)
 ///
 /// @param self QOpenGLTexture*
 /// @param value float
 void q_opengltexture_set_minimum_level_of_detail(void* self, float value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#minimumLevelOfDetail)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#minimumLevelOfDetail)
 ///
 /// @param self QOpenGLTexture*
 float q_opengltexture_minimum_level_of_detail(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setMaximumLevelOfDetail)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMaximumLevelOfDetail)
 ///
 /// @param self QOpenGLTexture*
 /// @param value float
 void q_opengltexture_set_maximum_level_of_detail(void* self, float value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#maximumLevelOfDetail)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#maximumLevelOfDetail)
 ///
 /// @param self QOpenGLTexture*
 float q_opengltexture_maximum_level_of_detail(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setLevelOfDetailRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setLevelOfDetailRange)
 ///
 /// @param self QOpenGLTexture*
 /// @param min float
 /// @param max float
 void q_opengltexture_set_level_of_detail_range(void* self, float min, float max);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#levelOfDetailRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#levelOfDetailRange)
 ///
 /// @param self QOpenGLTexture*
 libqt_pair /* tuple of float and float */ q_opengltexture_level_of_detail_range(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setLevelofDetailBias)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setLevelofDetailBias)
 ///
 /// @param self QOpenGLTexture*
 /// @param bias float
 void q_opengltexture_set_levelof_detail_bias(void* self, float bias);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#levelofDetailBias)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#levelofDetailBias)
 ///
 /// @param self QOpenGLTexture*
 float q_opengltexture_levelof_detail_bias(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#bind)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#bind)
 ///
 /// @param self QOpenGLTexture*
 /// @param unit uint32_t
 /// @param reset enum QOpenGLTexture__TextureUnitReset
 void q_opengltexture_bind22(void* self, uint32_t unit, int32_t reset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#release)
 ///
 /// @param self QOpenGLTexture*
 /// @param unit uint32_t
 /// @param reset enum QOpenGLTexture__TextureUnitReset
 void q_opengltexture_release22(void* self, uint32_t unit, int32_t reset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setSize)
 ///
 /// @param self QOpenGLTexture*
 /// @param width int
 /// @param height int
 void q_opengltexture_set_size2(void* self, int width, int height);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setSize)
 ///
 /// @param self QOpenGLTexture*
 /// @param width int
@@ -726,7 +726,7 @@ void q_opengltexture_set_size2(void* self, int width, int height);
 /// @param depth int
 void q_opengltexture_set_size3(void* self, int width, int height, int depth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -738,7 +738,7 @@ void q_opengltexture_set_size3(void* self, int width, int height, int depth);
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data72(void* self, int mipLevel, int layer, int32_t cubeFace, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -751,7 +751,7 @@ void q_opengltexture_set_data72(void* self, int mipLevel, int layer, int32_t cub
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data82(void* self, int mipLevel, int layer, int layerCount, int32_t cubeFace, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -762,7 +762,7 @@ void q_opengltexture_set_data82(void* self, int mipLevel, int layer, int layerCo
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data62(void* self, int mipLevel, int layer, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -772,7 +772,7 @@ void q_opengltexture_set_data62(void* self, int mipLevel, int layer, int32_t sou
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data52(void* self, int mipLevel, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param sourceFormat enum QOpenGLTexture__PixelFormat
@@ -781,7 +781,7 @@ void q_opengltexture_set_data52(void* self, int mipLevel, int32_t sourceFormat, 
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data42(void* self, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -796,7 +796,7 @@ void q_opengltexture_set_data42(void* self, int32_t sourceFormat, int32_t source
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data102(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -812,7 +812,7 @@ void q_opengltexture_set_data102(void* self, int xOffset, int yOffset, int zOffs
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data112(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -829,7 +829,7 @@ void q_opengltexture_set_data112(void* self, int xOffset, int yOffset, int zOffs
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data12(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int layer, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -847,7 +847,7 @@ void q_opengltexture_set_data12(void* self, int xOffset, int yOffset, int zOffse
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data13(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int layer, int32_t cubeFace, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param xOffset int
@@ -866,7 +866,7 @@ void q_opengltexture_set_data13(void* self, int xOffset, int yOffset, int zOffse
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_data14(void* self, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int mipLevel, int layer, int32_t cubeFace, int layerCount, int32_t sourceFormat, int32_t sourceType, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -877,7 +877,7 @@ void q_opengltexture_set_data14(void* self, int xOffset, int yOffset, int zOffse
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_compressed_data6(void* self, int mipLevel, int layer, int32_t cubeFace, int dataSize, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -889,7 +889,7 @@ void q_opengltexture_set_compressed_data6(void* self, int mipLevel, int layer, i
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_compressed_data7(void* self, int mipLevel, int layer, int layerCount, int32_t cubeFace, int dataSize, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -899,7 +899,7 @@ void q_opengltexture_set_compressed_data7(void* self, int mipLevel, int layer, i
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_compressed_data52(void* self, int mipLevel, int layer, int dataSize, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param mipLevel int
@@ -908,7 +908,7 @@ void q_opengltexture_set_compressed_data52(void* self, int mipLevel, int layer, 
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_compressed_data42(void* self, int mipLevel, int dataSize, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setCompressedData)
 ///
 /// @param self QOpenGLTexture*
 /// @param dataSize int
@@ -916,21 +916,21 @@ void q_opengltexture_set_compressed_data42(void* self, int mipLevel, int dataSiz
 /// @param options QOpenGLPixelTransferOptions*
 void q_opengltexture_set_compressed_data32(void* self, int dataSize, void* data, void* options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setData)
 ///
 /// @param self QOpenGLTexture*
 /// @param image QImage*
 /// @param genMipMaps enum QOpenGLTexture__MipMapGeneration
 void q_opengltexture_set_data22(void* self, void* image, int32_t genMipMaps);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#generateMipMaps)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#generateMipMaps)
 ///
 /// @param self QOpenGLTexture*
 /// @param baseLevel int
 /// @param resetBaseLevel bool
 void q_opengltexture_generate_mip_maps22(void* self, int baseLevel, bool resetBaseLevel);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltexture.html#dtor.QOpenGLTexture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#dtor.QOpenGLTexture)
 ///
 /// Delete this object from C++ memory.
 ///
