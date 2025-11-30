@@ -8,4 +8,5 @@ cmd/qrc-c/qrc-c
 cmd/qrc-c/qrc-c.exe
 cmd/uic-c/uic-c
 cmd/uic-c/uic-c.exe
+docs
 zig-out
