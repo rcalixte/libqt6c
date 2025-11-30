@@ -20,7 +20,7 @@
 /// @param appSocket const char*
 KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(const char* protocol, const char* poolSocket, const char* appSocket);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 const QMetaObject* k_io__forwardingworkerbase_meta_object(void* self);
@@ -49,20 +49,20 @@ void k_io__forwardingworkerbase_on_metacall(void* self, int32_t (*callback)(void
 /// @param param3 void*
 int32_t k_io__forwardingworkerbase_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_io__forwardingworkerbase_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#get)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#get)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_get(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#get)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#get)
 ///
 /// Allows for overriding the related default method
 ///
@@ -70,7 +70,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_get(void* self, void* url);
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
 void k_io__forwardingworkerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#get)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#get)
 ///
 /// Base class method implementation
 ///
@@ -78,7 +78,7 @@ void k_io__forwardingworkerbase_on_get(void* self, KIO__WorkerResult* (*callback
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_get(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#put)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#put)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
@@ -86,7 +86,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_get(void* self, void* url);
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_put(void* self, void* url, int permissions, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#put)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#put)
 ///
 /// Allows for overriding the related default method
 ///
@@ -94,7 +94,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_put(void* self, void* url, int per
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, int permissions, flag of enum KIO__JobFlag flags)
 void k_io__forwardingworkerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, void*, int, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#put)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#put)
 ///
 /// Base class method implementation
 ///
@@ -104,13 +104,13 @@ void k_io__forwardingworkerbase_on_put(void* self, KIO__WorkerResult* (*callback
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_put(void* self, void* url, int permissions, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#stat)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#stat)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_stat(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#stat)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#stat)
 ///
 /// Allows for overriding the related default method
 ///
@@ -118,7 +118,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_stat(void* self, void* url);
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
 void k_io__forwardingworkerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#stat)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#stat)
 ///
 /// Base class method implementation
 ///
@@ -126,13 +126,13 @@ void k_io__forwardingworkerbase_on_stat(void* self, KIO__WorkerResult* (*callbac
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_stat(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#mimetype)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mimetype)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_mimetype(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#mimetype)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mimetype)
 ///
 /// Allows for overriding the related default method
 ///
@@ -140,7 +140,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_mimetype(void* self, void* url);
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
 void k_io__forwardingworkerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#mimetype)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mimetype)
 ///
 /// Base class method implementation
 ///
@@ -148,13 +148,13 @@ void k_io__forwardingworkerbase_on_mimetype(void* self, KIO__WorkerResult* (*cal
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_mimetype(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#listDir)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#listDir)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_list_dir(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#listDir)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#listDir)
 ///
 /// Allows for overriding the related default method
 ///
@@ -162,7 +162,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_list_dir(void* self, void* url);
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
 void k_io__forwardingworkerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#listDir)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#listDir)
 ///
 /// Base class method implementation
 ///
@@ -170,14 +170,14 @@ void k_io__forwardingworkerbase_on_list_dir(void* self, KIO__WorkerResult* (*cal
 /// @param url QUrl*
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_list_dir(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#mkdir)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mkdir)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 /// @param permissions int
 KIO__WorkerResult* k_io__forwardingworkerbase_mkdir(void* self, void* url, int permissions);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#mkdir)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mkdir)
 ///
 /// Allows for overriding the related default method
 ///
@@ -185,7 +185,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_mkdir(void* self, void* url, int p
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, int permissions)
 void k_io__forwardingworkerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#mkdir)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mkdir)
 ///
 /// Base class method implementation
 ///
@@ -194,7 +194,7 @@ void k_io__forwardingworkerbase_on_mkdir(void* self, KIO__WorkerResult* (*callba
 /// @param permissions int
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_mkdir(void* self, void* url, int permissions);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#rename)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rename)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param src QUrl*
@@ -202,7 +202,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_mkdir(void* self, void* url,
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_rename(void* self, void* src, void* dest, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#rename)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rename)
 ///
 /// Allows for overriding the related default method
 ///
@@ -210,7 +210,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_rename(void* self, void* src, void
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* src, QUrl* dest, flag of enum KIO__JobFlag flags)
 void k_io__forwardingworkerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#rename)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rename)
 ///
 /// Base class method implementation
 ///
@@ -220,7 +220,7 @@ void k_io__forwardingworkerbase_on_rename(void* self, KIO__WorkerResult* (*callb
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_rename(void* self, void* src, void* dest, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#symlink)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#symlink)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param target const char*
@@ -228,7 +228,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_rename(void* self, void* src
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_symlink(void* self, const char* target, void* dest, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#symlink)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#symlink)
 ///
 /// Allows for overriding the related default method
 ///
@@ -236,7 +236,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_symlink(void* self, const char* ta
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, const char* target, QUrl* dest, flag of enum KIO__JobFlag flags)
 void k_io__forwardingworkerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void*, const char*, void*, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#symlink)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#symlink)
 ///
 /// Base class method implementation
 ///
@@ -246,14 +246,14 @@ void k_io__forwardingworkerbase_on_symlink(void* self, KIO__WorkerResult* (*call
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_symlink(void* self, const char* target, void* dest, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#chmod)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#chmod)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 /// @param permissions int
 KIO__WorkerResult* k_io__forwardingworkerbase_chmod(void* self, void* url, int permissions);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#chmod)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#chmod)
 ///
 /// Allows for overriding the related default method
 ///
@@ -261,7 +261,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_chmod(void* self, void* url, int p
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, int permissions)
 void k_io__forwardingworkerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#chmod)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#chmod)
 ///
 /// Base class method implementation
 ///
@@ -270,14 +270,14 @@ void k_io__forwardingworkerbase_on_chmod(void* self, KIO__WorkerResult* (*callba
 /// @param permissions int
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_chmod(void* self, void* url, int permissions);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#setModificationTime)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#setModificationTime)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 /// @param mtime QDateTime*
 KIO__WorkerResult* k_io__forwardingworkerbase_set_modification_time(void* self, void* url, void* mtime);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#setModificationTime)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#setModificationTime)
 ///
 /// Allows for overriding the related default method
 ///
@@ -285,7 +285,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_set_modification_time(void* self, 
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, QDateTime* mtime)
 void k_io__forwardingworkerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#setModificationTime)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#setModificationTime)
 ///
 /// Base class method implementation
 ///
@@ -294,7 +294,7 @@ void k_io__forwardingworkerbase_on_set_modification_time(void* self, KIO__Worker
 /// @param mtime QDateTime*
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_set_modification_time(void* self, void* url, void* mtime);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#copy)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#copy)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param src QUrl*
@@ -303,7 +303,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_set_modification_time(void* 
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_copy(void* self, void* src, void* dest, int permissions, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#copy)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#copy)
 ///
 /// Allows for overriding the related default method
 ///
@@ -311,7 +311,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_copy(void* self, void* src, void* 
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* src, QUrl* dest, int permissions, flag of enum KIO__JobFlag flags)
 void k_io__forwardingworkerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#copy)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#copy)
 ///
 /// Base class method implementation
 ///
@@ -322,14 +322,14 @@ void k_io__forwardingworkerbase_on_copy(void* self, KIO__WorkerResult* (*callbac
 /// @param flags flag of enum KIO__JobFlag
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_copy(void* self, void* src, void* dest, int permissions, int32_t flags);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#del)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#del)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 /// @param isfile bool
 KIO__WorkerResult* k_io__forwardingworkerbase_del(void* self, void* url, bool isfile);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#del)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#del)
 ///
 /// Allows for overriding the related default method
 ///
@@ -337,7 +337,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_del(void* self, void* url, bool is
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, bool isfile)
 void k_io__forwardingworkerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#del)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#del)
 ///
 /// Base class method implementation
 ///
@@ -346,14 +346,14 @@ void k_io__forwardingworkerbase_on_del(void* self, KIO__WorkerResult* (*callback
 /// @param isfile bool
 KIO__WorkerResult* k_io__forwardingworkerbase_qbase_del(void* self, void* url, bool isfile);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#rewriteUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rewriteUrl)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param url QUrl*
 /// @param newURL QUrl*
 bool k_io__forwardingworkerbase_rewrite_url(void* self, void* url, void* newURL);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#rewriteUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rewriteUrl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -361,7 +361,7 @@ bool k_io__forwardingworkerbase_rewrite_url(void* self, void* url, void* newURL)
 /// @param callback bool func(KIO__ForwardingWorkerBase* self, QUrl* url, QUrl* newURL)
 void k_io__forwardingworkerbase_on_rewrite_url(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#rewriteUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rewriteUrl)
 ///
 /// Base class method implementation
 ///
@@ -370,14 +370,14 @@ void k_io__forwardingworkerbase_on_rewrite_url(void* self, bool (*callback)(void
 /// @param newURL QUrl*
 bool k_io__forwardingworkerbase_qbase_rewrite_url(void* self, void* url, void* newURL);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#adjustUDSEntry)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#adjustUDSEntry)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param entry KIO__UDSEntry*
 /// @param creationMode enum KIO__ForwardingWorkerBase__UDSEntryCreationMode
 void k_io__forwardingworkerbase_adjust_u_d_s_entry(void* self, void* entry, int32_t creationMode);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#adjustUDSEntry)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#adjustUDSEntry)
 ///
 /// Allows for overriding the related default method
 ///
@@ -385,7 +385,7 @@ void k_io__forwardingworkerbase_adjust_u_d_s_entry(void* self, void* entry, int3
 /// @param callback void func(KIO__ForwardingWorkerBase* self, KIO__UDSEntry* entry, enum KIO__ForwardingWorkerBase__UDSEntryCreationMode creationMode)
 void k_io__forwardingworkerbase_on_adjust_u_d_s_entry(void* self, void (*callback)(void*, void*, int32_t));
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#adjustUDSEntry)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#adjustUDSEntry)
 ///
 /// Base class method implementation
 ///
@@ -394,12 +394,12 @@ void k_io__forwardingworkerbase_on_adjust_u_d_s_entry(void* self, void (*callbac
 /// @param creationMode enum KIO__ForwardingWorkerBase__UDSEntryCreationMode
 void k_io__forwardingworkerbase_qbase_adjust_u_d_s_entry(void* self, void* entry, int32_t creationMode);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#processedUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#processedUrl)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 QUrl* k_io__forwardingworkerbase_processed_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#processedUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#processedUrl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -407,19 +407,19 @@ QUrl* k_io__forwardingworkerbase_processed_url(void* self);
 /// @param callback QUrl* func()
 void k_io__forwardingworkerbase_on_processed_url(void* self, QUrl* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#processedUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#processedUrl)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__ForwardingWorkerBase*
 QUrl* k_io__forwardingworkerbase_qbase_processed_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#requestedUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#requestedUrl)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 QUrl* k_io__forwardingworkerbase_requested_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#requestedUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#requestedUrl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -427,14 +427,14 @@ QUrl* k_io__forwardingworkerbase_requested_url(void* self);
 /// @param callback QUrl* func()
 void k_io__forwardingworkerbase_on_requested_url(void* self, QUrl* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kio-forwardingworkerbase.html#requestedUrl)
+/// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#requestedUrl)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__ForwardingWorkerBase*
 QUrl* k_io__forwardingworkerbase_qbase_requested_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -442,7 +442,7 @@ QUrl* k_io__forwardingworkerbase_qbase_requested_url(void* self);
 /// @param c const char*
 const char* k_io__forwardingworkerbase_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -453,7 +453,7 @@ const char* k_io__forwardingworkerbase_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -462,7 +462,7 @@ const char* k_io__forwardingworkerbase_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param name char*
@@ -470,35 +470,35 @@ void k_io__forwardingworkerbase_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 bool k_io__forwardingworkerbase_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 bool k_io__forwardingworkerbase_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 bool k_io__forwardingworkerbase_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 bool k_io__forwardingworkerbase_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param b bool
@@ -506,14 +506,14 @@ bool k_io__forwardingworkerbase_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 QThread* k_io__forwardingworkerbase_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param thread QThread*
@@ -521,7 +521,7 @@ bool k_io__forwardingworkerbase_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param interval int
@@ -529,7 +529,7 @@ int32_t k_io__forwardingworkerbase_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param id int
@@ -537,7 +537,7 @@ void k_io__forwardingworkerbase_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param id enum Qt__TimerId
@@ -545,14 +545,14 @@ void k_io__forwardingworkerbase_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 libqt_list /* of QObject* */ k_io__forwardingworkerbase_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param parent QObject*
@@ -560,7 +560,7 @@ void k_io__forwardingworkerbase_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param filterObj QObject*
@@ -568,7 +568,7 @@ void k_io__forwardingworkerbase_install_event_filter(void* self, void* filterObj
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param obj QObject*
@@ -576,7 +576,7 @@ void k_io__forwardingworkerbase_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -586,7 +586,7 @@ QMetaObject__Connection* k_io__forwardingworkerbase_connect(void* sender, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param sender QObject*
@@ -596,7 +596,7 @@ QMetaObject__Connection* k_io__forwardingworkerbase_connect2(void* self, void* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -606,28 +606,28 @@ bool k_io__forwardingworkerbase_disconnect(void* sender, void* signal, void* rec
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_io__forwardingworkerbase_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param name const char*
@@ -636,7 +636,7 @@ bool k_io__forwardingworkerbase_set_property(void* self, const char* name, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param name const char*
@@ -644,7 +644,7 @@ QVariant* k_io__forwardingworkerbase_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -653,28 +653,28 @@ const char** k_io__forwardingworkerbase_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 QBindingStorage* k_io__forwardingworkerbase_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 const QBindingStorage* k_io__forwardingworkerbase_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback void func(KIO__ForwardingWorkerBase* self)
@@ -682,14 +682,14 @@ void k_io__forwardingworkerbase_on_destroyed(void* self, void (*callback)(void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 QObject* k_io__forwardingworkerbase_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param classname const char*
@@ -697,14 +697,14 @@ bool k_io__forwardingworkerbase_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param thread QThread*
@@ -713,7 +713,7 @@ bool k_io__forwardingworkerbase_move_to_thread2(void* self, void* thread, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param interval int
@@ -722,7 +722,7 @@ int32_t k_io__forwardingworkerbase_start_timer22(void* self, int interval, int32
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -733,7 +733,7 @@ QMetaObject__Connection* k_io__forwardingworkerbase_connect5(void* sender, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param sender QObject*
@@ -744,7 +744,7 @@ QMetaObject__Connection* k_io__forwardingworkerbase_connect4(void* self, void* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param param1 QObject*
@@ -752,7 +752,7 @@ void k_io__forwardingworkerbase_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback void func(KIO__ForwardingWorkerBase* self, QObject* param1)
@@ -760,21 +760,21 @@ void k_io__forwardingworkerbase_on_destroyed1(void* self, void (*callback)(void*
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#exit)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#exit)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_exit(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#dispatchLoop)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#dispatchLoop)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_dispatch_loop(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#data)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#data)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param data const char*
@@ -782,14 +782,14 @@ void k_io__forwardingworkerbase_data(void* self, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#dataReq)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#dataReq)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_data_req(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#workerStatus)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#workerStatus)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param host const char*
@@ -798,7 +798,7 @@ void k_io__forwardingworkerbase_worker_status(void* self, const char* host, bool
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#statEntry)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#statEntry)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _entry KIO__UDSEntry*
@@ -806,7 +806,7 @@ void k_io__forwardingworkerbase_stat_entry(void* self, void* _entry);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#listEntries)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#listEntries)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _entry libqt_list /* of KIO__UDSEntry* */
@@ -814,7 +814,7 @@ void k_io__forwardingworkerbase_list_entries(void* self, libqt_list _entry);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#canResume)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#canResume)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param offset uint64_t
@@ -822,14 +822,14 @@ bool k_io__forwardingworkerbase_can_resume(void* self, uint64_t offset);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#canResume)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#canResume)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_can_resume2(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#totalSize)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _bytes uint64_t
@@ -837,7 +837,7 @@ void k_io__forwardingworkerbase_total_size(void* self, uint64_t _bytes);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#processedSize)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _bytes uint64_t
@@ -845,7 +845,7 @@ void k_io__forwardingworkerbase_processed_size(void* self, uint64_t _bytes);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#position)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#position)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _pos uint64_t
@@ -853,7 +853,7 @@ void k_io__forwardingworkerbase_position(void* self, uint64_t _pos);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#written)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#written)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _bytes uint64_t
@@ -861,7 +861,7 @@ void k_io__forwardingworkerbase_written(void* self, uint64_t _bytes);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#truncated)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncated)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _length uint64_t
@@ -869,7 +869,7 @@ void k_io__forwardingworkerbase_truncated(void* self, uint64_t _length);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#speed)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#speed)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _bytes_per_second uint64_t
@@ -877,7 +877,7 @@ void k_io__forwardingworkerbase_speed(void* self, uint64_t _bytes_per_second);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#redirection)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#redirection)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _url QUrl*
@@ -885,14 +885,14 @@ void k_io__forwardingworkerbase_redirection(void* self, void* _url);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#errorPage)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#errorPage)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_error_page(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#mimeType)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#mimeType)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _type const char*
@@ -900,7 +900,7 @@ void k_io__forwardingworkerbase_mime_type(void* self, const char* _type);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#warning)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#warning)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param msg const char*
@@ -908,7 +908,7 @@ void k_io__forwardingworkerbase_warning(void* self, const char* msg);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#infoMessage)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param msg const char*
@@ -916,7 +916,7 @@ void k_io__forwardingworkerbase_info_message(void* self, const char* msg);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param type enum KIO__WorkerBase__MessageBoxType
@@ -925,7 +925,7 @@ int32_t k_io__forwardingworkerbase_message_box(void* self, int32_t type, const c
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param text const char*
@@ -934,7 +934,7 @@ int32_t k_io__forwardingworkerbase_message_box2(void* self, const char* text, in
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#sslError)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#sslError)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param sslData libqt_map /* of const char* to QVariant* */
@@ -942,7 +942,7 @@ int32_t k_io__forwardingworkerbase_ssl_error(void* self, libqt_map /* of const c
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#setMetaData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#setMetaData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param key const char*
@@ -951,7 +951,7 @@ void k_io__forwardingworkerbase_set_meta_data(void* self, const char* key, const
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#hasMetaData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#hasMetaData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param key const char*
@@ -959,7 +959,7 @@ bool k_io__forwardingworkerbase_has_meta_data(void* self, const char* key);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#metaData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#metaData)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -969,21 +969,21 @@ const char* k_io__forwardingworkerbase_meta_data(void* self, const char* key);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#allMetaData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#allMetaData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 KIO__MetaData* k_io__forwardingworkerbase_all_meta_data(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#mapConfig)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#mapConfig)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 libqt_map /* of const char* to QVariant* */ k_io__forwardingworkerbase_map_config(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#configValue)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param key const char*
@@ -992,7 +992,7 @@ bool k_io__forwardingworkerbase_config_value(void* self, const char* key, bool d
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#configValue)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param key const char*
@@ -1001,7 +1001,7 @@ int32_t k_io__forwardingworkerbase_config_value2(void* self, const char* key, in
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#configValue)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1011,49 +1011,49 @@ const char* k_io__forwardingworkerbase_config_value3(void* self, const char* key
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#config)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#config)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 KConfigGroup* k_io__forwardingworkerbase_config(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#remoteEncoding)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#remoteEncoding)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 KRemoteEncoding* k_io__forwardingworkerbase_remote_encoding(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#connectTimeout)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#connectTimeout)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 int32_t k_io__forwardingworkerbase_connect_timeout(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#proxyConnectTimeout)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#proxyConnectTimeout)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 int32_t k_io__forwardingworkerbase_proxy_connect_timeout(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#responseTimeout)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#responseTimeout)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 int32_t k_io__forwardingworkerbase_response_timeout(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#readTimeout)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#readTimeout)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 int32_t k_io__forwardingworkerbase_read_timeout(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#setTimeoutSpecialCommand)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#setTimeoutSpecialCommand)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param timeout int
@@ -1061,7 +1061,7 @@ void k_io__forwardingworkerbase_set_timeout_special_command(void* self, int time
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#readData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#readData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param buffer char*
@@ -1069,7 +1069,7 @@ int32_t k_io__forwardingworkerbase_read_data(void* self, char* buffer);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#listEntry)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#listEntry)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param entry KIO__UDSEntry*
@@ -1077,7 +1077,7 @@ void k_io__forwardingworkerbase_list_entry(void* self, void* entry);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#connectWorker)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#connectWorker)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param path const char*
@@ -1085,14 +1085,14 @@ void k_io__forwardingworkerbase_connect_worker(void* self, const char* path);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#disconnectWorker)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#disconnectWorker)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_disconnect_worker(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#openPasswordDialog)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#openPasswordDialog)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param info KIO__AuthInfo*
@@ -1100,7 +1100,7 @@ int32_t k_io__forwardingworkerbase_open_password_dialog(void* self, void* info);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#checkCachedAuthentication)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#checkCachedAuthentication)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param info KIO__AuthInfo*
@@ -1108,7 +1108,7 @@ bool k_io__forwardingworkerbase_check_cached_authentication(void* self, void* in
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#cacheAuthentication)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#cacheAuthentication)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param info KIO__AuthInfo*
@@ -1116,7 +1116,7 @@ bool k_io__forwardingworkerbase_cache_authentication(void* self, void* info);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#waitForAnswer)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#waitForAnswer)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param expected1 int
@@ -1126,28 +1126,28 @@ int32_t k_io__forwardingworkerbase_wait_for_answer(void* self, int expected1, in
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#sendMetaData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#sendMetaData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_send_meta_data(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#sendAndKeepMetaData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#sendAndKeepMetaData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 void k_io__forwardingworkerbase_send_and_keep_meta_data(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#wasKilled)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#wasKilled)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 bool k_io__forwardingworkerbase_was_killed(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#lookupHost)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#lookupHost)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param host const char*
@@ -1155,7 +1155,7 @@ void k_io__forwardingworkerbase_lookup_host(void* self, const char* host);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#waitForHostInfo)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#waitForHostInfo)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param info QHostInfo*
@@ -1163,7 +1163,7 @@ int32_t k_io__forwardingworkerbase_wait_for_host_info(void* self, void* info);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#requestPrivilegeOperation)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#requestPrivilegeOperation)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param operationDetails const char*
@@ -1173,7 +1173,7 @@ int32_t k_io__forwardingworkerbase_request_privilege_operation(void* self, const
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#addTemporaryAuthorization)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#addTemporaryAuthorization)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param action const char*
@@ -1181,7 +1181,7 @@ void k_io__forwardingworkerbase_add_temporary_authorization(void* self, const ch
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#setIncomingMetaData)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#setIncomingMetaData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param metaData KIO__MetaData*
@@ -1189,7 +1189,7 @@ void k_io__forwardingworkerbase_set_incoming_meta_data(void* self, void* metaDat
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param type enum KIO__WorkerBase__MessageBoxType
@@ -1199,7 +1199,7 @@ int32_t k_io__forwardingworkerbase_message_box3(void* self, int32_t type, const 
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param type enum KIO__WorkerBase__MessageBoxType
@@ -1210,7 +1210,7 @@ int32_t k_io__forwardingworkerbase_message_box4(void* self, int32_t type, const 
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param type enum KIO__WorkerBase__MessageBoxType
@@ -1222,7 +1222,7 @@ int32_t k_io__forwardingworkerbase_message_box5(void* self, int32_t type, const 
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param text const char*
@@ -1232,7 +1232,7 @@ int32_t k_io__forwardingworkerbase_message_box32(void* self, const char* text, i
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param text const char*
@@ -1243,7 +1243,7 @@ int32_t k_io__forwardingworkerbase_message_box42(void* self, const char* text, i
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param text const char*
@@ -1255,7 +1255,7 @@ int32_t k_io__forwardingworkerbase_message_box52(void* self, const char* text, i
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param text const char*
@@ -1268,7 +1268,7 @@ int32_t k_io__forwardingworkerbase_message_box6(void* self, const char* text, in
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#configValue)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1279,7 +1279,7 @@ const char* k_io__forwardingworkerbase_config_value22(void* self, const char* ke
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#setTimeoutSpecialCommand)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#setTimeoutSpecialCommand)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param timeout int
@@ -1288,7 +1288,7 @@ void k_io__forwardingworkerbase_set_timeout_special_command2(void* self, int tim
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#openPasswordDialog)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#openPasswordDialog)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param info KIO__AuthInfo*
@@ -1297,7 +1297,7 @@ int32_t k_io__forwardingworkerbase_open_password_dialog2(void* self, void* info,
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#waitForAnswer)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#waitForAnswer)
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param expected1 int
@@ -1308,7 +1308,7 @@ int32_t k_io__forwardingworkerbase_wait_for_answer4(void* self, int expected1, i
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1318,7 +1318,7 @@ bool k_io__forwardingworkerbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1328,7 +1328,7 @@ bool k_io__forwardingworkerbase_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1338,7 +1338,7 @@ void k_io__forwardingworkerbase_on_event(void* self, bool (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1349,7 +1349,7 @@ bool k_io__forwardingworkerbase_event_filter(void* self, void* watched, void* ev
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1360,7 +1360,7 @@ bool k_io__forwardingworkerbase_qbase_event_filter(void* self, void* watched, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1370,7 +1370,7 @@ void k_io__forwardingworkerbase_on_event_filter(void* self, bool (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1380,7 +1380,7 @@ void k_io__forwardingworkerbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1390,7 +1390,7 @@ void k_io__forwardingworkerbase_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1400,7 +1400,7 @@ void k_io__forwardingworkerbase_on_timer_event(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1410,7 +1410,7 @@ void k_io__forwardingworkerbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1420,7 +1420,7 @@ void k_io__forwardingworkerbase_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1430,7 +1430,7 @@ void k_io__forwardingworkerbase_on_child_event(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1440,7 +1440,7 @@ void k_io__forwardingworkerbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1450,7 +1450,7 @@ void k_io__forwardingworkerbase_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1460,7 +1460,7 @@ void k_io__forwardingworkerbase_on_custom_event(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1470,7 +1470,7 @@ void k_io__forwardingworkerbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1480,7 +1480,7 @@ void k_io__forwardingworkerbase_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1490,7 +1490,7 @@ void k_io__forwardingworkerbase_on_connect_notify(void* self, void (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1500,7 +1500,7 @@ void k_io__forwardingworkerbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1510,7 +1510,7 @@ void k_io__forwardingworkerbase_qbase_disconnect_notify(void* self, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1520,7 +1520,7 @@ void k_io__forwardingworkerbase_on_disconnect_notify(void* self, void (*callback
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#appConnectionMade)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#appConnectionMade)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1529,7 +1529,7 @@ void k_io__forwardingworkerbase_app_connection_made(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#appConnectionMade)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#appConnectionMade)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1538,7 +1538,7 @@ void k_io__forwardingworkerbase_qbase_app_connection_made(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#appConnectionMade)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#appConnectionMade)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1548,7 +1548,7 @@ void k_io__forwardingworkerbase_on_app_connection_made(void* self, void (*callba
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#setHost)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#setHost)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1561,7 +1561,7 @@ void k_io__forwardingworkerbase_set_host(void* self, const char* host, unsigned 
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#setHost)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#setHost)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1574,7 +1574,7 @@ void k_io__forwardingworkerbase_qbase_set_host(void* self, const char* host, uns
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#setHost)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#setHost)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1584,7 +1584,7 @@ void k_io__forwardingworkerbase_on_set_host(void* self, void (*callback)(void*, 
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#openConnection)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1593,7 +1593,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_open_connection(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#openConnection)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1602,7 +1602,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_open_connection(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#openConnection)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1612,7 +1612,7 @@ void k_io__forwardingworkerbase_on_open_connection(void* self, KIO__WorkerResult
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#closeConnection)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#closeConnection)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1621,7 +1621,7 @@ void k_io__forwardingworkerbase_close_connection(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#closeConnection)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#closeConnection)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1630,7 +1630,7 @@ void k_io__forwardingworkerbase_qbase_close_connection(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#closeConnection)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#closeConnection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1640,7 +1640,7 @@ void k_io__forwardingworkerbase_on_close_connection(void* self, void (*callback)
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#open)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1651,7 +1651,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_open(void* self, void* url, int32_
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#open)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1662,7 +1662,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_open(void* self, void* url, 
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#open)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1672,7 +1672,7 @@ void k_io__forwardingworkerbase_on_open(void* self, KIO__WorkerResult* (*callbac
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#read)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1682,7 +1682,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_read(void* self, uint64_t size);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#read)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1692,7 +1692,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_read(void* self, uint64_t si
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#read)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1702,7 +1702,7 @@ void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callbac
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#write)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1712,7 +1712,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, const char* data
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#write)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1722,7 +1722,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_write(void* self, const char
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#write)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1732,7 +1732,7 @@ void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callba
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#seek)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1742,7 +1742,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_seek(void* self, uint64_t offset);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#seek)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1752,7 +1752,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_seek(void* self, uint64_t of
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#seek)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1762,7 +1762,7 @@ void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callbac
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#truncate)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1772,7 +1772,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_truncate(void* self, uint64_t size
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#truncate)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1782,7 +1782,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_truncate(void* self, uint64_
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#truncate)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1792,7 +1792,7 @@ void k_io__forwardingworkerbase_on_truncate(void* self, KIO__WorkerResult* (*cal
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#close)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#close)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1801,7 +1801,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_close(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#close)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#close)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1810,7 +1810,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_close(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#close)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#close)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1820,7 +1820,7 @@ void k_io__forwardingworkerbase_on_close(void* self, KIO__WorkerResult* (*callba
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#chown)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1832,7 +1832,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_chown(void* self, void* url, const
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#chown)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1844,7 +1844,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_chown(void* self, void* url,
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#chown)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1854,7 +1854,7 @@ void k_io__forwardingworkerbase_on_chown(void* self, KIO__WorkerResult* (*callba
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#special)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1864,7 +1864,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, const char* da
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#special)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1874,7 +1874,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_special(void* self, const ch
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#special)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1884,7 +1884,7 @@ void k_io__forwardingworkerbase_on_special(void* self, KIO__WorkerResult* (*call
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1894,7 +1894,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_file_system_free_space(void* self,
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1904,7 +1904,7 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_file_system_free_space(void*
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1914,7 +1914,7 @@ void k_io__forwardingworkerbase_on_file_system_free_space(void* self, KIO__Worke
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#worker_status)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1923,7 +1923,7 @@ void k_io__forwardingworkerbase_worker_status2(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#worker_status)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1932,7 +1932,7 @@ void k_io__forwardingworkerbase_qbase_worker_status2(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#worker_status)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1942,7 +1942,7 @@ void k_io__forwardingworkerbase_on_worker_status2(void* self, void (*callback)()
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1951,7 +1951,7 @@ void k_io__forwardingworkerbase_reparse_configuration(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1960,7 +1960,7 @@ void k_io__forwardingworkerbase_qbase_reparse_configuration(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
+/// [Upstream resources](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1970,7 +1970,7 @@ void k_io__forwardingworkerbase_on_reparse_configuration(void* self, void (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1979,7 +1979,7 @@ QObject* k_io__forwardingworkerbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1988,7 +1988,7 @@ QObject* k_io__forwardingworkerbase_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1998,7 +1998,7 @@ void k_io__forwardingworkerbase_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2007,7 +2007,7 @@ int32_t k_io__forwardingworkerbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2016,7 +2016,7 @@ int32_t k_io__forwardingworkerbase_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2026,7 +2026,7 @@ void k_io__forwardingworkerbase_on_sender_signal_index(void* self, int32_t (*cal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2036,7 +2036,7 @@ int32_t k_io__forwardingworkerbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2046,7 +2046,7 @@ int32_t k_io__forwardingworkerbase_qbase_receivers(void* self, const char* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2056,7 +2056,7 @@ void k_io__forwardingworkerbase_on_receivers(void* self, int32_t (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2066,7 +2066,7 @@ bool k_io__forwardingworkerbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2076,7 +2076,7 @@ bool k_io__forwardingworkerbase_qbase_is_signal_connected(void* self, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2086,7 +2086,7 @@ void k_io__forwardingworkerbase_on_is_signal_connected(void* self, bool (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

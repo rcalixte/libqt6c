@@ -22,7 +22,7 @@ KSvg__FrameSvg* k_svg__framesvg_new();
 /// @param parent QObject*
 KSvg__FrameSvg* k_svg__framesvg_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSvg__FrameSvg*
 const QMetaObject* k_svg__framesvg_meta_object(void* self);
@@ -51,20 +51,20 @@ void k_svg__framesvg_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param3 void*
 int32_t k_svg__framesvg_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_svg__framesvg_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setImagePath)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setImagePath)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param path const char*
 void k_svg__framesvg_set_image_path(void* self, const char* path);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setImagePath)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setImagePath)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ void k_svg__framesvg_set_image_path(void* self, const char* path);
 /// @param callback void func(KSvg__FrameSvg* self, const char* path)
 void k_svg__framesvg_on_set_image_path(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setImagePath)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setImagePath)
 ///
 /// Base class method implementation
 ///
@@ -80,37 +80,37 @@ void k_svg__framesvg_on_set_image_path(void* self, void (*callback)(void*, const
 /// @param path const char*
 void k_svg__framesvg_qbase_set_image_path(void* self, const char* path);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setEnabledBorders)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setEnabledBorders)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param borders flag of enum KSvg__FrameSvg__EnabledBorder
 void k_svg__framesvg_set_enabled_borders(void* self, const int32_t borders);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#enabledBorders)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#enabledBorders)
 ///
 /// @param self KSvg__FrameSvg*
 ///
 /// @return flag of enum KSvg__FrameSvg__EnabledBorder
 int32_t k_svg__framesvg_enabled_borders(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#resizeFrame)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#resizeFrame)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param size QSizeF*
 void k_svg__framesvg_resize_frame(void* self, void* size);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#frameSize)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#frameSize)
 ///
 /// @param self KSvg__FrameSvg*
 QSizeF* k_svg__framesvg_frame_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#marginSize)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#marginSize)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param edge enum KSvg__FrameSvg__MarginEdge
 double k_svg__framesvg_margin_size(void* self, int32_t edge);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#getMargins)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#getMargins)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param left double*
@@ -119,13 +119,13 @@ double k_svg__framesvg_margin_size(void* self, int32_t edge);
 /// @param bottom double*
 void k_svg__framesvg_get_margins(void* self, double* left, double* top, double* right, double* bottom);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#fixedMarginSize)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#fixedMarginSize)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param edge enum KSvg__FrameSvg__MarginEdge
 double k_svg__framesvg_fixed_margin_size(void* self, int32_t edge);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#getFixedMargins)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#getFixedMargins)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param left double*
@@ -134,13 +134,13 @@ double k_svg__framesvg_fixed_margin_size(void* self, int32_t edge);
 /// @param bottom double*
 void k_svg__framesvg_get_fixed_margins(void* self, double* left, double* top, double* right, double* bottom);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#insetSize)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#insetSize)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param edge enum KSvg__FrameSvg__MarginEdge
 double k_svg__framesvg_inset_size(void* self, int32_t edge);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#getInset)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#getInset)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param left double*
@@ -149,115 +149,115 @@ double k_svg__framesvg_inset_size(void* self, int32_t edge);
 /// @param bottom double*
 void k_svg__framesvg_get_inset(void* self, double* left, double* top, double* right, double* bottom);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#contentsRect)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#contentsRect)
 ///
 /// @param self KSvg__FrameSvg*
 QRectF* k_svg__framesvg_contents_rect(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setElementPrefix)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setElementPrefix)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param location enum KSvg__FrameSvg__LocationPrefix
 void k_svg__framesvg_set_element_prefix(void* self, int32_t location);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setElementPrefix)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setElementPrefix)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param prefix const char*
 void k_svg__framesvg_set_element_prefix2(void* self, const char* prefix);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#hasElementPrefix)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#hasElementPrefix)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param prefix const char*
 bool k_svg__framesvg_has_element_prefix(void* self, const char* prefix);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#hasElementPrefix)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#hasElementPrefix)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param location enum KSvg__FrameSvg__LocationPrefix
 bool k_svg__framesvg_has_element_prefix2(void* self, int32_t location);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#prefix)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#prefix)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSvg__FrameSvg*
 const char* k_svg__framesvg_prefix(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#mask)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#mask)
 ///
 /// @param self KSvg__FrameSvg*
 QRegion* k_svg__framesvg_mask(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#alphaMask)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#alphaMask)
 ///
 /// @param self KSvg__FrameSvg*
 QPixmap* k_svg__framesvg_alpha_mask(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setCacheAllRenderedFrames)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setCacheAllRenderedFrames)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param cache bool
 void k_svg__framesvg_set_cache_all_rendered_frames(void* self, bool cache);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#cacheAllRenderedFrames)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#cacheAllRenderedFrames)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_cache_all_rendered_frames(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#clearCache)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#clearCache)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_clear_cache(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#framePixmap)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#framePixmap)
 ///
 /// @param self KSvg__FrameSvg*
 QPixmap* k_svg__framesvg_frame_pixmap(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#paintFrame)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#paintFrame)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
 /// @param target QRectF*
 void k_svg__framesvg_paint_frame(void* self, void* painter, void* target);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#paintFrame)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#paintFrame)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
 void k_svg__framesvg_paint_frame2(void* self, void* painter);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#actualPrefix)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#actualPrefix)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSvg__FrameSvg*
 const char* k_svg__framesvg_actual_prefix(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#isRepaintBlocked)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#isRepaintBlocked)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_is_repaint_blocked(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#setRepaintBlocked)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setRepaintBlocked)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param blocked bool
 void k_svg__framesvg_set_repaint_blocked(void* self, bool blocked);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#minimumDrawingHeight)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#minimumDrawingHeight)
 ///
 /// @param self KSvg__FrameSvg*
 int32_t k_svg__framesvg_minimum_drawing_height(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#minimumDrawingWidth)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#minimumDrawingWidth)
 ///
 /// @param self KSvg__FrameSvg*
 int32_t k_svg__framesvg_minimum_drawing_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -265,7 +265,7 @@ int32_t k_svg__framesvg_minimum_drawing_width(void* self);
 /// @param c const char*
 const char* k_svg__framesvg_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -274,7 +274,7 @@ const char* k_svg__framesvg_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_svg__framesvg_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#paintFrame)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#paintFrame)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -282,7 +282,7 @@ const char* k_svg__framesvg_tr3(const char* s, const char* c, int n);
 /// @param source QRectF*
 void k_svg__framesvg_paint_frame3(void* self, void* painter, void* target, void* source);
 
-/// [Qt documentation](https://api.kde.org/ksvg-framesvg.html#paintFrame)
+/// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#paintFrame)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -291,7 +291,7 @@ void k_svg__framesvg_paint_frame22(void* self, void* painter, void* pos);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#setDevicePixelRatio)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#setDevicePixelRatio)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param factor double
@@ -299,21 +299,21 @@ void k_svg__framesvg_set_device_pixel_ratio(void* self, double factor);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#devicePixelRatio)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#devicePixelRatio)
 ///
 /// @param self KSvg__FrameSvg*
 double k_svg__framesvg_device_pixel_ratio(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#pixmap)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#pixmap)
 ///
 /// @param self KSvg__FrameSvg*
 QPixmap* k_svg__framesvg_pixmap(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#image)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#image)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param size QSize*
@@ -321,7 +321,7 @@ QImage* k_svg__framesvg_image(void* self, void* size);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -330,7 +330,7 @@ void k_svg__framesvg_paint(void* self, void* painter, void* point);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -340,7 +340,7 @@ void k_svg__framesvg_paint2(void* self, void* painter, int x, int y);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -349,7 +349,7 @@ void k_svg__framesvg_paint3(void* self, void* painter, void* rect);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -361,14 +361,14 @@ void k_svg__framesvg_paint4(void* self, void* painter, int x, int y, int width, 
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#size)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#size)
 ///
 /// @param self KSvg__FrameSvg*
 QSizeF* k_svg__framesvg_size(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#resize)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#resize)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param width double
@@ -377,7 +377,7 @@ void k_svg__framesvg_resize(void* self, double width, double height);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#resize)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#resize)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param size QSizeF*
@@ -385,14 +385,14 @@ void k_svg__framesvg_resize2(void* self, void* size);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#resize)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#resize)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_resize3(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#elementSize)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementSize)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param elementId const char*
@@ -400,7 +400,7 @@ QSizeF* k_svg__framesvg_element_size(void* self, const char* elementId);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#elementRect)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementRect)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param elementId const char*
@@ -408,7 +408,7 @@ QRectF* k_svg__framesvg_element_rect(void* self, const char* elementId);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#hasElement)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#hasElement)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param elementId const char*
@@ -416,14 +416,14 @@ bool k_svg__framesvg_has_element(void* self, const char* elementId);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#isValid)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#isValid)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_is_valid(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#setContainsMultipleImages)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#setContainsMultipleImages)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param multiple bool
@@ -431,14 +431,14 @@ void k_svg__framesvg_set_contains_multiple_images(void* self, bool multiple);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#containsMultipleImages)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#containsMultipleImages)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_contains_multiple_images(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#imagePath)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#imagePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -447,7 +447,7 @@ const char* k_svg__framesvg_image_path(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#setUsingRenderingCache)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#setUsingRenderingCache)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param useCache bool
@@ -455,21 +455,21 @@ void k_svg__framesvg_set_using_rendering_cache(void* self, bool useCache);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#isUsingRenderingCache)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#isUsingRenderingCache)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_is_using_rendering_cache(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#fromCurrentImageSet)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#fromCurrentImageSet)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_from_current_image_set(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#setImageSet)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#setImageSet)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param theme KSvg__ImageSet*
@@ -477,14 +477,14 @@ void k_svg__framesvg_set_image_set(void* self, void* theme);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#imageSet)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#imageSet)
 ///
 /// @param self KSvg__FrameSvg*
 KSvg__ImageSet* k_svg__framesvg_image_set(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#setStatus)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#setStatus)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param status enum KSvg__Svg__Status
@@ -492,7 +492,7 @@ void k_svg__framesvg_set_status(void* self, int32_t status);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#status)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#status)
 ///
 /// @param self KSvg__FrameSvg*
 ///
@@ -501,7 +501,7 @@ int32_t k_svg__framesvg_status(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#setColorSet)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#setColorSet)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param colorSet enum KSvg__Svg__ColorSet
@@ -509,7 +509,7 @@ void k_svg__framesvg_set_color_set(void* self, int32_t colorSet);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#colorSet)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#colorSet)
 ///
 /// @param self KSvg__FrameSvg*
 ///
@@ -518,7 +518,7 @@ int32_t k_svg__framesvg_color_set(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#color)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#color)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param colorName enum KSvg__Svg__StyleSheetColor
@@ -526,7 +526,7 @@ QColor* k_svg__framesvg_color(void* self, int32_t colorName);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#setColor)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#setColor)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param colorName enum KSvg__Svg__StyleSheetColor
@@ -535,21 +535,21 @@ void k_svg__framesvg_set_color(void* self, int32_t colorName, void* color);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#clearColorOverrides)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#clearColorOverrides)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_clear_color_overrides(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#repaintNeeded)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#repaintNeeded)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_repaint_needed(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#repaintNeeded)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#repaintNeeded)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self)
@@ -557,14 +557,14 @@ void k_svg__framesvg_on_repaint_needed(void* self, void (*callback)(void*));
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#sizeChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#sizeChanged)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_size_changed(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#sizeChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#sizeChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self)
@@ -572,14 +572,14 @@ void k_svg__framesvg_on_size_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#imagePathChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#imagePathChanged)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_image_path_changed(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#imagePathChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#imagePathChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self)
@@ -587,14 +587,14 @@ void k_svg__framesvg_on_image_path_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#colorHintChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#colorHintChanged)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_color_hint_changed(void* self);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#colorHintChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#colorHintChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self)
@@ -602,7 +602,7 @@ void k_svg__framesvg_on_color_hint_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#fromCurrentImageSetChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#fromCurrentImageSetChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param fromCurrentImageSet bool
@@ -610,7 +610,7 @@ void k_svg__framesvg_from_current_image_set_changed(void* self, bool fromCurrent
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#fromCurrentImageSetChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#fromCurrentImageSetChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self, bool fromCurrentImageSet)
@@ -618,7 +618,7 @@ void k_svg__framesvg_on_from_current_image_set_changed(void* self, void (*callba
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#statusChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#statusChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param status enum KSvg__Svg__Status
@@ -626,7 +626,7 @@ void k_svg__framesvg_status_changed(void* self, int32_t status);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#statusChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#statusChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self, enum KSvg__Svg__Status status)
@@ -634,7 +634,7 @@ void k_svg__framesvg_on_status_changed(void* self, void (*callback)(void*, int32
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#colorSetChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#colorSetChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param colorSet enum KSvg__Svg__ColorSet
@@ -642,7 +642,7 @@ void k_svg__framesvg_color_set_changed(void* self, int32_t colorSet);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#colorSetChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#colorSetChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self, enum KSvg__Svg__ColorSet colorSet)
@@ -650,7 +650,7 @@ void k_svg__framesvg_on_color_set_changed(void* self, void (*callback)(void*, in
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#imageSetChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#imageSetChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param imageSet KSvg__ImageSet*
@@ -658,7 +658,7 @@ void k_svg__framesvg_image_set_changed(void* self, void* imageSet);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#imageSetChanged)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#imageSetChanged)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self, KSvg__ImageSet* imageSet)
@@ -666,7 +666,7 @@ void k_svg__framesvg_on_image_set_changed(void* self, void (*callback)(void*, vo
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#pixmap)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#pixmap)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param elementID const char*
@@ -674,7 +674,7 @@ QPixmap* k_svg__framesvg_pixmap1(void* self, const char* elementID);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#image)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#image)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param size QSize*
@@ -683,7 +683,7 @@ QImage* k_svg__framesvg_image2(void* self, void* size, const char* elementID);
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -693,7 +693,7 @@ void k_svg__framesvg_paint32(void* self, void* painter, void* point, const char*
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -704,7 +704,7 @@ void k_svg__framesvg_paint42(void* self, void* painter, int x, int y, const char
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -714,7 +714,7 @@ void k_svg__framesvg_paint33(void* self, void* painter, void* rect, const char* 
 
 /// Inherited from KSvg::Svg
 ///
-/// [Qt documentation](https://api.kde.org/ksvg-svg.html#paint)
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param painter QPainter*
@@ -727,7 +727,7 @@ void k_svg__framesvg_paint6(void* self, void* painter, int x, int y, int width, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param watched QObject*
@@ -736,7 +736,7 @@ bool k_svg__framesvg_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -746,7 +746,7 @@ void k_svg__framesvg_on_event_filter(void* self, bool (*callback)(void*, void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -757,7 +757,7 @@ bool k_svg__framesvg_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -766,7 +766,7 @@ const char* k_svg__framesvg_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param name char*
@@ -774,35 +774,35 @@ void k_svg__framesvg_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KSvg__FrameSvg*
 bool k_svg__framesvg_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param b bool
@@ -810,14 +810,14 @@ bool k_svg__framesvg_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KSvg__FrameSvg*
 QThread* k_svg__framesvg_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param thread QThread*
@@ -825,7 +825,7 @@ bool k_svg__framesvg_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param interval int
@@ -833,7 +833,7 @@ int32_t k_svg__framesvg_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param id int
@@ -841,7 +841,7 @@ void k_svg__framesvg_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param id enum Qt__TimerId
@@ -849,14 +849,14 @@ void k_svg__framesvg_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KSvg__FrameSvg*
 libqt_list /* of QObject* */ k_svg__framesvg_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param parent QObject*
@@ -864,7 +864,7 @@ void k_svg__framesvg_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param filterObj QObject*
@@ -872,7 +872,7 @@ void k_svg__framesvg_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param obj QObject*
@@ -880,7 +880,7 @@ void k_svg__framesvg_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -890,7 +890,7 @@ QMetaObject__Connection* k_svg__framesvg_connect(void* sender, void* signal, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param sender QObject*
@@ -900,7 +900,7 @@ QMetaObject__Connection* k_svg__framesvg_connect2(void* self, void* sender, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -910,28 +910,28 @@ bool k_svg__framesvg_disconnect(void* sender, void* signal, void* receiver, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_svg__framesvg_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param name const char*
@@ -940,7 +940,7 @@ bool k_svg__framesvg_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param name const char*
@@ -948,7 +948,7 @@ QVariant* k_svg__framesvg_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -957,28 +957,28 @@ const char** k_svg__framesvg_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KSvg__FrameSvg*
 QBindingStorage* k_svg__framesvg_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KSvg__FrameSvg*
 const QBindingStorage* k_svg__framesvg_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self)
@@ -986,14 +986,14 @@ void k_svg__framesvg_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KSvg__FrameSvg*
 QObject* k_svg__framesvg_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param classname const char*
@@ -1001,14 +1001,14 @@ bool k_svg__framesvg_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KSvg__FrameSvg*
 void k_svg__framesvg_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param thread QThread*
@@ -1017,7 +1017,7 @@ bool k_svg__framesvg_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param interval int
@@ -1026,7 +1026,7 @@ int32_t k_svg__framesvg_start_timer22(void* self, int interval, int32_t timerTyp
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1037,7 +1037,7 @@ QMetaObject__Connection* k_svg__framesvg_connect5(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param sender QObject*
@@ -1048,7 +1048,7 @@ QMetaObject__Connection* k_svg__framesvg_connect4(void* self, void* sender, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param param1 QObject*
@@ -1056,7 +1056,7 @@ void k_svg__framesvg_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSvg__FrameSvg*
 /// @param callback void func(KSvg__FrameSvg* self, QObject* param1)
@@ -1064,7 +1064,7 @@ void k_svg__framesvg_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1074,7 +1074,7 @@ bool k_svg__framesvg_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1084,7 +1084,7 @@ bool k_svg__framesvg_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1094,7 +1094,7 @@ void k_svg__framesvg_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1104,7 +1104,7 @@ void k_svg__framesvg_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1114,7 +1114,7 @@ void k_svg__framesvg_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1124,7 +1124,7 @@ void k_svg__framesvg_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1134,7 +1134,7 @@ void k_svg__framesvg_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1144,7 +1144,7 @@ void k_svg__framesvg_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1154,7 +1154,7 @@ void k_svg__framesvg_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1164,7 +1164,7 @@ void k_svg__framesvg_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1174,7 +1174,7 @@ void k_svg__framesvg_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1184,7 +1184,7 @@ void k_svg__framesvg_on_custom_event(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1194,7 +1194,7 @@ void k_svg__framesvg_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1204,7 +1204,7 @@ void k_svg__framesvg_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1214,7 +1214,7 @@ void k_svg__framesvg_on_connect_notify(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1224,7 +1224,7 @@ void k_svg__framesvg_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1234,7 +1234,7 @@ void k_svg__framesvg_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1244,7 +1244,7 @@ void k_svg__framesvg_on_disconnect_notify(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1253,7 +1253,7 @@ QObject* k_svg__framesvg_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1262,7 +1262,7 @@ QObject* k_svg__framesvg_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1272,7 +1272,7 @@ void k_svg__framesvg_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1281,7 +1281,7 @@ int32_t k_svg__framesvg_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1290,7 +1290,7 @@ int32_t k_svg__framesvg_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1300,7 +1300,7 @@ void k_svg__framesvg_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1310,7 +1310,7 @@ int32_t k_svg__framesvg_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1320,7 +1320,7 @@ int32_t k_svg__framesvg_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1330,7 +1330,7 @@ void k_svg__framesvg_on_receivers(void* self, int32_t (*callback)(void*, const c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1340,7 +1340,7 @@ bool k_svg__framesvg_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1350,7 +1350,7 @@ bool k_svg__framesvg_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1360,7 +1360,7 @@ void k_svg__framesvg_on_is_signal_connected(void* self, bool (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

@@ -13,34 +13,34 @@
 
 /// https://doc.qt.io/qt-6/qcborerror.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#c-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#c-var)
 ///
 /// @param self QCborError*
 ///
 /// @return enum QCborError__Code
 int32_t q_cborerror_c(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#c-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#c-var)
 ///
 /// @param self QCborError*
 /// @param c enum QCborError__Code
 void q_cborerror_set_c(void* self, int32_t c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#operator)
 ///
 /// @param self QCborError*
 ///
 /// @return enum QCborError__Code
 int32_t q_cborerror_to_q_cbor_error___code(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCborError*
 const char* q_cborerror_to_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#dtor.QCborError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#dtor.QCborError)
 ///
 /// Delete this object from C++ memory.
 ///

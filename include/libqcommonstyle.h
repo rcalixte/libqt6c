@@ -17,7 +17,7 @@
 ///
 QCommonStyle* q_commonstyle_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QCommonStyle*
 const QMetaObject* q_commonstyle_meta_object(void* self);
@@ -46,14 +46,14 @@ void q_commonstyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t q_commonstyle_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_commonstyle_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawPrimitive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawPrimitive)
 ///
 /// @param self QCommonStyle*
 /// @param pe enum QStyle__PrimitiveElement
@@ -62,7 +62,7 @@ const char* q_commonstyle_tr(const char* s);
 /// @param w QWidget*
 void q_commonstyle_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawPrimitive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawPrimitive)
 ///
 /// Allows for overriding the related default method
 ///
@@ -70,7 +70,7 @@ void q_commonstyle_draw_primitive(void* self, int32_t pe, void* opt, void* p, vo
 /// @param callback void func(QCommonStyle* self, enum QStyle__PrimitiveElement pe, QStyleOption* opt, QPainter* p, QWidget* w)
 void q_commonstyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawPrimitive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawPrimitive)
 ///
 /// Base class method implementation
 ///
@@ -81,7 +81,7 @@ void q_commonstyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t
 /// @param w QWidget*
 void q_commonstyle_qbase_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawControl)
 ///
 /// @param self QCommonStyle*
 /// @param element enum QStyle__ControlElement
@@ -90,7 +90,7 @@ void q_commonstyle_qbase_draw_primitive(void* self, int32_t pe, void* opt, void*
 /// @param w QWidget*
 void q_commonstyle_draw_control(void* self, int64_t element, void* opt, void* p, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawControl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -98,7 +98,7 @@ void q_commonstyle_draw_control(void* self, int64_t element, void* opt, void* p,
 /// @param callback void func(QCommonStyle* self, enum QStyle__ControlElement element, QStyleOption* opt, QPainter* p, QWidget* w)
 void q_commonstyle_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawControl)
 ///
 /// Base class method implementation
 ///
@@ -109,7 +109,7 @@ void q_commonstyle_on_draw_control(void* self, void (*callback)(void*, int64_t, 
 /// @param w QWidget*
 void q_commonstyle_qbase_draw_control(void* self, int64_t element, void* opt, void* p, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subElementRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#subElementRect)
 ///
 /// @param self QCommonStyle*
 /// @param r enum QStyle__SubElement
@@ -117,7 +117,7 @@ void q_commonstyle_qbase_draw_control(void* self, int64_t element, void* opt, vo
 /// @param widget QWidget*
 QRect* q_commonstyle_sub_element_rect(void* self, int64_t r, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subElementRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#subElementRect)
 ///
 /// Allows for overriding the related default method
 ///
@@ -125,7 +125,7 @@ QRect* q_commonstyle_sub_element_rect(void* self, int64_t r, void* opt, void* wi
 /// @param callback QRect* func(QCommonStyle* self, enum QStyle__SubElement r, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subElementRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#subElementRect)
 ///
 /// Base class method implementation
 ///
@@ -135,7 +135,7 @@ void q_commonstyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int
 /// @param widget QWidget*
 QRect* q_commonstyle_qbase_sub_element_rect(void* self, int64_t r, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawComplexControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawComplexControl)
 ///
 /// @param self QCommonStyle*
 /// @param cc enum QStyle__ComplexControl
@@ -144,7 +144,7 @@ QRect* q_commonstyle_qbase_sub_element_rect(void* self, int64_t r, void* opt, vo
 /// @param w QWidget*
 void q_commonstyle_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawComplexControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawComplexControl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -152,7 +152,7 @@ void q_commonstyle_draw_complex_control(void* self, int64_t cc, void* opt, void*
 /// @param callback void func(QCommonStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPainter* p, QWidget* w)
 void q_commonstyle_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawComplexControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#drawComplexControl)
 ///
 /// Base class method implementation
 ///
@@ -163,7 +163,7 @@ void q_commonstyle_on_draw_complex_control(void* self, void (*callback)(void*, i
 /// @param w QWidget*
 void q_commonstyle_qbase_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#hitTestComplexControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#hitTestComplexControl)
 ///
 /// @param self QCommonStyle*
 /// @param cc enum QStyle__ComplexControl
@@ -174,7 +174,7 @@ void q_commonstyle_qbase_draw_complex_control(void* self, int64_t cc, void* opt,
 /// @return enum QStyle__SubControl
 int64_t q_commonstyle_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#hitTestComplexControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#hitTestComplexControl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -182,7 +182,7 @@ int64_t q_commonstyle_hit_test_complex_control(void* self, int64_t cc, void* opt
 /// @param callback int64_t func(QCommonStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPoint* pt, QWidget* w)
 void q_commonstyle_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#hitTestComplexControl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#hitTestComplexControl)
 ///
 /// Base class method implementation
 ///
@@ -195,7 +195,7 @@ void q_commonstyle_on_hit_test_complex_control(void* self, int64_t (*callback)(v
 /// @return enum QStyle__SubControl
 int64_t q_commonstyle_qbase_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subControlRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#subControlRect)
 ///
 /// @param self QCommonStyle*
 /// @param cc enum QStyle__ComplexControl
@@ -204,7 +204,7 @@ int64_t q_commonstyle_qbase_hit_test_complex_control(void* self, int64_t cc, voi
 /// @param w QWidget*
 QRect* q_commonstyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subControlRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#subControlRect)
 ///
 /// Allows for overriding the related default method
 ///
@@ -212,7 +212,7 @@ QRect* q_commonstyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t
 /// @param callback QRect* func(QCommonStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* w)
 void q_commonstyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subControlRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#subControlRect)
 ///
 /// Base class method implementation
 ///
@@ -223,7 +223,7 @@ void q_commonstyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int
 /// @param w QWidget*
 QRect* q_commonstyle_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#sizeFromContents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#sizeFromContents)
 ///
 /// @param self QCommonStyle*
 /// @param ct enum QStyle__ContentsType
@@ -232,7 +232,7 @@ QRect* q_commonstyle_qbase_sub_control_rect(void* self, int64_t cc, void* opt, i
 /// @param widget QWidget*
 QSize* q_commonstyle_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#sizeFromContents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#sizeFromContents)
 ///
 /// Allows for overriding the related default method
 ///
@@ -240,7 +240,7 @@ QSize* q_commonstyle_size_from_contents(void* self, int64_t ct, void* opt, void*
 /// @param callback QSize* func(QCommonStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* widget)
 void q_commonstyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#sizeFromContents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#sizeFromContents)
 ///
 /// Base class method implementation
 ///
@@ -251,7 +251,7 @@ void q_commonstyle_on_size_from_contents(void* self, QSize* (*callback)(void*, i
 /// @param widget QWidget*
 QSize* q_commonstyle_qbase_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#pixelMetric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#pixelMetric)
 ///
 /// @param self QCommonStyle*
 /// @param m enum QStyle__PixelMetric
@@ -259,7 +259,7 @@ QSize* q_commonstyle_qbase_size_from_contents(void* self, int64_t ct, void* opt,
 /// @param widget QWidget*
 int32_t q_commonstyle_pixel_metric(void* self, int64_t m, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#pixelMetric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#pixelMetric)
 ///
 /// Allows for overriding the related default method
 ///
@@ -267,7 +267,7 @@ int32_t q_commonstyle_pixel_metric(void* self, int64_t m, void* opt, void* widge
 /// @param callback int32_t func(QCommonStyle* self, enum QStyle__PixelMetric m, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#pixelMetric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#pixelMetric)
 ///
 /// Base class method implementation
 ///
@@ -277,7 +277,7 @@ void q_commonstyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_
 /// @param widget QWidget*
 int32_t q_commonstyle_qbase_pixel_metric(void* self, int64_t m, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#styleHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#styleHint)
 ///
 /// @param self QCommonStyle*
 /// @param sh enum QStyle__StyleHint
@@ -286,7 +286,7 @@ int32_t q_commonstyle_qbase_pixel_metric(void* self, int64_t m, void* opt, void*
 /// @param shret QStyleHintReturn*
 int32_t q_commonstyle_style_hint(void* self, int64_t sh, void* opt, void* w, void* shret);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#styleHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#styleHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -294,7 +294,7 @@ int32_t q_commonstyle_style_hint(void* self, int64_t sh, void* opt, void* w, voi
 /// @param callback int32_t func(QCommonStyle* self, enum QStyle__StyleHint sh, QStyleOption* opt, QWidget* w, QStyleHintReturn* shret)
 void q_commonstyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#styleHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#styleHint)
 ///
 /// Base class method implementation
 ///
@@ -305,7 +305,7 @@ void q_commonstyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t,
 /// @param shret QStyleHintReturn*
 int32_t q_commonstyle_qbase_style_hint(void* self, int64_t sh, void* opt, void* w, void* shret);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#standardIcon)
 ///
 /// @param self QCommonStyle*
 /// @param standardIcon enum QStyle__StandardPixmap
@@ -313,7 +313,7 @@ int32_t q_commonstyle_qbase_style_hint(void* self, int64_t sh, void* opt, void* 
 /// @param widget QWidget*
 QIcon* q_commonstyle_standard_icon(void* self, int64_t standardIcon, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#standardIcon)
 ///
 /// Allows for overriding the related default method
 ///
@@ -321,7 +321,7 @@ QIcon* q_commonstyle_standard_icon(void* self, int64_t standardIcon, void* opt, 
 /// @param callback QIcon* func(QCommonStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#standardIcon)
 ///
 /// Base class method implementation
 ///
@@ -331,7 +331,7 @@ void q_commonstyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_
 /// @param widget QWidget*
 QIcon* q_commonstyle_qbase_standard_icon(void* self, int64_t standardIcon, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#standardPixmap)
 ///
 /// @param self QCommonStyle*
 /// @param sp enum QStyle__StandardPixmap
@@ -339,7 +339,7 @@ QIcon* q_commonstyle_qbase_standard_icon(void* self, int64_t standardIcon, void*
 /// @param widget QWidget*
 QPixmap* q_commonstyle_standard_pixmap(void* self, int64_t sp, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#standardPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -347,7 +347,7 @@ QPixmap* q_commonstyle_standard_pixmap(void* self, int64_t sp, void* opt, void* 
 /// @param callback QPixmap* func(QCommonStyle* self, enum QStyle__StandardPixmap sp, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#standardPixmap)
 ///
 /// Base class method implementation
 ///
@@ -357,7 +357,7 @@ void q_commonstyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, in
 /// @param widget QWidget*
 QPixmap* q_commonstyle_qbase_standard_pixmap(void* self, int64_t sp, void* opt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#generatedIconPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#generatedIconPixmap)
 ///
 /// @param self QCommonStyle*
 /// @param iconMode enum QIcon__Mode
@@ -365,7 +365,7 @@ QPixmap* q_commonstyle_qbase_standard_pixmap(void* self, int64_t sp, void* opt, 
 /// @param opt QStyleOption*
 QPixmap* q_commonstyle_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#generatedIconPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#generatedIconPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -373,7 +373,7 @@ QPixmap* q_commonstyle_generated_icon_pixmap(void* self, int32_t iconMode, void*
 /// @param callback QPixmap* func(QCommonStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
 void q_commonstyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#generatedIconPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#generatedIconPixmap)
 ///
 /// Base class method implementation
 ///
@@ -383,7 +383,7 @@ void q_commonstyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(voi
 /// @param opt QStyleOption*
 QPixmap* q_commonstyle_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#layoutSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#layoutSpacing)
 ///
 /// @param self QCommonStyle*
 /// @param control1 enum QSizePolicy__ControlType
@@ -393,7 +393,7 @@ QPixmap* q_commonstyle_qbase_generated_icon_pixmap(void* self, int32_t iconMode,
 /// @param widget QWidget*
 int32_t q_commonstyle_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#layoutSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#layoutSpacing)
 ///
 /// Allows for overriding the related default method
 ///
@@ -401,7 +401,7 @@ int32_t q_commonstyle_layout_spacing(void* self, int32_t control1, int32_t contr
 /// @param callback int32_t func(QCommonStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget)
 void q_commonstyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#layoutSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#layoutSpacing)
 ///
 /// Base class method implementation
 ///
@@ -413,13 +413,13 @@ void q_commonstyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int3
 /// @param widget QWidget*
 int32_t q_commonstyle_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// @param self QCommonStyle*
 /// @param param1 QPalette*
 void q_commonstyle_polish(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
@@ -427,7 +427,7 @@ void q_commonstyle_polish(void* self, void* param1);
 /// @param callback void func(QCommonStyle* self, QPalette* param1)
 void q_commonstyle_on_polish(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Base class method implementation
 ///
@@ -435,13 +435,13 @@ void q_commonstyle_on_polish(void* self, void (*callback)(void*, void*));
 /// @param param1 QPalette*
 void q_commonstyle_qbase_polish(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// @param self QCommonStyle*
 /// @param app QApplication*
 void q_commonstyle_polish2(void* self, void* app);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
@@ -449,7 +449,7 @@ void q_commonstyle_polish2(void* self, void* app);
 /// @param callback void func(QCommonStyle* self, QApplication* app)
 void q_commonstyle_on_polish2(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Base class method implementation
 ///
@@ -457,13 +457,13 @@ void q_commonstyle_on_polish2(void* self, void (*callback)(void*, void*));
 /// @param app QApplication*
 void q_commonstyle_qbase_polish2(void* self, void* app);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// @param self QCommonStyle*
 /// @param widget QWidget*
 void q_commonstyle_polish3(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
@@ -471,7 +471,7 @@ void q_commonstyle_polish3(void* self, void* widget);
 /// @param callback void func(QCommonStyle* self, QWidget* widget)
 void q_commonstyle_on_polish3(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Base class method implementation
 ///
@@ -479,13 +479,13 @@ void q_commonstyle_on_polish3(void* self, void (*callback)(void*, void*));
 /// @param widget QWidget*
 void q_commonstyle_qbase_polish3(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// @param self QCommonStyle*
 /// @param widget QWidget*
 void q_commonstyle_unpolish(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// Allows for overriding the related default method
 ///
@@ -493,7 +493,7 @@ void q_commonstyle_unpolish(void* self, void* widget);
 /// @param callback void func(QCommonStyle* self, QWidget* widget)
 void q_commonstyle_on_unpolish(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// Base class method implementation
 ///
@@ -501,13 +501,13 @@ void q_commonstyle_on_unpolish(void* self, void (*callback)(void*, void*));
 /// @param widget QWidget*
 void q_commonstyle_qbase_unpolish(void* self, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// @param self QCommonStyle*
 /// @param application QApplication*
 void q_commonstyle_unpolish2(void* self, void* application);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// Allows for overriding the related default method
 ///
@@ -515,7 +515,7 @@ void q_commonstyle_unpolish2(void* self, void* application);
 /// @param callback void func(QCommonStyle* self, QApplication* application)
 void q_commonstyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// Base class method implementation
 ///
@@ -523,7 +523,7 @@ void q_commonstyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 /// @param application QApplication*
 void q_commonstyle_qbase_unpolish2(void* self, void* application);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -531,7 +531,7 @@ void q_commonstyle_qbase_unpolish2(void* self, void* application);
 /// @param c const char*
 const char* q_commonstyle_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -542,7 +542,7 @@ const char* q_commonstyle_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -551,7 +551,7 @@ const char* q_commonstyle_name(void* self);
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#visualRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#visualRect)
 ///
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
@@ -560,7 +560,7 @@ QRect* q_commonstyle_visual_rect(int32_t direction, void* boundingRect, void* lo
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#visualPos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#visualPos)
 ///
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
@@ -569,7 +569,7 @@ QPoint* q_commonstyle_visual_pos(int32_t direction, void* boundingRect, void* lo
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#sliderPositionFromValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderPositionFromValue)
 ///
 /// @param min int
 /// @param max int
@@ -579,7 +579,7 @@ int32_t q_commonstyle_slider_position_from_value(int min, int max, int val, int 
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#sliderValueFromPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderValueFromPosition)
 ///
 /// @param min int
 /// @param max int
@@ -589,7 +589,7 @@ int32_t q_commonstyle_slider_value_from_position(int min, int max, int pos, int 
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#visualAlignment)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#visualAlignment)
 ///
 /// @param direction enum Qt__LayoutDirection
 /// @param alignment flag of enum Qt__AlignmentFlag
@@ -599,7 +599,7 @@ int32_t q_commonstyle_visual_alignment(int32_t direction, int32_t alignment);
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#alignedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#alignedRect)
 ///
 /// @param direction enum Qt__LayoutDirection
 /// @param alignment flag of enum Qt__AlignmentFlag
@@ -609,7 +609,7 @@ QRect* q_commonstyle_aligned_rect(int32_t direction, int32_t alignment, void* si
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
 ///
 /// @param self QCommonStyle*
 /// @param controls1 flag of enum QSizePolicy__ControlType
@@ -619,14 +619,14 @@ int32_t q_commonstyle_combined_layout_spacing(void* self, int32_t controls1, int
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#proxy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#proxy)
 ///
 /// @param self QCommonStyle*
 const QStyle* q_commonstyle_proxy(void* self);
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#sliderPositionFromValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderPositionFromValue)
 ///
 /// @param min int
 /// @param max int
@@ -637,7 +637,7 @@ int32_t q_commonstyle_slider_position_from_value5(int min, int max, int val, int
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#sliderValueFromPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderValueFromPosition)
 ///
 /// @param min int
 /// @param max int
@@ -648,7 +648,7 @@ int32_t q_commonstyle_slider_value_from_position5(int min, int max, int pos, int
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
 ///
 /// @param self QCommonStyle*
 /// @param controls1 flag of enum QSizePolicy__ControlType
@@ -659,7 +659,7 @@ int32_t q_commonstyle_combined_layout_spacing4(void* self, int32_t controls1, in
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
 ///
 /// @param self QCommonStyle*
 /// @param controls1 flag of enum QSizePolicy__ControlType
@@ -671,7 +671,7 @@ int32_t q_commonstyle_combined_layout_spacing5(void* self, int32_t controls1, in
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -680,7 +680,7 @@ const char* q_commonstyle_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCommonStyle*
 /// @param name char*
@@ -688,35 +688,35 @@ void q_commonstyle_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QCommonStyle*
 bool q_commonstyle_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QCommonStyle*
 bool q_commonstyle_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QCommonStyle*
 bool q_commonstyle_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QCommonStyle*
 bool q_commonstyle_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QCommonStyle*
 /// @param b bool
@@ -724,14 +724,14 @@ bool q_commonstyle_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QCommonStyle*
 QThread* q_commonstyle_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QCommonStyle*
 /// @param thread QThread*
@@ -739,7 +739,7 @@ bool q_commonstyle_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCommonStyle*
 /// @param interval int
@@ -747,7 +747,7 @@ int32_t q_commonstyle_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCommonStyle*
 /// @param id int
@@ -755,7 +755,7 @@ void q_commonstyle_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCommonStyle*
 /// @param id enum Qt__TimerId
@@ -763,14 +763,14 @@ void q_commonstyle_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QCommonStyle*
 libqt_list /* of QObject* */ q_commonstyle_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QCommonStyle*
 /// @param parent QObject*
@@ -778,7 +778,7 @@ void q_commonstyle_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QCommonStyle*
 /// @param filterObj QObject*
@@ -786,7 +786,7 @@ void q_commonstyle_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QCommonStyle*
 /// @param obj QObject*
@@ -794,7 +794,7 @@ void q_commonstyle_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -804,7 +804,7 @@ QMetaObject__Connection* q_commonstyle_connect(void* sender, void* signal, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QCommonStyle*
 /// @param sender QObject*
@@ -814,7 +814,7 @@ QMetaObject__Connection* q_commonstyle_connect2(void* self, void* sender, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -824,28 +824,28 @@ bool q_commonstyle_disconnect(void* sender, void* signal, void* receiver, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_commonstyle_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QCommonStyle*
 void q_commonstyle_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QCommonStyle*
 void q_commonstyle_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QCommonStyle*
 /// @param name const char*
@@ -854,7 +854,7 @@ bool q_commonstyle_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QCommonStyle*
 /// @param name const char*
@@ -862,7 +862,7 @@ QVariant* q_commonstyle_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -871,28 +871,28 @@ const char** q_commonstyle_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QCommonStyle*
 QBindingStorage* q_commonstyle_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QCommonStyle*
 const QBindingStorage* q_commonstyle_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommonStyle*
 void q_commonstyle_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommonStyle*
 /// @param callback void func(QCommonStyle* self)
@@ -900,14 +900,14 @@ void q_commonstyle_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QCommonStyle*
 QObject* q_commonstyle_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QCommonStyle*
 /// @param classname const char*
@@ -915,14 +915,14 @@ bool q_commonstyle_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QCommonStyle*
 void q_commonstyle_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QCommonStyle*
 /// @param thread QThread*
@@ -931,7 +931,7 @@ bool q_commonstyle_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCommonStyle*
 /// @param interval int
@@ -940,7 +940,7 @@ int32_t q_commonstyle_start_timer22(void* self, int interval, int32_t timerType)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -951,7 +951,7 @@ QMetaObject__Connection* q_commonstyle_connect5(void* sender, void* signal, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QCommonStyle*
 /// @param sender QObject*
@@ -962,7 +962,7 @@ QMetaObject__Connection* q_commonstyle_connect4(void* self, void* sender, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommonStyle*
 /// @param param1 QObject*
@@ -970,7 +970,7 @@ void q_commonstyle_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommonStyle*
 /// @param callback void func(QCommonStyle* self, QObject* param1)
@@ -978,7 +978,7 @@ void q_commonstyle_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -992,7 +992,7 @@ QRect* q_commonstyle_item_text_rect(void* self, void* fm, void* r, int flags, bo
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1006,7 +1006,7 @@ QRect* q_commonstyle_qbase_item_text_rect(void* self, void* fm, void* r, int fla
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1016,7 +1016,7 @@ void q_commonstyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1028,7 +1028,7 @@ QRect* q_commonstyle_item_pixmap_rect(void* self, void* r, int flags, void* pixm
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1040,7 +1040,7 @@ QRect* q_commonstyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1050,7 +1050,7 @@ void q_commonstyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, voi
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1066,7 +1066,7 @@ void q_commonstyle_draw_item_text(void* self, void* painter, void* rect, int fla
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1082,7 +1082,7 @@ void q_commonstyle_qbase_draw_item_text(void* self, void* painter, void* rect, i
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1092,7 +1092,7 @@ void q_commonstyle_on_draw_item_text(void* self, void (*callback)(void*, void*, 
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1105,7 +1105,7 @@ void q_commonstyle_draw_item_pixmap(void* self, void* painter, void* rect, int a
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1118,7 +1118,7 @@ void q_commonstyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect,
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1128,7 +1128,7 @@ void q_commonstyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1137,7 +1137,7 @@ QPalette* q_commonstyle_standard_palette(void* self);
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1146,7 +1146,7 @@ QPalette* q_commonstyle_qbase_standard_palette(void* self);
 
 /// Inherited from QStyle
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1156,7 +1156,7 @@ void q_commonstyle_on_standard_palette(void* self, QPalette* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1166,7 +1166,7 @@ bool q_commonstyle_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1176,7 +1176,7 @@ bool q_commonstyle_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1186,7 +1186,7 @@ void q_commonstyle_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1197,7 +1197,7 @@ bool q_commonstyle_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1208,7 +1208,7 @@ bool q_commonstyle_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1218,7 +1218,7 @@ void q_commonstyle_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1228,7 +1228,7 @@ void q_commonstyle_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1238,7 +1238,7 @@ void q_commonstyle_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1248,7 +1248,7 @@ void q_commonstyle_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1258,7 +1258,7 @@ void q_commonstyle_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1268,7 +1268,7 @@ void q_commonstyle_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1278,7 +1278,7 @@ void q_commonstyle_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1288,7 +1288,7 @@ void q_commonstyle_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1298,7 +1298,7 @@ void q_commonstyle_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1308,7 +1308,7 @@ void q_commonstyle_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1318,7 +1318,7 @@ void q_commonstyle_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1328,7 +1328,7 @@ void q_commonstyle_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1338,7 +1338,7 @@ void q_commonstyle_on_connect_notify(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1348,7 +1348,7 @@ void q_commonstyle_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1358,7 +1358,7 @@ void q_commonstyle_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1368,7 +1368,7 @@ void q_commonstyle_on_disconnect_notify(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1377,7 +1377,7 @@ QObject* q_commonstyle_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1386,7 +1386,7 @@ QObject* q_commonstyle_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1396,7 +1396,7 @@ void q_commonstyle_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1405,7 +1405,7 @@ int32_t q_commonstyle_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1414,7 +1414,7 @@ int32_t q_commonstyle_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1424,7 +1424,7 @@ void q_commonstyle_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1434,7 +1434,7 @@ int32_t q_commonstyle_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1444,7 +1444,7 @@ int32_t q_commonstyle_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1454,7 +1454,7 @@ void q_commonstyle_on_receivers(void* self, int32_t (*callback)(void*, const cha
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1464,7 +1464,7 @@ bool q_commonstyle_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1474,7 +1474,7 @@ bool q_commonstyle_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1484,7 +1484,7 @@ void q_commonstyle_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1492,7 +1492,7 @@ void q_commonstyle_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// @param callback void func(QCommonStyle* self, const char* objectName)
 void q_commonstyle_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#dtor.QCommonStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommonstyle.html#dtor.QCommonStyle)
 ///
 /// Delete this object from C++ memory.
 ///

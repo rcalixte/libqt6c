@@ -17,14 +17,14 @@
 ///
 Sonnet__GuessLanguage* k_sonnet__guesslanguage_new();
 
-/// [Qt documentation](https://api.kde.org/sonnet-guesslanguage.html#setLimits)
+/// [Upstream resources](https://api.kde.org/sonnet-guesslanguage.html#setLimits)
 ///
 /// @param self Sonnet__GuessLanguage*
 /// @param maxItems int
 /// @param minConfidence double
 void k_sonnet__guesslanguage_set_limits(void* self, int maxItems, double minConfidence);
 
-/// [Qt documentation](https://api.kde.org/sonnet-guesslanguage.html#identify)
+/// [Upstream resources](https://api.kde.org/sonnet-guesslanguage.html#identify)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -32,7 +32,7 @@ void k_sonnet__guesslanguage_set_limits(void* self, int maxItems, double minConf
 /// @param text const char*
 const char* k_sonnet__guesslanguage_identify(void* self, const char* text);
 
-/// [Qt documentation](https://api.kde.org/sonnet-guesslanguage.html#identify)
+/// [Upstream resources](https://api.kde.org/sonnet-guesslanguage.html#identify)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

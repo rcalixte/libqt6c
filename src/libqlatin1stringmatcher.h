@@ -17,20 +17,20 @@
 ///
 QLatin1StringMatcher* q_latin1stringmatcher_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#setCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#setCaseSensitivity)
 ///
 /// @param self QLatin1StringMatcher*
 /// @param cs enum Qt__CaseSensitivity
 void q_latin1stringmatcher_set_case_sensitivity(void* self, int32_t cs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#caseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#caseSensitivity)
 ///
 /// @param self QLatin1StringMatcher*
 ///
 /// @return enum Qt__CaseSensitivity
 int32_t q_latin1stringmatcher_case_sensitivity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#dtor.QLatin1StringMatcher)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#dtor.QLatin1StringMatcher)
 ///
 /// Delete this object from C++ memory.
 ///

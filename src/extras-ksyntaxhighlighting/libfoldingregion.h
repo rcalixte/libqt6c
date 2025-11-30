@@ -44,30 +44,30 @@ void k_syntaxhighlighting__foldingregion_copy_assign(void* self, void* other);
 /// @param other KSyntaxHighlighting__FoldingRegion*
 void k_syntaxhighlighting__foldingregion_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#operator-eq-eq)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#operator-eq-eq)
 ///
 /// @param self KSyntaxHighlighting__FoldingRegion*
 /// @param other KSyntaxHighlighting__FoldingRegion*
 bool k_syntaxhighlighting__foldingregion_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#isValid)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#isValid)
 ///
 /// @param self KSyntaxHighlighting__FoldingRegion*
 bool k_syntaxhighlighting__foldingregion_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#id)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#id)
 ///
 /// @param self KSyntaxHighlighting__FoldingRegion*
 int32_t k_syntaxhighlighting__foldingregion_id(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#type)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#type)
 ///
 /// @param self KSyntaxHighlighting__FoldingRegion*
 ///
 /// @return enum KSyntaxHighlighting__FoldingRegion__Type
 int32_t k_syntaxhighlighting__foldingregion_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#sibling)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#sibling)
 ///
 /// @param self KSyntaxHighlighting__FoldingRegion*
 KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_sibling(void* self);

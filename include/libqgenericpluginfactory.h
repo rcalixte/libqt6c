@@ -35,19 +35,19 @@ void q_genericpluginfactory_copy_assign(void* self, void* other);
 /// @param other QGenericPluginFactory*
 void q_genericpluginfactory_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgenericpluginfactory.html#keys)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgenericpluginfactory.html#keys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** q_genericpluginfactory_keys();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgenericpluginfactory.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgenericpluginfactory.html#create)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
 QObject* q_genericpluginfactory_create(const char* param1, const char* param2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgenericpluginfactory.html#dtor.QGenericPluginFactory)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgenericpluginfactory.html#dtor.QGenericPluginFactory)
 ///
 /// Delete this object from C++ memory.
 ///

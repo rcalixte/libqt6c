@@ -13,36 +13,36 @@
 
 /// https://doc.qt.io/qt-6/qstringconverter.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
 /// @param self QStringConverter*
 bool q_stringconverter_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
 ///
 /// @param self QStringConverter*
 void q_stringconverter_reset_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
 /// @param self QStringConverter*
 bool q_stringconverter_has_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringConverter*
 const char* q_stringconverter_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param e enum QStringConverter__Encoding
 const char* q_stringconverter_name_for_encoding(int32_t e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -59,57 +59,57 @@ QStringConverterBase__State* q_stringconverterbase__state_new();
 /// @param f flag of enum QStringConverterBase__Flag
 QStringConverterBase__State* q_stringconverterbase__state_new2(int32_t f);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#clear)
 ///
 /// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#reset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#reset)
 ///
 /// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_reset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
 ///
 /// @param self QStringConverterBase__State*
 ///
 /// @return flag of enum QStringConverterBase__Flag
 int32_t q_stringconverterbase__state_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param flags flag of enum QStringConverterBase__Flag
 void q_stringconverterbase__state_set_flags(void* self, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
 ///
 /// @param self QStringConverterBase__State*
 int32_t q_stringconverterbase__state_internal_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param internalState int
 void q_stringconverterbase__state_set_internal_state(void* self, int internalState);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
 ///
 /// @param self QStringConverterBase__State*
 int64_t q_stringconverterbase__state_remaining_chars(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param remainingChars int64_t
 void q_stringconverterbase__state_set_remaining_chars(void* self, int64_t remainingChars);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
 ///
 /// @param self QStringConverterBase__State*
 int64_t q_stringconverterbase__state_invalid_chars(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param invalidChars int64_t

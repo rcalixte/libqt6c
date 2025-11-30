@@ -64,240 +64,240 @@ void q_rect_copy_assign(void* self, void* other);
 /// @param other QRect*
 void q_rect_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#isNull)
 ///
 /// @param self QRect*
 bool q_rect_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#isEmpty)
 ///
 /// @param self QRect*
 bool q_rect_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#isValid)
 ///
 /// @param self QRect*
 bool q_rect_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#left)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#left)
 ///
 /// @param self QRect*
 int32_t q_rect_left(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#top)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#top)
 ///
 /// @param self QRect*
 int32_t q_rect_top(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#right)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#right)
 ///
 /// @param self QRect*
 int32_t q_rect_right(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#bottom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#bottom)
 ///
 /// @param self QRect*
 int32_t q_rect_bottom(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#normalized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#normalized)
 ///
 /// @param self QRect*
 QRect* q_rect_normalized(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#x)
 ///
 /// @param self QRect*
 int32_t q_rect_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#y)
 ///
 /// @param self QRect*
 int32_t q_rect_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setLeft)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_set_left(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setTop)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setTop)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_set_top(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setRight)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_set_right(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setBottom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setBottom)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_set_bottom(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setX)
 ///
 /// @param self QRect*
 /// @param x int
 void q_rect_set_x(void* self, int x);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setY)
 ///
 /// @param self QRect*
 /// @param y int
 void q_rect_set_y(void* self, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setTopLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setTopLeft)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_set_top_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setBottomRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setBottomRight)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_set_bottom_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setTopRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setTopRight)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_set_top_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setBottomLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setBottomLeft)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_set_bottom_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#topLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#topLeft)
 ///
 /// @param self QRect*
 QPoint* q_rect_top_left(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#bottomRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#bottomRight)
 ///
 /// @param self QRect*
 QPoint* q_rect_bottom_right(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#topRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#topRight)
 ///
 /// @param self QRect*
 QPoint* q_rect_top_right(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#bottomLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#bottomLeft)
 ///
 /// @param self QRect*
 QPoint* q_rect_bottom_left(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#center)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#center)
 ///
 /// @param self QRect*
 QPoint* q_rect_center(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveLeft)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_move_left(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveTop)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveTop)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_move_top(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveRight)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_move_right(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveBottom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveBottom)
 ///
 /// @param self QRect*
 /// @param pos int
 void q_rect_move_bottom(void* self, int pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveTopLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveTopLeft)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_move_top_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveBottomRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveBottomRight)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_move_bottom_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveTopRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveTopRight)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_move_top_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveBottomLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveBottomLeft)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_move_bottom_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveCenter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveCenter)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_move_center(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#translate)
 ///
 /// @param self QRect*
 /// @param dx int
 /// @param dy int
 void q_rect_translate(void* self, int dx, int dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#translate)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_translate2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#translated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#translated)
 ///
 /// @param self QRect*
 /// @param dx int
 /// @param dy int
 QRect* q_rect_translated(void* self, int dx, int dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#translated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#translated)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 QRect* q_rect_translated2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#transposed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#transposed)
 ///
 /// @param self QRect*
 QRect* q_rect_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveTo)
 ///
 /// @param self QRect*
 /// @param x int
 /// @param t int
 void q_rect_move_to(void* self, int x, int t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#moveTo)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 void q_rect_move_to2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setRect)
 ///
 /// @param self QRect*
 /// @param x int
@@ -306,7 +306,7 @@ void q_rect_move_to2(void* self, void* p);
 /// @param h int
 void q_rect_set_rect(void* self, int x, int y, int w, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#getRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#getRect)
 ///
 /// @param self QRect*
 /// @param x int*
@@ -315,7 +315,7 @@ void q_rect_set_rect(void* self, int x, int y, int w, int h);
 /// @param h int*
 void q_rect_get_rect(void* self, int* x, int* y, int* w, int* h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setCoords)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setCoords)
 ///
 /// @param self QRect*
 /// @param x1 int
@@ -324,7 +324,7 @@ void q_rect_get_rect(void* self, int* x, int* y, int* w, int* h);
 /// @param y2 int
 void q_rect_set_coords(void* self, int x1, int y1, int x2, int y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#getCoords)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#getCoords)
 ///
 /// @param self QRect*
 /// @param x1 int*
@@ -333,7 +333,7 @@ void q_rect_set_coords(void* self, int x1, int y1, int x2, int y2);
 /// @param y2 int*
 void q_rect_get_coords(void* self, int* x1, int* y1, int* x2, int* y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#adjust)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#adjust)
 ///
 /// @param self QRect*
 /// @param x1 int
@@ -342,7 +342,7 @@ void q_rect_get_coords(void* self, int* x1, int* y1, int* x2, int* y2);
 /// @param y2 int
 void q_rect_adjust(void* self, int x1, int y1, int x2, int y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#adjusted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#adjusted)
 ///
 /// @param self QRect*
 /// @param x1 int
@@ -351,83 +351,83 @@ void q_rect_adjust(void* self, int x1, int y1, int x2, int y2);
 /// @param y2 int
 QRect* q_rect_adjusted(void* self, int x1, int y1, int x2, int y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#size)
 ///
 /// @param self QRect*
 QSize* q_rect_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#width)
 ///
 /// @param self QRect*
 int32_t q_rect_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#height)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#height)
 ///
 /// @param self QRect*
 int32_t q_rect_height(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setWidth)
 ///
 /// @param self QRect*
 /// @param w int
 void q_rect_set_width(void* self, int w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setHeight)
 ///
 /// @param self QRect*
 /// @param h int
 void q_rect_set_height(void* self, int h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#setSize)
 ///
 /// @param self QRect*
 /// @param s QSize*
 void q_rect_set_size(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-7c)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#operator-7c)
 ///
 /// @param self QRect*
 /// @param r QRect*
 QRect* q_rect_operator_bitwise_or(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-and)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#operator-and)
 ///
 /// @param self QRect*
 /// @param r QRect*
 QRect* q_rect_operator_bitwise_and(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-7c-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#operator-7c-eq)
 ///
 /// @param self QRect*
 /// @param r QRect*
 void q_rect_operator_bitwise_or_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-and-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#operator-and-eq)
 ///
 /// @param self QRect*
 /// @param r QRect*
 void q_rect_operator_bitwise_and_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// @param self QRect*
 /// @param r QRect*
 bool q_rect_contains(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 bool q_rect_contains2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// @param self QRect*
 /// @param x int
 /// @param y int
 bool q_rect_contains3(void* self, int x, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// @param self QRect*
 /// @param x int
@@ -435,74 +435,74 @@ bool q_rect_contains3(void* self, int x, int y);
 /// @param proper bool
 bool q_rect_contains4(void* self, int x, int y, bool proper);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#united)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#united)
 ///
 /// @param self QRect*
 /// @param other QRect*
 QRect* q_rect_united(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#intersected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#intersected)
 ///
 /// @param self QRect*
 /// @param other QRect*
 QRect* q_rect_intersected(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#intersects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#intersects)
 ///
 /// @param self QRect*
 /// @param r QRect*
 bool q_rect_intersects(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#marginsAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#marginsAdded)
 ///
 /// @param self QRect*
 /// @param margins QMargins*
 QRect* q_rect_margins_added(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#marginsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#marginsRemoved)
 ///
 /// @param self QRect*
 /// @param margins QMargins*
 QRect* q_rect_margins_removed(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#operator-2b-eq)
 ///
 /// @param self QRect*
 /// @param margins QMargins*
 QRect* q_rect_operator_plus_assign(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#operator--eq)
 ///
 /// @param self QRect*
 /// @param margins QMargins*
 QRect* q_rect_operator_minus_assign(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#span)
 ///
 /// @param p1 QPoint*
 /// @param p2 QPoint*
 QRect* q_rect_span(void* p1, void* p2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#toRectF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#toRectF)
 ///
 /// @param self QRect*
 QRectF* q_rect_to_rect_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// @param self QRect*
 /// @param r QRect*
 /// @param proper bool
 bool q_rect_contains22(void* self, void* r, bool proper);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// @param self QRect*
 /// @param p QPoint*
 /// @param proper bool
 bool q_rect_contains23(void* self, void* p, bool proper);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#dtor.QRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#dtor.QRect)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -567,240 +567,240 @@ void q_rectf_copy_assign(void* self, void* other);
 /// @param other QRectF*
 void q_rectf_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#isNull)
 ///
 /// @param self QRectF*
 bool q_rectf_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#isEmpty)
 ///
 /// @param self QRectF*
 bool q_rectf_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#isValid)
 ///
 /// @param self QRectF*
 bool q_rectf_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#normalized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#normalized)
 ///
 /// @param self QRectF*
 QRectF* q_rectf_normalized(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#left)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#left)
 ///
 /// @param self QRectF*
 double q_rectf_left(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#top)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#top)
 ///
 /// @param self QRectF*
 double q_rectf_top(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#right)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#right)
 ///
 /// @param self QRectF*
 double q_rectf_right(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#bottom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#bottom)
 ///
 /// @param self QRectF*
 double q_rectf_bottom(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#x)
 ///
 /// @param self QRectF*
 double q_rectf_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#y)
 ///
 /// @param self QRectF*
 double q_rectf_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setLeft)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_set_left(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setTop)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setTop)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_set_top(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setRight)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_set_right(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setBottom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setBottom)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_set_bottom(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setX)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_set_x(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setY)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_set_y(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#topLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#topLeft)
 ///
 /// @param self QRectF*
 QPointF* q_rectf_top_left(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#bottomRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#bottomRight)
 ///
 /// @param self QRectF*
 QPointF* q_rectf_bottom_right(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#topRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#topRight)
 ///
 /// @param self QRectF*
 QPointF* q_rectf_top_right(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#bottomLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#bottomLeft)
 ///
 /// @param self QRectF*
 QPointF* q_rectf_bottom_left(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#center)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#center)
 ///
 /// @param self QRectF*
 QPointF* q_rectf_center(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setTopLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setTopLeft)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_set_top_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setBottomRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setBottomRight)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_set_bottom_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setTopRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setTopRight)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_set_top_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setBottomLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setBottomLeft)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_set_bottom_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveLeft)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_move_left(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveTop)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveTop)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_move_top(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveRight)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_move_right(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveBottom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveBottom)
 ///
 /// @param self QRectF*
 /// @param pos double
 void q_rectf_move_bottom(void* self, double pos);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveTopLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveTopLeft)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_move_top_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveBottomRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveBottomRight)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_move_bottom_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveTopRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveTopRight)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_move_top_right(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveBottomLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveBottomLeft)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_move_bottom_left(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveCenter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveCenter)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_move_center(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#translate)
 ///
 /// @param self QRectF*
 /// @param dx double
 /// @param dy double
 void q_rectf_translate(void* self, double dx, double dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#translate)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_translate2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#translated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#translated)
 ///
 /// @param self QRectF*
 /// @param dx double
 /// @param dy double
 QRectF* q_rectf_translated(void* self, double dx, double dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#translated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#translated)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 QRectF* q_rectf_translated2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#transposed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#transposed)
 ///
 /// @param self QRectF*
 QRectF* q_rectf_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveTo)
 ///
 /// @param self QRectF*
 /// @param x double
 /// @param y double
 void q_rectf_move_to(void* self, double x, double y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#moveTo)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 void q_rectf_move_to2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setRect)
 ///
 /// @param self QRectF*
 /// @param x double
@@ -809,7 +809,7 @@ void q_rectf_move_to2(void* self, void* p);
 /// @param h double
 void q_rectf_set_rect(void* self, double x, double y, double w, double h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#getRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#getRect)
 ///
 /// @param self QRectF*
 /// @param x double*
@@ -818,7 +818,7 @@ void q_rectf_set_rect(void* self, double x, double y, double w, double h);
 /// @param h double*
 void q_rectf_get_rect(void* self, double* x, double* y, double* w, double* h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setCoords)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setCoords)
 ///
 /// @param self QRectF*
 /// @param x1 double
@@ -827,7 +827,7 @@ void q_rectf_get_rect(void* self, double* x, double* y, double* w, double* h);
 /// @param y2 double
 void q_rectf_set_coords(void* self, double x1, double y1, double x2, double y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#getCoords)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#getCoords)
 ///
 /// @param self QRectF*
 /// @param x1 double*
@@ -836,7 +836,7 @@ void q_rectf_set_coords(void* self, double x1, double y1, double x2, double y2);
 /// @param y2 double*
 void q_rectf_get_coords(void* self, double* x1, double* y1, double* x2, double* y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#adjust)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#adjust)
 ///
 /// @param self QRectF*
 /// @param x1 double
@@ -845,7 +845,7 @@ void q_rectf_get_coords(void* self, double* x1, double* y1, double* x2, double* 
 /// @param y2 double
 void q_rectf_adjust(void* self, double x1, double y1, double x2, double y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#adjusted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#adjusted)
 ///
 /// @param self QRectF*
 /// @param x1 double
@@ -854,135 +854,135 @@ void q_rectf_adjust(void* self, double x1, double y1, double x2, double y2);
 /// @param y2 double
 QRectF* q_rectf_adjusted(void* self, double x1, double y1, double x2, double y2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#size)
 ///
 /// @param self QRectF*
 QSizeF* q_rectf_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#width)
 ///
 /// @param self QRectF*
 double q_rectf_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#height)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#height)
 ///
 /// @param self QRectF*
 double q_rectf_height(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setWidth)
 ///
 /// @param self QRectF*
 /// @param w double
 void q_rectf_set_width(void* self, double w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setHeight)
 ///
 /// @param self QRectF*
 /// @param h double
 void q_rectf_set_height(void* self, double h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#setSize)
 ///
 /// @param self QRectF*
 /// @param s QSizeF*
 void q_rectf_set_size(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-7c)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#operator-7c)
 ///
 /// @param self QRectF*
 /// @param r QRectF*
 QRectF* q_rectf_operator_bitwise_or(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-and)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#operator-and)
 ///
 /// @param self QRectF*
 /// @param r QRectF*
 QRectF* q_rectf_operator_bitwise_and(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-7c-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#operator-7c-eq)
 ///
 /// @param self QRectF*
 /// @param r QRectF*
 void q_rectf_operator_bitwise_or_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-and-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#operator-and-eq)
 ///
 /// @param self QRectF*
 /// @param r QRectF*
 void q_rectf_operator_bitwise_and_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#contains)
 ///
 /// @param self QRectF*
 /// @param r QRectF*
 bool q_rectf_contains(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#contains)
 ///
 /// @param self QRectF*
 /// @param p QPointF*
 bool q_rectf_contains2(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#contains)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#contains)
 ///
 /// @param self QRectF*
 /// @param x double
 /// @param y double
 bool q_rectf_contains3(void* self, double x, double y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#united)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#united)
 ///
 /// @param self QRectF*
 /// @param other QRectF*
 QRectF* q_rectf_united(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#intersected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#intersected)
 ///
 /// @param self QRectF*
 /// @param other QRectF*
 QRectF* q_rectf_intersected(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#intersects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#intersects)
 ///
 /// @param self QRectF*
 /// @param r QRectF*
 bool q_rectf_intersects(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#marginsAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#marginsAdded)
 ///
 /// @param self QRectF*
 /// @param margins QMarginsF*
 QRectF* q_rectf_margins_added(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#marginsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#marginsRemoved)
 ///
 /// @param self QRectF*
 /// @param margins QMarginsF*
 QRectF* q_rectf_margins_removed(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#operator-2b-eq)
 ///
 /// @param self QRectF*
 /// @param margins QMarginsF*
 QRectF* q_rectf_operator_plus_assign(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#operator--eq)
 ///
 /// @param self QRectF*
 /// @param margins QMarginsF*
 QRectF* q_rectf_operator_minus_assign(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#toRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#toRect)
 ///
 /// @param self QRectF*
 QRect* q_rectf_to_rect(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#toAlignedRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#toAlignedRect)
 ///
 /// @param self QRectF*
 QRect* q_rectf_to_aligned_rect(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#dtor.QRectF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#dtor.QRectF)
 ///
 /// Delete this object from C++ memory.
 ///

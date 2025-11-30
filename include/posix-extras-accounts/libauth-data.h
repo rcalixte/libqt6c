@@ -18,31 +18,31 @@
 /// @param other Accounts__AuthData*
 Accounts__AuthData* q_accounts__authdata_new(void* other);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
 /// @param self Accounts__AuthData*
 uint32_t q_accounts__authdata_credentials_id(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__AuthData*
 const char* q_accounts__authdata_method(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__AuthData*
 const char* q_accounts__authdata_mechanism(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
 /// @param self Accounts__AuthData*
 libqt_map /* of const char* to QVariant* */ q_accounts__authdata_parameters(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
 /// Delete this object from C++ memory.
 ///

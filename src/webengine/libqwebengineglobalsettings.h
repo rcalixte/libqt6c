@@ -13,27 +13,27 @@
 
 /// https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#secureMode-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#secureMode-var)
 ///
 /// @param self QWebEngineGlobalSettings__DnsMode*
 ///
 /// @return enum QWebEngineGlobalSettings__SecureDnsMode
 uint8_t q_webengineglobalsettings__dnsmode_secure_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#secureMode-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#secureMode-var)
 ///
 /// @param self QWebEngineGlobalSettings__DnsMode*
 /// @param secureMode enum QWebEngineGlobalSettings__SecureDnsMode
 void q_webengineglobalsettings__dnsmode_set_secure_mode(void* self, uint8_t secureMode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#serverTemplates-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#serverTemplates-var)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineGlobalSettings__DnsMode*
 const char** q_webengineglobalsettings__dnsmode_server_templates(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#serverTemplates-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#serverTemplates-var)
 ///
 /// @param self QWebEngineGlobalSettings__DnsMode*
 /// @param serverTemplates const char**
@@ -46,7 +46,7 @@ void q_webengineglobalsettings__dnsmode_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebengineglobalsettings.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineglobalsettings.html#setDnsMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings.html#setDnsMode)
 ///
 /// @param param1 QWebEngineGlobalSettings__DnsMode*
 bool q_webengineglobalsettings_set_dns_mode(void* param1);

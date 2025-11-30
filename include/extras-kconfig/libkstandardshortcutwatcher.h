@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 const QMetaObject* k_standardshortcut__standardshortcutwatcher_meta_object(void* self);
@@ -28,27 +28,27 @@ void* k_standardshortcut__standardshortcutwatcher_metacast(void* self, const cha
 /// @param param3 void*
 int32_t k_standardshortcut__standardshortcutwatcher_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_standardshortcut__standardshortcutwatcher_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
+/// [Upstream resources](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param id enum KStandardShortcut__StandardShortcut
 /// @param shortcut libqt_list /* of QKeySequence* */
 void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, int32_t id, libqt_list shortcut);
 
-/// [Qt documentation](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
+/// [Upstream resources](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, enum KStandardShortcut__StandardShortcut id, QKeySequence** shortcut)
 void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self, void (*callback)(void*, int32_t, QKeySequence**));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -56,7 +56,7 @@ void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self,
 /// @param c const char*
 const char* k_standardshortcut__standardshortcutwatcher_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -67,7 +67,7 @@ const char* k_standardshortcut__standardshortcutwatcher_tr3(const char* s, const
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param event QEvent*
@@ -75,7 +75,7 @@ bool k_standardshortcut__standardshortcutwatcher_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param watched QObject*
@@ -84,7 +84,7 @@ bool k_standardshortcut__standardshortcutwatcher_event_filter(void* self, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -93,7 +93,7 @@ const char* k_standardshortcut__standardshortcutwatcher_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param name char*
@@ -101,35 +101,35 @@ void k_standardshortcut__standardshortcutwatcher_set_object_name(void* self, cha
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 bool k_standardshortcut__standardshortcutwatcher_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 bool k_standardshortcut__standardshortcutwatcher_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 bool k_standardshortcut__standardshortcutwatcher_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 bool k_standardshortcut__standardshortcutwatcher_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param b bool
@@ -137,14 +137,14 @@ bool k_standardshortcut__standardshortcutwatcher_block_signals(void* self, bool 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 QThread* k_standardshortcut__standardshortcutwatcher_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param thread QThread*
@@ -152,7 +152,7 @@ bool k_standardshortcut__standardshortcutwatcher_move_to_thread(void* self, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param interval int
@@ -160,7 +160,7 @@ int32_t k_standardshortcut__standardshortcutwatcher_start_timer(void* self, int 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param id int
@@ -168,7 +168,7 @@ void k_standardshortcut__standardshortcutwatcher_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param id enum Qt__TimerId
@@ -176,14 +176,14 @@ void k_standardshortcut__standardshortcutwatcher_kill_timer2(void* self, int32_t
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 libqt_list /* of QObject* */ k_standardshortcut__standardshortcutwatcher_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param parent QObject*
@@ -191,7 +191,7 @@ void k_standardshortcut__standardshortcutwatcher_set_parent(void* self, void* pa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param filterObj QObject*
@@ -199,7 +199,7 @@ void k_standardshortcut__standardshortcutwatcher_install_event_filter(void* self
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param obj QObject*
@@ -207,7 +207,7 @@ void k_standardshortcut__standardshortcutwatcher_remove_event_filter(void* self,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -217,7 +217,7 @@ QMetaObject__Connection* k_standardshortcut__standardshortcutwatcher_connect(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param sender QObject*
@@ -227,7 +227,7 @@ QMetaObject__Connection* k_standardshortcut__standardshortcutwatcher_connect2(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -237,28 +237,28 @@ bool k_standardshortcut__standardshortcutwatcher_disconnect(void* sender, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_standardshortcut__standardshortcutwatcher_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 void k_standardshortcut__standardshortcutwatcher_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 void k_standardshortcut__standardshortcutwatcher_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param name const char*
@@ -267,7 +267,7 @@ bool k_standardshortcut__standardshortcutwatcher_set_property(void* self, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param name const char*
@@ -275,7 +275,7 @@ QVariant* k_standardshortcut__standardshortcutwatcher_property(void* self, const
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -284,28 +284,28 @@ const char** k_standardshortcut__standardshortcutwatcher_dynamic_property_names(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 QBindingStorage* k_standardshortcut__standardshortcutwatcher_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 const QBindingStorage* k_standardshortcut__standardshortcutwatcher_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 void k_standardshortcut__standardshortcutwatcher_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self)
@@ -313,14 +313,14 @@ void k_standardshortcut__standardshortcutwatcher_on_destroyed(void* self, void (
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 QObject* k_standardshortcut__standardshortcutwatcher_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param classname const char*
@@ -328,14 +328,14 @@ bool k_standardshortcut__standardshortcutwatcher_inherits(void* self, const char
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 void k_standardshortcut__standardshortcutwatcher_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param thread QThread*
@@ -344,7 +344,7 @@ bool k_standardshortcut__standardshortcutwatcher_move_to_thread2(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param interval int
@@ -353,7 +353,7 @@ int32_t k_standardshortcut__standardshortcutwatcher_start_timer22(void* self, in
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -364,7 +364,7 @@ QMetaObject__Connection* k_standardshortcut__standardshortcutwatcher_connect5(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param sender QObject*
@@ -375,7 +375,7 @@ QMetaObject__Connection* k_standardshortcut__standardshortcutwatcher_connect4(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param param1 QObject*
@@ -383,7 +383,7 @@ void k_standardshortcut__standardshortcutwatcher_destroyed1(void* self, void* pa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, QObject* param1)
@@ -391,7 +391,7 @@ void k_standardshortcut__standardshortcutwatcher_on_destroyed1(void* self, void 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -406,7 +406,7 @@ void k_standardshortcut__standardshortcutwatcher_delete(void* self);
 
 /// https://api.kde.org/kstandardshortcut.html
 
-/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#shortcutWatcher)
+/// [Upstream resources](https://api.kde.org/kstandardshortcut.html#shortcutWatcher)
 ///
 KStandardShortcut__StandardShortcutWatcher* k_standardshortcut_shortcut_watcher();
 #endif

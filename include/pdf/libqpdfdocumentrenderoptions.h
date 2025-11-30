@@ -44,55 +44,55 @@ void q_pdfdocumentrenderoptions_copy_assign(void* self, void* other);
 /// @param other QPdfDocumentRenderOptions*
 void q_pdfdocumentrenderoptions_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#rotation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#rotation)
 ///
 /// @param self QPdfDocumentRenderOptions*
 ///
 /// @return enum QPdfDocumentRenderOptions__Rotation
 int32_t q_pdfdocumentrenderoptions_rotation(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRotation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRotation)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param r enum QPdfDocumentRenderOptions__Rotation
 void q_pdfdocumentrenderoptions_set_rotation(void* self, int32_t r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#renderFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#renderFlags)
 ///
 /// @param self QPdfDocumentRenderOptions*
 ///
 /// @return flag of enum QPdfDocumentRenderOptions__RenderFlag
 int32_t q_pdfdocumentrenderoptions_render_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRenderFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRenderFlags)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param r flag of enum QPdfDocumentRenderOptions__RenderFlag
 void q_pdfdocumentrenderoptions_set_render_flags(void* self, int32_t r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledClipRect)
 ///
 /// @param self QPdfDocumentRenderOptions*
 QRect* q_pdfdocumentrenderoptions_scaled_clip_rect(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledClipRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledClipRect)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param r QRect*
 void q_pdfdocumentrenderoptions_set_scaled_clip_rect(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledSize)
 ///
 /// @param self QPdfDocumentRenderOptions*
 QSize* q_pdfdocumentrenderoptions_scaled_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledSize)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param s QSize*
 void q_pdfdocumentrenderoptions_set_scaled_size(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#dtor.QPdfDocumentRenderOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#dtor.QPdfDocumentRenderOptions)
 ///
 /// Delete this object from C++ memory.
 ///

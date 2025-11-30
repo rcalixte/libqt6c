@@ -54,30 +54,30 @@ void q_calendar_copy_assign(void* self, void* other);
 /// @param other QCalendar*
 void q_calendar_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isValid)
 ///
 /// @param self QCalendar*
 bool q_calendar_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#daysInMonth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#daysInMonth)
 ///
 /// @param self QCalendar*
 /// @param month int
 int32_t q_calendar_days_in_month(void* self, int month);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#daysInYear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#daysInYear)
 ///
 /// @param self QCalendar*
 /// @param year int
 int32_t q_calendar_days_in_year(void* self, int year);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#monthsInYear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#monthsInYear)
 ///
 /// @param self QCalendar*
 /// @param year int
 int32_t q_calendar_months_in_year(void* self, int year);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isDateValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isDateValid)
 ///
 /// @param self QCalendar*
 /// @param year int
@@ -85,65 +85,65 @@ int32_t q_calendar_months_in_year(void* self, int year);
 /// @param day int
 bool q_calendar_is_date_valid(void* self, int year, int month, int day);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isLeapYear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isLeapYear)
 ///
 /// @param self QCalendar*
 /// @param year int
 bool q_calendar_is_leap_year(void* self, int year);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isGregorian)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isGregorian)
 ///
 /// @param self QCalendar*
 bool q_calendar_is_gregorian(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isLunar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isLunar)
 ///
 /// @param self QCalendar*
 bool q_calendar_is_lunar(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isLuniSolar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isLuniSolar)
 ///
 /// @param self QCalendar*
 bool q_calendar_is_luni_solar(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isSolar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isSolar)
 ///
 /// @param self QCalendar*
 bool q_calendar_is_solar(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#isProleptic)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#isProleptic)
 ///
 /// @param self QCalendar*
 bool q_calendar_is_proleptic(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#hasYearZero)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#hasYearZero)
 ///
 /// @param self QCalendar*
 bool q_calendar_has_year_zero(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#maximumDaysInMonth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#maximumDaysInMonth)
 ///
 /// @param self QCalendar*
 int32_t q_calendar_maximum_days_in_month(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#minimumDaysInMonth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#minimumDaysInMonth)
 ///
 /// @param self QCalendar*
 int32_t q_calendar_minimum_days_in_month(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#maximumMonthsInYear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#maximumMonthsInYear)
 ///
 /// @param self QCalendar*
 int32_t q_calendar_maximum_months_in_year(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 const char* q_calendar_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#dateFromParts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#dateFromParts)
 ///
 /// @param self QCalendar*
 /// @param year int
@@ -151,32 +151,32 @@ const char* q_calendar_name(void* self);
 /// @param day int
 QDate* q_calendar_date_from_parts(void* self, int year, int month, int day);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#dateFromParts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#dateFromParts)
 ///
 /// @param self QCalendar*
 /// @param parts QCalendar__YearMonthDay*
 QDate* q_calendar_date_from_parts2(void* self, void* parts);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#matchCenturyToWeekday)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#matchCenturyToWeekday)
 ///
 /// @param self QCalendar*
 /// @param parts QCalendar__YearMonthDay*
 /// @param dow int
 QDate* q_calendar_match_century_to_weekday(void* self, void* parts, int dow);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#partsFromDate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#partsFromDate)
 ///
 /// @param self QCalendar*
 /// @param date QDate*
 QCalendar__YearMonthDay* q_calendar_parts_from_date(void* self, void* date);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#dayOfWeek)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#dayOfWeek)
 ///
 /// @param self QCalendar*
 /// @param date QDate*
 int32_t q_calendar_day_of_week(void* self, void* date);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#monthName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#monthName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -185,7 +185,7 @@ int32_t q_calendar_day_of_week(void* self, void* date);
 /// @param month int
 const char* q_calendar_month_name(void* self, void* locale, int month);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -194,7 +194,7 @@ const char* q_calendar_month_name(void* self, void* locale, int month);
 /// @param month int
 const char* q_calendar_standalone_month_name(void* self, void* locale, int month);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#weekDayName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#weekDayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -203,7 +203,7 @@ const char* q_calendar_standalone_month_name(void* self, void* locale, int month
 /// @param day int
 const char* q_calendar_week_day_name(void* self, void* locale, int day);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#standaloneWeekDayName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneWeekDayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -212,20 +212,20 @@ const char* q_calendar_week_day_name(void* self, void* locale, int day);
 /// @param day int
 const char* q_calendar_standalone_week_day_name(void* self, void* locale, int day);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#availableCalendars)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#availableCalendars)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** q_calendar_available_calendars();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#daysInMonth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#daysInMonth)
 ///
 /// @param self QCalendar*
 /// @param month int
 /// @param year int
 int32_t q_calendar_days_in_month2(void* self, int month, int year);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#monthName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#monthName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -235,7 +235,7 @@ int32_t q_calendar_days_in_month2(void* self, int month, int year);
 /// @param year int
 const char* q_calendar_month_name3(void* self, void* locale, int month, int year);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#monthName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#monthName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -246,7 +246,7 @@ const char* q_calendar_month_name3(void* self, void* locale, int month, int year
 /// @param format enum QLocale__FormatType
 const char* q_calendar_month_name4(void* self, void* locale, int month, int year, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -256,7 +256,7 @@ const char* q_calendar_month_name4(void* self, void* locale, int month, int year
 /// @param year int
 const char* q_calendar_standalone_month_name3(void* self, void* locale, int month, int year);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -267,7 +267,7 @@ const char* q_calendar_standalone_month_name3(void* self, void* locale, int mont
 /// @param format enum QLocale__FormatType
 const char* q_calendar_standalone_month_name4(void* self, void* locale, int month, int year, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#weekDayName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#weekDayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -277,7 +277,7 @@ const char* q_calendar_standalone_month_name4(void* self, void* locale, int mont
 /// @param format enum QLocale__FormatType
 const char* q_calendar_week_day_name3(void* self, void* locale, int day, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#standaloneWeekDayName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneWeekDayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -287,7 +287,7 @@ const char* q_calendar_week_day_name3(void* self, void* locale, int day, int32_t
 /// @param format enum QLocale__FormatType
 const char* q_calendar_standalone_week_day_name3(void* self, void* locale, int day, int32_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#dtor.QCalendar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#dtor.QCalendar)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -340,39 +340,39 @@ void q_calendar__yearmonthday_copy_assign(void* self, void* other);
 /// @param other QCalendar__YearMonthDay*
 void q_calendar__yearmonthday_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#isValid)
 ///
 /// @param self QCalendar__YearMonthDay*
 bool q_calendar__yearmonthday_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#year-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#year-var)
 ///
 /// @param self QCalendar__YearMonthDay*
 int32_t q_calendar__yearmonthday_year(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#year-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#year-var)
 ///
 /// @param self QCalendar__YearMonthDay*
 /// @param year int
 void q_calendar__yearmonthday_set_year(void* self, int year);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#month-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#month-var)
 ///
 /// @param self QCalendar__YearMonthDay*
 int32_t q_calendar__yearmonthday_month(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#month-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#month-var)
 ///
 /// @param self QCalendar__YearMonthDay*
 /// @param month int
 void q_calendar__yearmonthday_set_month(void* self, int month);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#day-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#day-var)
 ///
 /// @param self QCalendar__YearMonthDay*
 int32_t q_calendar__yearmonthday_day(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#day-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#day-var)
 ///
 /// @param self QCalendar__YearMonthDay*
 /// @param day int
@@ -411,12 +411,12 @@ void q_calendar__systemid_copy_assign(void* self, void* other);
 /// @param other QCalendar__SystemId*
 void q_calendar__systemid_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-systemid.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-systemid.html#index)
 ///
 /// @param self QCalendar__SystemId*
 uint64_t q_calendar__systemid_index(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-systemid.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-systemid.html#isValid)
 ///
 /// @param self QCalendar__SystemId*
 bool q_calendar__systemid_is_valid(void* self);

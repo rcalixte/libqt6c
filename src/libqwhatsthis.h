@@ -35,45 +35,45 @@ void q_whatsthis_copy_assign(void* self, void* other);
 /// @param other QWhatsThis*
 void q_whatsthis_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#enterWhatsThisMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#enterWhatsThisMode)
 ///
 void q_whatsthis_enter_whats_this_mode();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#inWhatsThisMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#inWhatsThisMode)
 ///
 bool q_whatsthis_in_whats_this_mode();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#leaveWhatsThisMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#leaveWhatsThisMode)
 ///
 void q_whatsthis_leave_whats_this_mode();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#showText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#showText)
 ///
 /// @param pos QPoint*
 /// @param text const char*
 void q_whatsthis_show_text(void* pos, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#hideText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#hideText)
 ///
 void q_whatsthis_hide_text();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#createAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#createAction)
 ///
 QAction* q_whatsthis_create_action();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#showText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#showText)
 ///
 /// @param pos QPoint*
 /// @param text const char*
 /// @param w QWidget*
 void q_whatsthis_show_text3(void* pos, const char* text, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#createAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#createAction)
 ///
 /// @param parent QObject*
 QAction* q_whatsthis_create_action1(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#dtor.QWhatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#dtor.QWhatsThis)
 ///
 /// Delete this object from C++ memory.
 ///

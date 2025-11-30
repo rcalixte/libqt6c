@@ -22,19 +22,19 @@ KEncodingProber* k_encodingprober_new();
 /// @param proberType enum KEncodingProber__ProberType
 KEncodingProber* k_encodingprober_new2(int32_t proberType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 const char* k_encodingprober_tr(const char* sourceText);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#reset)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#reset)
 ///
 /// @param self KEncodingProber*
 void k_encodingprober_reset(void* self);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#feed)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#feed)
 ///
 /// @param self KEncodingProber*
 /// @param data const char*
@@ -42,7 +42,7 @@ void k_encodingprober_reset(void* self);
 /// @return enum KEncodingProber__ProberState
 int32_t k_encodingprober_feed(void* self, const char* data);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#feed)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#feed)
 ///
 /// @param self KEncodingProber*
 /// @param data const char*
@@ -51,53 +51,53 @@ int32_t k_encodingprober_feed(void* self, const char* data);
 /// @return enum KEncodingProber__ProberState
 int32_t k_encodingprober_feed2(void* self, const char* data, int64_t lenVal);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#state)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#state)
 ///
 /// @param self KEncodingProber*
 ///
 /// @return enum KEncodingProber__ProberState
 int32_t k_encodingprober_state(void* self);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#encoding)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#encoding)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KEncodingProber*
 char* k_encodingprober_encoding(void* self);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#confidence)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#confidence)
 ///
 /// @param self KEncodingProber*
 float k_encodingprober_confidence(void* self);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#proberType)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#proberType)
 ///
 /// @param self KEncodingProber*
 ///
 /// @return enum KEncodingProber__ProberType
 int32_t k_encodingprober_prober_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#setProberType)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#setProberType)
 ///
 /// @param self KEncodingProber*
 /// @param proberType enum KEncodingProber__ProberType
 void k_encodingprober_set_prober_type(void* self, int32_t proberType);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#proberTypeForName)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#proberTypeForName)
 ///
 /// @param lang const char*
 ///
 /// @return enum KEncodingProber__ProberType
 int32_t k_encodingprober_prober_type_for_name(const char* lang);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#nameForProberType)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#nameForProberType)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param proberType enum KEncodingProber__ProberType
 const char* k_encodingprober_name_for_prober_type(int32_t proberType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -105,7 +105,7 @@ const char* k_encodingprober_name_for_prober_type(int32_t proberType);
 /// @param disambiguation const char*
 const char* k_encodingprober_tr2(const char* sourceText, const char* disambiguation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -114,7 +114,7 @@ const char* k_encodingprober_tr2(const char* sourceText, const char* disambiguat
 /// @param n int
 const char* k_encodingprober_tr3(const char* sourceText, const char* disambiguation, int n);
 
-/// [Qt documentation](https://api.kde.org/kencodingprober.html#dtor.KEncodingProber)
+/// [Upstream resources](https://api.kde.org/kencodingprober.html#dtor.KEncodingProber)
 ///
 /// Delete this object from C++ memory.
 ///

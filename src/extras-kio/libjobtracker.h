@@ -13,11 +13,11 @@
 
 /// https://api.kde.org/kio.html
 
-/// [Qt documentation](https://api.kde.org/kio.html#getJobTracker)
+/// [Upstream resources](https://api.kde.org/kio.html#getJobTracker)
 ///
 KJobTrackerInterface* k_io_get_job_tracker();
 
-/// [Qt documentation](https://api.kde.org/kio.html#setJobTracker)
+/// [Upstream resources](https://api.kde.org/kio.html#setJobTracker)
 ///
 /// @param param1 KJobTrackerInterface*
 void k_io_set_job_tracker(void* param1);

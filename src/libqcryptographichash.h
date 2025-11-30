@@ -18,58 +18,58 @@
 /// @param method enum QCryptographicHash__Algorithm
 QCryptographicHash* q_cryptographichash_new(int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#swap)
 ///
 /// @param self QCryptographicHash*
 /// @param other QCryptographicHash*
 void q_cryptographichash_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#reset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#reset)
 ///
 /// @param self QCryptographicHash*
 void q_cryptographichash_reset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#algorithm)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#algorithm)
 ///
 /// @param self QCryptographicHash*
 ///
 /// @return enum QCryptographicHash__Algorithm
 int32_t q_cryptographichash_algorithm(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///
 /// @param self QCryptographicHash*
 /// @param data const char*
 /// @param length int64_t
 void q_cryptographichash_add_data(void* self, const char* data, int64_t length);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///
 /// @param self QCryptographicHash*
 /// @param data const char*
 void q_cryptographichash_add_data2(void* self, const char* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///
 /// @param self QCryptographicHash*
 /// @param device QIODevice*
 bool q_cryptographichash_add_data3(void* self, void* device);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#result)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#result)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCryptographicHash*
 char* q_cryptographichash_result(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#resultView)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#resultView)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCryptographicHash*
 const char* q_cryptographichash_result_view(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hash)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hash)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -77,7 +77,7 @@ const char* q_cryptographichash_result_view(void* self);
 /// @param method enum QCryptographicHash__Algorithm
 char* q_cryptographichash_hash(const char* data, int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -86,7 +86,7 @@ char* q_cryptographichash_hash(const char* data, int32_t method);
 /// @param method enum QCryptographicHash__Algorithm
 const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -95,7 +95,7 @@ const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, i
 /// @param method enum QCryptographicHash__Algorithm
 const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -104,7 +104,7 @@ const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, 
 /// @param method enum QCryptographicHash__Algorithm
 const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -113,17 +113,17 @@ const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, i
 /// @param method enum QCryptographicHash__Algorithm
 const char* q_cryptographichash_hash_into5(libqt_list buffer, libqt_list data, int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashLength)
 ///
 /// @param method enum QCryptographicHash__Algorithm
 int32_t q_cryptographichash_hash_length(int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#supportsAlgorithm)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#supportsAlgorithm)
 ///
 /// @param method enum QCryptographicHash__Algorithm
 bool q_cryptographichash_supports_algorithm(int32_t method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#dtor.QCryptographicHash)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#dtor.QCryptographicHash)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -27,50 +27,50 @@ QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new2(int fileDescriptor);
 /// @param other QDBusUnixFileDescriptor*
 QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#operator-eq)
 ///
 /// @param self QDBusUnixFileDescriptor*
 /// @param other QDBusUnixFileDescriptor*
 void q_dbusunixfiledescriptor_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#swap)
 ///
 /// @param self QDBusUnixFileDescriptor*
 /// @param other QDBusUnixFileDescriptor*
 void q_dbusunixfiledescriptor_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#isValid)
 ///
 /// @param self QDBusUnixFileDescriptor*
 bool q_dbusunixfiledescriptor_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#fileDescriptor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#fileDescriptor)
 ///
 /// @param self QDBusUnixFileDescriptor*
 int32_t q_dbusunixfiledescriptor_file_descriptor(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#setFileDescriptor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#setFileDescriptor)
 ///
 /// @param self QDBusUnixFileDescriptor*
 /// @param fileDescriptor int
 void q_dbusunixfiledescriptor_set_file_descriptor(void* self, int fileDescriptor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#giveFileDescriptor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#giveFileDescriptor)
 ///
 /// @param self QDBusUnixFileDescriptor*
 /// @param fileDescriptor int
 void q_dbusunixfiledescriptor_give_file_descriptor(void* self, int fileDescriptor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#takeFileDescriptor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#takeFileDescriptor)
 ///
 /// @param self QDBusUnixFileDescriptor*
 int32_t q_dbusunixfiledescriptor_take_file_descriptor(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#isSupported)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#isSupported)
 ///
 bool q_dbusunixfiledescriptor_is_supported();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#dtor.QDBusUnixFileDescriptor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#dtor.QDBusUnixFileDescriptor)
 ///
 /// Delete this object from C++ memory.
 ///

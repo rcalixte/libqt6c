@@ -22,7 +22,7 @@ KRearrangeColumnsProxyModel* k_rearrangecolumnsproxymodel_new();
 /// @param parent QObject*
 KRearrangeColumnsProxyModel* k_rearrangecolumnsproxymodel_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 const QMetaObject* k_rearrangecolumnsproxymodel_meta_object(void* self);
@@ -51,26 +51,26 @@ void k_rearrangecolumnsproxymodel_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param3 void*
 int32_t k_rearrangecolumnsproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_rearrangecolumnsproxymodel_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#setSourceColumns)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#setSourceColumns)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param columns libqt_list /* of int */
 void k_rearrangecolumnsproxymodel_set_source_columns(void* self, libqt_list columns);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parent QModelIndex*
 int32_t k_rearrangecolumnsproxymodel_column_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -78,7 +78,7 @@ int32_t k_rearrangecolumnsproxymodel_column_count(void* self, void* parent);
 /// @param callback int32_t func(KRearrangeColumnsProxyModel* self, QModelIndex* parent)
 void k_rearrangecolumnsproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
 ///
 /// Base class method implementation
 ///
@@ -86,13 +86,13 @@ void k_rearrangecolumnsproxymodel_on_column_count(void* self, int32_t (*callback
 /// @param parent QModelIndex*
 int32_t k_rearrangecolumnsproxymodel_qbase_column_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#rowCount)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parent QModelIndex*
 int32_t k_rearrangecolumnsproxymodel_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -100,7 +100,7 @@ int32_t k_rearrangecolumnsproxymodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KRearrangeColumnsProxyModel* self, QModelIndex* parent)
 void k_rearrangecolumnsproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#rowCount)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
@@ -108,7 +108,7 @@ void k_rearrangecolumnsproxymodel_on_row_count(void* self, int32_t (*callback)(v
 /// @param parent QModelIndex*
 int32_t k_rearrangecolumnsproxymodel_qbase_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#index)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#index)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -116,7 +116,7 @@ int32_t k_rearrangecolumnsproxymodel_qbase_row_count(void* self, void* parent);
 /// @param parent QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_index(void* self, int row, int column, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#index)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#index)
 ///
 /// Allows for overriding the related default method
 ///
@@ -124,7 +124,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_index(void* self, int row, int column,
 /// @param callback QModelIndex* func(KRearrangeColumnsProxyModel* self, int row, int column, QModelIndex* parent)
 void k_rearrangecolumnsproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#index)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#index)
 ///
 /// Base class method implementation
 ///
@@ -134,13 +134,13 @@ void k_rearrangecolumnsproxymodel_on_index(void* self, QModelIndex* (*callback)(
 /// @param parent QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_qbase_index(void* self, int row, int column, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#parent)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#parent)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param child QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_parent(void* self, void* child);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#parent)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -148,7 +148,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_parent(void* self, void* child);
 /// @param callback QModelIndex* func(KRearrangeColumnsProxyModel* self, QModelIndex* child)
 void k_rearrangecolumnsproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#parent)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#parent)
 ///
 /// Base class method implementation
 ///
@@ -156,13 +156,13 @@ void k_rearrangecolumnsproxymodel_on_parent(void* self, QModelIndex* (*callback)
 /// @param child QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_qbase_parent(void* self, void* child);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#mapFromSource)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapFromSource)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param sourceIndex QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_map_from_source(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#mapFromSource)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapFromSource)
 ///
 /// Allows for overriding the related default method
 ///
@@ -170,7 +170,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_map_from_source(void* self, void* sour
 /// @param callback QModelIndex* func(KRearrangeColumnsProxyModel* self, QModelIndex* sourceIndex)
 void k_rearrangecolumnsproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#mapFromSource)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
 ///
@@ -178,13 +178,13 @@ void k_rearrangecolumnsproxymodel_on_map_from_source(void* self, QModelIndex* (*
 /// @param sourceIndex QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_qbase_map_from_source(void* self, void* sourceIndex);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#mapToSource)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapToSource)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param proxyIndex QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_map_to_source(void* self, void* proxyIndex);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#mapToSource)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapToSource)
 ///
 /// Allows for overriding the related default method
 ///
@@ -192,7 +192,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_map_to_source(void* self, void* proxyI
 /// @param callback QModelIndex* func(KRearrangeColumnsProxyModel* self, QModelIndex* proxyIndex)
 void k_rearrangecolumnsproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#mapToSource)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapToSource)
 ///
 /// Base class method implementation
 ///
@@ -200,7 +200,7 @@ void k_rearrangecolumnsproxymodel_on_map_to_source(void* self, QModelIndex* (*ca
 /// @param proxyIndex QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_qbase_map_to_source(void* self, void* proxyIndex);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#headerData)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#headerData)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param section int
@@ -208,7 +208,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_qbase_map_to_source(void* self, void* 
 /// @param role int
 QVariant* k_rearrangecolumnsproxymodel_header_data(void* self, int section, int32_t orientation, int role);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#headerData)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#headerData)
 ///
 /// Allows for overriding the related default method
 ///
@@ -216,7 +216,7 @@ QVariant* k_rearrangecolumnsproxymodel_header_data(void* self, int section, int3
 /// @param callback QVariant* func(KRearrangeColumnsProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 void k_rearrangecolumnsproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#headerData)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#headerData)
 ///
 /// Base class method implementation
 ///
@@ -226,13 +226,13 @@ void k_rearrangecolumnsproxymodel_on_header_data(void* self, QVariant* (*callbac
 /// @param role int
 QVariant* k_rearrangecolumnsproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#hasChildren)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parent QModelIndex*
 bool k_rearrangecolumnsproxymodel_has_children(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#hasChildren)
 ///
 /// Allows for overriding the related default method
 ///
@@ -240,7 +240,7 @@ bool k_rearrangecolumnsproxymodel_has_children(void* self, void* parent);
 /// @param callback bool func(KRearrangeColumnsProxyModel* self, QModelIndex* parent)
 void k_rearrangecolumnsproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#hasChildren)
 ///
 /// Base class method implementation
 ///
@@ -248,7 +248,7 @@ void k_rearrangecolumnsproxymodel_on_has_children(void* self, bool (*callback)(v
 /// @param parent QModelIndex*
 bool k_rearrangecolumnsproxymodel_qbase_has_children(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#sibling)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#sibling)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -256,7 +256,7 @@ bool k_rearrangecolumnsproxymodel_qbase_has_children(void* self, void* parent);
 /// @param idx QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_sibling(void* self, int row, int column, void* idx);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#sibling)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#sibling)
 ///
 /// Allows for overriding the related default method
 ///
@@ -264,7 +264,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_sibling(void* self, int row, int colum
 /// @param callback QModelIndex* func(KRearrangeColumnsProxyModel* self, int row, int column, QModelIndex* idx)
 void k_rearrangecolumnsproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#sibling)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#sibling)
 ///
 /// Base class method implementation
 ///
@@ -274,19 +274,19 @@ void k_rearrangecolumnsproxymodel_on_sibling(void* self, QModelIndex* (*callback
 /// @param idx QModelIndex*
 QModelIndex* k_rearrangecolumnsproxymodel_qbase_sibling(void* self, int row, int column, void* idx);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#proxyColumnForSourceColumn)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#proxyColumnForSourceColumn)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param sourceColumn int
 int32_t k_rearrangecolumnsproxymodel_proxy_column_for_source_column(void* self, int sourceColumn);
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#sourceColumnForProxyColumn)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#sourceColumnForProxyColumn)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param proxyColumn int
 int32_t k_rearrangecolumnsproxymodel_source_column_for_proxy_column(void* self, int proxyColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -294,7 +294,7 @@ int32_t k_rearrangecolumnsproxymodel_source_column_for_proxy_column(void* self, 
 /// @param c const char*
 const char* k_rearrangecolumnsproxymodel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -305,28 +305,28 @@ const char* k_rearrangecolumnsproxymodel_tr3(const char* s, const char* c, int n
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceLayoutChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceLayoutChanges)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 bool k_rearrangecolumnsproxymodel_handle_source_layout_changes(void* self);
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceDataChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceDataChanges)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 bool k_rearrangecolumnsproxymodel_handle_source_data_changes(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 QAbstractItemModel* k_rearrangecolumnsproxymodel_source_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -335,7 +335,7 @@ bool k_rearrangecolumnsproxymodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -343,7 +343,7 @@ bool k_rearrangecolumnsproxymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param column int
@@ -351,7 +351,7 @@ bool k_rearrangecolumnsproxymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -359,7 +359,7 @@ bool k_rearrangecolumnsproxymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param column int
@@ -367,7 +367,7 @@ bool k_rearrangecolumnsproxymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param sourceParent QModelIndex*
@@ -378,7 +378,7 @@ bool k_rearrangecolumnsproxymodel_move_row(void* self, void* sourceParent, int s
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param sourceParent QModelIndex*
@@ -389,7 +389,7 @@ bool k_rearrangecolumnsproxymodel_move_column(void* self, void* sourceParent, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param index QModelIndex*
@@ -397,7 +397,7 @@ bool k_rearrangecolumnsproxymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param topLeft QModelIndex*
@@ -406,7 +406,7 @@ void k_rearrangecolumnsproxymodel_data_changed(void* self, void* topLeft, void* 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
@@ -414,7 +414,7 @@ void k_rearrangecolumnsproxymodel_on_data_changed(void* self, void (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param orientation enum Qt__Orientation
@@ -424,7 +424,7 @@ void k_rearrangecolumnsproxymodel_header_data_changed(void* self, int32_t orient
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, enum Qt__Orientation orientation, int first, int last)
@@ -432,14 +432,14 @@ void k_rearrangecolumnsproxymodel_on_header_data_changed(void* self, void (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 void k_rearrangecolumnsproxymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self)
@@ -447,14 +447,14 @@ void k_rearrangecolumnsproxymodel_on_layout_changed(void* self, void (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 void k_rearrangecolumnsproxymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self)
@@ -462,7 +462,7 @@ void k_rearrangecolumnsproxymodel_on_layout_about_to_be_changed(void* self, void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -472,7 +472,7 @@ bool k_rearrangecolumnsproxymodel_has_index3(void* self, int row, int column, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -481,7 +481,7 @@ bool k_rearrangecolumnsproxymodel_insert_row2(void* self, int row, void* parent)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param column int
@@ -490,7 +490,7 @@ bool k_rearrangecolumnsproxymodel_insert_column2(void* self, int column, void* p
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param row int
@@ -499,7 +499,7 @@ bool k_rearrangecolumnsproxymodel_remove_row2(void* self, int row, void* parent)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param column int
@@ -508,7 +508,7 @@ bool k_rearrangecolumnsproxymodel_remove_column2(void* self, int column, void* p
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param index QModelIndex*
@@ -517,7 +517,7 @@ bool k_rearrangecolumnsproxymodel_check_index2(void* self, void* index, int32_t 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param topLeft QModelIndex*
@@ -527,7 +527,7 @@ void k_rearrangecolumnsproxymodel_data_changed3(void* self, void* topLeft, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
@@ -535,7 +535,7 @@ void k_rearrangecolumnsproxymodel_on_data_changed3(void* self, void (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -543,7 +543,7 @@ void k_rearrangecolumnsproxymodel_layout_changed1(void* self, libqt_list parents
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, QPersistentModelIndex** parents)
@@ -551,7 +551,7 @@ void k_rearrangecolumnsproxymodel_on_layout_changed1(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -560,7 +560,7 @@ void k_rearrangecolumnsproxymodel_layout_changed2(void* self, libqt_list parents
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -568,7 +568,7 @@ void k_rearrangecolumnsproxymodel_on_layout_changed2(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -576,7 +576,7 @@ void k_rearrangecolumnsproxymodel_layout_about_to_be_changed1(void* self, libqt_
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, QPersistentModelIndex** parents)
@@ -584,7 +584,7 @@ void k_rearrangecolumnsproxymodel_on_layout_about_to_be_changed1(void* self, voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -593,7 +593,7 @@ void k_rearrangecolumnsproxymodel_layout_about_to_be_changed2(void* self, libqt_
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -601,7 +601,7 @@ void k_rearrangecolumnsproxymodel_on_layout_about_to_be_changed2(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -610,7 +610,7 @@ const char* k_rearrangecolumnsproxymodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param name char*
@@ -618,35 +618,35 @@ void k_rearrangecolumnsproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 bool k_rearrangecolumnsproxymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 bool k_rearrangecolumnsproxymodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 bool k_rearrangecolumnsproxymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 bool k_rearrangecolumnsproxymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param b bool
@@ -654,14 +654,14 @@ bool k_rearrangecolumnsproxymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 QThread* k_rearrangecolumnsproxymodel_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param thread QThread*
@@ -669,7 +669,7 @@ bool k_rearrangecolumnsproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param interval int
@@ -677,7 +677,7 @@ int32_t k_rearrangecolumnsproxymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param id int
@@ -685,7 +685,7 @@ void k_rearrangecolumnsproxymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param id enum Qt__TimerId
@@ -693,14 +693,14 @@ void k_rearrangecolumnsproxymodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 libqt_list /* of QObject* */ k_rearrangecolumnsproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param parent QObject*
@@ -708,7 +708,7 @@ void k_rearrangecolumnsproxymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param filterObj QObject*
@@ -716,7 +716,7 @@ void k_rearrangecolumnsproxymodel_install_event_filter(void* self, void* filterO
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param obj QObject*
@@ -724,7 +724,7 @@ void k_rearrangecolumnsproxymodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -734,7 +734,7 @@ QMetaObject__Connection* k_rearrangecolumnsproxymodel_connect(void* sender, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param sender QObject*
@@ -744,7 +744,7 @@ QMetaObject__Connection* k_rearrangecolumnsproxymodel_connect2(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -754,28 +754,28 @@ bool k_rearrangecolumnsproxymodel_disconnect(void* sender, void* signal, void* r
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_rearrangecolumnsproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 void k_rearrangecolumnsproxymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 void k_rearrangecolumnsproxymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param name const char*
@@ -784,7 +784,7 @@ bool k_rearrangecolumnsproxymodel_set_property(void* self, const char* name, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param name const char*
@@ -792,7 +792,7 @@ QVariant* k_rearrangecolumnsproxymodel_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -801,28 +801,28 @@ const char** k_rearrangecolumnsproxymodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 QBindingStorage* k_rearrangecolumnsproxymodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 const QBindingStorage* k_rearrangecolumnsproxymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 void k_rearrangecolumnsproxymodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self)
@@ -830,7 +830,7 @@ void k_rearrangecolumnsproxymodel_on_destroyed(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param classname const char*
@@ -838,14 +838,14 @@ bool k_rearrangecolumnsproxymodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 void k_rearrangecolumnsproxymodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param thread QThread*
@@ -854,7 +854,7 @@ bool k_rearrangecolumnsproxymodel_move_to_thread2(void* self, void* thread, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param interval int
@@ -863,7 +863,7 @@ int32_t k_rearrangecolumnsproxymodel_start_timer22(void* self, int interval, int
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -874,7 +874,7 @@ QMetaObject__Connection* k_rearrangecolumnsproxymodel_connect5(void* sender, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param sender QObject*
@@ -885,7 +885,7 @@ QMetaObject__Connection* k_rearrangecolumnsproxymodel_connect4(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param param1 QObject*
@@ -893,7 +893,7 @@ void k_rearrangecolumnsproxymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param callback void func(KRearrangeColumnsProxyModel* self, QObject* param1)
@@ -901,7 +901,7 @@ void k_rearrangecolumnsproxymodel_on_destroyed1(void* self, void (*callback)(voi
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -915,7 +915,7 @@ bool k_rearrangecolumnsproxymodel_drop_mime_data(void* self, void* data, int32_t
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -929,7 +929,7 @@ bool k_rearrangecolumnsproxymodel_qbase_drop_mime_data(void* self, void* data, i
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -939,7 +939,7 @@ void k_rearrangecolumnsproxymodel_on_drop_mime_data(void* self, bool (*callback)
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -949,7 +949,7 @@ QItemSelection* k_rearrangecolumnsproxymodel_map_selection_from_source(void* sel
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -959,7 +959,7 @@ QItemSelection* k_rearrangecolumnsproxymodel_qbase_map_selection_from_source(voi
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -969,7 +969,7 @@ void k_rearrangecolumnsproxymodel_on_map_selection_from_source(void* self, QItem
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -979,7 +979,7 @@ QItemSelection* k_rearrangecolumnsproxymodel_map_selection_to_source(void* self,
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -989,7 +989,7 @@ QItemSelection* k_rearrangecolumnsproxymodel_qbase_map_selection_to_source(void*
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -999,7 +999,7 @@ void k_rearrangecolumnsproxymodel_on_map_selection_to_source(void* self, QItemSe
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1013,7 +1013,7 @@ libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_match(void* self, 
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1027,7 +1027,7 @@ libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_qbase_match(void* 
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1037,7 +1037,7 @@ void k_rearrangecolumnsproxymodel_on_match(void* self, QModelIndex** (*callback)
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1047,7 +1047,7 @@ void k_rearrangecolumnsproxymodel_set_source_model(void* self, void* sourceModel
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1057,7 +1057,7 @@ void k_rearrangecolumnsproxymodel_qbase_set_source_model(void* self, void* sourc
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1067,7 +1067,7 @@ void k_rearrangecolumnsproxymodel_on_set_source_model(void* self, void (*callbac
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1079,7 +1079,7 @@ bool k_rearrangecolumnsproxymodel_insert_columns(void* self, int column, int cou
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1091,7 +1091,7 @@ bool k_rearrangecolumnsproxymodel_qbase_insert_columns(void* self, int column, i
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1101,7 +1101,7 @@ void k_rearrangecolumnsproxymodel_on_insert_columns(void* self, bool (*callback)
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1113,7 +1113,7 @@ bool k_rearrangecolumnsproxymodel_insert_rows(void* self, int row, int count, vo
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1125,7 +1125,7 @@ bool k_rearrangecolumnsproxymodel_qbase_insert_rows(void* self, int row, int cou
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1135,7 +1135,7 @@ void k_rearrangecolumnsproxymodel_on_insert_rows(void* self, bool (*callback)(vo
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1147,7 +1147,7 @@ bool k_rearrangecolumnsproxymodel_remove_columns(void* self, int column, int cou
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1159,7 +1159,7 @@ bool k_rearrangecolumnsproxymodel_qbase_remove_columns(void* self, int column, i
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1169,7 +1169,7 @@ void k_rearrangecolumnsproxymodel_on_remove_columns(void* self, bool (*callback)
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1181,7 +1181,7 @@ bool k_rearrangecolumnsproxymodel_remove_rows(void* self, int row, int count, vo
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1193,7 +1193,7 @@ bool k_rearrangecolumnsproxymodel_qbase_remove_rows(void* self, int row, int cou
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1203,7 +1203,7 @@ void k_rearrangecolumnsproxymodel_on_remove_rows(void* self, bool (*callback)(vo
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1217,7 +1217,7 @@ bool k_rearrangecolumnsproxymodel_move_rows(void* self, void* sourceParent, int 
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1231,7 +1231,7 @@ bool k_rearrangecolumnsproxymodel_qbase_move_rows(void* self, void* sourceParent
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1241,7 +1241,7 @@ void k_rearrangecolumnsproxymodel_on_move_rows(void* self, bool (*callback)(void
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1255,7 +1255,7 @@ bool k_rearrangecolumnsproxymodel_move_columns(void* self, void* sourceParent, i
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1269,7 +1269,7 @@ bool k_rearrangecolumnsproxymodel_qbase_move_columns(void* self, void* sourcePar
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1279,7 +1279,7 @@ void k_rearrangecolumnsproxymodel_on_move_columns(void* self, bool (*callback)(v
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1288,7 +1288,7 @@ bool k_rearrangecolumnsproxymodel_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1297,7 +1297,7 @@ bool k_rearrangecolumnsproxymodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1307,7 +1307,7 @@ void k_rearrangecolumnsproxymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1316,7 +1316,7 @@ void k_rearrangecolumnsproxymodel_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1325,7 +1325,7 @@ void k_rearrangecolumnsproxymodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1335,7 +1335,7 @@ void k_rearrangecolumnsproxymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#data)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1346,7 +1346,7 @@ QVariant* k_rearrangecolumnsproxymodel_data(void* self, void* proxyIndex, int ro
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#data)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1357,7 +1357,7 @@ QVariant* k_rearrangecolumnsproxymodel_qbase_data(void* self, void* proxyIndex, 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#data)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1367,7 +1367,7 @@ void k_rearrangecolumnsproxymodel_on_data(void* self, QVariant* (*callback)(void
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1377,7 +1377,7 @@ libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_item_data(void*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1387,7 +1387,7 @@ libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_qbase_item_data
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1397,7 +1397,7 @@ void k_rearrangecolumnsproxymodel_on_item_data(void* self, libqt_map /* of int t
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1409,7 +1409,7 @@ int32_t k_rearrangecolumnsproxymodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1421,7 +1421,7 @@ int32_t k_rearrangecolumnsproxymodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1431,7 +1431,7 @@ void k_rearrangecolumnsproxymodel_on_flags(void* self, int32_t (*callback)(void*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1443,7 +1443,7 @@ bool k_rearrangecolumnsproxymodel_set_data(void* self, void* index, void* value,
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1455,7 +1455,7 @@ bool k_rearrangecolumnsproxymodel_qbase_set_data(void* self, void* index, void* 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1465,7 +1465,7 @@ void k_rearrangecolumnsproxymodel_on_set_data(void* self, bool (*callback)(void*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1476,7 +1476,7 @@ bool k_rearrangecolumnsproxymodel_set_item_data(void* self, void* index, libqt_m
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1487,7 +1487,7 @@ bool k_rearrangecolumnsproxymodel_qbase_set_item_data(void* self, void* index, l
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1497,7 +1497,7 @@ void k_rearrangecolumnsproxymodel_on_set_item_data(void* self, bool (*callback)(
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1510,7 +1510,7 @@ bool k_rearrangecolumnsproxymodel_set_header_data(void* self, int section, int32
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1523,7 +1523,7 @@ bool k_rearrangecolumnsproxymodel_qbase_set_header_data(void* self, int section,
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1533,7 +1533,7 @@ void k_rearrangecolumnsproxymodel_on_set_header_data(void* self, bool (*callback
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1543,7 +1543,7 @@ bool k_rearrangecolumnsproxymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1553,7 +1553,7 @@ bool k_rearrangecolumnsproxymodel_qbase_clear_item_data(void* self, void* index)
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1563,7 +1563,7 @@ void k_rearrangecolumnsproxymodel_on_clear_item_data(void* self, bool (*callback
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1573,7 +1573,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1583,7 +1583,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1593,7 +1593,7 @@ void k_rearrangecolumnsproxymodel_on_buddy(void* self, QModelIndex* (*callback)(
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1603,7 +1603,7 @@ bool k_rearrangecolumnsproxymodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1613,7 +1613,7 @@ bool k_rearrangecolumnsproxymodel_qbase_can_fetch_more(void* self, void* parent)
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1623,7 +1623,7 @@ void k_rearrangecolumnsproxymodel_on_can_fetch_more(void* self, bool (*callback)
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1633,7 +1633,7 @@ void k_rearrangecolumnsproxymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1643,7 +1643,7 @@ void k_rearrangecolumnsproxymodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1653,7 +1653,7 @@ void k_rearrangecolumnsproxymodel_on_fetch_more(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1664,7 +1664,7 @@ void k_rearrangecolumnsproxymodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1675,7 +1675,7 @@ void k_rearrangecolumnsproxymodel_qbase_sort(void* self, int column, int32_t ord
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1685,7 +1685,7 @@ void k_rearrangecolumnsproxymodel_on_sort(void* self, void (*callback)(void*, in
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1695,7 +1695,7 @@ QSize* k_rearrangecolumnsproxymodel_span(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1705,7 +1705,7 @@ QSize* k_rearrangecolumnsproxymodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1715,7 +1715,7 @@ void k_rearrangecolumnsproxymodel_on_span(void* self, QSize* (*callback)(void*, 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1725,7 +1725,7 @@ QMimeData* k_rearrangecolumnsproxymodel_mime_data(void* self, libqt_list indexes
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1735,7 +1735,7 @@ QMimeData* k_rearrangecolumnsproxymodel_qbase_mime_data(void* self, libqt_list i
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1745,7 +1745,7 @@ void k_rearrangecolumnsproxymodel_on_mime_data(void* self, QMimeData* (*callback
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1759,7 +1759,7 @@ bool k_rearrangecolumnsproxymodel_can_drop_mime_data(void* self, void* data, int
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1773,7 +1773,7 @@ bool k_rearrangecolumnsproxymodel_qbase_can_drop_mime_data(void* self, void* dat
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1783,7 +1783,7 @@ void k_rearrangecolumnsproxymodel_on_can_drop_mime_data(void* self, bool (*callb
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1794,7 +1794,7 @@ const char** k_rearrangecolumnsproxymodel_mime_types(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1805,7 +1805,7 @@ const char** k_rearrangecolumnsproxymodel_qbase_mime_types(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1815,7 +1815,7 @@ void k_rearrangecolumnsproxymodel_on_mime_types(void* self, const char** (*callb
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1826,7 +1826,7 @@ int32_t k_rearrangecolumnsproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1837,7 +1837,7 @@ int32_t k_rearrangecolumnsproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1847,7 +1847,7 @@ void k_rearrangecolumnsproxymodel_on_supported_drag_actions(void* self, int32_t 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1858,7 +1858,7 @@ int32_t k_rearrangecolumnsproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1869,7 +1869,7 @@ int32_t k_rearrangecolumnsproxymodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1879,7 +1879,7 @@ void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1888,7 +1888,7 @@ libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_role_names(void* se
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1897,7 +1897,7 @@ libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_qbase_role_names(vo
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1907,7 +1907,7 @@ void k_rearrangecolumnsproxymodel_on_role_names(void* self, libqt_map /* of int 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1918,7 +1918,7 @@ void k_rearrangecolumnsproxymodel_multi_data(void* self, void* index, void* role
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1929,7 +1929,7 @@ void k_rearrangecolumnsproxymodel_qbase_multi_data(void* self, void* index, void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1939,7 +1939,7 @@ void k_rearrangecolumnsproxymodel_on_multi_data(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1948,7 +1948,7 @@ void k_rearrangecolumnsproxymodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1957,7 +1957,7 @@ void k_rearrangecolumnsproxymodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1967,7 +1967,7 @@ void k_rearrangecolumnsproxymodel_on_reset_internal_data(void* self, void (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1977,7 +1977,7 @@ bool k_rearrangecolumnsproxymodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1987,7 +1987,7 @@ bool k_rearrangecolumnsproxymodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1997,7 +1997,7 @@ void k_rearrangecolumnsproxymodel_on_event(void* self, bool (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2008,7 +2008,7 @@ bool k_rearrangecolumnsproxymodel_event_filter(void* self, void* watched, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2019,7 +2019,7 @@ bool k_rearrangecolumnsproxymodel_qbase_event_filter(void* self, void* watched, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2029,7 +2029,7 @@ void k_rearrangecolumnsproxymodel_on_event_filter(void* self, bool (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2039,7 +2039,7 @@ void k_rearrangecolumnsproxymodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2049,7 +2049,7 @@ void k_rearrangecolumnsproxymodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2059,7 +2059,7 @@ void k_rearrangecolumnsproxymodel_on_timer_event(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2069,7 +2069,7 @@ void k_rearrangecolumnsproxymodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2079,7 +2079,7 @@ void k_rearrangecolumnsproxymodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2089,7 +2089,7 @@ void k_rearrangecolumnsproxymodel_on_child_event(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2099,7 +2099,7 @@ void k_rearrangecolumnsproxymodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2109,7 +2109,7 @@ void k_rearrangecolumnsproxymodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2119,7 +2119,7 @@ void k_rearrangecolumnsproxymodel_on_custom_event(void* self, void (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2129,7 +2129,7 @@ void k_rearrangecolumnsproxymodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2139,7 +2139,7 @@ void k_rearrangecolumnsproxymodel_qbase_connect_notify(void* self, void* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2149,7 +2149,7 @@ void k_rearrangecolumnsproxymodel_on_connect_notify(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2159,7 +2159,7 @@ void k_rearrangecolumnsproxymodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2169,7 +2169,7 @@ void k_rearrangecolumnsproxymodel_qbase_disconnect_notify(void* self, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2179,7 +2179,7 @@ void k_rearrangecolumnsproxymodel_on_disconnect_notify(void* self, void (*callba
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2189,7 +2189,7 @@ void k_rearrangecolumnsproxymodel_set_handle_source_layout_changes(void* self, b
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2199,7 +2199,7 @@ void k_rearrangecolumnsproxymodel_qbase_set_handle_source_layout_changes(void* s
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2209,7 +2209,7 @@ void k_rearrangecolumnsproxymodel_on_set_handle_source_layout_changes(void* self
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2219,7 +2219,7 @@ void k_rearrangecolumnsproxymodel_set_handle_source_data_changes(void* self, boo
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2229,7 +2229,7 @@ void k_rearrangecolumnsproxymodel_qbase_set_handle_source_data_changes(void* sel
 
 /// Inherited from QIdentityProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
+/// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2239,7 +2239,7 @@ void k_rearrangecolumnsproxymodel_on_set_handle_source_data_changes(void* self, 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2251,7 +2251,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_create_source_index(void* self, int ro
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2263,7 +2263,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_qbase_create_source_index(void* self, 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2273,7 +2273,7 @@ void k_rearrangecolumnsproxymodel_on_create_source_index(void* self, QModelIndex
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2284,7 +2284,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_create_index(void* self, int row, int 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2295,7 +2295,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_qbase_create_index(void* self, int row
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2305,7 +2305,7 @@ void k_rearrangecolumnsproxymodel_on_create_index(void* self, QModelIndex* (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2316,7 +2316,7 @@ void k_rearrangecolumnsproxymodel_encode_data(void* self, libqt_list indexes, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2327,7 +2327,7 @@ void k_rearrangecolumnsproxymodel_qbase_encode_data(void* self, libqt_list index
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2337,7 +2337,7 @@ void k_rearrangecolumnsproxymodel_on_encode_data(void* self, void (*callback)(vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2350,7 +2350,7 @@ bool k_rearrangecolumnsproxymodel_decode_data(void* self, int row, int column, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2363,7 +2363,7 @@ bool k_rearrangecolumnsproxymodel_qbase_decode_data(void* self, int row, int col
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2373,7 +2373,7 @@ void k_rearrangecolumnsproxymodel_on_decode_data(void* self, bool (*callback)(vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2385,7 +2385,7 @@ void k_rearrangecolumnsproxymodel_begin_insert_rows(void* self, void* parent, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2397,7 +2397,7 @@ void k_rearrangecolumnsproxymodel_qbase_begin_insert_rows(void* self, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2407,7 +2407,7 @@ void k_rearrangecolumnsproxymodel_on_begin_insert_rows(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2416,7 +2416,7 @@ void k_rearrangecolumnsproxymodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2425,7 +2425,7 @@ void k_rearrangecolumnsproxymodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2435,7 +2435,7 @@ void k_rearrangecolumnsproxymodel_on_end_insert_rows(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2447,7 +2447,7 @@ void k_rearrangecolumnsproxymodel_begin_remove_rows(void* self, void* parent, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2459,7 +2459,7 @@ void k_rearrangecolumnsproxymodel_qbase_begin_remove_rows(void* self, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2469,7 +2469,7 @@ void k_rearrangecolumnsproxymodel_on_begin_remove_rows(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2478,7 +2478,7 @@ void k_rearrangecolumnsproxymodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2487,7 +2487,7 @@ void k_rearrangecolumnsproxymodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2497,7 +2497,7 @@ void k_rearrangecolumnsproxymodel_on_end_remove_rows(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2511,7 +2511,7 @@ bool k_rearrangecolumnsproxymodel_begin_move_rows(void* self, void* sourceParent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2525,7 +2525,7 @@ bool k_rearrangecolumnsproxymodel_qbase_begin_move_rows(void* self, void* source
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2535,7 +2535,7 @@ void k_rearrangecolumnsproxymodel_on_begin_move_rows(void* self, bool (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2544,7 +2544,7 @@ void k_rearrangecolumnsproxymodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2553,7 +2553,7 @@ void k_rearrangecolumnsproxymodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2563,7 +2563,7 @@ void k_rearrangecolumnsproxymodel_on_end_move_rows(void* self, void (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2575,7 +2575,7 @@ void k_rearrangecolumnsproxymodel_begin_insert_columns(void* self, void* parent,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2587,7 +2587,7 @@ void k_rearrangecolumnsproxymodel_qbase_begin_insert_columns(void* self, void* p
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2597,7 +2597,7 @@ void k_rearrangecolumnsproxymodel_on_begin_insert_columns(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2606,7 +2606,7 @@ void k_rearrangecolumnsproxymodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2615,7 +2615,7 @@ void k_rearrangecolumnsproxymodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2625,7 +2625,7 @@ void k_rearrangecolumnsproxymodel_on_end_insert_columns(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2637,7 +2637,7 @@ void k_rearrangecolumnsproxymodel_begin_remove_columns(void* self, void* parent,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2649,7 +2649,7 @@ void k_rearrangecolumnsproxymodel_qbase_begin_remove_columns(void* self, void* p
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2659,7 +2659,7 @@ void k_rearrangecolumnsproxymodel_on_begin_remove_columns(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2668,7 +2668,7 @@ void k_rearrangecolumnsproxymodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2677,7 +2677,7 @@ void k_rearrangecolumnsproxymodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2687,7 +2687,7 @@ void k_rearrangecolumnsproxymodel_on_end_remove_columns(void* self, void (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2701,7 +2701,7 @@ bool k_rearrangecolumnsproxymodel_begin_move_columns(void* self, void* sourcePar
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2715,7 +2715,7 @@ bool k_rearrangecolumnsproxymodel_qbase_begin_move_columns(void* self, void* sou
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2725,7 +2725,7 @@ void k_rearrangecolumnsproxymodel_on_begin_move_columns(void* self, bool (*callb
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2734,7 +2734,7 @@ void k_rearrangecolumnsproxymodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2743,7 +2743,7 @@ void k_rearrangecolumnsproxymodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2753,7 +2753,7 @@ void k_rearrangecolumnsproxymodel_on_end_move_columns(void* self, void (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2762,7 +2762,7 @@ void k_rearrangecolumnsproxymodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2771,7 +2771,7 @@ void k_rearrangecolumnsproxymodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2781,7 +2781,7 @@ void k_rearrangecolumnsproxymodel_on_begin_reset_model(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2790,7 +2790,7 @@ void k_rearrangecolumnsproxymodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2799,7 +2799,7 @@ void k_rearrangecolumnsproxymodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2809,7 +2809,7 @@ void k_rearrangecolumnsproxymodel_on_end_reset_model(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2820,7 +2820,7 @@ void k_rearrangecolumnsproxymodel_change_persistent_index(void* self, void* from
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2831,7 +2831,7 @@ void k_rearrangecolumnsproxymodel_qbase_change_persistent_index(void* self, void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2841,7 +2841,7 @@ void k_rearrangecolumnsproxymodel_on_change_persistent_index(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2852,7 +2852,7 @@ void k_rearrangecolumnsproxymodel_change_persistent_index_list(void* self, libqt
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2863,7 +2863,7 @@ void k_rearrangecolumnsproxymodel_qbase_change_persistent_index_list(void* self,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2873,7 +2873,7 @@ void k_rearrangecolumnsproxymodel_on_change_persistent_index_list(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2882,7 +2882,7 @@ libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_persistent_index_l
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2891,7 +2891,7 @@ libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_qbase_persistent_i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2901,7 +2901,7 @@ void k_rearrangecolumnsproxymodel_on_persistent_index_list(void* self, QModelInd
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2910,7 +2910,7 @@ QObject* k_rearrangecolumnsproxymodel_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2919,7 +2919,7 @@ QObject* k_rearrangecolumnsproxymodel_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2929,7 +2929,7 @@ void k_rearrangecolumnsproxymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2938,7 +2938,7 @@ int32_t k_rearrangecolumnsproxymodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2947,7 +2947,7 @@ int32_t k_rearrangecolumnsproxymodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2957,7 +2957,7 @@ void k_rearrangecolumnsproxymodel_on_sender_signal_index(void* self, int32_t (*c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2967,7 +2967,7 @@ int32_t k_rearrangecolumnsproxymodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2977,7 +2977,7 @@ int32_t k_rearrangecolumnsproxymodel_qbase_receivers(void* self, const char* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2987,7 +2987,7 @@ void k_rearrangecolumnsproxymodel_on_receivers(void* self, int32_t (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2997,7 +2997,7 @@ bool k_rearrangecolumnsproxymodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3007,7 +3007,7 @@ bool k_rearrangecolumnsproxymodel_qbase_is_signal_connected(void* self, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3017,7 +3017,7 @@ void k_rearrangecolumnsproxymodel_on_is_signal_connected(void* self, bool (*call
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModelChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModelChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3027,7 +3027,7 @@ void k_rearrangecolumnsproxymodel_on_source_model_changed(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3037,7 +3037,7 @@ void k_rearrangecolumnsproxymodel_on_rows_about_to_be_inserted(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3047,7 +3047,7 @@ void k_rearrangecolumnsproxymodel_on_rows_inserted(void* self, void (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3057,7 +3057,7 @@ void k_rearrangecolumnsproxymodel_on_rows_about_to_be_removed(void* self, void (
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3067,7 +3067,7 @@ void k_rearrangecolumnsproxymodel_on_rows_removed(void* self, void (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3077,7 +3077,7 @@ void k_rearrangecolumnsproxymodel_on_columns_about_to_be_inserted(void* self, vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3087,7 +3087,7 @@ void k_rearrangecolumnsproxymodel_on_columns_inserted(void* self, void (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3097,7 +3097,7 @@ void k_rearrangecolumnsproxymodel_on_columns_about_to_be_removed(void* self, voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3107,7 +3107,7 @@ void k_rearrangecolumnsproxymodel_on_columns_removed(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3117,7 +3117,7 @@ void k_rearrangecolumnsproxymodel_on_model_about_to_be_reset(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3127,7 +3127,7 @@ void k_rearrangecolumnsproxymodel_on_model_reset(void* self, void (*callback)(vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3137,7 +3137,7 @@ void k_rearrangecolumnsproxymodel_on_rows_about_to_be_moved(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3147,7 +3147,7 @@ void k_rearrangecolumnsproxymodel_on_rows_moved(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3157,7 +3157,7 @@ void k_rearrangecolumnsproxymodel_on_columns_about_to_be_moved(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3167,7 +3167,7 @@ void k_rearrangecolumnsproxymodel_on_columns_moved(void* self, void (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3175,7 +3175,7 @@ void k_rearrangecolumnsproxymodel_on_columns_moved(void* self, void (*callback)(
 /// @param callback void func(KRearrangeColumnsProxyModel* self, const char* objectName)
 void k_rearrangecolumnsproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/krearrangecolumnsproxymodel.html#dtor.KRearrangeColumnsProxyModel)
+/// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#dtor.KRearrangeColumnsProxyModel)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -22,63 +22,63 @@ QWebEnginePermission* q_webenginepermission_new();
 /// @param other QWebEnginePermission*
 QWebEnginePermission* q_webenginepermission_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#operator-eq)
 ///
 /// @param self QWebEnginePermission*
 /// @param other QWebEnginePermission*
 void q_webenginepermission_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#swap)
 ///
 /// @param self QWebEnginePermission*
 /// @param other QWebEnginePermission*
 void q_webenginepermission_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#origin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#origin)
 ///
 /// @param self QWebEnginePermission*
 QUrl* q_webenginepermission_origin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#permissionType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#permissionType)
 ///
 /// @param self QWebEnginePermission*
 ///
 /// @return enum QWebEnginePermission__PermissionType
 uint8_t q_webenginepermission_permission_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#state)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#state)
 ///
 /// @param self QWebEnginePermission*
 ///
 /// @return enum QWebEnginePermission__State
 uint8_t q_webenginepermission_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#isValid)
 ///
 /// @param self QWebEnginePermission*
 bool q_webenginepermission_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#grant)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#grant)
 ///
 /// @param self QWebEnginePermission*
 void q_webenginepermission_grant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#deny)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#deny)
 ///
 /// @param self QWebEnginePermission*
 void q_webenginepermission_deny(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#reset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#reset)
 ///
 /// @param self QWebEnginePermission*
 void q_webenginepermission_reset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#isPersistent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#isPersistent)
 ///
 /// @param permissionType enum QWebEnginePermission__PermissionType
 bool q_webenginepermission_is_persistent(uint8_t permissionType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#dtor.QWebEnginePermission)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#dtor.QWebEnginePermission)
 ///
 /// Delete this object from C++ memory.
 ///

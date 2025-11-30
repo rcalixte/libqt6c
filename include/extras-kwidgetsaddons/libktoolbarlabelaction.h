@@ -26,7 +26,7 @@ KToolBarLabelAction* k_toolbarlabelaction_new(const char* text, void* parent);
 /// @param parent QObject*
 KToolBarLabelAction* k_toolbarlabelaction_new2(void* buddy, const char* text, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KToolBarLabelAction*
 const QMetaObject* k_toolbarlabelaction_meta_object(void* self);
@@ -55,31 +55,31 @@ void k_toolbarlabelaction_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_toolbarlabelaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_toolbarlabelaction_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#setBuddy)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#setBuddy)
 ///
 /// @param self KToolBarLabelAction*
 /// @param buddy QAction*
 void k_toolbarlabelaction_set_buddy(void* self, void* buddy);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#buddy)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#buddy)
 ///
 /// @param self KToolBarLabelAction*
 QAction* k_toolbarlabelaction_buddy(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
 ///
 /// @param self KToolBarLabelAction*
 /// @param parent QWidget*
 QWidget* k_toolbarlabelaction_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -87,7 +87,7 @@ QWidget* k_toolbarlabelaction_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KToolBarLabelAction* self, QWidget* parent)
 void k_toolbarlabelaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -95,25 +95,25 @@ void k_toolbarlabelaction_on_create_widget(void* self, QWidget* (*callback)(void
 /// @param parent QWidget*
 QWidget* k_toolbarlabelaction_qbase_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#textChanged)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#textChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param newText const char*
 void k_toolbarlabelaction_text_changed(void* self, const char* newText);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#textChanged)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#textChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self, const char* newText)
 void k_toolbarlabelaction_on_text_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#event)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#event)
 ///
 /// @param self KToolBarLabelAction*
 /// @param param1 QEvent*
 bool k_toolbarlabelaction_event(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#event)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -121,7 +121,7 @@ bool k_toolbarlabelaction_event(void* self, void* param1);
 /// @param callback bool func(KToolBarLabelAction* self, QEvent* param1)
 void k_toolbarlabelaction_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#event)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#event)
 ///
 /// Base class method implementation
 ///
@@ -129,14 +129,14 @@ void k_toolbarlabelaction_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool k_toolbarlabelaction_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
 ///
 /// @param self KToolBarLabelAction*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_toolbarlabelaction_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -144,7 +144,7 @@ bool k_toolbarlabelaction_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KToolBarLabelAction* self, QObject* watched, QEvent* event)
 void k_toolbarlabelaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -153,7 +153,7 @@ void k_toolbarlabelaction_on_event_filter(void* self, bool (*callback)(void*, vo
 /// @param event QEvent*
 bool k_toolbarlabelaction_qbase_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -161,7 +161,7 @@ bool k_toolbarlabelaction_qbase_event_filter(void* self, void* watched, void* ev
 /// @param c const char*
 const char* k_toolbarlabelaction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -172,7 +172,7 @@ const char* k_toolbarlabelaction_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#setDefaultWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#setDefaultWidget)
 ///
 /// @param self KToolBarLabelAction*
 /// @param w QWidget*
@@ -180,14 +180,14 @@ void k_toolbarlabelaction_set_default_widget(void* self, void* w);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#defaultWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#defaultWidget)
 ///
 /// @param self KToolBarLabelAction*
 QWidget* k_toolbarlabelaction_default_widget(void* self);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#requestWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#requestWidget)
 ///
 /// @param self KToolBarLabelAction*
 /// @param parent QWidget*
@@ -195,7 +195,7 @@ QWidget* k_toolbarlabelaction_request_widget(void* self, void* parent);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#releaseWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#releaseWidget)
 ///
 /// @param self KToolBarLabelAction*
 /// @param widget QWidget*
@@ -203,14 +203,14 @@ void k_toolbarlabelaction_release_widget(void* self, void* widget);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
 ///
 /// @param self KToolBarLabelAction*
 libqt_list /* of QObject* */ k_toolbarlabelaction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setActionGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setActionGroup)
 ///
 /// @param self KToolBarLabelAction*
 /// @param group QActionGroup*
@@ -218,14 +218,14 @@ void k_toolbarlabelaction_set_action_group(void* self, void* group);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#actionGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#actionGroup)
 ///
 /// @param self KToolBarLabelAction*
 QActionGroup* k_toolbarlabelaction_action_group(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIcon)
 ///
 /// @param self KToolBarLabelAction*
 /// @param icon QIcon*
@@ -233,14 +233,14 @@ void k_toolbarlabelaction_set_icon(void* self, void* icon);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#icon)
 ///
 /// @param self KToolBarLabelAction*
 QIcon* k_toolbarlabelaction_icon(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setText)
 ///
 /// @param self KToolBarLabelAction*
 /// @param text const char*
@@ -248,7 +248,7 @@ void k_toolbarlabelaction_set_text(void* self, const char* text);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -257,7 +257,7 @@ const char* k_toolbarlabelaction_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIconText)
 ///
 /// @param self KToolBarLabelAction*
 /// @param text const char*
@@ -265,7 +265,7 @@ void k_toolbarlabelaction_set_icon_text(void* self, const char* text);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#iconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -274,7 +274,7 @@ const char* k_toolbarlabelaction_icon_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setToolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setToolTip)
 ///
 /// @param self KToolBarLabelAction*
 /// @param tip const char*
@@ -282,7 +282,7 @@ void k_toolbarlabelaction_set_tool_tip(void* self, const char* tip);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -291,7 +291,7 @@ const char* k_toolbarlabelaction_tool_tip(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setStatusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setStatusTip)
 ///
 /// @param self KToolBarLabelAction*
 /// @param statusTip const char*
@@ -299,7 +299,7 @@ void k_toolbarlabelaction_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#statusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -308,7 +308,7 @@ const char* k_toolbarlabelaction_status_tip(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setWhatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setWhatsThis)
 ///
 /// @param self KToolBarLabelAction*
 /// @param what const char*
@@ -316,7 +316,7 @@ void k_toolbarlabelaction_set_whats_this(void* self, const char* what);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#whatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -325,7 +325,7 @@ const char* k_toolbarlabelaction_whats_this(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setPriority)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setPriority)
 ///
 /// @param self KToolBarLabelAction*
 /// @param priority enum QAction__Priority
@@ -333,7 +333,7 @@ void k_toolbarlabelaction_set_priority(void* self, int32_t priority);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#priority)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#priority)
 ///
 /// @param self KToolBarLabelAction*
 ///
@@ -342,7 +342,7 @@ int32_t k_toolbarlabelaction_priority(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setSeparator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setSeparator)
 ///
 /// @param self KToolBarLabelAction*
 /// @param b bool
@@ -350,14 +350,14 @@ void k_toolbarlabelaction_set_separator(void* self, bool b);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isSeparator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isSeparator)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_separator(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcut)
 ///
 /// @param self KToolBarLabelAction*
 /// @param shortcut QKeySequence*
@@ -365,14 +365,14 @@ void k_toolbarlabelaction_set_shortcut(void* self, void* shortcut);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcut)
 ///
 /// @param self KToolBarLabelAction*
 QKeySequence* k_toolbarlabelaction_shortcut(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KToolBarLabelAction*
 /// @param shortcuts libqt_list /* of QKeySequence* */
@@ -380,7 +380,7 @@ void k_toolbarlabelaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KToolBarLabelAction*
 /// @param shortcuts enum QKeySequence__StandardKey
@@ -388,14 +388,14 @@ void k_toolbarlabelaction_set_shortcuts2(void* self, int32_t shortcuts);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
 /// @param self KToolBarLabelAction*
 libqt_list /* of QKeySequence* */ k_toolbarlabelaction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcutContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcutContext)
 ///
 /// @param self KToolBarLabelAction*
 /// @param context enum Qt__ShortcutContext
@@ -403,7 +403,7 @@ void k_toolbarlabelaction_set_shortcut_context(void* self, int32_t context);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
 ///
 /// @param self KToolBarLabelAction*
 ///
@@ -412,7 +412,7 @@ int32_t k_toolbarlabelaction_shortcut_context(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setAutoRepeat)
 ///
 /// @param self KToolBarLabelAction*
 /// @param autoRepeat bool
@@ -420,14 +420,14 @@ void k_toolbarlabelaction_set_auto_repeat(void* self, bool autoRepeat);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_auto_repeat(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setFont)
 ///
 /// @param self KToolBarLabelAction*
 /// @param font QFont*
@@ -435,14 +435,14 @@ void k_toolbarlabelaction_set_font(void* self, void* font);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#font)
 ///
 /// @param self KToolBarLabelAction*
 QFont* k_toolbarlabelaction_font(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setCheckable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setCheckable)
 ///
 /// @param self KToolBarLabelAction*
 /// @param checkable bool
@@ -450,21 +450,21 @@ void k_toolbarlabelaction_set_checkable(void* self, bool checkable);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isCheckable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isCheckable)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_checkable(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#data)
 ///
 /// @param self KToolBarLabelAction*
 QVariant* k_toolbarlabelaction_data(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self KToolBarLabelAction*
 /// @param varVal QVariant*
@@ -472,28 +472,28 @@ void k_toolbarlabelaction_set_data(void* self, void* varVal);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isChecked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isChecked)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_checked(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isEnabled)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_enabled(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isVisible)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_visible(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#activate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#activate)
 ///
 /// @param self KToolBarLabelAction*
 /// @param event enum QAction__ActionEvent
@@ -501,7 +501,7 @@ void k_toolbarlabelaction_activate(void* self, int32_t event);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setMenuRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setMenuRole)
 ///
 /// @param self KToolBarLabelAction*
 /// @param menuRole enum QAction__MenuRole
@@ -509,7 +509,7 @@ void k_toolbarlabelaction_set_menu_role(void* self, int32_t menuRole);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#menuRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#menuRole)
 ///
 /// @param self KToolBarLabelAction*
 ///
@@ -518,7 +518,7 @@ int32_t k_toolbarlabelaction_menu_role(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIconVisibleInMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIconVisibleInMenu)
 ///
 /// @param self KToolBarLabelAction*
 /// @param visible bool
@@ -526,14 +526,14 @@ void k_toolbarlabelaction_set_icon_visible_in_menu(void* self, bool visible);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_icon_visible_in_menu(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcutVisibleInContextMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcutVisibleInContextMenu)
 ///
 /// @param self KToolBarLabelAction*
 /// @param show bool
@@ -541,35 +541,35 @@ void k_toolbarlabelaction_set_shortcut_visible_in_context_menu(void* self, bool 
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_shortcut_visible_in_context_menu(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#showStatusText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#showStatusText)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_show_status_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#trigger)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#trigger)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_trigger(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hover)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hover)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_hover(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setChecked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setChecked)
 ///
 /// @param self KToolBarLabelAction*
 /// @param checked bool
@@ -577,14 +577,14 @@ void k_toolbarlabelaction_set_checked(void* self, bool checked);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggle)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_toggle(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setEnabled)
 ///
 /// @param self KToolBarLabelAction*
 /// @param enabled bool
@@ -592,14 +592,14 @@ void k_toolbarlabelaction_set_enabled(void* self, bool enabled);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#resetEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#resetEnabled)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_reset_enabled(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setDisabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setDisabled)
 ///
 /// @param self KToolBarLabelAction*
 /// @param b bool
@@ -607,7 +607,7 @@ void k_toolbarlabelaction_set_disabled(void* self, bool b);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setVisible)
 ///
 /// @param self KToolBarLabelAction*
 /// @param visible bool
@@ -615,14 +615,14 @@ void k_toolbarlabelaction_set_visible(void* self, bool visible);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_changed(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self)
@@ -630,7 +630,7 @@ void k_toolbarlabelaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param enabled bool
@@ -638,7 +638,7 @@ void k_toolbarlabelaction_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self, bool enabled)
@@ -646,7 +646,7 @@ void k_toolbarlabelaction_on_enabled_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param checkable bool
@@ -654,7 +654,7 @@ void k_toolbarlabelaction_checkable_changed(void* self, bool checkable);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self, bool checkable)
@@ -662,14 +662,14 @@ void k_toolbarlabelaction_on_checkable_changed(void* self, void (*callback)(void
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_visible_changed(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self)
@@ -677,14 +677,14 @@ void k_toolbarlabelaction_on_visible_changed(void* self, void (*callback)(void*)
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_triggered(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self)
@@ -692,14 +692,14 @@ void k_toolbarlabelaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_hovered(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self)
@@ -707,7 +707,7 @@ void k_toolbarlabelaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToolBarLabelAction*
 /// @param param1 bool
@@ -715,7 +715,7 @@ void k_toolbarlabelaction_toggled(void* self, bool param1);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self, bool param1)
@@ -723,7 +723,7 @@ void k_toolbarlabelaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#showStatusText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#showStatusText)
 ///
 /// @param self KToolBarLabelAction*
 /// @param object QObject*
@@ -731,7 +731,7 @@ bool k_toolbarlabelaction_show_status_text1(void* self, void* object);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarLabelAction*
 /// @param checked bool
@@ -739,7 +739,7 @@ void k_toolbarlabelaction_triggered1(void* self, bool checked);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self, bool checked)
@@ -747,7 +747,7 @@ void k_toolbarlabelaction_on_triggered1(void* self, void (*callback)(void*, bool
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -756,7 +756,7 @@ const char* k_toolbarlabelaction_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KToolBarLabelAction*
 /// @param name char*
@@ -764,35 +764,35 @@ void k_toolbarlabelaction_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KToolBarLabelAction*
 bool k_toolbarlabelaction_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KToolBarLabelAction*
 /// @param b bool
@@ -800,14 +800,14 @@ bool k_toolbarlabelaction_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KToolBarLabelAction*
 QThread* k_toolbarlabelaction_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KToolBarLabelAction*
 /// @param thread QThread*
@@ -815,7 +815,7 @@ bool k_toolbarlabelaction_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KToolBarLabelAction*
 /// @param interval int
@@ -823,7 +823,7 @@ int32_t k_toolbarlabelaction_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KToolBarLabelAction*
 /// @param id int
@@ -831,7 +831,7 @@ void k_toolbarlabelaction_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KToolBarLabelAction*
 /// @param id enum Qt__TimerId
@@ -839,14 +839,14 @@ void k_toolbarlabelaction_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KToolBarLabelAction*
 libqt_list /* of QObject* */ k_toolbarlabelaction_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KToolBarLabelAction*
 /// @param parent QObject*
@@ -854,7 +854,7 @@ void k_toolbarlabelaction_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KToolBarLabelAction*
 /// @param filterObj QObject*
@@ -862,7 +862,7 @@ void k_toolbarlabelaction_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KToolBarLabelAction*
 /// @param obj QObject*
@@ -870,7 +870,7 @@ void k_toolbarlabelaction_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -880,7 +880,7 @@ QMetaObject__Connection* k_toolbarlabelaction_connect(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KToolBarLabelAction*
 /// @param sender QObject*
@@ -890,7 +890,7 @@ QMetaObject__Connection* k_toolbarlabelaction_connect2(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -900,28 +900,28 @@ bool k_toolbarlabelaction_disconnect(void* sender, void* signal, void* receiver,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_toolbarlabelaction_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KToolBarLabelAction*
 /// @param name const char*
@@ -930,7 +930,7 @@ bool k_toolbarlabelaction_set_property(void* self, const char* name, void* value
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KToolBarLabelAction*
 /// @param name const char*
@@ -938,7 +938,7 @@ QVariant* k_toolbarlabelaction_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -947,28 +947,28 @@ const char** k_toolbarlabelaction_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KToolBarLabelAction*
 QBindingStorage* k_toolbarlabelaction_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KToolBarLabelAction*
 const QBindingStorage* k_toolbarlabelaction_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self)
@@ -976,14 +976,14 @@ void k_toolbarlabelaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KToolBarLabelAction*
 QObject* k_toolbarlabelaction_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KToolBarLabelAction*
 /// @param classname const char*
@@ -991,14 +991,14 @@ bool k_toolbarlabelaction_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KToolBarLabelAction*
 void k_toolbarlabelaction_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KToolBarLabelAction*
 /// @param thread QThread*
@@ -1007,7 +1007,7 @@ bool k_toolbarlabelaction_move_to_thread2(void* self, void* thread, void* param2
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KToolBarLabelAction*
 /// @param interval int
@@ -1016,7 +1016,7 @@ int32_t k_toolbarlabelaction_start_timer22(void* self, int interval, int32_t tim
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1027,7 +1027,7 @@ QMetaObject__Connection* k_toolbarlabelaction_connect5(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KToolBarLabelAction*
 /// @param sender QObject*
@@ -1038,7 +1038,7 @@ QMetaObject__Connection* k_toolbarlabelaction_connect4(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarLabelAction*
 /// @param param1 QObject*
@@ -1046,7 +1046,7 @@ void k_toolbarlabelaction_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self, QObject* param1)
@@ -1054,7 +1054,7 @@ void k_toolbarlabelaction_on_destroyed1(void* self, void (*callback)(void*, void
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1064,7 +1064,7 @@ void k_toolbarlabelaction_delete_widget(void* self, void* widget);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1074,7 +1074,7 @@ void k_toolbarlabelaction_qbase_delete_widget(void* self, void* widget);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1084,7 +1084,7 @@ void k_toolbarlabelaction_on_delete_widget(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1094,7 +1094,7 @@ void k_toolbarlabelaction_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1104,7 +1104,7 @@ void k_toolbarlabelaction_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1114,7 +1114,7 @@ void k_toolbarlabelaction_on_timer_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1124,7 +1124,7 @@ void k_toolbarlabelaction_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1134,7 +1134,7 @@ void k_toolbarlabelaction_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1144,7 +1144,7 @@ void k_toolbarlabelaction_on_child_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1154,7 +1154,7 @@ void k_toolbarlabelaction_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1164,7 +1164,7 @@ void k_toolbarlabelaction_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1174,7 +1174,7 @@ void k_toolbarlabelaction_on_custom_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1184,7 +1184,7 @@ void k_toolbarlabelaction_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1194,7 +1194,7 @@ void k_toolbarlabelaction_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1204,7 +1204,7 @@ void k_toolbarlabelaction_on_connect_notify(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1214,7 +1214,7 @@ void k_toolbarlabelaction_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1224,7 +1224,7 @@ void k_toolbarlabelaction_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1234,7 +1234,7 @@ void k_toolbarlabelaction_on_disconnect_notify(void* self, void (*callback)(void
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1243,7 +1243,7 @@ libqt_list /* of QWidget* */ k_toolbarlabelaction_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1252,7 +1252,7 @@ libqt_list /* of QWidget* */ k_toolbarlabelaction_qbase_created_widgets(void* se
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1262,7 +1262,7 @@ void k_toolbarlabelaction_on_created_widgets(void* self, QWidget** (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1271,7 +1271,7 @@ QObject* k_toolbarlabelaction_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1280,7 +1280,7 @@ QObject* k_toolbarlabelaction_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1290,7 +1290,7 @@ void k_toolbarlabelaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1299,7 +1299,7 @@ int32_t k_toolbarlabelaction_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1308,7 +1308,7 @@ int32_t k_toolbarlabelaction_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1318,7 +1318,7 @@ void k_toolbarlabelaction_on_sender_signal_index(void* self, int32_t (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1328,7 +1328,7 @@ int32_t k_toolbarlabelaction_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1338,7 +1338,7 @@ int32_t k_toolbarlabelaction_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1348,7 +1348,7 @@ void k_toolbarlabelaction_on_receivers(void* self, int32_t (*callback)(void*, co
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1358,7 +1358,7 @@ bool k_toolbarlabelaction_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1368,7 +1368,7 @@ bool k_toolbarlabelaction_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1378,7 +1378,7 @@ void k_toolbarlabelaction_on_is_signal_connected(void* self, bool (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1386,7 +1386,7 @@ void k_toolbarlabelaction_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KToolBarLabelAction* self, const char* objectName)
 void k_toolbarlabelaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#dtor.KToolBarLabelAction)
+/// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#dtor.KToolBarLabelAction)
 ///
 /// Delete this object from C++ memory.
 ///

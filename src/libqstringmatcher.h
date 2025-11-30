@@ -46,59 +46,59 @@ QStringMatcher* q_stringmatcher_new5(const char* pattern, int32_t cs);
 /// @param cs enum Qt__CaseSensitivity
 QStringMatcher* q_stringmatcher_new6(void* uc, int64_t lenVal, int32_t cs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#operator-eq)
 ///
 /// @param self QStringMatcher*
 /// @param other QStringMatcher*
 void q_stringmatcher_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#setPattern)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#setPattern)
 ///
 /// @param self QStringMatcher*
 /// @param pattern const char*
 void q_stringmatcher_set_pattern(void* self, const char* pattern);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#setCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#setCaseSensitivity)
 ///
 /// @param self QStringMatcher*
 /// @param cs enum Qt__CaseSensitivity
 void q_stringmatcher_set_case_sensitivity(void* self, int32_t cs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
 ///
 /// @param self QStringMatcher*
 /// @param str const char*
 int64_t q_stringmatcher_index_in(void* self, const char* str);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
 ///
 /// @param self QStringMatcher*
 /// @param str QChar*
 /// @param length int64_t
 int64_t q_stringmatcher_index_in2(void* self, void* str, int64_t length);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#pattern)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#pattern)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringMatcher*
 const char* q_stringmatcher_pattern(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#caseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#caseSensitivity)
 ///
 /// @param self QStringMatcher*
 ///
 /// @return enum Qt__CaseSensitivity
 int32_t q_stringmatcher_case_sensitivity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
 ///
 /// @param self QStringMatcher*
 /// @param str const char*
 /// @param from int64_t
 int64_t q_stringmatcher_index_in22(void* self, const char* str, int64_t from);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
 ///
 /// @param self QStringMatcher*
 /// @param str QChar*
@@ -106,7 +106,7 @@ int64_t q_stringmatcher_index_in22(void* self, const char* str, int64_t from);
 /// @param from int64_t
 int64_t q_stringmatcher_index_in32(void* self, void* str, int64_t length, int64_t from);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#dtor.QStringMatcher)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#dtor.QStringMatcher)
 ///
 /// Delete this object from C++ memory.
 ///

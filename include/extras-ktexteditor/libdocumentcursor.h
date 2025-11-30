@@ -36,109 +36,109 @@ KTextEditor__DocumentCursor* k_texteditor__documentcursor_new3(void* document, i
 /// @param other KTextEditor__DocumentCursor*
 KTextEditor__DocumentCursor* k_texteditor__documentcursor_new4(void* other);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#document)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#document)
 ///
 /// @param self KTextEditor__DocumentCursor*
 KTextEditor__Document* k_texteditor__documentcursor_document(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#setPosition)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#setPosition)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param position KTextEditor__Cursor*
 void k_texteditor__documentcursor_set_position(void* self, void* position);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#line)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#line)
 ///
 /// @param self KTextEditor__DocumentCursor*
 int32_t k_texteditor__documentcursor_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#column)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#column)
 ///
 /// @param self KTextEditor__DocumentCursor*
 int32_t k_texteditor__documentcursor_column(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#isValid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#isValid)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#isValidTextPosition)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#isValidTextPosition)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_is_valid_text_position(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#makeValid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#makeValid)
 ///
 /// @param self KTextEditor__DocumentCursor*
 void k_texteditor__documentcursor_make_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#setPosition)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#setPosition)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param line int
 /// @param column int
 void k_texteditor__documentcursor_set_position2(void* self, int line, int column);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#setLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#setLine)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param line int
 void k_texteditor__documentcursor_set_line(void* self, int line);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#setColumn)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#setColumn)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param column int
 void k_texteditor__documentcursor_set_column(void* self, int column);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#atStartOfLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atStartOfLine)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_at_start_of_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#atEndOfLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atEndOfLine)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_at_end_of_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#atStartOfDocument)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atStartOfDocument)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_at_start_of_document(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#atEndOfDocument)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atEndOfDocument)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_at_end_of_document(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#gotoNextLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#gotoNextLine)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_goto_next_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#gotoPreviousLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#gotoPreviousLine)
 ///
 /// @param self KTextEditor__DocumentCursor*
 bool k_texteditor__documentcursor_goto_previous_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#move)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#move)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param chars int
 bool k_texteditor__documentcursor_move(void* self, int chars);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#toCursor)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#toCursor)
 ///
 /// @param self KTextEditor__DocumentCursor*
 KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#operator-eq)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param other KTextEditor__DocumentCursor*
 void k_texteditor__documentcursor_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-documentcursor.html#move)
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#move)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param chars int

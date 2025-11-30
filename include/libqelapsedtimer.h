@@ -39,70 +39,70 @@ void q_elapsedtimer_copy_assign(void* self, void* other);
 /// @param other QElapsedTimer*
 void q_elapsedtimer_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#clockType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#clockType)
 ///
 ///
 /// @return enum QElapsedTimer__ClockType
 int32_t q_elapsedtimer_clock_type();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#isMonotonic)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#isMonotonic)
 ///
 bool q_elapsedtimer_is_monotonic();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#start)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#start)
 ///
 /// @param self QElapsedTimer*
 void q_elapsedtimer_start(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#restart)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#restart)
 ///
 /// @param self QElapsedTimer*
 long long q_elapsedtimer_restart(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#invalidate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#invalidate)
 ///
 /// @param self QElapsedTimer*
 void q_elapsedtimer_invalidate(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#isValid)
 ///
 /// @param self QElapsedTimer*
 bool q_elapsedtimer_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#nsecsElapsed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#nsecsElapsed)
 ///
 /// @param self QElapsedTimer*
 long long q_elapsedtimer_nsecs_elapsed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#elapsed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#elapsed)
 ///
 /// @param self QElapsedTimer*
 long long q_elapsedtimer_elapsed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#hasExpired)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#hasExpired)
 ///
 /// @param self QElapsedTimer*
 /// @param timeout long long
 bool q_elapsedtimer_has_expired(void* self, long long timeout);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#msecsSinceReference)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#msecsSinceReference)
 ///
 /// @param self QElapsedTimer*
 long long q_elapsedtimer_msecs_since_reference(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#msecsTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#msecsTo)
 ///
 /// @param self QElapsedTimer*
 /// @param other QElapsedTimer*
 long long q_elapsedtimer_msecs_to(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#secsTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#secsTo)
 ///
 /// @param self QElapsedTimer*
 /// @param other QElapsedTimer*
 long long q_elapsedtimer_secs_to(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#dtor.QElapsedTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#dtor.QElapsedTimer)
 ///
 /// Delete this object from C++ memory.
 ///

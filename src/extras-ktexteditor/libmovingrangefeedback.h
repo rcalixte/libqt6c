@@ -17,13 +17,13 @@
 ///
 KTextEditor__MovingRangeFeedback* k_texteditor__movingrangefeedback_new();
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
 ///
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 void k_texteditor__movingrangefeedback_range_empty(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -31,7 +31,7 @@ void k_texteditor__movingrangefeedback_range_empty(void* self, void* range);
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range)
 void k_texteditor__movingrangefeedback_on_range_empty(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
 ///
 /// Base class method implementation
 ///
@@ -39,13 +39,13 @@ void k_texteditor__movingrangefeedback_on_range_empty(void* self, void (*callbac
 /// @param range KTextEditor__MovingRange*
 void k_texteditor__movingrangefeedback_qbase_range_empty(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
 ///
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 void k_texteditor__movingrangefeedback_range_invalid(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
 ///
 /// Allows for overriding the related default method
 ///
@@ -53,7 +53,7 @@ void k_texteditor__movingrangefeedback_range_invalid(void* self, void* range);
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range)
 void k_texteditor__movingrangefeedback_on_range_invalid(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
 ///
 /// Base class method implementation
 ///
@@ -61,14 +61,14 @@ void k_texteditor__movingrangefeedback_on_range_invalid(void* self, void (*callb
 /// @param range KTextEditor__MovingRange*
 void k_texteditor__movingrangefeedback_qbase_range_invalid(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
 ///
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 void k_texteditor__movingrangefeedback_mouse_entered_range(void* self, void* range, void* view);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
 ///
 /// Allows for overriding the related default method
 ///
@@ -76,7 +76,7 @@ void k_texteditor__movingrangefeedback_mouse_entered_range(void* self, void* ran
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range, KTextEditor__View* view)
 void k_texteditor__movingrangefeedback_on_mouse_entered_range(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
 ///
 /// Base class method implementation
 ///
@@ -85,14 +85,14 @@ void k_texteditor__movingrangefeedback_on_mouse_entered_range(void* self, void (
 /// @param view KTextEditor__View*
 void k_texteditor__movingrangefeedback_qbase_mouse_entered_range(void* self, void* range, void* view);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
 ///
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 void k_texteditor__movingrangefeedback_mouse_exited_range(void* self, void* range, void* view);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
 ///
 /// Allows for overriding the related default method
 ///
@@ -100,7 +100,7 @@ void k_texteditor__movingrangefeedback_mouse_exited_range(void* self, void* rang
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range, KTextEditor__View* view)
 void k_texteditor__movingrangefeedback_on_mouse_exited_range(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
 ///
 /// Base class method implementation
 ///
@@ -109,14 +109,14 @@ void k_texteditor__movingrangefeedback_on_mouse_exited_range(void* self, void (*
 /// @param view KTextEditor__View*
 void k_texteditor__movingrangefeedback_qbase_mouse_exited_range(void* self, void* range, void* view);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
 ///
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 void k_texteditor__movingrangefeedback_caret_entered_range(void* self, void* range, void* view);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
 ///
 /// Allows for overriding the related default method
 ///
@@ -124,7 +124,7 @@ void k_texteditor__movingrangefeedback_caret_entered_range(void* self, void* ran
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range, KTextEditor__View* view)
 void k_texteditor__movingrangefeedback_on_caret_entered_range(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
 ///
 /// Base class method implementation
 ///
@@ -133,14 +133,14 @@ void k_texteditor__movingrangefeedback_on_caret_entered_range(void* self, void (
 /// @param view KTextEditor__View*
 void k_texteditor__movingrangefeedback_qbase_caret_entered_range(void* self, void* range, void* view);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
 ///
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 void k_texteditor__movingrangefeedback_caret_exited_range(void* self, void* range, void* view);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
 ///
 /// Allows for overriding the related default method
 ///
@@ -148,7 +148,7 @@ void k_texteditor__movingrangefeedback_caret_exited_range(void* self, void* rang
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range, KTextEditor__View* view)
 void k_texteditor__movingrangefeedback_on_caret_exited_range(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
 ///
 /// Base class method implementation
 ///

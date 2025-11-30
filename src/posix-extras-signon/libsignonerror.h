@@ -33,37 +33,37 @@ SignOn__Error* q_signon__error_new3(int type);
 /// @param message const char*
 SignOn__Error* q_signon__error_new4(int type, const char* message);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
 /// @param src SignOn__Error*
 void q_signon__error_operator_assign(void* self, void* src);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
 /// @param type int
 void q_signon__error_set_type(void* self, int type);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
 /// @param message const char*
 void q_signon__error_set_message(void* self, const char* message);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
 int32_t q_signon__error_type(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__Error*
 const char* q_signon__error_message(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// Delete this object from C++ memory.
 ///

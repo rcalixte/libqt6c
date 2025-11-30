@@ -35,77 +35,77 @@ void k_file_copy_assign(void* self, void* other);
 /// @param other KFile*
 void k_file_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSortByName)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSortByName)
 ///
 /// @param sort flag of enum QDir__SortFlag
 bool k_file_is_sort_by_name(const int32_t* sort);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSortBySize)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSortBySize)
 ///
 /// @param sort flag of enum QDir__SortFlag
 bool k_file_is_sort_by_size(const int32_t* sort);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSortByDate)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSortByDate)
 ///
 /// @param sort flag of enum QDir__SortFlag
 bool k_file_is_sort_by_date(const int32_t* sort);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSortByType)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSortByType)
 ///
 /// @param sort flag of enum QDir__SortFlag
 bool k_file_is_sort_by_type(const int32_t* sort);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSortDirsFirst)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSortDirsFirst)
 ///
 /// @param sort flag of enum QDir__SortFlag
 bool k_file_is_sort_dirs_first(const int32_t* sort);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSortCaseInsensitive)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSortCaseInsensitive)
 ///
 /// @param sort flag of enum QDir__SortFlag
 bool k_file_is_sort_case_insensitive(const int32_t* sort);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isDefaultView)
+/// [Upstream resources](https://api.kde.org/kfile.html#isDefaultView)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_default_view(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSimpleView)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSimpleView)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_simple_view(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isDetailView)
+/// [Upstream resources](https://api.kde.org/kfile.html#isDetailView)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_detail_view(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isSeparateDirs)
+/// [Upstream resources](https://api.kde.org/kfile.html#isSeparateDirs)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_separate_dirs(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isPreviewContents)
+/// [Upstream resources](https://api.kde.org/kfile.html#isPreviewContents)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_preview_contents(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isPreviewInfo)
+/// [Upstream resources](https://api.kde.org/kfile.html#isPreviewInfo)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_preview_info(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isTreeView)
+/// [Upstream resources](https://api.kde.org/kfile.html#isTreeView)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_tree_view(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#isDetailTreeView)
+/// [Upstream resources](https://api.kde.org/kfile.html#isDetailTreeView)
 ///
 /// @param view enum KFile__FileView*
 bool k_file_is_detail_tree_view(int32_t* view);
 
-/// [Qt documentation](https://api.kde.org/kfile.html#dtor.KFile)
+/// [Upstream resources](https://api.kde.org/kfile.html#dtor.KFile)
 ///
 /// Delete this object from C++ memory.
 ///

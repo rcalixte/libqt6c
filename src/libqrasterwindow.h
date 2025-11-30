@@ -22,7 +22,7 @@ QRasterWindow* q_rasterwindow_new();
 /// @param parent QWindow*
 QRasterWindow* q_rasterwindow_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QRasterWindow*
 const QMetaObject* q_rasterwindow_meta_object(void* self);
@@ -51,20 +51,20 @@ void q_rasterwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param3 void*
 int32_t q_rasterwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_rasterwindow_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
 ///
 /// @param self QRasterWindow*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 int32_t q_rasterwindow_metric(void* self, int32_t metric);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ int32_t q_rasterwindow_metric(void* self, int32_t metric);
 /// @param callback int32_t func(QRasterWindow* self, enum QPaintDevice__PaintDeviceMetric metric)
 void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
 ///
 /// Base class method implementation
 ///
@@ -80,13 +80,13 @@ void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 int32_t q_rasterwindow_qbase_metric(void* self, int32_t metric);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
 ///
 /// @param self QRasterWindow*
 /// @param param1 QPoint*
 QPaintDevice* q_rasterwindow_redirected(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
 ///
 /// Allows for overriding the related default method
 ///
@@ -94,7 +94,7 @@ QPaintDevice* q_rasterwindow_redirected(void* self, void* param1);
 /// @param callback QPaintDevice* func(QRasterWindow* self, QPoint* param1)
 void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
 ///
 /// Base class method implementation
 ///
@@ -102,13 +102,13 @@ void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 /// @param param1 QPoint*
 QPaintDevice* q_rasterwindow_qbase_redirected(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
 ///
 /// @param self QRasterWindow*
 /// @param event QResizeEvent*
 void q_rasterwindow_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -116,7 +116,7 @@ void q_rasterwindow_resize_event(void* self, void* event);
 /// @param callback void func(QRasterWindow* self, QResizeEvent* event)
 void q_rasterwindow_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -124,7 +124,7 @@ void q_rasterwindow_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 void q_rasterwindow_qbase_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -132,7 +132,7 @@ void q_rasterwindow_qbase_resize_event(void* self, void* event);
 /// @param c const char*
 const char* q_rasterwindow_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -143,7 +143,7 @@ const char* q_rasterwindow_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
 ///
 /// @param self QRasterWindow*
 /// @param rect QRect*
@@ -151,7 +151,7 @@ void q_rasterwindow_update(void* self, void* rect);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
 ///
 /// @param self QRasterWindow*
 /// @param region QRegion*
@@ -159,14 +159,14 @@ void q_rasterwindow_update2(void* self, void* region);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_update3(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setSurfaceType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setSurfaceType)
 ///
 /// @param self QRasterWindow*
 /// @param surfaceType enum QSurface__SurfaceType
@@ -174,14 +174,14 @@ void q_rasterwindow_set_surface_type(void* self, int32_t surfaceType);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isVisible)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_visible(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibility)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#visibility)
 ///
 /// @param self QRasterWindow*
 ///
@@ -190,7 +190,7 @@ int32_t q_rasterwindow_visibility(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setVisibility)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setVisibility)
 ///
 /// @param self QRasterWindow*
 /// @param v enum QWindow__Visibility
@@ -198,28 +198,28 @@ void q_rasterwindow_set_visibility(void* self, int32_t v);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#create)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_create(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#winId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#winId)
 ///
 /// @param self QRasterWindow*
 uintptr_t q_rasterwindow_win_id(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#parent)
 ///
 /// @param self QRasterWindow*
 QWindow* q_rasterwindow_parent(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setParent)
 ///
 /// @param self QRasterWindow*
 /// @param parent QWindow*
@@ -227,21 +227,21 @@ void q_rasterwindow_set_parent(void* self, void* parent);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isTopLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isTopLevel)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_top_level(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isModal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isModal)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_modal(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#modality)
 ///
 /// @param self QRasterWindow*
 ///
@@ -250,7 +250,7 @@ int32_t q_rasterwindow_modality(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setModality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setModality)
 ///
 /// @param self QRasterWindow*
 /// @param modality enum Qt__WindowModality
@@ -258,7 +258,7 @@ void q_rasterwindow_set_modality(void* self, int32_t modality);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setFormat)
 ///
 /// @param self QRasterWindow*
 /// @param format QSurfaceFormat*
@@ -266,14 +266,14 @@ void q_rasterwindow_set_format(void* self, void* format);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#requestedFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#requestedFormat)
 ///
 /// @param self QRasterWindow*
 QSurfaceFormat* q_rasterwindow_requested_format(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setFlags)
 ///
 /// @param self QRasterWindow*
 /// @param flags flag of enum Qt__WindowType
@@ -281,7 +281,7 @@ void q_rasterwindow_set_flags(void* self, int64_t flags);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#flags)
 ///
 /// @param self QRasterWindow*
 ///
@@ -290,7 +290,7 @@ int64_t q_rasterwindow_flags(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setFlag)
 ///
 /// @param self QRasterWindow*
 /// @param param1 enum Qt__WindowType
@@ -298,7 +298,7 @@ void q_rasterwindow_set_flag(void* self, int64_t param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#type)
 ///
 /// @param self QRasterWindow*
 ///
@@ -307,7 +307,7 @@ int64_t q_rasterwindow_type(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#title)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#title)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -316,7 +316,7 @@ const char* q_rasterwindow_title(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setOpacity)
 ///
 /// @param self QRasterWindow*
 /// @param level double
@@ -324,14 +324,14 @@ void q_rasterwindow_set_opacity(void* self, double level);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#opacity)
 ///
 /// @param self QRasterWindow*
 double q_rasterwindow_opacity(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMask)
 ///
 /// @param self QRasterWindow*
 /// @param region QRegion*
@@ -339,21 +339,21 @@ void q_rasterwindow_set_mask(void* self, void* region);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mask)
 ///
 /// @param self QRasterWindow*
 QRegion* q_rasterwindow_mask(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isActive)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_active(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#reportContentOrientationChange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#reportContentOrientationChange)
 ///
 /// @param self QRasterWindow*
 /// @param orientation enum Qt__ScreenOrientation
@@ -361,7 +361,7 @@ void q_rasterwindow_report_content_orientation_change(void* self, int32_t orient
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#contentOrientation)
 ///
 /// @param self QRasterWindow*
 ///
@@ -370,14 +370,14 @@ int32_t q_rasterwindow_content_orientation(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#devicePixelRatio)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#devicePixelRatio)
 ///
 /// @param self QRasterWindow*
 double q_rasterwindow_device_pixel_ratio(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowState)
 ///
 /// @param self QRasterWindow*
 ///
@@ -386,7 +386,7 @@ int32_t q_rasterwindow_window_state(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStates)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowStates)
 ///
 /// @param self QRasterWindow*
 ///
@@ -395,7 +395,7 @@ int32_t q_rasterwindow_window_states(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setWindowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setWindowState)
 ///
 /// @param self QRasterWindow*
 /// @param state enum Qt__WindowState
@@ -403,7 +403,7 @@ void q_rasterwindow_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setWindowStates)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setWindowStates)
 ///
 /// @param self QRasterWindow*
 /// @param states flag of enum Qt__WindowState
@@ -411,7 +411,7 @@ void q_rasterwindow_set_window_states(void* self, int32_t states);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setTransientParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setTransientParent)
 ///
 /// @param self QRasterWindow*
 /// @param parent QWindow*
@@ -419,14 +419,14 @@ void q_rasterwindow_set_transient_parent(void* self, void* parent);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#transientParent)
 ///
 /// @param self QRasterWindow*
 QWindow* q_rasterwindow_transient_parent(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
 ///
 /// @param self QRasterWindow*
 /// @param child QWindow*
@@ -434,70 +434,70 @@ bool q_rasterwindow_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isExposed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isExposed)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_exposed(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumWidth)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_minimum_width(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumHeight)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_minimum_height(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumWidth)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_maximum_width(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumHeight)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_maximum_height(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumSize)
 ///
 /// @param self QRasterWindow*
 QSize* q_rasterwindow_minimum_size(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumSize)
 ///
 /// @param self QRasterWindow*
 QSize* q_rasterwindow_maximum_size(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#baseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#baseSize)
 ///
 /// @param self QRasterWindow*
 QSize* q_rasterwindow_base_size(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#sizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#sizeIncrement)
 ///
 /// @param self QRasterWindow*
 QSize* q_rasterwindow_size_increment(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMinimumSize)
 ///
 /// @param self QRasterWindow*
 /// @param size QSize*
@@ -505,7 +505,7 @@ void q_rasterwindow_set_minimum_size(void* self, void* size);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMaximumSize)
 ///
 /// @param self QRasterWindow*
 /// @param size QSize*
@@ -513,7 +513,7 @@ void q_rasterwindow_set_maximum_size(void* self, void* size);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setBaseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setBaseSize)
 ///
 /// @param self QRasterWindow*
 /// @param size QSize*
@@ -521,7 +521,7 @@ void q_rasterwindow_set_base_size(void* self, void* size);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setSizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setSizeIncrement)
 ///
 /// @param self QRasterWindow*
 /// @param size QSize*
@@ -529,35 +529,35 @@ void q_rasterwindow_set_size_increment(void* self, void* size);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#geometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#geometry)
 ///
 /// @param self QRasterWindow*
 QRect* q_rasterwindow_geometry(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#frameMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#frameMargins)
 ///
 /// @param self QRasterWindow*
 QMargins* q_rasterwindow_frame_margins(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#frameGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#frameGeometry)
 ///
 /// @param self QRasterWindow*
 QRect* q_rasterwindow_frame_geometry(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#framePosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#framePosition)
 ///
 /// @param self QRasterWindow*
 QPoint* q_rasterwindow_frame_position(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFramePosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setFramePosition)
 ///
 /// @param self QRasterWindow*
 /// @param point QPoint*
@@ -565,42 +565,42 @@ void q_rasterwindow_set_frame_position(void* self, void* point);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#width)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_width(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#height)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#height)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_height(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#x)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_x(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#y)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_y(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#position)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#position)
 ///
 /// @param self QRasterWindow*
 QPoint* q_rasterwindow_position(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setPosition)
 ///
 /// @param self QRasterWindow*
 /// @param pt QPoint*
@@ -608,7 +608,7 @@ void q_rasterwindow_set_position(void* self, void* pt);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setPosition)
 ///
 /// @param self QRasterWindow*
 /// @param posx int
@@ -617,7 +617,7 @@ void q_rasterwindow_set_position2(void* self, int posx, int posy);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resize)
 ///
 /// @param self QRasterWindow*
 /// @param newSize QSize*
@@ -625,7 +625,7 @@ void q_rasterwindow_resize(void* self, void* newSize);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resize)
 ///
 /// @param self QRasterWindow*
 /// @param w int
@@ -634,7 +634,7 @@ void q_rasterwindow_resize2(void* self, int w, int h);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setFilePath)
 ///
 /// @param self QRasterWindow*
 /// @param filePath const char*
@@ -642,7 +642,7 @@ void q_rasterwindow_set_file_path(void* self, const char* filePath);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#filePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#filePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -651,7 +651,7 @@ const char* q_rasterwindow_file_path(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setIcon)
 ///
 /// @param self QRasterWindow*
 /// @param icon QIcon*
@@ -659,21 +659,21 @@ void q_rasterwindow_set_icon(void* self, void* icon);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#icon)
 ///
 /// @param self QRasterWindow*
 QIcon* q_rasterwindow_icon(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#destroy)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_destroy(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setKeyboardGrabEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setKeyboardGrabEnabled)
 ///
 /// @param self QRasterWindow*
 /// @param grab bool
@@ -681,7 +681,7 @@ bool q_rasterwindow_set_keyboard_grab_enabled(void* self, bool grab);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMouseGrabEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMouseGrabEnabled)
 ///
 /// @param self QRasterWindow*
 /// @param grab bool
@@ -689,14 +689,14 @@ bool q_rasterwindow_set_mouse_grab_enabled(void* self, bool grab);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#screen)
 ///
 /// @param self QRasterWindow*
 QScreen* q_rasterwindow_screen(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setScreen)
 ///
 /// @param self QRasterWindow*
 /// @param screen QScreen*
@@ -704,7 +704,7 @@ void q_rasterwindow_set_screen(void* self, void* screen);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
 /// @param self QRasterWindow*
 /// @param pos QPointF*
@@ -712,7 +712,7 @@ QPointF* q_rasterwindow_map_to_global(void* self, void* pos);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
 ///
 /// @param self QRasterWindow*
 /// @param pos QPointF*
@@ -720,7 +720,7 @@ QPointF* q_rasterwindow_map_from_global(void* self, void* pos);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
 /// @param self QRasterWindow*
 /// @param pos QPoint*
@@ -728,7 +728,7 @@ QPoint* q_rasterwindow_map_to_global2(void* self, void* pos);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
 ///
 /// @param self QRasterWindow*
 /// @param pos QPoint*
@@ -736,14 +736,14 @@ QPoint* q_rasterwindow_map_from_global2(void* self, void* pos);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#cursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#cursor)
 ///
 /// @param self QRasterWindow*
 QCursor* q_rasterwindow_cursor(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setCursor)
 ///
 /// @param self QRasterWindow*
 /// @param cursor QCursor*
@@ -751,28 +751,28 @@ void q_rasterwindow_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#unsetCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#unsetCursor)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_unset_cursor(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#fromWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#fromWinId)
 ///
 /// @param id uintptr_t
 QWindow* q_rasterwindow_from_win_id(uintptr_t id);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#requestActivate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#requestActivate)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_request_activate(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setVisible)
 ///
 /// @param self QRasterWindow*
 /// @param visible bool
@@ -780,70 +780,70 @@ void q_rasterwindow_set_visible(void* self, bool visible);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#show)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_show(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#hide)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_hide(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showMinimized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showMinimized)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_show_minimized(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showMaximized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showMaximized)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_show_maximized(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showFullScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showFullScreen)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_show_full_screen(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showNormal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showNormal)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_show_normal(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#close)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#close)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_close(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#raise)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#raise)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_raise(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#lower)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#lower)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_lower(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#startSystemResize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#startSystemResize)
 ///
 /// @param self QRasterWindow*
 /// @param edges flag of enum Qt__Edge
@@ -851,14 +851,14 @@ bool q_rasterwindow_start_system_resize(void* self, int32_t edges);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#startSystemMove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#startSystemMove)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_start_system_move(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setTitle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setTitle)
 ///
 /// @param self QRasterWindow*
 /// @param title const char*
@@ -866,7 +866,7 @@ void q_rasterwindow_set_title(void* self, const char* title);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setX)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -874,7 +874,7 @@ void q_rasterwindow_set_x(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setY)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -882,7 +882,7 @@ void q_rasterwindow_set_y(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setWidth)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -890,7 +890,7 @@ void q_rasterwindow_set_width(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setHeight)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -898,7 +898,7 @@ void q_rasterwindow_set_height(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setGeometry)
 ///
 /// @param self QRasterWindow*
 /// @param posx int
@@ -909,7 +909,7 @@ void q_rasterwindow_set_geometry(void* self, int posx, int posy, int w, int h);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setGeometry)
 ///
 /// @param self QRasterWindow*
 /// @param rect QRect*
@@ -917,7 +917,7 @@ void q_rasterwindow_set_geometry2(void* self, void* rect);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMinimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMinimumWidth)
 ///
 /// @param self QRasterWindow*
 /// @param w int
@@ -925,7 +925,7 @@ void q_rasterwindow_set_minimum_width(void* self, int w);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMinimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMinimumHeight)
 ///
 /// @param self QRasterWindow*
 /// @param h int
@@ -933,7 +933,7 @@ void q_rasterwindow_set_minimum_height(void* self, int h);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMaximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMaximumWidth)
 ///
 /// @param self QRasterWindow*
 /// @param w int
@@ -941,7 +941,7 @@ void q_rasterwindow_set_maximum_width(void* self, int w);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setMaximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setMaximumHeight)
 ///
 /// @param self QRasterWindow*
 /// @param h int
@@ -949,7 +949,7 @@ void q_rasterwindow_set_maximum_height(void* self, int h);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#alert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#alert)
 ///
 /// @param self QRasterWindow*
 /// @param msec int
@@ -957,14 +957,14 @@ void q_rasterwindow_alert(void* self, int msec);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#requestUpdate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#requestUpdate)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_request_update(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
 ///
 /// @param self QRasterWindow*
 /// @param screen QScreen*
@@ -972,7 +972,7 @@ void q_rasterwindow_screen_changed(void* self, void* screen);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, QScreen* screen)
@@ -980,7 +980,7 @@ void q_rasterwindow_on_screen_changed(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
 ///
 /// @param self QRasterWindow*
 /// @param modality enum Qt__WindowModality
@@ -988,7 +988,7 @@ void q_rasterwindow_modality_changed(void* self, int32_t modality);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, enum Qt__WindowModality modality)
@@ -996,7 +996,7 @@ void q_rasterwindow_on_modality_changed(void* self, void (*callback)(void*, int3
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
 /// @param self QRasterWindow*
 /// @param windowState enum Qt__WindowState
@@ -1004,7 +1004,7 @@ void q_rasterwindow_window_state_changed(void* self, int32_t windowState);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, enum Qt__WindowState windowState)
@@ -1012,7 +1012,7 @@ void q_rasterwindow_on_window_state_changed(void* self, void (*callback)(void*, 
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
 ///
 /// @param self QRasterWindow*
 /// @param title const char*
@@ -1020,7 +1020,7 @@ void q_rasterwindow_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, const char* title)
@@ -1028,7 +1028,7 @@ void q_rasterwindow_on_window_title_changed(void* self, void (*callback)(void*, 
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#xChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#xChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1036,7 +1036,7 @@ void q_rasterwindow_x_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#xChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#xChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1044,7 +1044,7 @@ void q_rasterwindow_on_x_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#yChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#yChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1052,7 +1052,7 @@ void q_rasterwindow_y_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#yChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#yChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1060,7 +1060,7 @@ void q_rasterwindow_on_y_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1068,7 +1068,7 @@ void q_rasterwindow_width_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1076,7 +1076,7 @@ void q_rasterwindow_on_width_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1084,7 +1084,7 @@ void q_rasterwindow_height_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1092,7 +1092,7 @@ void q_rasterwindow_on_height_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1100,7 +1100,7 @@ void q_rasterwindow_minimum_width_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1108,7 +1108,7 @@ void q_rasterwindow_on_minimum_width_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1116,7 +1116,7 @@ void q_rasterwindow_minimum_height_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1124,7 +1124,7 @@ void q_rasterwindow_on_minimum_height_changed(void* self, void (*callback)(void*
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1132,7 +1132,7 @@ void q_rasterwindow_maximum_width_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1140,7 +1140,7 @@ void q_rasterwindow_on_maximum_width_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg int
@@ -1148,7 +1148,7 @@ void q_rasterwindow_maximum_height_changed(void* self, int arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, int arg)
@@ -1156,7 +1156,7 @@ void q_rasterwindow_on_maximum_height_changed(void* self, void (*callback)(void*
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
 ///
 /// @param self QRasterWindow*
 /// @param arg bool
@@ -1164,7 +1164,7 @@ void q_rasterwindow_visible_changed(void* self, bool arg);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, bool arg)
@@ -1172,7 +1172,7 @@ void q_rasterwindow_on_visible_changed(void* self, void (*callback)(void*, bool)
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
 ///
 /// @param self QRasterWindow*
 /// @param visibility enum QWindow__Visibility
@@ -1180,7 +1180,7 @@ void q_rasterwindow_visibility_changed(void* self, int32_t visibility);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, enum QWindow__Visibility visibility)
@@ -1188,14 +1188,14 @@ void q_rasterwindow_on_visibility_changed(void* self, void (*callback)(void*, in
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_active_changed(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self)
@@ -1203,7 +1203,7 @@ void q_rasterwindow_on_active_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
 ///
 /// @param self QRasterWindow*
 /// @param orientation enum Qt__ScreenOrientation
@@ -1211,7 +1211,7 @@ void q_rasterwindow_content_orientation_changed(void* self, int32_t orientation)
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, enum Qt__ScreenOrientation orientation)
@@ -1219,7 +1219,7 @@ void q_rasterwindow_on_content_orientation_changed(void* self, void (*callback)(
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
 ///
 /// @param self QRasterWindow*
 /// @param object QObject*
@@ -1227,7 +1227,7 @@ void q_rasterwindow_focus_object_changed(void* self, void* object);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, QObject* object)
@@ -1235,7 +1235,7 @@ void q_rasterwindow_on_focus_object_changed(void* self, void (*callback)(void*, 
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
 ///
 /// @param self QRasterWindow*
 /// @param opacity double
@@ -1243,7 +1243,7 @@ void q_rasterwindow_opacity_changed(void* self, double opacity);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, double opacity)
@@ -1251,7 +1251,7 @@ void q_rasterwindow_on_opacity_changed(void* self, void (*callback)(void*, doubl
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
 ///
 /// @param self QRasterWindow*
 /// @param transientParent QWindow*
@@ -1259,7 +1259,7 @@ void q_rasterwindow_transient_parent_changed(void* self, void* transientParent);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, QWindow* transientParent)
@@ -1267,7 +1267,7 @@ void q_rasterwindow_on_transient_parent_changed(void* self, void (*callback)(voi
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#parent)
 ///
 /// @param self QRasterWindow*
 /// @param mode enum QWindow__AncestorMode
@@ -1275,7 +1275,7 @@ QWindow* q_rasterwindow_parent1(void* self, int32_t mode);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setFlag)
 ///
 /// @param self QRasterWindow*
 /// @param param1 enum Qt__WindowType
@@ -1284,7 +1284,7 @@ void q_rasterwindow_set_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
 ///
 /// @param self QRasterWindow*
 /// @param child QWindow*
@@ -1293,7 +1293,7 @@ bool q_rasterwindow_is_ancestor_of2(void* self, void* child, int32_t mode);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1302,7 +1302,7 @@ const char* q_rasterwindow_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QRasterWindow*
 /// @param name char*
@@ -1310,35 +1310,35 @@ void q_rasterwindow_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QRasterWindow*
 /// @param b bool
@@ -1346,14 +1346,14 @@ bool q_rasterwindow_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QRasterWindow*
 QThread* q_rasterwindow_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QRasterWindow*
 /// @param thread QThread*
@@ -1361,7 +1361,7 @@ bool q_rasterwindow_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QRasterWindow*
 /// @param interval int
@@ -1369,7 +1369,7 @@ int32_t q_rasterwindow_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QRasterWindow*
 /// @param id int
@@ -1377,7 +1377,7 @@ void q_rasterwindow_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QRasterWindow*
 /// @param id enum Qt__TimerId
@@ -1385,14 +1385,14 @@ void q_rasterwindow_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QRasterWindow*
 libqt_list /* of QObject* */ q_rasterwindow_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QRasterWindow*
 /// @param filterObj QObject*
@@ -1400,7 +1400,7 @@ void q_rasterwindow_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QRasterWindow*
 /// @param obj QObject*
@@ -1408,7 +1408,7 @@ void q_rasterwindow_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1418,7 +1418,7 @@ QMetaObject__Connection* q_rasterwindow_connect(void* sender, void* signal, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QRasterWindow*
 /// @param sender QObject*
@@ -1428,7 +1428,7 @@ QMetaObject__Connection* q_rasterwindow_connect2(void* self, void* sender, const
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1438,28 +1438,28 @@ bool q_rasterwindow_disconnect(void* sender, void* signal, void* receiver, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_rasterwindow_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QRasterWindow*
 /// @param name const char*
@@ -1468,7 +1468,7 @@ bool q_rasterwindow_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QRasterWindow*
 /// @param name const char*
@@ -1476,7 +1476,7 @@ QVariant* q_rasterwindow_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1485,28 +1485,28 @@ const char** q_rasterwindow_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QRasterWindow*
 QBindingStorage* q_rasterwindow_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QRasterWindow*
 const QBindingStorage* q_rasterwindow_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self)
@@ -1514,7 +1514,7 @@ void q_rasterwindow_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QRasterWindow*
 /// @param classname const char*
@@ -1522,14 +1522,14 @@ bool q_rasterwindow_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QRasterWindow*
 void q_rasterwindow_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QRasterWindow*
 /// @param thread QThread*
@@ -1538,7 +1538,7 @@ bool q_rasterwindow_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QRasterWindow*
 /// @param interval int
@@ -1547,7 +1547,7 @@ int32_t q_rasterwindow_start_timer22(void* self, int interval, int32_t timerType
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1558,7 +1558,7 @@ QMetaObject__Connection* q_rasterwindow_connect5(void* sender, void* signal, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QRasterWindow*
 /// @param sender QObject*
@@ -1569,7 +1569,7 @@ QMetaObject__Connection* q_rasterwindow_connect4(void* self, void* sender, const
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRasterWindow*
 /// @param param1 QObject*
@@ -1577,7 +1577,7 @@ void q_rasterwindow_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, QObject* param1)
@@ -1585,7 +1585,7 @@ void q_rasterwindow_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSurface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
 ///
 /// @param self QRasterWindow*
 ///
@@ -1594,97 +1594,97 @@ int32_t q_rasterwindow_surface_class(void* self);
 
 /// Inherited from QSurface
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_supports_open_g_l(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self QRasterWindow*
 bool q_rasterwindow_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintEngine)
 ///
 /// @param self QRasterWindow*
 QPaintEngine* q_rasterwindow_paint_engine(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self QRasterWindow*
 double q_rasterwindow_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self QRasterWindow*
 int32_t q_rasterwindow_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
 ///
 double q_rasterwindow_device_pixel_ratio_f_scale();
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
@@ -1692,7 +1692,7 @@ int32_t q_rasterwindow_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1702,7 +1702,7 @@ void q_rasterwindow_expose_event(void* self, void* param1);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1712,7 +1712,7 @@ void q_rasterwindow_qbase_expose_event(void* self, void* param1);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1722,7 +1722,7 @@ void q_rasterwindow_on_expose_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#paintEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1732,7 +1732,7 @@ void q_rasterwindow_paint_event(void* self, void* event);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#paintEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1742,7 +1742,7 @@ void q_rasterwindow_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1752,7 +1752,7 @@ void q_rasterwindow_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1762,7 +1762,7 @@ bool q_rasterwindow_event(void* self, void* event);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1772,7 +1772,7 @@ bool q_rasterwindow_qbase_event(void* self, void* event);
 
 /// Inherited from QPaintDeviceWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1782,7 +1782,7 @@ void q_rasterwindow_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1793,7 +1793,7 @@ int32_t q_rasterwindow_surface_type(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1804,7 +1804,7 @@ int32_t q_rasterwindow_qbase_surface_type(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1814,7 +1814,7 @@ void q_rasterwindow_on_surface_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#format)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1823,7 +1823,7 @@ QSurfaceFormat* q_rasterwindow_format(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#format)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1832,7 +1832,7 @@ QSurfaceFormat* q_rasterwindow_qbase_format(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#format)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1842,7 +1842,7 @@ void q_rasterwindow_on_format(void* self, QSurfaceFormat* (*callback)());
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#size)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1851,7 +1851,7 @@ QSize* q_rasterwindow_size(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#size)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1860,7 +1860,7 @@ QSize* q_rasterwindow_qbase_size(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#size)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1870,7 +1870,7 @@ void q_rasterwindow_on_size(void* self, QSize* (*callback)());
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1879,7 +1879,7 @@ QAccessibleInterface* q_rasterwindow_accessible_root(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1888,7 +1888,7 @@ QAccessibleInterface* q_rasterwindow_qbase_accessible_root(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1898,7 +1898,7 @@ void q_rasterwindow_on_accessible_root(void* self, QAccessibleInterface* (*callb
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObject)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1907,7 +1907,7 @@ QObject* q_rasterwindow_focus_object(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObject)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1916,7 +1916,7 @@ QObject* q_rasterwindow_qbase_focus_object(void* self);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1926,7 +1926,7 @@ void q_rasterwindow_on_focus_object(void* self, QObject* (*callback)());
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1936,7 +1936,7 @@ void q_rasterwindow_move_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1946,7 +1946,7 @@ void q_rasterwindow_qbase_move_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1956,7 +1956,7 @@ void q_rasterwindow_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1966,7 +1966,7 @@ void q_rasterwindow_focus_in_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1976,7 +1976,7 @@ void q_rasterwindow_qbase_focus_in_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1986,7 +1986,7 @@ void q_rasterwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1996,7 +1996,7 @@ void q_rasterwindow_focus_out_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2006,7 +2006,7 @@ void q_rasterwindow_qbase_focus_out_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2016,7 +2016,7 @@ void q_rasterwindow_on_focus_out_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2026,7 +2026,7 @@ void q_rasterwindow_show_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2036,7 +2036,7 @@ void q_rasterwindow_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2046,7 +2046,7 @@ void q_rasterwindow_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2056,7 +2056,7 @@ void q_rasterwindow_hide_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2066,7 +2066,7 @@ void q_rasterwindow_qbase_hide_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2076,7 +2076,7 @@ void q_rasterwindow_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2086,7 +2086,7 @@ void q_rasterwindow_close_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2096,7 +2096,7 @@ void q_rasterwindow_qbase_close_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2106,7 +2106,7 @@ void q_rasterwindow_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2116,7 +2116,7 @@ void q_rasterwindow_key_press_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2126,7 +2126,7 @@ void q_rasterwindow_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2136,7 +2136,7 @@ void q_rasterwindow_on_key_press_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2146,7 +2146,7 @@ void q_rasterwindow_key_release_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2156,7 +2156,7 @@ void q_rasterwindow_qbase_key_release_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2166,7 +2166,7 @@ void q_rasterwindow_on_key_release_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2176,7 +2176,7 @@ void q_rasterwindow_mouse_press_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2186,7 +2186,7 @@ void q_rasterwindow_qbase_mouse_press_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2196,7 +2196,7 @@ void q_rasterwindow_on_mouse_press_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2206,7 +2206,7 @@ void q_rasterwindow_mouse_release_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2216,7 +2216,7 @@ void q_rasterwindow_qbase_mouse_release_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2226,7 +2226,7 @@ void q_rasterwindow_on_mouse_release_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2236,7 +2236,7 @@ void q_rasterwindow_mouse_double_click_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2246,7 +2246,7 @@ void q_rasterwindow_qbase_mouse_double_click_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2256,7 +2256,7 @@ void q_rasterwindow_on_mouse_double_click_event(void* self, void (*callback)(voi
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2266,7 +2266,7 @@ void q_rasterwindow_mouse_move_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2276,7 +2276,7 @@ void q_rasterwindow_qbase_mouse_move_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2286,7 +2286,7 @@ void q_rasterwindow_on_mouse_move_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2296,7 +2296,7 @@ void q_rasterwindow_wheel_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2306,7 +2306,7 @@ void q_rasterwindow_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2316,7 +2316,7 @@ void q_rasterwindow_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2326,7 +2326,7 @@ void q_rasterwindow_touch_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2336,7 +2336,7 @@ void q_rasterwindow_qbase_touch_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2346,7 +2346,7 @@ void q_rasterwindow_on_touch_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2356,7 +2356,7 @@ void q_rasterwindow_tablet_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2366,7 +2366,7 @@ void q_rasterwindow_qbase_tablet_event(void* self, void* param1);
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2376,7 +2376,7 @@ void q_rasterwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2388,7 +2388,7 @@ bool q_rasterwindow_native_event(void* self, const char* eventType, void* messag
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2400,7 +2400,7 @@ bool q_rasterwindow_qbase_native_event(void* self, const char* eventType, void* 
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2410,7 +2410,7 @@ void q_rasterwindow_on_native_event(void* self, bool (*callback)(void*, const ch
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2421,7 +2421,7 @@ bool q_rasterwindow_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2432,7 +2432,7 @@ bool q_rasterwindow_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2442,7 +2442,7 @@ void q_rasterwindow_on_event_filter(void* self, bool (*callback)(void*, void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2452,7 +2452,7 @@ void q_rasterwindow_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2462,7 +2462,7 @@ void q_rasterwindow_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2472,7 +2472,7 @@ void q_rasterwindow_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2482,7 +2482,7 @@ void q_rasterwindow_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2492,7 +2492,7 @@ void q_rasterwindow_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2502,7 +2502,7 @@ void q_rasterwindow_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2512,7 +2512,7 @@ void q_rasterwindow_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2522,7 +2522,7 @@ void q_rasterwindow_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2532,7 +2532,7 @@ void q_rasterwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2542,7 +2542,7 @@ void q_rasterwindow_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2552,7 +2552,7 @@ void q_rasterwindow_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2562,7 +2562,7 @@ void q_rasterwindow_on_connect_notify(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2572,7 +2572,7 @@ void q_rasterwindow_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2582,7 +2582,7 @@ void q_rasterwindow_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2592,7 +2592,7 @@ void q_rasterwindow_on_disconnect_notify(void* self, void (*callback)(void*, voi
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2601,7 +2601,7 @@ int32_t q_rasterwindow_dev_type(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2610,7 +2610,7 @@ int32_t q_rasterwindow_qbase_dev_type(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2620,7 +2620,7 @@ void q_rasterwindow_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2630,7 +2630,7 @@ void q_rasterwindow_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2640,7 +2640,7 @@ void q_rasterwindow_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2650,7 +2650,7 @@ void q_rasterwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2659,7 +2659,7 @@ QPainter* q_rasterwindow_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2668,7 +2668,7 @@ QPainter* q_rasterwindow_qbase_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2678,7 +2678,7 @@ void q_rasterwindow_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2689,7 +2689,7 @@ void* q_rasterwindow_resolve_interface(void* self, const char* name, int revisio
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2700,7 +2700,7 @@ void* q_rasterwindow_qbase_resolve_interface(void* self, const char* name, int r
 
 /// Inherited from QWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2710,7 +2710,7 @@ void q_rasterwindow_on_resolve_interface(void* self, void* (*callback)(void*, co
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2719,7 +2719,7 @@ QObject* q_rasterwindow_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2728,7 +2728,7 @@ QObject* q_rasterwindow_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2738,7 +2738,7 @@ void q_rasterwindow_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2747,7 +2747,7 @@ int32_t q_rasterwindow_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2756,7 +2756,7 @@ int32_t q_rasterwindow_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2766,7 +2766,7 @@ void q_rasterwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2776,7 +2776,7 @@ int32_t q_rasterwindow_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2786,7 +2786,7 @@ int32_t q_rasterwindow_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2796,7 +2796,7 @@ void q_rasterwindow_on_receivers(void* self, int32_t (*callback)(void*, const ch
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2806,7 +2806,7 @@ bool q_rasterwindow_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2816,7 +2816,7 @@ bool q_rasterwindow_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2826,7 +2826,7 @@ void q_rasterwindow_on_is_signal_connected(void* self, bool (*callback)(void*, v
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2837,7 +2837,7 @@ double q_rasterwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2848,7 +2848,7 @@ double q_rasterwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, in
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2858,7 +2858,7 @@ void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -2866,7 +2866,7 @@ void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// @param callback void func(QRasterWindow* self, const char* objectName)
 void q_rasterwindow_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#dtor.QRasterWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#dtor.QRasterWindow)
 ///
 /// Delete this object from C++ memory.
 ///

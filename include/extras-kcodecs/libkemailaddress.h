@@ -13,14 +13,14 @@
 
 /// https://api.kde.org/kemailaddress.html
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#splitAddressList)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddressList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char** k_emailaddress_split_address_list(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#splitAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddress)
 ///
 /// @param param1 const char*
 /// @param param2 char*
@@ -30,7 +30,7 @@ const char** k_emailaddress_split_address_list(const char* param1);
 /// @return enum KEmailAddress__EmailParseResult
 int32_t k_emailaddress_split_address(const char* param1, char* param2, char* param3, char* param4);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#splitAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddress)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
@@ -40,14 +40,14 @@ int32_t k_emailaddress_split_address(const char* param1, char* param2, char* par
 /// @return enum KEmailAddress__EmailParseResult
 int32_t k_emailaddress_split_address2(const char* param1, const char* param2, const char* param3, const char* param4);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#isValidAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#isValidAddress)
 ///
 /// @param param1 const char*
 ///
 /// @return enum KEmailAddress__EmailParseResult
 int32_t k_emailaddress_is_valid_address(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#isValidAddressList)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#isValidAddressList)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
@@ -55,32 +55,32 @@ int32_t k_emailaddress_is_valid_address(const char* param1);
 /// @return enum KEmailAddress__EmailParseResult
 int32_t k_emailaddress_is_valid_address_list(const char* param1, const char* param2);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#emailParseResultToString)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#emailParseResultToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KEmailAddress__EmailParseResult
 const char* k_emailaddress_email_parse_result_to_string(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#isValidSimpleAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#isValidSimpleAddress)
 ///
 /// @param param1 const char*
 bool k_emailaddress_is_valid_simple_address(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#simpleEmailAddressErrorMsg)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#simpleEmailAddressErrorMsg)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* k_emailaddress_simple_email_address_error_msg();
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#extractEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 char* k_emailaddress_extract_email_address(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#extractEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -88,14 +88,14 @@ char* k_emailaddress_extract_email_address(const char* param1);
 /// @param param2 const char*
 char* k_emailaddress_extract_email_address2(const char* param1, const char* param2);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#extractEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_emailaddress_extract_email_address3(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#extractEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -103,14 +103,14 @@ const char* k_emailaddress_extract_email_address3(const char* param1);
 /// @param param2 const char*
 const char* k_emailaddress_extract_email_address4(const char* param1, const char* param2);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#firstEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 char* k_emailaddress_first_email_address(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#firstEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -118,14 +118,14 @@ char* k_emailaddress_first_email_address(const char* param1);
 /// @param param2 const char*
 char* k_emailaddress_first_email_address2(const char* param1, const char* param2);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#firstEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_emailaddress_first_email_address3(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#firstEmailAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -133,21 +133,21 @@ const char* k_emailaddress_first_email_address3(const char* param1);
 /// @param param2 const char*
 const char* k_emailaddress_first_email_address4(const char* param1, const char* param2);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#extractEmailAddressAndName)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddressAndName)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
 /// @param param3 const char*
 bool k_emailaddress_extract_email_address_and_name(const char* param1, const char* param2, const char* param3);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#compareEmail)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#compareEmail)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
 /// @param param3 bool
 bool k_emailaddress_compare_email(const char* param1, const char* param2, bool param3);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#normalizedAddress)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizedAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -156,47 +156,47 @@ bool k_emailaddress_compare_email(const char* param1, const char* param2, bool p
 /// @param param3 const char*
 const char* k_emailaddress_normalized_address(const char* param1, const char* param2, const char* param3);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#fromIdn)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#fromIdn)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_emailaddress_from_idn(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#toIdn)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#toIdn)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_emailaddress_to_idn(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#normalizeAddressesAndDecodeIdn)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizeAddressesAndDecodeIdn)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_emailaddress_normalize_addresses_and_decode_idn(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#normalizeAddressesAndEncodeIdn)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizeAddressesAndEncodeIdn)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_emailaddress_normalize_addresses_and_encode_idn(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#quoteNameIfNecessary)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#quoteNameIfNecessary)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_emailaddress_quote_name_if_necessary(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#encodeMailtoUrl)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#encodeMailtoUrl)
 ///
 /// @param param1 const char*
 QUrl* k_emailaddress_encode_mailto_url(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kemailaddress.html#decodeMailtoUrl)
+/// [Upstream resources](https://api.kde.org/kemailaddress.html#decodeMailtoUrl)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

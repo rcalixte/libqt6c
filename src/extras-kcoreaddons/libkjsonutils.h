@@ -13,14 +13,14 @@
 
 /// https://api.kde.org/kjsonutils.html
 
-/// [Qt documentation](https://api.kde.org/kjsonutils.html#readTranslatedValue)
+/// [Upstream resources](https://api.kde.org/kjsonutils.html#readTranslatedValue)
 ///
 /// @param param1 QJsonObject*
 /// @param param2 const char*
 /// @param param3 QJsonValue*
 QJsonValue* k_jsonutils_read_translated_value(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/kjsonutils.html#readTranslatedString)
+/// [Upstream resources](https://api.kde.org/kjsonutils.html#readTranslatedString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

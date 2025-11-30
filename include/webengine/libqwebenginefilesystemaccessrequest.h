@@ -18,53 +18,53 @@
 /// @param other QWebEngineFileSystemAccessRequest*
 QWebEngineFileSystemAccessRequest* q_webenginefilesystemaccessrequest_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#operator-eq)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 /// @param other QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#swap)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 /// @param other QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accept)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_accept(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#reject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#reject)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_reject(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#origin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#origin)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 QUrl* q_webenginefilesystemaccessrequest_origin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#filePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#filePath)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 QUrl* q_webenginefilesystemaccessrequest_file_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#handleType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#handleType)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 ///
 /// @return enum QWebEngineFileSystemAccessRequest__HandleType
 int32_t q_webenginefilesystemaccessrequest_handle_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accessFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accessFlags)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 ///
 /// @return flag of enum QWebEngineFileSystemAccessRequest__AccessFlag
 int32_t q_webenginefilesystemaccessrequest_access_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#dtor.QWebEngineFileSystemAccessRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#dtor.QWebEngineFileSystemAccessRequest)
 ///
 /// Delete this object from C++ memory.
 ///

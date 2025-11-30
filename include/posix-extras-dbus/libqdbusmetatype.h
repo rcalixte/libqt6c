@@ -35,39 +35,39 @@ void q_dbusmetatype_copy_assign(void* self, void* other);
 /// @param other QDBusMetaType*
 void q_dbusmetatype_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#marshall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#marshall)
 ///
 /// @param param1 QDBusArgument*
 /// @param id QMetaType*
 /// @param data void*
 bool q_dbusmetatype_marshall(void* param1, void* id, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#demarshall)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#demarshall)
 ///
 /// @param param1 QDBusArgument*
 /// @param id QMetaType*
 /// @param data void*
 bool q_dbusmetatype_demarshall(void* param1, void* id, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#registerCustomType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#registerCustomType)
 ///
 /// @param type QMetaType*
 /// @param signature const char*
 void q_dbusmetatype_register_custom_type(void* type, const char* signature);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#signatureToMetaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#signatureToMetaType)
 ///
 /// @param signature const char*
 QMetaType* q_dbusmetatype_signature_to_meta_type(const char* signature);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#typeToSignature)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#typeToSignature)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param type QMetaType*
 const char* q_dbusmetatype_type_to_signature(void* type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#dtor.QDBusMetaType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#dtor.QDBusMetaType)
 ///
 /// Delete this object from C++ memory.
 ///

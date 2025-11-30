@@ -13,26 +13,26 @@
 
 /// https://api.kde.org/kstandardactions.html
 
-/// [Qt documentation](https://api.kde.org/kstandardactions.html#_kgui_createInternal)
+/// [Upstream resources](https://api.kde.org/kstandardactions.html#_kgui_createInternal)
 ///
 /// @param param1 enum KStandardActions__StandardAction
 /// @param param2 QObject*
 QAction* k_standardactions_kgui_create_internal(int32_t param1, void* param2);
 
-/// [Qt documentation](https://api.kde.org/kstandardactions.html#name)
+/// [Upstream resources](https://api.kde.org/kstandardactions.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardActions__StandardAction
 const char* k_standardactions_name(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kstandardactions.html#actionIds)
+/// [Upstream resources](https://api.kde.org/kstandardactions.html#actionIds)
 ///
 ///
 /// @return libqt_list of enum KStandardActions__StandardAction
 libqt_list /* of int32_t */ k_standardactions_action_ids();
 
-/// [Qt documentation](https://api.kde.org/kstandardactions.html#shortcutForActionId)
+/// [Upstream resources](https://api.kde.org/kstandardactions.html#shortcutForActionId)
 ///
 /// @param param1 enum KStandardActions__StandardAction
 ///

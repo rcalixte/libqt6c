@@ -17,13 +17,13 @@
 ///
 QFileIconProvider* q_fileiconprovider_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// @param self QFileIconProvider*
 /// @param type enum QAbstractFileIconProvider__IconType
 QIcon* q_fileiconprovider_icon(void* self, int32_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Allows for overriding the related default method
 ///
@@ -31,7 +31,7 @@ QIcon* q_fileiconprovider_icon(void* self, int32_t type);
 /// @param callback QIcon* func(QFileIconProvider* self, enum QAbstractFileIconProvider__IconType type)
 void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Base class method implementation
 ///
@@ -39,13 +39,13 @@ void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 /// @param type enum QAbstractFileIconProvider__IconType
 QIcon* q_fileiconprovider_qbase_icon(void* self, int32_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// @param self QFileIconProvider*
 /// @param info QFileInfo*
 QIcon* q_fileiconprovider_icon2(void* self, void* info);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Allows for overriding the related default method
 ///
@@ -53,7 +53,7 @@ QIcon* q_fileiconprovider_icon2(void* self, void* info);
 /// @param callback QIcon* func(QFileIconProvider* self, QFileInfo* info)
 void q_fileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Base class method implementation
 ///
@@ -63,7 +63,7 @@ QIcon* q_fileiconprovider_qbase_icon2(void* self, void* info);
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -75,7 +75,7 @@ const char* q_fileiconprovider_type(void* self, void* param1);
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -87,7 +87,7 @@ const char* q_fileiconprovider_qbase_type(void* self, void* param1);
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -97,7 +97,7 @@ void q_fileiconprovider_on_type(void* self, const char* (*callback)(void*, void*
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -107,7 +107,7 @@ void q_fileiconprovider_set_options(void* self, int32_t options);
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -117,7 +117,7 @@ void q_fileiconprovider_qbase_set_options(void* self, int32_t options);
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -127,7 +127,7 @@ void q_fileiconprovider_on_set_options(void* self, void (*callback)(void*, int32
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -138,7 +138,7 @@ int32_t q_fileiconprovider_options(void* self);
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -149,7 +149,7 @@ int32_t q_fileiconprovider_qbase_options(void* self);
 
 /// Inherited from QAbstractFileIconProvider
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -157,7 +157,7 @@ int32_t q_fileiconprovider_qbase_options(void* self);
 /// @param callback int32_t func()
 void q_fileiconprovider_on_options(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#dtor.QFileIconProvider)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#dtor.QFileIconProvider)
 ///
 /// Delete this object from C++ memory.
 ///

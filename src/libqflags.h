@@ -60,17 +60,17 @@ void q_flag_copy_assign(void* self, void* other);
 /// @param other QFlag*
 void q_flag_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator)
 ///
 /// @param self QFlag*
 int32_t q_flag_to_int(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator)
 ///
 /// @param self QFlag*
 uint32_t q_flag_to_unsigned_int(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#dtor.QFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#dtor.QFlag)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -111,12 +111,12 @@ void q_incompatibleflag_copy_assign(void* self, void* other);
 /// @param other QIncompatibleFlag*
 void q_incompatibleflag_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qincompatibleflag.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qincompatibleflag.html#operator)
 ///
 /// @param self QIncompatibleFlag*
 int32_t q_incompatibleflag_to_int(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qincompatibleflag.html#dtor.QIncompatibleFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qincompatibleflag.html#dtor.QIncompatibleFlag)
 ///
 /// Delete this object from C++ memory.
 ///

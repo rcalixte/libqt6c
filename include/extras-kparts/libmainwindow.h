@@ -28,7 +28,7 @@ KParts__MainWindow* k_parts__mainwindow_new2();
 /// @param f flag of enum Qt__WindowType
 KParts__MainWindow* k_parts__mainwindow_new3(void* parent, int64_t f);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KParts__MainWindow*
 const QMetaObject* k_parts__mainwindow_meta_object(void* self);
@@ -57,19 +57,19 @@ void k_parts__mainwindow_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t k_parts__mainwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_parts__mainwindow_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#configureToolbars)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#configureToolbars)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_configure_toolbars(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#configureToolbars)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#configureToolbars)
 ///
 /// Allows for overriding the related default method
 ///
@@ -77,20 +77,20 @@ void k_parts__mainwindow_configure_toolbars(void* self);
 /// @param callback void func()
 void k_parts__mainwindow_on_configure_toolbars(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#configureToolbars)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#configureToolbars)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_qbase_configure_toolbars(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#createGUI)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#createGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param part KParts__Part*
 void k_parts__mainwindow_create_g_u_i(void* self, void* part);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#createGUI)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#createGUI)
 ///
 /// Allows for overriding the related default method
 ///
@@ -98,7 +98,7 @@ void k_parts__mainwindow_create_g_u_i(void* self, void* part);
 /// @param callback void func(KParts__MainWindow* self, KParts__Part* part)
 void k_parts__mainwindow_on_create_g_u_i(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#createGUI)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#createGUI)
 ///
 /// Base class method implementation
 ///
@@ -106,13 +106,13 @@ void k_parts__mainwindow_on_create_g_u_i(void* self, void (*callback)(void*, voi
 /// @param part KParts__Part*
 void k_parts__mainwindow_qbase_create_g_u_i(void* self, void* part);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#setWindowTitleHandling)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#setWindowTitleHandling)
 ///
 /// @param self KParts__MainWindow*
 /// @param enabled bool
 void k_parts__mainwindow_set_window_title_handling(void* self, bool enabled);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#setWindowTitleHandling)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#setWindowTitleHandling)
 ///
 /// Allows for overriding the related default method
 ///
@@ -120,7 +120,7 @@ void k_parts__mainwindow_set_window_title_handling(void* self, bool enabled);
 /// @param callback void func(KParts__MainWindow* self, bool enabled)
 void k_parts__mainwindow_on_set_window_title_handling(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#setWindowTitleHandling)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#setWindowTitleHandling)
 ///
 /// Base class method implementation
 ///
@@ -128,13 +128,13 @@ void k_parts__mainwindow_on_set_window_title_handling(void* self, void (*callbac
 /// @param enabled bool
 void k_parts__mainwindow_qbase_set_window_title_handling(void* self, bool enabled);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#slotSetStatusBarText)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#slotSetStatusBarText)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 const char*
 void k_parts__mainwindow_slot_set_status_bar_text(void* self, const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#slotSetStatusBarText)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#slotSetStatusBarText)
 ///
 /// Allows for overriding the related default method
 ///
@@ -142,7 +142,7 @@ void k_parts__mainwindow_slot_set_status_bar_text(void* self, const char* param1
 /// @param callback void func(KParts__MainWindow* self, const char* param1)
 void k_parts__mainwindow_on_slot_set_status_bar_text(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#slotSetStatusBarText)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#slotSetStatusBarText)
 ///
 /// Base class method implementation
 ///
@@ -150,12 +150,12 @@ void k_parts__mainwindow_on_slot_set_status_bar_text(void* self, void (*callback
 /// @param param1 const char*
 void k_parts__mainwindow_qbase_slot_set_status_bar_text(void* self, const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#saveNewToolbarConfig)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#saveNewToolbarConfig)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_save_new_toolbar_config(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#saveNewToolbarConfig)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#saveNewToolbarConfig)
 ///
 /// Allows for overriding the related default method
 ///
@@ -163,20 +163,20 @@ void k_parts__mainwindow_save_new_toolbar_config(void* self);
 /// @param callback void func()
 void k_parts__mainwindow_on_save_new_toolbar_config(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#saveNewToolbarConfig)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#saveNewToolbarConfig)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_qbase_save_new_toolbar_config(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#createShellGUI)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#createShellGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param create bool
 void k_parts__mainwindow_create_shell_g_u_i(void* self, bool create);
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#createShellGUI)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#createShellGUI)
 ///
 /// Allows for overriding the related default method
 ///
@@ -184,7 +184,7 @@ void k_parts__mainwindow_create_shell_g_u_i(void* self, bool create);
 /// @param callback void func(KParts__MainWindow* self, bool create)
 void k_parts__mainwindow_on_create_shell_g_u_i(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-mainwindow.html#createShellGUI)
+/// [Upstream resources](https://api.kde.org/kparts-mainwindow.html#createShellGUI)
 ///
 /// Base class method implementation
 ///
@@ -192,7 +192,7 @@ void k_parts__mainwindow_on_create_shell_g_u_i(void* self, void (*callback)(void
 /// @param create bool
 void k_parts__mainwindow_qbase_create_shell_g_u_i(void* self, bool create);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -200,7 +200,7 @@ void k_parts__mainwindow_qbase_create_shell_g_u_i(void* self, bool create);
 /// @param c const char*
 const char* k_parts__mainwindow_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -211,21 +211,21 @@ const char* k_parts__mainwindow_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_set_help_menu_enabled(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isHelpMenuEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#isHelpMenuEnabled)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_help_menu_enabled(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setStandardToolBarMenuEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setStandardToolBarMenuEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param showToolBarMenu bool
@@ -233,28 +233,28 @@ void k_parts__mainwindow_set_standard_tool_bar_menu_enabled(void* self, bool sho
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isStandardToolBarMenuEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#isStandardToolBarMenuEnabled)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_standard_tool_bar_menu_enabled(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#createStandardStatusBarAction)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#createStandardStatusBarAction)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_create_standard_status_bar_action(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_setup_g_u_i(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param defaultSize QSize*
@@ -262,21 +262,21 @@ void k_parts__mainwindow_setup_g_u_i2(void* self, void* defaultSize);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#toolBarMenuAction)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#toolBarMenuAction)
 ///
 /// @param self KParts__MainWindow*
 QAction* k_parts__mainwindow_tool_bar_menu_action(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupToolbarMenuActions)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setupToolbarMenuActions)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_setup_toolbar_menu_actions(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#toolBarNames)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#toolBarNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -285,7 +285,7 @@ const char** k_parts__mainwindow_tool_bar_names(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setCommandBarEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setCommandBarEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param showCommandBar bool
@@ -293,14 +293,14 @@ void k_parts__mainwindow_set_command_bar_enabled(void* self, bool showCommandBar
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isCommandBarEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#isCommandBarEnabled)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_command_bar_enabled(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param newstate const char*
@@ -309,7 +309,7 @@ void k_parts__mainwindow_slot_state_changed2(void* self, const char* newstate, b
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isToolBarVisible)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#isToolBarVisible)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -317,7 +317,7 @@ bool k_parts__mainwindow_is_tool_bar_visible(void* self, const char* name);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setToolBarVisible)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setToolBarVisible)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -326,7 +326,7 @@ void k_parts__mainwindow_set_tool_bar_visible(void* self, const char* name, bool
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param showHelpMenu bool
@@ -334,7 +334,7 @@ void k_parts__mainwindow_set_help_menu_enabled1(void* self, bool showHelpMenu);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#createGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#createGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param xmlfile const char*
@@ -342,7 +342,7 @@ void k_parts__mainwindow_create_g_u_i1(void* self, const char* xmlfile);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param options flag of enum KXmlGuiWindow__StandardWindowOption
@@ -350,7 +350,7 @@ void k_parts__mainwindow_setup_g_u_i1(void* self, int32_t options);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param options flag of enum KXmlGuiWindow__StandardWindowOption
@@ -359,7 +359,7 @@ void k_parts__mainwindow_setup_g_u_i22(void* self, int32_t options, const char* 
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param defaultSize QSize*
@@ -368,7 +368,7 @@ void k_parts__mainwindow_setup_g_u_i23(void* self, void* defaultSize, int32_t op
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KParts__MainWindow*
 /// @param defaultSize QSize*
@@ -378,14 +378,14 @@ void k_parts__mainwindow_setup_g_u_i3(void* self, void* defaultSize, int32_t opt
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#canBeRestored)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#canBeRestored)
 ///
 /// @param numberOfInstances int
 bool k_parts__mainwindow_can_be_restored(int numberOfInstances);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#classNameOfToplevel)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#classNameOfToplevel)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -394,7 +394,7 @@ const char* k_parts__mainwindow_class_name_of_toplevel(int instanceNumber);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#restore)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#restore)
 ///
 /// @param self KParts__MainWindow*
 /// @param numberOfInstances int
@@ -402,41 +402,41 @@ bool k_parts__mainwindow_restore(void* self, int numberOfInstances);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#hasMenuBar)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#hasMenuBar)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_has_menu_bar(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#memberList)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#memberList)
 ///
 libqt_list /* of KMainWindow* */ k_parts__mainwindow_member_list();
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBar)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#toolBar)
 ///
 /// @param self KParts__MainWindow*
 KToolBar* k_parts__mainwindow_tool_bar(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBars)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#toolBars)
 ///
 /// @param self KParts__MainWindow*
 libqt_list /* of KToolBar* */ k_parts__mainwindow_tool_bars(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_set_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KParts__MainWindow*
 /// @param group KConfigGroup*
@@ -444,21 +444,21 @@ void k_parts__mainwindow_set_auto_save_settings2(void* self, void* group);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#resetAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#resetAutoSaveSettings)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_reset_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#autoSaveSettings)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveGroup)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#autoSaveGroup)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -467,14 +467,14 @@ const char* k_parts__mainwindow_auto_save_group(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveConfigGroup)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#autoSaveConfigGroup)
 ///
 /// @param self KParts__MainWindow*
 KConfigGroup* k_parts__mainwindow_auto_save_config_group(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setStateConfigGroup)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setStateConfigGroup)
 ///
 /// @param self KParts__MainWindow*
 /// @param configGroup const char*
@@ -482,14 +482,14 @@ void k_parts__mainwindow_set_state_config_group(void* self, const char* configGr
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#stateConfigGroup)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#stateConfigGroup)
 ///
 /// @param self KParts__MainWindow*
 KConfigGroup* k_parts__mainwindow_state_config_group(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveMainWindowSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveMainWindowSettings)
 ///
 /// @param self KParts__MainWindow*
 /// @param config KConfigGroup*
@@ -497,7 +497,7 @@ void k_parts__mainwindow_save_main_window_settings(void* self, void* config);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#dbusName)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#dbusName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -506,7 +506,7 @@ const char* k_parts__mainwindow_dbus_name(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// @param self KParts__MainWindow*
 /// @param caption const char*
@@ -515,7 +515,7 @@ void k_parts__mainwindow_set_caption2(void* self, const char* caption, bool modi
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Allows for overriding the related default method
 ///
@@ -525,7 +525,7 @@ void k_parts__mainwindow_on_set_caption2(void* self, void (*callback)(void*, con
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Base class method implementation
 ///
@@ -536,21 +536,21 @@ void k_parts__mainwindow_qbase_set_caption2(void* self, const char* caption, boo
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#appHelpActivated)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#appHelpActivated)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_app_help_activated(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setSettingsDirty)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setSettingsDirty)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_set_settings_dirty(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#restore)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#restore)
 ///
 /// @param self KParts__MainWindow*
 /// @param numberOfInstances int
@@ -559,7 +559,7 @@ bool k_parts__mainwindow_restore2(void* self, int numberOfInstances, bool show);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBar)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#toolBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -567,7 +567,7 @@ KToolBar* k_parts__mainwindow_tool_bar1(void* self, const char* name);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KParts__MainWindow*
 /// @param groupName const char*
@@ -575,7 +575,7 @@ void k_parts__mainwindow_set_auto_save_settings1(void* self, const char* groupNa
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KParts__MainWindow*
 /// @param groupName const char*
@@ -584,7 +584,7 @@ void k_parts__mainwindow_set_auto_save_settings22(void* self, const char* groupN
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KParts__MainWindow*
 /// @param group KConfigGroup*
@@ -593,14 +593,14 @@ void k_parts__mainwindow_set_auto_save_settings23(void* self, void* group, bool 
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#iconSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#iconSize)
 ///
 /// @param self KParts__MainWindow*
 QSize* k_parts__mainwindow_icon_size(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setIconSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setIconSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param iconSize QSize*
@@ -608,7 +608,7 @@ void k_parts__mainwindow_set_icon_size(void* self, void* iconSize);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyle)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -617,7 +617,7 @@ int32_t k_parts__mainwindow_tool_button_style(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setToolButtonStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setToolButtonStyle)
 ///
 /// @param self KParts__MainWindow*
 /// @param toolButtonStyle enum Qt__ToolButtonStyle
@@ -625,28 +625,28 @@ void k_parts__mainwindow_set_tool_button_style(void* self, int32_t toolButtonSty
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#isAnimated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#isAnimated)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_animated(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#isDockNestingEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#isDockNestingEnabled)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_dock_nesting_enabled(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#documentMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#documentMode)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_document_mode(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setDocumentMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setDocumentMode)
 ///
 /// @param self KParts__MainWindow*
 /// @param enabled bool
@@ -654,7 +654,7 @@ void k_parts__mainwindow_set_document_mode(void* self, bool enabled);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#tabShape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabShape)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -663,7 +663,7 @@ int32_t k_parts__mainwindow_tab_shape(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setTabShape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setTabShape)
 ///
 /// @param self KParts__MainWindow*
 /// @param tabShape enum QTabWidget__TabShape
@@ -671,7 +671,7 @@ void k_parts__mainwindow_set_tab_shape(void* self, int32_t tabShape);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#tabPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabPosition)
 ///
 /// @param self KParts__MainWindow*
 /// @param area enum Qt__DockWidgetArea
@@ -681,7 +681,7 @@ int32_t k_parts__mainwindow_tab_position(void* self, int32_t area);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setTabPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setTabPosition)
 ///
 /// @param self KParts__MainWindow*
 /// @param areas flag of enum Qt__DockWidgetArea
@@ -690,7 +690,7 @@ void k_parts__mainwindow_set_tab_position(void* self, int32_t areas, int32_t tab
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setDockOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setDockOptions)
 ///
 /// @param self KParts__MainWindow*
 /// @param options flag of enum QMainWindow__DockOption
@@ -698,7 +698,7 @@ void k_parts__mainwindow_set_dock_options(void* self, int32_t options);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#dockOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#dockOptions)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -707,7 +707,7 @@ int32_t k_parts__mainwindow_dock_options(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#isSeparator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#isSeparator)
 ///
 /// @param self KParts__MainWindow*
 /// @param pos QPoint*
@@ -715,14 +715,14 @@ bool k_parts__mainwindow_is_separator(void* self, void* pos);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#menuBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#menuBar)
 ///
 /// @param self KParts__MainWindow*
 QMenuBar* k_parts__mainwindow_menu_bar(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setMenuBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setMenuBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param menubar QMenuBar*
@@ -730,14 +730,14 @@ void k_parts__mainwindow_set_menu_bar(void* self, void* menubar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#menuWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#menuWidget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_menu_widget(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setMenuWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setMenuWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param menubar QWidget*
@@ -745,14 +745,14 @@ void k_parts__mainwindow_set_menu_widget(void* self, void* menubar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#statusBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#statusBar)
 ///
 /// @param self KParts__MainWindow*
 QStatusBar* k_parts__mainwindow_status_bar(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setStatusBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setStatusBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param statusbar QStatusBar*
@@ -760,14 +760,14 @@ void k_parts__mainwindow_set_status_bar(void* self, void* statusbar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#centralWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#centralWidget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_central_widget(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setCentralWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setCentralWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param widget QWidget*
@@ -775,14 +775,14 @@ void k_parts__mainwindow_set_central_widget(void* self, void* widget);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#takeCentralWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#takeCentralWidget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_take_central_widget(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setCorner)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setCorner)
 ///
 /// @param self KParts__MainWindow*
 /// @param corner enum Qt__Corner
@@ -791,7 +791,7 @@ void k_parts__mainwindow_set_corner(void* self, int32_t corner, int32_t area);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#corner)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#corner)
 ///
 /// @param self KParts__MainWindow*
 /// @param corner enum Qt__Corner
@@ -801,14 +801,14 @@ int32_t k_parts__mainwindow_corner(void* self, int32_t corner);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#addToolBarBreak)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addToolBarBreak)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_add_tool_bar_break(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#insertToolBarBreak)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#insertToolBarBreak)
 ///
 /// @param self KParts__MainWindow*
 /// @param before QToolBar*
@@ -816,7 +816,7 @@ void k_parts__mainwindow_insert_tool_bar_break(void* self, void* before);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#addToolBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addToolBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param area enum Qt__ToolBarArea
@@ -825,7 +825,7 @@ void k_parts__mainwindow_add_tool_bar(void* self, int32_t area, void* toolbar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#addToolBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addToolBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param toolbar QToolBar*
@@ -833,7 +833,7 @@ void k_parts__mainwindow_add_tool_bar2(void* self, void* toolbar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#addToolBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addToolBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param title const char*
@@ -841,7 +841,7 @@ QToolBar* k_parts__mainwindow_add_tool_bar3(void* self, const char* title);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#insertToolBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#insertToolBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param before QToolBar*
@@ -850,7 +850,7 @@ void k_parts__mainwindow_insert_tool_bar(void* self, void* before, void* toolbar
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#removeToolBar)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#removeToolBar)
 ///
 /// @param self KParts__MainWindow*
 /// @param toolbar QToolBar*
@@ -858,7 +858,7 @@ void k_parts__mainwindow_remove_tool_bar(void* self, void* toolbar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#removeToolBarBreak)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#removeToolBarBreak)
 ///
 /// @param self KParts__MainWindow*
 /// @param before QToolBar*
@@ -866,14 +866,14 @@ void k_parts__mainwindow_remove_tool_bar_break(void* self, void* before);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#unifiedTitleAndToolBarOnMac)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#unifiedTitleAndToolBarOnMac)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_unified_title_and_tool_bar_on_mac(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#toolBarArea)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolBarArea)
 ///
 /// @param self KParts__MainWindow*
 /// @param toolbar QToolBar*
@@ -883,7 +883,7 @@ int32_t k_parts__mainwindow_tool_bar_area(void* self, void* toolbar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#toolBarBreak)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolBarBreak)
 ///
 /// @param self KParts__MainWindow*
 /// @param toolbar QToolBar*
@@ -891,7 +891,7 @@ bool k_parts__mainwindow_tool_bar_break(void* self, void* toolbar);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#addDockWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addDockWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param area enum Qt__DockWidgetArea
@@ -900,7 +900,7 @@ void k_parts__mainwindow_add_dock_widget(void* self, int32_t area, void* dockwid
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#addDockWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addDockWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param area enum Qt__DockWidgetArea
@@ -910,7 +910,7 @@ void k_parts__mainwindow_add_dock_widget2(void* self, int32_t area, void* dockwi
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#splitDockWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#splitDockWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param after QDockWidget*
@@ -920,7 +920,7 @@ void k_parts__mainwindow_split_dock_widget(void* self, void* after, void* dockwi
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#tabifyDockWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabifyDockWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param first QDockWidget*
@@ -929,7 +929,7 @@ void k_parts__mainwindow_tabify_dock_widget(void* self, void* first, void* secon
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#tabifiedDockWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabifiedDockWidgets)
 ///
 /// @param self KParts__MainWindow*
 /// @param dockwidget QDockWidget*
@@ -937,7 +937,7 @@ libqt_list /* of QDockWidget* */ k_parts__mainwindow_tabified_dock_widgets(void*
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#removeDockWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#removeDockWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param dockwidget QDockWidget*
@@ -945,7 +945,7 @@ void k_parts__mainwindow_remove_dock_widget(void* self, void* dockwidget);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#restoreDockWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#restoreDockWidget)
 ///
 /// @param self KParts__MainWindow*
 /// @param dockwidget QDockWidget*
@@ -953,7 +953,7 @@ bool k_parts__mainwindow_restore_dock_widget(void* self, void* dockwidget);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#dockWidgetArea)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#dockWidgetArea)
 ///
 /// @param self KParts__MainWindow*
 /// @param dockwidget QDockWidget*
@@ -963,7 +963,7 @@ int32_t k_parts__mainwindow_dock_widget_area(void* self, void* dockwidget);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#resizeDocks)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#resizeDocks)
 ///
 /// @param self KParts__MainWindow*
 /// @param docks libqt_list /* of QDockWidget* */
@@ -973,7 +973,7 @@ void k_parts__mainwindow_resize_docks(void* self, libqt_list docks, libqt_list s
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#saveState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#saveState)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -982,7 +982,7 @@ char* k_parts__mainwindow_save_state(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
 ///
 /// @param self KParts__MainWindow*
 /// @param state const char*
@@ -990,7 +990,7 @@ bool k_parts__mainwindow_restore_state(void* self, const char* state);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setAnimated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setAnimated)
 ///
 /// @param self KParts__MainWindow*
 /// @param enabled bool
@@ -998,7 +998,7 @@ void k_parts__mainwindow_set_animated(void* self, bool enabled);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setDockNestingEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setDockNestingEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param enabled bool
@@ -1006,7 +1006,7 @@ void k_parts__mainwindow_set_dock_nesting_enabled(void* self, bool enabled);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setUnifiedTitleAndToolBarOnMac)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setUnifiedTitleAndToolBarOnMac)
 ///
 /// @param self KParts__MainWindow*
 /// @param set bool
@@ -1014,7 +1014,7 @@ void k_parts__mainwindow_set_unified_title_and_tool_bar_on_mac(void* self, bool 
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#iconSizeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#iconSizeChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param iconSize QSize*
@@ -1022,7 +1022,7 @@ void k_parts__mainwindow_icon_size_changed(void* self, void* iconSize);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#iconSizeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#iconSizeChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, QSize* iconSize)
@@ -1030,7 +1030,7 @@ void k_parts__mainwindow_on_icon_size_changed(void* self, void (*callback)(void*
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyleChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param toolButtonStyle enum Qt__ToolButtonStyle
@@ -1038,7 +1038,7 @@ void k_parts__mainwindow_tool_button_style_changed(void* self, int32_t toolButto
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyleChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, enum Qt__ToolButtonStyle toolButtonStyle)
@@ -1046,7 +1046,7 @@ void k_parts__mainwindow_on_tool_button_style_changed(void* self, void (*callbac
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#tabifiedDockWidgetActivated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabifiedDockWidgetActivated)
 ///
 /// @param self KParts__MainWindow*
 /// @param dockWidget QDockWidget*
@@ -1054,7 +1054,7 @@ void k_parts__mainwindow_tabified_dock_widget_activated(void* self, void* dockWi
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#tabifiedDockWidgetActivated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabifiedDockWidgetActivated)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, QDockWidget* dockWidget)
@@ -1062,7 +1062,7 @@ void k_parts__mainwindow_on_tabified_dock_widget_activated(void* self, void (*ca
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#addToolBarBreak)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addToolBarBreak)
 ///
 /// @param self KParts__MainWindow*
 /// @param area enum Qt__ToolBarArea
@@ -1070,7 +1070,7 @@ void k_parts__mainwindow_add_tool_bar_break1(void* self, int32_t area);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#saveState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#saveState)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1080,7 +1080,7 @@ char* k_parts__mainwindow_save_state1(void* self, int version);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
 ///
 /// @param self KParts__MainWindow*
 /// @param state const char*
@@ -1089,42 +1089,42 @@ bool k_parts__mainwindow_restore_state2(void* self, const char* state, int versi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KParts__MainWindow*
 uintptr_t k_parts__mainwindow_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KParts__MainWindow*
 uintptr_t k_parts__mainwindow_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KParts__MainWindow*
 uintptr_t k_parts__mainwindow_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KParts__MainWindow*
 QStyle* k_parts__mainwindow_style(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
 /// @param self KParts__MainWindow*
 /// @param style QStyle*
@@ -1132,28 +1132,28 @@ void k_parts__mainwindow_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -1162,7 +1162,7 @@ int32_t k_parts__mainwindow_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
 /// @param self KParts__MainWindow*
 /// @param windowModality enum Qt__WindowModality
@@ -1170,14 +1170,14 @@ void k_parts__mainwindow_set_window_modality(void* self, int32_t windowModality)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -1185,7 +1185,7 @@ bool k_parts__mainwindow_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param enabled bool
@@ -1193,7 +1193,7 @@ void k_parts__mainwindow_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param disabled bool
@@ -1201,7 +1201,7 @@ void k_parts__mainwindow_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
 /// @param self KParts__MainWindow*
 /// @param windowModified bool
@@ -1209,140 +1209,140 @@ void k_parts__mainwindow_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KParts__MainWindow*
 QRect* k_parts__mainwindow_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KParts__MainWindow*
 const QRect* k_parts__mainwindow_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KParts__MainWindow*
 QRect* k_parts__mainwindow_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_x(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_y(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KParts__MainWindow*
 QPoint* k_parts__mainwindow_pos(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KParts__MainWindow*
 QSize* k_parts__mainwindow_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KParts__MainWindow*
 QSize* k_parts__mainwindow_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KParts__MainWindow*
 QRect* k_parts__mainwindow_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KParts__MainWindow*
 QRect* k_parts__mainwindow_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KParts__MainWindow*
 QRegion* k_parts__mainwindow_children_region(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KParts__MainWindow*
 QSize* k_parts__mainwindow_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KParts__MainWindow*
 QSize* k_parts__mainwindow_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param minimumSize QSize*
@@ -1350,7 +1350,7 @@ void k_parts__mainwindow_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param minw int
@@ -1359,7 +1359,7 @@ void k_parts__mainwindow_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param maximumSize QSize*
@@ -1367,7 +1367,7 @@ void k_parts__mainwindow_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param maxw int
@@ -1376,7 +1376,7 @@ void k_parts__mainwindow_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
 /// @param self KParts__MainWindow*
 /// @param minw int
@@ -1384,7 +1384,7 @@ void k_parts__mainwindow_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
 /// @param self KParts__MainWindow*
 /// @param minh int
@@ -1392,7 +1392,7 @@ void k_parts__mainwindow_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
 /// @param self KParts__MainWindow*
 /// @param maxw int
@@ -1400,7 +1400,7 @@ void k_parts__mainwindow_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
 /// @param self KParts__MainWindow*
 /// @param maxh int
@@ -1408,14 +1408,14 @@ void k_parts__mainwindow_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KParts__MainWindow*
 QSize* k_parts__mainwindow_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
 /// @param self KParts__MainWindow*
 /// @param sizeIncrement QSize*
@@ -1423,7 +1423,7 @@ void k_parts__mainwindow_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
 /// @param self KParts__MainWindow*
 /// @param w int
@@ -1432,14 +1432,14 @@ void k_parts__mainwindow_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KParts__MainWindow*
 QSize* k_parts__mainwindow_base_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param baseSize QSize*
@@ -1447,7 +1447,7 @@ void k_parts__mainwindow_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param basew int
@@ -1456,7 +1456,7 @@ void k_parts__mainwindow_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param fixedSize QSize*
@@ -1464,7 +1464,7 @@ void k_parts__mainwindow_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
 /// @param self KParts__MainWindow*
 /// @param w int
@@ -1473,7 +1473,7 @@ void k_parts__mainwindow_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
 /// @param self KParts__MainWindow*
 /// @param w int
@@ -1481,7 +1481,7 @@ void k_parts__mainwindow_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
 /// @param self KParts__MainWindow*
 /// @param h int
@@ -1489,7 +1489,7 @@ void k_parts__mainwindow_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPointF*
@@ -1497,7 +1497,7 @@ QPointF* k_parts__mainwindow_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPoint*
@@ -1505,7 +1505,7 @@ QPoint* k_parts__mainwindow_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPointF*
@@ -1513,7 +1513,7 @@ QPointF* k_parts__mainwindow_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPoint*
@@ -1521,7 +1521,7 @@ QPoint* k_parts__mainwindow_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPointF*
@@ -1529,7 +1529,7 @@ QPointF* k_parts__mainwindow_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPoint*
@@ -1537,7 +1537,7 @@ QPoint* k_parts__mainwindow_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPointF*
@@ -1545,7 +1545,7 @@ QPointF* k_parts__mainwindow_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPoint*
@@ -1553,7 +1553,7 @@ QPoint* k_parts__mainwindow_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -1562,7 +1562,7 @@ QPointF* k_parts__mainwindow_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -1571,7 +1571,7 @@ QPoint* k_parts__mainwindow_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -1580,7 +1580,7 @@ QPointF* k_parts__mainwindow_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -1589,35 +1589,35 @@ QPoint* k_parts__mainwindow_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KParts__MainWindow*
 const QPalette* k_parts__mainwindow_palette(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
 /// @param self KParts__MainWindow*
 /// @param palette QPalette*
@@ -1625,7 +1625,7 @@ void k_parts__mainwindow_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
 /// @param self KParts__MainWindow*
 /// @param backgroundRole enum QPalette__ColorRole
@@ -1633,7 +1633,7 @@ void k_parts__mainwindow_set_background_role(void* self, int32_t backgroundRole)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -1642,7 +1642,7 @@ int32_t k_parts__mainwindow_background_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
 /// @param self KParts__MainWindow*
 /// @param foregroundRole enum QPalette__ColorRole
@@ -1650,7 +1650,7 @@ void k_parts__mainwindow_set_foreground_role(void* self, int32_t foregroundRole)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -1659,14 +1659,14 @@ int32_t k_parts__mainwindow_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KParts__MainWindow*
 const QFont* k_parts__mainwindow_font(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
 /// @param self KParts__MainWindow*
 /// @param font QFont*
@@ -1674,28 +1674,28 @@ void k_parts__mainwindow_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KParts__MainWindow*
 QFontMetrics* k_parts__mainwindow_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KParts__MainWindow*
 QFontInfo* k_parts__mainwindow_font_info(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KParts__MainWindow*
 QCursor* k_parts__mainwindow_cursor(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
 /// @param self KParts__MainWindow*
 /// @param cursor QCursor*
@@ -1703,14 +1703,14 @@ void k_parts__mainwindow_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
 /// @param self KParts__MainWindow*
 /// @param enable bool
@@ -1718,21 +1718,21 @@ void k_parts__mainwindow_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
 /// @param self KParts__MainWindow*
 /// @param enable bool
@@ -1740,14 +1740,14 @@ void k_parts__mainwindow_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// @param self KParts__MainWindow*
 /// @param mask QBitmap*
@@ -1755,7 +1755,7 @@ void k_parts__mainwindow_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// @param self KParts__MainWindow*
 /// @param mask QRegion*
@@ -1763,21 +1763,21 @@ void k_parts__mainwindow_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KParts__MainWindow*
 QRegion* k_parts__mainwindow_mask(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param target QPaintDevice*
@@ -1785,7 +1785,7 @@ void k_parts__mainwindow_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param painter QPainter*
@@ -1793,21 +1793,21 @@ void k_parts__mainwindow_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KParts__MainWindow*
 QPixmap* k_parts__mainwindow_grab(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KParts__MainWindow*
 QGraphicsEffect* k_parts__mainwindow_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
 /// @param self KParts__MainWindow*
 /// @param effect QGraphicsEffect*
@@ -1815,7 +1815,7 @@ void k_parts__mainwindow_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KParts__MainWindow*
 /// @param type enum Qt__GestureType
@@ -1823,7 +1823,7 @@ void k_parts__mainwindow_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self KParts__MainWindow*
 /// @param type enum Qt__GestureType
@@ -1831,7 +1831,7 @@ void k_parts__mainwindow_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
 /// @param self KParts__MainWindow*
 /// @param windowTitle const char*
@@ -1839,7 +1839,7 @@ void k_parts__mainwindow_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
 /// @param self KParts__MainWindow*
 /// @param styleSheet const char*
@@ -1847,7 +1847,7 @@ void k_parts__mainwindow_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1856,7 +1856,7 @@ const char* k_parts__mainwindow_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1865,7 +1865,7 @@ const char* k_parts__mainwindow_window_title(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
 /// @param self KParts__MainWindow*
 /// @param icon QIcon*
@@ -1873,14 +1873,14 @@ void k_parts__mainwindow_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KParts__MainWindow*
 QIcon* k_parts__mainwindow_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
 /// @param self KParts__MainWindow*
 /// @param windowIconText const char*
@@ -1888,7 +1888,7 @@ void k_parts__mainwindow_set_window_icon_text(void* self, const char* windowIcon
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1897,7 +1897,7 @@ const char* k_parts__mainwindow_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
 /// @param self KParts__MainWindow*
 /// @param windowRole const char*
@@ -1905,7 +1905,7 @@ void k_parts__mainwindow_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1914,7 +1914,7 @@ const char* k_parts__mainwindow_window_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
 /// @param self KParts__MainWindow*
 /// @param filePath const char*
@@ -1922,7 +1922,7 @@ void k_parts__mainwindow_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1931,7 +1931,7 @@ const char* k_parts__mainwindow_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
 /// @param self KParts__MainWindow*
 /// @param level double
@@ -1939,21 +1939,21 @@ void k_parts__mainwindow_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KParts__MainWindow*
 double k_parts__mainwindow_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
 /// @param self KParts__MainWindow*
 /// @param toolTip const char*
@@ -1961,7 +1961,7 @@ void k_parts__mainwindow_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1970,7 +1970,7 @@ const char* k_parts__mainwindow_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
 /// @param self KParts__MainWindow*
 /// @param msec int
@@ -1978,14 +1978,14 @@ void k_parts__mainwindow_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
 /// @param self KParts__MainWindow*
 /// @param statusTip const char*
@@ -1993,7 +1993,7 @@ void k_parts__mainwindow_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2002,7 +2002,7 @@ const char* k_parts__mainwindow_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
 /// @param self KParts__MainWindow*
 /// @param whatsThis const char*
@@ -2010,7 +2010,7 @@ void k_parts__mainwindow_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2019,7 +2019,7 @@ const char* k_parts__mainwindow_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2028,7 +2028,7 @@ const char* k_parts__mainwindow_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -2036,7 +2036,7 @@ void k_parts__mainwindow_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2045,7 +2045,7 @@ const char* k_parts__mainwindow_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
 /// @param self KParts__MainWindow*
 /// @param description const char*
@@ -2053,7 +2053,7 @@ void k_parts__mainwindow_set_accessible_description(void* self, const char* desc
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
 /// @param self KParts__MainWindow*
 /// @param direction enum Qt__LayoutDirection
@@ -2061,7 +2061,7 @@ void k_parts__mainwindow_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -2070,14 +2070,14 @@ int32_t k_parts__mainwindow_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
 /// @param self KParts__MainWindow*
 /// @param locale QLocale*
@@ -2085,63 +2085,63 @@ void k_parts__mainwindow_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KParts__MainWindow*
 QLocale* k_parts__mainwindow_locale(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KParts__MainWindow*
 /// @param reason enum Qt__FocusReason
@@ -2149,7 +2149,7 @@ void k_parts__mainwindow_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -2158,7 +2158,7 @@ int32_t k_parts__mainwindow_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
 /// @param self KParts__MainWindow*
 /// @param policy enum Qt__FocusPolicy
@@ -2166,14 +2166,14 @@ void k_parts__mainwindow_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
@@ -2181,7 +2181,7 @@ void k_parts__mainwindow_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
 /// @param self KParts__MainWindow*
 /// @param focusProxy QWidget*
@@ -2189,14 +2189,14 @@ void k_parts__mainwindow_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -2205,7 +2205,7 @@ int32_t k_parts__mainwindow_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
 /// @param self KParts__MainWindow*
 /// @param policy enum Qt__ContextMenuPolicy
@@ -2213,14 +2213,14 @@ void k_parts__mainwindow_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QCursor*
@@ -2228,28 +2228,28 @@ void k_parts__mainwindow_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
 /// @param self KParts__MainWindow*
 /// @param key QKeySequence*
@@ -2257,7 +2257,7 @@ int32_t k_parts__mainwindow_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
 /// @param self KParts__MainWindow*
 /// @param id int
@@ -2265,7 +2265,7 @@ void k_parts__mainwindow_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param id int
@@ -2273,7 +2273,7 @@ void k_parts__mainwindow_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
 /// @param self KParts__MainWindow*
 /// @param id int
@@ -2281,26 +2281,26 @@ void k_parts__mainwindow_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
 ///
 QWidget* k_parts__mainwindow_mouse_grabber();
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
 QWidget* k_parts__mainwindow_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param enable bool
@@ -2308,28 +2308,28 @@ void k_parts__mainwindow_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KParts__MainWindow*
 QGraphicsProxyWidget* k_parts__mainwindow_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_update(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_repaint(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KParts__MainWindow*
 /// @param x int
@@ -2340,7 +2340,7 @@ void k_parts__mainwindow_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QRect*
@@ -2348,7 +2348,7 @@ void k_parts__mainwindow_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QRegion*
@@ -2356,7 +2356,7 @@ void k_parts__mainwindow_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KParts__MainWindow*
 /// @param x int
@@ -2367,7 +2367,7 @@ void k_parts__mainwindow_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QRect*
@@ -2375,7 +2375,7 @@ void k_parts__mainwindow_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QRegion*
@@ -2383,7 +2383,7 @@ void k_parts__mainwindow_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
 /// @param self KParts__MainWindow*
 /// @param hidden bool
@@ -2391,70 +2391,70 @@ void k_parts__mainwindow_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_show(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_hide(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_close(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_raise(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_lower(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -2462,7 +2462,7 @@ void k_parts__mainwindow_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// @param self KParts__MainWindow*
 /// @param x int
@@ -2471,7 +2471,7 @@ void k_parts__mainwindow_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QPoint*
@@ -2479,7 +2479,7 @@ void k_parts__mainwindow_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// @param self KParts__MainWindow*
 /// @param w int
@@ -2488,7 +2488,7 @@ void k_parts__mainwindow_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QSize*
@@ -2496,7 +2496,7 @@ void k_parts__mainwindow_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// @param self KParts__MainWindow*
 /// @param x int
@@ -2507,7 +2507,7 @@ void k_parts__mainwindow_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// @param self KParts__MainWindow*
 /// @param geometry QRect*
@@ -2515,7 +2515,7 @@ void k_parts__mainwindow_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2524,7 +2524,7 @@ char* k_parts__mainwindow_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KParts__MainWindow*
 /// @param geometry const char*
@@ -2532,21 +2532,21 @@ bool k_parts__mainwindow_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -2554,35 +2554,35 @@ bool k_parts__mainwindow_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -2591,7 +2591,7 @@ int32_t k_parts__mainwindow_window_state(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
 /// @param self KParts__MainWindow*
 /// @param state flag of enum Qt__WindowState
@@ -2599,7 +2599,7 @@ void k_parts__mainwindow_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
 /// @param self KParts__MainWindow*
 /// @param state flag of enum Qt__WindowState
@@ -2607,14 +2607,14 @@ void k_parts__mainwindow_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KParts__MainWindow*
 QSizePolicy* k_parts__mainwindow_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
 /// @param self KParts__MainWindow*
 /// @param sizePolicy QSizePolicy*
@@ -2622,7 +2622,7 @@ void k_parts__mainwindow_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
 /// @param self KParts__MainWindow*
 /// @param horizontal enum QSizePolicy__Policy
@@ -2631,14 +2631,14 @@ void k_parts__mainwindow_set_size_policy2(void* self, int32_t horizontal, int32_
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KParts__MainWindow*
 QRegion* k_parts__mainwindow_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// @param self KParts__MainWindow*
 /// @param left int
@@ -2649,7 +2649,7 @@ void k_parts__mainwindow_set_contents_margins(void* self, int left, int top, int
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// @param self KParts__MainWindow*
 /// @param margins QMargins*
@@ -2657,28 +2657,28 @@ void k_parts__mainwindow_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KParts__MainWindow*
 QMargins* k_parts__mainwindow_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KParts__MainWindow*
 QRect* k_parts__mainwindow_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KParts__MainWindow*
 QLayout* k_parts__mainwindow_layout(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
 /// @param self KParts__MainWindow*
 /// @param layout QLayout*
@@ -2686,14 +2686,14 @@ void k_parts__mainwindow_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
 /// @param self KParts__MainWindow*
 /// @param parent QWidget*
@@ -2701,7 +2701,7 @@ void k_parts__mainwindow_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
 /// @param self KParts__MainWindow*
 /// @param parent QWidget*
@@ -2710,7 +2710,7 @@ void k_parts__mainwindow_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
 /// @param self KParts__MainWindow*
 /// @param dx int
@@ -2719,7 +2719,7 @@ void k_parts__mainwindow_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
 /// @param self KParts__MainWindow*
 /// @param dx int
@@ -2729,35 +2729,35 @@ void k_parts__mainwindow_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
 /// @param self KParts__MainWindow*
 /// @param on bool
@@ -2765,7 +2765,7 @@ void k_parts__mainwindow_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KParts__MainWindow*
 /// @param action QAction*
@@ -2773,7 +2773,7 @@ void k_parts__mainwindow_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KParts__MainWindow*
 /// @param actions libqt_list /* of QAction* */
@@ -2781,7 +2781,7 @@ void k_parts__mainwindow_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
 /// @param self KParts__MainWindow*
 /// @param before QAction*
@@ -2790,7 +2790,7 @@ void k_parts__mainwindow_insert_actions(void* self, void* before, libqt_list act
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
 /// @param self KParts__MainWindow*
 /// @param before QAction*
@@ -2799,7 +2799,7 @@ void k_parts__mainwindow_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
 /// @param self KParts__MainWindow*
 /// @param action QAction*
@@ -2807,14 +2807,14 @@ void k_parts__mainwindow_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KParts__MainWindow*
 libqt_list /* of QAction* */ k_parts__mainwindow_actions(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KParts__MainWindow*
 /// @param text const char*
@@ -2822,7 +2822,7 @@ QAction* k_parts__mainwindow_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KParts__MainWindow*
 /// @param icon QIcon*
@@ -2831,7 +2831,7 @@ QAction* k_parts__mainwindow_add_action3(void* self, void* icon, const char* tex
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KParts__MainWindow*
 /// @param text const char*
@@ -2840,7 +2840,7 @@ QAction* k_parts__mainwindow_add_action4(void* self, const char* text, void* sho
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KParts__MainWindow*
 /// @param icon QIcon*
@@ -2850,14 +2850,14 @@ QAction* k_parts__mainwindow_add_action5(void* self, void* icon, const char* tex
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self KParts__MainWindow*
 /// @param type flag of enum Qt__WindowType
@@ -2865,7 +2865,7 @@ void k_parts__mainwindow_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -2874,7 +2874,7 @@ int64_t k_parts__mainwindow_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 enum Qt__WindowType
@@ -2882,7 +2882,7 @@ void k_parts__mainwindow_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self KParts__MainWindow*
 /// @param type flag of enum Qt__WindowType
@@ -2890,7 +2890,7 @@ void k_parts__mainwindow_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -2899,14 +2899,14 @@ int64_t k_parts__mainwindow_window_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
 QWidget* k_parts__mainwindow_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KParts__MainWindow*
 /// @param x int
@@ -2915,7 +2915,7 @@ QWidget* k_parts__mainwindow_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KParts__MainWindow*
 /// @param p QPoint*
@@ -2923,7 +2923,7 @@ QWidget* k_parts__mainwindow_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KParts__MainWindow*
 /// @param p QPointF*
@@ -2931,7 +2931,7 @@ QWidget* k_parts__mainwindow_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2939,7 +2939,7 @@ void k_parts__mainwindow_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2947,14 +2947,14 @@ bool k_parts__mainwindow_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
 /// @param self KParts__MainWindow*
 /// @param child QWidget*
@@ -2962,14 +2962,14 @@ bool k_parts__mainwindow_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
 /// @param self KParts__MainWindow*
 /// @param enabled bool
@@ -2977,28 +2977,28 @@ void k_parts__mainwindow_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KParts__MainWindow*
 QBackingStore* k_parts__mainwindow_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KParts__MainWindow*
 QWindow* k_parts__mainwindow_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KParts__MainWindow*
 QScreen* k_parts__mainwindow_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
 /// @param self KParts__MainWindow*
 /// @param screen QScreen*
@@ -3006,14 +3006,14 @@ void k_parts__mainwindow_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 QWidget* k_parts__mainwindow_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param title const char*
@@ -3021,7 +3021,7 @@ void k_parts__mainwindow_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, const char* title)
@@ -3029,7 +3029,7 @@ void k_parts__mainwindow_on_window_title_changed(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param icon QIcon*
@@ -3037,7 +3037,7 @@ void k_parts__mainwindow_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, QIcon* icon)
@@ -3045,7 +3045,7 @@ void k_parts__mainwindow_on_window_icon_changed(void* self, void (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param iconText const char*
@@ -3053,7 +3053,7 @@ void k_parts__mainwindow_window_icon_text_changed(void* self, const char* iconTe
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, const char* iconText)
@@ -3061,7 +3061,7 @@ void k_parts__mainwindow_on_window_icon_text_changed(void* self, void (*callback
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KParts__MainWindow*
 /// @param pos QPoint*
@@ -3069,7 +3069,7 @@ void k_parts__mainwindow_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, QPoint* pos)
@@ -3077,7 +3077,7 @@ void k_parts__mainwindow_on_custom_context_menu_requested(void* self, void (*cal
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
 /// @param self KParts__MainWindow*
 ///
@@ -3086,7 +3086,7 @@ int64_t k_parts__mainwindow_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
 /// @param self KParts__MainWindow*
 /// @param hints flag of enum Qt__InputMethodHint
@@ -3094,7 +3094,7 @@ void k_parts__mainwindow_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param target QPaintDevice*
@@ -3103,7 +3103,7 @@ void k_parts__mainwindow_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param target QPaintDevice*
@@ -3113,7 +3113,7 @@ void k_parts__mainwindow_render3(void* self, void* target, void* targetOffset, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param target QPaintDevice*
@@ -3124,7 +3124,7 @@ void k_parts__mainwindow_render4(void* self, void* target, void* targetOffset, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param painter QPainter*
@@ -3133,7 +3133,7 @@ void k_parts__mainwindow_render23(void* self, void* painter, void* targetOffset)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param painter QPainter*
@@ -3143,7 +3143,7 @@ void k_parts__mainwindow_render32(void* self, void* painter, void* targetOffset,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KParts__MainWindow*
 /// @param painter QPainter*
@@ -3154,7 +3154,7 @@ void k_parts__mainwindow_render42(void* self, void* painter, void* targetOffset,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KParts__MainWindow*
 /// @param rectangle QRect*
@@ -3162,7 +3162,7 @@ QPixmap* k_parts__mainwindow_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KParts__MainWindow*
 /// @param type enum Qt__GestureType
@@ -3171,7 +3171,7 @@ void k_parts__mainwindow_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
 /// @param self KParts__MainWindow*
 /// @param key QKeySequence*
@@ -3180,7 +3180,7 @@ int32_t k_parts__mainwindow_grab_shortcut2(void* self, void* key, int32_t contex
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param id int
@@ -3189,7 +3189,7 @@ void k_parts__mainwindow_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
 /// @param self KParts__MainWindow*
 /// @param id int
@@ -3198,7 +3198,7 @@ void k_parts__mainwindow_set_shortcut_auto_repeat2(void* self, int id, bool enab
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 enum Qt__WindowType
@@ -3207,7 +3207,7 @@ void k_parts__mainwindow_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 enum Qt__WidgetAttribute
@@ -3216,7 +3216,7 @@ void k_parts__mainwindow_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
@@ -3224,7 +3224,7 @@ QWidget* k_parts__mainwindow_create_window_container2(void* window, void* parent
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
@@ -3233,7 +3233,7 @@ QWidget* k_parts__mainwindow_create_window_container3(void* window, void* parent
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3242,7 +3242,7 @@ const char* k_parts__mainwindow_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KParts__MainWindow*
 /// @param name char*
@@ -3250,35 +3250,35 @@ void k_parts__mainwindow_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KParts__MainWindow*
 /// @param b bool
@@ -3286,14 +3286,14 @@ bool k_parts__mainwindow_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KParts__MainWindow*
 QThread* k_parts__mainwindow_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KParts__MainWindow*
 /// @param thread QThread*
@@ -3301,7 +3301,7 @@ bool k_parts__mainwindow_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KParts__MainWindow*
 /// @param interval int
@@ -3309,7 +3309,7 @@ int32_t k_parts__mainwindow_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KParts__MainWindow*
 /// @param id int
@@ -3317,7 +3317,7 @@ void k_parts__mainwindow_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KParts__MainWindow*
 /// @param id enum Qt__TimerId
@@ -3325,14 +3325,14 @@ void k_parts__mainwindow_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KParts__MainWindow*
 libqt_list /* of QObject* */ k_parts__mainwindow_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KParts__MainWindow*
 /// @param filterObj QObject*
@@ -3340,7 +3340,7 @@ void k_parts__mainwindow_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KParts__MainWindow*
 /// @param obj QObject*
@@ -3348,7 +3348,7 @@ void k_parts__mainwindow_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -3358,7 +3358,7 @@ QMetaObject__Connection* k_parts__mainwindow_connect(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KParts__MainWindow*
 /// @param sender QObject*
@@ -3368,7 +3368,7 @@ QMetaObject__Connection* k_parts__mainwindow_connect2(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -3378,28 +3378,28 @@ bool k_parts__mainwindow_disconnect(void* sender, void* signal, void* receiver, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_parts__mainwindow_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -3408,7 +3408,7 @@ bool k_parts__mainwindow_set_property(void* self, const char* name, void* value)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -3416,7 +3416,7 @@ QVariant* k_parts__mainwindow_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3425,28 +3425,28 @@ const char** k_parts__mainwindow_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__MainWindow*
 QBindingStorage* k_parts__mainwindow_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__MainWindow*
 const QBindingStorage* k_parts__mainwindow_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self)
@@ -3454,14 +3454,14 @@ void k_parts__mainwindow_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KParts__MainWindow*
 QObject* k_parts__mainwindow_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KParts__MainWindow*
 /// @param classname const char*
@@ -3469,14 +3469,14 @@ bool k_parts__mainwindow_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KParts__MainWindow*
 /// @param thread QThread*
@@ -3485,7 +3485,7 @@ bool k_parts__mainwindow_move_to_thread2(void* self, void* thread, void* param2)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KParts__MainWindow*
 /// @param interval int
@@ -3494,7 +3494,7 @@ int32_t k_parts__mainwindow_start_timer22(void* self, int interval, int32_t time
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -3505,7 +3505,7 @@ QMetaObject__Connection* k_parts__mainwindow_connect5(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KParts__MainWindow*
 /// @param sender QObject*
@@ -3516,7 +3516,7 @@ QMetaObject__Connection* k_parts__mainwindow_connect4(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QObject*
@@ -3524,7 +3524,7 @@ void k_parts__mainwindow_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__MainWindow*
 /// @param callback void func(KParts__MainWindow* self, QObject* param1)
@@ -3532,90 +3532,90 @@ void k_parts__mainwindow_on_destroyed1(void* self, void (*callback)(void*, void*
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KParts__MainWindow*
 bool k_parts__mainwindow_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KParts__MainWindow*
 double k_parts__mainwindow_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KParts__MainWindow*
 double k_parts__mainwindow_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KParts__MainWindow*
 int32_t k_parts__mainwindow_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
 ///
 double k_parts__mainwindow_device_pixel_ratio_f_scale();
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
@@ -3623,14 +3623,14 @@ int32_t k_parts__mainwindow_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#builderClient)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#builderClient)
 ///
 /// @param self KParts__MainWindow*
 KXMLGUIClient* k_parts__mainwindow_builder_client(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#setBuilderClient)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#setBuilderClient)
 ///
 /// @param self KParts__MainWindow*
 /// @param client KXMLGUIClient*
@@ -3638,14 +3638,14 @@ void k_parts__mainwindow_set_builder_client(void* self, void* client);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#widget)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#widget)
 ///
 /// @param self KParts__MainWindow*
 QWidget* k_parts__mainwindow_widget(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -3653,7 +3653,7 @@ QAction* k_parts__mainwindow_action(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
 ///
 /// @param self KParts__MainWindow*
 /// @param doc QDomDocument*
@@ -3661,14 +3661,14 @@ void k_parts__mainwindow_set_x_m_l_g_u_i_build_document(void* self, void* doc);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
 /// @param self KParts__MainWindow*
 QDomDocument* k_parts__mainwindow_xmlgui_build_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setFactory)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setFactory)
 ///
 /// @param self KParts__MainWindow*
 /// @param factory KXMLGUIFactory*
@@ -3676,21 +3676,21 @@ void k_parts__mainwindow_set_factory(void* self, void* factory);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#factory)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#factory)
 ///
 /// @param self KParts__MainWindow*
 KXMLGUIFactory* k_parts__mainwindow_factory(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#parentClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
 /// @param self KParts__MainWindow*
 KXMLGUIClient* k_parts__mainwindow_parent_client(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#insertChildClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#insertChildClient)
 ///
 /// @param self KParts__MainWindow*
 /// @param child KXMLGUIClient*
@@ -3698,7 +3698,7 @@ void k_parts__mainwindow_insert_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#removeChildClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#removeChildClient)
 ///
 /// @param self KParts__MainWindow*
 /// @param child KXMLGUIClient*
@@ -3706,14 +3706,14 @@ void k_parts__mainwindow_remove_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#childClients)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#childClients)
 ///
 /// @param self KParts__MainWindow*
 libqt_list /* of KXMLGUIClient* */ k_parts__mainwindow_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
 ///
 /// @param self KParts__MainWindow*
 /// @param builder KXMLGUIBuilder*
@@ -3721,21 +3721,21 @@ void k_parts__mainwindow_set_client_builder(void* self, void* builder);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#clientBuilder)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
 /// @param self KParts__MainWindow*
 KXMLGUIBuilder* k_parts__mainwindow_client_builder(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#reloadXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#reloadXML)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_reload_x_m_l(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#plugActionList)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#plugActionList)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -3744,7 +3744,7 @@ void k_parts__mainwindow_plug_action_list(void* self, const char* name, libqt_li
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#unplugActionList)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#unplugActionList)
 ///
 /// @param self KParts__MainWindow*
 /// @param name const char*
@@ -3752,7 +3752,7 @@ void k_parts__mainwindow_unplug_action_list(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3762,7 +3762,7 @@ const char* k_parts__mainwindow_find_most_recent_x_m_l_file(const char* files[st
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param state const char*
@@ -3771,7 +3771,7 @@ void k_parts__mainwindow_add_state_action_enabled(void* self, const char* state,
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionDisabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#addStateActionDisabled)
 ///
 /// @param self KParts__MainWindow*
 /// @param state const char*
@@ -3780,7 +3780,7 @@ void k_parts__mainwindow_add_state_action_disabled(void* self, const char* state
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#getActionsToChangeForState)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#getActionsToChangeForState)
 ///
 /// @param self KParts__MainWindow*
 /// @param state const char*
@@ -3788,7 +3788,7 @@ KXMLGUIClient__StateChange* k_parts__mainwindow_get_actions_to_change_for_state(
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#beginXMLPlug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#beginXMLPlug)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -3796,14 +3796,14 @@ void k_parts__mainwindow_begin_x_m_l_plug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
 ///
 /// @param self KParts__MainWindow*
 void k_parts__mainwindow_end_x_m_l_plug(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#prepareXMLUnplug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#prepareXMLUnplug)
 ///
 /// @param self KParts__MainWindow*
 /// @param param1 QWidget*
@@ -3811,7 +3811,7 @@ void k_parts__mainwindow_prepare_x_m_l_unplug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KParts__MainWindow*
 /// @param xmlfile const char*
@@ -3820,7 +3820,7 @@ void k_parts__mainwindow_replace_x_m_l_file(void* self, const char* xmlfile, con
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3829,7 +3829,7 @@ const char* k_parts__mainwindow_find_version_number(const char* xml);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KParts__MainWindow*
 /// @param xmlfile const char*
@@ -3839,7 +3839,7 @@ void k_parts__mainwindow_replace_x_m_l_file3(void* self, const char* xmlfile, co
 
 /// Inherited from KParts::PartBase
 ///
-/// [Qt documentation](https://api.kde.org/kparts-partbase.html#setPartObject)
+/// [Upstream resources](https://api.kde.org/kparts-partbase.html#setPartObject)
 ///
 /// @param self KParts__MainWindow*
 /// @param object QObject*
@@ -3847,14 +3847,14 @@ void k_parts__mainwindow_set_part_object(void* self, void* object);
 
 /// Inherited from KParts::PartBase
 ///
-/// [Qt documentation](https://api.kde.org/kparts-partbase.html#partObject)
+/// [Upstream resources](https://api.kde.org/kparts-partbase.html#partObject)
 ///
 /// @param self KParts__MainWindow*
 QObject* k_parts__mainwindow_part_object(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#guiFactory)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#guiFactory)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3863,7 +3863,7 @@ KXMLGUIFactory* k_parts__mainwindow_gui_factory(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#guiFactory)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#guiFactory)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3872,7 +3872,7 @@ KXMLGUIFactory* k_parts__mainwindow_qbase_gui_factory(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#guiFactory)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#guiFactory)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3882,7 +3882,7 @@ void k_parts__mainwindow_on_gui_factory(void* self, KXMLGUIFactory* (*callback)(
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3892,7 +3892,7 @@ void k_parts__mainwindow_apply_main_window_settings(void* self, void* config);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3902,7 +3902,7 @@ void k_parts__mainwindow_qbase_apply_main_window_settings(void* self, void* conf
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3912,7 +3912,7 @@ void k_parts__mainwindow_on_apply_main_window_settings(void* self, void (*callba
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3922,7 +3922,7 @@ void k_parts__mainwindow_slot_state_changed(void* self, const char* newstate);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3932,7 +3932,7 @@ void k_parts__mainwindow_qbase_slot_state_changed(void* self, const char* newsta
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3942,7 +3942,7 @@ void k_parts__mainwindow_on_slot_state_changed(void* self, void (*callback)(void
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#event)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3952,7 +3952,7 @@ bool k_parts__mainwindow_event(void* self, void* event);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#event)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3962,7 +3962,7 @@ bool k_parts__mainwindow_qbase_event(void* self, void* event);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#event)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3972,7 +3972,7 @@ void k_parts__mainwindow_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3982,7 +3982,7 @@ void k_parts__mainwindow_set_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3992,7 +3992,7 @@ void k_parts__mainwindow_qbase_set_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4002,7 +4002,7 @@ void k_parts__mainwindow_on_set_caption(void* self, void (*callback)(void*, cons
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4012,7 +4012,7 @@ void k_parts__mainwindow_set_plain_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4022,7 +4022,7 @@ void k_parts__mainwindow_qbase_set_plain_caption(void* self, const char* caption
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4032,7 +4032,7 @@ void k_parts__mainwindow_on_set_plain_caption(void* self, void (*callback)(void*
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4042,7 +4042,7 @@ void k_parts__mainwindow_key_press_event(void* self, void* keyEvent);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4052,7 +4052,7 @@ void k_parts__mainwindow_qbase_key_press_event(void* self, void* keyEvent);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4062,7 +4062,7 @@ void k_parts__mainwindow_on_key_press_event(void* self, void (*callback)(void*, 
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4072,7 +4072,7 @@ void k_parts__mainwindow_close_event(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4082,7 +4082,7 @@ void k_parts__mainwindow_qbase_close_event(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4092,7 +4092,7 @@ void k_parts__mainwindow_on_close_event(void* self, void (*callback)(void*, void
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4101,7 +4101,7 @@ bool k_parts__mainwindow_query_close(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4110,7 +4110,7 @@ bool k_parts__mainwindow_qbase_query_close(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4120,7 +4120,7 @@ void k_parts__mainwindow_on_query_close(void* self, bool (*callback)());
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4130,7 +4130,7 @@ void k_parts__mainwindow_save_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4140,7 +4140,7 @@ void k_parts__mainwindow_qbase_save_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4150,7 +4150,7 @@ void k_parts__mainwindow_on_save_properties(void* self, void (*callback)(void*, 
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4160,7 +4160,7 @@ void k_parts__mainwindow_read_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4170,7 +4170,7 @@ void k_parts__mainwindow_qbase_read_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4180,7 +4180,7 @@ void k_parts__mainwindow_on_read_properties(void* self, void (*callback)(void*, 
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4190,7 +4190,7 @@ void k_parts__mainwindow_save_global_properties(void* self, void* sessionConfig)
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4200,7 +4200,7 @@ void k_parts__mainwindow_qbase_save_global_properties(void* self, void* sessionC
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4210,7 +4210,7 @@ void k_parts__mainwindow_on_save_global_properties(void* self, void (*callback)(
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4220,7 +4220,7 @@ void k_parts__mainwindow_read_global_properties(void* self, void* sessionConfig)
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4230,7 +4230,7 @@ void k_parts__mainwindow_qbase_read_global_properties(void* self, void* sessionC
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4240,7 +4240,7 @@ void k_parts__mainwindow_on_read_global_properties(void* self, void (*callback)(
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4249,7 +4249,7 @@ QMenu* k_parts__mainwindow_create_popup_menu(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4258,7 +4258,7 @@ QMenu* k_parts__mainwindow_qbase_create_popup_menu(void* self);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4268,7 +4268,7 @@ void k_parts__mainwindow_on_create_popup_menu(void* self, QMenu* (*callback)());
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4278,7 +4278,7 @@ void k_parts__mainwindow_context_menu_event(void* self, void* event);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4288,7 +4288,7 @@ void k_parts__mainwindow_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QMainWindow
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4298,7 +4298,7 @@ void k_parts__mainwindow_on_context_menu_event(void* self, void (*callback)(void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4307,7 +4307,7 @@ int32_t k_parts__mainwindow_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4316,7 +4316,7 @@ int32_t k_parts__mainwindow_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4326,7 +4326,7 @@ void k_parts__mainwindow_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4336,7 +4336,7 @@ void k_parts__mainwindow_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4346,7 +4346,7 @@ void k_parts__mainwindow_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4356,7 +4356,7 @@ void k_parts__mainwindow_on_set_visible(void* self, void (*callback)(void*, bool
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4365,7 +4365,7 @@ QSize* k_parts__mainwindow_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4374,7 +4374,7 @@ QSize* k_parts__mainwindow_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4384,7 +4384,7 @@ void k_parts__mainwindow_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4393,7 +4393,7 @@ QSize* k_parts__mainwindow_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4402,7 +4402,7 @@ QSize* k_parts__mainwindow_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4412,7 +4412,7 @@ void k_parts__mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4422,7 +4422,7 @@ int32_t k_parts__mainwindow_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4432,7 +4432,7 @@ int32_t k_parts__mainwindow_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4442,7 +4442,7 @@ void k_parts__mainwindow_on_height_for_width(void* self, int32_t (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4451,7 +4451,7 @@ bool k_parts__mainwindow_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4460,7 +4460,7 @@ bool k_parts__mainwindow_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4470,7 +4470,7 @@ void k_parts__mainwindow_on_has_height_for_width(void* self, bool (*callback)())
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4479,7 +4479,7 @@ QPaintEngine* k_parts__mainwindow_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4488,7 +4488,7 @@ QPaintEngine* k_parts__mainwindow_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4498,7 +4498,7 @@ void k_parts__mainwindow_on_paint_engine(void* self, QPaintEngine* (*callback)()
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4508,7 +4508,7 @@ void k_parts__mainwindow_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4518,7 +4518,7 @@ void k_parts__mainwindow_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4528,7 +4528,7 @@ void k_parts__mainwindow_on_mouse_press_event(void* self, void (*callback)(void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4538,7 +4538,7 @@ void k_parts__mainwindow_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4548,7 +4548,7 @@ void k_parts__mainwindow_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4558,7 +4558,7 @@ void k_parts__mainwindow_on_mouse_release_event(void* self, void (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4568,7 +4568,7 @@ void k_parts__mainwindow_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4578,7 +4578,7 @@ void k_parts__mainwindow_qbase_mouse_double_click_event(void* self, void* event)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4588,7 +4588,7 @@ void k_parts__mainwindow_on_mouse_double_click_event(void* self, void (*callback
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4598,7 +4598,7 @@ void k_parts__mainwindow_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4608,7 +4608,7 @@ void k_parts__mainwindow_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4618,7 +4618,7 @@ void k_parts__mainwindow_on_mouse_move_event(void* self, void (*callback)(void*,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4628,7 +4628,7 @@ void k_parts__mainwindow_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4638,7 +4638,7 @@ void k_parts__mainwindow_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4648,7 +4648,7 @@ void k_parts__mainwindow_on_wheel_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4658,7 +4658,7 @@ void k_parts__mainwindow_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4668,7 +4668,7 @@ void k_parts__mainwindow_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4678,7 +4678,7 @@ void k_parts__mainwindow_on_key_release_event(void* self, void (*callback)(void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4688,7 +4688,7 @@ void k_parts__mainwindow_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4698,7 +4698,7 @@ void k_parts__mainwindow_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4708,7 +4708,7 @@ void k_parts__mainwindow_on_focus_in_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4718,7 +4718,7 @@ void k_parts__mainwindow_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4728,7 +4728,7 @@ void k_parts__mainwindow_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4738,7 +4738,7 @@ void k_parts__mainwindow_on_focus_out_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4748,7 +4748,7 @@ void k_parts__mainwindow_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4758,7 +4758,7 @@ void k_parts__mainwindow_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4768,7 +4768,7 @@ void k_parts__mainwindow_on_enter_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4778,7 +4778,7 @@ void k_parts__mainwindow_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4788,7 +4788,7 @@ void k_parts__mainwindow_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4798,7 +4798,7 @@ void k_parts__mainwindow_on_leave_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4808,7 +4808,7 @@ void k_parts__mainwindow_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4818,7 +4818,7 @@ void k_parts__mainwindow_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4828,7 +4828,7 @@ void k_parts__mainwindow_on_paint_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4838,7 +4838,7 @@ void k_parts__mainwindow_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4848,7 +4848,7 @@ void k_parts__mainwindow_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4858,7 +4858,7 @@ void k_parts__mainwindow_on_move_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4868,7 +4868,7 @@ void k_parts__mainwindow_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4878,7 +4878,7 @@ void k_parts__mainwindow_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4888,7 +4888,7 @@ void k_parts__mainwindow_on_resize_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4898,7 +4898,7 @@ void k_parts__mainwindow_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4908,7 +4908,7 @@ void k_parts__mainwindow_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4918,7 +4918,7 @@ void k_parts__mainwindow_on_tablet_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4928,7 +4928,7 @@ void k_parts__mainwindow_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4938,7 +4938,7 @@ void k_parts__mainwindow_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4948,7 +4948,7 @@ void k_parts__mainwindow_on_action_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4958,7 +4958,7 @@ void k_parts__mainwindow_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4968,7 +4968,7 @@ void k_parts__mainwindow_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4978,7 +4978,7 @@ void k_parts__mainwindow_on_drag_enter_event(void* self, void (*callback)(void*,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4988,7 +4988,7 @@ void k_parts__mainwindow_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4998,7 +4998,7 @@ void k_parts__mainwindow_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5008,7 +5008,7 @@ void k_parts__mainwindow_on_drag_move_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5018,7 +5018,7 @@ void k_parts__mainwindow_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5028,7 +5028,7 @@ void k_parts__mainwindow_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5038,7 +5038,7 @@ void k_parts__mainwindow_on_drag_leave_event(void* self, void (*callback)(void*,
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5048,7 +5048,7 @@ void k_parts__mainwindow_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5058,7 +5058,7 @@ void k_parts__mainwindow_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5068,7 +5068,7 @@ void k_parts__mainwindow_on_drop_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5078,7 +5078,7 @@ void k_parts__mainwindow_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5088,7 +5088,7 @@ void k_parts__mainwindow_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5098,7 +5098,7 @@ void k_parts__mainwindow_on_show_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5108,7 +5108,7 @@ void k_parts__mainwindow_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5118,7 +5118,7 @@ void k_parts__mainwindow_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5128,7 +5128,7 @@ void k_parts__mainwindow_on_hide_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5140,7 +5140,7 @@ bool k_parts__mainwindow_native_event(void* self, const char* eventType, void* m
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5152,7 +5152,7 @@ bool k_parts__mainwindow_qbase_native_event(void* self, const char* eventType, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5162,7 +5162,7 @@ void k_parts__mainwindow_on_native_event(void* self, bool (*callback)(void*, con
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5172,7 +5172,7 @@ void k_parts__mainwindow_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5182,7 +5182,7 @@ void k_parts__mainwindow_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5192,7 +5192,7 @@ void k_parts__mainwindow_on_change_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5202,7 +5202,7 @@ int32_t k_parts__mainwindow_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5212,7 +5212,7 @@ int32_t k_parts__mainwindow_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5222,7 +5222,7 @@ void k_parts__mainwindow_on_metric(void* self, int32_t (*callback)(void*, int32_
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5232,7 +5232,7 @@ void k_parts__mainwindow_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5242,7 +5242,7 @@ void k_parts__mainwindow_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5252,7 +5252,7 @@ void k_parts__mainwindow_on_init_painter(void* self, void (*callback)(void*, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5262,7 +5262,7 @@ QPaintDevice* k_parts__mainwindow_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5272,7 +5272,7 @@ QPaintDevice* k_parts__mainwindow_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5282,7 +5282,7 @@ void k_parts__mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5291,7 +5291,7 @@ QPainter* k_parts__mainwindow_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5300,7 +5300,7 @@ QPainter* k_parts__mainwindow_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5310,7 +5310,7 @@ void k_parts__mainwindow_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5320,7 +5320,7 @@ void k_parts__mainwindow_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5330,7 +5330,7 @@ void k_parts__mainwindow_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5340,7 +5340,7 @@ void k_parts__mainwindow_on_input_method_event(void* self, void (*callback)(void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5350,7 +5350,7 @@ QVariant* k_parts__mainwindow_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5360,7 +5360,7 @@ QVariant* k_parts__mainwindow_qbase_input_method_query(void* self, int64_t param
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5370,7 +5370,7 @@ void k_parts__mainwindow_on_input_method_query(void* self, QVariant* (*callback)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5380,7 +5380,7 @@ bool k_parts__mainwindow_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5390,7 +5390,7 @@ bool k_parts__mainwindow_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5400,7 +5400,7 @@ void k_parts__mainwindow_on_focus_next_prev_child(void* self, bool (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5411,7 +5411,7 @@ bool k_parts__mainwindow_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5422,7 +5422,7 @@ bool k_parts__mainwindow_qbase_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5432,7 +5432,7 @@ void k_parts__mainwindow_on_event_filter(void* self, bool (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5442,7 +5442,7 @@ void k_parts__mainwindow_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5452,7 +5452,7 @@ void k_parts__mainwindow_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5462,7 +5462,7 @@ void k_parts__mainwindow_on_timer_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5472,7 +5472,7 @@ void k_parts__mainwindow_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5482,7 +5482,7 @@ void k_parts__mainwindow_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5492,7 +5492,7 @@ void k_parts__mainwindow_on_child_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5502,7 +5502,7 @@ void k_parts__mainwindow_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5512,7 +5512,7 @@ void k_parts__mainwindow_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5522,7 +5522,7 @@ void k_parts__mainwindow_on_custom_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5532,7 +5532,7 @@ void k_parts__mainwindow_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5542,7 +5542,7 @@ void k_parts__mainwindow_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5552,7 +5552,7 @@ void k_parts__mainwindow_on_connect_notify(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5562,7 +5562,7 @@ void k_parts__mainwindow_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5572,7 +5572,7 @@ void k_parts__mainwindow_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5582,7 +5582,7 @@ void k_parts__mainwindow_on_disconnect_notify(void* self, void (*callback)(void*
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#containerTags)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5593,7 +5593,7 @@ const char** k_parts__mainwindow_container_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#containerTags)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5604,7 +5604,7 @@ const char** k_parts__mainwindow_qbase_container_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#containerTags)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5614,7 +5614,7 @@ void k_parts__mainwindow_on_container_tags(void* self, const char** (*callback)(
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createContainer)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5627,7 +5627,7 @@ QWidget* k_parts__mainwindow_create_container(void* self, void* parent, int inde
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createContainer)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5640,7 +5640,7 @@ QWidget* k_parts__mainwindow_qbase_create_container(void* self, void* parent, in
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createContainer)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5650,7 +5650,7 @@ void k_parts__mainwindow_on_create_container(void* self, QWidget* (*callback)(vo
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#removeContainer)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5663,7 +5663,7 @@ void k_parts__mainwindow_remove_container(void* self, void* container, void* par
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#removeContainer)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5676,7 +5676,7 @@ void k_parts__mainwindow_qbase_remove_container(void* self, void* container, voi
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#removeContainer)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5686,7 +5686,7 @@ void k_parts__mainwindow_on_remove_container(void* self, void (*callback)(void*,
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#customTags)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5697,7 +5697,7 @@ const char** k_parts__mainwindow_custom_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#customTags)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5708,7 +5708,7 @@ const char** k_parts__mainwindow_qbase_custom_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#customTags)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5718,7 +5718,7 @@ void k_parts__mainwindow_on_custom_tags(void* self, const char** (*callback)());
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5730,7 +5730,7 @@ QAction* k_parts__mainwindow_create_custom_element(void* self, void* parent, int
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5742,7 +5742,7 @@ QAction* k_parts__mainwindow_qbase_create_custom_element(void* self, void* paren
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5752,7 +5752,7 @@ void k_parts__mainwindow_on_create_custom_element(void* self, QAction* (*callbac
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5762,7 +5762,7 @@ void k_parts__mainwindow_finalize_g_u_i(void* self, void* client);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5772,7 +5772,7 @@ void k_parts__mainwindow_qbase_finalize_g_u_i(void* self, void* client);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
+/// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5782,7 +5782,7 @@ void k_parts__mainwindow_on_finalize_g_u_i(void* self, void (*callback)(void*, v
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5792,7 +5792,7 @@ QAction* k_parts__mainwindow_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5802,7 +5802,7 @@ QAction* k_parts__mainwindow_qbase_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5812,7 +5812,7 @@ void k_parts__mainwindow_on_action2(void* self, QAction* (*callback)(void*, void
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5821,7 +5821,7 @@ KActionCollection* k_parts__mainwindow_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5830,7 +5830,7 @@ KActionCollection* k_parts__mainwindow_qbase_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5840,7 +5840,7 @@ void k_parts__mainwindow_on_action_collection(void* self, KActionCollection* (*c
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5851,7 +5851,7 @@ const char* k_parts__mainwindow_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5862,7 +5862,7 @@ const char* k_parts__mainwindow_qbase_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5872,7 +5872,7 @@ void k_parts__mainwindow_on_component_name(void* self, const char* (*callback)()
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5881,7 +5881,7 @@ QDomDocument* k_parts__mainwindow_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5890,7 +5890,7 @@ QDomDocument* k_parts__mainwindow_qbase_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5900,7 +5900,7 @@ void k_parts__mainwindow_on_dom_document(void* self, QDomDocument* (*callback)()
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5911,7 +5911,7 @@ const char* k_parts__mainwindow_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5922,7 +5922,7 @@ const char* k_parts__mainwindow_qbase_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5932,7 +5932,7 @@ void k_parts__mainwindow_on_xml_file(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5943,7 +5943,7 @@ const char* k_parts__mainwindow_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5954,7 +5954,7 @@ const char* k_parts__mainwindow_qbase_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5964,7 +5964,7 @@ void k_parts__mainwindow_on_local_x_m_l_file(void* self, const char* (*callback)
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5975,7 +5975,7 @@ void k_parts__mainwindow_set_component_name(void* self, const char* componentNam
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5986,7 +5986,7 @@ void k_parts__mainwindow_qbase_set_component_name(void* self, const char* compon
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5996,7 +5996,7 @@ void k_parts__mainwindow_on_set_component_name(void* self, void (*callback)(void
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6008,7 +6008,7 @@ void k_parts__mainwindow_set_x_m_l_file(void* self, const char* file, bool merge
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6020,7 +6020,7 @@ void k_parts__mainwindow_qbase_set_x_m_l_file(void* self, const char* file, bool
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6030,7 +6030,7 @@ void k_parts__mainwindow_on_set_x_m_l_file(void* self, void (*callback)(void*, c
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6040,7 +6040,7 @@ void k_parts__mainwindow_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6050,7 +6050,7 @@ void k_parts__mainwindow_qbase_set_local_x_m_l_file(void* self, const char* file
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6060,7 +6060,7 @@ void k_parts__mainwindow_on_set_local_x_m_l_file(void* self, void (*callback)(vo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6071,7 +6071,7 @@ void k_parts__mainwindow_set_x_m_l(void* self, const char* document, bool merge)
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6082,7 +6082,7 @@ void k_parts__mainwindow_qbase_set_x_m_l(void* self, const char* document, bool 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6092,7 +6092,7 @@ void k_parts__mainwindow_on_set_x_m_l(void* self, void (*callback)(void*, const 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6103,7 +6103,7 @@ void k_parts__mainwindow_set_d_o_m_document(void* self, void* document, bool mer
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6114,7 +6114,7 @@ void k_parts__mainwindow_qbase_set_d_o_m_document(void* self, void* document, bo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6124,7 +6124,7 @@ void k_parts__mainwindow_on_set_d_o_m_document(void* self, void (*callback)(void
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6135,7 +6135,7 @@ void k_parts__mainwindow_state_changed(void* self, const char* newstate, int32_t
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6146,7 +6146,7 @@ void k_parts__mainwindow_qbase_state_changed(void* self, const char* newstate, i
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6156,7 +6156,7 @@ void k_parts__mainwindow_on_state_changed(void* self, void (*callback)(void*, co
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6165,7 +6165,7 @@ void k_parts__mainwindow_check_ambiguous_shortcuts(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6174,7 +6174,7 @@ void k_parts__mainwindow_qbase_check_ambiguous_shortcuts(void* self);
 
 /// Inherited from KXmlGuiWindow
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
+/// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6184,7 +6184,7 @@ void k_parts__mainwindow_on_check_ambiguous_shortcuts(void* self, void (*callbac
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6195,7 +6195,7 @@ void k_parts__mainwindow_save_properties_internal(void* self, void* param1, int 
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6206,7 +6206,7 @@ void k_parts__mainwindow_qbase_save_properties_internal(void* self, void* param1
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6216,7 +6216,7 @@ void k_parts__mainwindow_on_save_properties_internal(void* self, void (*callback
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6227,7 +6227,7 @@ bool k_parts__mainwindow_read_properties_internal(void* self, void* param1, int 
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6238,7 +6238,7 @@ bool k_parts__mainwindow_qbase_read_properties_internal(void* self, void* param1
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6248,7 +6248,7 @@ void k_parts__mainwindow_on_read_properties_internal(void* self, bool (*callback
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6257,7 +6257,7 @@ bool k_parts__mainwindow_settings_dirty(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6266,7 +6266,7 @@ bool k_parts__mainwindow_qbase_settings_dirty(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6276,7 +6276,7 @@ void k_parts__mainwindow_on_settings_dirty(void* self, bool (*callback)());
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6285,7 +6285,7 @@ void k_parts__mainwindow_save_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6294,7 +6294,7 @@ void k_parts__mainwindow_qbase_save_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Upstream resources](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6304,7 +6304,7 @@ void k_parts__mainwindow_on_save_auto_save_settings(void* self, void (*callback)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6313,7 +6313,7 @@ void k_parts__mainwindow_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6322,7 +6322,7 @@ void k_parts__mainwindow_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6332,7 +6332,7 @@ void k_parts__mainwindow_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6341,7 +6341,7 @@ void k_parts__mainwindow_create(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6350,7 +6350,7 @@ void k_parts__mainwindow_qbase_create(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6360,7 +6360,7 @@ void k_parts__mainwindow_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6369,7 +6369,7 @@ void k_parts__mainwindow_destroy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6378,7 +6378,7 @@ void k_parts__mainwindow_qbase_destroy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6388,7 +6388,7 @@ void k_parts__mainwindow_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6397,7 +6397,7 @@ bool k_parts__mainwindow_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6406,7 +6406,7 @@ bool k_parts__mainwindow_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6416,7 +6416,7 @@ void k_parts__mainwindow_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6425,7 +6425,7 @@ bool k_parts__mainwindow_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6434,7 +6434,7 @@ bool k_parts__mainwindow_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6444,7 +6444,7 @@ void k_parts__mainwindow_on_focus_previous_child(void* self, bool (*callback)())
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6453,7 +6453,7 @@ QObject* k_parts__mainwindow_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6462,7 +6462,7 @@ QObject* k_parts__mainwindow_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6472,7 +6472,7 @@ void k_parts__mainwindow_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6481,7 +6481,7 @@ int32_t k_parts__mainwindow_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6490,7 +6490,7 @@ int32_t k_parts__mainwindow_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6500,7 +6500,7 @@ void k_parts__mainwindow_on_sender_signal_index(void* self, int32_t (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6510,7 +6510,7 @@ int32_t k_parts__mainwindow_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6520,7 +6520,7 @@ int32_t k_parts__mainwindow_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6530,7 +6530,7 @@ void k_parts__mainwindow_on_receivers(void* self, int32_t (*callback)(void*, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6540,7 +6540,7 @@ bool k_parts__mainwindow_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6550,7 +6550,7 @@ bool k_parts__mainwindow_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6560,7 +6560,7 @@ void k_parts__mainwindow_on_is_signal_connected(void* self, bool (*callback)(voi
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6571,7 +6571,7 @@ double k_parts__mainwindow_get_decoded_metric_f(void* self, int32_t metricA, int
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6582,7 +6582,7 @@ double k_parts__mainwindow_qbase_get_decoded_metric_f(void* self, int32_t metric
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6592,7 +6592,7 @@ void k_parts__mainwindow_on_get_decoded_metric_f(void* self, double (*callback)(
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -6603,7 +6603,7 @@ const char* k_parts__mainwindow_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -6614,7 +6614,7 @@ const char* k_parts__mainwindow_qbase_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6624,7 +6624,7 @@ void k_parts__mainwindow_on_standards_xml_file_location(void* self, const char* 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6633,7 +6633,7 @@ void k_parts__mainwindow_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6642,7 +6642,7 @@ void k_parts__mainwindow_qbase_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6652,7 +6652,7 @@ void k_parts__mainwindow_on_load_standards_xml_file(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

@@ -46,7 +46,7 @@ QAudioSource* q_audiosource_new5(void* audioDeviceInfo, void* format);
 /// @param parent QObject*
 QAudioSource* q_audiosource_new6(void* audioDeviceInfo, void* format, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QAudioSource*
 const QMetaObject* q_audiosource_meta_object(void* self);
@@ -75,118 +75,118 @@ void q_audiosource_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t q_audiosource_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_audiosource_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#isNull)
 ///
 /// @param self QAudioSource*
 bool q_audiosource_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#format)
 ///
 /// @param self QAudioSource*
 QAudioFormat* q_audiosource_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#start)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#start)
 ///
 /// @param self QAudioSource*
 /// @param device QIODevice*
 void q_audiosource_start(void* self, void* device);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#start)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#start)
 ///
 /// @param self QAudioSource*
 QIODevice* q_audiosource_start2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#stop)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#stop)
 ///
 /// @param self QAudioSource*
 void q_audiosource_stop(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#reset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#reset)
 ///
 /// @param self QAudioSource*
 void q_audiosource_reset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#suspend)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#suspend)
 ///
 /// @param self QAudioSource*
 void q_audiosource_suspend(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#resume)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#resume)
 ///
 /// @param self QAudioSource*
 void q_audiosource_resume(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#setBufferSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#setBufferSize)
 ///
 /// @param self QAudioSource*
 /// @param bytes int64_t
 void q_audiosource_set_buffer_size(void* self, int64_t bytes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#bufferSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#bufferSize)
 ///
 /// @param self QAudioSource*
 int64_t q_audiosource_buffer_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#bytesAvailable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#bytesAvailable)
 ///
 /// @param self QAudioSource*
 int64_t q_audiosource_bytes_available(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#setVolume)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#setVolume)
 ///
 /// @param self QAudioSource*
 /// @param volume double
 void q_audiosource_set_volume(void* self, double volume);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#volume)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#volume)
 ///
 /// @param self QAudioSource*
 double q_audiosource_volume(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#processedUSecs)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#processedUSecs)
 ///
 /// @param self QAudioSource*
 long long q_audiosource_processed_u_secs(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#elapsedUSecs)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#elapsedUSecs)
 ///
 /// @param self QAudioSource*
 long long q_audiosource_elapsed_u_secs(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#error)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#error)
 ///
 /// @param self QAudioSource*
 ///
 /// @return enum QAudio__Error
 int32_t q_audiosource_error(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#state)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#state)
 ///
 /// @param self QAudioSource*
 ///
 /// @return enum QAudio__State
 int32_t q_audiosource_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#stateChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#stateChanged)
 ///
 /// @param self QAudioSource*
 /// @param state enum QAudio__State
 void q_audiosource_state_changed(void* self, int32_t state);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#stateChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#stateChanged)
 ///
 /// @param self QAudioSource*
 /// @param callback void func(QAudioSource* self, enum QAudio__State state)
 void q_audiosource_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -194,7 +194,7 @@ void q_audiosource_on_state_changed(void* self, void (*callback)(void*, int32_t)
 /// @param c const char*
 const char* q_audiosource_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -205,7 +205,7 @@ const char* q_audiosource_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -214,7 +214,7 @@ const char* q_audiosource_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAudioSource*
 /// @param name char*
@@ -222,35 +222,35 @@ void q_audiosource_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QAudioSource*
 bool q_audiosource_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QAudioSource*
 bool q_audiosource_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QAudioSource*
 bool q_audiosource_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QAudioSource*
 bool q_audiosource_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QAudioSource*
 /// @param b bool
@@ -258,14 +258,14 @@ bool q_audiosource_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QAudioSource*
 QThread* q_audiosource_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAudioSource*
 /// @param thread QThread*
@@ -273,7 +273,7 @@ bool q_audiosource_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAudioSource*
 /// @param interval int
@@ -281,7 +281,7 @@ int32_t q_audiosource_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAudioSource*
 /// @param id int
@@ -289,7 +289,7 @@ void q_audiosource_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAudioSource*
 /// @param id enum Qt__TimerId
@@ -297,14 +297,14 @@ void q_audiosource_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QAudioSource*
 libqt_list /* of QObject* */ q_audiosource_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QAudioSource*
 /// @param parent QObject*
@@ -312,7 +312,7 @@ void q_audiosource_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QAudioSource*
 /// @param filterObj QObject*
@@ -320,7 +320,7 @@ void q_audiosource_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QAudioSource*
 /// @param obj QObject*
@@ -328,7 +328,7 @@ void q_audiosource_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -338,7 +338,7 @@ QMetaObject__Connection* q_audiosource_connect(void* sender, void* signal, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAudioSource*
 /// @param sender QObject*
@@ -348,7 +348,7 @@ QMetaObject__Connection* q_audiosource_connect2(void* self, void* sender, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -358,28 +358,28 @@ bool q_audiosource_disconnect(void* sender, void* signal, void* receiver, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_audiosource_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QAudioSource*
 void q_audiosource_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QAudioSource*
 void q_audiosource_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QAudioSource*
 /// @param name const char*
@@ -388,7 +388,7 @@ bool q_audiosource_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QAudioSource*
 /// @param name const char*
@@ -396,7 +396,7 @@ QVariant* q_audiosource_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -405,28 +405,28 @@ const char** q_audiosource_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAudioSource*
 QBindingStorage* q_audiosource_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAudioSource*
 const QBindingStorage* q_audiosource_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSource*
 void q_audiosource_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSource*
 /// @param callback void func(QAudioSource* self)
@@ -434,14 +434,14 @@ void q_audiosource_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QAudioSource*
 QObject* q_audiosource_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QAudioSource*
 /// @param classname const char*
@@ -449,14 +449,14 @@ bool q_audiosource_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QAudioSource*
 void q_audiosource_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAudioSource*
 /// @param thread QThread*
@@ -465,7 +465,7 @@ bool q_audiosource_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAudioSource*
 /// @param interval int
@@ -474,7 +474,7 @@ int32_t q_audiosource_start_timer22(void* self, int interval, int32_t timerType)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -485,7 +485,7 @@ QMetaObject__Connection* q_audiosource_connect5(void* sender, void* signal, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAudioSource*
 /// @param sender QObject*
@@ -496,7 +496,7 @@ QMetaObject__Connection* q_audiosource_connect4(void* self, void* sender, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSource*
 /// @param param1 QObject*
@@ -504,7 +504,7 @@ void q_audiosource_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSource*
 /// @param callback void func(QAudioSource* self, QObject* param1)
@@ -512,7 +512,7 @@ void q_audiosource_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -522,7 +522,7 @@ bool q_audiosource_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -532,7 +532,7 @@ bool q_audiosource_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -542,7 +542,7 @@ void q_audiosource_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -553,7 +553,7 @@ bool q_audiosource_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -564,7 +564,7 @@ bool q_audiosource_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -574,7 +574,7 @@ void q_audiosource_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -584,7 +584,7 @@ void q_audiosource_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -594,7 +594,7 @@ void q_audiosource_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -604,7 +604,7 @@ void q_audiosource_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -614,7 +614,7 @@ void q_audiosource_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -624,7 +624,7 @@ void q_audiosource_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -634,7 +634,7 @@ void q_audiosource_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -644,7 +644,7 @@ void q_audiosource_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -654,7 +654,7 @@ void q_audiosource_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -664,7 +664,7 @@ void q_audiosource_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -674,7 +674,7 @@ void q_audiosource_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -684,7 +684,7 @@ void q_audiosource_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -694,7 +694,7 @@ void q_audiosource_on_connect_notify(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -704,7 +704,7 @@ void q_audiosource_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -714,7 +714,7 @@ void q_audiosource_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -724,7 +724,7 @@ void q_audiosource_on_disconnect_notify(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -733,7 +733,7 @@ QObject* q_audiosource_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -742,7 +742,7 @@ QObject* q_audiosource_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -752,7 +752,7 @@ void q_audiosource_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -761,7 +761,7 @@ int32_t q_audiosource_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -770,7 +770,7 @@ int32_t q_audiosource_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -780,7 +780,7 @@ void q_audiosource_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -790,7 +790,7 @@ int32_t q_audiosource_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -800,7 +800,7 @@ int32_t q_audiosource_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -810,7 +810,7 @@ void q_audiosource_on_receivers(void* self, int32_t (*callback)(void*, const cha
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -820,7 +820,7 @@ bool q_audiosource_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -830,7 +830,7 @@ bool q_audiosource_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -840,7 +840,7 @@ void q_audiosource_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -848,7 +848,7 @@ void q_audiosource_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// @param callback void func(QAudioSource* self, const char* objectName)
 void q_audiosource_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#dtor.QAudioSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#dtor.QAudioSource)
 ///
 /// Delete this object from C++ memory.
 ///

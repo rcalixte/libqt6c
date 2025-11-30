@@ -35,7 +35,7 @@ void q_bindingstatus_copy_assign(void* self, void* other);
 /// @param other QBindingStatus*
 void q_bindingstatus_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbindingstatus.html#dtor.QBindingStatus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbindingstatus.html#dtor.QBindingStatus)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -48,23 +48,23 @@ void q_bindingstatus_delete(void* self);
 ///
 QBindingStorage* q_bindingstorage_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbindingstorage.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbindingstorage.html#isEmpty)
 ///
 /// @param self QBindingStorage*
 bool q_bindingstorage_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbindingstorage.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbindingstorage.html#isValid)
 ///
 /// @param self QBindingStorage*
 bool q_bindingstorage_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbindingstorage.html#registerDependency)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbindingstorage.html#registerDependency)
 ///
 /// @param self QBindingStorage*
 /// @param data QUntypedPropertyData*
 void q_bindingstorage_register_dependency(void* self, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbindingstorage.html#dtor.QBindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbindingstorage.html#dtor.QBindingStorage)
 ///
 /// Delete this object from C++ memory.
 ///

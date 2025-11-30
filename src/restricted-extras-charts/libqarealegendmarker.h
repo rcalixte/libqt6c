@@ -26,7 +26,7 @@ QAreaLegendMarker* q_arealegendmarker_new(void* series, void* legend);
 /// @param parent QObject*
 QAreaLegendMarker* q_arealegendmarker_new2(void* series, void* legend, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QAreaLegendMarker*
 const QMetaObject* q_arealegendmarker_meta_object(void* self);
@@ -55,21 +55,21 @@ void q_arealegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t q_arealegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_arealegendmarker_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#type)
 ///
 /// @param self QAreaLegendMarker*
 ///
 /// @return enum QLegendMarker__LegendMarkerType
 int32_t q_arealegendmarker_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
@@ -77,7 +77,7 @@ int32_t q_arealegendmarker_type(void* self);
 /// @param callback int32_t func()
 void q_arealegendmarker_on_type(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
@@ -86,12 +86,12 @@ void q_arealegendmarker_on_type(void* self, int32_t (*callback)());
 /// @return enum QLegendMarker__LegendMarkerType
 int32_t q_arealegendmarker_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#series)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#series)
 ///
 /// @param self QAreaLegendMarker*
 QAreaSeries* q_arealegendmarker_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#series)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#series)
 ///
 /// Allows for overriding the related default method
 ///
@@ -99,14 +99,14 @@ QAreaSeries* q_arealegendmarker_series(void* self);
 /// @param callback QAreaSeries* func()
 void q_arealegendmarker_on_series(void* self, QAreaSeries* (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#series)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#series)
 ///
 /// Base class method implementation
 ///
 /// @param self QAreaLegendMarker*
 QAreaSeries* q_arealegendmarker_qbase_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -114,7 +114,7 @@ QAreaSeries* q_arealegendmarker_qbase_series(void* self);
 /// @param c const char*
 const char* q_arealegendmarker_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -125,7 +125,7 @@ const char* q_arealegendmarker_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#label)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#label)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -134,7 +134,7 @@ const char* q_arealegendmarker_label(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setLabel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setLabel)
 ///
 /// @param self QAreaLegendMarker*
 /// @param label const char*
@@ -142,14 +142,14 @@ void q_arealegendmarker_set_label(void* self, const char* label);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrush)
 ///
 /// @param self QAreaLegendMarker*
 QBrush* q_arealegendmarker_label_brush(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setLabelBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setLabelBrush)
 ///
 /// @param self QAreaLegendMarker*
 /// @param brush QBrush*
@@ -157,14 +157,14 @@ void q_arealegendmarker_set_label_brush(void* self, void* brush);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#font)
 ///
 /// @param self QAreaLegendMarker*
 QFont* q_arealegendmarker_font(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setFont)
 ///
 /// @param self QAreaLegendMarker*
 /// @param font QFont*
@@ -172,14 +172,14 @@ void q_arealegendmarker_set_font(void* self, void* font);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#pen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#pen)
 ///
 /// @param self QAreaLegendMarker*
 QPen* q_arealegendmarker_pen(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setPen)
 ///
 /// @param self QAreaLegendMarker*
 /// @param pen QPen*
@@ -187,14 +187,14 @@ void q_arealegendmarker_set_pen(void* self, void* pen);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#brush)
 ///
 /// @param self QAreaLegendMarker*
 QBrush* q_arealegendmarker_brush(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setBrush)
 ///
 /// @param self QAreaLegendMarker*
 /// @param brush QBrush*
@@ -202,14 +202,14 @@ void q_arealegendmarker_set_brush(void* self, void* brush);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#isVisible)
 ///
 /// @param self QAreaLegendMarker*
 bool q_arealegendmarker_is_visible(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setVisible)
 ///
 /// @param self QAreaLegendMarker*
 /// @param visible bool
@@ -217,7 +217,7 @@ void q_arealegendmarker_set_visible(void* self, bool visible);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#shape)
 ///
 /// @param self QAreaLegendMarker*
 ///
@@ -226,7 +226,7 @@ int32_t q_arealegendmarker_shape(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setShape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#setShape)
 ///
 /// @param self QAreaLegendMarker*
 /// @param shape enum QLegend__MarkerShape
@@ -234,14 +234,14 @@ void q_arealegendmarker_set_shape(void* self, int32_t shape);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_clicked(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -249,7 +249,7 @@ void q_arealegendmarker_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// @param self QAreaLegendMarker*
 /// @param status bool
@@ -257,7 +257,7 @@ void q_arealegendmarker_hovered(void* self, bool status);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self, bool status)
@@ -265,14 +265,14 @@ void q_arealegendmarker_on_hovered(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_label_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -280,14 +280,14 @@ void q_arealegendmarker_on_label_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_label_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -295,14 +295,14 @@ void q_arealegendmarker_on_label_brush_changed(void* self, void (*callback)(void
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_font_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -310,14 +310,14 @@ void q_arealegendmarker_on_font_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_pen_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -325,14 +325,14 @@ void q_arealegendmarker_on_pen_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -340,14 +340,14 @@ void q_arealegendmarker_on_brush_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_visible_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -355,14 +355,14 @@ void q_arealegendmarker_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_shape_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -370,7 +370,7 @@ void q_arealegendmarker_on_shape_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -379,7 +379,7 @@ const char* q_arealegendmarker_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAreaLegendMarker*
 /// @param name char*
@@ -387,35 +387,35 @@ void q_arealegendmarker_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QAreaLegendMarker*
 bool q_arealegendmarker_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QAreaLegendMarker*
 bool q_arealegendmarker_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QAreaLegendMarker*
 bool q_arealegendmarker_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QAreaLegendMarker*
 bool q_arealegendmarker_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QAreaLegendMarker*
 /// @param b bool
@@ -423,14 +423,14 @@ bool q_arealegendmarker_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QAreaLegendMarker*
 QThread* q_arealegendmarker_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAreaLegendMarker*
 /// @param thread QThread*
@@ -438,7 +438,7 @@ bool q_arealegendmarker_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAreaLegendMarker*
 /// @param interval int
@@ -446,7 +446,7 @@ int32_t q_arealegendmarker_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAreaLegendMarker*
 /// @param id int
@@ -454,7 +454,7 @@ void q_arealegendmarker_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAreaLegendMarker*
 /// @param id enum Qt__TimerId
@@ -462,14 +462,14 @@ void q_arealegendmarker_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QAreaLegendMarker*
 libqt_list /* of QObject* */ q_arealegendmarker_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QAreaLegendMarker*
 /// @param parent QObject*
@@ -477,7 +477,7 @@ void q_arealegendmarker_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QAreaLegendMarker*
 /// @param filterObj QObject*
@@ -485,7 +485,7 @@ void q_arealegendmarker_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QAreaLegendMarker*
 /// @param obj QObject*
@@ -493,7 +493,7 @@ void q_arealegendmarker_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -503,7 +503,7 @@ QMetaObject__Connection* q_arealegendmarker_connect(void* sender, void* signal, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAreaLegendMarker*
 /// @param sender QObject*
@@ -513,7 +513,7 @@ QMetaObject__Connection* q_arealegendmarker_connect2(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -523,28 +523,28 @@ bool q_arealegendmarker_disconnect(void* sender, void* signal, void* receiver, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_arealegendmarker_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QAreaLegendMarker*
 /// @param name const char*
@@ -553,7 +553,7 @@ bool q_arealegendmarker_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QAreaLegendMarker*
 /// @param name const char*
@@ -561,7 +561,7 @@ QVariant* q_arealegendmarker_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -570,28 +570,28 @@ const char** q_arealegendmarker_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAreaLegendMarker*
 QBindingStorage* q_arealegendmarker_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAreaLegendMarker*
 const QBindingStorage* q_arealegendmarker_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self)
@@ -599,14 +599,14 @@ void q_arealegendmarker_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QAreaLegendMarker*
 QObject* q_arealegendmarker_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QAreaLegendMarker*
 /// @param classname const char*
@@ -614,14 +614,14 @@ bool q_arealegendmarker_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QAreaLegendMarker*
 void q_arealegendmarker_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAreaLegendMarker*
 /// @param thread QThread*
@@ -630,7 +630,7 @@ bool q_arealegendmarker_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAreaLegendMarker*
 /// @param interval int
@@ -639,7 +639,7 @@ int32_t q_arealegendmarker_start_timer22(void* self, int interval, int32_t timer
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -650,7 +650,7 @@ QMetaObject__Connection* q_arealegendmarker_connect5(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAreaLegendMarker*
 /// @param sender QObject*
@@ -661,7 +661,7 @@ QMetaObject__Connection* q_arealegendmarker_connect4(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAreaLegendMarker*
 /// @param param1 QObject*
@@ -669,7 +669,7 @@ void q_arealegendmarker_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAreaLegendMarker*
 /// @param callback void func(QAreaLegendMarker* self, QObject* param1)
@@ -677,7 +677,7 @@ void q_arealegendmarker_on_destroyed1(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -687,7 +687,7 @@ bool q_arealegendmarker_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -697,7 +697,7 @@ bool q_arealegendmarker_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -707,7 +707,7 @@ void q_arealegendmarker_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -718,7 +718,7 @@ bool q_arealegendmarker_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -729,7 +729,7 @@ bool q_arealegendmarker_qbase_event_filter(void* self, void* watched, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -739,7 +739,7 @@ void q_arealegendmarker_on_event_filter(void* self, bool (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -749,7 +749,7 @@ void q_arealegendmarker_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -759,7 +759,7 @@ void q_arealegendmarker_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -769,7 +769,7 @@ void q_arealegendmarker_on_timer_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -779,7 +779,7 @@ void q_arealegendmarker_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -789,7 +789,7 @@ void q_arealegendmarker_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -799,7 +799,7 @@ void q_arealegendmarker_on_child_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -809,7 +809,7 @@ void q_arealegendmarker_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -819,7 +819,7 @@ void q_arealegendmarker_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -829,7 +829,7 @@ void q_arealegendmarker_on_custom_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -839,7 +839,7 @@ void q_arealegendmarker_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -849,7 +849,7 @@ void q_arealegendmarker_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -859,7 +859,7 @@ void q_arealegendmarker_on_connect_notify(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -869,7 +869,7 @@ void q_arealegendmarker_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -879,7 +879,7 @@ void q_arealegendmarker_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -889,7 +889,7 @@ void q_arealegendmarker_on_disconnect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -898,7 +898,7 @@ QObject* q_arealegendmarker_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -907,7 +907,7 @@ QObject* q_arealegendmarker_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -917,7 +917,7 @@ void q_arealegendmarker_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -926,7 +926,7 @@ int32_t q_arealegendmarker_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -935,7 +935,7 @@ int32_t q_arealegendmarker_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -945,7 +945,7 @@ void q_arealegendmarker_on_sender_signal_index(void* self, int32_t (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -955,7 +955,7 @@ int32_t q_arealegendmarker_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -965,7 +965,7 @@ int32_t q_arealegendmarker_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -975,7 +975,7 @@ void q_arealegendmarker_on_receivers(void* self, int32_t (*callback)(void*, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -985,7 +985,7 @@ bool q_arealegendmarker_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -995,7 +995,7 @@ bool q_arealegendmarker_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1005,7 +1005,7 @@ void q_arealegendmarker_on_is_signal_connected(void* self, bool (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1013,7 +1013,7 @@ void q_arealegendmarker_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param callback void func(QAreaLegendMarker* self, const char* objectName)
 void q_arealegendmarker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#dtor.QAreaLegendMarker)
+/// [Upstream resources](https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html#dtor.QAreaLegendMarker)
 ///
 /// Delete this object from C++ memory.
 ///

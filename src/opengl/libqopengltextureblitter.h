@@ -17,54 +17,54 @@
 ///
 QOpenGLTextureBlitter* q_opengltextureblitter_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#create)
 ///
 /// @param self QOpenGLTextureBlitter*
 bool q_opengltextureblitter_create(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#isCreated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#isCreated)
 ///
 /// @param self QOpenGLTextureBlitter*
 bool q_opengltextureblitter_is_created(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#destroy)
 ///
 /// @param self QOpenGLTextureBlitter*
 void q_opengltextureblitter_destroy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#supportsExternalOESTarget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#supportsExternalOESTarget)
 ///
 /// @param self QOpenGLTextureBlitter*
 bool q_opengltextureblitter_supports_external_o_e_s_target(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#supportsRectangleTarget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#supportsRectangleTarget)
 ///
 /// @param self QOpenGLTextureBlitter*
 bool q_opengltextureblitter_supports_rectangle_target(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#bind)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#bind)
 ///
 /// @param self QOpenGLTextureBlitter*
 void q_opengltextureblitter_bind(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#release)
 ///
 /// @param self QOpenGLTextureBlitter*
 void q_opengltextureblitter_release(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#setRedBlueSwizzle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#setRedBlueSwizzle)
 ///
 /// @param self QOpenGLTextureBlitter*
 /// @param swizzle bool
 void q_opengltextureblitter_set_red_blue_swizzle(void* self, bool swizzle);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#setOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#setOpacity)
 ///
 /// @param self QOpenGLTextureBlitter*
 /// @param opacity float
 void q_opengltextureblitter_set_opacity(void* self, float opacity);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#blit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#blit)
 ///
 /// @param self QOpenGLTextureBlitter*
 /// @param texture uint32_t
@@ -72,19 +72,19 @@ void q_opengltextureblitter_set_opacity(void* self, float opacity);
 /// @param sourceOrigin enum QOpenGLTextureBlitter__Origin
 void q_opengltextureblitter_blit(void* self, uint32_t texture, void* targetTransform, int32_t sourceOrigin);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#targetTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#targetTransform)
 ///
 /// @param target QRectF*
 /// @param viewport QRect*
 QMatrix4x4* q_opengltextureblitter_target_transform(void* target, void* viewport);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#bind)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#bind)
 ///
 /// @param self QOpenGLTextureBlitter*
 /// @param target uint32_t
 void q_opengltextureblitter_bind1(void* self, uint32_t target);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopengltextureblitter.html#dtor.QOpenGLTextureBlitter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#dtor.QOpenGLTextureBlitter)
 ///
 /// Delete this object from C++ memory.
 ///

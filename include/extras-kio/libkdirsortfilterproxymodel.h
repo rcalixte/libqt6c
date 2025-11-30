@@ -22,7 +22,7 @@ KDirSortFilterProxyModel* k_dirsortfilterproxymodel_new();
 /// @param parent QObject*
 KDirSortFilterProxyModel* k_dirsortfilterproxymodel_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KDirSortFilterProxyModel*
 const QMetaObject* k_dirsortfilterproxymodel_meta_object(void* self);
@@ -51,20 +51,20 @@ void k_dirsortfilterproxymodel_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param3 void*
 int32_t k_dirsortfilterproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_dirsortfilterproxymodel_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#hasChildren)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param parent QModelIndex*
 bool k_dirsortfilterproxymodel_has_children(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#hasChildren)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ bool k_dirsortfilterproxymodel_has_children(void* self, void* parent);
 /// @param callback bool func(KDirSortFilterProxyModel* self, QModelIndex* parent)
 void k_dirsortfilterproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#hasChildren)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#hasChildren)
 ///
 /// Base class method implementation
 ///
@@ -80,13 +80,13 @@ void k_dirsortfilterproxymodel_on_has_children(void* self, bool (*callback)(void
 /// @param parent QModelIndex*
 bool k_dirsortfilterproxymodel_qbase_has_children(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#canFetchMore)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#canFetchMore)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param parent QModelIndex*
 bool k_dirsortfilterproxymodel_can_fetch_more(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#canFetchMore)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#canFetchMore)
 ///
 /// Allows for overriding the related default method
 ///
@@ -94,7 +94,7 @@ bool k_dirsortfilterproxymodel_can_fetch_more(void* self, void* parent);
 /// @param callback bool func(KDirSortFilterProxyModel* self, QModelIndex* parent)
 void k_dirsortfilterproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#canFetchMore)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#canFetchMore)
 ///
 /// Base class method implementation
 ///
@@ -102,48 +102,48 @@ void k_dirsortfilterproxymodel_on_can_fetch_more(void* self, bool (*callback)(vo
 /// @param parent QModelIndex*
 bool k_dirsortfilterproxymodel_qbase_can_fetch_more(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#pointsForPermissions)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#pointsForPermissions)
 ///
 /// @param info QFileInfo*
 int32_t k_dirsortfilterproxymodel_points_for_permissions(void* info);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#setSortFoldersFirst)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#setSortFoldersFirst)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param foldersFirst bool
 void k_dirsortfilterproxymodel_set_sort_folders_first(void* self, bool foldersFirst);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#sortFoldersFirst)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#sortFoldersFirst)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_sort_folders_first(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#setSortHiddenFilesLast)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#setSortHiddenFilesLast)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param hiddenFilesLast bool
 void k_dirsortfilterproxymodel_set_sort_hidden_files_last(void* self, bool hiddenFilesLast);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#sortHiddenFilesLast)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#sortHiddenFilesLast)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_sort_hidden_files_last(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#supportedDragOptions)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#supportedDragOptions)
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 int32_t k_dirsortfilterproxymodel_supported_drag_options(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#subSortLessThan)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#subSortLessThan)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 bool k_dirsortfilterproxymodel_sub_sort_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#subSortLessThan)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#subSortLessThan)
 ///
 /// Allows for overriding the related default method
 ///
@@ -151,7 +151,7 @@ bool k_dirsortfilterproxymodel_sub_sort_less_than(void* self, void* left, void* 
 /// @param callback bool func(KDirSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_dirsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#subSortLessThan)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#subSortLessThan)
 ///
 /// Base class method implementation
 ///
@@ -160,7 +160,7 @@ void k_dirsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback
 /// @param right QModelIndex*
 bool k_dirsortfilterproxymodel_qbase_sub_sort_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -168,7 +168,7 @@ bool k_dirsortfilterproxymodel_qbase_sub_sort_less_than(void* self, void* left, 
 /// @param c const char*
 const char* k_dirsortfilterproxymodel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -179,14 +179,14 @@ const char* k_dirsortfilterproxymodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#isCategorizedModel)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#isCategorizedModel)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_is_categorized_model(void* self);
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setCategorizedModel)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setCategorizedModel)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param categorizedModel bool
@@ -194,14 +194,14 @@ void k_dirsortfilterproxymodel_set_categorized_model(void* self, bool categorize
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortColumn)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 int32_t k_dirsortfilterproxymodel_sort_column(void* self);
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortOrder)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortOrder)
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
@@ -210,7 +210,7 @@ int32_t k_dirsortfilterproxymodel_sort_order(void* self);
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setSortCategoriesByNaturalComparison)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setSortCategoriesByNaturalComparison)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sortCategoriesByNaturalComparison bool
@@ -218,28 +218,28 @@ void k_dirsortfilterproxymodel_set_sort_categories_by_natural_comparison(void* s
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortCategoriesByNaturalComparison)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortCategoriesByNaturalComparison)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_sort_categories_by_natural_comparison(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRegularExpression)
 ///
 /// @param self KDirSortFilterProxyModel*
 QRegularExpression* k_dirsortfilterproxymodel_filter_regular_expression(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterKeyColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterKeyColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 int32_t k_dirsortfilterproxymodel_filter_key_column(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterKeyColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterKeyColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param column int
@@ -247,7 +247,7 @@ void k_dirsortfilterproxymodel_set_filter_key_column(void* self, int column);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivity)
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
@@ -256,7 +256,7 @@ int32_t k_dirsortfilterproxymodel_filter_case_sensitivity(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterCaseSensitivity)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param cs enum Qt__CaseSensitivity
@@ -264,7 +264,7 @@ void k_dirsortfilterproxymodel_set_filter_case_sensitivity(void* self, int32_t c
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivity)
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
@@ -273,7 +273,7 @@ int32_t k_dirsortfilterproxymodel_sort_case_sensitivity(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortCaseSensitivity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortCaseSensitivity)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param cs enum Qt__CaseSensitivity
@@ -281,14 +281,14 @@ void k_dirsortfilterproxymodel_set_sort_case_sensitivity(void* self, int32_t cs)
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isSortLocaleAware)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isSortLocaleAware)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_is_sort_locale_aware(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortLocaleAware)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortLocaleAware)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param on bool
@@ -296,14 +296,14 @@ void k_dirsortfilterproxymodel_set_sort_locale_aware(void* self, bool on);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilter)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_dynamic_sort_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setDynamicSortFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setDynamicSortFilter)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param enable bool
@@ -311,14 +311,14 @@ void k_dirsortfilterproxymodel_set_dynamic_sort_filter(void* self, bool enable);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRole)
 ///
 /// @param self KDirSortFilterProxyModel*
 int32_t k_dirsortfilterproxymodel_sort_role(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortRole)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param role int
@@ -326,14 +326,14 @@ void k_dirsortfilterproxymodel_set_sort_role(void* self, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRole)
 ///
 /// @param self KDirSortFilterProxyModel*
 int32_t k_dirsortfilterproxymodel_filter_role(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRole)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param role int
@@ -341,14 +341,14 @@ void k_dirsortfilterproxymodel_set_filter_role(void* self, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isRecursiveFilteringEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isRecursiveFilteringEnabled)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_is_recursive_filtering_enabled(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setRecursiveFilteringEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setRecursiveFilteringEnabled)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param recursive bool
@@ -356,14 +356,14 @@ void k_dirsortfilterproxymodel_set_recursive_filtering_enabled(void* self, bool 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRows)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_auto_accept_child_rows(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setAutoAcceptChildRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setAutoAcceptChildRows)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param accept bool
@@ -371,7 +371,7 @@ void k_dirsortfilterproxymodel_set_auto_accept_child_rows(void* self, bool accep
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param pattern const char*
@@ -379,7 +379,7 @@ void k_dirsortfilterproxymodel_set_filter_regular_expression(void* self, const c
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param regularExpression QRegularExpression*
@@ -387,7 +387,7 @@ void k_dirsortfilterproxymodel_set_filter_regular_expression2(void* self, void* 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterWildcard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterWildcard)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param pattern const char*
@@ -395,7 +395,7 @@ void k_dirsortfilterproxymodel_set_filter_wildcard(void* self, const char* patte
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterFixedString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterFixedString)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param pattern const char*
@@ -403,14 +403,14 @@ void k_dirsortfilterproxymodel_set_filter_fixed_string(void* self, const char* p
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidate)
 ///
 /// @param self KDirSortFilterProxyModel*
 void k_dirsortfilterproxymodel_invalidate(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param dynamicSortFilter bool
@@ -418,7 +418,7 @@ void k_dirsortfilterproxymodel_dynamic_sort_filter_changed(void* self, bool dyna
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, bool dynamicSortFilter)
@@ -426,7 +426,7 @@ void k_dirsortfilterproxymodel_on_dynamic_sort_filter_changed(void* self, void (
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param filterCaseSensitivity enum Qt__CaseSensitivity
@@ -434,7 +434,7 @@ void k_dirsortfilterproxymodel_filter_case_sensitivity_changed(void* self, int32
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, enum Qt__CaseSensitivity filterCaseSensitivity)
@@ -442,7 +442,7 @@ void k_dirsortfilterproxymodel_on_filter_case_sensitivity_changed(void* self, vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sortCaseSensitivity enum Qt__CaseSensitivity
@@ -450,7 +450,7 @@ void k_dirsortfilterproxymodel_sort_case_sensitivity_changed(void* self, int32_t
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, enum Qt__CaseSensitivity sortCaseSensitivity)
@@ -458,7 +458,7 @@ void k_dirsortfilterproxymodel_on_sort_case_sensitivity_changed(void* self, void
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sortLocaleAware bool
@@ -466,7 +466,7 @@ void k_dirsortfilterproxymodel_sort_locale_aware_changed(void* self, bool sortLo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, bool sortLocaleAware)
@@ -474,7 +474,7 @@ void k_dirsortfilterproxymodel_on_sort_locale_aware_changed(void* self, void (*c
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sortRole int
@@ -482,7 +482,7 @@ void k_dirsortfilterproxymodel_sort_role_changed(void* self, int sortRole);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, int sortRole)
@@ -490,7 +490,7 @@ void k_dirsortfilterproxymodel_on_sort_role_changed(void* self, void (*callback)
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param filterRole int
@@ -498,7 +498,7 @@ void k_dirsortfilterproxymodel_filter_role_changed(void* self, int filterRole);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, int filterRole)
@@ -506,7 +506,7 @@ void k_dirsortfilterproxymodel_on_filter_role_changed(void* self, void (*callbac
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param recursiveFilteringEnabled bool
@@ -514,7 +514,7 @@ void k_dirsortfilterproxymodel_recursive_filtering_enabled_changed(void* self, b
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, bool recursiveFilteringEnabled)
@@ -522,7 +522,7 @@ void k_dirsortfilterproxymodel_on_recursive_filtering_enabled_changed(void* self
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param autoAcceptChildRows bool
@@ -530,7 +530,7 @@ void k_dirsortfilterproxymodel_auto_accept_child_rows_changed(void* self, bool a
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, bool autoAcceptChildRows)
@@ -538,14 +538,14 @@ void k_dirsortfilterproxymodel_on_auto_accept_child_rows_changed(void* self, voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
 /// @param self KDirSortFilterProxyModel*
 QAbstractItemModel* k_dirsortfilterproxymodel_source_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param row int
@@ -554,7 +554,7 @@ bool k_dirsortfilterproxymodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param row int
@@ -562,7 +562,7 @@ bool k_dirsortfilterproxymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param column int
@@ -570,7 +570,7 @@ bool k_dirsortfilterproxymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param row int
@@ -578,7 +578,7 @@ bool k_dirsortfilterproxymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param column int
@@ -586,7 +586,7 @@ bool k_dirsortfilterproxymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sourceParent QModelIndex*
@@ -597,7 +597,7 @@ bool k_dirsortfilterproxymodel_move_row(void* self, void* sourceParent, int sour
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sourceParent QModelIndex*
@@ -608,7 +608,7 @@ bool k_dirsortfilterproxymodel_move_column(void* self, void* sourceParent, int s
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param index QModelIndex*
@@ -616,7 +616,7 @@ bool k_dirsortfilterproxymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param topLeft QModelIndex*
@@ -625,7 +625,7 @@ void k_dirsortfilterproxymodel_data_changed(void* self, void* topLeft, void* bot
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
@@ -633,7 +633,7 @@ void k_dirsortfilterproxymodel_on_data_changed(void* self, void (*callback)(void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param orientation enum Qt__Orientation
@@ -643,7 +643,7 @@ void k_dirsortfilterproxymodel_header_data_changed(void* self, int32_t orientati
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, enum Qt__Orientation orientation, int first, int last)
@@ -651,14 +651,14 @@ void k_dirsortfilterproxymodel_on_header_data_changed(void* self, void (*callbac
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 void k_dirsortfilterproxymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self)
@@ -666,14 +666,14 @@ void k_dirsortfilterproxymodel_on_layout_changed(void* self, void (*callback)(vo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 void k_dirsortfilterproxymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self)
@@ -681,7 +681,7 @@ void k_dirsortfilterproxymodel_on_layout_about_to_be_changed(void* self, void (*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param row int
@@ -691,7 +691,7 @@ bool k_dirsortfilterproxymodel_has_index3(void* self, int row, int column, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param row int
@@ -700,7 +700,7 @@ bool k_dirsortfilterproxymodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param column int
@@ -709,7 +709,7 @@ bool k_dirsortfilterproxymodel_insert_column2(void* self, int column, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param row int
@@ -718,7 +718,7 @@ bool k_dirsortfilterproxymodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param column int
@@ -727,7 +727,7 @@ bool k_dirsortfilterproxymodel_remove_column2(void* self, int column, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param index QModelIndex*
@@ -736,7 +736,7 @@ bool k_dirsortfilterproxymodel_check_index2(void* self, void* index, int32_t opt
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param topLeft QModelIndex*
@@ -746,7 +746,7 @@ void k_dirsortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bo
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
@@ -754,7 +754,7 @@ void k_dirsortfilterproxymodel_on_data_changed3(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -762,7 +762,7 @@ void k_dirsortfilterproxymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QPersistentModelIndex** parents)
@@ -770,7 +770,7 @@ void k_dirsortfilterproxymodel_on_layout_changed1(void* self, void (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -779,7 +779,7 @@ void k_dirsortfilterproxymodel_layout_changed2(void* self, libqt_list parents, i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -787,7 +787,7 @@ void k_dirsortfilterproxymodel_on_layout_changed2(void* self, void (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -795,7 +795,7 @@ void k_dirsortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_lis
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QPersistentModelIndex** parents)
@@ -803,7 +803,7 @@ void k_dirsortfilterproxymodel_on_layout_about_to_be_changed1(void* self, void (
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
@@ -812,7 +812,7 @@ void k_dirsortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_lis
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
@@ -820,7 +820,7 @@ void k_dirsortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -829,7 +829,7 @@ const char* k_dirsortfilterproxymodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param name char*
@@ -837,35 +837,35 @@ void k_dirsortfilterproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KDirSortFilterProxyModel*
 bool k_dirsortfilterproxymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param b bool
@@ -873,14 +873,14 @@ bool k_dirsortfilterproxymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KDirSortFilterProxyModel*
 QThread* k_dirsortfilterproxymodel_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param thread QThread*
@@ -888,7 +888,7 @@ bool k_dirsortfilterproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param interval int
@@ -896,7 +896,7 @@ int32_t k_dirsortfilterproxymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param id int
@@ -904,7 +904,7 @@ void k_dirsortfilterproxymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param id enum Qt__TimerId
@@ -912,14 +912,14 @@ void k_dirsortfilterproxymodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KDirSortFilterProxyModel*
 libqt_list /* of QObject* */ k_dirsortfilterproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param parent QObject*
@@ -927,7 +927,7 @@ void k_dirsortfilterproxymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param filterObj QObject*
@@ -935,7 +935,7 @@ void k_dirsortfilterproxymodel_install_event_filter(void* self, void* filterObj)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param obj QObject*
@@ -943,7 +943,7 @@ void k_dirsortfilterproxymodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -953,7 +953,7 @@ QMetaObject__Connection* k_dirsortfilterproxymodel_connect(void* sender, void* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sender QObject*
@@ -963,7 +963,7 @@ QMetaObject__Connection* k_dirsortfilterproxymodel_connect2(void* self, void* se
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -973,28 +973,28 @@ bool k_dirsortfilterproxymodel_disconnect(void* sender, void* signal, void* rece
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_dirsortfilterproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KDirSortFilterProxyModel*
 void k_dirsortfilterproxymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KDirSortFilterProxyModel*
 void k_dirsortfilterproxymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param name const char*
@@ -1003,7 +1003,7 @@ bool k_dirsortfilterproxymodel_set_property(void* self, const char* name, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param name const char*
@@ -1011,7 +1011,7 @@ QVariant* k_dirsortfilterproxymodel_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1020,28 +1020,28 @@ const char** k_dirsortfilterproxymodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KDirSortFilterProxyModel*
 QBindingStorage* k_dirsortfilterproxymodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KDirSortFilterProxyModel*
 const QBindingStorage* k_dirsortfilterproxymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDirSortFilterProxyModel*
 void k_dirsortfilterproxymodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self)
@@ -1049,7 +1049,7 @@ void k_dirsortfilterproxymodel_on_destroyed(void* self, void (*callback)(void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param classname const char*
@@ -1057,14 +1057,14 @@ bool k_dirsortfilterproxymodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KDirSortFilterProxyModel*
 void k_dirsortfilterproxymodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param thread QThread*
@@ -1073,7 +1073,7 @@ bool k_dirsortfilterproxymodel_move_to_thread2(void* self, void* thread, void* p
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param interval int
@@ -1082,7 +1082,7 @@ int32_t k_dirsortfilterproxymodel_start_timer22(void* self, int interval, int32_
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1093,7 +1093,7 @@ QMetaObject__Connection* k_dirsortfilterproxymodel_connect5(void* sender, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param sender QObject*
@@ -1104,7 +1104,7 @@ QMetaObject__Connection* k_dirsortfilterproxymodel_connect4(void* self, void* se
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param param1 QObject*
@@ -1112,7 +1112,7 @@ void k_dirsortfilterproxymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QObject* param1)
@@ -1120,7 +1120,7 @@ void k_dirsortfilterproxymodel_on_destroyed1(void* self, void (*callback)(void*,
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1131,7 +1131,7 @@ void k_dirsortfilterproxymodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1142,7 +1142,7 @@ void k_dirsortfilterproxymodel_qbase_sort(void* self, int column, int32_t order)
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1152,7 +1152,7 @@ void k_dirsortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, 
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1163,7 +1163,7 @@ bool k_dirsortfilterproxymodel_less_than(void* self, void* left, void* right);
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1174,7 +1174,7 @@ bool k_dirsortfilterproxymodel_qbase_less_than(void* self, void* left, void* rig
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1184,7 +1184,7 @@ void k_dirsortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, 
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1195,7 +1195,7 @@ int32_t k_dirsortfilterproxymodel_compare_categories(void* self, void* left, voi
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1206,7 +1206,7 @@ int32_t k_dirsortfilterproxymodel_qbase_compare_categories(void* self, void* lef
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
-/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1216,7 +1216,7 @@ void k_dirsortfilterproxymodel_on_compare_categories(void* self, int32_t (*callb
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1226,7 +1226,7 @@ void k_dirsortfilterproxymodel_set_source_model(void* self, void* sourceModel);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1236,7 +1236,7 @@ void k_dirsortfilterproxymodel_qbase_set_source_model(void* self, void* sourceMo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1246,7 +1246,7 @@ void k_dirsortfilterproxymodel_on_set_source_model(void* self, void (*callback)(
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1256,7 +1256,7 @@ QModelIndex* k_dirsortfilterproxymodel_map_to_source(void* self, void* proxyInde
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1266,7 +1266,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_map_to_source(void* self, void* pro
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1276,7 +1276,7 @@ void k_dirsortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callb
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1286,7 +1286,7 @@ QModelIndex* k_dirsortfilterproxymodel_map_from_source(void* self, void* sourceI
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1296,7 +1296,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_map_from_source(void* self, void* s
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1306,7 +1306,7 @@ void k_dirsortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*cal
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1316,7 +1316,7 @@ QItemSelection* k_dirsortfilterproxymodel_map_selection_to_source(void* self, vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1326,7 +1326,7 @@ QItemSelection* k_dirsortfilterproxymodel_qbase_map_selection_to_source(void* se
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1336,7 +1336,7 @@ void k_dirsortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelec
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1346,7 +1346,7 @@ QItemSelection* k_dirsortfilterproxymodel_map_selection_from_source(void* self, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1356,7 +1356,7 @@ QItemSelection* k_dirsortfilterproxymodel_qbase_map_selection_from_source(void* 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1366,7 +1366,7 @@ void k_dirsortfilterproxymodel_on_map_selection_from_source(void* self, QItemSel
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1377,7 +1377,7 @@ bool k_dirsortfilterproxymodel_filter_accepts_row(void* self, int source_row, vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1388,7 +1388,7 @@ bool k_dirsortfilterproxymodel_qbase_filter_accepts_row(void* self, int source_r
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1398,7 +1398,7 @@ void k_dirsortfilterproxymodel_on_filter_accepts_row(void* self, bool (*callback
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1409,7 +1409,7 @@ bool k_dirsortfilterproxymodel_filter_accepts_column(void* self, int source_colu
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1420,7 +1420,7 @@ bool k_dirsortfilterproxymodel_qbase_filter_accepts_column(void* self, int sourc
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1430,7 +1430,7 @@ void k_dirsortfilterproxymodel_on_filter_accepts_column(void* self, bool (*callb
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1442,7 +1442,7 @@ QModelIndex* k_dirsortfilterproxymodel_index(void* self, int row, int column, vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1454,7 +1454,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_index(void* self, int row, int colu
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1464,7 +1464,7 @@ void k_dirsortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(voi
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1474,7 +1474,7 @@ QModelIndex* k_dirsortfilterproxymodel_parent(void* self, void* child);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1484,7 +1484,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_parent(void* self, void* child);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1494,7 +1494,7 @@ void k_dirsortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1506,7 +1506,7 @@ QModelIndex* k_dirsortfilterproxymodel_sibling(void* self, int row, int column, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1518,7 +1518,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_sibling(void* self, int row, int co
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1528,7 +1528,7 @@ void k_dirsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1538,7 +1538,7 @@ int32_t k_dirsortfilterproxymodel_row_count(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1548,7 +1548,7 @@ int32_t k_dirsortfilterproxymodel_qbase_row_count(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1558,7 +1558,7 @@ void k_dirsortfilterproxymodel_on_row_count(void* self, int32_t (*callback)(void
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1568,7 +1568,7 @@ int32_t k_dirsortfilterproxymodel_column_count(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1578,7 +1578,7 @@ int32_t k_dirsortfilterproxymodel_qbase_column_count(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1588,7 +1588,7 @@ void k_dirsortfilterproxymodel_on_column_count(void* self, int32_t (*callback)(v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1599,7 +1599,7 @@ QVariant* k_dirsortfilterproxymodel_data(void* self, void* index, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1610,7 +1610,7 @@ QVariant* k_dirsortfilterproxymodel_qbase_data(void* self, void* index, int role
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1620,7 +1620,7 @@ void k_dirsortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1632,7 +1632,7 @@ bool k_dirsortfilterproxymodel_set_data(void* self, void* index, void* value, in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1644,7 +1644,7 @@ bool k_dirsortfilterproxymodel_qbase_set_data(void* self, void* index, void* val
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1654,7 +1654,7 @@ void k_dirsortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1666,7 +1666,7 @@ QVariant* k_dirsortfilterproxymodel_header_data(void* self, int section, int32_t
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1678,7 +1678,7 @@ QVariant* k_dirsortfilterproxymodel_qbase_header_data(void* self, int section, i
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1688,7 +1688,7 @@ void k_dirsortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1701,7 +1701,7 @@ bool k_dirsortfilterproxymodel_set_header_data(void* self, int section, int32_t 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1714,7 +1714,7 @@ bool k_dirsortfilterproxymodel_qbase_set_header_data(void* self, int section, in
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1724,7 +1724,7 @@ void k_dirsortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1734,7 +1734,7 @@ QMimeData* k_dirsortfilterproxymodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1744,7 +1744,7 @@ QMimeData* k_dirsortfilterproxymodel_qbase_mime_data(void* self, libqt_list inde
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1754,7 +1754,7 @@ void k_dirsortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1768,7 +1768,7 @@ bool k_dirsortfilterproxymodel_drop_mime_data(void* self, void* data, int32_t ac
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1782,7 +1782,7 @@ bool k_dirsortfilterproxymodel_qbase_drop_mime_data(void* self, void* data, int3
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1792,7 +1792,7 @@ void k_dirsortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1804,7 +1804,7 @@ bool k_dirsortfilterproxymodel_insert_rows(void* self, int row, int count, void*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1816,7 +1816,7 @@ bool k_dirsortfilterproxymodel_qbase_insert_rows(void* self, int row, int count,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1826,7 +1826,7 @@ void k_dirsortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1838,7 +1838,7 @@ bool k_dirsortfilterproxymodel_insert_columns(void* self, int column, int count,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1850,7 +1850,7 @@ bool k_dirsortfilterproxymodel_qbase_insert_columns(void* self, int column, int 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1860,7 +1860,7 @@ void k_dirsortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1872,7 +1872,7 @@ bool k_dirsortfilterproxymodel_remove_rows(void* self, int row, int count, void*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1884,7 +1884,7 @@ bool k_dirsortfilterproxymodel_qbase_remove_rows(void* self, int row, int count,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1894,7 +1894,7 @@ void k_dirsortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1906,7 +1906,7 @@ bool k_dirsortfilterproxymodel_remove_columns(void* self, int column, int count,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1918,7 +1918,7 @@ bool k_dirsortfilterproxymodel_qbase_remove_columns(void* self, int column, int 
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1928,7 +1928,7 @@ void k_dirsortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1938,7 +1938,7 @@ void k_dirsortfilterproxymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1948,7 +1948,7 @@ void k_dirsortfilterproxymodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1958,7 +1958,7 @@ void k_dirsortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*,
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1970,7 +1970,7 @@ int32_t k_dirsortfilterproxymodel_flags(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1982,7 +1982,7 @@ int32_t k_dirsortfilterproxymodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1992,7 +1992,7 @@ void k_dirsortfilterproxymodel_on_flags(void* self, int32_t (*callback)(void*, v
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2002,7 +2002,7 @@ QModelIndex* k_dirsortfilterproxymodel_buddy(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2012,7 +2012,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2022,7 +2022,7 @@ void k_dirsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(voi
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2036,7 +2036,7 @@ libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_match(void* self, voi
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2050,7 +2050,7 @@ libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_qbase_match(void* sel
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2060,7 +2060,7 @@ void k_dirsortfilterproxymodel_on_match(void* self, QModelIndex** (*callback)(vo
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2070,7 +2070,7 @@ QSize* k_dirsortfilterproxymodel_span(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2080,7 +2080,7 @@ QSize* k_dirsortfilterproxymodel_qbase_span(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2090,7 +2090,7 @@ void k_dirsortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, voi
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2101,7 +2101,7 @@ const char** k_dirsortfilterproxymodel_mime_types(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2112,7 +2112,7 @@ const char** k_dirsortfilterproxymodel_qbase_mime_types(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2122,7 +2122,7 @@ void k_dirsortfilterproxymodel_on_mime_types(void* self, const char** (*callback
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2133,7 +2133,7 @@ int32_t k_dirsortfilterproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2144,7 +2144,7 @@ int32_t k_dirsortfilterproxymodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2154,7 +2154,7 @@ void k_dirsortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*c
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2163,7 +2163,7 @@ bool k_dirsortfilterproxymodel_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2172,7 +2172,7 @@ bool k_dirsortfilterproxymodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2182,7 +2182,7 @@ void k_dirsortfilterproxymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2191,7 +2191,7 @@ void k_dirsortfilterproxymodel_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2200,7 +2200,7 @@ void k_dirsortfilterproxymodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2210,7 +2210,7 @@ void k_dirsortfilterproxymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2220,7 +2220,7 @@ libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(void* se
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2230,7 +2230,7 @@ libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_qbase_item_data(vo
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2240,7 +2240,7 @@ void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to Q
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2251,7 +2251,7 @@ bool k_dirsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2262,7 +2262,7 @@ bool k_dirsortfilterproxymodel_qbase_set_item_data(void* self, void* index, libq
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2272,7 +2272,7 @@ void k_dirsortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(voi
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2282,7 +2282,7 @@ bool k_dirsortfilterproxymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2292,7 +2292,7 @@ bool k_dirsortfilterproxymodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2302,7 +2302,7 @@ void k_dirsortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(v
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2316,7 +2316,7 @@ bool k_dirsortfilterproxymodel_can_drop_mime_data(void* self, void* data, int32_
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2330,7 +2330,7 @@ bool k_dirsortfilterproxymodel_qbase_can_drop_mime_data(void* self, void* data, 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2340,7 +2340,7 @@ void k_dirsortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2351,7 +2351,7 @@ int32_t k_dirsortfilterproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2362,7 +2362,7 @@ int32_t k_dirsortfilterproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2372,7 +2372,7 @@ void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*c
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2381,7 +2381,7 @@ libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(void* self)
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2390,7 +2390,7 @@ libqt_map /* of int to char* */ k_dirsortfilterproxymodel_qbase_role_names(void*
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2400,7 +2400,7 @@ void k_dirsortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2414,7 +2414,7 @@ bool k_dirsortfilterproxymodel_move_rows(void* self, void* sourceParent, int sou
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2428,7 +2428,7 @@ bool k_dirsortfilterproxymodel_qbase_move_rows(void* self, void* sourceParent, i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2438,7 +2438,7 @@ void k_dirsortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2452,7 +2452,7 @@ bool k_dirsortfilterproxymodel_move_columns(void* self, void* sourceParent, int 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2466,7 +2466,7 @@ bool k_dirsortfilterproxymodel_qbase_move_columns(void* self, void* sourceParent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2476,7 +2476,7 @@ void k_dirsortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2487,7 +2487,7 @@ void k_dirsortfilterproxymodel_multi_data(void* self, void* index, void* roleDat
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2498,7 +2498,7 @@ void k_dirsortfilterproxymodel_qbase_multi_data(void* self, void* index, void* r
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2508,7 +2508,7 @@ void k_dirsortfilterproxymodel_on_multi_data(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2517,7 +2517,7 @@ void k_dirsortfilterproxymodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2526,7 +2526,7 @@ void k_dirsortfilterproxymodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2536,7 +2536,7 @@ void k_dirsortfilterproxymodel_on_reset_internal_data(void* self, void (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2546,7 +2546,7 @@ bool k_dirsortfilterproxymodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2556,7 +2556,7 @@ bool k_dirsortfilterproxymodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2566,7 +2566,7 @@ void k_dirsortfilterproxymodel_on_event(void* self, bool (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2577,7 +2577,7 @@ bool k_dirsortfilterproxymodel_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2588,7 +2588,7 @@ bool k_dirsortfilterproxymodel_qbase_event_filter(void* self, void* watched, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2598,7 +2598,7 @@ void k_dirsortfilterproxymodel_on_event_filter(void* self, bool (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2608,7 +2608,7 @@ void k_dirsortfilterproxymodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2618,7 +2618,7 @@ void k_dirsortfilterproxymodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2628,7 +2628,7 @@ void k_dirsortfilterproxymodel_on_timer_event(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2638,7 +2638,7 @@ void k_dirsortfilterproxymodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2648,7 +2648,7 @@ void k_dirsortfilterproxymodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2658,7 +2658,7 @@ void k_dirsortfilterproxymodel_on_child_event(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2668,7 +2668,7 @@ void k_dirsortfilterproxymodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2678,7 +2678,7 @@ void k_dirsortfilterproxymodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2688,7 +2688,7 @@ void k_dirsortfilterproxymodel_on_custom_event(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2698,7 +2698,7 @@ void k_dirsortfilterproxymodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2708,7 +2708,7 @@ void k_dirsortfilterproxymodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2718,7 +2718,7 @@ void k_dirsortfilterproxymodel_on_connect_notify(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2728,7 +2728,7 @@ void k_dirsortfilterproxymodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2738,7 +2738,7 @@ void k_dirsortfilterproxymodel_qbase_disconnect_notify(void* self, void* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2748,7 +2748,7 @@ void k_dirsortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2757,7 +2757,7 @@ void k_dirsortfilterproxymodel_invalidate_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2766,7 +2766,7 @@ void k_dirsortfilterproxymodel_qbase_invalidate_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2776,7 +2776,7 @@ void k_dirsortfilterproxymodel_on_invalidate_filter(void* self, void (*callback)
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2785,7 +2785,7 @@ void k_dirsortfilterproxymodel_invalidate_rows_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2794,7 +2794,7 @@ void k_dirsortfilterproxymodel_qbase_invalidate_rows_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2804,7 +2804,7 @@ void k_dirsortfilterproxymodel_on_invalidate_rows_filter(void* self, void (*call
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2813,7 +2813,7 @@ void k_dirsortfilterproxymodel_invalidate_columns_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2822,7 +2822,7 @@ void k_dirsortfilterproxymodel_qbase_invalidate_columns_filter(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2832,7 +2832,7 @@ void k_dirsortfilterproxymodel_on_invalidate_columns_filter(void* self, void (*c
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2844,7 +2844,7 @@ QModelIndex* k_dirsortfilterproxymodel_create_source_index(void* self, int row, 
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2856,7 +2856,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_create_source_index(void* self, int
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2866,7 +2866,7 @@ void k_dirsortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2877,7 +2877,7 @@ QModelIndex* k_dirsortfilterproxymodel_create_index(void* self, int row, int col
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2888,7 +2888,7 @@ QModelIndex* k_dirsortfilterproxymodel_qbase_create_index(void* self, int row, i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2898,7 +2898,7 @@ void k_dirsortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2909,7 +2909,7 @@ void k_dirsortfilterproxymodel_encode_data(void* self, libqt_list indexes, void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2920,7 +2920,7 @@ void k_dirsortfilterproxymodel_qbase_encode_data(void* self, libqt_list indexes,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2930,7 +2930,7 @@ void k_dirsortfilterproxymodel_on_encode_data(void* self, void (*callback)(void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2943,7 +2943,7 @@ bool k_dirsortfilterproxymodel_decode_data(void* self, int row, int column, void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2956,7 +2956,7 @@ bool k_dirsortfilterproxymodel_qbase_decode_data(void* self, int row, int column
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2966,7 +2966,7 @@ void k_dirsortfilterproxymodel_on_decode_data(void* self, bool (*callback)(void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2978,7 +2978,7 @@ void k_dirsortfilterproxymodel_begin_insert_rows(void* self, void* parent, int f
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2990,7 +2990,7 @@ void k_dirsortfilterproxymodel_qbase_begin_insert_rows(void* self, void* parent,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3000,7 +3000,7 @@ void k_dirsortfilterproxymodel_on_begin_insert_rows(void* self, void (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3009,7 +3009,7 @@ void k_dirsortfilterproxymodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3018,7 +3018,7 @@ void k_dirsortfilterproxymodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3028,7 +3028,7 @@ void k_dirsortfilterproxymodel_on_end_insert_rows(void* self, void (*callback)()
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3040,7 +3040,7 @@ void k_dirsortfilterproxymodel_begin_remove_rows(void* self, void* parent, int f
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3052,7 +3052,7 @@ void k_dirsortfilterproxymodel_qbase_begin_remove_rows(void* self, void* parent,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3062,7 +3062,7 @@ void k_dirsortfilterproxymodel_on_begin_remove_rows(void* self, void (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3071,7 +3071,7 @@ void k_dirsortfilterproxymodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3080,7 +3080,7 @@ void k_dirsortfilterproxymodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3090,7 +3090,7 @@ void k_dirsortfilterproxymodel_on_end_remove_rows(void* self, void (*callback)()
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3104,7 +3104,7 @@ bool k_dirsortfilterproxymodel_begin_move_rows(void* self, void* sourceParent, i
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3118,7 +3118,7 @@ bool k_dirsortfilterproxymodel_qbase_begin_move_rows(void* self, void* sourcePar
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3128,7 +3128,7 @@ void k_dirsortfilterproxymodel_on_begin_move_rows(void* self, bool (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3137,7 +3137,7 @@ void k_dirsortfilterproxymodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3146,7 +3146,7 @@ void k_dirsortfilterproxymodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3156,7 +3156,7 @@ void k_dirsortfilterproxymodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3168,7 +3168,7 @@ void k_dirsortfilterproxymodel_begin_insert_columns(void* self, void* parent, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3180,7 +3180,7 @@ void k_dirsortfilterproxymodel_qbase_begin_insert_columns(void* self, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3190,7 +3190,7 @@ void k_dirsortfilterproxymodel_on_begin_insert_columns(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3199,7 +3199,7 @@ void k_dirsortfilterproxymodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3208,7 +3208,7 @@ void k_dirsortfilterproxymodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3218,7 +3218,7 @@ void k_dirsortfilterproxymodel_on_end_insert_columns(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3230,7 +3230,7 @@ void k_dirsortfilterproxymodel_begin_remove_columns(void* self, void* parent, in
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3242,7 +3242,7 @@ void k_dirsortfilterproxymodel_qbase_begin_remove_columns(void* self, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3252,7 +3252,7 @@ void k_dirsortfilterproxymodel_on_begin_remove_columns(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3261,7 +3261,7 @@ void k_dirsortfilterproxymodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3270,7 +3270,7 @@ void k_dirsortfilterproxymodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3280,7 +3280,7 @@ void k_dirsortfilterproxymodel_on_end_remove_columns(void* self, void (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3294,7 +3294,7 @@ bool k_dirsortfilterproxymodel_begin_move_columns(void* self, void* sourceParent
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3308,7 +3308,7 @@ bool k_dirsortfilterproxymodel_qbase_begin_move_columns(void* self, void* source
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3318,7 +3318,7 @@ void k_dirsortfilterproxymodel_on_begin_move_columns(void* self, bool (*callback
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3327,7 +3327,7 @@ void k_dirsortfilterproxymodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3336,7 +3336,7 @@ void k_dirsortfilterproxymodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3346,7 +3346,7 @@ void k_dirsortfilterproxymodel_on_end_move_columns(void* self, void (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3355,7 +3355,7 @@ void k_dirsortfilterproxymodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3364,7 +3364,7 @@ void k_dirsortfilterproxymodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3374,7 +3374,7 @@ void k_dirsortfilterproxymodel_on_begin_reset_model(void* self, void (*callback)
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3383,7 +3383,7 @@ void k_dirsortfilterproxymodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3392,7 +3392,7 @@ void k_dirsortfilterproxymodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3402,7 +3402,7 @@ void k_dirsortfilterproxymodel_on_end_reset_model(void* self, void (*callback)()
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3413,7 +3413,7 @@ void k_dirsortfilterproxymodel_change_persistent_index(void* self, void* from, v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3424,7 +3424,7 @@ void k_dirsortfilterproxymodel_qbase_change_persistent_index(void* self, void* f
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3434,7 +3434,7 @@ void k_dirsortfilterproxymodel_on_change_persistent_index(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3445,7 +3445,7 @@ void k_dirsortfilterproxymodel_change_persistent_index_list(void* self, libqt_li
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3456,7 +3456,7 @@ void k_dirsortfilterproxymodel_qbase_change_persistent_index_list(void* self, li
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3466,7 +3466,7 @@ void k_dirsortfilterproxymodel_on_change_persistent_index_list(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3475,7 +3475,7 @@ libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_persistent_index_list
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3484,7 +3484,7 @@ libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_qbase_persistent_inde
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3494,7 +3494,7 @@ void k_dirsortfilterproxymodel_on_persistent_index_list(void* self, QModelIndex*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3503,7 +3503,7 @@ QObject* k_dirsortfilterproxymodel_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3512,7 +3512,7 @@ QObject* k_dirsortfilterproxymodel_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3522,7 +3522,7 @@ void k_dirsortfilterproxymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3531,7 +3531,7 @@ int32_t k_dirsortfilterproxymodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3540,7 +3540,7 @@ int32_t k_dirsortfilterproxymodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3550,7 +3550,7 @@ void k_dirsortfilterproxymodel_on_sender_signal_index(void* self, int32_t (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3560,7 +3560,7 @@ int32_t k_dirsortfilterproxymodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3570,7 +3570,7 @@ int32_t k_dirsortfilterproxymodel_qbase_receivers(void* self, const char* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3580,7 +3580,7 @@ void k_dirsortfilterproxymodel_on_receivers(void* self, int32_t (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3590,7 +3590,7 @@ bool k_dirsortfilterproxymodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3600,7 +3600,7 @@ bool k_dirsortfilterproxymodel_qbase_is_signal_connected(void* self, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3610,7 +3610,7 @@ void k_dirsortfilterproxymodel_on_is_signal_connected(void* self, bool (*callbac
 
 /// Inherited from QAbstractProxyModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModelChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModelChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3620,7 +3620,7 @@ void k_dirsortfilterproxymodel_on_source_model_changed(void* self, void (*callba
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3630,7 +3630,7 @@ void k_dirsortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3640,7 +3640,7 @@ void k_dirsortfilterproxymodel_on_rows_inserted(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3650,7 +3650,7 @@ void k_dirsortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*ca
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3660,7 +3660,7 @@ void k_dirsortfilterproxymodel_on_rows_removed(void* self, void (*callback)(void
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3670,7 +3670,7 @@ void k_dirsortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void 
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3680,7 +3680,7 @@ void k_dirsortfilterproxymodel_on_columns_inserted(void* self, void (*callback)(
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3690,7 +3690,7 @@ void k_dirsortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3700,7 +3700,7 @@ void k_dirsortfilterproxymodel_on_columns_removed(void* self, void (*callback)(v
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3710,7 +3710,7 @@ void k_dirsortfilterproxymodel_on_model_about_to_be_reset(void* self, void (*cal
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3720,7 +3720,7 @@ void k_dirsortfilterproxymodel_on_model_reset(void* self, void (*callback)(void*
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3730,7 +3730,7 @@ void k_dirsortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*call
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3740,7 +3740,7 @@ void k_dirsortfilterproxymodel_on_rows_moved(void* self, void (*callback)(void*,
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3750,7 +3750,7 @@ void k_dirsortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*c
 
 /// Inherited from QAbstractItemModel
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3760,7 +3760,7 @@ void k_dirsortfilterproxymodel_on_columns_moved(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -3768,7 +3768,7 @@ void k_dirsortfilterproxymodel_on_columns_moved(void* self, void (*callback)(voi
 /// @param callback void func(KDirSortFilterProxyModel* self, const char* objectName)
 void k_dirsortfilterproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kdirsortfilterproxymodel.html#dtor.KDirSortFilterProxyModel)
+/// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#dtor.KDirSortFilterProxyModel)
 ///
 /// Delete this object from C++ memory.
 ///

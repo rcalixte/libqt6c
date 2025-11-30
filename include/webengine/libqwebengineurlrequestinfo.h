@@ -13,65 +13,65 @@
 
 /// https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#resourceType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#resourceType)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 ///
 /// @return enum QWebEngineUrlRequestInfo__ResourceType
 int32_t q_webengineurlrequestinfo_resource_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#navigationType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#navigationType)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 ///
 /// @return enum QWebEngineUrlRequestInfo__NavigationType
 int32_t q_webengineurlrequestinfo_navigation_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestUrl)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 QUrl* q_webengineurlrequestinfo_request_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#firstPartyUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#firstPartyUrl)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 QUrl* q_webengineurlrequestinfo_first_party_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#initiator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#initiator)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 QUrl* q_webengineurlrequestinfo_initiator(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestMethod)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestMethod)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineUrlRequestInfo*
 char* q_webengineurlrequestinfo_request_method(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestBody)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestBody)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 QIODevice* q_webengineurlrequestinfo_request_body(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#changed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#changed)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 bool q_webengineurlrequestinfo_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#block)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#block)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 /// @param shouldBlock bool
 void q_webengineurlrequestinfo_block(void* self, bool shouldBlock);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#redirect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#redirect)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 /// @param url QUrl*
 void q_webengineurlrequestinfo_redirect(void* self, void* url);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#setHttpHeader)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#setHttpHeader)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 /// @param name const char*

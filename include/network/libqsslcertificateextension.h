@@ -22,48 +22,48 @@ QSslCertificateExtension* q_sslcertificateextension_new();
 /// @param other QSslCertificateExtension*
 QSslCertificateExtension* q_sslcertificateextension_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#operator-eq)
 ///
 /// @param self QSslCertificateExtension*
 /// @param other QSslCertificateExtension*
 void q_sslcertificateextension_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#swap)
 ///
 /// @param self QSslCertificateExtension*
 /// @param other QSslCertificateExtension*
 void q_sslcertificateextension_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#oid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#oid)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslCertificateExtension*
 const char* q_sslcertificateextension_oid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslCertificateExtension*
 const char* q_sslcertificateextension_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#value)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#value)
 ///
 /// @param self QSslCertificateExtension*
 QVariant* q_sslcertificateextension_value(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#isCritical)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#isCritical)
 ///
 /// @param self QSslCertificateExtension*
 bool q_sslcertificateextension_is_critical(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#isSupported)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#isSupported)
 ///
 /// @param self QSslCertificateExtension*
 bool q_sslcertificateextension_is_supported(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#dtor.QSslCertificateExtension)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#dtor.QSslCertificateExtension)
 ///
 /// Delete this object from C++ memory.
 ///

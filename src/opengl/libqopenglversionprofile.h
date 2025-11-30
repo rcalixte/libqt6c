@@ -27,53 +27,53 @@ QOpenGLVersionProfile* q_openglversionprofile_new2(void* format);
 /// @param other QOpenGLVersionProfile*
 QOpenGLVersionProfile* q_openglversionprofile_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#operator-eq)
 ///
 /// @param self QOpenGLVersionProfile*
 /// @param rhs QOpenGLVersionProfile*
 void q_openglversionprofile_operator_assign(void* self, void* rhs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#version)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#version)
 ///
 /// @param self QOpenGLVersionProfile*
 libqt_pair /* tuple of int and int */ q_openglversionprofile_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#setVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#setVersion)
 ///
 /// @param self QOpenGLVersionProfile*
 /// @param majorVersion int
 /// @param minorVersion int
 void q_openglversionprofile_set_version(void* self, int majorVersion, int minorVersion);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#profile)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#profile)
 ///
 /// @param self QOpenGLVersionProfile*
 ///
 /// @return enum QSurfaceFormat__OpenGLContextProfile
 int32_t q_openglversionprofile_profile(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#setProfile)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#setProfile)
 ///
 /// @param self QOpenGLVersionProfile*
 /// @param profile enum QSurfaceFormat__OpenGLContextProfile
 void q_openglversionprofile_set_profile(void* self, int32_t profile);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#hasProfiles)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#hasProfiles)
 ///
 /// @param self QOpenGLVersionProfile*
 bool q_openglversionprofile_has_profiles(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#isLegacyVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#isLegacyVersion)
 ///
 /// @param self QOpenGLVersionProfile*
 bool q_openglversionprofile_is_legacy_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#isValid)
 ///
 /// @param self QOpenGLVersionProfile*
 bool q_openglversionprofile_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglversionprofile.html#dtor.QOpenGLVersionProfile)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#dtor.QOpenGLVersionProfile)
 ///
 /// Delete this object from C++ memory.
 ///

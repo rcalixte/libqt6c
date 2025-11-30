@@ -24,162 +24,162 @@ KDesktopFile* k_desktopfile_new(int32_t resourceType, const char* fileName);
 /// @param fileName const char*
 KDesktopFile* k_desktopfile_new2(const char* fileName);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#isDesktopFile)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#isDesktopFile)
 ///
 /// @param path const char*
 bool k_desktopfile_is_desktop_file(const char* path);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#isAuthorizedDesktopFile)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#isAuthorizedDesktopFile)
 ///
 /// @param path const char*
 bool k_desktopfile_is_authorized_desktop_file(const char* path);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#locateLocal)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#locateLocal)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param path const char*
 const char* k_desktopfile_locate_local(const char* path);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#desktopGroup)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#desktopGroup)
 ///
 /// @param self KDesktopFile*
 KConfigGroup* k_desktopfile_desktop_group(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readType)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readType)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readIcon)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_icon(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readName)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readComment)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readComment)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_comment(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readGenericName)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readGenericName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_generic_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readPath)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_path(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readUrl)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readUrl)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readActions)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readActions)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char** k_desktopfile_read_actions(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readMimeTypes)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readMimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char** k_desktopfile_read_mime_types(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#actionGroup)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#actionGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
 KConfigGroup* k_desktopfile_action_group(void* self, const char* group);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#actionGroup)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#actionGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
 KConfigGroup* k_desktopfile_action_group2(void* self, const char* group);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#hasActionGroup)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasActionGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
 bool k_desktopfile_has_action_group(void* self, const char* group);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#hasLinkType)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasLinkType)
 ///
 /// @param self KDesktopFile*
 bool k_desktopfile_has_link_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#hasApplicationType)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasApplicationType)
 ///
 /// @param self KDesktopFile*
 bool k_desktopfile_has_application_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#hasDeviceType)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasDeviceType)
 ///
 /// @param self KDesktopFile*
 bool k_desktopfile_has_device_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#tryExec)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#tryExec)
 ///
 /// @param self KDesktopFile*
 bool k_desktopfile_try_exec(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#readDocPath)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#readDocPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_read_doc_path(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#noDisplay)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#noDisplay)
 ///
 /// @param self KDesktopFile*
 bool k_desktopfile_no_display(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#copyTo)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#copyTo)
 ///
 /// @param self KDesktopFile*
 /// @param file const char*
 KDesktopFile* k_desktopfile_copy_to(void* self, const char* file);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#fileName)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#fileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 const char* k_desktopfile_file_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#actions)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#actions)
 ///
 /// @param self KDesktopFile*
 libqt_list /* of KDesktopFileAction* */ k_desktopfile_actions(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#locationType)
+/// [Upstream resources](https://api.kde.org/kconfig.html#locationType)
 ///
 /// @param self KDesktopFile*
 ///
@@ -188,7 +188,7 @@ int32_t k_desktopfile_location_type(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#name)
+/// [Upstream resources](https://api.kde.org/kconfig.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -197,7 +197,7 @@ const char* k_desktopfile_name(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#openFlags)
+/// [Upstream resources](https://api.kde.org/kconfig.html#openFlags)
 ///
 /// @param self KDesktopFile*
 ///
@@ -206,14 +206,14 @@ int32_t k_desktopfile_open_flags(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isDirty)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isDirty)
 ///
 /// @param self KDesktopFile*
 bool k_desktopfile_is_dirty(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isConfigWritable)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isConfigWritable)
 ///
 /// @param self KDesktopFile*
 /// @param warnUser bool
@@ -221,7 +221,7 @@ bool k_desktopfile_is_config_writable(void* self, bool warnUser);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#checkUpdate)
+/// [Upstream resources](https://api.kde.org/kconfig.html#checkUpdate)
 ///
 /// @param self KDesktopFile*
 /// @param id const char*
@@ -230,14 +230,14 @@ void k_desktopfile_check_update(void* self, const char* id, const char* updateFi
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#reparseConfiguration)
+/// [Upstream resources](https://api.kde.org/kconfig.html#reparseConfiguration)
 ///
 /// @param self KDesktopFile*
 void k_desktopfile_reparse_configuration(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#addConfigSources)
+/// [Upstream resources](https://api.kde.org/kconfig.html#addConfigSources)
 ///
 /// @param self KDesktopFile*
 /// @param sources const char**
@@ -245,7 +245,7 @@ void k_desktopfile_add_config_sources(void* self, const char* sources[static 1])
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#additionalConfigSources)
+/// [Upstream resources](https://api.kde.org/kconfig.html#additionalConfigSources)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -254,7 +254,7 @@ const char** k_desktopfile_additional_config_sources(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#locale)
+/// [Upstream resources](https://api.kde.org/kconfig.html#locale)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -263,7 +263,7 @@ const char* k_desktopfile_locale(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#setLocale)
+/// [Upstream resources](https://api.kde.org/kconfig.html#setLocale)
 ///
 /// @param self KDesktopFile*
 /// @param aLocale const char*
@@ -271,7 +271,7 @@ bool k_desktopfile_set_locale(void* self, const char* aLocale);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#setReadDefaults)
+/// [Upstream resources](https://api.kde.org/kconfig.html#setReadDefaults)
 ///
 /// @param self KDesktopFile*
 /// @param b bool
@@ -279,28 +279,28 @@ void k_desktopfile_set_read_defaults(void* self, bool b);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#readDefaults)
+/// [Upstream resources](https://api.kde.org/kconfig.html#readDefaults)
 ///
 /// @param self KDesktopFile*
 bool k_desktopfile_read_defaults(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#entryMap)
+/// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
 ///
 /// @param self KDesktopFile*
 libqt_map /* of const char* to const char* */ k_desktopfile_entry_map(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#setMainConfigName)
+/// [Upstream resources](https://api.kde.org/kconfig.html#setMainConfigName)
 ///
 /// @param str const char*
 void k_desktopfile_set_main_config_name(const char* str);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#mainConfigName)
+/// [Upstream resources](https://api.kde.org/kconfig.html#mainConfigName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -308,7 +308,7 @@ const char* k_desktopfile_main_config_name();
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#copyTo)
+/// [Upstream resources](https://api.kde.org/kconfig.html#copyTo)
 ///
 /// @param self KDesktopFile*
 /// @param file const char*
@@ -317,7 +317,7 @@ KConfig* k_desktopfile_copy_to2(void* self, const char* file, void* config);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#entryMap)
+/// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
 ///
 /// @param self KDesktopFile*
 /// @param aGroup const char*
@@ -325,7 +325,7 @@ libqt_map /* of const char* to const char* */ k_desktopfile_entry_map1(void* sel
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#hasGroup)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#hasGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
@@ -333,7 +333,7 @@ bool k_desktopfile_has_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#group)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
@@ -341,7 +341,7 @@ KConfigGroup* k_desktopfile_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#group)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
@@ -349,7 +349,7 @@ const KConfigGroup* k_desktopfile_group2(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#deleteGroup)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
@@ -357,7 +357,7 @@ void k_desktopfile_delete_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#isGroupImmutable)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#isGroupImmutable)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
@@ -365,7 +365,7 @@ bool k_desktopfile_is_group_immutable(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Qt documentation](https://api.kde.org/kconfigbase.html#deleteGroup)
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
@@ -374,7 +374,7 @@ void k_desktopfile_delete_group2(void* self, const char* group, int32_t flags);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#sync)
+/// [Upstream resources](https://api.kde.org/kconfig.html#sync)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -383,7 +383,7 @@ bool k_desktopfile_sync(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#sync)
+/// [Upstream resources](https://api.kde.org/kconfig.html#sync)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -392,7 +392,7 @@ bool k_desktopfile_qbase_sync(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#sync)
+/// [Upstream resources](https://api.kde.org/kconfig.html#sync)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -402,7 +402,7 @@ void k_desktopfile_on_sync(void* self, bool (*callback)());
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#markAsClean)
+/// [Upstream resources](https://api.kde.org/kconfig.html#markAsClean)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -411,7 +411,7 @@ void k_desktopfile_mark_as_clean(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#markAsClean)
+/// [Upstream resources](https://api.kde.org/kconfig.html#markAsClean)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -420,7 +420,7 @@ void k_desktopfile_qbase_mark_as_clean(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#markAsClean)
+/// [Upstream resources](https://api.kde.org/kconfig.html#markAsClean)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -430,7 +430,7 @@ void k_desktopfile_on_mark_as_clean(void* self, void (*callback)());
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#accessMode)
+/// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -441,7 +441,7 @@ int32_t k_desktopfile_access_mode(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#accessMode)
+/// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -452,7 +452,7 @@ int32_t k_desktopfile_qbase_access_mode(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#accessMode)
+/// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -462,7 +462,7 @@ void k_desktopfile_on_access_mode(void* self, int32_t (*callback)());
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isImmutable)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isImmutable)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -471,7 +471,7 @@ bool k_desktopfile_is_immutable(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isImmutable)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isImmutable)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -480,7 +480,7 @@ bool k_desktopfile_qbase_is_immutable(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isImmutable)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isImmutable)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -490,7 +490,7 @@ void k_desktopfile_on_is_immutable(void* self, bool (*callback)());
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#groupList)
+/// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -501,7 +501,7 @@ const char** k_desktopfile_group_list(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#groupList)
+/// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -512,7 +512,7 @@ const char** k_desktopfile_qbase_group_list(void* self);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#groupList)
+/// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -522,7 +522,7 @@ void k_desktopfile_on_group_list(void* self, const char** (*callback)());
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#hasGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#hasGroupImpl)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -532,7 +532,7 @@ bool k_desktopfile_has_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#hasGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#hasGroupImpl)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -542,7 +542,7 @@ bool k_desktopfile_qbase_has_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#hasGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#hasGroupImpl)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -552,7 +552,7 @@ void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(void*, const c
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#groupImpl)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -562,7 +562,7 @@ KConfigGroup* k_desktopfile_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#groupImpl)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -572,7 +572,7 @@ KConfigGroup* k_desktopfile_qbase_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#groupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#groupImpl)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -582,7 +582,7 @@ void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, co
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#deleteGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#deleteGroupImpl)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -593,7 +593,7 @@ void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t 
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#deleteGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#deleteGroupImpl)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -604,7 +604,7 @@ void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, in
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#deleteGroupImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#deleteGroupImpl)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -614,7 +614,7 @@ void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, cons
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -624,7 +624,7 @@ bool k_desktopfile_is_group_immutable_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -634,7 +634,7 @@ bool k_desktopfile_qbase_is_group_immutable_impl(void* self, const char* groupNa
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
+/// [Upstream resources](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -644,7 +644,7 @@ void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(void*
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#virtual_hook)
+/// [Upstream resources](https://api.kde.org/kconfig.html#virtual_hook)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -655,7 +655,7 @@ void k_desktopfile_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#virtual_hook)
+/// [Upstream resources](https://api.kde.org/kconfig.html#virtual_hook)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -666,7 +666,7 @@ void k_desktopfile_qbase_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KConfig
 ///
-/// [Qt documentation](https://api.kde.org/kconfig.html#virtual_hook)
+/// [Upstream resources](https://api.kde.org/kconfig.html#virtual_hook)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -674,7 +674,7 @@ void k_desktopfile_qbase_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(KDesktopFile* self, int id, void* data)
 void k_desktopfile_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
-/// [Qt documentation](https://api.kde.org/kdesktopfile.html#dtor.KDesktopFile)
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html#dtor.KDesktopFile)
 ///
 /// Delete this object from C++ memory.
 ///

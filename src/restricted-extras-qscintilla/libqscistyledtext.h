@@ -30,25 +30,25 @@ QsciStyledText* q_scistyledtext_new2(const char* text, void* style);
 /// @param param1 QsciStyledText*
 QsciStyledText* q_scistyledtext_new3(void* param1);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
 ///
 /// @param self QsciStyledText*
 /// @param sci QsciScintillaBase*
 void q_scistyledtext_apply(void* self, void* sci);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciStyledText*
 const char* q_scistyledtext_text(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
 ///
 /// @param self QsciStyledText*
 int32_t q_scistyledtext_style(void* self);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
 ///
 /// Delete this object from C++ memory.
 ///

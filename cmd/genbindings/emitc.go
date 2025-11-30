@@ -1266,7 +1266,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
 				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
-				docCommentUrl = "\n/// [Qt documentation](" + pageURL + ")\n///"
+				docCommentUrl = "\n/// [Upstream resources](" + pageURL + ")\n///"
 				ret.WriteString(docCommentUrl)
 			}
 
@@ -1445,7 +1445,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "", "-qtcharts", "")
 			pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
-			documentationURL := "\n/// [Qt documentation](" + pageURL + ")\n///"
+			documentationURL := "\n/// [Upstream resources](" + pageURL + ")\n///"
 
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
@@ -1528,7 +1528,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
 				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
-				docCommentUrl = "\n/// [Qt documentation](" + pageURL + ")\n///\n"
+				docCommentUrl = "\n/// [Upstream resources](" + pageURL + ")\n///\n"
 			}
 
 			slotComma := ifv(len(m.Parameters) != 0, ", ", "")
@@ -1549,7 +1549,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
 			pageUrl := getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
-			ret.WriteString(ifv(pageUrl != "", "\n/// [Qt documentation]("+pageUrl+")\n///\n", "\n") +
+			ret.WriteString(ifv(pageUrl != "", "\n/// [Upstream resources]("+pageUrl+")\n///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n" +
 				"void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self);\n\n")

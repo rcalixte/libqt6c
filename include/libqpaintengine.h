@@ -44,41 +44,41 @@ void q_textitem_copy_assign(void* self, void* other);
 /// @param other QTextItem*
 void q_textitem_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#descent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#descent)
 ///
 /// @param self QTextItem*
 double q_textitem_descent(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#ascent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#ascent)
 ///
 /// @param self QTextItem*
 double q_textitem_ascent(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#width)
 ///
 /// @param self QTextItem*
 double q_textitem_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#renderFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#renderFlags)
 ///
 /// @param self QTextItem*
 ///
 /// @return flag of enum QTextItem__RenderFlag
 int64_t q_textitem_render_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextItem*
 const char* q_textitem_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#font)
 ///
 /// @param self QTextItem*
 QFont* q_textitem_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#dtor.QTextItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#dtor.QTextItem)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -96,24 +96,24 @@ QPaintEngine* q_paintengine_new();
 /// @param features flag of enum QPaintEngine__PaintEngineFeature
 QPaintEngine* q_paintengine_new2(int64_t features);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#isActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#isActive)
 ///
 /// @param self QPaintEngine*
 bool q_paintengine_is_active(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#setActive)
 ///
 /// @param self QPaintEngine*
 /// @param newState bool
 void q_paintengine_set_active(void* self, bool newState);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#begin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#begin)
 ///
 /// @param self QPaintEngine*
 /// @param pdev QPaintDevice*
 bool q_paintengine_begin(void* self, void* pdev);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#begin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#begin)
 ///
 /// Allows for overriding the related default method
 ///
@@ -121,7 +121,7 @@ bool q_paintengine_begin(void* self, void* pdev);
 /// @param callback bool func(QPaintEngine* self, QPaintDevice* pdev)
 void q_paintengine_on_begin(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#begin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#begin)
 ///
 /// Base class method implementation
 ///
@@ -129,12 +129,12 @@ void q_paintengine_on_begin(void* self, bool (*callback)(void*, void*));
 /// @param pdev QPaintDevice*
 bool q_paintengine_qbase_begin(void* self, void* pdev);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#end)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#end)
 ///
 /// @param self QPaintEngine*
 bool q_paintengine_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#end)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#end)
 ///
 /// Allows for overriding the related default method
 ///
@@ -142,20 +142,20 @@ bool q_paintengine_end(void* self);
 /// @param callback bool func()
 void q_paintengine_on_end(void* self, bool (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#end)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#end)
 ///
 /// Base class method implementation
 ///
 /// @param self QPaintEngine*
 bool q_paintengine_qbase_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
 ///
 /// @param self QPaintEngine*
 /// @param state QPaintEngineState*
 void q_paintengine_update_state(void* self, void* state);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
 ///
 /// Allows for overriding the related default method
 ///
@@ -163,7 +163,7 @@ void q_paintengine_update_state(void* self, void* state);
 /// @param callback void func(QPaintEngine* self, QPaintEngineState* state)
 void q_paintengine_on_update_state(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
 ///
 /// Base class method implementation
 ///
@@ -171,14 +171,14 @@ void q_paintengine_on_update_state(void* self, void (*callback)(void*, void*));
 /// @param state QPaintEngineState*
 void q_paintengine_qbase_update_state(void* self, void* state);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// @param self QPaintEngine*
 /// @param rects QRect*
 /// @param rectCount int
 void q_paintengine_draw_rects(void* self, void* rects, int rectCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Allows for overriding the related default method
 ///
@@ -186,7 +186,7 @@ void q_paintengine_draw_rects(void* self, void* rects, int rectCount);
 /// @param callback void func(QPaintEngine* self, QRect* rects, int rectCount)
 void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Base class method implementation
 ///
@@ -195,14 +195,14 @@ void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, void*, int)
 /// @param rectCount int
 void q_paintengine_qbase_draw_rects(void* self, void* rects, int rectCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// @param self QPaintEngine*
 /// @param rects QRectF*
 /// @param rectCount int
 void q_paintengine_draw_rects2(void* self, void* rects, int rectCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Allows for overriding the related default method
 ///
@@ -210,7 +210,7 @@ void q_paintengine_draw_rects2(void* self, void* rects, int rectCount);
 /// @param callback void func(QPaintEngine* self, QRectF* rects, int rectCount)
 void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Base class method implementation
 ///
@@ -219,14 +219,14 @@ void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, void*, int
 /// @param rectCount int
 void q_paintengine_qbase_draw_rects2(void* self, void* rects, int rectCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// @param self QPaintEngine*
 /// @param lines QLine*
 /// @param lineCount int
 void q_paintengine_draw_lines(void* self, void* lines, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Allows for overriding the related default method
 ///
@@ -234,7 +234,7 @@ void q_paintengine_draw_lines(void* self, void* lines, int lineCount);
 /// @param callback void func(QPaintEngine* self, QLine* lines, int lineCount)
 void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Base class method implementation
 ///
@@ -243,14 +243,14 @@ void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, void*, int)
 /// @param lineCount int
 void q_paintengine_qbase_draw_lines(void* self, void* lines, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// @param self QPaintEngine*
 /// @param lines QLineF*
 /// @param lineCount int
 void q_paintengine_draw_lines2(void* self, void* lines, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Allows for overriding the related default method
 ///
@@ -258,7 +258,7 @@ void q_paintengine_draw_lines2(void* self, void* lines, int lineCount);
 /// @param callback void func(QPaintEngine* self, QLineF* lines, int lineCount)
 void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Base class method implementation
 ///
@@ -267,13 +267,13 @@ void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, void*, int
 /// @param lineCount int
 void q_paintengine_qbase_draw_lines2(void* self, void* lines, int lineCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// @param self QPaintEngine*
 /// @param r QRectF*
 void q_paintengine_draw_ellipse(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Allows for overriding the related default method
 ///
@@ -281,7 +281,7 @@ void q_paintengine_draw_ellipse(void* self, void* r);
 /// @param callback void func(QPaintEngine* self, QRectF* r)
 void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Base class method implementation
 ///
@@ -289,13 +289,13 @@ void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, void*));
 /// @param r QRectF*
 void q_paintengine_qbase_draw_ellipse(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// @param self QPaintEngine*
 /// @param r QRect*
 void q_paintengine_draw_ellipse2(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Allows for overriding the related default method
 ///
@@ -303,7 +303,7 @@ void q_paintengine_draw_ellipse2(void* self, void* r);
 /// @param callback void func(QPaintEngine* self, QRect* r)
 void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Base class method implementation
 ///
@@ -311,13 +311,13 @@ void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, void*));
 /// @param r QRect*
 void q_paintengine_qbase_draw_ellipse2(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///
 /// @param self QPaintEngine*
 /// @param path QPainterPath*
 void q_paintengine_draw_path(void* self, void* path);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///
 /// Allows for overriding the related default method
 ///
@@ -325,7 +325,7 @@ void q_paintengine_draw_path(void* self, void* path);
 /// @param callback void func(QPaintEngine* self, QPainterPath* path)
 void q_paintengine_on_draw_path(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///
 /// Base class method implementation
 ///
@@ -333,14 +333,14 @@ void q_paintengine_on_draw_path(void* self, void (*callback)(void*, void*));
 /// @param path QPainterPath*
 void q_paintengine_qbase_draw_path(void* self, void* path);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// @param self QPaintEngine*
 /// @param points QPointF*
 /// @param pointCount int
 void q_paintengine_draw_points(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Allows for overriding the related default method
 ///
@@ -348,7 +348,7 @@ void q_paintengine_draw_points(void* self, void* points, int pointCount);
 /// @param callback void func(QPaintEngine* self, QPointF* points, int pointCount)
 void q_paintengine_on_draw_points(void* self, void (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Base class method implementation
 ///
@@ -357,14 +357,14 @@ void q_paintengine_on_draw_points(void* self, void (*callback)(void*, void*, int
 /// @param pointCount int
 void q_paintengine_qbase_draw_points(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// @param self QPaintEngine*
 /// @param points QPoint*
 /// @param pointCount int
 void q_paintengine_draw_points2(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Allows for overriding the related default method
 ///
@@ -372,7 +372,7 @@ void q_paintengine_draw_points2(void* self, void* points, int pointCount);
 /// @param callback void func(QPaintEngine* self, QPoint* points, int pointCount)
 void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Base class method implementation
 ///
@@ -381,7 +381,7 @@ void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, void*, in
 /// @param pointCount int
 void q_paintengine_qbase_draw_points2(void* self, void* points, int pointCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// @param self QPaintEngine*
 /// @param points QPointF*
@@ -389,7 +389,7 @@ void q_paintengine_qbase_draw_points2(void* self, void* points, int pointCount);
 /// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Allows for overriding the related default method
 ///
@@ -397,7 +397,7 @@ void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int32_
 /// @param callback void func(QPaintEngine* self, QPointF* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode)
 void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Base class method implementation
 ///
@@ -407,7 +407,7 @@ void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, in
 /// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// @param self QPaintEngine*
 /// @param points QPoint*
@@ -415,7 +415,7 @@ void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, 
 /// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Allows for overriding the related default method
 ///
@@ -423,7 +423,7 @@ void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int32
 /// @param callback void func(QPaintEngine* self, QPoint* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode)
 void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Base class method implementation
 ///
@@ -433,7 +433,7 @@ void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, i
 /// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
 /// @param self QPaintEngine*
 /// @param r QRectF*
@@ -441,7 +441,7 @@ void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount,
 /// @param sr QRectF*
 void q_paintengine_draw_pixmap(void* self, void* r, void* pm, void* sr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -449,7 +449,7 @@ void q_paintengine_draw_pixmap(void* self, void* r, void* pm, void* sr);
 /// @param callback void func(QPaintEngine* self, QRectF* r, QPixmap* pm, QRectF* sr)
 void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
 /// Base class method implementation
 ///
@@ -459,14 +459,14 @@ void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, void*, voi
 /// @param sr QRectF*
 void q_paintengine_qbase_draw_pixmap(void* self, void* r, void* pm, void* sr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
 ///
 /// @param self QPaintEngine*
 /// @param p QPointF*
 /// @param textItem QTextItem*
 void q_paintengine_draw_text_item(void* self, void* p, void* textItem);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
 ///
 /// Allows for overriding the related default method
 ///
@@ -474,7 +474,7 @@ void q_paintengine_draw_text_item(void* self, void* p, void* textItem);
 /// @param callback void func(QPaintEngine* self, QPointF* p, QTextItem* textItem)
 void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
 ///
 /// Base class method implementation
 ///
@@ -483,7 +483,7 @@ void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, void*, 
 /// @param textItem QTextItem*
 void q_paintengine_qbase_draw_text_item(void* self, void* p, void* textItem);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
 ///
 /// @param self QPaintEngine*
 /// @param r QRectF*
@@ -491,7 +491,7 @@ void q_paintengine_qbase_draw_text_item(void* self, void* p, void* textItem);
 /// @param s QPointF*
 void q_paintengine_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -499,7 +499,7 @@ void q_paintengine_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s)
 /// @param callback void func(QPaintEngine* self, QRectF* r, QPixmap* pixmap, QPointF* s)
 void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
 ///
 /// Base class method implementation
 ///
@@ -509,7 +509,7 @@ void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, void
 /// @param s QPointF*
 void q_paintengine_qbase_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
 /// @param self QPaintEngine*
 /// @param r QRectF*
@@ -518,7 +518,7 @@ void q_paintengine_qbase_draw_tiled_pixmap(void* self, void* r, void* pixmap, vo
 /// @param flags flag of enum Qt__ImageConversionFlag
 void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
 /// Allows for overriding the related default method
 ///
@@ -526,7 +526,7 @@ void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int32_t f
 /// @param callback void func(QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, flag of enum Qt__ImageConversionFlag flags)
 void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
 /// Base class method implementation
 ///
@@ -537,45 +537,45 @@ void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void
 /// @param flags flag of enum Qt__ImageConversionFlag
 void q_paintengine_qbase_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setPaintDevice)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#setPaintDevice)
 ///
 /// @param self QPaintEngine*
 /// @param device QPaintDevice*
 void q_paintengine_set_paint_device(void* self, void* device);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#paintDevice)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#paintDevice)
 ///
 /// @param self QPaintEngine*
 QPaintDevice* q_paintengine_paint_device(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setSystemClip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#setSystemClip)
 ///
 /// @param self QPaintEngine*
 /// @param baseClip QRegion*
 void q_paintengine_set_system_clip(void* self, void* baseClip);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#systemClip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#systemClip)
 ///
 /// @param self QPaintEngine*
 QRegion* q_paintengine_system_clip(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setSystemRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#setSystemRect)
 ///
 /// @param self QPaintEngine*
 /// @param rect QRect*
 void q_paintengine_set_system_rect(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#systemRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#systemRect)
 ///
 /// @param self QPaintEngine*
 QRect* q_paintengine_system_rect(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
 /// @param self QPaintEngine*
 QPoint* q_paintengine_coordinate_offset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
 /// Allows for overriding the related default method
 ///
@@ -583,21 +583,21 @@ QPoint* q_paintengine_coordinate_offset(void* self);
 /// @param callback QPoint* func()
 void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
 /// Base class method implementation
 ///
 /// @param self QPaintEngine*
 QPoint* q_paintengine_qbase_coordinate_offset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
 /// @param self QPaintEngine*
 ///
 /// @return enum QPaintEngine__Type
 int32_t q_paintengine_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
 /// Allows for overriding the related default method
 ///
@@ -605,7 +605,7 @@ int32_t q_paintengine_type(void* self);
 /// @param callback int32_t func()
 void q_paintengine_on_type(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
 /// Base class method implementation
 ///
@@ -614,7 +614,7 @@ void q_paintengine_on_type(void* self, int32_t (*callback)());
 /// @return enum QPaintEngine__Type
 int32_t q_paintengine_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#fix_neg_rect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#fix_neg_rect)
 ///
 /// @param self QPaintEngine*
 /// @param x int*
@@ -623,52 +623,52 @@ int32_t q_paintengine_qbase_type(void* self);
 /// @param h int*
 void q_paintengine_fix_neg_rect(void* self, int* x, int* y, int* w, int* h);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#testDirty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#testDirty)
 ///
 /// @param self QPaintEngine*
 /// @param df flag of enum QPaintEngine__DirtyFlag
 bool q_paintengine_test_dirty(void* self, int32_t df);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setDirty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#setDirty)
 ///
 /// @param self QPaintEngine*
 /// @param df flag of enum QPaintEngine__DirtyFlag
 void q_paintengine_set_dirty(void* self, int32_t df);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#clearDirty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#clearDirty)
 ///
 /// @param self QPaintEngine*
 /// @param df flag of enum QPaintEngine__DirtyFlag
 void q_paintengine_clear_dirty(void* self, int32_t df);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#hasFeature)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#hasFeature)
 ///
 /// @param self QPaintEngine*
 /// @param feature flag of enum QPaintEngine__PaintEngineFeature
 bool q_paintengine_has_feature(void* self, int64_t feature);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#painter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#painter)
 ///
 /// @param self QPaintEngine*
 QPainter* q_paintengine_painter(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#syncState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#syncState)
 ///
 /// @param self QPaintEngine*
 void q_paintengine_sync_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#isExtended)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#isExtended)
 ///
 /// @param self QPaintEngine*
 bool q_paintengine_is_extended(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
 ///
 /// @param self QPaintEngine*
 /// @param size QSize*
 QPixmap* q_paintengine_create_pixmap(void* self, void* size);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -676,7 +676,7 @@ QPixmap* q_paintengine_create_pixmap(void* self, void* size);
 /// @param callback QPixmap* func(QPaintEngine* self, QSize* size)
 void q_paintengine_on_create_pixmap(void* self, QPixmap* (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
 ///
 /// Base class method implementation
 ///
@@ -684,14 +684,14 @@ void q_paintengine_on_create_pixmap(void* self, QPixmap* (*callback)(void*, void
 /// @param size QSize*
 QPixmap* q_paintengine_qbase_create_pixmap(void* self, void* size);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
 /// @param self QPaintEngine*
 /// @param image QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
 QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
 /// Allows for overriding the related default method
 ///
@@ -699,7 +699,7 @@ QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int32_t
 /// @param callback QPixmap* func(QPaintEngine* self, QImage* image, flag of enum Qt__ImageConversionFlag flags)
 void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int32_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
 /// Base class method implementation
 ///
@@ -708,7 +708,7 @@ void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(
 /// @param flags flag of enum Qt__ImageConversionFlag
 QPixmap* q_paintengine_qbase_create_pixmap_from_image(void* self, void* image, int32_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#dtor.QPaintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#dtor.QPaintEngine)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -739,107 +739,107 @@ void q_paintenginestate_copy_assign(void* self, void* other);
 /// @param other QPaintEngineState*
 void q_paintenginestate_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#state)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#state)
 ///
 /// @param self QPaintEngineState*
 ///
 /// @return flag of enum QPaintEngine__DirtyFlag
 int32_t q_paintenginestate_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#pen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#pen)
 ///
 /// @param self QPaintEngineState*
 QPen* q_paintenginestate_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#brush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#brush)
 ///
 /// @param self QPaintEngineState*
 QBrush* q_paintenginestate_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#brushOrigin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#brushOrigin)
 ///
 /// @param self QPaintEngineState*
 QPointF* q_paintenginestate_brush_origin(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#backgroundBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#backgroundBrush)
 ///
 /// @param self QPaintEngineState*
 QBrush* q_paintenginestate_background_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#backgroundMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#backgroundMode)
 ///
 /// @param self QPaintEngineState*
 ///
 /// @return enum Qt__BGMode
 int32_t q_paintenginestate_background_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#font)
 ///
 /// @param self QPaintEngineState*
 QFont* q_paintenginestate_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#transform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#transform)
 ///
 /// @param self QPaintEngineState*
 QTransform* q_paintenginestate_transform(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#clipOperation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#clipOperation)
 ///
 /// @param self QPaintEngineState*
 ///
 /// @return enum Qt__ClipOperation
 int32_t q_paintenginestate_clip_operation(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#clipRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#clipRegion)
 ///
 /// @param self QPaintEngineState*
 QRegion* q_paintenginestate_clip_region(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#clipPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#clipPath)
 ///
 /// @param self QPaintEngineState*
 QPainterPath* q_paintenginestate_clip_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#isClipEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#isClipEnabled)
 ///
 /// @param self QPaintEngineState*
 bool q_paintenginestate_is_clip_enabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#renderHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#renderHints)
 ///
 /// @param self QPaintEngineState*
 ///
 /// @return flag of enum QPainter__RenderHint
 int32_t q_paintenginestate_render_hints(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#compositionMode)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#compositionMode)
 ///
 /// @param self QPaintEngineState*
 ///
 /// @return enum QPainter__CompositionMode
 int32_t q_paintenginestate_composition_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#opacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#opacity)
 ///
 /// @param self QPaintEngineState*
 double q_paintenginestate_opacity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#painter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#painter)
 ///
 /// @param self QPaintEngineState*
 QPainter* q_paintenginestate_painter(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#brushNeedsResolving)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#brushNeedsResolving)
 ///
 /// @param self QPaintEngineState*
 bool q_paintenginestate_brush_needs_resolving(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#penNeedsResolving)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#penNeedsResolving)
 ///
 /// @param self QPaintEngineState*
 bool q_paintenginestate_pen_needs_resolving(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#dtor.QPaintEngineState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html#dtor.QPaintEngineState)
 ///
 /// Delete this object from C++ memory.
 ///

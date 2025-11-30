@@ -22,92 +22,92 @@ KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new();
 /// @param copyVal KSyntaxHighlighting__Theme*
 KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new2(void* copyVal);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#operator-eq)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param other KSyntaxHighlighting__Theme*
 void k_syntaxhighlighting__theme_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#isValid)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isValid)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__theme_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#name)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
 const char* k_syntaxhighlighting__theme_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#translatedName)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#translatedName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
 const char* k_syntaxhighlighting__theme_translated_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#isReadOnly)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isReadOnly)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 bool k_syntaxhighlighting__theme_is_read_only(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#filePath)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#filePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
 const char* k_syntaxhighlighting__theme_file_path(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#textColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#textColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 uint32_t k_syntaxhighlighting__theme_text_color(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#selectedTextColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#selectedTextColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 uint32_t k_syntaxhighlighting__theme_selected_text_color(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#backgroundColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#backgroundColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 uint32_t k_syntaxhighlighting__theme_background_color(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#selectedBackgroundColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#selectedBackgroundColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 uint32_t k_syntaxhighlighting__theme_selected_background_color(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#isBold)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isBold)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 bool k_syntaxhighlighting__theme_is_bold(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#isItalic)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isItalic)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 bool k_syntaxhighlighting__theme_is_italic(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#isUnderline)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isUnderline)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 bool k_syntaxhighlighting__theme_is_underline(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#isStrikeThrough)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isStrikeThrough)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
 bool k_syntaxhighlighting__theme_is_strike_through(void* self, int32_t style);
 
-/// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-theme.html#editorColor)
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#editorColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param role enum KSyntaxHighlighting__Theme__EditorColorRole

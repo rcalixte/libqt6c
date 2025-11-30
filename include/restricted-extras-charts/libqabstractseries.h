@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qabstractseries-qtcharts.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QAbstractSeries*
 const QMetaObject* q_abstractseries_meta_object(void* self);
@@ -28,141 +28,141 @@ void* q_abstractseries_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_abstractseries_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_abstractseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#type)
 ///
 /// @param self QAbstractSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 int32_t q_abstractseries_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setName)
 ///
 /// @param self QAbstractSeries*
 /// @param name const char*
 void q_abstractseries_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSeries*
 const char* q_abstractseries_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setVisible)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_set_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#isVisible)
 ///
 /// @param self QAbstractSeries*
 bool q_abstractseries_is_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacity)
 ///
 /// @param self QAbstractSeries*
 double q_abstractseries_opacity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setOpacity)
 ///
 /// @param self QAbstractSeries*
 /// @param opacity double
 void q_abstractseries_set_opacity(void* self, double opacity);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setUseOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setUseOpenGL)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_set_use_open_g_l(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGL)
 ///
 /// @param self QAbstractSeries*
 bool q_abstractseries_use_open_g_l(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#chart)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#chart)
 ///
 /// @param self QAbstractSeries*
 QChart* q_abstractseries_chart(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#attachAxis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#attachAxis)
 ///
 /// @param self QAbstractSeries*
 /// @param axis QAbstractAxis*
 bool q_abstractseries_attach_axis(void* self, void* axis);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#detachAxis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#detachAxis)
 ///
 /// @param self QAbstractSeries*
 /// @param axis QAbstractAxis*
 bool q_abstractseries_detach_axis(void* self, void* axis);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#attachedAxes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#attachedAxes)
 ///
 /// @param self QAbstractSeries*
 libqt_list /* of QAbstractAxis* */ q_abstractseries_attached_axes(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#show)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_show(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#hide)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_hide(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#nameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#nameChanged)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_name_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#nameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#nameChanged)
 ///
 /// @param self QAbstractSeries*
 /// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_name_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_visible_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
 ///
 /// @param self QAbstractSeries*
 /// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_visible_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_opacity_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
 ///
 /// @param self QAbstractSeries*
 /// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_opacity_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_use_open_g_l_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
 ///
 /// @param self QAbstractSeries*
 /// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -170,7 +170,7 @@ void q_abstractseries_on_use_open_g_l_changed(void* self, void (*callback)(void*
 /// @param c const char*
 const char* q_abstractseries_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -179,13 +179,13 @@ const char* q_abstractseries_tr2(const char* s, const char* c);
 /// @param n int
 const char* q_abstractseries_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setVisible)
 ///
 /// @param self QAbstractSeries*
 /// @param visible bool
 void q_abstractseries_set_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setUseOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setUseOpenGL)
 ///
 /// @param self QAbstractSeries*
 /// @param enable bool
@@ -193,7 +193,7 @@ void q_abstractseries_set_use_open_g_l1(void* self, bool enable);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QAbstractSeries*
 /// @param event QEvent*
@@ -201,7 +201,7 @@ bool q_abstractseries_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QAbstractSeries*
 /// @param watched QObject*
@@ -210,7 +210,7 @@ bool q_abstractseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -219,7 +219,7 @@ const char* q_abstractseries_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractSeries*
 /// @param name char*
@@ -227,35 +227,35 @@ void q_abstractseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QAbstractSeries*
 bool q_abstractseries_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QAbstractSeries*
 bool q_abstractseries_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QAbstractSeries*
 bool q_abstractseries_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QAbstractSeries*
 bool q_abstractseries_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QAbstractSeries*
 /// @param b bool
@@ -263,14 +263,14 @@ bool q_abstractseries_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QAbstractSeries*
 QThread* q_abstractseries_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAbstractSeries*
 /// @param thread QThread*
@@ -278,7 +278,7 @@ bool q_abstractseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAbstractSeries*
 /// @param interval int
@@ -286,7 +286,7 @@ int32_t q_abstractseries_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAbstractSeries*
 /// @param id int
@@ -294,7 +294,7 @@ void q_abstractseries_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAbstractSeries*
 /// @param id enum Qt__TimerId
@@ -302,14 +302,14 @@ void q_abstractseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QAbstractSeries*
 libqt_list /* of QObject* */ q_abstractseries_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QAbstractSeries*
 /// @param parent QObject*
@@ -317,7 +317,7 @@ void q_abstractseries_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QAbstractSeries*
 /// @param filterObj QObject*
@@ -325,7 +325,7 @@ void q_abstractseries_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QAbstractSeries*
 /// @param obj QObject*
@@ -333,7 +333,7 @@ void q_abstractseries_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -343,7 +343,7 @@ QMetaObject__Connection* q_abstractseries_connect(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAbstractSeries*
 /// @param sender QObject*
@@ -353,7 +353,7 @@ QMetaObject__Connection* q_abstractseries_connect2(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -363,28 +363,28 @@ bool q_abstractseries_disconnect(void* sender, void* signal, void* receiver, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_abstractseries_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QAbstractSeries*
 /// @param name const char*
@@ -393,7 +393,7 @@ bool q_abstractseries_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QAbstractSeries*
 /// @param name const char*
@@ -401,7 +401,7 @@ QVariant* q_abstractseries_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -410,28 +410,28 @@ const char** q_abstractseries_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAbstractSeries*
 QBindingStorage* q_abstractseries_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAbstractSeries*
 const QBindingStorage* q_abstractseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSeries*
 /// @param callback void func(QAbstractSeries* self)
@@ -439,14 +439,14 @@ void q_abstractseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QAbstractSeries*
 QObject* q_abstractseries_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QAbstractSeries*
 /// @param classname const char*
@@ -454,14 +454,14 @@ bool q_abstractseries_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QAbstractSeries*
 void q_abstractseries_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAbstractSeries*
 /// @param thread QThread*
@@ -470,7 +470,7 @@ bool q_abstractseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAbstractSeries*
 /// @param interval int
@@ -479,7 +479,7 @@ int32_t q_abstractseries_start_timer22(void* self, int interval, int32_t timerTy
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -490,7 +490,7 @@ QMetaObject__Connection* q_abstractseries_connect5(void* sender, void* signal, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAbstractSeries*
 /// @param sender QObject*
@@ -501,7 +501,7 @@ QMetaObject__Connection* q_abstractseries_connect4(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSeries*
 /// @param param1 QObject*
@@ -509,7 +509,7 @@ void q_abstractseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSeries*
 /// @param callback void func(QAbstractSeries* self, QObject* param1)
@@ -517,7 +517,7 @@ void q_abstractseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -525,7 +525,7 @@ void q_abstractseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(QAbstractSeries* self, const char* objectName)
 void q_abstractseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#dtor.QAbstractSeries)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#dtor.QAbstractSeries)
 ///
 /// Delete this object from C++ memory.
 ///

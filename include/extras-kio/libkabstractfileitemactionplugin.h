@@ -18,7 +18,7 @@
 /// @param parent QObject*
 KAbstractFileItemActionPlugin* k_abstractfileitemactionplugin_new(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 const QMetaObject* k_abstractfileitemactionplugin_meta_object(void* self);
@@ -47,21 +47,21 @@ void k_abstractfileitemactionplugin_on_metacall(void* self, int32_t (*callback)(
 /// @param param3 void*
 int32_t k_abstractfileitemactionplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_abstractfileitemactionplugin_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
+/// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param fileItemInfos KFileItemListProperties*
 /// @param parentWidget QWidget*
 libqt_list /* of QAction* */ k_abstractfileitemactionplugin_actions(void* self, void* fileItemInfos, void* parentWidget);
 
-/// [Qt documentation](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
+/// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
 ///
 /// Allows for overriding the related default method
 ///
@@ -69,7 +69,7 @@ libqt_list /* of QAction* */ k_abstractfileitemactionplugin_actions(void* self, 
 /// @param callback QAction** func(KAbstractFileItemActionPlugin* self, KFileItemListProperties* fileItemInfos, QWidget* parentWidget)
 void k_abstractfileitemactionplugin_on_actions(void* self, QAction** (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
+/// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
 ///
 /// Base class method implementation
 ///
@@ -78,19 +78,19 @@ void k_abstractfileitemactionplugin_on_actions(void* self, QAction** (*callback)
 /// @param parentWidget QWidget*
 libqt_list /* of QAction* */ k_abstractfileitemactionplugin_qbase_actions(void* self, void* fileItemInfos, void* parentWidget);
 
-/// [Qt documentation](https://api.kde.org/kabstractfileitemactionplugin.html#error)
+/// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#error)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param errorMessage const char*
 void k_abstractfileitemactionplugin_error(void* self, const char* errorMessage);
 
-/// [Qt documentation](https://api.kde.org/kabstractfileitemactionplugin.html#error)
+/// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#error)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param callback void func(KAbstractFileItemActionPlugin* self, const char* errorMessage)
 void k_abstractfileitemactionplugin_on_error(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -98,7 +98,7 @@ void k_abstractfileitemactionplugin_on_error(void* self, void (*callback)(void*,
 /// @param c const char*
 const char* k_abstractfileitemactionplugin_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -109,7 +109,7 @@ const char* k_abstractfileitemactionplugin_tr3(const char* s, const char* c, int
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -118,7 +118,7 @@ const char* k_abstractfileitemactionplugin_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param name char*
@@ -126,35 +126,35 @@ void k_abstractfileitemactionplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 bool k_abstractfileitemactionplugin_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 bool k_abstractfileitemactionplugin_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 bool k_abstractfileitemactionplugin_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 bool k_abstractfileitemactionplugin_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param b bool
@@ -162,14 +162,14 @@ bool k_abstractfileitemactionplugin_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 QThread* k_abstractfileitemactionplugin_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param thread QThread*
@@ -177,7 +177,7 @@ bool k_abstractfileitemactionplugin_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param interval int
@@ -185,7 +185,7 @@ int32_t k_abstractfileitemactionplugin_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param id int
@@ -193,7 +193,7 @@ void k_abstractfileitemactionplugin_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param id enum Qt__TimerId
@@ -201,14 +201,14 @@ void k_abstractfileitemactionplugin_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 libqt_list /* of QObject* */ k_abstractfileitemactionplugin_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param parent QObject*
@@ -216,7 +216,7 @@ void k_abstractfileitemactionplugin_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param filterObj QObject*
@@ -224,7 +224,7 @@ void k_abstractfileitemactionplugin_install_event_filter(void* self, void* filte
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param obj QObject*
@@ -232,7 +232,7 @@ void k_abstractfileitemactionplugin_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -242,7 +242,7 @@ QMetaObject__Connection* k_abstractfileitemactionplugin_connect(void* sender, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param sender QObject*
@@ -252,7 +252,7 @@ QMetaObject__Connection* k_abstractfileitemactionplugin_connect2(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -262,28 +262,28 @@ bool k_abstractfileitemactionplugin_disconnect(void* sender, void* signal, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_abstractfileitemactionplugin_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 void k_abstractfileitemactionplugin_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 void k_abstractfileitemactionplugin_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param name const char*
@@ -292,7 +292,7 @@ bool k_abstractfileitemactionplugin_set_property(void* self, const char* name, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param name const char*
@@ -300,7 +300,7 @@ QVariant* k_abstractfileitemactionplugin_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -309,28 +309,28 @@ const char** k_abstractfileitemactionplugin_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 QBindingStorage* k_abstractfileitemactionplugin_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 const QBindingStorage* k_abstractfileitemactionplugin_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 void k_abstractfileitemactionplugin_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param callback void func(KAbstractFileItemActionPlugin* self)
@@ -338,14 +338,14 @@ void k_abstractfileitemactionplugin_on_destroyed(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 QObject* k_abstractfileitemactionplugin_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param classname const char*
@@ -353,14 +353,14 @@ bool k_abstractfileitemactionplugin_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 void k_abstractfileitemactionplugin_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param thread QThread*
@@ -369,7 +369,7 @@ bool k_abstractfileitemactionplugin_move_to_thread2(void* self, void* thread, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param interval int
@@ -378,7 +378,7 @@ int32_t k_abstractfileitemactionplugin_start_timer22(void* self, int interval, i
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -389,7 +389,7 @@ QMetaObject__Connection* k_abstractfileitemactionplugin_connect5(void* sender, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param sender QObject*
@@ -400,7 +400,7 @@ QMetaObject__Connection* k_abstractfileitemactionplugin_connect4(void* self, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param param1 QObject*
@@ -408,7 +408,7 @@ void k_abstractfileitemactionplugin_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAbstractFileItemActionPlugin*
 /// @param callback void func(KAbstractFileItemActionPlugin* self, QObject* param1)
@@ -416,7 +416,7 @@ void k_abstractfileitemactionplugin_on_destroyed1(void* self, void (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -426,7 +426,7 @@ bool k_abstractfileitemactionplugin_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -436,7 +436,7 @@ bool k_abstractfileitemactionplugin_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -446,7 +446,7 @@ void k_abstractfileitemactionplugin_on_event(void* self, bool (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -457,7 +457,7 @@ bool k_abstractfileitemactionplugin_event_filter(void* self, void* watched, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -468,7 +468,7 @@ bool k_abstractfileitemactionplugin_qbase_event_filter(void* self, void* watched
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -478,7 +478,7 @@ void k_abstractfileitemactionplugin_on_event_filter(void* self, bool (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -488,7 +488,7 @@ void k_abstractfileitemactionplugin_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -498,7 +498,7 @@ void k_abstractfileitemactionplugin_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -508,7 +508,7 @@ void k_abstractfileitemactionplugin_on_timer_event(void* self, void (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -518,7 +518,7 @@ void k_abstractfileitemactionplugin_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -528,7 +528,7 @@ void k_abstractfileitemactionplugin_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -538,7 +538,7 @@ void k_abstractfileitemactionplugin_on_child_event(void* self, void (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -548,7 +548,7 @@ void k_abstractfileitemactionplugin_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -558,7 +558,7 @@ void k_abstractfileitemactionplugin_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -568,7 +568,7 @@ void k_abstractfileitemactionplugin_on_custom_event(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -578,7 +578,7 @@ void k_abstractfileitemactionplugin_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -588,7 +588,7 @@ void k_abstractfileitemactionplugin_qbase_connect_notify(void* self, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -598,7 +598,7 @@ void k_abstractfileitemactionplugin_on_connect_notify(void* self, void (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -608,7 +608,7 @@ void k_abstractfileitemactionplugin_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -618,7 +618,7 @@ void k_abstractfileitemactionplugin_qbase_disconnect_notify(void* self, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -628,7 +628,7 @@ void k_abstractfileitemactionplugin_on_disconnect_notify(void* self, void (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -637,7 +637,7 @@ QObject* k_abstractfileitemactionplugin_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -646,7 +646,7 @@ QObject* k_abstractfileitemactionplugin_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -656,7 +656,7 @@ void k_abstractfileitemactionplugin_on_sender(void* self, QObject* (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -665,7 +665,7 @@ int32_t k_abstractfileitemactionplugin_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -674,7 +674,7 @@ int32_t k_abstractfileitemactionplugin_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -684,7 +684,7 @@ void k_abstractfileitemactionplugin_on_sender_signal_index(void* self, int32_t (
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -694,7 +694,7 @@ int32_t k_abstractfileitemactionplugin_receivers(void* self, const char* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -704,7 +704,7 @@ int32_t k_abstractfileitemactionplugin_qbase_receivers(void* self, const char* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -714,7 +714,7 @@ void k_abstractfileitemactionplugin_on_receivers(void* self, int32_t (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -724,7 +724,7 @@ bool k_abstractfileitemactionplugin_is_signal_connected(void* self, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -734,7 +734,7 @@ bool k_abstractfileitemactionplugin_qbase_is_signal_connected(void* self, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -744,7 +744,7 @@ void k_abstractfileitemactionplugin_on_is_signal_connected(void* self, bool (*ca
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -752,7 +752,7 @@ void k_abstractfileitemactionplugin_on_is_signal_connected(void* self, bool (*ca
 /// @param callback void func(KAbstractFileItemActionPlugin* self, const char* objectName)
 void k_abstractfileitemactionplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kabstractfileitemactionplugin.html#dtor.KAbstractFileItemActionPlugin)
+/// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#dtor.KAbstractFileItemActionPlugin)
 ///
 /// Delete this object from C++ memory.
 ///

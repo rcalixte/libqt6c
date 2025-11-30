@@ -22,48 +22,48 @@ QTemporaryDir* q_temporarydir_new();
 /// @param templateName const char*
 QTemporaryDir* q_temporarydir_new2(const char* templateName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#swap)
 ///
 /// @param self QTemporaryDir*
 /// @param other QTemporaryDir*
 void q_temporarydir_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#isValid)
 ///
 /// @param self QTemporaryDir*
 bool q_temporarydir_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QTemporaryDir*
 const char* q_temporarydir_error_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#autoRemove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#autoRemove)
 ///
 /// @param self QTemporaryDir*
 bool q_temporarydir_auto_remove(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#setAutoRemove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#setAutoRemove)
 ///
 /// @param self QTemporaryDir*
 /// @param b bool
 void q_temporarydir_set_auto_remove(void* self, bool b);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#remove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#remove)
 ///
 /// @param self QTemporaryDir*
 bool q_temporarydir_remove(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#path)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#path)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QTemporaryDir*
 const char* q_temporarydir_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#filePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#filePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -71,7 +71,7 @@ const char* q_temporarydir_path(void* self);
 /// @param fileName const char*
 const char* q_temporarydir_file_path(void* self, const char* fileName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#dtor.QTemporaryDir)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#dtor.QTemporaryDir)
 ///
 /// Delete this object from C++ memory.
 ///

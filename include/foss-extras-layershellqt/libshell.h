@@ -35,11 +35,11 @@ void k_layershellqt__shell_copy_assign(void* self, void* other);
 /// @param other LayerShellQt__Shell*
 void k_layershellqt__shell_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://invent.kde.org/plasma/layer-shell-qt)
+/// [Upstream resources](https://invent.kde.org/plasma/layer-shell-qt)
 ///
 void k_layershellqt__shell_use_layer_shell();
 
-/// [Qt documentation](https://invent.kde.org/plasma/layer-shell-qt)
+/// [Upstream resources](https://invent.kde.org/plasma/layer-shell-qt)
 ///
 /// Delete this object from C++ memory.
 ///

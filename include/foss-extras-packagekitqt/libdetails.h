@@ -22,54 +22,54 @@ PackageKit__Details* q_packagekit__details_new();
 /// @param other libqt_map /* of const char* to QVariant* */
 PackageKit__Details* q_packagekit__details_new2(libqt_map /* of const char* to QVariant* */ other);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self PackageKit__Details*
 const char* q_packagekit__details_package_id(void* self);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self PackageKit__Details*
 const char* q_packagekit__details_description(void* self);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Details*
 ///
 /// @return enum PackageKit__Transaction__Group
 int32_t q_packagekit__details_group(void* self);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self PackageKit__Details*
 const char* q_packagekit__details_summary(void* self);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self PackageKit__Details*
 const char* q_packagekit__details_url(void* self);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self PackageKit__Details*
 const char* q_packagekit__details_license(void* self);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Details*
 uint64_t q_packagekit__details_size(void* self);
 
-/// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// Delete this object from C++ memory.
 ///

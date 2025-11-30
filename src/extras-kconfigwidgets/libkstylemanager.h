@@ -13,11 +13,11 @@
 
 /// https://api.kde.org/kstylemanager.html
 
-/// [Qt documentation](https://api.kde.org/kstylemanager.html#initStyle)
+/// [Upstream resources](https://api.kde.org/kstylemanager.html#initStyle)
 ///
 void k_stylemanager_init_style();
 
-/// [Qt documentation](https://api.kde.org/kstylemanager.html#createConfigureAction)
+/// [Upstream resources](https://api.kde.org/kstylemanager.html#createConfigureAction)
 ///
 /// @param param1 QObject*
 QAction* k_stylemanager_create_configure_action(void* param1);

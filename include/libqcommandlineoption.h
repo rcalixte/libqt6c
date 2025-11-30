@@ -70,84 +70,84 @@ QCommandLineOption* q_commandlineoption_new8(const char* names[static 1], const 
 /// @param defaultValue const char*
 QCommandLineOption* q_commandlineoption_new9(const char* names[static 1], const char* description, const char* valueName, const char* defaultValue);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#operator-eq)
 ///
 /// @param self QCommandLineOption*
 /// @param other QCommandLineOption*
 void q_commandlineoption_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#swap)
 ///
 /// @param self QCommandLineOption*
 /// @param other QCommandLineOption*
 void q_commandlineoption_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#names)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#names)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCommandLineOption*
 const char** q_commandlineoption_names(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#setValueName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#setValueName)
 ///
 /// @param self QCommandLineOption*
 /// @param name const char*
 void q_commandlineoption_set_value_name(void* self, const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#valueName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#valueName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCommandLineOption*
 const char* q_commandlineoption_value_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#setDescription)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#setDescription)
 ///
 /// @param self QCommandLineOption*
 /// @param description const char*
 void q_commandlineoption_set_description(void* self, const char* description);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#description)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#description)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCommandLineOption*
 const char* q_commandlineoption_description(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#setDefaultValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#setDefaultValue)
 ///
 /// @param self QCommandLineOption*
 /// @param defaultValue const char*
 void q_commandlineoption_set_default_value(void* self, const char* defaultValue);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#setDefaultValues)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#setDefaultValues)
 ///
 /// @param self QCommandLineOption*
 /// @param defaultValues const char**
 void q_commandlineoption_set_default_values(void* self, const char* defaultValues[static 1]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#defaultValues)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#defaultValues)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCommandLineOption*
 const char** q_commandlineoption_default_values(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#flags)
 ///
 /// @param self QCommandLineOption*
 ///
 /// @return flag of enum QCommandLineOption__Flag
 int32_t q_commandlineoption_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#setFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#setFlags)
 ///
 /// @param self QCommandLineOption*
 /// @param aflags flag of enum QCommandLineOption__Flag
 void q_commandlineoption_set_flags(void* self, int32_t aflags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#dtor.QCommandLineOption)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#dtor.QCommandLineOption)
 ///
 /// Delete this object from C++ memory.
 ///

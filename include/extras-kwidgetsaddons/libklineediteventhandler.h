@@ -13,12 +13,12 @@
 
 /// https://api.kde.org/klineediteventhandler.html
 
-/// [Qt documentation](https://api.kde.org/klineediteventhandler.html#catchReturnKey)
+/// [Upstream resources](https://api.kde.org/klineediteventhandler.html#catchReturnKey)
 ///
 /// @param param1 QObject*
 void k_lineediteventhandler_catch_return_key(void* param1);
 
-/// [Qt documentation](https://api.kde.org/klineediteventhandler.html#handleUrlDrops)
+/// [Upstream resources](https://api.kde.org/klineediteventhandler.html#handleUrlDrops)
 ///
 /// @param param1 QObject*
 void k_lineediteventhandler_handle_url_drops(void* param1);

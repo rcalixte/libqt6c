@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qwebenginenavigationrequest.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QWebEngineNavigationRequest*
 const QMetaObject* q_webenginenavigationrequest_meta_object(void* self);
@@ -28,57 +28,57 @@ void* q_webenginenavigationrequest_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_webenginenavigationrequest_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_webenginenavigationrequest_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#url)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#url)
 ///
 /// @param self QWebEngineNavigationRequest*
 QUrl* q_webenginenavigationrequest_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#isMainFrame)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#isMainFrame)
 ///
 /// @param self QWebEngineNavigationRequest*
 bool q_webenginenavigationrequest_is_main_frame(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#hasFormData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#hasFormData)
 ///
 /// @param self QWebEngineNavigationRequest*
 bool q_webenginenavigationrequest_has_form_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#navigationType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#navigationType)
 ///
 /// @param self QWebEngineNavigationRequest*
 ///
 /// @return enum QWebEngineNavigationRequest__NavigationType
 int32_t q_webenginenavigationrequest_navigation_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#accept)
 ///
 /// @param self QWebEngineNavigationRequest*
 void q_webenginenavigationrequest_accept(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#reject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#reject)
 ///
 /// @param self QWebEngineNavigationRequest*
 void q_webenginenavigationrequest_reject(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#actionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#actionChanged)
 ///
 /// @param self QWebEngineNavigationRequest*
 void q_webenginenavigationrequest_action_changed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#actionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#actionChanged)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param callback void func(QWebEngineNavigationRequest* self)
 void q_webenginenavigationrequest_on_action_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -86,7 +86,7 @@ void q_webenginenavigationrequest_on_action_changed(void* self, void (*callback)
 /// @param c const char*
 const char* q_webenginenavigationrequest_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -97,7 +97,7 @@ const char* q_webenginenavigationrequest_tr3(const char* s, const char* c, int n
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param event QEvent*
@@ -105,7 +105,7 @@ bool q_webenginenavigationrequest_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param watched QObject*
@@ -114,7 +114,7 @@ bool q_webenginenavigationrequest_event_filter(void* self, void* watched, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -123,7 +123,7 @@ const char* q_webenginenavigationrequest_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param name char*
@@ -131,35 +131,35 @@ void q_webenginenavigationrequest_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QWebEngineNavigationRequest*
 bool q_webenginenavigationrequest_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QWebEngineNavigationRequest*
 bool q_webenginenavigationrequest_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QWebEngineNavigationRequest*
 bool q_webenginenavigationrequest_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QWebEngineNavigationRequest*
 bool q_webenginenavigationrequest_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param b bool
@@ -167,14 +167,14 @@ bool q_webenginenavigationrequest_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QWebEngineNavigationRequest*
 QThread* q_webenginenavigationrequest_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param thread QThread*
@@ -182,7 +182,7 @@ bool q_webenginenavigationrequest_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param interval int
@@ -190,7 +190,7 @@ int32_t q_webenginenavigationrequest_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param id int
@@ -198,7 +198,7 @@ void q_webenginenavigationrequest_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param id enum Qt__TimerId
@@ -206,14 +206,14 @@ void q_webenginenavigationrequest_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QWebEngineNavigationRequest*
 libqt_list /* of QObject* */ q_webenginenavigationrequest_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param parent QObject*
@@ -221,7 +221,7 @@ void q_webenginenavigationrequest_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param filterObj QObject*
@@ -229,7 +229,7 @@ void q_webenginenavigationrequest_install_event_filter(void* self, void* filterO
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param obj QObject*
@@ -237,7 +237,7 @@ void q_webenginenavigationrequest_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -247,7 +247,7 @@ QMetaObject__Connection* q_webenginenavigationrequest_connect(void* sender, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param sender QObject*
@@ -257,7 +257,7 @@ QMetaObject__Connection* q_webenginenavigationrequest_connect2(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -267,28 +267,28 @@ bool q_webenginenavigationrequest_disconnect(void* sender, void* signal, void* r
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_webenginenavigationrequest_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QWebEngineNavigationRequest*
 void q_webenginenavigationrequest_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QWebEngineNavigationRequest*
 void q_webenginenavigationrequest_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param name const char*
@@ -297,7 +297,7 @@ bool q_webenginenavigationrequest_set_property(void* self, const char* name, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param name const char*
@@ -305,7 +305,7 @@ QVariant* q_webenginenavigationrequest_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -314,28 +314,28 @@ const char** q_webenginenavigationrequest_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QWebEngineNavigationRequest*
 QBindingStorage* q_webenginenavigationrequest_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QWebEngineNavigationRequest*
 const QBindingStorage* q_webenginenavigationrequest_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNavigationRequest*
 void q_webenginenavigationrequest_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param callback void func(QWebEngineNavigationRequest* self)
@@ -343,14 +343,14 @@ void q_webenginenavigationrequest_on_destroyed(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QWebEngineNavigationRequest*
 QObject* q_webenginenavigationrequest_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param classname const char*
@@ -358,14 +358,14 @@ bool q_webenginenavigationrequest_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QWebEngineNavigationRequest*
 void q_webenginenavigationrequest_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param thread QThread*
@@ -374,7 +374,7 @@ bool q_webenginenavigationrequest_move_to_thread2(void* self, void* thread, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param interval int
@@ -383,7 +383,7 @@ int32_t q_webenginenavigationrequest_start_timer22(void* self, int interval, int
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -394,7 +394,7 @@ QMetaObject__Connection* q_webenginenavigationrequest_connect5(void* sender, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param sender QObject*
@@ -405,7 +405,7 @@ QMetaObject__Connection* q_webenginenavigationrequest_connect4(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param param1 QObject*
@@ -413,7 +413,7 @@ void q_webenginenavigationrequest_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNavigationRequest*
 /// @param callback void func(QWebEngineNavigationRequest* self, QObject* param1)
@@ -421,7 +421,7 @@ void q_webenginenavigationrequest_on_destroyed1(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -429,7 +429,7 @@ void q_webenginenavigationrequest_on_destroyed1(void* self, void (*callback)(voi
 /// @param callback void func(QWebEngineNavigationRequest* self, const char* objectName)
 void q_webenginenavigationrequest_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#dtor.QWebEngineNavigationRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#dtor.QWebEngineNavigationRequest)
 ///
 /// Delete this object from C++ memory.
 ///

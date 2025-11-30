@@ -22,52 +22,52 @@ QCameraFormat* q_cameraformat_new();
 /// @param other QCameraFormat*
 QCameraFormat* q_cameraformat_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#operator-eq)
 ///
 /// @param self QCameraFormat*
 /// @param other QCameraFormat*
 void q_cameraformat_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#pixelFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#pixelFormat)
 ///
 /// @param self QCameraFormat*
 ///
 /// @return enum QVideoFrameFormat__PixelFormat
 int32_t q_cameraformat_pixel_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#resolution)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#resolution)
 ///
 /// @param self QCameraFormat*
 QSize* q_cameraformat_resolution(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#minFrameRate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#minFrameRate)
 ///
 /// @param self QCameraFormat*
 float q_cameraformat_min_frame_rate(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#maxFrameRate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#maxFrameRate)
 ///
 /// @param self QCameraFormat*
 float q_cameraformat_max_frame_rate(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#isNull)
 ///
 /// @param self QCameraFormat*
 bool q_cameraformat_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#operator-eq-eq)
 ///
 /// @param self QCameraFormat*
 /// @param other QCameraFormat*
 bool q_cameraformat_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#operator-not-eq)
 ///
 /// @param self QCameraFormat*
 /// @param other QCameraFormat*
 bool q_cameraformat_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#dtor.QCameraFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameraformat.html#dtor.QCameraFormat)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -85,73 +85,73 @@ QCameraDevice* q_cameradevice_new();
 /// @param other QCameraDevice*
 QCameraDevice* q_cameradevice_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#operator-eq)
 ///
 /// @param self QCameraDevice*
 /// @param other QCameraDevice*
 void q_cameradevice_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#operator-eq-eq)
 ///
 /// @param self QCameraDevice*
 /// @param other QCameraDevice*
 bool q_cameradevice_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#operator-not-eq)
 ///
 /// @param self QCameraDevice*
 /// @param other QCameraDevice*
 bool q_cameradevice_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#isNull)
 ///
 /// @param self QCameraDevice*
 bool q_cameradevice_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#id)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#id)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCameraDevice*
 char* q_cameradevice_id(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#description)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#description)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCameraDevice*
 const char* q_cameradevice_description(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#isDefault)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#isDefault)
 ///
 /// @param self QCameraDevice*
 bool q_cameradevice_is_default(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#position)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#position)
 ///
 /// @param self QCameraDevice*
 ///
 /// @return enum QCameraDevice__Position
 int32_t q_cameradevice_position(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#photoResolutions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#photoResolutions)
 ///
 /// @param self QCameraDevice*
 libqt_list /* of QSize* */ q_cameradevice_photo_resolutions(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#videoFormats)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#videoFormats)
 ///
 /// @param self QCameraDevice*
 libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#correctionAngle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#correctionAngle)
 ///
 /// @param self QCameraDevice*
 ///
 /// @return enum QtVideo__Rotation
 int32_t q_cameradevice_correction_angle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#dtor.QCameraDevice)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#dtor.QCameraDevice)
 ///
 /// Delete this object from C++ memory.
 ///

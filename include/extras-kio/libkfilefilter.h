@@ -29,67 +29,67 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
 /// @param other KFileFilter*
 KFileFilter* k_filefilter_new3(void* other);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#operator-eq)
 ///
 /// @param self KFileFilter*
 /// @param other KFileFilter*
 void k_filefilter_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#operator-eq-eq)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#operator-eq-eq)
 ///
 /// @param self KFileFilter*
 /// @param other KFileFilter*
 bool k_filefilter_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#label)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#label)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileFilter*
 const char* k_filefilter_label(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#filePatterns)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#filePatterns)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileFilter*
 const char** k_filefilter_file_patterns(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#mimePatterns)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#mimePatterns)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileFilter*
 const char** k_filefilter_mime_patterns(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#toFilterString)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#toFilterString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileFilter*
 const char* k_filefilter_to_filter_string(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#isEmpty)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#isEmpty)
 ///
 /// @param self KFileFilter*
 bool k_filefilter_is_empty(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#isValid)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#isValid)
 ///
 /// @param self KFileFilter*
 bool k_filefilter_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#fromMimeType)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#fromMimeType)
 ///
 /// @param mimeType const char*
 KFileFilter* k_filefilter_from_mime_type(const char* mimeType);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#fromMimeTypes)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#fromMimeTypes)
 ///
 /// @param mimeTypes const char**
 libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTypes[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kfilefilter.html#dtor.KFileFilter)
+/// [Upstream resources](https://api.kde.org/kfilefilter.html#dtor.KFileFilter)
 ///
 /// Delete this object from C++ memory.
 ///

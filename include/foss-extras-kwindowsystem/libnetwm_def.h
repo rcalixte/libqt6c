@@ -49,34 +49,34 @@ void k_netpoint_copy_assign(void* self, void* other);
 /// @param other NETPoint*
 void k_netpoint_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/netpoint.html#toPoint)
+/// [Upstream resources](https://api.kde.org/netpoint.html#toPoint)
 ///
 /// @param self NETPoint*
 QPoint* k_netpoint_to_point(void* self);
 
-/// [Qt documentation](https://api.kde.org/netpoint.html#x-var)
+/// [Upstream resources](https://api.kde.org/netpoint.html#x-var)
 ///
 /// @param self NETPoint*
 int32_t k_netpoint_x(void* self);
 
-/// [Qt documentation](https://api.kde.org/netpoint.html#x-var)
+/// [Upstream resources](https://api.kde.org/netpoint.html#x-var)
 ///
 /// @param self NETPoint*
 /// @param x int
 void k_netpoint_set_x(void* self, int x);
 
-/// [Qt documentation](https://api.kde.org/netpoint.html#y-var)
+/// [Upstream resources](https://api.kde.org/netpoint.html#y-var)
 ///
 /// @param self NETPoint*
 int32_t k_netpoint_y(void* self);
 
-/// [Qt documentation](https://api.kde.org/netpoint.html#y-var)
+/// [Upstream resources](https://api.kde.org/netpoint.html#y-var)
 ///
 /// @param self NETPoint*
 /// @param y int
 void k_netpoint_set_y(void* self, int y);
 
-/// [Qt documentation](https://api.kde.org/netpoint.html#dtor.NETPoint)
+/// [Upstream resources](https://api.kde.org/netpoint.html#dtor.NETPoint)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -121,34 +121,34 @@ void k_netsize_copy_assign(void* self, void* other);
 /// @param other NETSize*
 void k_netsize_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/netsize.html#toSize)
+/// [Upstream resources](https://api.kde.org/netsize.html#toSize)
 ///
 /// @param self NETSize*
 QSize* k_netsize_to_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/netsize.html#width-var)
+/// [Upstream resources](https://api.kde.org/netsize.html#width-var)
 ///
 /// @param self NETSize*
 int32_t k_netsize_width(void* self);
 
-/// [Qt documentation](https://api.kde.org/netsize.html#width-var)
+/// [Upstream resources](https://api.kde.org/netsize.html#width-var)
 ///
 /// @param self NETSize*
 /// @param width int
 void k_netsize_set_width(void* self, int width);
 
-/// [Qt documentation](https://api.kde.org/netsize.html#height-var)
+/// [Upstream resources](https://api.kde.org/netsize.html#height-var)
 ///
 /// @param self NETSize*
 int32_t k_netsize_height(void* self);
 
-/// [Qt documentation](https://api.kde.org/netsize.html#height-var)
+/// [Upstream resources](https://api.kde.org/netsize.html#height-var)
 ///
 /// @param self NETSize*
 /// @param height int
 void k_netsize_set_height(void* self, int height);
 
-/// [Qt documentation](https://api.kde.org/netsize.html#dtor.NETSize)
+/// [Upstream resources](https://api.kde.org/netsize.html#dtor.NETSize)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -188,34 +188,34 @@ void k_netrect_copy_assign(void* self, void* other);
 /// @param other NETRect*
 void k_netrect_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/netrect.html#toRect)
+/// [Upstream resources](https://api.kde.org/netrect.html#toRect)
 ///
 /// @param self NETRect*
 QRect* k_netrect_to_rect(void* self);
 
-/// [Qt documentation](https://api.kde.org/netrect.html#pos-var)
+/// [Upstream resources](https://api.kde.org/netrect.html#pos-var)
 ///
 /// @param self NETRect*
 NETPoint* k_netrect_pos(void* self);
 
-/// [Qt documentation](https://api.kde.org/netrect.html#pos-var)
+/// [Upstream resources](https://api.kde.org/netrect.html#pos-var)
 ///
 /// @param self NETRect*
 /// @param pos NETPoint*
 void k_netrect_set_pos(void* self, void* pos);
 
-/// [Qt documentation](https://api.kde.org/netrect.html#size-var)
+/// [Upstream resources](https://api.kde.org/netrect.html#size-var)
 ///
 /// @param self NETRect*
 NETSize* k_netrect_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/netrect.html#size-var)
+/// [Upstream resources](https://api.kde.org/netrect.html#size-var)
 ///
 /// @param self NETRect*
 /// @param size NETSize*
 void k_netrect_set_size(void* self, void* size);
 
-/// [Qt documentation](https://api.kde.org/netrect.html#dtor.NETRect)
+/// [Upstream resources](https://api.kde.org/netrect.html#dtor.NETRect)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -250,29 +250,29 @@ void k_neticon_copy_assign(void* self, void* other);
 /// @param other NETIcon*
 void k_neticon_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/neticon.html#size-var)
+/// [Upstream resources](https://api.kde.org/neticon.html#size-var)
 ///
 /// @param self NETIcon*
 NETSize* k_neticon_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/neticon.html#size-var)
+/// [Upstream resources](https://api.kde.org/neticon.html#size-var)
 ///
 /// @param self NETIcon*
 /// @param size NETSize*
 void k_neticon_set_size(void* self, void* size);
 
-/// [Qt documentation](https://api.kde.org/neticon.html#data-var)
+/// [Upstream resources](https://api.kde.org/neticon.html#data-var)
 ///
 /// @param self NETIcon*
 unsigned char* k_neticon_data(void* self);
 
-/// [Qt documentation](https://api.kde.org/neticon.html#data-var)
+/// [Upstream resources](https://api.kde.org/neticon.html#data-var)
 ///
 /// @param self NETIcon*
 /// @param data unsigned char*
 void k_neticon_set_data(void* self, unsigned char* data);
 
-/// [Qt documentation](https://api.kde.org/neticon.html#dtor.NETIcon)
+/// [Upstream resources](https://api.kde.org/neticon.html#dtor.NETIcon)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -307,139 +307,139 @@ void k_netextendedstrut_copy_assign(void* self, void* other);
 /// @param other NETExtendedStrut*
 void k_netextendedstrut_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#left_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_width-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_left_width(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#left_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_width-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param left_width int
 void k_netextendedstrut_set_left_width(void* self, int left_width);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#left_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_start-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_left_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#left_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_start-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param left_start int
 void k_netextendedstrut_set_left_start(void* self, int left_start);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#left_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_end-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_left_end(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#left_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_end-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param left_end int
 void k_netextendedstrut_set_left_end(void* self, int left_end);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#right_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_width-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_right_width(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#right_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_width-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param right_width int
 void k_netextendedstrut_set_right_width(void* self, int right_width);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#right_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_start-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_right_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#right_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_start-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param right_start int
 void k_netextendedstrut_set_right_start(void* self, int right_start);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#right_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_end-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_right_end(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#right_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_end-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param right_end int
 void k_netextendedstrut_set_right_end(void* self, int right_end);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#top_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_width-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_top_width(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#top_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_width-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param top_width int
 void k_netextendedstrut_set_top_width(void* self, int top_width);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#top_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_start-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_top_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#top_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_start-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param top_start int
 void k_netextendedstrut_set_top_start(void* self, int top_start);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#top_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_end-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_top_end(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#top_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_end-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param top_end int
 void k_netextendedstrut_set_top_end(void* self, int top_end);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#bottom_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_width-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_bottom_width(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#bottom_width-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_width-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param bottom_width int
 void k_netextendedstrut_set_bottom_width(void* self, int bottom_width);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#bottom_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_start-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_bottom_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#bottom_start-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_start-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param bottom_start int
 void k_netextendedstrut_set_bottom_start(void* self, int bottom_start);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#bottom_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_end-var)
 ///
 /// @param self NETExtendedStrut*
 int32_t k_netextendedstrut_bottom_end(void* self);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#bottom_end-var)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_end-var)
 ///
 /// @param self NETExtendedStrut*
 /// @param bottom_end int
 void k_netextendedstrut_set_bottom_end(void* self, int bottom_end);
 
-/// [Qt documentation](https://api.kde.org/netextendedstrut.html#dtor.NETExtendedStrut)
+/// [Upstream resources](https://api.kde.org/netextendedstrut.html#dtor.NETExtendedStrut)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -474,51 +474,51 @@ void k_netstrut_copy_assign(void* self, void* other);
 /// @param other NETStrut*
 void k_netstrut_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#left-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#left-var)
 ///
 /// @param self NETStrut*
 int32_t k_netstrut_left(void* self);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#left-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#left-var)
 ///
 /// @param self NETStrut*
 /// @param left int
 void k_netstrut_set_left(void* self, int left);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#right-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#right-var)
 ///
 /// @param self NETStrut*
 int32_t k_netstrut_right(void* self);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#right-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#right-var)
 ///
 /// @param self NETStrut*
 /// @param right int
 void k_netstrut_set_right(void* self, int right);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#top-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#top-var)
 ///
 /// @param self NETStrut*
 int32_t k_netstrut_top(void* self);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#top-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#top-var)
 ///
 /// @param self NETStrut*
 /// @param top int
 void k_netstrut_set_top(void* self, int top);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#bottom-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#bottom-var)
 ///
 /// @param self NETStrut*
 int32_t k_netstrut_bottom(void* self);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#bottom-var)
+/// [Upstream resources](https://api.kde.org/netstrut.html#bottom-var)
 ///
 /// @param self NETStrut*
 /// @param bottom int
 void k_netstrut_set_bottom(void* self, int bottom);
 
-/// [Qt documentation](https://api.kde.org/netstrut.html#dtor.NETStrut)
+/// [Upstream resources](https://api.kde.org/netstrut.html#dtor.NETStrut)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -553,56 +553,56 @@ void k_netfullscreenmonitors_copy_assign(void* self, void* other);
 /// @param other NETFullscreenMonitors*
 void k_netfullscreenmonitors_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#top-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#top-var)
 ///
 /// @param self NETFullscreenMonitors*
 int32_t k_netfullscreenmonitors_top(void* self);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#top-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#top-var)
 ///
 /// @param self NETFullscreenMonitors*
 /// @param top int
 void k_netfullscreenmonitors_set_top(void* self, int top);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#bottom-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#bottom-var)
 ///
 /// @param self NETFullscreenMonitors*
 int32_t k_netfullscreenmonitors_bottom(void* self);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#bottom-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#bottom-var)
 ///
 /// @param self NETFullscreenMonitors*
 /// @param bottom int
 void k_netfullscreenmonitors_set_bottom(void* self, int bottom);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#left-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#left-var)
 ///
 /// @param self NETFullscreenMonitors*
 int32_t k_netfullscreenmonitors_left(void* self);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#left-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#left-var)
 ///
 /// @param self NETFullscreenMonitors*
 /// @param left int
 void k_netfullscreenmonitors_set_left(void* self, int left);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#right-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#right-var)
 ///
 /// @param self NETFullscreenMonitors*
 int32_t k_netfullscreenmonitors_right(void* self);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#right-var)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#right-var)
 ///
 /// @param self NETFullscreenMonitors*
 /// @param right int
 void k_netfullscreenmonitors_set_right(void* self, int right);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#isSet)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#isSet)
 ///
 /// @param self NETFullscreenMonitors*
 bool k_netfullscreenmonitors_is_set(void* self);
 
-/// [Qt documentation](https://api.kde.org/netfullscreenmonitors.html#dtor.NETFullscreenMonitors)
+/// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#dtor.NETFullscreenMonitors)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -633,19 +633,19 @@ void k_net_copy_assign(void* self, void* other);
 /// @param other NET*
 void k_net_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/net.html#timestampCompare)
+/// [Upstream resources](https://api.kde.org/net.html#timestampCompare)
 ///
 /// @param time1 uint64_t
 /// @param time2 uint64_t
 int32_t k_net_timestamp_compare(uint64_t time1, uint64_t time2);
 
-/// [Qt documentation](https://api.kde.org/net.html#timestampDiff)
+/// [Upstream resources](https://api.kde.org/net.html#timestampDiff)
 ///
 /// @param time1 uint64_t
 /// @param time2 uint64_t
 int32_t k_net_timestamp_diff(uint64_t time1, uint64_t time2);
 
-/// [Qt documentation](https://api.kde.org/net.html#dtor.NET)
+/// [Upstream resources](https://api.kde.org/net.html#dtor.NET)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -35,73 +35,73 @@ void q_sysinfo_copy_assign(void* self, void* other);
 /// @param other QSysInfo*
 void q_sysinfo_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#buildCpuArchitecture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#buildCpuArchitecture)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_build_cpu_architecture();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#currentCpuArchitecture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#currentCpuArchitecture)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_current_cpu_architecture();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#buildAbi)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#buildAbi)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_build_abi();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#kernelType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#kernelType)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_kernel_type();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#kernelVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#kernelVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_kernel_version();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#productType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#productType)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_product_type();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#productVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#productVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_product_version();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#prettyProductName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#prettyProductName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_pretty_product_name();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#machineHostName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#machineHostName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_sysinfo_machine_host_name();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#machineUniqueId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#machineUniqueId)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 char* q_sysinfo_machine_unique_id();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#bootUniqueId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#bootUniqueId)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 char* q_sysinfo_boot_unique_id();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsysinfo.html#dtor.QSysInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#dtor.QSysInfo)
 ///
 /// Delete this object from C++ memory.
 ///

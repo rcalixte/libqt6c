@@ -19,7 +19,7 @@
 /// @param conf KCoreConfigSkeleton*
 KConfigDialogManager* k_configdialogmanager_new(void* parent, void* conf);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KConfigDialogManager*
 const QMetaObject* k_configdialogmanager_meta_object(void* self);
@@ -48,83 +48,83 @@ void k_configdialogmanager_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_configdialogmanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_configdialogmanager_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#settingsChanged)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#settingsChanged)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_settings_changed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#settingsChanged)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#settingsChanged)
 ///
 /// @param self KConfigDialogManager*
 /// @param callback void func(KConfigDialogManager* self)
 void k_configdialogmanager_on_settings_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#widgetModified)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#widgetModified)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_widget_modified(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#widgetModified)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#widgetModified)
 ///
 /// @param self KConfigDialogManager*
 /// @param callback void func(KConfigDialogManager* self)
 void k_configdialogmanager_on_widget_modified(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#addWidget)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#addWidget)
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 void k_configdialogmanager_add_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#hasChanged)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#hasChanged)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_has_changed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#isDefault)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#isDefault)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_is_default(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#propertyMap)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#propertyMap)
 ///
 libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map();
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#updateSettings)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#updateSettings)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_update_settings(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#updateWidgets)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#updateWidgets)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_update_widgets(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#updateWidgetsDefault)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#updateWidgetsDefault)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_update_widgets_default(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setDefaultsIndicatorsVisible)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setDefaultsIndicatorsVisible)
 ///
 /// @param self KConfigDialogManager*
 /// @param enabled bool
 void k_configdialogmanager_set_defaults_indicators_visible(void* self, bool enabled);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#init)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#init)
 ///
 /// @param self KConfigDialogManager*
 /// @param trackChanges bool
 void k_configdialogmanager_init(void* self, bool trackChanges);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#init)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#init)
 ///
 /// Allows for overriding the related default method
 ///
@@ -132,7 +132,7 @@ void k_configdialogmanager_init(void* self, bool trackChanges);
 /// @param callback void func(KConfigDialogManager* self, bool trackChanges)
 void k_configdialogmanager_on_init(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#init)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#init)
 ///
 /// Base class method implementation
 ///
@@ -140,14 +140,14 @@ void k_configdialogmanager_on_init(void* self, void (*callback)(void*, bool));
 /// @param trackChanges bool
 void k_configdialogmanager_qbase_init(void* self, bool trackChanges);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 /// @param trackChanges bool
 bool k_configdialogmanager_parse_children(void* self, void* widget, bool trackChanges);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
 /// Allows for overriding the related default method
 ///
@@ -155,7 +155,7 @@ bool k_configdialogmanager_parse_children(void* self, void* widget, bool trackCh
 /// @param callback bool func(KConfigDialogManager* self, QWidget* widget, bool trackChanges)
 void k_configdialogmanager_on_parse_children(void* self, bool (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
 /// Base class method implementation
 ///
@@ -164,7 +164,7 @@ void k_configdialogmanager_on_parse_children(void* self, bool (*callback)(void*,
 /// @param trackChanges bool
 bool k_configdialogmanager_qbase_parse_children(void* self, void* widget, bool trackChanges);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -172,7 +172,7 @@ bool k_configdialogmanager_qbase_parse_children(void* self, void* widget, bool t
 /// @param widget QWidget*
 char* k_configdialogmanager_get_user_property(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -180,7 +180,7 @@ char* k_configdialogmanager_get_user_property(void* self, void* widget);
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_user_property(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
 /// Base class method implementation
 ///
@@ -188,7 +188,7 @@ void k_configdialogmanager_on_get_user_property(void* self, char* (*callback)(vo
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_user_property(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -196,7 +196,7 @@ char* k_configdialogmanager_qbase_get_user_property(void* self, void* widget);
 /// @param widget QWidget*
 char* k_configdialogmanager_get_custom_property(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -204,7 +204,7 @@ char* k_configdialogmanager_get_custom_property(void* self, void* widget);
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_custom_property(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
 /// Base class method implementation
 ///
@@ -212,7 +212,7 @@ void k_configdialogmanager_on_get_custom_property(void* self, char* (*callback)(
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_custom_property(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -220,7 +220,7 @@ char* k_configdialogmanager_qbase_get_custom_property(void* self, void* widget);
 /// @param widget QWidget*
 char* k_configdialogmanager_get_user_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
 /// Allows for overriding the related default method
 ///
@@ -228,7 +228,7 @@ char* k_configdialogmanager_get_user_property_changed_signal(void* self, void* w
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_user_property_changed_signal(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
 /// Base class method implementation
 ///
@@ -236,7 +236,7 @@ void k_configdialogmanager_on_get_user_property_changed_signal(void* self, char*
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_user_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -244,7 +244,7 @@ char* k_configdialogmanager_qbase_get_user_property_changed_signal(void* self, v
 /// @param widget QWidget*
 char* k_configdialogmanager_get_custom_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
 /// Allows for overriding the related default method
 ///
@@ -252,7 +252,7 @@ char* k_configdialogmanager_get_custom_property_changed_signal(void* self, void*
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
 /// Base class method implementation
 ///
@@ -260,14 +260,14 @@ void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, cha
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_custom_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
 /// @param self KConfigDialogManager*
 /// @param w QWidget*
 /// @param v QVariant*
 void k_configdialogmanager_set_property(void* self, void* w, void* v);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -275,7 +275,7 @@ void k_configdialogmanager_set_property(void* self, void* w, void* v);
 /// @param callback void func(KConfigDialogManager* self, QWidget* w, QVariant* v)
 void k_configdialogmanager_on_set_property(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setProperty)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
 /// Base class method implementation
 ///
@@ -284,13 +284,13 @@ void k_configdialogmanager_on_set_property(void* self, void (*callback)(void*, v
 /// @param v QVariant*
 void k_configdialogmanager_qbase_set_property(void* self, void* w, void* v);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
 /// @param self KConfigDialogManager*
 /// @param w QWidget*
 QVariant* k_configdialogmanager_property(void* self, void* w);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
 /// Allows for overriding the related default method
 ///
@@ -298,7 +298,7 @@ QVariant* k_configdialogmanager_property(void* self, void* w);
 /// @param callback QVariant* func(KConfigDialogManager* self, QWidget* w)
 void k_configdialogmanager_on_property(void* self, QVariant* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#property)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
 /// Base class method implementation
 ///
@@ -306,14 +306,14 @@ void k_configdialogmanager_on_property(void* self, QVariant* (*callback)(void*, 
 /// @param w QWidget*
 QVariant* k_configdialogmanager_qbase_property(void* self, void* w);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 /// @param item KConfigSkeletonItem*
 void k_configdialogmanager_setup_widget(void* self, void* widget, void* item);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -321,7 +321,7 @@ void k_configdialogmanager_setup_widget(void* self, void* widget, void* item);
 /// @param callback void func(KConfigDialogManager* self, QWidget* widget, KConfigSkeletonItem* item)
 void k_configdialogmanager_on_setup_widget(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
 /// Base class method implementation
 ///
@@ -330,12 +330,12 @@ void k_configdialogmanager_on_setup_widget(void* self, void (*callback)(void*, v
 /// @param item KConfigSkeletonItem*
 void k_configdialogmanager_qbase_setup_widget(void* self, void* widget, void* item);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#initMaps)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_init_maps(void* self);
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#initMaps)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
 /// Allows for overriding the related default method
 ///
@@ -343,14 +343,14 @@ void k_configdialogmanager_init_maps(void* self);
 /// @param callback void func()
 void k_configdialogmanager_on_init_maps(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#initMaps)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_qbase_init_maps(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -358,7 +358,7 @@ void k_configdialogmanager_qbase_init_maps(void* self);
 /// @param c const char*
 const char* k_configdialogmanager_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -369,7 +369,7 @@ const char* k_configdialogmanager_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -378,7 +378,7 @@ const char* k_configdialogmanager_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KConfigDialogManager*
 /// @param name char*
@@ -386,35 +386,35 @@ void k_configdialogmanager_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KConfigDialogManager*
 /// @param b bool
@@ -422,14 +422,14 @@ bool k_configdialogmanager_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KConfigDialogManager*
 QThread* k_configdialogmanager_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KConfigDialogManager*
 /// @param thread QThread*
@@ -437,7 +437,7 @@ bool k_configdialogmanager_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KConfigDialogManager*
 /// @param interval int
@@ -445,7 +445,7 @@ int32_t k_configdialogmanager_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KConfigDialogManager*
 /// @param id int
@@ -453,7 +453,7 @@ void k_configdialogmanager_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KConfigDialogManager*
 /// @param id enum Qt__TimerId
@@ -461,14 +461,14 @@ void k_configdialogmanager_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KConfigDialogManager*
 libqt_list /* of QObject* */ k_configdialogmanager_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KConfigDialogManager*
 /// @param parent QObject*
@@ -476,7 +476,7 @@ void k_configdialogmanager_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KConfigDialogManager*
 /// @param filterObj QObject*
@@ -484,7 +484,7 @@ void k_configdialogmanager_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KConfigDialogManager*
 /// @param obj QObject*
@@ -492,7 +492,7 @@ void k_configdialogmanager_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -502,7 +502,7 @@ QMetaObject__Connection* k_configdialogmanager_connect(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KConfigDialogManager*
 /// @param sender QObject*
@@ -512,7 +512,7 @@ QMetaObject__Connection* k_configdialogmanager_connect2(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -522,28 +522,28 @@ bool k_configdialogmanager_disconnect(void* sender, void* signal, void* receiver
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_configdialogmanager_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -552,28 +552,28 @@ const char** k_configdialogmanager_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KConfigDialogManager*
 QBindingStorage* k_configdialogmanager_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KConfigDialogManager*
 const QBindingStorage* k_configdialogmanager_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigDialogManager*
 /// @param callback void func(KConfigDialogManager* self)
@@ -581,14 +581,14 @@ void k_configdialogmanager_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KConfigDialogManager*
 QObject* k_configdialogmanager_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KConfigDialogManager*
 /// @param classname const char*
@@ -596,14 +596,14 @@ bool k_configdialogmanager_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KConfigDialogManager*
 /// @param thread QThread*
@@ -612,7 +612,7 @@ bool k_configdialogmanager_move_to_thread2(void* self, void* thread, void* param
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KConfigDialogManager*
 /// @param interval int
@@ -621,7 +621,7 @@ int32_t k_configdialogmanager_start_timer22(void* self, int interval, int32_t ti
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -632,7 +632,7 @@ QMetaObject__Connection* k_configdialogmanager_connect5(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KConfigDialogManager*
 /// @param sender QObject*
@@ -643,7 +643,7 @@ QMetaObject__Connection* k_configdialogmanager_connect4(void* self, void* sender
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigDialogManager*
 /// @param param1 QObject*
@@ -651,7 +651,7 @@ void k_configdialogmanager_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigDialogManager*
 /// @param callback void func(KConfigDialogManager* self, QObject* param1)
@@ -659,7 +659,7 @@ void k_configdialogmanager_on_destroyed1(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -669,7 +669,7 @@ bool k_configdialogmanager_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -679,7 +679,7 @@ bool k_configdialogmanager_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -689,7 +689,7 @@ void k_configdialogmanager_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -700,7 +700,7 @@ bool k_configdialogmanager_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -711,7 +711,7 @@ bool k_configdialogmanager_qbase_event_filter(void* self, void* watched, void* e
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -721,7 +721,7 @@ void k_configdialogmanager_on_event_filter(void* self, bool (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -731,7 +731,7 @@ void k_configdialogmanager_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -741,7 +741,7 @@ void k_configdialogmanager_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -751,7 +751,7 @@ void k_configdialogmanager_on_timer_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -761,7 +761,7 @@ void k_configdialogmanager_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -771,7 +771,7 @@ void k_configdialogmanager_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -781,7 +781,7 @@ void k_configdialogmanager_on_child_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -791,7 +791,7 @@ void k_configdialogmanager_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -801,7 +801,7 @@ void k_configdialogmanager_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -811,7 +811,7 @@ void k_configdialogmanager_on_custom_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -821,7 +821,7 @@ void k_configdialogmanager_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -831,7 +831,7 @@ void k_configdialogmanager_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -841,7 +841,7 @@ void k_configdialogmanager_on_connect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -851,7 +851,7 @@ void k_configdialogmanager_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -861,7 +861,7 @@ void k_configdialogmanager_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -871,7 +871,7 @@ void k_configdialogmanager_on_disconnect_notify(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -880,7 +880,7 @@ QObject* k_configdialogmanager_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -889,7 +889,7 @@ QObject* k_configdialogmanager_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,7 +899,7 @@ void k_configdialogmanager_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -908,7 +908,7 @@ int32_t k_configdialogmanager_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -917,7 +917,7 @@ int32_t k_configdialogmanager_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -927,7 +927,7 @@ void k_configdialogmanager_on_sender_signal_index(void* self, int32_t (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -937,7 +937,7 @@ int32_t k_configdialogmanager_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -947,7 +947,7 @@ int32_t k_configdialogmanager_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -957,7 +957,7 @@ void k_configdialogmanager_on_receivers(void* self, int32_t (*callback)(void*, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -967,7 +967,7 @@ bool k_configdialogmanager_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -977,7 +977,7 @@ bool k_configdialogmanager_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -987,7 +987,7 @@ void k_configdialogmanager_on_is_signal_connected(void* self, bool (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -995,7 +995,7 @@ void k_configdialogmanager_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KConfigDialogManager* self, const char* objectName)
 void k_configdialogmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#dtor.KConfigDialogManager)
+/// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#dtor.KConfigDialogManager)
 ///
 /// Delete this object from C++ memory.
 ///

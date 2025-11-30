@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kio-storedtransferjob.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__StoredTransferJob*
 const QMetaObject* k_io__storedtransferjob_meta_object(void* self);
@@ -28,27 +28,27 @@ void* k_io__storedtransferjob_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_io__storedtransferjob_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_io__storedtransferjob_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kio-storedtransferjob.html#setData)
+/// [Upstream resources](https://api.kde.org/kio-storedtransferjob.html#setData)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param arr const char*
 void k_io__storedtransferjob_set_data(void* self, const char* arr);
 
-/// [Qt documentation](https://api.kde.org/kio-storedtransferjob.html#data)
+/// [Upstream resources](https://api.kde.org/kio-storedtransferjob.html#data)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__StoredTransferJob*
 char* k_io__storedtransferjob_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -56,7 +56,7 @@ char* k_io__storedtransferjob_data(void* self);
 /// @param c const char*
 const char* k_io__storedtransferjob_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -67,7 +67,7 @@ const char* k_io__storedtransferjob_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#setModificationTime)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#setModificationTime)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param mtime QDateTime*
@@ -75,14 +75,14 @@ void k_io__storedtransferjob_set_modification_time(void* self, void* mtime);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#isErrorPage)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#isErrorPage)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_error_page(void* self);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#setAsyncDataEnabled)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#setAsyncDataEnabled)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param enabled bool
@@ -90,7 +90,7 @@ void k_io__storedtransferjob_set_async_data_enabled(void* self, bool enabled);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#sendAsyncData)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#sendAsyncData)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param data const char*
@@ -98,7 +98,7 @@ void k_io__storedtransferjob_send_async_data(void* self, const char* data);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#mimetype)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#mimetype)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -107,14 +107,14 @@ const char* k_io__storedtransferjob_mimetype(void* self);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#redirectUrl)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#redirectUrl)
 ///
 /// @param self KIO__StoredTransferJob*
 QUrl* k_io__storedtransferjob_redirect_url(void* self);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#setTotalSize)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#setTotalSize)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param bytes uint64_t
@@ -122,7 +122,7 @@ void k_io__storedtransferjob_set_total_size(void* self, uint64_t bytes);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#dataReq)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#dataReq)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KIO__Job*
@@ -131,7 +131,7 @@ void k_io__storedtransferjob_data_req(void* self, void* job, char* data);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#dataReq)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#dataReq)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, char* data)
@@ -139,7 +139,7 @@ void k_io__storedtransferjob_on_data_req(void* self, void (*callback)(void*, voi
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#redirection)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#redirection)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KIO__Job*
@@ -148,7 +148,7 @@ void k_io__storedtransferjob_redirection(void* self, void* job, void* url);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#redirection)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#redirection)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, QUrl* url)
@@ -156,7 +156,7 @@ void k_io__storedtransferjob_on_redirection(void* self, void (*callback)(void*, 
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#permanentRedirection)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#permanentRedirection)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KIO__Job*
@@ -166,7 +166,7 @@ void k_io__storedtransferjob_permanent_redirection(void* self, void* job, void* 
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#permanentRedirection)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#permanentRedirection)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, QUrl* fromUrl, QUrl* toUrl)
@@ -174,7 +174,7 @@ void k_io__storedtransferjob_on_permanent_redirection(void* self, void (*callbac
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#mimeTypeFound)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#mimeTypeFound)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KIO__Job*
@@ -183,7 +183,7 @@ void k_io__storedtransferjob_mime_type_found(void* self, void* job, const char* 
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#mimeTypeFound)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#mimeTypeFound)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, const char* mimeType)
@@ -191,7 +191,7 @@ void k_io__storedtransferjob_on_mime_type_found(void* self, void (*callback)(voi
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#canResume)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#canResume)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KIO__Job*
@@ -200,7 +200,7 @@ void k_io__storedtransferjob_can_resume(void* self, void* job, uint64_t offset);
 
 /// Inherited from KIO::TransferJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-transferjob.html#canResume)
+/// [Upstream resources](https://api.kde.org/kio-transferjob.html#canResume)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, uint64_t offset)
@@ -208,34 +208,34 @@ void k_io__storedtransferjob_on_can_resume(void* self, void (*callback)(void*, v
 
 /// Inherited from KIO::SimpleJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-simplejob.html#url)
+/// [Upstream resources](https://api.kde.org/kio-simplejob.html#url)
 ///
 /// @param self KIO__StoredTransferJob*
 const QUrl* k_io__storedtransferjob_url(void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-simplejob.html#putOnHold)
+/// [Upstream resources](https://api.kde.org/kio-simplejob.html#putOnHold)
 ///
 /// @param self KIO__StoredTransferJob*
 void k_io__storedtransferjob_put_on_hold(void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-simplejob.html#removeOnHold)
+/// [Upstream resources](https://api.kde.org/kio-simplejob.html#removeOnHold)
 ///
 void k_io__storedtransferjob_remove_on_hold();
 
 /// Inherited from KIO::SimpleJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-simplejob.html#isRedirectionHandlingEnabled)
+/// [Upstream resources](https://api.kde.org/kio-simplejob.html#isRedirectionHandlingEnabled)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_redirection_handling_enabled(void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-simplejob.html#setRedirectionHandlingEnabled)
+/// [Upstream resources](https://api.kde.org/kio-simplejob.html#setRedirectionHandlingEnabled)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param handle bool
@@ -243,7 +243,7 @@ void k_io__storedtransferjob_set_redirection_handling_enabled(void* self, bool h
 
 /// Inherited from KIO::SimpleJob
 ///
-/// [Qt documentation](https://api.kde.org/kio-simplejob.html#slotError)
+/// [Upstream resources](https://api.kde.org/kio-simplejob.html#slotError)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param param1 int
@@ -252,21 +252,21 @@ void k_io__storedtransferjob_slot_error(void* self, int param1, const char* para
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#start)
+/// [Upstream resources](https://api.kde.org/kio-job.html#start)
 ///
 /// @param self KIO__StoredTransferJob*
 void k_io__storedtransferjob_start(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#uiDelegateExtension)
+/// [Upstream resources](https://api.kde.org/kio-job.html#uiDelegateExtension)
 ///
 /// @param self KIO__StoredTransferJob*
 KIO__JobUiDelegateExtension* k_io__storedtransferjob_ui_delegate_extension(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#setUiDelegateExtension)
+/// [Upstream resources](https://api.kde.org/kio-job.html#setUiDelegateExtension)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param extension KIO__JobUiDelegateExtension*
@@ -274,7 +274,7 @@ void k_io__storedtransferjob_set_ui_delegate_extension(void* self, void* extensi
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#errorString)
+/// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -283,7 +283,7 @@ const char* k_io__storedtransferjob_error_string(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#detailedErrorStrings)
+/// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -292,7 +292,7 @@ const char** k_io__storedtransferjob_detailed_error_strings(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#setParentJob)
+/// [Upstream resources](https://api.kde.org/kio-job.html#setParentJob)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param parentJob KIO__Job*
@@ -300,14 +300,14 @@ void k_io__storedtransferjob_set_parent_job(void* self, void* parentJob);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#parentJob)
+/// [Upstream resources](https://api.kde.org/kio-job.html#parentJob)
 ///
 /// @param self KIO__StoredTransferJob*
 KIO__Job* k_io__storedtransferjob_parent_job(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#setMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#setMetaData)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param metaData KIO__MetaData*
@@ -315,7 +315,7 @@ void k_io__storedtransferjob_set_meta_data(void* self, void* metaData);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#addMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param key const char*
@@ -324,7 +324,7 @@ void k_io__storedtransferjob_add_meta_data(void* self, const char* key, const ch
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#addMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param values libqt_map /* of const char* to const char* */
@@ -332,7 +332,7 @@ void k_io__storedtransferjob_add_meta_data2(void* self, libqt_map /* of const ch
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#mergeMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param values libqt_map /* of const char* to const char* */
@@ -340,21 +340,21 @@ void k_io__storedtransferjob_merge_meta_data(void* self, libqt_map /* of const c
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#outgoingMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#outgoingMetaData)
 ///
 /// @param self KIO__StoredTransferJob*
 KIO__MetaData* k_io__storedtransferjob_outgoing_meta_data(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#metaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#metaData)
 ///
 /// @param self KIO__StoredTransferJob*
 KIO__MetaData* k_io__storedtransferjob_meta_data(void* self);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#queryMetaData)
+/// [Upstream resources](https://api.kde.org/kio-job.html#queryMetaData)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -364,7 +364,7 @@ const char* k_io__storedtransferjob_query_meta_data(void* self, const char* key)
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#connected)
+/// [Upstream resources](https://api.kde.org/kio-job.html#connected)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KIO__Job*
@@ -372,7 +372,7 @@ void k_io__storedtransferjob_connected(void* self, void* job);
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#connected)
+/// [Upstream resources](https://api.kde.org/kio-job.html#connected)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job)
@@ -380,7 +380,7 @@ void k_io__storedtransferjob_on_connected(void* self, void (*callback)(void*, vo
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#detailedErrorStrings)
+/// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -390,7 +390,7 @@ const char** k_io__storedtransferjob_detailed_error_strings1(void* self, void* r
 
 /// Inherited from KIO::Job
 ///
-/// [Qt documentation](https://api.kde.org/kio-job.html#detailedErrorStrings)
+/// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -401,7 +401,7 @@ const char** k_io__storedtransferjob_detailed_error_strings2(void* self, void* r
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setUiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#setUiDelegate)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param delegate KJobUiDelegate*
@@ -409,14 +409,14 @@ void k_io__storedtransferjob_set_ui_delegate(void* self, void* delegate);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#uiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
 /// @param self KIO__StoredTransferJob*
 KJobUiDelegate* k_io__storedtransferjob_ui_delegate(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#capabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
 /// @param self KIO__StoredTransferJob*
 ///
@@ -425,49 +425,49 @@ int32_t k_io__storedtransferjob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isSuspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_suspended(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspend)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resume)
+/// [Upstream resources](https://api.kde.org/kjob.html#resume)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#exec)
+/// [Upstream resources](https://api.kde.org/kjob.html#exec)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#error)
+/// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
 /// @param self KIO__StoredTransferJob*
 int32_t k_io__storedtransferjob_error(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -476,7 +476,7 @@ const char* k_io__storedtransferjob_error_text(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param unit enum KJob__Unit
@@ -484,7 +484,7 @@ uint64_t k_io__storedtransferjob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param unit enum KJob__Unit
@@ -492,14 +492,14 @@ uint64_t k_io__storedtransferjob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percent)
+/// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
 /// @param self KIO__StoredTransferJob*
 uint64_t k_io__storedtransferjob_percent(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#setAutoDelete)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param autodelete bool
@@ -507,42 +507,42 @@ void k_io__storedtransferjob_set_auto_delete(void* self, bool autodelete);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_auto_delete(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__StoredTransferJob*
 void k_io__storedtransferjob_set_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isStartedWithExec)
+/// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_started_with_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#elapsedTime)
+/// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
 /// @param self KIO__StoredTransferJob*
 long long k_io__storedtransferjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
@@ -551,7 +551,7 @@ void k_io__storedtransferjob_info_message(void* self, void* job, const char* mes
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KJob* job, const char* message)
@@ -559,7 +559,7 @@ void k_io__storedtransferjob_on_info_message(void* self, void (*callback)(void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
@@ -568,7 +568,7 @@ void k_io__storedtransferjob_warning(void* self, void* job, const char* message)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KJob* job, const char* message)
@@ -576,7 +576,7 @@ void k_io__storedtransferjob_on_warning(void* self, void (*callback)(void*, void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
@@ -585,7 +585,7 @@ void k_io__storedtransferjob_total_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uint64_t size)
@@ -593,7 +593,7 @@ void k_io__storedtransferjob_on_total_size(void* self, void (*callback)(void*, v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
@@ -602,7 +602,7 @@ void k_io__storedtransferjob_processed_size(void* self, void* job, uint64_t size
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uint64_t size)
@@ -610,7 +610,7 @@ void k_io__storedtransferjob_on_processed_size(void* self, void (*callback)(void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
@@ -619,7 +619,7 @@ void k_io__storedtransferjob_speed(void* self, void* job, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uint64_t speed)
@@ -627,7 +627,7 @@ void k_io__storedtransferjob_on_speed(void* self, void (*callback)(void*, void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param verbosity enum KJob__KillVerbosity
@@ -635,7 +635,7 @@ bool k_io__storedtransferjob_kill1(void* self, int32_t verbosity);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param hide bool
@@ -643,7 +643,7 @@ void k_io__storedtransferjob_set_finished_notification_hidden1(void* self, bool 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param event QEvent*
@@ -651,7 +651,7 @@ bool k_io__storedtransferjob_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param watched QObject*
@@ -660,7 +660,7 @@ bool k_io__storedtransferjob_event_filter(void* self, void* watched, void* event
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -669,7 +669,7 @@ const char* k_io__storedtransferjob_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param name char*
@@ -677,35 +677,35 @@ void k_io__storedtransferjob_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KIO__StoredTransferJob*
 bool k_io__storedtransferjob_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param b bool
@@ -713,14 +713,14 @@ bool k_io__storedtransferjob_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KIO__StoredTransferJob*
 QThread* k_io__storedtransferjob_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param thread QThread*
@@ -728,7 +728,7 @@ bool k_io__storedtransferjob_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param interval int
@@ -736,7 +736,7 @@ int32_t k_io__storedtransferjob_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param id int
@@ -744,7 +744,7 @@ void k_io__storedtransferjob_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param id enum Qt__TimerId
@@ -752,14 +752,14 @@ void k_io__storedtransferjob_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KIO__StoredTransferJob*
 libqt_list /* of QObject* */ k_io__storedtransferjob_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param parent QObject*
@@ -767,7 +767,7 @@ void k_io__storedtransferjob_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param filterObj QObject*
@@ -775,7 +775,7 @@ void k_io__storedtransferjob_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param obj QObject*
@@ -783,7 +783,7 @@ void k_io__storedtransferjob_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -793,7 +793,7 @@ QMetaObject__Connection* k_io__storedtransferjob_connect(void* sender, void* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param sender QObject*
@@ -803,7 +803,7 @@ QMetaObject__Connection* k_io__storedtransferjob_connect2(void* self, void* send
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -813,28 +813,28 @@ bool k_io__storedtransferjob_disconnect(void* sender, void* signal, void* receiv
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_io__storedtransferjob_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KIO__StoredTransferJob*
 void k_io__storedtransferjob_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KIO__StoredTransferJob*
 void k_io__storedtransferjob_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param name const char*
@@ -843,7 +843,7 @@ bool k_io__storedtransferjob_set_property(void* self, const char* name, void* va
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param name const char*
@@ -851,7 +851,7 @@ QVariant* k_io__storedtransferjob_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -860,28 +860,28 @@ const char** k_io__storedtransferjob_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__StoredTransferJob*
 QBindingStorage* k_io__storedtransferjob_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__StoredTransferJob*
 const QBindingStorage* k_io__storedtransferjob_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__StoredTransferJob*
 void k_io__storedtransferjob_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self)
@@ -889,14 +889,14 @@ void k_io__storedtransferjob_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KIO__StoredTransferJob*
 QObject* k_io__storedtransferjob_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param classname const char*
@@ -904,14 +904,14 @@ bool k_io__storedtransferjob_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KIO__StoredTransferJob*
 void k_io__storedtransferjob_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param thread QThread*
@@ -920,7 +920,7 @@ bool k_io__storedtransferjob_move_to_thread2(void* self, void* thread, void* par
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param interval int
@@ -929,7 +929,7 @@ int32_t k_io__storedtransferjob_start_timer22(void* self, int interval, int32_t 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -940,7 +940,7 @@ QMetaObject__Connection* k_io__storedtransferjob_connect5(void* sender, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param sender QObject*
@@ -951,7 +951,7 @@ QMetaObject__Connection* k_io__storedtransferjob_connect4(void* self, void* send
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param param1 QObject*
@@ -959,7 +959,7 @@ void k_io__storedtransferjob_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param callback void func(KIO__StoredTransferJob* self, QObject* param1)
@@ -967,7 +967,7 @@ void k_io__storedtransferjob_on_destroyed1(void* self, void (*callback)(void*, v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#finished)
+/// [Upstream resources](https://api.kde.org/kjob.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -977,7 +977,7 @@ void k_io__storedtransferjob_on_finished(void* self, void (*callback)(void*, voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspended)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -987,7 +987,7 @@ void k_io__storedtransferjob_on_suspended(void* self, void (*callback)(void*, vo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resumed)
+/// [Upstream resources](https://api.kde.org/kjob.html#resumed)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -997,7 +997,7 @@ void k_io__storedtransferjob_on_resumed(void* self, void (*callback)(void*, void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#result)
+/// [Upstream resources](https://api.kde.org/kjob.html#result)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1007,7 +1007,7 @@ void k_io__storedtransferjob_on_result(void* self, void (*callback)(void*, void*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1017,7 +1017,7 @@ void k_io__storedtransferjob_on_total_amount_changed(void* self, void (*callback
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1027,7 +1027,7 @@ void k_io__storedtransferjob_on_processed_amount_changed(void* self, void (*call
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percentChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#percentChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1037,7 +1037,7 @@ void k_io__storedtransferjob_on_percent_changed(void* self, void (*callback)(voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1052,14 +1052,14 @@ void k_io__storedtransferjob_delete(void* self);
 
 /// https://api.kde.org/kio.html
 
-/// [Qt documentation](https://api.kde.org/kio.html#storedGet)
+/// [Upstream resources](https://api.kde.org/kio.html#storedGet)
 ///
 /// @param param1 QUrl*
 /// @param param2 enum KIO__LoadType
 /// @param param3 flag of enum KIO__JobFlag
 KIO__StoredTransferJob* k_io_stored_get(void* param1, int32_t param2, int32_t param3);
 
-/// [Qt documentation](https://api.kde.org/kio.html#storedPut)
+/// [Upstream resources](https://api.kde.org/kio.html#storedPut)
 ///
 /// @param param1 QIODevice*
 /// @param param2 QUrl*
@@ -1067,7 +1067,7 @@ KIO__StoredTransferJob* k_io_stored_get(void* param1, int32_t param2, int32_t pa
 /// @param param4 flag of enum KIO__JobFlag
 KIO__StoredTransferJob* k_io_stored_put(void* param1, void* param2, int param3, int32_t param4);
 
-/// [Qt documentation](https://api.kde.org/kio.html#storedPut)
+/// [Upstream resources](https://api.kde.org/kio.html#storedPut)
 ///
 /// @param param1 const char*
 /// @param param2 QUrl*
@@ -1075,14 +1075,14 @@ KIO__StoredTransferJob* k_io_stored_put(void* param1, void* param2, int param3, 
 /// @param param4 flag of enum KIO__JobFlag
 KIO__StoredTransferJob* k_io_stored_put2(const char* param1, void* param2, int param3, int32_t param4);
 
-/// [Qt documentation](https://api.kde.org/kio.html#storedHttpPost)
+/// [Upstream resources](https://api.kde.org/kio.html#storedHttpPost)
 ///
 /// @param param1 const char*
 /// @param param2 QUrl*
 /// @param param3 flag of enum KIO__JobFlag
 KIO__StoredTransferJob* k_io_stored_http_post(const char* param1, void* param2, int32_t param3);
 
-/// [Qt documentation](https://api.kde.org/kio.html#storedHttpPost)
+/// [Upstream resources](https://api.kde.org/kio.html#storedHttpPost)
 ///
 /// @param param1 QIODevice*
 /// @param param2 QUrl*

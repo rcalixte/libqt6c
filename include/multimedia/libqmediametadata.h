@@ -22,49 +22,49 @@ QMediaMetaData* q_mediametadata_new(void* param1);
 ///
 QMediaMetaData* q_mediametadata_new2();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#value)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#value)
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
 QVariant* q_mediametadata_value(void* self, int32_t k);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#insert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#insert)
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
 /// @param value QVariant*
 void q_mediametadata_insert(void* self, int32_t k, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#remove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#remove)
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
 void q_mediametadata_remove(void* self, int32_t k);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#keys)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#keys)
 ///
 /// @param self QMediaMetaData*
 ///
 /// @return libqt_list of enum QMediaMetaData__Key
 libqt_list /* of int32_t */ q_mediametadata_keys(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#operator-5b-5d)
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
 QVariant* q_mediametadata_operator_subscript(void* self, int32_t k);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#clear)
 ///
 /// @param self QMediaMetaData*
 void q_mediametadata_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#isEmpty)
 ///
 /// @param self QMediaMetaData*
 bool q_mediametadata_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#stringValue)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#stringValue)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -72,14 +72,14 @@ bool q_mediametadata_is_empty(void* self);
 /// @param k enum QMediaMetaData__Key
 const char* q_mediametadata_string_value(void* self, int32_t k);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#metaDataKeyToString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#metaDataKeyToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param k enum QMediaMetaData__Key
 const char* q_mediametadata_meta_data_key_to_string(int32_t k);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#dtor.QMediaMetaData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#dtor.QMediaMetaData)
 ///
 /// Delete this object from C++ memory.
 ///

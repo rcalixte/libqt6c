@@ -13,12 +13,12 @@
 
 /// https://api.kde.org/kpassword.html
 
-/// [Qt documentation](https://api.kde.org/kpassword.html#qt_getEnumMetaObject)
+/// [Upstream resources](https://api.kde.org/kpassword.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum KPassword__RevealMode
 const QMetaObject* k_password_get_enum_meta_object(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/kpassword.html#qt_getEnumName)
+/// [Upstream resources](https://api.kde.org/kpassword.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

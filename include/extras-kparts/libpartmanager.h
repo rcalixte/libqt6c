@@ -24,7 +24,7 @@ KParts__PartManager* k_parts__partmanager_new(void* parent);
 /// @param parent QObject*
 KParts__PartManager* k_parts__partmanager_new2(void* topLevel, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KParts__PartManager*
 const QMetaObject* k_parts__partmanager_meta_object(void* self);
@@ -53,67 +53,67 @@ void k_parts__partmanager_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_parts__partmanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_parts__partmanager_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setSelectionPolicy)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setSelectionPolicy)
 ///
 /// @param self KParts__PartManager*
 /// @param policy enum KParts__PartManager__SelectionPolicy
 void k_parts__partmanager_set_selection_policy(void* self, int32_t policy);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#selectionPolicy)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#selectionPolicy)
 ///
 /// @param self KParts__PartManager*
 ///
 /// @return enum KParts__PartManager__SelectionPolicy
 int32_t k_parts__partmanager_selection_policy(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setAllowNestedParts)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setAllowNestedParts)
 ///
 /// @param self KParts__PartManager*
 /// @param allow bool
 void k_parts__partmanager_set_allow_nested_parts(void* self, bool allow);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#allowNestedParts)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#allowNestedParts)
 ///
 /// @param self KParts__PartManager*
 bool k_parts__partmanager_allow_nested_parts(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setIgnoreScrollBars)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setIgnoreScrollBars)
 ///
 /// @param self KParts__PartManager*
 /// @param ignore bool
 void k_parts__partmanager_set_ignore_scroll_bars(void* self, bool ignore);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#ignoreScrollBars)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#ignoreScrollBars)
 ///
 /// @param self KParts__PartManager*
 bool k_parts__partmanager_ignore_scroll_bars(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setActivationButtonMask)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setActivationButtonMask)
 ///
 /// @param self KParts__PartManager*
 /// @param buttonMask short
 void k_parts__partmanager_set_activation_button_mask(void* self, short buttonMask);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activationButtonMask)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activationButtonMask)
 ///
 /// @param self KParts__PartManager*
 short k_parts__partmanager_activation_button_mask(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#eventFilter)
 ///
 /// @param self KParts__PartManager*
 /// @param obj QObject*
 /// @param ev QEvent*
 bool k_parts__partmanager_event_filter(void* self, void* obj, void* ev);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -121,7 +121,7 @@ bool k_parts__partmanager_event_filter(void* self, void* obj, void* ev);
 /// @param callback bool func(KParts__PartManager* self, QObject* obj, QEvent* ev)
 void k_parts__partmanager_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#eventFilter)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -130,14 +130,14 @@ void k_parts__partmanager_on_event_filter(void* self, bool (*callback)(void*, vo
 /// @param ev QEvent*
 bool k_parts__partmanager_qbase_event_filter(void* self, void* obj, void* ev);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#addPart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#addPart)
 ///
 /// @param self KParts__PartManager*
 /// @param part KParts__Part*
 /// @param setActive bool
 void k_parts__partmanager_add_part(void* self, void* part, bool setActive);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#addPart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#addPart)
 ///
 /// Allows for overriding the related default method
 ///
@@ -145,7 +145,7 @@ void k_parts__partmanager_add_part(void* self, void* part, bool setActive);
 /// @param callback void func(KParts__PartManager* self, KParts__Part* part, bool setActive)
 void k_parts__partmanager_on_add_part(void* self, void (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#addPart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#addPart)
 ///
 /// Base class method implementation
 ///
@@ -154,13 +154,13 @@ void k_parts__partmanager_on_add_part(void* self, void (*callback)(void*, void*,
 /// @param setActive bool
 void k_parts__partmanager_qbase_add_part(void* self, void* part, bool setActive);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#removePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#removePart)
 ///
 /// @param self KParts__PartManager*
 /// @param part KParts__Part*
 void k_parts__partmanager_remove_part(void* self, void* part);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#removePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#removePart)
 ///
 /// Allows for overriding the related default method
 ///
@@ -168,7 +168,7 @@ void k_parts__partmanager_remove_part(void* self, void* part);
 /// @param callback void func(KParts__PartManager* self, KParts__Part* part)
 void k_parts__partmanager_on_remove_part(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#removePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#removePart)
 ///
 /// Base class method implementation
 ///
@@ -176,7 +176,7 @@ void k_parts__partmanager_on_remove_part(void* self, void (*callback)(void*, voi
 /// @param part KParts__Part*
 void k_parts__partmanager_qbase_remove_part(void* self, void* part);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#replacePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#replacePart)
 ///
 /// @param self KParts__PartManager*
 /// @param oldPart KParts__Part*
@@ -184,7 +184,7 @@ void k_parts__partmanager_qbase_remove_part(void* self, void* part);
 /// @param setActive bool
 void k_parts__partmanager_replace_part(void* self, void* oldPart, void* newPart, bool setActive);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#replacePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#replacePart)
 ///
 /// Allows for overriding the related default method
 ///
@@ -192,7 +192,7 @@ void k_parts__partmanager_replace_part(void* self, void* oldPart, void* newPart,
 /// @param callback void func(KParts__PartManager* self, KParts__Part* oldPart, KParts__Part* newPart, bool setActive)
 void k_parts__partmanager_on_replace_part(void* self, void (*callback)(void*, void*, void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#replacePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#replacePart)
 ///
 /// Base class method implementation
 ///
@@ -202,14 +202,14 @@ void k_parts__partmanager_on_replace_part(void* self, void (*callback)(void*, vo
 /// @param setActive bool
 void k_parts__partmanager_qbase_replace_part(void* self, void* oldPart, void* newPart, bool setActive);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setActivePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setActivePart)
 ///
 /// @param self KParts__PartManager*
 /// @param part KParts__Part*
 /// @param widget QWidget*
 void k_parts__partmanager_set_active_part(void* self, void* part, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setActivePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setActivePart)
 ///
 /// Allows for overriding the related default method
 ///
@@ -217,7 +217,7 @@ void k_parts__partmanager_set_active_part(void* self, void* part, void* widget);
 /// @param callback void func(KParts__PartManager* self, KParts__Part* part, QWidget* widget)
 void k_parts__partmanager_on_set_active_part(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setActivePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setActivePart)
 ///
 /// Base class method implementation
 ///
@@ -226,12 +226,12 @@ void k_parts__partmanager_on_set_active_part(void* self, void (*callback)(void*,
 /// @param widget QWidget*
 void k_parts__partmanager_qbase_set_active_part(void* self, void* part, void* widget);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activePart)
 ///
 /// @param self KParts__PartManager*
 KParts__Part* k_parts__partmanager_active_part(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activePart)
 ///
 /// Allows for overriding the related default method
 ///
@@ -239,19 +239,19 @@ KParts__Part* k_parts__partmanager_active_part(void* self);
 /// @param callback KParts__Part* func()
 void k_parts__partmanager_on_active_part(void* self, KParts__Part* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activePart)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activePart)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__PartManager*
 KParts__Part* k_parts__partmanager_qbase_active_part(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activeWidget)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activeWidget)
 ///
 /// @param self KParts__PartManager*
 QWidget* k_parts__partmanager_active_widget(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activeWidget)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activeWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -259,78 +259,78 @@ QWidget* k_parts__partmanager_active_widget(void* self);
 /// @param callback QWidget* func()
 void k_parts__partmanager_on_active_widget(void* self, QWidget* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activeWidget)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activeWidget)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__PartManager*
 QWidget* k_parts__partmanager_qbase_active_widget(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#parts)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#parts)
 ///
 /// @param self KParts__PartManager*
 libqt_list /* of KParts__Part* */ k_parts__partmanager_parts(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#addManagedTopLevelWidget)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#addManagedTopLevelWidget)
 ///
 /// @param self KParts__PartManager*
 /// @param topLevel QWidget*
 void k_parts__partmanager_add_managed_top_level_widget(void* self, void* topLevel);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#removeManagedTopLevelWidget)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#removeManagedTopLevelWidget)
 ///
 /// @param self KParts__PartManager*
 /// @param topLevel QWidget*
 void k_parts__partmanager_remove_managed_top_level_widget(void* self, void* topLevel);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#reason)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#reason)
 ///
 /// @param self KParts__PartManager*
 int32_t k_parts__partmanager_reason(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#partAdded)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#partAdded)
 ///
 /// @param self KParts__PartManager*
 /// @param part KParts__Part*
 void k_parts__partmanager_part_added(void* self, void* part);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#partAdded)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#partAdded)
 ///
 /// @param self KParts__PartManager*
 /// @param callback void func(KParts__PartManager* self, KParts__Part* part)
 void k_parts__partmanager_on_part_added(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#partRemoved)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#partRemoved)
 ///
 /// @param self KParts__PartManager*
 /// @param part KParts__Part*
 void k_parts__partmanager_part_removed(void* self, void* part);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#partRemoved)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#partRemoved)
 ///
 /// @param self KParts__PartManager*
 /// @param callback void func(KParts__PartManager* self, KParts__Part* part)
 void k_parts__partmanager_on_part_removed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activePartChanged)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activePartChanged)
 ///
 /// @param self KParts__PartManager*
 /// @param newPart KParts__Part*
 void k_parts__partmanager_active_part_changed(void* self, void* newPart);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#activePartChanged)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activePartChanged)
 ///
 /// @param self KParts__PartManager*
 /// @param callback void func(KParts__PartManager* self, KParts__Part* newPart)
 void k_parts__partmanager_on_active_part_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setIgnoreExplictFocusRequests)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setIgnoreExplictFocusRequests)
 ///
 /// @param self KParts__PartManager*
 /// @param ignoreExplictFocusRequests bool
 void k_parts__partmanager_set_ignore_explict_focus_requests(void* self, bool ignoreExplictFocusRequests);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setIgnoreExplictFocusRequests)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setIgnoreExplictFocusRequests)
 ///
 /// Allows for overriding the related default method
 ///
@@ -338,7 +338,7 @@ void k_parts__partmanager_set_ignore_explict_focus_requests(void* self, bool ign
 /// @param callback void func(KParts__PartManager* self, bool ignoreExplictFocusRequests)
 void k_parts__partmanager_on_set_ignore_explict_focus_requests(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#setIgnoreExplictFocusRequests)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#setIgnoreExplictFocusRequests)
 ///
 /// Base class method implementation
 ///
@@ -346,12 +346,12 @@ void k_parts__partmanager_on_set_ignore_explict_focus_requests(void* self, void 
 /// @param ignoreExplictFocusRequests bool
 void k_parts__partmanager_qbase_set_ignore_explict_focus_requests(void* self, bool ignoreExplictFocusRequests);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotObjectDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotObjectDestroyed)
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_slot_object_destroyed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotObjectDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotObjectDestroyed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -359,19 +359,19 @@ void k_parts__partmanager_slot_object_destroyed(void* self);
 /// @param callback void func()
 void k_parts__partmanager_on_slot_object_destroyed(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotObjectDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotObjectDestroyed)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_qbase_slot_object_destroyed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotWidgetDestroyed)
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_slot_widget_destroyed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotWidgetDestroyed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -379,19 +379,19 @@ void k_parts__partmanager_slot_widget_destroyed(void* self);
 /// @param callback void func()
 void k_parts__partmanager_on_slot_widget_destroyed(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotWidgetDestroyed)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_qbase_slot_widget_destroyed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotManagedTopLevelWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotManagedTopLevelWidgetDestroyed)
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_slot_managed_top_level_widget_destroyed(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotManagedTopLevelWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotManagedTopLevelWidgetDestroyed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -399,14 +399,14 @@ void k_parts__partmanager_slot_managed_top_level_widget_destroyed(void* self);
 /// @param callback void func()
 void k_parts__partmanager_on_slot_managed_top_level_widget_destroyed(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-partmanager.html#slotManagedTopLevelWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-partmanager.html#slotManagedTopLevelWidgetDestroyed)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_qbase_slot_managed_top_level_widget_destroyed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -414,7 +414,7 @@ void k_parts__partmanager_qbase_slot_managed_top_level_widget_destroyed(void* se
 /// @param c const char*
 const char* k_parts__partmanager_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -425,7 +425,7 @@ const char* k_parts__partmanager_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -434,7 +434,7 @@ const char* k_parts__partmanager_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KParts__PartManager*
 /// @param name char*
@@ -442,35 +442,35 @@ void k_parts__partmanager_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KParts__PartManager*
 bool k_parts__partmanager_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KParts__PartManager*
 bool k_parts__partmanager_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KParts__PartManager*
 bool k_parts__partmanager_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KParts__PartManager*
 bool k_parts__partmanager_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KParts__PartManager*
 /// @param b bool
@@ -478,14 +478,14 @@ bool k_parts__partmanager_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KParts__PartManager*
 QThread* k_parts__partmanager_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KParts__PartManager*
 /// @param thread QThread*
@@ -493,7 +493,7 @@ bool k_parts__partmanager_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KParts__PartManager*
 /// @param interval int
@@ -501,7 +501,7 @@ int32_t k_parts__partmanager_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KParts__PartManager*
 /// @param id int
@@ -509,7 +509,7 @@ void k_parts__partmanager_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KParts__PartManager*
 /// @param id enum Qt__TimerId
@@ -517,14 +517,14 @@ void k_parts__partmanager_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KParts__PartManager*
 libqt_list /* of QObject* */ k_parts__partmanager_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KParts__PartManager*
 /// @param parent QObject*
@@ -532,7 +532,7 @@ void k_parts__partmanager_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KParts__PartManager*
 /// @param filterObj QObject*
@@ -540,7 +540,7 @@ void k_parts__partmanager_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KParts__PartManager*
 /// @param obj QObject*
@@ -548,7 +548,7 @@ void k_parts__partmanager_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -558,7 +558,7 @@ QMetaObject__Connection* k_parts__partmanager_connect(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KParts__PartManager*
 /// @param sender QObject*
@@ -568,7 +568,7 @@ QMetaObject__Connection* k_parts__partmanager_connect2(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -578,28 +578,28 @@ bool k_parts__partmanager_disconnect(void* sender, void* signal, void* receiver,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_parts__partmanager_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KParts__PartManager*
 /// @param name const char*
@@ -608,7 +608,7 @@ bool k_parts__partmanager_set_property(void* self, const char* name, void* value
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KParts__PartManager*
 /// @param name const char*
@@ -616,7 +616,7 @@ QVariant* k_parts__partmanager_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -625,28 +625,28 @@ const char** k_parts__partmanager_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__PartManager*
 QBindingStorage* k_parts__partmanager_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__PartManager*
 const QBindingStorage* k_parts__partmanager_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__PartManager*
 /// @param callback void func(KParts__PartManager* self)
@@ -654,14 +654,14 @@ void k_parts__partmanager_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KParts__PartManager*
 QObject* k_parts__partmanager_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KParts__PartManager*
 /// @param classname const char*
@@ -669,14 +669,14 @@ bool k_parts__partmanager_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KParts__PartManager*
 void k_parts__partmanager_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KParts__PartManager*
 /// @param thread QThread*
@@ -685,7 +685,7 @@ bool k_parts__partmanager_move_to_thread2(void* self, void* thread, void* param2
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KParts__PartManager*
 /// @param interval int
@@ -694,7 +694,7 @@ int32_t k_parts__partmanager_start_timer22(void* self, int interval, int32_t tim
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -705,7 +705,7 @@ QMetaObject__Connection* k_parts__partmanager_connect5(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KParts__PartManager*
 /// @param sender QObject*
@@ -716,7 +716,7 @@ QMetaObject__Connection* k_parts__partmanager_connect4(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__PartManager*
 /// @param param1 QObject*
@@ -724,7 +724,7 @@ void k_parts__partmanager_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__PartManager*
 /// @param callback void func(KParts__PartManager* self, QObject* param1)
@@ -732,7 +732,7 @@ void k_parts__partmanager_on_destroyed1(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -742,7 +742,7 @@ bool k_parts__partmanager_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -752,7 +752,7 @@ bool k_parts__partmanager_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -762,7 +762,7 @@ void k_parts__partmanager_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -772,7 +772,7 @@ void k_parts__partmanager_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -782,7 +782,7 @@ void k_parts__partmanager_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -792,7 +792,7 @@ void k_parts__partmanager_on_timer_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -802,7 +802,7 @@ void k_parts__partmanager_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -812,7 +812,7 @@ void k_parts__partmanager_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -822,7 +822,7 @@ void k_parts__partmanager_on_child_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -832,7 +832,7 @@ void k_parts__partmanager_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -842,7 +842,7 @@ void k_parts__partmanager_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -852,7 +852,7 @@ void k_parts__partmanager_on_custom_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -862,7 +862,7 @@ void k_parts__partmanager_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -872,7 +872,7 @@ void k_parts__partmanager_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -882,7 +882,7 @@ void k_parts__partmanager_on_connect_notify(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -892,7 +892,7 @@ void k_parts__partmanager_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -902,7 +902,7 @@ void k_parts__partmanager_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -912,7 +912,7 @@ void k_parts__partmanager_on_disconnect_notify(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -921,7 +921,7 @@ QObject* k_parts__partmanager_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -930,7 +930,7 @@ QObject* k_parts__partmanager_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -940,7 +940,7 @@ void k_parts__partmanager_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -949,7 +949,7 @@ int32_t k_parts__partmanager_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -958,7 +958,7 @@ int32_t k_parts__partmanager_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -968,7 +968,7 @@ void k_parts__partmanager_on_sender_signal_index(void* self, int32_t (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -978,7 +978,7 @@ int32_t k_parts__partmanager_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -988,7 +988,7 @@ int32_t k_parts__partmanager_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -998,7 +998,7 @@ void k_parts__partmanager_on_receivers(void* self, int32_t (*callback)(void*, co
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1008,7 +1008,7 @@ bool k_parts__partmanager_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1018,7 +1018,7 @@ bool k_parts__partmanager_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1028,7 +1028,7 @@ void k_parts__partmanager_on_is_signal_connected(void* self, bool (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

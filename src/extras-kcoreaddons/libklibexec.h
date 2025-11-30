@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/klibexec.html
 
-/// [Qt documentation](https://api.kde.org/klibexec.html#pathFromAddress)
+/// [Upstream resources](https://api.kde.org/klibexec.html#pathFromAddress)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -21,21 +21,21 @@
 /// @param param2 void*
 const char* k_libexec_path_from_address(const char* param1, void* param2);
 
-/// [Qt documentation](https://api.kde.org/klibexec.html#pathCandidates)
+/// [Upstream resources](https://api.kde.org/klibexec.html#pathCandidates)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char** k_libexec_path_candidates(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/klibexec.html#path)
+/// [Upstream resources](https://api.kde.org/klibexec.html#path)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_libexec_path(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/klibexec.html#kdeFrameworksPaths)
+/// [Upstream resources](https://api.kde.org/klibexec.html#kdeFrameworksPaths)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

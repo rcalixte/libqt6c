@@ -75,146 +75,146 @@ void q_vector2d_copy_assign(void* self, void* other);
 /// @param other QVector2D*
 void q_vector2d_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#isNull)
 ///
 /// @param self QVector2D*
 bool q_vector2d_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#x)
 ///
 /// @param self QVector2D*
 float q_vector2d_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#y)
 ///
 /// @param self QVector2D*
 float q_vector2d_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#setX)
 ///
 /// @param self QVector2D*
 /// @param x float
 void q_vector2d_set_x(void* self, float x);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#setY)
 ///
 /// @param self QVector2D*
 /// @param y float
 void q_vector2d_set_y(void* self, float y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-5b-5d)
 ///
 /// @param self QVector2D*
 /// @param i int
 float* q_vector2d_operator_subscript(void* self, int i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-5b-5d)
 ///
 /// @param self QVector2D*
 /// @param i int
 float q_vector2d_operator_subscript2(void* self, int i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#length)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#length)
 ///
 /// @param self QVector2D*
 float q_vector2d_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#lengthSquared)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#lengthSquared)
 ///
 /// @param self QVector2D*
 float q_vector2d_length_squared(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#normalized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#normalized)
 ///
 /// @param self QVector2D*
 QVector2D* q_vector2d_normalized(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#normalize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#normalize)
 ///
 /// @param self QVector2D*
 void q_vector2d_normalize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#distanceToPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#distanceToPoint)
 ///
 /// @param self QVector2D*
 /// @param point QVector2D*
 float q_vector2d_distance_to_point(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#distanceToLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#distanceToLine)
 ///
 /// @param self QVector2D*
 /// @param point QVector2D*
 /// @param direction QVector2D*
 float q_vector2d_distance_to_line(void* self, void* point, void* direction);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-2b-eq)
 ///
 /// @param self QVector2D*
 /// @param vector QVector2D*
 QVector2D* q_vector2d_operator_plus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator--eq)
 ///
 /// @param self QVector2D*
 /// @param vector QVector2D*
 QVector2D* q_vector2d_operator_minus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-2a-eq)
 ///
 /// @param self QVector2D*
 /// @param factor float
 QVector2D* q_vector2d_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-2a-eq)
 ///
 /// @param self QVector2D*
 /// @param vector QVector2D*
 QVector2D* q_vector2d_operator_multiply_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-2f-eq)
 ///
 /// @param self QVector2D*
 /// @param divisor float
 QVector2D* q_vector2d_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-2f-eq)
 ///
 /// @param self QVector2D*
 /// @param vector QVector2D*
 QVector2D* q_vector2d_operator_divide_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#dotProduct)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#dotProduct)
 ///
 /// @param v1 QVector2D*
 /// @param v2 QVector2D*
 float q_vector2d_dot_product(void* v1, void* v2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#toVector3D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#toVector3D)
 ///
 /// @param self QVector2D*
 QVector3D* q_vector2d_to_vector3_d(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#toVector4D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#toVector4D)
 ///
 /// @param self QVector2D*
 QVector4D* q_vector2d_to_vector4_d(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#toPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#toPoint)
 ///
 /// @param self QVector2D*
 QPoint* q_vector2d_to_point(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#toPointF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#toPointF)
 ///
 /// @param self QVector2D*
 QPointF* q_vector2d_to_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator)
 ///
 /// @param self QVector2D*
 QVariant* q_vector2d_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#dtor.QVector2D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#dtor.QVector2D)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -292,138 +292,138 @@ void q_vector3d_copy_assign(void* self, void* other);
 /// @param other QVector3D*
 void q_vector3d_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#isNull)
 ///
 /// @param self QVector3D*
 bool q_vector3d_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#x)
 ///
 /// @param self QVector3D*
 float q_vector3d_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#y)
 ///
 /// @param self QVector3D*
 float q_vector3d_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#z)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#z)
 ///
 /// @param self QVector3D*
 float q_vector3d_z(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#setX)
 ///
 /// @param self QVector3D*
 /// @param x float
 void q_vector3d_set_x(void* self, float x);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#setY)
 ///
 /// @param self QVector3D*
 /// @param y float
 void q_vector3d_set_y(void* self, float y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#setZ)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#setZ)
 ///
 /// @param self QVector3D*
 /// @param z float
 void q_vector3d_set_z(void* self, float z);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-5b-5d)
 ///
 /// @param self QVector3D*
 /// @param i int
 float* q_vector3d_operator_subscript(void* self, int i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-5b-5d)
 ///
 /// @param self QVector3D*
 /// @param i int
 float q_vector3d_operator_subscript2(void* self, int i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#length)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#length)
 ///
 /// @param self QVector3D*
 float q_vector3d_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#lengthSquared)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#lengthSquared)
 ///
 /// @param self QVector3D*
 float q_vector3d_length_squared(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#normalized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#normalized)
 ///
 /// @param self QVector3D*
 QVector3D* q_vector3d_normalized(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#normalize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#normalize)
 ///
 /// @param self QVector3D*
 void q_vector3d_normalize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-2b-eq)
 ///
 /// @param self QVector3D*
 /// @param vector QVector3D*
 QVector3D* q_vector3d_operator_plus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator--eq)
 ///
 /// @param self QVector3D*
 /// @param vector QVector3D*
 QVector3D* q_vector3d_operator_minus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-2a-eq)
 ///
 /// @param self QVector3D*
 /// @param factor float
 QVector3D* q_vector3d_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-2a-eq)
 ///
 /// @param self QVector3D*
 /// @param vector QVector3D*
 QVector3D* q_vector3d_operator_multiply_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-2f-eq)
 ///
 /// @param self QVector3D*
 /// @param divisor float
 QVector3D* q_vector3d_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-2f-eq)
 ///
 /// @param self QVector3D*
 /// @param vector QVector3D*
 QVector3D* q_vector3d_operator_divide_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#dotProduct)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#dotProduct)
 ///
 /// @param v1 QVector3D*
 /// @param v2 QVector3D*
 float q_vector3d_dot_product(void* v1, void* v2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#crossProduct)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#crossProduct)
 ///
 /// @param v1 QVector3D*
 /// @param v2 QVector3D*
 QVector3D* q_vector3d_cross_product(void* v1, void* v2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#normal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#normal)
 ///
 /// @param v1 QVector3D*
 /// @param v2 QVector3D*
 QVector3D* q_vector3d_normal(void* v1, void* v2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#normal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#normal)
 ///
 /// @param v1 QVector3D*
 /// @param v2 QVector3D*
 /// @param v3 QVector3D*
 QVector3D* q_vector3d_normal2(void* v1, void* v2, void* v3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#project)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#project)
 ///
 /// @param self QVector3D*
 /// @param modelView QMatrix4x4*
@@ -431,7 +431,7 @@ QVector3D* q_vector3d_normal2(void* v1, void* v2, void* v3);
 /// @param viewport QRect*
 QVector3D* q_vector3d_project(void* self, void* modelView, void* projection, void* viewport);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#unproject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#unproject)
 ///
 /// @param self QVector3D*
 /// @param modelView QMatrix4x4*
@@ -439,20 +439,20 @@ QVector3D* q_vector3d_project(void* self, void* modelView, void* projection, voi
 /// @param viewport QRect*
 QVector3D* q_vector3d_unproject(void* self, void* modelView, void* projection, void* viewport);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#distanceToPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#distanceToPoint)
 ///
 /// @param self QVector3D*
 /// @param point QVector3D*
 float q_vector3d_distance_to_point(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#distanceToPlane)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#distanceToPlane)
 ///
 /// @param self QVector3D*
 /// @param plane QVector3D*
 /// @param normal QVector3D*
 float q_vector3d_distance_to_plane(void* self, void* plane, void* normal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#distanceToPlane)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#distanceToPlane)
 ///
 /// @param self QVector3D*
 /// @param plane1 QVector3D*
@@ -460,39 +460,39 @@ float q_vector3d_distance_to_plane(void* self, void* plane, void* normal);
 /// @param plane3 QVector3D*
 float q_vector3d_distance_to_plane2(void* self, void* plane1, void* plane2, void* plane3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#distanceToLine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#distanceToLine)
 ///
 /// @param self QVector3D*
 /// @param point QVector3D*
 /// @param direction QVector3D*
 float q_vector3d_distance_to_line(void* self, void* point, void* direction);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#toVector2D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#toVector2D)
 ///
 /// @param self QVector3D*
 QVector2D* q_vector3d_to_vector2_d(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#toVector4D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#toVector4D)
 ///
 /// @param self QVector3D*
 QVector4D* q_vector3d_to_vector4_d(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#toPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#toPoint)
 ///
 /// @param self QVector3D*
 QPoint* q_vector3d_to_point(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#toPointF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#toPointF)
 ///
 /// @param self QVector3D*
 QPointF* q_vector3d_to_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator)
 ///
 /// @param self QVector3D*
 QVariant* q_vector3d_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#dtor.QVector3D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#dtor.QVector3D)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -578,165 +578,165 @@ void q_vector4d_copy_assign(void* self, void* other);
 /// @param other QVector4D*
 void q_vector4d_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#isNull)
 ///
 /// @param self QVector4D*
 bool q_vector4d_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#x)
 ///
 /// @param self QVector4D*
 float q_vector4d_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#y)
 ///
 /// @param self QVector4D*
 float q_vector4d_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#z)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#z)
 ///
 /// @param self QVector4D*
 float q_vector4d_z(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#w)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#w)
 ///
 /// @param self QVector4D*
 float q_vector4d_w(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#setX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#setX)
 ///
 /// @param self QVector4D*
 /// @param x float
 void q_vector4d_set_x(void* self, float x);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#setY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#setY)
 ///
 /// @param self QVector4D*
 /// @param y float
 void q_vector4d_set_y(void* self, float y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#setZ)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#setZ)
 ///
 /// @param self QVector4D*
 /// @param z float
 void q_vector4d_set_z(void* self, float z);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#setW)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#setW)
 ///
 /// @param self QVector4D*
 /// @param w float
 void q_vector4d_set_w(void* self, float w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-5b-5d)
 ///
 /// @param self QVector4D*
 /// @param i int
 float* q_vector4d_operator_subscript(void* self, int i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-5b-5d)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-5b-5d)
 ///
 /// @param self QVector4D*
 /// @param i int
 float q_vector4d_operator_subscript2(void* self, int i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#length)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#length)
 ///
 /// @param self QVector4D*
 float q_vector4d_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#lengthSquared)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#lengthSquared)
 ///
 /// @param self QVector4D*
 float q_vector4d_length_squared(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#normalized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#normalized)
 ///
 /// @param self QVector4D*
 QVector4D* q_vector4d_normalized(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#normalize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#normalize)
 ///
 /// @param self QVector4D*
 void q_vector4d_normalize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-2b-eq)
 ///
 /// @param self QVector4D*
 /// @param vector QVector4D*
 QVector4D* q_vector4d_operator_plus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator--eq)
 ///
 /// @param self QVector4D*
 /// @param vector QVector4D*
 QVector4D* q_vector4d_operator_minus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-2a-eq)
 ///
 /// @param self QVector4D*
 /// @param factor float
 QVector4D* q_vector4d_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-2a-eq)
 ///
 /// @param self QVector4D*
 /// @param vector QVector4D*
 QVector4D* q_vector4d_operator_multiply_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-2f-eq)
 ///
 /// @param self QVector4D*
 /// @param divisor float
 QVector4D* q_vector4d_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-2f-eq)
 ///
 /// @param self QVector4D*
 /// @param vector QVector4D*
 QVector4D* q_vector4d_operator_divide_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#dotProduct)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#dotProduct)
 ///
 /// @param v1 QVector4D*
 /// @param v2 QVector4D*
 float q_vector4d_dot_product(void* v1, void* v2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#toVector2D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#toVector2D)
 ///
 /// @param self QVector4D*
 QVector2D* q_vector4d_to_vector2_d(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#toVector2DAffine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#toVector2DAffine)
 ///
 /// @param self QVector4D*
 QVector2D* q_vector4d_to_vector2_d_affine(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#toVector3D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#toVector3D)
 ///
 /// @param self QVector4D*
 QVector3D* q_vector4d_to_vector3_d(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#toVector3DAffine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#toVector3DAffine)
 ///
 /// @param self QVector4D*
 QVector3D* q_vector4d_to_vector3_d_affine(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#toPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#toPoint)
 ///
 /// @param self QVector4D*
 QPoint* q_vector4d_to_point(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#toPointF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#toPointF)
 ///
 /// @param self QVector4D*
 QPointF* q_vector4d_to_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator)
 ///
 /// @param self QVector4D*
 QVariant* q_vector4d_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#dtor.QVector4D)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#dtor.QVector4D)
 ///
 /// Delete this object from C++ memory.
 ///

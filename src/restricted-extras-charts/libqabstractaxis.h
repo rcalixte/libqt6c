@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QAbstractAxis*
 const QMetaObject* q_abstractaxis_meta_object(void* self);
@@ -28,694 +28,694 @@ void* q_abstractaxis_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_abstractaxis_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_abstractaxis_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#type)
 ///
 /// @param self QAbstractAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
 int32_t q_abstractaxis_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isVisible)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setVisible)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#show)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_show(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#hide)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_hide(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isLineVisible)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLineVisible)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLinePen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLinePen)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_set_line_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePen)
 ///
 /// @param self QAbstractAxis*
 QPen* q_abstractaxis_line_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLinePenColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLinePenColor)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_set_line_pen_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenColor)
 ///
 /// @param self QAbstractAxis*
 QColor* q_abstractaxis_line_pen_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isGridLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isGridLineVisible)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_grid_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLineVisible)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_grid_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLinePen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLinePen)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_set_grid_line_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePen)
 ///
 /// @param self QAbstractAxis*
 QPen* q_abstractaxis_grid_line_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isMinorGridLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isMinorGridLineVisible)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_minor_grid_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLineVisible)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_minor_grid_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLinePen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLinePen)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_set_minor_grid_line_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePen)
 ///
 /// @param self QAbstractAxis*
 QPen* q_abstractaxis_minor_grid_line_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLineColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLineColor)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_set_grid_line_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColor)
 ///
 /// @param self QAbstractAxis*
 QColor* q_abstractaxis_grid_line_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLineColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLineColor)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_set_minor_grid_line_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColor)
 ///
 /// @param self QAbstractAxis*
 QColor* q_abstractaxis_minor_grid_line_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisible)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_labels_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsVisible)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_labels_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsBrush)
 ///
 /// @param self QAbstractAxis*
 /// @param brush QBrush*
 void q_abstractaxis_set_labels_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrush)
 ///
 /// @param self QAbstractAxis*
 QBrush* q_abstractaxis_labels_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsFont)
 ///
 /// @param self QAbstractAxis*
 /// @param font QFont*
 void q_abstractaxis_set_labels_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFont)
 ///
 /// @param self QAbstractAxis*
 QFont* q_abstractaxis_labels_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsAngle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsAngle)
 ///
 /// @param self QAbstractAxis*
 /// @param angle int
 void q_abstractaxis_set_labels_angle(void* self, int angle);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngle)
 ///
 /// @param self QAbstractAxis*
 int32_t q_abstractaxis_labels_angle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsColor)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_set_labels_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColor)
 ///
 /// @param self QAbstractAxis*
 QColor* q_abstractaxis_labels_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isTitleVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isTitleVisible)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_title_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleVisible)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_title_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleBrush)
 ///
 /// @param self QAbstractAxis*
 /// @param brush QBrush*
 void q_abstractaxis_set_title_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrush)
 ///
 /// @param self QAbstractAxis*
 QBrush* q_abstractaxis_title_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleFont)
 ///
 /// @param self QAbstractAxis*
 /// @param font QFont*
 void q_abstractaxis_set_title_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFont)
 ///
 /// @param self QAbstractAxis*
 QFont* q_abstractaxis_title_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleText)
 ///
 /// @param self QAbstractAxis*
 /// @param title const char*
 void q_abstractaxis_set_title_text(void* self, const char* title);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractAxis*
 const char* q_abstractaxis_title_text(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisible)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_shades_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesVisible)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_shades_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesPen)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_set_shades_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPen)
 ///
 /// @param self QAbstractAxis*
 QPen* q_abstractaxis_shades_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesBrush)
 ///
 /// @param self QAbstractAxis*
 /// @param brush QBrush*
 void q_abstractaxis_set_shades_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrush)
 ///
 /// @param self QAbstractAxis*
 QBrush* q_abstractaxis_shades_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesColor)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_set_shades_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColor)
 ///
 /// @param self QAbstractAxis*
 QColor* q_abstractaxis_shades_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesBorderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesBorderColor)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_set_shades_border_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColor)
 ///
 /// @param self QAbstractAxis*
 QColor* q_abstractaxis_shades_border_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#orientation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#orientation)
 ///
 /// @param self QAbstractAxis*
 ///
 /// @return enum Qt__Orientation
 int32_t q_abstractaxis_orientation(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#alignment)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#alignment)
 ///
 /// @param self QAbstractAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 int32_t q_abstractaxis_alignment(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMin)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMin)
 ///
 /// @param self QAbstractAxis*
 /// @param min QVariant*
 void q_abstractaxis_set_min(void* self, void* min);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMax)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMax)
 ///
 /// @param self QAbstractAxis*
 /// @param max QVariant*
 void q_abstractaxis_set_max(void* self, void* max);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setRange)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setRange)
 ///
 /// @param self QAbstractAxis*
 /// @param min QVariant*
 /// @param max QVariant*
 void q_abstractaxis_set_range(void* self, void* min, void* max);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setReverse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setReverse)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_reverse(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isReverse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#isReverse)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_reverse(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsEditable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsEditable)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_labels_editable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditable)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_labels_editable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncated)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_labels_truncated(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTruncateLabels)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTruncateLabels)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_set_truncate_labels(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabels)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabels)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_truncate_labels(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#visibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_visible_changed(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#visibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_line_pen_changed(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#lineVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#lineVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_line_visible_changed(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#lineVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#lineVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_labels_visible_changed(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrushChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param brush QBrush*
 void q_abstractaxis_labels_brush_changed(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrushChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QBrush* brush)
 void q_abstractaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFontChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QFont*
 void q_abstractaxis_labels_font_changed(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFontChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QFont* pen)
 void q_abstractaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param angle int
 void q_abstractaxis_labels_angle_changed(void* self, int angle);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, int angle)
 void q_abstractaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_grid_line_pen_changed(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_grid_visible_changed(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_minor_grid_visible_changed(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_minor_grid_line_pen_changed(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_grid_line_color_changed(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_minor_grid_line_color_changed(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#colorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#colorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_color_changed(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#colorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#colorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_labels_color_changed(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleTextChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param title const char*
 void q_abstractaxis_title_text_changed(void* self, const char* title);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleTextChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, const char* title)
 void q_abstractaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrushChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param brush QBrush*
 void q_abstractaxis_title_brush_changed(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrushChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QBrush* brush)
 void q_abstractaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_title_visible_changed(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFontChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param font QFont*
 void q_abstractaxis_title_font_changed(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFontChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QFont* font)
 void q_abstractaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_shades_visible_changed(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisibleChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_shades_color_changed(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param color QColor*
 void q_abstractaxis_shades_border_color_changed(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColorChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColorChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param pen QPen*
 void q_abstractaxis_shades_pen_changed(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPenChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrushChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param brush QBrush*
 void q_abstractaxis_shades_brush_changed(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrushChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrushChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QBrush* brush)
 void q_abstractaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#reverseChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#reverseChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param reverse bool
 void q_abstractaxis_reverse_changed(void* self, bool reverse);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#reverseChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#reverseChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool reverse)
 void q_abstractaxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditableChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param editable bool
 void q_abstractaxis_labels_editable_changed(void* self, bool editable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditableChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool editable)
 void q_abstractaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncatedChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncatedChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param labelsTruncated bool
 void q_abstractaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncatedChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncatedChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool labelsTruncated)
 void q_abstractaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabelsChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabelsChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param truncateLabels bool
 void q_abstractaxis_truncate_labels_changed(void* self, bool truncateLabels);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabelsChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabelsChanged)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, bool truncateLabels)
 void q_abstractaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -723,7 +723,7 @@ void q_abstractaxis_on_truncate_labels_changed(void* self, void (*callback)(void
 /// @param c const char*
 const char* q_abstractaxis_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -732,61 +732,61 @@ const char* q_abstractaxis_tr2(const char* s, const char* c);
 /// @param n int
 const char* q_abstractaxis_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setVisible)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_set_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLineVisible)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_set_line_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setGridLineVisible)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_set_grid_line_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLineVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMinorGridLineVisible)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_set_minor_grid_line_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsVisible)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_set_labels_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTitleVisible)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_set_title_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setShadesVisible)
 ///
 /// @param self QAbstractAxis*
 /// @param visible bool
 void q_abstractaxis_set_shades_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setReverse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setReverse)
 ///
 /// @param self QAbstractAxis*
 /// @param reverse bool
 void q_abstractaxis_set_reverse1(void* self, bool reverse);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsEditable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setLabelsEditable)
 ///
 /// @param self QAbstractAxis*
 /// @param editable bool
 void q_abstractaxis_set_labels_editable1(void* self, bool editable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTruncateLabels)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setTruncateLabels)
 ///
 /// @param self QAbstractAxis*
 /// @param truncateLabels bool
@@ -794,7 +794,7 @@ void q_abstractaxis_set_truncate_labels1(void* self, bool truncateLabels);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QAbstractAxis*
 /// @param event QEvent*
@@ -802,7 +802,7 @@ bool q_abstractaxis_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QAbstractAxis*
 /// @param watched QObject*
@@ -811,7 +811,7 @@ bool q_abstractaxis_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -820,7 +820,7 @@ const char* q_abstractaxis_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractAxis*
 /// @param name char*
@@ -828,35 +828,35 @@ void q_abstractaxis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QAbstractAxis*
 bool q_abstractaxis_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QAbstractAxis*
 /// @param b bool
@@ -864,14 +864,14 @@ bool q_abstractaxis_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QAbstractAxis*
 QThread* q_abstractaxis_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAbstractAxis*
 /// @param thread QThread*
@@ -879,7 +879,7 @@ bool q_abstractaxis_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAbstractAxis*
 /// @param interval int
@@ -887,7 +887,7 @@ int32_t q_abstractaxis_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAbstractAxis*
 /// @param id int
@@ -895,7 +895,7 @@ void q_abstractaxis_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QAbstractAxis*
 /// @param id enum Qt__TimerId
@@ -903,14 +903,14 @@ void q_abstractaxis_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QAbstractAxis*
 libqt_list /* of QObject* */ q_abstractaxis_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QAbstractAxis*
 /// @param parent QObject*
@@ -918,7 +918,7 @@ void q_abstractaxis_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QAbstractAxis*
 /// @param filterObj QObject*
@@ -926,7 +926,7 @@ void q_abstractaxis_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QAbstractAxis*
 /// @param obj QObject*
@@ -934,7 +934,7 @@ void q_abstractaxis_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -944,7 +944,7 @@ QMetaObject__Connection* q_abstractaxis_connect(void* sender, void* signal, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAbstractAxis*
 /// @param sender QObject*
@@ -954,7 +954,7 @@ QMetaObject__Connection* q_abstractaxis_connect2(void* self, void* sender, const
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -964,28 +964,28 @@ bool q_abstractaxis_disconnect(void* sender, void* signal, void* receiver, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_abstractaxis_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QAbstractAxis*
 /// @param name const char*
@@ -994,7 +994,7 @@ bool q_abstractaxis_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QAbstractAxis*
 /// @param name const char*
@@ -1002,7 +1002,7 @@ QVariant* q_abstractaxis_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1011,28 +1011,28 @@ const char** q_abstractaxis_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAbstractAxis*
 QBindingStorage* q_abstractaxis_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAbstractAxis*
 const QBindingStorage* q_abstractaxis_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self)
@@ -1040,14 +1040,14 @@ void q_abstractaxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QAbstractAxis*
 QObject* q_abstractaxis_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QAbstractAxis*
 /// @param classname const char*
@@ -1055,14 +1055,14 @@ bool q_abstractaxis_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QAbstractAxis*
 void q_abstractaxis_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QAbstractAxis*
 /// @param thread QThread*
@@ -1071,7 +1071,7 @@ bool q_abstractaxis_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAbstractAxis*
 /// @param interval int
@@ -1080,7 +1080,7 @@ int32_t q_abstractaxis_start_timer22(void* self, int interval, int32_t timerType
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1091,7 +1091,7 @@ QMetaObject__Connection* q_abstractaxis_connect5(void* sender, void* signal, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QAbstractAxis*
 /// @param sender QObject*
@@ -1102,7 +1102,7 @@ QMetaObject__Connection* q_abstractaxis_connect4(void* self, void* sender, const
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractAxis*
 /// @param param1 QObject*
@@ -1110,7 +1110,7 @@ void q_abstractaxis_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractAxis*
 /// @param callback void func(QAbstractAxis* self, QObject* param1)
@@ -1118,7 +1118,7 @@ void q_abstractaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1126,7 +1126,7 @@ void q_abstractaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(QAbstractAxis* self, const char* objectName)
 void q_abstractaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#dtor.QAbstractAxis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#dtor.QAbstractAxis)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -32,112 +32,112 @@ KIconColors* k_iconcolors_new3(void* palette);
 /// @param other KIconColors*
 KIconColors* k_iconcolors_new4(void* other);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#operator-eq)
 ///
 /// @param self KIconColors*
 /// @param other KIconColors*
 void k_iconcolors_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#text)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#text)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#highlight)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#highlight)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_highlight(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#highlightedText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#highlightedText)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_highlighted_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#accent)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#accent)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_accent(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#background)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#background)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_background(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#neutralText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#neutralText)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_neutral_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#positiveText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#positiveText)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_positive_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#negativeText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#negativeText)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_negative_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#activeText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#activeText)
 ///
 /// @param self KIconColors*
 QColor* k_iconcolors_active_text(void* self);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_text(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setHighlight)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setHighlight)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_highlight(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setHighlightedText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setHighlightedText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_highlighted_text(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setAccent)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setAccent)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_accent(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setBackground)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setBackground)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_background(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setNeutralText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setNeutralText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_neutral_text(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setPositiveText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setPositiveText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_positive_text(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setNegativeText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setNegativeText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_negative_text(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#setActiveText)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#setActiveText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 void k_iconcolors_set_active_text(void* self, void* color);
 
-/// [Qt documentation](https://api.kde.org/kiconcolors.html#dtor.KIconColors)
+/// [Upstream resources](https://api.kde.org/kiconcolors.html#dtor.KIconColors)
 ///
 /// Delete this object from C++ memory.
 ///

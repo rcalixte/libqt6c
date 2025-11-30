@@ -32,31 +32,31 @@ QDBusObjectPath* q_dbusobjectpath_new3(const char* path);
 /// @param param1 QDBusObjectPath*
 QDBusObjectPath* q_dbusobjectpath_new4(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusobjectpath.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#swap)
 ///
 /// @param self QDBusObjectPath*
 /// @param other QDBusObjectPath*
 void q_dbusobjectpath_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusobjectpath.html#setPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#setPath)
 ///
 /// @param self QDBusObjectPath*
 /// @param path const char*
 void q_dbusobjectpath_set_path(void* self, const char* path);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusobjectpath.html#path)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#path)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusObjectPath*
 const char* q_dbusobjectpath_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusobjectpath.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#operator)
 ///
 /// @param self QDBusObjectPath*
 QVariant* q_dbusobjectpath_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusobjectpath.html#dtor.QDBusObjectPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#dtor.QDBusObjectPath)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -84,26 +84,26 @@ QDBusSignature* q_dbussignature_new3(const char* signature);
 /// @param param1 QDBusSignature*
 QDBusSignature* q_dbussignature_new4(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbussignature.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#swap)
 ///
 /// @param self QDBusSignature*
 /// @param other QDBusSignature*
 void q_dbussignature_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbussignature.html#setSignature)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#setSignature)
 ///
 /// @param self QDBusSignature*
 /// @param signature const char*
 void q_dbussignature_set_signature(void* self, const char* signature);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbussignature.html#signature)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#signature)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusSignature*
 const char* q_dbussignature_signature(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbussignature.html#dtor.QDBusSignature)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#dtor.QDBusSignature)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -121,30 +121,30 @@ QDBusVariant* q_dbusvariant_new();
 /// @param variant QVariant*
 QDBusVariant* q_dbusvariant_new2(void* variant);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusvariant.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#swap)
 ///
 /// @param self QDBusVariant*
 /// @param other QDBusVariant*
 void q_dbusvariant_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusvariant.html#setVariant)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#setVariant)
 ///
 /// @param self QDBusVariant*
 /// @param variant QVariant*
 void q_dbusvariant_set_variant(void* self, void* variant);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusvariant.html#variant)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#variant)
 ///
 /// @param self QDBusVariant*
 QVariant* q_dbusvariant_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusvariant.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#operator-eq)
 ///
 /// @param self QDBusVariant*
 /// @param param1 QDBusVariant*
 void q_dbusvariant_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdbusvariant.html#dtor.QDBusVariant)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#dtor.QDBusVariant)
 ///
 /// Delete this object from C++ memory.
 ///

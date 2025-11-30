@@ -22,67 +22,67 @@ QPdfOutputIntent* q_pdfoutputintent_new();
 /// @param other QPdfOutputIntent*
 QPdfOutputIntent* q_pdfoutputintent_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#operator-eq)
 ///
 /// @param self QPdfOutputIntent*
 /// @param other QPdfOutputIntent*
 void q_pdfoutputintent_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#swap)
 ///
 /// @param self QPdfOutputIntent*
 /// @param other QPdfOutputIntent*
 void q_pdfoutputintent_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputConditionIdentifier)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputConditionIdentifier)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfOutputIntent*
 const char* q_pdfoutputintent_output_condition_identifier(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputConditionIdentifier)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputConditionIdentifier)
 ///
 /// @param self QPdfOutputIntent*
 /// @param identifier const char*
 void q_pdfoutputintent_set_output_condition_identifier(void* self, const char* identifier);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputCondition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputCondition)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfOutputIntent*
 const char* q_pdfoutputintent_output_condition(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputCondition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputCondition)
 ///
 /// @param self QPdfOutputIntent*
 /// @param condition const char*
 void q_pdfoutputintent_set_output_condition(void* self, const char* condition);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#registryName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#registryName)
 ///
 /// @param self QPdfOutputIntent*
 QUrl* q_pdfoutputintent_registry_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setRegistryName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#setRegistryName)
 ///
 /// @param self QPdfOutputIntent*
 /// @param name QUrl*
 void q_pdfoutputintent_set_registry_name(void* self, void* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputProfile)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputProfile)
 ///
 /// @param self QPdfOutputIntent*
 QColorSpace* q_pdfoutputintent_output_profile(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputProfile)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputProfile)
 ///
 /// @param self QPdfOutputIntent*
 /// @param profile QColorSpace*
 void q_pdfoutputintent_set_output_profile(void* self, void* profile);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#dtor.QPdfOutputIntent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#dtor.QPdfOutputIntent)
 ///
 /// Delete this object from C++ memory.
 ///

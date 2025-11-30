@@ -13,14 +13,14 @@
 
 /// https://api.kde.org/kfilesystemtype.html
 
-/// [Qt documentation](https://api.kde.org/kfilesystemtype.html#fileSystemType)
+/// [Upstream resources](https://api.kde.org/kfilesystemtype.html#fileSystemType)
 ///
 /// @param param1 const char*
 ///
 /// @return enum KFileSystemType__Type
 int32_t k_filesystemtype_file_system_type(const char* param1);
 
-/// [Qt documentation](https://api.kde.org/kfilesystemtype.html#fileSystemName)
+/// [Upstream resources](https://api.kde.org/kfilesystemtype.html#fileSystemName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

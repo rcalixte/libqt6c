@@ -18,65 +18,65 @@
 /// @param param1 QWebEngineFrame*
 QWebEngineFrame* q_webengineframe_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#isValid)
 ///
 /// @param self QWebEngineFrame*
 bool q_webengineframe_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineFrame*
 const char* q_webengineframe_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#htmlName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#htmlName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineFrame*
 const char* q_webengineframe_html_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#children)
 ///
 /// @param self QWebEngineFrame*
 libqt_list /* of QWebEngineFrame* */ q_webengineframe_children(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#url)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#url)
 ///
 /// @param self QWebEngineFrame*
 QUrl* q_webengineframe_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#size)
 ///
 /// @param self QWebEngineFrame*
 QSizeF* q_webengineframe_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#isMainFrame)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#isMainFrame)
 ///
 /// @param self QWebEngineFrame*
 bool q_webengineframe_is_main_frame(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
 /// @param self QWebEngineFrame*
 /// @param script const char*
 void q_webengineframe_run_java_script(void* self, const char* script);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
 ///
 /// @param self QWebEngineFrame*
 /// @param filePath const char*
 void q_webengineframe_print_to_pdf(void* self, const char* filePath);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
 /// @param self QWebEngineFrame*
 /// @param script const char*
 /// @param worldId uint32_t
 void q_webengineframe_run_java_script22(void* self, const char* script, uint32_t worldId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#dtor.QWebEngineFrame)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#dtor.QWebEngineFrame)
 ///
 /// Delete this object from C++ memory.
 ///

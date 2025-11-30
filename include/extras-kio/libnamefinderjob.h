@@ -20,7 +20,7 @@
 /// @param parent QObject*
 KIO__NameFinderJob* k_io__namefinderjob_new(void* baseUrl, const char* name, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__NameFinderJob*
 const QMetaObject* k_io__namefinderjob_meta_object(void* self);
@@ -49,19 +49,19 @@ void k_io__namefinderjob_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t k_io__namefinderjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_io__namefinderjob_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kio-namefinderjob.html#start)
+/// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#start)
 ///
 /// @param self KIO__NameFinderJob*
 void k_io__namefinderjob_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-namefinderjob.html#start)
+/// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#start)
 ///
 /// Allows for overriding the related default method
 ///
@@ -69,31 +69,31 @@ void k_io__namefinderjob_start(void* self);
 /// @param callback void func()
 void k_io__namefinderjob_on_start(void* self, void (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kio-namefinderjob.html#start)
+/// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#start)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__NameFinderJob*
 void k_io__namefinderjob_qbase_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-namefinderjob.html#finalUrl)
+/// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#finalUrl)
 ///
 /// @param self KIO__NameFinderJob*
 QUrl* k_io__namefinderjob_final_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-namefinderjob.html#baseUrl)
+/// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#baseUrl)
 ///
 /// @param self KIO__NameFinderJob*
 QUrl* k_io__namefinderjob_base_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-namefinderjob.html#finalName)
+/// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#finalName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__NameFinderJob*
 const char* k_io__namefinderjob_final_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -101,7 +101,7 @@ const char* k_io__namefinderjob_final_name(void* self);
 /// @param c const char*
 const char* k_io__namefinderjob_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -112,7 +112,7 @@ const char* k_io__namefinderjob_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setUiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#setUiDelegate)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param delegate KJobUiDelegate*
@@ -120,14 +120,14 @@ void k_io__namefinderjob_set_ui_delegate(void* self, void* delegate);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#uiDelegate)
+/// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
 /// @param self KIO__NameFinderJob*
 KJobUiDelegate* k_io__namefinderjob_ui_delegate(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#capabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
 /// @param self KIO__NameFinderJob*
 ///
@@ -136,49 +136,49 @@ int32_t k_io__namefinderjob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isSuspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_is_suspended(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspend)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resume)
+/// [Upstream resources](https://api.kde.org/kjob.html#resume)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#exec)
+/// [Upstream resources](https://api.kde.org/kjob.html#exec)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#error)
+/// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
 /// @param self KIO__NameFinderJob*
 int32_t k_io__namefinderjob_error(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -187,7 +187,7 @@ const char* k_io__namefinderjob_error_text(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param unit enum KJob__Unit
@@ -195,7 +195,7 @@ uint64_t k_io__namefinderjob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param unit enum KJob__Unit
@@ -203,14 +203,14 @@ uint64_t k_io__namefinderjob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percent)
+/// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
 /// @param self KIO__NameFinderJob*
 uint64_t k_io__namefinderjob_percent(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#setAutoDelete)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param autodelete bool
@@ -218,42 +218,42 @@ void k_io__namefinderjob_set_auto_delete(void* self, bool autodelete);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isAutoDelete)
+/// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_is_auto_delete(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__NameFinderJob*
 void k_io__namefinderjob_set_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_is_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isStartedWithExec)
+/// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_is_started_with_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#elapsedTime)
+/// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
 /// @param self KIO__NameFinderJob*
 long long k_io__namefinderjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param job KJob*
@@ -262,7 +262,7 @@ void k_io__namefinderjob_info_message(void* self, void* job, const char* message
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
+/// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param callback void func(KIO__NameFinderJob* self, KJob* job, const char* message)
@@ -270,7 +270,7 @@ void k_io__namefinderjob_on_info_message(void* self, void (*callback)(void*, voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param job KJob*
@@ -279,7 +279,7 @@ void k_io__namefinderjob_warning(void* self, void* job, const char* message);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#warning)
+/// [Upstream resources](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param callback void func(KIO__NameFinderJob* self, KJob* job, const char* message)
@@ -287,7 +287,7 @@ void k_io__namefinderjob_on_warning(void* self, void (*callback)(void*, void*, c
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param job KJob*
@@ -296,7 +296,7 @@ void k_io__namefinderjob_total_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param callback void func(KIO__NameFinderJob* self, KJob* job, uint64_t size)
@@ -304,7 +304,7 @@ void k_io__namefinderjob_on_total_size(void* self, void (*callback)(void*, void*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param job KJob*
@@ -313,7 +313,7 @@ void k_io__namefinderjob_processed_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param callback void func(KIO__NameFinderJob* self, KJob* job, uint64_t size)
@@ -321,7 +321,7 @@ void k_io__namefinderjob_on_processed_size(void* self, void (*callback)(void*, v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param job KJob*
@@ -330,7 +330,7 @@ void k_io__namefinderjob_speed(void* self, void* job, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#speed)
+/// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param callback void func(KIO__NameFinderJob* self, KJob* job, uint64_t speed)
@@ -338,7 +338,7 @@ void k_io__namefinderjob_on_speed(void* self, void (*callback)(void*, void*, uin
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#kill)
+/// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param verbosity enum KJob__KillVerbosity
@@ -346,7 +346,7 @@ bool k_io__namefinderjob_kill1(void* self, int32_t verbosity);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param hide bool
@@ -354,7 +354,7 @@ void k_io__namefinderjob_set_finished_notification_hidden1(void* self, bool hide
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -363,7 +363,7 @@ const char* k_io__namefinderjob_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param name char*
@@ -371,35 +371,35 @@ void k_io__namefinderjob_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KIO__NameFinderJob*
 bool k_io__namefinderjob_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param b bool
@@ -407,14 +407,14 @@ bool k_io__namefinderjob_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KIO__NameFinderJob*
 QThread* k_io__namefinderjob_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param thread QThread*
@@ -422,7 +422,7 @@ bool k_io__namefinderjob_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param interval int
@@ -430,7 +430,7 @@ int32_t k_io__namefinderjob_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param id int
@@ -438,7 +438,7 @@ void k_io__namefinderjob_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param id enum Qt__TimerId
@@ -446,14 +446,14 @@ void k_io__namefinderjob_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KIO__NameFinderJob*
 libqt_list /* of QObject* */ k_io__namefinderjob_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param parent QObject*
@@ -461,7 +461,7 @@ void k_io__namefinderjob_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param filterObj QObject*
@@ -469,7 +469,7 @@ void k_io__namefinderjob_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param obj QObject*
@@ -477,7 +477,7 @@ void k_io__namefinderjob_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -487,7 +487,7 @@ QMetaObject__Connection* k_io__namefinderjob_connect(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param sender QObject*
@@ -497,7 +497,7 @@ QMetaObject__Connection* k_io__namefinderjob_connect2(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -507,28 +507,28 @@ bool k_io__namefinderjob_disconnect(void* sender, void* signal, void* receiver, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_io__namefinderjob_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KIO__NameFinderJob*
 void k_io__namefinderjob_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KIO__NameFinderJob*
 void k_io__namefinderjob_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param name const char*
@@ -537,7 +537,7 @@ bool k_io__namefinderjob_set_property(void* self, const char* name, void* value)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param name const char*
@@ -545,7 +545,7 @@ QVariant* k_io__namefinderjob_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -554,28 +554,28 @@ const char** k_io__namefinderjob_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__NameFinderJob*
 QBindingStorage* k_io__namefinderjob_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KIO__NameFinderJob*
 const QBindingStorage* k_io__namefinderjob_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__NameFinderJob*
 void k_io__namefinderjob_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param callback void func(KIO__NameFinderJob* self)
@@ -583,14 +583,14 @@ void k_io__namefinderjob_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KIO__NameFinderJob*
 QObject* k_io__namefinderjob_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param classname const char*
@@ -598,14 +598,14 @@ bool k_io__namefinderjob_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KIO__NameFinderJob*
 void k_io__namefinderjob_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param thread QThread*
@@ -614,7 +614,7 @@ bool k_io__namefinderjob_move_to_thread2(void* self, void* thread, void* param2)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param interval int
@@ -623,7 +623,7 @@ int32_t k_io__namefinderjob_start_timer22(void* self, int interval, int32_t time
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -634,7 +634,7 @@ QMetaObject__Connection* k_io__namefinderjob_connect5(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param sender QObject*
@@ -645,7 +645,7 @@ QMetaObject__Connection* k_io__namefinderjob_connect4(void* self, void* sender, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param param1 QObject*
@@ -653,7 +653,7 @@ void k_io__namefinderjob_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KIO__NameFinderJob*
 /// @param callback void func(KIO__NameFinderJob* self, QObject* param1)
@@ -661,7 +661,7 @@ void k_io__namefinderjob_on_destroyed1(void* self, void (*callback)(void*, void*
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#addSubjob)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#addSubjob)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -671,7 +671,7 @@ bool k_io__namefinderjob_add_subjob(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#addSubjob)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#addSubjob)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -681,7 +681,7 @@ bool k_io__namefinderjob_qbase_add_subjob(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#addSubjob)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#addSubjob)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -691,7 +691,7 @@ void k_io__namefinderjob_on_add_subjob(void* self, bool (*callback)(void*, void*
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#removeSubjob)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#removeSubjob)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -701,7 +701,7 @@ bool k_io__namefinderjob_remove_subjob(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#removeSubjob)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#removeSubjob)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -711,7 +711,7 @@ bool k_io__namefinderjob_qbase_remove_subjob(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#removeSubjob)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#removeSubjob)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -721,7 +721,7 @@ void k_io__namefinderjob_on_remove_subjob(void* self, bool (*callback)(void*, vo
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotResult)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#slotResult)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -731,7 +731,7 @@ void k_io__namefinderjob_slot_result(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotResult)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#slotResult)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -741,7 +741,7 @@ void k_io__namefinderjob_qbase_slot_result(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotResult)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#slotResult)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -751,7 +751,7 @@ void k_io__namefinderjob_on_slot_result(void* self, void (*callback)(void*, void
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotInfoMessage)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#slotInfoMessage)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -762,7 +762,7 @@ void k_io__namefinderjob_slot_info_message(void* self, void* job, const char* me
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotInfoMessage)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#slotInfoMessage)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -773,7 +773,7 @@ void k_io__namefinderjob_qbase_slot_info_message(void* self, void* job, const ch
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotInfoMessage)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#slotInfoMessage)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -783,7 +783,7 @@ void k_io__namefinderjob_on_slot_info_message(void* self, void (*callback)(void*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
+/// [Upstream resources](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -792,7 +792,7 @@ bool k_io__namefinderjob_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
+/// [Upstream resources](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -801,7 +801,7 @@ bool k_io__namefinderjob_qbase_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
+/// [Upstream resources](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -811,7 +811,7 @@ void k_io__namefinderjob_on_do_kill(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -820,7 +820,7 @@ bool k_io__namefinderjob_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -829,7 +829,7 @@ bool k_io__namefinderjob_qbase_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
+/// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -839,7 +839,7 @@ void k_io__namefinderjob_on_do_suspend(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
+/// [Upstream resources](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -848,7 +848,7 @@ bool k_io__namefinderjob_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
+/// [Upstream resources](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -857,7 +857,7 @@ bool k_io__namefinderjob_qbase_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
+/// [Upstream resources](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -867,7 +867,7 @@ void k_io__namefinderjob_on_do_resume(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -878,7 +878,7 @@ const char* k_io__namefinderjob_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -889,7 +889,7 @@ const char* k_io__namefinderjob_qbase_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
+/// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,7 +899,7 @@ void k_io__namefinderjob_on_error_string(void* self, const char* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -909,7 +909,7 @@ bool k_io__namefinderjob_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -919,7 +919,7 @@ bool k_io__namefinderjob_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -929,7 +929,7 @@ void k_io__namefinderjob_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -940,7 +940,7 @@ bool k_io__namefinderjob_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -951,7 +951,7 @@ bool k_io__namefinderjob_qbase_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -961,7 +961,7 @@ void k_io__namefinderjob_on_event_filter(void* self, bool (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -971,7 +971,7 @@ void k_io__namefinderjob_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -981,7 +981,7 @@ void k_io__namefinderjob_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -991,7 +991,7 @@ void k_io__namefinderjob_on_timer_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1001,7 +1001,7 @@ void k_io__namefinderjob_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1011,7 +1011,7 @@ void k_io__namefinderjob_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1021,7 +1021,7 @@ void k_io__namefinderjob_on_child_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1031,7 +1031,7 @@ void k_io__namefinderjob_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1041,7 +1041,7 @@ void k_io__namefinderjob_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1051,7 +1051,7 @@ void k_io__namefinderjob_on_custom_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1061,7 +1061,7 @@ void k_io__namefinderjob_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1071,7 +1071,7 @@ void k_io__namefinderjob_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1081,7 +1081,7 @@ void k_io__namefinderjob_on_connect_notify(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1091,7 +1091,7 @@ void k_io__namefinderjob_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1101,7 +1101,7 @@ void k_io__namefinderjob_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1111,7 +1111,7 @@ void k_io__namefinderjob_on_disconnect_notify(void* self, void (*callback)(void*
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#hasSubjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#hasSubjobs)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1120,7 +1120,7 @@ bool k_io__namefinderjob_has_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#hasSubjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#hasSubjobs)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1129,7 +1129,7 @@ bool k_io__namefinderjob_qbase_has_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#hasSubjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#hasSubjobs)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1139,7 +1139,7 @@ void k_io__namefinderjob_on_has_subjobs(void* self, bool (*callback)());
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#subjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#subjobs)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1148,7 +1148,7 @@ libqt_list /* of KJob* */ k_io__namefinderjob_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#subjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#subjobs)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1157,7 +1157,7 @@ libqt_list /* of KJob* */ k_io__namefinderjob_qbase_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#subjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#subjobs)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1167,7 +1167,7 @@ void k_io__namefinderjob_on_subjobs(void* self, KJob** (*callback)());
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#clearSubjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#clearSubjobs)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1176,7 +1176,7 @@ void k_io__namefinderjob_clear_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#clearSubjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#clearSubjobs)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1185,7 +1185,7 @@ void k_io__namefinderjob_qbase_clear_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
-/// [Qt documentation](https://api.kde.org/kcompositejob.html#clearSubjobs)
+/// [Upstream resources](https://api.kde.org/kcompositejob.html#clearSubjobs)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1195,7 +1195,7 @@ void k_io__namefinderjob_on_clear_subjobs(void* self, void (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1205,7 +1205,7 @@ void k_io__namefinderjob_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1215,7 +1215,7 @@ void k_io__namefinderjob_qbase_set_capabilities(void* self, int32_t capabilities
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
+/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1225,7 +1225,7 @@ void k_io__namefinderjob_on_set_capabilities(void* self, void (*callback)(void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1234,7 +1234,7 @@ bool k_io__namefinderjob_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1243,7 +1243,7 @@ bool k_io__namefinderjob_qbase_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
+/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1253,7 +1253,7 @@ void k_io__namefinderjob_on_is_finished(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setError)
+/// [Upstream resources](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1263,7 +1263,7 @@ void k_io__namefinderjob_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setError)
+/// [Upstream resources](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1273,7 +1273,7 @@ void k_io__namefinderjob_qbase_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setError)
+/// [Upstream resources](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1283,7 +1283,7 @@ void k_io__namefinderjob_on_set_error(void* self, void (*callback)(void*, int));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1293,7 +1293,7 @@ void k_io__namefinderjob_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1303,7 +1303,7 @@ void k_io__namefinderjob_qbase_set_error_text(void* self, const char* errorText)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
+/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1313,7 +1313,7 @@ void k_io__namefinderjob_on_set_error_text(void* self, void (*callback)(void*, c
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1324,7 +1324,7 @@ void k_io__namefinderjob_set_processed_amount(void* self, int32_t unit, uint64_t
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1335,7 +1335,7 @@ void k_io__namefinderjob_qbase_set_processed_amount(void* self, int32_t unit, ui
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1345,7 +1345,7 @@ void k_io__namefinderjob_on_set_processed_amount(void* self, void (*callback)(vo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1356,7 +1356,7 @@ void k_io__namefinderjob_set_total_amount(void* self, int32_t unit, uint64_t amo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1367,7 +1367,7 @@ void k_io__namefinderjob_qbase_set_total_amount(void* self, int32_t unit, uint64
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
+/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1377,7 +1377,7 @@ void k_io__namefinderjob_on_set_total_amount(void* self, void (*callback)(void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1387,7 +1387,7 @@ void k_io__namefinderjob_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1397,7 +1397,7 @@ void k_io__namefinderjob_qbase_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
+/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1407,7 +1407,7 @@ void k_io__namefinderjob_on_set_progress_unit(void* self, void (*callback)(void*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1417,7 +1417,7 @@ void k_io__namefinderjob_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1427,7 +1427,7 @@ void k_io__namefinderjob_qbase_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1437,7 +1437,7 @@ void k_io__namefinderjob_on_set_percent(void* self, void (*callback)(void*, uint
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1446,7 +1446,7 @@ void k_io__namefinderjob_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1455,7 +1455,7 @@ void k_io__namefinderjob_qbase_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1465,7 +1465,7 @@ void k_io__namefinderjob_on_emit_result(void* self, void (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1476,7 +1476,7 @@ void k_io__namefinderjob_emit_percent(void* self, uint64_t processedAmount, uint
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1487,7 +1487,7 @@ void k_io__namefinderjob_qbase_emit_percent(void* self, uint64_t processedAmount
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1497,7 +1497,7 @@ void k_io__namefinderjob_on_emit_percent(void* self, void (*callback)(void*, uin
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1507,7 +1507,7 @@ void k_io__namefinderjob_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1517,7 +1517,7 @@ void k_io__namefinderjob_qbase_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
+/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1527,7 +1527,7 @@ void k_io__namefinderjob_on_emit_speed(void* self, void (*callback)(void*, uint6
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
+/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1536,7 +1536,7 @@ void k_io__namefinderjob_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
+/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1545,7 +1545,7 @@ void k_io__namefinderjob_qbase_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
+/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1555,7 +1555,7 @@ void k_io__namefinderjob_on_start_elapsed_timer(void* self, void (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1564,7 +1564,7 @@ QObject* k_io__namefinderjob_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1573,7 +1573,7 @@ QObject* k_io__namefinderjob_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1583,7 +1583,7 @@ void k_io__namefinderjob_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1592,7 +1592,7 @@ int32_t k_io__namefinderjob_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1601,7 +1601,7 @@ int32_t k_io__namefinderjob_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1611,7 +1611,7 @@ void k_io__namefinderjob_on_sender_signal_index(void* self, int32_t (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1621,7 +1621,7 @@ int32_t k_io__namefinderjob_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1631,7 +1631,7 @@ int32_t k_io__namefinderjob_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1641,7 +1641,7 @@ void k_io__namefinderjob_on_receivers(void* self, int32_t (*callback)(void*, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1651,7 +1651,7 @@ bool k_io__namefinderjob_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1661,7 +1661,7 @@ bool k_io__namefinderjob_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1671,7 +1671,7 @@ void k_io__namefinderjob_on_is_signal_connected(void* self, bool (*callback)(voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#finished)
+/// [Upstream resources](https://api.kde.org/kjob.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1681,7 +1681,7 @@ void k_io__namefinderjob_on_finished(void* self, void (*callback)(void*, void*))
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#suspended)
+/// [Upstream resources](https://api.kde.org/kjob.html#suspended)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1691,7 +1691,7 @@ void k_io__namefinderjob_on_suspended(void* self, void (*callback)(void*, void*)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#resumed)
+/// [Upstream resources](https://api.kde.org/kjob.html#resumed)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1701,7 +1701,7 @@ void k_io__namefinderjob_on_resumed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#result)
+/// [Upstream resources](https://api.kde.org/kjob.html#result)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1711,7 +1711,7 @@ void k_io__namefinderjob_on_result(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#totalAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#totalAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1721,7 +1721,7 @@ void k_io__namefinderjob_on_total_amount_changed(void* self, void (*callback)(vo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#processedAmountChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#processedAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1731,7 +1731,7 @@ void k_io__namefinderjob_on_processed_amount_changed(void* self, void (*callback
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#percentChanged)
+/// [Upstream resources](https://api.kde.org/kjob.html#percentChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1741,7 +1741,7 @@ void k_io__namefinderjob_on_percent_changed(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

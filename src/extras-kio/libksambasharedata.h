@@ -22,42 +22,42 @@ KSambaShareData* k_sambasharedata_new();
 /// @param other KSambaShareData*
 KSambaShareData* k_sambasharedata_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#name)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShareData*
 const char* k_sambasharedata_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#path)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#path)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShareData*
 const char* k_sambasharedata_path(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#comment)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#comment)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShareData*
 const char* k_sambasharedata_comment(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#acl)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#acl)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShareData*
 const char* k_sambasharedata_acl(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#guestPermission)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#guestPermission)
 ///
 /// @param self KSambaShareData*
 ///
 /// @return enum KSambaShareData__GuestPermission
 int32_t k_sambasharedata_guest_permission(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#setName)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#setName)
 ///
 /// @param self KSambaShareData*
 /// @param name const char*
@@ -65,7 +65,7 @@ int32_t k_sambasharedata_guest_permission(void* self);
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#setPath)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#setPath)
 ///
 /// @param self KSambaShareData*
 /// @param path const char*
@@ -73,7 +73,7 @@ int32_t k_sambasharedata_set_name(void* self, const char* name);
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_set_path(void* self, const char* path);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#setComment)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#setComment)
 ///
 /// @param self KSambaShareData*
 /// @param comment const char*
@@ -81,7 +81,7 @@ int32_t k_sambasharedata_set_path(void* self, const char* path);
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_set_comment(void* self, const char* comment);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#setAcl)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#setAcl)
 ///
 /// @param self KSambaShareData*
 /// @param acl const char*
@@ -89,46 +89,46 @@ int32_t k_sambasharedata_set_comment(void* self, const char* comment);
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_set_acl(void* self, const char* acl);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#setGuestPermission)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#setGuestPermission)
 ///
 /// @param self KSambaShareData*
 ///
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_set_guest_permission(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#save)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#save)
 ///
 /// @param self KSambaShareData*
 ///
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_save(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#remove)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#remove)
 ///
 /// @param self KSambaShareData*
 ///
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_remove(void* self);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#operator-eq)
 ///
 /// @param self KSambaShareData*
 /// @param other KSambaShareData*
 void k_sambasharedata_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#operator-eq-eq)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#operator-eq-eq)
 ///
 /// @param self KSambaShareData*
 /// @param other KSambaShareData*
 bool k_sambasharedata_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#operator-not-eq)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#operator-not-eq)
 ///
 /// @param self KSambaShareData*
 /// @param other KSambaShareData*
 bool k_sambasharedata_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#setGuestPermission)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#setGuestPermission)
 ///
 /// @param self KSambaShareData*
 /// @param permission enum KSambaShareData__GuestPermission*
@@ -136,7 +136,7 @@ bool k_sambasharedata_operator_not_equal(void* self, void* other);
 /// @return enum KSambaShareData__UserShareError
 int32_t k_sambasharedata_set_guest_permission1(void* self, int32_t* permission);
 
-/// [Qt documentation](https://api.kde.org/ksambasharedata.html#dtor.KSambaShareData)
+/// [Upstream resources](https://api.kde.org/ksambasharedata.html#dtor.KSambaShareData)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -39,224 +39,224 @@ void q_fontdatabase_copy_assign(void* self, void* other);
 /// @param other QFontDatabase*
 void q_fontdatabase_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#standardSizes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#standardSizes)
 ///
 libqt_list /* of int */ q_fontdatabase_standard_sizes();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
 ///
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 libqt_list /* of int32_t */ q_fontdatabase_writing_systems();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
 ///
 /// @param family const char*
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 libqt_list /* of int32_t */ q_fontdatabase_writing_systems2(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#families)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** q_fontdatabase_families();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#styles)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styles)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param family const char*
 const char** q_fontdatabase_styles(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#pointSizes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#pointSizes)
 ///
 /// @param family const char*
 libqt_list /* of int */ q_fontdatabase_point_sizes(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#smoothSizes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#smoothSizes)
 ///
 /// @param family const char*
 /// @param style const char*
 libqt_list /* of int */ q_fontdatabase_smooth_sizes(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param font QFont*
 const char* q_fontdatabase_style_string(void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param fontInfo QFontInfo*
 const char* q_fontdatabase_style_string2(void* fontInfo);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#font)
 ///
 /// @param family const char*
 /// @param style const char*
 /// @param pointSize int
 QFont* q_fontdatabase_font(const char* family, const char* style, int pointSize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isBitmapScalable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isBitmapScalable)
 ///
 /// @param family const char*
 bool q_fontdatabase_is_bitmap_scalable(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isSmoothlyScalable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isSmoothlyScalable)
 ///
 /// @param family const char*
 bool q_fontdatabase_is_smoothly_scalable(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isScalable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isScalable)
 ///
 /// @param family const char*
 bool q_fontdatabase_is_scalable(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isFixedPitch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isFixedPitch)
 ///
 /// @param family const char*
 bool q_fontdatabase_is_fixed_pitch(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#italic)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#italic)
 ///
 /// @param family const char*
 /// @param style const char*
 bool q_fontdatabase_italic(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#bold)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#bold)
 ///
 /// @param family const char*
 /// @param style const char*
 bool q_fontdatabase_bold(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#weight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#weight)
 ///
 /// @param family const char*
 /// @param style const char*
 int32_t q_fontdatabase_weight(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#hasFamily)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#hasFamily)
 ///
 /// @param family const char*
 bool q_fontdatabase_has_family(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isPrivateFamily)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isPrivateFamily)
 ///
 /// @param family const char*
 bool q_fontdatabase_is_private_family(const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystemName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystemName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
 const char* q_fontdatabase_writing_system_name(int32_t writingSystem);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystemSample)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystemSample)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
 const char* q_fontdatabase_writing_system_sample(int32_t writingSystem);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFont)
 ///
 /// @param fileName const char*
 int32_t q_fontdatabase_add_application_font(const char* fileName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFontFromData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFontFromData)
 ///
 /// @param fontData const char*
 int32_t q_fontdatabase_add_application_font_from_data(const char* fontData);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFontFamilies)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFontFamilies)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param id int
 const char** q_fontdatabase_application_font_families(int id);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#removeApplicationFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#removeApplicationFont)
 ///
 /// @param id int
 bool q_fontdatabase_remove_application_font(int id);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#removeAllApplicationFonts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#removeAllApplicationFonts)
 ///
 bool q_fontdatabase_remove_all_application_fonts();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFallbackFontFamily)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFallbackFontFamily)
 ///
 /// @param script enum QChar__Script
 /// @param familyName const char*
 void q_fontdatabase_add_application_fallback_font_family(int32_t script, const char* familyName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#removeApplicationFallbackFontFamily)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#removeApplicationFallbackFontFamily)
 ///
 /// @param script enum QChar__Script
 /// @param familyName const char*
 bool q_fontdatabase_remove_application_fallback_font_family(int32_t script, const char* familyName);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#setApplicationFallbackFontFamilies)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#setApplicationFallbackFontFamilies)
 ///
 /// @param param1 enum QChar__Script
 /// @param familyNames const char**
 void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const char* familyNames[static 1]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFallbackFontFamilies)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFallbackFontFamilies)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param script enum QChar__Script
 const char** q_fontdatabase_application_fallback_font_families(int32_t script);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#systemFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#systemFont)
 ///
 /// @param type enum QFontDatabase__SystemFont
 QFont* q_fontdatabase_system_font(int32_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#families)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
 const char** q_fontdatabase_families1(int32_t writingSystem);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#pointSizes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#pointSizes)
 ///
 /// @param family const char*
 /// @param style const char*
 libqt_list /* of int */ q_fontdatabase_point_sizes2(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isBitmapScalable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isBitmapScalable)
 ///
 /// @param family const char*
 /// @param style const char*
 bool q_fontdatabase_is_bitmap_scalable2(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isSmoothlyScalable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isSmoothlyScalable)
 ///
 /// @param family const char*
 /// @param style const char*
 bool q_fontdatabase_is_smoothly_scalable2(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isScalable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isScalable)
 ///
 /// @param family const char*
 /// @param style const char*
 bool q_fontdatabase_is_scalable2(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#isFixedPitch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isFixedPitch)
 ///
 /// @param family const char*
 /// @param style const char*
 bool q_fontdatabase_is_fixed_pitch2(const char* family, const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#dtor.QFontDatabase)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#dtor.QFontDatabase)
 ///
 /// Delete this object from C++ memory.
 ///

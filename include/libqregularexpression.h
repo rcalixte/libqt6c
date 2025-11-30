@@ -33,119 +33,119 @@ QRegularExpression* q_regularexpression_new3(void* re);
 /// @param options flag of enum QRegularExpression__PatternOption
 QRegularExpression* q_regularexpression_new4(const char* pattern, int32_t options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#patternOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#patternOptions)
 ///
 /// @param self QRegularExpression*
 ///
 /// @return flag of enum QRegularExpression__PatternOption
 int32_t q_regularexpression_pattern_options(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#setPatternOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#setPatternOptions)
 ///
 /// @param self QRegularExpression*
 /// @param options flag of enum QRegularExpression__PatternOption
 void q_regularexpression_set_pattern_options(void* self, int32_t options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#operator-eq)
 ///
 /// @param self QRegularExpression*
 /// @param re QRegularExpression*
 void q_regularexpression_operator_assign(void* self, void* re);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#swap)
 ///
 /// @param self QRegularExpression*
 /// @param other QRegularExpression*
 void q_regularexpression_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#pattern)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#pattern)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpression*
 const char* q_regularexpression_pattern(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#setPattern)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#setPattern)
 ///
 /// @param self QRegularExpression*
 /// @param pattern const char*
 void q_regularexpression_set_pattern(void* self, const char* pattern);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#isValid)
 ///
 /// @param self QRegularExpression*
 bool q_regularexpression_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#patternErrorOffset)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#patternErrorOffset)
 ///
 /// @param self QRegularExpression*
 int64_t q_regularexpression_pattern_error_offset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#errorString)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpression*
 const char* q_regularexpression_error_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#captureCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#captureCount)
 ///
 /// @param self QRegularExpression*
 int32_t q_regularexpression_capture_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#namedCaptureGroups)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#namedCaptureGroups)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpression*
 const char** q_regularexpression_named_capture_groups(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#match)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
 QRegularExpressionMatch* q_regularexpression_match(void* self, const char* subject);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
 QRegularExpressionMatchIterator* q_regularexpression_global_match(void* self, const char* subject);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#optimize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#optimize)
 ///
 /// @param self QRegularExpression*
 void q_regularexpression_optimize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#escape)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#escape)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param str const char*
 const char* q_regularexpression_escape(const char* str);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param str const char*
 const char* q_regularexpression_wildcard_to_regular_expression(const char* str);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#anchoredPattern)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#anchoredPattern)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param expression const char*
 const char* q_regularexpression_anchored_pattern(const char* expression);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#match)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
 /// @param offset int64_t
 QRegularExpressionMatch* q_regularexpression_match22(void* self, const char* subject, int64_t offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#match)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
@@ -153,7 +153,7 @@ QRegularExpressionMatch* q_regularexpression_match22(void* self, const char* sub
 /// @param matchType enum QRegularExpression__MatchType
 QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subject, int64_t offset, int32_t matchType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#match)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#match)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
@@ -162,14 +162,14 @@ QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subj
 /// @param matchOptions flag of enum QRegularExpression__MatchOption
 QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int32_t matchOptions);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
 /// @param offset int64_t
 QRegularExpressionMatchIterator* q_regularexpression_global_match22(void* self, const char* subject, int64_t offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
@@ -177,7 +177,7 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match22(void* self, 
 /// @param matchType enum QRegularExpression__MatchType
 QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, const char* subject, int64_t offset, int32_t matchType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
 ///
 /// @param self QRegularExpression*
 /// @param subject const char*
@@ -186,7 +186,7 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, c
 /// @param matchOptions flag of enum QRegularExpression__MatchOption
 QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int32_t matchOptions);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -194,7 +194,7 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, c
 /// @param options flag of enum QRegularExpression__WildcardConversionOption
 const char* q_regularexpression_wildcard_to_regular_expression22(const char* str, int32_t options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#dtor.QRegularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#dtor.QRegularExpression)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -212,77 +212,77 @@ QRegularExpressionMatch* q_regularexpressionmatch_new();
 /// @param match QRegularExpressionMatch*
 QRegularExpressionMatch* q_regularexpressionmatch_new2(void* match);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#operator-eq)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param match QRegularExpressionMatch*
 void q_regularexpressionmatch_operator_assign(void* self, void* match);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#swap)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param other QRegularExpressionMatch*
 void q_regularexpressionmatch_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#regularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#regularExpression)
 ///
 /// @param self QRegularExpressionMatch*
 QRegularExpression* q_regularexpressionmatch_regular_expression(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#matchType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#matchType)
 ///
 /// @param self QRegularExpressionMatch*
 ///
 /// @return enum QRegularExpression__MatchType
 int32_t q_regularexpressionmatch_match_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#matchOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#matchOptions)
 ///
 /// @param self QRegularExpressionMatch*
 ///
 /// @return flag of enum QRegularExpression__MatchOption
 int32_t q_regularexpressionmatch_match_options(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasMatch)
 ///
 /// @param self QRegularExpressionMatch*
 bool q_regularexpressionmatch_has_match(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasPartialMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasPartialMatch)
 ///
 /// @param self QRegularExpressionMatch*
 bool q_regularexpressionmatch_has_partial_match(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#isValid)
 ///
 /// @param self QRegularExpressionMatch*
 bool q_regularexpressionmatch_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#lastCapturedIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#lastCapturedIndex)
 ///
 /// @param self QRegularExpressionMatch*
 int32_t q_regularexpressionmatch_last_captured_index(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasCaptured)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasCaptured)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param name char*
 bool q_regularexpressionmatch_has_captured(void* self, char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasCaptured)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasCaptured)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param nth int
 bool q_regularexpressionmatch_has_captured2(void* self, int nth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpressionMatch*
 const char* q_regularexpressionmatch_captured(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -290,47 +290,47 @@ const char* q_regularexpressionmatch_captured(void* self);
 /// @param name char*
 const char* q_regularexpressionmatch_captured2(void* self, char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedTexts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedTexts)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpressionMatch*
 const char** q_regularexpressionmatch_captured_texts(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
 ///
 /// @param self QRegularExpressionMatch*
 int64_t q_regularexpressionmatch_captured_start(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
 ///
 /// @param self QRegularExpressionMatch*
 int64_t q_regularexpressionmatch_captured_length(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
 ///
 /// @param self QRegularExpressionMatch*
 int64_t q_regularexpressionmatch_captured_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param name char*
 int64_t q_regularexpressionmatch_captured_start2(void* self, char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param name char*
 int64_t q_regularexpressionmatch_captured_length2(void* self, char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param name char*
 int64_t q_regularexpressionmatch_captured_end2(void* self, char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -338,25 +338,25 @@ int64_t q_regularexpressionmatch_captured_end2(void* self, char* name);
 /// @param nth int
 const char* q_regularexpressionmatch_captured1(void* self, int nth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param nth int
 int64_t q_regularexpressionmatch_captured_start1(void* self, int nth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param nth int
 int64_t q_regularexpressionmatch_captured_length1(void* self, int nth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
 ///
 /// @param self QRegularExpressionMatch*
 /// @param nth int
 int64_t q_regularexpressionmatch_captured_end1(void* self, int nth);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#dtor.QRegularExpressionMatch)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#dtor.QRegularExpressionMatch)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -374,58 +374,58 @@ QRegularExpressionMatchIterator* q_regularexpressionmatchiterator_new();
 /// @param iterator QRegularExpressionMatchIterator*
 QRegularExpressionMatchIterator* q_regularexpressionmatchiterator_new2(void* iterator);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#operator-eq)
 ///
 /// @param self QRegularExpressionMatchIterator*
 /// @param iterator QRegularExpressionMatchIterator*
 void q_regularexpressionmatchiterator_operator_assign(void* self, void* iterator);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#swap)
 ///
 /// @param self QRegularExpressionMatchIterator*
 /// @param other QRegularExpressionMatchIterator*
 void q_regularexpressionmatchiterator_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#isValid)
 ///
 /// @param self QRegularExpressionMatchIterator*
 bool q_regularexpressionmatchiterator_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#hasNext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#hasNext)
 ///
 /// @param self QRegularExpressionMatchIterator*
 bool q_regularexpressionmatchiterator_has_next(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#next)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#next)
 ///
 /// @param self QRegularExpressionMatchIterator*
 QRegularExpressionMatch* q_regularexpressionmatchiterator_next(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#peekNext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#peekNext)
 ///
 /// @param self QRegularExpressionMatchIterator*
 QRegularExpressionMatch* q_regularexpressionmatchiterator_peek_next(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#regularExpression)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#regularExpression)
 ///
 /// @param self QRegularExpressionMatchIterator*
 QRegularExpression* q_regularexpressionmatchiterator_regular_expression(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#matchType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#matchType)
 ///
 /// @param self QRegularExpressionMatchIterator*
 ///
 /// @return enum QRegularExpression__MatchType
 int32_t q_regularexpressionmatchiterator_match_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#matchOptions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#matchOptions)
 ///
 /// @param self QRegularExpressionMatchIterator*
 ///
 /// @return flag of enum QRegularExpression__MatchOption
 int32_t q_regularexpressionmatchiterator_match_options(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#dtor.QRegularExpressionMatchIterator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#dtor.QRegularExpressionMatchIterator)
 ///
 /// Delete this object from C++ memory.
 ///

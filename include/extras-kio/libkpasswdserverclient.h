@@ -17,7 +17,7 @@
 ///
 KPasswdServerClient* k_passwdserverclient_new();
 
-/// [Qt documentation](https://api.kde.org/kpasswdserverclient.html#checkAuthInfo)
+/// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#checkAuthInfo)
 ///
 /// @param self KPasswdServerClient*
 /// @param info KIO__AuthInfo*
@@ -25,7 +25,7 @@ KPasswdServerClient* k_passwdserverclient_new();
 /// @param usertime long long
 bool k_passwdserverclient_check_auth_info(void* self, void* info, long long windowId, long long usertime);
 
-/// [Qt documentation](https://api.kde.org/kpasswdserverclient.html#queryAuthInfo)
+/// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#queryAuthInfo)
 ///
 /// @param self KPasswdServerClient*
 /// @param info KIO__AuthInfo*
@@ -34,14 +34,14 @@ bool k_passwdserverclient_check_auth_info(void* self, void* info, long long wind
 /// @param usertime long long
 int32_t k_passwdserverclient_query_auth_info(void* self, void* info, const char* errorMsg, long long windowId, long long usertime);
 
-/// [Qt documentation](https://api.kde.org/kpasswdserverclient.html#addAuthInfo)
+/// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#addAuthInfo)
 ///
 /// @param self KPasswdServerClient*
 /// @param info KIO__AuthInfo*
 /// @param windowId long long
 void k_passwdserverclient_add_auth_info(void* self, void* info, long long windowId);
 
-/// [Qt documentation](https://api.kde.org/kpasswdserverclient.html#removeAuthInfo)
+/// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#removeAuthInfo)
 ///
 /// @param self KPasswdServerClient*
 /// @param host const char*
@@ -49,7 +49,7 @@ void k_passwdserverclient_add_auth_info(void* self, void* info, long long window
 /// @param user const char*
 void k_passwdserverclient_remove_auth_info(void* self, const char* host, const char* protocol, const char* user);
 
-/// [Qt documentation](https://api.kde.org/kpasswdserverclient.html#dtor.KPasswdServerClient)
+/// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#dtor.KPasswdServerClient)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kruntimeplatform.html
 
-/// [Qt documentation](https://api.kde.org/kruntimeplatform.html#runtimePlatform)
+/// [Upstream resources](https://api.kde.org/kruntimeplatform.html#runtimePlatform)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

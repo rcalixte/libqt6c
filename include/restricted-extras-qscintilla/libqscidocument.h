@@ -22,13 +22,13 @@ QsciDocument* q_scidocument_new();
 /// @param param1 QsciDocument*
 QsciDocument* q_scidocument_new2(void* param1);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
 ///
 /// @param self QsciDocument*
 /// @param param1 QsciDocument*
 void q_scidocument_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
 ///
 /// Delete this object from C++ memory.
 ///

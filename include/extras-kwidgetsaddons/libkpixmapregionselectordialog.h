@@ -22,7 +22,7 @@ KPixmapRegionSelectorDialog* k_pixmapregionselectordialog_new(void* parent);
 ///
 KPixmapRegionSelectorDialog* k_pixmapregionselectordialog_new2();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 const QMetaObject* k_pixmapregionselectordialog_meta_object(void* self);
@@ -51,48 +51,48 @@ void k_pixmapregionselectordialog_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param3 void*
 int32_t k_pixmapregionselectordialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_pixmapregionselectordialog_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#pixmapRegionSelectorWidget)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#pixmapRegionSelectorWidget)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 KPixmapRegionSelectorWidget* k_pixmapregionselectordialog_pixmap_region_selector_widget(void* self);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 QRect* k_pixmapregionselectordialog_get_selected_region(void* pixmap);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
 /// @param aspectRatioHeight int
 QRect* k_pixmapregionselectordialog_get_selected_region2(void* pixmap, int aspectRatioWidth, int aspectRatioHeight);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 QImage* k_pixmapregionselectordialog_get_selected_image(void* pixmap);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
 /// @param aspectRatioHeight int
 QImage* k_pixmapregionselectordialog_get_selected_image2(void* pixmap, int aspectRatioWidth, int aspectRatioHeight);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#adjustRegionSelectorWidgetSizeToFitScreen)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#adjustRegionSelectorWidgetSizeToFitScreen)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_adjust_region_selector_widget_size_to_fit_screen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -100,7 +100,7 @@ void k_pixmapregionselectordialog_adjust_region_selector_widget_size_to_fit_scre
 /// @param c const char*
 const char* k_pixmapregionselectordialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -109,13 +109,13 @@ const char* k_pixmapregionselectordialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_pixmapregionselectordialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 /// @param parent QWidget*
 QRect* k_pixmapregionselectordialog_get_selected_region22(void* pixmap, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
@@ -123,13 +123,13 @@ QRect* k_pixmapregionselectordialog_get_selected_region22(void* pixmap, void* pa
 /// @param parent QWidget*
 QRect* k_pixmapregionselectordialog_get_selected_region4(void* pixmap, int aspectRatioWidth, int aspectRatioHeight, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 /// @param parent QWidget*
 QImage* k_pixmapregionselectordialog_get_selected_image22(void* pixmap, void* parent);
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
@@ -139,14 +139,14 @@ QImage* k_pixmapregionselectordialog_get_selected_image4(void* pixmap, int aspec
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#result)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_result(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setSizeGripEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setSizeGripEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param sizeGripEnabled bool
@@ -154,14 +154,14 @@ void k_pixmapregionselectordialog_set_size_grip_enabled(void* self, bool sizeGri
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_size_grip_enabled(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setModal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setModal)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param modal bool
@@ -169,7 +169,7 @@ void k_pixmapregionselectordialog_set_modal(void* self, bool modal);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setResult)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setResult)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param r int
@@ -177,7 +177,7 @@ void k_pixmapregionselectordialog_set_result(void* self, int r);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param result int
@@ -185,7 +185,7 @@ void k_pixmapregionselectordialog_finished(void* self, int result);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self, int result)
@@ -193,14 +193,14 @@ void k_pixmapregionselectordialog_on_finished(void* self, void (*callback)(void*
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_accepted(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self)
@@ -208,14 +208,14 @@ void k_pixmapregionselectordialog_on_accepted(void* self, void (*callback)(void*
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_rejected(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self)
@@ -223,42 +223,42 @@ void k_pixmapregionselectordialog_on_rejected(void* self, void (*callback)(void*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 uintptr_t k_pixmapregionselectordialog_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 uintptr_t k_pixmapregionselectordialog_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 uintptr_t k_pixmapregionselectordialog_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QStyle* k_pixmapregionselectordialog_style(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param style QStyle*
@@ -266,28 +266,28 @@ void k_pixmapregionselectordialog_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -296,7 +296,7 @@ int32_t k_pixmapregionselectordialog_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param windowModality enum Qt__WindowModality
@@ -304,14 +304,14 @@ void k_pixmapregionselectordialog_set_window_modality(void* self, int32_t window
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QWidget*
@@ -319,7 +319,7 @@ bool k_pixmapregionselectordialog_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param enabled bool
@@ -327,7 +327,7 @@ void k_pixmapregionselectordialog_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param disabled bool
@@ -335,7 +335,7 @@ void k_pixmapregionselectordialog_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param windowModified bool
@@ -343,140 +343,140 @@ void k_pixmapregionselectordialog_set_window_modified(void* self, bool windowMod
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRect* k_pixmapregionselectordialog_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 const QRect* k_pixmapregionselectordialog_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRect* k_pixmapregionselectordialog_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_x(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_y(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QPoint* k_pixmapregionselectordialog_pos(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QSize* k_pixmapregionselectordialog_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QSize* k_pixmapregionselectordialog_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRect* k_pixmapregionselectordialog_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRect* k_pixmapregionselectordialog_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRegion* k_pixmapregionselectordialog_children_region(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QSize* k_pixmapregionselectordialog_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QSize* k_pixmapregionselectordialog_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param minimumSize QSize*
@@ -484,7 +484,7 @@ void k_pixmapregionselectordialog_set_minimum_size(void* self, void* minimumSize
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param minw int
@@ -493,7 +493,7 @@ void k_pixmapregionselectordialog_set_minimum_size2(void* self, int minw, int mi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param maximumSize QSize*
@@ -501,7 +501,7 @@ void k_pixmapregionselectordialog_set_maximum_size(void* self, void* maximumSize
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param maxw int
@@ -510,7 +510,7 @@ void k_pixmapregionselectordialog_set_maximum_size2(void* self, int maxw, int ma
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param minw int
@@ -518,7 +518,7 @@ void k_pixmapregionselectordialog_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param minh int
@@ -526,7 +526,7 @@ void k_pixmapregionselectordialog_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param maxw int
@@ -534,7 +534,7 @@ void k_pixmapregionselectordialog_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param maxh int
@@ -542,14 +542,14 @@ void k_pixmapregionselectordialog_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QSize* k_pixmapregionselectordialog_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param sizeIncrement QSize*
@@ -557,7 +557,7 @@ void k_pixmapregionselectordialog_set_size_increment(void* self, void* sizeIncre
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param w int
@@ -566,14 +566,14 @@ void k_pixmapregionselectordialog_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QSize* k_pixmapregionselectordialog_base_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param baseSize QSize*
@@ -581,7 +581,7 @@ void k_pixmapregionselectordialog_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param basew int
@@ -590,7 +590,7 @@ void k_pixmapregionselectordialog_set_base_size2(void* self, int basew, int base
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param fixedSize QSize*
@@ -598,7 +598,7 @@ void k_pixmapregionselectordialog_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param w int
@@ -607,7 +607,7 @@ void k_pixmapregionselectordialog_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param w int
@@ -615,7 +615,7 @@ void k_pixmapregionselectordialog_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param h int
@@ -623,7 +623,7 @@ void k_pixmapregionselectordialog_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPointF*
@@ -631,7 +631,7 @@ QPointF* k_pixmapregionselectordialog_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPoint*
@@ -639,7 +639,7 @@ QPoint* k_pixmapregionselectordialog_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPointF*
@@ -647,7 +647,7 @@ QPointF* k_pixmapregionselectordialog_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPoint*
@@ -655,7 +655,7 @@ QPoint* k_pixmapregionselectordialog_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPointF*
@@ -663,7 +663,7 @@ QPointF* k_pixmapregionselectordialog_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPoint*
@@ -671,7 +671,7 @@ QPoint* k_pixmapregionselectordialog_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPointF*
@@ -679,7 +679,7 @@ QPointF* k_pixmapregionselectordialog_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPoint*
@@ -687,7 +687,7 @@ QPoint* k_pixmapregionselectordialog_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QWidget*
@@ -696,7 +696,7 @@ QPointF* k_pixmapregionselectordialog_map_to(void* self, void* param1, void* par
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QWidget*
@@ -705,7 +705,7 @@ QPoint* k_pixmapregionselectordialog_map_to2(void* self, void* param1, void* par
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QWidget*
@@ -714,7 +714,7 @@ QPointF* k_pixmapregionselectordialog_map_from(void* self, void* param1, void* p
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QWidget*
@@ -723,35 +723,35 @@ QPoint* k_pixmapregionselectordialog_map_from2(void* self, void* param1, void* p
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 const QPalette* k_pixmapregionselectordialog_palette(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param palette QPalette*
@@ -759,7 +759,7 @@ void k_pixmapregionselectordialog_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param backgroundRole enum QPalette__ColorRole
@@ -767,7 +767,7 @@ void k_pixmapregionselectordialog_set_background_role(void* self, int32_t backgr
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -776,7 +776,7 @@ int32_t k_pixmapregionselectordialog_background_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param foregroundRole enum QPalette__ColorRole
@@ -784,7 +784,7 @@ void k_pixmapregionselectordialog_set_foreground_role(void* self, int32_t foregr
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -793,14 +793,14 @@ int32_t k_pixmapregionselectordialog_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 const QFont* k_pixmapregionselectordialog_font(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param font QFont*
@@ -808,28 +808,28 @@ void k_pixmapregionselectordialog_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QFontMetrics* k_pixmapregionselectordialog_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QFontInfo* k_pixmapregionselectordialog_font_info(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QCursor* k_pixmapregionselectordialog_cursor(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param cursor QCursor*
@@ -837,14 +837,14 @@ void k_pixmapregionselectordialog_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param enable bool
@@ -852,21 +852,21 @@ void k_pixmapregionselectordialog_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param enable bool
@@ -874,14 +874,14 @@ void k_pixmapregionselectordialog_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param mask QBitmap*
@@ -889,7 +889,7 @@ void k_pixmapregionselectordialog_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param mask QRegion*
@@ -897,21 +897,21 @@ void k_pixmapregionselectordialog_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRegion* k_pixmapregionselectordialog_mask(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param target QPaintDevice*
@@ -919,7 +919,7 @@ void k_pixmapregionselectordialog_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param painter QPainter*
@@ -927,21 +927,21 @@ void k_pixmapregionselectordialog_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QPixmap* k_pixmapregionselectordialog_grab(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QGraphicsEffect* k_pixmapregionselectordialog_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param effect QGraphicsEffect*
@@ -949,7 +949,7 @@ void k_pixmapregionselectordialog_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param type enum Qt__GestureType
@@ -957,7 +957,7 @@ void k_pixmapregionselectordialog_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param type enum Qt__GestureType
@@ -965,7 +965,7 @@ void k_pixmapregionselectordialog_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param windowTitle const char*
@@ -973,7 +973,7 @@ void k_pixmapregionselectordialog_set_window_title(void* self, const char* windo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param styleSheet const char*
@@ -981,7 +981,7 @@ void k_pixmapregionselectordialog_set_style_sheet(void* self, const char* styleS
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -990,7 +990,7 @@ const char* k_pixmapregionselectordialog_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -999,7 +999,7 @@ const char* k_pixmapregionselectordialog_window_title(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param icon QIcon*
@@ -1007,14 +1007,14 @@ void k_pixmapregionselectordialog_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QIcon* k_pixmapregionselectordialog_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param windowIconText const char*
@@ -1022,7 +1022,7 @@ void k_pixmapregionselectordialog_set_window_icon_text(void* self, const char* w
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1031,7 +1031,7 @@ const char* k_pixmapregionselectordialog_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param windowRole const char*
@@ -1039,7 +1039,7 @@ void k_pixmapregionselectordialog_set_window_role(void* self, const char* window
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1048,7 +1048,7 @@ const char* k_pixmapregionselectordialog_window_role(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param filePath const char*
@@ -1056,7 +1056,7 @@ void k_pixmapregionselectordialog_set_window_file_path(void* self, const char* f
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1065,7 +1065,7 @@ const char* k_pixmapregionselectordialog_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param level double
@@ -1073,21 +1073,21 @@ void k_pixmapregionselectordialog_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 double k_pixmapregionselectordialog_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param toolTip const char*
@@ -1095,7 +1095,7 @@ void k_pixmapregionselectordialog_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1104,7 +1104,7 @@ const char* k_pixmapregionselectordialog_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param msec int
@@ -1112,14 +1112,14 @@ void k_pixmapregionselectordialog_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param statusTip const char*
@@ -1127,7 +1127,7 @@ void k_pixmapregionselectordialog_set_status_tip(void* self, const char* statusT
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1136,7 +1136,7 @@ const char* k_pixmapregionselectordialog_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param whatsThis const char*
@@ -1144,7 +1144,7 @@ void k_pixmapregionselectordialog_set_whats_this(void* self, const char* whatsTh
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1153,7 +1153,7 @@ const char* k_pixmapregionselectordialog_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1162,7 +1162,7 @@ const char* k_pixmapregionselectordialog_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param name const char*
@@ -1170,7 +1170,7 @@ void k_pixmapregionselectordialog_set_accessible_name(void* self, const char* na
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1179,7 +1179,7 @@ const char* k_pixmapregionselectordialog_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param description const char*
@@ -1187,7 +1187,7 @@ void k_pixmapregionselectordialog_set_accessible_description(void* self, const c
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param direction enum Qt__LayoutDirection
@@ -1195,7 +1195,7 @@ void k_pixmapregionselectordialog_set_layout_direction(void* self, int32_t direc
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -1204,14 +1204,14 @@ int32_t k_pixmapregionselectordialog_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param locale QLocale*
@@ -1219,63 +1219,63 @@ void k_pixmapregionselectordialog_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QLocale* k_pixmapregionselectordialog_locale(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param reason enum Qt__FocusReason
@@ -1283,7 +1283,7 @@ void k_pixmapregionselectordialog_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -1292,7 +1292,7 @@ int32_t k_pixmapregionselectordialog_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param policy enum Qt__FocusPolicy
@@ -1300,14 +1300,14 @@ void k_pixmapregionselectordialog_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
@@ -1315,7 +1315,7 @@ void k_pixmapregionselectordialog_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param focusProxy QWidget*
@@ -1323,14 +1323,14 @@ void k_pixmapregionselectordialog_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -1339,7 +1339,7 @@ int32_t k_pixmapregionselectordialog_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param policy enum Qt__ContextMenuPolicy
@@ -1347,14 +1347,14 @@ void k_pixmapregionselectordialog_set_context_menu_policy(void* self, int32_t po
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QCursor*
@@ -1362,28 +1362,28 @@ void k_pixmapregionselectordialog_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param key QKeySequence*
@@ -1391,7 +1391,7 @@ int32_t k_pixmapregionselectordialog_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param id int
@@ -1399,7 +1399,7 @@ void k_pixmapregionselectordialog_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param id int
@@ -1407,7 +1407,7 @@ void k_pixmapregionselectordialog_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param id int
@@ -1415,26 +1415,26 @@ void k_pixmapregionselectordialog_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
 ///
 QWidget* k_pixmapregionselectordialog_mouse_grabber();
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
 QWidget* k_pixmapregionselectordialog_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param enable bool
@@ -1442,28 +1442,28 @@ void k_pixmapregionselectordialog_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QGraphicsProxyWidget* k_pixmapregionselectordialog_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_update(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_repaint(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param x int
@@ -1474,7 +1474,7 @@ void k_pixmapregionselectordialog_update2(void* self, int x, int y, int w, int h
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QRect*
@@ -1482,7 +1482,7 @@ void k_pixmapregionselectordialog_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QRegion*
@@ -1490,7 +1490,7 @@ void k_pixmapregionselectordialog_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param x int
@@ -1501,7 +1501,7 @@ void k_pixmapregionselectordialog_repaint2(void* self, int x, int y, int w, int 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QRect*
@@ -1509,7 +1509,7 @@ void k_pixmapregionselectordialog_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QRegion*
@@ -1517,7 +1517,7 @@ void k_pixmapregionselectordialog_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param hidden bool
@@ -1525,70 +1525,70 @@ void k_pixmapregionselectordialog_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_show(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_hide(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_close(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_raise(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_lower(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QWidget*
@@ -1596,7 +1596,7 @@ void k_pixmapregionselectordialog_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param x int
@@ -1605,7 +1605,7 @@ void k_pixmapregionselectordialog_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QPoint*
@@ -1613,7 +1613,7 @@ void k_pixmapregionselectordialog_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param w int
@@ -1622,7 +1622,7 @@ void k_pixmapregionselectordialog_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QSize*
@@ -1630,7 +1630,7 @@ void k_pixmapregionselectordialog_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param x int
@@ -1641,7 +1641,7 @@ void k_pixmapregionselectordialog_set_geometry(void* self, int x, int y, int w, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param geometry QRect*
@@ -1649,7 +1649,7 @@ void k_pixmapregionselectordialog_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1658,7 +1658,7 @@ char* k_pixmapregionselectordialog_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param geometry const char*
@@ -1666,21 +1666,21 @@ bool k_pixmapregionselectordialog_restore_geometry(void* self, const char* geome
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QWidget*
@@ -1688,35 +1688,35 @@ bool k_pixmapregionselectordialog_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -1725,7 +1725,7 @@ int32_t k_pixmapregionselectordialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param state flag of enum Qt__WindowState
@@ -1733,7 +1733,7 @@ void k_pixmapregionselectordialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param state flag of enum Qt__WindowState
@@ -1741,14 +1741,14 @@ void k_pixmapregionselectordialog_override_window_state(void* self, int32_t stat
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QSizePolicy* k_pixmapregionselectordialog_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param sizePolicy QSizePolicy*
@@ -1756,7 +1756,7 @@ void k_pixmapregionselectordialog_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param horizontal enum QSizePolicy__Policy
@@ -1765,14 +1765,14 @@ void k_pixmapregionselectordialog_set_size_policy2(void* self, int32_t horizonta
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRegion* k_pixmapregionselectordialog_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param left int
@@ -1783,7 +1783,7 @@ void k_pixmapregionselectordialog_set_contents_margins(void* self, int left, int
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param margins QMargins*
@@ -1791,28 +1791,28 @@ void k_pixmapregionselectordialog_set_contents_margins2(void* self, void* margin
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QMargins* k_pixmapregionselectordialog_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QRect* k_pixmapregionselectordialog_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QLayout* k_pixmapregionselectordialog_layout(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param layout QLayout*
@@ -1820,14 +1820,14 @@ void k_pixmapregionselectordialog_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param parent QWidget*
@@ -1835,7 +1835,7 @@ void k_pixmapregionselectordialog_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param parent QWidget*
@@ -1844,7 +1844,7 @@ void k_pixmapregionselectordialog_set_parent2(void* self, void* parent, int64_t 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param dx int
@@ -1853,7 +1853,7 @@ void k_pixmapregionselectordialog_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param dx int
@@ -1863,35 +1863,35 @@ void k_pixmapregionselectordialog_scroll2(void* self, int dx, int dy, void* para
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param on bool
@@ -1899,7 +1899,7 @@ void k_pixmapregionselectordialog_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param action QAction*
@@ -1907,7 +1907,7 @@ void k_pixmapregionselectordialog_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param actions libqt_list /* of QAction* */
@@ -1915,7 +1915,7 @@ void k_pixmapregionselectordialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param before QAction*
@@ -1924,7 +1924,7 @@ void k_pixmapregionselectordialog_insert_actions(void* self, void* before, libqt
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param before QAction*
@@ -1933,7 +1933,7 @@ void k_pixmapregionselectordialog_insert_action(void* self, void* before, void* 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param action QAction*
@@ -1941,14 +1941,14 @@ void k_pixmapregionselectordialog_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 libqt_list /* of QAction* */ k_pixmapregionselectordialog_actions(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param text const char*
@@ -1956,7 +1956,7 @@ QAction* k_pixmapregionselectordialog_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param icon QIcon*
@@ -1965,7 +1965,7 @@ QAction* k_pixmapregionselectordialog_add_action3(void* self, void* icon, const 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param text const char*
@@ -1974,7 +1974,7 @@ QAction* k_pixmapregionselectordialog_add_action4(void* self, const char* text, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param icon QIcon*
@@ -1984,14 +1984,14 @@ QAction* k_pixmapregionselectordialog_add_action5(void* self, void* icon, const 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWidget* k_pixmapregionselectordialog_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param type flag of enum Qt__WindowType
@@ -1999,7 +1999,7 @@ void k_pixmapregionselectordialog_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -2008,7 +2008,7 @@ int64_t k_pixmapregionselectordialog_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 enum Qt__WindowType
@@ -2016,7 +2016,7 @@ void k_pixmapregionselectordialog_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param type flag of enum Qt__WindowType
@@ -2024,7 +2024,7 @@ void k_pixmapregionselectordialog_override_window_flags(void* self, int64_t type
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -2033,14 +2033,14 @@ int64_t k_pixmapregionselectordialog_window_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
 QWidget* k_pixmapregionselectordialog_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param x int
@@ -2049,7 +2049,7 @@ QWidget* k_pixmapregionselectordialog_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param p QPoint*
@@ -2057,7 +2057,7 @@ QWidget* k_pixmapregionselectordialog_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param p QPointF*
@@ -2065,7 +2065,7 @@ QWidget* k_pixmapregionselectordialog_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2073,7 +2073,7 @@ void k_pixmapregionselectordialog_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2081,14 +2081,14 @@ bool k_pixmapregionselectordialog_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param child QWidget*
@@ -2096,14 +2096,14 @@ bool k_pixmapregionselectordialog_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param enabled bool
@@ -2111,28 +2111,28 @@ void k_pixmapregionselectordialog_set_auto_fill_background(void* self, bool enab
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QBackingStore* k_pixmapregionselectordialog_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QWindow* k_pixmapregionselectordialog_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QScreen* k_pixmapregionselectordialog_screen(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param screen QScreen*
@@ -2140,14 +2140,14 @@ void k_pixmapregionselectordialog_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 QWidget* k_pixmapregionselectordialog_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param title const char*
@@ -2155,7 +2155,7 @@ void k_pixmapregionselectordialog_window_title_changed(void* self, const char* t
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self, const char* title)
@@ -2163,7 +2163,7 @@ void k_pixmapregionselectordialog_on_window_title_changed(void* self, void (*cal
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param icon QIcon*
@@ -2171,7 +2171,7 @@ void k_pixmapregionselectordialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self, QIcon* icon)
@@ -2179,7 +2179,7 @@ void k_pixmapregionselectordialog_on_window_icon_changed(void* self, void (*call
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param iconText const char*
@@ -2187,7 +2187,7 @@ void k_pixmapregionselectordialog_window_icon_text_changed(void* self, const cha
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self, const char* iconText)
@@ -2195,7 +2195,7 @@ void k_pixmapregionselectordialog_on_window_icon_text_changed(void* self, void (
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param pos QPoint*
@@ -2203,7 +2203,7 @@ void k_pixmapregionselectordialog_custom_context_menu_requested(void* self, void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self, QPoint* pos)
@@ -2211,7 +2211,7 @@ void k_pixmapregionselectordialog_on_custom_context_menu_requested(void* self, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 ///
@@ -2220,7 +2220,7 @@ int64_t k_pixmapregionselectordialog_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param hints flag of enum Qt__InputMethodHint
@@ -2228,7 +2228,7 @@ void k_pixmapregionselectordialog_set_input_method_hints(void* self, int64_t hin
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param target QPaintDevice*
@@ -2237,7 +2237,7 @@ void k_pixmapregionselectordialog_render22(void* self, void* target, void* targe
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param target QPaintDevice*
@@ -2247,7 +2247,7 @@ void k_pixmapregionselectordialog_render3(void* self, void* target, void* target
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param target QPaintDevice*
@@ -2258,7 +2258,7 @@ void k_pixmapregionselectordialog_render4(void* self, void* target, void* target
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param painter QPainter*
@@ -2267,7 +2267,7 @@ void k_pixmapregionselectordialog_render23(void* self, void* painter, void* targ
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param painter QPainter*
@@ -2277,7 +2277,7 @@ void k_pixmapregionselectordialog_render32(void* self, void* painter, void* targ
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param painter QPainter*
@@ -2288,7 +2288,7 @@ void k_pixmapregionselectordialog_render42(void* self, void* painter, void* targ
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param rectangle QRect*
@@ -2296,7 +2296,7 @@ QPixmap* k_pixmapregionselectordialog_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param type enum Qt__GestureType
@@ -2305,7 +2305,7 @@ void k_pixmapregionselectordialog_grab_gesture2(void* self, int64_t type, int32_
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param key QKeySequence*
@@ -2314,7 +2314,7 @@ int32_t k_pixmapregionselectordialog_grab_shortcut2(void* self, void* key, int32
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param id int
@@ -2323,7 +2323,7 @@ void k_pixmapregionselectordialog_set_shortcut_enabled2(void* self, int id, bool
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param id int
@@ -2332,7 +2332,7 @@ void k_pixmapregionselectordialog_set_shortcut_auto_repeat2(void* self, int id, 
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 enum Qt__WindowType
@@ -2341,7 +2341,7 @@ void k_pixmapregionselectordialog_set_window_flag2(void* self, int64_t param1, b
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 enum Qt__WidgetAttribute
@@ -2350,7 +2350,7 @@ void k_pixmapregionselectordialog_set_attribute2(void* self, int32_t param1, boo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
@@ -2358,7 +2358,7 @@ QWidget* k_pixmapregionselectordialog_create_window_container2(void* window, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
@@ -2367,7 +2367,7 @@ QWidget* k_pixmapregionselectordialog_create_window_container3(void* window, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2376,7 +2376,7 @@ const char* k_pixmapregionselectordialog_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param name char*
@@ -2384,35 +2384,35 @@ void k_pixmapregionselectordialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param b bool
@@ -2420,14 +2420,14 @@ bool k_pixmapregionselectordialog_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QThread* k_pixmapregionselectordialog_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param thread QThread*
@@ -2435,7 +2435,7 @@ bool k_pixmapregionselectordialog_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param interval int
@@ -2443,7 +2443,7 @@ int32_t k_pixmapregionselectordialog_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param id int
@@ -2451,7 +2451,7 @@ void k_pixmapregionselectordialog_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param id enum Qt__TimerId
@@ -2459,14 +2459,14 @@ void k_pixmapregionselectordialog_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 libqt_list /* of QObject* */ k_pixmapregionselectordialog_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param filterObj QObject*
@@ -2474,7 +2474,7 @@ void k_pixmapregionselectordialog_install_event_filter(void* self, void* filterO
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param obj QObject*
@@ -2482,7 +2482,7 @@ void k_pixmapregionselectordialog_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -2492,7 +2492,7 @@ QMetaObject__Connection* k_pixmapregionselectordialog_connect(void* sender, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param sender QObject*
@@ -2502,7 +2502,7 @@ QMetaObject__Connection* k_pixmapregionselectordialog_connect2(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -2512,28 +2512,28 @@ bool k_pixmapregionselectordialog_disconnect(void* sender, void* signal, void* r
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_pixmapregionselectordialog_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param name const char*
@@ -2542,7 +2542,7 @@ bool k_pixmapregionselectordialog_set_property(void* self, const char* name, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param name const char*
@@ -2550,7 +2550,7 @@ QVariant* k_pixmapregionselectordialog_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2559,28 +2559,28 @@ const char** k_pixmapregionselectordialog_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QBindingStorage* k_pixmapregionselectordialog_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 const QBindingStorage* k_pixmapregionselectordialog_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self)
@@ -2588,14 +2588,14 @@ void k_pixmapregionselectordialog_on_destroyed(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 QObject* k_pixmapregionselectordialog_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param classname const char*
@@ -2603,14 +2603,14 @@ bool k_pixmapregionselectordialog_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param thread QThread*
@@ -2619,7 +2619,7 @@ bool k_pixmapregionselectordialog_move_to_thread2(void* self, void* thread, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param interval int
@@ -2628,7 +2628,7 @@ int32_t k_pixmapregionselectordialog_start_timer22(void* self, int interval, int
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -2639,7 +2639,7 @@ QMetaObject__Connection* k_pixmapregionselectordialog_connect5(void* sender, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param sender QObject*
@@ -2650,7 +2650,7 @@ QMetaObject__Connection* k_pixmapregionselectordialog_connect4(void* self, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param param1 QObject*
@@ -2658,7 +2658,7 @@ void k_pixmapregionselectordialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 /// @param callback void func(KPixmapRegionSelectorDialog* self, QObject* param1)
@@ -2666,90 +2666,90 @@ void k_pixmapregionselectordialog_on_destroyed1(void* self, void (*callback)(voi
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 bool k_pixmapregionselectordialog_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 double k_pixmapregionselectordialog_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 double k_pixmapregionselectordialog_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 int32_t k_pixmapregionselectordialog_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
 ///
 double k_pixmapregionselectordialog_device_pixel_ratio_f_scale();
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
@@ -2757,7 +2757,7 @@ int32_t k_pixmapregionselectordialog_encode_metric_f(int32_t metric, double valu
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2767,7 +2767,7 @@ void k_pixmapregionselectordialog_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2777,7 +2777,7 @@ void k_pixmapregionselectordialog_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2787,7 +2787,7 @@ void k_pixmapregionselectordialog_on_set_visible(void* self, void (*callback)(vo
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2796,7 +2796,7 @@ QSize* k_pixmapregionselectordialog_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2805,7 +2805,7 @@ QSize* k_pixmapregionselectordialog_qbase_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2815,7 +2815,7 @@ void k_pixmapregionselectordialog_on_size_hint(void* self, QSize* (*callback)())
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2824,7 +2824,7 @@ QSize* k_pixmapregionselectordialog_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2833,7 +2833,7 @@ QSize* k_pixmapregionselectordialog_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2843,7 +2843,7 @@ void k_pixmapregionselectordialog_on_minimum_size_hint(void* self, QSize* (*call
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2852,7 +2852,7 @@ void k_pixmapregionselectordialog_open(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2861,7 +2861,7 @@ void k_pixmapregionselectordialog_qbase_open(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2871,7 +2871,7 @@ void k_pixmapregionselectordialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2880,7 +2880,7 @@ int32_t k_pixmapregionselectordialog_exec(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2889,7 +2889,7 @@ int32_t k_pixmapregionselectordialog_qbase_exec(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2899,7 +2899,7 @@ void k_pixmapregionselectordialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2909,7 +2909,7 @@ void k_pixmapregionselectordialog_done(void* self, int param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2919,7 +2919,7 @@ void k_pixmapregionselectordialog_qbase_done(void* self, int param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2929,7 +2929,7 @@ void k_pixmapregionselectordialog_on_done(void* self, void (*callback)(void*, in
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2938,7 +2938,7 @@ void k_pixmapregionselectordialog_accept(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2947,7 +2947,7 @@ void k_pixmapregionselectordialog_qbase_accept(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2957,7 +2957,7 @@ void k_pixmapregionselectordialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2966,7 +2966,7 @@ void k_pixmapregionselectordialog_reject(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2975,7 +2975,7 @@ void k_pixmapregionselectordialog_qbase_reject(void* self);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2985,7 +2985,7 @@ void k_pixmapregionselectordialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2995,7 +2995,7 @@ void k_pixmapregionselectordialog_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3005,7 +3005,7 @@ void k_pixmapregionselectordialog_qbase_key_press_event(void* self, void* param1
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3015,7 +3015,7 @@ void k_pixmapregionselectordialog_on_key_press_event(void* self, void (*callback
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3025,7 +3025,7 @@ void k_pixmapregionselectordialog_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3035,7 +3035,7 @@ void k_pixmapregionselectordialog_qbase_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3045,7 +3045,7 @@ void k_pixmapregionselectordialog_on_close_event(void* self, void (*callback)(vo
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3055,7 +3055,7 @@ void k_pixmapregionselectordialog_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3065,7 +3065,7 @@ void k_pixmapregionselectordialog_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3075,7 +3075,7 @@ void k_pixmapregionselectordialog_on_show_event(void* self, void (*callback)(voi
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3085,7 +3085,7 @@ void k_pixmapregionselectordialog_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3095,7 +3095,7 @@ void k_pixmapregionselectordialog_qbase_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3105,7 +3105,7 @@ void k_pixmapregionselectordialog_on_resize_event(void* self, void (*callback)(v
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3115,7 +3115,7 @@ void k_pixmapregionselectordialog_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3125,7 +3125,7 @@ void k_pixmapregionselectordialog_qbase_context_menu_event(void* self, void* par
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3135,7 +3135,7 @@ void k_pixmapregionselectordialog_on_context_menu_event(void* self, void (*callb
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3146,7 +3146,7 @@ bool k_pixmapregionselectordialog_event_filter(void* self, void* param1, void* p
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3157,7 +3157,7 @@ bool k_pixmapregionselectordialog_qbase_event_filter(void* self, void* param1, v
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3167,7 +3167,7 @@ void k_pixmapregionselectordialog_on_event_filter(void* self, bool (*callback)(v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3176,7 +3176,7 @@ int32_t k_pixmapregionselectordialog_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3185,7 +3185,7 @@ int32_t k_pixmapregionselectordialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3195,7 +3195,7 @@ void k_pixmapregionselectordialog_on_dev_type(void* self, int32_t (*callback)())
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3205,7 +3205,7 @@ int32_t k_pixmapregionselectordialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3215,7 +3215,7 @@ int32_t k_pixmapregionselectordialog_qbase_height_for_width(void* self, int para
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3225,7 +3225,7 @@ void k_pixmapregionselectordialog_on_height_for_width(void* self, int32_t (*call
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3234,7 +3234,7 @@ bool k_pixmapregionselectordialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3243,7 +3243,7 @@ bool k_pixmapregionselectordialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3253,7 +3253,7 @@ void k_pixmapregionselectordialog_on_has_height_for_width(void* self, bool (*cal
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3262,7 +3262,7 @@ QPaintEngine* k_pixmapregionselectordialog_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3271,7 +3271,7 @@ QPaintEngine* k_pixmapregionselectordialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3281,7 +3281,7 @@ void k_pixmapregionselectordialog_on_paint_engine(void* self, QPaintEngine* (*ca
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3291,7 +3291,7 @@ bool k_pixmapregionselectordialog_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3301,7 +3301,7 @@ bool k_pixmapregionselectordialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3311,7 +3311,7 @@ void k_pixmapregionselectordialog_on_event(void* self, bool (*callback)(void*, v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3321,7 +3321,7 @@ void k_pixmapregionselectordialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3331,7 +3331,7 @@ void k_pixmapregionselectordialog_qbase_mouse_press_event(void* self, void* even
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3341,7 +3341,7 @@ void k_pixmapregionselectordialog_on_mouse_press_event(void* self, void (*callba
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3351,7 +3351,7 @@ void k_pixmapregionselectordialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3361,7 +3361,7 @@ void k_pixmapregionselectordialog_qbase_mouse_release_event(void* self, void* ev
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3371,7 +3371,7 @@ void k_pixmapregionselectordialog_on_mouse_release_event(void* self, void (*call
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3381,7 +3381,7 @@ void k_pixmapregionselectordialog_mouse_double_click_event(void* self, void* eve
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3391,7 +3391,7 @@ void k_pixmapregionselectordialog_qbase_mouse_double_click_event(void* self, voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3401,7 +3401,7 @@ void k_pixmapregionselectordialog_on_mouse_double_click_event(void* self, void (
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3411,7 +3411,7 @@ void k_pixmapregionselectordialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3421,7 +3421,7 @@ void k_pixmapregionselectordialog_qbase_mouse_move_event(void* self, void* event
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3431,7 +3431,7 @@ void k_pixmapregionselectordialog_on_mouse_move_event(void* self, void (*callbac
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3441,7 +3441,7 @@ void k_pixmapregionselectordialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3451,7 +3451,7 @@ void k_pixmapregionselectordialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3461,7 +3461,7 @@ void k_pixmapregionselectordialog_on_wheel_event(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3471,7 +3471,7 @@ void k_pixmapregionselectordialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3481,7 +3481,7 @@ void k_pixmapregionselectordialog_qbase_key_release_event(void* self, void* even
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3491,7 +3491,7 @@ void k_pixmapregionselectordialog_on_key_release_event(void* self, void (*callba
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3501,7 +3501,7 @@ void k_pixmapregionselectordialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3511,7 +3511,7 @@ void k_pixmapregionselectordialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3521,7 +3521,7 @@ void k_pixmapregionselectordialog_on_focus_in_event(void* self, void (*callback)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3531,7 +3531,7 @@ void k_pixmapregionselectordialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3541,7 +3541,7 @@ void k_pixmapregionselectordialog_qbase_focus_out_event(void* self, void* event)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3551,7 +3551,7 @@ void k_pixmapregionselectordialog_on_focus_out_event(void* self, void (*callback
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3561,7 +3561,7 @@ void k_pixmapregionselectordialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3571,7 +3571,7 @@ void k_pixmapregionselectordialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3581,7 +3581,7 @@ void k_pixmapregionselectordialog_on_enter_event(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3591,7 +3591,7 @@ void k_pixmapregionselectordialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3601,7 +3601,7 @@ void k_pixmapregionselectordialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3611,7 +3611,7 @@ void k_pixmapregionselectordialog_on_leave_event(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3621,7 +3621,7 @@ void k_pixmapregionselectordialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3631,7 +3631,7 @@ void k_pixmapregionselectordialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3641,7 +3641,7 @@ void k_pixmapregionselectordialog_on_paint_event(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3651,7 +3651,7 @@ void k_pixmapregionselectordialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3661,7 +3661,7 @@ void k_pixmapregionselectordialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3671,7 +3671,7 @@ void k_pixmapregionselectordialog_on_move_event(void* self, void (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3681,7 +3681,7 @@ void k_pixmapregionselectordialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3691,7 +3691,7 @@ void k_pixmapregionselectordialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3701,7 +3701,7 @@ void k_pixmapregionselectordialog_on_tablet_event(void* self, void (*callback)(v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3711,7 +3711,7 @@ void k_pixmapregionselectordialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3721,7 +3721,7 @@ void k_pixmapregionselectordialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3731,7 +3731,7 @@ void k_pixmapregionselectordialog_on_action_event(void* self, void (*callback)(v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3741,7 +3741,7 @@ void k_pixmapregionselectordialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3751,7 +3751,7 @@ void k_pixmapregionselectordialog_qbase_drag_enter_event(void* self, void* event
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3761,7 +3761,7 @@ void k_pixmapregionselectordialog_on_drag_enter_event(void* self, void (*callbac
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3771,7 +3771,7 @@ void k_pixmapregionselectordialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3781,7 +3781,7 @@ void k_pixmapregionselectordialog_qbase_drag_move_event(void* self, void* event)
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3791,7 +3791,7 @@ void k_pixmapregionselectordialog_on_drag_move_event(void* self, void (*callback
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3801,7 +3801,7 @@ void k_pixmapregionselectordialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3811,7 +3811,7 @@ void k_pixmapregionselectordialog_qbase_drag_leave_event(void* self, void* event
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3821,7 +3821,7 @@ void k_pixmapregionselectordialog_on_drag_leave_event(void* self, void (*callbac
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3831,7 +3831,7 @@ void k_pixmapregionselectordialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3841,7 +3841,7 @@ void k_pixmapregionselectordialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3851,7 +3851,7 @@ void k_pixmapregionselectordialog_on_drop_event(void* self, void (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3861,7 +3861,7 @@ void k_pixmapregionselectordialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3871,7 +3871,7 @@ void k_pixmapregionselectordialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3881,7 +3881,7 @@ void k_pixmapregionselectordialog_on_hide_event(void* self, void (*callback)(voi
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3893,7 +3893,7 @@ bool k_pixmapregionselectordialog_native_event(void* self, const char* eventType
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3905,7 +3905,7 @@ bool k_pixmapregionselectordialog_qbase_native_event(void* self, const char* eve
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3915,7 +3915,7 @@ void k_pixmapregionselectordialog_on_native_event(void* self, bool (*callback)(v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3925,7 +3925,7 @@ void k_pixmapregionselectordialog_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3935,7 +3935,7 @@ void k_pixmapregionselectordialog_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3945,7 +3945,7 @@ void k_pixmapregionselectordialog_on_change_event(void* self, void (*callback)(v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3955,7 +3955,7 @@ int32_t k_pixmapregionselectordialog_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3965,7 +3965,7 @@ int32_t k_pixmapregionselectordialog_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3975,7 +3975,7 @@ void k_pixmapregionselectordialog_on_metric(void* self, int32_t (*callback)(void
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3985,7 +3985,7 @@ void k_pixmapregionselectordialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3995,7 +3995,7 @@ void k_pixmapregionselectordialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4005,7 +4005,7 @@ void k_pixmapregionselectordialog_on_init_painter(void* self, void (*callback)(v
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4015,7 +4015,7 @@ QPaintDevice* k_pixmapregionselectordialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4025,7 +4025,7 @@ QPaintDevice* k_pixmapregionselectordialog_qbase_redirected(void* self, void* of
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4035,7 +4035,7 @@ void k_pixmapregionselectordialog_on_redirected(void* self, QPaintDevice* (*call
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4044,7 +4044,7 @@ QPainter* k_pixmapregionselectordialog_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4053,7 +4053,7 @@ QPainter* k_pixmapregionselectordialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4063,7 +4063,7 @@ void k_pixmapregionselectordialog_on_shared_painter(void* self, QPainter* (*call
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4073,7 +4073,7 @@ void k_pixmapregionselectordialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4083,7 +4083,7 @@ void k_pixmapregionselectordialog_qbase_input_method_event(void* self, void* par
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4093,7 +4093,7 @@ void k_pixmapregionselectordialog_on_input_method_event(void* self, void (*callb
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4103,7 +4103,7 @@ QVariant* k_pixmapregionselectordialog_input_method_query(void* self, int64_t pa
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4113,7 +4113,7 @@ QVariant* k_pixmapregionselectordialog_qbase_input_method_query(void* self, int6
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4123,7 +4123,7 @@ void k_pixmapregionselectordialog_on_input_method_query(void* self, QVariant* (*
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4133,7 +4133,7 @@ bool k_pixmapregionselectordialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4143,7 +4143,7 @@ bool k_pixmapregionselectordialog_qbase_focus_next_prev_child(void* self, bool n
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4153,7 +4153,7 @@ void k_pixmapregionselectordialog_on_focus_next_prev_child(void* self, bool (*ca
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4163,7 +4163,7 @@ void k_pixmapregionselectordialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4173,7 +4173,7 @@ void k_pixmapregionselectordialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4183,7 +4183,7 @@ void k_pixmapregionselectordialog_on_timer_event(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4193,7 +4193,7 @@ void k_pixmapregionselectordialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4203,7 +4203,7 @@ void k_pixmapregionselectordialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4213,7 +4213,7 @@ void k_pixmapregionselectordialog_on_child_event(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4223,7 +4223,7 @@ void k_pixmapregionselectordialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4233,7 +4233,7 @@ void k_pixmapregionselectordialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4243,7 +4243,7 @@ void k_pixmapregionselectordialog_on_custom_event(void* self, void (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4253,7 +4253,7 @@ void k_pixmapregionselectordialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4263,7 +4263,7 @@ void k_pixmapregionselectordialog_qbase_connect_notify(void* self, void* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4273,7 +4273,7 @@ void k_pixmapregionselectordialog_on_connect_notify(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4283,7 +4283,7 @@ void k_pixmapregionselectordialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4293,7 +4293,7 @@ void k_pixmapregionselectordialog_qbase_disconnect_notify(void* self, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4303,7 +4303,7 @@ void k_pixmapregionselectordialog_on_disconnect_notify(void* self, void (*callba
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4313,7 +4313,7 @@ void k_pixmapregionselectordialog_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4323,7 +4323,7 @@ void k_pixmapregionselectordialog_qbase_adjust_position(void* self, void* param1
 
 /// Inherited from QDialog
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4333,7 +4333,7 @@ void k_pixmapregionselectordialog_on_adjust_position(void* self, void (*callback
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4342,7 +4342,7 @@ void k_pixmapregionselectordialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4351,7 +4351,7 @@ void k_pixmapregionselectordialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4361,7 +4361,7 @@ void k_pixmapregionselectordialog_on_update_micro_focus(void* self, void (*callb
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4370,7 +4370,7 @@ void k_pixmapregionselectordialog_create(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4379,7 +4379,7 @@ void k_pixmapregionselectordialog_qbase_create(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4389,7 +4389,7 @@ void k_pixmapregionselectordialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4398,7 +4398,7 @@ void k_pixmapregionselectordialog_destroy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4407,7 +4407,7 @@ void k_pixmapregionselectordialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4417,7 +4417,7 @@ void k_pixmapregionselectordialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4426,7 +4426,7 @@ bool k_pixmapregionselectordialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4435,7 +4435,7 @@ bool k_pixmapregionselectordialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4445,7 +4445,7 @@ void k_pixmapregionselectordialog_on_focus_next_child(void* self, bool (*callbac
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4454,7 +4454,7 @@ bool k_pixmapregionselectordialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4463,7 +4463,7 @@ bool k_pixmapregionselectordialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4473,7 +4473,7 @@ void k_pixmapregionselectordialog_on_focus_previous_child(void* self, bool (*cal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4482,7 +4482,7 @@ QObject* k_pixmapregionselectordialog_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4491,7 +4491,7 @@ QObject* k_pixmapregionselectordialog_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4501,7 +4501,7 @@ void k_pixmapregionselectordialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4510,7 +4510,7 @@ int32_t k_pixmapregionselectordialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4519,7 +4519,7 @@ int32_t k_pixmapregionselectordialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4529,7 +4529,7 @@ void k_pixmapregionselectordialog_on_sender_signal_index(void* self, int32_t (*c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4539,7 +4539,7 @@ int32_t k_pixmapregionselectordialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4549,7 +4549,7 @@ int32_t k_pixmapregionselectordialog_qbase_receivers(void* self, const char* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4559,7 +4559,7 @@ void k_pixmapregionselectordialog_on_receivers(void* self, int32_t (*callback)(v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4569,7 +4569,7 @@ bool k_pixmapregionselectordialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4579,7 +4579,7 @@ bool k_pixmapregionselectordialog_qbase_is_signal_connected(void* self, void* si
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4589,7 +4589,7 @@ void k_pixmapregionselectordialog_on_is_signal_connected(void* self, bool (*call
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4600,7 +4600,7 @@ double k_pixmapregionselectordialog_get_decoded_metric_f(void* self, int32_t met
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4611,7 +4611,7 @@ double k_pixmapregionselectordialog_qbase_get_decoded_metric_f(void* self, int32
 
 /// Inherited from QPaintDevice
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4621,7 +4621,7 @@ void k_pixmapregionselectordialog_on_get_decoded_metric_f(void* self, double (*c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -4629,7 +4629,7 @@ void k_pixmapregionselectordialog_on_get_decoded_metric_f(void* self, double (*c
 /// @param callback void func(KPixmapRegionSelectorDialog* self, const char* objectName)
 void k_pixmapregionselectordialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#dtor.KPixmapRegionSelectorDialog)
+/// [Upstream resources](https://api.kde.org/kpixmapregionselectordialog.html#dtor.KPixmapRegionSelectorDialog)
 ///
 /// Delete this object from C++ memory.
 ///

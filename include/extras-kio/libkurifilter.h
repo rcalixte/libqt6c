@@ -22,28 +22,28 @@ KUriFilterSearchProvider* k_urifiltersearchprovider_new();
 /// @param param1 KUriFilterSearchProvider*
 KUriFilterSearchProvider* k_urifiltersearchprovider_new2(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#desktopEntryName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#desktopEntryName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 const char* k_urifiltersearchprovider_desktop_entry_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#name)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 const char* k_urifiltersearchprovider_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#iconName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 const char* k_urifiltersearchprovider_icon_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#iconName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
 /// Allows for overriding the related default method
 ///
@@ -51,40 +51,40 @@ const char* k_urifiltersearchprovider_icon_name(void* self);
 /// @param callback const char* func()
 void k_urifiltersearchprovider_on_icon_name(void* self, const char* (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#iconName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
 /// Base class method implementation
 ///
 /// @param self KUriFilterSearchProvider*
 const char* k_urifiltersearchprovider_qbase_icon_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#keys)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#keys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 const char** k_urifiltersearchprovider_keys(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#defaultKey)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#defaultKey)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 const char* k_urifiltersearchprovider_default_key(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#operator-eq)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param param1 KUriFilterSearchProvider*
 void k_urifiltersearchprovider_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param desktopEntryName const char*
 void k_urifiltersearchprovider_set_desktop_entry_name(void* self, const char* desktopEntryName);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
 ///
 /// Allows for overriding the related default method
 ///
@@ -92,7 +92,7 @@ void k_urifiltersearchprovider_set_desktop_entry_name(void* self, const char* de
 /// @param callback void func(KUriFilterSearchProvider* self, const char* desktopEntryName)
 void k_urifiltersearchprovider_on_set_desktop_entry_name(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
 ///
 /// Base class method implementation
 ///
@@ -100,13 +100,13 @@ void k_urifiltersearchprovider_on_set_desktop_entry_name(void* self, void (*call
 /// @param desktopEntryName const char*
 void k_urifiltersearchprovider_qbase_set_desktop_entry_name(void* self, const char* desktopEntryName);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param iconName const char*
 void k_urifiltersearchprovider_set_icon_name(void* self, const char* iconName);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
 ///
 /// Allows for overriding the related default method
 ///
@@ -114,7 +114,7 @@ void k_urifiltersearchprovider_set_icon_name(void* self, const char* iconName);
 /// @param callback void func(KUriFilterSearchProvider* self, const char* iconName)
 void k_urifiltersearchprovider_on_set_icon_name(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
 ///
 /// Base class method implementation
 ///
@@ -122,13 +122,13 @@ void k_urifiltersearchprovider_on_set_icon_name(void* self, void (*callback)(voi
 /// @param iconName const char*
 void k_urifiltersearchprovider_qbase_set_icon_name(void* self, const char* iconName);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param keys const char**
 void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///
 /// Allows for overriding the related default method
 ///
@@ -136,7 +136,7 @@ void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]);
 /// @param callback void func(KUriFilterSearchProvider* self, const char** keys)
 void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///
 /// Base class method implementation
 ///
@@ -144,13 +144,13 @@ void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, c
 /// @param keys const char**
 void k_urifiltersearchprovider_qbase_set_keys(void* self, const char* keys[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param name const char*
 void k_urifiltersearchprovider_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
 ///
 /// Allows for overriding the related default method
 ///
@@ -158,7 +158,7 @@ void k_urifiltersearchprovider_set_name(void* self, const char* name);
 /// @param callback void func(KUriFilterSearchProvider* self, const char* name)
 void k_urifiltersearchprovider_on_set_name(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setName)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
 ///
 /// Base class method implementation
 ///
@@ -166,7 +166,7 @@ void k_urifiltersearchprovider_on_set_name(void* self, void (*callback)(void*, c
 /// @param name const char*
 void k_urifiltersearchprovider_qbase_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#dtor.KUriFilterSearchProvider)
+/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#dtor.KUriFilterSearchProvider)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -194,94 +194,94 @@ KUriFilterData* k_urifilterdata_new3(const char* url);
 /// @param other KUriFilterData*
 KUriFilterData* k_urifilterdata_new4(void* other);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#uri)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#uri)
 ///
 /// @param self KUriFilterData*
 QUrl* k_urifilterdata_uri(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#errorMsg)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#errorMsg)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_error_msg(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#uriType)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#uriType)
 ///
 /// @param self KUriFilterData*
 ///
 /// @return enum KUriFilterData__UriTypes
 int32_t k_urifilterdata_uri_type(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#absolutePath)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#absolutePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_absolute_path(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#hasAbsolutePath)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#hasAbsolutePath)
 ///
 /// @param self KUriFilterData*
 bool k_urifilterdata_has_absolute_path(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#argsAndOptions)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#argsAndOptions)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_args_and_options(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#hasArgsAndOptions)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#hasArgsAndOptions)
 ///
 /// @param self KUriFilterData*
 bool k_urifilterdata_has_args_and_options(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#checkForExecutables)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#checkForExecutables)
 ///
 /// @param self KUriFilterData*
 bool k_urifilterdata_check_for_executables(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#typedString)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#typedString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_typed_string(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#searchTerm)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchTerm)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_search_term(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#searchTermSeparator)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchTermSeparator)
 ///
 /// @param self KUriFilterData*
 QChar* k_urifilterdata_search_term_separator(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#searchProvider)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchProvider)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_search_provider(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#preferredSearchProviders)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#preferredSearchProviders)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char** k_urifilterdata_preferred_search_providers(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#queryForSearchProvider)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#queryForSearchProvider)
 ///
 /// @param self KUriFilterData*
 /// @param provider const char*
 KUriFilterSearchProvider* k_urifilterdata_query_for_search_provider(void* self, const char* provider);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#queryForPreferredSearchProvider)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#queryForPreferredSearchProvider)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -289,7 +289,7 @@ KUriFilterSearchProvider* k_urifilterdata_query_for_search_provider(void* self, 
 /// @param provider const char*
 const char* k_urifilterdata_query_for_preferred_search_provider(void* self, const char* provider);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#allQueriesForSearchProvider)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#allQueriesForSearchProvider)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -297,7 +297,7 @@ const char* k_urifilterdata_query_for_preferred_search_provider(void* self, cons
 /// @param provider const char*
 const char** k_urifilterdata_all_queries_for_search_provider(void* self, const char* provider);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#iconNameForPreferredSearchProvider)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#iconNameForPreferredSearchProvider)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -305,102 +305,102 @@ const char** k_urifilterdata_all_queries_for_search_provider(void* self, const c
 /// @param provider const char*
 const char* k_urifilterdata_icon_name_for_preferred_search_provider(void* self, const char* provider);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#alternateSearchProviders)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#alternateSearchProviders)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char** k_urifilterdata_alternate_search_providers(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#alternateDefaultSearchProvider)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#alternateDefaultSearchProvider)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_alternate_default_search_provider(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#defaultUrlScheme)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#defaultUrlScheme)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_default_url_scheme(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#searchFilteringOptions)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchFilteringOptions)
 ///
 /// @param self KUriFilterData*
 ///
 /// @return flag of enum KUriFilterData__SearchFilterOption
 int32_t k_urifilterdata_search_filtering_options(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#iconName)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#iconName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 const char* k_urifilterdata_icon_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setCheckForExecutables)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setCheckForExecutables)
 ///
 /// @param self KUriFilterData*
 /// @param check bool
 void k_urifilterdata_set_check_for_executables(void* self, bool check);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setData)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setData)
 ///
 /// @param self KUriFilterData*
 /// @param url QUrl*
 void k_urifilterdata_set_data(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setData)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setData)
 ///
 /// @param self KUriFilterData*
 /// @param url const char*
 void k_urifilterdata_set_data2(void* self, const char* url);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setAbsolutePath)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setAbsolutePath)
 ///
 /// @param self KUriFilterData*
 /// @param abs_path const char*
 bool k_urifilterdata_set_absolute_path(void* self, const char* abs_path);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setAlternateSearchProviders)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setAlternateSearchProviders)
 ///
 /// @param self KUriFilterData*
 /// @param providers const char**
 void k_urifilterdata_set_alternate_search_providers(void* self, const char* providers[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setAlternateDefaultSearchProvider)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setAlternateDefaultSearchProvider)
 ///
 /// @param self KUriFilterData*
 /// @param provider const char*
 void k_urifilterdata_set_alternate_default_search_provider(void* self, const char* provider);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setDefaultUrlScheme)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setDefaultUrlScheme)
 ///
 /// @param self KUriFilterData*
 /// @param defaultUrlScheme const char*
 void k_urifilterdata_set_default_url_scheme(void* self, const char* defaultUrlScheme);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#setSearchFilteringOptions)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#setSearchFilteringOptions)
 ///
 /// @param self KUriFilterData*
 /// @param options flag of enum KUriFilterData__SearchFilterOption
 void k_urifilterdata_set_search_filtering_options(void* self, int32_t options);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#operator-eq)
 ///
 /// @param self KUriFilterData*
 /// @param url QUrl*
 void k_urifilterdata_operator_assign(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#operator-eq)
 ///
 /// @param self KUriFilterData*
 /// @param url const char*
 void k_urifilterdata_operator_assign2(void* self, const char* url);
 
-/// [Qt documentation](https://api.kde.org/kurifilterdata.html#dtor.KUriFilterData)
+/// [Upstream resources](https://api.kde.org/kurifilterdata.html#dtor.KUriFilterData)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -409,35 +409,35 @@ void k_urifilterdata_delete(void* self);
 
 /// https://api.kde.org/kurifilter.html
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#self)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#self)
 ///
 KUriFilter* k_urifilter_self();
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param data KUriFilterData*
 bool k_urifilter_filter_uri(void* self, void* data);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param uri QUrl*
 bool k_urifilter_filter_uri2(void* self, void* uri);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param uri const char*
 bool k_urifilter_filter_uri3(void* self, const char* uri);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filteredUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///
 /// @param self KUriFilter*
 /// @param uri QUrl*
 QUrl* k_urifilter_filtered_uri(void* self, void* uri);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filteredUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -445,49 +445,49 @@ QUrl* k_urifilter_filtered_uri(void* self, void* uri);
 /// @param uri const char*
 const char* k_urifilter_filtered_uri2(void* self, const char* uri);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filterSearchUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filterSearchUri)
 ///
 /// @param self KUriFilter*
 /// @param data KUriFilterData*
 /// @param types flag of enum KUriFilter__SearchFilterType
 bool k_urifilter_filter_search_uri(void* self, void* data, int32_t types);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#pluginNames)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#pluginNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilter*
 const char** k_urifilter_plugin_names(void* self);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param data KUriFilterData*
 /// @param filters const char**
 bool k_urifilter_filter_uri22(void* self, void* data, const char* filters[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param uri QUrl*
 /// @param filters const char**
 bool k_urifilter_filter_uri23(void* self, void* uri, const char* filters[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param uri const char*
 /// @param filters const char**
 bool k_urifilter_filter_uri24(void* self, const char* uri, const char* filters[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filteredUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///
 /// @param self KUriFilter*
 /// @param uri QUrl*
 /// @param filters const char**
 QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#filteredUri)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -496,7 +496,7 @@ QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[stat
 /// @param filters const char**
 const char* k_urifilter_filtered_uri23(void* self, const char* uri, const char* filters[static 1]);
 
-/// [Qt documentation](https://api.kde.org/kurifilter.html#dtor.KUriFilter)
+/// [Upstream resources](https://api.kde.org/kurifilter.html#dtor.KUriFilter)
 ///
 /// Delete this object from C++ memory.
 ///

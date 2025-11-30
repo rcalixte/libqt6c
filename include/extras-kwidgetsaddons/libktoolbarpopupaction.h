@@ -20,7 +20,7 @@
 /// @param parent QObject*
 KToolBarPopupAction* k_toolbarpopupaction_new(void* icon, const char* text, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KToolBarPopupAction*
 const QMetaObject* k_toolbarpopupaction_meta_object(void* self);
@@ -49,38 +49,38 @@ void k_toolbarpopupaction_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_toolbarpopupaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_toolbarpopupaction_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#popupMenu)
+/// [Upstream resources](https://api.kde.org/ktoolbarpopupaction.html#popupMenu)
 ///
 /// @param self KToolBarPopupAction*
 QMenu* k_toolbarpopupaction_popup_menu(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#popupMode)
+/// [Upstream resources](https://api.kde.org/ktoolbarpopupaction.html#popupMode)
 ///
 /// @param self KToolBarPopupAction*
 ///
 /// @return enum KToolBarPopupAction__PopupMode
 int32_t k_toolbarpopupaction_popup_mode(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#setPopupMode)
+/// [Upstream resources](https://api.kde.org/ktoolbarpopupaction.html#setPopupMode)
 ///
 /// @param self KToolBarPopupAction*
 /// @param popupMode enum KToolBarPopupAction__PopupMode
 void k_toolbarpopupaction_set_popup_mode(void* self, int32_t popupMode);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
+/// [Upstream resources](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
 ///
 /// @param self KToolBarPopupAction*
 /// @param parent QWidget*
 QWidget* k_toolbarpopupaction_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
+/// [Upstream resources](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -88,7 +88,7 @@ QWidget* k_toolbarpopupaction_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KToolBarPopupAction* self, QWidget* parent)
 void k_toolbarpopupaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
+/// [Upstream resources](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -96,7 +96,7 @@ void k_toolbarpopupaction_on_create_widget(void* self, QWidget* (*callback)(void
 /// @param parent QWidget*
 QWidget* k_toolbarpopupaction_qbase_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -104,7 +104,7 @@ QWidget* k_toolbarpopupaction_qbase_create_widget(void* self, void* parent);
 /// @param c const char*
 const char* k_toolbarpopupaction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -115,7 +115,7 @@ const char* k_toolbarpopupaction_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#setDefaultWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#setDefaultWidget)
 ///
 /// @param self KToolBarPopupAction*
 /// @param w QWidget*
@@ -123,14 +123,14 @@ void k_toolbarpopupaction_set_default_widget(void* self, void* w);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#defaultWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#defaultWidget)
 ///
 /// @param self KToolBarPopupAction*
 QWidget* k_toolbarpopupaction_default_widget(void* self);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#requestWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#requestWidget)
 ///
 /// @param self KToolBarPopupAction*
 /// @param parent QWidget*
@@ -138,7 +138,7 @@ QWidget* k_toolbarpopupaction_request_widget(void* self, void* parent);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#releaseWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#releaseWidget)
 ///
 /// @param self KToolBarPopupAction*
 /// @param widget QWidget*
@@ -146,14 +146,14 @@ void k_toolbarpopupaction_release_widget(void* self, void* widget);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
 ///
 /// @param self KToolBarPopupAction*
 libqt_list /* of QObject* */ k_toolbarpopupaction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setActionGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setActionGroup)
 ///
 /// @param self KToolBarPopupAction*
 /// @param group QActionGroup*
@@ -161,14 +161,14 @@ void k_toolbarpopupaction_set_action_group(void* self, void* group);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#actionGroup)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#actionGroup)
 ///
 /// @param self KToolBarPopupAction*
 QActionGroup* k_toolbarpopupaction_action_group(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIcon)
 ///
 /// @param self KToolBarPopupAction*
 /// @param icon QIcon*
@@ -176,14 +176,14 @@ void k_toolbarpopupaction_set_icon(void* self, void* icon);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#icon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#icon)
 ///
 /// @param self KToolBarPopupAction*
 QIcon* k_toolbarpopupaction_icon(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setText)
 ///
 /// @param self KToolBarPopupAction*
 /// @param text const char*
@@ -191,7 +191,7 @@ void k_toolbarpopupaction_set_text(void* self, const char* text);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -200,7 +200,7 @@ const char* k_toolbarpopupaction_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIconText)
 ///
 /// @param self KToolBarPopupAction*
 /// @param text const char*
@@ -208,7 +208,7 @@ void k_toolbarpopupaction_set_icon_text(void* self, const char* text);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#iconText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -217,7 +217,7 @@ const char* k_toolbarpopupaction_icon_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setToolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setToolTip)
 ///
 /// @param self KToolBarPopupAction*
 /// @param tip const char*
@@ -225,7 +225,7 @@ void k_toolbarpopupaction_set_tool_tip(void* self, const char* tip);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -234,7 +234,7 @@ const char* k_toolbarpopupaction_tool_tip(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setStatusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setStatusTip)
 ///
 /// @param self KToolBarPopupAction*
 /// @param statusTip const char*
@@ -242,7 +242,7 @@ void k_toolbarpopupaction_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#statusTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -251,7 +251,7 @@ const char* k_toolbarpopupaction_status_tip(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setWhatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setWhatsThis)
 ///
 /// @param self KToolBarPopupAction*
 /// @param what const char*
@@ -259,7 +259,7 @@ void k_toolbarpopupaction_set_whats_this(void* self, const char* what);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#whatsThis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -268,7 +268,7 @@ const char* k_toolbarpopupaction_whats_this(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setPriority)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setPriority)
 ///
 /// @param self KToolBarPopupAction*
 /// @param priority enum QAction__Priority
@@ -276,7 +276,7 @@ void k_toolbarpopupaction_set_priority(void* self, int32_t priority);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#priority)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#priority)
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -285,7 +285,7 @@ int32_t k_toolbarpopupaction_priority(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setSeparator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setSeparator)
 ///
 /// @param self KToolBarPopupAction*
 /// @param b bool
@@ -293,14 +293,14 @@ void k_toolbarpopupaction_set_separator(void* self, bool b);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isSeparator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isSeparator)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_separator(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcut)
 ///
 /// @param self KToolBarPopupAction*
 /// @param shortcut QKeySequence*
@@ -308,14 +308,14 @@ void k_toolbarpopupaction_set_shortcut(void* self, void* shortcut);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcut)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcut)
 ///
 /// @param self KToolBarPopupAction*
 QKeySequence* k_toolbarpopupaction_shortcut(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KToolBarPopupAction*
 /// @param shortcuts libqt_list /* of QKeySequence* */
@@ -323,7 +323,7 @@ void k_toolbarpopupaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KToolBarPopupAction*
 /// @param shortcuts enum QKeySequence__StandardKey
@@ -331,14 +331,14 @@ void k_toolbarpopupaction_set_shortcuts2(void* self, int32_t shortcuts);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcuts)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
 /// @param self KToolBarPopupAction*
 libqt_list /* of QKeySequence* */ k_toolbarpopupaction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcutContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcutContext)
 ///
 /// @param self KToolBarPopupAction*
 /// @param context enum Qt__ShortcutContext
@@ -346,7 +346,7 @@ void k_toolbarpopupaction_set_shortcut_context(void* self, int32_t context);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -355,7 +355,7 @@ int32_t k_toolbarpopupaction_shortcut_context(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setAutoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setAutoRepeat)
 ///
 /// @param self KToolBarPopupAction*
 /// @param autoRepeat bool
@@ -363,14 +363,14 @@ void k_toolbarpopupaction_set_auto_repeat(void* self, bool autoRepeat);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_auto_repeat(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setFont)
 ///
 /// @param self KToolBarPopupAction*
 /// @param font QFont*
@@ -378,14 +378,14 @@ void k_toolbarpopupaction_set_font(void* self, void* font);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#font)
 ///
 /// @param self KToolBarPopupAction*
 QFont* k_toolbarpopupaction_font(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setCheckable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setCheckable)
 ///
 /// @param self KToolBarPopupAction*
 /// @param checkable bool
@@ -393,21 +393,21 @@ void k_toolbarpopupaction_set_checkable(void* self, bool checkable);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isCheckable)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isCheckable)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_checkable(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#data)
 ///
 /// @param self KToolBarPopupAction*
 QVariant* k_toolbarpopupaction_data(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self KToolBarPopupAction*
 /// @param varVal QVariant*
@@ -415,28 +415,28 @@ void k_toolbarpopupaction_set_data(void* self, void* varVal);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isChecked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isChecked)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_checked(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isEnabled)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_enabled(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isVisible)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_visible(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#activate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#activate)
 ///
 /// @param self KToolBarPopupAction*
 /// @param event enum QAction__ActionEvent
@@ -444,7 +444,7 @@ void k_toolbarpopupaction_activate(void* self, int32_t event);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setMenuRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setMenuRole)
 ///
 /// @param self KToolBarPopupAction*
 /// @param menuRole enum QAction__MenuRole
@@ -452,7 +452,7 @@ void k_toolbarpopupaction_set_menu_role(void* self, int32_t menuRole);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#menuRole)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#menuRole)
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -461,7 +461,7 @@ int32_t k_toolbarpopupaction_menu_role(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIconVisibleInMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setIconVisibleInMenu)
 ///
 /// @param self KToolBarPopupAction*
 /// @param visible bool
@@ -469,14 +469,14 @@ void k_toolbarpopupaction_set_icon_visible_in_menu(void* self, bool visible);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_icon_visible_in_menu(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcutVisibleInContextMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcutVisibleInContextMenu)
 ///
 /// @param self KToolBarPopupAction*
 /// @param show bool
@@ -484,35 +484,35 @@ void k_toolbarpopupaction_set_shortcut_visible_in_context_menu(void* self, bool 
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_shortcut_visible_in_context_menu(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#showStatusText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#showStatusText)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_show_status_text(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#trigger)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#trigger)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_trigger(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hover)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hover)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_hover(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setChecked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setChecked)
 ///
 /// @param self KToolBarPopupAction*
 /// @param checked bool
@@ -520,14 +520,14 @@ void k_toolbarpopupaction_set_checked(void* self, bool checked);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggle)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_toggle(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setEnabled)
 ///
 /// @param self KToolBarPopupAction*
 /// @param enabled bool
@@ -535,14 +535,14 @@ void k_toolbarpopupaction_set_enabled(void* self, bool enabled);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#resetEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#resetEnabled)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_reset_enabled(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setDisabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setDisabled)
 ///
 /// @param self KToolBarPopupAction*
 /// @param b bool
@@ -550,7 +550,7 @@ void k_toolbarpopupaction_set_disabled(void* self, bool b);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setVisible)
 ///
 /// @param self KToolBarPopupAction*
 /// @param visible bool
@@ -558,14 +558,14 @@ void k_toolbarpopupaction_set_visible(void* self, bool visible);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_changed(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self)
@@ -573,7 +573,7 @@ void k_toolbarpopupaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToolBarPopupAction*
 /// @param enabled bool
@@ -581,7 +581,7 @@ void k_toolbarpopupaction_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self, bool enabled)
@@ -589,7 +589,7 @@ void k_toolbarpopupaction_on_enabled_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToolBarPopupAction*
 /// @param checkable bool
@@ -597,7 +597,7 @@ void k_toolbarpopupaction_checkable_changed(void* self, bool checkable);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self, bool checkable)
@@ -605,14 +605,14 @@ void k_toolbarpopupaction_on_checkable_changed(void* self, void (*callback)(void
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_visible_changed(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self)
@@ -620,14 +620,14 @@ void k_toolbarpopupaction_on_visible_changed(void* self, void (*callback)(void*)
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_triggered(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self)
@@ -635,14 +635,14 @@ void k_toolbarpopupaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_hovered(void* self);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self)
@@ -650,7 +650,7 @@ void k_toolbarpopupaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToolBarPopupAction*
 /// @param param1 bool
@@ -658,7 +658,7 @@ void k_toolbarpopupaction_toggled(void* self, bool param1);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self, bool param1)
@@ -666,7 +666,7 @@ void k_toolbarpopupaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#showStatusText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#showStatusText)
 ///
 /// @param self KToolBarPopupAction*
 /// @param object QObject*
@@ -674,7 +674,7 @@ bool k_toolbarpopupaction_show_status_text1(void* self, void* object);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarPopupAction*
 /// @param checked bool
@@ -682,7 +682,7 @@ void k_toolbarpopupaction_triggered1(void* self, bool checked);
 
 /// Inherited from QAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self, bool checked)
@@ -690,7 +690,7 @@ void k_toolbarpopupaction_on_triggered1(void* self, void (*callback)(void*, bool
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -699,7 +699,7 @@ const char* k_toolbarpopupaction_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KToolBarPopupAction*
 /// @param name char*
@@ -707,35 +707,35 @@ void k_toolbarpopupaction_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KToolBarPopupAction*
 bool k_toolbarpopupaction_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KToolBarPopupAction*
 /// @param b bool
@@ -743,14 +743,14 @@ bool k_toolbarpopupaction_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KToolBarPopupAction*
 QThread* k_toolbarpopupaction_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KToolBarPopupAction*
 /// @param thread QThread*
@@ -758,7 +758,7 @@ bool k_toolbarpopupaction_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KToolBarPopupAction*
 /// @param interval int
@@ -766,7 +766,7 @@ int32_t k_toolbarpopupaction_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KToolBarPopupAction*
 /// @param id int
@@ -774,7 +774,7 @@ void k_toolbarpopupaction_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KToolBarPopupAction*
 /// @param id enum Qt__TimerId
@@ -782,14 +782,14 @@ void k_toolbarpopupaction_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KToolBarPopupAction*
 libqt_list /* of QObject* */ k_toolbarpopupaction_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KToolBarPopupAction*
 /// @param parent QObject*
@@ -797,7 +797,7 @@ void k_toolbarpopupaction_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KToolBarPopupAction*
 /// @param filterObj QObject*
@@ -805,7 +805,7 @@ void k_toolbarpopupaction_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KToolBarPopupAction*
 /// @param obj QObject*
@@ -813,7 +813,7 @@ void k_toolbarpopupaction_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -823,7 +823,7 @@ QMetaObject__Connection* k_toolbarpopupaction_connect(void* sender, void* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KToolBarPopupAction*
 /// @param sender QObject*
@@ -833,7 +833,7 @@ QMetaObject__Connection* k_toolbarpopupaction_connect2(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -843,28 +843,28 @@ bool k_toolbarpopupaction_disconnect(void* sender, void* signal, void* receiver,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_toolbarpopupaction_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KToolBarPopupAction*
 /// @param name const char*
@@ -873,7 +873,7 @@ bool k_toolbarpopupaction_set_property(void* self, const char* name, void* value
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KToolBarPopupAction*
 /// @param name const char*
@@ -881,7 +881,7 @@ QVariant* k_toolbarpopupaction_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -890,28 +890,28 @@ const char** k_toolbarpopupaction_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KToolBarPopupAction*
 QBindingStorage* k_toolbarpopupaction_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KToolBarPopupAction*
 const QBindingStorage* k_toolbarpopupaction_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self)
@@ -919,14 +919,14 @@ void k_toolbarpopupaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KToolBarPopupAction*
 QObject* k_toolbarpopupaction_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KToolBarPopupAction*
 /// @param classname const char*
@@ -934,14 +934,14 @@ bool k_toolbarpopupaction_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KToolBarPopupAction*
 /// @param thread QThread*
@@ -950,7 +950,7 @@ bool k_toolbarpopupaction_move_to_thread2(void* self, void* thread, void* param2
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KToolBarPopupAction*
 /// @param interval int
@@ -959,7 +959,7 @@ int32_t k_toolbarpopupaction_start_timer22(void* self, int interval, int32_t tim
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -970,7 +970,7 @@ QMetaObject__Connection* k_toolbarpopupaction_connect5(void* sender, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KToolBarPopupAction*
 /// @param sender QObject*
@@ -981,7 +981,7 @@ QMetaObject__Connection* k_toolbarpopupaction_connect4(void* self, void* sender,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarPopupAction*
 /// @param param1 QObject*
@@ -989,7 +989,7 @@ void k_toolbarpopupaction_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarPopupAction*
 /// @param callback void func(KToolBarPopupAction* self, QObject* param1)
@@ -997,7 +997,7 @@ void k_toolbarpopupaction_on_destroyed1(void* self, void (*callback)(void*, void
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1007,7 +1007,7 @@ bool k_toolbarpopupaction_event(void* self, void* param1);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1017,7 +1017,7 @@ bool k_toolbarpopupaction_qbase_event(void* self, void* param1);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1027,7 +1027,7 @@ void k_toolbarpopupaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1038,7 +1038,7 @@ bool k_toolbarpopupaction_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1049,7 +1049,7 @@ bool k_toolbarpopupaction_qbase_event_filter(void* self, void* param1, void* par
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1059,7 +1059,7 @@ void k_toolbarpopupaction_on_event_filter(void* self, bool (*callback)(void*, vo
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1069,7 +1069,7 @@ void k_toolbarpopupaction_delete_widget(void* self, void* widget);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1079,7 +1079,7 @@ void k_toolbarpopupaction_qbase_delete_widget(void* self, void* widget);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1089,7 +1089,7 @@ void k_toolbarpopupaction_on_delete_widget(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1099,7 +1099,7 @@ void k_toolbarpopupaction_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1109,7 +1109,7 @@ void k_toolbarpopupaction_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1119,7 +1119,7 @@ void k_toolbarpopupaction_on_timer_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1129,7 +1129,7 @@ void k_toolbarpopupaction_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1139,7 +1139,7 @@ void k_toolbarpopupaction_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1149,7 +1149,7 @@ void k_toolbarpopupaction_on_child_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1159,7 +1159,7 @@ void k_toolbarpopupaction_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1169,7 +1169,7 @@ void k_toolbarpopupaction_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1179,7 +1179,7 @@ void k_toolbarpopupaction_on_custom_event(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1189,7 +1189,7 @@ void k_toolbarpopupaction_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1199,7 +1199,7 @@ void k_toolbarpopupaction_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1209,7 +1209,7 @@ void k_toolbarpopupaction_on_connect_notify(void* self, void (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1219,7 +1219,7 @@ void k_toolbarpopupaction_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1229,7 +1229,7 @@ void k_toolbarpopupaction_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1239,7 +1239,7 @@ void k_toolbarpopupaction_on_disconnect_notify(void* self, void (*callback)(void
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1248,7 +1248,7 @@ libqt_list /* of QWidget* */ k_toolbarpopupaction_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1257,7 +1257,7 @@ libqt_list /* of QWidget* */ k_toolbarpopupaction_qbase_created_widgets(void* se
 
 /// Inherited from QWidgetAction
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1267,7 +1267,7 @@ void k_toolbarpopupaction_on_created_widgets(void* self, QWidget** (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1276,7 +1276,7 @@ QObject* k_toolbarpopupaction_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1285,7 +1285,7 @@ QObject* k_toolbarpopupaction_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1295,7 +1295,7 @@ void k_toolbarpopupaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1304,7 +1304,7 @@ int32_t k_toolbarpopupaction_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1313,7 +1313,7 @@ int32_t k_toolbarpopupaction_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1323,7 +1323,7 @@ void k_toolbarpopupaction_on_sender_signal_index(void* self, int32_t (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1333,7 +1333,7 @@ int32_t k_toolbarpopupaction_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1343,7 +1343,7 @@ int32_t k_toolbarpopupaction_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1353,7 +1353,7 @@ void k_toolbarpopupaction_on_receivers(void* self, int32_t (*callback)(void*, co
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1363,7 +1363,7 @@ bool k_toolbarpopupaction_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1373,7 +1373,7 @@ bool k_toolbarpopupaction_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1383,7 +1383,7 @@ void k_toolbarpopupaction_on_is_signal_connected(void* self, bool (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1391,7 +1391,7 @@ void k_toolbarpopupaction_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KToolBarPopupAction* self, const char* objectName)
 void k_toolbarpopupaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#dtor.KToolBarPopupAction)
+/// [Upstream resources](https://api.kde.org/ktoolbarpopupaction.html#dtor.KToolBarPopupAction)
 ///
 /// Delete this object from C++ memory.
 ///

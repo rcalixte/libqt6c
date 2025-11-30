@@ -86,151 +86,151 @@ void q_matrix4x4_copy_assign(void* self, void* other);
 /// @param other QMatrix4x4*
 void q_matrix4x4_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-28-29)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-28-29)
 ///
 /// @param self QMatrix4x4*
 /// @param row int
 /// @param column int
 const float* q_matrix4x4_operator_call(void* self, int row, int column);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-28-29)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-28-29)
 ///
 /// @param self QMatrix4x4*
 /// @param row int
 /// @param column int
 float* q_matrix4x4_operator_call2(void* self, int row, int column);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#column)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#column)
 ///
 /// @param self QMatrix4x4*
 /// @param index int
 QVector4D* q_matrix4x4_column(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#setColumn)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#setColumn)
 ///
 /// @param self QMatrix4x4*
 /// @param index int
 /// @param value QVector4D*
 void q_matrix4x4_set_column(void* self, int index, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#row)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#row)
 ///
 /// @param self QMatrix4x4*
 /// @param index int
 QVector4D* q_matrix4x4_row(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#setRow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#setRow)
 ///
 /// @param self QMatrix4x4*
 /// @param index int
 /// @param value QVector4D*
 void q_matrix4x4_set_row(void* self, int index, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#isAffine)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#isAffine)
 ///
 /// @param self QMatrix4x4*
 bool q_matrix4x4_is_affine(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#isIdentity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#isIdentity)
 ///
 /// @param self QMatrix4x4*
 bool q_matrix4x4_is_identity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#setToIdentity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#setToIdentity)
 ///
 /// @param self QMatrix4x4*
 void q_matrix4x4_set_to_identity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#fill)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#fill)
 ///
 /// @param self QMatrix4x4*
 /// @param value float
 void q_matrix4x4_fill(void* self, float value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#determinant)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#determinant)
 ///
 /// @param self QMatrix4x4*
 double q_matrix4x4_determinant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#inverted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#inverted)
 ///
 /// @param self QMatrix4x4*
 QMatrix4x4* q_matrix4x4_inverted(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#transposed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#transposed)
 ///
 /// @param self QMatrix4x4*
 QMatrix4x4* q_matrix4x4_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2b-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2b-eq)
 ///
 /// @param self QMatrix4x4*
 /// @param other QMatrix4x4*
 QMatrix4x4* q_matrix4x4_operator_plus_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator--eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator--eq)
 ///
 /// @param self QMatrix4x4*
 /// @param other QMatrix4x4*
 QMatrix4x4* q_matrix4x4_operator_minus_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2a-eq)
 ///
 /// @param self QMatrix4x4*
 /// @param other QMatrix4x4*
 QMatrix4x4* q_matrix4x4_operator_multiply_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2a-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2a-eq)
 ///
 /// @param self QMatrix4x4*
 /// @param factor float
 QMatrix4x4* q_matrix4x4_operator_multiply_assign2(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2f-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2f-eq)
 ///
 /// @param self QMatrix4x4*
 /// @param divisor float
 QMatrix4x4* q_matrix4x4_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-eq-eq)
 ///
 /// @param self QMatrix4x4*
 /// @param other QMatrix4x4*
 bool q_matrix4x4_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-not-eq)
 ///
 /// @param self QMatrix4x4*
 /// @param other QMatrix4x4*
 bool q_matrix4x4_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
 ///
 /// @param self QMatrix4x4*
 /// @param vector QVector3D*
 void q_matrix4x4_scale(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#translate)
 ///
 /// @param self QMatrix4x4*
 /// @param vector QVector3D*
 void q_matrix4x4_translate(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
 ///
 /// @param self QMatrix4x4*
 /// @param angle float
 /// @param vector QVector3D*
 void q_matrix4x4_rotate(void* self, float angle, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
 ///
 /// @param self QMatrix4x4*
 /// @param x float
 /// @param y float
 void q_matrix4x4_scale2(void* self, float x, float y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
 ///
 /// @param self QMatrix4x4*
 /// @param x float
@@ -238,20 +238,20 @@ void q_matrix4x4_scale2(void* self, float x, float y);
 /// @param z float
 void q_matrix4x4_scale3(void* self, float x, float y, float z);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#scale)
 ///
 /// @param self QMatrix4x4*
 /// @param factor float
 void q_matrix4x4_scale4(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#translate)
 ///
 /// @param self QMatrix4x4*
 /// @param x float
 /// @param y float
 void q_matrix4x4_translate2(void* self, float x, float y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#translate)
 ///
 /// @param self QMatrix4x4*
 /// @param x float
@@ -259,7 +259,7 @@ void q_matrix4x4_translate2(void* self, float x, float y);
 /// @param z float
 void q_matrix4x4_translate3(void* self, float x, float y, float z);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
 ///
 /// @param self QMatrix4x4*
 /// @param angle float
@@ -267,25 +267,25 @@ void q_matrix4x4_translate3(void* self, float x, float y, float z);
 /// @param y float
 void q_matrix4x4_rotate2(void* self, float angle, float x, float y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
 ///
 /// @param self QMatrix4x4*
 /// @param quaternion QQuaternion*
 void q_matrix4x4_rotate3(void* self, void* quaternion);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#ortho)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#ortho)
 ///
 /// @param self QMatrix4x4*
 /// @param rect QRect*
 void q_matrix4x4_ortho(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#ortho)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#ortho)
 ///
 /// @param self QMatrix4x4*
 /// @param rect QRectF*
 void q_matrix4x4_ortho2(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#ortho)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#ortho)
 ///
 /// @param self QMatrix4x4*
 /// @param left float
@@ -296,7 +296,7 @@ void q_matrix4x4_ortho2(void* self, void* rect);
 /// @param farPlane float
 void q_matrix4x4_ortho3(void* self, float left, float right, float bottom, float top, float nearPlane, float farPlane);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#frustum)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#frustum)
 ///
 /// @param self QMatrix4x4*
 /// @param left float
@@ -307,7 +307,7 @@ void q_matrix4x4_ortho3(void* self, float left, float right, float bottom, float
 /// @param farPlane float
 void q_matrix4x4_frustum(void* self, float left, float right, float bottom, float top, float nearPlane, float farPlane);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#perspective)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#perspective)
 ///
 /// @param self QMatrix4x4*
 /// @param verticalAngle float
@@ -316,7 +316,7 @@ void q_matrix4x4_frustum(void* self, float left, float right, float bottom, floa
 /// @param farPlane float
 void q_matrix4x4_perspective(void* self, float verticalAngle, float aspectRatio, float nearPlane, float farPlane);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#lookAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#lookAt)
 ///
 /// @param self QMatrix4x4*
 /// @param eye QVector3D*
@@ -324,13 +324,13 @@ void q_matrix4x4_perspective(void* self, float verticalAngle, float aspectRatio,
 /// @param up QVector3D*
 void q_matrix4x4_look_at(void* self, void* eye, void* center, void* up);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
 ///
 /// @param self QMatrix4x4*
 /// @param rect QRectF*
 void q_matrix4x4_viewport(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
 ///
 /// @param self QMatrix4x4*
 /// @param left float
@@ -339,96 +339,96 @@ void q_matrix4x4_viewport(void* self, void* rect);
 /// @param height float
 void q_matrix4x4_viewport2(void* self, float left, float bottom, float width, float height);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#flipCoordinates)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#flipCoordinates)
 ///
 /// @param self QMatrix4x4*
 void q_matrix4x4_flip_coordinates(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#copyDataTo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#copyDataTo)
 ///
 /// @param self QMatrix4x4*
 /// @param values float*
 void q_matrix4x4_copy_data_to(void* self, float* values);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#toTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#toTransform)
 ///
 /// @param self QMatrix4x4*
 QTransform* q_matrix4x4_to_transform(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#toTransform)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#toTransform)
 ///
 /// @param self QMatrix4x4*
 /// @param distanceToPlane float
 QTransform* q_matrix4x4_to_transform2(void* self, float distanceToPlane);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
 ///
 /// @param self QMatrix4x4*
 /// @param point QPoint*
 QPoint* q_matrix4x4_map(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
 ///
 /// @param self QMatrix4x4*
 /// @param point QPointF*
 QPointF* q_matrix4x4_map2(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
 ///
 /// @param self QMatrix4x4*
 /// @param point QVector3D*
 QVector3D* q_matrix4x4_map3(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#mapVector)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#mapVector)
 ///
 /// @param self QMatrix4x4*
 /// @param vector QVector3D*
 QVector3D* q_matrix4x4_map_vector(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#map)
 ///
 /// @param self QMatrix4x4*
 /// @param point QVector4D*
 QVector4D* q_matrix4x4_map4(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#mapRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#mapRect)
 ///
 /// @param self QMatrix4x4*
 /// @param rect QRect*
 QRect* q_matrix4x4_map_rect(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#mapRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#mapRect)
 ///
 /// @param self QMatrix4x4*
 /// @param rect QRectF*
 QRectF* q_matrix4x4_map_rect2(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#data)
 ///
 /// @param self QMatrix4x4*
 float* q_matrix4x4_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#data)
 ///
 /// @param self QMatrix4x4*
 const float* q_matrix4x4_data2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#constData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#constData)
 ///
 /// @param self QMatrix4x4*
 const float* q_matrix4x4_const_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#optimize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#optimize)
 ///
 /// @param self QMatrix4x4*
 void q_matrix4x4_optimize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator)
 ///
 /// @param self QMatrix4x4*
 QVariant* q_matrix4x4_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#projectedRotate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#projectedRotate)
 ///
 /// @param self QMatrix4x4*
 /// @param angle float
@@ -438,7 +438,7 @@ QVariant* q_matrix4x4_to_q_variant(void* self);
 /// @param distanceToPlane float
 void q_matrix4x4_projected_rotate(void* self, float angle, float x, float y, float z, float distanceToPlane);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#projectedRotate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#projectedRotate)
 ///
 /// @param self QMatrix4x4*
 /// @param angle float
@@ -447,20 +447,20 @@ void q_matrix4x4_projected_rotate(void* self, float angle, float x, float y, flo
 /// @param z float
 void q_matrix4x4_projected_rotate2(void* self, float angle, float x, float y, float z);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#flags)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#flags)
 ///
 /// @param self QMatrix4x4*
 ///
 /// @return flag of enum QMatrix4x4__Flag
 int32_t q_matrix4x4_flags(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#inverted)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#inverted)
 ///
 /// @param self QMatrix4x4*
 /// @param invertible bool*
 QMatrix4x4* q_matrix4x4_inverted1(void* self, bool* invertible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#rotate)
 ///
 /// @param self QMatrix4x4*
 /// @param angle float
@@ -469,7 +469,7 @@ QMatrix4x4* q_matrix4x4_inverted1(void* self, bool* invertible);
 /// @param z float
 void q_matrix4x4_rotate4(void* self, float angle, float x, float y, float z);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
 ///
 /// @param self QMatrix4x4*
 /// @param left float
@@ -479,7 +479,7 @@ void q_matrix4x4_rotate4(void* self, float angle, float x, float y, float z);
 /// @param nearPlane float
 void q_matrix4x4_viewport5(void* self, float left, float bottom, float width, float height, float nearPlane);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#viewport)
 ///
 /// @param self QMatrix4x4*
 /// @param left float
@@ -490,7 +490,7 @@ void q_matrix4x4_viewport5(void* self, float left, float bottom, float width, fl
 /// @param farPlane float
 void q_matrix4x4_viewport6(void* self, float left, float bottom, float width, float height, float nearPlane, float farPlane);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#dtor.QMatrix4x4)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#dtor.QMatrix4x4)
 ///
 /// Delete this object from C++ memory.
 ///

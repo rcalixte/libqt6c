@@ -13,19 +13,19 @@
 
 /// https://api.kde.org/attica.html
 
-/// [Qt documentation](https://api.kde.org/attica.html#versionMajor)
+/// [Upstream resources](https://api.kde.org/attica.html#versionMajor)
 ///
 uint32_t k_attica_version_major();
 
-/// [Qt documentation](https://api.kde.org/attica.html#versionMinor)
+/// [Upstream resources](https://api.kde.org/attica.html#versionMinor)
 ///
 uint32_t k_attica_version_minor();
 
-/// [Qt documentation](https://api.kde.org/attica.html#versionRelease)
+/// [Upstream resources](https://api.kde.org/attica.html#versionRelease)
 ///
 uint32_t k_attica_version_release();
 
-/// [Qt documentation](https://api.kde.org/attica.html#versionString)
+/// [Upstream resources](https://api.kde.org/attica.html#versionString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

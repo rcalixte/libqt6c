@@ -17,27 +17,27 @@
 ///
 QBasicMutex* q_basicmutex_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#lock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasicmutex.html#lock)
 ///
 /// @param self QBasicMutex*
 void q_basicmutex_lock(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#unlock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasicmutex.html#unlock)
 ///
 /// @param self QBasicMutex*
 void q_basicmutex_unlock(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#tryLock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasicmutex.html#tryLock)
 ///
 /// @param self QBasicMutex*
 bool q_basicmutex_try_lock(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#try_lock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasicmutex.html#try_lock)
 ///
 /// @param self QBasicMutex*
 bool q_basicmutex_try_lock2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#dtor.QBasicMutex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasicmutex.html#dtor.QBasicMutex)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -50,18 +50,18 @@ void q_basicmutex_delete(void* self);
 ///
 QMutex* q_mutex_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#try_lock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmutex.html#try_lock)
 ///
 /// @param self QMutex*
 bool q_mutex_try_lock(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#tryLock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmutex.html#tryLock)
 ///
 /// @param self QMutex*
 /// @param timeout int
 bool q_mutex_try_lock2(void* self, int timeout);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#tryLock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmutex.html#tryLock)
 ///
 /// @param self QMutex*
 /// @param timeout QDeadlineTimer*
@@ -69,19 +69,19 @@ bool q_mutex_try_lock3(void* self, void* timeout);
 
 /// Inherited from QBasicMutex
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#lock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasicmutex.html#lock)
 ///
 /// @param self QMutex*
 void q_mutex_lock(void* self);
 
 /// Inherited from QBasicMutex
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#unlock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasicmutex.html#unlock)
 ///
 /// @param self QMutex*
 void q_mutex_unlock(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#dtor.QMutex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmutex.html#dtor.QMutex)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -94,39 +94,39 @@ void q_mutex_delete(void* self);
 ///
 QRecursiveMutex* q_recursivemutex_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#lock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrecursivemutex.html#lock)
 ///
 /// @param self QRecursiveMutex*
 void q_recursivemutex_lock(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
 ///
 /// @param self QRecursiveMutex*
 /// @param timeout int
 bool q_recursivemutex_try_lock(void* self, int timeout);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
 ///
 /// @param self QRecursiveMutex*
 bool q_recursivemutex_try_lock2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#unlock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrecursivemutex.html#unlock)
 ///
 /// @param self QRecursiveMutex*
 void q_recursivemutex_unlock(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#try_lock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrecursivemutex.html#try_lock)
 ///
 /// @param self QRecursiveMutex*
 bool q_recursivemutex_try_lock3(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
 ///
 /// @param self QRecursiveMutex*
 /// @param timer QDeadlineTimer*
 bool q_recursivemutex_try_lock1(void* self, void* timer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#dtor.QRecursiveMutex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrecursivemutex.html#dtor.QRecursiveMutex)
 ///
 /// Delete this object from C++ memory.
 ///

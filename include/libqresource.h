@@ -28,121 +28,121 @@ QResource* q_resource_new2(const char* file);
 /// @param locale QLocale*
 QResource* q_resource_new3(const char* file, void* locale);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#setFileName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#setFileName)
 ///
 /// @param self QResource*
 /// @param file const char*
 void q_resource_set_file_name(void* self, const char* file);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#fileName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#fileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QResource*
 const char* q_resource_file_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#absoluteFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#absoluteFilePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QResource*
 const char* q_resource_absolute_file_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#setLocale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#setLocale)
 ///
 /// @param self QResource*
 /// @param locale QLocale*
 void q_resource_set_locale(void* self, void* locale);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#locale)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#locale)
 ///
 /// @param self QResource*
 QLocale* q_resource_locale(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#isValid)
 ///
 /// @param self QResource*
 bool q_resource_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#compressionAlgorithm)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#compressionAlgorithm)
 ///
 /// @param self QResource*
 ///
 /// @return enum QResource__Compression
 int32_t q_resource_compression_algorithm(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#size)
 ///
 /// @param self QResource*
 long long q_resource_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#data)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#data)
 ///
 /// @param self QResource*
 const unsigned char* q_resource_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#uncompressedSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#uncompressedSize)
 ///
 /// @param self QResource*
 long long q_resource_uncompressed_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#uncompressedData)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#uncompressedData)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QResource*
 char* q_resource_uncompressed_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#lastModified)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#lastModified)
 ///
 /// @param self QResource*
 QDateTime* q_resource_last_modified(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#registerResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///
 /// @param rccFilename const char*
 bool q_resource_register_resource(const char* rccFilename);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
 ///
 /// @param rccFilename const char*
 bool q_resource_unregister_resource(const char* rccFilename);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#registerResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///
 /// @param rccData unsigned char*
 bool q_resource_register_resource2(unsigned char* rccData);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
 ///
 /// @param rccData unsigned char*
 bool q_resource_unregister_resource2(unsigned char* rccData);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#registerResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///
 /// @param rccFilename const char*
 /// @param resourceRoot const char*
 bool q_resource_register_resource22(const char* rccFilename, const char* resourceRoot);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
 ///
 /// @param rccFilename const char*
 /// @param resourceRoot const char*
 bool q_resource_unregister_resource22(const char* rccFilename, const char* resourceRoot);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#registerResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///
 /// @param rccData unsigned char*
 /// @param resourceRoot const char*
 bool q_resource_register_resource23(unsigned char* rccData, const char* resourceRoot);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
 ///
 /// @param rccData unsigned char*
 /// @param resourceRoot const char*
 bool q_resource_unregister_resource23(unsigned char* rccData, const char* resourceRoot);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#dtor.QResource)
+/// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#dtor.QResource)
 ///
 /// Delete this object from C++ memory.
 ///

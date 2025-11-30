@@ -13,14 +13,14 @@
 
 /// https://doc.qt.io/qt-6/qwebenginesettings.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontFamily)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontFamily)
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
 /// @param family const char*
 void q_webenginesettings_set_font_family(void* self, int32_t which, const char* family);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#fontFamily)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#fontFamily)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -28,100 +28,100 @@ void q_webenginesettings_set_font_family(void* self, int32_t which, const char* 
 /// @param which enum QWebEngineSettings__FontFamily
 const char* q_webenginesettings_font_family(void* self, int32_t which);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontFamily)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontFamily)
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
 void q_webenginesettings_reset_font_family(void* self, int32_t which);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param type enum QWebEngineSettings__FontSize
 /// @param size int
 void q_webenginesettings_set_font_size(void* self, int32_t type, int size);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#fontSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#fontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param type enum QWebEngineSettings__FontSize
 int32_t q_webenginesettings_font_size(void* self, int32_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param type enum QWebEngineSettings__FontSize
 void q_webenginesettings_reset_font_size(void* self, int32_t type);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
 /// @param on bool
 void q_webenginesettings_set_attribute(void* self, int32_t attr, bool on);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#testAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#testAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
 bool q_webenginesettings_test_attribute(void* self, int32_t attr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
 void q_webenginesettings_reset_attribute(void* self, int32_t attr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setDefaultTextEncoding)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setDefaultTextEncoding)
 ///
 /// @param self QWebEngineSettings*
 /// @param encoding const char*
 void q_webenginesettings_set_default_text_encoding(void* self, const char* encoding);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#defaultTextEncoding)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#defaultTextEncoding)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineSettings*
 const char* q_webenginesettings_default_text_encoding(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#unknownUrlSchemePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#unknownUrlSchemePolicy)
 ///
 /// @param self QWebEngineSettings*
 ///
 /// @return enum QWebEngineSettings__UnknownUrlSchemePolicy
 int32_t q_webenginesettings_unknown_url_scheme_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setUnknownUrlSchemePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setUnknownUrlSchemePolicy)
 ///
 /// @param self QWebEngineSettings*
 /// @param policy enum QWebEngineSettings__UnknownUrlSchemePolicy
 void q_webenginesettings_set_unknown_url_scheme_policy(void* self, int32_t policy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetUnknownUrlSchemePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetUnknownUrlSchemePolicy)
 ///
 /// @param self QWebEngineSettings*
 void q_webenginesettings_reset_unknown_url_scheme_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setImageAnimationPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setImageAnimationPolicy)
 ///
 /// @param self QWebEngineSettings*
 /// @param policy enum QWebEngineSettings__ImageAnimationPolicy
 void q_webenginesettings_set_image_animation_policy(void* self, uint8_t policy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#imageAnimationPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#imageAnimationPolicy)
 ///
 /// @param self QWebEngineSettings*
 ///
 /// @return enum QWebEngineSettings__ImageAnimationPolicy
 uint8_t q_webenginesettings_image_animation_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetImageAnimationPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetImageAnimationPolicy)
 ///
 /// @param self QWebEngineSettings*
 void q_webenginesettings_reset_image_animation_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#dtor.QWebEngineSettings)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#dtor.QWebEngineSettings)
 ///
 /// Delete this object from C++ memory.
 ///

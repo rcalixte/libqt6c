@@ -35,52 +35,52 @@ void q_tooltip_copy_assign(void* self, void* other);
 /// @param other QToolTip*
 void q_tooltip_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#showText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
 /// @param pos QPoint*
 /// @param text const char*
 void q_tooltip_show_text(void* pos, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#hideText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#hideText)
 ///
 void q_tooltip_hide_text();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#isVisible)
 ///
 bool q_tooltip_is_visible();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#text)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* q_tooltip_text();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#palette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#palette)
 ///
 QPalette* q_tooltip_palette();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#setPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#setPalette)
 ///
 /// @param palette QPalette*
 void q_tooltip_set_palette(void* palette);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#font)
 ///
 QFont* q_tooltip_font();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#setFont)
 ///
 /// @param font QFont*
 void q_tooltip_set_font(void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#showText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
 /// @param pos QPoint*
 /// @param text const char*
 /// @param w QWidget*
 void q_tooltip_show_text3(void* pos, const char* text, void* w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#showText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
 /// @param pos QPoint*
 /// @param text const char*
@@ -88,7 +88,7 @@ void q_tooltip_show_text3(void* pos, const char* text, void* w);
 /// @param rect QRect*
 void q_tooltip_show_text4(void* pos, const char* text, void* w, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#showText)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
 /// @param pos QPoint*
 /// @param text const char*
@@ -97,7 +97,7 @@ void q_tooltip_show_text4(void* pos, const char* text, void* w, void* rect);
 /// @param msecShowTime int
 void q_tooltip_show_text5(void* pos, const char* text, void* w, void* rect, int msecShowTime);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#dtor.QToolTip)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#dtor.QToolTip)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -22,7 +22,7 @@ QOpenGLVertexArrayObject* q_openglvertexarrayobject_new();
 /// @param parent QObject*
 QOpenGLVertexArrayObject* q_openglvertexarrayobject_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QOpenGLVertexArrayObject*
 const QMetaObject* q_openglvertexarrayobject_meta_object(void* self);
@@ -51,44 +51,44 @@ void q_openglvertexarrayobject_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param3 void*
 int32_t q_openglvertexarrayobject_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_openglvertexarrayobject_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#create)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#create)
 ///
 /// @param self QOpenGLVertexArrayObject*
 bool q_openglvertexarrayobject_create(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#destroy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#destroy)
 ///
 /// @param self QOpenGLVertexArrayObject*
 void q_openglvertexarrayobject_destroy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#isCreated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#isCreated)
 ///
 /// @param self QOpenGLVertexArrayObject*
 bool q_openglvertexarrayobject_is_created(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#objectId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#objectId)
 ///
 /// @param self QOpenGLVertexArrayObject*
 uint32_t q_openglvertexarrayobject_object_id(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#bind)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#bind)
 ///
 /// @param self QOpenGLVertexArrayObject*
 void q_openglvertexarrayobject_bind(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#release)
 ///
 /// @param self QOpenGLVertexArrayObject*
 void q_openglvertexarrayobject_release(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -96,7 +96,7 @@ void q_openglvertexarrayobject_release(void* self);
 /// @param c const char*
 const char* q_openglvertexarrayobject_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -107,7 +107,7 @@ const char* q_openglvertexarrayobject_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -116,7 +116,7 @@ const char* q_openglvertexarrayobject_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param name char*
@@ -124,35 +124,35 @@ void q_openglvertexarrayobject_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QOpenGLVertexArrayObject*
 bool q_openglvertexarrayobject_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QOpenGLVertexArrayObject*
 bool q_openglvertexarrayobject_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QOpenGLVertexArrayObject*
 bool q_openglvertexarrayobject_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QOpenGLVertexArrayObject*
 bool q_openglvertexarrayobject_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param b bool
@@ -160,14 +160,14 @@ bool q_openglvertexarrayobject_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QOpenGLVertexArrayObject*
 QThread* q_openglvertexarrayobject_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param thread QThread*
@@ -175,7 +175,7 @@ bool q_openglvertexarrayobject_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param interval int
@@ -183,7 +183,7 @@ int32_t q_openglvertexarrayobject_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param id int
@@ -191,7 +191,7 @@ void q_openglvertexarrayobject_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param id enum Qt__TimerId
@@ -199,14 +199,14 @@ void q_openglvertexarrayobject_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QOpenGLVertexArrayObject*
 libqt_list /* of QObject* */ q_openglvertexarrayobject_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param parent QObject*
@@ -214,7 +214,7 @@ void q_openglvertexarrayobject_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param filterObj QObject*
@@ -222,7 +222,7 @@ void q_openglvertexarrayobject_install_event_filter(void* self, void* filterObj)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param obj QObject*
@@ -230,7 +230,7 @@ void q_openglvertexarrayobject_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -240,7 +240,7 @@ QMetaObject__Connection* q_openglvertexarrayobject_connect(void* sender, void* s
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param sender QObject*
@@ -250,7 +250,7 @@ QMetaObject__Connection* q_openglvertexarrayobject_connect2(void* self, void* se
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -260,28 +260,28 @@ bool q_openglvertexarrayobject_disconnect(void* sender, void* signal, void* rece
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_openglvertexarrayobject_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QOpenGLVertexArrayObject*
 void q_openglvertexarrayobject_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QOpenGLVertexArrayObject*
 void q_openglvertexarrayobject_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param name const char*
@@ -290,7 +290,7 @@ bool q_openglvertexarrayobject_set_property(void* self, const char* name, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param name const char*
@@ -298,7 +298,7 @@ QVariant* q_openglvertexarrayobject_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -307,28 +307,28 @@ const char** q_openglvertexarrayobject_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QOpenGLVertexArrayObject*
 QBindingStorage* q_openglvertexarrayobject_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QOpenGLVertexArrayObject*
 const QBindingStorage* q_openglvertexarrayobject_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QOpenGLVertexArrayObject*
 void q_openglvertexarrayobject_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param callback void func(QOpenGLVertexArrayObject* self)
@@ -336,14 +336,14 @@ void q_openglvertexarrayobject_on_destroyed(void* self, void (*callback)(void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QOpenGLVertexArrayObject*
 QObject* q_openglvertexarrayobject_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param classname const char*
@@ -351,14 +351,14 @@ bool q_openglvertexarrayobject_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QOpenGLVertexArrayObject*
 void q_openglvertexarrayobject_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param thread QThread*
@@ -367,7 +367,7 @@ bool q_openglvertexarrayobject_move_to_thread2(void* self, void* thread, void* p
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param interval int
@@ -376,7 +376,7 @@ int32_t q_openglvertexarrayobject_start_timer22(void* self, int interval, int32_
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -387,7 +387,7 @@ QMetaObject__Connection* q_openglvertexarrayobject_connect5(void* sender, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param sender QObject*
@@ -398,7 +398,7 @@ QMetaObject__Connection* q_openglvertexarrayobject_connect4(void* self, void* se
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param param1 QObject*
@@ -406,7 +406,7 @@ void q_openglvertexarrayobject_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QOpenGLVertexArrayObject*
 /// @param callback void func(QOpenGLVertexArrayObject* self, QObject* param1)
@@ -414,7 +414,7 @@ void q_openglvertexarrayobject_on_destroyed1(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -424,7 +424,7 @@ bool q_openglvertexarrayobject_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -434,7 +434,7 @@ bool q_openglvertexarrayobject_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -444,7 +444,7 @@ void q_openglvertexarrayobject_on_event(void* self, bool (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -455,7 +455,7 @@ bool q_openglvertexarrayobject_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -466,7 +466,7 @@ bool q_openglvertexarrayobject_qbase_event_filter(void* self, void* watched, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -476,7 +476,7 @@ void q_openglvertexarrayobject_on_event_filter(void* self, bool (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -486,7 +486,7 @@ void q_openglvertexarrayobject_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -496,7 +496,7 @@ void q_openglvertexarrayobject_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -506,7 +506,7 @@ void q_openglvertexarrayobject_on_timer_event(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -516,7 +516,7 @@ void q_openglvertexarrayobject_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -526,7 +526,7 @@ void q_openglvertexarrayobject_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -536,7 +536,7 @@ void q_openglvertexarrayobject_on_child_event(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -546,7 +546,7 @@ void q_openglvertexarrayobject_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -556,7 +556,7 @@ void q_openglvertexarrayobject_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -566,7 +566,7 @@ void q_openglvertexarrayobject_on_custom_event(void* self, void (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -576,7 +576,7 @@ void q_openglvertexarrayobject_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -586,7 +586,7 @@ void q_openglvertexarrayobject_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -596,7 +596,7 @@ void q_openglvertexarrayobject_on_connect_notify(void* self, void (*callback)(vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -606,7 +606,7 @@ void q_openglvertexarrayobject_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -616,7 +616,7 @@ void q_openglvertexarrayobject_qbase_disconnect_notify(void* self, void* signal)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -626,7 +626,7 @@ void q_openglvertexarrayobject_on_disconnect_notify(void* self, void (*callback)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -635,7 +635,7 @@ QObject* q_openglvertexarrayobject_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -644,7 +644,7 @@ QObject* q_openglvertexarrayobject_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -654,7 +654,7 @@ void q_openglvertexarrayobject_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -663,7 +663,7 @@ int32_t q_openglvertexarrayobject_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -672,7 +672,7 @@ int32_t q_openglvertexarrayobject_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -682,7 +682,7 @@ void q_openglvertexarrayobject_on_sender_signal_index(void* self, int32_t (*call
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -692,7 +692,7 @@ int32_t q_openglvertexarrayobject_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -702,7 +702,7 @@ int32_t q_openglvertexarrayobject_qbase_receivers(void* self, const char* signal
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -712,7 +712,7 @@ void q_openglvertexarrayobject_on_receivers(void* self, int32_t (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -722,7 +722,7 @@ bool q_openglvertexarrayobject_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -732,7 +732,7 @@ bool q_openglvertexarrayobject_qbase_is_signal_connected(void* self, void* signa
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -742,7 +742,7 @@ void q_openglvertexarrayobject_on_is_signal_connected(void* self, bool (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -750,7 +750,7 @@ void q_openglvertexarrayobject_on_is_signal_connected(void* self, bool (*callbac
 /// @param callback void func(QOpenGLVertexArrayObject* self, const char* objectName)
 void q_openglvertexarrayobject_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#dtor.QOpenGLVertexArrayObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject.html#dtor.QOpenGLVertexArrayObject)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -764,12 +764,12 @@ void q_openglvertexarrayobject_delete(void* self);
 /// @param v QOpenGLVertexArrayObject*
 QOpenGLVertexArrayObject__Binder* q_openglvertexarrayobject__binder_new(void* v);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject-binder.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject-binder.html#release)
 ///
 /// @param self QOpenGLVertexArrayObject__Binder*
 void q_openglvertexarrayobject__binder_release(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qopenglvertexarrayobject-binder.html#rebind)
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglvertexarrayobject-binder.html#rebind)
 ///
 /// @param self QOpenGLVertexArrayObject__Binder*
 void q_openglvertexarrayobject__binder_rebind(void* self);

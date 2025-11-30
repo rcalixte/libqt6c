@@ -18,34 +18,34 @@
 /// @param param1 QTest__QTouchEventWidgetSequence*
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
 /// @param pt QPoint*
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#move)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
 /// @param pt QPoint*
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#release)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
 /// @param pt QPoint*
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_stationary(void* self, int touchId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
 ///
 /// Allows for overriding the related default method
 ///
@@ -53,7 +53,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_stationary(v
 /// @param callback QTest__QTouchEventWidgetSequence* func(QTest__QTouchEventWidgetSequence* self, int touchId)
 void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEventWidgetSequence* (*callback)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
 ///
 /// Base class method implementation
 ///
@@ -61,13 +61,13 @@ void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEv
 /// @param touchId int
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_qbase_stationary(void* self, int touchId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param processEvents bool
 bool q_test__qtoucheventwidgetsequence_commit(void* self, bool processEvents);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
 ///
 /// Allows for overriding the related default method
 ///
@@ -75,7 +75,7 @@ bool q_test__qtoucheventwidgetsequence_commit(void* self, bool processEvents);
 /// @param callback bool func(QTest__QTouchEventWidgetSequence* self, bool processEvents)
 void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
 ///
 /// Base class method implementation
 ///
@@ -83,7 +83,7 @@ void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(vo
 /// @param processEvents bool
 bool q_test__qtoucheventwidgetsequence_qbase_commit(void* self, bool processEvents);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
@@ -91,7 +91,7 @@ bool q_test__qtoucheventwidgetsequence_qbase_commit(void* self, bool processEven
 /// @param widget QWidget*
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press3(void* self, int touchId, void* pt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#move)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#move)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
@@ -99,7 +99,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press3(void*
 /// @param widget QWidget*
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move3(void* self, int touchId, void* pt, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#release)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#release)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
@@ -109,7 +109,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release3(voi
 
 /// Inherited from QTest::QTouchEventSequence
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -119,7 +119,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_point(void* self, int touchId);
 
 /// Inherited from QTest::QTouchEventSequence
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -129,7 +129,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point(void* self, int touch
 
 /// Inherited from QTest::QTouchEventSequence
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -139,7 +139,7 @@ void q_test__qtoucheventwidgetsequence_on_point(void* self, QEventPoint* (*callb
 
 /// Inherited from QTest::QTouchEventSequence
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#pointOrPreviousPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#pointOrPreviousPoint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -149,7 +149,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_point_or_previous_point(void* sel
 
 /// Inherited from QTest::QTouchEventSequence
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#pointOrPreviousPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#pointOrPreviousPoint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -159,7 +159,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point_or_previous_point(voi
 
 /// Inherited from QTest::QTouchEventSequence
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#pointOrPreviousPoint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#pointOrPreviousPoint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///

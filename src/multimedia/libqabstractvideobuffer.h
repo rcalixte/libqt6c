@@ -13,23 +13,23 @@
 
 /// https://doc.qt.io/qt-6/qabstractvideobuffer.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer.html#unmap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#unmap)
 ///
 /// @param self QAbstractVideoBuffer*
 void q_abstractvideobuffer_unmap(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer.html#format)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#format)
 ///
 /// @param self QAbstractVideoBuffer*
 QVideoFrameFormat* q_abstractvideobuffer_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#operator-eq)
 ///
 /// @param self QAbstractVideoBuffer*
 /// @param param1 QAbstractVideoBuffer*
 void q_abstractvideobuffer_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer.html#dtor.QAbstractVideoBuffer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#dtor.QAbstractVideoBuffer)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -60,12 +60,12 @@ void q_abstractvideobuffer__mapdata_copy_assign(void* self, void* other);
 /// @param other QAbstractVideoBuffer__MapData*
 void q_abstractvideobuffer__mapdata_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
 ///
 /// @param self QAbstractVideoBuffer__MapData*
 int32_t q_abstractvideobuffer__mapdata_plane_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
 ///
 /// @param self QAbstractVideoBuffer__MapData*
 /// @param planeCount int

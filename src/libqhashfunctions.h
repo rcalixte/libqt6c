@@ -44,24 +44,24 @@ void q_hashseed_copy_assign(void* self, void* other);
 /// @param other QHashSeed*
 void q_hashseed_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#operator)
 ///
 /// @param self QHashSeed*
 uint64_t q_hashseed_to_unsigned_long(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#globalSeed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#globalSeed)
 ///
 QHashSeed* q_hashseed_global_seed();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#setDeterministicGlobalSeed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#setDeterministicGlobalSeed)
 ///
 void q_hashseed_set_deterministic_global_seed();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#resetRandomGlobalSeed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#resetRandomGlobalSeed)
 ///
 void q_hashseed_reset_random_global_seed();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#dtor.QHashSeed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#dtor.QHashSeed)
 ///
 /// Delete this object from C++ memory.
 ///

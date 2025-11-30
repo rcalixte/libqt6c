@@ -13,24 +13,24 @@
 
 /// https://api.kde.org/knscore.html
 
-/// [Qt documentation](https://api.kde.org/knscore.html#qt_getEnumMetaObject)
+/// [Upstream resources](https://api.kde.org/knscore.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum KNSCore__SortMode
 const QMetaObject* k_nscore_get_enum_meta_object(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/knscore.html#qt_getEnumName)
+/// [Upstream resources](https://api.kde.org/knscore.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KNSCore__SortMode
 const char* k_nscore_get_enum_name(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/knscore.html#qt_getEnumMetaObject)
+/// [Upstream resources](https://api.kde.org/knscore.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum KNSCore__Filter
 const QMetaObject* k_nscore_get_enum_meta_object2(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/knscore.html#qt_getEnumName)
+/// [Upstream resources](https://api.kde.org/knscore.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -93,45 +93,45 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t 
 /// @param pageSize_ int
 KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_, int pageSize_);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#sortMode)
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#sortMode)
 ///
 /// @param self KNSCore__SearchRequest*
 ///
 /// @return enum KNSCore__SortMode
 int32_t k_nscore__searchrequest_sort_mode(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#filter)
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#filter)
 ///
 /// @param self KNSCore__SearchRequest*
 ///
 /// @return enum KNSCore__Filter
 int32_t k_nscore__searchrequest_filter(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#searchTerm)
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#searchTerm)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchRequest*
 const char* k_nscore__searchrequest_search_term(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#categories)
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#categories)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchRequest*
 const char** k_nscore__searchrequest_categories(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#page)
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#page)
 ///
 /// @param self KNSCore__SearchRequest*
 int32_t k_nscore__searchrequest_page(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#pageSize)
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#pageSize)
 ///
 /// @param self KNSCore__SearchRequest*
 int32_t k_nscore__searchrequest_page_size(void* self);
 
-/// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#nextPage)
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#nextPage)
 ///
 /// @param self KNSCore__SearchRequest*
 KNSCore__SearchRequest* k_nscore__searchrequest_next_page(void* self);

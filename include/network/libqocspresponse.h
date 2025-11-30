@@ -22,43 +22,43 @@ QOcspResponse* q_ocspresponse_new();
 /// @param other QOcspResponse*
 QOcspResponse* q_ocspresponse_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#operator-eq)
 ///
 /// @param self QOcspResponse*
 /// @param other QOcspResponse*
 void q_ocspresponse_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#certificateStatus)
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#certificateStatus)
 ///
 /// @param self QOcspResponse*
 ///
 /// @return enum QOcspResponse__QOcspCertificateStatus
 int32_t q_ocspresponse_certificate_status(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#revocationReason)
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#revocationReason)
 ///
 /// @param self QOcspResponse*
 ///
 /// @return enum QOcspResponse__QOcspRevocationReason
 int32_t q_ocspresponse_revocation_reason(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#responder)
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#responder)
 ///
 /// @param self QOcspResponse*
 QSslCertificate* q_ocspresponse_responder(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#subject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#subject)
 ///
 /// @param self QOcspResponse*
 QSslCertificate* q_ocspresponse_subject(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#swap)
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#swap)
 ///
 /// @param self QOcspResponse*
 /// @param other QOcspResponse*
 void q_ocspresponse_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#dtor.QOcspResponse)
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#dtor.QOcspResponse)
 ///
 /// Delete this object from C++ memory.
 ///

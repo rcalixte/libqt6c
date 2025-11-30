@@ -44,7 +44,7 @@ void q_disambiguated_t_copy_assign(void* self, void* other);
 /// @param other Disambiguated_t*
 void q_disambiguated_t_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/disambiguated-t.html#dtor.Disambiguated_t)
+/// [Upstream resources](https://doc.qt.io/qt-6/disambiguated-t.html#dtor.Disambiguated_t)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -75,13 +75,13 @@ void q_internal_copy_assign(void* self, void* other);
 /// @param other QInternal*
 void q_internal_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qinternal.html#activateCallbacks)
+/// [Upstream resources](https://doc.qt.io/qt-6/qinternal.html#activateCallbacks)
 ///
 /// @param param1 enum QInternal__Callback
 /// @param param2 void*
 bool q_internal_activate_callbacks(int32_t param1, void* param2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qinternal.html#dtor.QInternal)
+/// [Upstream resources](https://doc.qt.io/qt-6/qinternal.html#dtor.QInternal)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -148,36 +148,36 @@ void q_keycombination_copy_assign(void* self, void* other);
 /// @param other QKeyCombination*
 void q_keycombination_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#keyboardModifiers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#keyboardModifiers)
 ///
 /// @param self QKeyCombination*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 int64_t q_keycombination_keyboard_modifiers(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#key)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#key)
 ///
 /// @param self QKeyCombination*
 ///
 /// @return enum Qt__Key
 int32_t q_keycombination_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#fromCombined)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#fromCombined)
 ///
 /// @param combined int
 QKeyCombination* q_keycombination_from_combined(int combined);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#toCombined)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#toCombined)
 ///
 /// @param self QKeyCombination*
 int32_t q_keycombination_to_combined(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#operator)
 ///
 /// @param self QKeyCombination*
 int32_t q_keycombination_to_int(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#dtor.QKeyCombination)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#dtor.QKeyCombination)
 ///
 /// Delete this object from C++ memory.
 ///

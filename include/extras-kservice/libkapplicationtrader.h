@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kapplicationtrader.html
 
-/// [Qt documentation](https://api.kde.org/kapplicationtrader.html#isSubsequence)
+/// [Upstream resources](https://api.kde.org/kapplicationtrader.html#isSubsequence)
 ///
 /// @param param1 const char*
 /// @param param2 const char*

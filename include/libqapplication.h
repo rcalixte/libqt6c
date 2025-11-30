@@ -26,7 +26,7 @@ QApplication* q_application_new(int* argc, char* argv[]);
 /// @param param3 int
 QApplication* q_application_new2(int* argc, char* argv[], int param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QApplication*
 const QMetaObject* q_application_meta_object(void* self);
@@ -55,201 +55,201 @@ void q_application_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t q_application_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_application_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#style)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#style)
 ///
 QStyle* q_application_style();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setStyle)
 ///
 /// @param style QStyle*
 void q_application_set_style(void* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setStyle)
 ///
 /// @param style const char*
 QStyle* q_application_set_style2(const char* style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#palette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#palette)
 ///
 /// @param param1 QWidget*
 QPalette* q_application_palette(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#palette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#palette)
 ///
 /// @param className const char*
 QPalette* q_application_palette2(const char* className);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setPalette)
 ///
 /// @param param1 QPalette*
 void q_application_set_palette(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
 QFont* q_application_font();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
 /// @param param1 QWidget*
 QFont* q_application_font2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
 /// @param className const char*
 QFont* q_application_font3(const char* className);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setFont)
 ///
 /// @param param1 QFont*
 void q_application_set_font(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#fontMetrics)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#fontMetrics)
 ///
 QFontMetrics* q_application_font_metrics();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#allWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#allWidgets)
 ///
 libqt_list /* of QWidget* */ q_application_all_widgets();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#topLevelWidgets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#topLevelWidgets)
 ///
 libqt_list /* of QWidget* */ q_application_top_level_widgets();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#activePopupWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#activePopupWidget)
 ///
 QWidget* q_application_active_popup_widget();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#activeModalWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#activeModalWidget)
 ///
 QWidget* q_application_active_modal_widget();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#focusWidget)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#focusWidget)
 ///
 QWidget* q_application_focus_widget();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#activeWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#activeWindow)
 ///
 QWidget* q_application_active_window();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setActiveWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setActiveWindow)
 ///
 /// @param act QWidget*
 void q_application_set_active_window(void* act);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#widgetAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#widgetAt)
 ///
 /// @param p QPoint*
 QWidget* q_application_widget_at(void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#widgetAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#widgetAt)
 ///
 /// @param x int
 /// @param y int
 QWidget* q_application_widget_at2(int x, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#topLevelAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#topLevelAt)
 ///
 /// @param p QPoint*
 QWidget* q_application_top_level_at(void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#topLevelAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#topLevelAt)
 ///
 /// @param x int
 /// @param y int
 QWidget* q_application_top_level_at2(int x, int y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#beep)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#beep)
 ///
 void q_application_beep();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#alert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#alert)
 ///
 /// @param widget QWidget*
 void q_application_alert(void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setCursorFlashTime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setCursorFlashTime)
 ///
 /// @param cursorFlashTime int
 void q_application_set_cursor_flash_time(int cursorFlashTime);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#cursorFlashTime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#cursorFlashTime)
 ///
 int32_t q_application_cursor_flash_time();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setDoubleClickInterval)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setDoubleClickInterval)
 ///
 /// @param doubleClickInterval int
 void q_application_set_double_click_interval(int doubleClickInterval);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#doubleClickInterval)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#doubleClickInterval)
 ///
 int32_t q_application_double_click_interval();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setKeyboardInputInterval)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setKeyboardInputInterval)
 ///
 /// @param keyboardInputInterval int
 void q_application_set_keyboard_input_interval(int keyboardInputInterval);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#keyboardInputInterval)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#keyboardInputInterval)
 ///
 int32_t q_application_keyboard_input_interval();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setWheelScrollLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setWheelScrollLines)
 ///
 /// @param wheelScrollLines int
 void q_application_set_wheel_scroll_lines(int wheelScrollLines);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#wheelScrollLines)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#wheelScrollLines)
 ///
 int32_t q_application_wheel_scroll_lines();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStartDragTime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setStartDragTime)
 ///
 /// @param ms int
 void q_application_set_start_drag_time(int ms);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#startDragTime)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#startDragTime)
 ///
 int32_t q_application_start_drag_time();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStartDragDistance)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setStartDragDistance)
 ///
 /// @param l int
 void q_application_set_start_drag_distance(int l);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#startDragDistance)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#startDragDistance)
 ///
 int32_t q_application_start_drag_distance();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#isEffectEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#isEffectEnabled)
 ///
 /// @param param1 enum Qt__UIEffect
 bool q_application_is_effect_enabled(int32_t param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setEffectEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setEffectEnabled)
 ///
 /// @param param1 enum Qt__UIEffect
 void q_application_set_effect_enabled(int32_t param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#exec)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#exec)
 ///
 int32_t q_application_exec();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#notify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#notify)
 ///
 /// @param self QApplication*
 /// @param param1 QObject*
 /// @param param2 QEvent*
 bool q_application_notify(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#notify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#notify)
 ///
 /// Allows for overriding the related default method
 ///
@@ -257,7 +257,7 @@ bool q_application_notify(void* self, void* param1, void* param2);
 /// @param callback bool func(QApplication* self, QObject* param1, QEvent* param2)
 void q_application_on_notify(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#notify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#notify)
 ///
 /// Base class method implementation
 ///
@@ -266,14 +266,14 @@ void q_application_on_notify(void* self, bool (*callback)(void*, void*, void*));
 /// @param param2 QEvent*
 bool q_application_qbase_notify(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
 ///
 /// @param self QApplication*
 /// @param name const char*
 /// @param revision int
 void* q_application_resolve_interface(void* self, const char* name, int revision);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
 ///
 /// Allows for overriding the related default method
 ///
@@ -281,7 +281,7 @@ void* q_application_resolve_interface(void* self, const char* name, int revision
 /// @param callback void* func(QApplication* self, const char* name, int revision)
 void q_application_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
 ///
 /// Base class method implementation
 ///
@@ -290,58 +290,58 @@ void q_application_on_resolve_interface(void* self, void* (*callback)(void*, con
 /// @param revision int
 void* q_application_qbase_resolve_interface(void* self, const char* name, int revision);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#focusChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#focusChanged)
 ///
 /// @param self QApplication*
 /// @param old QWidget*
 /// @param now QWidget*
 void q_application_focus_changed(void* self, void* old, void* now);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#focusChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#focusChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QWidget* old, QWidget* now)
 void q_application_on_focus_changed(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#styleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#styleSheet)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QApplication*
 const char* q_application_style_sheet(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#autoSipEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#autoSipEnabled)
 ///
 /// @param self QApplication*
 bool q_application_auto_sip_enabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyleSheet)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setStyleSheet)
 ///
 /// @param self QApplication*
 /// @param sheet const char*
 void q_application_set_style_sheet(void* self, const char* sheet);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setAutoSipEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setAutoSipEnabled)
 ///
 /// @param self QApplication*
 /// @param enabled bool
 void q_application_set_auto_sip_enabled(void* self, bool enabled);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#closeAllWindows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#closeAllWindows)
 ///
 void q_application_close_all_windows();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#aboutQt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#aboutQt)
 ///
 void q_application_about_qt();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#event)
 ///
 /// @param self QApplication*
 /// @param param1 QEvent*
 bool q_application_event(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -349,7 +349,7 @@ bool q_application_event(void* self, void* param1);
 /// @param callback bool func(QApplication* self, QEvent* param1)
 void q_application_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#event)
 ///
 /// Base class method implementation
 ///
@@ -357,7 +357,7 @@ void q_application_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool q_application_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -365,7 +365,7 @@ bool q_application_qbase_event(void* self, void* param1);
 /// @param c const char*
 const char* q_application_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -374,25 +374,25 @@ const char* q_application_tr2(const char* s, const char* c);
 /// @param n int
 const char* q_application_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setPalette)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setPalette)
 ///
 /// @param param1 QPalette*
 /// @param className const char*
 void q_application_set_palette2(void* param1, const char* className);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setFont)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setFont)
 ///
 /// @param param1 QFont*
 /// @param className const char*
 void q_application_set_font2(void* param1, const char* className);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#alert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#alert)
 ///
 /// @param widget QWidget*
 /// @param duration int
 void q_application_alert2(void* widget, int duration);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setEffectEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setEffectEnabled)
 ///
 /// @param param1 enum Qt__UIEffect
 /// @param enable bool
@@ -400,14 +400,14 @@ void q_application_set_effect_enabled2(int32_t param1, bool enable);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setApplicationDisplayName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setApplicationDisplayName)
 ///
 /// @param name const char*
 void q_application_set_application_display_name(const char* name);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -415,7 +415,7 @@ const char* q_application_application_display_name();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber)
 ///
 /// @param self QApplication*
 /// @param number long long
@@ -423,14 +423,14 @@ void q_application_set_badge_number(void* self, long long number);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopFileName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopFileName)
 ///
 /// @param name const char*
 void q_application_set_desktop_file_name(const char* name);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#desktopFileName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#desktopFileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -438,32 +438,32 @@ const char* q_application_desktop_file_name();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#allWindows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#allWindows)
 ///
 libqt_list /* of QWindow* */ q_application_all_windows();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#topLevelWindows)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#topLevelWindows)
 ///
 libqt_list /* of QWindow* */ q_application_top_level_windows();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setWindowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setWindowIcon)
 ///
 /// @param icon QIcon*
 void q_application_set_window_icon(void* icon);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#windowIcon)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#windowIcon)
 ///
 QIcon* q_application_window_icon();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#platformName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -471,83 +471,83 @@ const char* q_application_platform_name();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#modalWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#modalWindow)
 ///
 QWindow* q_application_modal_window();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindow)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#focusWindow)
 ///
 QWindow* q_application_focus_window();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#focusObject)
 ///
 QObject* q_application_focus_object();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreen)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreen)
 ///
 QScreen* q_application_primary_screen();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screens)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screens)
 ///
 libqt_list /* of QScreen* */ q_application_screens();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screenAt)
 ///
 /// @param point QPoint*
 QScreen* q_application_screen_at(void* point);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#devicePixelRatio)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#devicePixelRatio)
 ///
 /// @param self QApplication*
 double q_application_device_pixel_ratio(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#overrideCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#overrideCursor)
 ///
 QCursor* q_application_override_cursor();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setOverrideCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setOverrideCursor)
 ///
 /// @param overrideCursor QCursor*
 void q_application_set_override_cursor(void* overrideCursor);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#changeOverrideCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#changeOverrideCursor)
 ///
 /// @param param1 QCursor*
 void q_application_change_override_cursor(void* param1);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#restoreOverrideCursor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#restoreOverrideCursor)
 ///
 void q_application_restore_override_cursor();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#clipboard)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#clipboard)
 ///
 QClipboard* q_application_clipboard();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#keyboardModifiers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#keyboardModifiers)
 ///
 ///
 /// @return flag of enum Qt__KeyboardModifier
@@ -555,7 +555,7 @@ int64_t q_application_keyboard_modifiers();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#queryKeyboardModifiers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#queryKeyboardModifiers)
 ///
 ///
 /// @return flag of enum Qt__KeyboardModifier
@@ -563,7 +563,7 @@ int64_t q_application_query_keyboard_modifiers();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#mouseButtons)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#mouseButtons)
 ///
 ///
 /// @return flag of enum Qt__MouseButton
@@ -571,14 +571,14 @@ int64_t q_application_mouse_buttons();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setLayoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setLayoutDirection)
 ///
 /// @param direction enum Qt__LayoutDirection
 void q_application_set_layout_direction(int32_t direction);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirection)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirection)
 ///
 ///
 /// @return enum Qt__LayoutDirection
@@ -586,57 +586,57 @@ int32_t q_application_layout_direction();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isRightToLeft)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#isRightToLeft)
 ///
 bool q_application_is_right_to_left();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isLeftToRight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#isLeftToRight)
 ///
 bool q_application_is_left_to_right();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#styleHints)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#styleHints)
 ///
 QStyleHints* q_application_style_hints();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopSettingsAware)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopSettingsAware)
 ///
 /// @param on bool
 void q_application_set_desktop_settings_aware(bool on);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#desktopSettingsAware)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#desktopSettingsAware)
 ///
 bool q_application_desktop_settings_aware();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#inputMethod)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#inputMethod)
 ///
 QInputMethod* q_application_input_method();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setQuitOnLastWindowClosed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setQuitOnLastWindowClosed)
 ///
 /// @param quit bool
 void q_application_set_quit_on_last_window_closed(bool quit);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#quitOnLastWindowClosed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#quitOnLastWindowClosed)
 ///
 bool q_application_quit_on_last_window_closed();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationState)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#applicationState)
 ///
 ///
 /// @return enum Qt__ApplicationState
@@ -644,14 +644,14 @@ int32_t q_application_application_state();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setHighDpiScaleFactorRoundingPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setHighDpiScaleFactorRoundingPolicy)
 ///
 /// @param policy enum Qt__HighDpiScaleFactorRoundingPolicy
 void q_application_set_high_dpi_scale_factor_rounding_policy(int32_t policy);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#highDpiScaleFactorRoundingPolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#highDpiScaleFactorRoundingPolicy)
 ///
 ///
 /// @return enum Qt__HighDpiScaleFactorRoundingPolicy
@@ -659,14 +659,14 @@ int32_t q_application_high_dpi_scale_factor_rounding_policy();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isSessionRestored)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#isSessionRestored)
 ///
 /// @param self QApplication*
 bool q_application_is_session_restored(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#sessionId)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#sessionId)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -675,7 +675,7 @@ const char* q_application_session_id(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#sessionKey)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#sessionKey)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -684,27 +684,27 @@ const char* q_application_session_key(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isSavingSession)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#isSavingSession)
 ///
 /// @param self QApplication*
 bool q_application_is_saving_session(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#sync)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#sync)
 ///
 void q_application_sync();
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontDatabaseChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#fontDatabaseChanged)
 ///
 /// @param self QApplication*
 void q_application_font_database_changed(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontDatabaseChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#fontDatabaseChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -712,7 +712,7 @@ void q_application_on_font_database_changed(void* self, void (*callback)(void*))
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
 ///
 /// @param self QApplication*
 /// @param screen QScreen*
@@ -720,7 +720,7 @@ void q_application_screen_added(void* self, void* screen);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QScreen* screen)
@@ -728,7 +728,7 @@ void q_application_on_screen_added(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
 ///
 /// @param self QApplication*
 /// @param screen QScreen*
@@ -736,7 +736,7 @@ void q_application_screen_removed(void* self, void* screen);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QScreen* screen)
@@ -744,7 +744,7 @@ void q_application_on_screen_removed(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
 ///
 /// @param self QApplication*
 /// @param screen QScreen*
@@ -752,7 +752,7 @@ void q_application_primary_screen_changed(void* self, void* screen);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QScreen* screen)
@@ -760,14 +760,14 @@ void q_application_on_primary_screen_changed(void* self, void (*callback)(void*,
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
 ///
 /// @param self QApplication*
 void q_application_last_window_closed(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -775,7 +775,7 @@ void q_application_on_last_window_closed(void* self, void (*callback)(void*));
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
 ///
 /// @param self QApplication*
 /// @param focusObject QObject*
@@ -783,7 +783,7 @@ void q_application_focus_object_changed(void* self, void* focusObject);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QObject* focusObject)
@@ -791,7 +791,7 @@ void q_application_on_focus_object_changed(void* self, void (*callback)(void*, v
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
 ///
 /// @param self QApplication*
 /// @param focusWindow QWindow*
@@ -799,7 +799,7 @@ void q_application_focus_window_changed(void* self, void* focusWindow);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QWindow* focusWindow)
@@ -807,7 +807,7 @@ void q_application_on_focus_window_changed(void* self, void (*callback)(void*, v
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
 ///
 /// @param self QApplication*
 /// @param state enum Qt__ApplicationState
@@ -815,7 +815,7 @@ void q_application_application_state_changed(void* self, int32_t state);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, enum Qt__ApplicationState state)
@@ -823,7 +823,7 @@ void q_application_on_application_state_changed(void* self, void (*callback)(voi
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
 ///
 /// @param self QApplication*
 /// @param direction enum Qt__LayoutDirection
@@ -831,7 +831,7 @@ void q_application_layout_direction_changed(void* self, int32_t direction);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, enum Qt__LayoutDirection direction)
@@ -839,7 +839,7 @@ void q_application_on_layout_direction_changed(void* self, void (*callback)(void
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
 ///
 /// @param self QApplication*
 /// @param sessionManager QSessionManager*
@@ -847,7 +847,7 @@ void q_application_commit_data_request(void* self, void* sessionManager);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QSessionManager* sessionManager)
@@ -855,7 +855,7 @@ void q_application_on_commit_data_request(void* self, void (*callback)(void*, vo
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
 ///
 /// @param self QApplication*
 /// @param sessionManager QSessionManager*
@@ -863,7 +863,7 @@ void q_application_save_state_request(void* self, void* sessionManager);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QSessionManager* sessionManager)
@@ -871,14 +871,14 @@ void q_application_on_save_state_request(void* self, void (*callback)(void*, voi
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
 ///
 /// @param self QApplication*
 void q_application_application_display_name_changed(void* self);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -886,7 +886,7 @@ void q_application_on_application_display_name_changed(void* self, void (*callba
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
 ///
 /// @param self QApplication*
 /// @param pal QPalette*
@@ -894,7 +894,7 @@ void q_application_palette_changed(void* self, void* pal);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QPalette* pal)
@@ -902,7 +902,7 @@ void q_application_on_palette_changed(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
 ///
 /// @param self QApplication*
 /// @param font QFont*
@@ -910,7 +910,7 @@ void q_application_font_changed(void* self, void* font);
 
 /// Inherited from QGuiApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QFont* font)
@@ -918,7 +918,7 @@ void q_application_on_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#arguments)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#arguments)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -926,28 +926,28 @@ const char** q_application_arguments();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
 ///
 /// @param attribute enum Qt__ApplicationAttribute
 void q_application_set_attribute(int32_t attribute);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#testAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#testAttribute)
 ///
 /// @param attribute enum Qt__ApplicationAttribute
 bool q_application_test_attribute(int32_t attribute);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setOrganizationDomain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setOrganizationDomain)
 ///
 /// @param orgDomain const char*
 void q_application_set_organization_domain(const char* orgDomain);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomain)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomain)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -955,14 +955,14 @@ const char* q_application_organization_domain();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setOrganizationName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setOrganizationName)
 ///
 /// @param orgName const char*
 void q_application_set_organization_name(const char* orgName);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -970,14 +970,14 @@ const char* q_application_organization_name();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setApplicationName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setApplicationName)
 ///
 /// @param application const char*
 void q_application_set_application_name(const char* application);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -985,14 +985,14 @@ const char* q_application_application_name();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setApplicationVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setApplicationVersion)
 ///
 /// @param version const char*
 void q_application_set_application_version(const char* version);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1000,32 +1000,32 @@ const char* q_application_application_version();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setSetuidAllowed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setSetuidAllowed)
 ///
 /// @param allow bool
 void q_application_set_setuid_allowed(bool allow);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#isSetuidAllowed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#isSetuidAllowed)
 ///
 bool q_application_is_setuid_allowed();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#instance)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#instance)
 ///
 QCoreApplication* q_application_instance();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
 void q_application_process_events();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 /// @param maxtime int
@@ -1033,7 +1033,7 @@ void q_application_process_events2(int32_t flags, int maxtime);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 /// @param deadline QDeadlineTimer*
@@ -1041,7 +1041,7 @@ void q_application_process_events3(int32_t flags, void* deadline);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#sendEvent)
 ///
 /// @param receiver QObject*
 /// @param event QEvent*
@@ -1049,7 +1049,7 @@ bool q_application_send_event(void* receiver, void* event);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#postEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#postEvent)
 ///
 /// @param receiver QObject*
 /// @param event QEvent*
@@ -1057,45 +1057,45 @@ void q_application_post_event(void* receiver, void* event);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
 ///
 void q_application_send_posted_events();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removePostedEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#removePostedEvents)
 ///
 /// @param receiver QObject*
 void q_application_remove_posted_events(void* receiver);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#eventDispatcher)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#eventDispatcher)
 ///
 QAbstractEventDispatcher* q_application_event_dispatcher();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setEventDispatcher)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setEventDispatcher)
 ///
 /// @param eventDispatcher QAbstractEventDispatcher*
 void q_application_set_event_dispatcher(void* eventDispatcher);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#startingUp)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#startingUp)
 ///
 bool q_application_starting_up();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#closingDown)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#closingDown)
 ///
 bool q_application_closing_down();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationDirPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationDirPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1103,7 +1103,7 @@ const char* q_application_application_dir_path();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationFilePath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationFilePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1111,13 +1111,13 @@ const char* q_application_application_file_path();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationPid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationPid)
 ///
 long long q_application_application_pid();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#checkPermission)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#checkPermission)
 ///
 /// @param self QApplication*
 /// @param permission QPermission*
@@ -1127,14 +1127,14 @@ int32_t q_application_check_permission(void* self, void* permission);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setLibraryPaths)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setLibraryPaths)
 ///
 /// @param libraryPaths const char**
 void q_application_set_library_paths(const char* libraryPaths[static 1]);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#libraryPaths)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#libraryPaths)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1142,35 +1142,35 @@ const char** q_application_library_paths();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#addLibraryPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#addLibraryPath)
 ///
 /// @param param1 const char*
 void q_application_add_library_path(const char* param1);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeLibraryPath)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#removeLibraryPath)
 ///
 /// @param param1 const char*
 void q_application_remove_library_path(const char* param1);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installTranslator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#installTranslator)
 ///
 /// @param messageFile QTranslator*
 bool q_application_install_translator(void* messageFile);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeTranslator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#removeTranslator)
 ///
 /// @param messageFile QTranslator*
 bool q_application_remove_translator(void* messageFile);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1180,7 +1180,7 @@ const char* q_application_translate(const char* context, const char* key);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
 ///
 /// @param self QApplication*
 /// @param filterObj QAbstractNativeEventFilter*
@@ -1188,7 +1188,7 @@ void q_application_install_native_event_filter(void* self, void* filterObj);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QAbstractNativeEventFilter* filterObj)
@@ -1196,7 +1196,7 @@ void q_application_on_install_native_event_filter(void* self, void (*callback)(v
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
 ///
 /// @param self QApplication*
 /// @param filterObj QAbstractNativeEventFilter*
@@ -1204,7 +1204,7 @@ void q_application_remove_native_event_filter(void* self, void* filterObj);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QAbstractNativeEventFilter* filterObj)
@@ -1212,39 +1212,39 @@ void q_application_on_remove_native_event_filter(void* self, void (*callback)(vo
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#isQuitLockEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#isQuitLockEnabled)
 ///
 bool q_application_is_quit_lock_enabled();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setQuitLockEnabled)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setQuitLockEnabled)
 ///
 /// @param enabled bool
 void q_application_set_quit_lock_enabled(bool enabled);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#quit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#quit)
 ///
 void q_application_quit();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#exit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#exit)
 ///
 void q_application_exit();
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
 ///
 /// @param self QApplication*
 void q_application_organization_name_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -1252,14 +1252,14 @@ void q_application_on_organization_name_changed(void* self, void (*callback)(voi
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
 ///
 /// @param self QApplication*
 void q_application_organization_domain_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -1267,14 +1267,14 @@ void q_application_on_organization_domain_changed(void* self, void (*callback)(v
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
 ///
 /// @param self QApplication*
 void q_application_application_name_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -1282,14 +1282,14 @@ void q_application_on_application_name_changed(void* self, void (*callback)(void
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
 ///
 /// @param self QApplication*
 void q_application_application_version_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -1297,7 +1297,7 @@ void q_application_on_application_version_changed(void* self, void (*callback)(v
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
 ///
 /// @param attribute enum Qt__ApplicationAttribute
 /// @param on bool
@@ -1305,14 +1305,14 @@ void q_application_set_attribute2(int32_t attribute, bool on);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 void q_application_process_events1(int32_t flags);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#postEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#postEvent)
 ///
 /// @param receiver QObject*
 /// @param event QEvent*
@@ -1321,14 +1321,14 @@ void q_application_post_event3(void* receiver, void* event, int priority);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
 ///
 /// @param receiver QObject*
 void q_application_send_posted_events1(void* receiver);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
 ///
 /// @param receiver QObject*
 /// @param event_type int
@@ -1336,7 +1336,7 @@ void q_application_send_posted_events2(void* receiver, int event_type);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removePostedEvents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#removePostedEvents)
 ///
 /// @param receiver QObject*
 /// @param eventType int
@@ -1344,7 +1344,7 @@ void q_application_remove_posted_events2(void* receiver, int eventType);
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1355,7 +1355,7 @@ const char* q_application_translate3(const char* context, const char* key, const
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1367,14 +1367,14 @@ const char* q_application_translate4(const char* context, const char* key, const
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#exit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#exit)
 ///
 /// @param retcode int
 void q_application_exit1(int retcode);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1383,7 +1383,7 @@ const char* q_application_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QApplication*
 /// @param name char*
@@ -1391,35 +1391,35 @@ void q_application_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QApplication*
 bool q_application_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QApplication*
 bool q_application_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QApplication*
 bool q_application_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QApplication*
 bool q_application_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QApplication*
 /// @param b bool
@@ -1427,14 +1427,14 @@ bool q_application_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QApplication*
 QThread* q_application_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QApplication*
 /// @param thread QThread*
@@ -1442,7 +1442,7 @@ bool q_application_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QApplication*
 /// @param interval int
@@ -1450,7 +1450,7 @@ int32_t q_application_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QApplication*
 /// @param id int
@@ -1458,7 +1458,7 @@ void q_application_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QApplication*
 /// @param id enum Qt__TimerId
@@ -1466,14 +1466,14 @@ void q_application_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QApplication*
 libqt_list /* of QObject* */ q_application_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QApplication*
 /// @param parent QObject*
@@ -1481,7 +1481,7 @@ void q_application_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QApplication*
 /// @param filterObj QObject*
@@ -1489,7 +1489,7 @@ void q_application_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QApplication*
 /// @param obj QObject*
@@ -1497,7 +1497,7 @@ void q_application_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1507,7 +1507,7 @@ QMetaObject__Connection* q_application_connect(void* sender, void* signal, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QApplication*
 /// @param sender QObject*
@@ -1517,7 +1517,7 @@ QMetaObject__Connection* q_application_connect2(void* self, void* sender, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1527,28 +1527,28 @@ bool q_application_disconnect(void* sender, void* signal, void* receiver, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_application_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QApplication*
 void q_application_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QApplication*
 void q_application_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QApplication*
 /// @param name const char*
@@ -1557,7 +1557,7 @@ bool q_application_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QApplication*
 /// @param name const char*
@@ -1565,7 +1565,7 @@ QVariant* q_application_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1574,28 +1574,28 @@ const char** q_application_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QApplication*
 QBindingStorage* q_application_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QApplication*
 const QBindingStorage* q_application_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QApplication*
 void q_application_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self)
@@ -1603,14 +1603,14 @@ void q_application_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QApplication*
 QObject* q_application_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QApplication*
 /// @param classname const char*
@@ -1618,14 +1618,14 @@ bool q_application_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QApplication*
 void q_application_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QApplication*
 /// @param thread QThread*
@@ -1634,7 +1634,7 @@ bool q_application_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QApplication*
 /// @param interval int
@@ -1643,7 +1643,7 @@ int32_t q_application_start_timer22(void* self, int interval, int32_t timerType)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -1654,7 +1654,7 @@ QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QApplication*
 /// @param sender QObject*
@@ -1665,7 +1665,7 @@ QMetaObject__Connection* q_application_connect4(void* self, void* sender, const 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QApplication*
 /// @param param1 QObject*
@@ -1673,7 +1673,7 @@ void q_application_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QObject* param1)
@@ -1681,7 +1681,7 @@ void q_application_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1692,7 +1692,7 @@ bool q_application_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1703,7 +1703,7 @@ bool q_application_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1713,7 +1713,7 @@ void q_application_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1723,7 +1723,7 @@ void q_application_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1733,7 +1733,7 @@ void q_application_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1743,7 +1743,7 @@ void q_application_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1753,7 +1753,7 @@ void q_application_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1763,7 +1763,7 @@ void q_application_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1773,7 +1773,7 @@ void q_application_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1783,7 +1783,7 @@ void q_application_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1793,7 +1793,7 @@ void q_application_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1803,7 +1803,7 @@ void q_application_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1813,7 +1813,7 @@ void q_application_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1823,7 +1823,7 @@ void q_application_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1833,7 +1833,7 @@ void q_application_on_connect_notify(void* self, void (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1843,7 +1843,7 @@ void q_application_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1853,7 +1853,7 @@ void q_application_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1863,7 +1863,7 @@ void q_application_on_disconnect_notify(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1872,7 +1872,7 @@ QObject* q_application_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1881,7 +1881,7 @@ QObject* q_application_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1891,7 +1891,7 @@ void q_application_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1900,7 +1900,7 @@ int32_t q_application_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1909,7 +1909,7 @@ int32_t q_application_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1919,7 +1919,7 @@ void q_application_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1929,7 +1929,7 @@ int32_t q_application_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1939,7 +1939,7 @@ int32_t q_application_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1949,7 +1949,7 @@ void q_application_on_receivers(void* self, int32_t (*callback)(void*, const cha
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1959,7 +1959,7 @@ bool q_application_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1969,7 +1969,7 @@ bool q_application_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1979,7 +1979,7 @@ void q_application_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 
 /// Inherited from QCoreApplication
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#aboutToQuit)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#aboutToQuit)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1989,7 +1989,7 @@ void q_application_on_about_to_quit(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1997,7 +1997,7 @@ void q_application_on_about_to_quit(void* self, void (*callback)(void*));
 /// @param callback void func(QApplication* self, const char* objectName)
 void q_application_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#dtor.QApplication)
+/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#dtor.QApplication)
 ///
 /// Delete this object from C++ memory.
 ///

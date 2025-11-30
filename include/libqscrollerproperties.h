@@ -22,47 +22,47 @@ QScrollerProperties* q_scrollerproperties_new();
 /// @param sp QScrollerProperties*
 QScrollerProperties* q_scrollerproperties_new2(void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq)
 ///
 /// @param self QScrollerProperties*
 /// @param sp QScrollerProperties*
 void q_scrollerproperties_operator_assign(void* self, void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq-eq)
 ///
 /// @param self QScrollerProperties*
 /// @param sp QScrollerProperties*
 bool q_scrollerproperties_operator_equal(void* self, void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-not-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-not-eq)
 ///
 /// @param self QScrollerProperties*
 /// @param sp QScrollerProperties*
 bool q_scrollerproperties_operator_not_equal(void* self, void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#setDefaultScrollerProperties)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#setDefaultScrollerProperties)
 ///
 /// @param sp QScrollerProperties*
 void q_scrollerproperties_set_default_scroller_properties(void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#unsetDefaultScrollerProperties)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#unsetDefaultScrollerProperties)
 ///
 void q_scrollerproperties_unset_default_scroller_properties();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#scrollMetric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#scrollMetric)
 ///
 /// @param self QScrollerProperties*
 /// @param metric enum QScrollerProperties__ScrollMetric
 QVariant* q_scrollerproperties_scroll_metric(void* self, int32_t metric);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#setScrollMetric)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#setScrollMetric)
 ///
 /// @param self QScrollerProperties*
 /// @param metric enum QScrollerProperties__ScrollMetric
 /// @param value QVariant*
 void q_scrollerproperties_set_scroll_metric(void* self, int32_t metric, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#dtor.QScrollerProperties)
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#dtor.QScrollerProperties)
 ///
 /// Delete this object from C++ memory.
 ///

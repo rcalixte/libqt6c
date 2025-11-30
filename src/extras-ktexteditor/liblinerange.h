@@ -50,116 +50,116 @@ void k_texteditor__linerange_copy_assign(void* self, void* other);
 /// @param other KTextEditor__LineRange*
 void k_texteditor__linerange_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#isValid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#isValid)
 ///
 /// @param self KTextEditor__LineRange*
 bool k_texteditor__linerange_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#invalid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#invalid)
 ///
 KTextEditor__LineRange* k_texteditor__linerange_invalid();
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#toString)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__LineRange*
 const char* k_texteditor__linerange_to_string(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#start)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#start)
 ///
 /// @param self KTextEditor__LineRange*
 int32_t k_texteditor__linerange_start(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#end)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#end)
 ///
 /// @param self KTextEditor__LineRange*
 int32_t k_texteditor__linerange_end(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#setRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#setRange)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 void k_texteditor__linerange_set_range(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#setRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#setRange)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param start int
 /// @param end int
 void k_texteditor__linerange_set_range2(void* self, int start, int end);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#setBothLines)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#setBothLines)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param line int
 void k_texteditor__linerange_set_both_lines(void* self, int line);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#setStart)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#setStart)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param start int
 void k_texteditor__linerange_set_start(void* self, int start);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#setEnd)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#setEnd)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param end int
 void k_texteditor__linerange_set_end(void* self, int end);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#expandToRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#expandToRange)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 bool k_texteditor__linerange_expand_to_range(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#confineToRange)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#confineToRange)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 bool k_texteditor__linerange_confine_to_range(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#onSingleLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#onSingleLine)
 ///
 /// @param self KTextEditor__LineRange*
 bool k_texteditor__linerange_on_single_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#numberOfLines)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#numberOfLines)
 ///
 /// @param self KTextEditor__LineRange*
 int32_t k_texteditor__linerange_number_of_lines(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#contains)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#contains)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 bool k_texteditor__linerange_contains(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#containsLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#containsLine)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param line int
 bool k_texteditor__linerange_contains_line(void* self, int line);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#overlaps)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#overlaps)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 bool k_texteditor__linerange_overlaps(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#overlapsLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#overlapsLine)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param line int
 bool k_texteditor__linerange_overlaps_line(void* self, int line);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#intersect)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#intersect)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 KTextEditor__LineRange* k_texteditor__linerange_intersect(void* self, void* range);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-linerange.html#encompass)
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#encompass)
 ///
 /// @param self KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*

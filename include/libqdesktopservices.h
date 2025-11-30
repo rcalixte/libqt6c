@@ -35,24 +35,24 @@ void q_desktopservices_copy_assign(void* self, void* other);
 /// @param other QDesktopServices*
 void q_desktopservices_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl)
 ///
 /// @param url QUrl*
 bool q_desktopservices_open_url(void* url);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdesktopservices.html#setUrlHandler)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesktopservices.html#setUrlHandler)
 ///
 /// @param scheme const char*
 /// @param receiver QObject*
 /// @param method const char*
 void q_desktopservices_set_url_handler(const char* scheme, void* receiver, const char* method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdesktopservices.html#unsetUrlHandler)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesktopservices.html#unsetUrlHandler)
 ///
 /// @param scheme const char*
 void q_desktopservices_unset_url_handler(const char* scheme);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdesktopservices.html#dtor.QDesktopServices)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesktopservices.html#dtor.QDesktopServices)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qgraphicsanchor.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QGraphicsAnchor*
 const QMetaObject* q_graphicsanchor_meta_object(void* self);
@@ -28,43 +28,43 @@ void* q_graphicsanchor_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t q_graphicsanchor_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_graphicsanchor_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#setSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchor.html#setSpacing)
 ///
 /// @param self QGraphicsAnchor*
 /// @param spacing double
 void q_graphicsanchor_set_spacing(void* self, double spacing);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#unsetSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchor.html#unsetSpacing)
 ///
 /// @param self QGraphicsAnchor*
 void q_graphicsanchor_unset_spacing(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#spacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchor.html#spacing)
 ///
 /// @param self QGraphicsAnchor*
 double q_graphicsanchor_spacing(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchor.html#setSizePolicy)
 ///
 /// @param self QGraphicsAnchor*
 /// @param policy enum QSizePolicy__Policy
 void q_graphicsanchor_set_size_policy(void* self, int32_t policy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#sizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchor.html#sizePolicy)
 ///
 /// @param self QGraphicsAnchor*
 ///
 /// @return enum QSizePolicy__Policy
 int32_t q_graphicsanchor_size_policy(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -72,7 +72,7 @@ int32_t q_graphicsanchor_size_policy(void* self);
 /// @param c const char*
 const char* q_graphicsanchor_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -83,7 +83,7 @@ const char* q_graphicsanchor_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// @param self QGraphicsAnchor*
 /// @param event QEvent*
@@ -91,7 +91,7 @@ bool q_graphicsanchor_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// @param self QGraphicsAnchor*
 /// @param watched QObject*
@@ -100,7 +100,7 @@ bool q_graphicsanchor_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -109,7 +109,7 @@ const char* q_graphicsanchor_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsAnchor*
 /// @param name char*
@@ -117,35 +117,35 @@ void q_graphicsanchor_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QGraphicsAnchor*
 bool q_graphicsanchor_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QGraphicsAnchor*
 bool q_graphicsanchor_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QGraphicsAnchor*
 bool q_graphicsanchor_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QGraphicsAnchor*
 bool q_graphicsanchor_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QGraphicsAnchor*
 /// @param b bool
@@ -153,14 +153,14 @@ bool q_graphicsanchor_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QGraphicsAnchor*
 QThread* q_graphicsanchor_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QGraphicsAnchor*
 /// @param thread QThread*
@@ -168,7 +168,7 @@ bool q_graphicsanchor_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGraphicsAnchor*
 /// @param interval int
@@ -176,7 +176,7 @@ int32_t q_graphicsanchor_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QGraphicsAnchor*
 /// @param id int
@@ -184,7 +184,7 @@ void q_graphicsanchor_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QGraphicsAnchor*
 /// @param id enum Qt__TimerId
@@ -192,14 +192,14 @@ void q_graphicsanchor_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QGraphicsAnchor*
 libqt_list /* of QObject* */ q_graphicsanchor_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QGraphicsAnchor*
 /// @param parent QObject*
@@ -207,7 +207,7 @@ void q_graphicsanchor_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QGraphicsAnchor*
 /// @param filterObj QObject*
@@ -215,7 +215,7 @@ void q_graphicsanchor_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QGraphicsAnchor*
 /// @param obj QObject*
@@ -223,7 +223,7 @@ void q_graphicsanchor_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -233,7 +233,7 @@ QMetaObject__Connection* q_graphicsanchor_connect(void* sender, void* signal, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QGraphicsAnchor*
 /// @param sender QObject*
@@ -243,7 +243,7 @@ QMetaObject__Connection* q_graphicsanchor_connect2(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -253,28 +253,28 @@ bool q_graphicsanchor_disconnect(void* sender, void* signal, void* receiver, voi
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_graphicsanchor_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QGraphicsAnchor*
 void q_graphicsanchor_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QGraphicsAnchor*
 void q_graphicsanchor_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QGraphicsAnchor*
 /// @param name const char*
@@ -283,7 +283,7 @@ bool q_graphicsanchor_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QGraphicsAnchor*
 /// @param name const char*
@@ -291,7 +291,7 @@ QVariant* q_graphicsanchor_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -300,28 +300,28 @@ const char** q_graphicsanchor_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QGraphicsAnchor*
 QBindingStorage* q_graphicsanchor_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QGraphicsAnchor*
 const QBindingStorage* q_graphicsanchor_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsAnchor*
 void q_graphicsanchor_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsAnchor*
 /// @param callback void func(QGraphicsAnchor* self)
@@ -329,14 +329,14 @@ void q_graphicsanchor_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QGraphicsAnchor*
 QObject* q_graphicsanchor_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QGraphicsAnchor*
 /// @param classname const char*
@@ -344,14 +344,14 @@ bool q_graphicsanchor_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QGraphicsAnchor*
 void q_graphicsanchor_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QGraphicsAnchor*
 /// @param thread QThread*
@@ -360,7 +360,7 @@ bool q_graphicsanchor_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGraphicsAnchor*
 /// @param interval int
@@ -369,7 +369,7 @@ int32_t q_graphicsanchor_start_timer22(void* self, int interval, int32_t timerTy
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -380,7 +380,7 @@ QMetaObject__Connection* q_graphicsanchor_connect5(void* sender, void* signal, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QGraphicsAnchor*
 /// @param sender QObject*
@@ -391,7 +391,7 @@ QMetaObject__Connection* q_graphicsanchor_connect4(void* self, void* sender, con
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsAnchor*
 /// @param param1 QObject*
@@ -399,7 +399,7 @@ void q_graphicsanchor_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsAnchor*
 /// @param callback void func(QGraphicsAnchor* self, QObject* param1)
@@ -407,7 +407,7 @@ void q_graphicsanchor_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -415,7 +415,7 @@ void q_graphicsanchor_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(QGraphicsAnchor* self, const char* objectName)
 void q_graphicsanchor_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#dtor.QGraphicsAnchor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchor.html#dtor.QGraphicsAnchor)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -433,7 +433,7 @@ QGraphicsAnchorLayout* q_graphicsanchorlayout_new();
 /// @param parent QGraphicsLayoutItem*
 QGraphicsAnchorLayout* q_graphicsanchorlayout_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchor)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param firstItem QGraphicsLayoutItem*
@@ -442,7 +442,7 @@ QGraphicsAnchorLayout* q_graphicsanchorlayout_new2(void* parent);
 /// @param secondEdge enum Qt__AnchorPoint
 QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, int32_t firstEdge, void* secondItem, int32_t secondEdge);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#anchor)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#anchor)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param firstItem QGraphicsLayoutItem*
@@ -451,7 +451,7 @@ QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, 
 /// @param secondEdge enum Qt__AnchorPoint
 QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int32_t firstEdge, void* secondItem, int32_t secondEdge);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addCornerAnchors)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addCornerAnchors)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param firstItem QGraphicsLayoutItem*
@@ -460,48 +460,48 @@ QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int3
 /// @param secondCorner enum Qt__Corner
 void q_graphicsanchorlayout_add_corner_anchors(void* self, void* firstItem, int32_t firstCorner, void* secondItem, int32_t secondCorner);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param firstItem QGraphicsLayoutItem*
 /// @param secondItem QGraphicsLayoutItem*
 void q_graphicsanchorlayout_add_anchors(void* self, void* firstItem, void* secondItem);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setHorizontalSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setHorizontalSpacing)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param spacing double
 void q_graphicsanchorlayout_set_horizontal_spacing(void* self, double spacing);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setVerticalSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setVerticalSpacing)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param spacing double
 void q_graphicsanchorlayout_set_vertical_spacing(void* self, double spacing);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setSpacing)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param spacing double
 void q_graphicsanchorlayout_set_spacing(void* self, double spacing);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#horizontalSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#horizontalSpacing)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_horizontal_spacing(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#verticalSpacing)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#verticalSpacing)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_vertical_spacing(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param index int
 void q_graphicsanchorlayout_remove_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
 ///
 /// Allows for overriding the related default method
 ///
@@ -509,7 +509,7 @@ void q_graphicsanchorlayout_remove_at(void* self, int index);
 /// @param callback void func(QGraphicsAnchorLayout* self, int index)
 void q_graphicsanchorlayout_on_remove_at(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
 ///
 /// Base class method implementation
 ///
@@ -517,13 +517,13 @@ void q_graphicsanchorlayout_on_remove_at(void* self, void (*callback)(void*, int
 /// @param index int
 void q_graphicsanchorlayout_qbase_remove_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param rect QRectF*
 void q_graphicsanchorlayout_set_geometry(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
 ///
 /// Allows for overriding the related default method
 ///
@@ -531,7 +531,7 @@ void q_graphicsanchorlayout_set_geometry(void* self, void* rect);
 /// @param callback void func(QGraphicsAnchorLayout* self, QRectF* rect)
 void q_graphicsanchorlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
 ///
 /// Base class method implementation
 ///
@@ -539,12 +539,12 @@ void q_graphicsanchorlayout_on_set_geometry(void* self, void (*callback)(void*, 
 /// @param rect QRectF*
 void q_graphicsanchorlayout_qbase_set_geometry(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
 ///
 /// @param self QGraphicsAnchorLayout*
 int32_t q_graphicsanchorlayout_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
 ///
 /// Allows for overriding the related default method
 ///
@@ -552,20 +552,20 @@ int32_t q_graphicsanchorlayout_count(void* self);
 /// @param callback int32_t func()
 void q_graphicsanchorlayout_on_count(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsAnchorLayout*
 int32_t q_graphicsanchorlayout_qbase_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param index int
 QGraphicsLayoutItem* q_graphicsanchorlayout_item_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
 ///
 /// Allows for overriding the related default method
 ///
@@ -573,7 +573,7 @@ QGraphicsLayoutItem* q_graphicsanchorlayout_item_at(void* self, int index);
 /// @param callback QGraphicsLayoutItem* func(QGraphicsAnchorLayout* self, int index)
 void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
 ///
 /// Base class method implementation
 ///
@@ -581,12 +581,12 @@ void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callba
 /// @param index int
 QGraphicsLayoutItem* q_graphicsanchorlayout_qbase_item_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
 ///
 /// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_invalidate(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
 ///
 /// Allows for overriding the related default method
 ///
@@ -594,21 +594,21 @@ void q_graphicsanchorlayout_invalidate(void* self);
 /// @param callback void func()
 void q_graphicsanchorlayout_on_invalidate(void* self, void (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_qbase_invalidate(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 QSizeF* q_graphicsanchorlayout_size_hint(void* self, int32_t which, void* constraint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -616,7 +616,7 @@ QSizeF* q_graphicsanchorlayout_size_hint(void* self, int32_t which, void* constr
 /// @param callback QSizeF* func(QGraphicsAnchorLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
 /// Base class method implementation
 ///
@@ -625,7 +625,7 @@ void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, 
 /// @param constraint QSizeF*
 QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int32_t which, void* constraint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param firstItem QGraphicsLayoutItem*
@@ -635,7 +635,7 @@ void q_graphicsanchorlayout_add_anchors3(void* self, void* firstItem, void* seco
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#setContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#setContentsMargins)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param left double
@@ -646,34 +646,34 @@ void q_graphicsanchorlayout_set_contents_margins(void* self, double left, double
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#activate)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#activate)
 ///
 /// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_activate(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#isActivated)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#isActivated)
 ///
 /// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_is_activated(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#setInstantInvalidatePropagation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#setInstantInvalidatePropagation)
 ///
 /// @param enable bool
 void q_graphicsanchorlayout_set_instant_invalidate_propagation(bool enable);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#instantInvalidatePropagation)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#instantInvalidatePropagation)
 ///
 bool q_graphicsanchorlayout_instant_invalidate_propagation();
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param policy QSizePolicy*
@@ -681,7 +681,7 @@ void q_graphicsanchorlayout_set_size_policy(void* self, void* policy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param hPolicy enum QSizePolicy__Policy
@@ -690,14 +690,14 @@ void q_graphicsanchorlayout_set_size_policy2(void* self, int32_t hPolicy, int32_
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizePolicy)
 ///
 /// @param self QGraphicsAnchorLayout*
 QSizePolicy* q_graphicsanchorlayout_size_policy(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param size QSizeF*
@@ -705,7 +705,7 @@ void q_graphicsanchorlayout_set_minimum_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param w double
@@ -714,14 +714,14 @@ void q_graphicsanchorlayout_set_minimum_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 QSizeF* q_graphicsanchorlayout_minimum_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumWidth)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param width double
@@ -729,14 +729,14 @@ void q_graphicsanchorlayout_set_minimum_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumWidth)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_minimum_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumHeight)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param height double
@@ -744,14 +744,14 @@ void q_graphicsanchorlayout_set_minimum_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumHeight)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_minimum_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param size QSizeF*
@@ -759,7 +759,7 @@ void q_graphicsanchorlayout_set_preferred_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param w double
@@ -768,14 +768,14 @@ void q_graphicsanchorlayout_set_preferred_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 QSizeF* q_graphicsanchorlayout_preferred_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredWidth)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param width double
@@ -783,14 +783,14 @@ void q_graphicsanchorlayout_set_preferred_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredWidth)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_preferred_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredHeight)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param height double
@@ -798,14 +798,14 @@ void q_graphicsanchorlayout_set_preferred_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredHeight)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_preferred_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param size QSizeF*
@@ -813,7 +813,7 @@ void q_graphicsanchorlayout_set_maximum_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param w double
@@ -822,14 +822,14 @@ void q_graphicsanchorlayout_set_maximum_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumSize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumSize)
 ///
 /// @param self QGraphicsAnchorLayout*
 QSizeF* q_graphicsanchorlayout_maximum_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumWidth)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param width double
@@ -837,14 +837,14 @@ void q_graphicsanchorlayout_set_maximum_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumWidth)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_maximum_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumHeight)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param height double
@@ -852,28 +852,28 @@ void q_graphicsanchorlayout_set_maximum_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumHeight)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumHeight)
 ///
 /// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_maximum_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#geometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#geometry)
 ///
 /// @param self QGraphicsAnchorLayout*
 QRectF* q_graphicsanchorlayout_geometry(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#contentsRect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#contentsRect)
 ///
 /// @param self QGraphicsAnchorLayout*
 QRectF* q_graphicsanchorlayout_contents_rect(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param which enum Qt__SizeHint
@@ -881,14 +881,14 @@ QSizeF* q_graphicsanchorlayout_effective_size_hint(void* self, int32_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#parentLayoutItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#parentLayoutItem)
 ///
 /// @param self QGraphicsAnchorLayout*
 QGraphicsLayoutItem* q_graphicsanchorlayout_parent_layout_item(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setParentLayoutItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setParentLayoutItem)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param parent QGraphicsLayoutItem*
@@ -896,28 +896,28 @@ void q_graphicsanchorlayout_set_parent_layout_item(void* self, void* parent);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isLayout)
 ///
 /// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_is_layout(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#graphicsItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#graphicsItem)
 ///
 /// @param self QGraphicsAnchorLayout*
 QGraphicsItem* q_graphicsanchorlayout_graphics_item(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#ownedByLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#ownedByLayout)
 ///
 /// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_owned_by_layout(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param hPolicy enum QSizePolicy__Policy
@@ -927,7 +927,7 @@ void q_graphicsanchorlayout_set_size_policy3(void* self, int32_t hPolicy, int32_
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param which enum Qt__SizeHint
@@ -936,7 +936,7 @@ QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int32_t which, v
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -949,7 +949,7 @@ void q_graphicsanchorlayout_get_contents_margins(void* self, double* left, doubl
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -962,7 +962,7 @@ void q_graphicsanchorlayout_qbase_get_contents_margins(void* self, double* left,
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -972,7 +972,7 @@ void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*callback)
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -981,7 +981,7 @@ void q_graphicsanchorlayout_update_geometry(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -990,7 +990,7 @@ void q_graphicsanchorlayout_qbase_update_geometry(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1000,7 +1000,7 @@ void q_graphicsanchorlayout_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1010,7 +1010,7 @@ void q_graphicsanchorlayout_widget_event(void* self, void* e);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1020,7 +1020,7 @@ void q_graphicsanchorlayout_qbase_widget_event(void* self, void* e);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1030,7 +1030,7 @@ void q_graphicsanchorlayout_on_widget_event(void* self, void (*callback)(void*, 
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1039,7 +1039,7 @@ bool q_graphicsanchorlayout_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1048,7 +1048,7 @@ bool q_graphicsanchorlayout_qbase_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1058,7 +1058,7 @@ void q_graphicsanchorlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1068,7 +1068,7 @@ void q_graphicsanchorlayout_add_child_layout_item(void* self, void* layoutItem);
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1078,7 +1078,7 @@ void q_graphicsanchorlayout_qbase_add_child_layout_item(void* self, void* layout
 
 /// Inherited from QGraphicsLayout
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1088,7 +1088,7 @@ void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*callback
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1098,7 +1098,7 @@ void q_graphicsanchorlayout_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1108,7 +1108,7 @@ void q_graphicsanchorlayout_qbase_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1118,7 +1118,7 @@ void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*callback)(vo
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1128,7 +1128,7 @@ void q_graphicsanchorlayout_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1138,7 +1138,7 @@ void q_graphicsanchorlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
 
 /// Inherited from QGraphicsLayoutItem
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1146,7 +1146,7 @@ void q_graphicsanchorlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
 /// @param callback void func(QGraphicsAnchorLayout* self, bool ownedByLayout)
 void q_graphicsanchorlayout_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#dtor.QGraphicsAnchorLayout)
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#dtor.QGraphicsAnchorLayout)
 ///
 /// Delete this object from C++ memory.
 ///

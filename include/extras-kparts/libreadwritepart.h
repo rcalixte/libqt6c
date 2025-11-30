@@ -28,7 +28,7 @@ KParts__ReadWritePart* k_parts__readwritepart_new2(void* parent);
 /// @param data KPluginMetaData*
 KParts__ReadWritePart* k_parts__readwritepart_new3(void* parent, void* data);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KParts__ReadWritePart*
 const QMetaObject* k_parts__readwritepart_meta_object(void* self);
@@ -57,25 +57,25 @@ void k_parts__readwritepart_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_parts__readwritepart_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_parts__readwritepart_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#isReadWrite)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#isReadWrite)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_is_read_write(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#setReadWrite)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setReadWrite)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param readwrite bool
 void k_parts__readwritepart_set_read_write(void* self, bool readwrite);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#setReadWrite)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setReadWrite)
 ///
 /// Allows for overriding the related default method
 ///
@@ -83,7 +83,7 @@ void k_parts__readwritepart_set_read_write(void* self, bool readwrite);
 /// @param callback void func(KParts__ReadWritePart* self, bool readwrite)
 void k_parts__readwritepart_on_set_read_write(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#setReadWrite)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setReadWrite)
 ///
 /// Base class method implementation
 ///
@@ -91,17 +91,17 @@ void k_parts__readwritepart_on_set_read_write(void* self, void (*callback)(void*
 /// @param readwrite bool
 void k_parts__readwritepart_qbase_set_read_write(void* self, bool readwrite);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#isModified)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#isModified)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_is_modified(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#queryClose)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#queryClose)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_query_close(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#queryClose)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#queryClose)
 ///
 /// Allows for overriding the related default method
 ///
@@ -109,19 +109,19 @@ bool k_parts__readwritepart_query_close(void* self);
 /// @param callback bool func()
 void k_parts__readwritepart_on_query_close(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#queryClose)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#queryClose)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_qbase_query_close(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#closeUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_close_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#closeUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -129,20 +129,20 @@ bool k_parts__readwritepart_close_url(void* self);
 /// @param callback bool func()
 void k_parts__readwritepart_on_close_url(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#closeUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_qbase_close_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#closeUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param promptToSave bool
 bool k_parts__readwritepart_close_url2(void* self, bool promptToSave);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#closeUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -150,7 +150,7 @@ bool k_parts__readwritepart_close_url2(void* self, bool promptToSave);
 /// @param callback bool func(KParts__ReadWritePart* self, bool promptToSave)
 void k_parts__readwritepart_on_close_url2(void* self, bool (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#closeUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// Base class method implementation
 ///
@@ -158,13 +158,13 @@ void k_parts__readwritepart_on_close_url2(void* self, bool (*callback)(void*, bo
 /// @param promptToSave bool
 bool k_parts__readwritepart_qbase_close_url2(void* self, bool promptToSave);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveAs)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveAs)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param url QUrl*
 bool k_parts__readwritepart_save_as(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveAs)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveAs)
 ///
 /// Allows for overriding the related default method
 ///
@@ -172,7 +172,7 @@ bool k_parts__readwritepart_save_as(void* self, void* url);
 /// @param callback bool func(KParts__ReadWritePart* self, QUrl* url)
 void k_parts__readwritepart_on_save_as(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveAs)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveAs)
 ///
 /// Base class method implementation
 ///
@@ -180,13 +180,13 @@ void k_parts__readwritepart_on_save_as(void* self, bool (*callback)(void*, void*
 /// @param url QUrl*
 bool k_parts__readwritepart_qbase_save_as(void* self, void* url);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#setModified)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setModified)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param modified bool
 void k_parts__readwritepart_set_modified(void* self, bool modified);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#setModified)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setModified)
 ///
 /// Allows for overriding the related default method
 ///
@@ -194,7 +194,7 @@ void k_parts__readwritepart_set_modified(void* self, bool modified);
 /// @param callback void func(KParts__ReadWritePart* self, bool modified)
 void k_parts__readwritepart_on_set_modified(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#setModified)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setModified)
 ///
 /// Base class method implementation
 ///
@@ -202,30 +202,30 @@ void k_parts__readwritepart_on_set_modified(void* self, void (*callback)(void*, 
 /// @param modified bool
 void k_parts__readwritepart_qbase_set_modified(void* self, bool modified);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#sigQueryClose)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#sigQueryClose)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param handled bool*
 /// @param abortClosing bool*
 void k_parts__readwritepart_sig_query_close(void* self, bool* handled, bool* abortClosing);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#sigQueryClose)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#sigQueryClose)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self, bool* handled, bool* abortClosing)
 void k_parts__readwritepart_on_sig_query_close(void* self, void (*callback)(void*, bool*, bool*));
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#setModified)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setModified)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_set_modified2(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#save)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#save)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_save(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#save)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#save)
 ///
 /// Allows for overriding the related default method
 ///
@@ -233,24 +233,24 @@ bool k_parts__readwritepart_save(void* self);
 /// @param callback bool func()
 void k_parts__readwritepart_on_save(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#save)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#save)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_qbase_save(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#waitSaveComplete)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#waitSaveComplete)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_wait_save_complete(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveFile)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveFile)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_save_file(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveFile)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveFile)
 ///
 /// Allows for overriding the related default method
 ///
@@ -258,19 +258,19 @@ bool k_parts__readwritepart_save_file(void* self);
 /// @param callback bool func()
 void k_parts__readwritepart_on_save_file(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveFile)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveFile)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_qbase_save_file(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_save_to_url(void* self);
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
 ///
 /// Allows for overriding the related default method
 ///
@@ -278,14 +278,14 @@ bool k_parts__readwritepart_save_to_url(void* self);
 /// @param callback bool func()
 void k_parts__readwritepart_on_save_to_url(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_qbase_save_to_url(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -293,7 +293,7 @@ bool k_parts__readwritepart_qbase_save_to_url(void* self);
 /// @param c const char*
 const char* k_parts__readwritepart_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -304,7 +304,7 @@ const char* k_parts__readwritepart_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setProgressInfoEnabled)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setProgressInfoEnabled)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param show bool
@@ -312,28 +312,28 @@ void k_parts__readwritepart_set_progress_info_enabled(void* self, bool show);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#isProgressInfoEnabled)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#isProgressInfoEnabled)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_is_progress_info_enabled(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#url)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#url)
 ///
 /// @param self KParts__ReadWritePart*
 QUrl* k_parts__readwritepart_url(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#navigationExtension)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#navigationExtension)
 ///
 /// @param self KParts__ReadWritePart*
 KParts__NavigationExtension* k_parts__readwritepart_navigation_extension(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setArguments)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setArguments)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param arguments KParts__OpenUrlArguments*
@@ -341,14 +341,14 @@ void k_parts__readwritepart_set_arguments(void* self, void* arguments);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#arguments)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#arguments)
 ///
 /// @param self KParts__ReadWritePart*
 KParts__OpenUrlArguments* k_parts__readwritepart_arguments(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#openStream)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openStream)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param mimeType const char*
@@ -357,7 +357,7 @@ bool k_parts__readwritepart_open_stream(void* self, const char* mimeType, void* 
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#writeStream)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#writeStream)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param data const char*
@@ -365,14 +365,14 @@ bool k_parts__readwritepart_write_stream(void* self, const char* data);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#closeStream)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#closeStream)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_close_stream(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#started)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#started)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param job KIO__Job*
@@ -380,7 +380,7 @@ void k_parts__readwritepart_started(void* self, void* job);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#started)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#started)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self, KIO__Job* job)
@@ -388,14 +388,14 @@ void k_parts__readwritepart_on_started(void* self, void (*callback)(void*, void*
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#completed)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#completed)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_completed(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#completed)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#completed)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self)
@@ -403,14 +403,14 @@ void k_parts__readwritepart_on_completed(void* self, void (*callback)(void*));
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#completedWithPendingAction)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#completedWithPendingAction)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_completed_with_pending_action(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#completedWithPendingAction)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#completedWithPendingAction)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self)
@@ -418,7 +418,7 @@ void k_parts__readwritepart_on_completed_with_pending_action(void* self, void (*
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#canceled)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#canceled)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param errMsg const char*
@@ -426,7 +426,7 @@ void k_parts__readwritepart_canceled(void* self, const char* errMsg);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#canceled)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#canceled)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self, const char* errMsg)
@@ -434,7 +434,7 @@ void k_parts__readwritepart_on_canceled(void* self, void (*callback)(void*, cons
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#urlChanged)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#urlChanged)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param url QUrl*
@@ -442,7 +442,7 @@ void k_parts__readwritepart_url_changed(void* self, void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#urlChanged)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#urlChanged)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self, QUrl* url)
@@ -450,14 +450,14 @@ void k_parts__readwritepart_on_url_changed(void* self, void (*callback)(void*, v
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#manager)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#manager)
 ///
 /// @param self KParts__ReadWritePart*
 KParts__PartManager* k_parts__readwritepart_manager(void* self);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setAutoDeleteWidget)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setAutoDeleteWidget)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param autoDeleteWidget bool
@@ -465,7 +465,7 @@ void k_parts__readwritepart_set_auto_delete_widget(void* self, bool autoDeleteWi
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setAutoDeletePart)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setAutoDeletePart)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param autoDeletePart bool
@@ -473,14 +473,14 @@ void k_parts__readwritepart_set_auto_delete_part(void* self, bool autoDeletePart
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#metaData)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#metaData)
 ///
 /// @param self KParts__ReadWritePart*
 KPluginMetaData* k_parts__readwritepart_meta_data(void* self);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setWindowCaption)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setWindowCaption)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param caption const char*
@@ -488,7 +488,7 @@ void k_parts__readwritepart_set_window_caption(void* self, const char* caption);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setWindowCaption)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setWindowCaption)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self, const char* caption)
@@ -496,7 +496,7 @@ void k_parts__readwritepart_on_set_window_caption(void* self, void (*callback)(v
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setStatusBarText)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setStatusBarText)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param text const char*
@@ -504,7 +504,7 @@ void k_parts__readwritepart_set_status_bar_text(void* self, const char* text);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setStatusBarText)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setStatusBarText)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self, const char* text)
@@ -512,7 +512,7 @@ void k_parts__readwritepart_on_set_status_bar_text(void* self, void (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -521,7 +521,7 @@ const char* k_parts__readwritepart_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param name char*
@@ -529,35 +529,35 @@ void k_parts__readwritepart_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KParts__ReadWritePart*
 bool k_parts__readwritepart_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param b bool
@@ -565,14 +565,14 @@ bool k_parts__readwritepart_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KParts__ReadWritePart*
 QThread* k_parts__readwritepart_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param thread QThread*
@@ -580,7 +580,7 @@ bool k_parts__readwritepart_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param interval int
@@ -588,7 +588,7 @@ int32_t k_parts__readwritepart_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param id int
@@ -596,7 +596,7 @@ void k_parts__readwritepart_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param id enum Qt__TimerId
@@ -604,14 +604,14 @@ void k_parts__readwritepart_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KParts__ReadWritePart*
 libqt_list /* of QObject* */ k_parts__readwritepart_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param parent QObject*
@@ -619,7 +619,7 @@ void k_parts__readwritepart_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param filterObj QObject*
@@ -627,7 +627,7 @@ void k_parts__readwritepart_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param obj QObject*
@@ -635,7 +635,7 @@ void k_parts__readwritepart_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -645,7 +645,7 @@ QMetaObject__Connection* k_parts__readwritepart_connect(void* sender, void* sign
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param sender QObject*
@@ -655,7 +655,7 @@ QMetaObject__Connection* k_parts__readwritepart_connect2(void* self, void* sende
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -665,28 +665,28 @@ bool k_parts__readwritepart_disconnect(void* sender, void* signal, void* receive
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool k_parts__readwritepart_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param name const char*
@@ -695,7 +695,7 @@ bool k_parts__readwritepart_set_property(void* self, const char* name, void* val
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param name const char*
@@ -703,7 +703,7 @@ QVariant* k_parts__readwritepart_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -712,28 +712,28 @@ const char** k_parts__readwritepart_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__ReadWritePart*
 QBindingStorage* k_parts__readwritepart_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__ReadWritePart*
 const QBindingStorage* k_parts__readwritepart_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self)
@@ -741,14 +741,14 @@ void k_parts__readwritepart_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KParts__ReadWritePart*
 QObject* k_parts__readwritepart_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param classname const char*
@@ -756,14 +756,14 @@ bool k_parts__readwritepart_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param thread QThread*
@@ -772,7 +772,7 @@ bool k_parts__readwritepart_move_to_thread2(void* self, void* thread, void* para
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param interval int
@@ -781,7 +781,7 @@ int32_t k_parts__readwritepart_start_timer22(void* self, int interval, int32_t t
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -792,7 +792,7 @@ QMetaObject__Connection* k_parts__readwritepart_connect5(void* sender, void* sig
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param sender QObject*
@@ -803,7 +803,7 @@ QMetaObject__Connection* k_parts__readwritepart_connect4(void* self, void* sende
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param param1 QObject*
@@ -811,7 +811,7 @@ void k_parts__readwritepart_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param callback void func(KParts__ReadWritePart* self, QObject* param1)
@@ -819,7 +819,7 @@ void k_parts__readwritepart_on_destroyed1(void* self, void (*callback)(void*, vo
 
 /// Inherited from KParts::PartBase
 ///
-/// [Qt documentation](https://api.kde.org/kparts-partbase.html#setPartObject)
+/// [Upstream resources](https://api.kde.org/kparts-partbase.html#setPartObject)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param object QObject*
@@ -827,14 +827,14 @@ void k_parts__readwritepart_set_part_object(void* self, void* object);
 
 /// Inherited from KParts::PartBase
 ///
-/// [Qt documentation](https://api.kde.org/kparts-partbase.html#partObject)
+/// [Upstream resources](https://api.kde.org/kparts-partbase.html#partObject)
 ///
 /// @param self KParts__ReadWritePart*
 QObject* k_parts__readwritepart_part_object(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param name const char*
@@ -842,7 +842,7 @@ QAction* k_parts__readwritepart_action(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param doc QDomDocument*
@@ -850,14 +850,14 @@ void k_parts__readwritepart_set_x_m_l_g_u_i_build_document(void* self, void* doc
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
 /// @param self KParts__ReadWritePart*
 QDomDocument* k_parts__readwritepart_xmlgui_build_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setFactory)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setFactory)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param factory KXMLGUIFactory*
@@ -865,21 +865,21 @@ void k_parts__readwritepart_set_factory(void* self, void* factory);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#factory)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#factory)
 ///
 /// @param self KParts__ReadWritePart*
 KXMLGUIFactory* k_parts__readwritepart_factory(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#parentClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
 /// @param self KParts__ReadWritePart*
 KXMLGUIClient* k_parts__readwritepart_parent_client(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#insertChildClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#insertChildClient)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param child KXMLGUIClient*
@@ -887,7 +887,7 @@ void k_parts__readwritepart_insert_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#removeChildClient)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#removeChildClient)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param child KXMLGUIClient*
@@ -895,14 +895,14 @@ void k_parts__readwritepart_remove_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#childClients)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#childClients)
 ///
 /// @param self KParts__ReadWritePart*
 libqt_list /* of KXMLGUIClient* */ k_parts__readwritepart_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param builder KXMLGUIBuilder*
@@ -910,21 +910,21 @@ void k_parts__readwritepart_set_client_builder(void* self, void* builder);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#clientBuilder)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
 /// @param self KParts__ReadWritePart*
 KXMLGUIBuilder* k_parts__readwritepart_client_builder(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#reloadXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#reloadXML)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_reload_x_m_l(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#plugActionList)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#plugActionList)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param name const char*
@@ -933,7 +933,7 @@ void k_parts__readwritepart_plug_action_list(void* self, const char* name, libqt
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#unplugActionList)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#unplugActionList)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param name const char*
@@ -941,7 +941,7 @@ void k_parts__readwritepart_unplug_action_list(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -951,7 +951,7 @@ const char* k_parts__readwritepart_find_most_recent_x_m_l_file(const char* files
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param state const char*
@@ -960,7 +960,7 @@ void k_parts__readwritepart_add_state_action_enabled(void* self, const char* sta
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionDisabled)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#addStateActionDisabled)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param state const char*
@@ -969,7 +969,7 @@ void k_parts__readwritepart_add_state_action_disabled(void* self, const char* st
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#getActionsToChangeForState)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#getActionsToChangeForState)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param state const char*
@@ -977,7 +977,7 @@ KXMLGUIClient__StateChange* k_parts__readwritepart_get_actions_to_change_for_sta
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#beginXMLPlug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#beginXMLPlug)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param param1 QWidget*
@@ -985,14 +985,14 @@ void k_parts__readwritepart_begin_x_m_l_plug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
 ///
 /// @param self KParts__ReadWritePart*
 void k_parts__readwritepart_end_x_m_l_plug(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#prepareXMLUnplug)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#prepareXMLUnplug)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param param1 QWidget*
@@ -1000,7 +1000,7 @@ void k_parts__readwritepart_prepare_x_m_l_unplug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param xmlfile const char*
@@ -1009,7 +1009,7 @@ void k_parts__readwritepart_replace_x_m_l_file(void* self, const char* xmlfile, 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1018,7 +1018,7 @@ const char* k_parts__readwritepart_find_version_number(const char* xml);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KParts__ReadWritePart*
 /// @param xmlfile const char*
@@ -1028,7 +1028,7 @@ void k_parts__readwritepart_replace_x_m_l_file3(void* self, const char* xmlfile,
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#openUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openUrl)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1038,7 +1038,7 @@ bool k_parts__readwritepart_open_url(void* self, void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#openUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openUrl)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1048,7 +1048,7 @@ bool k_parts__readwritepart_qbase_open_url(void* self, void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#openUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openUrl)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1058,7 +1058,7 @@ void k_parts__readwritepart_on_open_url(void* self, bool (*callback)(void*, void
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#openFile)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1067,7 +1067,7 @@ bool k_parts__readwritepart_open_file(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#openFile)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1076,7 +1076,7 @@ bool k_parts__readwritepart_qbase_open_file(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#openFile)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1086,7 +1086,7 @@ void k_parts__readwritepart_on_open_file(void* self, bool (*callback)());
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#guiActivateEvent)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#guiActivateEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1096,7 +1096,7 @@ void k_parts__readwritepart_gui_activate_event(void* self, void* event);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#guiActivateEvent)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#guiActivateEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1106,7 +1106,7 @@ void k_parts__readwritepart_qbase_gui_activate_event(void* self, void* event);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#guiActivateEvent)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#guiActivateEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1116,7 +1116,7 @@ void k_parts__readwritepart_on_gui_activate_event(void* self, void (*callback)(v
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#widget)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#widget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1125,7 +1125,7 @@ QWidget* k_parts__readwritepart_widget(void* self);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#widget)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#widget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1134,7 +1134,7 @@ QWidget* k_parts__readwritepart_qbase_widget(void* self);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#widget)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#widget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1144,7 +1144,7 @@ void k_parts__readwritepart_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setManager)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setManager)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1154,7 +1154,7 @@ void k_parts__readwritepart_set_manager(void* self, void* manager);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setManager)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setManager)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1164,7 +1164,7 @@ void k_parts__readwritepart_qbase_set_manager(void* self, void* manager);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setManager)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setManager)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1174,7 +1174,7 @@ void k_parts__readwritepart_on_set_manager(void* self, void (*callback)(void*, v
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#hitTest)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#hitTest)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1185,7 +1185,7 @@ KParts__Part* k_parts__readwritepart_hit_test(void* self, void* widget, void* gl
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#hitTest)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#hitTest)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1196,7 +1196,7 @@ KParts__Part* k_parts__readwritepart_qbase_hit_test(void* self, void* widget, vo
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#hitTest)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#hitTest)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1206,7 +1206,7 @@ void k_parts__readwritepart_on_hit_test(void* self, KParts__Part* (*callback)(vo
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setWidget)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1216,7 +1216,7 @@ void k_parts__readwritepart_set_widget(void* self, void* widget);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setWidget)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1226,7 +1226,7 @@ void k_parts__readwritepart_qbase_set_widget(void* self, void* widget);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#setWidget)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#setWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1236,7 +1236,7 @@ void k_parts__readwritepart_on_set_widget(void* self, void (*callback)(void*, vo
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#customEvent)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1246,7 +1246,7 @@ void k_parts__readwritepart_custom_event(void* self, void* event);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#customEvent)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1256,7 +1256,7 @@ void k_parts__readwritepart_qbase_custom_event(void* self, void* event);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#customEvent)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1266,7 +1266,7 @@ void k_parts__readwritepart_on_custom_event(void* self, void (*callback)(void*, 
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#partActivateEvent)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#partActivateEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1276,7 +1276,7 @@ void k_parts__readwritepart_part_activate_event(void* self, void* event);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#partActivateEvent)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#partActivateEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1286,7 +1286,7 @@ void k_parts__readwritepart_qbase_part_activate_event(void* self, void* event);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#partActivateEvent)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#partActivateEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1296,7 +1296,7 @@ void k_parts__readwritepart_on_part_activate_event(void* self, void (*callback)(
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1306,7 +1306,7 @@ bool k_parts__readwritepart_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1316,7 +1316,7 @@ bool k_parts__readwritepart_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1326,7 +1326,7 @@ void k_parts__readwritepart_on_event(void* self, bool (*callback)(void*, void*))
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1337,7 +1337,7 @@ bool k_parts__readwritepart_event_filter(void* self, void* watched, void* event)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1348,7 +1348,7 @@ bool k_parts__readwritepart_qbase_event_filter(void* self, void* watched, void* 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1358,7 +1358,7 @@ void k_parts__readwritepart_on_event_filter(void* self, bool (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1368,7 +1368,7 @@ void k_parts__readwritepart_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1378,7 +1378,7 @@ void k_parts__readwritepart_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1388,7 +1388,7 @@ void k_parts__readwritepart_on_timer_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1398,7 +1398,7 @@ void k_parts__readwritepart_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1408,7 +1408,7 @@ void k_parts__readwritepart_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1418,7 +1418,7 @@ void k_parts__readwritepart_on_child_event(void* self, void (*callback)(void*, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1428,7 +1428,7 @@ void k_parts__readwritepart_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1438,7 +1438,7 @@ void k_parts__readwritepart_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1448,7 +1448,7 @@ void k_parts__readwritepart_on_connect_notify(void* self, void (*callback)(void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1458,7 +1458,7 @@ void k_parts__readwritepart_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1468,7 +1468,7 @@ void k_parts__readwritepart_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1478,7 +1478,7 @@ void k_parts__readwritepart_on_disconnect_notify(void* self, void (*callback)(vo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1488,7 +1488,7 @@ QAction* k_parts__readwritepart_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1498,7 +1498,7 @@ QAction* k_parts__readwritepart_qbase_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1508,7 +1508,7 @@ void k_parts__readwritepart_on_action2(void* self, QAction* (*callback)(void*, v
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1517,7 +1517,7 @@ KActionCollection* k_parts__readwritepart_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1526,7 +1526,7 @@ KActionCollection* k_parts__readwritepart_qbase_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1536,7 +1536,7 @@ void k_parts__readwritepart_on_action_collection(void* self, KActionCollection* 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1547,7 +1547,7 @@ const char* k_parts__readwritepart_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1558,7 +1558,7 @@ const char* k_parts__readwritepart_qbase_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1568,7 +1568,7 @@ void k_parts__readwritepart_on_component_name(void* self, const char* (*callback
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1577,7 +1577,7 @@ QDomDocument* k_parts__readwritepart_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1586,7 +1586,7 @@ QDomDocument* k_parts__readwritepart_qbase_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1596,7 +1596,7 @@ void k_parts__readwritepart_on_dom_document(void* self, QDomDocument* (*callback
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1607,7 +1607,7 @@ const char* k_parts__readwritepart_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1618,7 +1618,7 @@ const char* k_parts__readwritepart_qbase_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1628,7 +1628,7 @@ void k_parts__readwritepart_on_xml_file(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1639,7 +1639,7 @@ const char* k_parts__readwritepart_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1650,7 +1650,7 @@ const char* k_parts__readwritepart_qbase_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1660,7 +1660,7 @@ void k_parts__readwritepart_on_local_x_m_l_file(void* self, const char* (*callba
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1671,7 +1671,7 @@ void k_parts__readwritepart_set_component_name(void* self, const char* component
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1682,7 +1682,7 @@ void k_parts__readwritepart_qbase_set_component_name(void* self, const char* com
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1692,7 +1692,7 @@ void k_parts__readwritepart_on_set_component_name(void* self, void (*callback)(v
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1704,7 +1704,7 @@ void k_parts__readwritepart_set_x_m_l_file(void* self, const char* file, bool me
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1716,7 +1716,7 @@ void k_parts__readwritepart_qbase_set_x_m_l_file(void* self, const char* file, b
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1726,7 +1726,7 @@ void k_parts__readwritepart_on_set_x_m_l_file(void* self, void (*callback)(void*
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1736,7 +1736,7 @@ void k_parts__readwritepart_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1746,7 +1746,7 @@ void k_parts__readwritepart_qbase_set_local_x_m_l_file(void* self, const char* f
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1756,7 +1756,7 @@ void k_parts__readwritepart_on_set_local_x_m_l_file(void* self, void (*callback)
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1767,7 +1767,7 @@ void k_parts__readwritepart_set_x_m_l(void* self, const char* document, bool mer
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1778,7 +1778,7 @@ void k_parts__readwritepart_qbase_set_x_m_l(void* self, const char* document, bo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1788,7 +1788,7 @@ void k_parts__readwritepart_on_set_x_m_l(void* self, void (*callback)(void*, con
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1799,7 +1799,7 @@ void k_parts__readwritepart_set_d_o_m_document(void* self, void* document, bool 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1810,7 +1810,7 @@ void k_parts__readwritepart_qbase_set_d_o_m_document(void* self, void* document,
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1820,7 +1820,7 @@ void k_parts__readwritepart_on_set_d_o_m_document(void* self, void (*callback)(v
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1831,7 +1831,7 @@ void k_parts__readwritepart_state_changed(void* self, const char* newstate, int3
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1842,7 +1842,7 @@ void k_parts__readwritepart_qbase_state_changed(void* self, const char* newstate
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1852,7 +1852,7 @@ void k_parts__readwritepart_on_state_changed(void* self, void (*callback)(void*,
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#abortLoad)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#abortLoad)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1861,7 +1861,7 @@ void k_parts__readwritepart_abort_load(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#abortLoad)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#abortLoad)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1870,7 +1870,7 @@ void k_parts__readwritepart_qbase_abort_load(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#abortLoad)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#abortLoad)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1880,7 +1880,7 @@ void k_parts__readwritepart_on_abort_load(void* self, void (*callback)());
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setUrl)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1890,7 +1890,7 @@ void k_parts__readwritepart_set_url(void* self, void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setUrl)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1900,7 +1900,7 @@ void k_parts__readwritepart_qbase_set_url(void* self, void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setUrl)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setUrl)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1910,7 +1910,7 @@ void k_parts__readwritepart_on_set_url(void* self, void (*callback)(void*, void*
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#localFilePath)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#localFilePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1921,7 +1921,7 @@ const char* k_parts__readwritepart_local_file_path(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#localFilePath)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#localFilePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1932,7 +1932,7 @@ const char* k_parts__readwritepart_qbase_local_file_path(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#localFilePath)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#localFilePath)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1942,7 +1942,7 @@ void k_parts__readwritepart_on_local_file_path(void* self, const char* (*callbac
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setLocalFilePath)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setLocalFilePath)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1952,7 +1952,7 @@ void k_parts__readwritepart_set_local_file_path(void* self, const char* localFil
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setLocalFilePath)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setLocalFilePath)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1962,7 +1962,7 @@ void k_parts__readwritepart_qbase_set_local_file_path(void* self, const char* lo
 
 /// Inherited from KParts::ReadOnlyPart
 ///
-/// [Qt documentation](https://api.kde.org/kparts-readonlypart.html#setLocalFilePath)
+/// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setLocalFilePath)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1972,7 +1972,7 @@ void k_parts__readwritepart_on_set_local_file_path(void* self, void (*callback)(
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#hostContainer)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1982,7 +1982,7 @@ QWidget* k_parts__readwritepart_host_container(void* self, const char* container
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#hostContainer)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1992,7 +1992,7 @@ QWidget* k_parts__readwritepart_qbase_host_container(void* self, const char* con
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#hostContainer)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2002,7 +2002,7 @@ void k_parts__readwritepart_on_host_container(void* self, QWidget* (*callback)(v
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2011,7 +2011,7 @@ void k_parts__readwritepart_slot_widget_destroyed(void* self);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2020,7 +2020,7 @@ void k_parts__readwritepart_qbase_slot_widget_destroyed(void* self);
 
 /// Inherited from KParts::Part
 ///
-/// [Qt documentation](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
+/// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2030,7 +2030,7 @@ void k_parts__readwritepart_on_slot_widget_destroyed(void* self, void (*callback
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2039,7 +2039,7 @@ QObject* k_parts__readwritepart_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2048,7 +2048,7 @@ QObject* k_parts__readwritepart_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2058,7 +2058,7 @@ void k_parts__readwritepart_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2067,7 +2067,7 @@ int32_t k_parts__readwritepart_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2076,7 +2076,7 @@ int32_t k_parts__readwritepart_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2086,7 +2086,7 @@ void k_parts__readwritepart_on_sender_signal_index(void* self, int32_t (*callbac
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2096,7 +2096,7 @@ int32_t k_parts__readwritepart_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2106,7 +2106,7 @@ int32_t k_parts__readwritepart_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2116,7 +2116,7 @@ void k_parts__readwritepart_on_receivers(void* self, int32_t (*callback)(void*, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2126,7 +2126,7 @@ bool k_parts__readwritepart_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2136,7 +2136,7 @@ bool k_parts__readwritepart_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2146,7 +2146,7 @@ void k_parts__readwritepart_on_is_signal_connected(void* self, bool (*callback)(
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2157,7 +2157,7 @@ const char* k_parts__readwritepart_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2168,7 +2168,7 @@ const char* k_parts__readwritepart_qbase_standards_xml_file_location(void* self)
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2178,7 +2178,7 @@ void k_parts__readwritepart_on_standards_xml_file_location(void* self, const cha
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2187,7 +2187,7 @@ void k_parts__readwritepart_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2196,7 +2196,7 @@ void k_parts__readwritepart_qbase_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2206,7 +2206,7 @@ void k_parts__readwritepart_on_load_standards_xml_file(void* self, void (*callba
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///

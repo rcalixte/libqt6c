@@ -33,27 +33,27 @@ Accounts__Error* q_accounts__error_new3(int32_t type);
 /// @param message const char*
 Accounts__Error* q_accounts__error_new4(int32_t type, const char* message);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///
 /// @param self Accounts__Error*
 /// @param src Accounts__Error*
 void q_accounts__error_operator_assign(void* self, void* src);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///
 /// @param self Accounts__Error*
 ///
 /// @return enum Accounts__Error__ErrorType
 int32_t q_accounts__error_type(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Accounts__Error*
 const char* q_accounts__error_message(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///
 /// Delete this object from C++ memory.
 ///

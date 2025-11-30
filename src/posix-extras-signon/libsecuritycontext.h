@@ -28,33 +28,33 @@ SignOn__SecurityContext* q_signon__securitycontext_new2(const char* systemContex
 /// @param param1 SignOn__SecurityContext*
 SignOn__SecurityContext* q_signon__securitycontext_new3(void* param1);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
 /// @param self SignOn__SecurityContext*
 /// @param systemContext const char*
 void q_signon__securitycontext_set_system_context(void* self, const char* systemContext);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SecurityContext*
 const char* q_signon__securitycontext_system_context(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
 /// @param self SignOn__SecurityContext*
 /// @param applicationContext const char*
 void q_signon__securitycontext_set_application_context(void* self, const char* applicationContext);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SecurityContext*
 const char* q_signon__securitycontext_application_context(void* self);
 
-/// [Qt documentation](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
 /// Delete this object from C++ memory.
 ///

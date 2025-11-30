@@ -33,13 +33,13 @@ KSslErrorUiData* k_sslerroruidata_new3(void* reply, libqt_list sslErrors);
 /// @param other KSslErrorUiData*
 KSslErrorUiData* k_sslerroruidata_new4(void* other);
 
-/// [Qt documentation](https://api.kde.org/ksslerroruidata.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/ksslerroruidata.html#operator-eq)
 ///
 /// @param self KSslErrorUiData*
 /// @param param1 KSslErrorUiData*
 void k_sslerroruidata_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api.kde.org/ksslerroruidata.html#dtor.KSslErrorUiData)
+/// [Upstream resources](https://api.kde.org/ksslerroruidata.html#dtor.KSslErrorUiData)
 ///
 /// Delete this object from C++ memory.
 ///

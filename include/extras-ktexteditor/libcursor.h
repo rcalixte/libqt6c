@@ -50,72 +50,72 @@ void k_texteditor__cursor_copy_assign(void* self, void* other);
 /// @param other KTextEditor__Cursor*
 void k_texteditor__cursor_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#isValid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#isValid)
 ///
 /// @param self KTextEditor__Cursor*
 bool k_texteditor__cursor_is_valid(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#invalid)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#invalid)
 ///
 KTextEditor__Cursor* k_texteditor__cursor_invalid();
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#start)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#start)
 ///
 KTextEditor__Cursor* k_texteditor__cursor_start();
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#toString)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__Cursor*
 const char* k_texteditor__cursor_to_string(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#setPosition)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#setPosition)
 ///
 /// @param self KTextEditor__Cursor*
 /// @param position KTextEditor__Cursor*
 void k_texteditor__cursor_set_position(void* self, void* position);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#setPosition)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#setPosition)
 ///
 /// @param self KTextEditor__Cursor*
 /// @param line int
 /// @param column int
 void k_texteditor__cursor_set_position2(void* self, int line, int column);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#line)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#line)
 ///
 /// @param self KTextEditor__Cursor*
 int32_t k_texteditor__cursor_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#setLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#setLine)
 ///
 /// @param self KTextEditor__Cursor*
 /// @param line int
 void k_texteditor__cursor_set_line(void* self, int line);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#column)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#column)
 ///
 /// @param self KTextEditor__Cursor*
 int32_t k_texteditor__cursor_column(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#setColumn)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#setColumn)
 ///
 /// @param self KTextEditor__Cursor*
 /// @param column int
 void k_texteditor__cursor_set_column(void* self, int column);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#atStartOfLine)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#atStartOfLine)
 ///
 /// @param self KTextEditor__Cursor*
 bool k_texteditor__cursor_at_start_of_line(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#atStartOfDocument)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#atStartOfDocument)
 ///
 /// @param self KTextEditor__Cursor*
 bool k_texteditor__cursor_at_start_of_document(void* self);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-cursor.html#position)
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#position)
 ///
 /// @param self KTextEditor__Cursor*
 /// @param line int*

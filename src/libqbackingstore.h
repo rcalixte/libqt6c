@@ -18,34 +18,34 @@
 /// @param window QWindow*
 QBackingStore* q_backingstore_new(void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#window)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#window)
 ///
 /// @param self QBackingStore*
 QWindow* q_backingstore_window(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#paintDevice)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#paintDevice)
 ///
 /// @param self QBackingStore*
 QPaintDevice* q_backingstore_paint_device(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#flush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#flush)
 ///
 /// @param self QBackingStore*
 /// @param region QRegion*
 void q_backingstore_flush(void* self, void* region);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#resize)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#resize)
 ///
 /// @param self QBackingStore*
 /// @param size QSize*
 void q_backingstore_resize(void* self, void* size);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#size)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#size)
 ///
 /// @param self QBackingStore*
 QSize* q_backingstore_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#scroll)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#scroll)
 ///
 /// @param self QBackingStore*
 /// @param area QRegion*
@@ -53,41 +53,41 @@ QSize* q_backingstore_size(void* self);
 /// @param dy int
 bool q_backingstore_scroll(void* self, void* area, int dx, int dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#beginPaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#beginPaint)
 ///
 /// @param self QBackingStore*
 /// @param param1 QRegion*
 void q_backingstore_begin_paint(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#endPaint)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#endPaint)
 ///
 /// @param self QBackingStore*
 void q_backingstore_end_paint(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#setStaticContents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#setStaticContents)
 ///
 /// @param self QBackingStore*
 /// @param region QRegion*
 void q_backingstore_set_static_contents(void* self, void* region);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#staticContents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#staticContents)
 ///
 /// @param self QBackingStore*
 QRegion* q_backingstore_static_contents(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#hasStaticContents)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#hasStaticContents)
 ///
 /// @param self QBackingStore*
 bool q_backingstore_has_static_contents(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#flush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#flush)
 ///
 /// @param self QBackingStore*
 /// @param region QRegion*
 /// @param window QWindow*
 void q_backingstore_flush2(void* self, void* region, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#flush)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#flush)
 ///
 /// @param self QBackingStore*
 /// @param region QRegion*
@@ -95,7 +95,7 @@ void q_backingstore_flush2(void* self, void* region, void* window);
 /// @param offset QPoint*
 void q_backingstore_flush3(void* self, void* region, void* window, void* offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#dtor.QBackingStore)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbackingstore.html#dtor.QBackingStore)
 ///
 /// Delete this object from C++ memory.
 ///

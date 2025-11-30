@@ -17,7 +17,7 @@
 ///
 KTextEditor__TextHintProvider* k_texteditor__texthintprovider_new();
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
+/// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -26,7 +26,7 @@ KTextEditor__TextHintProvider* k_texteditor__texthintprovider_new();
 /// @param position KTextEditor__Cursor*
 const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, void* position);
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
+/// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -34,7 +34,7 @@ const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, voi
 /// @param callback const char* func(KTextEditor__TextHintProvider* self, KTextEditor__View* view, KTextEditor__Cursor* position)
 void k_texteditor__texthintprovider_on_text_hint(void* self, const char* (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
+/// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
 ///
 /// Base class method implementation
 ///

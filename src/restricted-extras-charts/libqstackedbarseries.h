@@ -22,7 +22,7 @@ QStackedBarSeries* q_stackedbarseries_new();
 /// @param parent QObject*
 QStackedBarSeries* q_stackedbarseries_new2(void* parent);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QStackedBarSeries*
 const QMetaObject* q_stackedbarseries_meta_object(void* self);
@@ -51,21 +51,21 @@ void q_stackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t q_stackedbarseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* q_stackedbarseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
 ///
 /// @param self QStackedBarSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 int32_t q_stackedbarseries_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,7 +73,7 @@ int32_t q_stackedbarseries_type(void* self);
 /// @param callback int32_t func()
 void q_stackedbarseries_on_type(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
@@ -82,7 +82,7 @@ void q_stackedbarseries_on_type(void* self, int32_t (*callback)());
 /// @return enum QAbstractSeries__SeriesType
 int32_t q_stackedbarseries_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -90,7 +90,7 @@ int32_t q_stackedbarseries_qbase_type(void* self);
 /// @param c const char*
 const char* q_stackedbarseries_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -101,7 +101,7 @@ const char* q_stackedbarseries_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#setBarWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setBarWidth)
 ///
 /// @param self QStackedBarSeries*
 /// @param width double
@@ -109,14 +109,14 @@ void q_stackedbarseries_set_bar_width(void* self, double width);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barWidth)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barWidth)
 ///
 /// @param self QStackedBarSeries*
 double q_stackedbarseries_bar_width(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#append)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#append)
 ///
 /// @param self QStackedBarSeries*
 /// @param set QBarSet*
@@ -124,7 +124,7 @@ bool q_stackedbarseries_append(void* self, void* set);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#remove)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#remove)
 ///
 /// @param self QStackedBarSeries*
 /// @param set QBarSet*
@@ -132,7 +132,7 @@ bool q_stackedbarseries_remove(void* self, void* set);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#take)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#take)
 ///
 /// @param self QStackedBarSeries*
 /// @param set QBarSet*
@@ -140,7 +140,7 @@ bool q_stackedbarseries_take(void* self, void* set);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#append)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#append)
 ///
 /// @param self QStackedBarSeries*
 /// @param sets libqt_list /* of QBarSet* */
@@ -148,7 +148,7 @@ bool q_stackedbarseries_append2(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#insert)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#insert)
 ///
 /// @param self QStackedBarSeries*
 /// @param index int
@@ -157,42 +157,42 @@ bool q_stackedbarseries_insert(void* self, int index, void* set);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#count)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#count)
 ///
 /// @param self QStackedBarSeries*
 int32_t q_stackedbarseries_count(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barSets)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barSets)
 ///
 /// @param self QStackedBarSeries*
 libqt_list /* of QBarSet* */ q_stackedbarseries_bar_sets(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#clear)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#clear)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_clear(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsVisible)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_set_labels_visible(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#isLabelsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#isLabelsVisible)
 ///
 /// @param self QStackedBarSeries*
 bool q_stackedbarseries_is_labels_visible(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsFormat)
 ///
 /// @param self QStackedBarSeries*
 /// @param format const char*
@@ -200,7 +200,7 @@ void q_stackedbarseries_set_labels_format(void* self, const char* format);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormat)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormat)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -209,7 +209,7 @@ const char* q_stackedbarseries_labels_format(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsAngle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsAngle)
 ///
 /// @param self QStackedBarSeries*
 /// @param angle double
@@ -217,14 +217,14 @@ void q_stackedbarseries_set_labels_angle(void* self, double angle);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngle)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngle)
 ///
 /// @param self QStackedBarSeries*
 double q_stackedbarseries_labels_angle(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsPosition)
 ///
 /// @param self QStackedBarSeries*
 /// @param position enum QAbstractBarSeries__LabelsPosition
@@ -232,7 +232,7 @@ void q_stackedbarseries_set_labels_position(void* self, int32_t position);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPosition)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPosition)
 ///
 /// @param self QStackedBarSeries*
 ///
@@ -241,7 +241,7 @@ int32_t q_stackedbarseries_labels_position(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsPrecision)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsPrecision)
 ///
 /// @param self QStackedBarSeries*
 /// @param precision int
@@ -249,14 +249,14 @@ void q_stackedbarseries_set_labels_precision(void* self, int precision);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecision)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecision)
 ///
 /// @param self QStackedBarSeries*
 int32_t q_stackedbarseries_labels_precision(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
 ///
 /// @param self QStackedBarSeries*
 /// @param index int
@@ -265,7 +265,7 @@ void q_stackedbarseries_clicked(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, int index, QBarSet* barset)
@@ -273,7 +273,7 @@ void q_stackedbarseries_on_clicked(void* self, void (*callback)(void*, int, void
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
 ///
 /// @param self QStackedBarSeries*
 /// @param status bool
@@ -283,7 +283,7 @@ void q_stackedbarseries_hovered(void* self, bool status, int index, void* barset
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, bool status, int index, QBarSet* barset)
@@ -291,7 +291,7 @@ void q_stackedbarseries_on_hovered(void* self, void (*callback)(void*, bool, int
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
 ///
 /// @param self QStackedBarSeries*
 /// @param index int
@@ -300,7 +300,7 @@ void q_stackedbarseries_pressed(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, int index, QBarSet* barset)
@@ -308,7 +308,7 @@ void q_stackedbarseries_on_pressed(void* self, void (*callback)(void*, int, void
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
 ///
 /// @param self QStackedBarSeries*
 /// @param index int
@@ -317,7 +317,7 @@ void q_stackedbarseries_released(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, int index, QBarSet* barset)
@@ -325,7 +325,7 @@ void q_stackedbarseries_on_released(void* self, void (*callback)(void*, int, voi
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
 ///
 /// @param self QStackedBarSeries*
 /// @param index int
@@ -334,7 +334,7 @@ void q_stackedbarseries_double_clicked(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, int index, QBarSet* barset)
@@ -342,14 +342,14 @@ void q_stackedbarseries_on_double_clicked(void* self, void (*callback)(void*, in
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_count_changed(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self)
@@ -357,14 +357,14 @@ void q_stackedbarseries_on_count_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_labels_visible_changed(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self)
@@ -372,7 +372,7 @@ void q_stackedbarseries_on_labels_visible_changed(void* self, void (*callback)(v
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param format const char*
@@ -380,7 +380,7 @@ void q_stackedbarseries_labels_format_changed(void* self, const char* format);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, const char* format)
@@ -388,7 +388,7 @@ void q_stackedbarseries_on_labels_format_changed(void* self, void (*callback)(vo
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param position enum QAbstractBarSeries__LabelsPosition
@@ -396,7 +396,7 @@ void q_stackedbarseries_labels_position_changed(void* self, int32_t position);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, enum QAbstractBarSeries__LabelsPosition position)
@@ -404,7 +404,7 @@ void q_stackedbarseries_on_labels_position_changed(void* self, void (*callback)(
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param angle double
@@ -412,7 +412,7 @@ void q_stackedbarseries_labels_angle_changed(void* self, double angle);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, double angle)
@@ -420,7 +420,7 @@ void q_stackedbarseries_on_labels_angle_changed(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param precision int
@@ -428,7 +428,7 @@ void q_stackedbarseries_labels_precision_changed(void* self, int precision);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, int precision)
@@ -436,7 +436,7 @@ void q_stackedbarseries_on_labels_precision_changed(void* self, void (*callback)
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
 /// @param self QStackedBarSeries*
 /// @param sets libqt_list /* of QBarSet* */
@@ -444,7 +444,7 @@ void q_stackedbarseries_barsets_added(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, QBarSet** sets)
@@ -452,7 +452,7 @@ void q_stackedbarseries_on_barsets_added(void* self, void (*callback)(void*, QBa
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
 /// @param self QStackedBarSeries*
 /// @param sets libqt_list /* of QBarSet* */
@@ -460,7 +460,7 @@ void q_stackedbarseries_barsets_removed(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, QBarSet** sets)
@@ -468,7 +468,7 @@ void q_stackedbarseries_on_barsets_removed(void* self, void (*callback)(void*, Q
 
 /// Inherited from QAbstractBarSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsVisible)
 ///
 /// @param self QStackedBarSeries*
 /// @param visible bool
@@ -476,7 +476,7 @@ void q_stackedbarseries_set_labels_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setName)
 ///
 /// @param self QStackedBarSeries*
 /// @param name const char*
@@ -484,7 +484,7 @@ void q_stackedbarseries_set_name(void* self, const char* name);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#name)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -493,28 +493,28 @@ const char* q_stackedbarseries_name(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_set_visible(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
 /// @param self QStackedBarSeries*
 bool q_stackedbarseries_is_visible(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
 /// @param self QStackedBarSeries*
 double q_stackedbarseries_opacity(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setOpacity)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setOpacity)
 ///
 /// @param self QStackedBarSeries*
 /// @param opacity double
@@ -522,28 +522,28 @@ void q_stackedbarseries_set_opacity(void* self, double opacity);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_set_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
 /// @param self QStackedBarSeries*
 bool q_stackedbarseries_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#chart)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
 /// @param self QStackedBarSeries*
 QChart* q_stackedbarseries_chart(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachAxis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#attachAxis)
 ///
 /// @param self QStackedBarSeries*
 /// @param axis QAbstractAxis*
@@ -551,7 +551,7 @@ bool q_stackedbarseries_attach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#detachAxis)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#detachAxis)
 ///
 /// @param self QStackedBarSeries*
 /// @param axis QAbstractAxis*
@@ -559,35 +559,35 @@ bool q_stackedbarseries_detach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
 ///
 /// @param self QStackedBarSeries*
 libqt_list /* of QAbstractAxis* */ q_stackedbarseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#show)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#show)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_show(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#hide)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#hide)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_hide(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self)
@@ -595,14 +595,14 @@ void q_stackedbarseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self)
@@ -610,14 +610,14 @@ void q_stackedbarseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self)
@@ -625,14 +625,14 @@ void q_stackedbarseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self)
@@ -640,7 +640,7 @@ void q_stackedbarseries_on_use_open_g_l_changed(void* self, void (*callback)(voi
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
 ///
 /// @param self QStackedBarSeries*
 /// @param visible bool
@@ -648,7 +648,7 @@ void q_stackedbarseries_set_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
 ///
 /// @param self QStackedBarSeries*
 /// @param enable bool
@@ -656,7 +656,7 @@ void q_stackedbarseries_set_use_open_g_l1(void* self, bool enable);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -665,7 +665,7 @@ const char* q_stackedbarseries_object_name(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QStackedBarSeries*
 /// @param name char*
@@ -673,35 +673,35 @@ void q_stackedbarseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QStackedBarSeries*
 bool q_stackedbarseries_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QStackedBarSeries*
 bool q_stackedbarseries_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QStackedBarSeries*
 bool q_stackedbarseries_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QStackedBarSeries*
 bool q_stackedbarseries_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
 /// @param self QStackedBarSeries*
 /// @param b bool
@@ -709,14 +709,14 @@ bool q_stackedbarseries_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QStackedBarSeries*
 QThread* q_stackedbarseries_thread(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QStackedBarSeries*
 /// @param thread QThread*
@@ -724,7 +724,7 @@ bool q_stackedbarseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QStackedBarSeries*
 /// @param interval int
@@ -732,7 +732,7 @@ int32_t q_stackedbarseries_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QStackedBarSeries*
 /// @param id int
@@ -740,7 +740,7 @@ void q_stackedbarseries_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QStackedBarSeries*
 /// @param id enum Qt__TimerId
@@ -748,14 +748,14 @@ void q_stackedbarseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QStackedBarSeries*
 libqt_list /* of QObject* */ q_stackedbarseries_children(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
 /// @param self QStackedBarSeries*
 /// @param parent QObject*
@@ -763,7 +763,7 @@ void q_stackedbarseries_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
 /// @param self QStackedBarSeries*
 /// @param filterObj QObject*
@@ -771,7 +771,7 @@ void q_stackedbarseries_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
 /// @param self QStackedBarSeries*
 /// @param obj QObject*
@@ -779,7 +779,7 @@ void q_stackedbarseries_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -789,7 +789,7 @@ QMetaObject__Connection* q_stackedbarseries_connect(void* sender, void* signal, 
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QStackedBarSeries*
 /// @param sender QObject*
@@ -799,7 +799,7 @@ QMetaObject__Connection* q_stackedbarseries_connect2(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -809,28 +809,28 @@ bool q_stackedbarseries_disconnect(void* sender, void* signal, void* receiver, v
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
 bool q_stackedbarseries_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
 /// @param self QStackedBarSeries*
 /// @param name const char*
@@ -839,7 +839,7 @@ bool q_stackedbarseries_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
 /// @param self QStackedBarSeries*
 /// @param name const char*
@@ -847,7 +847,7 @@ QVariant* q_stackedbarseries_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -856,28 +856,28 @@ const char** q_stackedbarseries_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStackedBarSeries*
 QBindingStorage* q_stackedbarseries_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStackedBarSeries*
 const QBindingStorage* q_stackedbarseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_destroyed(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self)
@@ -885,14 +885,14 @@ void q_stackedbarseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QStackedBarSeries*
 QObject* q_stackedbarseries_parent(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
 /// @param self QStackedBarSeries*
 /// @param classname const char*
@@ -900,14 +900,14 @@ bool q_stackedbarseries_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QStackedBarSeries*
 void q_stackedbarseries_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// @param self QStackedBarSeries*
 /// @param thread QThread*
@@ -916,7 +916,7 @@ bool q_stackedbarseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QStackedBarSeries*
 /// @param interval int
@@ -925,7 +925,7 @@ int32_t q_stackedbarseries_start_timer22(void* self, int interval, int32_t timer
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
 /// @param signal QMetaMethod*
@@ -936,7 +936,7 @@ QMetaObject__Connection* q_stackedbarseries_connect5(void* sender, void* signal,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param self QStackedBarSeries*
 /// @param sender QObject*
@@ -947,7 +947,7 @@ QMetaObject__Connection* q_stackedbarseries_connect4(void* self, void* sender, c
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStackedBarSeries*
 /// @param param1 QObject*
@@ -955,7 +955,7 @@ void q_stackedbarseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void func(QStackedBarSeries* self, QObject* param1)
@@ -963,7 +963,7 @@ void q_stackedbarseries_on_destroyed1(void* self, void (*callback)(void*, void*)
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -973,7 +973,7 @@ bool q_stackedbarseries_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -983,7 +983,7 @@ bool q_stackedbarseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -993,7 +993,7 @@ void q_stackedbarseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1004,7 +1004,7 @@ bool q_stackedbarseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1015,7 +1015,7 @@ bool q_stackedbarseries_qbase_event_filter(void* self, void* watched, void* even
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1025,7 +1025,7 @@ void q_stackedbarseries_on_event_filter(void* self, bool (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1035,7 +1035,7 @@ void q_stackedbarseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1045,7 +1045,7 @@ void q_stackedbarseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1055,7 +1055,7 @@ void q_stackedbarseries_on_timer_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1065,7 +1065,7 @@ void q_stackedbarseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1075,7 +1075,7 @@ void q_stackedbarseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1085,7 +1085,7 @@ void q_stackedbarseries_on_child_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1095,7 +1095,7 @@ void q_stackedbarseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1105,7 +1105,7 @@ void q_stackedbarseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1115,7 +1115,7 @@ void q_stackedbarseries_on_custom_event(void* self, void (*callback)(void*, void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1125,7 +1125,7 @@ void q_stackedbarseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1135,7 +1135,7 @@ void q_stackedbarseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1145,7 +1145,7 @@ void q_stackedbarseries_on_connect_notify(void* self, void (*callback)(void*, vo
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1155,7 +1155,7 @@ void q_stackedbarseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1165,7 +1165,7 @@ void q_stackedbarseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1175,7 +1175,7 @@ void q_stackedbarseries_on_disconnect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1184,7 +1184,7 @@ QObject* q_stackedbarseries_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1193,7 +1193,7 @@ QObject* q_stackedbarseries_qbase_sender(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1203,7 +1203,7 @@ void q_stackedbarseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1212,7 +1212,7 @@ int32_t q_stackedbarseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1221,7 +1221,7 @@ int32_t q_stackedbarseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1231,7 +1231,7 @@ void q_stackedbarseries_on_sender_signal_index(void* self, int32_t (*callback)()
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1241,7 +1241,7 @@ int32_t q_stackedbarseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1251,7 +1251,7 @@ int32_t q_stackedbarseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1261,7 +1261,7 @@ void q_stackedbarseries_on_receivers(void* self, int32_t (*callback)(void*, cons
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1271,7 +1271,7 @@ bool q_stackedbarseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1281,7 +1281,7 @@ bool q_stackedbarseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1291,7 +1291,7 @@ void q_stackedbarseries_on_is_signal_connected(void* self, bool (*callback)(void
 
 /// Inherited from QObject
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1299,7 +1299,7 @@ void q_stackedbarseries_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param callback void func(QStackedBarSeries* self, const char* objectName)
 void q_stackedbarseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#dtor.QStackedBarSeries)
+/// [Upstream resources](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#dtor.QStackedBarSeries)
 ///
 /// Delete this object from C++ memory.
 ///

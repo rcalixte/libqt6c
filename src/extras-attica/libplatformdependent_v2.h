@@ -13,27 +13,27 @@
 
 /// https://api.kde.org/attica-platformdependentv2.html
 
-/// [Qt documentation](https://api.kde.org/attica-platformdependentv2.html#deleteResource)
+/// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#deleteResource)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
 QNetworkReply* k_attica__platformdependentv2_delete_resource(void* self, void* request);
 
-/// [Qt documentation](https://api.kde.org/attica-platformdependentv2.html#put)
+/// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#put)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
 QNetworkReply* k_attica__platformdependentv2_put(void* self, void* request, void* data);
 
-/// [Qt documentation](https://api.kde.org/attica-platformdependentv2.html#put)
+/// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#put)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
 /// @param data const char*
 QNetworkReply* k_attica__platformdependentv2_put2(void* self, void* request, const char* data);
 
-/// [Qt documentation](https://api.kde.org/attica-platformdependentv2.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#operator-eq)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param param1 Attica__PlatformDependentV2*
@@ -41,14 +41,14 @@ void k_attica__platformdependentv2_operator_assign(void* self, void* param1);
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#getDefaultProviderFiles)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#getDefaultProviderFiles)
 ///
 /// @param self Attica__PlatformDependentV2*
 libqt_list /* of QUrl* */ k_attica__platformdependentv2_get_default_provider_files(void* self);
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#addDefaultProviderFile)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#addDefaultProviderFile)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param url QUrl*
@@ -56,7 +56,7 @@ void k_attica__platformdependentv2_add_default_provider_file(void* self, void* u
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#removeDefaultProviderFile)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#removeDefaultProviderFile)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param url QUrl*
@@ -64,7 +64,7 @@ void k_attica__platformdependentv2_remove_default_provider_file(void* self, void
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#enableProvider)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#enableProvider)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
@@ -73,7 +73,7 @@ void k_attica__platformdependentv2_enable_provider(void* self, void* baseUrl, bo
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#isEnabled)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#isEnabled)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
@@ -81,7 +81,7 @@ bool k_attica__platformdependentv2_is_enabled(void* self, void* baseUrl);
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#hasCredentials)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#hasCredentials)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
@@ -89,7 +89,7 @@ bool k_attica__platformdependentv2_has_credentials(void* self, void* baseUrl);
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#loadCredentials)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#loadCredentials)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
@@ -99,7 +99,7 @@ bool k_attica__platformdependentv2_load_credentials(void* self, void* baseUrl, c
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#askForCredentials)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#askForCredentials)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
@@ -109,7 +109,7 @@ bool k_attica__platformdependentv2_ask_for_credentials(void* self, void* baseUrl
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#saveCredentials)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#saveCredentials)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
@@ -119,7 +119,7 @@ bool k_attica__platformdependentv2_save_credentials(void* self, void* baseUrl, c
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#get)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#get)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
@@ -127,7 +127,7 @@ QNetworkReply* k_attica__platformdependentv2_get(void* self, void* request);
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#post)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#post)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
@@ -136,7 +136,7 @@ QNetworkReply* k_attica__platformdependentv2_post(void* self, void* request, voi
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#post)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#post)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
@@ -145,7 +145,7 @@ QNetworkReply* k_attica__platformdependentv2_post2(void* self, void* request, co
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#setNam)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#setNam)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param nam QNetworkAccessManager*
@@ -153,7 +153,7 @@ void k_attica__platformdependentv2_set_nam(void* self, void* nam);
 
 /// Inherited from Attica::PlatformDependent
 ///
-/// [Qt documentation](https://api.kde.org/attica-platformdependent.html#nam)
+/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#nam)
 ///
 /// @param self Attica__PlatformDependentV2*
 QNetworkAccessManager* k_attica__platformdependentv2_nam(void* self);

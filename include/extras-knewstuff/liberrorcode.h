@@ -13,12 +13,12 @@
 
 /// https://api.kde.org/knscore-errorcode.html
 
-/// [Qt documentation](https://api.kde.org/knscore-errorcode.html#qt_getEnumMetaObject)
+/// [Upstream resources](https://api.kde.org/knscore-errorcode.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum KNSCore__ErrorCode__ErrorCode
 const QMetaObject* k_nscore__errorcode_get_enum_meta_object(int32_t param1);
 
-/// [Qt documentation](https://api.kde.org/knscore-errorcode.html#qt_getEnumName)
+/// [Upstream resources](https://api.kde.org/knscore-errorcode.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

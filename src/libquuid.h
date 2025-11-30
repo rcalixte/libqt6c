@@ -75,116 +75,116 @@ void q_uuid_copy_assign(void* self, void* other);
 /// @param other QUuid*
 void q_uuid_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromString)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromString)
 ///
 /// @param stringVal char*
 QUuid* q_uuid_from_string(char* stringVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QUuid*
 const char* q_uuid_to_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toByteArray)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toByteArray)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QUuid*
 char* q_uuid_to_byte_array(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toBytes)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toBytes)
 ///
 /// @param self QUuid*
 QUuid__Id128Bytes* q_uuid_to_bytes(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toRfc4122)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toRfc4122)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QUuid*
 char* q_uuid_to_rfc4122(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromBytes)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromBytes)
 ///
 /// @param bytes void*
 QUuid* q_uuid_from_bytes(void* bytes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromRfc4122)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromRfc4122)
 ///
 /// @param param1 const char*
 QUuid* q_uuid_from_rfc4122(const char* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#isNull)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#isNull)
 ///
 /// @param self QUuid*
 bool q_uuid_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuid)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuid)
 ///
 QUuid* q_uuid_create_uuid();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuidV5)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuidV5)
 ///
 /// @param ns QUuid*
 /// @param baseData const char*
 QUuid* q_uuid_create_uuid_v5(void* ns, const char* baseData);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuidV3)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuidV3)
 ///
 /// @param ns QUuid*
 /// @param baseData const char*
 QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#variant)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#variant)
 ///
 /// @param self QUuid*
 ///
 /// @return enum QUuid__Variant
 int32_t q_uuid_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#version)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#version)
 ///
 /// @param self QUuid*
 ///
 /// @return enum QUuid__Version
 int32_t q_uuid_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data1-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data1-var)
 ///
 /// @param self QUuid*
 uint32_t q_uuid_data1(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data1-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data1-var)
 ///
 /// @param self QUuid*
 /// @param data1 uint32_t
 void q_uuid_set_data1(void* self, uint32_t data1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data2-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data2-var)
 ///
 /// @param self QUuid*
 unsigned short q_uuid_data2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data2-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data2-var)
 ///
 /// @param self QUuid*
 /// @param data2 unsigned short
 void q_uuid_set_data2(void* self, unsigned short data2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data3-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
 ///
 /// @param self QUuid*
 unsigned short q_uuid_data3(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data3-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
 ///
 /// @param self QUuid*
 /// @param data3 unsigned short
 void q_uuid_set_data3(void* self, unsigned short data3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toString)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -192,7 +192,7 @@ void q_uuid_set_data3(void* self, unsigned short data3);
 /// @param mode enum QUuid__StringFormat
 const char* q_uuid_to_string1(void* self, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toByteArray)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toByteArray)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -200,19 +200,19 @@ const char* q_uuid_to_string1(void* self, int32_t mode);
 /// @param mode enum QUuid__StringFormat
 char* q_uuid_to_byte_array1(void* self, int32_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toBytes)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toBytes)
 ///
 /// @param self QUuid*
 /// @param order enum QSysInfo__Endian
 QUuid__Id128Bytes* q_uuid_to_bytes1(void* self, int32_t order);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromBytes)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromBytes)
 ///
 /// @param bytes void*
 /// @param order enum QSysInfo__Endian
 QUuid* q_uuid_from_bytes2(void* bytes, int32_t order);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#dtor.QUuid)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#dtor.QUuid)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -230,7 +230,7 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new();
 /// @param param1 QUuid__Id128Bytes*
 QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid-id128bytes.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid-id128bytes.html#operator)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

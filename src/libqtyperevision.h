@@ -44,36 +44,36 @@ void q_typerevision_copy_assign(void* self, void* other);
 /// @param other QTypeRevision*
 void q_typerevision_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#zero)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#zero)
 ///
 QTypeRevision* q_typerevision_zero();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#hasMajorVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#hasMajorVersion)
 ///
 /// @param self QTypeRevision*
 bool q_typerevision_has_major_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#majorVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#majorVersion)
 ///
 /// @param self QTypeRevision*
 unsigned char q_typerevision_major_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#hasMinorVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#hasMinorVersion)
 ///
 /// @param self QTypeRevision*
 bool q_typerevision_has_minor_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#minorVersion)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#minorVersion)
 ///
 /// @param self QTypeRevision*
 unsigned char q_typerevision_minor_version(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#isValid)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#isValid)
 ///
 /// @param self QTypeRevision*
 bool q_typerevision_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#dtor.QTypeRevision)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#dtor.QTypeRevision)
 ///
 /// Delete this object from C++ memory.
 ///

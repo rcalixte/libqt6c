@@ -17,40 +17,40 @@
 ///
 KEMailSettings* k_emailsettings_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 const char* k_emailsettings_tr(const char* sourceText);
 
-/// [Qt documentation](https://api.kde.org/kemailsettings.html#profiles)
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#profiles)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KEMailSettings*
 const char** k_emailsettings_profiles(void* self);
 
-/// [Qt documentation](https://api.kde.org/kemailsettings.html#setProfile)
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#setProfile)
 ///
 /// @param self KEMailSettings*
 /// @param s const char*
 void k_emailsettings_set_profile(void* self, const char* s);
 
-/// [Qt documentation](https://api.kde.org/kemailsettings.html#defaultProfileName)
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#defaultProfileName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KEMailSettings*
 const char* k_emailsettings_default_profile_name(void* self);
 
-/// [Qt documentation](https://api.kde.org/kemailsettings.html#setDefault)
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#setDefault)
 ///
 /// @param self KEMailSettings*
 /// @param def const char*
 void k_emailsettings_set_default(void* self, const char* def);
 
-/// [Qt documentation](https://api.kde.org/kemailsettings.html#getSetting)
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#getSetting)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -58,14 +58,14 @@ void k_emailsettings_set_default(void* self, const char* def);
 /// @param s enum KEMailSettings__Setting
 const char* k_emailsettings_get_setting(void* self, int32_t s);
 
-/// [Qt documentation](https://api.kde.org/kemailsettings.html#setSetting)
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#setSetting)
 ///
 /// @param self KEMailSettings*
 /// @param s enum KEMailSettings__Setting
 /// @param v const char*
 void k_emailsettings_set_setting(void* self, int32_t s, const char* v);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -73,7 +73,7 @@ void k_emailsettings_set_setting(void* self, int32_t s, const char* v);
 /// @param disambiguation const char*
 const char* k_emailsettings_tr2(const char* sourceText, const char* disambiguation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -82,7 +82,7 @@ const char* k_emailsettings_tr2(const char* sourceText, const char* disambiguati
 /// @param n int
 const char* k_emailsettings_tr3(const char* sourceText, const char* disambiguation, int n);
 
-/// [Qt documentation](https://api.kde.org/kemailsettings.html#dtor.KEMailSettings)
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#dtor.KEMailSettings)
 ///
 /// Delete this object from C++ memory.
 ///

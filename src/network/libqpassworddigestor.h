@@ -13,7 +13,7 @@
 
 /// https://doc.qt.io/qt-6/qpassworddigestor.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf1)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf1)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -24,7 +24,7 @@
 /// @param param5 uint64_t
 char* q_passworddigestor_derive_key_pbkdf1(int32_t param1, const char* param2, const char* param3, int param4, uint64_t param5);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf2)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf2)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

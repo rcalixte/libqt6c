@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/krandom.html
 
-/// [Qt documentation](https://api.kde.org/krandom.html#randomString)
+/// [Upstream resources](https://api.kde.org/krandom.html#randomString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

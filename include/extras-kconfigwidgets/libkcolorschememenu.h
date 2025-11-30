@@ -13,7 +13,7 @@
 
 /// https://api.kde.org/kcolorschememenu.html
 
-/// [Qt documentation](https://api.kde.org/kcolorschememenu.html#createMenu)
+/// [Upstream resources](https://api.kde.org/kcolorschememenu.html#createMenu)
 ///
 /// @param param1 KColorSchemeManager*
 /// @param param2 QObject*

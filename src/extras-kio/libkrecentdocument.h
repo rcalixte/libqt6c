@@ -35,58 +35,58 @@ void k_recentdocument_copy_assign(void* self, void* other);
 /// @param other KRecentDocument*
 void k_recentdocument_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#recentUrls)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#recentUrls)
 ///
 libqt_list /* of QUrl* */ k_recentdocument_recent_urls();
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#add)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
 /// @param url QUrl*
 void k_recentdocument_add(void* url);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#add)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
 /// @param url QUrl*
 /// @param groups libqt_list /* of enum KRecentDocument__RecentDocumentGroup */
 void k_recentdocument_add2(void* url, libqt_list groups);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#add)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
 /// @param url QUrl*
 /// @param desktopEntryName const char*
 void k_recentdocument_add3(void* url, const char* desktopEntryName);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#add)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
 /// @param url QUrl*
 /// @param desktopEntryName const char*
 /// @param groups libqt_list /* of enum KRecentDocument__RecentDocumentGroup */
 void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list groups);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#removeFile)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#removeFile)
 ///
 /// @param url QUrl*
 void k_recentdocument_remove_file(void* url);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#removeApplication)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#removeApplication)
 ///
 /// @param desktopEntryName const char*
 void k_recentdocument_remove_application(const char* desktopEntryName);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#removeBookmarksModifiedSince)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#removeBookmarksModifiedSince)
 ///
 /// @param since QDateTime*
 void k_recentdocument_remove_bookmarks_modified_since(void* since);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#clear)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#clear)
 ///
 void k_recentdocument_clear();
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#maximumItems)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#maximumItems)
 ///
 int32_t k_recentdocument_maximum_items();
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#dtor.KRecentDocument)
+/// [Upstream resources](https://api.kde.org/krecentdocument.html#dtor.KRecentDocument)
 ///
 /// Delete this object from C++ memory.
 ///

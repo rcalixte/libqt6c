@@ -22,32 +22,32 @@ Attica__AccountBalance* k_attica__accountbalance_new();
 /// @param other Attica__AccountBalance*
 Attica__AccountBalance* k_attica__accountbalance_new2(void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-accountbalance.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/attica-accountbalance.html#operator-eq)
 ///
 /// @param self Attica__AccountBalance*
 /// @param other Attica__AccountBalance*
 void k_attica__accountbalance_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api.kde.org/attica-accountbalance.html#setCurrency)
+/// [Upstream resources](https://api.kde.org/attica-accountbalance.html#setCurrency)
 ///
 /// @param self Attica__AccountBalance*
 /// @param currency const char*
 void k_attica__accountbalance_set_currency(void* self, const char* currency);
 
-/// [Qt documentation](https://api.kde.org/attica-accountbalance.html#currency)
+/// [Upstream resources](https://api.kde.org/attica-accountbalance.html#currency)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__AccountBalance*
 const char* k_attica__accountbalance_currency(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-accountbalance.html#setBalance)
+/// [Upstream resources](https://api.kde.org/attica-accountbalance.html#setBalance)
 ///
 /// @param self Attica__AccountBalance*
 /// @param name const char*
 void k_attica__accountbalance_set_balance(void* self, const char* name);
 
-/// [Qt documentation](https://api.kde.org/attica-accountbalance.html#balance)
+/// [Upstream resources](https://api.kde.org/attica-accountbalance.html#balance)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -47,42 +47,42 @@ void k_io__openwith_delete(void* self);
 /// @param param1 KIO__OpenWith__AcceptResult*
 KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new(void* param1);
 
-/// [Qt documentation](https://api.kde.org/kio-openwith-acceptresult.html#accept-var)
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#accept-var)
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 bool k_io__openwith__acceptresult_accept(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-openwith-acceptresult.html#accept-var)
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#accept-var)
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 /// @param accept bool
 void k_io__openwith__acceptresult_set_accept(void* self, bool accept);
 
-/// [Qt documentation](https://api.kde.org/kio-openwith-acceptresult.html#error-var)
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#error-var)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 const char* k_io__openwith__acceptresult_error(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-openwith-acceptresult.html#error-var)
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#error-var)
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 /// @param error const char*
 void k_io__openwith__acceptresult_set_error(void* self, const char* error);
 
-/// [Qt documentation](https://api.kde.org/kio-openwith-acceptresult.html#rebuildSycoca-var)
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#rebuildSycoca-var)
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 bool k_io__openwith__acceptresult_rebuild_sycoca(void* self);
 
-/// [Qt documentation](https://api.kde.org/kio-openwith-acceptresult.html#rebuildSycoca-var)
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#rebuildSycoca-var)
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 /// @param rebuildSycoca bool
 void k_io__openwith__acceptresult_set_rebuild_sycoca(void* self, bool rebuildSycoca);
 
-/// [Qt documentation](https://api.kde.org/kio-openwith-acceptresult.html#operator-eq)
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#operator-eq)
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 /// @param param1 KIO__OpenWith__AcceptResult*
