@@ -11,50 +11,58 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html)
 
 /// q_webenginedesktopmediarequest_new constructs a new QWebEngineDesktopMediaRequest object.
 ///
 /// @param other QWebEngineDesktopMediaRequest*
+///
 QWebEngineDesktopMediaRequest* q_webenginedesktopmediarequest_new(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#operator-eq)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
 /// @param other QWebEngineDesktopMediaRequest*
+///
 void q_webenginedesktopmediarequest_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#swap)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
 /// @param other QWebEngineDesktopMediaRequest*
+///
 void q_webenginedesktopmediarequest_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#screensModel)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
+///
 QAbstractListModel* q_webenginedesktopmediarequest_screens_model(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#windowsModel)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
+///
 QAbstractListModel* q_webenginedesktopmediarequest_windows_model(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#selectScreen)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
 /// @param index QModelIndex*
+///
 void q_webenginedesktopmediarequest_select_screen(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#selectWindow)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
 /// @param index QModelIndex*
+///
 void q_webenginedesktopmediarequest_select_window(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#cancel)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
+///
 void q_webenginedesktopmediarequest_cancel(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#dtor.QWebEngineDesktopMediaRequest)
@@ -62,6 +70,7 @@ void q_webenginedesktopmediarequest_cancel(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QWebEngineDesktopMediaRequest*
+///
 void q_webenginedesktopmediarequest_delete(void* self);
 
 #endif

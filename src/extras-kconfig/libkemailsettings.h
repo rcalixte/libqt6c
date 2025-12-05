@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kemailsettings.html
+/// [Upstream resources](https://api.kde.org/kemailsettings.html)
 
 /// k_emailsettings_new constructs a new KEMailSettings object.
 ///
@@ -22,6 +22,7 @@ KEMailSettings* k_emailsettings_new();
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
+///
 const char* k_emailsettings_tr(const char* sourceText);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#profiles)
@@ -29,12 +30,14 @@ const char* k_emailsettings_tr(const char* sourceText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KEMailSettings*
+///
 const char** k_emailsettings_profiles(void* self);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#setProfile)
 ///
 /// @param self KEMailSettings*
 /// @param s const char*
+///
 void k_emailsettings_set_profile(void* self, const char* s);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#defaultProfileName)
@@ -42,12 +45,14 @@ void k_emailsettings_set_profile(void* self, const char* s);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KEMailSettings*
+///
 const char* k_emailsettings_default_profile_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#setDefault)
 ///
 /// @param self KEMailSettings*
 /// @param def const char*
+///
 void k_emailsettings_set_default(void* self, const char* def);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#getSetting)
@@ -56,6 +61,7 @@ void k_emailsettings_set_default(void* self, const char* def);
 ///
 /// @param self KEMailSettings*
 /// @param s enum KEMailSettings__Setting
+///
 const char* k_emailsettings_get_setting(void* self, int32_t s);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#setSetting)
@@ -63,6 +69,7 @@ const char* k_emailsettings_get_setting(void* self, int32_t s);
 /// @param self KEMailSettings*
 /// @param s enum KEMailSettings__Setting
 /// @param v const char*
+///
 void k_emailsettings_set_setting(void* self, int32_t s, const char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -71,6 +78,7 @@ void k_emailsettings_set_setting(void* self, int32_t s, const char* v);
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
+///
 const char* k_emailsettings_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -80,6 +88,7 @@ const char* k_emailsettings_tr2(const char* sourceText, const char* disambiguati
 /// @param sourceText const char*
 /// @param disambiguation const char*
 /// @param n int
+///
 const char* k_emailsettings_tr3(const char* sourceText, const char* disambiguation, int n);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#dtor.KEMailSettings)
@@ -87,9 +96,10 @@ const char* k_emailsettings_tr3(const char* sourceText, const char* disambiguati
 /// Delete this object from C++ memory.
 ///
 /// @param self KEMailSettings*
+///
 void k_emailsettings_delete(void* self);
 
-/// https://api.kde.org/kemailsettings.html#types
+/// [Upstream resources](https://api.kde.org/kemailsettings.html#public-types)
 
 typedef enum {
     KEMAILSETTINGS_SETTING_CLIENTPROGRAM = 0,

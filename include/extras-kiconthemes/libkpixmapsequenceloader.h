@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kpixmapsequenceloader.html
+/// [Upstream resources](https://api.kde.org/kpixmapsequenceloader.html)
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequenceloader.html#load)
 ///
 /// @param param1 const char*
 /// @param param2 int
+///
 KPixmapSequence* k_pixmapsequenceloader_load(const char* param1, int param2);
 #endif

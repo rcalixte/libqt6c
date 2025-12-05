@@ -11,38 +11,45 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qscrollerproperties.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html)
 
 /// q_scrollerproperties_new constructs a new QScrollerProperties object.
 ///
 QScrollerProperties* q_scrollerproperties_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html)
+
 /// q_scrollerproperties_new2 constructs a new QScrollerProperties object.
 ///
 /// @param sp QScrollerProperties*
+///
 QScrollerProperties* q_scrollerproperties_new2(void* sp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq)
 ///
 /// @param self QScrollerProperties*
 /// @param sp QScrollerProperties*
+///
 void q_scrollerproperties_operator_assign(void* self, void* sp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq-eq)
 ///
 /// @param self QScrollerProperties*
 /// @param sp QScrollerProperties*
+///
 bool q_scrollerproperties_operator_equal(void* self, void* sp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-not-eq)
 ///
 /// @param self QScrollerProperties*
 /// @param sp QScrollerProperties*
+///
 bool q_scrollerproperties_operator_not_equal(void* self, void* sp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#setDefaultScrollerProperties)
 ///
 /// @param sp QScrollerProperties*
+///
 void q_scrollerproperties_set_default_scroller_properties(void* sp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#unsetDefaultScrollerProperties)
@@ -53,6 +60,7 @@ void q_scrollerproperties_unset_default_scroller_properties();
 ///
 /// @param self QScrollerProperties*
 /// @param metric enum QScrollerProperties__ScrollMetric
+///
 QVariant* q_scrollerproperties_scroll_metric(void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#setScrollMetric)
@@ -60,6 +68,7 @@ QVariant* q_scrollerproperties_scroll_metric(void* self, int32_t metric);
 /// @param self QScrollerProperties*
 /// @param metric enum QScrollerProperties__ScrollMetric
 /// @param value QVariant*
+///
 void q_scrollerproperties_set_scroll_metric(void* self, int32_t metric, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#dtor.QScrollerProperties)
@@ -67,9 +76,10 @@ void q_scrollerproperties_set_scroll_metric(void* self, int32_t metric, void* va
 /// Delete this object from C++ memory.
 ///
 /// @param self QScrollerProperties*
+///
 void q_scrollerproperties_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qscrollerproperties.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#public-types)
 
 typedef enum {
     QSCROLLERPROPERTIES_OVERSHOOTPOLICY_OVERSHOOTWHENSCROLLABLE = 0,
@@ -77,12 +87,16 @@ typedef enum {
     QSCROLLERPROPERTIES_OVERSHOOTPOLICY_OVERSHOOTALWAYSON = 2
 } QScrollerProperties__OvershootPolicy;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#public-types)
+
 typedef enum {
     QSCROLLERPROPERTIES_FRAMERATES_STANDARD = 0,
     QSCROLLERPROPERTIES_FRAMERATES_FPS60 = 1,
     QSCROLLERPROPERTIES_FRAMERATES_FPS30 = 2,
     QSCROLLERPROPERTIES_FRAMERATES_FPS20 = 3
 } QScrollerProperties__FrameRates;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#public-types)
 
 typedef enum {
     QSCROLLERPROPERTIES_SCROLLMETRIC_MOUSEPRESSEVENTDELAY = 0,

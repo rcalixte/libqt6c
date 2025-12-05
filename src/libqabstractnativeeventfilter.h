@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qabstractnativeeventfilter.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html)
 
 /// q_abstractnativeeventfilter_new constructs a new QAbstractNativeEventFilter object.
 ///
@@ -23,6 +23,7 @@ QAbstractNativeEventFilter* q_abstractnativeeventfilter_new();
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
@@ -31,6 +32,7 @@ bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eve
 ///
 /// @param self QAbstractNativeEventFilter*
 /// @param callback bool func(QAbstractNativeEventFilter* self, const char* eventType, void* message, intptr_t* result)
+///
 void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
@@ -41,6 +43,7 @@ void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callb
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_abstractnativeeventfilter_qbase_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#dtor.QAbstractNativeEventFilter)
@@ -48,6 +51,7 @@ bool q_abstractnativeeventfilter_qbase_native_event_filter(void* self, const cha
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractNativeEventFilter*
+///
 void q_abstractnativeeventfilter_delete(void* self);
 
 #endif

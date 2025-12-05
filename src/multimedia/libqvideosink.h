@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qvideosink.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html)
 
 /// q_videosink_new constructs a new QVideoSink object.
 ///
 QVideoSink* q_videosink_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html)
+
 /// q_videosink_new2 constructs a new QVideoSink object.
 ///
 /// @param parent QObject*
+///
 QVideoSink* q_videosink_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QVideoSink*
+///
 const QMetaObject* q_videosink_meta_object(void* self);
 
 /// @param self QVideoSink*
 /// @param param1 const char*
+///
 void* q_videosink_metacast(void* self, const char* param1);
 
 /// @param self QVideoSink*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_videosink_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QVideoSink*
 /// @param callback int32_t func(QVideoSink* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_videosink_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_videosink_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_videosink_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,11 +64,13 @@ int32_t q_videosink_qbase_metacall(void* self, int32_t param1, int param2, void*
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_videosink_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoSize)
 ///
 /// @param self QVideoSink*
+///
 QSize* q_videosink_video_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#subtitleText)
@@ -68,58 +78,68 @@ QSize* q_videosink_video_size(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QVideoSink*
+///
 const char* q_videosink_subtitle_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#setSubtitleText)
 ///
 /// @param self QVideoSink*
 /// @param subtitle const char*
+///
 void q_videosink_set_subtitle_text(void* self, const char* subtitle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#setVideoFrame)
 ///
 /// @param self QVideoSink*
 /// @param frame QVideoFrame*
+///
 void q_videosink_set_video_frame(void* self, void* frame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoFrame)
 ///
 /// @param self QVideoSink*
+///
 QVideoFrame* q_videosink_video_frame(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoFrameChanged)
 ///
 /// @param self QVideoSink*
 /// @param frame QVideoFrame*
+///
 void q_videosink_video_frame_changed(void* self, void* frame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoFrameChanged)
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, QVideoFrame* frame)
+///
 void q_videosink_on_video_frame_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#subtitleTextChanged)
 ///
 /// @param self QVideoSink*
 /// @param subtitleText const char*
+///
 void q_videosink_subtitle_text_changed(void* self, const char* subtitleText);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#subtitleTextChanged)
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, const char* subtitleText)
+///
 void q_videosink_on_subtitle_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoSizeChanged)
 ///
 /// @param self QVideoSink*
+///
 void q_videosink_video_size_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoSizeChanged)
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self)
+///
 void q_videosink_on_video_size_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -128,6 +148,7 @@ void q_videosink_on_video_size_changed(void* self, void (*callback)(void*));
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_videosink_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -137,6 +158,7 @@ const char* q_videosink_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_videosink_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -146,6 +168,7 @@ const char* q_videosink_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QVideoSink*
+///
 const char* q_videosink_object_name(void* self);
 
 /// Inherited from QObject
@@ -154,6 +177,7 @@ const char* q_videosink_object_name(void* self);
 ///
 /// @param self QVideoSink*
 /// @param name char*
+///
 void q_videosink_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -161,6 +185,7 @@ void q_videosink_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QVideoSink*
+///
 bool q_videosink_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -168,6 +193,7 @@ bool q_videosink_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QVideoSink*
+///
 bool q_videosink_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -175,6 +201,7 @@ bool q_videosink_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QVideoSink*
+///
 bool q_videosink_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -182,6 +209,7 @@ bool q_videosink_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QVideoSink*
+///
 bool q_videosink_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -190,6 +218,7 @@ bool q_videosink_signals_blocked(void* self);
 ///
 /// @param self QVideoSink*
 /// @param b bool
+///
 bool q_videosink_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -197,6 +226,7 @@ bool q_videosink_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QVideoSink*
+///
 QThread* q_videosink_thread(void* self);
 
 /// Inherited from QObject
@@ -205,6 +235,7 @@ QThread* q_videosink_thread(void* self);
 ///
 /// @param self QVideoSink*
 /// @param thread QThread*
+///
 bool q_videosink_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -213,6 +244,7 @@ bool q_videosink_move_to_thread(void* self, void* thread);
 ///
 /// @param self QVideoSink*
 /// @param interval int
+///
 int32_t q_videosink_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -221,6 +253,7 @@ int32_t q_videosink_start_timer(void* self, int interval);
 ///
 /// @param self QVideoSink*
 /// @param id int
+///
 void q_videosink_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -229,6 +262,7 @@ void q_videosink_kill_timer(void* self, int id);
 ///
 /// @param self QVideoSink*
 /// @param id enum Qt__TimerId
+///
 void q_videosink_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -236,6 +270,7 @@ void q_videosink_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QVideoSink*
+///
 libqt_list /* of QObject* */ q_videosink_children(void* self);
 
 /// Inherited from QObject
@@ -244,6 +279,7 @@ libqt_list /* of QObject* */ q_videosink_children(void* self);
 ///
 /// @param self QVideoSink*
 /// @param parent QObject*
+///
 void q_videosink_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -252,6 +288,7 @@ void q_videosink_set_parent(void* self, void* parent);
 ///
 /// @param self QVideoSink*
 /// @param filterObj QObject*
+///
 void q_videosink_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -260,6 +297,7 @@ void q_videosink_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QVideoSink*
 /// @param obj QObject*
+///
 void q_videosink_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -270,6 +308,7 @@ void q_videosink_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_videosink_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -280,6 +319,7 @@ QMetaObject__Connection* q_videosink_connect(void* sender, void* signal, void* r
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_videosink_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -290,6 +330,7 @@ QMetaObject__Connection* q_videosink_connect2(void* self, void* sender, const ch
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_videosink_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -297,6 +338,7 @@ bool q_videosink_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_videosink_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -304,6 +346,7 @@ bool q_videosink_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QVideoSink*
+///
 void q_videosink_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -311,6 +354,7 @@ void q_videosink_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QVideoSink*
+///
 void q_videosink_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -320,6 +364,7 @@ void q_videosink_dump_object_info(void* self);
 /// @param self QVideoSink*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_videosink_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -328,6 +373,7 @@ bool q_videosink_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QVideoSink*
 /// @param name const char*
+///
 QVariant* q_videosink_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -337,6 +383,7 @@ QVariant* q_videosink_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QVideoSink*
+///
 const char** q_videosink_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -344,6 +391,7 @@ const char** q_videosink_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QVideoSink*
+///
 QBindingStorage* q_videosink_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -351,6 +399,7 @@ QBindingStorage* q_videosink_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QVideoSink*
+///
 const QBindingStorage* q_videosink_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -358,6 +407,7 @@ const QBindingStorage* q_videosink_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVideoSink*
+///
 void q_videosink_destroyed(void* self);
 
 /// Inherited from QObject
@@ -366,6 +416,7 @@ void q_videosink_destroyed(void* self);
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self)
+///
 void q_videosink_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -373,6 +424,7 @@ void q_videosink_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QVideoSink*
+///
 QObject* q_videosink_parent(void* self);
 
 /// Inherited from QObject
@@ -381,6 +433,7 @@ QObject* q_videosink_parent(void* self);
 ///
 /// @param self QVideoSink*
 /// @param classname const char*
+///
 bool q_videosink_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -388,6 +441,7 @@ bool q_videosink_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QVideoSink*
+///
 void q_videosink_delete_later(void* self);
 
 /// Inherited from QObject
@@ -397,6 +451,7 @@ void q_videosink_delete_later(void* self);
 /// @param self QVideoSink*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_videosink_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -406,6 +461,7 @@ bool q_videosink_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QVideoSink*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_videosink_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -417,6 +473,7 @@ int32_t q_videosink_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_videosink_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -428,6 +485,7 @@ QMetaObject__Connection* q_videosink_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_videosink_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -436,6 +494,7 @@ QMetaObject__Connection* q_videosink_connect4(void* self, void* sender, const ch
 ///
 /// @param self QVideoSink*
 /// @param param1 QObject*
+///
 void q_videosink_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -444,6 +503,7 @@ void q_videosink_destroyed1(void* self, void* param1);
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, QObject* param1)
+///
 void q_videosink_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -454,6 +514,7 @@ void q_videosink_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QVideoSink*
 /// @param event QEvent*
+///
 bool q_videosink_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -464,6 +525,7 @@ bool q_videosink_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param event QEvent*
+///
 bool q_videosink_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -474,6 +536,7 @@ bool q_videosink_qbase_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param callback bool func(QVideoSink* self, QEvent* event)
+///
 void q_videosink_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -485,6 +548,7 @@ void q_videosink_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QVideoSink*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_videosink_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -496,6 +560,7 @@ bool q_videosink_event_filter(void* self, void* watched, void* event);
 /// @param self QVideoSink*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_videosink_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -506,6 +571,7 @@ bool q_videosink_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QVideoSink*
 /// @param callback bool func(QVideoSink* self, QObject* watched, QEvent* event)
+///
 void q_videosink_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -516,6 +582,7 @@ void q_videosink_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 /// @param self QVideoSink*
 /// @param event QTimerEvent*
+///
 void q_videosink_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -526,6 +593,7 @@ void q_videosink_timer_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param event QTimerEvent*
+///
 void q_videosink_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -536,6 +604,7 @@ void q_videosink_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, QTimerEvent* event)
+///
 void q_videosink_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -546,6 +615,7 @@ void q_videosink_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QVideoSink*
 /// @param event QChildEvent*
+///
 void q_videosink_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -556,6 +626,7 @@ void q_videosink_child_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param event QChildEvent*
+///
 void q_videosink_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -566,6 +637,7 @@ void q_videosink_qbase_child_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, QChildEvent* event)
+///
 void q_videosink_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -576,6 +648,7 @@ void q_videosink_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QVideoSink*
 /// @param event QEvent*
+///
 void q_videosink_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -586,6 +659,7 @@ void q_videosink_custom_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param event QEvent*
+///
 void q_videosink_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -596,6 +670,7 @@ void q_videosink_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, QEvent* event)
+///
 void q_videosink_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -606,6 +681,7 @@ void q_videosink_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QVideoSink*
 /// @param signal QMetaMethod*
+///
 void q_videosink_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -616,6 +692,7 @@ void q_videosink_connect_notify(void* self, void* signal);
 ///
 /// @param self QVideoSink*
 /// @param signal QMetaMethod*
+///
 void q_videosink_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -626,6 +703,7 @@ void q_videosink_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, QMetaMethod* signal)
+///
 void q_videosink_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -636,6 +714,7 @@ void q_videosink_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QVideoSink*
 /// @param signal QMetaMethod*
+///
 void q_videosink_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -646,6 +725,7 @@ void q_videosink_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QVideoSink*
 /// @param signal QMetaMethod*
+///
 void q_videosink_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -656,6 +736,7 @@ void q_videosink_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, QMetaMethod* signal)
+///
 void q_videosink_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -665,6 +746,7 @@ void q_videosink_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QVideoSink*
+///
 QObject* q_videosink_sender(void* self);
 
 /// Inherited from QObject
@@ -674,6 +756,7 @@ QObject* q_videosink_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QVideoSink*
+///
 QObject* q_videosink_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -684,6 +767,7 @@ QObject* q_videosink_qbase_sender(void* self);
 ///
 /// @param self QVideoSink*
 /// @param callback QObject* func()
+///
 void q_videosink_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -693,6 +777,7 @@ void q_videosink_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QVideoSink*
+///
 int32_t q_videosink_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -702,6 +787,7 @@ int32_t q_videosink_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QVideoSink*
+///
 int32_t q_videosink_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -712,6 +798,7 @@ int32_t q_videosink_qbase_sender_signal_index(void* self);
 ///
 /// @param self QVideoSink*
 /// @param callback int32_t func()
+///
 void q_videosink_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -722,6 +809,7 @@ void q_videosink_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QVideoSink*
 /// @param signal const char*
+///
 int32_t q_videosink_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -732,6 +820,7 @@ int32_t q_videosink_receivers(void* self, const char* signal);
 ///
 /// @param self QVideoSink*
 /// @param signal const char*
+///
 int32_t q_videosink_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -742,6 +831,7 @@ int32_t q_videosink_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QVideoSink*
 /// @param callback int32_t func(QVideoSink* self, const char* signal)
+///
 void q_videosink_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -752,6 +842,7 @@ void q_videosink_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// @param self QVideoSink*
 /// @param signal QMetaMethod*
+///
 bool q_videosink_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -762,6 +853,7 @@ bool q_videosink_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QVideoSink*
 /// @param signal QMetaMethod*
+///
 bool q_videosink_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -772,6 +864,7 @@ bool q_videosink_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QVideoSink*
 /// @param callback bool func(QVideoSink* self, QMetaMethod* signal)
+///
 void q_videosink_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -782,6 +875,7 @@ void q_videosink_on_is_signal_connected(void* self, bool (*callback)(void*, void
 ///
 /// @param self QVideoSink*
 /// @param callback void func(QVideoSink* self, const char* objectName)
+///
 void q_videosink_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#dtor.QVideoSink)
@@ -789,6 +883,7 @@ void q_videosink_on_object_name_changed(void* self, void (*callback)(void*, cons
 /// Delete this object from C++ memory.
 ///
 /// @param self QVideoSink*
+///
 void q_videosink_delete(void* self);
 
 #endif

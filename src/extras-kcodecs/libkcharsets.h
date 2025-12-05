@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kcharsets.html
+/// [Upstream resources](https://api.kde.org/kcharsets.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
+///
 const char* k_charsets_tr(const char* sourceText);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#charsets)
@@ -29,6 +30,7 @@ KCharsets* k_charsets_charsets();
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param ch QChar*
+///
 const char* k_charsets_to_entity(void* ch);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#resolveEntities)
@@ -36,6 +38,7 @@ const char* k_charsets_to_entity(void* ch);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param text const char*
+///
 const char* k_charsets_resolve_entities(const char* text);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#availableEncodingNames)
@@ -43,6 +46,7 @@ const char* k_charsets_resolve_entities(const char* text);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharsets*
+///
 const char** k_charsets_available_encoding_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#descriptiveEncodingNames)
@@ -50,11 +54,13 @@ const char** k_charsets_available_encoding_names(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharsets*
+///
 const char** k_charsets_descriptive_encoding_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#encodingsByScript)
 ///
 /// @param self KCharsets*
+///
 libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#encodingForName)
@@ -63,6 +69,7 @@ libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self);
 ///
 /// @param self KCharsets*
 /// @param descriptiveName const char*
+///
 const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -71,6 +78,7 @@ const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
+///
 const char* k_charsets_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -80,6 +88,7 @@ const char* k_charsets_tr2(const char* sourceText, const char* disambiguation);
 /// @param sourceText const char*
 /// @param disambiguation const char*
 /// @param n int
+///
 const char* k_charsets_tr3(const char* sourceText, const char* disambiguation, int n);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#dtor.KCharsets)
@@ -87,6 +96,7 @@ const char* k_charsets_tr3(const char* sourceText, const char* disambiguation, i
 /// Delete this object from C++ memory.
 ///
 /// @param self KCharsets*
+///
 void k_charsets_delete(void* self);
 
 #endif

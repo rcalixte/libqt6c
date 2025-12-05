@@ -11,12 +11,13 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/krandom.html
+/// [Upstream resources](https://api.kde.org/krandom.html)
 
 /// [Upstream resources](https://api.kde.org/krandom.html#randomString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 int
+///
 const char* k_random_random_string(int param1);
 #endif

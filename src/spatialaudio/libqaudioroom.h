@@ -11,32 +11,37 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qaudioroom.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html)
 
 /// q_audioroom_new constructs a new QAudioRoom object.
 ///
 /// @param engine QAudioEngine*
+///
 QAudioRoom* q_audioroom_new(void* engine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QAudioRoom*
+///
 const QMetaObject* q_audioroom_meta_object(void* self);
 
 /// @param self QAudioRoom*
 /// @param param1 const char*
+///
 void* q_audioroom_metacast(void* self, const char* param1);
 
 /// @param self QAudioRoom*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_audioroom_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAudioRoom*
 /// @param callback int32_t func(QAudioRoom* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_audioroom_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -45,6 +50,7 @@ void q_audioroom_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_audioroom_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -52,39 +58,46 @@ int32_t q_audioroom_qbase_metacall(void* self, int32_t param1, int param2, void*
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_audioroom_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setPosition)
 ///
 /// @param self QAudioRoom*
 /// @param pos QVector3D*
+///
 void q_audioroom_set_position(void* self, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#position)
 ///
 /// @param self QAudioRoom*
+///
 QVector3D* q_audioroom_position(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setDimensions)
 ///
 /// @param self QAudioRoom*
 /// @param dim QVector3D*
+///
 void q_audioroom_set_dimensions(void* self, void* dim);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#dimensions)
 ///
 /// @param self QAudioRoom*
+///
 QVector3D* q_audioroom_dimensions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setRotation)
 ///
 /// @param self QAudioRoom*
 /// @param q QQuaternion*
+///
 void q_audioroom_set_rotation(void* self, void* q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#rotation)
 ///
 /// @param self QAudioRoom*
+///
 QQuaternion* q_audioroom_rotation(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setWallMaterial)
@@ -92,6 +105,7 @@ QQuaternion* q_audioroom_rotation(void* self);
 /// @param self QAudioRoom*
 /// @param wall enum QAudioRoom__Wall
 /// @param material enum QAudioRoom__Material
+///
 void q_audioroom_set_wall_material(void* self, int32_t wall, int32_t material);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#wallMaterial)
@@ -100,138 +114,163 @@ void q_audioroom_set_wall_material(void* self, int32_t wall, int32_t material);
 /// @param wall enum QAudioRoom__Wall
 ///
 /// @return enum QAudioRoom__Material
+///
 int32_t q_audioroom_wall_material(void* self, int32_t wall);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setReflectionGain)
 ///
 /// @param self QAudioRoom*
 /// @param factor float
+///
 void q_audioroom_set_reflection_gain(void* self, float factor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reflectionGain)
 ///
 /// @param self QAudioRoom*
+///
 float q_audioroom_reflection_gain(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setReverbGain)
 ///
 /// @param self QAudioRoom*
 /// @param factor float
+///
 void q_audioroom_set_reverb_gain(void* self, float factor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbGain)
 ///
 /// @param self QAudioRoom*
+///
 float q_audioroom_reverb_gain(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setReverbTime)
 ///
 /// @param self QAudioRoom*
 /// @param factor float
+///
 void q_audioroom_set_reverb_time(void* self, float factor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbTime)
 ///
 /// @param self QAudioRoom*
+///
 float q_audioroom_reverb_time(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#setReverbBrightness)
 ///
 /// @param self QAudioRoom*
 /// @param factor float
+///
 void q_audioroom_set_reverb_brightness(void* self, float factor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbBrightness)
 ///
 /// @param self QAudioRoom*
+///
 float q_audioroom_reverb_brightness(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#positionChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_position_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#positionChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_position_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#dimensionsChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_dimensions_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#dimensionsChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_dimensions_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#rotationChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_rotation_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#rotationChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#wallsChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_walls_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#wallsChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_walls_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reflectionGainChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_reflection_gain_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reflectionGainChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_reflection_gain_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbGainChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_reverb_gain_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbGainChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_reverb_gain_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbTimeChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_reverb_time_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbTimeChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_reverb_time_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbBrightnessChanged)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_reverb_brightness_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#reverbBrightnessChanged)
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_reverb_brightness_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -240,6 +279,7 @@ void q_audioroom_on_reverb_brightness_changed(void* self, void (*callback)(void*
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_audioroom_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -249,6 +289,7 @@ const char* q_audioroom_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_audioroom_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -258,6 +299,7 @@ const char* q_audioroom_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QAudioRoom*
+///
 const char* q_audioroom_object_name(void* self);
 
 /// Inherited from QObject
@@ -266,6 +308,7 @@ const char* q_audioroom_object_name(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param name char*
+///
 void q_audioroom_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -273,6 +316,7 @@ void q_audioroom_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QAudioRoom*
+///
 bool q_audioroom_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -280,6 +324,7 @@ bool q_audioroom_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QAudioRoom*
+///
 bool q_audioroom_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -287,6 +332,7 @@ bool q_audioroom_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QAudioRoom*
+///
 bool q_audioroom_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -294,6 +340,7 @@ bool q_audioroom_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QAudioRoom*
+///
 bool q_audioroom_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -302,6 +349,7 @@ bool q_audioroom_signals_blocked(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param b bool
+///
 bool q_audioroom_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -309,6 +357,7 @@ bool q_audioroom_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QAudioRoom*
+///
 QThread* q_audioroom_thread(void* self);
 
 /// Inherited from QObject
@@ -317,6 +366,7 @@ QThread* q_audioroom_thread(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param thread QThread*
+///
 bool q_audioroom_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -325,6 +375,7 @@ bool q_audioroom_move_to_thread(void* self, void* thread);
 ///
 /// @param self QAudioRoom*
 /// @param interval int
+///
 int32_t q_audioroom_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -333,6 +384,7 @@ int32_t q_audioroom_start_timer(void* self, int interval);
 ///
 /// @param self QAudioRoom*
 /// @param id int
+///
 void q_audioroom_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -341,6 +393,7 @@ void q_audioroom_kill_timer(void* self, int id);
 ///
 /// @param self QAudioRoom*
 /// @param id enum Qt__TimerId
+///
 void q_audioroom_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -348,6 +401,7 @@ void q_audioroom_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QAudioRoom*
+///
 libqt_list /* of QObject* */ q_audioroom_children(void* self);
 
 /// Inherited from QObject
@@ -356,6 +410,7 @@ libqt_list /* of QObject* */ q_audioroom_children(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param parent QObject*
+///
 void q_audioroom_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -364,6 +419,7 @@ void q_audioroom_set_parent(void* self, void* parent);
 ///
 /// @param self QAudioRoom*
 /// @param filterObj QObject*
+///
 void q_audioroom_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -372,6 +428,7 @@ void q_audioroom_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QAudioRoom*
 /// @param obj QObject*
+///
 void q_audioroom_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -382,6 +439,7 @@ void q_audioroom_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_audioroom_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -392,6 +450,7 @@ QMetaObject__Connection* q_audioroom_connect(void* sender, void* signal, void* r
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_audioroom_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -402,6 +461,7 @@ QMetaObject__Connection* q_audioroom_connect2(void* self, void* sender, const ch
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_audioroom_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -409,6 +469,7 @@ bool q_audioroom_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_audioroom_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -416,6 +477,7 @@ bool q_audioroom_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -423,6 +485,7 @@ void q_audioroom_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -432,6 +495,7 @@ void q_audioroom_dump_object_info(void* self);
 /// @param self QAudioRoom*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_audioroom_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -440,6 +504,7 @@ bool q_audioroom_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QAudioRoom*
 /// @param name const char*
+///
 QVariant* q_audioroom_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -449,6 +514,7 @@ QVariant* q_audioroom_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QAudioRoom*
+///
 const char** q_audioroom_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -456,6 +522,7 @@ const char** q_audioroom_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAudioRoom*
+///
 QBindingStorage* q_audioroom_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -463,6 +530,7 @@ QBindingStorage* q_audioroom_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QAudioRoom*
+///
 const QBindingStorage* q_audioroom_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -470,6 +538,7 @@ const QBindingStorage* q_audioroom_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_destroyed(void* self);
 
 /// Inherited from QObject
@@ -478,6 +547,7 @@ void q_audioroom_destroyed(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self)
+///
 void q_audioroom_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -485,6 +555,7 @@ void q_audioroom_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QAudioRoom*
+///
 QObject* q_audioroom_parent(void* self);
 
 /// Inherited from QObject
@@ -493,6 +564,7 @@ QObject* q_audioroom_parent(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param classname const char*
+///
 bool q_audioroom_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -500,6 +572,7 @@ bool q_audioroom_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_delete_later(void* self);
 
 /// Inherited from QObject
@@ -509,6 +582,7 @@ void q_audioroom_delete_later(void* self);
 /// @param self QAudioRoom*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_audioroom_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -518,6 +592,7 @@ bool q_audioroom_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAudioRoom*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_audioroom_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -529,6 +604,7 @@ int32_t q_audioroom_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_audioroom_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -540,6 +616,7 @@ QMetaObject__Connection* q_audioroom_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_audioroom_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -548,6 +625,7 @@ QMetaObject__Connection* q_audioroom_connect4(void* self, void* sender, const ch
 ///
 /// @param self QAudioRoom*
 /// @param param1 QObject*
+///
 void q_audioroom_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -556,6 +634,7 @@ void q_audioroom_destroyed1(void* self, void* param1);
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self, QObject* param1)
+///
 void q_audioroom_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -566,6 +645,7 @@ void q_audioroom_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QAudioRoom*
 /// @param event QEvent*
+///
 bool q_audioroom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -576,6 +656,7 @@ bool q_audioroom_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param event QEvent*
+///
 bool q_audioroom_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -586,6 +667,7 @@ bool q_audioroom_qbase_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param callback bool func(QAudioRoom* self, QEvent* event)
+///
 void q_audioroom_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -597,6 +679,7 @@ void q_audioroom_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QAudioRoom*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_audioroom_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -608,6 +691,7 @@ bool q_audioroom_event_filter(void* self, void* watched, void* event);
 /// @param self QAudioRoom*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_audioroom_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -618,6 +702,7 @@ bool q_audioroom_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param callback bool func(QAudioRoom* self, QObject* watched, QEvent* event)
+///
 void q_audioroom_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -628,6 +713,7 @@ void q_audioroom_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 /// @param self QAudioRoom*
 /// @param event QTimerEvent*
+///
 void q_audioroom_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -638,6 +724,7 @@ void q_audioroom_timer_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param event QTimerEvent*
+///
 void q_audioroom_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -648,6 +735,7 @@ void q_audioroom_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self, QTimerEvent* event)
+///
 void q_audioroom_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -658,6 +746,7 @@ void q_audioroom_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QAudioRoom*
 /// @param event QChildEvent*
+///
 void q_audioroom_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -668,6 +757,7 @@ void q_audioroom_child_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param event QChildEvent*
+///
 void q_audioroom_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -678,6 +768,7 @@ void q_audioroom_qbase_child_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self, QChildEvent* event)
+///
 void q_audioroom_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -688,6 +779,7 @@ void q_audioroom_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QAudioRoom*
 /// @param event QEvent*
+///
 void q_audioroom_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -698,6 +790,7 @@ void q_audioroom_custom_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param event QEvent*
+///
 void q_audioroom_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -708,6 +801,7 @@ void q_audioroom_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self, QEvent* event)
+///
 void q_audioroom_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -718,6 +812,7 @@ void q_audioroom_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QAudioRoom*
 /// @param signal QMetaMethod*
+///
 void q_audioroom_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -728,6 +823,7 @@ void q_audioroom_connect_notify(void* self, void* signal);
 ///
 /// @param self QAudioRoom*
 /// @param signal QMetaMethod*
+///
 void q_audioroom_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -738,6 +834,7 @@ void q_audioroom_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self, QMetaMethod* signal)
+///
 void q_audioroom_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -748,6 +845,7 @@ void q_audioroom_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QAudioRoom*
 /// @param signal QMetaMethod*
+///
 void q_audioroom_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -758,6 +856,7 @@ void q_audioroom_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QAudioRoom*
 /// @param signal QMetaMethod*
+///
 void q_audioroom_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -768,6 +867,7 @@ void q_audioroom_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self, QMetaMethod* signal)
+///
 void q_audioroom_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -777,6 +877,7 @@ void q_audioroom_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QAudioRoom*
+///
 QObject* q_audioroom_sender(void* self);
 
 /// Inherited from QObject
@@ -786,6 +887,7 @@ QObject* q_audioroom_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QAudioRoom*
+///
 QObject* q_audioroom_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -796,6 +898,7 @@ QObject* q_audioroom_qbase_sender(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param callback QObject* func()
+///
 void q_audioroom_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -805,6 +908,7 @@ void q_audioroom_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QAudioRoom*
+///
 int32_t q_audioroom_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -814,6 +918,7 @@ int32_t q_audioroom_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QAudioRoom*
+///
 int32_t q_audioroom_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -824,6 +929,7 @@ int32_t q_audioroom_qbase_sender_signal_index(void* self);
 ///
 /// @param self QAudioRoom*
 /// @param callback int32_t func()
+///
 void q_audioroom_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -834,6 +940,7 @@ void q_audioroom_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QAudioRoom*
 /// @param signal const char*
+///
 int32_t q_audioroom_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -844,6 +951,7 @@ int32_t q_audioroom_receivers(void* self, const char* signal);
 ///
 /// @param self QAudioRoom*
 /// @param signal const char*
+///
 int32_t q_audioroom_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -854,6 +962,7 @@ int32_t q_audioroom_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QAudioRoom*
 /// @param callback int32_t func(QAudioRoom* self, const char* signal)
+///
 void q_audioroom_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -864,6 +973,7 @@ void q_audioroom_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// @param self QAudioRoom*
 /// @param signal QMetaMethod*
+///
 bool q_audioroom_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -874,6 +984,7 @@ bool q_audioroom_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QAudioRoom*
 /// @param signal QMetaMethod*
+///
 bool q_audioroom_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -884,6 +995,7 @@ bool q_audioroom_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QAudioRoom*
 /// @param callback bool func(QAudioRoom* self, QMetaMethod* signal)
+///
 void q_audioroom_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -894,6 +1006,7 @@ void q_audioroom_on_is_signal_connected(void* self, bool (*callback)(void*, void
 ///
 /// @param self QAudioRoom*
 /// @param callback void func(QAudioRoom* self, const char* objectName)
+///
 void q_audioroom_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#dtor.QAudioRoom)
@@ -901,9 +1014,10 @@ void q_audioroom_on_object_name_changed(void* self, void (*callback)(void*, cons
 /// Delete this object from C++ memory.
 ///
 /// @param self QAudioRoom*
+///
 void q_audioroom_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qaudioroom.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#public-types)
 
 typedef enum {
     QAUDIOROOM_MATERIAL_TRANSPARENT = 0,
@@ -931,6 +1045,8 @@ typedef enum {
     QAUDIOROOM_MATERIAL_WOODPANEL = 22,
     QAUDIOROOM_MATERIAL_UNIFORMMATERIAL = 23
 } QAudioRoom__Material;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudioroom.html#public-types)
 
 typedef enum {
     QAUDIOROOM_WALL_LEFTWALL = 0,

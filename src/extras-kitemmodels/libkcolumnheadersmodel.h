@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kcolumnheadersmodel.html
+/// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html)
 
 /// k_columnheadersmodel_new constructs a new KColumnHeadersModel object.
 ///
 KColumnHeadersModel* k_columnheadersmodel_new();
 
+/// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html)
+
 /// k_columnheadersmodel_new2 constructs a new KColumnHeadersModel object.
 ///
 /// @param parent QObject*
+///
 KColumnHeadersModel* k_columnheadersmodel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KColumnHeadersModel*
+///
 const QMetaObject* k_columnheadersmodel_meta_object(void* self);
 
 /// @param self KColumnHeadersModel*
 /// @param param1 const char*
+///
 void* k_columnheadersmodel_metacast(void* self, const char* param1);
 
 /// @param self KColumnHeadersModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_columnheadersmodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func(KColumnHeadersModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_columnheadersmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void k_columnheadersmodel_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_columnheadersmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,12 +64,14 @@ int32_t k_columnheadersmodel_qbase_metacall(void* self, int32_t param1, int para
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_columnheadersmodel_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#rowCount)
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 int32_t k_columnheadersmodel_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#rowCount)
@@ -70,6 +80,7 @@ int32_t k_columnheadersmodel_row_count(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func(KColumnHeadersModel* self, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#rowCount)
@@ -78,6 +89,7 @@ void k_columnheadersmodel_on_row_count(void* self, int32_t (*callback)(void*, vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 int32_t k_columnheadersmodel_qbase_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#data)
@@ -85,6 +97,7 @@ int32_t k_columnheadersmodel_qbase_row_count(void* self, void* parent);
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_columnheadersmodel_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#data)
@@ -93,6 +106,7 @@ QVariant* k_columnheadersmodel_data(void* self, void* index, int role);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QVariant* func(KColumnHeadersModel* self, QModelIndex* index, int role)
+///
 void k_columnheadersmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#data)
@@ -102,11 +116,13 @@ void k_columnheadersmodel_on_data(void* self, QVariant* (*callback)(void*, void*
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_columnheadersmodel_qbase_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#roleNames)
 ///
 /// @param self KColumnHeadersModel*
+///
 libqt_map /* of int to char* */ k_columnheadersmodel_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#roleNames)
@@ -115,6 +131,7 @@ libqt_map /* of int to char* */ k_columnheadersmodel_role_names(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void k_columnheadersmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#roleNames)
@@ -122,28 +139,33 @@ void k_columnheadersmodel_on_role_names(void* self, libqt_map /* of int to char*
 /// Base class method implementation
 ///
 /// @param self KColumnHeadersModel*
+///
 libqt_map /* of int to char* */ k_columnheadersmodel_qbase_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sourceModel)
 ///
 /// @param self KColumnHeadersModel*
+///
 QAbstractItemModel* k_columnheadersmodel_source_model(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#setSourceModel)
 ///
 /// @param self KColumnHeadersModel*
 /// @param newSourceModel QAbstractItemModel*
+///
 void k_columnheadersmodel_set_source_model(void* self, void* newSourceModel);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sortColumn)
 ///
 /// @param self KColumnHeadersModel*
+///
 int32_t k_columnheadersmodel_sort_column(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#setSortColumn)
 ///
 /// @param self KColumnHeadersModel*
 /// @param newSortColumn int
+///
 void k_columnheadersmodel_set_sort_column(void* self, int newSortColumn);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sortOrder)
@@ -151,45 +173,53 @@ void k_columnheadersmodel_set_sort_column(void* self, int newSortColumn);
 /// @param self KColumnHeadersModel*
 ///
 /// @return enum Qt__SortOrder
+///
 int32_t k_columnheadersmodel_sort_order(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#setSortOrder)
 ///
 /// @param self KColumnHeadersModel*
 /// @param newSortOrder enum Qt__SortOrder
+///
 void k_columnheadersmodel_set_sort_order(void* self, int32_t newSortOrder);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sourceModelChanged)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_source_model_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sourceModelChanged)
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_source_model_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sortColumnChanged)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_sort_column_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sortColumnChanged)
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_sort_column_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sortOrderChanged)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_sort_order_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#sortOrderChanged)
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_sort_order_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -198,6 +228,7 @@ void k_columnheadersmodel_on_sort_order_changed(void* self, void (*callback)(voi
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_columnheadersmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -207,6 +238,7 @@ const char* k_columnheadersmodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_columnheadersmodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractItemModel
@@ -216,6 +248,7 @@ const char* k_columnheadersmodel_tr3(const char* s, const char* c, int n);
 /// @param self KColumnHeadersModel*
 /// @param row int
 /// @param column int
+///
 bool k_columnheadersmodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -224,6 +257,7 @@ bool k_columnheadersmodel_has_index(void* self, int row, int column);
 ///
 /// @param self KColumnHeadersModel*
 /// @param child QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
@@ -234,6 +268,7 @@ QModelIndex* k_columnheadersmodel_parent(void* self, void* child);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QModelIndex* func(KColumnHeadersModel* self, QModelIndex* child)
+///
 void k_columnheadersmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -244,6 +279,7 @@ void k_columnheadersmodel_on_parent(void* self, QModelIndex* (*callback)(void*, 
 ///
 /// @param self KColumnHeadersModel*
 /// @param child QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_qbase_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
@@ -252,6 +288,7 @@ QModelIndex* k_columnheadersmodel_qbase_parent(void* self, void* child);
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 int32_t k_columnheadersmodel_column_count(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -262,6 +299,7 @@ int32_t k_columnheadersmodel_column_count(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func(KColumnHeadersModel* self, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -272,6 +310,7 @@ void k_columnheadersmodel_on_column_count(void* self, int32_t (*callback)(void*,
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 int32_t k_columnheadersmodel_qbase_column_count(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -280,6 +319,7 @@ int32_t k_columnheadersmodel_qbase_column_count(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -290,6 +330,7 @@ bool k_columnheadersmodel_has_children(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -300,6 +341,7 @@ void k_columnheadersmodel_on_has_children(void* self, bool (*callback)(void*, vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -308,6 +350,7 @@ bool k_columnheadersmodel_qbase_has_children(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param row int
+///
 bool k_columnheadersmodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -316,6 +359,7 @@ bool k_columnheadersmodel_insert_row(void* self, int row);
 ///
 /// @param self KColumnHeadersModel*
 /// @param column int
+///
 bool k_columnheadersmodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -324,6 +368,7 @@ bool k_columnheadersmodel_insert_column(void* self, int column);
 ///
 /// @param self KColumnHeadersModel*
 /// @param row int
+///
 bool k_columnheadersmodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -332,6 +377,7 @@ bool k_columnheadersmodel_remove_row(void* self, int row);
 ///
 /// @param self KColumnHeadersModel*
 /// @param column int
+///
 bool k_columnheadersmodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -343,6 +389,7 @@ bool k_columnheadersmodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_columnheadersmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -354,6 +401,7 @@ bool k_columnheadersmodel_move_row(void* self, void* sourceParent, int sourceRow
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_columnheadersmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -362,6 +410,7 @@ bool k_columnheadersmodel_move_column(void* self, void* sourceParent, int source
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 bool k_columnheadersmodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -371,6 +420,7 @@ bool k_columnheadersmodel_check_index(void* self, void* index);
 /// @param self KColumnHeadersModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void k_columnheadersmodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -379,6 +429,7 @@ void k_columnheadersmodel_data_changed(void* self, void* topLeft, void* bottomRi
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void k_columnheadersmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -389,6 +440,7 @@ void k_columnheadersmodel_on_data_changed(void* self, void (*callback)(void*, vo
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -397,6 +449,7 @@ void k_columnheadersmodel_header_data_changed(void* self, int32_t orientation, i
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void k_columnheadersmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -404,6 +457,7 @@ void k_columnheadersmodel_on_header_data_changed(void* self, void (*callback)(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -412,6 +466,7 @@ void k_columnheadersmodel_layout_changed(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -419,6 +474,7 @@ void k_columnheadersmodel_on_layout_changed(void* self, void (*callback)(void*))
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -427,6 +483,7 @@ void k_columnheadersmodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -437,6 +494,7 @@ void k_columnheadersmodel_on_layout_about_to_be_changed(void* self, void (*callb
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -446,6 +504,7 @@ bool k_columnheadersmodel_has_index3(void* self, int row, int column, void* pare
 /// @param self KColumnHeadersModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -455,6 +514,7 @@ bool k_columnheadersmodel_insert_row2(void* self, int row, void* parent);
 /// @param self KColumnHeadersModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -464,6 +524,7 @@ bool k_columnheadersmodel_insert_column2(void* self, int column, void* parent);
 /// @param self KColumnHeadersModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -473,6 +534,7 @@ bool k_columnheadersmodel_remove_row2(void* self, int row, void* parent);
 /// @param self KColumnHeadersModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -482,6 +544,7 @@ bool k_columnheadersmodel_remove_column2(void* self, int column, void* parent);
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool k_columnheadersmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -492,6 +555,7 @@ bool k_columnheadersmodel_check_index2(void* self, void* index, int32_t options)
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void k_columnheadersmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -500,6 +564,7 @@ void k_columnheadersmodel_data_changed3(void* self, void* topLeft, void* bottomR
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void k_columnheadersmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -508,6 +573,7 @@ void k_columnheadersmodel_on_data_changed3(void* self, void (*callback)(void*, v
 ///
 /// @param self KColumnHeadersModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_columnheadersmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -516,6 +582,7 @@ void k_columnheadersmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QPersistentModelIndex** parents)
+///
 void k_columnheadersmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -525,6 +592,7 @@ void k_columnheadersmodel_on_layout_changed1(void* self, void (*callback)(void*,
 /// @param self KColumnHeadersModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_columnheadersmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -533,6 +601,7 @@ void k_columnheadersmodel_layout_changed2(void* self, libqt_list parents, int32_
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_columnheadersmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -541,6 +610,7 @@ void k_columnheadersmodel_on_layout_changed2(void* self, void (*callback)(void*,
 ///
 /// @param self KColumnHeadersModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_columnheadersmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -549,6 +619,7 @@ void k_columnheadersmodel_layout_about_to_be_changed1(void* self, libqt_list par
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QPersistentModelIndex** parents)
+///
 void k_columnheadersmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -558,6 +629,7 @@ void k_columnheadersmodel_on_layout_about_to_be_changed1(void* self, void (*call
 /// @param self KColumnHeadersModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_columnheadersmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -566,6 +638,7 @@ void k_columnheadersmodel_layout_about_to_be_changed2(void* self, libqt_list par
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_columnheadersmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -575,6 +648,7 @@ void k_columnheadersmodel_on_layout_about_to_be_changed2(void* self, void (*call
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColumnHeadersModel*
+///
 const char* k_columnheadersmodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -583,6 +657,7 @@ const char* k_columnheadersmodel_object_name(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param name char*
+///
 void k_columnheadersmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -590,6 +665,7 @@ void k_columnheadersmodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KColumnHeadersModel*
+///
 bool k_columnheadersmodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -597,6 +673,7 @@ bool k_columnheadersmodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KColumnHeadersModel*
+///
 bool k_columnheadersmodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -604,6 +681,7 @@ bool k_columnheadersmodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KColumnHeadersModel*
+///
 bool k_columnheadersmodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -611,6 +689,7 @@ bool k_columnheadersmodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KColumnHeadersModel*
+///
 bool k_columnheadersmodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -619,6 +698,7 @@ bool k_columnheadersmodel_signals_blocked(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param b bool
+///
 bool k_columnheadersmodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -626,6 +706,7 @@ bool k_columnheadersmodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KColumnHeadersModel*
+///
 QThread* k_columnheadersmodel_thread(void* self);
 
 /// Inherited from QObject
@@ -634,6 +715,7 @@ QThread* k_columnheadersmodel_thread(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param thread QThread*
+///
 bool k_columnheadersmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -642,6 +724,7 @@ bool k_columnheadersmodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self KColumnHeadersModel*
 /// @param interval int
+///
 int32_t k_columnheadersmodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -650,6 +733,7 @@ int32_t k_columnheadersmodel_start_timer(void* self, int interval);
 ///
 /// @param self KColumnHeadersModel*
 /// @param id int
+///
 void k_columnheadersmodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -658,6 +742,7 @@ void k_columnheadersmodel_kill_timer(void* self, int id);
 ///
 /// @param self KColumnHeadersModel*
 /// @param id enum Qt__TimerId
+///
 void k_columnheadersmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -665,6 +750,7 @@ void k_columnheadersmodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KColumnHeadersModel*
+///
 libqt_list /* of QObject* */ k_columnheadersmodel_children(void* self);
 
 /// Inherited from QObject
@@ -673,6 +759,7 @@ libqt_list /* of QObject* */ k_columnheadersmodel_children(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QObject*
+///
 void k_columnheadersmodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -681,6 +768,7 @@ void k_columnheadersmodel_set_parent(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param filterObj QObject*
+///
 void k_columnheadersmodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -689,6 +777,7 @@ void k_columnheadersmodel_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KColumnHeadersModel*
 /// @param obj QObject*
+///
 void k_columnheadersmodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -699,6 +788,7 @@ void k_columnheadersmodel_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_columnheadersmodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -709,6 +799,7 @@ QMetaObject__Connection* k_columnheadersmodel_connect(void* sender, void* signal
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_columnheadersmodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -719,6 +810,7 @@ QMetaObject__Connection* k_columnheadersmodel_connect2(void* self, void* sender,
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_columnheadersmodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -726,6 +818,7 @@ bool k_columnheadersmodel_disconnect(void* sender, void* signal, void* receiver,
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_columnheadersmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -733,6 +826,7 @@ bool k_columnheadersmodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -740,6 +834,7 @@ void k_columnheadersmodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -749,6 +844,7 @@ void k_columnheadersmodel_dump_object_info(void* self);
 /// @param self KColumnHeadersModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_columnheadersmodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -757,6 +853,7 @@ bool k_columnheadersmodel_set_property(void* self, const char* name, void* value
 ///
 /// @param self KColumnHeadersModel*
 /// @param name const char*
+///
 QVariant* k_columnheadersmodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -766,6 +863,7 @@ QVariant* k_columnheadersmodel_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColumnHeadersModel*
+///
 const char** k_columnheadersmodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -773,6 +871,7 @@ const char** k_columnheadersmodel_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KColumnHeadersModel*
+///
 QBindingStorage* k_columnheadersmodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -780,6 +879,7 @@ QBindingStorage* k_columnheadersmodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KColumnHeadersModel*
+///
 const QBindingStorage* k_columnheadersmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -787,6 +887,7 @@ const QBindingStorage* k_columnheadersmodel_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -795,6 +896,7 @@ void k_columnheadersmodel_destroyed(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -803,6 +905,7 @@ void k_columnheadersmodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// @param self KColumnHeadersModel*
 /// @param classname const char*
+///
 bool k_columnheadersmodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -810,6 +913,7 @@ bool k_columnheadersmodel_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -819,6 +923,7 @@ void k_columnheadersmodel_delete_later(void* self);
 /// @param self KColumnHeadersModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_columnheadersmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -828,6 +933,7 @@ bool k_columnheadersmodel_move_to_thread2(void* self, void* thread, void* param2
 /// @param self KColumnHeadersModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_columnheadersmodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -839,6 +945,7 @@ int32_t k_columnheadersmodel_start_timer22(void* self, int interval, int32_t tim
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_columnheadersmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -850,6 +957,7 @@ QMetaObject__Connection* k_columnheadersmodel_connect5(void* sender, void* signa
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_columnheadersmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -858,6 +966,7 @@ QMetaObject__Connection* k_columnheadersmodel_connect4(void* self, void* sender,
 ///
 /// @param self KColumnHeadersModel*
 /// @param param1 QObject*
+///
 void k_columnheadersmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -866,6 +975,7 @@ void k_columnheadersmodel_destroyed1(void* self, void* param1);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QObject* param1)
+///
 void k_columnheadersmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractListModel
@@ -878,6 +988,7 @@ void k_columnheadersmodel_on_destroyed1(void* self, void (*callback)(void*, void
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -890,6 +1001,7 @@ QModelIndex* k_columnheadersmodel_index(void* self, int row, int column, void* p
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -900,6 +1012,7 @@ QModelIndex* k_columnheadersmodel_qbase_index(void* self, int row, int column, v
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QModelIndex* func(KColumnHeadersModel* self, int row, int column, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -912,6 +1025,7 @@ void k_columnheadersmodel_on_index(void* self, QModelIndex* (*callback)(void*, i
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractListModel
@@ -924,6 +1038,7 @@ QModelIndex* k_columnheadersmodel_sibling(void* self, int row, int column, void*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractListModel
@@ -934,6 +1049,7 @@ QModelIndex* k_columnheadersmodel_qbase_sibling(void* self, int row, int column,
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QModelIndex* func(KColumnHeadersModel* self, int row, int column, QModelIndex* idx)
+///
 void k_columnheadersmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -948,6 +1064,7 @@ void k_columnheadersmodel_on_sibling(void* self, QModelIndex* (*callback)(void*,
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -962,6 +1079,7 @@ bool k_columnheadersmodel_drop_mime_data(void* self, void* data, int32_t action,
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -972,6 +1090,7 @@ bool k_columnheadersmodel_qbase_drop_mime_data(void* self, void* data, int32_t a
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -984,6 +1103,7 @@ void k_columnheadersmodel_on_drop_mime_data(void* self, bool (*callback)(void*, 
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_columnheadersmodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractListModel
@@ -996,6 +1116,7 @@ int32_t k_columnheadersmodel_flags(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_columnheadersmodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QAbstractListModel
@@ -1006,6 +1127,7 @@ int32_t k_columnheadersmodel_qbase_flags(void* self, void* index);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func(KColumnHeadersModel* self, QModelIndex* index)
+///
 void k_columnheadersmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1018,6 +1140,7 @@ void k_columnheadersmodel_on_flags(void* self, int32_t (*callback)(void*, void*)
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_columnheadersmodel_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1030,6 +1153,7 @@ bool k_columnheadersmodel_set_data(void* self, void* index, void* value, int rol
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_columnheadersmodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1040,6 +1164,7 @@ bool k_columnheadersmodel_qbase_set_data(void* self, void* index, void* value, i
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* index, QVariant* value, int role)
+///
 void k_columnheadersmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1052,6 +1177,7 @@ void k_columnheadersmodel_on_set_data(void* self, bool (*callback)(void*, void*,
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_columnheadersmodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1064,6 +1190,7 @@ QVariant* k_columnheadersmodel_header_data(void* self, int section, int32_t orie
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_columnheadersmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1074,6 +1201,7 @@ QVariant* k_columnheadersmodel_qbase_header_data(void* self, int section, int32_
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QVariant* func(KColumnHeadersModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void k_columnheadersmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -1087,6 +1215,7 @@ void k_columnheadersmodel_on_header_data(void* self, QVariant* (*callback)(void*
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_columnheadersmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1100,6 +1229,7 @@ bool k_columnheadersmodel_set_header_data(void* self, int section, int32_t orien
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_columnheadersmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1110,6 +1240,7 @@ bool k_columnheadersmodel_qbase_set_header_data(void* self, int section, int32_t
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void k_columnheadersmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1120,6 +1251,7 @@ void k_columnheadersmodel_on_set_header_data(void* self, bool (*callback)(void*,
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_columnheadersmodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1130,6 +1262,7 @@ libqt_map /* of int to QVariant* */ k_columnheadersmodel_item_data(void* self, v
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_columnheadersmodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1140,6 +1273,7 @@ libqt_map /* of int to QVariant* */ k_columnheadersmodel_qbase_item_data(void* s
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(KColumnHeadersModel* self, QModelIndex* index)
+///
 void k_columnheadersmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1151,6 +1285,7 @@ void k_columnheadersmodel_on_item_data(void* self, libqt_map /* of int to QVaria
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_columnheadersmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1162,6 +1297,7 @@ bool k_columnheadersmodel_set_item_data(void* self, void* index, libqt_map /* of
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_columnheadersmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1172,6 +1308,7 @@ bool k_columnheadersmodel_qbase_set_item_data(void* self, void* index, libqt_map
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void k_columnheadersmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1182,6 +1319,7 @@ void k_columnheadersmodel_on_set_item_data(void* self, bool (*callback)(void*, v
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 bool k_columnheadersmodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1192,6 +1330,7 @@ bool k_columnheadersmodel_clear_item_data(void* self, void* index);
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 bool k_columnheadersmodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1202,6 +1341,7 @@ bool k_columnheadersmodel_qbase_clear_item_data(void* self, void* index);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* index)
+///
 void k_columnheadersmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1213,6 +1353,7 @@ void k_columnheadersmodel_on_clear_item_data(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 const char** k_columnheadersmodel_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1224,6 +1365,7 @@ const char** k_columnheadersmodel_mime_types(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 const char** k_columnheadersmodel_qbase_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1234,6 +1376,7 @@ const char** k_columnheadersmodel_qbase_mime_types(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback const char** func()
+///
 void k_columnheadersmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1244,6 +1387,7 @@ void k_columnheadersmodel_on_mime_types(void* self, const char** (*callback)());
 ///
 /// @param self KColumnHeadersModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_columnheadersmodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -1254,6 +1398,7 @@ QMimeData* k_columnheadersmodel_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self KColumnHeadersModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_columnheadersmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -1264,6 +1409,7 @@ QMimeData* k_columnheadersmodel_qbase_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QMimeData* func(KColumnHeadersModel* self, QModelIndex** indexes)
+///
 void k_columnheadersmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -1278,6 +1424,7 @@ void k_columnheadersmodel_on_mime_data(void* self, QMimeData* (*callback)(void*,
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1292,6 +1439,7 @@ bool k_columnheadersmodel_can_drop_mime_data(void* self, void* data, int32_t act
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1302,6 +1450,7 @@ bool k_columnheadersmodel_qbase_can_drop_mime_data(void* self, void* data, int32
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1313,6 +1462,7 @@ void k_columnheadersmodel_on_can_drop_mime_data(void* self, bool (*callback)(voi
 /// @param self KColumnHeadersModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_columnheadersmodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1324,6 +1474,7 @@ int32_t k_columnheadersmodel_supported_drop_actions(void* self);
 /// @param self KColumnHeadersModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_columnheadersmodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1334,6 +1485,7 @@ int32_t k_columnheadersmodel_qbase_supported_drop_actions(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func()
+///
 void k_columnheadersmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1345,6 +1497,7 @@ void k_columnheadersmodel_on_supported_drop_actions(void* self, int32_t (*callba
 /// @param self KColumnHeadersModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_columnheadersmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1356,6 +1509,7 @@ int32_t k_columnheadersmodel_supported_drag_actions(void* self);
 /// @param self KColumnHeadersModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_columnheadersmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1366,6 +1520,7 @@ int32_t k_columnheadersmodel_qbase_supported_drag_actions(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func()
+///
 void k_columnheadersmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1378,6 +1533,7 @@ void k_columnheadersmodel_on_supported_drag_actions(void* self, int32_t (*callba
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1390,6 +1546,7 @@ bool k_columnheadersmodel_insert_rows(void* self, int row, int count, void* pare
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1400,6 +1557,7 @@ bool k_columnheadersmodel_qbase_insert_rows(void* self, int row, int count, void
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, int row, int count, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1412,6 +1570,7 @@ void k_columnheadersmodel_on_insert_rows(void* self, bool (*callback)(void*, int
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1424,6 +1583,7 @@ bool k_columnheadersmodel_insert_columns(void* self, int column, int count, void
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1434,6 +1594,7 @@ bool k_columnheadersmodel_qbase_insert_columns(void* self, int column, int count
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, int column, int count, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1446,6 +1607,7 @@ void k_columnheadersmodel_on_insert_columns(void* self, bool (*callback)(void*, 
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1458,6 +1620,7 @@ bool k_columnheadersmodel_remove_rows(void* self, int row, int count, void* pare
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1468,6 +1631,7 @@ bool k_columnheadersmodel_qbase_remove_rows(void* self, int row, int count, void
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, int row, int count, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1480,6 +1644,7 @@ void k_columnheadersmodel_on_remove_rows(void* self, bool (*callback)(void*, int
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1492,6 +1657,7 @@ bool k_columnheadersmodel_remove_columns(void* self, int column, int count, void
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1502,6 +1668,7 @@ bool k_columnheadersmodel_qbase_remove_columns(void* self, int column, int count
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, int column, int count, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1516,6 +1683,7 @@ void k_columnheadersmodel_on_remove_columns(void* self, bool (*callback)(void*, 
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_columnheadersmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1530,6 +1698,7 @@ bool k_columnheadersmodel_move_rows(void* self, void* sourceParent, int sourceRo
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_columnheadersmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1540,6 +1709,7 @@ bool k_columnheadersmodel_qbase_move_rows(void* self, void* sourceParent, int so
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_columnheadersmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1554,6 +1724,7 @@ void k_columnheadersmodel_on_move_rows(void* self, bool (*callback)(void*, void*
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_columnheadersmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1568,6 +1739,7 @@ bool k_columnheadersmodel_move_columns(void* self, void* sourceParent, int sourc
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_columnheadersmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1578,6 +1750,7 @@ bool k_columnheadersmodel_qbase_move_columns(void* self, void* sourceParent, int
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_columnheadersmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1588,6 +1761,7 @@ void k_columnheadersmodel_on_move_columns(void* self, bool (*callback)(void*, vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 void k_columnheadersmodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1598,6 +1772,7 @@ void k_columnheadersmodel_fetch_more(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 void k_columnheadersmodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1608,6 +1783,7 @@ void k_columnheadersmodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1618,6 +1794,7 @@ void k_columnheadersmodel_on_fetch_more(void* self, void (*callback)(void*, void
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1628,6 +1805,7 @@ bool k_columnheadersmodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param parent QModelIndex*
+///
 bool k_columnheadersmodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1638,6 +1816,7 @@ bool k_columnheadersmodel_qbase_can_fetch_more(void* self, void* parent);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* parent)
+///
 void k_columnheadersmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1649,6 +1828,7 @@ void k_columnheadersmodel_on_can_fetch_more(void* self, bool (*callback)(void*, 
 /// @param self KColumnHeadersModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_columnheadersmodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1660,6 +1840,7 @@ void k_columnheadersmodel_sort(void* self, int column, int32_t order);
 /// @param self KColumnHeadersModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_columnheadersmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1670,6 +1851,7 @@ void k_columnheadersmodel_qbase_sort(void* self, int column, int32_t order);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, int column, enum Qt__SortOrder order)
+///
 void k_columnheadersmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1680,6 +1862,7 @@ void k_columnheadersmodel_on_sort(void* self, void (*callback)(void*, int, int32
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1690,6 +1873,7 @@ QModelIndex* k_columnheadersmodel_buddy(void* self, void* index);
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_columnheadersmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1700,6 +1884,7 @@ QModelIndex* k_columnheadersmodel_qbase_buddy(void* self, void* index);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QModelIndex* func(KColumnHeadersModel* self, QModelIndex* index)
+///
 void k_columnheadersmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1714,6 +1899,7 @@ void k_columnheadersmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, v
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_columnheadersmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1728,6 +1914,7 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_match(void* self, void* st
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1738,6 +1925,7 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_match(void* self, vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QModelIndex** func(KColumnHeadersModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void k_columnheadersmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1748,6 +1936,7 @@ void k_columnheadersmodel_on_match(void* self, QModelIndex** (*callback)(void*, 
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 QSize* k_columnheadersmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1758,6 +1947,7 @@ QSize* k_columnheadersmodel_span(void* self, void* index);
 ///
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
+///
 QSize* k_columnheadersmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1768,6 +1958,7 @@ QSize* k_columnheadersmodel_qbase_span(void* self, void* index);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QSize* func(KColumnHeadersModel* self, QModelIndex* index)
+///
 void k_columnheadersmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1779,6 +1970,7 @@ void k_columnheadersmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_columnheadersmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1790,6 +1982,7 @@ void k_columnheadersmodel_multi_data(void* self, void* index, void* roleDataSpan
 /// @param self KColumnHeadersModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_columnheadersmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1800,6 +1993,7 @@ void k_columnheadersmodel_qbase_multi_data(void* self, void* index, void* roleDa
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void k_columnheadersmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1809,6 +2003,7 @@ void k_columnheadersmodel_on_multi_data(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 bool k_columnheadersmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1818,6 +2013,7 @@ bool k_columnheadersmodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 bool k_columnheadersmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1828,6 +2024,7 @@ bool k_columnheadersmodel_qbase_submit(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func()
+///
 void k_columnheadersmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1837,6 +2034,7 @@ void k_columnheadersmodel_on_submit(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1846,6 +2044,7 @@ void k_columnheadersmodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1856,6 +2055,7 @@ void k_columnheadersmodel_qbase_revert(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1865,6 +2065,7 @@ void k_columnheadersmodel_on_revert(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1874,6 +2075,7 @@ void k_columnheadersmodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1884,6 +2086,7 @@ void k_columnheadersmodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1894,6 +2097,7 @@ void k_columnheadersmodel_on_reset_internal_data(void* self, void (*callback)())
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QEvent*
+///
 bool k_columnheadersmodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1904,6 +2108,7 @@ bool k_columnheadersmodel_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QEvent*
+///
 bool k_columnheadersmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1914,6 +2119,7 @@ bool k_columnheadersmodel_qbase_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QEvent* event)
+///
 void k_columnheadersmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1925,6 +2131,7 @@ void k_columnheadersmodel_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KColumnHeadersModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_columnheadersmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1936,6 +2143,7 @@ bool k_columnheadersmodel_event_filter(void* self, void* watched, void* event);
 /// @param self KColumnHeadersModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_columnheadersmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1946,6 +2154,7 @@ bool k_columnheadersmodel_qbase_event_filter(void* self, void* watched, void* ev
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QObject* watched, QEvent* event)
+///
 void k_columnheadersmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1956,6 +2165,7 @@ void k_columnheadersmodel_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QTimerEvent*
+///
 void k_columnheadersmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1966,6 +2176,7 @@ void k_columnheadersmodel_timer_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QTimerEvent*
+///
 void k_columnheadersmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1976,6 +2187,7 @@ void k_columnheadersmodel_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QTimerEvent* event)
+///
 void k_columnheadersmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1986,6 +2198,7 @@ void k_columnheadersmodel_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QChildEvent*
+///
 void k_columnheadersmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1996,6 +2209,7 @@ void k_columnheadersmodel_child_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QChildEvent*
+///
 void k_columnheadersmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2006,6 +2220,7 @@ void k_columnheadersmodel_qbase_child_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QChildEvent* event)
+///
 void k_columnheadersmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2016,6 +2231,7 @@ void k_columnheadersmodel_on_child_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QEvent*
+///
 void k_columnheadersmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2026,6 +2242,7 @@ void k_columnheadersmodel_custom_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param event QEvent*
+///
 void k_columnheadersmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2036,6 +2253,7 @@ void k_columnheadersmodel_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QEvent* event)
+///
 void k_columnheadersmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2046,6 +2264,7 @@ void k_columnheadersmodel_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal QMetaMethod*
+///
 void k_columnheadersmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2056,6 +2275,7 @@ void k_columnheadersmodel_connect_notify(void* self, void* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal QMetaMethod*
+///
 void k_columnheadersmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2066,6 +2286,7 @@ void k_columnheadersmodel_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QMetaMethod* signal)
+///
 void k_columnheadersmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2076,6 +2297,7 @@ void k_columnheadersmodel_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal QMetaMethod*
+///
 void k_columnheadersmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2086,6 +2308,7 @@ void k_columnheadersmodel_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal QMetaMethod*
+///
 void k_columnheadersmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2096,6 +2319,7 @@ void k_columnheadersmodel_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QMetaMethod* signal)
+///
 void k_columnheadersmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2107,6 +2331,7 @@ void k_columnheadersmodel_on_disconnect_notify(void* self, void (*callback)(void
 /// @param self KColumnHeadersModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_columnheadersmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2118,6 +2343,7 @@ QModelIndex* k_columnheadersmodel_create_index(void* self, int row, int column);
 /// @param self KColumnHeadersModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_columnheadersmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2128,6 +2354,7 @@ QModelIndex* k_columnheadersmodel_qbase_create_index(void* self, int row, int co
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QModelIndex* func(KColumnHeadersModel* self, int row, int column)
+///
 void k_columnheadersmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2139,6 +2366,7 @@ void k_columnheadersmodel_on_create_index(void* self, QModelIndex* (*callback)(v
 /// @param self KColumnHeadersModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_columnheadersmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2150,6 +2378,7 @@ void k_columnheadersmodel_encode_data(void* self, libqt_list indexes, void* stre
 /// @param self KColumnHeadersModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_columnheadersmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2160,6 +2389,7 @@ void k_columnheadersmodel_qbase_encode_data(void* self, libqt_list indexes, void
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void k_columnheadersmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2173,6 +2403,7 @@ void k_columnheadersmodel_on_encode_data(void* self, void (*callback)(void*, QMo
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_columnheadersmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2186,6 +2417,7 @@ bool k_columnheadersmodel_decode_data(void* self, int row, int column, void* par
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_columnheadersmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2196,6 +2428,7 @@ bool k_columnheadersmodel_qbase_decode_data(void* self, int row, int column, voi
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void k_columnheadersmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2208,6 +2441,7 @@ void k_columnheadersmodel_on_decode_data(void* self, bool (*callback)(void*, int
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2220,6 +2454,7 @@ void k_columnheadersmodel_begin_insert_rows(void* self, void* parent, int first,
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2230,6 +2465,7 @@ void k_columnheadersmodel_qbase_begin_insert_rows(void* self, void* parent, int 
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2239,6 +2475,7 @@ void k_columnheadersmodel_on_begin_insert_rows(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2248,6 +2485,7 @@ void k_columnheadersmodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2258,6 +2496,7 @@ void k_columnheadersmodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2270,6 +2509,7 @@ void k_columnheadersmodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2282,6 +2522,7 @@ void k_columnheadersmodel_begin_remove_rows(void* self, void* parent, int first,
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2292,6 +2533,7 @@ void k_columnheadersmodel_qbase_begin_remove_rows(void* self, void* parent, int 
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2301,6 +2543,7 @@ void k_columnheadersmodel_on_begin_remove_rows(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2310,6 +2553,7 @@ void k_columnheadersmodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2320,6 +2564,7 @@ void k_columnheadersmodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2334,6 +2579,7 @@ void k_columnheadersmodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_columnheadersmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2348,6 +2594,7 @@ bool k_columnheadersmodel_begin_move_rows(void* self, void* sourceParent, int so
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_columnheadersmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2358,6 +2605,7 @@ bool k_columnheadersmodel_qbase_begin_move_rows(void* self, void* sourceParent, 
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void k_columnheadersmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2367,6 +2615,7 @@ void k_columnheadersmodel_on_begin_move_rows(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2376,6 +2625,7 @@ void k_columnheadersmodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2386,6 +2636,7 @@ void k_columnheadersmodel_qbase_end_move_rows(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2398,6 +2649,7 @@ void k_columnheadersmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2410,6 +2662,7 @@ void k_columnheadersmodel_begin_insert_columns(void* self, void* parent, int fir
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2420,6 +2673,7 @@ void k_columnheadersmodel_qbase_begin_insert_columns(void* self, void* parent, i
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2429,6 +2683,7 @@ void k_columnheadersmodel_on_begin_insert_columns(void* self, void (*callback)(v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2438,6 +2693,7 @@ void k_columnheadersmodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2448,6 +2704,7 @@ void k_columnheadersmodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2460,6 +2717,7 @@ void k_columnheadersmodel_on_end_insert_columns(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2472,6 +2730,7 @@ void k_columnheadersmodel_begin_remove_columns(void* self, void* parent, int fir
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_columnheadersmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2482,6 +2741,7 @@ void k_columnheadersmodel_qbase_begin_remove_columns(void* self, void* parent, i
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2491,6 +2751,7 @@ void k_columnheadersmodel_on_begin_remove_columns(void* self, void (*callback)(v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2500,6 +2761,7 @@ void k_columnheadersmodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2510,6 +2772,7 @@ void k_columnheadersmodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2524,6 +2787,7 @@ void k_columnheadersmodel_on_end_remove_columns(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_columnheadersmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2538,6 +2802,7 @@ bool k_columnheadersmodel_begin_move_columns(void* self, void* sourceParent, int
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_columnheadersmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2548,6 +2813,7 @@ bool k_columnheadersmodel_qbase_begin_move_columns(void* self, void* sourceParen
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_columnheadersmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2557,6 +2823,7 @@ void k_columnheadersmodel_on_begin_move_columns(void* self, bool (*callback)(voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2566,6 +2833,7 @@ void k_columnheadersmodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2576,6 +2844,7 @@ void k_columnheadersmodel_qbase_end_move_columns(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2585,6 +2854,7 @@ void k_columnheadersmodel_on_end_move_columns(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2594,6 +2864,7 @@ void k_columnheadersmodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2604,6 +2875,7 @@ void k_columnheadersmodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2613,6 +2885,7 @@ void k_columnheadersmodel_on_begin_reset_model(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2622,6 +2895,7 @@ void k_columnheadersmodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2632,6 +2906,7 @@ void k_columnheadersmodel_qbase_end_reset_model(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func()
+///
 void k_columnheadersmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2643,6 +2918,7 @@ void k_columnheadersmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param self KColumnHeadersModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_columnheadersmodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2654,6 +2930,7 @@ void k_columnheadersmodel_change_persistent_index(void* self, void* from, void* 
 /// @param self KColumnHeadersModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_columnheadersmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2664,6 +2941,7 @@ void k_columnheadersmodel_qbase_change_persistent_index(void* self, void* from, 
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* from, QModelIndex* to)
+///
 void k_columnheadersmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2675,6 +2953,7 @@ void k_columnheadersmodel_on_change_persistent_index(void* self, void (*callback
 /// @param self KColumnHeadersModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_columnheadersmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2686,6 +2965,7 @@ void k_columnheadersmodel_change_persistent_index_list(void* self, libqt_list fr
 /// @param self KColumnHeadersModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_columnheadersmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2696,6 +2976,7 @@ void k_columnheadersmodel_qbase_change_persistent_index_list(void* self, libqt_l
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex** from, QModelIndex** to)
+///
 void k_columnheadersmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -2705,6 +2986,7 @@ void k_columnheadersmodel_on_change_persistent_index_list(void* self, void (*cal
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 libqt_list /* of QModelIndex* */ k_columnheadersmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2714,6 +2996,7 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_persistent_index_list(void
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2724,6 +3007,7 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_persistent_index_lis
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QModelIndex** func()
+///
 void k_columnheadersmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -2733,6 +3017,7 @@ void k_columnheadersmodel_on_persistent_index_list(void* self, QModelIndex** (*c
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 QObject* k_columnheadersmodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2742,6 +3027,7 @@ QObject* k_columnheadersmodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 QObject* k_columnheadersmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2752,6 +3038,7 @@ QObject* k_columnheadersmodel_qbase_sender(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback QObject* func()
+///
 void k_columnheadersmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2761,6 +3048,7 @@ void k_columnheadersmodel_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 int32_t k_columnheadersmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2770,6 +3058,7 @@ int32_t k_columnheadersmodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColumnHeadersModel*
+///
 int32_t k_columnheadersmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2780,6 +3069,7 @@ int32_t k_columnheadersmodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func()
+///
 void k_columnheadersmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2790,6 +3080,7 @@ void k_columnheadersmodel_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal const char*
+///
 int32_t k_columnheadersmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2800,6 +3091,7 @@ int32_t k_columnheadersmodel_receivers(void* self, const char* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal const char*
+///
 int32_t k_columnheadersmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2810,6 +3102,7 @@ int32_t k_columnheadersmodel_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback int32_t func(KColumnHeadersModel* self, const char* signal)
+///
 void k_columnheadersmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2820,6 +3113,7 @@ void k_columnheadersmodel_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal QMetaMethod*
+///
 bool k_columnheadersmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2830,6 +3124,7 @@ bool k_columnheadersmodel_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param signal QMetaMethod*
+///
 bool k_columnheadersmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2840,6 +3135,7 @@ bool k_columnheadersmodel_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback bool func(KColumnHeadersModel* self, QMetaMethod* signal)
+///
 void k_columnheadersmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2850,6 +3146,7 @@ void k_columnheadersmodel_on_is_signal_connected(void* self, bool (*callback)(vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2860,6 +3157,7 @@ void k_columnheadersmodel_on_rows_about_to_be_inserted(void* self, void (*callba
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2870,6 +3168,7 @@ void k_columnheadersmodel_on_rows_inserted(void* self, void (*callback)(void*, v
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2880,6 +3179,7 @@ void k_columnheadersmodel_on_rows_about_to_be_removed(void* self, void (*callbac
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2890,6 +3190,7 @@ void k_columnheadersmodel_on_rows_removed(void* self, void (*callback)(void*, vo
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2900,6 +3201,7 @@ void k_columnheadersmodel_on_columns_about_to_be_inserted(void* self, void (*cal
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2910,6 +3212,7 @@ void k_columnheadersmodel_on_columns_inserted(void* self, void (*callback)(void*
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2920,6 +3223,7 @@ void k_columnheadersmodel_on_columns_about_to_be_removed(void* self, void (*call
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* parent, int first, int last)
+///
 void k_columnheadersmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2930,6 +3234,7 @@ void k_columnheadersmodel_on_columns_removed(void* self, void (*callback)(void*,
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2940,6 +3245,7 @@ void k_columnheadersmodel_on_model_about_to_be_reset(void* self, void (*callback
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self)
+///
 void k_columnheadersmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2950,6 +3256,7 @@ void k_columnheadersmodel_on_model_reset(void* self, void (*callback)(void*));
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_columnheadersmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2960,6 +3267,7 @@ void k_columnheadersmodel_on_rows_about_to_be_moved(void* self, void (*callback)
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_columnheadersmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2970,6 +3278,7 @@ void k_columnheadersmodel_on_rows_moved(void* self, void (*callback)(void*, void
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_columnheadersmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2980,6 +3289,7 @@ void k_columnheadersmodel_on_columns_about_to_be_moved(void* self, void (*callba
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_columnheadersmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2990,6 +3300,7 @@ void k_columnheadersmodel_on_columns_moved(void* self, void (*callback)(void*, v
 ///
 /// @param self KColumnHeadersModel*
 /// @param callback void func(KColumnHeadersModel* self, const char* objectName)
+///
 void k_columnheadersmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#dtor.KColumnHeadersModel)
@@ -2997,9 +3308,10 @@ void k_columnheadersmodel_on_object_name_changed(void* self, void (*callback)(vo
 /// Delete this object from C++ memory.
 ///
 /// @param self KColumnHeadersModel*
+///
 void k_columnheadersmodel_delete(void* self);
 
-/// https://api.kde.org/kcolumnheadersmodel.html#types
+/// [Upstream resources](https://api.kde.org/kcolumnheadersmodel.html#public-types)
 
 typedef enum {
     KCOLUMNHEADERSMODEL_EXTRAROLES_SORTROLE = 18714894

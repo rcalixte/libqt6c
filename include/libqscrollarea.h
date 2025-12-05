@@ -11,12 +11,15 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qscrollarea.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html)
 
 /// q_scrollarea_new constructs a new QScrollArea object.
 ///
 /// @param parent QWidget*
+///
 QScrollArea* q_scrollarea_new(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html)
 
 /// q_scrollarea_new2 constructs a new QScrollArea object.
 ///
@@ -25,22 +28,26 @@ QScrollArea* q_scrollarea_new2();
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QScrollArea*
+///
 const QMetaObject* q_scrollarea_meta_object(void* self);
 
 /// @param self QScrollArea*
 /// @param param1 const char*
+///
 void* q_scrollarea_metacast(void* self, const char* param1);
 
 /// @param self QScrollArea*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_scrollarea_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QScrollArea*
 /// @param callback int32_t func(QScrollArea* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_scrollarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_scrollarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_scrollarea_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,38 +64,45 @@ int32_t q_scrollarea_qbase_metacall(void* self, int32_t param1, int param2, void
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_scrollarea_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#widget)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_widget(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#setWidget)
 ///
 /// @param self QScrollArea*
 /// @param widget QWidget*
+///
 void q_scrollarea_set_widget(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#takeWidget)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_take_widget(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#widgetResizable)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_widget_resizable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#setWidgetResizable)
 ///
 /// @param self QScrollArea*
 /// @param resizable bool
+///
 void q_scrollarea_set_widget_resizable(void* self, bool resizable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#sizeHint)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#sizeHint)
@@ -96,6 +111,7 @@ QSize* q_scrollarea_size_hint(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback QSize* func()
+///
 void q_scrollarea_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#sizeHint)
@@ -103,12 +119,14 @@ void q_scrollarea_on_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_qbase_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#focusNextPrevChild)
 ///
 /// @param self QScrollArea*
 /// @param next bool
+///
 bool q_scrollarea_focus_next_prev_child(void* self, bool next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#focusNextPrevChild)
@@ -117,6 +135,7 @@ bool q_scrollarea_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func(QScrollArea* self, bool next)
+///
 void q_scrollarea_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#focusNextPrevChild)
@@ -125,6 +144,7 @@ void q_scrollarea_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 ///
 /// @param self QScrollArea*
 /// @param next bool
+///
 bool q_scrollarea_qbase_focus_next_prev_child(void* self, bool next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#alignment)
@@ -132,12 +152,14 @@ bool q_scrollarea_qbase_focus_next_prev_child(void* self, bool next);
 /// @param self QScrollArea*
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t q_scrollarea_alignment(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#setAlignment)
 ///
 /// @param self QScrollArea*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 void q_scrollarea_set_alignment(void* self, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#ensureVisible)
@@ -145,18 +167,21 @@ void q_scrollarea_set_alignment(void* self, int32_t alignment);
 /// @param self QScrollArea*
 /// @param x int
 /// @param y int
+///
 void q_scrollarea_ensure_visible(void* self, int x, int y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#ensureWidgetVisible)
 ///
 /// @param self QScrollArea*
 /// @param childWidget QWidget*
+///
 void q_scrollarea_ensure_widget_visible(void* self, void* childWidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#event)
 ///
 /// @param self QScrollArea*
 /// @param param1 QEvent*
+///
 bool q_scrollarea_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#event)
@@ -165,6 +190,7 @@ bool q_scrollarea_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func(QScrollArea* self, QEvent* param1)
+///
 void q_scrollarea_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#event)
@@ -173,6 +199,7 @@ void q_scrollarea_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param param1 QEvent*
+///
 bool q_scrollarea_qbase_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#eventFilter)
@@ -180,6 +207,7 @@ bool q_scrollarea_qbase_event(void* self, void* param1);
 /// @param self QScrollArea*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool q_scrollarea_event_filter(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#eventFilter)
@@ -188,6 +216,7 @@ bool q_scrollarea_event_filter(void* self, void* param1, void* param2);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func(QScrollArea* self, QObject* param1, QEvent* param2)
+///
 void q_scrollarea_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#eventFilter)
@@ -197,12 +226,14 @@ void q_scrollarea_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 /// @param self QScrollArea*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool q_scrollarea_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#resizeEvent)
 ///
 /// @param self QScrollArea*
 /// @param param1 QResizeEvent*
+///
 void q_scrollarea_resize_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#resizeEvent)
@@ -211,6 +242,7 @@ void q_scrollarea_resize_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QResizeEvent* param1)
+///
 void q_scrollarea_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#resizeEvent)
@@ -219,6 +251,7 @@ void q_scrollarea_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param param1 QResizeEvent*
+///
 void q_scrollarea_qbase_resize_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#scrollContentsBy)
@@ -226,6 +259,7 @@ void q_scrollarea_qbase_resize_event(void* self, void* param1);
 /// @param self QScrollArea*
 /// @param dx int
 /// @param dy int
+///
 void q_scrollarea_scroll_contents_by(void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#scrollContentsBy)
@@ -234,6 +268,7 @@ void q_scrollarea_scroll_contents_by(void* self, int dx, int dy);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, int dx, int dy)
+///
 void q_scrollarea_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#scrollContentsBy)
@@ -243,11 +278,13 @@ void q_scrollarea_on_scroll_contents_by(void* self, void (*callback)(void*, int,
 /// @param self QScrollArea*
 /// @param dx int
 /// @param dy int
+///
 void q_scrollarea_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#viewportSizeHint)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_viewport_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#viewportSizeHint)
@@ -256,6 +293,7 @@ QSize* q_scrollarea_viewport_size_hint(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback QSize* func()
+///
 void q_scrollarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#viewportSizeHint)
@@ -263,6 +301,7 @@ void q_scrollarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_qbase_viewport_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -271,6 +310,7 @@ QSize* q_scrollarea_qbase_viewport_size_hint(void* self);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_scrollarea_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -280,6 +320,7 @@ const char* q_scrollarea_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_scrollarea_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#ensureVisible)
@@ -288,6 +329,7 @@ const char* q_scrollarea_tr3(const char* s, const char* c, int n);
 /// @param x int
 /// @param y int
 /// @param xmargin int
+///
 void q_scrollarea_ensure_visible3(void* self, int x, int y, int xmargin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#ensureVisible)
@@ -297,6 +339,7 @@ void q_scrollarea_ensure_visible3(void* self, int x, int y, int xmargin);
 /// @param y int
 /// @param xmargin int
 /// @param ymargin int
+///
 void q_scrollarea_ensure_visible4(void* self, int x, int y, int xmargin, int ymargin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#ensureWidgetVisible)
@@ -304,6 +347,7 @@ void q_scrollarea_ensure_visible4(void* self, int x, int y, int xmargin, int yma
 /// @param self QScrollArea*
 /// @param childWidget QWidget*
 /// @param xmargin int
+///
 void q_scrollarea_ensure_widget_visible2(void* self, void* childWidget, int xmargin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#ensureWidgetVisible)
@@ -312,6 +356,7 @@ void q_scrollarea_ensure_widget_visible2(void* self, void* childWidget, int xmar
 /// @param childWidget QWidget*
 /// @param xmargin int
 /// @param ymargin int
+///
 void q_scrollarea_ensure_widget_visible3(void* self, void* childWidget, int xmargin, int ymargin);
 
 /// Inherited from QAbstractScrollArea
@@ -321,6 +366,7 @@ void q_scrollarea_ensure_widget_visible3(void* self, void* childWidget, int xmar
 /// @param self QScrollArea*
 ///
 /// @return enum Qt__ScrollBarPolicy
+///
 int32_t q_scrollarea_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -329,6 +375,7 @@ int32_t q_scrollarea_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QScrollArea*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
+///
 void q_scrollarea_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
@@ -336,6 +383,7 @@ void q_scrollarea_set_vertical_scroll_bar_policy(void* self, int32_t verticalScr
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
 /// @param self QScrollArea*
+///
 QScrollBar* q_scrollarea_vertical_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -344,6 +392,7 @@ QScrollBar* q_scrollarea_vertical_scroll_bar(void* self);
 ///
 /// @param self QScrollArea*
 /// @param scrollbar QScrollBar*
+///
 void q_scrollarea_set_vertical_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
@@ -353,6 +402,7 @@ void q_scrollarea_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QScrollArea*
 ///
 /// @return enum Qt__ScrollBarPolicy
+///
 int32_t q_scrollarea_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -361,6 +411,7 @@ int32_t q_scrollarea_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QScrollArea*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
+///
 void q_scrollarea_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
@@ -368,6 +419,7 @@ void q_scrollarea_set_horizontal_scroll_bar_policy(void* self, int32_t horizonta
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
 /// @param self QScrollArea*
+///
 QScrollBar* q_scrollarea_horizontal_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -376,6 +428,7 @@ QScrollBar* q_scrollarea_horizontal_scroll_bar(void* self);
 ///
 /// @param self QScrollArea*
 /// @param scrollbar QScrollBar*
+///
 void q_scrollarea_set_horizontal_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
@@ -383,6 +436,7 @@ void q_scrollarea_set_horizontal_scroll_bar(void* self, void* scrollbar);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_corner_widget(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -391,6 +445,7 @@ QWidget* q_scrollarea_corner_widget(void* self);
 ///
 /// @param self QScrollArea*
 /// @param widget QWidget*
+///
 void q_scrollarea_set_corner_widget(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
@@ -400,6 +455,7 @@ void q_scrollarea_set_corner_widget(void* self, void* widget);
 /// @param self QScrollArea*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 void q_scrollarea_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
@@ -408,6 +464,7 @@ void q_scrollarea_add_scroll_bar_widget(void* self, void* widget, int32_t alignm
 ///
 /// @param self QScrollArea*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 libqt_list /* of QWidget* */ q_scrollarea_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
@@ -415,6 +472,7 @@ libqt_list /* of QWidget* */ q_scrollarea_scroll_bar_widgets(void* self, int32_t
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_viewport(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -423,6 +481,7 @@ QWidget* q_scrollarea_viewport(void* self);
 ///
 /// @param self QScrollArea*
 /// @param widget QWidget*
+///
 void q_scrollarea_set_viewport(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
@@ -430,6 +489,7 @@ void q_scrollarea_set_viewport(void* self, void* widget);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_maximum_viewport_size(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -439,6 +499,7 @@ QSize* q_scrollarea_maximum_viewport_size(void* self);
 /// @param self QScrollArea*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
+///
 int32_t q_scrollarea_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -447,6 +508,7 @@ int32_t q_scrollarea_size_adjust_policy(void* self);
 ///
 /// @param self QScrollArea*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
+///
 void q_scrollarea_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
@@ -454,6 +516,7 @@ void q_scrollarea_set_size_adjust_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_frame_style(void* self);
 
 /// Inherited from QFrame
@@ -462,6 +525,7 @@ int32_t q_scrollarea_frame_style(void* self);
 ///
 /// @param self QScrollArea*
 /// @param frameStyle int
+///
 void q_scrollarea_set_frame_style(void* self, int frameStyle);
 
 /// Inherited from QFrame
@@ -469,6 +533,7 @@ void q_scrollarea_set_frame_style(void* self, int frameStyle);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_frame_width(void* self);
 
 /// Inherited from QFrame
@@ -478,6 +543,7 @@ int32_t q_scrollarea_frame_width(void* self);
 /// @param self QScrollArea*
 ///
 /// @return enum QFrame__Shape
+///
 int32_t q_scrollarea_frame_shape(void* self);
 
 /// Inherited from QFrame
@@ -486,6 +552,7 @@ int32_t q_scrollarea_frame_shape(void* self);
 ///
 /// @param self QScrollArea*
 /// @param frameShape enum QFrame__Shape
+///
 void q_scrollarea_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
@@ -495,6 +562,7 @@ void q_scrollarea_set_frame_shape(void* self, int32_t frameShape);
 /// @param self QScrollArea*
 ///
 /// @return enum QFrame__Shadow
+///
 int32_t q_scrollarea_frame_shadow(void* self);
 
 /// Inherited from QFrame
@@ -503,6 +571,7 @@ int32_t q_scrollarea_frame_shadow(void* self);
 ///
 /// @param self QScrollArea*
 /// @param frameShadow enum QFrame__Shadow
+///
 void q_scrollarea_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
@@ -510,6 +579,7 @@ void q_scrollarea_set_frame_shadow(void* self, int32_t frameShadow);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_line_width(void* self);
 
 /// Inherited from QFrame
@@ -518,6 +588,7 @@ int32_t q_scrollarea_line_width(void* self);
 ///
 /// @param self QScrollArea*
 /// @param lineWidth int
+///
 void q_scrollarea_set_line_width(void* self, int lineWidth);
 
 /// Inherited from QFrame
@@ -525,6 +596,7 @@ void q_scrollarea_set_line_width(void* self, int lineWidth);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_mid_line_width(void* self);
 
 /// Inherited from QFrame
@@ -533,6 +605,7 @@ int32_t q_scrollarea_mid_line_width(void* self);
 ///
 /// @param self QScrollArea*
 /// @param midLineWidth int
+///
 void q_scrollarea_set_mid_line_width(void* self, int midLineWidth);
 
 /// Inherited from QFrame
@@ -540,6 +613,7 @@ void q_scrollarea_set_mid_line_width(void* self, int midLineWidth);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
 /// @param self QScrollArea*
+///
 QRect* q_scrollarea_frame_rect(void* self);
 
 /// Inherited from QFrame
@@ -548,6 +622,7 @@ QRect* q_scrollarea_frame_rect(void* self);
 ///
 /// @param self QScrollArea*
 /// @param frameRect QRect*
+///
 void q_scrollarea_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
@@ -555,6 +630,7 @@ void q_scrollarea_set_frame_rect(void* self, void* frameRect);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QScrollArea*
+///
 uintptr_t q_scrollarea_win_id(void* self);
 
 /// Inherited from QWidget
@@ -562,6 +638,7 @@ uintptr_t q_scrollarea_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -569,6 +646,7 @@ void q_scrollarea_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self QScrollArea*
+///
 uintptr_t q_scrollarea_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -576,6 +654,7 @@ uintptr_t q_scrollarea_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self QScrollArea*
+///
 uintptr_t q_scrollarea_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -583,6 +662,7 @@ uintptr_t q_scrollarea_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self QScrollArea*
+///
 QStyle* q_scrollarea_style(void* self);
 
 /// Inherited from QWidget
@@ -591,6 +671,7 @@ QStyle* q_scrollarea_style(void* self);
 ///
 /// @param self QScrollArea*
 /// @param style QStyle*
+///
 void q_scrollarea_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -598,6 +679,7 @@ void q_scrollarea_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -605,6 +687,7 @@ bool q_scrollarea_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_window(void* self);
 
 /// Inherited from QWidget
@@ -612,6 +695,7 @@ bool q_scrollarea_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -621,6 +705,7 @@ bool q_scrollarea_is_modal(void* self);
 /// @param self QScrollArea*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t q_scrollarea_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -629,6 +714,7 @@ int32_t q_scrollarea_window_modality(void* self);
 ///
 /// @param self QScrollArea*
 /// @param windowModality enum Qt__WindowModality
+///
 void q_scrollarea_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -636,6 +722,7 @@ void q_scrollarea_set_window_modality(void* self, int32_t windowModality);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -644,6 +731,7 @@ bool q_scrollarea_is_enabled(void* self);
 ///
 /// @param self QScrollArea*
 /// @param param1 QWidget*
+///
 bool q_scrollarea_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -652,6 +740,7 @@ bool q_scrollarea_is_enabled_to(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param enabled bool
+///
 void q_scrollarea_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -660,6 +749,7 @@ void q_scrollarea_set_enabled(void* self, bool enabled);
 ///
 /// @param self QScrollArea*
 /// @param disabled bool
+///
 void q_scrollarea_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -668,6 +758,7 @@ void q_scrollarea_set_disabled(void* self, bool disabled);
 ///
 /// @param self QScrollArea*
 /// @param windowModified bool
+///
 void q_scrollarea_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -675,6 +766,7 @@ void q_scrollarea_set_window_modified(void* self, bool windowModified);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self QScrollArea*
+///
 QRect* q_scrollarea_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -682,6 +774,7 @@ QRect* q_scrollarea_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self QScrollArea*
+///
 const QRect* q_scrollarea_geometry(void* self);
 
 /// Inherited from QWidget
@@ -689,6 +782,7 @@ const QRect* q_scrollarea_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self QScrollArea*
+///
 QRect* q_scrollarea_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -696,6 +790,7 @@ QRect* q_scrollarea_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_x(void* self);
 
 /// Inherited from QWidget
@@ -703,6 +798,7 @@ int32_t q_scrollarea_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_y(void* self);
 
 /// Inherited from QWidget
@@ -710,6 +806,7 @@ int32_t q_scrollarea_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self QScrollArea*
+///
 QPoint* q_scrollarea_pos(void* self);
 
 /// Inherited from QWidget
@@ -717,6 +814,7 @@ QPoint* q_scrollarea_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -724,6 +822,7 @@ QSize* q_scrollarea_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_size(void* self);
 
 /// Inherited from QWidget
@@ -731,6 +830,7 @@ QSize* q_scrollarea_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_width(void* self);
 
 /// Inherited from QWidget
@@ -738,6 +838,7 @@ int32_t q_scrollarea_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_height(void* self);
 
 /// Inherited from QWidget
@@ -745,6 +846,7 @@ int32_t q_scrollarea_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self QScrollArea*
+///
 QRect* q_scrollarea_rect(void* self);
 
 /// Inherited from QWidget
@@ -752,6 +854,7 @@ QRect* q_scrollarea_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self QScrollArea*
+///
 QRect* q_scrollarea_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -759,6 +862,7 @@ QRect* q_scrollarea_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self QScrollArea*
+///
 QRegion* q_scrollarea_children_region(void* self);
 
 /// Inherited from QWidget
@@ -766,6 +870,7 @@ QRegion* q_scrollarea_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -773,6 +878,7 @@ QSize* q_scrollarea_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -780,6 +886,7 @@ QSize* q_scrollarea_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -787,6 +894,7 @@ int32_t q_scrollarea_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -794,6 +902,7 @@ int32_t q_scrollarea_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -801,6 +910,7 @@ int32_t q_scrollarea_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -809,6 +919,7 @@ int32_t q_scrollarea_maximum_height(void* self);
 ///
 /// @param self QScrollArea*
 /// @param minimumSize QSize*
+///
 void q_scrollarea_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -818,6 +929,7 @@ void q_scrollarea_set_minimum_size(void* self, void* minimumSize);
 /// @param self QScrollArea*
 /// @param minw int
 /// @param minh int
+///
 void q_scrollarea_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -826,6 +938,7 @@ void q_scrollarea_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self QScrollArea*
 /// @param maximumSize QSize*
+///
 void q_scrollarea_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -835,6 +948,7 @@ void q_scrollarea_set_maximum_size(void* self, void* maximumSize);
 /// @param self QScrollArea*
 /// @param maxw int
 /// @param maxh int
+///
 void q_scrollarea_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -843,6 +957,7 @@ void q_scrollarea_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self QScrollArea*
 /// @param minw int
+///
 void q_scrollarea_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -851,6 +966,7 @@ void q_scrollarea_set_minimum_width(void* self, int minw);
 ///
 /// @param self QScrollArea*
 /// @param minh int
+///
 void q_scrollarea_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -859,6 +975,7 @@ void q_scrollarea_set_minimum_height(void* self, int minh);
 ///
 /// @param self QScrollArea*
 /// @param maxw int
+///
 void q_scrollarea_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -867,6 +984,7 @@ void q_scrollarea_set_maximum_width(void* self, int maxw);
 ///
 /// @param self QScrollArea*
 /// @param maxh int
+///
 void q_scrollarea_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -874,6 +992,7 @@ void q_scrollarea_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -882,6 +1001,7 @@ QSize* q_scrollarea_size_increment(void* self);
 ///
 /// @param self QScrollArea*
 /// @param sizeIncrement QSize*
+///
 void q_scrollarea_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -891,6 +1011,7 @@ void q_scrollarea_set_size_increment(void* self, void* sizeIncrement);
 /// @param self QScrollArea*
 /// @param w int
 /// @param h int
+///
 void q_scrollarea_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -898,6 +1019,7 @@ void q_scrollarea_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_base_size(void* self);
 
 /// Inherited from QWidget
@@ -906,6 +1028,7 @@ QSize* q_scrollarea_base_size(void* self);
 ///
 /// @param self QScrollArea*
 /// @param baseSize QSize*
+///
 void q_scrollarea_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -915,6 +1038,7 @@ void q_scrollarea_set_base_size(void* self, void* baseSize);
 /// @param self QScrollArea*
 /// @param basew int
 /// @param baseh int
+///
 void q_scrollarea_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -923,6 +1047,7 @@ void q_scrollarea_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self QScrollArea*
 /// @param fixedSize QSize*
+///
 void q_scrollarea_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -932,6 +1057,7 @@ void q_scrollarea_set_fixed_size(void* self, void* fixedSize);
 /// @param self QScrollArea*
 /// @param w int
 /// @param h int
+///
 void q_scrollarea_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -940,6 +1066,7 @@ void q_scrollarea_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self QScrollArea*
 /// @param w int
+///
 void q_scrollarea_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -948,6 +1075,7 @@ void q_scrollarea_set_fixed_width(void* self, int w);
 ///
 /// @param self QScrollArea*
 /// @param h int
+///
 void q_scrollarea_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -956,6 +1084,7 @@ void q_scrollarea_set_fixed_height(void* self, int h);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPointF*
+///
 QPointF* q_scrollarea_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -964,6 +1093,7 @@ QPointF* q_scrollarea_map_to_global(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPoint*
+///
 QPoint* q_scrollarea_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -972,6 +1102,7 @@ QPoint* q_scrollarea_map_to_global2(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPointF*
+///
 QPointF* q_scrollarea_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -980,6 +1111,7 @@ QPointF* q_scrollarea_map_from_global(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPoint*
+///
 QPoint* q_scrollarea_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -988,6 +1120,7 @@ QPoint* q_scrollarea_map_from_global2(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPointF*
+///
 QPointF* q_scrollarea_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -996,6 +1129,7 @@ QPointF* q_scrollarea_map_to_parent(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPoint*
+///
 QPoint* q_scrollarea_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1004,6 +1138,7 @@ QPoint* q_scrollarea_map_to_parent2(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPointF*
+///
 QPointF* q_scrollarea_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1012,6 +1147,7 @@ QPointF* q_scrollarea_map_from_parent(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPoint*
+///
 QPoint* q_scrollarea_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1021,6 +1157,7 @@ QPoint* q_scrollarea_map_from_parent2(void* self, void* param1);
 /// @param self QScrollArea*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* q_scrollarea_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1030,6 +1167,7 @@ QPointF* q_scrollarea_map_to(void* self, void* param1, void* param2);
 /// @param self QScrollArea*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* q_scrollarea_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1039,6 +1177,7 @@ QPoint* q_scrollarea_map_to2(void* self, void* param1, void* param2);
 /// @param self QScrollArea*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* q_scrollarea_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1048,6 +1187,7 @@ QPointF* q_scrollarea_map_from(void* self, void* param1, void* param2);
 /// @param self QScrollArea*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* q_scrollarea_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1055,6 +1195,7 @@ QPoint* q_scrollarea_map_from2(void* self, void* param1, void* param2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_window(void* self);
 
 /// Inherited from QWidget
@@ -1062,6 +1203,7 @@ QWidget* q_scrollarea_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -1069,6 +1211,7 @@ QWidget* q_scrollarea_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -1076,6 +1219,7 @@ QWidget* q_scrollarea_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self QScrollArea*
+///
 const QPalette* q_scrollarea_palette(void* self);
 
 /// Inherited from QWidget
@@ -1084,6 +1228,7 @@ const QPalette* q_scrollarea_palette(void* self);
 ///
 /// @param self QScrollArea*
 /// @param palette QPalette*
+///
 void q_scrollarea_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -1092,6 +1237,7 @@ void q_scrollarea_set_palette(void* self, void* palette);
 ///
 /// @param self QScrollArea*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void q_scrollarea_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -1101,6 +1247,7 @@ void q_scrollarea_set_background_role(void* self, int32_t backgroundRole);
 /// @param self QScrollArea*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t q_scrollarea_background_role(void* self);
 
 /// Inherited from QWidget
@@ -1109,6 +1256,7 @@ int32_t q_scrollarea_background_role(void* self);
 ///
 /// @param self QScrollArea*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void q_scrollarea_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -1118,6 +1266,7 @@ void q_scrollarea_set_foreground_role(void* self, int32_t foregroundRole);
 /// @param self QScrollArea*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t q_scrollarea_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -1125,6 +1274,7 @@ int32_t q_scrollarea_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self QScrollArea*
+///
 const QFont* q_scrollarea_font(void* self);
 
 /// Inherited from QWidget
@@ -1133,6 +1283,7 @@ const QFont* q_scrollarea_font(void* self);
 ///
 /// @param self QScrollArea*
 /// @param font QFont*
+///
 void q_scrollarea_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -1140,6 +1291,7 @@ void q_scrollarea_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self QScrollArea*
+///
 QFontMetrics* q_scrollarea_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -1147,6 +1299,7 @@ QFontMetrics* q_scrollarea_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self QScrollArea*
+///
 QFontInfo* q_scrollarea_font_info(void* self);
 
 /// Inherited from QWidget
@@ -1154,6 +1307,7 @@ QFontInfo* q_scrollarea_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self QScrollArea*
+///
 QCursor* q_scrollarea_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1162,6 +1316,7 @@ QCursor* q_scrollarea_cursor(void* self);
 ///
 /// @param self QScrollArea*
 /// @param cursor QCursor*
+///
 void q_scrollarea_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -1169,6 +1324,7 @@ void q_scrollarea_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1177,6 +1333,7 @@ void q_scrollarea_unset_cursor(void* self);
 ///
 /// @param self QScrollArea*
 /// @param enable bool
+///
 void q_scrollarea_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1184,6 +1341,7 @@ void q_scrollarea_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1191,6 +1349,7 @@ bool q_scrollarea_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1199,6 +1358,7 @@ bool q_scrollarea_under_mouse(void* self);
 ///
 /// @param self QScrollArea*
 /// @param enable bool
+///
 void q_scrollarea_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1206,6 +1366,7 @@ void q_scrollarea_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1214,6 +1375,7 @@ bool q_scrollarea_has_tablet_tracking(void* self);
 ///
 /// @param self QScrollArea*
 /// @param mask QBitmap*
+///
 void q_scrollarea_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1222,6 +1384,7 @@ void q_scrollarea_set_mask(void* self, void* mask);
 ///
 /// @param self QScrollArea*
 /// @param mask QRegion*
+///
 void q_scrollarea_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1229,6 +1392,7 @@ void q_scrollarea_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self QScrollArea*
+///
 QRegion* q_scrollarea_mask(void* self);
 
 /// Inherited from QWidget
@@ -1236,6 +1400,7 @@ QRegion* q_scrollarea_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -1244,6 +1409,7 @@ void q_scrollarea_clear_mask(void* self);
 ///
 /// @param self QScrollArea*
 /// @param target QPaintDevice*
+///
 void q_scrollarea_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -1252,6 +1418,7 @@ void q_scrollarea_render(void* self, void* target);
 ///
 /// @param self QScrollArea*
 /// @param painter QPainter*
+///
 void q_scrollarea_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -1259,6 +1426,7 @@ void q_scrollarea_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self QScrollArea*
+///
 QPixmap* q_scrollarea_grab(void* self);
 
 /// Inherited from QWidget
@@ -1266,6 +1434,7 @@ QPixmap* q_scrollarea_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self QScrollArea*
+///
 QGraphicsEffect* q_scrollarea_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -1274,6 +1443,7 @@ QGraphicsEffect* q_scrollarea_graphics_effect(void* self);
 ///
 /// @param self QScrollArea*
 /// @param effect QGraphicsEffect*
+///
 void q_scrollarea_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -1282,6 +1452,7 @@ void q_scrollarea_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self QScrollArea*
 /// @param type enum Qt__GestureType
+///
 void q_scrollarea_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1290,6 +1461,7 @@ void q_scrollarea_grab_gesture(void* self, int64_t type);
 ///
 /// @param self QScrollArea*
 /// @param type enum Qt__GestureType
+///
 void q_scrollarea_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1298,6 +1470,7 @@ void q_scrollarea_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self QScrollArea*
 /// @param windowTitle const char*
+///
 void q_scrollarea_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -1306,6 +1479,7 @@ void q_scrollarea_set_window_title(void* self, const char* windowTitle);
 ///
 /// @param self QScrollArea*
 /// @param styleSheet const char*
+///
 void q_scrollarea_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -1315,6 +1489,7 @@ void q_scrollarea_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -1324,6 +1499,7 @@ const char* q_scrollarea_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_window_title(void* self);
 
 /// Inherited from QWidget
@@ -1332,6 +1508,7 @@ const char* q_scrollarea_window_title(void* self);
 ///
 /// @param self QScrollArea*
 /// @param icon QIcon*
+///
 void q_scrollarea_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -1339,6 +1516,7 @@ void q_scrollarea_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self QScrollArea*
+///
 QIcon* q_scrollarea_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -1347,6 +1525,7 @@ QIcon* q_scrollarea_window_icon(void* self);
 ///
 /// @param self QScrollArea*
 /// @param windowIconText const char*
+///
 void q_scrollarea_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -1356,6 +1535,7 @@ void q_scrollarea_set_window_icon_text(void* self, const char* windowIconText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -1364,6 +1544,7 @@ const char* q_scrollarea_window_icon_text(void* self);
 ///
 /// @param self QScrollArea*
 /// @param windowRole const char*
+///
 void q_scrollarea_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -1373,6 +1554,7 @@ void q_scrollarea_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_window_role(void* self);
 
 /// Inherited from QWidget
@@ -1381,6 +1563,7 @@ const char* q_scrollarea_window_role(void* self);
 ///
 /// @param self QScrollArea*
 /// @param filePath const char*
+///
 void q_scrollarea_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -1390,6 +1573,7 @@ void q_scrollarea_set_window_file_path(void* self, const char* filePath);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -1398,6 +1582,7 @@ const char* q_scrollarea_window_file_path(void* self);
 ///
 /// @param self QScrollArea*
 /// @param level double
+///
 void q_scrollarea_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -1405,6 +1590,7 @@ void q_scrollarea_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self QScrollArea*
+///
 double q_scrollarea_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -1412,6 +1598,7 @@ double q_scrollarea_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -1420,6 +1607,7 @@ bool q_scrollarea_is_window_modified(void* self);
 ///
 /// @param self QScrollArea*
 /// @param toolTip const char*
+///
 void q_scrollarea_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -1429,6 +1617,7 @@ void q_scrollarea_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -1437,6 +1626,7 @@ const char* q_scrollarea_tool_tip(void* self);
 ///
 /// @param self QScrollArea*
 /// @param msec int
+///
 void q_scrollarea_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -1444,6 +1634,7 @@ void q_scrollarea_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -1452,6 +1643,7 @@ int32_t q_scrollarea_tool_tip_duration(void* self);
 ///
 /// @param self QScrollArea*
 /// @param statusTip const char*
+///
 void q_scrollarea_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -1461,6 +1653,7 @@ void q_scrollarea_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -1469,6 +1662,7 @@ const char* q_scrollarea_status_tip(void* self);
 ///
 /// @param self QScrollArea*
 /// @param whatsThis const char*
+///
 void q_scrollarea_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -1478,6 +1672,7 @@ void q_scrollarea_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -1487,6 +1682,7 @@ const char* q_scrollarea_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -1495,6 +1691,7 @@ const char* q_scrollarea_accessible_name(void* self);
 ///
 /// @param self QScrollArea*
 /// @param name const char*
+///
 void q_scrollarea_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -1504,6 +1701,7 @@ void q_scrollarea_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -1512,6 +1710,7 @@ const char* q_scrollarea_accessible_description(void* self);
 ///
 /// @param self QScrollArea*
 /// @param description const char*
+///
 void q_scrollarea_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -1520,6 +1719,7 @@ void q_scrollarea_set_accessible_description(void* self, const char* description
 ///
 /// @param self QScrollArea*
 /// @param direction enum Qt__LayoutDirection
+///
 void q_scrollarea_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -1529,6 +1729,7 @@ void q_scrollarea_set_layout_direction(void* self, int32_t direction);
 /// @param self QScrollArea*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t q_scrollarea_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1536,6 +1737,7 @@ int32_t q_scrollarea_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1544,6 +1746,7 @@ void q_scrollarea_unset_layout_direction(void* self);
 ///
 /// @param self QScrollArea*
 /// @param locale QLocale*
+///
 void q_scrollarea_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -1551,6 +1754,7 @@ void q_scrollarea_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self QScrollArea*
+///
 QLocale* q_scrollarea_locale(void* self);
 
 /// Inherited from QWidget
@@ -1558,6 +1762,7 @@ QLocale* q_scrollarea_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -1565,6 +1770,7 @@ void q_scrollarea_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -1572,6 +1778,7 @@ bool q_scrollarea_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -1579,6 +1786,7 @@ bool q_scrollarea_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -1586,6 +1794,7 @@ void q_scrollarea_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -1593,6 +1802,7 @@ bool q_scrollarea_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -1600,6 +1810,7 @@ void q_scrollarea_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -1608,6 +1819,7 @@ void q_scrollarea_clear_focus(void* self);
 ///
 /// @param self QScrollArea*
 /// @param reason enum Qt__FocusReason
+///
 void q_scrollarea_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -1617,6 +1829,7 @@ void q_scrollarea_set_focus2(void* self, int32_t reason);
 /// @param self QScrollArea*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t q_scrollarea_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -1625,6 +1838,7 @@ int32_t q_scrollarea_focus_policy(void* self);
 ///
 /// @param self QScrollArea*
 /// @param policy enum Qt__FocusPolicy
+///
 void q_scrollarea_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1632,6 +1846,7 @@ void q_scrollarea_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -1640,6 +1855,7 @@ bool q_scrollarea_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void q_scrollarea_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1648,6 +1864,7 @@ void q_scrollarea_set_tab_order(void* param1, void* param2);
 ///
 /// @param self QScrollArea*
 /// @param focusProxy QWidget*
+///
 void q_scrollarea_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -1655,6 +1872,7 @@ void q_scrollarea_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -1664,6 +1882,7 @@ QWidget* q_scrollarea_focus_proxy(void* self);
 /// @param self QScrollArea*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t q_scrollarea_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -1672,6 +1891,7 @@ int32_t q_scrollarea_context_menu_policy(void* self);
 ///
 /// @param self QScrollArea*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void q_scrollarea_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1679,6 +1899,7 @@ void q_scrollarea_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1687,6 +1908,7 @@ void q_scrollarea_grab_mouse(void* self);
 ///
 /// @param self QScrollArea*
 /// @param param1 QCursor*
+///
 void q_scrollarea_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1694,6 +1916,7 @@ void q_scrollarea_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1701,6 +1924,7 @@ void q_scrollarea_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1708,6 +1932,7 @@ void q_scrollarea_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1716,6 +1941,7 @@ void q_scrollarea_release_keyboard(void* self);
 ///
 /// @param self QScrollArea*
 /// @param key QKeySequence*
+///
 int32_t q_scrollarea_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -1724,6 +1950,7 @@ int32_t q_scrollarea_grab_shortcut(void* self, void* key);
 ///
 /// @param self QScrollArea*
 /// @param id int
+///
 void q_scrollarea_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -1732,6 +1959,7 @@ void q_scrollarea_release_shortcut(void* self, int id);
 ///
 /// @param self QScrollArea*
 /// @param id int
+///
 void q_scrollarea_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -1740,6 +1968,7 @@ void q_scrollarea_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self QScrollArea*
 /// @param id int
+///
 void q_scrollarea_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -1759,6 +1988,7 @@ QWidget* q_scrollarea_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1767,6 +1997,7 @@ bool q_scrollarea_updates_enabled(void* self);
 ///
 /// @param self QScrollArea*
 /// @param enable bool
+///
 void q_scrollarea_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1774,6 +2005,7 @@ void q_scrollarea_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self QScrollArea*
+///
 QGraphicsProxyWidget* q_scrollarea_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -1781,6 +2013,7 @@ QGraphicsProxyWidget* q_scrollarea_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_update(void* self);
 
 /// Inherited from QWidget
@@ -1788,6 +2021,7 @@ void q_scrollarea_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_repaint(void* self);
 
 /// Inherited from QWidget
@@ -1799,6 +2033,7 @@ void q_scrollarea_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_scrollarea_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1807,6 +2042,7 @@ void q_scrollarea_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self QScrollArea*
 /// @param param1 QRect*
+///
 void q_scrollarea_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1815,6 +2051,7 @@ void q_scrollarea_update3(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QRegion*
+///
 void q_scrollarea_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1826,6 +2063,7 @@ void q_scrollarea_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_scrollarea_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1834,6 +2072,7 @@ void q_scrollarea_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self QScrollArea*
 /// @param param1 QRect*
+///
 void q_scrollarea_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1842,6 +2081,7 @@ void q_scrollarea_repaint3(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QRegion*
+///
 void q_scrollarea_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1850,6 +2090,7 @@ void q_scrollarea_repaint4(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param hidden bool
+///
 void q_scrollarea_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -1857,6 +2098,7 @@ void q_scrollarea_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_show(void* self);
 
 /// Inherited from QWidget
@@ -1864,6 +2106,7 @@ void q_scrollarea_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_hide(void* self);
 
 /// Inherited from QWidget
@@ -1871,6 +2114,7 @@ void q_scrollarea_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1878,6 +2122,7 @@ void q_scrollarea_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1885,6 +2130,7 @@ void q_scrollarea_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1892,6 +2138,7 @@ void q_scrollarea_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -1899,6 +2146,7 @@ void q_scrollarea_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_close(void* self);
 
 /// Inherited from QWidget
@@ -1906,6 +2154,7 @@ bool q_scrollarea_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_raise(void* self);
 
 /// Inherited from QWidget
@@ -1913,6 +2162,7 @@ void q_scrollarea_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_lower(void* self);
 
 /// Inherited from QWidget
@@ -1921,6 +2171,7 @@ void q_scrollarea_lower(void* self);
 ///
 /// @param self QScrollArea*
 /// @param param1 QWidget*
+///
 void q_scrollarea_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1930,6 +2181,7 @@ void q_scrollarea_stack_under(void* self, void* param1);
 /// @param self QScrollArea*
 /// @param x int
 /// @param y int
+///
 void q_scrollarea_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -1938,6 +2190,7 @@ void q_scrollarea_move(void* self, int x, int y);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPoint*
+///
 void q_scrollarea_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1947,6 +2200,7 @@ void q_scrollarea_move2(void* self, void* param1);
 /// @param self QScrollArea*
 /// @param w int
 /// @param h int
+///
 void q_scrollarea_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1955,6 +2209,7 @@ void q_scrollarea_resize(void* self, int w, int h);
 ///
 /// @param self QScrollArea*
 /// @param param1 QSize*
+///
 void q_scrollarea_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1966,6 +2221,7 @@ void q_scrollarea_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_scrollarea_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1974,6 +2230,7 @@ void q_scrollarea_set_geometry(void* self, int x, int y, int w, int h);
 ///
 /// @param self QScrollArea*
 /// @param geometry QRect*
+///
 void q_scrollarea_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -1983,6 +2240,7 @@ void q_scrollarea_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 char* q_scrollarea_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1991,6 +2249,7 @@ char* q_scrollarea_save_geometry(void* self);
 ///
 /// @param self QScrollArea*
 /// @param geometry const char*
+///
 bool q_scrollarea_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -1998,6 +2257,7 @@ bool q_scrollarea_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -2005,6 +2265,7 @@ void q_scrollarea_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -2013,6 +2274,7 @@ bool q_scrollarea_is_visible(void* self);
 ///
 /// @param self QScrollArea*
 /// @param param1 QWidget*
+///
 bool q_scrollarea_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2020,6 +2282,7 @@ bool q_scrollarea_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -2027,6 +2290,7 @@ bool q_scrollarea_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -2034,6 +2298,7 @@ bool q_scrollarea_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -2041,6 +2306,7 @@ bool q_scrollarea_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -2050,6 +2316,7 @@ bool q_scrollarea_is_full_screen(void* self);
 /// @param self QScrollArea*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t q_scrollarea_window_state(void* self);
 
 /// Inherited from QWidget
@@ -2058,6 +2325,7 @@ int32_t q_scrollarea_window_state(void* self);
 ///
 /// @param self QScrollArea*
 /// @param state flag of enum Qt__WindowState
+///
 void q_scrollarea_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2066,6 +2334,7 @@ void q_scrollarea_set_window_state(void* self, int32_t state);
 ///
 /// @param self QScrollArea*
 /// @param state flag of enum Qt__WindowState
+///
 void q_scrollarea_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2073,6 +2342,7 @@ void q_scrollarea_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self QScrollArea*
+///
 QSizePolicy* q_scrollarea_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -2081,6 +2351,7 @@ QSizePolicy* q_scrollarea_size_policy(void* self);
 ///
 /// @param self QScrollArea*
 /// @param sizePolicy QSizePolicy*
+///
 void q_scrollarea_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -2090,6 +2361,7 @@ void q_scrollarea_set_size_policy(void* self, void* sizePolicy);
 /// @param self QScrollArea*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void q_scrollarea_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -2097,6 +2369,7 @@ void q_scrollarea_set_size_policy2(void* self, int32_t horizontal, int32_t verti
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self QScrollArea*
+///
 QRegion* q_scrollarea_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -2108,6 +2381,7 @@ QRegion* q_scrollarea_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void q_scrollarea_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -2116,6 +2390,7 @@ void q_scrollarea_set_contents_margins(void* self, int left, int top, int right,
 ///
 /// @param self QScrollArea*
 /// @param margins QMargins*
+///
 void q_scrollarea_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -2123,6 +2398,7 @@ void q_scrollarea_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self QScrollArea*
+///
 QMargins* q_scrollarea_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -2130,6 +2406,7 @@ QMargins* q_scrollarea_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self QScrollArea*
+///
 QRect* q_scrollarea_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -2137,6 +2414,7 @@ QRect* q_scrollarea_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self QScrollArea*
+///
 QLayout* q_scrollarea_layout(void* self);
 
 /// Inherited from QWidget
@@ -2145,6 +2423,7 @@ QLayout* q_scrollarea_layout(void* self);
 ///
 /// @param self QScrollArea*
 /// @param layout QLayout*
+///
 void q_scrollarea_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -2152,6 +2431,7 @@ void q_scrollarea_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -2160,6 +2440,7 @@ void q_scrollarea_update_geometry(void* self);
 ///
 /// @param self QScrollArea*
 /// @param parent QWidget*
+///
 void q_scrollarea_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -2169,6 +2450,7 @@ void q_scrollarea_set_parent(void* self, void* parent);
 /// @param self QScrollArea*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void q_scrollarea_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -2178,6 +2460,7 @@ void q_scrollarea_set_parent2(void* self, void* parent, int64_t f);
 /// @param self QScrollArea*
 /// @param dx int
 /// @param dy int
+///
 void q_scrollarea_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -2188,6 +2471,7 @@ void q_scrollarea_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void q_scrollarea_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -2195,6 +2479,7 @@ void q_scrollarea_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -2202,6 +2487,7 @@ QWidget* q_scrollarea_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2209,6 +2495,7 @@ QWidget* q_scrollarea_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2216,6 +2503,7 @@ QWidget* q_scrollarea_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -2224,6 +2512,7 @@ bool q_scrollarea_accept_drops(void* self);
 ///
 /// @param self QScrollArea*
 /// @param on bool
+///
 void q_scrollarea_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -2232,6 +2521,7 @@ void q_scrollarea_set_accept_drops(void* self, bool on);
 ///
 /// @param self QScrollArea*
 /// @param action QAction*
+///
 void q_scrollarea_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2240,6 +2530,7 @@ void q_scrollarea_add_action(void* self, void* action);
 ///
 /// @param self QScrollArea*
 /// @param actions libqt_list /* of QAction* */
+///
 void q_scrollarea_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2249,6 +2540,7 @@ void q_scrollarea_add_actions(void* self, libqt_list actions);
 /// @param self QScrollArea*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void q_scrollarea_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2258,6 +2550,7 @@ void q_scrollarea_insert_actions(void* self, void* before, libqt_list actions);
 /// @param self QScrollArea*
 /// @param before QAction*
 /// @param action QAction*
+///
 void q_scrollarea_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -2266,6 +2559,7 @@ void q_scrollarea_insert_action(void* self, void* before, void* action);
 ///
 /// @param self QScrollArea*
 /// @param action QAction*
+///
 void q_scrollarea_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2273,6 +2567,7 @@ void q_scrollarea_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self QScrollArea*
+///
 libqt_list /* of QAction* */ q_scrollarea_actions(void* self);
 
 /// Inherited from QWidget
@@ -2281,6 +2576,7 @@ libqt_list /* of QAction* */ q_scrollarea_actions(void* self);
 ///
 /// @param self QScrollArea*
 /// @param text const char*
+///
 QAction* q_scrollarea_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -2290,6 +2586,7 @@ QAction* q_scrollarea_add_action2(void* self, const char* text);
 /// @param self QScrollArea*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* q_scrollarea_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -2299,6 +2596,7 @@ QAction* q_scrollarea_add_action3(void* self, void* icon, const char* text);
 /// @param self QScrollArea*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* q_scrollarea_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2309,6 +2607,7 @@ QAction* q_scrollarea_add_action4(void* self, const char* text, void* shortcut);
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* q_scrollarea_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2316,6 +2615,7 @@ QAction* q_scrollarea_add_action5(void* self, void* icon, const char* text, void
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self QScrollArea*
+///
 QWidget* q_scrollarea_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2324,6 +2624,7 @@ QWidget* q_scrollarea_parent_widget(void* self);
 ///
 /// @param self QScrollArea*
 /// @param type flag of enum Qt__WindowType
+///
 void q_scrollarea_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2333,6 +2634,7 @@ void q_scrollarea_set_window_flags(void* self, int64_t type);
 /// @param self QScrollArea*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t q_scrollarea_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -2341,6 +2643,7 @@ int64_t q_scrollarea_window_flags(void* self);
 ///
 /// @param self QScrollArea*
 /// @param param1 enum Qt__WindowType
+///
 void q_scrollarea_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -2349,6 +2652,7 @@ void q_scrollarea_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self QScrollArea*
 /// @param type flag of enum Qt__WindowType
+///
 void q_scrollarea_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2358,6 +2662,7 @@ void q_scrollarea_override_window_flags(void* self, int64_t type);
 /// @param self QScrollArea*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t q_scrollarea_window_type(void* self);
 
 /// Inherited from QWidget
@@ -2365,6 +2670,7 @@ int64_t q_scrollarea_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* q_scrollarea_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -2374,6 +2680,7 @@ QWidget* q_scrollarea_find(uint64_t param1);
 /// @param self QScrollArea*
 /// @param x int
 /// @param y int
+///
 QWidget* q_scrollarea_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2382,6 +2689,7 @@ QWidget* q_scrollarea_child_at(void* self, int x, int y);
 ///
 /// @param self QScrollArea*
 /// @param p QPoint*
+///
 QWidget* q_scrollarea_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2390,6 +2698,7 @@ QWidget* q_scrollarea_child_at2(void* self, void* p);
 ///
 /// @param self QScrollArea*
 /// @param p QPointF*
+///
 QWidget* q_scrollarea_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2398,6 +2707,7 @@ QWidget* q_scrollarea_child_at3(void* self, void* p);
 ///
 /// @param self QScrollArea*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void q_scrollarea_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2406,6 +2716,7 @@ void q_scrollarea_set_attribute(void* self, int32_t param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool q_scrollarea_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2413,6 +2724,7 @@ bool q_scrollarea_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -2421,6 +2733,7 @@ void q_scrollarea_ensure_polished(void* self);
 ///
 /// @param self QScrollArea*
 /// @param child QWidget*
+///
 bool q_scrollarea_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -2428,6 +2741,7 @@ bool q_scrollarea_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -2436,6 +2750,7 @@ bool q_scrollarea_auto_fill_background(void* self);
 ///
 /// @param self QScrollArea*
 /// @param enabled bool
+///
 void q_scrollarea_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -2443,6 +2758,7 @@ void q_scrollarea_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self QScrollArea*
+///
 QBackingStore* q_scrollarea_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -2450,6 +2766,7 @@ QBackingStore* q_scrollarea_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self QScrollArea*
+///
 QWindow* q_scrollarea_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -2457,6 +2774,7 @@ QWindow* q_scrollarea_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self QScrollArea*
+///
 QScreen* q_scrollarea_screen(void* self);
 
 /// Inherited from QWidget
@@ -2465,6 +2783,7 @@ QScreen* q_scrollarea_screen(void* self);
 ///
 /// @param self QScrollArea*
 /// @param screen QScreen*
+///
 void q_scrollarea_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -2472,6 +2791,7 @@ void q_scrollarea_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* q_scrollarea_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -2480,6 +2800,7 @@ QWidget* q_scrollarea_create_window_container(void* window);
 ///
 /// @param self QScrollArea*
 /// @param title const char*
+///
 void q_scrollarea_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -2488,6 +2809,7 @@ void q_scrollarea_window_title_changed(void* self, const char* title);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, const char* title)
+///
 void q_scrollarea_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2496,6 +2818,7 @@ void q_scrollarea_on_window_title_changed(void* self, void (*callback)(void*, co
 ///
 /// @param self QScrollArea*
 /// @param icon QIcon*
+///
 void q_scrollarea_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2504,6 +2827,7 @@ void q_scrollarea_window_icon_changed(void* self, void* icon);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QIcon* icon)
+///
 void q_scrollarea_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2512,6 +2836,7 @@ void q_scrollarea_on_window_icon_changed(void* self, void (*callback)(void*, voi
 ///
 /// @param self QScrollArea*
 /// @param iconText const char*
+///
 void q_scrollarea_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -2520,6 +2845,7 @@ void q_scrollarea_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, const char* iconText)
+///
 void q_scrollarea_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2528,6 +2854,7 @@ void q_scrollarea_on_window_icon_text_changed(void* self, void (*callback)(void*
 ///
 /// @param self QScrollArea*
 /// @param pos QPoint*
+///
 void q_scrollarea_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -2536,6 +2863,7 @@ void q_scrollarea_custom_context_menu_requested(void* self, void* pos);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QPoint* pos)
+///
 void q_scrollarea_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2545,6 +2873,7 @@ void q_scrollarea_on_custom_context_menu_requested(void* self, void (*callback)(
 /// @param self QScrollArea*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t q_scrollarea_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -2553,6 +2882,7 @@ int64_t q_scrollarea_input_method_hints(void* self);
 ///
 /// @param self QScrollArea*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void q_scrollarea_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -2562,6 +2892,7 @@ void q_scrollarea_set_input_method_hints(void* self, int64_t hints);
 /// @param self QScrollArea*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void q_scrollarea_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2572,6 +2903,7 @@ void q_scrollarea_render22(void* self, void* target, void* targetOffset);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void q_scrollarea_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2583,6 +2915,7 @@ void q_scrollarea_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void q_scrollarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2592,6 +2925,7 @@ void q_scrollarea_render4(void* self, void* target, void* targetOffset, void* so
 /// @param self QScrollArea*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void q_scrollarea_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2602,6 +2936,7 @@ void q_scrollarea_render23(void* self, void* painter, void* targetOffset);
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void q_scrollarea_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2613,6 +2948,7 @@ void q_scrollarea_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void q_scrollarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2621,6 +2957,7 @@ void q_scrollarea_render42(void* self, void* painter, void* targetOffset, void* 
 ///
 /// @param self QScrollArea*
 /// @param rectangle QRect*
+///
 QPixmap* q_scrollarea_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -2630,6 +2967,7 @@ QPixmap* q_scrollarea_grab1(void* self, void* rectangle);
 /// @param self QScrollArea*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void q_scrollarea_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -2639,6 +2977,7 @@ void q_scrollarea_grab_gesture2(void* self, int64_t type, int32_t flags);
 /// @param self QScrollArea*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t q_scrollarea_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -2648,6 +2987,7 @@ int32_t q_scrollarea_grab_shortcut2(void* self, void* key, int32_t context);
 /// @param self QScrollArea*
 /// @param id int
 /// @param enable bool
+///
 void q_scrollarea_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2657,6 +2997,7 @@ void q_scrollarea_set_shortcut_enabled2(void* self, int id, bool enable);
 /// @param self QScrollArea*
 /// @param id int
 /// @param enable bool
+///
 void q_scrollarea_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2666,6 +3007,7 @@ void q_scrollarea_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param self QScrollArea*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void q_scrollarea_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2675,6 +3017,7 @@ void q_scrollarea_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QScrollArea*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void q_scrollarea_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2683,6 +3026,7 @@ void q_scrollarea_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* q_scrollarea_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -2692,6 +3036,7 @@ QWidget* q_scrollarea_create_window_container2(void* window, void* parent);
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* q_scrollarea_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -2701,6 +3046,7 @@ QWidget* q_scrollarea_create_window_container3(void* window, void* parent, int64
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char* q_scrollarea_object_name(void* self);
 
 /// Inherited from QObject
@@ -2709,6 +3055,7 @@ const char* q_scrollarea_object_name(void* self);
 ///
 /// @param self QScrollArea*
 /// @param name char*
+///
 void q_scrollarea_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -2716,6 +3063,7 @@ void q_scrollarea_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -2723,6 +3071,7 @@ bool q_scrollarea_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -2730,6 +3079,7 @@ bool q_scrollarea_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -2737,6 +3087,7 @@ bool q_scrollarea_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -2745,6 +3096,7 @@ bool q_scrollarea_signals_blocked(void* self);
 ///
 /// @param self QScrollArea*
 /// @param b bool
+///
 bool q_scrollarea_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -2752,6 +3104,7 @@ bool q_scrollarea_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QScrollArea*
+///
 QThread* q_scrollarea_thread(void* self);
 
 /// Inherited from QObject
@@ -2760,6 +3113,7 @@ QThread* q_scrollarea_thread(void* self);
 ///
 /// @param self QScrollArea*
 /// @param thread QThread*
+///
 bool q_scrollarea_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -2768,6 +3122,7 @@ bool q_scrollarea_move_to_thread(void* self, void* thread);
 ///
 /// @param self QScrollArea*
 /// @param interval int
+///
 int32_t q_scrollarea_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -2776,6 +3131,7 @@ int32_t q_scrollarea_start_timer(void* self, int interval);
 ///
 /// @param self QScrollArea*
 /// @param id int
+///
 void q_scrollarea_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -2784,6 +3140,7 @@ void q_scrollarea_kill_timer(void* self, int id);
 ///
 /// @param self QScrollArea*
 /// @param id enum Qt__TimerId
+///
 void q_scrollarea_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -2791,6 +3148,7 @@ void q_scrollarea_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QScrollArea*
+///
 libqt_list /* of QObject* */ q_scrollarea_children(void* self);
 
 /// Inherited from QObject
@@ -2799,6 +3157,7 @@ libqt_list /* of QObject* */ q_scrollarea_children(void* self);
 ///
 /// @param self QScrollArea*
 /// @param filterObj QObject*
+///
 void q_scrollarea_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -2807,6 +3166,7 @@ void q_scrollarea_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QScrollArea*
 /// @param obj QObject*
+///
 void q_scrollarea_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -2817,6 +3177,7 @@ void q_scrollarea_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_scrollarea_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -2827,6 +3188,7 @@ QMetaObject__Connection* q_scrollarea_connect(void* sender, void* signal, void* 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_scrollarea_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -2837,6 +3199,7 @@ QMetaObject__Connection* q_scrollarea_connect2(void* self, void* sender, const c
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_scrollarea_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -2844,6 +3207,7 @@ bool q_scrollarea_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_scrollarea_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -2851,6 +3215,7 @@ bool q_scrollarea_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -2858,6 +3223,7 @@ void q_scrollarea_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -2867,6 +3233,7 @@ void q_scrollarea_dump_object_info(void* self);
 /// @param self QScrollArea*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_scrollarea_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -2875,6 +3242,7 @@ bool q_scrollarea_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QScrollArea*
 /// @param name const char*
+///
 QVariant* q_scrollarea_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -2884,6 +3252,7 @@ QVariant* q_scrollarea_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QScrollArea*
+///
 const char** q_scrollarea_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -2891,6 +3260,7 @@ const char** q_scrollarea_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QScrollArea*
+///
 QBindingStorage* q_scrollarea_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -2898,6 +3268,7 @@ QBindingStorage* q_scrollarea_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QScrollArea*
+///
 const QBindingStorage* q_scrollarea_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -2905,6 +3276,7 @@ const QBindingStorage* q_scrollarea_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_destroyed(void* self);
 
 /// Inherited from QObject
@@ -2913,6 +3285,7 @@ void q_scrollarea_destroyed(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self)
+///
 void q_scrollarea_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2920,6 +3293,7 @@ void q_scrollarea_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QScrollArea*
+///
 QObject* q_scrollarea_parent(void* self);
 
 /// Inherited from QObject
@@ -2928,6 +3302,7 @@ QObject* q_scrollarea_parent(void* self);
 ///
 /// @param self QScrollArea*
 /// @param classname const char*
+///
 bool q_scrollarea_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -2935,6 +3310,7 @@ bool q_scrollarea_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_delete_later(void* self);
 
 /// Inherited from QObject
@@ -2944,6 +3320,7 @@ void q_scrollarea_delete_later(void* self);
 /// @param self QScrollArea*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_scrollarea_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -2953,6 +3330,7 @@ bool q_scrollarea_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QScrollArea*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_scrollarea_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -2964,6 +3342,7 @@ int32_t q_scrollarea_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_scrollarea_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -2975,6 +3354,7 @@ QMetaObject__Connection* q_scrollarea_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_scrollarea_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -2983,6 +3363,7 @@ QMetaObject__Connection* q_scrollarea_connect4(void* self, void* sender, const c
 ///
 /// @param self QScrollArea*
 /// @param param1 QObject*
+///
 void q_scrollarea_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -2991,6 +3372,7 @@ void q_scrollarea_destroyed1(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QObject* param1)
+///
 void q_scrollarea_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2998,6 +3380,7 @@ void q_scrollarea_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -3005,6 +3388,7 @@ bool q_scrollarea_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3012,6 +3396,7 @@ int32_t q_scrollarea_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3019,6 +3404,7 @@ int32_t q_scrollarea_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3026,6 +3412,7 @@ int32_t q_scrollarea_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3033,6 +3420,7 @@ int32_t q_scrollarea_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3040,6 +3428,7 @@ int32_t q_scrollarea_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3047,6 +3436,7 @@ int32_t q_scrollarea_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self QScrollArea*
+///
 double q_scrollarea_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -3054,6 +3444,7 @@ double q_scrollarea_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self QScrollArea*
+///
 double q_scrollarea_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -3061,6 +3452,7 @@ double q_scrollarea_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -3068,6 +3460,7 @@ int32_t q_scrollarea_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -3082,6 +3475,7 @@ double q_scrollarea_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t q_scrollarea_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractScrollArea
@@ -3091,6 +3485,7 @@ int32_t q_scrollarea_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -3100,6 +3495,7 @@ QSize* q_scrollarea_minimum_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QSize* q_scrollarea_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -3110,6 +3506,7 @@ QSize* q_scrollarea_qbase_minimum_size_hint(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback QSize* func()
+///
 void q_scrollarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -3120,6 +3517,7 @@ void q_scrollarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// @param self QScrollArea*
 /// @param viewport QWidget*
+///
 void q_scrollarea_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -3130,6 +3528,7 @@ void q_scrollarea_setup_viewport(void* self, void* viewport);
 ///
 /// @param self QScrollArea*
 /// @param viewport QWidget*
+///
 void q_scrollarea_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -3140,6 +3539,7 @@ void q_scrollarea_qbase_setup_viewport(void* self, void* viewport);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QWidget* viewport)
+///
 void q_scrollarea_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3150,6 +3550,7 @@ void q_scrollarea_on_setup_viewport(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param param1 QEvent*
+///
 bool q_scrollarea_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3160,6 +3561,7 @@ bool q_scrollarea_viewport_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QEvent*
+///
 bool q_scrollarea_qbase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3170,6 +3572,7 @@ bool q_scrollarea_qbase_viewport_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func(QScrollArea* self, QEvent* param1)
+///
 void q_scrollarea_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3180,6 +3583,7 @@ void q_scrollarea_on_viewport_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param param1 QPaintEvent*
+///
 void q_scrollarea_paint_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3190,6 +3594,7 @@ void q_scrollarea_paint_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPaintEvent*
+///
 void q_scrollarea_qbase_paint_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3200,6 +3605,7 @@ void q_scrollarea_qbase_paint_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QPaintEvent* param1)
+///
 void q_scrollarea_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3210,6 +3616,7 @@ void q_scrollarea_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_mouse_press_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3220,6 +3627,7 @@ void q_scrollarea_mouse_press_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_qbase_mouse_press_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3230,6 +3638,7 @@ void q_scrollarea_qbase_mouse_press_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QMouseEvent* param1)
+///
 void q_scrollarea_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3240,6 +3649,7 @@ void q_scrollarea_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_mouse_release_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3250,6 +3660,7 @@ void q_scrollarea_mouse_release_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_qbase_mouse_release_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3260,6 +3671,7 @@ void q_scrollarea_qbase_mouse_release_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QMouseEvent* param1)
+///
 void q_scrollarea_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3270,6 +3682,7 @@ void q_scrollarea_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_mouse_double_click_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3280,6 +3693,7 @@ void q_scrollarea_mouse_double_click_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_qbase_mouse_double_click_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3290,6 +3704,7 @@ void q_scrollarea_qbase_mouse_double_click_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QMouseEvent* param1)
+///
 void q_scrollarea_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3300,6 +3715,7 @@ void q_scrollarea_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_mouse_move_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3310,6 +3726,7 @@ void q_scrollarea_mouse_move_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QMouseEvent*
+///
 void q_scrollarea_qbase_mouse_move_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3320,6 +3737,7 @@ void q_scrollarea_qbase_mouse_move_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QMouseEvent* param1)
+///
 void q_scrollarea_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3330,6 +3748,7 @@ void q_scrollarea_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QScrollArea*
 /// @param param1 QWheelEvent*
+///
 void q_scrollarea_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3340,6 +3759,7 @@ void q_scrollarea_wheel_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QWheelEvent*
+///
 void q_scrollarea_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3350,6 +3770,7 @@ void q_scrollarea_qbase_wheel_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QWheelEvent* param1)
+///
 void q_scrollarea_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3360,6 +3781,7 @@ void q_scrollarea_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param param1 QContextMenuEvent*
+///
 void q_scrollarea_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3370,6 +3792,7 @@ void q_scrollarea_context_menu_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QContextMenuEvent*
+///
 void q_scrollarea_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3380,6 +3803,7 @@ void q_scrollarea_qbase_context_menu_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QContextMenuEvent* param1)
+///
 void q_scrollarea_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3390,6 +3814,7 @@ void q_scrollarea_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 /// @param self QScrollArea*
 /// @param param1 QDragEnterEvent*
+///
 void q_scrollarea_drag_enter_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3400,6 +3825,7 @@ void q_scrollarea_drag_enter_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QDragEnterEvent*
+///
 void q_scrollarea_qbase_drag_enter_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3410,6 +3836,7 @@ void q_scrollarea_qbase_drag_enter_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QDragEnterEvent* param1)
+///
 void q_scrollarea_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3420,6 +3847,7 @@ void q_scrollarea_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QScrollArea*
 /// @param param1 QDragMoveEvent*
+///
 void q_scrollarea_drag_move_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3430,6 +3858,7 @@ void q_scrollarea_drag_move_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QDragMoveEvent*
+///
 void q_scrollarea_qbase_drag_move_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3440,6 +3869,7 @@ void q_scrollarea_qbase_drag_move_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QDragMoveEvent* param1)
+///
 void q_scrollarea_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3450,6 +3880,7 @@ void q_scrollarea_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QScrollArea*
 /// @param param1 QDragLeaveEvent*
+///
 void q_scrollarea_drag_leave_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3460,6 +3891,7 @@ void q_scrollarea_drag_leave_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QDragLeaveEvent*
+///
 void q_scrollarea_qbase_drag_leave_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3470,6 +3902,7 @@ void q_scrollarea_qbase_drag_leave_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QDragLeaveEvent* param1)
+///
 void q_scrollarea_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3480,6 +3913,7 @@ void q_scrollarea_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QScrollArea*
 /// @param param1 QDropEvent*
+///
 void q_scrollarea_drop_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3490,6 +3924,7 @@ void q_scrollarea_drop_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QDropEvent*
+///
 void q_scrollarea_qbase_drop_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3500,6 +3935,7 @@ void q_scrollarea_qbase_drop_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QDropEvent* param1)
+///
 void q_scrollarea_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3510,6 +3946,7 @@ void q_scrollarea_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param param1 QKeyEvent*
+///
 void q_scrollarea_key_press_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3520,6 +3957,7 @@ void q_scrollarea_key_press_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QKeyEvent*
+///
 void q_scrollarea_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -3530,6 +3968,7 @@ void q_scrollarea_qbase_key_press_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QKeyEvent* param1)
+///
 void q_scrollarea_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3540,6 +3979,7 @@ void q_scrollarea_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QScrollArea*
 /// @param param1 QEvent*
+///
 void q_scrollarea_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -3550,6 +3990,7 @@ void q_scrollarea_change_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QEvent*
+///
 void q_scrollarea_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -3560,6 +4001,7 @@ void q_scrollarea_qbase_change_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QEvent* param1)
+///
 void q_scrollarea_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3570,6 +4012,7 @@ void q_scrollarea_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param option QStyleOptionFrame*
+///
 void q_scrollarea_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -3580,6 +4023,7 @@ void q_scrollarea_init_style_option(void* self, void* option);
 ///
 /// @param self QScrollArea*
 /// @param option QStyleOptionFrame*
+///
 void q_scrollarea_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -3590,6 +4034,7 @@ void q_scrollarea_qbase_init_style_option(void* self, void* option);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QStyleOptionFrame* option)
+///
 void q_scrollarea_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3599,6 +4044,7 @@ void q_scrollarea_on_init_style_option(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3608,6 +4054,7 @@ int32_t q_scrollarea_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3618,6 +4065,7 @@ int32_t q_scrollarea_qbase_dev_type(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback int32_t func()
+///
 void q_scrollarea_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3628,6 +4076,7 @@ void q_scrollarea_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self QScrollArea*
 /// @param visible bool
+///
 void q_scrollarea_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3638,6 +4087,7 @@ void q_scrollarea_set_visible(void* self, bool visible);
 ///
 /// @param self QScrollArea*
 /// @param visible bool
+///
 void q_scrollarea_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3648,6 +4098,7 @@ void q_scrollarea_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, bool visible)
+///
 void q_scrollarea_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3658,6 +4109,7 @@ void q_scrollarea_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// @param self QScrollArea*
 /// @param param1 int
+///
 int32_t q_scrollarea_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3668,6 +4120,7 @@ int32_t q_scrollarea_height_for_width(void* self, int param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 int
+///
 int32_t q_scrollarea_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3678,6 +4131,7 @@ int32_t q_scrollarea_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self QScrollArea*
 /// @param callback int32_t func(QScrollArea* self, int param1)
+///
 void q_scrollarea_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3687,6 +4141,7 @@ void q_scrollarea_on_height_for_width(void* self, int32_t (*callback)(void*, int
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3696,6 +4151,7 @@ bool q_scrollarea_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3706,6 +4162,7 @@ bool q_scrollarea_qbase_has_height_for_width(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func()
+///
 void q_scrollarea_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3715,6 +4172,7 @@ void q_scrollarea_on_has_height_for_width(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QPaintEngine* q_scrollarea_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3724,6 +4182,7 @@ QPaintEngine* q_scrollarea_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QPaintEngine* q_scrollarea_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3734,6 +4193,7 @@ QPaintEngine* q_scrollarea_qbase_paint_engine(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback QPaintEngine* func()
+///
 void q_scrollarea_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3744,6 +4204,7 @@ void q_scrollarea_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self QScrollArea*
 /// @param event QKeyEvent*
+///
 void q_scrollarea_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3754,6 +4215,7 @@ void q_scrollarea_key_release_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QKeyEvent*
+///
 void q_scrollarea_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3764,6 +4226,7 @@ void q_scrollarea_qbase_key_release_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QKeyEvent* event)
+///
 void q_scrollarea_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3774,6 +4237,7 @@ void q_scrollarea_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QScrollArea*
 /// @param event QFocusEvent*
+///
 void q_scrollarea_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3784,6 +4248,7 @@ void q_scrollarea_focus_in_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QFocusEvent*
+///
 void q_scrollarea_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3794,6 +4259,7 @@ void q_scrollarea_qbase_focus_in_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QFocusEvent* event)
+///
 void q_scrollarea_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3804,6 +4270,7 @@ void q_scrollarea_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QFocusEvent*
+///
 void q_scrollarea_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3814,6 +4281,7 @@ void q_scrollarea_focus_out_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QFocusEvent*
+///
 void q_scrollarea_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3824,6 +4292,7 @@ void q_scrollarea_qbase_focus_out_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QFocusEvent* event)
+///
 void q_scrollarea_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3834,6 +4303,7 @@ void q_scrollarea_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QScrollArea*
 /// @param event QEnterEvent*
+///
 void q_scrollarea_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3844,6 +4314,7 @@ void q_scrollarea_enter_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QEnterEvent*
+///
 void q_scrollarea_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3854,6 +4325,7 @@ void q_scrollarea_qbase_enter_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QEnterEvent* event)
+///
 void q_scrollarea_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3864,6 +4336,7 @@ void q_scrollarea_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QEvent*
+///
 void q_scrollarea_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3874,6 +4347,7 @@ void q_scrollarea_leave_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QEvent*
+///
 void q_scrollarea_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3884,6 +4358,7 @@ void q_scrollarea_qbase_leave_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QEvent* event)
+///
 void q_scrollarea_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3894,6 +4369,7 @@ void q_scrollarea_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QMoveEvent*
+///
 void q_scrollarea_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3904,6 +4380,7 @@ void q_scrollarea_move_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QMoveEvent*
+///
 void q_scrollarea_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3914,6 +4391,7 @@ void q_scrollarea_qbase_move_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QMoveEvent* event)
+///
 void q_scrollarea_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3924,6 +4402,7 @@ void q_scrollarea_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QCloseEvent*
+///
 void q_scrollarea_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3934,6 +4413,7 @@ void q_scrollarea_close_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QCloseEvent*
+///
 void q_scrollarea_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3944,6 +4424,7 @@ void q_scrollarea_qbase_close_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QCloseEvent* event)
+///
 void q_scrollarea_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3954,6 +4435,7 @@ void q_scrollarea_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QTabletEvent*
+///
 void q_scrollarea_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3964,6 +4446,7 @@ void q_scrollarea_tablet_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QTabletEvent*
+///
 void q_scrollarea_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3974,6 +4457,7 @@ void q_scrollarea_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QTabletEvent* event)
+///
 void q_scrollarea_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3984,6 +4468,7 @@ void q_scrollarea_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QActionEvent*
+///
 void q_scrollarea_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3994,6 +4479,7 @@ void q_scrollarea_action_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QActionEvent*
+///
 void q_scrollarea_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4004,6 +4490,7 @@ void q_scrollarea_qbase_action_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QActionEvent* event)
+///
 void q_scrollarea_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4014,6 +4501,7 @@ void q_scrollarea_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QShowEvent*
+///
 void q_scrollarea_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4024,6 +4512,7 @@ void q_scrollarea_show_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QShowEvent*
+///
 void q_scrollarea_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4034,6 +4523,7 @@ void q_scrollarea_qbase_show_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QShowEvent* event)
+///
 void q_scrollarea_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4044,6 +4534,7 @@ void q_scrollarea_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QHideEvent*
+///
 void q_scrollarea_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4054,6 +4545,7 @@ void q_scrollarea_hide_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QHideEvent*
+///
 void q_scrollarea_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4064,6 +4556,7 @@ void q_scrollarea_qbase_hide_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QHideEvent* event)
+///
 void q_scrollarea_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4076,6 +4569,7 @@ void q_scrollarea_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_scrollarea_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4088,6 +4582,7 @@ bool q_scrollarea_native_event(void* self, const char* eventType, void* message,
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_scrollarea_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4098,6 +4593,7 @@ bool q_scrollarea_qbase_native_event(void* self, const char* eventType, void* me
 ///
 /// @param self QScrollArea*
 /// @param callback bool func(QScrollArea* self, const char* eventType, void* message, intptr_t* result)
+///
 void q_scrollarea_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4108,6 +4604,7 @@ void q_scrollarea_on_native_event(void* self, bool (*callback)(void*, const char
 ///
 /// @param self QScrollArea*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t q_scrollarea_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4118,6 +4615,7 @@ int32_t q_scrollarea_metric(void* self, int32_t param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t q_scrollarea_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4128,6 +4626,7 @@ int32_t q_scrollarea_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self QScrollArea*
 /// @param callback int32_t func(QScrollArea* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void q_scrollarea_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4138,6 +4637,7 @@ void q_scrollarea_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// @param self QScrollArea*
 /// @param painter QPainter*
+///
 void q_scrollarea_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4148,6 +4648,7 @@ void q_scrollarea_init_painter(void* self, void* painter);
 ///
 /// @param self QScrollArea*
 /// @param painter QPainter*
+///
 void q_scrollarea_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4158,6 +4659,7 @@ void q_scrollarea_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QPainter* painter)
+///
 void q_scrollarea_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4168,6 +4670,7 @@ void q_scrollarea_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param offset QPoint*
+///
 QPaintDevice* q_scrollarea_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4178,6 +4681,7 @@ QPaintDevice* q_scrollarea_redirected(void* self, void* offset);
 ///
 /// @param self QScrollArea*
 /// @param offset QPoint*
+///
 QPaintDevice* q_scrollarea_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4188,6 +4692,7 @@ QPaintDevice* q_scrollarea_qbase_redirected(void* self, void* offset);
 ///
 /// @param self QScrollArea*
 /// @param callback QPaintDevice* func(QScrollArea* self, QPoint* offset)
+///
 void q_scrollarea_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4197,6 +4702,7 @@ void q_scrollarea_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QPainter* q_scrollarea_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4206,6 +4712,7 @@ QPainter* q_scrollarea_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QPainter* q_scrollarea_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4216,6 +4723,7 @@ QPainter* q_scrollarea_qbase_shared_painter(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback QPainter* func()
+///
 void q_scrollarea_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4226,6 +4734,7 @@ void q_scrollarea_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// @param self QScrollArea*
 /// @param param1 QInputMethodEvent*
+///
 void q_scrollarea_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4236,6 +4745,7 @@ void q_scrollarea_input_method_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QInputMethodEvent*
+///
 void q_scrollarea_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4246,6 +4756,7 @@ void q_scrollarea_qbase_input_method_event(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QInputMethodEvent* param1)
+///
 void q_scrollarea_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4256,6 +4767,7 @@ void q_scrollarea_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 /// @param self QScrollArea*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* q_scrollarea_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4266,6 +4778,7 @@ QVariant* q_scrollarea_input_method_query(void* self, int64_t param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* q_scrollarea_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4276,6 +4789,7 @@ QVariant* q_scrollarea_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// @param self QScrollArea*
 /// @param callback QVariant* func(QScrollArea* self, enum Qt__InputMethodQuery param1)
+///
 void q_scrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QObject
@@ -4286,6 +4800,7 @@ void q_scrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 /// @param self QScrollArea*
 /// @param event QTimerEvent*
+///
 void q_scrollarea_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4296,6 +4811,7 @@ void q_scrollarea_timer_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QTimerEvent*
+///
 void q_scrollarea_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4306,6 +4822,7 @@ void q_scrollarea_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QTimerEvent* event)
+///
 void q_scrollarea_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4316,6 +4833,7 @@ void q_scrollarea_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QChildEvent*
+///
 void q_scrollarea_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4326,6 +4844,7 @@ void q_scrollarea_child_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QChildEvent*
+///
 void q_scrollarea_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4336,6 +4855,7 @@ void q_scrollarea_qbase_child_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QChildEvent* event)
+///
 void q_scrollarea_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4346,6 +4866,7 @@ void q_scrollarea_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param event QEvent*
+///
 void q_scrollarea_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4356,6 +4877,7 @@ void q_scrollarea_custom_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param event QEvent*
+///
 void q_scrollarea_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4366,6 +4888,7 @@ void q_scrollarea_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QEvent* event)
+///
 void q_scrollarea_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4376,6 +4899,7 @@ void q_scrollarea_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param signal QMetaMethod*
+///
 void q_scrollarea_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4386,6 +4910,7 @@ void q_scrollarea_connect_notify(void* self, void* signal);
 ///
 /// @param self QScrollArea*
 /// @param signal QMetaMethod*
+///
 void q_scrollarea_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4396,6 +4921,7 @@ void q_scrollarea_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QMetaMethod* signal)
+///
 void q_scrollarea_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4406,6 +4932,7 @@ void q_scrollarea_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QScrollArea*
 /// @param signal QMetaMethod*
+///
 void q_scrollarea_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4416,6 +4943,7 @@ void q_scrollarea_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QScrollArea*
 /// @param signal QMetaMethod*
+///
 void q_scrollarea_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4426,6 +4954,7 @@ void q_scrollarea_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QMetaMethod* signal)
+///
 void q_scrollarea_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4439,6 +4968,7 @@ void q_scrollarea_on_disconnect_notify(void* self, void (*callback)(void*, void*
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void q_scrollarea_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -4452,6 +4982,7 @@ void q_scrollarea_set_viewport_margins(void* self, int left, int top, int right,
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void q_scrollarea_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -4462,6 +4993,7 @@ void q_scrollarea_qbase_set_viewport_margins(void* self, int left, int top, int 
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, int left, int top, int right, int bottom)
+///
 void q_scrollarea_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -4471,6 +5003,7 @@ void q_scrollarea_on_set_viewport_margins(void* self, void (*callback)(void*, in
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QMargins* q_scrollarea_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4480,6 +5013,7 @@ QMargins* q_scrollarea_viewport_margins(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QMargins* q_scrollarea_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4490,6 +5024,7 @@ QMargins* q_scrollarea_qbase_viewport_margins(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback QMargins* func()
+///
 void q_scrollarea_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -4500,6 +5035,7 @@ void q_scrollarea_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 /// @param self QScrollArea*
 /// @param param1 QPainter*
+///
 void q_scrollarea_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -4510,6 +5046,7 @@ void q_scrollarea_draw_frame(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param param1 QPainter*
+///
 void q_scrollarea_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -4520,6 +5057,7 @@ void q_scrollarea_qbase_draw_frame(void* self, void* param1);
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, QPainter* param1)
+///
 void q_scrollarea_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4529,6 +5067,7 @@ void q_scrollarea_on_draw_frame(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4538,6 +5077,7 @@ void q_scrollarea_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4548,6 +5088,7 @@ void q_scrollarea_qbase_update_micro_focus(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback void func()
+///
 void q_scrollarea_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4557,6 +5098,7 @@ void q_scrollarea_on_update_micro_focus(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_create(void* self);
 
 /// Inherited from QWidget
@@ -4566,6 +5108,7 @@ void q_scrollarea_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4576,6 +5119,7 @@ void q_scrollarea_qbase_create(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback void func()
+///
 void q_scrollarea_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4585,6 +5129,7 @@ void q_scrollarea_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4594,6 +5139,7 @@ void q_scrollarea_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4604,6 +5150,7 @@ void q_scrollarea_qbase_destroy(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback void func()
+///
 void q_scrollarea_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4613,6 +5160,7 @@ void q_scrollarea_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4622,6 +5170,7 @@ bool q_scrollarea_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4632,6 +5181,7 @@ bool q_scrollarea_qbase_focus_next_child(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func()
+///
 void q_scrollarea_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4641,6 +5191,7 @@ void q_scrollarea_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4650,6 +5201,7 @@ bool q_scrollarea_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 bool q_scrollarea_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4660,6 +5212,7 @@ bool q_scrollarea_qbase_focus_previous_child(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func()
+///
 void q_scrollarea_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4669,6 +5222,7 @@ void q_scrollarea_on_focus_previous_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QObject* q_scrollarea_sender(void* self);
 
 /// Inherited from QObject
@@ -4678,6 +5232,7 @@ QObject* q_scrollarea_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 QObject* q_scrollarea_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4688,6 +5243,7 @@ QObject* q_scrollarea_qbase_sender(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback QObject* func()
+///
 void q_scrollarea_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4697,6 +5253,7 @@ void q_scrollarea_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4706,6 +5263,7 @@ int32_t q_scrollarea_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QScrollArea*
+///
 int32_t q_scrollarea_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4716,6 +5274,7 @@ int32_t q_scrollarea_qbase_sender_signal_index(void* self);
 ///
 /// @param self QScrollArea*
 /// @param callback int32_t func()
+///
 void q_scrollarea_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4726,6 +5285,7 @@ void q_scrollarea_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QScrollArea*
 /// @param signal const char*
+///
 int32_t q_scrollarea_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4736,6 +5296,7 @@ int32_t q_scrollarea_receivers(void* self, const char* signal);
 ///
 /// @param self QScrollArea*
 /// @param signal const char*
+///
 int32_t q_scrollarea_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4746,6 +5307,7 @@ int32_t q_scrollarea_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QScrollArea*
 /// @param callback int32_t func(QScrollArea* self, const char* signal)
+///
 void q_scrollarea_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4756,6 +5318,7 @@ void q_scrollarea_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// @param self QScrollArea*
 /// @param signal QMetaMethod*
+///
 bool q_scrollarea_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4766,6 +5329,7 @@ bool q_scrollarea_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QScrollArea*
 /// @param signal QMetaMethod*
+///
 bool q_scrollarea_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4776,6 +5340,7 @@ bool q_scrollarea_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QScrollArea*
 /// @param callback bool func(QScrollArea* self, QMetaMethod* signal)
+///
 void q_scrollarea_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4787,6 +5352,7 @@ void q_scrollarea_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param self QScrollArea*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double q_scrollarea_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4798,6 +5364,7 @@ double q_scrollarea_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 /// @param self QScrollArea*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double q_scrollarea_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4808,6 +5375,7 @@ double q_scrollarea_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 ///
 /// @param self QScrollArea*
 /// @param callback double func(QScrollArea* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void q_scrollarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4818,6 +5386,7 @@ void q_scrollarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 ///
 /// @param self QScrollArea*
 /// @param callback void func(QScrollArea* self, const char* objectName)
+///
 void q_scrollarea_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#dtor.QScrollArea)
@@ -4825,6 +5394,7 @@ void q_scrollarea_on_object_name_changed(void* self, void (*callback)(void*, con
 /// Delete this object from C++ memory.
 ///
 /// @param self QScrollArea*
+///
 void q_scrollarea_delete(void* self);
 
 #endif

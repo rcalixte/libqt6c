@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ksycocaentry.html
+/// [Upstream resources](https://api.kde.org/ksycocaentry.html)
 
 /// k_sycocaentry_new constructs a new KSycocaEntry object.
 ///
@@ -21,6 +21,7 @@ KSycocaEntry* k_sycocaentry_new();
 ///
 /// @param self KSycocaEntry*
 /// @param t enum KSycocaEntry__KSycocaType
+///
 bool k_sycocaentry_is_type(void* self, int32_t t);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#sycocaType)
@@ -28,6 +29,7 @@ bool k_sycocaentry_is_type(void* self, int32_t t);
 /// @param self KSycocaEntry*
 ///
 /// @return enum KSycocaEntry__KSycocaType
+///
 int32_t k_sycocaentry_sycoca_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#name)
@@ -35,6 +37,7 @@ int32_t k_sycocaentry_sycoca_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSycocaEntry*
+///
 const char* k_sycocaentry_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#entryPath)
@@ -42,6 +45,7 @@ const char* k_sycocaentry_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSycocaEntry*
+///
 const char* k_sycocaentry_entry_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#storageId)
@@ -49,27 +53,32 @@ const char* k_sycocaentry_entry_path(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSycocaEntry*
+///
 const char* k_sycocaentry_storage_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isValid)
 ///
 /// @param self KSycocaEntry*
+///
 bool k_sycocaentry_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isDeleted)
 ///
 /// @param self KSycocaEntry*
+///
 bool k_sycocaentry_is_deleted(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#setDeleted)
 ///
 /// @param self KSycocaEntry*
 /// @param deleted bool
+///
 void k_sycocaentry_set_deleted(void* self, bool deleted);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isSeparator)
 ///
 /// @param self KSycocaEntry*
+///
 bool k_sycocaentry_is_separator(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#dtor.KSycocaEntry)
@@ -77,6 +86,7 @@ bool k_sycocaentry_is_separator(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self KSycocaEntry*
+///
 void k_sycocaentry_delete(void* self);
 
 #endif

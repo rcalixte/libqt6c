@@ -11,15 +11,18 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qopenglfunctions.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html)
 
 /// q_openglfunctions_new constructs a new QOpenGLFunctions object.
 ///
 QOpenGLFunctions* q_openglfunctions_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html)
+
 /// q_openglfunctions_new2 constructs a new QOpenGLFunctions object.
 ///
 /// @param context QOpenGLContext*
+///
 QOpenGLFunctions* q_openglfunctions_new2(void* context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#openGLFeatures)
@@ -27,17 +30,20 @@ QOpenGLFunctions* q_openglfunctions_new2(void* context);
 /// @param self QOpenGLFunctions*
 ///
 /// @return flag of enum QOpenGLFunctions__OpenGLFeature
+///
 int32_t q_openglfunctions_open_g_l_features(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#hasOpenGLFeature)
 ///
 /// @param self QOpenGLFunctions*
 /// @param feature enum QOpenGLFunctions__OpenGLFeature
+///
 bool q_openglfunctions_has_open_g_l_feature(void* self, int32_t feature);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#initializeOpenGLFunctions)
 ///
 /// @param self QOpenGLFunctions*
+///
 void q_openglfunctions_initialize_open_g_l_functions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBindTexture)
@@ -45,6 +51,7 @@ void q_openglfunctions_initialize_open_g_l_functions(void* self);
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
 /// @param texture uint32_t
+///
 void q_openglfunctions_gl_bind_texture(void* self, uint32_t target, uint32_t texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBlendFunc)
@@ -52,12 +59,14 @@ void q_openglfunctions_gl_bind_texture(void* self, uint32_t target, uint32_t tex
 /// @param self QOpenGLFunctions*
 /// @param sfactor uint32_t
 /// @param dfactor uint32_t
+///
 void q_openglfunctions_gl_blend_func(void* self, uint32_t sfactor, uint32_t dfactor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glClear)
 ///
 /// @param self QOpenGLFunctions*
 /// @param mask uint32_t
+///
 void q_openglfunctions_gl_clear(void* self, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glClearColor)
@@ -67,12 +76,14 @@ void q_openglfunctions_gl_clear(void* self, uint32_t mask);
 /// @param green float
 /// @param blue float
 /// @param alpha float
+///
 void q_openglfunctions_gl_clear_color(void* self, float red, float green, float blue, float alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glClearStencil)
 ///
 /// @param self QOpenGLFunctions*
 /// @param s int32_t
+///
 void q_openglfunctions_gl_clear_stencil(void* self, int32_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glColorMask)
@@ -82,6 +93,7 @@ void q_openglfunctions_gl_clear_stencil(void* self, int32_t s);
 /// @param green uint8_t
 /// @param blue uint8_t
 /// @param alpha uint8_t
+///
 void q_openglfunctions_gl_color_mask(void* self, uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCopyTexImage2D)
@@ -95,6 +107,7 @@ void q_openglfunctions_gl_color_mask(void* self, uint8_t red, uint8_t green, uin
 /// @param width int32_t
 /// @param height int32_t
 /// @param border int32_t
+///
 void q_openglfunctions_gl_copy_tex_image2_d(void* self, uint32_t target, int32_t level, uint32_t internalformat, int32_t x, int32_t y, int32_t width, int32_t height, int32_t border);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCopyTexSubImage2D)
@@ -108,12 +121,14 @@ void q_openglfunctions_gl_copy_tex_image2_d(void* self, uint32_t target, int32_t
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_gl_copy_tex_sub_image2_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCullFace)
 ///
 /// @param self QOpenGLFunctions*
 /// @param mode uint32_t
+///
 void q_openglfunctions_gl_cull_face(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDeleteTextures)
@@ -121,24 +136,28 @@ void q_openglfunctions_gl_cull_face(void* self, uint32_t mode);
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param textures uint32_t*
+///
 void q_openglfunctions_gl_delete_textures(void* self, int32_t n, uint32_t* textures);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDepthFunc)
 ///
 /// @param self QOpenGLFunctions*
 /// @param func uint32_t
+///
 void q_openglfunctions_gl_depth_func(void* self, uint32_t func);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDepthMask)
 ///
 /// @param self QOpenGLFunctions*
 /// @param flag uint8_t
+///
 void q_openglfunctions_gl_depth_mask(void* self, uint8_t flag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDisable)
 ///
 /// @param self QOpenGLFunctions*
 /// @param cap uint32_t
+///
 void q_openglfunctions_gl_disable(void* self, uint32_t cap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDrawArrays)
@@ -147,6 +166,7 @@ void q_openglfunctions_gl_disable(void* self, uint32_t cap);
 /// @param mode uint32_t
 /// @param first int32_t
 /// @param count int32_t
+///
 void q_openglfunctions_gl_draw_arrays(void* self, uint32_t mode, int32_t first, int32_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDrawElements)
@@ -156,28 +176,33 @@ void q_openglfunctions_gl_draw_arrays(void* self, uint32_t mode, int32_t first, 
 /// @param count int32_t
 /// @param type uint32_t
 /// @param indices void*
+///
 void q_openglfunctions_gl_draw_elements(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glEnable)
 ///
 /// @param self QOpenGLFunctions*
 /// @param cap uint32_t
+///
 void q_openglfunctions_gl_enable(void* self, uint32_t cap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glFinish)
 ///
 /// @param self QOpenGLFunctions*
+///
 void q_openglfunctions_gl_finish(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glFlush)
 ///
 /// @param self QOpenGLFunctions*
+///
 void q_openglfunctions_gl_flush(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glFrontFace)
 ///
 /// @param self QOpenGLFunctions*
 /// @param mode uint32_t
+///
 void q_openglfunctions_gl_front_face(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGenTextures)
@@ -185,6 +210,7 @@ void q_openglfunctions_gl_front_face(void* self, uint32_t mode);
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param textures uint32_t*
+///
 void q_openglfunctions_gl_gen_textures(void* self, int32_t n, uint32_t* textures);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetBooleanv)
@@ -192,6 +218,7 @@ void q_openglfunctions_gl_gen_textures(void* self, int32_t n, uint32_t* textures
 /// @param self QOpenGLFunctions*
 /// @param pname uint32_t
 /// @param params uint8_t*
+///
 void q_openglfunctions_gl_get_booleanv(void* self, uint32_t pname, uint8_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetFloatv)
@@ -199,6 +226,7 @@ void q_openglfunctions_gl_get_booleanv(void* self, uint32_t pname, uint8_t* para
 /// @param self QOpenGLFunctions*
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_gl_get_floatv(void* self, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetIntegerv)
@@ -206,12 +234,14 @@ void q_openglfunctions_gl_get_floatv(void* self, uint32_t pname, float* params);
 /// @param self QOpenGLFunctions*
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_integerv(void* self, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetString)
 ///
 /// @param self QOpenGLFunctions*
 /// @param name uint32_t
+///
 const uint8_t* q_openglfunctions_gl_get_string(void* self, uint32_t name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetTexParameterfv)
@@ -220,6 +250,7 @@ const uint8_t* q_openglfunctions_gl_get_string(void* self, uint32_t name);
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_gl_get_tex_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetTexParameteriv)
@@ -228,6 +259,7 @@ void q_openglfunctions_gl_get_tex_parameterfv(void* self, uint32_t target, uint3
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_tex_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glHint)
@@ -235,24 +267,28 @@ void q_openglfunctions_gl_get_tex_parameteriv(void* self, uint32_t target, uint3
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
 /// @param mode uint32_t
+///
 void q_openglfunctions_gl_hint(void* self, uint32_t target, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glIsEnabled)
 ///
 /// @param self QOpenGLFunctions*
 /// @param cap uint32_t
+///
 uint8_t q_openglfunctions_gl_is_enabled(void* self, uint32_t cap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glIsTexture)
 ///
 /// @param self QOpenGLFunctions*
 /// @param texture uint32_t
+///
 uint8_t q_openglfunctions_gl_is_texture(void* self, uint32_t texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glLineWidth)
 ///
 /// @param self QOpenGLFunctions*
 /// @param width float
+///
 void q_openglfunctions_gl_line_width(void* self, float width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glPixelStorei)
@@ -260,6 +296,7 @@ void q_openglfunctions_gl_line_width(void* self, float width);
 /// @param self QOpenGLFunctions*
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_gl_pixel_storei(void* self, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glPolygonOffset)
@@ -267,6 +304,7 @@ void q_openglfunctions_gl_pixel_storei(void* self, uint32_t pname, int32_t param
 /// @param self QOpenGLFunctions*
 /// @param factor float
 /// @param units float
+///
 void q_openglfunctions_gl_polygon_offset(void* self, float factor, float units);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glReadPixels)
@@ -279,6 +317,7 @@ void q_openglfunctions_gl_polygon_offset(void* self, float factor, float units);
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_gl_read_pixels(void* self, int32_t x, int32_t y, int32_t width, int32_t height, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glScissor)
@@ -288,6 +327,7 @@ void q_openglfunctions_gl_read_pixels(void* self, int32_t x, int32_t y, int32_t 
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_gl_scissor(void* self, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glStencilFunc)
@@ -296,12 +336,14 @@ void q_openglfunctions_gl_scissor(void* self, int32_t x, int32_t y, int32_t widt
 /// @param func uint32_t
 /// @param ref int32_t
 /// @param mask uint32_t
+///
 void q_openglfunctions_gl_stencil_func(void* self, uint32_t func, int32_t ref, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glStencilMask)
 ///
 /// @param self QOpenGLFunctions*
 /// @param mask uint32_t
+///
 void q_openglfunctions_gl_stencil_mask(void* self, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glStencilOp)
@@ -310,6 +352,7 @@ void q_openglfunctions_gl_stencil_mask(void* self, uint32_t mask);
 /// @param fail uint32_t
 /// @param zfail uint32_t
 /// @param zpass uint32_t
+///
 void q_openglfunctions_gl_stencil_op(void* self, uint32_t fail, uint32_t zfail, uint32_t zpass);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glTexImage2D)
@@ -324,6 +367,7 @@ void q_openglfunctions_gl_stencil_op(void* self, uint32_t fail, uint32_t zfail, 
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_gl_tex_image2_d(void* self, uint32_t target, int32_t level, int32_t internalformat, int32_t width, int32_t height, int32_t border, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glTexParameterf)
@@ -332,6 +376,7 @@ void q_openglfunctions_gl_tex_image2_d(void* self, uint32_t target, int32_t leve
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_gl_tex_parameterf(void* self, uint32_t target, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glTexParameterfv)
@@ -340,6 +385,7 @@ void q_openglfunctions_gl_tex_parameterf(void* self, uint32_t target, uint32_t p
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_gl_tex_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glTexParameteri)
@@ -348,6 +394,7 @@ void q_openglfunctions_gl_tex_parameterfv(void* self, uint32_t target, uint32_t 
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_gl_tex_parameteri(void* self, uint32_t target, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glTexParameteriv)
@@ -356,6 +403,7 @@ void q_openglfunctions_gl_tex_parameteri(void* self, uint32_t target, uint32_t p
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_tex_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glTexSubImage2D)
@@ -370,6 +418,7 @@ void q_openglfunctions_gl_tex_parameteriv(void* self, uint32_t target, uint32_t 
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_gl_tex_sub_image2_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t width, int32_t height, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glViewport)
@@ -379,12 +428,14 @@ void q_openglfunctions_gl_tex_sub_image2_d(void* self, uint32_t target, int32_t 
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_gl_viewport(void* self, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glActiveTexture)
 ///
 /// @param self QOpenGLFunctions*
 /// @param texture uint32_t
+///
 void q_openglfunctions_gl_active_texture(void* self, uint32_t texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glAttachShader)
@@ -392,6 +443,7 @@ void q_openglfunctions_gl_active_texture(void* self, uint32_t texture);
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
 /// @param shader uint32_t
+///
 void q_openglfunctions_gl_attach_shader(void* self, uint32_t program, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBindAttribLocation)
@@ -400,6 +452,7 @@ void q_openglfunctions_gl_attach_shader(void* self, uint32_t program, uint32_t s
 /// @param program uint32_t
 /// @param index uint32_t
 /// @param name const char*
+///
 void q_openglfunctions_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBindBuffer)
@@ -407,6 +460,7 @@ void q_openglfunctions_gl_bind_attrib_location(void* self, uint32_t program, uin
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
 /// @param buffer uint32_t
+///
 void q_openglfunctions_gl_bind_buffer(void* self, uint32_t target, uint32_t buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBindFramebuffer)
@@ -414,6 +468,7 @@ void q_openglfunctions_gl_bind_buffer(void* self, uint32_t target, uint32_t buff
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
 /// @param framebuffer uint32_t
+///
 void q_openglfunctions_gl_bind_framebuffer(void* self, uint32_t target, uint32_t framebuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBindRenderbuffer)
@@ -421,6 +476,7 @@ void q_openglfunctions_gl_bind_framebuffer(void* self, uint32_t target, uint32_t
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
 /// @param renderbuffer uint32_t
+///
 void q_openglfunctions_gl_bind_renderbuffer(void* self, uint32_t target, uint32_t renderbuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBlendColor)
@@ -430,12 +486,14 @@ void q_openglfunctions_gl_bind_renderbuffer(void* self, uint32_t target, uint32_
 /// @param green float
 /// @param blue float
 /// @param alpha float
+///
 void q_openglfunctions_gl_blend_color(void* self, float red, float green, float blue, float alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBlendEquation)
 ///
 /// @param self QOpenGLFunctions*
 /// @param mode uint32_t
+///
 void q_openglfunctions_gl_blend_equation(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBlendEquationSeparate)
@@ -443,6 +501,7 @@ void q_openglfunctions_gl_blend_equation(void* self, uint32_t mode);
 /// @param self QOpenGLFunctions*
 /// @param modeRGB uint32_t
 /// @param modeAlpha uint32_t
+///
 void q_openglfunctions_gl_blend_equation_separate(void* self, uint32_t modeRGB, uint32_t modeAlpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBlendFuncSeparate)
@@ -452,6 +511,7 @@ void q_openglfunctions_gl_blend_equation_separate(void* self, uint32_t modeRGB, 
 /// @param dstRGB uint32_t
 /// @param srcAlpha uint32_t
 /// @param dstAlpha uint32_t
+///
 void q_openglfunctions_gl_blend_func_separate(void* self, uint32_t srcRGB, uint32_t dstRGB, uint32_t srcAlpha, uint32_t dstAlpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBufferData)
@@ -461,6 +521,7 @@ void q_openglfunctions_gl_blend_func_separate(void* self, uint32_t srcRGB, uint3
 /// @param size int64_t
 /// @param data void*
 /// @param usage uint32_t
+///
 void q_openglfunctions_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBufferSubData)
@@ -470,18 +531,21 @@ void q_openglfunctions_gl_buffer_data(void* self, uint32_t target, int64_t size,
 /// @param offset int64_t
 /// @param size int64_t
 /// @param data void*
+///
 void q_openglfunctions_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glClearDepthf)
 ///
 /// @param self QOpenGLFunctions*
 /// @param depth float
+///
 void q_openglfunctions_gl_clear_depthf(void* self, float depth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCompileShader)
 ///
 /// @param self QOpenGLFunctions*
 /// @param shader uint32_t
+///
 void q_openglfunctions_gl_compile_shader(void* self, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCompressedTexImage2D)
@@ -495,6 +559,7 @@ void q_openglfunctions_gl_compile_shader(void* self, uint32_t shader);
 /// @param border int32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_gl_compressed_tex_image2_d(void* self, uint32_t target, int32_t level, uint32_t internalformat, int32_t width, int32_t height, int32_t border, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCompressedTexSubImage2D)
@@ -509,17 +574,20 @@ void q_openglfunctions_gl_compressed_tex_image2_d(void* self, uint32_t target, i
 /// @param format uint32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_gl_compressed_tex_sub_image2_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t width, int32_t height, uint32_t format, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCreateProgram)
 ///
 /// @param self QOpenGLFunctions*
+///
 uint32_t q_openglfunctions_gl_create_program(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glCreateShader)
 ///
 /// @param self QOpenGLFunctions*
 /// @param type uint32_t
+///
 uint32_t q_openglfunctions_gl_create_shader(void* self, uint32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDeleteBuffers)
@@ -527,6 +595,7 @@ uint32_t q_openglfunctions_gl_create_shader(void* self, uint32_t type);
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param buffers uint32_t*
+///
 void q_openglfunctions_gl_delete_buffers(void* self, int32_t n, uint32_t* buffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDeleteFramebuffers)
@@ -534,12 +603,14 @@ void q_openglfunctions_gl_delete_buffers(void* self, int32_t n, uint32_t* buffer
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param framebuffers uint32_t*
+///
 void q_openglfunctions_gl_delete_framebuffers(void* self, int32_t n, uint32_t* framebuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDeleteProgram)
 ///
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
+///
 void q_openglfunctions_gl_delete_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDeleteRenderbuffers)
@@ -547,12 +618,14 @@ void q_openglfunctions_gl_delete_program(void* self, uint32_t program);
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param renderbuffers uint32_t*
+///
 void q_openglfunctions_gl_delete_renderbuffers(void* self, int32_t n, uint32_t* renderbuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDeleteShader)
 ///
 /// @param self QOpenGLFunctions*
 /// @param shader uint32_t
+///
 void q_openglfunctions_gl_delete_shader(void* self, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDepthRangef)
@@ -560,6 +633,7 @@ void q_openglfunctions_gl_delete_shader(void* self, uint32_t shader);
 /// @param self QOpenGLFunctions*
 /// @param zNear float
 /// @param zFar float
+///
 void q_openglfunctions_gl_depth_rangef(void* self, float zNear, float zFar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDetachShader)
@@ -567,18 +641,21 @@ void q_openglfunctions_gl_depth_rangef(void* self, float zNear, float zFar);
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
 /// @param shader uint32_t
+///
 void q_openglfunctions_gl_detach_shader(void* self, uint32_t program, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glDisableVertexAttribArray)
 ///
 /// @param self QOpenGLFunctions*
 /// @param index uint32_t
+///
 void q_openglfunctions_gl_disable_vertex_attrib_array(void* self, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glEnableVertexAttribArray)
 ///
 /// @param self QOpenGLFunctions*
 /// @param index uint32_t
+///
 void q_openglfunctions_gl_enable_vertex_attrib_array(void* self, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glFramebufferRenderbuffer)
@@ -588,6 +665,7 @@ void q_openglfunctions_gl_enable_vertex_attrib_array(void* self, uint32_t index)
 /// @param attachment uint32_t
 /// @param renderbuffertarget uint32_t
 /// @param renderbuffer uint32_t
+///
 void q_openglfunctions_gl_framebuffer_renderbuffer(void* self, uint32_t target, uint32_t attachment, uint32_t renderbuffertarget, uint32_t renderbuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glFramebufferTexture2D)
@@ -598,6 +676,7 @@ void q_openglfunctions_gl_framebuffer_renderbuffer(void* self, uint32_t target, 
 /// @param textarget uint32_t
 /// @param texture uint32_t
 /// @param level int32_t
+///
 void q_openglfunctions_gl_framebuffer_texture2_d(void* self, uint32_t target, uint32_t attachment, uint32_t textarget, uint32_t texture, int32_t level);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGenBuffers)
@@ -605,12 +684,14 @@ void q_openglfunctions_gl_framebuffer_texture2_d(void* self, uint32_t target, ui
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param buffers uint32_t*
+///
 void q_openglfunctions_gl_gen_buffers(void* self, int32_t n, uint32_t* buffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGenerateMipmap)
 ///
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
+///
 void q_openglfunctions_gl_generate_mipmap(void* self, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGenFramebuffers)
@@ -618,6 +699,7 @@ void q_openglfunctions_gl_generate_mipmap(void* self, uint32_t target);
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param framebuffers uint32_t*
+///
 void q_openglfunctions_gl_gen_framebuffers(void* self, int32_t n, uint32_t* framebuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGenRenderbuffers)
@@ -625,6 +707,7 @@ void q_openglfunctions_gl_gen_framebuffers(void* self, int32_t n, uint32_t* fram
 /// @param self QOpenGLFunctions*
 /// @param n int32_t
 /// @param renderbuffers uint32_t*
+///
 void q_openglfunctions_gl_gen_renderbuffers(void* self, int32_t n, uint32_t* renderbuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetAttachedShaders)
@@ -634,6 +717,7 @@ void q_openglfunctions_gl_gen_renderbuffers(void* self, int32_t n, uint32_t* ren
 /// @param maxcount int32_t
 /// @param count int32_t*
 /// @param shaders uint32_t*
+///
 void q_openglfunctions_gl_get_attached_shaders(void* self, uint32_t program, int32_t maxcount, int32_t* count, uint32_t* shaders);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetAttribLocation)
@@ -641,6 +725,7 @@ void q_openglfunctions_gl_get_attached_shaders(void* self, uint32_t program, int
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
 /// @param name const char*
+///
 int32_t q_openglfunctions_gl_get_attrib_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetBufferParameteriv)
@@ -649,6 +734,7 @@ int32_t q_openglfunctions_gl_get_attrib_location(void* self, uint32_t program, c
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_buffer_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetFramebufferAttachmentParameteriv)
@@ -658,6 +744,7 @@ void q_openglfunctions_gl_get_buffer_parameteriv(void* self, uint32_t target, ui
 /// @param attachment uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_framebuffer_attachment_parameteriv(void* self, uint32_t target, uint32_t attachment, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetProgramiv)
@@ -666,6 +753,7 @@ void q_openglfunctions_gl_get_framebuffer_attachment_parameteriv(void* self, uin
 /// @param program uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_programiv(void* self, uint32_t program, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetProgramInfoLog)
@@ -675,6 +763,7 @@ void q_openglfunctions_gl_get_programiv(void* self, uint32_t program, uint32_t p
 /// @param bufsize int32_t
 /// @param length int32_t*
 /// @param infolog char*
+///
 void q_openglfunctions_gl_get_program_info_log(void* self, uint32_t program, int32_t bufsize, int32_t* length, char* infolog);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetRenderbufferParameteriv)
@@ -683,6 +772,7 @@ void q_openglfunctions_gl_get_program_info_log(void* self, uint32_t program, int
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_renderbuffer_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetShaderiv)
@@ -691,6 +781,7 @@ void q_openglfunctions_gl_get_renderbuffer_parameteriv(void* self, uint32_t targ
 /// @param shader uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_shaderiv(void* self, uint32_t shader, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetShaderInfoLog)
@@ -700,6 +791,7 @@ void q_openglfunctions_gl_get_shaderiv(void* self, uint32_t shader, uint32_t pna
 /// @param bufsize int32_t
 /// @param length int32_t*
 /// @param infolog char*
+///
 void q_openglfunctions_gl_get_shader_info_log(void* self, uint32_t shader, int32_t bufsize, int32_t* length, char* infolog);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetShaderPrecisionFormat)
@@ -709,6 +801,7 @@ void q_openglfunctions_gl_get_shader_info_log(void* self, uint32_t shader, int32
 /// @param precisiontype uint32_t
 /// @param range int32_t*
 /// @param precision int32_t*
+///
 void q_openglfunctions_gl_get_shader_precision_format(void* self, uint32_t shadertype, uint32_t precisiontype, int32_t* range, int32_t* precision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetShaderSource)
@@ -718,6 +811,7 @@ void q_openglfunctions_gl_get_shader_precision_format(void* self, uint32_t shade
 /// @param bufsize int32_t
 /// @param length int32_t*
 /// @param source char*
+///
 void q_openglfunctions_gl_get_shader_source(void* self, uint32_t shader, int32_t bufsize, int32_t* length, char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetUniformfv)
@@ -726,6 +820,7 @@ void q_openglfunctions_gl_get_shader_source(void* self, uint32_t shader, int32_t
 /// @param program uint32_t
 /// @param location int32_t
 /// @param params float*
+///
 void q_openglfunctions_gl_get_uniformfv(void* self, uint32_t program, int32_t location, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetUniformiv)
@@ -734,6 +829,7 @@ void q_openglfunctions_gl_get_uniformfv(void* self, uint32_t program, int32_t lo
 /// @param program uint32_t
 /// @param location int32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_uniformiv(void* self, uint32_t program, int32_t location, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetUniformLocation)
@@ -741,6 +837,7 @@ void q_openglfunctions_gl_get_uniformiv(void* self, uint32_t program, int32_t lo
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
 /// @param name const char*
+///
 int32_t q_openglfunctions_gl_get_uniform_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetVertexAttribfv)
@@ -749,6 +846,7 @@ int32_t q_openglfunctions_gl_get_uniform_location(void* self, uint32_t program, 
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_gl_get_vertex_attribfv(void* self, uint32_t index, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetVertexAttribiv)
@@ -757,6 +855,7 @@ void q_openglfunctions_gl_get_vertex_attribfv(void* self, uint32_t index, uint32
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_gl_get_vertex_attribiv(void* self, uint32_t index, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glGetVertexAttribPointerv)
@@ -765,47 +864,55 @@ void q_openglfunctions_gl_get_vertex_attribiv(void* self, uint32_t index, uint32
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param pointer void*
+///
 void q_openglfunctions_gl_get_vertex_attrib_pointerv(void* self, uint32_t index, uint32_t pname, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glIsBuffer)
 ///
 /// @param self QOpenGLFunctions*
 /// @param buffer uint32_t
+///
 uint8_t q_openglfunctions_gl_is_buffer(void* self, uint32_t buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glIsFramebuffer)
 ///
 /// @param self QOpenGLFunctions*
 /// @param framebuffer uint32_t
+///
 uint8_t q_openglfunctions_gl_is_framebuffer(void* self, uint32_t framebuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glIsProgram)
 ///
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
+///
 uint8_t q_openglfunctions_gl_is_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glIsRenderbuffer)
 ///
 /// @param self QOpenGLFunctions*
 /// @param renderbuffer uint32_t
+///
 uint8_t q_openglfunctions_gl_is_renderbuffer(void* self, uint32_t renderbuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glIsShader)
 ///
 /// @param self QOpenGLFunctions*
 /// @param shader uint32_t
+///
 uint8_t q_openglfunctions_gl_is_shader(void* self, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glLinkProgram)
 ///
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
+///
 void q_openglfunctions_gl_link_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glReleaseShaderCompiler)
 ///
 /// @param self QOpenGLFunctions*
+///
 void q_openglfunctions_gl_release_shader_compiler(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glRenderbufferStorage)
@@ -815,6 +922,7 @@ void q_openglfunctions_gl_release_shader_compiler(void* self);
 /// @param internalformat uint32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_gl_renderbuffer_storage(void* self, uint32_t target, uint32_t internalformat, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glSampleCoverage)
@@ -822,6 +930,7 @@ void q_openglfunctions_gl_renderbuffer_storage(void* self, uint32_t target, uint
 /// @param self QOpenGLFunctions*
 /// @param value float
 /// @param invert uint8_t
+///
 void q_openglfunctions_gl_sample_coverage(void* self, float value, uint8_t invert);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glShaderBinary)
@@ -832,6 +941,7 @@ void q_openglfunctions_gl_sample_coverage(void* self, float value, uint8_t inver
 /// @param binaryformat uint32_t
 /// @param binary void*
 /// @param length int32_t
+///
 void q_openglfunctions_gl_shader_binary(void* self, int32_t n, uint32_t* shaders, uint32_t binaryformat, void* binary, int32_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glShaderSource)
@@ -841,6 +951,7 @@ void q_openglfunctions_gl_shader_binary(void* self, int32_t n, uint32_t* shaders
 /// @param count int32_t
 /// @param stringVal const char**
 /// @param length int32_t*
+///
 void q_openglfunctions_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glStencilFuncSeparate)
@@ -850,6 +961,7 @@ void q_openglfunctions_gl_shader_source(void* self, uint32_t shader, int32_t cou
 /// @param func uint32_t
 /// @param ref int32_t
 /// @param mask uint32_t
+///
 void q_openglfunctions_gl_stencil_func_separate(void* self, uint32_t face, uint32_t func, int32_t ref, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glStencilMaskSeparate)
@@ -857,6 +969,7 @@ void q_openglfunctions_gl_stencil_func_separate(void* self, uint32_t face, uint3
 /// @param self QOpenGLFunctions*
 /// @param face uint32_t
 /// @param mask uint32_t
+///
 void q_openglfunctions_gl_stencil_mask_separate(void* self, uint32_t face, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glStencilOpSeparate)
@@ -866,6 +979,7 @@ void q_openglfunctions_gl_stencil_mask_separate(void* self, uint32_t face, uint3
 /// @param fail uint32_t
 /// @param zfail uint32_t
 /// @param zpass uint32_t
+///
 void q_openglfunctions_gl_stencil_op_separate(void* self, uint32_t face, uint32_t fail, uint32_t zfail, uint32_t zpass);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform1f)
@@ -873,6 +987,7 @@ void q_openglfunctions_gl_stencil_op_separate(void* self, uint32_t face, uint32_
 /// @param self QOpenGLFunctions*
 /// @param location int32_t
 /// @param x float
+///
 void q_openglfunctions_gl_uniform1f(void* self, int32_t location, float x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform1fv)
@@ -881,6 +996,7 @@ void q_openglfunctions_gl_uniform1f(void* self, int32_t location, float x);
 /// @param location int32_t
 /// @param count int32_t
 /// @param v float*
+///
 void q_openglfunctions_gl_uniform1fv(void* self, int32_t location, int32_t count, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform1i)
@@ -888,6 +1004,7 @@ void q_openglfunctions_gl_uniform1fv(void* self, int32_t location, int32_t count
 /// @param self QOpenGLFunctions*
 /// @param location int32_t
 /// @param x int32_t
+///
 void q_openglfunctions_gl_uniform1i(void* self, int32_t location, int32_t x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform1iv)
@@ -896,6 +1013,7 @@ void q_openglfunctions_gl_uniform1i(void* self, int32_t location, int32_t x);
 /// @param location int32_t
 /// @param count int32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_gl_uniform1iv(void* self, int32_t location, int32_t count, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform2f)
@@ -904,6 +1022,7 @@ void q_openglfunctions_gl_uniform1iv(void* self, int32_t location, int32_t count
 /// @param location int32_t
 /// @param x float
 /// @param y float
+///
 void q_openglfunctions_gl_uniform2f(void* self, int32_t location, float x, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform2fv)
@@ -912,6 +1031,7 @@ void q_openglfunctions_gl_uniform2f(void* self, int32_t location, float x, float
 /// @param location int32_t
 /// @param count int32_t
 /// @param v float*
+///
 void q_openglfunctions_gl_uniform2fv(void* self, int32_t location, int32_t count, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform2i)
@@ -920,6 +1040,7 @@ void q_openglfunctions_gl_uniform2fv(void* self, int32_t location, int32_t count
 /// @param location int32_t
 /// @param x int32_t
 /// @param y int32_t
+///
 void q_openglfunctions_gl_uniform2i(void* self, int32_t location, int32_t x, int32_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform2iv)
@@ -928,6 +1049,7 @@ void q_openglfunctions_gl_uniform2i(void* self, int32_t location, int32_t x, int
 /// @param location int32_t
 /// @param count int32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_gl_uniform2iv(void* self, int32_t location, int32_t count, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform3f)
@@ -937,6 +1059,7 @@ void q_openglfunctions_gl_uniform2iv(void* self, int32_t location, int32_t count
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_gl_uniform3f(void* self, int32_t location, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform3fv)
@@ -945,6 +1068,7 @@ void q_openglfunctions_gl_uniform3f(void* self, int32_t location, float x, float
 /// @param location int32_t
 /// @param count int32_t
 /// @param v float*
+///
 void q_openglfunctions_gl_uniform3fv(void* self, int32_t location, int32_t count, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform3i)
@@ -954,6 +1078,7 @@ void q_openglfunctions_gl_uniform3fv(void* self, int32_t location, int32_t count
 /// @param x int32_t
 /// @param y int32_t
 /// @param z int32_t
+///
 void q_openglfunctions_gl_uniform3i(void* self, int32_t location, int32_t x, int32_t y, int32_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform3iv)
@@ -962,6 +1087,7 @@ void q_openglfunctions_gl_uniform3i(void* self, int32_t location, int32_t x, int
 /// @param location int32_t
 /// @param count int32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_gl_uniform3iv(void* self, int32_t location, int32_t count, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform4f)
@@ -972,6 +1098,7 @@ void q_openglfunctions_gl_uniform3iv(void* self, int32_t location, int32_t count
 /// @param y float
 /// @param z float
 /// @param w float
+///
 void q_openglfunctions_gl_uniform4f(void* self, int32_t location, float x, float y, float z, float w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform4fv)
@@ -980,6 +1107,7 @@ void q_openglfunctions_gl_uniform4f(void* self, int32_t location, float x, float
 /// @param location int32_t
 /// @param count int32_t
 /// @param v float*
+///
 void q_openglfunctions_gl_uniform4fv(void* self, int32_t location, int32_t count, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform4i)
@@ -990,6 +1118,7 @@ void q_openglfunctions_gl_uniform4fv(void* self, int32_t location, int32_t count
 /// @param y int32_t
 /// @param z int32_t
 /// @param w int32_t
+///
 void q_openglfunctions_gl_uniform4i(void* self, int32_t location, int32_t x, int32_t y, int32_t z, int32_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniform4iv)
@@ -998,6 +1127,7 @@ void q_openglfunctions_gl_uniform4i(void* self, int32_t location, int32_t x, int
 /// @param location int32_t
 /// @param count int32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_gl_uniform4iv(void* self, int32_t location, int32_t count, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniformMatrix2fv)
@@ -1007,6 +1137,7 @@ void q_openglfunctions_gl_uniform4iv(void* self, int32_t location, int32_t count
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_gl_uniform_matrix2fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniformMatrix3fv)
@@ -1016,6 +1147,7 @@ void q_openglfunctions_gl_uniform_matrix2fv(void* self, int32_t location, int32_
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_gl_uniform_matrix3fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUniformMatrix4fv)
@@ -1025,18 +1157,21 @@ void q_openglfunctions_gl_uniform_matrix3fv(void* self, int32_t location, int32_
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_gl_uniform_matrix4fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glUseProgram)
 ///
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
+///
 void q_openglfunctions_gl_use_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glValidateProgram)
 ///
 /// @param self QOpenGLFunctions*
 /// @param program uint32_t
+///
 void q_openglfunctions_gl_validate_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib1f)
@@ -1044,6 +1179,7 @@ void q_openglfunctions_gl_validate_program(void* self, uint32_t program);
 /// @param self QOpenGLFunctions*
 /// @param indx uint32_t
 /// @param x float
+///
 void q_openglfunctions_gl_vertex_attrib1f(void* self, uint32_t indx, float x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib1fv)
@@ -1051,6 +1187,7 @@ void q_openglfunctions_gl_vertex_attrib1f(void* self, uint32_t indx, float x);
 /// @param self QOpenGLFunctions*
 /// @param indx uint32_t
 /// @param values float*
+///
 void q_openglfunctions_gl_vertex_attrib1fv(void* self, uint32_t indx, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib2f)
@@ -1059,6 +1196,7 @@ void q_openglfunctions_gl_vertex_attrib1fv(void* self, uint32_t indx, float* val
 /// @param indx uint32_t
 /// @param x float
 /// @param y float
+///
 void q_openglfunctions_gl_vertex_attrib2f(void* self, uint32_t indx, float x, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib2fv)
@@ -1066,6 +1204,7 @@ void q_openglfunctions_gl_vertex_attrib2f(void* self, uint32_t indx, float x, fl
 /// @param self QOpenGLFunctions*
 /// @param indx uint32_t
 /// @param values float*
+///
 void q_openglfunctions_gl_vertex_attrib2fv(void* self, uint32_t indx, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib3f)
@@ -1075,6 +1214,7 @@ void q_openglfunctions_gl_vertex_attrib2fv(void* self, uint32_t indx, float* val
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_gl_vertex_attrib3f(void* self, uint32_t indx, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib3fv)
@@ -1082,6 +1222,7 @@ void q_openglfunctions_gl_vertex_attrib3f(void* self, uint32_t indx, float x, fl
 /// @param self QOpenGLFunctions*
 /// @param indx uint32_t
 /// @param values float*
+///
 void q_openglfunctions_gl_vertex_attrib3fv(void* self, uint32_t indx, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib4f)
@@ -1092,6 +1233,7 @@ void q_openglfunctions_gl_vertex_attrib3fv(void* self, uint32_t indx, float* val
 /// @param y float
 /// @param z float
 /// @param w float
+///
 void q_openglfunctions_gl_vertex_attrib4f(void* self, uint32_t indx, float x, float y, float z, float w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttrib4fv)
@@ -1099,6 +1241,7 @@ void q_openglfunctions_gl_vertex_attrib4f(void* self, uint32_t indx, float x, fl
 /// @param self QOpenGLFunctions*
 /// @param indx uint32_t
 /// @param values float*
+///
 void q_openglfunctions_gl_vertex_attrib4fv(void* self, uint32_t indx, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glVertexAttribPointer)
@@ -1110,6 +1253,7 @@ void q_openglfunctions_gl_vertex_attrib4fv(void* self, uint32_t indx, float* val
 /// @param normalized uint8_t
 /// @param stride int32_t
 /// @param ptr void*
+///
 void q_openglfunctions_gl_vertex_attrib_pointer(void* self, uint32_t indx, int32_t size, uint32_t type, uint8_t normalized, int32_t stride, void* ptr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#dtor.QOpenGLFunctions)
@@ -1117,9 +1261,10 @@ void q_openglfunctions_gl_vertex_attrib_pointer(void* self, uint32_t indx, int32
 /// Delete this object from C++ memory.
 ///
 /// @param self QOpenGLFunctions*
+///
 void q_openglfunctions_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qopenglfunctions.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#public-types)
 
 typedef enum {
     QOPENGLFUNCTIONS_OPENGLFEATURE_MULTITEXTURE = 1,

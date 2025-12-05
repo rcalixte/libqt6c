@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/krecentdirs.html
+/// [Upstream resources](https://api.kde.org/krecentdirs.html)
 
 /// [Upstream resources](https://api.kde.org/krecentdirs.html#list)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char** k_recentdirs_list(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/krecentdirs.html#dir)
@@ -25,11 +26,13 @@ const char** k_recentdirs_list(const char* param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_recentdirs_dir(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/krecentdirs.html#add)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
+///
 void k_recentdirs_add(const char* param1, const char* param2);
 #endif

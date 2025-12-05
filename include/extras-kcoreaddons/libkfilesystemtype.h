@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kfilesystemtype.html
+/// [Upstream resources](https://api.kde.org/kfilesystemtype.html)
 
 /// [Upstream resources](https://api.kde.org/kfilesystemtype.html#fileSystemType)
 ///
 /// @param param1 const char*
 ///
 /// @return enum KFileSystemType__Type
+///
 int32_t k_filesystemtype_file_system_type(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kfilesystemtype.html#fileSystemName)
@@ -25,9 +26,10 @@ int32_t k_filesystemtype_file_system_type(const char* param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KFileSystemType__Type
+///
 const char* k_filesystemtype_file_system_name(int32_t param1);
 
-/// https://api.kde.org/kfilesystemtype.html#types
+/// [Upstream resources](https://api.kde.org/kfilesystemtype.html#public-types)
 
 typedef enum {
     KFILESYSTEMTYPE_TYPE_UNKNOWN = 0,

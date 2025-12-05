@@ -11,41 +11,51 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qproxystyle.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html)
 
 /// q_proxystyle_new constructs a new QProxyStyle object.
 ///
 QProxyStyle* q_proxystyle_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html)
+
 /// q_proxystyle_new2 constructs a new QProxyStyle object.
 ///
 /// @param key const char*
+///
 QProxyStyle* q_proxystyle_new2(const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html)
 
 /// q_proxystyle_new3 constructs a new QProxyStyle object.
 ///
 /// @param style QStyle*
+///
 QProxyStyle* q_proxystyle_new3(void* style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QProxyStyle*
+///
 const QMetaObject* q_proxystyle_meta_object(void* self);
 
 /// @param self QProxyStyle*
 /// @param param1 const char*
+///
 void* q_proxystyle_metacast(void* self, const char* param1);
 
 /// @param self QProxyStyle*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_proxystyle_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t func(QProxyStyle* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -54,6 +64,7 @@ void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_proxystyle_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -61,17 +72,20 @@ int32_t q_proxystyle_qbase_metacall(void* self, int32_t param1, int param2, void
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_proxystyle_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#baseStyle)
 ///
 /// @param self QProxyStyle*
+///
 QStyle* q_proxystyle_base_style(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#setBaseStyle)
 ///
 /// @param self QProxyStyle*
 /// @param style QStyle*
+///
 void q_proxystyle_set_base_style(void* self, void* style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
@@ -81,6 +95,7 @@ void q_proxystyle_set_base_style(void* self, void* style);
 /// @param option QStyleOption*
 /// @param painter QPainter*
 /// @param widget QWidget*
+///
 void q_proxystyle_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
@@ -89,6 +104,7 @@ void q_proxystyle_draw_primitive(void* self, int32_t element, void* option, void
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, enum QStyle__PrimitiveElement element, QStyleOption* option, QPainter* painter, QWidget* widget)
+///
 void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
@@ -100,6 +116,7 @@ void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t,
 /// @param option QStyleOption*
 /// @param painter QPainter*
 /// @param widget QWidget*
+///
 void q_proxystyle_qbase_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
@@ -109,6 +126,7 @@ void q_proxystyle_qbase_draw_primitive(void* self, int32_t element, void* option
 /// @param option QStyleOption*
 /// @param painter QPainter*
 /// @param widget QWidget*
+///
 void q_proxystyle_draw_control(void* self, int64_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
@@ -117,6 +135,7 @@ void q_proxystyle_draw_control(void* self, int64_t element, void* option, void* 
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, enum QStyle__ControlElement element, QStyleOption* option, QPainter* painter, QWidget* widget)
+///
 void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
@@ -128,6 +147,7 @@ void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int64_t, v
 /// @param option QStyleOption*
 /// @param painter QPainter*
 /// @param widget QWidget*
+///
 void q_proxystyle_qbase_draw_control(void* self, int64_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
@@ -137,6 +157,7 @@ void q_proxystyle_qbase_draw_control(void* self, int64_t element, void* option, 
 /// @param option QStyleOptionComplex*
 /// @param painter QPainter*
 /// @param widget QWidget*
+///
 void q_proxystyle_draw_complex_control(void* self, int64_t control, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
@@ -145,6 +166,7 @@ void q_proxystyle_draw_complex_control(void* self, int64_t control, void* option
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPainter* painter, QWidget* widget)
+///
 void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
@@ -156,6 +178,7 @@ void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, in
 /// @param option QStyleOptionComplex*
 /// @param painter QPainter*
 /// @param widget QWidget*
+///
 void q_proxystyle_qbase_draw_complex_control(void* self, int64_t control, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
@@ -168,6 +191,7 @@ void q_proxystyle_qbase_draw_complex_control(void* self, int64_t control, void* 
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
+///
 void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
@@ -176,6 +200,7 @@ void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flag
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole)
+///
 void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
@@ -190,6 +215,7 @@ void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, v
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
+///
 void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
@@ -199,6 +225,7 @@ void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, in
 /// @param rect QRect*
 /// @param alignment int
 /// @param pixmap QPixmap*
+///
 void q_proxystyle_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
@@ -207,6 +234,7 @@ void q_proxystyle_draw_item_pixmap(void* self, void* painter, void* rect, int al
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap)
+///
 void q_proxystyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
@@ -218,6 +246,7 @@ void q_proxystyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*,
 /// @param rect QRect*
 /// @param alignment int
 /// @param pixmap QPixmap*
+///
 void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
@@ -227,6 +256,7 @@ void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, 
 /// @param option QStyleOption*
 /// @param size QSize*
 /// @param widget QWidget*
+///
 QSize* q_proxystyle_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
@@ -235,6 +265,7 @@ QSize* q_proxystyle_size_from_contents(void* self, int64_t type, void* option, v
 ///
 /// @param self QProxyStyle*
 /// @param callback QSize* func(QProxyStyle* self, enum QStyle__ContentsType type, QStyleOption* option, QSize* size, QWidget* widget)
+///
 void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
@@ -246,6 +277,7 @@ void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, in
 /// @param option QStyleOption*
 /// @param size QSize*
 /// @param widget QWidget*
+///
 QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
@@ -254,6 +286,7 @@ QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t type, void* opt
 /// @param element enum QStyle__SubElement
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
@@ -262,6 +295,7 @@ QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, 
 ///
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, enum QStyle__SubElement element, QStyleOption* option, QWidget* widget)
+///
 void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
@@ -272,6 +306,7 @@ void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int6
 /// @param element enum QStyle__SubElement
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QRect* q_proxystyle_qbase_sub_element_rect(void* self, int64_t element, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
@@ -281,6 +316,7 @@ QRect* q_proxystyle_qbase_sub_element_rect(void* self, int64_t element, void* op
 /// @param opt QStyleOptionComplex*
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
+///
 QRect* q_proxystyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
@@ -289,6 +325,7 @@ QRect* q_proxystyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t 
 ///
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget)
+///
 void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
@@ -300,6 +337,7 @@ void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int6
 /// @param opt QStyleOptionComplex*
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
+///
 QRect* q_proxystyle_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
@@ -310,6 +348,7 @@ QRect* q_proxystyle_qbase_sub_control_rect(void* self, int64_t cc, void* opt, in
 /// @param flags int
 /// @param enabled bool
 /// @param text const char*
+///
 QRect* q_proxystyle_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
@@ -318,6 +357,7 @@ QRect* q_proxystyle_item_text_rect(void* self, void* fm, void* r, int flags, boo
 ///
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text)
+///
 void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
@@ -330,6 +370,7 @@ void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*,
 /// @param flags int
 /// @param enabled bool
 /// @param text const char*
+///
 QRect* q_proxystyle_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
@@ -338,6 +379,7 @@ QRect* q_proxystyle_qbase_item_text_rect(void* self, void* fm, void* r, int flag
 /// @param r QRect*
 /// @param flags int
 /// @param pixmap QPixmap*
+///
 QRect* q_proxystyle_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
@@ -346,6 +388,7 @@ QRect* q_proxystyle_item_pixmap_rect(void* self, void* r, int flags, void* pixma
 ///
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, QRect* r, int flags, QPixmap* pixmap)
+///
 void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
@@ -356,6 +399,7 @@ void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void
 /// @param r QRect*
 /// @param flags int
 /// @param pixmap QPixmap*
+///
 QRect* q_proxystyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
@@ -367,6 +411,7 @@ QRect* q_proxystyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void*
 /// @param widget QWidget*
 ///
 /// @return enum QStyle__SubControl
+///
 int64_t q_proxystyle_hit_test_complex_control(void* self, int64_t control, void* option, void* pos, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
@@ -375,6 +420,7 @@ int64_t q_proxystyle_hit_test_complex_control(void* self, int64_t control, void*
 ///
 /// @param self QProxyStyle*
 /// @param callback int64_t func(QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget)
+///
 void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
@@ -388,6 +434,7 @@ void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*callback)(vo
 /// @param widget QWidget*
 ///
 /// @return enum QStyle__SubControl
+///
 int64_t q_proxystyle_qbase_hit_test_complex_control(void* self, int64_t control, void* option, void* pos, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
@@ -397,6 +444,7 @@ int64_t q_proxystyle_qbase_hit_test_complex_control(void* self, int64_t control,
 /// @param option QStyleOption*
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
+///
 int32_t q_proxystyle_style_hint(void* self, int64_t hint, void* option, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
@@ -405,6 +453,7 @@ int32_t q_proxystyle_style_hint(void* self, int64_t hint, void* option, void* wi
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t func(QProxyStyle* self, enum QStyle__StyleHint hint, QStyleOption* option, QWidget* widget, QStyleHintReturn* returnData)
+///
 void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
@@ -416,6 +465,7 @@ void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param option QStyleOption*
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
+///
 int32_t q_proxystyle_qbase_style_hint(void* self, int64_t hint, void* option, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
@@ -424,6 +474,7 @@ int32_t q_proxystyle_qbase_style_hint(void* self, int64_t hint, void* option, vo
 /// @param metric enum QStyle__PixelMetric
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_proxystyle_pixel_metric(void* self, int64_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
@@ -432,6 +483,7 @@ int32_t q_proxystyle_pixel_metric(void* self, int64_t metric, void* option, void
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t func(QProxyStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget)
+///
 void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
@@ -442,6 +494,7 @@ void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t
 /// @param metric enum QStyle__PixelMetric
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_proxystyle_qbase_pixel_metric(void* self, int64_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
@@ -452,6 +505,7 @@ int32_t q_proxystyle_qbase_pixel_metric(void* self, int64_t metric, void* option
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_proxystyle_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
@@ -460,6 +514,7 @@ int32_t q_proxystyle_layout_spacing(void* self, int32_t control1, int32_t contro
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t func(QProxyStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget)
+///
 void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
@@ -472,6 +527,7 @@ void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_proxystyle_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
@@ -480,6 +536,7 @@ int32_t q_proxystyle_qbase_layout_spacing(void* self, int32_t control1, int32_t 
 /// @param standardIcon enum QStyle__StandardPixmap
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QIcon* q_proxystyle_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
@@ -488,6 +545,7 @@ QIcon* q_proxystyle_standard_icon(void* self, int64_t standardIcon, void* option
 ///
 /// @param self QProxyStyle*
 /// @param callback QIcon* func(QProxyStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget)
+///
 void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
@@ -498,6 +556,7 @@ void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t
 /// @param standardIcon enum QStyle__StandardPixmap
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QIcon* q_proxystyle_qbase_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
@@ -506,6 +565,7 @@ QIcon* q_proxystyle_qbase_standard_icon(void* self, int64_t standardIcon, void* 
 /// @param standardPixmap enum QStyle__StandardPixmap
 /// @param opt QStyleOption*
 /// @param widget QWidget*
+///
 QPixmap* q_proxystyle_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
@@ -514,6 +574,7 @@ QPixmap* q_proxystyle_standard_pixmap(void* self, int64_t standardPixmap, void* 
 ///
 /// @param self QProxyStyle*
 /// @param callback QPixmap* func(QProxyStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget)
+///
 void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
@@ -524,6 +585,7 @@ void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int
 /// @param standardPixmap enum QStyle__StandardPixmap
 /// @param opt QStyleOption*
 /// @param widget QWidget*
+///
 QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
@@ -532,6 +594,7 @@ QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int64_t standardPixmap, 
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
+///
 QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
@@ -540,6 +603,7 @@ QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int32_t iconMode, void* 
 ///
 /// @param self QProxyStyle*
 /// @param callback QPixmap* func(QProxyStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
+///
 void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
@@ -550,11 +614,13 @@ void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
+///
 QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
 ///
 /// @param self QProxyStyle*
+///
 QPalette* q_proxystyle_standard_palette(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
@@ -563,6 +629,7 @@ QPalette* q_proxystyle_standard_palette(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param callback QPalette* func()
+///
 void q_proxystyle_on_standard_palette(void* self, QPalette* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
@@ -570,12 +637,14 @@ void q_proxystyle_on_standard_palette(void* self, QPalette* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QProxyStyle*
+///
 QPalette* q_proxystyle_qbase_standard_palette(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// @param self QProxyStyle*
 /// @param widget QWidget*
+///
 void q_proxystyle_polish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -584,6 +653,7 @@ void q_proxystyle_polish(void* self, void* widget);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QWidget* widget)
+///
 void q_proxystyle_on_polish(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -592,12 +662,14 @@ void q_proxystyle_on_polish(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param widget QWidget*
+///
 void q_proxystyle_qbase_polish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// @param self QProxyStyle*
 /// @param pal QPalette*
+///
 void q_proxystyle_polish2(void* self, void* pal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -606,6 +678,7 @@ void q_proxystyle_polish2(void* self, void* pal);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QPalette* pal)
+///
 void q_proxystyle_on_polish2(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -614,12 +687,14 @@ void q_proxystyle_on_polish2(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param pal QPalette*
+///
 void q_proxystyle_qbase_polish2(void* self, void* pal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// @param self QProxyStyle*
 /// @param app QApplication*
+///
 void q_proxystyle_polish3(void* self, void* app);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -628,6 +703,7 @@ void q_proxystyle_polish3(void* self, void* app);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QApplication* app)
+///
 void q_proxystyle_on_polish3(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -636,12 +712,14 @@ void q_proxystyle_on_polish3(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param app QApplication*
+///
 void q_proxystyle_qbase_polish3(void* self, void* app);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
 /// @param self QProxyStyle*
 /// @param widget QWidget*
+///
 void q_proxystyle_unpolish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
@@ -650,6 +728,7 @@ void q_proxystyle_unpolish(void* self, void* widget);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QWidget* widget)
+///
 void q_proxystyle_on_unpolish(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
@@ -658,12 +737,14 @@ void q_proxystyle_on_unpolish(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param widget QWidget*
+///
 void q_proxystyle_qbase_unpolish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
 /// @param self QProxyStyle*
 /// @param app QApplication*
+///
 void q_proxystyle_unpolish2(void* self, void* app);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
@@ -672,6 +753,7 @@ void q_proxystyle_unpolish2(void* self, void* app);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QApplication* app)
+///
 void q_proxystyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
@@ -680,12 +762,14 @@ void q_proxystyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param app QApplication*
+///
 void q_proxystyle_qbase_unpolish2(void* self, void* app);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#event)
 ///
 /// @param self QProxyStyle*
 /// @param e QEvent*
+///
 bool q_proxystyle_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#event)
@@ -694,6 +778,7 @@ bool q_proxystyle_event(void* self, void* e);
 ///
 /// @param self QProxyStyle*
 /// @param callback bool func(QProxyStyle* self, QEvent* e)
+///
 void q_proxystyle_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#event)
@@ -702,6 +787,7 @@ void q_proxystyle_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param e QEvent*
+///
 bool q_proxystyle_qbase_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -710,6 +796,7 @@ bool q_proxystyle_qbase_event(void* self, void* e);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_proxystyle_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -719,6 +806,7 @@ const char* q_proxystyle_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_proxystyle_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QStyle
@@ -728,6 +816,7 @@ const char* q_proxystyle_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QProxyStyle*
+///
 const char* q_proxystyle_name(void* self);
 
 /// Inherited from QStyle
@@ -737,6 +826,7 @@ const char* q_proxystyle_name(void* self);
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalRect QRect*
+///
 QRect* q_proxystyle_visual_rect(int32_t direction, void* boundingRect, void* logicalRect);
 
 /// Inherited from QStyle
@@ -746,6 +836,7 @@ QRect* q_proxystyle_visual_rect(int32_t direction, void* boundingRect, void* log
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalPos QPoint*
+///
 QPoint* q_proxystyle_visual_pos(int32_t direction, void* boundingRect, void* logicalPos);
 
 /// Inherited from QStyle
@@ -756,6 +847,7 @@ QPoint* q_proxystyle_visual_pos(int32_t direction, void* boundingRect, void* log
 /// @param max int
 /// @param val int
 /// @param space int
+///
 int32_t q_proxystyle_slider_position_from_value(int min, int max, int val, int space);
 
 /// Inherited from QStyle
@@ -766,6 +858,7 @@ int32_t q_proxystyle_slider_position_from_value(int min, int max, int val, int s
 /// @param max int
 /// @param pos int
 /// @param space int
+///
 int32_t q_proxystyle_slider_value_from_position(int min, int max, int pos, int space);
 
 /// Inherited from QStyle
@@ -776,6 +869,7 @@ int32_t q_proxystyle_slider_value_from_position(int min, int max, int pos, int s
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t q_proxystyle_visual_alignment(int32_t direction, int32_t alignment);
 
 /// Inherited from QStyle
@@ -786,6 +880,7 @@ int32_t q_proxystyle_visual_alignment(int32_t direction, int32_t alignment);
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param size QSize*
 /// @param rectangle QRect*
+///
 QRect* q_proxystyle_aligned_rect(int32_t direction, int32_t alignment, void* size, void* rectangle);
 
 /// Inherited from QStyle
@@ -796,6 +891,7 @@ QRect* q_proxystyle_aligned_rect(int32_t direction, int32_t alignment, void* siz
 /// @param controls1 flag of enum QSizePolicy__ControlType
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
+///
 int32_t q_proxystyle_combined_layout_spacing(void* self, int32_t controls1, int32_t controls2, int32_t orientation);
 
 /// Inherited from QStyle
@@ -803,6 +899,7 @@ int32_t q_proxystyle_combined_layout_spacing(void* self, int32_t controls1, int3
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#proxy)
 ///
 /// @param self QProxyStyle*
+///
 const QStyle* q_proxystyle_proxy(void* self);
 
 /// Inherited from QStyle
@@ -814,6 +911,7 @@ const QStyle* q_proxystyle_proxy(void* self);
 /// @param val int
 /// @param space int
 /// @param upsideDown bool
+///
 int32_t q_proxystyle_slider_position_from_value5(int min, int max, int val, int space, bool upsideDown);
 
 /// Inherited from QStyle
@@ -825,6 +923,7 @@ int32_t q_proxystyle_slider_position_from_value5(int min, int max, int val, int 
 /// @param pos int
 /// @param space int
 /// @param upsideDown bool
+///
 int32_t q_proxystyle_slider_value_from_position5(int min, int max, int pos, int space, bool upsideDown);
 
 /// Inherited from QStyle
@@ -836,6 +935,7 @@ int32_t q_proxystyle_slider_value_from_position5(int min, int max, int pos, int 
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
+///
 int32_t q_proxystyle_combined_layout_spacing4(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option);
 
 /// Inherited from QStyle
@@ -848,6 +948,7 @@ int32_t q_proxystyle_combined_layout_spacing4(void* self, int32_t controls1, int
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_proxystyle_combined_layout_spacing5(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option, void* widget);
 
 /// Inherited from QObject
@@ -857,6 +958,7 @@ int32_t q_proxystyle_combined_layout_spacing5(void* self, int32_t controls1, int
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QProxyStyle*
+///
 const char* q_proxystyle_object_name(void* self);
 
 /// Inherited from QObject
@@ -865,6 +967,7 @@ const char* q_proxystyle_object_name(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param name char*
+///
 void q_proxystyle_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -872,6 +975,7 @@ void q_proxystyle_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QProxyStyle*
+///
 bool q_proxystyle_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -879,6 +983,7 @@ bool q_proxystyle_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QProxyStyle*
+///
 bool q_proxystyle_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -886,6 +991,7 @@ bool q_proxystyle_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QProxyStyle*
+///
 bool q_proxystyle_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -893,6 +999,7 @@ bool q_proxystyle_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QProxyStyle*
+///
 bool q_proxystyle_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -901,6 +1008,7 @@ bool q_proxystyle_signals_blocked(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param b bool
+///
 bool q_proxystyle_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -908,6 +1016,7 @@ bool q_proxystyle_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QProxyStyle*
+///
 QThread* q_proxystyle_thread(void* self);
 
 /// Inherited from QObject
@@ -916,6 +1025,7 @@ QThread* q_proxystyle_thread(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param thread QThread*
+///
 bool q_proxystyle_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -924,6 +1034,7 @@ bool q_proxystyle_move_to_thread(void* self, void* thread);
 ///
 /// @param self QProxyStyle*
 /// @param interval int
+///
 int32_t q_proxystyle_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -932,6 +1043,7 @@ int32_t q_proxystyle_start_timer(void* self, int interval);
 ///
 /// @param self QProxyStyle*
 /// @param id int
+///
 void q_proxystyle_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -940,6 +1052,7 @@ void q_proxystyle_kill_timer(void* self, int id);
 ///
 /// @param self QProxyStyle*
 /// @param id enum Qt__TimerId
+///
 void q_proxystyle_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -947,6 +1060,7 @@ void q_proxystyle_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QProxyStyle*
+///
 libqt_list /* of QObject* */ q_proxystyle_children(void* self);
 
 /// Inherited from QObject
@@ -955,6 +1069,7 @@ libqt_list /* of QObject* */ q_proxystyle_children(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param parent QObject*
+///
 void q_proxystyle_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -963,6 +1078,7 @@ void q_proxystyle_set_parent(void* self, void* parent);
 ///
 /// @param self QProxyStyle*
 /// @param filterObj QObject*
+///
 void q_proxystyle_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -971,6 +1087,7 @@ void q_proxystyle_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QProxyStyle*
 /// @param obj QObject*
+///
 void q_proxystyle_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -981,6 +1098,7 @@ void q_proxystyle_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_proxystyle_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -991,6 +1109,7 @@ QMetaObject__Connection* q_proxystyle_connect(void* sender, void* signal, void* 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_proxystyle_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -1001,6 +1120,7 @@ QMetaObject__Connection* q_proxystyle_connect2(void* self, void* sender, const c
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_proxystyle_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -1008,6 +1128,7 @@ bool q_proxystyle_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_proxystyle_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -1015,6 +1136,7 @@ bool q_proxystyle_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QProxyStyle*
+///
 void q_proxystyle_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -1022,6 +1144,7 @@ void q_proxystyle_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QProxyStyle*
+///
 void q_proxystyle_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -1031,6 +1154,7 @@ void q_proxystyle_dump_object_info(void* self);
 /// @param self QProxyStyle*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_proxystyle_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -1039,6 +1163,7 @@ bool q_proxystyle_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QProxyStyle*
 /// @param name const char*
+///
 QVariant* q_proxystyle_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -1048,6 +1173,7 @@ QVariant* q_proxystyle_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QProxyStyle*
+///
 const char** q_proxystyle_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -1055,6 +1181,7 @@ const char** q_proxystyle_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QProxyStyle*
+///
 QBindingStorage* q_proxystyle_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -1062,6 +1189,7 @@ QBindingStorage* q_proxystyle_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QProxyStyle*
+///
 const QBindingStorage* q_proxystyle_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -1069,6 +1197,7 @@ const QBindingStorage* q_proxystyle_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QProxyStyle*
+///
 void q_proxystyle_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1077,6 +1206,7 @@ void q_proxystyle_destroyed(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self)
+///
 void q_proxystyle_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1084,6 +1214,7 @@ void q_proxystyle_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QProxyStyle*
+///
 QObject* q_proxystyle_parent(void* self);
 
 /// Inherited from QObject
@@ -1092,6 +1223,7 @@ QObject* q_proxystyle_parent(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param classname const char*
+///
 bool q_proxystyle_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1099,6 +1231,7 @@ bool q_proxystyle_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QProxyStyle*
+///
 void q_proxystyle_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1108,6 +1241,7 @@ void q_proxystyle_delete_later(void* self);
 /// @param self QProxyStyle*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_proxystyle_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1117,6 +1251,7 @@ bool q_proxystyle_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QProxyStyle*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_proxystyle_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1128,6 +1263,7 @@ int32_t q_proxystyle_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1139,6 +1275,7 @@ QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1147,6 +1284,7 @@ QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const c
 ///
 /// @param self QProxyStyle*
 /// @param param1 QObject*
+///
 void q_proxystyle_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1155,6 +1293,7 @@ void q_proxystyle_destroyed1(void* self, void* param1);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QObject* param1)
+///
 void q_proxystyle_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1166,6 +1305,7 @@ void q_proxystyle_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QProxyStyle*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_proxystyle_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1177,6 +1317,7 @@ bool q_proxystyle_event_filter(void* self, void* watched, void* event);
 /// @param self QProxyStyle*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_proxystyle_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1187,6 +1328,7 @@ bool q_proxystyle_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QProxyStyle*
 /// @param callback bool func(QProxyStyle* self, QObject* watched, QEvent* event)
+///
 void q_proxystyle_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1197,6 +1339,7 @@ void q_proxystyle_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 /// @param self QProxyStyle*
 /// @param event QTimerEvent*
+///
 void q_proxystyle_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1207,6 +1350,7 @@ void q_proxystyle_timer_event(void* self, void* event);
 ///
 /// @param self QProxyStyle*
 /// @param event QTimerEvent*
+///
 void q_proxystyle_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1217,6 +1361,7 @@ void q_proxystyle_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QTimerEvent* event)
+///
 void q_proxystyle_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1227,6 +1372,7 @@ void q_proxystyle_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param event QChildEvent*
+///
 void q_proxystyle_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1237,6 +1383,7 @@ void q_proxystyle_child_event(void* self, void* event);
 ///
 /// @param self QProxyStyle*
 /// @param event QChildEvent*
+///
 void q_proxystyle_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1247,6 +1394,7 @@ void q_proxystyle_qbase_child_event(void* self, void* event);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QChildEvent* event)
+///
 void q_proxystyle_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1257,6 +1405,7 @@ void q_proxystyle_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param event QEvent*
+///
 void q_proxystyle_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1267,6 +1416,7 @@ void q_proxystyle_custom_event(void* self, void* event);
 ///
 /// @param self QProxyStyle*
 /// @param event QEvent*
+///
 void q_proxystyle_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1277,6 +1427,7 @@ void q_proxystyle_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QEvent* event)
+///
 void q_proxystyle_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1287,6 +1438,7 @@ void q_proxystyle_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
+///
 void q_proxystyle_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1297,6 +1449,7 @@ void q_proxystyle_connect_notify(void* self, void* signal);
 ///
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
+///
 void q_proxystyle_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1307,6 +1460,7 @@ void q_proxystyle_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QMetaMethod* signal)
+///
 void q_proxystyle_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1317,6 +1471,7 @@ void q_proxystyle_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
+///
 void q_proxystyle_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1327,6 +1482,7 @@ void q_proxystyle_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
+///
 void q_proxystyle_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1337,6 +1493,7 @@ void q_proxystyle_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, QMetaMethod* signal)
+///
 void q_proxystyle_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1346,6 +1503,7 @@ void q_proxystyle_on_disconnect_notify(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QProxyStyle*
+///
 QObject* q_proxystyle_sender(void* self);
 
 /// Inherited from QObject
@@ -1355,6 +1513,7 @@ QObject* q_proxystyle_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QProxyStyle*
+///
 QObject* q_proxystyle_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1365,6 +1524,7 @@ QObject* q_proxystyle_qbase_sender(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param callback QObject* func()
+///
 void q_proxystyle_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1374,6 +1534,7 @@ void q_proxystyle_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QProxyStyle*
+///
 int32_t q_proxystyle_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1383,6 +1544,7 @@ int32_t q_proxystyle_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QProxyStyle*
+///
 int32_t q_proxystyle_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1393,6 +1555,7 @@ int32_t q_proxystyle_qbase_sender_signal_index(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t func()
+///
 void q_proxystyle_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1403,6 +1566,7 @@ void q_proxystyle_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QProxyStyle*
 /// @param signal const char*
+///
 int32_t q_proxystyle_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1413,6 +1577,7 @@ int32_t q_proxystyle_receivers(void* self, const char* signal);
 ///
 /// @param self QProxyStyle*
 /// @param signal const char*
+///
 int32_t q_proxystyle_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1423,6 +1588,7 @@ int32_t q_proxystyle_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t func(QProxyStyle* self, const char* signal)
+///
 void q_proxystyle_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1433,6 +1599,7 @@ void q_proxystyle_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
+///
 bool q_proxystyle_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1443,6 +1610,7 @@ bool q_proxystyle_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
+///
 bool q_proxystyle_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1453,6 +1621,7 @@ bool q_proxystyle_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QProxyStyle*
 /// @param callback bool func(QProxyStyle* self, QMetaMethod* signal)
+///
 void q_proxystyle_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1463,6 +1632,7 @@ void q_proxystyle_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 ///
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, const char* objectName)
+///
 void q_proxystyle_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#dtor.QProxyStyle)
@@ -1470,6 +1640,7 @@ void q_proxystyle_on_object_name_changed(void* self, void (*callback)(void*, con
 /// Delete this object from C++ memory.
 ///
 /// @param self QProxyStyle*
+///
 void q_proxystyle_delete(void* self);
 
 #endif

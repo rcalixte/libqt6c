@@ -11,27 +11,33 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kcompletionmatches.html
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html)
 
 /// k_completionmatches_new constructs a new KCompletionMatches object.
 ///
 /// @param sort bool
+///
 KCompletionMatches* k_completionmatches_new(bool sort);
+
+/// [Upstream resources](https://api.kde.org/kcompletionmatches.html)
 
 /// k_completionmatches_new2 constructs a new KCompletionMatches object.
 ///
 /// @param param1 KCompletionMatches*
+///
 KCompletionMatches* k_completionmatches_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#operator-eq)
 ///
 /// @param self KCompletionMatches*
 /// @param param1 KCompletionMatches*
+///
 void k_completionmatches_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#removeDuplicates)
 ///
 /// @param self KCompletionMatches*
+///
 void k_completionmatches_remove_duplicates(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#list)
@@ -39,11 +45,13 @@ void k_completionmatches_remove_duplicates(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletionMatches*
+///
 const char** k_completionmatches_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#sorting)
 ///
 /// @param self KCompletionMatches*
+///
 bool k_completionmatches_sorting(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#list)
@@ -52,6 +60,7 @@ bool k_completionmatches_sorting(void* self);
 ///
 /// @param self KCompletionMatches*
 /// @param sort bool
+///
 const char** k_completionmatches_list1(void* self, bool sort);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#dtor.KCompletionMatches)
@@ -59,6 +68,7 @@ const char** k_completionmatches_list1(void* self, bool sort);
 /// Delete this object from C++ memory.
 ///
 /// @param self KCompletionMatches*
+///
 void k_completionmatches_delete(void* self);
 
 #endif

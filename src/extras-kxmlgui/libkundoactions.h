@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kundoactions.html
+/// [Upstream resources](https://api.kde.org/kundoactions.html)
 
 /// [Upstream resources](https://api.kde.org/kundoactions.html#createRedoAction)
 ///
 /// @param param1 QUndoStack*
 /// @param param2 KActionCollection*
 /// @param param3 const char*
+///
 QAction* k_undoactions_create_redo_action(void* param1, void* param2, const char* param3);
 
 /// [Upstream resources](https://api.kde.org/kundoactions.html#createUndoAction)
@@ -25,5 +26,6 @@ QAction* k_undoactions_create_redo_action(void* param1, void* param2, const char
 /// @param param1 QUndoStack*
 /// @param param2 KActionCollection*
 /// @param param3 const char*
+///
 QAction* k_undoactions_create_undo_action(void* param1, void* param2, const char* param3);
 #endif

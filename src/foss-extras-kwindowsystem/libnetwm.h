@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/netwm.html#types
+/// [Upstream resources](https://api.kde.org/netwm.html#public-types)
 
 typedef enum {
     NETROOTINFO__PROTOCOLS = 0,
@@ -21,6 +21,8 @@ typedef enum {
     NETROOTINFO__ACTIONS = 4,
     NETROOTINFO__PROPERTIES_SIZE = 5
 } NETRootInfo__;
+
+/// [Upstream resources](https://api.kde.org/netwm.html#public-types)
 
 typedef enum {
     NETWININFO__PROTOCOLS = 0,

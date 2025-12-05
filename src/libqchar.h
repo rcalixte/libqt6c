@@ -11,43 +11,56 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qlatin1char.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1char.html)
 
 /// q_latin1char_new constructs a new QLatin1Char object.
 ///
 /// @param other QLatin1Char*
+///
 QLatin1Char* q_latin1char_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1char.html)
 
 /// q_latin1char_new2 constructs a new QLatin1Char object and invalidates the source QLatin1Char object.
 ///
 /// @param other QLatin1Char*
+///
 QLatin1Char* q_latin1char_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1char.html)
 
 /// q_latin1char_new3 constructs a new QLatin1Char object.
 ///
 /// @param c char
+///
 QLatin1Char* q_latin1char_new3(char c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1char.html)
 
 /// q_latin1char_new4 constructs a new QLatin1Char object.
 ///
 /// @param param1 QLatin1Char*
+///
 QLatin1Char* q_latin1char_new4(void* param1);
 
 /// q_latin1char_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QLatin1Char*
 /// @param other QLatin1Char*
+///
 void q_latin1char_copy_assign(void* self, void* other);
 
 /// q_latin1char_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QLatin1Char*
 /// @param other QLatin1Char*
+///
 void q_latin1char_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1char.html#toLatin1)
 ///
 /// @param self QLatin1Char*
+///
 char q_latin1char_to_latin1(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1char.html#dtor.QLatin1Char)
@@ -55,85 +68,124 @@ char q_latin1char_to_latin1(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QLatin1Char*
+///
 void q_latin1char_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qchar.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new constructs a new QChar object.
 ///
 /// @param other QChar*
+///
 QChar* q_char_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new2 constructs a new QChar object and invalidates the source QChar object.
 ///
 /// @param other QChar*
+///
 QChar* q_char_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new3 constructs a new QChar object.
 ///
 QChar* q_char_new3();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
+
 /// q_char_new4 constructs a new QChar object.
 ///
 /// @param rc unsigned short
+///
 QChar* q_char_new4(unsigned short rc);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new5 constructs a new QChar object.
 ///
 /// @param c unsigned char
 /// @param r unsigned char
+///
 QChar* q_char_new5(unsigned char c, unsigned char r);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new6 constructs a new QChar object.
 ///
 /// @param rc short
+///
 QChar* q_char_new6(short rc);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new7 constructs a new QChar object.
 ///
 /// @param rc uint32_t
+///
 QChar* q_char_new7(uint32_t rc);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new8 constructs a new QChar object.
 ///
 /// @param rc int
+///
 QChar* q_char_new8(int rc);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new9 constructs a new QChar object.
 ///
 /// @param s enum QChar__SpecialCharacter
+///
 QChar* q_char_new9(int32_t s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new10 constructs a new QChar object.
 ///
 /// @param ch QLatin1Char*
+///
 QChar* q_char_new10(void* ch);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new11 constructs a new QChar object.
 ///
 /// @param c char
+///
 QChar* q_char_new11(char c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new12 constructs a new QChar object.
 ///
 /// @param c unsigned char
+///
 QChar* q_char_new12(unsigned char c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 
 /// q_char_new13 constructs a new QChar object.
 ///
 /// @param param1 QChar*
+///
 QChar* q_char_new13(void* param1);
 
 /// q_char_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QChar*
 /// @param other QChar*
+///
 void q_char_copy_assign(void* self, void* other);
 
 /// q_char_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QChar*
 /// @param other QChar*
+///
 void q_char_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#category)
@@ -141,6 +193,7 @@ void q_char_move_assign(void* self, void* other);
 /// @param self QChar*
 ///
 /// @return enum QChar__Category
+///
 int32_t q_char_category(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#direction)
@@ -148,6 +201,7 @@ int32_t q_char_category(void* self);
 /// @param self QChar*
 ///
 /// @return enum QChar__Direction
+///
 int32_t q_char_direction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#joiningType)
@@ -155,21 +209,25 @@ int32_t q_char_direction(void* self);
 /// @param self QChar*
 ///
 /// @return enum QChar__JoiningType
+///
 int32_t q_char_joining_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#combiningClass)
 ///
 /// @param self QChar*
+///
 unsigned char q_char_combining_class(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#mirroredChar)
 ///
 /// @param self QChar*
+///
 QChar* q_char_mirrored_char(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#hasMirrored)
 ///
 /// @param self QChar*
+///
 bool q_char_has_mirrored(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#decomposition)
@@ -177,6 +235,7 @@ bool q_char_has_mirrored(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QChar*
+///
 const char* q_char_decomposition(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#decompositionTag)
@@ -184,31 +243,37 @@ const char* q_char_decomposition(void* self);
 /// @param self QChar*
 ///
 /// @return enum QChar__Decomposition
+///
 int32_t q_char_decomposition_tag(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#digitValue)
 ///
 /// @param self QChar*
+///
 int32_t q_char_digit_value(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#toLower)
 ///
 /// @param self QChar*
+///
 QChar* q_char_to_lower(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#toUpper)
 ///
 /// @param self QChar*
+///
 QChar* q_char_to_upper(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#toTitleCase)
 ///
 /// @param self QChar*
+///
 QChar* q_char_to_title_case(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#toCaseFolded)
 ///
 /// @param self QChar*
+///
 QChar* q_char_to_case_folded(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#script)
@@ -216,6 +281,7 @@ QChar* q_char_to_case_folded(void* self);
 /// @param self QChar*
 ///
 /// @return enum QChar__Script
+///
 int32_t q_char_script(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#unicodeVersion)
@@ -223,129 +289,153 @@ int32_t q_char_script(void* self);
 /// @param self QChar*
 ///
 /// @return enum QChar__UnicodeVersion
+///
 int32_t q_char_unicode_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#toLatin1)
 ///
 /// @param self QChar*
+///
 char q_char_to_latin1(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#fromLatin1)
 ///
 /// @param c char
+///
 QChar* q_char_from_latin1(char c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isNull)
 ///
 /// @param self QChar*
+///
 bool q_char_is_null(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isPrint)
 ///
 /// @param self QChar*
+///
 bool q_char_is_print(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isSpace)
 ///
 /// @param self QChar*
+///
 bool q_char_is_space(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isMark)
 ///
 /// @param self QChar*
+///
 bool q_char_is_mark(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isPunct)
 ///
 /// @param self QChar*
+///
 bool q_char_is_punct(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isSymbol)
 ///
 /// @param self QChar*
+///
 bool q_char_is_symbol(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isLetter)
 ///
 /// @param self QChar*
+///
 bool q_char_is_letter(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isNumber)
 ///
 /// @param self QChar*
+///
 bool q_char_is_number(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isLetterOrNumber)
 ///
 /// @param self QChar*
+///
 bool q_char_is_letter_or_number(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isDigit)
 ///
 /// @param self QChar*
+///
 bool q_char_is_digit(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isLower)
 ///
 /// @param self QChar*
+///
 bool q_char_is_lower(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isUpper)
 ///
 /// @param self QChar*
+///
 bool q_char_is_upper(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isTitleCase)
 ///
 /// @param self QChar*
+///
 bool q_char_is_title_case(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isNonCharacter)
 ///
 /// @param self QChar*
+///
 bool q_char_is_non_character(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isHighSurrogate)
 ///
 /// @param self QChar*
+///
 bool q_char_is_high_surrogate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isLowSurrogate)
 ///
 /// @param self QChar*
+///
 bool q_char_is_low_surrogate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#isSurrogate)
 ///
 /// @param self QChar*
+///
 bool q_char_is_surrogate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#cell)
 ///
 /// @param self QChar*
+///
 unsigned char q_char_cell(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#row)
 ///
 /// @param self QChar*
+///
 unsigned char q_char_row(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#setCell)
 ///
 /// @param self QChar*
 /// @param acell unsigned char
+///
 void q_char_set_cell(void* self, unsigned char acell);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#setRow)
 ///
 /// @param self QChar*
 /// @param arow unsigned char
+///
 void q_char_set_row(void* self, unsigned char arow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#currentUnicodeVersion)
 ///
-///
 /// @return enum QChar__UnicodeVersion
+///
 int32_t q_char_current_unicode_version();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#dtor.QChar)
@@ -353,9 +443,10 @@ int32_t q_char_current_unicode_version();
 /// Delete this object from C++ memory.
 ///
 /// @param self QChar*
+///
 void q_char_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qchar.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
 
 typedef enum {
     QCHAR_SPECIALCHARACTER_NULL = 0,
@@ -375,6 +466,8 @@ typedef enum {
     QCHAR_SPECIALCHARACTER_VISUALTABCHARACTER = 8594,
     QCHAR_SPECIALCHARACTER_LASTVALIDCODEPOINT = 1114111
 } QChar__SpecialCharacter;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
 
 typedef enum {
     QCHAR_CATEGORY_MARK_NONSPACING = 0,
@@ -408,6 +501,8 @@ typedef enum {
     QCHAR_CATEGORY_SYMBOL_MODIFIER = 28,
     QCHAR_CATEGORY_SYMBOL_OTHER = 29
 } QChar__Category;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
 
 typedef enum {
     QCHAR_SCRIPT_SCRIPT_UNKNOWN = 0,
@@ -577,6 +672,8 @@ typedef enum {
     QCHAR_SCRIPT_SCRIPTCOUNT = 164
 } QChar__Script;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
+
 typedef enum {
     QCHAR_DIRECTION_DIRL = 0,
     QCHAR_DIRECTION_DIRR = 1,
@@ -603,6 +700,8 @@ typedef enum {
     QCHAR_DIRECTION_DIRPDI = 22
 } QChar__Direction;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
+
 typedef enum {
     QCHAR_DECOMPOSITION_NODECOMPOSITION = 0,
     QCHAR_DECOMPOSITION_CANONICAL = 1,
@@ -624,6 +723,8 @@ typedef enum {
     QCHAR_DECOMPOSITION_FRACTION = 17
 } QChar__Decomposition;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
+
 typedef enum {
     QCHAR_JOININGTYPE_JOINING_NONE = 0,
     QCHAR_JOININGTYPE_JOINING_CAUSING = 1,
@@ -632,6 +733,8 @@ typedef enum {
     QCHAR_JOININGTYPE_JOINING_LEFT = 4,
     QCHAR_JOININGTYPE_JOINING_TRANSPARENT = 5
 } QChar__JoiningType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
 
 typedef enum {
     QCHAR_COMBININGCLASS_COMBINING_BELOWLEFTATTACHED = 200,
@@ -654,6 +757,8 @@ typedef enum {
     QCHAR_COMBININGCLASS_COMBINING_DOUBLEABOVE = 234,
     QCHAR_COMBININGCLASS_COMBINING_IOTASUBSCRIPT = 240
 } QChar__CombiningClass;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchar.html#public-types)
 
 typedef enum {
     QCHAR_UNICODEVERSION_UNICODE_UNASSIGNED = 0,

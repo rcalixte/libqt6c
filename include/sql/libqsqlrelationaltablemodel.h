@@ -11,28 +11,35 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsqlrelation.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html)
 
 /// q_sqlrelation_new constructs a new QSqlRelation object.
 ///
 QSqlRelation* q_sqlrelation_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html)
 
 /// q_sqlrelation_new2 constructs a new QSqlRelation object.
 ///
 /// @param aTableName const char*
 /// @param indexCol const char*
 /// @param displayCol const char*
+///
 QSqlRelation* q_sqlrelation_new2(const char* aTableName, const char* indexCol, const char* displayCol);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html)
 
 /// q_sqlrelation_new3 constructs a new QSqlRelation object.
 ///
 /// @param param1 QSqlRelation*
+///
 QSqlRelation* q_sqlrelation_new3(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#swap)
 ///
 /// @param self QSqlRelation*
 /// @param other QSqlRelation*
+///
 void q_sqlrelation_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#tableName)
@@ -40,6 +47,7 @@ void q_sqlrelation_swap(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelation*
+///
 const char* q_sqlrelation_table_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#indexColumn)
@@ -47,6 +55,7 @@ const char* q_sqlrelation_table_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelation*
+///
 const char* q_sqlrelation_index_column(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#displayColumn)
@@ -54,11 +63,13 @@ const char* q_sqlrelation_index_column(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelation*
+///
 const char* q_sqlrelation_display_column(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#isValid)
 ///
 /// @param self QSqlRelation*
+///
 bool q_sqlrelation_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#dtor.QSqlRelation)
@@ -66,44 +77,55 @@ bool q_sqlrelation_is_valid(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QSqlRelation*
+///
 void q_sqlrelation_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html)
 
 /// q_sqlrelationaltablemodel_new constructs a new QSqlRelationalTableModel object.
 ///
 QSqlRelationalTableModel* q_sqlrelationaltablemodel_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html)
+
 /// q_sqlrelationaltablemodel_new2 constructs a new QSqlRelationalTableModel object.
 ///
 /// @param parent QObject*
+///
 QSqlRelationalTableModel* q_sqlrelationaltablemodel_new2(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html)
 
 /// q_sqlrelationaltablemodel_new3 constructs a new QSqlRelationalTableModel object.
 ///
 /// @param parent QObject*
 /// @param db QSqlDatabase*
+///
 QSqlRelationalTableModel* q_sqlrelationaltablemodel_new3(void* parent, void* db);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const QMetaObject* q_sqlrelationaltablemodel_meta_object(void* self);
 
 /// @param self QSqlRelationalTableModel*
 /// @param param1 const char*
+///
 void* q_sqlrelationaltablemodel_metacast(void* self, const char* param1);
 
 /// @param self QSqlRelationalTableModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_sqlrelationaltablemodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_sqlrelationaltablemodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -112,6 +134,7 @@ void q_sqlrelationaltablemodel_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_sqlrelationaltablemodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -119,6 +142,7 @@ int32_t q_sqlrelationaltablemodel_qbase_metacall(void* self, int32_t param1, int
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_sqlrelationaltablemodel_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#data)
@@ -126,6 +150,7 @@ const char* q_sqlrelationaltablemodel_tr(const char* s);
 /// @param self QSqlRelationalTableModel*
 /// @param item QModelIndex*
 /// @param role int
+///
 QVariant* q_sqlrelationaltablemodel_data(void* self, void* item, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#data)
@@ -134,6 +159,7 @@ QVariant* q_sqlrelationaltablemodel_data(void* self, void* item, int role);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QVariant* func(QSqlRelationalTableModel* self, QModelIndex* item, int role)
+///
 void q_sqlrelationaltablemodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#data)
@@ -143,6 +169,7 @@ void q_sqlrelationaltablemodel_on_data(void* self, QVariant* (*callback)(void*, 
 /// @param self QSqlRelationalTableModel*
 /// @param item QModelIndex*
 /// @param role int
+///
 QVariant* q_sqlrelationaltablemodel_qbase_data(void* self, void* item, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setData)
@@ -151,6 +178,7 @@ QVariant* q_sqlrelationaltablemodel_qbase_data(void* self, void* item, int role)
 /// @param item QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_sqlrelationaltablemodel_set_data(void* self, void* item, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setData)
@@ -159,6 +187,7 @@ bool q_sqlrelationaltablemodel_set_data(void* self, void* item, void* value, int
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* item, QVariant* value, int role)
+///
 void q_sqlrelationaltablemodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setData)
@@ -169,6 +198,7 @@ void q_sqlrelationaltablemodel_on_set_data(void* self, bool (*callback)(void*, v
 /// @param item QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_sqlrelationaltablemodel_qbase_set_data(void* self, void* item, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#removeColumns)
@@ -177,6 +207,7 @@ bool q_sqlrelationaltablemodel_qbase_set_data(void* self, void* item, void* valu
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#removeColumns)
@@ -185,6 +216,7 @@ bool q_sqlrelationaltablemodel_remove_columns(void* self, int column, int count,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int column, int count, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#removeColumns)
@@ -195,11 +227,13 @@ void q_sqlrelationaltablemodel_on_remove_columns(void* self, bool (*callback)(vo
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#clear)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#clear)
@@ -208,6 +242,7 @@ void q_sqlrelationaltablemodel_clear(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_clear(void* self, void (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#clear)
@@ -215,11 +250,13 @@ void q_sqlrelationaltablemodel_on_clear(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#select)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_select(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#select)
@@ -228,6 +265,7 @@ bool q_sqlrelationaltablemodel_select(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func()
+///
 void q_sqlrelationaltablemodel_on_select(void* self, bool (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#select)
@@ -235,12 +273,14 @@ void q_sqlrelationaltablemodel_on_select(void* self, bool (*callback)());
 /// Base class method implementation
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_qbase_select(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setTable)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param tableName const char*
+///
 void q_sqlrelationaltablemodel_set_table(void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setTable)
@@ -249,6 +289,7 @@ void q_sqlrelationaltablemodel_set_table(void* self, const char* tableName);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, const char* tableName)
+///
 void q_sqlrelationaltablemodel_on_set_table(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setTable)
@@ -257,6 +298,7 @@ void q_sqlrelationaltablemodel_on_set_table(void* self, void (*callback)(void*, 
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param tableName const char*
+///
 void q_sqlrelationaltablemodel_qbase_set_table(void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setRelation)
@@ -264,6 +306,7 @@ void q_sqlrelationaltablemodel_qbase_set_table(void* self, const char* tableName
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param relation QSqlRelation*
+///
 void q_sqlrelationaltablemodel_set_relation(void* self, int column, void* relation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setRelation)
@@ -272,6 +315,7 @@ void q_sqlrelationaltablemodel_set_relation(void* self, int column, void* relati
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, int column, QSqlRelation* relation)
+///
 void q_sqlrelationaltablemodel_on_set_relation(void* self, void (*callback)(void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setRelation)
@@ -281,18 +325,21 @@ void q_sqlrelationaltablemodel_on_set_relation(void* self, void (*callback)(void
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param relation QSqlRelation*
+///
 void q_sqlrelationaltablemodel_qbase_set_relation(void* self, int column, void* relation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#relation)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param column int
+///
 QSqlRelation* q_sqlrelationaltablemodel_relation(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#relationModel)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param column int
+///
 QSqlTableModel* q_sqlrelationaltablemodel_relation_model(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#relationModel)
@@ -301,6 +348,7 @@ QSqlTableModel* q_sqlrelationaltablemodel_relation_model(void* self, int column)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QSqlTableModel* func(QSqlRelationalTableModel* self, int column)
+///
 void q_sqlrelationaltablemodel_on_relation_model(void* self, QSqlTableModel* (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#relationModel)
@@ -309,18 +357,21 @@ void q_sqlrelationaltablemodel_on_relation_model(void* self, QSqlTableModel* (*c
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param column int
+///
 QSqlTableModel* q_sqlrelationaltablemodel_qbase_relation_model(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#setJoinMode)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param joinMode enum QSqlRelationalTableModel__JoinMode
+///
 void q_sqlrelationaltablemodel_set_join_mode(void* self, int32_t joinMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#revertRow)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 void q_sqlrelationaltablemodel_revert_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#revertRow)
@@ -329,6 +380,7 @@ void q_sqlrelationaltablemodel_revert_row(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, int row)
+///
 void q_sqlrelationaltablemodel_on_revert_row(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#revertRow)
@@ -337,6 +389,7 @@ void q_sqlrelationaltablemodel_on_revert_row(void* self, void (*callback)(void*,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 void q_sqlrelationaltablemodel_qbase_revert_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#selectStatement)
@@ -344,6 +397,7 @@ void q_sqlrelationaltablemodel_qbase_revert_row(void* self, int row);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char* q_sqlrelationaltablemodel_select_statement(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#selectStatement)
@@ -352,6 +406,7 @@ const char* q_sqlrelationaltablemodel_select_statement(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback const char* func()
+///
 void q_sqlrelationaltablemodel_on_select_statement(void* self, const char* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#selectStatement)
@@ -359,6 +414,7 @@ void q_sqlrelationaltablemodel_on_select_statement(void* self, const char* (*cal
 /// Base class method implementation
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char* q_sqlrelationaltablemodel_qbase_select_statement(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#updateRowInTable)
@@ -366,6 +422,7 @@ const char* q_sqlrelationaltablemodel_qbase_select_statement(void* self);
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param values QSqlRecord*
+///
 bool q_sqlrelationaltablemodel_update_row_in_table(void* self, int row, void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#updateRowInTable)
@@ -374,6 +431,7 @@ bool q_sqlrelationaltablemodel_update_row_in_table(void* self, int row, void* va
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int row, QSqlRecord* values)
+///
 void q_sqlrelationaltablemodel_on_update_row_in_table(void* self, bool (*callback)(void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#updateRowInTable)
@@ -383,12 +441,14 @@ void q_sqlrelationaltablemodel_on_update_row_in_table(void* self, bool (*callbac
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param values QSqlRecord*
+///
 bool q_sqlrelationaltablemodel_qbase_update_row_in_table(void* self, int row, void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#insertRowIntoTable)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param values QSqlRecord*
+///
 bool q_sqlrelationaltablemodel_insert_row_into_table(void* self, void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#insertRowIntoTable)
@@ -397,6 +457,7 @@ bool q_sqlrelationaltablemodel_insert_row_into_table(void* self, void* values);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QSqlRecord* values)
+///
 void q_sqlrelationaltablemodel_on_insert_row_into_table(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#insertRowIntoTable)
@@ -405,6 +466,7 @@ void q_sqlrelationaltablemodel_on_insert_row_into_table(void* self, bool (*callb
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param values QSqlRecord*
+///
 bool q_sqlrelationaltablemodel_qbase_insert_row_into_table(void* self, void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#orderByClause)
@@ -412,6 +474,7 @@ bool q_sqlrelationaltablemodel_qbase_insert_row_into_table(void* self, void* val
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char* q_sqlrelationaltablemodel_order_by_clause(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#orderByClause)
@@ -420,6 +483,7 @@ const char* q_sqlrelationaltablemodel_order_by_clause(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback const char* func()
+///
 void q_sqlrelationaltablemodel_on_order_by_clause(void* self, const char* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#orderByClause)
@@ -427,6 +491,7 @@ void q_sqlrelationaltablemodel_on_order_by_clause(void* self, const char* (*call
 /// Base class method implementation
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char* q_sqlrelationaltablemodel_qbase_order_by_clause(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -435,6 +500,7 @@ const char* q_sqlrelationaltablemodel_qbase_order_by_clause(void* self);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_sqlrelationaltablemodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -444,6 +510,7 @@ const char* q_sqlrelationaltablemodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_sqlrelationaltablemodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QSqlTableModel
@@ -453,6 +520,7 @@ const char* q_sqlrelationaltablemodel_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char* q_sqlrelationaltablemodel_table_name(void* self);
 
 /// Inherited from QSqlTableModel
@@ -460,6 +528,7 @@ const char* q_sqlrelationaltablemodel_table_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#record)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QSqlRecord* q_sqlrelationaltablemodel_record(void* self);
 
 /// Inherited from QSqlTableModel
@@ -468,6 +537,7 @@ QSqlRecord* q_sqlrelationaltablemodel_record(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 QSqlRecord* q_sqlrelationaltablemodel_record2(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -475,6 +545,7 @@ QSqlRecord* q_sqlrelationaltablemodel_record2(void* self, int row);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#isDirty)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_is_dirty(void* self);
 
 /// Inherited from QSqlTableModel
@@ -483,6 +554,7 @@ bool q_sqlrelationaltablemodel_is_dirty(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 bool q_sqlrelationaltablemodel_is_dirty2(void* self, void* index);
 
 /// Inherited from QSqlTableModel
@@ -492,6 +564,7 @@ bool q_sqlrelationaltablemodel_is_dirty2(void* self, void* index);
 /// @param self QSqlRelationalTableModel*
 ///
 /// @return enum QSqlTableModel__EditStrategy
+///
 int32_t q_sqlrelationaltablemodel_edit_strategy(void* self);
 
 /// Inherited from QSqlTableModel
@@ -499,6 +572,7 @@ int32_t q_sqlrelationaltablemodel_edit_strategy(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#primaryKey)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QSqlIndex* q_sqlrelationaltablemodel_primary_key(void* self);
 
 /// Inherited from QSqlTableModel
@@ -506,6 +580,7 @@ QSqlIndex* q_sqlrelationaltablemodel_primary_key(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#database)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QSqlDatabase* q_sqlrelationaltablemodel_database(void* self);
 
 /// Inherited from QSqlTableModel
@@ -514,6 +589,7 @@ QSqlDatabase* q_sqlrelationaltablemodel_database(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param fieldName const char*
+///
 int32_t q_sqlrelationaltablemodel_field_index(void* self, const char* fieldName);
 
 /// Inherited from QSqlTableModel
@@ -523,6 +599,7 @@ int32_t q_sqlrelationaltablemodel_field_index(void* self, const char* fieldName)
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char* q_sqlrelationaltablemodel_filter(void* self);
 
 /// Inherited from QSqlTableModel
@@ -532,6 +609,7 @@ const char* q_sqlrelationaltablemodel_filter(void* self);
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param record QSqlRecord*
+///
 bool q_sqlrelationaltablemodel_insert_record(void* self, int row, void* record);
 
 /// Inherited from QSqlTableModel
@@ -541,6 +619,7 @@ bool q_sqlrelationaltablemodel_insert_record(void* self, int row, void* record);
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param record QSqlRecord*
+///
 bool q_sqlrelationaltablemodel_set_record(void* self, int row, void* record);
 
 /// Inherited from QSqlTableModel
@@ -548,6 +627,7 @@ bool q_sqlrelationaltablemodel_set_record(void* self, int row, void* record);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#submitAll)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_submit_all(void* self);
 
 /// Inherited from QSqlTableModel
@@ -555,6 +635,7 @@ bool q_sqlrelationaltablemodel_submit_all(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#revertAll)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_revert_all(void* self);
 
 /// Inherited from QSqlTableModel
@@ -564,6 +645,7 @@ void q_sqlrelationaltablemodel_revert_all(void* self);
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param record QSqlRecord*
+///
 void q_sqlrelationaltablemodel_prime_insert(void* self, int row, void* record);
 
 /// Inherited from QSqlTableModel
@@ -572,6 +654,7 @@ void q_sqlrelationaltablemodel_prime_insert(void* self, int row, void* record);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, int row, QSqlRecord* record)
+///
 void q_sqlrelationaltablemodel_on_prime_insert(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QSqlTableModel
@@ -580,6 +663,7 @@ void q_sqlrelationaltablemodel_on_prime_insert(void* self, void (*callback)(void
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param record QSqlRecord*
+///
 void q_sqlrelationaltablemodel_before_insert(void* self, void* record);
 
 /// Inherited from QSqlTableModel
@@ -588,6 +672,7 @@ void q_sqlrelationaltablemodel_before_insert(void* self, void* record);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QSqlRecord* record)
+///
 void q_sqlrelationaltablemodel_on_before_insert(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSqlTableModel
@@ -597,6 +682,7 @@ void q_sqlrelationaltablemodel_on_before_insert(void* self, void (*callback)(voi
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param record QSqlRecord*
+///
 void q_sqlrelationaltablemodel_before_update(void* self, int row, void* record);
 
 /// Inherited from QSqlTableModel
@@ -605,6 +691,7 @@ void q_sqlrelationaltablemodel_before_update(void* self, int row, void* record);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, int row, QSqlRecord* record)
+///
 void q_sqlrelationaltablemodel_on_before_update(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QSqlTableModel
@@ -613,6 +700,7 @@ void q_sqlrelationaltablemodel_on_before_update(void* self, void (*callback)(voi
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 void q_sqlrelationaltablemodel_before_delete(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -621,6 +709,7 @@ void q_sqlrelationaltablemodel_before_delete(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, int row)
+///
 void q_sqlrelationaltablemodel_on_before_delete(void* self, void (*callback)(void*, int));
 
 /// Inherited from QSqlQueryModel
@@ -629,6 +718,7 @@ void q_sqlrelationaltablemodel_on_before_delete(void* self, void (*callback)(voi
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param query QSqlQuery*
+///
 void q_sqlrelationaltablemodel_set_query(void* self, void* query);
 
 /// Inherited from QSqlQueryModel
@@ -637,6 +727,7 @@ void q_sqlrelationaltablemodel_set_query(void* self, void* query);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param query const char*
+///
 void q_sqlrelationaltablemodel_set_query2(void* self, const char* query);
 
 /// Inherited from QSqlQueryModel
@@ -644,6 +735,7 @@ void q_sqlrelationaltablemodel_set_query2(void* self, const char* query);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#query)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const QSqlQuery* q_sqlrelationaltablemodel_query(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -651,6 +743,7 @@ const QSqlQuery* q_sqlrelationaltablemodel_query(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#lastError)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QSqlError* q_sqlrelationaltablemodel_last_error(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -660,6 +753,7 @@ QSqlError* q_sqlrelationaltablemodel_last_error(void* self);
 /// @param self QSqlRelationalTableModel*
 /// @param query const char*
 /// @param db QSqlDatabase*
+///
 void q_sqlrelationaltablemodel_set_query22(void* self, const char* query, void* db);
 
 /// Inherited from QSqlQueryModel
@@ -668,6 +762,7 @@ void q_sqlrelationaltablemodel_set_query22(void* self, const char* query, void* 
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param param1 Disambiguated_t*
+///
 const QSqlQuery* q_sqlrelationaltablemodel_query1(void* self, void* param1);
 
 /// Inherited from QAbstractItemModel
@@ -677,6 +772,7 @@ const QSqlQuery* q_sqlrelationaltablemodel_query1(void* self, void* param1);
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param column int
+///
 bool q_sqlrelationaltablemodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -685,6 +781,7 @@ bool q_sqlrelationaltablemodel_has_index(void* self, int row, int column);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param child QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
@@ -695,6 +792,7 @@ QModelIndex* q_sqlrelationaltablemodel_parent(void* self, void* child);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, QModelIndex* child)
+///
 void q_sqlrelationaltablemodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -705,6 +803,7 @@ void q_sqlrelationaltablemodel_on_parent(void* self, QModelIndex* (*callback)(vo
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param child QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_qbase_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
@@ -713,6 +812,7 @@ QModelIndex* q_sqlrelationaltablemodel_qbase_parent(void* self, void* child);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -723,6 +823,7 @@ bool q_sqlrelationaltablemodel_has_children(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -733,6 +834,7 @@ void q_sqlrelationaltablemodel_on_has_children(void* self, bool (*callback)(void
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -741,6 +843,7 @@ bool q_sqlrelationaltablemodel_qbase_has_children(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 bool q_sqlrelationaltablemodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -749,6 +852,7 @@ bool q_sqlrelationaltablemodel_insert_row(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param column int
+///
 bool q_sqlrelationaltablemodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -757,6 +861,7 @@ bool q_sqlrelationaltablemodel_insert_column(void* self, int column);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 bool q_sqlrelationaltablemodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -765,6 +870,7 @@ bool q_sqlrelationaltablemodel_remove_row(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param column int
+///
 bool q_sqlrelationaltablemodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -776,6 +882,7 @@ bool q_sqlrelationaltablemodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_sqlrelationaltablemodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -787,6 +894,7 @@ bool q_sqlrelationaltablemodel_move_row(void* self, void* sourceParent, int sour
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_sqlrelationaltablemodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -795,6 +903,7 @@ bool q_sqlrelationaltablemodel_move_column(void* self, void* sourceParent, int s
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 bool q_sqlrelationaltablemodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -804,6 +913,7 @@ bool q_sqlrelationaltablemodel_check_index(void* self, void* index);
 /// @param self QSqlRelationalTableModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void q_sqlrelationaltablemodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -812,6 +922,7 @@ void q_sqlrelationaltablemodel_data_changed(void* self, void* topLeft, void* bot
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void q_sqlrelationaltablemodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -822,6 +933,7 @@ void q_sqlrelationaltablemodel_on_data_changed(void* self, void (*callback)(void
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -830,6 +942,7 @@ void q_sqlrelationaltablemodel_header_data_changed(void* self, int32_t orientati
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -837,6 +950,7 @@ void q_sqlrelationaltablemodel_on_header_data_changed(void* self, void (*callbac
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -845,6 +959,7 @@ void q_sqlrelationaltablemodel_layout_changed(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self)
+///
 void q_sqlrelationaltablemodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -852,6 +967,7 @@ void q_sqlrelationaltablemodel_on_layout_changed(void* self, void (*callback)(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -860,6 +976,7 @@ void q_sqlrelationaltablemodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self)
+///
 void q_sqlrelationaltablemodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -870,6 +987,7 @@ void q_sqlrelationaltablemodel_on_layout_about_to_be_changed(void* self, void (*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -879,6 +997,7 @@ bool q_sqlrelationaltablemodel_has_index3(void* self, int row, int column, void*
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -888,6 +1007,7 @@ bool q_sqlrelationaltablemodel_insert_row2(void* self, int row, void* parent);
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -897,6 +1017,7 @@ bool q_sqlrelationaltablemodel_insert_column2(void* self, int column, void* pare
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -906,6 +1027,7 @@ bool q_sqlrelationaltablemodel_remove_row2(void* self, int row, void* parent);
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -915,6 +1037,7 @@ bool q_sqlrelationaltablemodel_remove_column2(void* self, int column, void* pare
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool q_sqlrelationaltablemodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -925,6 +1048,7 @@ bool q_sqlrelationaltablemodel_check_index2(void* self, void* index, int32_t opt
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void q_sqlrelationaltablemodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -933,6 +1057,7 @@ void q_sqlrelationaltablemodel_data_changed3(void* self, void* topLeft, void* bo
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void q_sqlrelationaltablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -941,6 +1066,7 @@ void q_sqlrelationaltablemodel_on_data_changed3(void* self, void (*callback)(voi
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_sqlrelationaltablemodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -949,6 +1075,7 @@ void q_sqlrelationaltablemodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QPersistentModelIndex** parents)
+///
 void q_sqlrelationaltablemodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -958,6 +1085,7 @@ void q_sqlrelationaltablemodel_on_layout_changed1(void* self, void (*callback)(v
 /// @param self QSqlRelationalTableModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_sqlrelationaltablemodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -966,6 +1094,7 @@ void q_sqlrelationaltablemodel_layout_changed2(void* self, libqt_list parents, i
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_sqlrelationaltablemodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -974,6 +1103,7 @@ void q_sqlrelationaltablemodel_on_layout_changed2(void* self, void (*callback)(v
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_sqlrelationaltablemodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -982,6 +1112,7 @@ void q_sqlrelationaltablemodel_layout_about_to_be_changed1(void* self, libqt_lis
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QPersistentModelIndex** parents)
+///
 void q_sqlrelationaltablemodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -991,6 +1122,7 @@ void q_sqlrelationaltablemodel_on_layout_about_to_be_changed1(void* self, void (
 /// @param self QSqlRelationalTableModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_sqlrelationaltablemodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -999,6 +1131,7 @@ void q_sqlrelationaltablemodel_layout_about_to_be_changed2(void* self, libqt_lis
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_sqlrelationaltablemodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -1008,6 +1141,7 @@ void q_sqlrelationaltablemodel_on_layout_about_to_be_changed2(void* self, void (
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char* q_sqlrelationaltablemodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -1016,6 +1150,7 @@ const char* q_sqlrelationaltablemodel_object_name(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param name char*
+///
 void q_sqlrelationaltablemodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -1023,6 +1158,7 @@ void q_sqlrelationaltablemodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -1030,6 +1166,7 @@ bool q_sqlrelationaltablemodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -1037,6 +1174,7 @@ bool q_sqlrelationaltablemodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -1044,6 +1182,7 @@ bool q_sqlrelationaltablemodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -1052,6 +1191,7 @@ bool q_sqlrelationaltablemodel_signals_blocked(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param b bool
+///
 bool q_sqlrelationaltablemodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -1059,6 +1199,7 @@ bool q_sqlrelationaltablemodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QThread* q_sqlrelationaltablemodel_thread(void* self);
 
 /// Inherited from QObject
@@ -1067,6 +1208,7 @@ QThread* q_sqlrelationaltablemodel_thread(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param thread QThread*
+///
 bool q_sqlrelationaltablemodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -1075,6 +1217,7 @@ bool q_sqlrelationaltablemodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param interval int
+///
 int32_t q_sqlrelationaltablemodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -1083,6 +1226,7 @@ int32_t q_sqlrelationaltablemodel_start_timer(void* self, int interval);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param id int
+///
 void q_sqlrelationaltablemodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -1091,6 +1235,7 @@ void q_sqlrelationaltablemodel_kill_timer(void* self, int id);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param id enum Qt__TimerId
+///
 void q_sqlrelationaltablemodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -1098,6 +1243,7 @@ void q_sqlrelationaltablemodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 libqt_list /* of QObject* */ q_sqlrelationaltablemodel_children(void* self);
 
 /// Inherited from QObject
@@ -1106,6 +1252,7 @@ libqt_list /* of QObject* */ q_sqlrelationaltablemodel_children(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QObject*
+///
 void q_sqlrelationaltablemodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -1114,6 +1261,7 @@ void q_sqlrelationaltablemodel_set_parent(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param filterObj QObject*
+///
 void q_sqlrelationaltablemodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -1122,6 +1270,7 @@ void q_sqlrelationaltablemodel_install_event_filter(void* self, void* filterObj)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param obj QObject*
+///
 void q_sqlrelationaltablemodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -1132,6 +1281,7 @@ void q_sqlrelationaltablemodel_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_sqlrelationaltablemodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -1142,6 +1292,7 @@ QMetaObject__Connection* q_sqlrelationaltablemodel_connect(void* sender, void* s
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_sqlrelationaltablemodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -1152,6 +1303,7 @@ QMetaObject__Connection* q_sqlrelationaltablemodel_connect2(void* self, void* se
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_sqlrelationaltablemodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -1159,6 +1311,7 @@ bool q_sqlrelationaltablemodel_disconnect(void* sender, void* signal, void* rece
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_sqlrelationaltablemodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -1166,6 +1319,7 @@ bool q_sqlrelationaltablemodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -1173,6 +1327,7 @@ void q_sqlrelationaltablemodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -1182,6 +1337,7 @@ void q_sqlrelationaltablemodel_dump_object_info(void* self);
 /// @param self QSqlRelationalTableModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_sqlrelationaltablemodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -1190,6 +1346,7 @@ bool q_sqlrelationaltablemodel_set_property(void* self, const char* name, void* 
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param name const char*
+///
 QVariant* q_sqlrelationaltablemodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -1199,6 +1356,7 @@ QVariant* q_sqlrelationaltablemodel_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char** q_sqlrelationaltablemodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -1206,6 +1364,7 @@ const char** q_sqlrelationaltablemodel_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QBindingStorage* q_sqlrelationaltablemodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -1213,6 +1372,7 @@ QBindingStorage* q_sqlrelationaltablemodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const QBindingStorage* q_sqlrelationaltablemodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -1220,6 +1380,7 @@ const QBindingStorage* q_sqlrelationaltablemodel_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1228,6 +1389,7 @@ void q_sqlrelationaltablemodel_destroyed(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self)
+///
 void q_sqlrelationaltablemodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1236,6 +1398,7 @@ void q_sqlrelationaltablemodel_on_destroyed(void* self, void (*callback)(void*))
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param classname const char*
+///
 bool q_sqlrelationaltablemodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1243,6 +1406,7 @@ bool q_sqlrelationaltablemodel_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1252,6 +1416,7 @@ void q_sqlrelationaltablemodel_delete_later(void* self);
 /// @param self QSqlRelationalTableModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_sqlrelationaltablemodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1261,6 +1426,7 @@ bool q_sqlrelationaltablemodel_move_to_thread2(void* self, void* thread, void* p
 /// @param self QSqlRelationalTableModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_sqlrelationaltablemodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1272,6 +1438,7 @@ int32_t q_sqlrelationaltablemodel_start_timer22(void* self, int interval, int32_
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_sqlrelationaltablemodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1283,6 +1450,7 @@ QMetaObject__Connection* q_sqlrelationaltablemodel_connect5(void* sender, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_sqlrelationaltablemodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1291,6 +1459,7 @@ QMetaObject__Connection* q_sqlrelationaltablemodel_connect4(void* self, void* se
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param param1 QObject*
+///
 void q_sqlrelationaltablemodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1299,6 +1468,7 @@ void q_sqlrelationaltablemodel_destroyed1(void* self, void* param1);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QObject* param1)
+///
 void q_sqlrelationaltablemodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSqlTableModel
@@ -1311,6 +1481,7 @@ void q_sqlrelationaltablemodel_on_destroyed1(void* self, void (*callback)(void*,
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_sqlrelationaltablemodel_flags(void* self, void* index);
 
 /// Inherited from QSqlTableModel
@@ -1323,6 +1494,7 @@ int32_t q_sqlrelationaltablemodel_flags(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_sqlrelationaltablemodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QSqlTableModel
@@ -1333,6 +1505,7 @@ int32_t q_sqlrelationaltablemodel_qbase_flags(void* self, void* index);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, QModelIndex* index)
+///
 void q_sqlrelationaltablemodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QSqlTableModel
@@ -1343,6 +1516,7 @@ void q_sqlrelationaltablemodel_on_flags(void* self, int32_t (*callback)(void*, v
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 bool q_sqlrelationaltablemodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QSqlTableModel
@@ -1353,6 +1527,7 @@ bool q_sqlrelationaltablemodel_clear_item_data(void* self, void* index);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QSqlTableModel
@@ -1363,6 +1538,7 @@ bool q_sqlrelationaltablemodel_qbase_clear_item_data(void* self, void* index);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* index)
+///
 void q_sqlrelationaltablemodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QSqlTableModel
@@ -1375,6 +1551,7 @@ void q_sqlrelationaltablemodel_on_clear_item_data(void* self, bool (*callback)(v
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_sqlrelationaltablemodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QSqlTableModel
@@ -1387,6 +1564,7 @@ QVariant* q_sqlrelationaltablemodel_header_data(void* self, int section, int32_t
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_sqlrelationaltablemodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QSqlTableModel
@@ -1397,6 +1575,7 @@ QVariant* q_sqlrelationaltablemodel_qbase_header_data(void* self, int section, i
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QVariant* func(QSqlRelationalTableModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void q_sqlrelationaltablemodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QSqlTableModel
@@ -1407,6 +1586,7 @@ void q_sqlrelationaltablemodel_on_header_data(void* self, QVariant* (*callback)(
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param strategy enum QSqlTableModel__EditStrategy
+///
 void q_sqlrelationaltablemodel_set_edit_strategy(void* self, int32_t strategy);
 
 /// Inherited from QSqlTableModel
@@ -1417,6 +1597,7 @@ void q_sqlrelationaltablemodel_set_edit_strategy(void* self, int32_t strategy);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param strategy enum QSqlTableModel__EditStrategy
+///
 void q_sqlrelationaltablemodel_qbase_set_edit_strategy(void* self, int32_t strategy);
 
 /// Inherited from QSqlTableModel
@@ -1427,6 +1608,7 @@ void q_sqlrelationaltablemodel_qbase_set_edit_strategy(void* self, int32_t strat
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, enum QSqlTableModel__EditStrategy strategy)
+///
 void q_sqlrelationaltablemodel_on_set_edit_strategy(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QSqlTableModel
@@ -1438,6 +1620,7 @@ void q_sqlrelationaltablemodel_on_set_edit_strategy(void* self, void (*callback)
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_sqlrelationaltablemodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QSqlTableModel
@@ -1449,6 +1632,7 @@ void q_sqlrelationaltablemodel_sort(void* self, int column, int32_t order);
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_sqlrelationaltablemodel_qbase_sort(void* self, int column, int32_t order);
 
 /// Inherited from QSqlTableModel
@@ -1459,6 +1643,7 @@ void q_sqlrelationaltablemodel_qbase_sort(void* self, int column, int32_t order)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, int column, enum Qt__SortOrder order)
+///
 void q_sqlrelationaltablemodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QSqlTableModel
@@ -1470,6 +1655,7 @@ void q_sqlrelationaltablemodel_on_sort(void* self, void (*callback)(void*, int, 
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_sqlrelationaltablemodel_set_sort(void* self, int column, int32_t order);
 
 /// Inherited from QSqlTableModel
@@ -1481,6 +1667,7 @@ void q_sqlrelationaltablemodel_set_sort(void* self, int column, int32_t order);
 /// @param self QSqlRelationalTableModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_sqlrelationaltablemodel_qbase_set_sort(void* self, int column, int32_t order);
 
 /// Inherited from QSqlTableModel
@@ -1491,6 +1678,7 @@ void q_sqlrelationaltablemodel_qbase_set_sort(void* self, int column, int32_t or
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, int column, enum Qt__SortOrder order)
+///
 void q_sqlrelationaltablemodel_on_set_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QSqlTableModel
@@ -1501,6 +1689,7 @@ void q_sqlrelationaltablemodel_on_set_sort(void* self, void (*callback)(void*, i
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param filter const char*
+///
 void q_sqlrelationaltablemodel_set_filter(void* self, const char* filter);
 
 /// Inherited from QSqlTableModel
@@ -1511,6 +1700,7 @@ void q_sqlrelationaltablemodel_set_filter(void* self, const char* filter);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param filter const char*
+///
 void q_sqlrelationaltablemodel_qbase_set_filter(void* self, const char* filter);
 
 /// Inherited from QSqlTableModel
@@ -1521,6 +1711,7 @@ void q_sqlrelationaltablemodel_qbase_set_filter(void* self, const char* filter);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, const char* filter)
+///
 void q_sqlrelationaltablemodel_on_set_filter(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QSqlTableModel
@@ -1531,6 +1722,7 @@ void q_sqlrelationaltablemodel_on_set_filter(void* self, void (*callback)(void*,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 int32_t q_sqlrelationaltablemodel_row_count(void* self, void* parent);
 
 /// Inherited from QSqlTableModel
@@ -1541,6 +1733,7 @@ int32_t q_sqlrelationaltablemodel_row_count(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 int32_t q_sqlrelationaltablemodel_qbase_row_count(void* self, void* parent);
 
 /// Inherited from QSqlTableModel
@@ -1551,6 +1744,7 @@ int32_t q_sqlrelationaltablemodel_qbase_row_count(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QSqlTableModel
@@ -1563,6 +1757,7 @@ void q_sqlrelationaltablemodel_on_row_count(void* self, int32_t (*callback)(void
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QSqlTableModel
@@ -1575,6 +1770,7 @@ bool q_sqlrelationaltablemodel_remove_rows(void* self, int row, int count, void*
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QSqlTableModel
@@ -1585,6 +1781,7 @@ bool q_sqlrelationaltablemodel_qbase_remove_rows(void* self, int row, int count,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int row, int count, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QSqlTableModel
@@ -1597,6 +1794,7 @@ void q_sqlrelationaltablemodel_on_remove_rows(void* self, bool (*callback)(void*
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QSqlTableModel
@@ -1609,6 +1807,7 @@ bool q_sqlrelationaltablemodel_insert_rows(void* self, int row, int count, void*
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QSqlTableModel
@@ -1619,6 +1818,7 @@ bool q_sqlrelationaltablemodel_qbase_insert_rows(void* self, int row, int count,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int row, int count, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QSqlTableModel
@@ -1629,6 +1829,7 @@ void q_sqlrelationaltablemodel_on_insert_rows(void* self, bool (*callback)(void*
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 bool q_sqlrelationaltablemodel_select_row(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -1639,6 +1840,7 @@ bool q_sqlrelationaltablemodel_select_row(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 bool q_sqlrelationaltablemodel_qbase_select_row(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -1649,6 +1851,7 @@ bool q_sqlrelationaltablemodel_qbase_select_row(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int row)
+///
 void q_sqlrelationaltablemodel_on_select_row(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QSqlTableModel
@@ -1658,6 +1861,7 @@ void q_sqlrelationaltablemodel_on_select_row(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_submit(void* self);
 
 /// Inherited from QSqlTableModel
@@ -1667,6 +1871,7 @@ bool q_sqlrelationaltablemodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 bool q_sqlrelationaltablemodel_qbase_submit(void* self);
 
 /// Inherited from QSqlTableModel
@@ -1677,6 +1882,7 @@ bool q_sqlrelationaltablemodel_qbase_submit(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func()
+///
 void q_sqlrelationaltablemodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QSqlTableModel
@@ -1686,6 +1892,7 @@ void q_sqlrelationaltablemodel_on_submit(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_revert(void* self);
 
 /// Inherited from QSqlTableModel
@@ -1695,6 +1902,7 @@ void q_sqlrelationaltablemodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_revert(void* self);
 
 /// Inherited from QSqlTableModel
@@ -1705,6 +1913,7 @@ void q_sqlrelationaltablemodel_qbase_revert(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QSqlTableModel
@@ -1715,6 +1924,7 @@ void q_sqlrelationaltablemodel_on_revert(void* self, void (*callback)());
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 bool q_sqlrelationaltablemodel_delete_row_from_table(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -1725,6 +1935,7 @@ bool q_sqlrelationaltablemodel_delete_row_from_table(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 bool q_sqlrelationaltablemodel_qbase_delete_row_from_table(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -1735,6 +1946,7 @@ bool q_sqlrelationaltablemodel_qbase_delete_row_from_table(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int row)
+///
 void q_sqlrelationaltablemodel_on_delete_row_from_table(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QSqlTableModel
@@ -1745,6 +1957,7 @@ void q_sqlrelationaltablemodel_on_delete_row_from_table(void* self, bool (*callb
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param item QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_index_in_query(void* self, void* item);
 
 /// Inherited from QSqlTableModel
@@ -1755,6 +1968,7 @@ QModelIndex* q_sqlrelationaltablemodel_index_in_query(void* self, void* item);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param item QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_qbase_index_in_query(void* self, void* item);
 
 /// Inherited from QSqlTableModel
@@ -1765,6 +1979,7 @@ QModelIndex* q_sqlrelationaltablemodel_qbase_index_in_query(void* self, void* it
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, QModelIndex* item)
+///
 void q_sqlrelationaltablemodel_on_index_in_query(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSqlQueryModel
@@ -1775,6 +1990,7 @@ void q_sqlrelationaltablemodel_on_index_in_query(void* self, QModelIndex* (*call
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 int32_t q_sqlrelationaltablemodel_column_count(void* self, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1785,6 +2001,7 @@ int32_t q_sqlrelationaltablemodel_column_count(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 int32_t q_sqlrelationaltablemodel_qbase_column_count(void* self, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1795,6 +2012,7 @@ int32_t q_sqlrelationaltablemodel_qbase_column_count(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QSqlQueryModel
@@ -1808,6 +2026,7 @@ void q_sqlrelationaltablemodel_on_column_count(void* self, int32_t (*callback)(v
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_sqlrelationaltablemodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QSqlQueryModel
@@ -1821,6 +2040,7 @@ bool q_sqlrelationaltablemodel_set_header_data(void* self, int section, int32_t 
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_sqlrelationaltablemodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QSqlQueryModel
@@ -1831,6 +2051,7 @@ bool q_sqlrelationaltablemodel_qbase_set_header_data(void* self, int section, in
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void q_sqlrelationaltablemodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QSqlQueryModel
@@ -1843,6 +2064,7 @@ void q_sqlrelationaltablemodel_on_set_header_data(void* self, bool (*callback)(v
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1855,6 +2077,7 @@ bool q_sqlrelationaltablemodel_insert_columns(void* self, int column, int count,
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1865,6 +2088,7 @@ bool q_sqlrelationaltablemodel_qbase_insert_columns(void* self, int column, int 
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int column, int count, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QSqlQueryModel
@@ -1875,6 +2099,7 @@ void q_sqlrelationaltablemodel_on_insert_columns(void* self, bool (*callback)(vo
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 void q_sqlrelationaltablemodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1885,6 +2110,7 @@ void q_sqlrelationaltablemodel_fetch_more(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 void q_sqlrelationaltablemodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1895,6 +2121,7 @@ void q_sqlrelationaltablemodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSqlQueryModel
@@ -1905,6 +2132,7 @@ void q_sqlrelationaltablemodel_on_fetch_more(void* self, void (*callback)(void*,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1915,6 +2143,7 @@ bool q_sqlrelationaltablemodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QSqlQueryModel
@@ -1925,6 +2154,7 @@ bool q_sqlrelationaltablemodel_qbase_can_fetch_more(void* self, void* parent);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QSqlQueryModel
@@ -1934,6 +2164,7 @@ void q_sqlrelationaltablemodel_on_can_fetch_more(void* self, bool (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 libqt_map /* of int to char* */ q_sqlrelationaltablemodel_role_names(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -1943,6 +2174,7 @@ libqt_map /* of int to char* */ q_sqlrelationaltablemodel_role_names(void* self)
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 libqt_map /* of int to char* */ q_sqlrelationaltablemodel_qbase_role_names(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -1953,6 +2185,7 @@ libqt_map /* of int to char* */ q_sqlrelationaltablemodel_qbase_role_names(void*
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void q_sqlrelationaltablemodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QSqlQueryModel
@@ -1962,6 +2195,7 @@ void q_sqlrelationaltablemodel_on_role_names(void* self, libqt_map /* of int to 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_query_change(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -1971,6 +2205,7 @@ void q_sqlrelationaltablemodel_query_change(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_query_change(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -1981,6 +2216,7 @@ void q_sqlrelationaltablemodel_qbase_query_change(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_query_change(void* self, void (*callback)());
 
 /// Inherited from QAbstractTableModel
@@ -1993,6 +2229,7 @@ void q_sqlrelationaltablemodel_on_query_change(void* self, void (*callback)());
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractTableModel
@@ -2005,6 +2242,7 @@ QModelIndex* q_sqlrelationaltablemodel_index(void* self, int row, int column, vo
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractTableModel
@@ -2015,6 +2253,7 @@ QModelIndex* q_sqlrelationaltablemodel_qbase_index(void* self, int row, int colu
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, int row, int column, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractTableModel
@@ -2027,6 +2266,7 @@ void q_sqlrelationaltablemodel_on_index(void* self, QModelIndex* (*callback)(voi
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractTableModel
@@ -2039,6 +2279,7 @@ QModelIndex* q_sqlrelationaltablemodel_sibling(void* self, int row, int column, 
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractTableModel
@@ -2049,6 +2290,7 @@ QModelIndex* q_sqlrelationaltablemodel_qbase_sibling(void* self, int row, int co
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, int row, int column, QModelIndex* idx)
+///
 void q_sqlrelationaltablemodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractTableModel
@@ -2063,6 +2305,7 @@ void q_sqlrelationaltablemodel_on_sibling(void* self, QModelIndex* (*callback)(v
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractTableModel
@@ -2077,6 +2320,7 @@ bool q_sqlrelationaltablemodel_drop_mime_data(void* self, void* data, int32_t ac
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractTableModel
@@ -2087,6 +2331,7 @@ bool q_sqlrelationaltablemodel_qbase_drop_mime_data(void* self, void* data, int3
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2097,6 +2342,7 @@ void q_sqlrelationaltablemodel_on_drop_mime_data(void* self, bool (*callback)(vo
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_sqlrelationaltablemodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2107,6 +2353,7 @@ libqt_map /* of int to QVariant* */ q_sqlrelationaltablemodel_item_data(void* se
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_sqlrelationaltablemodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2117,6 +2364,7 @@ libqt_map /* of int to QVariant* */ q_sqlrelationaltablemodel_qbase_item_data(vo
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(QSqlRelationalTableModel* self, QModelIndex* index)
+///
 void q_sqlrelationaltablemodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2128,6 +2376,7 @@ void q_sqlrelationaltablemodel_on_item_data(void* self, libqt_map /* of int to Q
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_sqlrelationaltablemodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -2139,6 +2388,7 @@ bool q_sqlrelationaltablemodel_set_item_data(void* self, void* index, libqt_map 
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_sqlrelationaltablemodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -2149,6 +2399,7 @@ bool q_sqlrelationaltablemodel_qbase_set_item_data(void* self, void* index, libq
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void q_sqlrelationaltablemodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -2160,6 +2411,7 @@ void q_sqlrelationaltablemodel_on_set_item_data(void* self, bool (*callback)(voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char** q_sqlrelationaltablemodel_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2171,6 +2423,7 @@ const char** q_sqlrelationaltablemodel_mime_types(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 const char** q_sqlrelationaltablemodel_qbase_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2181,6 +2434,7 @@ const char** q_sqlrelationaltablemodel_qbase_mime_types(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback const char** func()
+///
 void q_sqlrelationaltablemodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2191,6 +2445,7 @@ void q_sqlrelationaltablemodel_on_mime_types(void* self, const char** (*callback
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_sqlrelationaltablemodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -2201,6 +2456,7 @@ QMimeData* q_sqlrelationaltablemodel_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_sqlrelationaltablemodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -2211,6 +2467,7 @@ QMimeData* q_sqlrelationaltablemodel_qbase_mime_data(void* self, libqt_list inde
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QMimeData* func(QSqlRelationalTableModel* self, QModelIndex** indexes)
+///
 void q_sqlrelationaltablemodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -2225,6 +2482,7 @@ void q_sqlrelationaltablemodel_on_mime_data(void* self, QMimeData* (*callback)(v
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2239,6 +2497,7 @@ bool q_sqlrelationaltablemodel_can_drop_mime_data(void* self, void* data, int32_
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_sqlrelationaltablemodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2249,6 +2508,7 @@ bool q_sqlrelationaltablemodel_qbase_can_drop_mime_data(void* self, void* data, 
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_sqlrelationaltablemodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2260,6 +2520,7 @@ void q_sqlrelationaltablemodel_on_can_drop_mime_data(void* self, bool (*callback
 /// @param self QSqlRelationalTableModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_sqlrelationaltablemodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2271,6 +2532,7 @@ int32_t q_sqlrelationaltablemodel_supported_drop_actions(void* self);
 /// @param self QSqlRelationalTableModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_sqlrelationaltablemodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2281,6 +2543,7 @@ int32_t q_sqlrelationaltablemodel_qbase_supported_drop_actions(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func()
+///
 void q_sqlrelationaltablemodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2292,6 +2555,7 @@ void q_sqlrelationaltablemodel_on_supported_drop_actions(void* self, int32_t (*c
 /// @param self QSqlRelationalTableModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_sqlrelationaltablemodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2303,6 +2567,7 @@ int32_t q_sqlrelationaltablemodel_supported_drag_actions(void* self);
 /// @param self QSqlRelationalTableModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_sqlrelationaltablemodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2313,6 +2578,7 @@ int32_t q_sqlrelationaltablemodel_qbase_supported_drag_actions(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func()
+///
 void q_sqlrelationaltablemodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2327,6 +2593,7 @@ void q_sqlrelationaltablemodel_on_supported_drag_actions(void* self, int32_t (*c
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_sqlrelationaltablemodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2341,6 +2608,7 @@ bool q_sqlrelationaltablemodel_move_rows(void* self, void* sourceParent, int sou
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_sqlrelationaltablemodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2351,6 +2619,7 @@ bool q_sqlrelationaltablemodel_qbase_move_rows(void* self, void* sourceParent, i
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_sqlrelationaltablemodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2365,6 +2634,7 @@ void q_sqlrelationaltablemodel_on_move_rows(void* self, bool (*callback)(void*, 
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_sqlrelationaltablemodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2379,6 +2649,7 @@ bool q_sqlrelationaltablemodel_move_columns(void* self, void* sourceParent, int 
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_sqlrelationaltablemodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2389,6 +2660,7 @@ bool q_sqlrelationaltablemodel_qbase_move_columns(void* self, void* sourceParent
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_sqlrelationaltablemodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2399,6 +2671,7 @@ void q_sqlrelationaltablemodel_on_move_columns(void* self, bool (*callback)(void
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2409,6 +2682,7 @@ QModelIndex* q_sqlrelationaltablemodel_buddy(void* self, void* index);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_sqlrelationaltablemodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2419,6 +2693,7 @@ QModelIndex* q_sqlrelationaltablemodel_qbase_buddy(void* self, void* index);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, QModelIndex* index)
+///
 void q_sqlrelationaltablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2433,6 +2708,7 @@ void q_sqlrelationaltablemodel_on_buddy(void* self, QModelIndex* (*callback)(voi
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -2447,6 +2723,7 @@ libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_match(void* self, voi
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -2457,6 +2734,7 @@ libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_qbase_match(void* sel
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex** func(QSqlRelationalTableModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void q_sqlrelationaltablemodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -2467,6 +2745,7 @@ void q_sqlrelationaltablemodel_on_match(void* self, QModelIndex** (*callback)(vo
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 QSize* q_sqlrelationaltablemodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2477,6 +2756,7 @@ QSize* q_sqlrelationaltablemodel_span(void* self, void* index);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
+///
 QSize* q_sqlrelationaltablemodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2487,6 +2767,7 @@ QSize* q_sqlrelationaltablemodel_qbase_span(void* self, void* index);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QSize* func(QSqlRelationalTableModel* self, QModelIndex* index)
+///
 void q_sqlrelationaltablemodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2498,6 +2779,7 @@ void q_sqlrelationaltablemodel_on_span(void* self, QSize* (*callback)(void*, voi
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_sqlrelationaltablemodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -2509,6 +2791,7 @@ void q_sqlrelationaltablemodel_multi_data(void* self, void* index, void* roleDat
 /// @param self QSqlRelationalTableModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_sqlrelationaltablemodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -2519,6 +2802,7 @@ void q_sqlrelationaltablemodel_qbase_multi_data(void* self, void* index, void* r
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void q_sqlrelationaltablemodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2528,6 +2812,7 @@ void q_sqlrelationaltablemodel_on_multi_data(void* self, void (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2537,6 +2822,7 @@ void q_sqlrelationaltablemodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2547,6 +2833,7 @@ void q_sqlrelationaltablemodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2557,6 +2844,7 @@ void q_sqlrelationaltablemodel_on_reset_internal_data(void* self, void (*callbac
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QEvent*
+///
 bool q_sqlrelationaltablemodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2567,6 +2855,7 @@ bool q_sqlrelationaltablemodel_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QEvent*
+///
 bool q_sqlrelationaltablemodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2577,6 +2866,7 @@ bool q_sqlrelationaltablemodel_qbase_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QEvent* event)
+///
 void q_sqlrelationaltablemodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2588,6 +2878,7 @@ void q_sqlrelationaltablemodel_on_event(void* self, bool (*callback)(void*, void
 /// @param self QSqlRelationalTableModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_sqlrelationaltablemodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2599,6 +2890,7 @@ bool q_sqlrelationaltablemodel_event_filter(void* self, void* watched, void* eve
 /// @param self QSqlRelationalTableModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_sqlrelationaltablemodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2609,6 +2901,7 @@ bool q_sqlrelationaltablemodel_qbase_event_filter(void* self, void* watched, voi
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QObject* watched, QEvent* event)
+///
 void q_sqlrelationaltablemodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2619,6 +2912,7 @@ void q_sqlrelationaltablemodel_on_event_filter(void* self, bool (*callback)(void
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QTimerEvent*
+///
 void q_sqlrelationaltablemodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2629,6 +2923,7 @@ void q_sqlrelationaltablemodel_timer_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QTimerEvent*
+///
 void q_sqlrelationaltablemodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2639,6 +2934,7 @@ void q_sqlrelationaltablemodel_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QTimerEvent* event)
+///
 void q_sqlrelationaltablemodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2649,6 +2945,7 @@ void q_sqlrelationaltablemodel_on_timer_event(void* self, void (*callback)(void*
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QChildEvent*
+///
 void q_sqlrelationaltablemodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2659,6 +2956,7 @@ void q_sqlrelationaltablemodel_child_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QChildEvent*
+///
 void q_sqlrelationaltablemodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2669,6 +2967,7 @@ void q_sqlrelationaltablemodel_qbase_child_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QChildEvent* event)
+///
 void q_sqlrelationaltablemodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2679,6 +2978,7 @@ void q_sqlrelationaltablemodel_on_child_event(void* self, void (*callback)(void*
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QEvent*
+///
 void q_sqlrelationaltablemodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2689,6 +2989,7 @@ void q_sqlrelationaltablemodel_custom_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param event QEvent*
+///
 void q_sqlrelationaltablemodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2699,6 +3000,7 @@ void q_sqlrelationaltablemodel_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QEvent* event)
+///
 void q_sqlrelationaltablemodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2709,6 +3011,7 @@ void q_sqlrelationaltablemodel_on_custom_event(void* self, void (*callback)(void
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal QMetaMethod*
+///
 void q_sqlrelationaltablemodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2719,6 +3022,7 @@ void q_sqlrelationaltablemodel_connect_notify(void* self, void* signal);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal QMetaMethod*
+///
 void q_sqlrelationaltablemodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2729,6 +3033,7 @@ void q_sqlrelationaltablemodel_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QMetaMethod* signal)
+///
 void q_sqlrelationaltablemodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2739,6 +3044,7 @@ void q_sqlrelationaltablemodel_on_connect_notify(void* self, void (*callback)(vo
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal QMetaMethod*
+///
 void q_sqlrelationaltablemodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2749,6 +3055,7 @@ void q_sqlrelationaltablemodel_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal QMetaMethod*
+///
 void q_sqlrelationaltablemodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2759,6 +3066,7 @@ void q_sqlrelationaltablemodel_qbase_disconnect_notify(void* self, void* signal)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QMetaMethod* signal)
+///
 void q_sqlrelationaltablemodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSqlTableModel
@@ -2769,6 +3077,7 @@ void q_sqlrelationaltablemodel_on_disconnect_notify(void* self, void (*callback)
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param key QSqlIndex*
+///
 void q_sqlrelationaltablemodel_set_primary_key(void* self, void* key);
 
 /// Inherited from QSqlTableModel
@@ -2779,6 +3088,7 @@ void q_sqlrelationaltablemodel_set_primary_key(void* self, void* key);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param key QSqlIndex*
+///
 void q_sqlrelationaltablemodel_qbase_set_primary_key(void* self, void* key);
 
 /// Inherited from QSqlTableModel
@@ -2789,6 +3099,7 @@ void q_sqlrelationaltablemodel_qbase_set_primary_key(void* self, void* key);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QSqlIndex* key)
+///
 void q_sqlrelationaltablemodel_on_set_primary_key(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSqlTableModel
@@ -2799,6 +3110,7 @@ void q_sqlrelationaltablemodel_on_set_primary_key(void* self, void (*callback)(v
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 QSqlRecord* q_sqlrelationaltablemodel_primary_values(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -2809,6 +3121,7 @@ QSqlRecord* q_sqlrelationaltablemodel_primary_values(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param row int
+///
 QSqlRecord* q_sqlrelationaltablemodel_qbase_primary_values(void* self, int row);
 
 /// Inherited from QSqlTableModel
@@ -2819,6 +3132,7 @@ QSqlRecord* q_sqlrelationaltablemodel_qbase_primary_values(void* self, int row);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QSqlRecord* func(QSqlRelationalTableModel* self, int row)
+///
 void q_sqlrelationaltablemodel_on_primary_values(void* self, QSqlRecord* (*callback)(void*, int));
 
 /// Inherited from QSqlQueryModel
@@ -2831,6 +3145,7 @@ void q_sqlrelationaltablemodel_on_primary_values(void* self, QSqlRecord* (*callb
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -2843,6 +3158,7 @@ void q_sqlrelationaltablemodel_begin_insert_rows(void* self, void* parent, int f
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -2853,6 +3169,7 @@ void q_sqlrelationaltablemodel_qbase_begin_insert_rows(void* self, void* parent,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QSqlQueryModel
@@ -2862,6 +3179,7 @@ void q_sqlrelationaltablemodel_on_begin_insert_rows(void* self, void (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_end_insert_rows(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -2871,6 +3189,7 @@ void q_sqlrelationaltablemodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -2881,6 +3200,7 @@ void q_sqlrelationaltablemodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QSqlQueryModel
@@ -2893,6 +3213,7 @@ void q_sqlrelationaltablemodel_on_end_insert_rows(void* self, void (*callback)()
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -2905,6 +3226,7 @@ void q_sqlrelationaltablemodel_begin_remove_rows(void* self, void* parent, int f
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -2915,6 +3237,7 @@ void q_sqlrelationaltablemodel_qbase_begin_remove_rows(void* self, void* parent,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QSqlQueryModel
@@ -2924,6 +3247,7 @@ void q_sqlrelationaltablemodel_on_begin_remove_rows(void* self, void (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_end_remove_rows(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -2933,6 +3257,7 @@ void q_sqlrelationaltablemodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -2943,6 +3268,7 @@ void q_sqlrelationaltablemodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QSqlQueryModel
@@ -2955,6 +3281,7 @@ void q_sqlrelationaltablemodel_on_end_remove_rows(void* self, void (*callback)()
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -2967,6 +3294,7 @@ void q_sqlrelationaltablemodel_begin_insert_columns(void* self, void* parent, in
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -2977,6 +3305,7 @@ void q_sqlrelationaltablemodel_qbase_begin_insert_columns(void* self, void* pare
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QSqlQueryModel
@@ -2986,6 +3315,7 @@ void q_sqlrelationaltablemodel_on_begin_insert_columns(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_end_insert_columns(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -2995,6 +3325,7 @@ void q_sqlrelationaltablemodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -3005,6 +3336,7 @@ void q_sqlrelationaltablemodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QSqlQueryModel
@@ -3017,6 +3349,7 @@ void q_sqlrelationaltablemodel_on_end_insert_columns(void* self, void (*callback
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -3029,6 +3362,7 @@ void q_sqlrelationaltablemodel_begin_remove_columns(void* self, void* parent, in
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_sqlrelationaltablemodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QSqlQueryModel
@@ -3039,6 +3373,7 @@ void q_sqlrelationaltablemodel_qbase_begin_remove_columns(void* self, void* pare
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QSqlQueryModel
@@ -3048,6 +3383,7 @@ void q_sqlrelationaltablemodel_on_begin_remove_columns(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_end_remove_columns(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -3057,6 +3393,7 @@ void q_sqlrelationaltablemodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -3067,6 +3404,7 @@ void q_sqlrelationaltablemodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QSqlQueryModel
@@ -3076,6 +3414,7 @@ void q_sqlrelationaltablemodel_on_end_remove_columns(void* self, void (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_begin_reset_model(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -3085,6 +3424,7 @@ void q_sqlrelationaltablemodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -3095,6 +3435,7 @@ void q_sqlrelationaltablemodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QSqlQueryModel
@@ -3104,6 +3445,7 @@ void q_sqlrelationaltablemodel_on_begin_reset_model(void* self, void (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_end_reset_model(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -3113,6 +3455,7 @@ void q_sqlrelationaltablemodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QSqlQueryModel
@@ -3123,6 +3466,7 @@ void q_sqlrelationaltablemodel_qbase_end_reset_model(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QSqlQueryModel
@@ -3133,6 +3477,7 @@ void q_sqlrelationaltablemodel_on_end_reset_model(void* self, void (*callback)()
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param error QSqlError*
+///
 void q_sqlrelationaltablemodel_set_last_error(void* self, void* error);
 
 /// Inherited from QSqlQueryModel
@@ -3143,6 +3488,7 @@ void q_sqlrelationaltablemodel_set_last_error(void* self, void* error);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param error QSqlError*
+///
 void q_sqlrelationaltablemodel_qbase_set_last_error(void* self, void* error);
 
 /// Inherited from QSqlQueryModel
@@ -3153,6 +3499,7 @@ void q_sqlrelationaltablemodel_qbase_set_last_error(void* self, void* error);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QSqlError* error)
+///
 void q_sqlrelationaltablemodel_on_set_last_error(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3164,6 +3511,7 @@ void q_sqlrelationaltablemodel_on_set_last_error(void* self, void (*callback)(vo
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_sqlrelationaltablemodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -3175,6 +3523,7 @@ QModelIndex* q_sqlrelationaltablemodel_create_index(void* self, int row, int col
 /// @param self QSqlRelationalTableModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_sqlrelationaltablemodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -3185,6 +3534,7 @@ QModelIndex* q_sqlrelationaltablemodel_qbase_create_index(void* self, int row, i
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, int row, int column)
+///
 void q_sqlrelationaltablemodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3196,6 +3546,7 @@ void q_sqlrelationaltablemodel_on_create_index(void* self, QModelIndex* (*callba
 /// @param self QSqlRelationalTableModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_sqlrelationaltablemodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -3207,6 +3558,7 @@ void q_sqlrelationaltablemodel_encode_data(void* self, libqt_list indexes, void*
 /// @param self QSqlRelationalTableModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_sqlrelationaltablemodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -3217,6 +3569,7 @@ void q_sqlrelationaltablemodel_qbase_encode_data(void* self, libqt_list indexes,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void q_sqlrelationaltablemodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3230,6 +3583,7 @@ void q_sqlrelationaltablemodel_on_encode_data(void* self, void (*callback)(void*
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_sqlrelationaltablemodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -3243,6 +3597,7 @@ bool q_sqlrelationaltablemodel_decode_data(void* self, int row, int column, void
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_sqlrelationaltablemodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -3253,6 +3608,7 @@ bool q_sqlrelationaltablemodel_qbase_decode_data(void* self, int row, int column
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void q_sqlrelationaltablemodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3267,6 +3623,7 @@ void q_sqlrelationaltablemodel_on_decode_data(void* self, bool (*callback)(void*
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_sqlrelationaltablemodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -3281,6 +3638,7 @@ bool q_sqlrelationaltablemodel_begin_move_rows(void* self, void* sourceParent, i
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_sqlrelationaltablemodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -3291,6 +3649,7 @@ bool q_sqlrelationaltablemodel_qbase_begin_move_rows(void* self, void* sourcePar
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void q_sqlrelationaltablemodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3300,6 +3659,7 @@ void q_sqlrelationaltablemodel_on_begin_move_rows(void* self, bool (*callback)(v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3309,6 +3669,7 @@ void q_sqlrelationaltablemodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3319,6 +3680,7 @@ void q_sqlrelationaltablemodel_qbase_end_move_rows(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3333,6 +3695,7 @@ void q_sqlrelationaltablemodel_on_end_move_rows(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_sqlrelationaltablemodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -3347,6 +3710,7 @@ bool q_sqlrelationaltablemodel_begin_move_columns(void* self, void* sourceParent
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_sqlrelationaltablemodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -3357,6 +3721,7 @@ bool q_sqlrelationaltablemodel_qbase_begin_move_columns(void* self, void* source
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_sqlrelationaltablemodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3366,6 +3731,7 @@ void q_sqlrelationaltablemodel_on_begin_move_columns(void* self, bool (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3375,6 +3741,7 @@ void q_sqlrelationaltablemodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3385,6 +3752,7 @@ void q_sqlrelationaltablemodel_qbase_end_move_columns(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func()
+///
 void q_sqlrelationaltablemodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3396,6 +3764,7 @@ void q_sqlrelationaltablemodel_on_end_move_columns(void* self, void (*callback)(
 /// @param self QSqlRelationalTableModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_sqlrelationaltablemodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -3407,6 +3776,7 @@ void q_sqlrelationaltablemodel_change_persistent_index(void* self, void* from, v
 /// @param self QSqlRelationalTableModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_sqlrelationaltablemodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -3417,6 +3787,7 @@ void q_sqlrelationaltablemodel_qbase_change_persistent_index(void* self, void* f
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* from, QModelIndex* to)
+///
 void q_sqlrelationaltablemodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3428,6 +3799,7 @@ void q_sqlrelationaltablemodel_on_change_persistent_index(void* self, void (*cal
 /// @param self QSqlRelationalTableModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_sqlrelationaltablemodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -3439,6 +3811,7 @@ void q_sqlrelationaltablemodel_change_persistent_index_list(void* self, libqt_li
 /// @param self QSqlRelationalTableModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_sqlrelationaltablemodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -3449,6 +3822,7 @@ void q_sqlrelationaltablemodel_qbase_change_persistent_index_list(void* self, li
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex** from, QModelIndex** to)
+///
 void q_sqlrelationaltablemodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -3458,6 +3832,7 @@ void q_sqlrelationaltablemodel_on_change_persistent_index_list(void* self, void 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3467,6 +3842,7 @@ libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_persistent_index_list
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3477,6 +3853,7 @@ libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_qbase_persistent_inde
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex** func()
+///
 void q_sqlrelationaltablemodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -3486,6 +3863,7 @@ void q_sqlrelationaltablemodel_on_persistent_index_list(void* self, QModelIndex*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QObject* q_sqlrelationaltablemodel_sender(void* self);
 
 /// Inherited from QObject
@@ -3495,6 +3873,7 @@ QObject* q_sqlrelationaltablemodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 QObject* q_sqlrelationaltablemodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3505,6 +3884,7 @@ QObject* q_sqlrelationaltablemodel_qbase_sender(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback QObject* func()
+///
 void q_sqlrelationaltablemodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3514,6 +3894,7 @@ void q_sqlrelationaltablemodel_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 int32_t q_sqlrelationaltablemodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3523,6 +3904,7 @@ int32_t q_sqlrelationaltablemodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSqlRelationalTableModel*
+///
 int32_t q_sqlrelationaltablemodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3533,6 +3915,7 @@ int32_t q_sqlrelationaltablemodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func()
+///
 void q_sqlrelationaltablemodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3543,6 +3926,7 @@ void q_sqlrelationaltablemodel_on_sender_signal_index(void* self, int32_t (*call
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal const char*
+///
 int32_t q_sqlrelationaltablemodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3553,6 +3937,7 @@ int32_t q_sqlrelationaltablemodel_receivers(void* self, const char* signal);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal const char*
+///
 int32_t q_sqlrelationaltablemodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3563,6 +3948,7 @@ int32_t q_sqlrelationaltablemodel_qbase_receivers(void* self, const char* signal
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, const char* signal)
+///
 void q_sqlrelationaltablemodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3573,6 +3959,7 @@ void q_sqlrelationaltablemodel_on_receivers(void* self, int32_t (*callback)(void
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal QMetaMethod*
+///
 bool q_sqlrelationaltablemodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3583,6 +3970,7 @@ bool q_sqlrelationaltablemodel_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param signal QMetaMethod*
+///
 bool q_sqlrelationaltablemodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3593,6 +3981,7 @@ bool q_sqlrelationaltablemodel_qbase_is_signal_connected(void* self, void* signa
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QMetaMethod* signal)
+///
 void q_sqlrelationaltablemodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3603,6 +3992,7 @@ void q_sqlrelationaltablemodel_on_is_signal_connected(void* self, bool (*callbac
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3613,6 +4003,7 @@ void q_sqlrelationaltablemodel_on_rows_about_to_be_inserted(void* self, void (*c
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3623,6 +4014,7 @@ void q_sqlrelationaltablemodel_on_rows_inserted(void* self, void (*callback)(voi
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3633,6 +4025,7 @@ void q_sqlrelationaltablemodel_on_rows_about_to_be_removed(void* self, void (*ca
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3643,6 +4036,7 @@ void q_sqlrelationaltablemodel_on_rows_removed(void* self, void (*callback)(void
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3653,6 +4047,7 @@ void q_sqlrelationaltablemodel_on_columns_about_to_be_inserted(void* self, void 
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3663,6 +4058,7 @@ void q_sqlrelationaltablemodel_on_columns_inserted(void* self, void (*callback)(
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3673,6 +4069,7 @@ void q_sqlrelationaltablemodel_on_columns_about_to_be_removed(void* self, void (
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* parent, int first, int last)
+///
 void q_sqlrelationaltablemodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3683,6 +4080,7 @@ void q_sqlrelationaltablemodel_on_columns_removed(void* self, void (*callback)(v
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self)
+///
 void q_sqlrelationaltablemodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3693,6 +4091,7 @@ void q_sqlrelationaltablemodel_on_model_about_to_be_reset(void* self, void (*cal
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self)
+///
 void q_sqlrelationaltablemodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3703,6 +4102,7 @@ void q_sqlrelationaltablemodel_on_model_reset(void* self, void (*callback)(void*
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_sqlrelationaltablemodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3713,6 +4113,7 @@ void q_sqlrelationaltablemodel_on_rows_about_to_be_moved(void* self, void (*call
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_sqlrelationaltablemodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3723,6 +4124,7 @@ void q_sqlrelationaltablemodel_on_rows_moved(void* self, void (*callback)(void*,
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_sqlrelationaltablemodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3733,6 +4135,7 @@ void q_sqlrelationaltablemodel_on_columns_about_to_be_moved(void* self, void (*c
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_sqlrelationaltablemodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3743,6 +4146,7 @@ void q_sqlrelationaltablemodel_on_columns_moved(void* self, void (*callback)(voi
 ///
 /// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, const char* objectName)
+///
 void q_sqlrelationaltablemodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#dtor.QSqlRelationalTableModel)
@@ -3750,9 +4154,10 @@ void q_sqlrelationaltablemodel_on_object_name_changed(void* self, void (*callbac
 /// Delete this object from C++ memory.
 ///
 /// @param self QSqlRelationalTableModel*
+///
 void q_sqlrelationaltablemodel_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#public-types)
 
 typedef enum {
     QSQLRELATIONALTABLEMODEL_JOINMODE_INNERJOIN = 0,

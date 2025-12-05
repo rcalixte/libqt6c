@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/solid-solidnamespace.html#types
+/// [Upstream resources](https://api.kde.org/solid-solidnamespace.html#public-types)
 
 typedef enum {
     SOLID_ERRORTYPE_NOERROR = 0,

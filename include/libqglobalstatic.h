@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qglobalstatic.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qglobalstatic.html#public-types)
 
 typedef enum {
     QTGLOBALSTATIC_GUARDVALUES_DESTROYED = -2,

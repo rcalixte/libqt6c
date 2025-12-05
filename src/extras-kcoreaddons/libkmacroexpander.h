@@ -11,21 +11,25 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kmacroexpanderbase.html
+/// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html)
 
 /// k_macroexpanderbase_new constructs a new KMacroExpanderBase object.
 ///
 KMacroExpanderBase* k_macroexpanderbase_new();
 
+/// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html)
+
 /// k_macroexpanderbase_new2 constructs a new KMacroExpanderBase object.
 ///
 /// @param c QChar*
+///
 KMacroExpanderBase* k_macroexpanderbase_new2(void* c);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandMacros)
 ///
 /// @param self KMacroExpanderBase*
 /// @param str const char*
+///
 void k_macroexpanderbase_expand_macros(void* self, const char* str);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandMacrosShellQuote)
@@ -33,23 +37,27 @@ void k_macroexpanderbase_expand_macros(void* self, const char* str);
 /// @param self KMacroExpanderBase*
 /// @param str const char*
 /// @param pos int*
+///
 bool k_macroexpanderbase_expand_macros_shell_quote(void* self, const char* str, int* pos);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandMacrosShellQuote)
 ///
 /// @param self KMacroExpanderBase*
 /// @param str const char*
+///
 bool k_macroexpanderbase_expand_macros_shell_quote2(void* self, const char* str);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#setEscapeChar)
 ///
 /// @param self KMacroExpanderBase*
 /// @param c QChar*
+///
 void k_macroexpanderbase_set_escape_char(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#escapeChar)
 ///
 /// @param self KMacroExpanderBase*
+///
 QChar* k_macroexpanderbase_escape_char(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
@@ -58,6 +66,7 @@ QChar* k_macroexpanderbase_escape_char(void* self);
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
@@ -66,6 +75,7 @@ int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int 
 ///
 /// @param self KMacroExpanderBase*
 /// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** retVal)
+///
 void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
@@ -76,6 +86,7 @@ void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
@@ -84,6 +95,7 @@ int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
@@ -92,6 +104,7 @@ int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, in
 ///
 /// @param self KMacroExpanderBase*
 /// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** retVal)
+///
 void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
@@ -102,6 +115,7 @@ void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_macroexpanderbase_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#dtor.KMacroExpanderBase)
@@ -109,17 +123,21 @@ int32_t k_macroexpanderbase_qbase_expand_escaped_macro(void* self, const char* s
 /// Delete this object from C++ memory.
 ///
 /// @param self KMacroExpanderBase*
+///
 void k_macroexpanderbase_delete(void* self);
 
-/// https://api.kde.org/kwordmacroexpander.html
+/// [Upstream resources](https://api.kde.org/kwordmacroexpander.html)
 
 /// k_wordmacroexpander_new constructs a new KWordMacroExpander object.
 ///
 KWordMacroExpander* k_wordmacroexpander_new();
 
+/// [Upstream resources](https://api.kde.org/kwordmacroexpander.html)
+
 /// k_wordmacroexpander_new2 constructs a new KWordMacroExpander object.
 ///
 /// @param c QChar*
+///
 KWordMacroExpander* k_wordmacroexpander_new2(void* c);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandPlainMacro)
@@ -128,6 +146,7 @@ KWordMacroExpander* k_wordmacroexpander_new2(void* c);
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandPlainMacro)
@@ -136,6 +155,7 @@ int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int 
 ///
 /// @param self KWordMacroExpander*
 /// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** retVal)
+///
 void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandPlainMacro)
@@ -146,6 +166,7 @@ void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
@@ -154,6 +175,7 @@ int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
@@ -162,6 +184,7 @@ int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, in
 ///
 /// @param self KWordMacroExpander*
 /// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** retVal)
+///
 void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
@@ -172,6 +195,7 @@ void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_wordmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
@@ -179,6 +203,7 @@ int32_t k_wordmacroexpander_qbase_expand_escaped_macro(void* self, const char* s
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param retVal const char**
+///
 bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
@@ -187,6 +212,7 @@ bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* r
 ///
 /// @param self KWordMacroExpander*
 /// @param callback bool func(KWordMacroExpander* self, const char* str, const char** retVal)
+///
 void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
@@ -196,6 +222,7 @@ void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, con
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param retVal const char**
+///
 bool k_wordmacroexpander_qbase_expand_macro(void* self, const char* str, const char* retVal[static 1]);
 
 /// Inherited from KMacroExpanderBase
@@ -204,6 +231,7 @@ bool k_wordmacroexpander_qbase_expand_macro(void* self, const char* str, const c
 ///
 /// @param self KWordMacroExpander*
 /// @param str const char*
+///
 void k_wordmacroexpander_expand_macros(void* self, const char* str);
 
 /// Inherited from KMacroExpanderBase
@@ -213,6 +241,7 @@ void k_wordmacroexpander_expand_macros(void* self, const char* str);
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param pos int*
+///
 bool k_wordmacroexpander_expand_macros_shell_quote(void* self, const char* str, int* pos);
 
 /// Inherited from KMacroExpanderBase
@@ -221,6 +250,7 @@ bool k_wordmacroexpander_expand_macros_shell_quote(void* self, const char* str, 
 ///
 /// @param self KWordMacroExpander*
 /// @param str const char*
+///
 bool k_wordmacroexpander_expand_macros_shell_quote2(void* self, const char* str);
 
 /// Inherited from KMacroExpanderBase
@@ -229,6 +259,7 @@ bool k_wordmacroexpander_expand_macros_shell_quote2(void* self, const char* str)
 ///
 /// @param self KWordMacroExpander*
 /// @param c QChar*
+///
 void k_wordmacroexpander_set_escape_char(void* self, void* c);
 
 /// Inherited from KMacroExpanderBase
@@ -236,6 +267,7 @@ void k_wordmacroexpander_set_escape_char(void* self, void* c);
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#escapeChar)
 ///
 /// @param self KWordMacroExpander*
+///
 QChar* k_wordmacroexpander_escape_char(void* self);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#dtor.KWordMacroExpander)
@@ -243,17 +275,21 @@ QChar* k_wordmacroexpander_escape_char(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self KWordMacroExpander*
+///
 void k_wordmacroexpander_delete(void* self);
 
-/// https://api.kde.org/kcharmacroexpander.html
+/// [Upstream resources](https://api.kde.org/kcharmacroexpander.html)
 
 /// k_charmacroexpander_new constructs a new KCharMacroExpander object.
 ///
 KCharMacroExpander* k_charmacroexpander_new();
 
+/// [Upstream resources](https://api.kde.org/kcharmacroexpander.html)
+
 /// k_charmacroexpander_new2 constructs a new KCharMacroExpander object.
 ///
 /// @param c QChar*
+///
 KCharMacroExpander* k_charmacroexpander_new2(void* c);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandPlainMacro)
@@ -262,6 +298,7 @@ KCharMacroExpander* k_charmacroexpander_new2(void* c);
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandPlainMacro)
@@ -270,6 +307,7 @@ int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int 
 ///
 /// @param self KCharMacroExpander*
 /// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** retVal)
+///
 void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandPlainMacro)
@@ -280,6 +318,7 @@ void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
@@ -288,6 +327,7 @@ int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
@@ -296,6 +336,7 @@ int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, in
 ///
 /// @param self KCharMacroExpander*
 /// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** retVal)
+///
 void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
@@ -306,6 +347,7 @@ void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
+///
 int32_t k_charmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
@@ -313,6 +355,7 @@ int32_t k_charmacroexpander_qbase_expand_escaped_macro(void* self, const char* s
 /// @param self KCharMacroExpander*
 /// @param chr QChar*
 /// @param retVal const char**
+///
 bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
@@ -321,6 +364,7 @@ bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[
 ///
 /// @param self KCharMacroExpander*
 /// @param callback bool func(KCharMacroExpander* self, QChar* chr, const char** retVal)
+///
 void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
@@ -330,6 +374,7 @@ void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, voi
 /// @param self KCharMacroExpander*
 /// @param chr QChar*
 /// @param retVal const char**
+///
 bool k_charmacroexpander_qbase_expand_macro(void* self, void* chr, const char* retVal[static 1]);
 
 /// Inherited from KMacroExpanderBase
@@ -338,6 +383,7 @@ bool k_charmacroexpander_qbase_expand_macro(void* self, void* chr, const char* r
 ///
 /// @param self KCharMacroExpander*
 /// @param str const char*
+///
 void k_charmacroexpander_expand_macros(void* self, const char* str);
 
 /// Inherited from KMacroExpanderBase
@@ -347,6 +393,7 @@ void k_charmacroexpander_expand_macros(void* self, const char* str);
 /// @param self KCharMacroExpander*
 /// @param str const char*
 /// @param pos int*
+///
 bool k_charmacroexpander_expand_macros_shell_quote(void* self, const char* str, int* pos);
 
 /// Inherited from KMacroExpanderBase
@@ -355,6 +402,7 @@ bool k_charmacroexpander_expand_macros_shell_quote(void* self, const char* str, 
 ///
 /// @param self KCharMacroExpander*
 /// @param str const char*
+///
 bool k_charmacroexpander_expand_macros_shell_quote2(void* self, const char* str);
 
 /// Inherited from KMacroExpanderBase
@@ -363,6 +411,7 @@ bool k_charmacroexpander_expand_macros_shell_quote2(void* self, const char* str)
 ///
 /// @param self KCharMacroExpander*
 /// @param c QChar*
+///
 void k_charmacroexpander_set_escape_char(void* self, void* c);
 
 /// Inherited from KMacroExpanderBase
@@ -370,6 +419,7 @@ void k_charmacroexpander_set_escape_char(void* self, void* c);
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#escapeChar)
 ///
 /// @param self KCharMacroExpander*
+///
 QChar* k_charmacroexpander_escape_char(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#dtor.KCharMacroExpander)
@@ -377,9 +427,10 @@ QChar* k_charmacroexpander_escape_char(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self KCharMacroExpander*
+///
 void k_charmacroexpander_delete(void* self);
 
-/// https://api.kde.org/kmacroexpander.html
+/// [Upstream resources](https://api.kde.org/kmacroexpander.html)
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
 ///
@@ -388,6 +439,7 @@ void k_charmacroexpander_delete(void* self);
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros(const char* param1, libqt_map /* of QChar* to const char* */ param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
@@ -397,6 +449,7 @@ const char* k_macroexpander_expand_macros(const char* param1, libqt_map /* of QC
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros_shell_quote(const char* param1, libqt_map /* of QChar* to const char* */ param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
@@ -406,6 +459,7 @@ const char* k_macroexpander_expand_macros_shell_quote(const char* param1, libqt_
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros2(const char* param1, libqt_map /* of const char* to const char* */ param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
@@ -415,6 +469,7 @@ const char* k_macroexpander_expand_macros2(const char* param1, libqt_map /* of c
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros_shell_quote2(const char* param1, libqt_map /* of const char* to const char* */ param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
@@ -424,6 +479,7 @@ const char* k_macroexpander_expand_macros_shell_quote2(const char* param1, libqt
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros3(const char* param1, libqt_map /* of QChar* to const char* */ param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
@@ -433,6 +489,7 @@ const char* k_macroexpander_expand_macros3(const char* param1, libqt_map /* of Q
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros4(const char* param1, libqt_map /* of const char* to const char* */ param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
@@ -442,6 +499,7 @@ const char* k_macroexpander_expand_macros4(const char* param1, libqt_map /* of c
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros_shell_quote3(const char* param1, libqt_map /* of QChar* to const char* */ param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
@@ -451,5 +509,6 @@ const char* k_macroexpander_expand_macros_shell_quote3(const char* param1, libqt
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */
 /// @param param3 QChar*
+///
 const char* k_macroexpander_expand_macros_shell_quote4(const char* param1, libqt_map /* of const char* to const char* */ param2, void* param3);
 #endif

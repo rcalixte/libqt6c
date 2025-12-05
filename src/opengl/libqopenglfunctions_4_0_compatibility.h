@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html)
 
 /// q_openglfunctions_4_0_compatibility_new constructs a new QOpenGLFunctions_4_0_Compatibility object.
 ///
@@ -20,6 +20,7 @@ QOpenGLFunctions_4_0_Compatibility* q_openglfunctions_4_0_compatibility_new();
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#initializeOpenGLFunctions)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 bool q_openglfunctions_4_0_compatibility_initialize_open_g_l_functions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#initializeOpenGLFunctions)
@@ -28,6 +29,7 @@ bool q_openglfunctions_4_0_compatibility_initialize_open_g_l_functions(void* sel
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param callback bool func()
+///
 void q_openglfunctions_4_0_compatibility_on_initialize_open_g_l_functions(void* self, bool (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#initializeOpenGLFunctions)
@@ -35,6 +37,7 @@ void q_openglfunctions_4_0_compatibility_on_initialize_open_g_l_functions(void* 
 /// Base class method implementation
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 bool q_openglfunctions_4_0_compatibility_qbase_initialize_open_g_l_functions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glViewport)
@@ -44,6 +47,7 @@ bool q_openglfunctions_4_0_compatibility_qbase_initialize_open_g_l_functions(voi
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_viewport(void* self, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDepthRange)
@@ -51,12 +55,14 @@ void q_openglfunctions_4_0_compatibility_gl_viewport(void* self, int32_t x, int3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param nearVal double
 /// @param farVal double
+///
 void q_openglfunctions_4_0_compatibility_gl_depth_range(void* self, double nearVal, double farVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsEnabled)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param cap uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_enabled(void* self, uint32_t cap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexLevelParameteriv)
@@ -66,6 +72,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_enabled(void* self, uint32_t c
 /// @param level int32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_level_parameteriv(void* self, uint32_t target, int32_t level, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexLevelParameterfv)
@@ -75,6 +82,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_level_parameteriv(void* self
 /// @param level int32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_level_parameterfv(void* self, uint32_t target, int32_t level, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexParameteriv)
@@ -83,6 +91,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_level_parameterfv(void* self
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexParameterfv)
@@ -91,6 +100,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_parameteriv(void* self, uint
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexImage)
@@ -101,12 +111,14 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_parameterfv(void* self, uint
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_image(void* self, uint32_t target, int32_t level, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetString)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param name uint32_t
+///
 const uint8_t* q_openglfunctions_4_0_compatibility_gl_get_string(void* self, uint32_t name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetIntegerv)
@@ -114,6 +126,7 @@ const uint8_t* q_openglfunctions_4_0_compatibility_gl_get_string(void* self, uin
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_integerv(void* self, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetFloatv)
@@ -121,6 +134,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_integerv(void* self, uint32_t pn
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_floatv(void* self, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetDoublev)
@@ -128,6 +142,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_floatv(void* self, uint32_t pnam
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params double*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_doublev(void* self, uint32_t pname, double* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetBooleanv)
@@ -135,6 +150,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_doublev(void* self, uint32_t pna
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_booleanv(void* self, uint32_t pname, uint8_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glReadPixels)
@@ -147,12 +163,14 @@ void q_openglfunctions_4_0_compatibility_gl_get_booleanv(void* self, uint32_t pn
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_read_pixels(void* self, int32_t x, int32_t y, int32_t width, int32_t height, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glReadBuffer)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_read_buffer(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelStorei)
@@ -160,6 +178,7 @@ void q_openglfunctions_4_0_compatibility_gl_read_buffer(void* self, uint32_t mod
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_storei(void* self, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelStoref)
@@ -167,12 +186,14 @@ void q_openglfunctions_4_0_compatibility_gl_pixel_storei(void* self, uint32_t pn
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_storef(void* self, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDepthFunc)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param func uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_depth_func(void* self, uint32_t func);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glStencilOp)
@@ -181,6 +202,7 @@ void q_openglfunctions_4_0_compatibility_gl_depth_func(void* self, uint32_t func
 /// @param fail uint32_t
 /// @param zfail uint32_t
 /// @param zpass uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_stencil_op(void* self, uint32_t fail, uint32_t zfail, uint32_t zpass);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glStencilFunc)
@@ -189,12 +211,14 @@ void q_openglfunctions_4_0_compatibility_gl_stencil_op(void* self, uint32_t fail
 /// @param func uint32_t
 /// @param ref int32_t
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_stencil_func(void* self, uint32_t func, int32_t ref, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLogicOp)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param opcode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_logic_op(void* self, uint32_t opcode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendFunc)
@@ -202,34 +226,40 @@ void q_openglfunctions_4_0_compatibility_gl_logic_op(void* self, uint32_t opcode
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param sfactor uint32_t
 /// @param dfactor uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_func(void* self, uint32_t sfactor, uint32_t dfactor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFlush)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_flush(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFinish)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_finish(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEnable)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param cap uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_enable(void* self, uint32_t cap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDisable)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param cap uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_disable(void* self, uint32_t cap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDepthMask)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param flag uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_depth_mask(void* self, uint8_t flag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorMask)
@@ -239,24 +269,28 @@ void q_openglfunctions_4_0_compatibility_gl_depth_mask(void* self, uint8_t flag)
 /// @param green uint8_t
 /// @param blue uint8_t
 /// @param alpha uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color_mask(void* self, uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glStencilMask)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_stencil_mask(void* self, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearDepth)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param depth double
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_depth(void* self, double depth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearStencil)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_stencil(void* self, int32_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearColor)
@@ -266,18 +300,21 @@ void q_openglfunctions_4_0_compatibility_gl_clear_stencil(void* self, int32_t s)
 /// @param green float
 /// @param blue float
 /// @param alpha float
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_color(void* self, float red, float green, float blue, float alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClear)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_clear(void* self, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawBuffer)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_buffer(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexImage2D)
@@ -292,6 +329,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_buffer(void* self, uint32_t mod
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_image2_d(void* self, uint32_t target, int32_t level, int32_t internalformat, int32_t width, int32_t height, int32_t border, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexImage1D)
@@ -305,6 +343,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_image2_d(void* self, uint32_t ta
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_image1_d(void* self, uint32_t target, int32_t level, int32_t internalformat, int32_t width, int32_t border, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexParameteriv)
@@ -313,6 +352,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_image1_d(void* self, uint32_t ta
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexParameteri)
@@ -321,6 +361,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_parameteriv(void* self, uint32_t
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_parameteri(void* self, uint32_t target, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexParameterfv)
@@ -329,6 +370,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_parameteri(void* self, uint32_t 
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexParameterf)
@@ -337,6 +379,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_parameterfv(void* self, uint32_t
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_parameterf(void* self, uint32_t target, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glScissor)
@@ -346,6 +389,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_parameterf(void* self, uint32_t 
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_scissor(void* self, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPolygonMode)
@@ -353,18 +397,21 @@ void q_openglfunctions_4_0_compatibility_gl_scissor(void* self, int32_t x, int32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param face uint32_t
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_polygon_mode(void* self, uint32_t face, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPointSize)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param size float
+///
 void q_openglfunctions_4_0_compatibility_gl_point_size(void* self, float size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLineWidth)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param width float
+///
 void q_openglfunctions_4_0_compatibility_gl_line_width(void* self, float width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glHint)
@@ -372,36 +419,42 @@ void q_openglfunctions_4_0_compatibility_gl_line_width(void* self, float width);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_hint(void* self, uint32_t target, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFrontFace)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_front_face(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCullFace)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_cull_face(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexubv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_indexubv(void* self, uint8_t* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexub)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_indexub(void* self, uint8_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsTexture)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param texture uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_texture(void* self, uint32_t texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenTextures)
@@ -409,6 +462,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_texture(void* self, uint32_t t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param textures uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_textures(void* self, int32_t n, uint32_t* textures);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteTextures)
@@ -416,6 +470,7 @@ void q_openglfunctions_4_0_compatibility_gl_gen_textures(void* self, int32_t n, 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param textures uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_textures(void* self, int32_t n, uint32_t* textures);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindTexture)
@@ -423,6 +478,7 @@ void q_openglfunctions_4_0_compatibility_gl_delete_textures(void* self, int32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param texture uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_texture(void* self, uint32_t target, uint32_t texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexSubImage2D)
@@ -437,6 +493,7 @@ void q_openglfunctions_4_0_compatibility_gl_bind_texture(void* self, uint32_t ta
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_sub_image2_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t width, int32_t height, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexSubImage1D)
@@ -449,6 +506,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_sub_image2_d(void* self, uint32_
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_sub_image1_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t width, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyTexSubImage2D)
@@ -462,6 +520,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_sub_image1_d(void* self, uint32_
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_tex_sub_image2_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyTexSubImage1D)
@@ -473,6 +532,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_tex_sub_image2_d(void* self, ui
 /// @param x int32_t
 /// @param y int32_t
 /// @param width int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_tex_sub_image1_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t x, int32_t y, int32_t width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyTexImage2D)
@@ -486,6 +546,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_tex_sub_image1_d(void* self, ui
 /// @param width int32_t
 /// @param height int32_t
 /// @param border int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_tex_image2_d(void* self, uint32_t target, int32_t level, uint32_t internalformat, int32_t x, int32_t y, int32_t width, int32_t height, int32_t border);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyTexImage1D)
@@ -498,6 +559,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_tex_image2_d(void* self, uint32
 /// @param y int32_t
 /// @param width int32_t
 /// @param border int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_tex_image1_d(void* self, uint32_t target, int32_t level, uint32_t internalformat, int32_t x, int32_t y, int32_t width, int32_t border);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPolygonOffset)
@@ -505,6 +567,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_tex_image1_d(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param factor float
 /// @param units float
+///
 void q_openglfunctions_4_0_compatibility_gl_polygon_offset(void* self, float factor, float units);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawElements)
@@ -514,6 +577,7 @@ void q_openglfunctions_4_0_compatibility_gl_polygon_offset(void* self, float fac
 /// @param count int32_t
 /// @param type uint32_t
 /// @param indices void*
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_elements(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawArrays)
@@ -522,6 +586,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_elements(void* self, uint32_t m
 /// @param mode uint32_t
 /// @param first int32_t
 /// @param count int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_arrays(void* self, uint32_t mode, int32_t first, int32_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyTexSubImage3D)
@@ -536,6 +601,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_arrays(void* self, uint32_t mod
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_tex_sub_image3_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t zoffset, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexSubImage3D)
@@ -552,6 +618,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_tex_sub_image3_d(void* self, ui
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_sub_image3_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t zoffset, int32_t width, int32_t height, int32_t depth, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexImage3D)
@@ -567,6 +634,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_sub_image3_d(void* self, uint32_
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_image3_d(void* self, uint32_t target, int32_t level, int32_t internalformat, int32_t width, int32_t height, int32_t depth, int32_t border, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawRangeElements)
@@ -578,12 +646,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_image3_d(void* self, uint32_t ta
 /// @param count int32_t
 /// @param type uint32_t
 /// @param indices void*
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_range_elements(void* self, uint32_t mode, uint32_t start, uint32_t end, int32_t count, uint32_t type, void* indices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendEquation)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_equation(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendColor)
@@ -593,6 +663,7 @@ void q_openglfunctions_4_0_compatibility_gl_blend_equation(void* self, uint32_t 
 /// @param green float
 /// @param blue float
 /// @param alpha float
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_color(void* self, float red, float green, float blue, float alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetCompressedTexImage)
@@ -601,6 +672,7 @@ void q_openglfunctions_4_0_compatibility_gl_blend_color(void* self, float red, f
 /// @param target uint32_t
 /// @param level int32_t
 /// @param img void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_compressed_tex_image(void* self, uint32_t target, int32_t level, void* img);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCompressedTexSubImage1D)
@@ -613,6 +685,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_compressed_tex_image(void* self,
 /// @param format uint32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_compressed_tex_sub_image1_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t width, uint32_t format, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCompressedTexSubImage2D)
@@ -627,6 +700,7 @@ void q_openglfunctions_4_0_compatibility_gl_compressed_tex_sub_image1_d(void* se
 /// @param format uint32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_compressed_tex_sub_image2_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t width, int32_t height, uint32_t format, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCompressedTexSubImage3D)
@@ -643,6 +717,7 @@ void q_openglfunctions_4_0_compatibility_gl_compressed_tex_sub_image2_d(void* se
 /// @param format uint32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_compressed_tex_sub_image3_d(void* self, uint32_t target, int32_t level, int32_t xoffset, int32_t yoffset, int32_t zoffset, int32_t width, int32_t height, int32_t depth, uint32_t format, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCompressedTexImage1D)
@@ -655,6 +730,7 @@ void q_openglfunctions_4_0_compatibility_gl_compressed_tex_sub_image3_d(void* se
 /// @param border int32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_compressed_tex_image1_d(void* self, uint32_t target, int32_t level, uint32_t internalformat, int32_t width, int32_t border, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCompressedTexImage2D)
@@ -668,6 +744,7 @@ void q_openglfunctions_4_0_compatibility_gl_compressed_tex_image1_d(void* self, 
 /// @param border int32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_compressed_tex_image2_d(void* self, uint32_t target, int32_t level, uint32_t internalformat, int32_t width, int32_t height, int32_t border, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCompressedTexImage3D)
@@ -682,6 +759,7 @@ void q_openglfunctions_4_0_compatibility_gl_compressed_tex_image2_d(void* self, 
 /// @param border int32_t
 /// @param imageSize int32_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_compressed_tex_image3_d(void* self, uint32_t target, int32_t level, uint32_t internalformat, int32_t width, int32_t height, int32_t depth, int32_t border, int32_t imageSize, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSampleCoverage)
@@ -689,12 +767,14 @@ void q_openglfunctions_4_0_compatibility_gl_compressed_tex_image3_d(void* self, 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param value float
 /// @param invert uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_sample_coverage(void* self, float value, uint8_t invert);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glActiveTexture)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param texture uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_active_texture(void* self, uint32_t texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPointParameteriv)
@@ -702,6 +782,7 @@ void q_openglfunctions_4_0_compatibility_gl_active_texture(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_point_parameteriv(void* self, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPointParameteri)
@@ -709,6 +790,7 @@ void q_openglfunctions_4_0_compatibility_gl_point_parameteriv(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_point_parameteri(void* self, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPointParameterfv)
@@ -716,6 +798,7 @@ void q_openglfunctions_4_0_compatibility_gl_point_parameteri(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_point_parameterfv(void* self, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPointParameterf)
@@ -723,6 +806,7 @@ void q_openglfunctions_4_0_compatibility_gl_point_parameterfv(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_point_parameterf(void* self, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiDrawArrays)
@@ -732,6 +816,7 @@ void q_openglfunctions_4_0_compatibility_gl_point_parameterf(void* self, uint32_
 /// @param first int32_t*
 /// @param count int32_t*
 /// @param drawcount int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_draw_arrays(void* self, uint32_t mode, int32_t* first, int32_t* count, int32_t drawcount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendFuncSeparate)
@@ -741,6 +826,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_draw_arrays(void* self, uint32
 /// @param dfactorRGB uint32_t
 /// @param sfactorAlpha uint32_t
 /// @param dfactorAlpha uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_func_separate(void* self, uint32_t sfactorRGB, uint32_t dfactorRGB, uint32_t sfactorAlpha, uint32_t dfactorAlpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetBufferParameteriv)
@@ -749,12 +835,14 @@ void q_openglfunctions_4_0_compatibility_gl_blend_func_separate(void* self, uint
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_buffer_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUnmapBuffer)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_unmap_buffer(void* self, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMapBuffer)
@@ -762,6 +850,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_unmap_buffer(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param access uint32_t
+///
 void* q_openglfunctions_4_0_compatibility_gl_map_buffer(void* self, uint32_t target, uint32_t access);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetBufferSubData)
@@ -771,6 +860,7 @@ void* q_openglfunctions_4_0_compatibility_gl_map_buffer(void* self, uint32_t tar
 /// @param offset intptr_t
 /// @param size intptr_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBufferSubData)
@@ -780,6 +870,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_buffer_sub_data(void* self, uint
 /// @param offset intptr_t
 /// @param size intptr_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBufferData)
@@ -789,12 +880,14 @@ void q_openglfunctions_4_0_compatibility_gl_buffer_sub_data(void* self, uint32_t
 /// @param size intptr_t
 /// @param data void*
 /// @param usage uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsBuffer)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param buffer uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_buffer(void* self, uint32_t buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenBuffers)
@@ -802,6 +895,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_buffer(void* self, uint32_t bu
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param buffers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_buffers(void* self, int32_t n, uint32_t* buffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteBuffers)
@@ -809,6 +903,7 @@ void q_openglfunctions_4_0_compatibility_gl_gen_buffers(void* self, int32_t n, u
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param buffers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_buffers(void* self, int32_t n, uint32_t* buffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindBuffer)
@@ -816,6 +911,7 @@ void q_openglfunctions_4_0_compatibility_gl_delete_buffers(void* self, int32_t n
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param buffer uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_buffer(void* self, uint32_t target, uint32_t buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetQueryObjectuiv)
@@ -824,6 +920,7 @@ void q_openglfunctions_4_0_compatibility_gl_bind_buffer(void* self, uint32_t tar
 /// @param id uint32_t
 /// @param pname uint32_t
 /// @param params uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_query_objectuiv(void* self, uint32_t id, uint32_t pname, uint32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetQueryObjectiv)
@@ -832,6 +929,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_query_objectuiv(void* self, uint
 /// @param id uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_query_objectiv(void* self, uint32_t id, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetQueryiv)
@@ -840,12 +938,14 @@ void q_openglfunctions_4_0_compatibility_gl_get_query_objectiv(void* self, uint3
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_queryiv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEndQuery)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_end_query(void* self, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBeginQuery)
@@ -853,12 +953,14 @@ void q_openglfunctions_4_0_compatibility_gl_end_query(void* self, uint32_t targe
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param id uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_begin_query(void* self, uint32_t target, uint32_t id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsQuery)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param id uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_query(void* self, uint32_t id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteQueries)
@@ -866,6 +968,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_query(void* self, uint32_t id)
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param ids uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_queries(void* self, int32_t n, uint32_t* ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenQueries)
@@ -873,6 +976,7 @@ void q_openglfunctions_4_0_compatibility_gl_delete_queries(void* self, int32_t n
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param ids uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_queries(void* self, int32_t n, uint32_t* ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribPointer)
@@ -884,12 +988,14 @@ void q_openglfunctions_4_0_compatibility_gl_gen_queries(void* self, int32_t n, u
 /// @param normalized uint8_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_pointer(void* self, uint32_t index, int32_t size, uint32_t type, uint8_t normalized, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glValidateProgram)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_validate_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix4fv)
@@ -899,6 +1005,7 @@ void q_openglfunctions_4_0_compatibility_gl_validate_program(void* self, uint32_
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix3fv)
@@ -908,6 +1015,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4fv(void* self, int32_
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix2fv)
@@ -917,6 +1025,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3fv(void* self, int32_
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4iv)
@@ -925,6 +1034,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2fv(void* self, int32_
 /// @param location int32_t
 /// @param count int32_t
 /// @param value int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4iv(void* self, int32_t location, int32_t count, int32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3iv)
@@ -933,6 +1043,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4iv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3iv(void* self, int32_t location, int32_t count, int32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2iv)
@@ -941,6 +1052,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3iv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2iv(void* self, int32_t location, int32_t count, int32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1iv)
@@ -949,6 +1061,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2iv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1iv(void* self, int32_t location, int32_t count, int32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4fv)
@@ -957,6 +1070,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform1iv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4fv(void* self, int32_t location, int32_t count, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3fv)
@@ -965,6 +1079,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4fv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3fv(void* self, int32_t location, int32_t count, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2fv)
@@ -973,6 +1088,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3fv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2fv(void* self, int32_t location, int32_t count, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1fv)
@@ -981,6 +1097,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2fv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1fv(void* self, int32_t location, int32_t count, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4i)
@@ -991,6 +1108,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform1fv(void* self, int32_t locat
 /// @param v1 int32_t
 /// @param v2 int32_t
 /// @param v3 int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4i(void* self, int32_t location, int32_t v0, int32_t v1, int32_t v2, int32_t v3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3i)
@@ -1000,6 +1118,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4i(void* self, int32_t locati
 /// @param v0 int32_t
 /// @param v1 int32_t
 /// @param v2 int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3i(void* self, int32_t location, int32_t v0, int32_t v1, int32_t v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2i)
@@ -1008,6 +1127,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3i(void* self, int32_t locati
 /// @param location int32_t
 /// @param v0 int32_t
 /// @param v1 int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2i(void* self, int32_t location, int32_t v0, int32_t v1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1i)
@@ -1015,6 +1135,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2i(void* self, int32_t locati
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param location int32_t
 /// @param v0 int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1i(void* self, int32_t location, int32_t v0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4f)
@@ -1025,6 +1146,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform1i(void* self, int32_t locati
 /// @param v1 float
 /// @param v2 float
 /// @param v3 float
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4f(void* self, int32_t location, float v0, float v1, float v2, float v3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3f)
@@ -1034,6 +1156,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4f(void* self, int32_t locati
 /// @param v0 float
 /// @param v1 float
 /// @param v2 float
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3f(void* self, int32_t location, float v0, float v1, float v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2f)
@@ -1042,6 +1165,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3f(void* self, int32_t locati
 /// @param location int32_t
 /// @param v0 float
 /// @param v1 float
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2f(void* self, int32_t location, float v0, float v1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1f)
@@ -1049,30 +1173,35 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2f(void* self, int32_t locati
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param location int32_t
 /// @param v0 float
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1f(void* self, int32_t location, float v0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUseProgram)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_use_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLinkProgram)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_link_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsShader)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param shader uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_shader(void* self, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsProgram)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetVertexAttribiv)
@@ -1081,6 +1210,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_program(void* self, uint32_t p
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_vertex_attribiv(void* self, uint32_t index, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetVertexAttribfv)
@@ -1089,6 +1219,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_vertex_attribiv(void* self, uint
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_vertex_attribfv(void* self, uint32_t index, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetVertexAttribdv)
@@ -1097,6 +1228,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_vertex_attribfv(void* self, uint
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params double*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_vertex_attribdv(void* self, uint32_t index, uint32_t pname, double* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetUniformiv)
@@ -1105,6 +1237,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_vertex_attribdv(void* self, uint
 /// @param program uint32_t
 /// @param location int32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_uniformiv(void* self, uint32_t program, int32_t location, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetUniformfv)
@@ -1113,6 +1246,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_uniformiv(void* self, uint32_t p
 /// @param program uint32_t
 /// @param location int32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_uniformfv(void* self, uint32_t program, int32_t location, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetUniformLocation)
@@ -1120,6 +1254,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_uniformfv(void* self, uint32_t p
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
 /// @param name char*
+///
 int32_t q_openglfunctions_4_0_compatibility_gl_get_uniform_location(void* self, uint32_t program, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetShaderSource)
@@ -1129,6 +1264,7 @@ int32_t q_openglfunctions_4_0_compatibility_gl_get_uniform_location(void* self, 
 /// @param bufSize int32_t
 /// @param length int32_t*
 /// @param source char*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_shader_source(void* self, uint32_t shader, int32_t bufSize, int32_t* length, char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetShaderInfoLog)
@@ -1138,6 +1274,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_shader_source(void* self, uint32
 /// @param bufSize int32_t
 /// @param length int32_t*
 /// @param infoLog char*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_shader_info_log(void* self, uint32_t shader, int32_t bufSize, int32_t* length, char* infoLog);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetShaderiv)
@@ -1146,6 +1283,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_shader_info_log(void* self, uint
 /// @param shader uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_shaderiv(void* self, uint32_t shader, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetProgramInfoLog)
@@ -1155,6 +1293,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_shaderiv(void* self, uint32_t sh
 /// @param bufSize int32_t
 /// @param length int32_t*
 /// @param infoLog char*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_program_info_log(void* self, uint32_t program, int32_t bufSize, int32_t* length, char* infoLog);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetProgramiv)
@@ -1163,6 +1302,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_program_info_log(void* self, uin
 /// @param program uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_programiv(void* self, uint32_t program, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetAttribLocation)
@@ -1170,6 +1310,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_programiv(void* self, uint32_t p
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
 /// @param name char*
+///
 int32_t q_openglfunctions_4_0_compatibility_gl_get_attrib_location(void* self, uint32_t program, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetAttachedShaders)
@@ -1179,18 +1320,21 @@ int32_t q_openglfunctions_4_0_compatibility_gl_get_attrib_location(void* self, u
 /// @param maxCount int32_t
 /// @param count int32_t*
 /// @param obj uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_attached_shaders(void* self, uint32_t program, int32_t maxCount, int32_t* count, uint32_t* obj);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEnableVertexAttribArray)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_enable_vertex_attrib_array(void* self, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDisableVertexAttribArray)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_disable_vertex_attrib_array(void* self, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDetachShader)
@@ -1198,35 +1342,41 @@ void q_openglfunctions_4_0_compatibility_gl_disable_vertex_attrib_array(void* se
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
 /// @param shader uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_detach_shader(void* self, uint32_t program, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteShader)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param shader uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_shader(void* self, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteProgram)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_program(void* self, uint32_t program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCreateShader)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
+///
 uint32_t q_openglfunctions_4_0_compatibility_gl_create_shader(void* self, uint32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCreateProgram)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 uint32_t q_openglfunctions_4_0_compatibility_gl_create_program(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCompileShader)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param shader uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_compile_shader(void* self, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindAttribLocation)
@@ -1235,6 +1385,7 @@ void q_openglfunctions_4_0_compatibility_gl_compile_shader(void* self, uint32_t 
 /// @param program uint32_t
 /// @param index uint32_t
 /// @param name char*
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glAttachShader)
@@ -1242,6 +1393,7 @@ void q_openglfunctions_4_0_compatibility_gl_bind_attrib_location(void* self, uin
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
 /// @param shader uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_attach_shader(void* self, uint32_t program, uint32_t shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glStencilMaskSeparate)
@@ -1249,6 +1401,7 @@ void q_openglfunctions_4_0_compatibility_gl_attach_shader(void* self, uint32_t p
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param face uint32_t
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_stencil_mask_separate(void* self, uint32_t face, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glStencilFuncSeparate)
@@ -1258,6 +1411,7 @@ void q_openglfunctions_4_0_compatibility_gl_stencil_mask_separate(void* self, ui
 /// @param func uint32_t
 /// @param ref int32_t
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_stencil_func_separate(void* self, uint32_t face, uint32_t func, int32_t ref, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glStencilOpSeparate)
@@ -1267,6 +1421,7 @@ void q_openglfunctions_4_0_compatibility_gl_stencil_func_separate(void* self, ui
 /// @param sfail uint32_t
 /// @param dpfail uint32_t
 /// @param dppass uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_stencil_op_separate(void* self, uint32_t face, uint32_t sfail, uint32_t dpfail, uint32_t dppass);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendEquationSeparate)
@@ -1274,6 +1429,7 @@ void q_openglfunctions_4_0_compatibility_gl_stencil_op_separate(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param modeRGB uint32_t
 /// @param modeAlpha uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_equation_separate(void* self, uint32_t modeRGB, uint32_t modeAlpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix4x3fv)
@@ -1283,6 +1439,7 @@ void q_openglfunctions_4_0_compatibility_gl_blend_equation_separate(void* self, 
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x3fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix3x4fv)
@@ -1292,6 +1449,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x3fv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x4fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix4x2fv)
@@ -1301,6 +1459,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x4fv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x2fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix2x4fv)
@@ -1310,6 +1469,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x2fv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2x4fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix3x2fv)
@@ -1319,6 +1479,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2x4fv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x2fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix2x3fv)
@@ -1328,12 +1489,14 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x2fv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2x3fv(void* self, int32_t location, int32_t count, uint8_t transpose, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsVertexArray)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param array uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_vertex_array(void* self, uint32_t array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenVertexArrays)
@@ -1341,6 +1504,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_vertex_array(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param arrays uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_vertex_arrays(void* self, int32_t n, uint32_t* arrays);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteVertexArrays)
@@ -1348,12 +1512,14 @@ void q_openglfunctions_4_0_compatibility_gl_gen_vertex_arrays(void* self, int32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param arrays uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_vertex_arrays(void* self, int32_t n, uint32_t* arrays);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindVertexArray)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param array uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_vertex_array(void* self, uint32_t array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFlushMappedBufferRange)
@@ -1362,6 +1528,7 @@ void q_openglfunctions_4_0_compatibility_gl_bind_vertex_array(void* self, uint32
 /// @param target uint32_t
 /// @param offset intptr_t
 /// @param length intptr_t
+///
 void q_openglfunctions_4_0_compatibility_gl_flush_mapped_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMapBufferRange)
@@ -1371,6 +1538,7 @@ void q_openglfunctions_4_0_compatibility_gl_flush_mapped_buffer_range(void* self
 /// @param offset intptr_t
 /// @param length intptr_t
 /// @param access uint32_t
+///
 void* q_openglfunctions_4_0_compatibility_gl_map_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length, uint32_t access);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFramebufferTextureLayer)
@@ -1381,6 +1549,7 @@ void* q_openglfunctions_4_0_compatibility_gl_map_buffer_range(void* self, uint32
 /// @param texture uint32_t
 /// @param level int32_t
 /// @param layer int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture_layer(void* self, uint32_t target, uint32_t attachment, uint32_t texture, int32_t level, int32_t layer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRenderbufferStorageMultisample)
@@ -1391,6 +1560,7 @@ void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture_layer(void* self
 /// @param internalformat uint32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_renderbuffer_storage_multisample(void* self, uint32_t target, int32_t samples, uint32_t internalformat, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlitFramebuffer)
@@ -1406,12 +1576,14 @@ void q_openglfunctions_4_0_compatibility_gl_renderbuffer_storage_multisample(voi
 /// @param dstY1 int32_t
 /// @param mask uint32_t
 /// @param filter uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blit_framebuffer(void* self, int32_t srcX0, int32_t srcY0, int32_t srcX1, int32_t srcY1, int32_t dstX0, int32_t dstY0, int32_t dstX1, int32_t dstY1, uint32_t mask, uint32_t filter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenerateMipmap)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_generate_mipmap(void* self, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetFramebufferAttachmentParameteriv)
@@ -1421,6 +1593,7 @@ void q_openglfunctions_4_0_compatibility_gl_generate_mipmap(void* self, uint32_t
 /// @param attachment uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_framebuffer_attachment_parameteriv(void* self, uint32_t target, uint32_t attachment, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFramebufferRenderbuffer)
@@ -1430,6 +1603,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_framebuffer_attachment_parameter
 /// @param attachment uint32_t
 /// @param renderbuffertarget uint32_t
 /// @param renderbuffer uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_framebuffer_renderbuffer(void* self, uint32_t target, uint32_t attachment, uint32_t renderbuffertarget, uint32_t renderbuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFramebufferTexture3D)
@@ -1441,6 +1615,7 @@ void q_openglfunctions_4_0_compatibility_gl_framebuffer_renderbuffer(void* self,
 /// @param texture uint32_t
 /// @param level int32_t
 /// @param zoffset int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture3_d(void* self, uint32_t target, uint32_t attachment, uint32_t textarget, uint32_t texture, int32_t level, int32_t zoffset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFramebufferTexture2D)
@@ -1451,6 +1626,7 @@ void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture3_d(void* self, u
 /// @param textarget uint32_t
 /// @param texture uint32_t
 /// @param level int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture2_d(void* self, uint32_t target, uint32_t attachment, uint32_t textarget, uint32_t texture, int32_t level);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFramebufferTexture1D)
@@ -1461,6 +1637,7 @@ void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture2_d(void* self, u
 /// @param textarget uint32_t
 /// @param texture uint32_t
 /// @param level int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture1_d(void* self, uint32_t target, uint32_t attachment, uint32_t textarget, uint32_t texture, int32_t level);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenFramebuffers)
@@ -1468,6 +1645,7 @@ void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture1_d(void* self, u
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param framebuffers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_framebuffers(void* self, int32_t n, uint32_t* framebuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteFramebuffers)
@@ -1475,6 +1653,7 @@ void q_openglfunctions_4_0_compatibility_gl_gen_framebuffers(void* self, int32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param framebuffers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_framebuffers(void* self, int32_t n, uint32_t* framebuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindFramebuffer)
@@ -1482,12 +1661,14 @@ void q_openglfunctions_4_0_compatibility_gl_delete_framebuffers(void* self, int3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param framebuffer uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_framebuffer(void* self, uint32_t target, uint32_t framebuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsFramebuffer)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param framebuffer uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_framebuffer(void* self, uint32_t framebuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetRenderbufferParameteriv)
@@ -1496,6 +1677,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_framebuffer(void* self, uint32
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_renderbuffer_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRenderbufferStorage)
@@ -1505,6 +1687,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_renderbuffer_parameteriv(void* s
 /// @param internalformat uint32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_renderbuffer_storage(void* self, uint32_t target, uint32_t internalformat, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenRenderbuffers)
@@ -1512,6 +1695,7 @@ void q_openglfunctions_4_0_compatibility_gl_renderbuffer_storage(void* self, uin
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param renderbuffers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_renderbuffers(void* self, int32_t n, uint32_t* renderbuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteRenderbuffers)
@@ -1519,6 +1703,7 @@ void q_openglfunctions_4_0_compatibility_gl_gen_renderbuffers(void* self, int32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param renderbuffers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_renderbuffers(void* self, int32_t n, uint32_t* renderbuffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindRenderbuffer)
@@ -1526,12 +1711,14 @@ void q_openglfunctions_4_0_compatibility_gl_delete_renderbuffers(void* self, int
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param renderbuffer uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_renderbuffer(void* self, uint32_t target, uint32_t renderbuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsRenderbuffer)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param renderbuffer uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_renderbuffer(void* self, uint32_t renderbuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetStringi)
@@ -1539,6 +1726,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_renderbuffer(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param name uint32_t
 /// @param index uint32_t
+///
 const uint8_t* q_openglfunctions_4_0_compatibility_gl_get_stringi(void* self, uint32_t name, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearBufferfi)
@@ -1548,6 +1736,7 @@ const uint8_t* q_openglfunctions_4_0_compatibility_gl_get_stringi(void* self, ui
 /// @param drawbuffer int32_t
 /// @param depth float
 /// @param stencil int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_bufferfi(void* self, uint32_t buffer, int32_t drawbuffer, float depth, int32_t stencil);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearBufferfv)
@@ -1556,6 +1745,7 @@ void q_openglfunctions_4_0_compatibility_gl_clear_bufferfi(void* self, uint32_t 
 /// @param buffer uint32_t
 /// @param drawbuffer int32_t
 /// @param value float*
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_bufferfv(void* self, uint32_t buffer, int32_t drawbuffer, float* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearBufferuiv)
@@ -1564,6 +1754,7 @@ void q_openglfunctions_4_0_compatibility_gl_clear_bufferfv(void* self, uint32_t 
 /// @param buffer uint32_t
 /// @param drawbuffer int32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_bufferuiv(void* self, uint32_t buffer, int32_t drawbuffer, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearBufferiv)
@@ -1572,6 +1763,7 @@ void q_openglfunctions_4_0_compatibility_gl_clear_bufferuiv(void* self, uint32_t
 /// @param buffer uint32_t
 /// @param drawbuffer int32_t
 /// @param value int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_bufferiv(void* self, uint32_t buffer, int32_t drawbuffer, int32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexParameterIuiv)
@@ -1580,6 +1772,7 @@ void q_openglfunctions_4_0_compatibility_gl_clear_bufferiv(void* self, uint32_t 
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_parameter_iuiv(void* self, uint32_t target, uint32_t pname, uint32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexParameterIiv)
@@ -1588,6 +1781,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_parameter_iuiv(void* self, u
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_parameter_iiv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexParameterIuiv)
@@ -1596,6 +1790,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_parameter_iiv(void* self, ui
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_parameter_iuiv(void* self, uint32_t target, uint32_t pname, uint32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexParameterIiv)
@@ -1604,6 +1799,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_parameter_iuiv(void* self, uint3
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_parameter_iiv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4uiv)
@@ -1612,6 +1808,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_parameter_iiv(void* self, uint32
 /// @param location int32_t
 /// @param count int32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4uiv(void* self, int32_t location, int32_t count, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3uiv)
@@ -1620,6 +1817,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4uiv(void* self, int32_t loca
 /// @param location int32_t
 /// @param count int32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3uiv(void* self, int32_t location, int32_t count, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2uiv)
@@ -1628,6 +1826,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3uiv(void* self, int32_t loca
 /// @param location int32_t
 /// @param count int32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2uiv(void* self, int32_t location, int32_t count, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1uiv)
@@ -1636,6 +1835,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2uiv(void* self, int32_t loca
 /// @param location int32_t
 /// @param count int32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1uiv(void* self, int32_t location, int32_t count, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4ui)
@@ -1646,6 +1846,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform1uiv(void* self, int32_t loca
 /// @param v1 uint32_t
 /// @param v2 uint32_t
 /// @param v3 uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4ui(void* self, int32_t location, uint32_t v0, uint32_t v1, uint32_t v2, uint32_t v3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3ui)
@@ -1655,6 +1856,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4ui(void* self, int32_t locat
 /// @param v0 uint32_t
 /// @param v1 uint32_t
 /// @param v2 uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3ui(void* self, int32_t location, uint32_t v0, uint32_t v1, uint32_t v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2ui)
@@ -1663,6 +1865,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3ui(void* self, int32_t locat
 /// @param location int32_t
 /// @param v0 uint32_t
 /// @param v1 uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2ui(void* self, int32_t location, uint32_t v0, uint32_t v1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1ui)
@@ -1670,6 +1873,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2ui(void* self, int32_t locat
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param location int32_t
 /// @param v0 uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1ui(void* self, int32_t location, uint32_t v0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetFragDataLocation)
@@ -1677,6 +1881,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform1ui(void* self, int32_t locat
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
 /// @param name char*
+///
 int32_t q_openglfunctions_4_0_compatibility_gl_get_frag_data_location(void* self, uint32_t program, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindFragDataLocation)
@@ -1685,6 +1890,7 @@ int32_t q_openglfunctions_4_0_compatibility_gl_get_frag_data_location(void* self
 /// @param program uint32_t
 /// @param color uint32_t
 /// @param name char*
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetUniformuiv)
@@ -1693,6 +1899,7 @@ void q_openglfunctions_4_0_compatibility_gl_bind_frag_data_location(void* self, 
 /// @param program uint32_t
 /// @param location int32_t
 /// @param params uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_uniformuiv(void* self, uint32_t program, int32_t location, uint32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetVertexAttribIuiv)
@@ -1701,6 +1908,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_uniformuiv(void* self, uint32_t 
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_vertex_attrib_iuiv(void* self, uint32_t index, uint32_t pname, uint32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetVertexAttribIiv)
@@ -1709,6 +1917,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_vertex_attrib_iuiv(void* self, u
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_vertex_attrib_iiv(void* self, uint32_t index, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribIPointer)
@@ -1719,11 +1928,13 @@ void q_openglfunctions_4_0_compatibility_gl_get_vertex_attrib_iiv(void* self, ui
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i_pointer(void* self, uint32_t index, int32_t size, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEndConditionalRender)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_end_conditional_render(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBeginConditionalRender)
@@ -1731,6 +1942,7 @@ void q_openglfunctions_4_0_compatibility_gl_end_conditional_render(void* self);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param id uint32_t
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_begin_conditional_render(void* self, uint32_t id, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClampColor)
@@ -1738,6 +1950,7 @@ void q_openglfunctions_4_0_compatibility_gl_begin_conditional_render(void* self,
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param clamp uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_clamp_color(void* self, uint32_t target, uint32_t clamp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindBufferBase)
@@ -1746,6 +1959,7 @@ void q_openglfunctions_4_0_compatibility_gl_clamp_color(void* self, uint32_t tar
 /// @param target uint32_t
 /// @param index uint32_t
 /// @param buffer uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_buffer_base(void* self, uint32_t target, uint32_t index, uint32_t buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindBufferRange)
@@ -1756,17 +1970,20 @@ void q_openglfunctions_4_0_compatibility_gl_bind_buffer_base(void* self, uint32_
 /// @param buffer uint32_t
 /// @param offset intptr_t
 /// @param size intptr_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, intptr_t offset, intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEndTransformFeedback)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_end_transform_feedback(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBeginTransformFeedback)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param primitiveMode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_begin_transform_feedback(void* self, uint32_t primitiveMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsEnabledi)
@@ -1774,6 +1991,7 @@ void q_openglfunctions_4_0_compatibility_gl_begin_transform_feedback(void* self,
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param index uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_enabledi(void* self, uint32_t target, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDisablei)
@@ -1781,6 +1999,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_enabledi(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param index uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_disablei(void* self, uint32_t target, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEnablei)
@@ -1788,6 +2007,7 @@ void q_openglfunctions_4_0_compatibility_gl_disablei(void* self, uint32_t target
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param index uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_enablei(void* self, uint32_t target, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetIntegeri_v)
@@ -1796,6 +2016,7 @@ void q_openglfunctions_4_0_compatibility_gl_enablei(void* self, uint32_t target,
 /// @param target uint32_t
 /// @param index uint32_t
 /// @param data int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_integeri_v(void* self, uint32_t target, uint32_t index, int32_t* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetBooleani_v)
@@ -1804,6 +2025,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_integeri_v(void* self, uint32_t 
 /// @param target uint32_t
 /// @param index uint32_t
 /// @param data uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_booleani_v(void* self, uint32_t target, uint32_t index, uint8_t* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorMaski)
@@ -1814,6 +2036,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_booleani_v(void* self, uint32_t 
 /// @param g uint8_t
 /// @param b uint8_t
 /// @param a uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color_maski(void* self, uint32_t index, uint8_t r, uint8_t g, uint8_t b, uint8_t a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyBufferSubData)
@@ -1824,6 +2047,7 @@ void q_openglfunctions_4_0_compatibility_gl_color_maski(void* self, uint32_t ind
 /// @param readOffset intptr_t
 /// @param writeOffset intptr_t
 /// @param size intptr_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformBlockBinding)
@@ -1832,6 +2056,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_buffer_sub_data(void* self, uin
 /// @param program uint32_t
 /// @param uniformBlockIndex uint32_t
 /// @param uniformBlockBinding uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_block_binding(void* self, uint32_t program, uint32_t uniformBlockIndex, uint32_t uniformBlockBinding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetActiveUniformBlockName)
@@ -1842,6 +2067,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_block_binding(void* self, ui
 /// @param bufSize int32_t
 /// @param length int32_t*
 /// @param uniformBlockName char*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_active_uniform_block_name(void* self, uint32_t program, uint32_t uniformBlockIndex, int32_t bufSize, int32_t* length, char* uniformBlockName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetActiveUniformBlockiv)
@@ -1851,6 +2077,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_active_uniform_block_name(void* 
 /// @param uniformBlockIndex uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_active_uniform_blockiv(void* self, uint32_t program, uint32_t uniformBlockIndex, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetUniformBlockIndex)
@@ -1858,6 +2085,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_active_uniform_blockiv(void* sel
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
 /// @param uniformBlockName char*
+///
 uint32_t q_openglfunctions_4_0_compatibility_gl_get_uniform_block_index(void* self, uint32_t program, char* uniformBlockName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetActiveUniformName)
@@ -1868,6 +2096,7 @@ uint32_t q_openglfunctions_4_0_compatibility_gl_get_uniform_block_index(void* se
 /// @param bufSize int32_t
 /// @param length int32_t*
 /// @param uniformName char*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_active_uniform_name(void* self, uint32_t program, uint32_t uniformIndex, int32_t bufSize, int32_t* length, char* uniformName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetActiveUniformsiv)
@@ -1878,12 +2107,14 @@ void q_openglfunctions_4_0_compatibility_gl_get_active_uniform_name(void* self, 
 /// @param uniformIndices uint32_t*
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_active_uniformsiv(void* self, uint32_t program, int32_t uniformCount, uint32_t* uniformIndices, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPrimitiveRestartIndex)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_primitive_restart_index(void* self, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexBuffer)
@@ -1892,6 +2123,7 @@ void q_openglfunctions_4_0_compatibility_gl_primitive_restart_index(void* self, 
 /// @param target uint32_t
 /// @param internalformat uint32_t
 /// @param buffer uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_buffer(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawElementsInstanced)
@@ -1902,6 +2134,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_buffer(void* self, uint32_t targ
 /// @param type uint32_t
 /// @param indices void*
 /// @param instancecount int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_elements_instanced(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices, int32_t instancecount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawArraysInstanced)
@@ -1911,6 +2144,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_elements_instanced(void* self, 
 /// @param first int32_t
 /// @param count int32_t
 /// @param instancecount int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_arrays_instanced(void* self, uint32_t mode, int32_t first, int32_t count, int32_t instancecount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSampleMaski)
@@ -1918,6 +2152,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_arrays_instanced(void* self, ui
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_sample_maski(void* self, uint32_t index, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMultisamplefv)
@@ -1926,6 +2161,7 @@ void q_openglfunctions_4_0_compatibility_gl_sample_maski(void* self, uint32_t in
 /// @param pname uint32_t
 /// @param index uint32_t
 /// @param val float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_multisamplefv(void* self, uint32_t pname, uint32_t index, float* val);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexImage3DMultisample)
@@ -1938,6 +2174,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_multisamplefv(void* self, uint32
 /// @param height int32_t
 /// @param depth int32_t
 /// @param fixedsamplelocations uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_image3_d_multisample(void* self, uint32_t target, int32_t samples, int32_t internalformat, int32_t width, int32_t height, int32_t depth, uint8_t fixedsamplelocations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexImage2DMultisample)
@@ -1949,6 +2186,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_image3_d_multisample(void* self,
 /// @param width int32_t
 /// @param height int32_t
 /// @param fixedsamplelocations uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_image2_d_multisample(void* self, uint32_t target, int32_t samples, int32_t internalformat, int32_t width, int32_t height, uint8_t fixedsamplelocations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetInteger64v)
@@ -1956,12 +2194,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_image2_d_multisample(void* self,
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params int64_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_integer64v(void* self, uint32_t pname, int64_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glProvokingVertex)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_provoking_vertex(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawElementsInstancedBaseVertex)
@@ -1973,6 +2213,7 @@ void q_openglfunctions_4_0_compatibility_gl_provoking_vertex(void* self, uint32_
 /// @param indices void*
 /// @param instancecount int32_t
 /// @param basevertex int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_elements_instanced_base_vertex(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices, int32_t instancecount, int32_t basevertex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawRangeElementsBaseVertex)
@@ -1985,6 +2226,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_elements_instanced_base_vertex(
 /// @param type uint32_t
 /// @param indices void*
 /// @param basevertex int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_range_elements_base_vertex(void* self, uint32_t mode, uint32_t start, uint32_t end, int32_t count, uint32_t type, void* indices, int32_t basevertex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawElementsBaseVertex)
@@ -1995,6 +2237,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_range_elements_base_vertex(void
 /// @param type uint32_t
 /// @param indices void*
 /// @param basevertex int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_elements_base_vertex(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices, int32_t basevertex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFramebufferTexture)
@@ -2004,6 +2247,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_elements_base_vertex(void* self
 /// @param attachment uint32_t
 /// @param texture uint32_t
 /// @param level int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture(void* self, uint32_t target, uint32_t attachment, uint32_t texture, int32_t level);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetBufferParameteri64v)
@@ -2012,6 +2256,7 @@ void q_openglfunctions_4_0_compatibility_gl_framebuffer_texture(void* self, uint
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int64_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_buffer_parameteri64v(void* self, uint32_t target, uint32_t pname, int64_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetInteger64i_v)
@@ -2020,6 +2265,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_buffer_parameteri64v(void* self,
 /// @param target uint32_t
 /// @param index uint32_t
 /// @param data int64_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_integer64i_v(void* self, uint32_t target, uint32_t index, int64_t* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP4uiv)
@@ -2029,6 +2275,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_integer64i_v(void* self, uint32_
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p4uiv(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP4ui)
@@ -2038,6 +2285,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p4uiv(void* self, uint
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p4ui(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP3uiv)
@@ -2047,6 +2295,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p4ui(void* self, uint3
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p3uiv(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP3ui)
@@ -2056,6 +2305,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p3uiv(void* self, uint
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p3ui(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP2uiv)
@@ -2065,6 +2315,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p3ui(void* self, uint3
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p2uiv(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP2ui)
@@ -2074,6 +2325,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p2uiv(void* self, uint
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p2ui(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP1uiv)
@@ -2083,6 +2335,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p2ui(void* self, uint3
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p1uiv(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribP1ui)
@@ -2092,6 +2345,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p1uiv(void* self, uint
 /// @param type uint32_t
 /// @param normalized uint8_t
 /// @param value uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p1ui(void* self, uint32_t index, uint32_t type, uint8_t normalized, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColorP3uiv)
@@ -2099,6 +2353,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_p1ui(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param color uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color_p3uiv(void* self, uint32_t type, uint32_t* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColorP3ui)
@@ -2106,6 +2361,7 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color_p3uiv(void* self, ui
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param color uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color_p3ui(void* self, uint32_t type, uint32_t color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorP4uiv)
@@ -2113,6 +2369,7 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color_p3ui(void* self, uin
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param color uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color_p4uiv(void* self, uint32_t type, uint32_t* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorP4ui)
@@ -2120,6 +2377,7 @@ void q_openglfunctions_4_0_compatibility_gl_color_p4uiv(void* self, uint32_t typ
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param color uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color_p4ui(void* self, uint32_t type, uint32_t color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorP3uiv)
@@ -2127,6 +2385,7 @@ void q_openglfunctions_4_0_compatibility_gl_color_p4ui(void* self, uint32_t type
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param color uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color_p3uiv(void* self, uint32_t type, uint32_t* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorP3ui)
@@ -2134,6 +2393,7 @@ void q_openglfunctions_4_0_compatibility_gl_color_p3uiv(void* self, uint32_t typ
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param color uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color_p3ui(void* self, uint32_t type, uint32_t color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormalP3uiv)
@@ -2141,6 +2401,7 @@ void q_openglfunctions_4_0_compatibility_gl_color_p3ui(void* self, uint32_t type
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_normal_p3uiv(void* self, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormalP3ui)
@@ -2148,6 +2409,7 @@ void q_openglfunctions_4_0_compatibility_gl_normal_p3uiv(void* self, uint32_t ty
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_normal_p3ui(void* self, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP4uiv)
@@ -2156,6 +2418,7 @@ void q_openglfunctions_4_0_compatibility_gl_normal_p3ui(void* self, uint32_t typ
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p4uiv(void* self, uint32_t texture, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP4ui)
@@ -2164,6 +2427,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p4uiv(void* self, ui
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p4ui(void* self, uint32_t texture, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP3uiv)
@@ -2172,6 +2436,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p4ui(void* self, uin
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p3uiv(void* self, uint32_t texture, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP3ui)
@@ -2180,6 +2445,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p3uiv(void* self, ui
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p3ui(void* self, uint32_t texture, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP2uiv)
@@ -2188,6 +2454,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p3ui(void* self, uin
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p2uiv(void* self, uint32_t texture, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP2ui)
@@ -2196,6 +2463,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p2uiv(void* self, ui
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p2ui(void* self, uint32_t texture, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP1uiv)
@@ -2204,6 +2472,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p2ui(void* self, uin
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p1uiv(void* self, uint32_t texture, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoordP1ui)
@@ -2212,6 +2481,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p1uiv(void* self, ui
 /// @param texture uint32_t
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p1ui(void* self, uint32_t texture, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP4uiv)
@@ -2219,6 +2489,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord_p1ui(void* self, uin
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p4uiv(void* self, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP4ui)
@@ -2226,6 +2497,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p4uiv(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p4ui(void* self, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP3uiv)
@@ -2233,6 +2505,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p4ui(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p3uiv(void* self, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP3ui)
@@ -2240,6 +2513,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p3uiv(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p3ui(void* self, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP2uiv)
@@ -2247,6 +2521,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p3ui(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p2uiv(void* self, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP2ui)
@@ -2254,6 +2529,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p2uiv(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p2ui(void* self, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP1uiv)
@@ -2261,6 +2537,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p2ui(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p1uiv(void* self, uint32_t type, uint32_t* coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordP1ui)
@@ -2268,6 +2545,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p1uiv(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param coords uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_p1ui(void* self, uint32_t type, uint32_t coords);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexP4uiv)
@@ -2275,6 +2553,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_p1ui(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_p4uiv(void* self, uint32_t type, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexP4ui)
@@ -2282,6 +2561,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_p4uiv(void* self, uint32_t ty
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param value uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_p4ui(void* self, uint32_t type, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexP3uiv)
@@ -2289,6 +2569,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_p4ui(void* self, uint32_t typ
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_p3uiv(void* self, uint32_t type, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexP3ui)
@@ -2296,6 +2577,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_p3uiv(void* self, uint32_t ty
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param value uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_p3ui(void* self, uint32_t type, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexP2uiv)
@@ -2303,6 +2585,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_p3ui(void* self, uint32_t typ
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param value uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_p2uiv(void* self, uint32_t type, uint32_t* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexP2ui)
@@ -2310,6 +2593,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_p2uiv(void* self, uint32_t ty
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param type uint32_t
 /// @param value uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_p2ui(void* self, uint32_t type, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetQueryObjectui64v)
@@ -2318,6 +2602,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_p2ui(void* self, uint32_t typ
 /// @param id uint32_t
 /// @param pname uint32_t
 /// @param params uint64_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_query_objectui64v(void* self, uint32_t id, uint32_t pname, uint64_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetQueryObjecti64v)
@@ -2326,6 +2611,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_query_objectui64v(void* self, ui
 /// @param id uint32_t
 /// @param pname uint32_t
 /// @param params int64_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_query_objecti64v(void* self, uint32_t id, uint32_t pname, int64_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glQueryCounter)
@@ -2333,6 +2619,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_query_objecti64v(void* self, uin
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param id uint32_t
 /// @param target uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_query_counter(void* self, uint32_t id, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetSamplerParameterIuiv)
@@ -2341,6 +2628,7 @@ void q_openglfunctions_4_0_compatibility_gl_query_counter(void* self, uint32_t i
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param params uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameter_iuiv(void* self, uint32_t sampler, uint32_t pname, uint32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetSamplerParameterfv)
@@ -2349,6 +2637,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameter_iuiv(void* sel
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameterfv(void* self, uint32_t sampler, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetSamplerParameterIiv)
@@ -2357,6 +2646,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameterfv(void* self, 
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameter_iiv(void* self, uint32_t sampler, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetSamplerParameteriv)
@@ -2365,6 +2655,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameter_iiv(void* self
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameteriv(void* self, uint32_t sampler, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSamplerParameterIuiv)
@@ -2373,6 +2664,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_sampler_parameteriv(void* self, 
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param param uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_sampler_parameter_iuiv(void* self, uint32_t sampler, uint32_t pname, uint32_t* param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSamplerParameterIiv)
@@ -2381,6 +2673,7 @@ void q_openglfunctions_4_0_compatibility_gl_sampler_parameter_iuiv(void* self, u
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param param int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_sampler_parameter_iiv(void* self, uint32_t sampler, uint32_t pname, int32_t* param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSamplerParameterfv)
@@ -2389,6 +2682,7 @@ void q_openglfunctions_4_0_compatibility_gl_sampler_parameter_iiv(void* self, ui
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param param float*
+///
 void q_openglfunctions_4_0_compatibility_gl_sampler_parameterfv(void* self, uint32_t sampler, uint32_t pname, float* param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSamplerParameterf)
@@ -2397,6 +2691,7 @@ void q_openglfunctions_4_0_compatibility_gl_sampler_parameterfv(void* self, uint
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_sampler_parameterf(void* self, uint32_t sampler, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSamplerParameteriv)
@@ -2405,6 +2700,7 @@ void q_openglfunctions_4_0_compatibility_gl_sampler_parameterf(void* self, uint3
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param param int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_sampler_parameteriv(void* self, uint32_t sampler, uint32_t pname, int32_t* param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSamplerParameteri)
@@ -2413,6 +2709,7 @@ void q_openglfunctions_4_0_compatibility_gl_sampler_parameteriv(void* self, uint
 /// @param sampler uint32_t
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_sampler_parameteri(void* self, uint32_t sampler, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindSampler)
@@ -2420,12 +2717,14 @@ void q_openglfunctions_4_0_compatibility_gl_sampler_parameteri(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param unit uint32_t
 /// @param sampler uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_sampler(void* self, uint32_t unit, uint32_t sampler);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsSampler)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param sampler uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_sampler(void* self, uint32_t sampler);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteSamplers)
@@ -2433,6 +2732,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_sampler(void* self, uint32_t s
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param count int32_t
 /// @param samplers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_samplers(void* self, int32_t count, uint32_t* samplers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenSamplers)
@@ -2440,6 +2740,7 @@ void q_openglfunctions_4_0_compatibility_gl_delete_samplers(void* self, int32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param count int32_t
 /// @param samplers uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_samplers(void* self, int32_t count, uint32_t* samplers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetFragDataIndex)
@@ -2447,6 +2748,7 @@ void q_openglfunctions_4_0_compatibility_gl_gen_samplers(void* self, int32_t cou
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param program uint32_t
 /// @param name char*
+///
 int32_t q_openglfunctions_4_0_compatibility_gl_get_frag_data_index(void* self, uint32_t program, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindFragDataLocationIndexed)
@@ -2456,6 +2758,7 @@ int32_t q_openglfunctions_4_0_compatibility_gl_get_frag_data_index(void* self, u
 /// @param colorNumber uint32_t
 /// @param index uint32_t
 /// @param name char*
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_frag_data_location_indexed(void* self, uint32_t program, uint32_t colorNumber, uint32_t index, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribDivisor)
@@ -2463,6 +2766,7 @@ void q_openglfunctions_4_0_compatibility_gl_bind_frag_data_location_indexed(void
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param divisor uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_divisor(void* self, uint32_t index, uint32_t divisor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetQueryIndexediv)
@@ -2472,6 +2776,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_divisor(void* self, ui
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_query_indexediv(void* self, uint32_t target, uint32_t index, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEndQueryIndexed)
@@ -2479,6 +2784,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_query_indexediv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param index uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_end_query_indexed(void* self, uint32_t target, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBeginQueryIndexed)
@@ -2487,6 +2793,7 @@ void q_openglfunctions_4_0_compatibility_gl_end_query_indexed(void* self, uint32
 /// @param target uint32_t
 /// @param index uint32_t
 /// @param id uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_begin_query_indexed(void* self, uint32_t target, uint32_t index, uint32_t id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawTransformFeedbackStream)
@@ -2495,6 +2802,7 @@ void q_openglfunctions_4_0_compatibility_gl_begin_query_indexed(void* self, uint
 /// @param mode uint32_t
 /// @param id uint32_t
 /// @param stream uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_transform_feedback_stream(void* self, uint32_t mode, uint32_t id, uint32_t stream);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawTransformFeedback)
@@ -2502,22 +2810,26 @@ void q_openglfunctions_4_0_compatibility_gl_draw_transform_feedback_stream(void*
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
 /// @param id uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_transform_feedback(void* self, uint32_t mode, uint32_t id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glResumeTransformFeedback)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_resume_transform_feedback(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPauseTransformFeedback)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_pause_transform_feedback(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsTransformFeedback)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param id uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_transform_feedback(void* self, uint32_t id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenTransformFeedbacks)
@@ -2525,6 +2837,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_transform_feedback(void* self,
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param ids uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_gen_transform_feedbacks(void* self, int32_t n, uint32_t* ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteTransformFeedbacks)
@@ -2532,6 +2845,7 @@ void q_openglfunctions_4_0_compatibility_gl_gen_transform_feedbacks(void* self, 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param n int32_t
 /// @param ids uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_transform_feedbacks(void* self, int32_t n, uint32_t* ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBindTransformFeedback)
@@ -2539,6 +2853,7 @@ void q_openglfunctions_4_0_compatibility_gl_delete_transform_feedbacks(void* sel
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param id uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_bind_transform_feedback(void* self, uint32_t target, uint32_t id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPatchParameterfv)
@@ -2546,6 +2861,7 @@ void q_openglfunctions_4_0_compatibility_gl_bind_transform_feedback(void* self, 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param values float*
+///
 void q_openglfunctions_4_0_compatibility_gl_patch_parameterfv(void* self, uint32_t pname, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPatchParameteri)
@@ -2553,6 +2869,7 @@ void q_openglfunctions_4_0_compatibility_gl_patch_parameterfv(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param value int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_patch_parameteri(void* self, uint32_t pname, int32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetProgramStageiv)
@@ -2562,6 +2879,7 @@ void q_openglfunctions_4_0_compatibility_gl_patch_parameteri(void* self, uint32_
 /// @param shadertype uint32_t
 /// @param pname uint32_t
 /// @param values int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_program_stageiv(void* self, uint32_t program, uint32_t shadertype, uint32_t pname, int32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetUniformSubroutineuiv)
@@ -2570,6 +2888,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_program_stageiv(void* self, uint
 /// @param shadertype uint32_t
 /// @param location int32_t
 /// @param params uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_uniform_subroutineuiv(void* self, uint32_t shadertype, int32_t location, uint32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformSubroutinesuiv)
@@ -2578,6 +2897,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_uniform_subroutineuiv(void* self
 /// @param shadertype uint32_t
 /// @param count int32_t
 /// @param indices uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_subroutinesuiv(void* self, uint32_t shadertype, int32_t count, uint32_t* indices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetActiveSubroutineName)
@@ -2589,6 +2909,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_subroutinesuiv(void* self, u
 /// @param bufsize int32_t
 /// @param length int32_t*
 /// @param name char*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_active_subroutine_name(void* self, uint32_t program, uint32_t shadertype, uint32_t index, int32_t bufsize, int32_t* length, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetActiveSubroutineUniformName)
@@ -2600,6 +2921,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_active_subroutine_name(void* sel
 /// @param bufsize int32_t
 /// @param length int32_t*
 /// @param name char*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_active_subroutine_uniform_name(void* self, uint32_t program, uint32_t shadertype, uint32_t index, int32_t bufsize, int32_t* length, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetActiveSubroutineUniformiv)
@@ -2610,6 +2932,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_active_subroutine_uniform_name(v
 /// @param index uint32_t
 /// @param pname uint32_t
 /// @param values int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_active_subroutine_uniformiv(void* self, uint32_t program, uint32_t shadertype, uint32_t index, uint32_t pname, int32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetSubroutineIndex)
@@ -2618,6 +2941,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_active_subroutine_uniformiv(void
 /// @param program uint32_t
 /// @param shadertype uint32_t
 /// @param name char*
+///
 uint32_t q_openglfunctions_4_0_compatibility_gl_get_subroutine_index(void* self, uint32_t program, uint32_t shadertype, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetSubroutineUniformLocation)
@@ -2626,6 +2950,7 @@ uint32_t q_openglfunctions_4_0_compatibility_gl_get_subroutine_index(void* self,
 /// @param program uint32_t
 /// @param shadertype uint32_t
 /// @param name char*
+///
 int32_t q_openglfunctions_4_0_compatibility_gl_get_subroutine_uniform_location(void* self, uint32_t program, uint32_t shadertype, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetUniformdv)
@@ -2634,6 +2959,7 @@ int32_t q_openglfunctions_4_0_compatibility_gl_get_subroutine_uniform_location(v
 /// @param program uint32_t
 /// @param location int32_t
 /// @param params double*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_uniformdv(void* self, uint32_t program, int32_t location, double* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix4x3dv)
@@ -2643,6 +2969,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_uniformdv(void* self, uint32_t p
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x3dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix4x2dv)
@@ -2652,6 +2979,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x3dv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x2dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix3x4dv)
@@ -2661,6 +2989,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4x2dv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x4dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix3x2dv)
@@ -2670,6 +2999,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x4dv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x2dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix2x4dv)
@@ -2679,6 +3009,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3x2dv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2x4dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix2x3dv)
@@ -2688,6 +3019,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2x4dv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2x3dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix4dv)
@@ -2697,6 +3029,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2x3dv(void* self, int3
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix3dv)
@@ -2706,6 +3039,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix4dv(void* self, int32_
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniformMatrix2dv)
@@ -2715,6 +3049,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix3dv(void* self, int32_
 /// @param count int32_t
 /// @param transpose uint8_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2dv(void* self, int32_t location, int32_t count, uint8_t transpose, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4dv)
@@ -2723,6 +3058,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform_matrix2dv(void* self, int32_
 /// @param location int32_t
 /// @param count int32_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4dv(void* self, int32_t location, int32_t count, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3dv)
@@ -2731,6 +3067,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4dv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3dv(void* self, int32_t location, int32_t count, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2dv)
@@ -2739,6 +3076,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3dv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2dv(void* self, int32_t location, int32_t count, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1dv)
@@ -2747,6 +3085,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2dv(void* self, int32_t locat
 /// @param location int32_t
 /// @param count int32_t
 /// @param value double*
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1dv(void* self, int32_t location, int32_t count, double* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform4d)
@@ -2757,6 +3096,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform1dv(void* self, int32_t locat
 /// @param y double
 /// @param z double
 /// @param w double
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform4d(void* self, int32_t location, double x, double y, double z, double w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform3d)
@@ -2766,6 +3106,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform4d(void* self, int32_t locati
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform3d(void* self, int32_t location, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform2d)
@@ -2774,6 +3115,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform3d(void* self, int32_t locati
 /// @param location int32_t
 /// @param x double
 /// @param y double
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform2d(void* self, int32_t location, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glUniform1d)
@@ -2781,6 +3123,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform2d(void* self, int32_t locati
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param location int32_t
 /// @param x double
+///
 void q_openglfunctions_4_0_compatibility_gl_uniform1d(void* self, int32_t location, double x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawElementsIndirect)
@@ -2789,6 +3132,7 @@ void q_openglfunctions_4_0_compatibility_gl_uniform1d(void* self, int32_t locati
 /// @param mode uint32_t
 /// @param type uint32_t
 /// @param indirect void*
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_elements_indirect(void* self, uint32_t mode, uint32_t type, void* indirect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawArraysIndirect)
@@ -2796,6 +3140,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_elements_indirect(void* self, u
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
 /// @param indirect void*
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_arrays_indirect(void* self, uint32_t mode, void* indirect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendFuncSeparatei)
@@ -2806,6 +3151,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_arrays_indirect(void* self, uin
 /// @param dstRGB uint32_t
 /// @param srcAlpha uint32_t
 /// @param dstAlpha uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_func_separatei(void* self, uint32_t buf, uint32_t srcRGB, uint32_t dstRGB, uint32_t srcAlpha, uint32_t dstAlpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendFunci)
@@ -2814,6 +3160,7 @@ void q_openglfunctions_4_0_compatibility_gl_blend_func_separatei(void* self, uin
 /// @param buf uint32_t
 /// @param src uint32_t
 /// @param dst uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_funci(void* self, uint32_t buf, uint32_t src, uint32_t dst);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendEquationSeparatei)
@@ -2822,6 +3169,7 @@ void q_openglfunctions_4_0_compatibility_gl_blend_funci(void* self, uint32_t buf
 /// @param buf uint32_t
 /// @param modeRGB uint32_t
 /// @param modeAlpha uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_equation_separatei(void* self, uint32_t buf, uint32_t modeRGB, uint32_t modeAlpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBlendEquationi)
@@ -2829,12 +3177,14 @@ void q_openglfunctions_4_0_compatibility_gl_blend_equation_separatei(void* self,
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param buf uint32_t
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_blend_equationi(void* self, uint32_t buf, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMinSampleShading)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param value float
+///
 void q_openglfunctions_4_0_compatibility_gl_min_sample_shading(void* self, float value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTranslatef)
@@ -2843,6 +3193,7 @@ void q_openglfunctions_4_0_compatibility_gl_min_sample_shading(void* self, float
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_4_0_compatibility_gl_translatef(void* self, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTranslated)
@@ -2851,6 +3202,7 @@ void q_openglfunctions_4_0_compatibility_gl_translatef(void* self, float x, floa
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_translated(void* self, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glScalef)
@@ -2859,6 +3211,7 @@ void q_openglfunctions_4_0_compatibility_gl_translated(void* self, double x, dou
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_4_0_compatibility_gl_scalef(void* self, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glScaled)
@@ -2867,6 +3220,7 @@ void q_openglfunctions_4_0_compatibility_gl_scalef(void* self, float x, float y,
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_scaled(void* self, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRotatef)
@@ -2876,6 +3230,7 @@ void q_openglfunctions_4_0_compatibility_gl_scaled(void* self, double x, double 
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_4_0_compatibility_gl_rotatef(void* self, float angle, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRotated)
@@ -2885,16 +3240,19 @@ void q_openglfunctions_4_0_compatibility_gl_rotatef(void* self, float angle, flo
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_rotated(void* self, double angle, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPushMatrix)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_push_matrix(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPopMatrix)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_pop_matrix(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glOrtho)
@@ -2906,41 +3264,48 @@ void q_openglfunctions_4_0_compatibility_gl_pop_matrix(void* self);
 /// @param top double
 /// @param zNear double
 /// @param zFar double
+///
 void q_openglfunctions_4_0_compatibility_gl_ortho(void* self, double left, double right, double bottom, double top, double zNear, double zFar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultMatrixd)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m double*
+///
 void q_openglfunctions_4_0_compatibility_gl_mult_matrixd(void* self, double* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultMatrixf)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m float*
+///
 void q_openglfunctions_4_0_compatibility_gl_mult_matrixf(void* self, float* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMatrixMode)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_matrix_mode(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLoadMatrixd)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m double*
+///
 void q_openglfunctions_4_0_compatibility_gl_load_matrixd(void* self, double* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLoadMatrixf)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m float*
+///
 void q_openglfunctions_4_0_compatibility_gl_load_matrixf(void* self, float* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLoadIdentity)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_load_identity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFrustum)
@@ -2952,12 +3317,14 @@ void q_openglfunctions_4_0_compatibility_gl_load_identity(void* self);
 /// @param top double
 /// @param zNear double
 /// @param zFar double
+///
 void q_openglfunctions_4_0_compatibility_gl_frustum(void* self, double left, double right, double bottom, double top, double zNear, double zFar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIsList)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param list uint32_t
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_is_list(void* self, uint32_t list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexGeniv)
@@ -2966,6 +3333,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_is_list(void* self, uint32_t list
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_geniv(void* self, uint32_t coord, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexGenfv)
@@ -2974,6 +3342,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_geniv(void* self, uint32_t c
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_genfv(void* self, uint32_t coord, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexGendv)
@@ -2982,6 +3351,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_genfv(void* self, uint32_t c
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param params double*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_gendv(void* self, uint32_t coord, uint32_t pname, double* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexEnviv)
@@ -2990,6 +3360,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_gendv(void* self, uint32_t c
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_enviv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetTexEnvfv)
@@ -2998,12 +3369,14 @@ void q_openglfunctions_4_0_compatibility_gl_get_tex_enviv(void* self, uint32_t t
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_tex_envfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetPolygonStipple)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mask uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_polygon_stipple(void* self, uint8_t* mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetPixelMapusv)
@@ -3011,6 +3384,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_polygon_stipple(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mapVal uint32_t
 /// @param values uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_pixel_mapusv(void* self, uint32_t mapVal, uint16_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetPixelMapuiv)
@@ -3018,6 +3392,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_pixel_mapusv(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mapVal uint32_t
 /// @param values uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_pixel_mapuiv(void* self, uint32_t mapVal, uint32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetPixelMapfv)
@@ -3025,6 +3400,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_pixel_mapuiv(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mapVal uint32_t
 /// @param values float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_pixel_mapfv(void* self, uint32_t mapVal, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMaterialiv)
@@ -3033,6 +3409,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_pixel_mapfv(void* self, uint32_t
 /// @param face uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_materialiv(void* self, uint32_t face, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMaterialfv)
@@ -3041,6 +3418,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_materialiv(void* self, uint32_t 
 /// @param face uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_materialfv(void* self, uint32_t face, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMapiv)
@@ -3049,6 +3427,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_materialfv(void* self, uint32_t 
 /// @param target uint32_t
 /// @param query uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_mapiv(void* self, uint32_t target, uint32_t query, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMapfv)
@@ -3057,6 +3436,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_mapiv(void* self, uint32_t targe
 /// @param target uint32_t
 /// @param query uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_mapfv(void* self, uint32_t target, uint32_t query, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMapdv)
@@ -3065,6 +3445,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_mapfv(void* self, uint32_t targe
 /// @param target uint32_t
 /// @param query uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_mapdv(void* self, uint32_t target, uint32_t query, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetLightiv)
@@ -3073,6 +3454,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_mapdv(void* self, uint32_t targe
 /// @param light uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_lightiv(void* self, uint32_t light, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetLightfv)
@@ -3081,6 +3463,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_lightiv(void* self, uint32_t lig
 /// @param light uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_lightfv(void* self, uint32_t light, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetClipPlane)
@@ -3088,6 +3471,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_lightfv(void* self, uint32_t lig
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param plane uint32_t
 /// @param equation double*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_clip_plane(void* self, uint32_t plane, double* equation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDrawPixels)
@@ -3098,6 +3482,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_clip_plane(void* self, uint32_t 
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param pixels void*
+///
 void q_openglfunctions_4_0_compatibility_gl_draw_pixels(void* self, int32_t width, int32_t height, uint32_t format, uint32_t type, void* pixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyPixels)
@@ -3108,6 +3493,7 @@ void q_openglfunctions_4_0_compatibility_gl_draw_pixels(void* self, int32_t widt
 /// @param width int32_t
 /// @param height int32_t
 /// @param type uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_pixels(void* self, int32_t x, int32_t y, int32_t width, int32_t height, uint32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelMapusv)
@@ -3116,6 +3502,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_pixels(void* self, int32_t x, i
 /// @param mapVal uint32_t
 /// @param mapsize int32_t
 /// @param values uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_mapusv(void* self, uint32_t mapVal, int32_t mapsize, uint16_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelMapuiv)
@@ -3124,6 +3511,7 @@ void q_openglfunctions_4_0_compatibility_gl_pixel_mapusv(void* self, uint32_t ma
 /// @param mapVal uint32_t
 /// @param mapsize int32_t
 /// @param values uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_mapuiv(void* self, uint32_t mapVal, int32_t mapsize, uint32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelMapfv)
@@ -3132,6 +3520,7 @@ void q_openglfunctions_4_0_compatibility_gl_pixel_mapuiv(void* self, uint32_t ma
 /// @param mapVal uint32_t
 /// @param mapsize int32_t
 /// @param values float*
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_mapfv(void* self, uint32_t mapVal, int32_t mapsize, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelTransferi)
@@ -3139,6 +3528,7 @@ void q_openglfunctions_4_0_compatibility_gl_pixel_mapfv(void* self, uint32_t map
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_transferi(void* self, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelTransferf)
@@ -3146,6 +3536,7 @@ void q_openglfunctions_4_0_compatibility_gl_pixel_transferi(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_transferf(void* self, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPixelZoom)
@@ -3153,6 +3544,7 @@ void q_openglfunctions_4_0_compatibility_gl_pixel_transferf(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param xfactor float
 /// @param yfactor float
+///
 void q_openglfunctions_4_0_compatibility_gl_pixel_zoom(void* self, float xfactor, float yfactor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glAlphaFunc)
@@ -3160,6 +3552,7 @@ void q_openglfunctions_4_0_compatibility_gl_pixel_zoom(void* self, float xfactor
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param func uint32_t
 /// @param ref float
+///
 void q_openglfunctions_4_0_compatibility_gl_alpha_func(void* self, uint32_t func, float ref);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalPoint2)
@@ -3167,6 +3560,7 @@ void q_openglfunctions_4_0_compatibility_gl_alpha_func(void* self, uint32_t func
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param i int32_t
 /// @param j int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_point2(void* self, int32_t i, int32_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalMesh2)
@@ -3177,12 +3571,14 @@ void q_openglfunctions_4_0_compatibility_gl_eval_point2(void* self, int32_t i, i
 /// @param i2 int32_t
 /// @param j1 int32_t
 /// @param j2 int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_mesh2(void* self, uint32_t mode, int32_t i1, int32_t i2, int32_t j1, int32_t j2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalPoint1)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param i int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_point1(void* self, int32_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalMesh1)
@@ -3191,12 +3587,14 @@ void q_openglfunctions_4_0_compatibility_gl_eval_point1(void* self, int32_t i);
 /// @param mode uint32_t
 /// @param i1 int32_t
 /// @param i2 int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_mesh1(void* self, uint32_t mode, int32_t i1, int32_t i2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord2fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u float*
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord2fv(void* self, float* u);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord2f)
@@ -3204,12 +3602,14 @@ void q_openglfunctions_4_0_compatibility_gl_eval_coord2fv(void* self, float* u);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u float
 /// @param v float
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord2f(void* self, float u, float v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord2dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u double*
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord2dv(void* self, double* u);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord2d)
@@ -3217,30 +3617,35 @@ void q_openglfunctions_4_0_compatibility_gl_eval_coord2dv(void* self, double* u)
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u double
 /// @param v double
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord2d(void* self, double u, double v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord1fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u float*
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord1fv(void* self, float* u);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord1f)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u float
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord1f(void* self, float u);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord1dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u double*
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord1dv(void* self, double* u);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEvalCoord1d)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param u double
+///
 void q_openglfunctions_4_0_compatibility_gl_eval_coord1d(void* self, double u);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMapGrid2f)
@@ -3252,6 +3657,7 @@ void q_openglfunctions_4_0_compatibility_gl_eval_coord1d(void* self, double u);
 /// @param vn int32_t
 /// @param v1 float
 /// @param v2 float
+///
 void q_openglfunctions_4_0_compatibility_gl_map_grid2f(void* self, int32_t un, float u1, float u2, int32_t vn, float v1, float v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMapGrid2d)
@@ -3263,6 +3669,7 @@ void q_openglfunctions_4_0_compatibility_gl_map_grid2f(void* self, int32_t un, f
 /// @param vn int32_t
 /// @param v1 double
 /// @param v2 double
+///
 void q_openglfunctions_4_0_compatibility_gl_map_grid2d(void* self, int32_t un, double u1, double u2, int32_t vn, double v1, double v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMapGrid1f)
@@ -3271,6 +3678,7 @@ void q_openglfunctions_4_0_compatibility_gl_map_grid2d(void* self, int32_t un, d
 /// @param un int32_t
 /// @param u1 float
 /// @param u2 float
+///
 void q_openglfunctions_4_0_compatibility_gl_map_grid1f(void* self, int32_t un, float u1, float u2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMapGrid1d)
@@ -3279,6 +3687,7 @@ void q_openglfunctions_4_0_compatibility_gl_map_grid1f(void* self, int32_t un, f
 /// @param un int32_t
 /// @param u1 double
 /// @param u2 double
+///
 void q_openglfunctions_4_0_compatibility_gl_map_grid1d(void* self, int32_t un, double u1, double u2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMap2f)
@@ -3294,6 +3703,7 @@ void q_openglfunctions_4_0_compatibility_gl_map_grid1d(void* self, int32_t un, d
 /// @param vstride int32_t
 /// @param vorder int32_t
 /// @param points float*
+///
 void q_openglfunctions_4_0_compatibility_gl_map2f(void* self, uint32_t target, float u1, float u2, int32_t ustride, int32_t uorder, float v1, float v2, int32_t vstride, int32_t vorder, float* points);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMap2d)
@@ -3309,6 +3719,7 @@ void q_openglfunctions_4_0_compatibility_gl_map2f(void* self, uint32_t target, f
 /// @param vstride int32_t
 /// @param vorder int32_t
 /// @param points double*
+///
 void q_openglfunctions_4_0_compatibility_gl_map2d(void* self, uint32_t target, double u1, double u2, int32_t ustride, int32_t uorder, double v1, double v2, int32_t vstride, int32_t vorder, double* points);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMap1f)
@@ -3320,6 +3731,7 @@ void q_openglfunctions_4_0_compatibility_gl_map2d(void* self, uint32_t target, d
 /// @param stride int32_t
 /// @param order int32_t
 /// @param points float*
+///
 void q_openglfunctions_4_0_compatibility_gl_map1f(void* self, uint32_t target, float u1, float u2, int32_t stride, int32_t order, float* points);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMap1d)
@@ -3331,17 +3743,20 @@ void q_openglfunctions_4_0_compatibility_gl_map1f(void* self, uint32_t target, f
 /// @param stride int32_t
 /// @param order int32_t
 /// @param points double*
+///
 void q_openglfunctions_4_0_compatibility_gl_map1d(void* self, uint32_t target, double u1, double u2, int32_t stride, int32_t order, double* points);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPushAttrib)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_push_attrib(void* self, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPopAttrib)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_pop_attrib(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glAccum)
@@ -3349,18 +3764,21 @@ void q_openglfunctions_4_0_compatibility_gl_pop_attrib(void* self);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param op uint32_t
 /// @param value float
+///
 void q_openglfunctions_4_0_compatibility_gl_accum(void* self, uint32_t op, float value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexMask)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_index_mask(void* self, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearIndex)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c float
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_index(void* self, float c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClearAccum)
@@ -3370,40 +3788,47 @@ void q_openglfunctions_4_0_compatibility_gl_clear_index(void* self, float c);
 /// @param green float
 /// @param blue float
 /// @param alpha float
+///
 void q_openglfunctions_4_0_compatibility_gl_clear_accum(void* self, float red, float green, float blue, float alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPushName)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param name uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_push_name(void* self, uint32_t name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPopName)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_pop_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPassThrough)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param token float
+///
 void q_openglfunctions_4_0_compatibility_gl_pass_through(void* self, float token);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLoadName)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param name uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_load_name(void* self, uint32_t name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glInitNames)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_init_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRenderMode)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 int32_t q_openglfunctions_4_0_compatibility_gl_render_mode(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSelectBuffer)
@@ -3411,6 +3836,7 @@ int32_t q_openglfunctions_4_0_compatibility_gl_render_mode(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param size int32_t
 /// @param buffer uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_select_buffer(void* self, int32_t size, uint32_t* buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFeedbackBuffer)
@@ -3419,6 +3845,7 @@ void q_openglfunctions_4_0_compatibility_gl_select_buffer(void* self, int32_t si
 /// @param size int32_t
 /// @param type uint32_t
 /// @param buffer float*
+///
 void q_openglfunctions_4_0_compatibility_gl_feedback_buffer(void* self, int32_t size, uint32_t type, float* buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexGeniv)
@@ -3427,6 +3854,7 @@ void q_openglfunctions_4_0_compatibility_gl_feedback_buffer(void* self, int32_t 
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_geniv(void* self, uint32_t coord, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexGeni)
@@ -3435,6 +3863,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_geniv(void* self, uint32_t coord
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_geni(void* self, uint32_t coord, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexGenfv)
@@ -3443,6 +3872,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_geni(void* self, uint32_t coord,
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_genfv(void* self, uint32_t coord, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexGenf)
@@ -3451,6 +3881,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_genfv(void* self, uint32_t coord
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_genf(void* self, uint32_t coord, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexGendv)
@@ -3459,6 +3890,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_genf(void* self, uint32_t coord,
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param params double*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_gendv(void* self, uint32_t coord, uint32_t pname, double* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexGend)
@@ -3467,6 +3899,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_gendv(void* self, uint32_t coord
 /// @param coord uint32_t
 /// @param pname uint32_t
 /// @param param double
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_gend(void* self, uint32_t coord, uint32_t pname, double param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexEnviv)
@@ -3475,6 +3908,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_gend(void* self, uint32_t coord,
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_enviv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexEnvi)
@@ -3483,6 +3917,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_enviv(void* self, uint32_t targe
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_envi(void* self, uint32_t target, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexEnvfv)
@@ -3491,6 +3926,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_envi(void* self, uint32_t target
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_envfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexEnvf)
@@ -3499,18 +3935,21 @@ void q_openglfunctions_4_0_compatibility_gl_tex_envfv(void* self, uint32_t targe
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_envf(void* self, uint32_t target, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glShadeModel)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_shade_model(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPolygonStipple)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mask uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_polygon_stipple(void* self, uint8_t* mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMaterialiv)
@@ -3519,6 +3958,7 @@ void q_openglfunctions_4_0_compatibility_gl_polygon_stipple(void* self, uint8_t*
 /// @param face uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_materialiv(void* self, uint32_t face, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMateriali)
@@ -3527,6 +3967,7 @@ void q_openglfunctions_4_0_compatibility_gl_materialiv(void* self, uint32_t face
 /// @param face uint32_t
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_materiali(void* self, uint32_t face, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMaterialfv)
@@ -3535,6 +3976,7 @@ void q_openglfunctions_4_0_compatibility_gl_materiali(void* self, uint32_t face,
 /// @param face uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_materialfv(void* self, uint32_t face, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMaterialf)
@@ -3543,6 +3985,7 @@ void q_openglfunctions_4_0_compatibility_gl_materialfv(void* self, uint32_t face
 /// @param face uint32_t
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_materialf(void* self, uint32_t face, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLineStipple)
@@ -3550,6 +3993,7 @@ void q_openglfunctions_4_0_compatibility_gl_materialf(void* self, uint32_t face,
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param factor int32_t
 /// @param pattern uint16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_line_stipple(void* self, int32_t factor, uint16_t pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLightModeliv)
@@ -3557,6 +4001,7 @@ void q_openglfunctions_4_0_compatibility_gl_line_stipple(void* self, int32_t fac
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_light_modeliv(void* self, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLightModeli)
@@ -3564,6 +4009,7 @@ void q_openglfunctions_4_0_compatibility_gl_light_modeliv(void* self, uint32_t p
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_light_modeli(void* self, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLightModelfv)
@@ -3571,6 +4017,7 @@ void q_openglfunctions_4_0_compatibility_gl_light_modeli(void* self, uint32_t pn
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_light_modelfv(void* self, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLightModelf)
@@ -3578,6 +4025,7 @@ void q_openglfunctions_4_0_compatibility_gl_light_modelfv(void* self, uint32_t p
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_light_modelf(void* self, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLightiv)
@@ -3586,6 +4034,7 @@ void q_openglfunctions_4_0_compatibility_gl_light_modelf(void* self, uint32_t pn
 /// @param light uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_lightiv(void* self, uint32_t light, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLighti)
@@ -3594,6 +4043,7 @@ void q_openglfunctions_4_0_compatibility_gl_lightiv(void* self, uint32_t light, 
 /// @param light uint32_t
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_lighti(void* self, uint32_t light, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLightfv)
@@ -3602,6 +4052,7 @@ void q_openglfunctions_4_0_compatibility_gl_lighti(void* self, uint32_t light, u
 /// @param light uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_lightfv(void* self, uint32_t light, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLightf)
@@ -3610,6 +4061,7 @@ void q_openglfunctions_4_0_compatibility_gl_lightfv(void* self, uint32_t light, 
 /// @param light uint32_t
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_lightf(void* self, uint32_t light, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogiv)
@@ -3617,6 +4069,7 @@ void q_openglfunctions_4_0_compatibility_gl_lightf(void* self, uint32_t light, u
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_fogiv(void* self, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogi)
@@ -3624,6 +4077,7 @@ void q_openglfunctions_4_0_compatibility_gl_fogiv(void* self, uint32_t pname, in
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_fogi(void* self, uint32_t pname, int32_t param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogfv)
@@ -3631,6 +4085,7 @@ void q_openglfunctions_4_0_compatibility_gl_fogi(void* self, uint32_t pname, int
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_fogfv(void* self, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogf)
@@ -3638,6 +4093,7 @@ void q_openglfunctions_4_0_compatibility_gl_fogfv(void* self, uint32_t pname, fl
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param pname uint32_t
 /// @param param float
+///
 void q_openglfunctions_4_0_compatibility_gl_fogf(void* self, uint32_t pname, float param);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorMaterial)
@@ -3645,6 +4101,7 @@ void q_openglfunctions_4_0_compatibility_gl_fogf(void* self, uint32_t pname, flo
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param face uint32_t
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color_material(void* self, uint32_t face, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClipPlane)
@@ -3652,12 +4109,14 @@ void q_openglfunctions_4_0_compatibility_gl_color_material(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param plane uint32_t
 /// @param equation double*
+///
 void q_openglfunctions_4_0_compatibility_gl_clip_plane(void* self, uint32_t plane, double* equation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4s)
@@ -3667,12 +4126,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex4sv(void* self, int16_t* v);
 /// @param y int16_t
 /// @param z int16_t
 /// @param w int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4s(void* self, int16_t x, int16_t y, int16_t z, int16_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4i)
@@ -3682,12 +4143,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex4iv(void* self, int32_t* v);
 /// @param y int32_t
 /// @param z int32_t
 /// @param w int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4i(void* self, int32_t x, int32_t y, int32_t z, int32_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4f)
@@ -3697,12 +4160,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex4fv(void* self, float* v);
 /// @param y float
 /// @param z float
 /// @param w float
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4f(void* self, float x, float y, float z, float w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex4d)
@@ -3712,12 +4177,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex4dv(void* self, double* v);
 /// @param y double
 /// @param z double
 /// @param w double
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex4d(void* self, double x, double y, double z, double w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3s)
@@ -3726,12 +4193,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex3sv(void* self, int16_t* v);
 /// @param x int16_t
 /// @param y int16_t
 /// @param z int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3s(void* self, int16_t x, int16_t y, int16_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3i)
@@ -3740,12 +4209,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex3iv(void* self, int32_t* v);
 /// @param x int32_t
 /// @param y int32_t
 /// @param z int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3i(void* self, int32_t x, int32_t y, int32_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3f)
@@ -3754,12 +4225,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex3fv(void* self, float* v);
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3f(void* self, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex3d)
@@ -3768,12 +4241,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex3dv(void* self, double* v);
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex3d(void* self, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2s)
@@ -3781,12 +4256,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex2sv(void* self, int16_t* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x int16_t
 /// @param y int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2s(void* self, int16_t x, int16_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2i)
@@ -3794,12 +4271,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex2iv(void* self, int32_t* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x int32_t
 /// @param y int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2i(void* self, int32_t x, int32_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2f)
@@ -3807,12 +4286,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex2fv(void* self, float* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x float
 /// @param y float
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2f(void* self, float x, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertex2d)
@@ -3820,12 +4301,14 @@ void q_openglfunctions_4_0_compatibility_gl_vertex2dv(void* self, double* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x double
 /// @param y double
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex2d(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4s)
@@ -3835,12 +4318,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord4sv(void* self, int16_t* v)
 /// @param t int16_t
 /// @param r int16_t
 /// @param q int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4s(void* self, int16_t s, int16_t t, int16_t r, int16_t q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4i)
@@ -3850,12 +4335,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord4iv(void* self, int32_t* v)
 /// @param t int32_t
 /// @param r int32_t
 /// @param q int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4i(void* self, int32_t s, int32_t t, int32_t r, int32_t q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4f)
@@ -3865,12 +4352,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord4fv(void* self, float* v);
 /// @param t float
 /// @param r float
 /// @param q float
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4f(void* self, float s, float t, float r, float q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord4d)
@@ -3880,12 +4369,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord4dv(void* self, double* v);
 /// @param t double
 /// @param r double
 /// @param q double
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord4d(void* self, double s, double t, double r, double q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3s)
@@ -3894,12 +4385,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord3sv(void* self, int16_t* v)
 /// @param s int16_t
 /// @param t int16_t
 /// @param r int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3s(void* self, int16_t s, int16_t t, int16_t r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3i)
@@ -3908,12 +4401,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord3iv(void* self, int32_t* v)
 /// @param s int32_t
 /// @param t int32_t
 /// @param r int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3i(void* self, int32_t s, int32_t t, int32_t r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3f)
@@ -3922,12 +4417,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord3fv(void* self, float* v);
 /// @param s float
 /// @param t float
 /// @param r float
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3f(void* self, float s, float t, float r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord3d)
@@ -3936,12 +4433,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord3dv(void* self, double* v);
 /// @param s double
 /// @param t double
 /// @param r double
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord3d(void* self, double s, double t, double r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2s)
@@ -3949,12 +4448,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord2sv(void* self, int16_t* v)
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s int16_t
 /// @param t int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2s(void* self, int16_t s, int16_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2i)
@@ -3962,12 +4463,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord2iv(void* self, int32_t* v)
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s int32_t
 /// @param t int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2i(void* self, int32_t s, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2f)
@@ -3975,12 +4478,14 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord2fv(void* self, float* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s float
 /// @param t float
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2f(void* self, float s, float t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord2d)
@@ -3988,54 +4493,63 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord2dv(void* self, double* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s double
 /// @param t double
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord2d(void* self, double s, double t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1s)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1s(void* self, int16_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1i)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1i(void* self, int32_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1f)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s float
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1f(void* self, float s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoord1d)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param s double
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord1d(void* self, double s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRectsv)
@@ -4043,6 +4557,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord1d(void* self, double s);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v1 int16_t*
 /// @param v2 int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_rectsv(void* self, int16_t* v1, int16_t* v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRects)
@@ -4052,6 +4567,7 @@ void q_openglfunctions_4_0_compatibility_gl_rectsv(void* self, int16_t* v1, int1
 /// @param y1 int16_t
 /// @param x2 int16_t
 /// @param y2 int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_rects(void* self, int16_t x1, int16_t y1, int16_t x2, int16_t y2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRectiv)
@@ -4059,6 +4575,7 @@ void q_openglfunctions_4_0_compatibility_gl_rects(void* self, int16_t x1, int16_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v1 int32_t*
 /// @param v2 int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_rectiv(void* self, int32_t* v1, int32_t* v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRecti)
@@ -4068,6 +4585,7 @@ void q_openglfunctions_4_0_compatibility_gl_rectiv(void* self, int32_t* v1, int3
 /// @param y1 int32_t
 /// @param x2 int32_t
 /// @param y2 int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_recti(void* self, int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRectfv)
@@ -4075,6 +4593,7 @@ void q_openglfunctions_4_0_compatibility_gl_recti(void* self, int32_t x1, int32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v1 float*
 /// @param v2 float*
+///
 void q_openglfunctions_4_0_compatibility_gl_rectfv(void* self, float* v1, float* v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRectf)
@@ -4084,6 +4603,7 @@ void q_openglfunctions_4_0_compatibility_gl_rectfv(void* self, float* v1, float*
 /// @param y1 float
 /// @param x2 float
 /// @param y2 float
+///
 void q_openglfunctions_4_0_compatibility_gl_rectf(void* self, float x1, float y1, float x2, float y2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRectdv)
@@ -4091,6 +4611,7 @@ void q_openglfunctions_4_0_compatibility_gl_rectf(void* self, float x1, float y1
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v1 double*
 /// @param v2 double*
+///
 void q_openglfunctions_4_0_compatibility_gl_rectdv(void* self, double* v1, double* v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRectd)
@@ -4100,12 +4621,14 @@ void q_openglfunctions_4_0_compatibility_gl_rectdv(void* self, double* v1, doubl
 /// @param y1 double
 /// @param x2 double
 /// @param y2 double
+///
 void q_openglfunctions_4_0_compatibility_gl_rectd(void* self, double x1, double y1, double x2, double y2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4s)
@@ -4115,12 +4638,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos4sv(void* self, int16_t* v
 /// @param y int16_t
 /// @param z int16_t
 /// @param w int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4s(void* self, int16_t x, int16_t y, int16_t z, int16_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4i)
@@ -4130,12 +4655,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos4iv(void* self, int32_t* v
 /// @param y int32_t
 /// @param z int32_t
 /// @param w int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4i(void* self, int32_t x, int32_t y, int32_t z, int32_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4f)
@@ -4145,12 +4672,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos4fv(void* self, float* v);
 /// @param y float
 /// @param z float
 /// @param w float
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4f(void* self, float x, float y, float z, float w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos4d)
@@ -4160,12 +4689,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos4dv(void* self, double* v)
 /// @param y double
 /// @param z double
 /// @param w double
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos4d(void* self, double x, double y, double z, double w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3s)
@@ -4174,12 +4705,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos3sv(void* self, int16_t* v
 /// @param x int16_t
 /// @param y int16_t
 /// @param z int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3s(void* self, int16_t x, int16_t y, int16_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3i)
@@ -4188,12 +4721,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos3iv(void* self, int32_t* v
 /// @param x int32_t
 /// @param y int32_t
 /// @param z int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3i(void* self, int32_t x, int32_t y, int32_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3f)
@@ -4202,12 +4737,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos3fv(void* self, float* v);
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3f(void* self, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos3d)
@@ -4216,12 +4753,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos3dv(void* self, double* v)
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos3d(void* self, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2s)
@@ -4229,12 +4768,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos2sv(void* self, int16_t* v
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x int16_t
 /// @param y int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2s(void* self, int16_t x, int16_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2i)
@@ -4242,12 +4783,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos2iv(void* self, int32_t* v
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x int32_t
 /// @param y int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2i(void* self, int32_t x, int32_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2f)
@@ -4255,12 +4798,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos2fv(void* self, float* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x float
 /// @param y float
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2f(void* self, float x, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glRasterPos2d)
@@ -4268,12 +4813,14 @@ void q_openglfunctions_4_0_compatibility_gl_raster_pos2dv(void* self, double* v)
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x double
 /// @param y double
+///
 void q_openglfunctions_4_0_compatibility_gl_raster_pos2d(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3s)
@@ -4282,12 +4829,14 @@ void q_openglfunctions_4_0_compatibility_gl_normal3sv(void* self, int16_t* v);
 /// @param nx int16_t
 /// @param ny int16_t
 /// @param nz int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3s(void* self, int16_t nx, int16_t ny, int16_t nz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3i)
@@ -4296,12 +4845,14 @@ void q_openglfunctions_4_0_compatibility_gl_normal3iv(void* self, int32_t* v);
 /// @param nx int32_t
 /// @param ny int32_t
 /// @param nz int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3i(void* self, int32_t nx, int32_t ny, int32_t nz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3f)
@@ -4310,12 +4861,14 @@ void q_openglfunctions_4_0_compatibility_gl_normal3fv(void* self, float* v);
 /// @param nx float
 /// @param ny float
 /// @param nz float
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3f(void* self, float nx, float ny, float nz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3d)
@@ -4324,12 +4877,14 @@ void q_openglfunctions_4_0_compatibility_gl_normal3dv(void* self, double* v);
 /// @param nx double
 /// @param ny double
 /// @param nz double
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3d(void* self, double nx, double ny, double nz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3bv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v signed char*
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3bv(void* self, signed char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormal3b)
@@ -4338,77 +4893,90 @@ void q_openglfunctions_4_0_compatibility_gl_normal3bv(void* self, signed char* v
 /// @param nx signed char
 /// @param ny signed char
 /// @param nz signed char
+///
 void q_openglfunctions_4_0_compatibility_gl_normal3b(void* self, signed char nx, signed char ny, signed char nz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexsv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_indexsv(void* self, int16_t* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexs)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_indexs(void* self, int16_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexiv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_indexiv(void* self, int32_t* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexi)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_indexi(void* self, int32_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexfv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c float*
+///
 void q_openglfunctions_4_0_compatibility_gl_indexfv(void* self, float* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexf)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c float
+///
 void q_openglfunctions_4_0_compatibility_gl_indexf(void* self, float c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexdv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c double*
+///
 void q_openglfunctions_4_0_compatibility_gl_indexdv(void* self, double* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexd)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param c double
+///
 void q_openglfunctions_4_0_compatibility_gl_indexd(void* self, double c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEnd)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEdgeFlagv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param flag uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_edge_flagv(void* self, uint8_t* flag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEdgeFlag)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param flag uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_edge_flag(void* self, uint8_t flag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4usv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4usv(void* self, uint16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4us)
@@ -4418,12 +4986,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4usv(void* self, uint16_t* v);
 /// @param green uint16_t
 /// @param blue uint16_t
 /// @param alpha uint16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color4us(void* self, uint16_t red, uint16_t green, uint16_t blue, uint16_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4uiv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4uiv(void* self, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4ui)
@@ -4433,12 +5003,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4uiv(void* self, uint32_t* v);
 /// @param green uint32_t
 /// @param blue uint32_t
 /// @param alpha uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color4ui(void* self, uint32_t red, uint32_t green, uint32_t blue, uint32_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4ubv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4ubv(void* self, uint8_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4ub)
@@ -4448,12 +5020,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4ubv(void* self, uint8_t* v);
 /// @param green uint8_t
 /// @param blue uint8_t
 /// @param alpha uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color4ub(void* self, uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4s)
@@ -4463,12 +5037,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4sv(void* self, int16_t* v);
 /// @param green int16_t
 /// @param blue int16_t
 /// @param alpha int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color4s(void* self, int16_t red, int16_t green, int16_t blue, int16_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4i)
@@ -4478,12 +5054,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4iv(void* self, int32_t* v);
 /// @param green int32_t
 /// @param blue int32_t
 /// @param alpha int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color4i(void* self, int32_t red, int32_t green, int32_t blue, int32_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4f)
@@ -4493,12 +5071,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4fv(void* self, float* v);
 /// @param green float
 /// @param blue float
 /// @param alpha float
+///
 void q_openglfunctions_4_0_compatibility_gl_color4f(void* self, float red, float green, float blue, float alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4d)
@@ -4508,12 +5088,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4dv(void* self, double* v);
 /// @param green double
 /// @param blue double
 /// @param alpha double
+///
 void q_openglfunctions_4_0_compatibility_gl_color4d(void* self, double red, double green, double blue, double alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4bv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v signed char*
+///
 void q_openglfunctions_4_0_compatibility_gl_color4bv(void* self, signed char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor4b)
@@ -4523,12 +5105,14 @@ void q_openglfunctions_4_0_compatibility_gl_color4bv(void* self, signed char* v)
 /// @param green signed char
 /// @param blue signed char
 /// @param alpha signed char
+///
 void q_openglfunctions_4_0_compatibility_gl_color4b(void* self, signed char red, signed char green, signed char blue, signed char alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3usv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3usv(void* self, uint16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3us)
@@ -4537,12 +5121,14 @@ void q_openglfunctions_4_0_compatibility_gl_color3usv(void* self, uint16_t* v);
 /// @param red uint16_t
 /// @param green uint16_t
 /// @param blue uint16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color3us(void* self, uint16_t red, uint16_t green, uint16_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3uiv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3uiv(void* self, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3ui)
@@ -4551,12 +5137,14 @@ void q_openglfunctions_4_0_compatibility_gl_color3uiv(void* self, uint32_t* v);
 /// @param red uint32_t
 /// @param green uint32_t
 /// @param blue uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color3ui(void* self, uint32_t red, uint32_t green, uint32_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3ubv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3ubv(void* self, uint8_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3ub)
@@ -4565,12 +5153,14 @@ void q_openglfunctions_4_0_compatibility_gl_color3ubv(void* self, uint8_t* v);
 /// @param red uint8_t
 /// @param green uint8_t
 /// @param blue uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color3ub(void* self, uint8_t red, uint8_t green, uint8_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3s)
@@ -4579,12 +5169,14 @@ void q_openglfunctions_4_0_compatibility_gl_color3sv(void* self, int16_t* v);
 /// @param red int16_t
 /// @param green int16_t
 /// @param blue int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color3s(void* self, int16_t red, int16_t green, int16_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3i)
@@ -4593,12 +5185,14 @@ void q_openglfunctions_4_0_compatibility_gl_color3iv(void* self, int32_t* v);
 /// @param red int32_t
 /// @param green int32_t
 /// @param blue int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_color3i(void* self, int32_t red, int32_t green, int32_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3f)
@@ -4607,12 +5201,14 @@ void q_openglfunctions_4_0_compatibility_gl_color3fv(void* self, float* v);
 /// @param red float
 /// @param green float
 /// @param blue float
+///
 void q_openglfunctions_4_0_compatibility_gl_color3f(void* self, float red, float green, float blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3d)
@@ -4621,12 +5217,14 @@ void q_openglfunctions_4_0_compatibility_gl_color3dv(void* self, double* v);
 /// @param red double
 /// @param green double
 /// @param blue double
+///
 void q_openglfunctions_4_0_compatibility_gl_color3d(void* self, double red, double green, double blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3bv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v signed char*
+///
 void q_openglfunctions_4_0_compatibility_gl_color3bv(void* self, signed char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColor3b)
@@ -4635,6 +5233,7 @@ void q_openglfunctions_4_0_compatibility_gl_color3bv(void* self, signed char* v)
 /// @param red signed char
 /// @param green signed char
 /// @param blue signed char
+///
 void q_openglfunctions_4_0_compatibility_gl_color3b(void* self, signed char red, signed char green, signed char blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBitmap)
@@ -4647,24 +5246,28 @@ void q_openglfunctions_4_0_compatibility_gl_color3b(void* self, signed char red,
 /// @param xmove float
 /// @param ymove float
 /// @param bitmap uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_bitmap(void* self, int32_t width, int32_t height, float xorig, float yorig, float xmove, float ymove, uint8_t* bitmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glBegin)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_begin(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glListBase)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param base uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_list_base(void* self, uint32_t base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGenLists)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param range int32_t
+///
 uint32_t q_openglfunctions_4_0_compatibility_gl_gen_lists(void* self, int32_t range);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDeleteLists)
@@ -4672,6 +5275,7 @@ uint32_t q_openglfunctions_4_0_compatibility_gl_gen_lists(void* self, int32_t ra
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param list uint32_t
 /// @param range int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_delete_lists(void* self, uint32_t list, int32_t range);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCallLists)
@@ -4680,17 +5284,20 @@ void q_openglfunctions_4_0_compatibility_gl_delete_lists(void* self, uint32_t li
 /// @param n int32_t
 /// @param type uint32_t
 /// @param lists void*
+///
 void q_openglfunctions_4_0_compatibility_gl_call_lists(void* self, int32_t n, uint32_t type, void* lists);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCallList)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param list uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_call_list(void* self, uint32_t list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEndList)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_end_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNewList)
@@ -4698,17 +5305,20 @@ void q_openglfunctions_4_0_compatibility_gl_end_list(void* self);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param list uint32_t
 /// @param mode uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_new_list(void* self, uint32_t list, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPushClientAttrib)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param mask uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_push_client_attrib(void* self, uint32_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPopClientAttrib)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_gl_pop_client_attrib(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glPrioritizeTextures)
@@ -4717,6 +5327,7 @@ void q_openglfunctions_4_0_compatibility_gl_pop_client_attrib(void* self);
 /// @param n int32_t
 /// @param textures uint32_t*
 /// @param priorities float*
+///
 void q_openglfunctions_4_0_compatibility_gl_prioritize_textures(void* self, int32_t n, uint32_t* textures, float* priorities);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glAreTexturesResident)
@@ -4725,6 +5336,7 @@ void q_openglfunctions_4_0_compatibility_gl_prioritize_textures(void* self, int3
 /// @param n int32_t
 /// @param textures uint32_t*
 /// @param residences uint8_t*
+///
 uint8_t q_openglfunctions_4_0_compatibility_gl_are_textures_resident(void* self, int32_t n, uint32_t* textures, uint8_t* residences);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexPointer)
@@ -4734,6 +5346,7 @@ uint8_t q_openglfunctions_4_0_compatibility_gl_are_textures_resident(void* self,
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_pointer(void* self, int32_t size, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glTexCoordPointer)
@@ -4743,6 +5356,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_pointer(void* self, int32_t s
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_tex_coord_pointer(void* self, int32_t size, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glNormalPointer)
@@ -4751,6 +5365,7 @@ void q_openglfunctions_4_0_compatibility_gl_tex_coord_pointer(void* self, int32_
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_normal_pointer(void* self, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glInterleavedArrays)
@@ -4759,6 +5374,7 @@ void q_openglfunctions_4_0_compatibility_gl_normal_pointer(void* self, uint32_t 
 /// @param format uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_interleaved_arrays(void* self, uint32_t format, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glIndexPointer)
@@ -4767,12 +5383,14 @@ void q_openglfunctions_4_0_compatibility_gl_interleaved_arrays(void* self, uint3
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_index_pointer(void* self, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEnableClientState)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param array uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_enable_client_state(void* self, uint32_t array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glEdgeFlagPointer)
@@ -4780,12 +5398,14 @@ void q_openglfunctions_4_0_compatibility_gl_enable_client_state(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_edge_flag_pointer(void* self, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glDisableClientState)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param array uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_disable_client_state(void* self, uint32_t array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorPointer)
@@ -4795,24 +5415,28 @@ void q_openglfunctions_4_0_compatibility_gl_disable_client_state(void* self, uin
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_color_pointer(void* self, int32_t size, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glArrayElement)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param i int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_array_element(void* self, int32_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glResetMinmax)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_reset_minmax(void* self, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glResetHistogram)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_reset_histogram(void* self, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMinmax)
@@ -4821,6 +5445,7 @@ void q_openglfunctions_4_0_compatibility_gl_reset_histogram(void* self, uint32_t
 /// @param target uint32_t
 /// @param internalformat uint32_t
 /// @param sink uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_minmax(void* self, uint32_t target, uint32_t internalformat, uint8_t sink);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glHistogram)
@@ -4830,6 +5455,7 @@ void q_openglfunctions_4_0_compatibility_gl_minmax(void* self, uint32_t target, 
 /// @param width int32_t
 /// @param internalformat uint32_t
 /// @param sink uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_histogram(void* self, uint32_t target, int32_t width, uint32_t internalformat, uint8_t sink);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMinmaxParameteriv)
@@ -4838,6 +5464,7 @@ void q_openglfunctions_4_0_compatibility_gl_histogram(void* self, uint32_t targe
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_minmax_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMinmaxParameterfv)
@@ -4846,6 +5473,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_minmax_parameteriv(void* self, u
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_minmax_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetMinmax)
@@ -4856,6 +5484,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_minmax_parameterfv(void* self, u
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param values void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_minmax(void* self, uint32_t target, uint8_t reset, uint32_t format, uint32_t type, void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetHistogramParameteriv)
@@ -4864,6 +5493,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_minmax(void* self, uint32_t targ
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_histogram_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetHistogramParameterfv)
@@ -4872,6 +5502,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_histogram_parameteriv(void* self
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_histogram_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetHistogram)
@@ -4882,6 +5513,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_histogram_parameterfv(void* self
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param values void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_histogram(void* self, uint32_t target, uint8_t reset, uint32_t format, uint32_t type, void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSeparableFilter2D)
@@ -4895,6 +5527,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_histogram(void* self, uint32_t t
 /// @param type uint32_t
 /// @param row void*
 /// @param column void*
+///
 void q_openglfunctions_4_0_compatibility_gl_separable_filter2_d(void* self, uint32_t target, uint32_t internalformat, int32_t width, int32_t height, uint32_t format, uint32_t type, void* row, void* column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetSeparableFilter)
@@ -4906,6 +5539,7 @@ void q_openglfunctions_4_0_compatibility_gl_separable_filter2_d(void* self, uint
 /// @param row void*
 /// @param column void*
 /// @param span void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_separable_filter(void* self, uint32_t target, uint32_t format, uint32_t type, void* row, void* column, void* span);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetConvolutionParameteriv)
@@ -4914,6 +5548,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_separable_filter(void* self, uin
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_convolution_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetConvolutionParameterfv)
@@ -4922,6 +5557,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_convolution_parameteriv(void* se
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_convolution_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetConvolutionFilter)
@@ -4931,6 +5567,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_convolution_parameterfv(void* se
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param image void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_convolution_filter(void* self, uint32_t target, uint32_t format, uint32_t type, void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyConvolutionFilter2D)
@@ -4942,6 +5579,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_convolution_filter(void* self, u
 /// @param y int32_t
 /// @param width int32_t
 /// @param height int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_convolution_filter2_d(void* self, uint32_t target, uint32_t internalformat, int32_t x, int32_t y, int32_t width, int32_t height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyConvolutionFilter1D)
@@ -4952,6 +5590,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_convolution_filter2_d(void* sel
 /// @param x int32_t
 /// @param y int32_t
 /// @param width int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_convolution_filter1_d(void* self, uint32_t target, uint32_t internalformat, int32_t x, int32_t y, int32_t width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glConvolutionParameteriv)
@@ -4960,6 +5599,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_convolution_filter1_d(void* sel
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_convolution_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glConvolutionParameteri)
@@ -4968,6 +5608,7 @@ void q_openglfunctions_4_0_compatibility_gl_convolution_parameteriv(void* self, 
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_convolution_parameteri(void* self, uint32_t target, uint32_t pname, int32_t params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glConvolutionParameterfv)
@@ -4976,6 +5617,7 @@ void q_openglfunctions_4_0_compatibility_gl_convolution_parameteri(void* self, u
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_convolution_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glConvolutionParameterf)
@@ -4984,6 +5626,7 @@ void q_openglfunctions_4_0_compatibility_gl_convolution_parameterfv(void* self, 
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float
+///
 void q_openglfunctions_4_0_compatibility_gl_convolution_parameterf(void* self, uint32_t target, uint32_t pname, float params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glConvolutionFilter2D)
@@ -4996,6 +5639,7 @@ void q_openglfunctions_4_0_compatibility_gl_convolution_parameterf(void* self, u
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param image void*
+///
 void q_openglfunctions_4_0_compatibility_gl_convolution_filter2_d(void* self, uint32_t target, uint32_t internalformat, int32_t width, int32_t height, uint32_t format, uint32_t type, void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glConvolutionFilter1D)
@@ -5007,6 +5651,7 @@ void q_openglfunctions_4_0_compatibility_gl_convolution_filter2_d(void* self, ui
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param image void*
+///
 void q_openglfunctions_4_0_compatibility_gl_convolution_filter1_d(void* self, uint32_t target, uint32_t internalformat, int32_t width, uint32_t format, uint32_t type, void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyColorSubTable)
@@ -5017,6 +5662,7 @@ void q_openglfunctions_4_0_compatibility_gl_convolution_filter1_d(void* self, ui
 /// @param x int32_t
 /// @param y int32_t
 /// @param width int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_color_sub_table(void* self, uint32_t target, int32_t start, int32_t x, int32_t y, int32_t width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorSubTable)
@@ -5028,6 +5674,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_color_sub_table(void* self, uin
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param data void*
+///
 void q_openglfunctions_4_0_compatibility_gl_color_sub_table(void* self, uint32_t target, int32_t start, int32_t count, uint32_t format, uint32_t type, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetColorTableParameteriv)
@@ -5036,6 +5683,7 @@ void q_openglfunctions_4_0_compatibility_gl_color_sub_table(void* self, uint32_t
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_color_table_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetColorTableParameterfv)
@@ -5044,6 +5692,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_color_table_parameteriv(void* se
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_color_table_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glGetColorTable)
@@ -5053,6 +5702,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_color_table_parameterfv(void* se
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param table void*
+///
 void q_openglfunctions_4_0_compatibility_gl_get_color_table(void* self, uint32_t target, uint32_t format, uint32_t type, void* table);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glCopyColorTable)
@@ -5063,6 +5713,7 @@ void q_openglfunctions_4_0_compatibility_gl_get_color_table(void* self, uint32_t
 /// @param x int32_t
 /// @param y int32_t
 /// @param width int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_copy_color_table(void* self, uint32_t target, uint32_t internalformat, int32_t x, int32_t y, int32_t width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorTableParameteriv)
@@ -5071,6 +5722,7 @@ void q_openglfunctions_4_0_compatibility_gl_copy_color_table(void* self, uint32_
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_color_table_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorTableParameterfv)
@@ -5079,6 +5731,7 @@ void q_openglfunctions_4_0_compatibility_gl_color_table_parameteriv(void* self, 
 /// @param target uint32_t
 /// @param pname uint32_t
 /// @param params float*
+///
 void q_openglfunctions_4_0_compatibility_gl_color_table_parameterfv(void* self, uint32_t target, uint32_t pname, float* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glColorTable)
@@ -5090,30 +5743,35 @@ void q_openglfunctions_4_0_compatibility_gl_color_table_parameterfv(void* self, 
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param table void*
+///
 void q_openglfunctions_4_0_compatibility_gl_color_table(void* self, uint32_t target, uint32_t internalformat, int32_t width, uint32_t format, uint32_t type, void* table);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultTransposeMatrixd)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m double*
+///
 void q_openglfunctions_4_0_compatibility_gl_mult_transpose_matrixd(void* self, double* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultTransposeMatrixf)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m float*
+///
 void q_openglfunctions_4_0_compatibility_gl_mult_transpose_matrixf(void* self, float* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLoadTransposeMatrixd)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m double*
+///
 void q_openglfunctions_4_0_compatibility_gl_load_transpose_matrixd(void* self, double* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glLoadTransposeMatrixf)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param m float*
+///
 void q_openglfunctions_4_0_compatibility_gl_load_transpose_matrixf(void* self, float* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4sv)
@@ -5121,6 +5779,7 @@ void q_openglfunctions_4_0_compatibility_gl_load_transpose_matrixf(void* self, f
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4sv(void* self, uint32_t target, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4s)
@@ -5131,6 +5790,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4sv(void* self, uint3
 /// @param t int16_t
 /// @param r int16_t
 /// @param q int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4s(void* self, uint32_t target, int16_t s, int16_t t, int16_t r, int16_t q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4iv)
@@ -5138,6 +5798,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4s(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4iv(void* self, uint32_t target, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4i)
@@ -5148,6 +5809,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4iv(void* self, uint3
 /// @param t int32_t
 /// @param r int32_t
 /// @param q int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4i(void* self, uint32_t target, int32_t s, int32_t t, int32_t r, int32_t q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4fv)
@@ -5155,6 +5817,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4i(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4fv(void* self, uint32_t target, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4f)
@@ -5165,6 +5828,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4fv(void* self, uint3
 /// @param t float
 /// @param r float
 /// @param q float
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4f(void* self, uint32_t target, float s, float t, float r, float q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4dv)
@@ -5172,6 +5836,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4f(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4dv(void* self, uint32_t target, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord4d)
@@ -5182,6 +5847,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4dv(void* self, uint3
 /// @param t double
 /// @param r double
 /// @param q double
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4d(void* self, uint32_t target, double s, double t, double r, double q);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3sv)
@@ -5189,6 +5855,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord4d(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3sv(void* self, uint32_t target, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3s)
@@ -5198,6 +5865,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3sv(void* self, uint3
 /// @param s int16_t
 /// @param t int16_t
 /// @param r int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3s(void* self, uint32_t target, int16_t s, int16_t t, int16_t r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3iv)
@@ -5205,6 +5873,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3s(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3iv(void* self, uint32_t target, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3i)
@@ -5214,6 +5883,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3iv(void* self, uint3
 /// @param s int32_t
 /// @param t int32_t
 /// @param r int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3i(void* self, uint32_t target, int32_t s, int32_t t, int32_t r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3fv)
@@ -5221,6 +5891,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3i(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3fv(void* self, uint32_t target, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3f)
@@ -5230,6 +5901,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3fv(void* self, uint3
 /// @param s float
 /// @param t float
 /// @param r float
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3f(void* self, uint32_t target, float s, float t, float r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3dv)
@@ -5237,6 +5909,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3f(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3dv(void* self, uint32_t target, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord3d)
@@ -5246,6 +5919,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3dv(void* self, uint3
 /// @param s double
 /// @param t double
 /// @param r double
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3d(void* self, uint32_t target, double s, double t, double r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2sv)
@@ -5253,6 +5927,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord3d(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2sv(void* self, uint32_t target, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2s)
@@ -5261,6 +5936,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2sv(void* self, uint3
 /// @param target uint32_t
 /// @param s int16_t
 /// @param t int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2s(void* self, uint32_t target, int16_t s, int16_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2iv)
@@ -5268,6 +5944,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2s(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2iv(void* self, uint32_t target, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2i)
@@ -5276,6 +5953,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2iv(void* self, uint3
 /// @param target uint32_t
 /// @param s int32_t
 /// @param t int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2i(void* self, uint32_t target, int32_t s, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2fv)
@@ -5283,6 +5961,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2i(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2fv(void* self, uint32_t target, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2f)
@@ -5291,6 +5970,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2fv(void* self, uint3
 /// @param target uint32_t
 /// @param s float
 /// @param t float
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2f(void* self, uint32_t target, float s, float t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2dv)
@@ -5298,6 +5978,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2f(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2dv(void* self, uint32_t target, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord2d)
@@ -5306,6 +5987,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2dv(void* self, uint3
 /// @param target uint32_t
 /// @param s double
 /// @param t double
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2d(void* self, uint32_t target, double s, double t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1sv)
@@ -5313,6 +5995,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord2d(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1sv(void* self, uint32_t target, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1s)
@@ -5320,6 +6003,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1sv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param s int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1s(void* self, uint32_t target, int16_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1iv)
@@ -5327,6 +6011,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1s(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1iv(void* self, uint32_t target, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1i)
@@ -5334,6 +6019,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1iv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param s int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1i(void* self, uint32_t target, int32_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1fv)
@@ -5341,6 +6027,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1i(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1fv(void* self, uint32_t target, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1f)
@@ -5348,6 +6035,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1fv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param s float
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1f(void* self, uint32_t target, float s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1dv)
@@ -5355,6 +6043,7 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1f(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1dv(void* self, uint32_t target, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glMultiTexCoord1d)
@@ -5362,18 +6051,21 @@ void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1dv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param target uint32_t
 /// @param s double
+///
 void q_openglfunctions_4_0_compatibility_gl_multi_tex_coord1d(void* self, uint32_t target, double s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glClientActiveTexture)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param texture uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_client_active_texture(void* self, uint32_t texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3s)
@@ -5382,12 +6074,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos3sv(void* self, int16_t* v
 /// @param x int16_t
 /// @param y int16_t
 /// @param z int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3s(void* self, int16_t x, int16_t y, int16_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3i)
@@ -5396,12 +6090,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos3iv(void* self, int32_t* v
 /// @param x int32_t
 /// @param y int32_t
 /// @param z int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3i(void* self, int32_t x, int32_t y, int32_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3f)
@@ -5410,12 +6106,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos3fv(void* self, float* v);
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3f(void* self, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos3d)
@@ -5424,12 +6122,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos3dv(void* self, double* v)
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos3d(void* self, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2s)
@@ -5437,12 +6137,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos2sv(void* self, int16_t* v
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x int16_t
 /// @param y int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2s(void* self, int16_t x, int16_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2i)
@@ -5450,12 +6152,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos2iv(void* self, int32_t* v
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x int32_t
 /// @param y int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2i(void* self, int32_t x, int32_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2f)
@@ -5463,12 +6167,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos2fv(void* self, float* v);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x float
 /// @param y float
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2f(void* self, float x, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glWindowPos2d)
@@ -5476,6 +6182,7 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos2dv(void* self, double* v)
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param x double
 /// @param y double
+///
 void q_openglfunctions_4_0_compatibility_gl_window_pos2d(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColorPointer)
@@ -5485,12 +6192,14 @@ void q_openglfunctions_4_0_compatibility_gl_window_pos2d(void* self, double x, d
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color_pointer(void* self, int32_t size, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3usv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3usv(void* self, uint16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3us)
@@ -5499,12 +6208,14 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3usv(void* self, uint
 /// @param red uint16_t
 /// @param green uint16_t
 /// @param blue uint16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3us(void* self, uint16_t red, uint16_t green, uint16_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3uiv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3uiv(void* self, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3ui)
@@ -5513,12 +6224,14 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3uiv(void* self, uint
 /// @param red uint32_t
 /// @param green uint32_t
 /// @param blue uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3ui(void* self, uint32_t red, uint32_t green, uint32_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3ubv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3ubv(void* self, uint8_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3ub)
@@ -5527,12 +6240,14 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3ubv(void* self, uint
 /// @param red uint8_t
 /// @param green uint8_t
 /// @param blue uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3ub(void* self, uint8_t red, uint8_t green, uint8_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3sv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3sv(void* self, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3s)
@@ -5541,12 +6256,14 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3sv(void* self, int16
 /// @param red int16_t
 /// @param green int16_t
 /// @param blue int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3s(void* self, int16_t red, int16_t green, int16_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3iv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3iv(void* self, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3i)
@@ -5555,12 +6272,14 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3iv(void* self, int32
 /// @param red int32_t
 /// @param green int32_t
 /// @param blue int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3i(void* self, int32_t red, int32_t green, int32_t blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3fv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3fv(void* self, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3f)
@@ -5569,12 +6288,14 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3fv(void* self, float
 /// @param red float
 /// @param green float
 /// @param blue float
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3f(void* self, float red, float green, float blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3dv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3dv(void* self, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3d)
@@ -5583,12 +6304,14 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3dv(void* self, doubl
 /// @param red double
 /// @param green double
 /// @param blue double
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3d(void* self, double red, double green, double blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3bv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param v signed char*
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3bv(void* self, signed char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glSecondaryColor3b)
@@ -5597,6 +6320,7 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3bv(void* self, signe
 /// @param red signed char
 /// @param green signed char
 /// @param blue signed char
+///
 void q_openglfunctions_4_0_compatibility_gl_secondary_color3b(void* self, signed char red, signed char green, signed char blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogCoordPointer)
@@ -5605,30 +6329,35 @@ void q_openglfunctions_4_0_compatibility_gl_secondary_color3b(void* self, signed
 /// @param type uint32_t
 /// @param stride int32_t
 /// @param pointer void*
+///
 void q_openglfunctions_4_0_compatibility_gl_fog_coord_pointer(void* self, uint32_t type, int32_t stride, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogCoorddv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param coord double*
+///
 void q_openglfunctions_4_0_compatibility_gl_fog_coorddv(void* self, double* coord);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogCoordd)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param coord double
+///
 void q_openglfunctions_4_0_compatibility_gl_fog_coordd(void* self, double coord);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogCoordfv)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param coord float*
+///
 void q_openglfunctions_4_0_compatibility_gl_fog_coordfv(void* self, float* coord);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glFogCoordf)
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param coord float
+///
 void q_openglfunctions_4_0_compatibility_gl_fog_coordf(void* self, float coord);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4usv)
@@ -5636,6 +6365,7 @@ void q_openglfunctions_4_0_compatibility_gl_fog_coordf(void* self, float coord);
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4usv(void* self, uint32_t index, uint16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4uiv)
@@ -5643,6 +6373,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4usv(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4uiv(void* self, uint32_t index, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4ubv)
@@ -5650,6 +6381,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4uiv(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4ubv(void* self, uint32_t index, uint8_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4sv)
@@ -5657,6 +6389,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4ubv(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4sv(void* self, uint32_t index, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4s)
@@ -5667,6 +6400,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4sv(void* self, uint32_
 /// @param y int16_t
 /// @param z int16_t
 /// @param w int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4s(void* self, uint32_t index, int16_t x, int16_t y, int16_t z, int16_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4iv)
@@ -5674,6 +6408,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4s(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4iv(void* self, uint32_t index, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4fv)
@@ -5681,6 +6416,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4iv(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4fv(void* self, uint32_t index, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4f)
@@ -5691,6 +6427,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4fv(void* self, uint32_
 /// @param y float
 /// @param z float
 /// @param w float
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4f(void* self, uint32_t index, float x, float y, float z, float w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4dv)
@@ -5698,6 +6435,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4f(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4dv(void* self, uint32_t index, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4d)
@@ -5708,6 +6446,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4dv(void* self, uint32_
 /// @param y double
 /// @param z double
 /// @param w double
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4d(void* self, uint32_t index, double x, double y, double z, double w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4bv)
@@ -5715,6 +6454,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4d(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v signed char*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4bv(void* self, uint32_t index, signed char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4Nusv)
@@ -5722,6 +6462,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4bv(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nusv(void* self, uint32_t index, uint16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4Nuiv)
@@ -5729,6 +6470,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nusv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nuiv(void* self, uint32_t index, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4Nubv)
@@ -5736,6 +6478,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nuiv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nubv(void* self, uint32_t index, uint8_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4Nub)
@@ -5746,6 +6489,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nubv(void* self, uint
 /// @param y uint8_t
 /// @param z uint8_t
 /// @param w uint8_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nub(void* self, uint32_t index, uint8_t x, uint8_t y, uint8_t z, uint8_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4Nsv)
@@ -5753,6 +6497,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nub(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nsv(void* self, uint32_t index, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4Niv)
@@ -5760,6 +6505,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nsv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_niv(void* self, uint32_t index, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib4Nbv)
@@ -5767,6 +6513,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_niv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v signed char*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nbv(void* self, uint32_t index, signed char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib3sv)
@@ -5774,6 +6521,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib4_nbv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3sv(void* self, uint32_t index, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib3s)
@@ -5783,6 +6531,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3sv(void* self, uint32_
 /// @param x int16_t
 /// @param y int16_t
 /// @param z int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3s(void* self, uint32_t index, int16_t x, int16_t y, int16_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib3fv)
@@ -5790,6 +6539,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3s(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3fv(void* self, uint32_t index, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib3f)
@@ -5799,6 +6549,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3fv(void* self, uint32_
 /// @param x float
 /// @param y float
 /// @param z float
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3f(void* self, uint32_t index, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib3dv)
@@ -5806,6 +6557,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3f(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3dv(void* self, uint32_t index, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib3d)
@@ -5815,6 +6567,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3dv(void* self, uint32_
 /// @param x double
 /// @param y double
 /// @param z double
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3d(void* self, uint32_t index, double x, double y, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib2sv)
@@ -5822,6 +6575,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib3d(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2sv(void* self, uint32_t index, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib2s)
@@ -5830,6 +6584,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2sv(void* self, uint32_
 /// @param index uint32_t
 /// @param x int16_t
 /// @param y int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2s(void* self, uint32_t index, int16_t x, int16_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib2fv)
@@ -5837,6 +6592,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2s(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2fv(void* self, uint32_t index, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib2f)
@@ -5845,6 +6601,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2fv(void* self, uint32_
 /// @param index uint32_t
 /// @param x float
 /// @param y float
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2f(void* self, uint32_t index, float x, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib2dv)
@@ -5852,6 +6609,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2f(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2dv(void* self, uint32_t index, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib2d)
@@ -5860,6 +6618,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2dv(void* self, uint32_
 /// @param index uint32_t
 /// @param x double
 /// @param y double
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2d(void* self, uint32_t index, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib1sv)
@@ -5867,6 +6626,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib2d(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1sv(void* self, uint32_t index, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib1s)
@@ -5874,6 +6634,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1sv(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param x int16_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1s(void* self, uint32_t index, int16_t x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib1fv)
@@ -5881,6 +6642,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1s(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v float*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1fv(void* self, uint32_t index, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib1f)
@@ -5888,6 +6650,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1fv(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param x float
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1f(void* self, uint32_t index, float x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib1dv)
@@ -5895,6 +6658,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1f(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v double*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1dv(void* self, uint32_t index, double* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttrib1d)
@@ -5902,6 +6666,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1dv(void* self, uint32_
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param x double
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1d(void* self, uint32_t index, double x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4usv)
@@ -5909,6 +6674,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib1d(void* self, uint32_t
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4usv(void* self, uint32_t index, uint16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4ubv)
@@ -5916,6 +6682,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4usv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint8_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4ubv(void* self, uint32_t index, uint8_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4sv)
@@ -5923,6 +6690,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4ubv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int16_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4sv(void* self, uint32_t index, int16_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4bv)
@@ -5930,6 +6698,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4sv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v signed char*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4bv(void* self, uint32_t index, signed char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4uiv)
@@ -5937,6 +6706,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4bv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4uiv(void* self, uint32_t index, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI3uiv)
@@ -5944,6 +6714,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4uiv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3uiv(void* self, uint32_t index, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI2uiv)
@@ -5951,6 +6722,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3uiv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2uiv(void* self, uint32_t index, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI1uiv)
@@ -5958,6 +6730,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2uiv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v uint32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1uiv(void* self, uint32_t index, uint32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4iv)
@@ -5965,6 +6738,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1uiv(void* self, uint
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4iv(void* self, uint32_t index, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI3iv)
@@ -5972,6 +6746,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4iv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3iv(void* self, uint32_t index, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI2iv)
@@ -5979,6 +6754,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3iv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2iv(void* self, uint32_t index, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI1iv)
@@ -5986,6 +6762,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2iv(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param v int32_t*
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1iv(void* self, uint32_t index, int32_t* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4ui)
@@ -5996,6 +6773,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1iv(void* self, uint3
 /// @param y uint32_t
 /// @param z uint32_t
 /// @param w uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4ui(void* self, uint32_t index, uint32_t x, uint32_t y, uint32_t z, uint32_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI3ui)
@@ -6005,6 +6783,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4ui(void* self, uint3
 /// @param x uint32_t
 /// @param y uint32_t
 /// @param z uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3ui(void* self, uint32_t index, uint32_t x, uint32_t y, uint32_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI2ui)
@@ -6013,6 +6792,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3ui(void* self, uint3
 /// @param index uint32_t
 /// @param x uint32_t
 /// @param y uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2ui(void* self, uint32_t index, uint32_t x, uint32_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI1ui)
@@ -6020,6 +6800,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2ui(void* self, uint3
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param x uint32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1ui(void* self, uint32_t index, uint32_t x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI4i)
@@ -6030,6 +6811,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1ui(void* self, uint3
 /// @param y int32_t
 /// @param z int32_t
 /// @param w int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4i(void* self, uint32_t index, int32_t x, int32_t y, int32_t z, int32_t w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI3i)
@@ -6039,6 +6821,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i4i(void* self, uint32
 /// @param x int32_t
 /// @param y int32_t
 /// @param z int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3i(void* self, uint32_t index, int32_t x, int32_t y, int32_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI2i)
@@ -6047,6 +6830,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i3i(void* self, uint32
 /// @param index uint32_t
 /// @param x int32_t
 /// @param y int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2i(void* self, uint32_t index, int32_t x, int32_t y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#glVertexAttribI1i)
@@ -6054,6 +6838,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i2i(void* self, uint32
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param index uint32_t
 /// @param x int32_t
+///
 void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1i(void* self, uint32_t index, int32_t x);
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6063,6 +6848,7 @@ void q_openglfunctions_4_0_compatibility_gl_vertex_attrib_i1i(void* self, uint32
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 bool q_openglfunctions_4_0_compatibility_is_initialized(void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6072,6 +6858,7 @@ bool q_openglfunctions_4_0_compatibility_is_initialized(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 bool q_openglfunctions_4_0_compatibility_qbase_is_initialized(void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6082,6 +6869,7 @@ bool q_openglfunctions_4_0_compatibility_qbase_is_initialized(void* self);
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param callback bool func()
+///
 void q_openglfunctions_4_0_compatibility_on_is_initialized(void* self, bool (*callback)());
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6092,6 +6880,7 @@ void q_openglfunctions_4_0_compatibility_on_is_initialized(void* self, bool (*ca
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param context QOpenGLContext*
+///
 void q_openglfunctions_4_0_compatibility_set_owning_context(void* self, void* context);
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6102,6 +6891,7 @@ void q_openglfunctions_4_0_compatibility_set_owning_context(void* self, void* co
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param context QOpenGLContext*
+///
 void q_openglfunctions_4_0_compatibility_qbase_set_owning_context(void* self, void* context);
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6112,6 +6902,7 @@ void q_openglfunctions_4_0_compatibility_qbase_set_owning_context(void* self, vo
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param callback void func(QOpenGLFunctions_4_0_Compatibility* self, QOpenGLContext* context)
+///
 void q_openglfunctions_4_0_compatibility_on_set_owning_context(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6121,6 +6912,7 @@ void q_openglfunctions_4_0_compatibility_on_set_owning_context(void* self, void 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 QOpenGLContext* q_openglfunctions_4_0_compatibility_owning_context(void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6130,6 +6922,7 @@ QOpenGLContext* q_openglfunctions_4_0_compatibility_owning_context(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 QOpenGLContext* q_openglfunctions_4_0_compatibility_qbase_owning_context(void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
@@ -6140,6 +6933,7 @@ QOpenGLContext* q_openglfunctions_4_0_compatibility_qbase_owning_context(void* s
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
 /// @param callback QOpenGLContext* func()
+///
 void q_openglfunctions_4_0_compatibility_on_owning_context(void* self, QOpenGLContext* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-compatibility.html#dtor.QOpenGLFunctions_4_0_Compatibility)
@@ -6147,6 +6941,7 @@ void q_openglfunctions_4_0_compatibility_on_owning_context(void* self, QOpenGLCo
 /// Delete this object from C++ memory.
 ///
 /// @param self QOpenGLFunctions_4_0_Compatibility*
+///
 void q_openglfunctions_4_0_compatibility_delete(void* self);
 
 #endif

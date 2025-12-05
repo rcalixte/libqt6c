@@ -11,70 +11,93 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kpluginmetadata.html
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html)
 
 /// k_pluginmetadata_new constructs a new KPluginMetaData object.
 ///
 KPluginMetaData* k_pluginmetadata_new();
 
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html)
+
 /// k_pluginmetadata_new2 constructs a new KPluginMetaData object.
 ///
 /// @param loader QPluginLoader*
+///
 KPluginMetaData* k_pluginmetadata_new2(void* loader);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html)
 
 /// k_pluginmetadata_new3 constructs a new KPluginMetaData object.
 ///
 /// @param pluginFile const char*
+///
 KPluginMetaData* k_pluginmetadata_new3(const char* pluginFile);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html)
 
 /// k_pluginmetadata_new4 constructs a new KPluginMetaData object.
 ///
 /// @param metaData QJsonObject*
 /// @param fileName const char*
+///
 KPluginMetaData* k_pluginmetadata_new4(void* metaData, const char* fileName);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html)
 
 /// k_pluginmetadata_new5 constructs a new KPluginMetaData object.
 ///
 /// @param param1 KPluginMetaData*
+///
 KPluginMetaData* k_pluginmetadata_new5(void* param1);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html)
 
 /// k_pluginmetadata_new6 constructs a new KPluginMetaData object.
 ///
 /// @param loader QPluginLoader*
 /// @param options flag of enum KPluginMetaData__KPluginMetaDataOption
+///
 KPluginMetaData* k_pluginmetadata_new6(void* loader, int32_t options);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html)
 
 /// k_pluginmetadata_new7 constructs a new KPluginMetaData object.
 ///
 /// @param pluginFile const char*
 /// @param options flag of enum KPluginMetaData__KPluginMetaDataOption
+///
 KPluginMetaData* k_pluginmetadata_new7(const char* pluginFile, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#operator-eq)
 ///
 /// @param self KPluginMetaData*
 /// @param param1 KPluginMetaData*
+///
 void k_pluginmetadata_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#fromJsonFile)
 ///
 /// @param jsonFile const char*
+///
 KPluginMetaData* k_pluginmetadata_from_json_file(const char* jsonFile);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#findPluginById)
 ///
 /// @param directory const char*
 /// @param pluginId const char*
+///
 KPluginMetaData* k_pluginmetadata_find_plugin_by_id(const char* directory, const char* pluginId);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#isValid)
 ///
 /// @param self KPluginMetaData*
+///
 bool k_pluginmetadata_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#isHidden)
 ///
 /// @param self KPluginMetaData*
+///
 bool k_pluginmetadata_is_hidden(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#fileName)
@@ -82,11 +105,13 @@ bool k_pluginmetadata_is_hidden(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_file_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#rawData)
 ///
 /// @param self KPluginMetaData*
+///
 QJsonObject* k_pluginmetadata_raw_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#name)
@@ -94,6 +119,7 @@ QJsonObject* k_pluginmetadata_raw_data(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#description)
@@ -101,21 +127,25 @@ const char* k_pluginmetadata_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_description(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#authors)
 ///
 /// @param self KPluginMetaData*
+///
 libqt_list /* of KAboutPerson* */ k_pluginmetadata_authors(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#translators)
 ///
 /// @param self KPluginMetaData*
+///
 libqt_list /* of KAboutPerson* */ k_pluginmetadata_translators(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#otherContributors)
 ///
 /// @param self KPluginMetaData*
+///
 libqt_list /* of KAboutPerson* */ k_pluginmetadata_other_contributors(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#category)
@@ -123,6 +153,7 @@ libqt_list /* of KAboutPerson* */ k_pluginmetadata_other_contributors(void* self
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_category(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#iconName)
@@ -130,6 +161,7 @@ const char* k_pluginmetadata_category(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#license)
@@ -137,6 +169,7 @@ const char* k_pluginmetadata_icon_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_license(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#licenseText)
@@ -144,6 +177,7 @@ const char* k_pluginmetadata_license(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_license_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#copyrightText)
@@ -151,6 +185,7 @@ const char* k_pluginmetadata_license_text(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_copyright_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#pluginId)
@@ -158,6 +193,7 @@ const char* k_pluginmetadata_copyright_text(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_plugin_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#version)
@@ -165,6 +201,7 @@ const char* k_pluginmetadata_plugin_id(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#website)
@@ -172,6 +209,7 @@ const char* k_pluginmetadata_version(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_website(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#bugReportUrl)
@@ -179,6 +217,7 @@ const char* k_pluginmetadata_website(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char* k_pluginmetadata_bug_report_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#mimeTypes)
@@ -186,12 +225,14 @@ const char* k_pluginmetadata_bug_report_url(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char** k_pluginmetadata_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#supportsMimeType)
 ///
 /// @param self KPluginMetaData*
 /// @param mimeType const char*
+///
 bool k_pluginmetadata_supports_mime_type(void* self, const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#formFactors)
@@ -199,11 +240,13 @@ bool k_pluginmetadata_supports_mime_type(void* self, const char* mimeType);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
+///
 const char** k_pluginmetadata_form_factors(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#isEnabledByDefault)
 ///
 /// @param self KPluginMetaData*
+///
 bool k_pluginmetadata_is_enabled_by_default(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
@@ -212,6 +255,7 @@ bool k_pluginmetadata_is_enabled_by_default(void* self);
 ///
 /// @param self KPluginMetaData*
 /// @param key const char*
+///
 const char* k_pluginmetadata_value2(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
@@ -219,6 +263,7 @@ const char* k_pluginmetadata_value2(void* self, const char* key);
 /// @param self KPluginMetaData*
 /// @param key const char*
 /// @param defaultValue bool
+///
 bool k_pluginmetadata_value4(void* self, const char* key, bool defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
@@ -226,6 +271,7 @@ bool k_pluginmetadata_value4(void* self, const char* key, bool defaultValue);
 /// @param self KPluginMetaData*
 /// @param key const char*
 /// @param defaultValue int
+///
 int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
@@ -235,23 +281,27 @@ int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue);
 /// @param self KPluginMetaData*
 /// @param key const char*
 /// @param defaultValue const char**
+///
 const char** k_pluginmetadata_value8(void* self, const char* key, const char* defaultValue[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#operator-eq-eq)
 ///
 /// @param self KPluginMetaData*
 /// @param other KPluginMetaData*
+///
 bool k_pluginmetadata_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#operator-not-eq)
 ///
 /// @param self KPluginMetaData*
 /// @param other KPluginMetaData*
+///
 bool k_pluginmetadata_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#isStaticPlugin)
 ///
 /// @param self KPluginMetaData*
+///
 bool k_pluginmetadata_is_static_plugin(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#findPluginById)
@@ -259,6 +309,7 @@ bool k_pluginmetadata_is_static_plugin(void* self);
 /// @param directory const char*
 /// @param pluginId const char*
 /// @param options flag of enum KPluginMetaData__KPluginMetaDataOption
+///
 KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, const char* pluginId, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
@@ -268,6 +319,7 @@ KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, cons
 /// @param self KPluginMetaData*
 /// @param key const char*
 /// @param defaultValue const char*
+///
 const char* k_pluginmetadata_value23(void* self, const char* key, const char* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#dtor.KPluginMetaData)
@@ -275,9 +327,10 @@ const char* k_pluginmetadata_value23(void* self, const char* key, const char* de
 /// Delete this object from C++ memory.
 ///
 /// @param self KPluginMetaData*
+///
 void k_pluginmetadata_delete(void* self);
 
-/// https://api.kde.org/kpluginmetadata.html#types
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#public-types)
 
 typedef enum {
     KPLUGINMETADATA_KPLUGINMETADATAOPTION_ALLOWEMPTYMETADATA = 1,

@@ -11,56 +11,70 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qwebenginehttprequest.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html)
 
 /// q_webenginehttprequest_new constructs a new QWebEngineHttpRequest object.
 ///
 QWebEngineHttpRequest* q_webenginehttprequest_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html)
+
 /// q_webenginehttprequest_new2 constructs a new QWebEngineHttpRequest object.
 ///
 /// @param other QWebEngineHttpRequest*
+///
 QWebEngineHttpRequest* q_webenginehttprequest_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html)
 
 /// q_webenginehttprequest_new3 constructs a new QWebEngineHttpRequest object.
 ///
 /// @param url QUrl*
+///
 QWebEngineHttpRequest* q_webenginehttprequest_new3(void* url);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html)
 
 /// q_webenginehttprequest_new4 constructs a new QWebEngineHttpRequest object.
 ///
 /// @param url QUrl*
 /// @param method enum QWebEngineHttpRequest__Method*
+///
 QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int32_t* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-eq)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param other QWebEngineHttpRequest*
+///
 void q_webenginehttprequest_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#postRequest)
 ///
 /// @param url QUrl*
 /// @param postData libqt_map /* of const char* to const char* */
+///
 QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map /* of const char* to const char* */ postData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#swap)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param other QWebEngineHttpRequest*
+///
 void q_webenginehttprequest_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-eq-eq)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param other QWebEngineHttpRequest*
+///
 bool q_webenginehttprequest_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-not-eq)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param other QWebEngineHttpRequest*
+///
 bool q_webenginehttprequest_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#method)
@@ -68,23 +82,27 @@ bool q_webenginehttprequest_operator_not_equal(void* self, void* other);
 /// @param self QWebEngineHttpRequest*
 ///
 /// @return enum QWebEngineHttpRequest__Method
+///
 int32_t q_webenginehttprequest_method(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setMethod)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param method enum QWebEngineHttpRequest__Method
+///
 void q_webenginehttprequest_set_method(void* self, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#url)
 ///
 /// @param self QWebEngineHttpRequest*
+///
 QUrl* q_webenginehttprequest_url(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setUrl)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param url QUrl*
+///
 void q_webenginehttprequest_set_url(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#postData)
@@ -92,18 +110,21 @@ void q_webenginehttprequest_set_url(void* self, void* url);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineHttpRequest*
+///
 char* q_webenginehttprequest_post_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setPostData)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param postData const char*
+///
 void q_webenginehttprequest_set_post_data(void* self, const char* postData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#hasHeader)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param headerName const char*
+///
 bool q_webenginehttprequest_has_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#headers)
@@ -111,6 +132,7 @@ bool q_webenginehttprequest_has_header(void* self, const char* headerName);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineHttpRequest*
+///
 const char** q_webenginehttprequest_headers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#header)
@@ -119,6 +141,7 @@ const char** q_webenginehttprequest_headers(void* self);
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param headerName const char*
+///
 char* q_webenginehttprequest_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setHeader)
@@ -126,12 +149,14 @@ char* q_webenginehttprequest_header(void* self, const char* headerName);
 /// @param self QWebEngineHttpRequest*
 /// @param headerName const char*
 /// @param value const char*
+///
 void q_webenginehttprequest_set_header(void* self, const char* headerName, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#unsetHeader)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param headerName const char*
+///
 void q_webenginehttprequest_unset_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#dtor.QWebEngineHttpRequest)
@@ -139,9 +164,10 @@ void q_webenginehttprequest_unset_header(void* self, const char* headerName);
 /// Delete this object from C++ memory.
 ///
 /// @param self QWebEngineHttpRequest*
+///
 void q_webenginehttprequest_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qwebenginehttprequest.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#public-types)
 
 typedef enum {
     QWEBENGINEHTTPREQUEST_METHOD_GET = 0,

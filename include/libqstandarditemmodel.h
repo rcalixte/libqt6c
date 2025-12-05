@@ -11,38 +11,51 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qstandarditem.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html)
 
 /// q_standarditem_new constructs a new QStandardItem object.
 ///
 QStandardItem* q_standarditem_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html)
+
 /// q_standarditem_new2 constructs a new QStandardItem object.
 ///
 /// @param text const char*
+///
 QStandardItem* q_standarditem_new2(const char* text);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html)
 
 /// q_standarditem_new3 constructs a new QStandardItem object.
 ///
 /// @param icon QIcon*
 /// @param text const char*
+///
 QStandardItem* q_standarditem_new3(void* icon, const char* text);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html)
 
 /// q_standarditem_new4 constructs a new QStandardItem object.
 ///
 /// @param rows int
+///
 QStandardItem* q_standarditem_new4(int rows);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html)
 
 /// q_standarditem_new5 constructs a new QStandardItem object.
 ///
 /// @param rows int
 /// @param columns int
+///
 QStandardItem* q_standarditem_new5(int rows, int columns);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#data)
 ///
 /// @param self QStandardItem*
 /// @param role int
+///
 QVariant* q_standarditem_data(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#data)
@@ -51,6 +64,7 @@ QVariant* q_standarditem_data(void* self, int role);
 ///
 /// @param self QStandardItem*
 /// @param callback QVariant* func(QStandardItem* self, int role)
+///
 void q_standarditem_on_data(void* self, QVariant* (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#data)
@@ -59,12 +73,14 @@ void q_standarditem_on_data(void* self, QVariant* (*callback)(void*, int));
 ///
 /// @param self QStandardItem*
 /// @param role int
+///
 QVariant* q_standarditem_qbase_data(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#multiData)
 ///
 /// @param self QStandardItem*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_standarditem_multi_data(void* self, void* roleDataSpan);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#multiData)
@@ -73,6 +89,7 @@ void q_standarditem_multi_data(void* self, void* roleDataSpan);
 ///
 /// @param self QStandardItem*
 /// @param callback void func(QStandardItem* self, QModelRoleDataSpan* roleDataSpan)
+///
 void q_standarditem_on_multi_data(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#multiData)
@@ -81,6 +98,7 @@ void q_standarditem_on_multi_data(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStandardItem*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_standarditem_qbase_multi_data(void* self, void* roleDataSpan);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setData)
@@ -88,6 +106,7 @@ void q_standarditem_qbase_multi_data(void* self, void* roleDataSpan);
 /// @param self QStandardItem*
 /// @param value QVariant*
 /// @param role int
+///
 void q_standarditem_set_data(void* self, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setData)
@@ -96,6 +115,7 @@ void q_standarditem_set_data(void* self, void* value, int role);
 ///
 /// @param self QStandardItem*
 /// @param callback void func(QStandardItem* self, QVariant* value, int role)
+///
 void q_standarditem_on_set_data(void* self, void (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setData)
@@ -105,11 +125,13 @@ void q_standarditem_on_set_data(void* self, void (*callback)(void*, void*, int))
 /// @param self QStandardItem*
 /// @param value QVariant*
 /// @param role int
+///
 void q_standarditem_qbase_set_data(void* self, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#clearData)
 ///
 /// @param self QStandardItem*
+///
 void q_standarditem_clear_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#text)
@@ -117,23 +139,27 @@ void q_standarditem_clear_data(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
+///
 const char* q_standarditem_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setText)
 ///
 /// @param self QStandardItem*
 /// @param text const char*
+///
 void q_standarditem_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#icon)
 ///
 /// @param self QStandardItem*
+///
 QIcon* q_standarditem_icon(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setIcon)
 ///
 /// @param self QStandardItem*
 /// @param icon QIcon*
+///
 void q_standarditem_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#toolTip)
@@ -141,12 +167,14 @@ void q_standarditem_set_icon(void* self, void* icon);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
+///
 const char* q_standarditem_tool_tip(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setToolTip)
 ///
 /// @param self QStandardItem*
 /// @param toolTip const char*
+///
 void q_standarditem_set_tool_tip(void* self, const char* toolTip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#statusTip)
@@ -154,12 +182,14 @@ void q_standarditem_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
+///
 const char* q_standarditem_status_tip(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setStatusTip)
 ///
 /// @param self QStandardItem*
 /// @param statusTip const char*
+///
 void q_standarditem_set_status_tip(void* self, const char* statusTip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#whatsThis)
@@ -167,34 +197,40 @@ void q_standarditem_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
+///
 const char* q_standarditem_whats_this(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setWhatsThis)
 ///
 /// @param self QStandardItem*
 /// @param whatsThis const char*
+///
 void q_standarditem_set_whats_this(void* self, const char* whatsThis);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#sizeHint)
 ///
 /// @param self QStandardItem*
+///
 QSize* q_standarditem_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setSizeHint)
 ///
 /// @param self QStandardItem*
 /// @param sizeHint QSize*
+///
 void q_standarditem_set_size_hint(void* self, void* sizeHint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#font)
 ///
 /// @param self QStandardItem*
+///
 QFont* q_standarditem_font(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setFont)
 ///
 /// @param self QStandardItem*
 /// @param font QFont*
+///
 void q_standarditem_set_font(void* self, void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#textAlignment)
@@ -202,34 +238,40 @@ void q_standarditem_set_font(void* self, void* font);
 /// @param self QStandardItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t q_standarditem_text_alignment(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setTextAlignment)
 ///
 /// @param self QStandardItem*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
+///
 void q_standarditem_set_text_alignment(void* self, int32_t textAlignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#background)
 ///
 /// @param self QStandardItem*
+///
 QBrush* q_standarditem_background(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setBackground)
 ///
 /// @param self QStandardItem*
 /// @param brush QBrush*
+///
 void q_standarditem_set_background(void* self, void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#foreground)
 ///
 /// @param self QStandardItem*
+///
 QBrush* q_standarditem_foreground(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setForeground)
 ///
 /// @param self QStandardItem*
 /// @param brush QBrush*
+///
 void q_standarditem_set_foreground(void* self, void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#checkState)
@@ -237,12 +279,14 @@ void q_standarditem_set_foreground(void* self, void* brush);
 /// @param self QStandardItem*
 ///
 /// @return enum Qt__CheckState
+///
 int32_t q_standarditem_check_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setCheckState)
 ///
 /// @param self QStandardItem*
 /// @param checkState enum Qt__CheckState
+///
 void q_standarditem_set_check_state(void* self, int32_t checkState);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#accessibleText)
@@ -250,12 +294,14 @@ void q_standarditem_set_check_state(void* self, int32_t checkState);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
+///
 const char* q_standarditem_accessible_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setAccessibleText)
 ///
 /// @param self QStandardItem*
 /// @param accessibleText const char*
+///
 void q_standarditem_set_accessible_text(void* self, const char* accessibleText);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#accessibleDescription)
@@ -263,12 +309,14 @@ void q_standarditem_set_accessible_text(void* self, const char* accessibleText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
+///
 const char* q_standarditem_accessible_description(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setAccessibleDescription)
 ///
 /// @param self QStandardItem*
 /// @param accessibleDescription const char*
+///
 void q_standarditem_set_accessible_description(void* self, const char* accessibleDescription);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#flags)
@@ -276,158 +324,187 @@ void q_standarditem_set_accessible_description(void* self, const char* accessibl
 /// @param self QStandardItem*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_standarditem_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setFlags)
 ///
 /// @param self QStandardItem*
 /// @param flags flag of enum Qt__ItemFlag
+///
 void q_standarditem_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isEnabled)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setEnabled)
 ///
 /// @param self QStandardItem*
 /// @param enabled bool
+///
 void q_standarditem_set_enabled(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isEditable)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_editable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setEditable)
 ///
 /// @param self QStandardItem*
 /// @param editable bool
+///
 void q_standarditem_set_editable(void* self, bool editable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isSelectable)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_selectable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setSelectable)
 ///
 /// @param self QStandardItem*
 /// @param selectable bool
+///
 void q_standarditem_set_selectable(void* self, bool selectable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isCheckable)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_checkable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setCheckable)
 ///
 /// @param self QStandardItem*
 /// @param checkable bool
+///
 void q_standarditem_set_checkable(void* self, bool checkable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isAutoTristate)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_auto_tristate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setAutoTristate)
 ///
 /// @param self QStandardItem*
 /// @param tristate bool
+///
 void q_standarditem_set_auto_tristate(void* self, bool tristate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isUserTristate)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_user_tristate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setUserTristate)
 ///
 /// @param self QStandardItem*
 /// @param tristate bool
+///
 void q_standarditem_set_user_tristate(void* self, bool tristate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isDragEnabled)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_drag_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setDragEnabled)
 ///
 /// @param self QStandardItem*
 /// @param dragEnabled bool
+///
 void q_standarditem_set_drag_enabled(void* self, bool dragEnabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#isDropEnabled)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_is_drop_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setDropEnabled)
 ///
 /// @param self QStandardItem*
 /// @param dropEnabled bool
+///
 void q_standarditem_set_drop_enabled(void* self, bool dropEnabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#parent)
 ///
 /// @param self QStandardItem*
+///
 QStandardItem* q_standarditem_parent(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#row)
 ///
 /// @param self QStandardItem*
+///
 int32_t q_standarditem_row(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#column)
 ///
 /// @param self QStandardItem*
+///
 int32_t q_standarditem_column(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#index)
 ///
 /// @param self QStandardItem*
+///
 QModelIndex* q_standarditem_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#model)
 ///
 /// @param self QStandardItem*
+///
 QStandardItemModel* q_standarditem_model(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#rowCount)
 ///
 /// @param self QStandardItem*
+///
 int32_t q_standarditem_row_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setRowCount)
 ///
 /// @param self QStandardItem*
 /// @param rows int
+///
 void q_standarditem_set_row_count(void* self, int rows);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#columnCount)
 ///
 /// @param self QStandardItem*
+///
 int32_t q_standarditem_column_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setColumnCount)
 ///
 /// @param self QStandardItem*
 /// @param columns int
+///
 void q_standarditem_set_column_count(void* self, int columns);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#hasChildren)
 ///
 /// @param self QStandardItem*
+///
 bool q_standarditem_has_children(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#child)
 ///
 /// @param self QStandardItem*
 /// @param row int
+///
 QStandardItem* q_standarditem_child(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setChild)
@@ -436,6 +513,7 @@ QStandardItem* q_standarditem_child(void* self, int row);
 /// @param row int
 /// @param column int
 /// @param item QStandardItem*
+///
 void q_standarditem_set_child(void* self, int row, int column, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#setChild)
@@ -443,6 +521,7 @@ void q_standarditem_set_child(void* self, int row, int column, void* item);
 /// @param self QStandardItem*
 /// @param row int
 /// @param item QStandardItem*
+///
 void q_standarditem_set_child2(void* self, int row, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#insertRow)
@@ -450,6 +529,7 @@ void q_standarditem_set_child2(void* self, int row, void* item);
 /// @param self QStandardItem*
 /// @param row int
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditem_insert_row(void* self, int row, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#insertColumn)
@@ -457,6 +537,7 @@ void q_standarditem_insert_row(void* self, int row, libqt_list items);
 /// @param self QStandardItem*
 /// @param column int
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditem_insert_column(void* self, int column, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#insertRows)
@@ -464,6 +545,7 @@ void q_standarditem_insert_column(void* self, int column, libqt_list items);
 /// @param self QStandardItem*
 /// @param row int
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditem_insert_rows(void* self, int row, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#insertRows)
@@ -471,6 +553,7 @@ void q_standarditem_insert_rows(void* self, int row, libqt_list items);
 /// @param self QStandardItem*
 /// @param row int
 /// @param count int
+///
 void q_standarditem_insert_rows2(void* self, int row, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#insertColumns)
@@ -478,18 +561,21 @@ void q_standarditem_insert_rows2(void* self, int row, int count);
 /// @param self QStandardItem*
 /// @param column int
 /// @param count int
+///
 void q_standarditem_insert_columns(void* self, int column, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#removeRow)
 ///
 /// @param self QStandardItem*
 /// @param row int
+///
 void q_standarditem_remove_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#removeColumn)
 ///
 /// @param self QStandardItem*
 /// @param column int
+///
 void q_standarditem_remove_column(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#removeRows)
@@ -497,6 +583,7 @@ void q_standarditem_remove_column(void* self, int column);
 /// @param self QStandardItem*
 /// @param row int
 /// @param count int
+///
 void q_standarditem_remove_rows(void* self, int row, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#removeColumns)
@@ -504,24 +591,28 @@ void q_standarditem_remove_rows(void* self, int row, int count);
 /// @param self QStandardItem*
 /// @param column int
 /// @param count int
+///
 void q_standarditem_remove_columns(void* self, int column, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#appendRow)
 ///
 /// @param self QStandardItem*
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditem_append_row(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#appendRows)
 ///
 /// @param self QStandardItem*
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditem_append_rows(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#appendColumn)
 ///
 /// @param self QStandardItem*
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditem_append_column(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#insertRow)
@@ -529,41 +620,48 @@ void q_standarditem_append_column(void* self, libqt_list items);
 /// @param self QStandardItem*
 /// @param row int
 /// @param item QStandardItem*
+///
 void q_standarditem_insert_row2(void* self, int row, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#appendRow)
 ///
 /// @param self QStandardItem*
 /// @param item QStandardItem*
+///
 void q_standarditem_append_row2(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#takeChild)
 ///
 /// @param self QStandardItem*
 /// @param row int
+///
 QStandardItem* q_standarditem_take_child(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#takeRow)
 ///
 /// @param self QStandardItem*
 /// @param row int
+///
 libqt_list /* of QStandardItem* */ q_standarditem_take_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#takeColumn)
 ///
 /// @param self QStandardItem*
 /// @param column int
+///
 libqt_list /* of QStandardItem* */ q_standarditem_take_column(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#sortChildren)
 ///
 /// @param self QStandardItem*
 /// @param column int
+///
 void q_standarditem_sort_children(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#clone)
 ///
 /// @param self QStandardItem*
+///
 QStandardItem* q_standarditem_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#clone)
@@ -572,6 +670,7 @@ QStandardItem* q_standarditem_clone(void* self);
 ///
 /// @param self QStandardItem*
 /// @param callback QStandardItem* func()
+///
 void q_standarditem_on_clone(void* self, QStandardItem* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#clone)
@@ -579,11 +678,13 @@ void q_standarditem_on_clone(void* self, QStandardItem* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QStandardItem*
+///
 QStandardItem* q_standarditem_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#type)
 ///
 /// @param self QStandardItem*
+///
 int32_t q_standarditem_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#type)
@@ -592,6 +693,7 @@ int32_t q_standarditem_type(void* self);
 ///
 /// @param self QStandardItem*
 /// @param callback int32_t func()
+///
 void q_standarditem_on_type(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#type)
@@ -599,12 +701,14 @@ void q_standarditem_on_type(void* self, int32_t (*callback)());
 /// Base class method implementation
 ///
 /// @param self QStandardItem*
+///
 int32_t q_standarditem_qbase_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#read)
 ///
 /// @param self QStandardItem*
 /// @param in QDataStream*
+///
 void q_standarditem_read(void* self, void* in);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#read)
@@ -613,6 +717,7 @@ void q_standarditem_read(void* self, void* in);
 ///
 /// @param self QStandardItem*
 /// @param callback void func(QStandardItem* self, QDataStream* in)
+///
 void q_standarditem_on_read(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#read)
@@ -621,12 +726,14 @@ void q_standarditem_on_read(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStandardItem*
 /// @param in QDataStream*
+///
 void q_standarditem_qbase_read(void* self, void* in);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#write)
 ///
 /// @param self QStandardItem*
 /// @param out QDataStream*
+///
 void q_standarditem_write(void* self, void* out);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#write)
@@ -635,6 +742,7 @@ void q_standarditem_write(void* self, void* out);
 ///
 /// @param self QStandardItem*
 /// @param callback void func(QStandardItem* self, QDataStream* out)
+///
 void q_standarditem_on_write(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#write)
@@ -643,12 +751,14 @@ void q_standarditem_on_write(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStandardItem*
 /// @param out QDataStream*
+///
 void q_standarditem_qbase_write(void* self, void* out);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
 ///
 /// @param self QStandardItem*
 /// @param other QStandardItem*
+///
 bool q_standarditem_operator_lesser(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
@@ -657,6 +767,7 @@ bool q_standarditem_operator_lesser(void* self, void* other);
 ///
 /// @param self QStandardItem*
 /// @param callback bool func(QStandardItem* self, QStandardItem* other)
+///
 void q_standarditem_on_operator_lesser(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
@@ -665,12 +776,14 @@ void q_standarditem_on_operator_lesser(void* self, bool (*callback)(void*, void*
 ///
 /// @param self QStandardItem*
 /// @param other QStandardItem*
+///
 bool q_standarditem_qbase_operator_lesser(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
 ///
 /// @param self QStandardItem*
 /// @param other QStandardItem*
+///
 void q_standarditem_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
@@ -679,6 +792,7 @@ void q_standarditem_operator_assign(void* self, void* other);
 ///
 /// @param self QStandardItem*
 /// @param callback void func(QStandardItem* self, QStandardItem* other)
+///
 void q_standarditem_on_operator_assign(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
@@ -687,11 +801,13 @@ void q_standarditem_on_operator_assign(void* self, void (*callback)(void*, void*
 ///
 /// @param self QStandardItem*
 /// @param other QStandardItem*
+///
 void q_standarditem_qbase_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#emitDataChanged)
 ///
 /// @param self QStandardItem*
+///
 void q_standarditem_emit_data_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#emitDataChanged)
@@ -700,6 +816,7 @@ void q_standarditem_emit_data_changed(void* self);
 ///
 /// @param self QStandardItem*
 /// @param callback void func()
+///
 void q_standarditem_on_emit_data_changed(void* self, void (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#emitDataChanged)
@@ -707,6 +824,7 @@ void q_standarditem_on_emit_data_changed(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self QStandardItem*
+///
 void q_standarditem_qbase_emit_data_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#child)
@@ -714,6 +832,7 @@ void q_standarditem_qbase_emit_data_changed(void* self);
 /// @param self QStandardItem*
 /// @param row int
 /// @param column int
+///
 QStandardItem* q_standarditem_child2(void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#takeChild)
@@ -721,6 +840,7 @@ QStandardItem* q_standarditem_child2(void* self, int row, int column);
 /// @param self QStandardItem*
 /// @param row int
 /// @param column int
+///
 QStandardItem* q_standarditem_take_child2(void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#sortChildren)
@@ -728,6 +848,7 @@ QStandardItem* q_standarditem_take_child2(void* self, int row, int column);
 /// @param self QStandardItem*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_standarditem_sort_children2(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#dtor.QStandardItem)
@@ -735,51 +856,65 @@ void q_standarditem_sort_children2(void* self, int column, int32_t order);
 /// Delete this object from C++ memory.
 ///
 /// @param self QStandardItem*
+///
 void q_standarditem_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qstandarditemmodel.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html)
 
 /// q_standarditemmodel_new constructs a new QStandardItemModel object.
 ///
 QStandardItemModel* q_standarditemmodel_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html)
+
 /// q_standarditemmodel_new2 constructs a new QStandardItemModel object.
 ///
 /// @param rows int
 /// @param columns int
+///
 QStandardItemModel* q_standarditemmodel_new2(int rows, int columns);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html)
 
 /// q_standarditemmodel_new3 constructs a new QStandardItemModel object.
 ///
 /// @param parent QObject*
+///
 QStandardItemModel* q_standarditemmodel_new3(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html)
 
 /// q_standarditemmodel_new4 constructs a new QStandardItemModel object.
 ///
 /// @param rows int
 /// @param columns int
 /// @param parent QObject*
+///
 QStandardItemModel* q_standarditemmodel_new4(int rows, int columns, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QStandardItemModel*
+///
 const QMetaObject* q_standarditemmodel_meta_object(void* self);
 
 /// @param self QStandardItemModel*
 /// @param param1 const char*
+///
 void* q_standarditemmodel_metacast(void* self, const char* param1);
 
 /// @param self QStandardItemModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_standarditemmodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_standarditemmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -788,6 +923,7 @@ void q_standarditemmodel_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_standarditemmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -795,17 +931,20 @@ int32_t q_standarditemmodel_qbase_metacall(void* self, int32_t param1, int param
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_standarditemmodel_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemRoleNames)
 ///
 /// @param self QStandardItemModel*
 /// @param roleNames libqt_map /* of int to char* */
+///
 void q_standarditemmodel_set_item_role_names(void* self, libqt_map /* of int to char* */ roleNames);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#roleNames)
 ///
 /// @param self QStandardItemModel*
+///
 libqt_map /* of int to char* */ q_standarditemmodel_role_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#roleNames)
@@ -814,6 +953,7 @@ libqt_map /* of int to char* */ q_standarditemmodel_role_names(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#roleNames)
@@ -821,6 +961,7 @@ void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* 
 /// Base class method implementation
 ///
 /// @param self QStandardItemModel*
+///
 libqt_map /* of int to char* */ q_standarditemmodel_qbase_role_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#index)
@@ -829,6 +970,7 @@ libqt_map /* of int to char* */ q_standarditemmodel_qbase_role_names(void* self)
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_standarditemmodel_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#index)
@@ -837,6 +979,7 @@ QModelIndex* q_standarditemmodel_index(void* self, int row, int column, void* pa
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column, QModelIndex* parent)
+///
 void q_standarditemmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#index)
@@ -847,12 +990,14 @@ void q_standarditemmodel_on_index(void* self, QModelIndex* (*callback)(void*, in
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_standarditemmodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#parent)
 ///
 /// @param self QStandardItemModel*
 /// @param child QModelIndex*
+///
 QModelIndex* q_standarditemmodel_parent(void* self, void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#parent)
@@ -861,6 +1006,7 @@ QModelIndex* q_standarditemmodel_parent(void* self, void* child);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, QModelIndex* child)
+///
 void q_standarditemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#parent)
@@ -869,12 +1015,14 @@ void q_standarditemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, v
 ///
 /// @param self QStandardItemModel*
 /// @param child QModelIndex*
+///
 QModelIndex* q_standarditemmodel_qbase_parent(void* self, void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#rowCount)
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 int32_t q_standarditemmodel_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#rowCount)
@@ -883,6 +1031,7 @@ int32_t q_standarditemmodel_row_count(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self, QModelIndex* parent)
+///
 void q_standarditemmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#rowCount)
@@ -891,12 +1040,14 @@ void q_standarditemmodel_on_row_count(void* self, int32_t (*callback)(void*, voi
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 int32_t q_standarditemmodel_qbase_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#columnCount)
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 int32_t q_standarditemmodel_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#columnCount)
@@ -905,6 +1056,7 @@ int32_t q_standarditemmodel_column_count(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self, QModelIndex* parent)
+///
 void q_standarditemmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#columnCount)
@@ -913,12 +1065,14 @@ void q_standarditemmodel_on_column_count(void* self, int32_t (*callback)(void*, 
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 int32_t q_standarditemmodel_qbase_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#hasChildren)
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_has_children(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#hasChildren)
@@ -927,6 +1081,7 @@ bool q_standarditemmodel_has_children(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* parent)
+///
 void q_standarditemmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#hasChildren)
@@ -935,6 +1090,7 @@ void q_standarditemmodel_on_has_children(void* self, bool (*callback)(void*, voi
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_has_children(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#data)
@@ -942,6 +1098,7 @@ bool q_standarditemmodel_qbase_has_children(void* self, void* parent);
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* q_standarditemmodel_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#data)
@@ -950,6 +1107,7 @@ QVariant* q_standarditemmodel_data(void* self, void* index, int role);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QVariant* func(QStandardItemModel* self, QModelIndex* index, int role)
+///
 void q_standarditemmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#data)
@@ -959,6 +1117,7 @@ void q_standarditemmodel_on_data(void* self, QVariant* (*callback)(void*, void*,
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* q_standarditemmodel_qbase_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#multiData)
@@ -966,6 +1125,7 @@ QVariant* q_standarditemmodel_qbase_data(void* self, void* index, int role);
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_standarditemmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#multiData)
@@ -974,6 +1134,7 @@ void q_standarditemmodel_multi_data(void* self, void* index, void* roleDataSpan)
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void q_standarditemmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#multiData)
@@ -983,6 +1144,7 @@ void q_standarditemmodel_on_multi_data(void* self, void (*callback)(void*, void*
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_standarditemmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setData)
@@ -991,6 +1153,7 @@ void q_standarditemmodel_qbase_multi_data(void* self, void* index, void* roleDat
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_standarditemmodel_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setData)
@@ -999,6 +1162,7 @@ bool q_standarditemmodel_set_data(void* self, void* index, void* value, int role
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* index, QVariant* value, int role)
+///
 void q_standarditemmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setData)
@@ -1009,12 +1173,14 @@ void q_standarditemmodel_on_set_data(void* self, bool (*callback)(void*, void*, 
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_standarditemmodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#clearItemData)
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 bool q_standarditemmodel_clear_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#clearItemData)
@@ -1023,6 +1189,7 @@ bool q_standarditemmodel_clear_item_data(void* self, void* index);
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* index)
+///
 void q_standarditemmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#clearItemData)
@@ -1031,6 +1198,7 @@ void q_standarditemmodel_on_clear_item_data(void* self, bool (*callback)(void*, 
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 bool q_standarditemmodel_qbase_clear_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#headerData)
@@ -1039,6 +1207,7 @@ bool q_standarditemmodel_qbase_clear_item_data(void* self, void* index);
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_standarditemmodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#headerData)
@@ -1047,6 +1216,7 @@ QVariant* q_standarditemmodel_header_data(void* self, int section, int32_t orien
 ///
 /// @param self QStandardItemModel*
 /// @param callback QVariant* func(QStandardItemModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void q_standarditemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#headerData)
@@ -1057,6 +1227,7 @@ void q_standarditemmodel_on_header_data(void* self, QVariant* (*callback)(void*,
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_standarditemmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHeaderData)
@@ -1066,6 +1237,7 @@ QVariant* q_standarditemmodel_qbase_header_data(void* self, int section, int32_t
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_standarditemmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHeaderData)
@@ -1074,6 +1246,7 @@ bool q_standarditemmodel_set_header_data(void* self, int section, int32_t orient
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void q_standarditemmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHeaderData)
@@ -1085,6 +1258,7 @@ void q_standarditemmodel_on_set_header_data(void* self, bool (*callback)(void*, 
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_standarditemmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRows)
@@ -1093,6 +1267,7 @@ bool q_standarditemmodel_qbase_set_header_data(void* self, int section, int32_t 
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRows)
@@ -1101,6 +1276,7 @@ bool q_standarditemmodel_insert_rows(void* self, int row, int count, void* paren
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, int row, int count, QModelIndex* parent)
+///
 void q_standarditemmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRows)
@@ -1111,6 +1287,7 @@ void q_standarditemmodel_on_insert_rows(void* self, bool (*callback)(void*, int,
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumns)
@@ -1119,6 +1296,7 @@ bool q_standarditemmodel_qbase_insert_rows(void* self, int row, int count, void*
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumns)
@@ -1127,6 +1305,7 @@ bool q_standarditemmodel_insert_columns(void* self, int column, int count, void*
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, int column, int count, QModelIndex* parent)
+///
 void q_standarditemmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumns)
@@ -1137,6 +1316,7 @@ void q_standarditemmodel_on_insert_columns(void* self, bool (*callback)(void*, i
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeRows)
@@ -1145,6 +1325,7 @@ bool q_standarditemmodel_qbase_insert_columns(void* self, int column, int count,
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeRows)
@@ -1153,6 +1334,7 @@ bool q_standarditemmodel_remove_rows(void* self, int row, int count, void* paren
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, int row, int count, QModelIndex* parent)
+///
 void q_standarditemmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeRows)
@@ -1163,6 +1345,7 @@ void q_standarditemmodel_on_remove_rows(void* self, bool (*callback)(void*, int,
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeColumns)
@@ -1171,6 +1354,7 @@ bool q_standarditemmodel_qbase_remove_rows(void* self, int row, int count, void*
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeColumns)
@@ -1179,6 +1363,7 @@ bool q_standarditemmodel_remove_columns(void* self, int column, int count, void*
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, int column, int count, QModelIndex* parent)
+///
 void q_standarditemmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeColumns)
@@ -1189,6 +1374,7 @@ void q_standarditemmodel_on_remove_columns(void* self, bool (*callback)(void*, i
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
@@ -1197,6 +1383,7 @@ bool q_standarditemmodel_qbase_remove_columns(void* self, int column, int count,
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_standarditemmodel_flags(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
@@ -1205,6 +1392,7 @@ int32_t q_standarditemmodel_flags(void* self, void* index);
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self, QModelIndex* index)
+///
 void q_standarditemmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
@@ -1215,6 +1403,7 @@ void q_standarditemmodel_on_flags(void* self, int32_t (*callback)(void*, void*))
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_standarditemmodel_qbase_flags(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
@@ -1222,6 +1411,7 @@ int32_t q_standarditemmodel_qbase_flags(void* self, void* index);
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_standarditemmodel_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
@@ -1230,6 +1420,7 @@ int32_t q_standarditemmodel_supported_drop_actions(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func()
+///
 void q_standarditemmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
@@ -1239,12 +1430,14 @@ void q_standarditemmodel_on_supported_drop_actions(void* self, int32_t (*callbac
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_standarditemmodel_qbase_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_standarditemmodel_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
@@ -1253,6 +1446,7 @@ libqt_map /* of int to QVariant* */ q_standarditemmodel_item_data(void* self, vo
 ///
 /// @param self QStandardItemModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(QStandardItemModel* self, QModelIndex* index)
+///
 void q_standarditemmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
@@ -1261,6 +1455,7 @@ void q_standarditemmodel_on_item_data(void* self, libqt_map /* of int to QVarian
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_standarditemmodel_qbase_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemData)
@@ -1268,6 +1463,7 @@ libqt_map /* of int to QVariant* */ q_standarditemmodel_qbase_item_data(void* se
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_standarditemmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemData)
@@ -1276,6 +1472,7 @@ bool q_standarditemmodel_set_item_data(void* self, void* index, libqt_map /* of 
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void q_standarditemmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemData)
@@ -1285,11 +1482,13 @@ void q_standarditemmodel_on_set_item_data(void* self, bool (*callback)(void*, vo
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_standarditemmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#clear)
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#sort)
@@ -1297,6 +1496,7 @@ void q_standarditemmodel_clear(void* self);
 /// @param self QStandardItemModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_standarditemmodel_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#sort)
@@ -1305,6 +1505,7 @@ void q_standarditemmodel_sort(void* self, int column, int32_t order);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, int column, enum Qt__SortOrder order)
+///
 void q_standarditemmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#sort)
@@ -1314,24 +1515,28 @@ void q_standarditemmodel_on_sort(void* self, void (*callback)(void*, int, int32_
 /// @param self QStandardItemModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_standarditemmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemFromIndex)
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 QStandardItem* q_standarditemmodel_item_from_index(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#indexFromItem)
 ///
 /// @param self QStandardItemModel*
 /// @param item QStandardItem*
+///
 QModelIndex* q_standarditemmodel_index_from_item(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#item)
 ///
 /// @param self QStandardItemModel*
 /// @param row int
+///
 QStandardItem* q_standarditemmodel_item(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItem)
@@ -1340,6 +1545,7 @@ QStandardItem* q_standarditemmodel_item(void* self, int row);
 /// @param row int
 /// @param column int
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_set_item(void* self, int row, int column, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItem)
@@ -1347,17 +1553,20 @@ void q_standarditemmodel_set_item(void* self, int row, int column, void* item);
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_set_item2(void* self, int row, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#invisibleRootItem)
 ///
 /// @param self QStandardItemModel*
+///
 QStandardItem* q_standarditemmodel_invisible_root_item(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#horizontalHeaderItem)
 ///
 /// @param self QStandardItemModel*
 /// @param column int
+///
 QStandardItem* q_standarditemmodel_horizontal_header_item(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHorizontalHeaderItem)
@@ -1365,12 +1574,14 @@ QStandardItem* q_standarditemmodel_horizontal_header_item(void* self, int column
 /// @param self QStandardItemModel*
 /// @param column int
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_set_horizontal_header_item(void* self, int column, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#verticalHeaderItem)
 ///
 /// @param self QStandardItemModel*
 /// @param row int
+///
 QStandardItem* q_standarditemmodel_vertical_header_item(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setVerticalHeaderItem)
@@ -1378,48 +1589,56 @@ QStandardItem* q_standarditemmodel_vertical_header_item(void* self, int row);
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_set_vertical_header_item(void* self, int row, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHorizontalHeaderLabels)
 ///
 /// @param self QStandardItemModel*
 /// @param labels const char**
+///
 void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* labels[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setVerticalHeaderLabels)
 ///
 /// @param self QStandardItemModel*
 /// @param labels const char**
+///
 void q_standarditemmodel_set_vertical_header_labels(void* self, const char* labels[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setRowCount)
 ///
 /// @param self QStandardItemModel*
 /// @param rows int
+///
 void q_standarditemmodel_set_row_count(void* self, int rows);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setColumnCount)
 ///
 /// @param self QStandardItemModel*
 /// @param columns int
+///
 void q_standarditemmodel_set_column_count(void* self, int columns);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#appendRow)
 ///
 /// @param self QStandardItemModel*
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditemmodel_append_row(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#appendColumn)
 ///
 /// @param self QStandardItemModel*
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditemmodel_append_column(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#appendRow)
 ///
 /// @param self QStandardItemModel*
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_append_row2(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
@@ -1427,6 +1646,7 @@ void q_standarditemmodel_append_row2(void* self, void* item);
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditemmodel_insert_row(void* self, int row, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumn)
@@ -1434,6 +1654,7 @@ void q_standarditemmodel_insert_row(void* self, int row, libqt_list items);
 /// @param self QStandardItemModel*
 /// @param column int
 /// @param items libqt_list /* of QStandardItem* */
+///
 void q_standarditemmodel_insert_column(void* self, int column, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
@@ -1441,76 +1662,89 @@ void q_standarditemmodel_insert_column(void* self, int column, libqt_list items)
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_insert_row2(void* self, int row, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
 ///
 /// @param self QStandardItemModel*
 /// @param row int
+///
 bool q_standarditemmodel_insert_row3(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumn)
 ///
 /// @param self QStandardItemModel*
 /// @param column int
+///
 bool q_standarditemmodel_insert_column2(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeItem)
 ///
 /// @param self QStandardItemModel*
 /// @param row int
+///
 QStandardItem* q_standarditemmodel_take_item(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeRow)
 ///
 /// @param self QStandardItemModel*
 /// @param row int
+///
 libqt_list /* of QStandardItem* */ q_standarditemmodel_take_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeColumn)
 ///
 /// @param self QStandardItemModel*
 /// @param column int
+///
 libqt_list /* of QStandardItem* */ q_standarditemmodel_take_column(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeHorizontalHeaderItem)
 ///
 /// @param self QStandardItemModel*
 /// @param column int
+///
 QStandardItem* q_standarditemmodel_take_horizontal_header_item(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeVerticalHeaderItem)
 ///
 /// @param self QStandardItemModel*
 /// @param row int
+///
 QStandardItem* q_standarditemmodel_take_vertical_header_item(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemPrototype)
 ///
 /// @param self QStandardItemModel*
+///
 const QStandardItem* q_standarditemmodel_item_prototype(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemPrototype)
 ///
 /// @param self QStandardItemModel*
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_set_item_prototype(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#findItems)
 ///
 /// @param self QStandardItemModel*
 /// @param text const char*
+///
 libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#sortRole)
 ///
 /// @param self QStandardItemModel*
+///
 int32_t q_standarditemmodel_sort_role(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setSortRole)
 ///
 /// @param self QStandardItemModel*
 /// @param role int
+///
 void q_standarditemmodel_set_sort_role(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
@@ -1518,6 +1752,7 @@ void q_standarditemmodel_set_sort_role(void* self, int role);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItemModel*
+///
 const char** q_standarditemmodel_mime_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
@@ -1526,6 +1761,7 @@ const char** q_standarditemmodel_mime_types(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback const char** func()
+///
 void q_standarditemmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
@@ -1533,12 +1769,14 @@ void q_standarditemmodel_on_mime_types(void* self, const char** (*callback)());
 /// Base class method implementation
 ///
 /// @param self QStandardItemModel*
+///
 const char** q_standarditemmodel_qbase_mime_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
 ///
 /// @param self QStandardItemModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_standarditemmodel_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
@@ -1547,6 +1785,7 @@ QMimeData* q_standarditemmodel_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QMimeData* func(QStandardItemModel* self, QModelIndex** indexes)
+///
 void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
@@ -1555,6 +1794,7 @@ void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, 
 ///
 /// @param self QStandardItemModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_standarditemmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#dropMimeData)
@@ -1565,6 +1805,7 @@ QMimeData* q_standarditemmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#dropMimeData)
@@ -1573,6 +1814,7 @@ bool q_standarditemmodel_drop_mime_data(void* self, void* data, int32_t action, 
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_standarditemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#dropMimeData)
@@ -1585,18 +1827,21 @@ void q_standarditemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, v
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemChanged)
 ///
 /// @param self QStandardItemModel*
 /// @param item QStandardItem*
+///
 void q_standarditemmodel_item_changed(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemChanged)
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QStandardItem* item)
+///
 void q_standarditemmodel_on_item_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -1605,6 +1850,7 @@ void q_standarditemmodel_on_item_changed(void* self, void (*callback)(void*, voi
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_standarditemmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -1614,6 +1860,7 @@ const char* q_standarditemmodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_standarditemmodel_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#item)
@@ -1621,6 +1868,7 @@ const char* q_standarditemmodel_tr3(const char* s, const char* c, int n);
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param column int
+///
 QStandardItem* q_standarditemmodel_item2(void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
@@ -1628,6 +1876,7 @@ QStandardItem* q_standarditemmodel_item2(void* self, int row, int column);
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_insert_row22(void* self, int row, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumn)
@@ -1635,6 +1884,7 @@ bool q_standarditemmodel_insert_row22(void* self, int row, void* parent);
 /// @param self QStandardItemModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_insert_column22(void* self, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeItem)
@@ -1642,6 +1892,7 @@ bool q_standarditemmodel_insert_column22(void* self, int column, void* parent);
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param column int
+///
 QStandardItem* q_standarditemmodel_take_item2(void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#findItems)
@@ -1649,6 +1900,7 @@ QStandardItem* q_standarditemmodel_take_item2(void* self, int row, int column);
 /// @param self QStandardItemModel*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items2(void* self, const char* text, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#findItems)
@@ -1657,6 +1909,7 @@ libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items2(void* self, c
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 /// @param column int
+///
 libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items3(void* self, const char* text, int32_t flags, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1666,6 +1919,7 @@ libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items3(void* self, c
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param column int
+///
 bool q_standarditemmodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1674,6 +1928,7 @@ bool q_standarditemmodel_has_index(void* self, int row, int column);
 ///
 /// @param self QStandardItemModel*
 /// @param row int
+///
 bool q_standarditemmodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -1682,6 +1937,7 @@ bool q_standarditemmodel_remove_row(void* self, int row);
 ///
 /// @param self QStandardItemModel*
 /// @param column int
+///
 bool q_standarditemmodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1693,6 +1949,7 @@ bool q_standarditemmodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_standarditemmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1704,6 +1961,7 @@ bool q_standarditemmodel_move_row(void* self, void* sourceParent, int sourceRow,
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_standarditemmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1712,6 +1970,7 @@ bool q_standarditemmodel_move_column(void* self, void* sourceParent, int sourceC
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 bool q_standarditemmodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1721,6 +1980,7 @@ bool q_standarditemmodel_check_index(void* self, void* index);
 /// @param self QStandardItemModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void q_standarditemmodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -1729,6 +1989,7 @@ void q_standarditemmodel_data_changed(void* self, void* topLeft, void* bottomRig
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void q_standarditemmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1739,6 +2000,7 @@ void q_standarditemmodel_on_data_changed(void* self, void (*callback)(void*, voi
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1747,6 +2009,7 @@ void q_standarditemmodel_header_data_changed(void* self, int32_t orientation, in
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void q_standarditemmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1754,6 +2017,7 @@ void q_standarditemmodel_on_header_data_changed(void* self, void (*callback)(voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1762,6 +2026,7 @@ void q_standarditemmodel_layout_changed(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self)
+///
 void q_standarditemmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1769,6 +2034,7 @@ void q_standarditemmodel_on_layout_changed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1777,6 +2043,7 @@ void q_standarditemmodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self)
+///
 void q_standarditemmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1787,6 +2054,7 @@ void q_standarditemmodel_on_layout_about_to_be_changed(void* self, void (*callba
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1796,6 +2064,7 @@ bool q_standarditemmodel_has_index3(void* self, int row, int column, void* paren
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1805,6 +2074,7 @@ bool q_standarditemmodel_remove_row2(void* self, int row, void* parent);
 /// @param self QStandardItemModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1814,6 +2084,7 @@ bool q_standarditemmodel_remove_column2(void* self, int column, void* parent);
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool q_standarditemmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -1824,6 +2095,7 @@ bool q_standarditemmodel_check_index2(void* self, void* index, int32_t options);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void q_standarditemmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -1832,6 +2104,7 @@ void q_standarditemmodel_data_changed3(void* self, void* topLeft, void* bottomRi
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void q_standarditemmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -1840,6 +2113,7 @@ void q_standarditemmodel_on_data_changed3(void* self, void (*callback)(void*, vo
 ///
 /// @param self QStandardItemModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_standarditemmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -1848,6 +2122,7 @@ void q_standarditemmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents)
+///
 void q_standarditemmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -1857,6 +2132,7 @@ void q_standarditemmodel_on_layout_changed1(void* self, void (*callback)(void*, 
 /// @param self QStandardItemModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_standarditemmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -1865,6 +2141,7 @@ void q_standarditemmodel_layout_changed2(void* self, libqt_list parents, int32_t
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_standarditemmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1873,6 +2150,7 @@ void q_standarditemmodel_on_layout_changed2(void* self, void (*callback)(void*, 
 ///
 /// @param self QStandardItemModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_standarditemmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -1881,6 +2159,7 @@ void q_standarditemmodel_layout_about_to_be_changed1(void* self, libqt_list pare
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents)
+///
 void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -1890,6 +2169,7 @@ void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*callb
 /// @param self QStandardItemModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_standarditemmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -1898,6 +2178,7 @@ void q_standarditemmodel_layout_about_to_be_changed2(void* self, libqt_list pare
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -1907,6 +2188,7 @@ void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*callb
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItemModel*
+///
 const char* q_standarditemmodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -1915,6 +2197,7 @@ const char* q_standarditemmodel_object_name(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param name char*
+///
 void q_standarditemmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -1922,6 +2205,7 @@ void q_standarditemmodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QStandardItemModel*
+///
 bool q_standarditemmodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -1929,6 +2213,7 @@ bool q_standarditemmodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QStandardItemModel*
+///
 bool q_standarditemmodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -1936,6 +2221,7 @@ bool q_standarditemmodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QStandardItemModel*
+///
 bool q_standarditemmodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -1943,6 +2229,7 @@ bool q_standarditemmodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QStandardItemModel*
+///
 bool q_standarditemmodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -1951,6 +2238,7 @@ bool q_standarditemmodel_signals_blocked(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param b bool
+///
 bool q_standarditemmodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -1958,6 +2246,7 @@ bool q_standarditemmodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QStandardItemModel*
+///
 QThread* q_standarditemmodel_thread(void* self);
 
 /// Inherited from QObject
@@ -1966,6 +2255,7 @@ QThread* q_standarditemmodel_thread(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param thread QThread*
+///
 bool q_standarditemmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -1974,6 +2264,7 @@ bool q_standarditemmodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self QStandardItemModel*
 /// @param interval int
+///
 int32_t q_standarditemmodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -1982,6 +2273,7 @@ int32_t q_standarditemmodel_start_timer(void* self, int interval);
 ///
 /// @param self QStandardItemModel*
 /// @param id int
+///
 void q_standarditemmodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -1990,6 +2282,7 @@ void q_standarditemmodel_kill_timer(void* self, int id);
 ///
 /// @param self QStandardItemModel*
 /// @param id enum Qt__TimerId
+///
 void q_standarditemmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -1997,6 +2290,7 @@ void q_standarditemmodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QStandardItemModel*
+///
 libqt_list /* of QObject* */ q_standarditemmodel_children(void* self);
 
 /// Inherited from QObject
@@ -2005,6 +2299,7 @@ libqt_list /* of QObject* */ q_standarditemmodel_children(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param parent QObject*
+///
 void q_standarditemmodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -2013,6 +2308,7 @@ void q_standarditemmodel_set_parent(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param filterObj QObject*
+///
 void q_standarditemmodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -2021,6 +2317,7 @@ void q_standarditemmodel_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QStandardItemModel*
 /// @param obj QObject*
+///
 void q_standarditemmodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -2031,6 +2328,7 @@ void q_standarditemmodel_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_standarditemmodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -2041,6 +2339,7 @@ QMetaObject__Connection* q_standarditemmodel_connect(void* sender, void* signal,
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_standarditemmodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -2051,6 +2350,7 @@ QMetaObject__Connection* q_standarditemmodel_connect2(void* self, void* sender, 
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_standarditemmodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -2058,6 +2358,7 @@ bool q_standarditemmodel_disconnect(void* sender, void* signal, void* receiver, 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_standarditemmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -2065,6 +2366,7 @@ bool q_standarditemmodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -2072,6 +2374,7 @@ void q_standarditemmodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -2081,6 +2384,7 @@ void q_standarditemmodel_dump_object_info(void* self);
 /// @param self QStandardItemModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_standarditemmodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -2089,6 +2393,7 @@ bool q_standarditemmodel_set_property(void* self, const char* name, void* value)
 ///
 /// @param self QStandardItemModel*
 /// @param name const char*
+///
 QVariant* q_standarditemmodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -2098,6 +2403,7 @@ QVariant* q_standarditemmodel_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItemModel*
+///
 const char** q_standarditemmodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -2105,6 +2411,7 @@ const char** q_standarditemmodel_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStandardItemModel*
+///
 QBindingStorage* q_standarditemmodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -2112,6 +2419,7 @@ QBindingStorage* q_standarditemmodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStandardItemModel*
+///
 const QBindingStorage* q_standarditemmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -2119,6 +2427,7 @@ const QBindingStorage* q_standarditemmodel_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -2127,6 +2436,7 @@ void q_standarditemmodel_destroyed(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self)
+///
 void q_standarditemmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2135,6 +2445,7 @@ void q_standarditemmodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// @param self QStandardItemModel*
 /// @param classname const char*
+///
 bool q_standarditemmodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -2142,6 +2453,7 @@ bool q_standarditemmodel_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -2151,6 +2463,7 @@ void q_standarditemmodel_delete_later(void* self);
 /// @param self QStandardItemModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_standarditemmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -2160,6 +2473,7 @@ bool q_standarditemmodel_move_to_thread2(void* self, void* thread, void* param2)
 /// @param self QStandardItemModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_standarditemmodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -2171,6 +2485,7 @@ int32_t q_standarditemmodel_start_timer22(void* self, int interval, int32_t time
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_standarditemmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -2182,6 +2497,7 @@ QMetaObject__Connection* q_standarditemmodel_connect5(void* sender, void* signal
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_standarditemmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -2190,6 +2506,7 @@ QMetaObject__Connection* q_standarditemmodel_connect4(void* self, void* sender, 
 ///
 /// @param self QStandardItemModel*
 /// @param param1 QObject*
+///
 void q_standarditemmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -2198,6 +2515,7 @@ void q_standarditemmodel_destroyed1(void* self, void* param1);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QObject* param1)
+///
 void q_standarditemmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2210,6 +2528,7 @@ void q_standarditemmodel_on_destroyed1(void* self, void (*callback)(void*, void*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_standarditemmodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -2222,6 +2541,7 @@ QModelIndex* q_standarditemmodel_sibling(void* self, int row, int column, void* 
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_standarditemmodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -2232,6 +2552,7 @@ QModelIndex* q_standarditemmodel_qbase_sibling(void* self, int row, int column, 
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column, QModelIndex* idx)
+///
 void q_standarditemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2246,6 +2567,7 @@ void q_standarditemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, 
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2260,6 +2582,7 @@ bool q_standarditemmodel_can_drop_mime_data(void* self, void* data, int32_t acti
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2270,6 +2593,7 @@ bool q_standarditemmodel_qbase_can_drop_mime_data(void* self, void* data, int32_
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_standarditemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2281,6 +2605,7 @@ void q_standarditemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_standarditemmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2292,6 +2617,7 @@ int32_t q_standarditemmodel_supported_drag_actions(void* self);
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_standarditemmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2302,6 +2628,7 @@ int32_t q_standarditemmodel_qbase_supported_drag_actions(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func()
+///
 void q_standarditemmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2316,6 +2643,7 @@ void q_standarditemmodel_on_supported_drag_actions(void* self, int32_t (*callbac
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_standarditemmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2330,6 +2658,7 @@ bool q_standarditemmodel_move_rows(void* self, void* sourceParent, int sourceRow
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_standarditemmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2340,6 +2669,7 @@ bool q_standarditemmodel_qbase_move_rows(void* self, void* sourceParent, int sou
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_standarditemmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2354,6 +2684,7 @@ void q_standarditemmodel_on_move_rows(void* self, bool (*callback)(void*, void*,
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_standarditemmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2368,6 +2699,7 @@ bool q_standarditemmodel_move_columns(void* self, void* sourceParent, int source
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_standarditemmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -2378,6 +2710,7 @@ bool q_standarditemmodel_qbase_move_columns(void* self, void* sourceParent, int 
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_standarditemmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2388,6 +2721,7 @@ void q_standarditemmodel_on_move_columns(void* self, bool (*callback)(void*, voi
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 void q_standarditemmodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2398,6 +2732,7 @@ void q_standarditemmodel_fetch_more(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 void q_standarditemmodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2408,6 +2743,7 @@ void q_standarditemmodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent)
+///
 void q_standarditemmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2418,6 +2754,7 @@ void q_standarditemmodel_on_fetch_more(void* self, void (*callback)(void*, void*
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2428,6 +2765,7 @@ bool q_standarditemmodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param parent QModelIndex*
+///
 bool q_standarditemmodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -2438,6 +2776,7 @@ bool q_standarditemmodel_qbase_can_fetch_more(void* self, void* parent);
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* parent)
+///
 void q_standarditemmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2448,6 +2787,7 @@ void q_standarditemmodel_on_can_fetch_more(void* self, bool (*callback)(void*, v
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_standarditemmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2458,6 +2798,7 @@ QModelIndex* q_standarditemmodel_buddy(void* self, void* index);
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_standarditemmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2468,6 +2809,7 @@ QModelIndex* q_standarditemmodel_qbase_buddy(void* self, void* index);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, QModelIndex* index)
+///
 void q_standarditemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2482,6 +2824,7 @@ void q_standarditemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, vo
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_standarditemmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -2496,6 +2839,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_match(void* self, void* sta
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -2506,6 +2850,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, voi
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex** func(QStandardItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void q_standarditemmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -2516,6 +2861,7 @@ void q_standarditemmodel_on_match(void* self, QModelIndex** (*callback)(void*, v
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 QSize* q_standarditemmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2526,6 +2872,7 @@ QSize* q_standarditemmodel_span(void* self, void* index);
 ///
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
+///
 QSize* q_standarditemmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -2536,6 +2883,7 @@ QSize* q_standarditemmodel_qbase_span(void* self, void* index);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QSize* func(QStandardItemModel* self, QModelIndex* index)
+///
 void q_standarditemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2545,6 +2893,7 @@ void q_standarditemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 bool q_standarditemmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2554,6 +2903,7 @@ bool q_standarditemmodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 bool q_standarditemmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2564,6 +2914,7 @@ bool q_standarditemmodel_qbase_submit(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func()
+///
 void q_standarditemmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2573,6 +2924,7 @@ void q_standarditemmodel_on_submit(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2582,6 +2934,7 @@ void q_standarditemmodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2592,6 +2945,7 @@ void q_standarditemmodel_qbase_revert(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2601,6 +2955,7 @@ void q_standarditemmodel_on_revert(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2610,6 +2965,7 @@ void q_standarditemmodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2620,6 +2976,7 @@ void q_standarditemmodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2630,6 +2987,7 @@ void q_standarditemmodel_on_reset_internal_data(void* self, void (*callback)());
 ///
 /// @param self QStandardItemModel*
 /// @param event QEvent*
+///
 bool q_standarditemmodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2640,6 +2998,7 @@ bool q_standarditemmodel_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param event QEvent*
+///
 bool q_standarditemmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2650,6 +3009,7 @@ bool q_standarditemmodel_qbase_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QEvent* event)
+///
 void q_standarditemmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2661,6 +3021,7 @@ void q_standarditemmodel_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QStandardItemModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_standarditemmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2672,6 +3033,7 @@ bool q_standarditemmodel_event_filter(void* self, void* watched, void* event);
 /// @param self QStandardItemModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_standarditemmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2682,6 +3044,7 @@ bool q_standarditemmodel_qbase_event_filter(void* self, void* watched, void* eve
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QObject* watched, QEvent* event)
+///
 void q_standarditemmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2692,6 +3055,7 @@ void q_standarditemmodel_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 /// @param self QStandardItemModel*
 /// @param event QTimerEvent*
+///
 void q_standarditemmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2702,6 +3066,7 @@ void q_standarditemmodel_timer_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param event QTimerEvent*
+///
 void q_standarditemmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2712,6 +3077,7 @@ void q_standarditemmodel_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QTimerEvent* event)
+///
 void q_standarditemmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2722,6 +3088,7 @@ void q_standarditemmodel_on_timer_event(void* self, void (*callback)(void*, void
 ///
 /// @param self QStandardItemModel*
 /// @param event QChildEvent*
+///
 void q_standarditemmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2732,6 +3099,7 @@ void q_standarditemmodel_child_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param event QChildEvent*
+///
 void q_standarditemmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2742,6 +3110,7 @@ void q_standarditemmodel_qbase_child_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QChildEvent* event)
+///
 void q_standarditemmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2752,6 +3121,7 @@ void q_standarditemmodel_on_child_event(void* self, void (*callback)(void*, void
 ///
 /// @param self QStandardItemModel*
 /// @param event QEvent*
+///
 void q_standarditemmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2762,6 +3132,7 @@ void q_standarditemmodel_custom_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param event QEvent*
+///
 void q_standarditemmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2772,6 +3143,7 @@ void q_standarditemmodel_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QEvent* event)
+///
 void q_standarditemmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2782,6 +3154,7 @@ void q_standarditemmodel_on_custom_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self QStandardItemModel*
 /// @param signal QMetaMethod*
+///
 void q_standarditemmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2792,6 +3165,7 @@ void q_standarditemmodel_connect_notify(void* self, void* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param signal QMetaMethod*
+///
 void q_standarditemmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2802,6 +3176,7 @@ void q_standarditemmodel_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QMetaMethod* signal)
+///
 void q_standarditemmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2812,6 +3187,7 @@ void q_standarditemmodel_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 /// @param self QStandardItemModel*
 /// @param signal QMetaMethod*
+///
 void q_standarditemmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2822,6 +3198,7 @@ void q_standarditemmodel_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param signal QMetaMethod*
+///
 void q_standarditemmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2832,6 +3209,7 @@ void q_standarditemmodel_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QMetaMethod* signal)
+///
 void q_standarditemmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2843,6 +3221,7 @@ void q_standarditemmodel_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_standarditemmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2854,6 +3233,7 @@ QModelIndex* q_standarditemmodel_create_index(void* self, int row, int column);
 /// @param self QStandardItemModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_standarditemmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2864,6 +3244,7 @@ QModelIndex* q_standarditemmodel_qbase_create_index(void* self, int row, int col
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column)
+///
 void q_standarditemmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2875,6 +3256,7 @@ void q_standarditemmodel_on_create_index(void* self, QModelIndex* (*callback)(vo
 /// @param self QStandardItemModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_standarditemmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2886,6 +3268,7 @@ void q_standarditemmodel_encode_data(void* self, libqt_list indexes, void* strea
 /// @param self QStandardItemModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_standarditemmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2896,6 +3279,7 @@ void q_standarditemmodel_qbase_encode_data(void* self, libqt_list indexes, void*
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void q_standarditemmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2909,6 +3293,7 @@ void q_standarditemmodel_on_encode_data(void* self, void (*callback)(void*, QMod
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_standarditemmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2922,6 +3307,7 @@ bool q_standarditemmodel_decode_data(void* self, int row, int column, void* pare
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_standarditemmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2932,6 +3318,7 @@ bool q_standarditemmodel_qbase_decode_data(void* self, int row, int column, void
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void q_standarditemmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2944,6 +3331,7 @@ void q_standarditemmodel_on_decode_data(void* self, bool (*callback)(void*, int,
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2956,6 +3344,7 @@ void q_standarditemmodel_begin_insert_rows(void* self, void* parent, int first, 
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2966,6 +3355,7 @@ void q_standarditemmodel_qbase_begin_insert_rows(void* self, void* parent, int f
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2975,6 +3365,7 @@ void q_standarditemmodel_on_begin_insert_rows(void* self, void (*callback)(void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2984,6 +3375,7 @@ void q_standarditemmodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2994,6 +3386,7 @@ void q_standarditemmodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3006,6 +3399,7 @@ void q_standarditemmodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -3018,6 +3412,7 @@ void q_standarditemmodel_begin_remove_rows(void* self, void* parent, int first, 
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -3028,6 +3423,7 @@ void q_standarditemmodel_qbase_begin_remove_rows(void* self, void* parent, int f
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3037,6 +3433,7 @@ void q_standarditemmodel_on_begin_remove_rows(void* self, void (*callback)(void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3046,6 +3443,7 @@ void q_standarditemmodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3056,6 +3454,7 @@ void q_standarditemmodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3070,6 +3469,7 @@ void q_standarditemmodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_standarditemmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -3084,6 +3484,7 @@ bool q_standarditemmodel_begin_move_rows(void* self, void* sourceParent, int sou
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_standarditemmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -3094,6 +3495,7 @@ bool q_standarditemmodel_qbase_begin_move_rows(void* self, void* sourceParent, i
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void q_standarditemmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3103,6 +3505,7 @@ void q_standarditemmodel_on_begin_move_rows(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3112,6 +3515,7 @@ void q_standarditemmodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3122,6 +3526,7 @@ void q_standarditemmodel_qbase_end_move_rows(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3134,6 +3539,7 @@ void q_standarditemmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -3146,6 +3552,7 @@ void q_standarditemmodel_begin_insert_columns(void* self, void* parent, int firs
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -3156,6 +3563,7 @@ void q_standarditemmodel_qbase_begin_insert_columns(void* self, void* parent, in
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3165,6 +3573,7 @@ void q_standarditemmodel_on_begin_insert_columns(void* self, void (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3174,6 +3583,7 @@ void q_standarditemmodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3184,6 +3594,7 @@ void q_standarditemmodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3196,6 +3607,7 @@ void q_standarditemmodel_on_end_insert_columns(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -3208,6 +3620,7 @@ void q_standarditemmodel_begin_remove_columns(void* self, void* parent, int firs
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_standarditemmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -3218,6 +3631,7 @@ void q_standarditemmodel_qbase_begin_remove_columns(void* self, void* parent, in
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3227,6 +3641,7 @@ void q_standarditemmodel_on_begin_remove_columns(void* self, void (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3236,6 +3651,7 @@ void q_standarditemmodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3246,6 +3662,7 @@ void q_standarditemmodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3260,6 +3677,7 @@ void q_standarditemmodel_on_end_remove_columns(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_standarditemmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -3274,6 +3692,7 @@ bool q_standarditemmodel_begin_move_columns(void* self, void* sourceParent, int 
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_standarditemmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -3284,6 +3703,7 @@ bool q_standarditemmodel_qbase_begin_move_columns(void* self, void* sourceParent
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_standarditemmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3293,6 +3713,7 @@ void q_standarditemmodel_on_begin_move_columns(void* self, bool (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3302,6 +3723,7 @@ void q_standarditemmodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3312,6 +3734,7 @@ void q_standarditemmodel_qbase_end_move_columns(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3321,6 +3744,7 @@ void q_standarditemmodel_on_end_move_columns(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3330,6 +3754,7 @@ void q_standarditemmodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3340,6 +3765,7 @@ void q_standarditemmodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3349,6 +3775,7 @@ void q_standarditemmodel_on_begin_reset_model(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3358,6 +3785,7 @@ void q_standarditemmodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3368,6 +3796,7 @@ void q_standarditemmodel_qbase_end_reset_model(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func()
+///
 void q_standarditemmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3379,6 +3808,7 @@ void q_standarditemmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param self QStandardItemModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_standarditemmodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -3390,6 +3820,7 @@ void q_standarditemmodel_change_persistent_index(void* self, void* from, void* t
 /// @param self QStandardItemModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_standarditemmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -3400,6 +3831,7 @@ void q_standarditemmodel_qbase_change_persistent_index(void* self, void* from, v
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* from, QModelIndex* to)
+///
 void q_standarditemmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3411,6 +3843,7 @@ void q_standarditemmodel_on_change_persistent_index(void* self, void (*callback)
 /// @param self QStandardItemModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_standarditemmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -3422,6 +3855,7 @@ void q_standarditemmodel_change_persistent_index_list(void* self, libqt_list fro
 /// @param self QStandardItemModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_standarditemmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -3432,6 +3866,7 @@ void q_standarditemmodel_qbase_change_persistent_index_list(void* self, libqt_li
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex** from, QModelIndex** to)
+///
 void q_standarditemmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -3441,6 +3876,7 @@ void q_standarditemmodel_on_change_persistent_index_list(void* self, void (*call
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 libqt_list /* of QModelIndex* */ q_standarditemmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3450,6 +3886,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_persistent_index_list(void*
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -3460,6 +3897,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_persistent_index_list
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex** func()
+///
 void q_standarditemmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -3469,6 +3907,7 @@ void q_standarditemmodel_on_persistent_index_list(void* self, QModelIndex** (*ca
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 QObject* q_standarditemmodel_sender(void* self);
 
 /// Inherited from QObject
@@ -3478,6 +3917,7 @@ QObject* q_standarditemmodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 QObject* q_standarditemmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3488,6 +3928,7 @@ QObject* q_standarditemmodel_qbase_sender(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QObject* func()
+///
 void q_standarditemmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3497,6 +3938,7 @@ void q_standarditemmodel_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 int32_t q_standarditemmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3506,6 +3948,7 @@ int32_t q_standarditemmodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
+///
 int32_t q_standarditemmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3516,6 +3959,7 @@ int32_t q_standarditemmodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func()
+///
 void q_standarditemmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3526,6 +3970,7 @@ void q_standarditemmodel_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// @param self QStandardItemModel*
 /// @param signal const char*
+///
 int32_t q_standarditemmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3536,6 +3981,7 @@ int32_t q_standarditemmodel_receivers(void* self, const char* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param signal const char*
+///
 int32_t q_standarditemmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3546,6 +3992,7 @@ int32_t q_standarditemmodel_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self, const char* signal)
+///
 void q_standarditemmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3556,6 +4003,7 @@ void q_standarditemmodel_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// @param self QStandardItemModel*
 /// @param signal QMetaMethod*
+///
 bool q_standarditemmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3566,6 +4014,7 @@ bool q_standarditemmodel_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param signal QMetaMethod*
+///
 bool q_standarditemmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3576,6 +4025,7 @@ bool q_standarditemmodel_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QMetaMethod* signal)
+///
 void q_standarditemmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3586,6 +4036,7 @@ void q_standarditemmodel_on_is_signal_connected(void* self, bool (*callback)(voi
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3596,6 +4047,7 @@ void q_standarditemmodel_on_rows_about_to_be_inserted(void* self, void (*callbac
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3606,6 +4058,7 @@ void q_standarditemmodel_on_rows_inserted(void* self, void (*callback)(void*, vo
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3616,6 +4069,7 @@ void q_standarditemmodel_on_rows_about_to_be_removed(void* self, void (*callback
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3626,6 +4080,7 @@ void q_standarditemmodel_on_rows_removed(void* self, void (*callback)(void*, voi
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3636,6 +4091,7 @@ void q_standarditemmodel_on_columns_about_to_be_inserted(void* self, void (*call
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3646,6 +4102,7 @@ void q_standarditemmodel_on_columns_inserted(void* self, void (*callback)(void*,
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3656,6 +4113,7 @@ void q_standarditemmodel_on_columns_about_to_be_removed(void* self, void (*callb
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
+///
 void q_standarditemmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3666,6 +4124,7 @@ void q_standarditemmodel_on_columns_removed(void* self, void (*callback)(void*, 
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self)
+///
 void q_standarditemmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3676,6 +4135,7 @@ void q_standarditemmodel_on_model_about_to_be_reset(void* self, void (*callback)
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self)
+///
 void q_standarditemmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3686,6 +4146,7 @@ void q_standarditemmodel_on_model_reset(void* self, void (*callback)(void*));
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_standarditemmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3696,6 +4157,7 @@ void q_standarditemmodel_on_rows_about_to_be_moved(void* self, void (*callback)(
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_standarditemmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3706,6 +4168,7 @@ void q_standarditemmodel_on_rows_moved(void* self, void (*callback)(void*, void*
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_standarditemmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3716,6 +4179,7 @@ void q_standarditemmodel_on_columns_about_to_be_moved(void* self, void (*callbac
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_standarditemmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3726,6 +4190,7 @@ void q_standarditemmodel_on_columns_moved(void* self, void (*callback)(void*, vo
 ///
 /// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, const char* objectName)
+///
 void q_standarditemmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#dtor.QStandardItemModel)
@@ -3733,9 +4198,10 @@ void q_standarditemmodel_on_object_name_changed(void* self, void (*callback)(voi
 /// Delete this object from C++ memory.
 ///
 /// @param self QStandardItemModel*
+///
 void q_standarditemmodel_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qstandarditemmodel.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#public-types)
 
 typedef enum {
     QSTANDARDITEM_ITEMTYPE_TYPE = 0,

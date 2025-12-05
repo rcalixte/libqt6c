@@ -11,23 +11,26 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kkeyserver.html
+/// [Upstream resources](https://api.kde.org/kkeyserver.html)
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#modToStringUser)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint32_t
+///
 const char* k_keyserver_mod_to_string_user(uint32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#stringUserToMod)
 ///
 /// @param param1 const char*
+///
 uint32_t k_keyserver_string_user_to_mod(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#isShiftAsModifierAllowed)
 ///
 /// @param param1 int
+///
 bool k_keyserver_is_shift_as_modifier_allowed(int param1);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#initializeMods)
@@ -78,28 +81,33 @@ uint32_t k_keyserver_accel_mod_mask_x();
 ///
 /// @param param1 int
 /// @param param2 int*
+///
 bool k_keyserver_key_qt_to_sym_x(int param1, int* param2);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#keyQtToSymXs)
 ///
 /// @param param1 int
+///
 libqt_list /* of int */ k_keyserver_key_qt_to_sym_xs(int param1);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#keyQtToCodeX)
 ///
 /// @param param1 int
 /// @param param2 int*
+///
 bool k_keyserver_key_qt_to_code_x(int param1, int* param2);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#keyQtToCodeXs)
 ///
 /// @param param1 int
+///
 libqt_list /* of int */ k_keyserver_key_qt_to_code_xs(int param1);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#keyQtToModX)
 ///
 /// @param param1 int
 /// @param param2 uint32_t*
+///
 bool k_keyserver_key_qt_to_mod_x(int param1, uint32_t* param2);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#symXModXToKeyQt)
@@ -107,12 +115,14 @@ bool k_keyserver_key_qt_to_mod_x(int param1, uint32_t* param2);
 /// @param param1 uint32_t
 /// @param param2 uint16_t
 /// @param param3 int*
+///
 bool k_keyserver_sym_x_mod_x_to_key_qt(uint32_t param1, uint16_t param2, int* param3);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#modXToQt)
 ///
 /// @param param1 uint32_t
 /// @param param2 int*
+///
 bool k_keyserver_mod_x_to_qt(uint32_t param1, int* param2);
 
 #ifdef __linux__
@@ -120,6 +130,7 @@ bool k_keyserver_mod_x_to_qt(uint32_t param1, int* param2);
 ///
 /// @param param1 xcb_generic_event_t*
 /// @param param2 int*
+///
 bool k_keyserver_xcb_key_press_event_to_qt(xcb_generic_event_t* param1, int* param2);
 #endif
 
@@ -128,6 +139,7 @@ bool k_keyserver_xcb_key_press_event_to_qt(xcb_generic_event_t* param1, int* par
 ///
 /// @param param1 xcb_key_press_event_t*
 /// @param param2 int*
+///
 bool k_keyserver_xcb_key_press_event_to_qt2(xcb_key_press_event_t* param1, int* param2);
 #endif
 #endif

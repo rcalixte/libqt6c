@@ -11,28 +11,34 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qlibraryinfo.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html)
 
 /// q_libraryinfo_new constructs a new QLibraryInfo object.
 ///
 /// @param other QLibraryInfo*
+///
 QLibraryInfo* q_libraryinfo_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html)
 
 /// q_libraryinfo_new2 constructs a new QLibraryInfo object and invalidates the source QLibraryInfo object.
 ///
 /// @param other QLibraryInfo*
+///
 QLibraryInfo* q_libraryinfo_new2(void* other);
 
 /// q_libraryinfo_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QLibraryInfo*
 /// @param other QLibraryInfo*
+///
 void q_libraryinfo_copy_assign(void* self, void* other);
 
 /// q_libraryinfo_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QLibraryInfo*
 /// @param other QLibraryInfo*
+///
 void q_libraryinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#build)
@@ -58,6 +64,7 @@ QVersionNumber* q_libraryinfo_version();
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param p enum QLibraryInfo__LibraryPath
+///
 const char* q_libraryinfo_path(int32_t p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#paths)
@@ -65,6 +72,7 @@ const char* q_libraryinfo_path(int32_t p);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param p enum QLibraryInfo__LibraryPath
+///
 const char** q_libraryinfo_paths(int32_t p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
@@ -72,6 +80,7 @@ const char** q_libraryinfo_paths(int32_t p);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param location enum QLibraryInfo__LibraryPath
+///
 const char* q_libraryinfo_location(int32_t location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#platformPluginArguments)
@@ -79,6 +88,7 @@ const char* q_libraryinfo_location(int32_t location);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param platformName const char*
+///
 const char** q_libraryinfo_platform_plugin_arguments(const char* platformName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#dtor.QLibraryInfo)
@@ -86,9 +96,10 @@ const char** q_libraryinfo_platform_plugin_arguments(const char* platformName);
 /// Delete this object from C++ memory.
 ///
 /// @param self QLibraryInfo*
+///
 void q_libraryinfo_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qlibraryinfo.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#public-types)
 
 typedef enum {
     QLIBRARYINFO_LIBRARYPATH_PREFIXPATH = 0,

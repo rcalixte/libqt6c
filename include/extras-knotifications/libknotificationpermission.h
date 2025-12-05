@@ -11,11 +11,11 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/knotificationpermission.html
+/// [Upstream resources](https://api.kde.org/knotificationpermission.html)
 
 /// [Upstream resources](https://api.kde.org/knotificationpermission.html#checkPermission)
 ///
-///
 /// @return enum Qt__PermissionStatus
+///
 int32_t k_notificationpermission_check_permission();
 #endif

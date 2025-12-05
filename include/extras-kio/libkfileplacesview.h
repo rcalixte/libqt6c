@@ -11,12 +11,15 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kfileplacesview.html
+/// [Upstream resources](https://api.kde.org/kfileplacesview.html)
 
 /// k_fileplacesview_new constructs a new KFilePlacesView object.
 ///
 /// @param parent QWidget*
+///
 KFilePlacesView* k_fileplacesview_new(void* parent);
+
+/// [Upstream resources](https://api.kde.org/kfileplacesview.html)
 
 /// k_fileplacesview_new2 constructs a new KFilePlacesView object.
 ///
@@ -25,22 +28,26 @@ KFilePlacesView* k_fileplacesview_new2();
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFilePlacesView*
+///
 const QMetaObject* k_fileplacesview_meta_object(void* self);
 
 /// @param self KFilePlacesView*
 /// @param param1 const char*
+///
 void* k_fileplacesview_metacast(void* self, const char* param1);
 
 /// @param self KFilePlacesView*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_fileplacesview_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func(KFilePlacesView* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_fileplacesview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void k_fileplacesview_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_fileplacesview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,49 +64,58 @@ int32_t k_fileplacesview_qbase_metacall(void* self, int32_t param1, int param2, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_fileplacesview_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#allPlacesShown)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_all_places_shown(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setDropOnPlaceEnabled)
 ///
 /// @param self KFilePlacesView*
 /// @param enabled bool
+///
 void k_fileplacesview_set_drop_on_place_enabled(void* self, bool enabled);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#isDropOnPlaceEnabled)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_drop_on_place_enabled(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setDragAutoActivationDelay)
 ///
 /// @param self KFilePlacesView*
 /// @param delay int
+///
 void k_fileplacesview_set_drag_auto_activation_delay(void* self, int delay);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragAutoActivationDelay)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_drag_auto_activation_delay(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setAutoResizeItemsEnabled)
 ///
 /// @param self KFilePlacesView*
 /// @param enabled bool
+///
 void k_fileplacesview_set_auto_resize_items_enabled(void* self, bool enabled);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#isAutoResizeItemsEnabled)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_auto_resize_items_enabled(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#sizeHint)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#sizeHint)
@@ -107,6 +124,7 @@ QSize* k_fileplacesview_size_hint(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
+///
 void k_fileplacesview_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#sizeHint)
@@ -114,24 +132,28 @@ void k_fileplacesview_on_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_qbase_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setUrl)
 ///
 /// @param self KFilePlacesView*
 /// @param url QUrl*
+///
 void k_fileplacesview_set_url(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setShowAll)
 ///
 /// @param self KFilePlacesView*
 /// @param showAll bool
+///
 void k_fileplacesview_set_show_all(void* self, bool showAll);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setModel)
 ///
 /// @param self KFilePlacesView*
 /// @param model QAbstractItemModel*
+///
 void k_fileplacesview_set_model(void* self, void* model);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setModel)
@@ -140,6 +162,7 @@ void k_fileplacesview_set_model(void* self, void* model);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QAbstractItemModel* model)
+///
 void k_fileplacesview_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#setModel)
@@ -148,12 +171,14 @@ void k_fileplacesview_on_set_model(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param model QAbstractItemModel*
+///
 void k_fileplacesview_qbase_set_model(void* self, void* model);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#keyPressEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QKeyEvent*
+///
 void k_fileplacesview_key_press_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#keyPressEvent)
@@ -162,6 +187,7 @@ void k_fileplacesview_key_press_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QKeyEvent* event)
+///
 void k_fileplacesview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#keyPressEvent)
@@ -170,12 +196,14 @@ void k_fileplacesview_on_key_press_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KFilePlacesView*
 /// @param event QKeyEvent*
+///
 void k_fileplacesview_qbase_key_press_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#contextMenuEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QContextMenuEvent*
+///
 void k_fileplacesview_context_menu_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#contextMenuEvent)
@@ -184,6 +212,7 @@ void k_fileplacesview_context_menu_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QContextMenuEvent* event)
+///
 void k_fileplacesview_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#contextMenuEvent)
@@ -192,12 +221,14 @@ void k_fileplacesview_on_context_menu_event(void* self, void (*callback)(void*, 
 ///
 /// @param self KFilePlacesView*
 /// @param event QContextMenuEvent*
+///
 void k_fileplacesview_qbase_context_menu_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#resizeEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QResizeEvent*
+///
 void k_fileplacesview_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#resizeEvent)
@@ -206,6 +237,7 @@ void k_fileplacesview_resize_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QResizeEvent* event)
+///
 void k_fileplacesview_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#resizeEvent)
@@ -214,12 +246,14 @@ void k_fileplacesview_on_resize_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFilePlacesView*
 /// @param event QResizeEvent*
+///
 void k_fileplacesview_qbase_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#showEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QShowEvent*
+///
 void k_fileplacesview_show_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#showEvent)
@@ -228,6 +262,7 @@ void k_fileplacesview_show_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QShowEvent* event)
+///
 void k_fileplacesview_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#showEvent)
@@ -236,12 +271,14 @@ void k_fileplacesview_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param event QShowEvent*
+///
 void k_fileplacesview_qbase_show_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#hideEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QHideEvent*
+///
 void k_fileplacesview_hide_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#hideEvent)
@@ -250,6 +287,7 @@ void k_fileplacesview_hide_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QHideEvent* event)
+///
 void k_fileplacesview_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#hideEvent)
@@ -258,12 +296,14 @@ void k_fileplacesview_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param event QHideEvent*
+///
 void k_fileplacesview_qbase_hide_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragEnterEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QDragEnterEvent*
+///
 void k_fileplacesview_drag_enter_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragEnterEvent)
@@ -272,6 +312,7 @@ void k_fileplacesview_drag_enter_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QDragEnterEvent* event)
+///
 void k_fileplacesview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragEnterEvent)
@@ -280,12 +321,14 @@ void k_fileplacesview_on_drag_enter_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self KFilePlacesView*
 /// @param event QDragEnterEvent*
+///
 void k_fileplacesview_qbase_drag_enter_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragLeaveEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QDragLeaveEvent*
+///
 void k_fileplacesview_drag_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragLeaveEvent)
@@ -294,6 +337,7 @@ void k_fileplacesview_drag_leave_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QDragLeaveEvent* event)
+///
 void k_fileplacesview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragLeaveEvent)
@@ -302,12 +346,14 @@ void k_fileplacesview_on_drag_leave_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self KFilePlacesView*
 /// @param event QDragLeaveEvent*
+///
 void k_fileplacesview_qbase_drag_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragMoveEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QDragMoveEvent*
+///
 void k_fileplacesview_drag_move_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragMoveEvent)
@@ -316,6 +362,7 @@ void k_fileplacesview_drag_move_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QDragMoveEvent* event)
+///
 void k_fileplacesview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dragMoveEvent)
@@ -324,12 +371,14 @@ void k_fileplacesview_on_drag_move_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KFilePlacesView*
 /// @param event QDragMoveEvent*
+///
 void k_fileplacesview_qbase_drag_move_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dropEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QDropEvent*
+///
 void k_fileplacesview_drop_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dropEvent)
@@ -338,6 +387,7 @@ void k_fileplacesview_drop_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QDropEvent* event)
+///
 void k_fileplacesview_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dropEvent)
@@ -346,12 +396,14 @@ void k_fileplacesview_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param event QDropEvent*
+///
 void k_fileplacesview_qbase_drop_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#paintEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QPaintEvent*
+///
 void k_fileplacesview_paint_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#paintEvent)
@@ -360,6 +412,7 @@ void k_fileplacesview_paint_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QPaintEvent* event)
+///
 void k_fileplacesview_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#paintEvent)
@@ -368,12 +421,14 @@ void k_fileplacesview_on_paint_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param event QPaintEvent*
+///
 void k_fileplacesview_qbase_paint_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#startDrag)
 ///
 /// @param self KFilePlacesView*
 /// @param supportedActions flag of enum Qt__DropAction
+///
 void k_fileplacesview_start_drag(void* self, int32_t supportedActions);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#startDrag)
@@ -382,6 +437,7 @@ void k_fileplacesview_start_drag(void* self, int32_t supportedActions);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, flag of enum Qt__DropAction supportedActions)
+///
 void k_fileplacesview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#startDrag)
@@ -390,12 +446,14 @@ void k_fileplacesview_on_start_drag(void* self, void (*callback)(void*, int32_t)
 ///
 /// @param self KFilePlacesView*
 /// @param supportedActions flag of enum Qt__DropAction
+///
 void k_fileplacesview_qbase_start_drag(void* self, int32_t supportedActions);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#mousePressEvent)
 ///
 /// @param self KFilePlacesView*
 /// @param event QMouseEvent*
+///
 void k_fileplacesview_mouse_press_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#mousePressEvent)
@@ -404,6 +462,7 @@ void k_fileplacesview_mouse_press_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QMouseEvent* event)
+///
 void k_fileplacesview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#mousePressEvent)
@@ -412,6 +471,7 @@ void k_fileplacesview_on_mouse_press_event(void* self, void (*callback)(void*, v
 ///
 /// @param self KFilePlacesView*
 /// @param event QMouseEvent*
+///
 void k_fileplacesview_qbase_mouse_press_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#rowsInserted)
@@ -420,6 +480,7 @@ void k_fileplacesview_qbase_mouse_press_event(void* self, void* event);
 /// @param parent QModelIndex*
 /// @param start int
 /// @param end int
+///
 void k_fileplacesview_rows_inserted(void* self, void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#rowsInserted)
@@ -428,6 +489,7 @@ void k_fileplacesview_rows_inserted(void* self, void* parent, int start, int end
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* parent, int start, int end)
+///
 void k_fileplacesview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#rowsInserted)
@@ -438,6 +500,7 @@ void k_fileplacesview_on_rows_inserted(void* self, void (*callback)(void*, void*
 /// @param parent QModelIndex*
 /// @param start int
 /// @param end int
+///
 void k_fileplacesview_qbase_rows_inserted(void* self, void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dataChanged)
@@ -446,6 +509,7 @@ void k_fileplacesview_qbase_rows_inserted(void* self, void* parent, int start, i
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void k_fileplacesview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dataChanged)
@@ -454,6 +518,7 @@ void k_fileplacesview_data_changed(void* self, void* topLeft, void* bottomRight,
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void k_fileplacesview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dataChanged)
@@ -464,54 +529,63 @@ void k_fileplacesview_on_data_changed(void* self, void (*callback)(void*, void*,
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void k_fileplacesview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#placeActivated)
 ///
 /// @param self KFilePlacesView*
 /// @param url QUrl*
+///
 void k_fileplacesview_place_activated(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#placeActivated)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QUrl* url)
+///
 void k_fileplacesview_on_place_activated(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#tabRequested)
 ///
 /// @param self KFilePlacesView*
 /// @param url QUrl*
+///
 void k_fileplacesview_tab_requested(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#tabRequested)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QUrl* url)
+///
 void k_fileplacesview_on_tab_requested(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#activeTabRequested)
 ///
 /// @param self KFilePlacesView*
 /// @param url QUrl*
+///
 void k_fileplacesview_active_tab_requested(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#activeTabRequested)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QUrl* url)
+///
 void k_fileplacesview_on_active_tab_requested(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#newWindowRequested)
 ///
 /// @param self KFilePlacesView*
 /// @param url QUrl*
+///
 void k_fileplacesview_new_window_requested(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#newWindowRequested)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QUrl* url)
+///
 void k_fileplacesview_on_new_window_requested(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#contextMenuAboutToShow)
@@ -519,36 +593,42 @@ void k_fileplacesview_on_new_window_requested(void* self, void (*callback)(void*
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
 /// @param menu QMenu*
+///
 void k_fileplacesview_context_menu_about_to_show(void* self, void* index, void* menu);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#contextMenuAboutToShow)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index, QMenu* menu)
+///
 void k_fileplacesview_on_context_menu_about_to_show(void* self, void (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#allPlacesShownChanged)
 ///
 /// @param self KFilePlacesView*
 /// @param allPlacesShown bool
+///
 void k_fileplacesview_all_places_shown_changed(void* self, bool allPlacesShown);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#allPlacesShownChanged)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, bool allPlacesShown)
+///
 void k_fileplacesview_on_all_places_shown_changed(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#urlChanged)
 ///
 /// @param self KFilePlacesView*
 /// @param url QUrl*
+///
 void k_fileplacesview_url_changed(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#urlChanged)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QUrl* url)
+///
 void k_fileplacesview_on_url_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#urlsDropped)
@@ -557,12 +637,14 @@ void k_fileplacesview_on_url_changed(void* self, void (*callback)(void*, void*))
 /// @param dest QUrl*
 /// @param event QDropEvent*
 /// @param parent QWidget*
+///
 void k_fileplacesview_urls_dropped(void* self, void* dest, void* event, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#urlsDropped)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QUrl* dest, QDropEvent* event, QWidget* parent)
+///
 void k_fileplacesview_on_urls_dropped(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -571,6 +653,7 @@ void k_fileplacesview_on_urls_dropped(void* self, void (*callback)(void*, void*,
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_fileplacesview_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -580,6 +663,7 @@ const char* k_fileplacesview_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_fileplacesview_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QListView
@@ -588,6 +672,7 @@ const char* k_fileplacesview_tr3(const char* s, const char* c, int n);
 ///
 /// @param self KFilePlacesView*
 /// @param movement enum QListView__Movement
+///
 void k_fileplacesview_set_movement(void* self, int32_t movement);
 
 /// Inherited from QListView
@@ -597,6 +682,7 @@ void k_fileplacesview_set_movement(void* self, int32_t movement);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QListView__Movement
+///
 int32_t k_fileplacesview_movement(void* self);
 
 /// Inherited from QListView
@@ -605,6 +691,7 @@ int32_t k_fileplacesview_movement(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param flow enum QListView__Flow
+///
 void k_fileplacesview_set_flow(void* self, int32_t flow);
 
 /// Inherited from QListView
@@ -614,6 +701,7 @@ void k_fileplacesview_set_flow(void* self, int32_t flow);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QListView__Flow
+///
 int32_t k_fileplacesview_flow(void* self);
 
 /// Inherited from QListView
@@ -622,6 +710,7 @@ int32_t k_fileplacesview_flow(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_wrapping(void* self, bool enable);
 
 /// Inherited from QListView
@@ -629,6 +718,7 @@ void k_fileplacesview_set_wrapping(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isWrapping)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_wrapping(void* self);
 
 /// Inherited from QListView
@@ -637,6 +727,7 @@ bool k_fileplacesview_is_wrapping(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mode enum QListView__ResizeMode
+///
 void k_fileplacesview_set_resize_mode(void* self, int32_t mode);
 
 /// Inherited from QListView
@@ -646,6 +737,7 @@ void k_fileplacesview_set_resize_mode(void* self, int32_t mode);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QListView__ResizeMode
+///
 int32_t k_fileplacesview_resize_mode(void* self);
 
 /// Inherited from QListView
@@ -654,6 +746,7 @@ int32_t k_fileplacesview_resize_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mode enum QListView__LayoutMode
+///
 void k_fileplacesview_set_layout_mode(void* self, int32_t mode);
 
 /// Inherited from QListView
@@ -663,6 +756,7 @@ void k_fileplacesview_set_layout_mode(void* self, int32_t mode);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QListView__LayoutMode
+///
 int32_t k_fileplacesview_layout_mode(void* self);
 
 /// Inherited from QListView
@@ -671,6 +765,7 @@ int32_t k_fileplacesview_layout_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param space int
+///
 void k_fileplacesview_set_spacing(void* self, int space);
 
 /// Inherited from QListView
@@ -678,6 +773,7 @@ void k_fileplacesview_set_spacing(void* self, int space);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#spacing)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_spacing(void* self);
 
 /// Inherited from QListView
@@ -686,6 +782,7 @@ int32_t k_fileplacesview_spacing(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param batchSize int
+///
 void k_fileplacesview_set_batch_size(void* self, int batchSize);
 
 /// Inherited from QListView
@@ -693,6 +790,7 @@ void k_fileplacesview_set_batch_size(void* self, int batchSize);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#batchSize)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_batch_size(void* self);
 
 /// Inherited from QListView
@@ -701,6 +799,7 @@ int32_t k_fileplacesview_batch_size(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param size QSize*
+///
 void k_fileplacesview_set_grid_size(void* self, void* size);
 
 /// Inherited from QListView
@@ -708,6 +807,7 @@ void k_fileplacesview_set_grid_size(void* self, void* size);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#gridSize)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_grid_size(void* self);
 
 /// Inherited from QListView
@@ -716,6 +816,7 @@ QSize* k_fileplacesview_grid_size(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mode enum QListView__ViewMode
+///
 void k_fileplacesview_set_view_mode(void* self, int32_t mode);
 
 /// Inherited from QListView
@@ -725,6 +826,7 @@ void k_fileplacesview_set_view_mode(void* self, int32_t mode);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QListView__ViewMode
+///
 int32_t k_fileplacesview_view_mode(void* self);
 
 /// Inherited from QListView
@@ -732,6 +834,7 @@ int32_t k_fileplacesview_view_mode(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#clearPropertyFlags)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_clear_property_flags(void* self);
 
 /// Inherited from QListView
@@ -740,6 +843,7 @@ void k_fileplacesview_clear_property_flags(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param row int
+///
 bool k_fileplacesview_is_row_hidden(void* self, int row);
 
 /// Inherited from QListView
@@ -749,6 +853,7 @@ bool k_fileplacesview_is_row_hidden(void* self, int row);
 /// @param self KFilePlacesView*
 /// @param row int
 /// @param hide bool
+///
 void k_fileplacesview_set_row_hidden(void* self, int row, bool hide);
 
 /// Inherited from QListView
@@ -757,6 +862,7 @@ void k_fileplacesview_set_row_hidden(void* self, int row, bool hide);
 ///
 /// @param self KFilePlacesView*
 /// @param column int
+///
 void k_fileplacesview_set_model_column(void* self, int column);
 
 /// Inherited from QListView
@@ -764,6 +870,7 @@ void k_fileplacesview_set_model_column(void* self, int column);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#modelColumn)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_model_column(void* self);
 
 /// Inherited from QListView
@@ -772,6 +879,7 @@ int32_t k_fileplacesview_model_column(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_uniform_item_sizes(void* self, bool enable);
 
 /// Inherited from QListView
@@ -779,6 +887,7 @@ void k_fileplacesview_set_uniform_item_sizes(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#uniformItemSizes)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_uniform_item_sizes(void* self);
 
 /// Inherited from QListView
@@ -787,6 +896,7 @@ bool k_fileplacesview_uniform_item_sizes(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param on bool
+///
 void k_fileplacesview_set_word_wrap(void* self, bool on);
 
 /// Inherited from QListView
@@ -794,6 +904,7 @@ void k_fileplacesview_set_word_wrap(void* self, bool on);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#wordWrap)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_word_wrap(void* self);
 
 /// Inherited from QListView
@@ -802,6 +913,7 @@ bool k_fileplacesview_word_wrap(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param show bool
+///
 void k_fileplacesview_set_selection_rect_visible(void* self, bool show);
 
 /// Inherited from QListView
@@ -809,6 +921,7 @@ void k_fileplacesview_set_selection_rect_visible(void* self, bool show);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isSelectionRectVisible)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_selection_rect_visible(void* self);
 
 /// Inherited from QListView
@@ -817,6 +930,7 @@ bool k_fileplacesview_is_selection_rect_visible(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 void k_fileplacesview_set_item_alignment(void* self, int32_t alignment);
 
 /// Inherited from QListView
@@ -826,6 +940,7 @@ void k_fileplacesview_set_item_alignment(void* self, int32_t alignment);
 /// @param self KFilePlacesView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t k_fileplacesview_item_alignment(void* self);
 
 /// Inherited from QListView
@@ -834,6 +949,7 @@ int32_t k_fileplacesview_item_alignment(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 void k_fileplacesview_indexes_moved(void* self, libqt_list indexes);
 
 /// Inherited from QListView
@@ -842,6 +958,7 @@ void k_fileplacesview_indexes_moved(void* self, libqt_list indexes);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex** indexes)
+///
 void k_fileplacesview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemView
@@ -849,6 +966,7 @@ void k_fileplacesview_on_indexes_moved(void* self, void (*callback)(void*, QMode
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#model)
 ///
 /// @param self KFilePlacesView*
+///
 QAbstractItemModel* k_fileplacesview_model(void* self);
 
 /// Inherited from QAbstractItemView
@@ -856,6 +974,7 @@ QAbstractItemModel* k_fileplacesview_model(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionModel)
 ///
 /// @param self KFilePlacesView*
+///
 QItemSelectionModel* k_fileplacesview_selection_model(void* self);
 
 /// Inherited from QAbstractItemView
@@ -864,6 +983,7 @@ QItemSelectionModel* k_fileplacesview_selection_model(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param delegate QAbstractItemDelegate*
+///
 void k_fileplacesview_set_item_delegate(void* self, void* delegate);
 
 /// Inherited from QAbstractItemView
@@ -871,6 +991,7 @@ void k_fileplacesview_set_item_delegate(void* self, void* delegate);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
 /// @param self KFilePlacesView*
+///
 QAbstractItemDelegate* k_fileplacesview_item_delegate(void* self);
 
 /// Inherited from QAbstractItemView
@@ -879,6 +1000,7 @@ QAbstractItemDelegate* k_fileplacesview_item_delegate(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mode enum QAbstractItemView__SelectionMode
+///
 void k_fileplacesview_set_selection_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
@@ -888,6 +1010,7 @@ void k_fileplacesview_set_selection_mode(void* self, int32_t mode);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__SelectionMode
+///
 int32_t k_fileplacesview_selection_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -896,6 +1019,7 @@ int32_t k_fileplacesview_selection_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param behavior enum QAbstractItemView__SelectionBehavior
+///
 void k_fileplacesview_set_selection_behavior(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
@@ -905,6 +1029,7 @@ void k_fileplacesview_set_selection_behavior(void* self, int32_t behavior);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
+///
 int32_t k_fileplacesview_selection_behavior(void* self);
 
 /// Inherited from QAbstractItemView
@@ -912,6 +1037,7 @@ int32_t k_fileplacesview_selection_behavior(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#currentIndex)
 ///
 /// @param self KFilePlacesView*
+///
 QModelIndex* k_fileplacesview_current_index(void* self);
 
 /// Inherited from QAbstractItemView
@@ -919,6 +1045,7 @@ QModelIndex* k_fileplacesview_current_index(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rootIndex)
 ///
 /// @param self KFilePlacesView*
+///
 QModelIndex* k_fileplacesview_root_index(void* self);
 
 /// Inherited from QAbstractItemView
@@ -927,6 +1054,7 @@ QModelIndex* k_fileplacesview_root_index(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param triggers flag of enum QAbstractItemView__EditTrigger
+///
 void k_fileplacesview_set_edit_triggers(void* self, int32_t triggers);
 
 /// Inherited from QAbstractItemView
@@ -936,6 +1064,7 @@ void k_fileplacesview_set_edit_triggers(void* self, int32_t triggers);
 /// @param self KFilePlacesView*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
+///
 int32_t k_fileplacesview_edit_triggers(void* self);
 
 /// Inherited from QAbstractItemView
@@ -944,6 +1073,7 @@ int32_t k_fileplacesview_edit_triggers(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mode enum QAbstractItemView__ScrollMode
+///
 void k_fileplacesview_set_vertical_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
@@ -953,6 +1083,7 @@ void k_fileplacesview_set_vertical_scroll_mode(void* self, int32_t mode);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
+///
 int32_t k_fileplacesview_vertical_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -960,6 +1091,7 @@ int32_t k_fileplacesview_vertical_scroll_mode(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#resetVerticalScrollMode)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_reset_vertical_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -968,6 +1100,7 @@ void k_fileplacesview_reset_vertical_scroll_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mode enum QAbstractItemView__ScrollMode
+///
 void k_fileplacesview_set_horizontal_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
@@ -977,6 +1110,7 @@ void k_fileplacesview_set_horizontal_scroll_mode(void* self, int32_t mode);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
+///
 int32_t k_fileplacesview_horizontal_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -984,6 +1118,7 @@ int32_t k_fileplacesview_horizontal_scroll_mode(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#resetHorizontalScrollMode)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_reset_horizontal_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -992,6 +1127,7 @@ void k_fileplacesview_reset_horizontal_scroll_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_auto_scroll(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
@@ -999,6 +1135,7 @@ void k_fileplacesview_set_auto_scroll(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#hasAutoScroll)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_has_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1007,6 +1144,7 @@ bool k_fileplacesview_has_auto_scroll(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param margin int
+///
 void k_fileplacesview_set_auto_scroll_margin(void* self, int margin);
 
 /// Inherited from QAbstractItemView
@@ -1014,6 +1152,7 @@ void k_fileplacesview_set_auto_scroll_margin(void* self, int margin);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#autoScrollMargin)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_auto_scroll_margin(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1022,6 +1161,7 @@ int32_t k_fileplacesview_auto_scroll_margin(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_tab_key_navigation(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
@@ -1029,6 +1169,7 @@ void k_fileplacesview_set_tab_key_navigation(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#tabKeyNavigation)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_tab_key_navigation(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1037,6 +1178,7 @@ bool k_fileplacesview_tab_key_navigation(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_drop_indicator_shown(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
@@ -1044,6 +1186,7 @@ void k_fileplacesview_set_drop_indicator_shown(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#showDropIndicator)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_show_drop_indicator(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1052,6 +1195,7 @@ bool k_fileplacesview_show_drop_indicator(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_drag_enabled(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
@@ -1059,6 +1203,7 @@ void k_fileplacesview_set_drag_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnabled)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_drag_enabled(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1067,6 +1212,7 @@ bool k_fileplacesview_drag_enabled(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param overwrite bool
+///
 void k_fileplacesview_set_drag_drop_overwrite_mode(void* self, bool overwrite);
 
 /// Inherited from QAbstractItemView
@@ -1074,6 +1220,7 @@ void k_fileplacesview_set_drag_drop_overwrite_mode(void* self, bool overwrite);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropOverwriteMode)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_drag_drop_overwrite_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1082,6 +1229,7 @@ bool k_fileplacesview_drag_drop_overwrite_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param behavior enum QAbstractItemView__DragDropMode
+///
 void k_fileplacesview_set_drag_drop_mode(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
@@ -1091,6 +1239,7 @@ void k_fileplacesview_set_drag_drop_mode(void* self, int32_t behavior);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__DragDropMode
+///
 int32_t k_fileplacesview_drag_drop_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1099,6 +1248,7 @@ int32_t k_fileplacesview_drag_drop_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param dropAction enum Qt__DropAction
+///
 void k_fileplacesview_set_default_drop_action(void* self, int32_t dropAction);
 
 /// Inherited from QAbstractItemView
@@ -1108,6 +1258,7 @@ void k_fileplacesview_set_default_drop_action(void* self, int32_t dropAction);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__DropAction
+///
 int32_t k_fileplacesview_default_drop_action(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1116,6 +1267,7 @@ int32_t k_fileplacesview_default_drop_action(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_alternating_row_colors(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
@@ -1123,6 +1275,7 @@ void k_fileplacesview_set_alternating_row_colors(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#alternatingRowColors)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_alternating_row_colors(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1131,6 +1284,7 @@ bool k_fileplacesview_alternating_row_colors(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param size QSize*
+///
 void k_fileplacesview_set_icon_size(void* self, void* size);
 
 /// Inherited from QAbstractItemView
@@ -1138,6 +1292,7 @@ void k_fileplacesview_set_icon_size(void* self, void* size);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#iconSize)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_icon_size(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1146,6 +1301,7 @@ QSize* k_fileplacesview_icon_size(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mode enum Qt__TextElideMode
+///
 void k_fileplacesview_set_text_elide_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
@@ -1155,6 +1311,7 @@ void k_fileplacesview_set_text_elide_mode(void* self, int32_t mode);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__TextElideMode
+///
 int32_t k_fileplacesview_text_elide_mode(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1163,6 +1320,7 @@ int32_t k_fileplacesview_text_elide_mode(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QSize* k_fileplacesview_size_hint_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1171,6 +1329,7 @@ QSize* k_fileplacesview_size_hint_for_index(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_open_persistent_editor(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1179,6 +1338,7 @@ void k_fileplacesview_open_persistent_editor(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_close_persistent_editor(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1187,6 +1347,7 @@ void k_fileplacesview_close_persistent_editor(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 bool k_fileplacesview_is_persistent_editor_open(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1196,6 +1357,7 @@ bool k_fileplacesview_is_persistent_editor_open(void* self, void* index);
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
 /// @param widget QWidget*
+///
 void k_fileplacesview_set_index_widget(void* self, void* index, void* widget);
 
 /// Inherited from QAbstractItemView
@@ -1204,6 +1366,7 @@ void k_fileplacesview_set_index_widget(void* self, void* index, void* widget);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QWidget* k_fileplacesview_index_widget(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1213,6 +1376,7 @@ QWidget* k_fileplacesview_index_widget(void* self, void* index);
 /// @param self KFilePlacesView*
 /// @param row int
 /// @param delegate QAbstractItemDelegate*
+///
 void k_fileplacesview_set_item_delegate_for_row(void* self, int row, void* delegate);
 
 /// Inherited from QAbstractItemView
@@ -1221,6 +1385,7 @@ void k_fileplacesview_set_item_delegate_for_row(void* self, int row, void* deleg
 ///
 /// @param self KFilePlacesView*
 /// @param row int
+///
 QAbstractItemDelegate* k_fileplacesview_item_delegate_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
@@ -1230,6 +1395,7 @@ QAbstractItemDelegate* k_fileplacesview_item_delegate_for_row(void* self, int ro
 /// @param self KFilePlacesView*
 /// @param column int
 /// @param delegate QAbstractItemDelegate*
+///
 void k_fileplacesview_set_item_delegate_for_column(void* self, int column, void* delegate);
 
 /// Inherited from QAbstractItemView
@@ -1238,6 +1404,7 @@ void k_fileplacesview_set_item_delegate_for_column(void* self, int column, void*
 ///
 /// @param self KFilePlacesView*
 /// @param column int
+///
 QAbstractItemDelegate* k_fileplacesview_item_delegate_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
@@ -1246,6 +1413,7 @@ QAbstractItemDelegate* k_fileplacesview_item_delegate_for_column(void* self, int
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QAbstractItemDelegate* k_fileplacesview_item_delegate2(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1254,6 +1422,7 @@ QAbstractItemDelegate* k_fileplacesview_item_delegate2(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_edit(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1261,6 +1430,7 @@ void k_fileplacesview_edit(void* self, void* index);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#clearSelection)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_clear_selection(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1269,6 +1439,7 @@ void k_fileplacesview_clear_selection(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_set_current_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1276,6 +1447,7 @@ void k_fileplacesview_set_current_index(void* self, void* index);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollToTop)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_scroll_to_top(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1283,6 +1455,7 @@ void k_fileplacesview_scroll_to_top(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollToBottom)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_scroll_to_bottom(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1291,6 +1464,7 @@ void k_fileplacesview_scroll_to_bottom(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_update(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1299,6 +1473,7 @@ void k_fileplacesview_update(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_pressed(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1307,6 +1482,7 @@ void k_fileplacesview_pressed(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1315,6 +1491,7 @@ void k_fileplacesview_on_pressed(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1323,6 +1500,7 @@ void k_fileplacesview_clicked(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1331,6 +1509,7 @@ void k_fileplacesview_on_clicked(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_double_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1339,6 +1518,7 @@ void k_fileplacesview_double_clicked(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1347,6 +1527,7 @@ void k_fileplacesview_on_double_clicked(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_activated(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1355,6 +1536,7 @@ void k_fileplacesview_activated(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_activated(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1363,6 +1545,7 @@ void k_fileplacesview_on_activated(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_entered(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -1371,6 +1554,7 @@ void k_fileplacesview_entered(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_entered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1378,6 +1562,7 @@ void k_fileplacesview_on_entered(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_viewport_entered(void* self);
 
 /// Inherited from QAbstractItemView
@@ -1386,6 +1571,7 @@ void k_fileplacesview_viewport_entered(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self)
+///
 void k_fileplacesview_on_viewport_entered(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
@@ -1394,6 +1580,7 @@ void k_fileplacesview_on_viewport_entered(void* self, void (*callback)(void*));
 ///
 /// @param self KFilePlacesView*
 /// @param size QSize*
+///
 void k_fileplacesview_icon_size_changed(void* self, void* size);
 
 /// Inherited from QAbstractItemView
@@ -1402,6 +1589,7 @@ void k_fileplacesview_icon_size_changed(void* self, void* size);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QSize* size)
+///
 void k_fileplacesview_on_icon_size_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -1411,6 +1599,7 @@ void k_fileplacesview_on_icon_size_changed(void* self, void (*callback)(void*, v
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__ScrollBarPolicy
+///
 int32_t k_fileplacesview_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1419,6 +1608,7 @@ int32_t k_fileplacesview_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
+///
 void k_fileplacesview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
@@ -1426,6 +1616,7 @@ void k_fileplacesview_set_vertical_scroll_bar_policy(void* self, int32_t vertica
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
 /// @param self KFilePlacesView*
+///
 QScrollBar* k_fileplacesview_vertical_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1434,6 +1625,7 @@ QScrollBar* k_fileplacesview_vertical_scroll_bar(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param scrollbar QScrollBar*
+///
 void k_fileplacesview_set_vertical_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
@@ -1443,6 +1635,7 @@ void k_fileplacesview_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__ScrollBarPolicy
+///
 int32_t k_fileplacesview_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1451,6 +1644,7 @@ int32_t k_fileplacesview_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
+///
 void k_fileplacesview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
@@ -1458,6 +1652,7 @@ void k_fileplacesview_set_horizontal_scroll_bar_policy(void* self, int32_t horiz
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
 /// @param self KFilePlacesView*
+///
 QScrollBar* k_fileplacesview_horizontal_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1466,6 +1661,7 @@ QScrollBar* k_fileplacesview_horizontal_scroll_bar(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param scrollbar QScrollBar*
+///
 void k_fileplacesview_set_horizontal_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
@@ -1473,6 +1669,7 @@ void k_fileplacesview_set_horizontal_scroll_bar(void* self, void* scrollbar);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_corner_widget(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1481,6 +1678,7 @@ QWidget* k_fileplacesview_corner_widget(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param widget QWidget*
+///
 void k_fileplacesview_set_corner_widget(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
@@ -1490,6 +1688,7 @@ void k_fileplacesview_set_corner_widget(void* self, void* widget);
 /// @param self KFilePlacesView*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 void k_fileplacesview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
@@ -1498,6 +1697,7 @@ void k_fileplacesview_add_scroll_bar_widget(void* self, void* widget, int32_t al
 ///
 /// @param self KFilePlacesView*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 libqt_list /* of QWidget* */ k_fileplacesview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
@@ -1505,6 +1705,7 @@ libqt_list /* of QWidget* */ k_fileplacesview_scroll_bar_widgets(void* self, int
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_viewport(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1513,6 +1714,7 @@ QWidget* k_fileplacesview_viewport(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param widget QWidget*
+///
 void k_fileplacesview_set_viewport(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
@@ -1520,6 +1722,7 @@ void k_fileplacesview_set_viewport(void* self, void* widget);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_maximum_viewport_size(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1529,6 +1732,7 @@ QSize* k_fileplacesview_maximum_viewport_size(void* self);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
+///
 int32_t k_fileplacesview_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1537,6 +1741,7 @@ int32_t k_fileplacesview_size_adjust_policy(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
+///
 void k_fileplacesview_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
@@ -1544,6 +1749,7 @@ void k_fileplacesview_set_size_adjust_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_frame_style(void* self);
 
 /// Inherited from QFrame
@@ -1552,6 +1758,7 @@ int32_t k_fileplacesview_frame_style(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param frameStyle int
+///
 void k_fileplacesview_set_frame_style(void* self, int frameStyle);
 
 /// Inherited from QFrame
@@ -1559,6 +1766,7 @@ void k_fileplacesview_set_frame_style(void* self, int frameStyle);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_frame_width(void* self);
 
 /// Inherited from QFrame
@@ -1568,6 +1776,7 @@ int32_t k_fileplacesview_frame_width(void* self);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QFrame__Shape
+///
 int32_t k_fileplacesview_frame_shape(void* self);
 
 /// Inherited from QFrame
@@ -1576,6 +1785,7 @@ int32_t k_fileplacesview_frame_shape(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param frameShape enum QFrame__Shape
+///
 void k_fileplacesview_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
@@ -1585,6 +1795,7 @@ void k_fileplacesview_set_frame_shape(void* self, int32_t frameShape);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QFrame__Shadow
+///
 int32_t k_fileplacesview_frame_shadow(void* self);
 
 /// Inherited from QFrame
@@ -1593,6 +1804,7 @@ int32_t k_fileplacesview_frame_shadow(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param frameShadow enum QFrame__Shadow
+///
 void k_fileplacesview_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
@@ -1600,6 +1812,7 @@ void k_fileplacesview_set_frame_shadow(void* self, int32_t frameShadow);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_line_width(void* self);
 
 /// Inherited from QFrame
@@ -1608,6 +1821,7 @@ int32_t k_fileplacesview_line_width(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param lineWidth int
+///
 void k_fileplacesview_set_line_width(void* self, int lineWidth);
 
 /// Inherited from QFrame
@@ -1615,6 +1829,7 @@ void k_fileplacesview_set_line_width(void* self, int lineWidth);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_mid_line_width(void* self);
 
 /// Inherited from QFrame
@@ -1623,6 +1838,7 @@ int32_t k_fileplacesview_mid_line_width(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param midLineWidth int
+///
 void k_fileplacesview_set_mid_line_width(void* self, int midLineWidth);
 
 /// Inherited from QFrame
@@ -1630,6 +1846,7 @@ void k_fileplacesview_set_mid_line_width(void* self, int midLineWidth);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
 /// @param self KFilePlacesView*
+///
 QRect* k_fileplacesview_frame_rect(void* self);
 
 /// Inherited from QFrame
@@ -1638,6 +1855,7 @@ QRect* k_fileplacesview_frame_rect(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param frameRect QRect*
+///
 void k_fileplacesview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
@@ -1645,6 +1863,7 @@ void k_fileplacesview_set_frame_rect(void* self, void* frameRect);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KFilePlacesView*
+///
 uintptr_t k_fileplacesview_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1652,6 +1871,7 @@ uintptr_t k_fileplacesview_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1659,6 +1879,7 @@ void k_fileplacesview_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KFilePlacesView*
+///
 uintptr_t k_fileplacesview_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1666,6 +1887,7 @@ uintptr_t k_fileplacesview_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KFilePlacesView*
+///
 uintptr_t k_fileplacesview_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1673,6 +1895,7 @@ uintptr_t k_fileplacesview_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KFilePlacesView*
+///
 QStyle* k_fileplacesview_style(void* self);
 
 /// Inherited from QWidget
@@ -1681,6 +1904,7 @@ QStyle* k_fileplacesview_style(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param style QStyle*
+///
 void k_fileplacesview_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -1688,6 +1912,7 @@ void k_fileplacesview_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -1695,6 +1920,7 @@ bool k_fileplacesview_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_window(void* self);
 
 /// Inherited from QWidget
@@ -1702,6 +1928,7 @@ bool k_fileplacesview_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -1711,6 +1938,7 @@ bool k_fileplacesview_is_modal(void* self);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t k_fileplacesview_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -1719,6 +1947,7 @@ int32_t k_fileplacesview_window_modality(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param windowModality enum Qt__WindowModality
+///
 void k_fileplacesview_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -1726,6 +1955,7 @@ void k_fileplacesview_set_window_modality(void* self, int32_t windowModality);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1734,6 +1964,7 @@ bool k_fileplacesview_is_enabled(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QWidget*
+///
 bool k_fileplacesview_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1742,6 +1973,7 @@ bool k_fileplacesview_is_enabled_to(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param enabled bool
+///
 void k_fileplacesview_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -1750,6 +1982,7 @@ void k_fileplacesview_set_enabled(void* self, bool enabled);
 ///
 /// @param self KFilePlacesView*
 /// @param disabled bool
+///
 void k_fileplacesview_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -1758,6 +1991,7 @@ void k_fileplacesview_set_disabled(void* self, bool disabled);
 ///
 /// @param self KFilePlacesView*
 /// @param windowModified bool
+///
 void k_fileplacesview_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -1765,6 +1999,7 @@ void k_fileplacesview_set_window_modified(void* self, bool windowModified);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KFilePlacesView*
+///
 QRect* k_fileplacesview_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1772,6 +2007,7 @@ QRect* k_fileplacesview_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KFilePlacesView*
+///
 const QRect* k_fileplacesview_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1779,6 +2015,7 @@ const QRect* k_fileplacesview_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KFilePlacesView*
+///
 QRect* k_fileplacesview_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1786,6 +2023,7 @@ QRect* k_fileplacesview_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_x(void* self);
 
 /// Inherited from QWidget
@@ -1793,6 +2031,7 @@ int32_t k_fileplacesview_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_y(void* self);
 
 /// Inherited from QWidget
@@ -1800,6 +2039,7 @@ int32_t k_fileplacesview_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KFilePlacesView*
+///
 QPoint* k_fileplacesview_pos(void* self);
 
 /// Inherited from QWidget
@@ -1807,6 +2047,7 @@ QPoint* k_fileplacesview_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -1814,6 +2055,7 @@ QSize* k_fileplacesview_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_size(void* self);
 
 /// Inherited from QWidget
@@ -1821,6 +2063,7 @@ QSize* k_fileplacesview_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_width(void* self);
 
 /// Inherited from QWidget
@@ -1828,6 +2071,7 @@ int32_t k_fileplacesview_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_height(void* self);
 
 /// Inherited from QWidget
@@ -1835,6 +2079,7 @@ int32_t k_fileplacesview_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KFilePlacesView*
+///
 QRect* k_fileplacesview_rect(void* self);
 
 /// Inherited from QWidget
@@ -1842,6 +2087,7 @@ QRect* k_fileplacesview_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KFilePlacesView*
+///
 QRect* k_fileplacesview_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -1849,6 +2095,7 @@ QRect* k_fileplacesview_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KFilePlacesView*
+///
 QRegion* k_fileplacesview_children_region(void* self);
 
 /// Inherited from QWidget
@@ -1856,6 +2103,7 @@ QRegion* k_fileplacesview_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -1863,6 +2111,7 @@ QSize* k_fileplacesview_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -1870,6 +2119,7 @@ QSize* k_fileplacesview_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -1877,6 +2127,7 @@ int32_t k_fileplacesview_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -1884,6 +2135,7 @@ int32_t k_fileplacesview_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -1891,6 +2143,7 @@ int32_t k_fileplacesview_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -1899,6 +2152,7 @@ int32_t k_fileplacesview_maximum_height(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param minimumSize QSize*
+///
 void k_fileplacesview_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -1908,6 +2162,7 @@ void k_fileplacesview_set_minimum_size(void* self, void* minimumSize);
 /// @param self KFilePlacesView*
 /// @param minw int
 /// @param minh int
+///
 void k_fileplacesview_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -1916,6 +2171,7 @@ void k_fileplacesview_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self KFilePlacesView*
 /// @param maximumSize QSize*
+///
 void k_fileplacesview_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -1925,6 +2181,7 @@ void k_fileplacesview_set_maximum_size(void* self, void* maximumSize);
 /// @param self KFilePlacesView*
 /// @param maxw int
 /// @param maxh int
+///
 void k_fileplacesview_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -1933,6 +2190,7 @@ void k_fileplacesview_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self KFilePlacesView*
 /// @param minw int
+///
 void k_fileplacesview_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -1941,6 +2199,7 @@ void k_fileplacesview_set_minimum_width(void* self, int minw);
 ///
 /// @param self KFilePlacesView*
 /// @param minh int
+///
 void k_fileplacesview_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -1949,6 +2208,7 @@ void k_fileplacesview_set_minimum_height(void* self, int minh);
 ///
 /// @param self KFilePlacesView*
 /// @param maxw int
+///
 void k_fileplacesview_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -1957,6 +2217,7 @@ void k_fileplacesview_set_maximum_width(void* self, int maxw);
 ///
 /// @param self KFilePlacesView*
 /// @param maxh int
+///
 void k_fileplacesview_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -1964,6 +2225,7 @@ void k_fileplacesview_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -1972,6 +2234,7 @@ QSize* k_fileplacesview_size_increment(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param sizeIncrement QSize*
+///
 void k_fileplacesview_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -1981,6 +2244,7 @@ void k_fileplacesview_set_size_increment(void* self, void* sizeIncrement);
 /// @param self KFilePlacesView*
 /// @param w int
 /// @param h int
+///
 void k_fileplacesview_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1988,6 +2252,7 @@ void k_fileplacesview_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_base_size(void* self);
 
 /// Inherited from QWidget
@@ -1996,6 +2261,7 @@ QSize* k_fileplacesview_base_size(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param baseSize QSize*
+///
 void k_fileplacesview_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -2005,6 +2271,7 @@ void k_fileplacesview_set_base_size(void* self, void* baseSize);
 /// @param self KFilePlacesView*
 /// @param basew int
 /// @param baseh int
+///
 void k_fileplacesview_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -2013,6 +2280,7 @@ void k_fileplacesview_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self KFilePlacesView*
 /// @param fixedSize QSize*
+///
 void k_fileplacesview_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -2022,6 +2290,7 @@ void k_fileplacesview_set_fixed_size(void* self, void* fixedSize);
 /// @param self KFilePlacesView*
 /// @param w int
 /// @param h int
+///
 void k_fileplacesview_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -2030,6 +2299,7 @@ void k_fileplacesview_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self KFilePlacesView*
 /// @param w int
+///
 void k_fileplacesview_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -2038,6 +2308,7 @@ void k_fileplacesview_set_fixed_width(void* self, int w);
 ///
 /// @param self KFilePlacesView*
 /// @param h int
+///
 void k_fileplacesview_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -2046,6 +2317,7 @@ void k_fileplacesview_set_fixed_height(void* self, int h);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPointF*
+///
 QPointF* k_fileplacesview_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2054,6 +2326,7 @@ QPointF* k_fileplacesview_map_to_global(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPoint*
+///
 QPoint* k_fileplacesview_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2062,6 +2335,7 @@ QPoint* k_fileplacesview_map_to_global2(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPointF*
+///
 QPointF* k_fileplacesview_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2070,6 +2344,7 @@ QPointF* k_fileplacesview_map_from_global(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPoint*
+///
 QPoint* k_fileplacesview_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2078,6 +2353,7 @@ QPoint* k_fileplacesview_map_from_global2(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPointF*
+///
 QPointF* k_fileplacesview_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2086,6 +2362,7 @@ QPointF* k_fileplacesview_map_to_parent(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPoint*
+///
 QPoint* k_fileplacesview_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2094,6 +2371,7 @@ QPoint* k_fileplacesview_map_to_parent2(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPointF*
+///
 QPointF* k_fileplacesview_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2102,6 +2380,7 @@ QPointF* k_fileplacesview_map_from_parent(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPoint*
+///
 QPoint* k_fileplacesview_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2111,6 +2390,7 @@ QPoint* k_fileplacesview_map_from_parent2(void* self, void* param1);
 /// @param self KFilePlacesView*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_fileplacesview_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2120,6 +2400,7 @@ QPointF* k_fileplacesview_map_to(void* self, void* param1, void* param2);
 /// @param self KFilePlacesView*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_fileplacesview_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2129,6 +2410,7 @@ QPoint* k_fileplacesview_map_to2(void* self, void* param1, void* param2);
 /// @param self KFilePlacesView*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_fileplacesview_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2138,6 +2420,7 @@ QPointF* k_fileplacesview_map_from(void* self, void* param1, void* param2);
 /// @param self KFilePlacesView*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_fileplacesview_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2145,6 +2428,7 @@ QPoint* k_fileplacesview_map_from2(void* self, void* param1, void* param2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_window(void* self);
 
 /// Inherited from QWidget
@@ -2152,6 +2436,7 @@ QWidget* k_fileplacesview_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2159,6 +2444,7 @@ QWidget* k_fileplacesview_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -2166,6 +2452,7 @@ QWidget* k_fileplacesview_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KFilePlacesView*
+///
 const QPalette* k_fileplacesview_palette(void* self);
 
 /// Inherited from QWidget
@@ -2174,6 +2461,7 @@ const QPalette* k_fileplacesview_palette(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param palette QPalette*
+///
 void k_fileplacesview_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -2182,6 +2470,7 @@ void k_fileplacesview_set_palette(void* self, void* palette);
 ///
 /// @param self KFilePlacesView*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void k_fileplacesview_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -2191,6 +2480,7 @@ void k_fileplacesview_set_background_role(void* self, int32_t backgroundRole);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_fileplacesview_background_role(void* self);
 
 /// Inherited from QWidget
@@ -2199,6 +2489,7 @@ int32_t k_fileplacesview_background_role(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void k_fileplacesview_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -2208,6 +2499,7 @@ void k_fileplacesview_set_foreground_role(void* self, int32_t foregroundRole);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_fileplacesview_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -2215,6 +2507,7 @@ int32_t k_fileplacesview_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KFilePlacesView*
+///
 const QFont* k_fileplacesview_font(void* self);
 
 /// Inherited from QWidget
@@ -2223,6 +2516,7 @@ const QFont* k_fileplacesview_font(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param font QFont*
+///
 void k_fileplacesview_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -2230,6 +2524,7 @@ void k_fileplacesview_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KFilePlacesView*
+///
 QFontMetrics* k_fileplacesview_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -2237,6 +2532,7 @@ QFontMetrics* k_fileplacesview_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KFilePlacesView*
+///
 QFontInfo* k_fileplacesview_font_info(void* self);
 
 /// Inherited from QWidget
@@ -2244,6 +2540,7 @@ QFontInfo* k_fileplacesview_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KFilePlacesView*
+///
 QCursor* k_fileplacesview_cursor(void* self);
 
 /// Inherited from QWidget
@@ -2252,6 +2549,7 @@ QCursor* k_fileplacesview_cursor(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param cursor QCursor*
+///
 void k_fileplacesview_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -2259,6 +2557,7 @@ void k_fileplacesview_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -2267,6 +2566,7 @@ void k_fileplacesview_unset_cursor(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -2274,6 +2574,7 @@ void k_fileplacesview_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -2281,6 +2582,7 @@ bool k_fileplacesview_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2289,6 +2591,7 @@ bool k_fileplacesview_under_mouse(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -2296,6 +2599,7 @@ void k_fileplacesview_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -2304,6 +2608,7 @@ bool k_fileplacesview_has_tablet_tracking(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param mask QBitmap*
+///
 void k_fileplacesview_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -2312,6 +2617,7 @@ void k_fileplacesview_set_mask(void* self, void* mask);
 ///
 /// @param self KFilePlacesView*
 /// @param mask QRegion*
+///
 void k_fileplacesview_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -2319,6 +2625,7 @@ void k_fileplacesview_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KFilePlacesView*
+///
 QRegion* k_fileplacesview_mask(void* self);
 
 /// Inherited from QWidget
@@ -2326,6 +2633,7 @@ QRegion* k_fileplacesview_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -2334,6 +2642,7 @@ void k_fileplacesview_clear_mask(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param target QPaintDevice*
+///
 void k_fileplacesview_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -2342,6 +2651,7 @@ void k_fileplacesview_render(void* self, void* target);
 ///
 /// @param self KFilePlacesView*
 /// @param painter QPainter*
+///
 void k_fileplacesview_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -2349,6 +2659,7 @@ void k_fileplacesview_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KFilePlacesView*
+///
 QPixmap* k_fileplacesview_grab(void* self);
 
 /// Inherited from QWidget
@@ -2356,6 +2667,7 @@ QPixmap* k_fileplacesview_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KFilePlacesView*
+///
 QGraphicsEffect* k_fileplacesview_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -2364,6 +2676,7 @@ QGraphicsEffect* k_fileplacesview_graphics_effect(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param effect QGraphicsEffect*
+///
 void k_fileplacesview_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -2372,6 +2685,7 @@ void k_fileplacesview_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self KFilePlacesView*
 /// @param type enum Qt__GestureType
+///
 void k_fileplacesview_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2380,6 +2694,7 @@ void k_fileplacesview_grab_gesture(void* self, int64_t type);
 ///
 /// @param self KFilePlacesView*
 /// @param type enum Qt__GestureType
+///
 void k_fileplacesview_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2388,6 +2703,7 @@ void k_fileplacesview_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self KFilePlacesView*
 /// @param windowTitle const char*
+///
 void k_fileplacesview_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -2396,6 +2712,7 @@ void k_fileplacesview_set_window_title(void* self, const char* windowTitle);
 ///
 /// @param self KFilePlacesView*
 /// @param styleSheet const char*
+///
 void k_fileplacesview_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -2405,6 +2722,7 @@ void k_fileplacesview_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -2414,6 +2732,7 @@ const char* k_fileplacesview_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_window_title(void* self);
 
 /// Inherited from QWidget
@@ -2422,6 +2741,7 @@ const char* k_fileplacesview_window_title(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param icon QIcon*
+///
 void k_fileplacesview_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2429,6 +2749,7 @@ void k_fileplacesview_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KFilePlacesView*
+///
 QIcon* k_fileplacesview_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -2437,6 +2758,7 @@ QIcon* k_fileplacesview_window_icon(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param windowIconText const char*
+///
 void k_fileplacesview_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -2446,6 +2768,7 @@ void k_fileplacesview_set_window_icon_text(void* self, const char* windowIconTex
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -2454,6 +2777,7 @@ const char* k_fileplacesview_window_icon_text(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param windowRole const char*
+///
 void k_fileplacesview_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -2463,6 +2787,7 @@ void k_fileplacesview_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_window_role(void* self);
 
 /// Inherited from QWidget
@@ -2471,6 +2796,7 @@ const char* k_fileplacesview_window_role(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param filePath const char*
+///
 void k_fileplacesview_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -2480,6 +2806,7 @@ void k_fileplacesview_set_window_file_path(void* self, const char* filePath);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -2488,6 +2815,7 @@ const char* k_fileplacesview_window_file_path(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param level double
+///
 void k_fileplacesview_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -2495,6 +2823,7 @@ void k_fileplacesview_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KFilePlacesView*
+///
 double k_fileplacesview_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -2502,6 +2831,7 @@ double k_fileplacesview_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -2510,6 +2840,7 @@ bool k_fileplacesview_is_window_modified(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param toolTip const char*
+///
 void k_fileplacesview_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -2519,6 +2850,7 @@ void k_fileplacesview_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -2527,6 +2859,7 @@ const char* k_fileplacesview_tool_tip(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param msec int
+///
 void k_fileplacesview_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -2534,6 +2867,7 @@ void k_fileplacesview_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -2542,6 +2876,7 @@ int32_t k_fileplacesview_tool_tip_duration(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param statusTip const char*
+///
 void k_fileplacesview_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -2551,6 +2886,7 @@ void k_fileplacesview_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -2559,6 +2895,7 @@ const char* k_fileplacesview_status_tip(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param whatsThis const char*
+///
 void k_fileplacesview_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -2568,6 +2905,7 @@ void k_fileplacesview_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -2577,6 +2915,7 @@ const char* k_fileplacesview_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -2585,6 +2924,7 @@ const char* k_fileplacesview_accessible_name(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param name const char*
+///
 void k_fileplacesview_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -2594,6 +2934,7 @@ void k_fileplacesview_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -2602,6 +2943,7 @@ const char* k_fileplacesview_accessible_description(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param description const char*
+///
 void k_fileplacesview_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -2610,6 +2952,7 @@ void k_fileplacesview_set_accessible_description(void* self, const char* descrip
 ///
 /// @param self KFilePlacesView*
 /// @param direction enum Qt__LayoutDirection
+///
 void k_fileplacesview_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -2619,6 +2962,7 @@ void k_fileplacesview_set_layout_direction(void* self, int32_t direction);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t k_fileplacesview_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -2626,6 +2970,7 @@ int32_t k_fileplacesview_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -2634,6 +2979,7 @@ void k_fileplacesview_unset_layout_direction(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param locale QLocale*
+///
 void k_fileplacesview_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -2641,6 +2987,7 @@ void k_fileplacesview_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KFilePlacesView*
+///
 QLocale* k_fileplacesview_locale(void* self);
 
 /// Inherited from QWidget
@@ -2648,6 +2995,7 @@ QLocale* k_fileplacesview_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -2655,6 +3003,7 @@ void k_fileplacesview_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -2662,6 +3011,7 @@ bool k_fileplacesview_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -2669,6 +3019,7 @@ bool k_fileplacesview_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -2676,6 +3027,7 @@ void k_fileplacesview_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -2683,6 +3035,7 @@ bool k_fileplacesview_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -2690,6 +3043,7 @@ void k_fileplacesview_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -2698,6 +3052,7 @@ void k_fileplacesview_clear_focus(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param reason enum Qt__FocusReason
+///
 void k_fileplacesview_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -2707,6 +3062,7 @@ void k_fileplacesview_set_focus2(void* self, int32_t reason);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t k_fileplacesview_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -2715,6 +3071,7 @@ int32_t k_fileplacesview_focus_policy(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param policy enum Qt__FocusPolicy
+///
 void k_fileplacesview_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -2722,6 +3079,7 @@ void k_fileplacesview_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -2730,6 +3088,7 @@ bool k_fileplacesview_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void k_fileplacesview_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2738,6 +3097,7 @@ void k_fileplacesview_set_tab_order(void* param1, void* param2);
 ///
 /// @param self KFilePlacesView*
 /// @param focusProxy QWidget*
+///
 void k_fileplacesview_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -2745,6 +3105,7 @@ void k_fileplacesview_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -2754,6 +3115,7 @@ QWidget* k_fileplacesview_focus_proxy(void* self);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t k_fileplacesview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -2762,6 +3124,7 @@ int32_t k_fileplacesview_context_menu_policy(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void k_fileplacesview_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -2769,6 +3132,7 @@ void k_fileplacesview_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2777,6 +3141,7 @@ void k_fileplacesview_grab_mouse(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QCursor*
+///
 void k_fileplacesview_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2784,6 +3149,7 @@ void k_fileplacesview_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2791,6 +3157,7 @@ void k_fileplacesview_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -2798,6 +3165,7 @@ void k_fileplacesview_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -2806,6 +3174,7 @@ void k_fileplacesview_release_keyboard(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param key QKeySequence*
+///
 int32_t k_fileplacesview_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -2814,6 +3183,7 @@ int32_t k_fileplacesview_grab_shortcut(void* self, void* key);
 ///
 /// @param self KFilePlacesView*
 /// @param id int
+///
 void k_fileplacesview_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -2822,6 +3192,7 @@ void k_fileplacesview_release_shortcut(void* self, int id);
 ///
 /// @param self KFilePlacesView*
 /// @param id int
+///
 void k_fileplacesview_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -2830,6 +3201,7 @@ void k_fileplacesview_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self KFilePlacesView*
 /// @param id int
+///
 void k_fileplacesview_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -2849,6 +3221,7 @@ QWidget* k_fileplacesview_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -2857,6 +3230,7 @@ bool k_fileplacesview_updates_enabled(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enable bool
+///
 void k_fileplacesview_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -2864,6 +3238,7 @@ void k_fileplacesview_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KFilePlacesView*
+///
 QGraphicsProxyWidget* k_fileplacesview_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -2871,6 +3246,7 @@ QGraphicsProxyWidget* k_fileplacesview_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_repaint(void* self);
 
 /// Inherited from QWidget
@@ -2882,6 +3258,7 @@ void k_fileplacesview_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_fileplacesview_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -2890,6 +3267,7 @@ void k_fileplacesview_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QRect*
+///
 void k_fileplacesview_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2898,6 +3276,7 @@ void k_fileplacesview_update3(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QRegion*
+///
 void k_fileplacesview_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2909,6 +3288,7 @@ void k_fileplacesview_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_fileplacesview_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -2917,6 +3297,7 @@ void k_fileplacesview_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QRect*
+///
 void k_fileplacesview_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2925,6 +3306,7 @@ void k_fileplacesview_repaint3(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QRegion*
+///
 void k_fileplacesview_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2933,6 +3315,7 @@ void k_fileplacesview_repaint4(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param hidden bool
+///
 void k_fileplacesview_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -2940,6 +3323,7 @@ void k_fileplacesview_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_show(void* self);
 
 /// Inherited from QWidget
@@ -2947,6 +3331,7 @@ void k_fileplacesview_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_hide(void* self);
 
 /// Inherited from QWidget
@@ -2954,6 +3339,7 @@ void k_fileplacesview_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -2961,6 +3347,7 @@ void k_fileplacesview_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -2968,6 +3355,7 @@ void k_fileplacesview_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -2975,6 +3363,7 @@ void k_fileplacesview_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -2982,6 +3371,7 @@ void k_fileplacesview_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_close(void* self);
 
 /// Inherited from QWidget
@@ -2989,6 +3379,7 @@ bool k_fileplacesview_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_raise(void* self);
 
 /// Inherited from QWidget
@@ -2996,6 +3387,7 @@ void k_fileplacesview_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_lower(void* self);
 
 /// Inherited from QWidget
@@ -3004,6 +3396,7 @@ void k_fileplacesview_lower(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QWidget*
+///
 void k_fileplacesview_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3013,6 +3406,7 @@ void k_fileplacesview_stack_under(void* self, void* param1);
 /// @param self KFilePlacesView*
 /// @param x int
 /// @param y int
+///
 void k_fileplacesview_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -3021,6 +3415,7 @@ void k_fileplacesview_move(void* self, int x, int y);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPoint*
+///
 void k_fileplacesview_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3030,6 +3425,7 @@ void k_fileplacesview_move2(void* self, void* param1);
 /// @param self KFilePlacesView*
 /// @param w int
 /// @param h int
+///
 void k_fileplacesview_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -3038,6 +3434,7 @@ void k_fileplacesview_resize(void* self, int w, int h);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QSize*
+///
 void k_fileplacesview_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3049,6 +3446,7 @@ void k_fileplacesview_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_fileplacesview_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -3057,6 +3455,7 @@ void k_fileplacesview_set_geometry(void* self, int x, int y, int w, int h);
 ///
 /// @param self KFilePlacesView*
 /// @param geometry QRect*
+///
 void k_fileplacesview_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -3066,6 +3465,7 @@ void k_fileplacesview_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 char* k_fileplacesview_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -3074,6 +3474,7 @@ char* k_fileplacesview_save_geometry(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param geometry const char*
+///
 bool k_fileplacesview_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -3081,6 +3482,7 @@ bool k_fileplacesview_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -3088,6 +3490,7 @@ void k_fileplacesview_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -3096,6 +3499,7 @@ bool k_fileplacesview_is_visible(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QWidget*
+///
 bool k_fileplacesview_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3103,6 +3507,7 @@ bool k_fileplacesview_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -3110,6 +3515,7 @@ bool k_fileplacesview_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -3117,6 +3523,7 @@ bool k_fileplacesview_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -3124,6 +3531,7 @@ bool k_fileplacesview_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -3133,6 +3541,7 @@ bool k_fileplacesview_is_full_screen(void* self);
 /// @param self KFilePlacesView*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t k_fileplacesview_window_state(void* self);
 
 /// Inherited from QWidget
@@ -3141,6 +3550,7 @@ int32_t k_fileplacesview_window_state(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param state flag of enum Qt__WindowState
+///
 void k_fileplacesview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -3149,6 +3559,7 @@ void k_fileplacesview_set_window_state(void* self, int32_t state);
 ///
 /// @param self KFilePlacesView*
 /// @param state flag of enum Qt__WindowState
+///
 void k_fileplacesview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -3156,6 +3567,7 @@ void k_fileplacesview_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KFilePlacesView*
+///
 QSizePolicy* k_fileplacesview_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -3164,6 +3576,7 @@ QSizePolicy* k_fileplacesview_size_policy(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param sizePolicy QSizePolicy*
+///
 void k_fileplacesview_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -3173,6 +3586,7 @@ void k_fileplacesview_set_size_policy(void* self, void* sizePolicy);
 /// @param self KFilePlacesView*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void k_fileplacesview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -3180,6 +3594,7 @@ void k_fileplacesview_set_size_policy2(void* self, int32_t horizontal, int32_t v
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KFilePlacesView*
+///
 QRegion* k_fileplacesview_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -3191,6 +3606,7 @@ QRegion* k_fileplacesview_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_fileplacesview_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -3199,6 +3615,7 @@ void k_fileplacesview_set_contents_margins(void* self, int left, int top, int ri
 ///
 /// @param self KFilePlacesView*
 /// @param margins QMargins*
+///
 void k_fileplacesview_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -3206,6 +3623,7 @@ void k_fileplacesview_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KFilePlacesView*
+///
 QMargins* k_fileplacesview_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -3213,6 +3631,7 @@ QMargins* k_fileplacesview_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KFilePlacesView*
+///
 QRect* k_fileplacesview_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -3220,6 +3639,7 @@ QRect* k_fileplacesview_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KFilePlacesView*
+///
 QLayout* k_fileplacesview_layout(void* self);
 
 /// Inherited from QWidget
@@ -3228,6 +3648,7 @@ QLayout* k_fileplacesview_layout(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param layout QLayout*
+///
 void k_fileplacesview_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -3235,6 +3656,7 @@ void k_fileplacesview_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -3243,6 +3665,7 @@ void k_fileplacesview_update_geometry(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param parent QWidget*
+///
 void k_fileplacesview_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -3252,6 +3675,7 @@ void k_fileplacesview_set_parent(void* self, void* parent);
 /// @param self KFilePlacesView*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void k_fileplacesview_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -3261,6 +3685,7 @@ void k_fileplacesview_set_parent2(void* self, void* parent, int64_t f);
 /// @param self KFilePlacesView*
 /// @param dx int
 /// @param dy int
+///
 void k_fileplacesview_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -3271,6 +3696,7 @@ void k_fileplacesview_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void k_fileplacesview_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -3278,6 +3704,7 @@ void k_fileplacesview_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -3285,6 +3712,7 @@ QWidget* k_fileplacesview_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -3292,6 +3720,7 @@ QWidget* k_fileplacesview_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -3299,6 +3728,7 @@ QWidget* k_fileplacesview_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -3307,6 +3737,7 @@ bool k_fileplacesview_accept_drops(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param on bool
+///
 void k_fileplacesview_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -3315,6 +3746,7 @@ void k_fileplacesview_set_accept_drops(void* self, bool on);
 ///
 /// @param self KFilePlacesView*
 /// @param action QAction*
+///
 void k_fileplacesview_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -3323,6 +3755,7 @@ void k_fileplacesview_add_action(void* self, void* action);
 ///
 /// @param self KFilePlacesView*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_fileplacesview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -3332,6 +3765,7 @@ void k_fileplacesview_add_actions(void* self, libqt_list actions);
 /// @param self KFilePlacesView*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_fileplacesview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -3341,6 +3775,7 @@ void k_fileplacesview_insert_actions(void* self, void* before, libqt_list action
 /// @param self KFilePlacesView*
 /// @param before QAction*
 /// @param action QAction*
+///
 void k_fileplacesview_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -3349,6 +3784,7 @@ void k_fileplacesview_insert_action(void* self, void* before, void* action);
 ///
 /// @param self KFilePlacesView*
 /// @param action QAction*
+///
 void k_fileplacesview_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -3356,6 +3792,7 @@ void k_fileplacesview_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KFilePlacesView*
+///
 libqt_list /* of QAction* */ k_fileplacesview_actions(void* self);
 
 /// Inherited from QWidget
@@ -3364,6 +3801,7 @@ libqt_list /* of QAction* */ k_fileplacesview_actions(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param text const char*
+///
 QAction* k_fileplacesview_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -3373,6 +3811,7 @@ QAction* k_fileplacesview_add_action2(void* self, const char* text);
 /// @param self KFilePlacesView*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* k_fileplacesview_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -3382,6 +3821,7 @@ QAction* k_fileplacesview_add_action3(void* self, void* icon, const char* text);
 /// @param self KFilePlacesView*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_fileplacesview_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -3392,6 +3832,7 @@ QAction* k_fileplacesview_add_action4(void* self, const char* text, void* shortc
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_fileplacesview_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -3399,6 +3840,7 @@ QAction* k_fileplacesview_add_action5(void* self, void* icon, const char* text, 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KFilePlacesView*
+///
 QWidget* k_fileplacesview_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -3407,6 +3849,7 @@ QWidget* k_fileplacesview_parent_widget(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param type flag of enum Qt__WindowType
+///
 void k_fileplacesview_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -3416,6 +3859,7 @@ void k_fileplacesview_set_window_flags(void* self, int64_t type);
 /// @param self KFilePlacesView*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t k_fileplacesview_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -3424,6 +3868,7 @@ int64_t k_fileplacesview_window_flags(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 enum Qt__WindowType
+///
 void k_fileplacesview_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3432,6 +3877,7 @@ void k_fileplacesview_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self KFilePlacesView*
 /// @param type flag of enum Qt__WindowType
+///
 void k_fileplacesview_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -3441,6 +3887,7 @@ void k_fileplacesview_override_window_flags(void* self, int64_t type);
 /// @param self KFilePlacesView*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t k_fileplacesview_window_type(void* self);
 
 /// Inherited from QWidget
@@ -3448,6 +3895,7 @@ int64_t k_fileplacesview_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* k_fileplacesview_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -3457,6 +3905,7 @@ QWidget* k_fileplacesview_find(uint64_t param1);
 /// @param self KFilePlacesView*
 /// @param x int
 /// @param y int
+///
 QWidget* k_fileplacesview_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -3465,6 +3914,7 @@ QWidget* k_fileplacesview_child_at(void* self, int x, int y);
 ///
 /// @param self KFilePlacesView*
 /// @param p QPoint*
+///
 QWidget* k_fileplacesview_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -3473,6 +3923,7 @@ QWidget* k_fileplacesview_child_at2(void* self, void* p);
 ///
 /// @param self KFilePlacesView*
 /// @param p QPointF*
+///
 QWidget* k_fileplacesview_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -3481,6 +3932,7 @@ QWidget* k_fileplacesview_child_at3(void* self, void* p);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void k_fileplacesview_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3489,6 +3941,7 @@ void k_fileplacesview_set_attribute(void* self, int32_t param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool k_fileplacesview_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3496,6 +3949,7 @@ bool k_fileplacesview_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -3504,6 +3958,7 @@ void k_fileplacesview_ensure_polished(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param child QWidget*
+///
 bool k_fileplacesview_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -3511,6 +3966,7 @@ bool k_fileplacesview_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -3519,6 +3975,7 @@ bool k_fileplacesview_auto_fill_background(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param enabled bool
+///
 void k_fileplacesview_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -3526,6 +3983,7 @@ void k_fileplacesview_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KFilePlacesView*
+///
 QBackingStore* k_fileplacesview_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -3533,6 +3991,7 @@ QBackingStore* k_fileplacesview_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KFilePlacesView*
+///
 QWindow* k_fileplacesview_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -3540,6 +3999,7 @@ QWindow* k_fileplacesview_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KFilePlacesView*
+///
 QScreen* k_fileplacesview_screen(void* self);
 
 /// Inherited from QWidget
@@ -3548,6 +4008,7 @@ QScreen* k_fileplacesview_screen(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param screen QScreen*
+///
 void k_fileplacesview_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -3555,6 +4016,7 @@ void k_fileplacesview_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* k_fileplacesview_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -3563,6 +4025,7 @@ QWidget* k_fileplacesview_create_window_container(void* window);
 ///
 /// @param self KFilePlacesView*
 /// @param title const char*
+///
 void k_fileplacesview_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -3571,6 +4034,7 @@ void k_fileplacesview_window_title_changed(void* self, const char* title);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, const char* title)
+///
 void k_fileplacesview_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3579,6 +4043,7 @@ void k_fileplacesview_on_window_title_changed(void* self, void (*callback)(void*
 ///
 /// @param self KFilePlacesView*
 /// @param icon QIcon*
+///
 void k_fileplacesview_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -3587,6 +4052,7 @@ void k_fileplacesview_window_icon_changed(void* self, void* icon);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QIcon* icon)
+///
 void k_fileplacesview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3595,6 +4061,7 @@ void k_fileplacesview_on_window_icon_changed(void* self, void (*callback)(void*,
 ///
 /// @param self KFilePlacesView*
 /// @param iconText const char*
+///
 void k_fileplacesview_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -3603,6 +4070,7 @@ void k_fileplacesview_window_icon_text_changed(void* self, const char* iconText)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, const char* iconText)
+///
 void k_fileplacesview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3611,6 +4079,7 @@ void k_fileplacesview_on_window_icon_text_changed(void* self, void (*callback)(v
 ///
 /// @param self KFilePlacesView*
 /// @param pos QPoint*
+///
 void k_fileplacesview_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -3619,6 +4088,7 @@ void k_fileplacesview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QPoint* pos)
+///
 void k_fileplacesview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3628,6 +4098,7 @@ void k_fileplacesview_on_custom_context_menu_requested(void* self, void (*callba
 /// @param self KFilePlacesView*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t k_fileplacesview_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -3636,6 +4107,7 @@ int64_t k_fileplacesview_input_method_hints(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void k_fileplacesview_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -3645,6 +4117,7 @@ void k_fileplacesview_set_input_method_hints(void* self, int64_t hints);
 /// @param self KFilePlacesView*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void k_fileplacesview_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -3655,6 +4128,7 @@ void k_fileplacesview_render22(void* self, void* target, void* targetOffset);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_fileplacesview_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -3666,6 +4140,7 @@ void k_fileplacesview_render3(void* self, void* target, void* targetOffset, void
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_fileplacesview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -3675,6 +4150,7 @@ void k_fileplacesview_render4(void* self, void* target, void* targetOffset, void
 /// @param self KFilePlacesView*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void k_fileplacesview_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -3685,6 +4161,7 @@ void k_fileplacesview_render23(void* self, void* painter, void* targetOffset);
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_fileplacesview_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -3696,6 +4173,7 @@ void k_fileplacesview_render32(void* self, void* painter, void* targetOffset, vo
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_fileplacesview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -3704,6 +4182,7 @@ void k_fileplacesview_render42(void* self, void* painter, void* targetOffset, vo
 ///
 /// @param self KFilePlacesView*
 /// @param rectangle QRect*
+///
 QPixmap* k_fileplacesview_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -3713,6 +4192,7 @@ QPixmap* k_fileplacesview_grab1(void* self, void* rectangle);
 /// @param self KFilePlacesView*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void k_fileplacesview_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -3722,6 +4202,7 @@ void k_fileplacesview_grab_gesture2(void* self, int64_t type, int32_t flags);
 /// @param self KFilePlacesView*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t k_fileplacesview_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -3731,6 +4212,7 @@ int32_t k_fileplacesview_grab_shortcut2(void* self, void* key, int32_t context);
 /// @param self KFilePlacesView*
 /// @param id int
 /// @param enable bool
+///
 void k_fileplacesview_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -3740,6 +4222,7 @@ void k_fileplacesview_set_shortcut_enabled2(void* self, int id, bool enable);
 /// @param self KFilePlacesView*
 /// @param id int
 /// @param enable bool
+///
 void k_fileplacesview_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -3749,6 +4232,7 @@ void k_fileplacesview_set_shortcut_auto_repeat2(void* self, int id, bool enable)
 /// @param self KFilePlacesView*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void k_fileplacesview_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -3758,6 +4242,7 @@ void k_fileplacesview_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self KFilePlacesView*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void k_fileplacesview_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -3766,6 +4251,7 @@ void k_fileplacesview_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* k_fileplacesview_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -3775,6 +4261,7 @@ QWidget* k_fileplacesview_create_window_container2(void* window, void* parent);
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* k_fileplacesview_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -3784,6 +4271,7 @@ QWidget* k_fileplacesview_create_window_container3(void* window, void* parent, i
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char* k_fileplacesview_object_name(void* self);
 
 /// Inherited from QObject
@@ -3792,6 +4280,7 @@ const char* k_fileplacesview_object_name(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param name char*
+///
 void k_fileplacesview_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -3799,6 +4288,7 @@ void k_fileplacesview_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -3806,6 +4296,7 @@ bool k_fileplacesview_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -3813,6 +4304,7 @@ bool k_fileplacesview_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -3820,6 +4312,7 @@ bool k_fileplacesview_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -3828,6 +4321,7 @@ bool k_fileplacesview_signals_blocked(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param b bool
+///
 bool k_fileplacesview_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -3835,6 +4329,7 @@ bool k_fileplacesview_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KFilePlacesView*
+///
 QThread* k_fileplacesview_thread(void* self);
 
 /// Inherited from QObject
@@ -3843,6 +4338,7 @@ QThread* k_fileplacesview_thread(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param thread QThread*
+///
 bool k_fileplacesview_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -3851,6 +4347,7 @@ bool k_fileplacesview_move_to_thread(void* self, void* thread);
 ///
 /// @param self KFilePlacesView*
 /// @param interval int
+///
 int32_t k_fileplacesview_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -3859,6 +4356,7 @@ int32_t k_fileplacesview_start_timer(void* self, int interval);
 ///
 /// @param self KFilePlacesView*
 /// @param id int
+///
 void k_fileplacesview_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -3867,6 +4365,7 @@ void k_fileplacesview_kill_timer(void* self, int id);
 ///
 /// @param self KFilePlacesView*
 /// @param id enum Qt__TimerId
+///
 void k_fileplacesview_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -3874,6 +4373,7 @@ void k_fileplacesview_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KFilePlacesView*
+///
 libqt_list /* of QObject* */ k_fileplacesview_children(void* self);
 
 /// Inherited from QObject
@@ -3882,6 +4382,7 @@ libqt_list /* of QObject* */ k_fileplacesview_children(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param filterObj QObject*
+///
 void k_fileplacesview_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -3890,6 +4391,7 @@ void k_fileplacesview_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KFilePlacesView*
 /// @param obj QObject*
+///
 void k_fileplacesview_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -3900,6 +4402,7 @@ void k_fileplacesview_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_fileplacesview_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -3910,6 +4413,7 @@ QMetaObject__Connection* k_fileplacesview_connect(void* sender, void* signal, vo
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_fileplacesview_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -3920,6 +4424,7 @@ QMetaObject__Connection* k_fileplacesview_connect2(void* self, void* sender, con
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_fileplacesview_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -3927,6 +4432,7 @@ bool k_fileplacesview_disconnect(void* sender, void* signal, void* receiver, voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_fileplacesview_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -3934,6 +4440,7 @@ bool k_fileplacesview_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -3941,6 +4448,7 @@ void k_fileplacesview_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -3950,6 +4458,7 @@ void k_fileplacesview_dump_object_info(void* self);
 /// @param self KFilePlacesView*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_fileplacesview_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -3958,6 +4467,7 @@ bool k_fileplacesview_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KFilePlacesView*
 /// @param name const char*
+///
 QVariant* k_fileplacesview_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -3967,6 +4477,7 @@ QVariant* k_fileplacesview_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesView*
+///
 const char** k_fileplacesview_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -3974,6 +4485,7 @@ const char** k_fileplacesview_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KFilePlacesView*
+///
 QBindingStorage* k_fileplacesview_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -3981,6 +4493,7 @@ QBindingStorage* k_fileplacesview_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KFilePlacesView*
+///
 const QBindingStorage* k_fileplacesview_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -3988,6 +4501,7 @@ const QBindingStorage* k_fileplacesview_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_destroyed(void* self);
 
 /// Inherited from QObject
@@ -3996,6 +4510,7 @@ void k_fileplacesview_destroyed(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self)
+///
 void k_fileplacesview_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4003,6 +4518,7 @@ void k_fileplacesview_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KFilePlacesView*
+///
 QObject* k_fileplacesview_parent(void* self);
 
 /// Inherited from QObject
@@ -4011,6 +4527,7 @@ QObject* k_fileplacesview_parent(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param classname const char*
+///
 bool k_fileplacesview_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -4018,6 +4535,7 @@ bool k_fileplacesview_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_delete_later(void* self);
 
 /// Inherited from QObject
@@ -4027,6 +4545,7 @@ void k_fileplacesview_delete_later(void* self);
 /// @param self KFilePlacesView*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_fileplacesview_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -4036,6 +4555,7 @@ bool k_fileplacesview_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KFilePlacesView*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_fileplacesview_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -4047,6 +4567,7 @@ int32_t k_fileplacesview_start_timer22(void* self, int interval, int32_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_fileplacesview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -4058,6 +4579,7 @@ QMetaObject__Connection* k_fileplacesview_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_fileplacesview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -4066,6 +4588,7 @@ QMetaObject__Connection* k_fileplacesview_connect4(void* self, void* sender, con
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QObject*
+///
 void k_fileplacesview_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -4074,6 +4597,7 @@ void k_fileplacesview_destroyed1(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QObject* param1)
+///
 void k_fileplacesview_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4081,6 +4605,7 @@ void k_fileplacesview_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -4088,6 +4613,7 @@ bool k_fileplacesview_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -4095,6 +4621,7 @@ int32_t k_fileplacesview_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -4102,6 +4629,7 @@ int32_t k_fileplacesview_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -4109,6 +4637,7 @@ int32_t k_fileplacesview_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -4116,6 +4645,7 @@ int32_t k_fileplacesview_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -4123,6 +4653,7 @@ int32_t k_fileplacesview_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -4130,6 +4661,7 @@ int32_t k_fileplacesview_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KFilePlacesView*
+///
 double k_fileplacesview_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -4137,6 +4669,7 @@ double k_fileplacesview_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KFilePlacesView*
+///
 double k_fileplacesview_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -4144,6 +4677,7 @@ double k_fileplacesview_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -4151,6 +4685,7 @@ int32_t k_fileplacesview_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -4165,6 +4700,7 @@ double k_fileplacesview_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t k_fileplacesview_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QListView
@@ -4175,6 +4711,7 @@ int32_t k_fileplacesview_encode_metric_f(int32_t metric, double value);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QRect* k_fileplacesview_visual_rect(void* self, void* index);
 
 /// Inherited from QListView
@@ -4185,6 +4722,7 @@ QRect* k_fileplacesview_visual_rect(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QRect* k_fileplacesview_qbase_visual_rect(void* self, void* index);
 
 /// Inherited from QListView
@@ -4195,6 +4733,7 @@ QRect* k_fileplacesview_qbase_visual_rect(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QRect* func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4206,6 +4745,7 @@ void k_fileplacesview_on_visual_rect(void* self, QRect* (*callback)(void*, void*
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
+///
 void k_fileplacesview_scroll_to(void* self, void* index, int32_t hint);
 
 /// Inherited from QListView
@@ -4217,6 +4757,7 @@ void k_fileplacesview_scroll_to(void* self, void* index, int32_t hint);
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
+///
 void k_fileplacesview_qbase_scroll_to(void* self, void* index, int32_t hint);
 
 /// Inherited from QListView
@@ -4227,6 +4768,7 @@ void k_fileplacesview_qbase_scroll_to(void* self, void* index, int32_t hint);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
+///
 void k_fileplacesview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QListView
@@ -4237,6 +4779,7 @@ void k_fileplacesview_on_scroll_to(void* self, void (*callback)(void*, void*, in
 ///
 /// @param self KFilePlacesView*
 /// @param p QPoint*
+///
 QModelIndex* k_fileplacesview_index_at(void* self, void* p);
 
 /// Inherited from QListView
@@ -4247,6 +4790,7 @@ QModelIndex* k_fileplacesview_index_at(void* self, void* p);
 ///
 /// @param self KFilePlacesView*
 /// @param p QPoint*
+///
 QModelIndex* k_fileplacesview_qbase_index_at(void* self, void* p);
 
 /// Inherited from QListView
@@ -4257,6 +4801,7 @@ QModelIndex* k_fileplacesview_qbase_index_at(void* self, void* p);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QModelIndex* func(KFilePlacesView* self, QPoint* p)
+///
 void k_fileplacesview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4266,6 +4811,7 @@ void k_fileplacesview_on_index_at(void* self, QModelIndex* (*callback)(void*, vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_do_items_layout(void* self);
 
 /// Inherited from QListView
@@ -4275,6 +4821,7 @@ void k_fileplacesview_do_items_layout(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_do_items_layout(void* self);
 
 /// Inherited from QListView
@@ -4285,6 +4832,7 @@ void k_fileplacesview_qbase_do_items_layout(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_do_items_layout(void* self, void (*callback)());
 
 /// Inherited from QListView
@@ -4294,6 +4842,7 @@ void k_fileplacesview_on_do_items_layout(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_reset(void* self);
 
 /// Inherited from QListView
@@ -4303,6 +4852,7 @@ void k_fileplacesview_reset(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_reset(void* self);
 
 /// Inherited from QListView
@@ -4313,6 +4863,7 @@ void k_fileplacesview_qbase_reset(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_reset(void* self, void (*callback)());
 
 /// Inherited from QListView
@@ -4323,6 +4874,7 @@ void k_fileplacesview_on_reset(void* self, void (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_set_root_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -4333,6 +4885,7 @@ void k_fileplacesview_set_root_index(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_qbase_set_root_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -4343,6 +4896,7 @@ void k_fileplacesview_qbase_set_root_index(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_set_root_index(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4353,6 +4907,7 @@ void k_fileplacesview_on_set_root_index(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesView*
 /// @param e QEvent*
+///
 bool k_fileplacesview_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4363,6 +4918,7 @@ bool k_fileplacesview_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param e QEvent*
+///
 bool k_fileplacesview_qbase_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4373,6 +4929,7 @@ bool k_fileplacesview_qbase_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, QEvent* e)
+///
 void k_fileplacesview_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4384,6 +4941,7 @@ void k_fileplacesview_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KFilePlacesView*
 /// @param dx int
 /// @param dy int
+///
 void k_fileplacesview_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QListView
@@ -4395,6 +4953,7 @@ void k_fileplacesview_scroll_contents_by(void* self, int dx, int dy);
 /// @param self KFilePlacesView*
 /// @param dx int
 /// @param dy int
+///
 void k_fileplacesview_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QListView
@@ -4405,6 +4964,7 @@ void k_fileplacesview_qbase_scroll_contents_by(void* self, int dx, int dy);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int dx, int dy)
+///
 void k_fileplacesview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
@@ -4417,6 +4977,7 @@ void k_fileplacesview_on_scroll_contents_by(void* self, void (*callback)(void*, 
 /// @param parent QModelIndex*
 /// @param start int
 /// @param end int
+///
 void k_fileplacesview_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
@@ -4429,6 +4990,7 @@ void k_fileplacesview_rows_about_to_be_removed(void* self, void* parent, int sta
 /// @param parent QModelIndex*
 /// @param start int
 /// @param end int
+///
 void k_fileplacesview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
@@ -4439,6 +5001,7 @@ void k_fileplacesview_qbase_rows_about_to_be_removed(void* self, void* parent, i
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* parent, int start, int end)
+///
 void k_fileplacesview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QListView
@@ -4449,6 +5012,7 @@ void k_fileplacesview_on_rows_about_to_be_removed(void* self, void (*callback)(v
 ///
 /// @param self KFilePlacesView*
 /// @param e QMouseEvent*
+///
 void k_fileplacesview_mouse_move_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4459,6 +5023,7 @@ void k_fileplacesview_mouse_move_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param e QMouseEvent*
+///
 void k_fileplacesview_qbase_mouse_move_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4469,6 +5034,7 @@ void k_fileplacesview_qbase_mouse_move_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QMouseEvent* e)
+///
 void k_fileplacesview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4479,6 +5045,7 @@ void k_fileplacesview_on_mouse_move_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self KFilePlacesView*
 /// @param e QMouseEvent*
+///
 void k_fileplacesview_mouse_release_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4489,6 +5056,7 @@ void k_fileplacesview_mouse_release_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param e QMouseEvent*
+///
 void k_fileplacesview_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4499,6 +5067,7 @@ void k_fileplacesview_qbase_mouse_release_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QMouseEvent* e)
+///
 void k_fileplacesview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4509,6 +5078,7 @@ void k_fileplacesview_on_mouse_release_event(void* self, void (*callback)(void*,
 ///
 /// @param self KFilePlacesView*
 /// @param e QWheelEvent*
+///
 void k_fileplacesview_wheel_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4519,6 +5089,7 @@ void k_fileplacesview_wheel_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param e QWheelEvent*
+///
 void k_fileplacesview_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4529,6 +5100,7 @@ void k_fileplacesview_qbase_wheel_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QWheelEvent* e)
+///
 void k_fileplacesview_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4539,6 +5111,7 @@ void k_fileplacesview_on_wheel_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param e QTimerEvent*
+///
 void k_fileplacesview_timer_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4549,6 +5122,7 @@ void k_fileplacesview_timer_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param e QTimerEvent*
+///
 void k_fileplacesview_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -4559,6 +5133,7 @@ void k_fileplacesview_qbase_timer_event(void* self, void* e);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QTimerEvent* e)
+///
 void k_fileplacesview_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4569,6 +5144,7 @@ void k_fileplacesview_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param option QStyleOptionViewItem*
+///
 void k_fileplacesview_init_view_item_option(void* self, void* option);
 
 /// Inherited from QListView
@@ -4579,6 +5155,7 @@ void k_fileplacesview_init_view_item_option(void* self, void* option);
 ///
 /// @param self KFilePlacesView*
 /// @param option QStyleOptionViewItem*
+///
 void k_fileplacesview_qbase_init_view_item_option(void* self, void* option);
 
 /// Inherited from QListView
@@ -4589,6 +5166,7 @@ void k_fileplacesview_qbase_init_view_item_option(void* self, void* option);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QStyleOptionViewItem* option)
+///
 void k_fileplacesview_on_init_view_item_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4598,6 +5176,7 @@ void k_fileplacesview_on_init_view_item_option(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_horizontal_offset(void* self);
 
 /// Inherited from QListView
@@ -4607,6 +5186,7 @@ int32_t k_fileplacesview_horizontal_offset(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_qbase_horizontal_offset(void* self);
 
 /// Inherited from QListView
@@ -4617,6 +5197,7 @@ int32_t k_fileplacesview_qbase_horizontal_offset(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func()
+///
 void k_fileplacesview_on_horizontal_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
@@ -4626,6 +5207,7 @@ void k_fileplacesview_on_horizontal_offset(void* self, int32_t (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_vertical_offset(void* self);
 
 /// Inherited from QListView
@@ -4635,6 +5217,7 @@ int32_t k_fileplacesview_vertical_offset(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_qbase_vertical_offset(void* self);
 
 /// Inherited from QListView
@@ -4645,6 +5228,7 @@ int32_t k_fileplacesview_qbase_vertical_offset(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func()
+///
 void k_fileplacesview_on_vertical_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
@@ -4656,6 +5240,7 @@ void k_fileplacesview_on_vertical_offset(void* self, int32_t (*callback)());
 /// @param self KFilePlacesView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
+///
 QModelIndex* k_fileplacesview_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// Inherited from QListView
@@ -4667,6 +5252,7 @@ QModelIndex* k_fileplacesview_move_cursor(void* self, int32_t cursorAction, int6
 /// @param self KFilePlacesView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
+///
 QModelIndex* k_fileplacesview_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// Inherited from QListView
@@ -4677,6 +5263,7 @@ QModelIndex* k_fileplacesview_qbase_move_cursor(void* self, int32_t cursorAction
 ///
 /// @param self KFilePlacesView*
 /// @param callback QModelIndex* func(KFilePlacesView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
+///
 void k_fileplacesview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// Inherited from QListView
@@ -4688,6 +5275,7 @@ void k_fileplacesview_on_move_cursor(void* self, QModelIndex* (*callback)(void*,
 /// @param self KFilePlacesView*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
+///
 void k_fileplacesview_set_selection(void* self, void* rect, int32_t command);
 
 /// Inherited from QListView
@@ -4699,6 +5287,7 @@ void k_fileplacesview_set_selection(void* self, void* rect, int32_t command);
 /// @param self KFilePlacesView*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
+///
 void k_fileplacesview_qbase_set_selection(void* self, void* rect, int32_t command);
 
 /// Inherited from QListView
@@ -4709,6 +5298,7 @@ void k_fileplacesview_qbase_set_selection(void* self, void* rect, int32_t comman
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
+///
 void k_fileplacesview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QListView
@@ -4719,6 +5309,7 @@ void k_fileplacesview_on_set_selection(void* self, void (*callback)(void*, void*
 ///
 /// @param self KFilePlacesView*
 /// @param selection QItemSelection*
+///
 QRegion* k_fileplacesview_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QListView
@@ -4729,6 +5320,7 @@ QRegion* k_fileplacesview_visual_region_for_selection(void* self, void* selectio
 ///
 /// @param self KFilePlacesView*
 /// @param selection QItemSelection*
+///
 QRegion* k_fileplacesview_qbase_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QListView
@@ -4739,6 +5331,7 @@ QRegion* k_fileplacesview_qbase_visual_region_for_selection(void* self, void* se
 ///
 /// @param self KFilePlacesView*
 /// @param callback QRegion* func(KFilePlacesView* self, QItemSelection* selection)
+///
 void k_fileplacesview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4748,6 +5341,7 @@ void k_fileplacesview_on_visual_region_for_selection(void* self, QRegion* (*call
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 libqt_list /* of QModelIndex* */ k_fileplacesview_selected_indexes(void* self);
 
 /// Inherited from QListView
@@ -4757,6 +5351,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesview_selected_indexes(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 libqt_list /* of QModelIndex* */ k_fileplacesview_qbase_selected_indexes(void* self);
 
 /// Inherited from QListView
@@ -4767,6 +5362,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesview_qbase_selected_indexes(void* s
 ///
 /// @param self KFilePlacesView*
 /// @param callback QModelIndex** func()
+///
 void k_fileplacesview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QListView
@@ -4776,6 +5372,7 @@ void k_fileplacesview_on_selected_indexes(void* self, QModelIndex** (*callback)(
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_update_geometries(void* self);
 
 /// Inherited from QListView
@@ -4785,6 +5382,7 @@ void k_fileplacesview_update_geometries(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_update_geometries(void* self);
 
 /// Inherited from QListView
@@ -4795,6 +5393,7 @@ void k_fileplacesview_qbase_update_geometries(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_update_geometries(void* self, void (*callback)());
 
 /// Inherited from QListView
@@ -4805,6 +5404,7 @@ void k_fileplacesview_on_update_geometries(void* self, void (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 bool k_fileplacesview_is_index_hidden(void* self, void* index);
 
 /// Inherited from QListView
@@ -4815,6 +5415,7 @@ bool k_fileplacesview_is_index_hidden(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 bool k_fileplacesview_qbase_is_index_hidden(void* self, void* index);
 
 /// Inherited from QListView
@@ -4825,6 +5426,7 @@ bool k_fileplacesview_qbase_is_index_hidden(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4836,6 +5438,7 @@ void k_fileplacesview_on_is_index_hidden(void* self, bool (*callback)(void*, voi
 /// @param self KFilePlacesView*
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
+///
 void k_fileplacesview_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QListView
@@ -4847,6 +5450,7 @@ void k_fileplacesview_selection_changed(void* self, void* selected, void* desele
 /// @param self KFilePlacesView*
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
+///
 void k_fileplacesview_qbase_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QListView
@@ -4857,6 +5461,7 @@ void k_fileplacesview_qbase_selection_changed(void* self, void* selected, void* 
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QItemSelection* selected, QItemSelection* deselected)
+///
 void k_fileplacesview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QListView
@@ -4868,6 +5473,7 @@ void k_fileplacesview_on_selection_changed(void* self, void (*callback)(void*, v
 /// @param self KFilePlacesView*
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
+///
 void k_fileplacesview_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QListView
@@ -4879,6 +5485,7 @@ void k_fileplacesview_current_changed(void* self, void* current, void* previous)
 /// @param self KFilePlacesView*
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
+///
 void k_fileplacesview_qbase_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QListView
@@ -4889,6 +5496,7 @@ void k_fileplacesview_qbase_current_changed(void* self, void* current, void* pre
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QModelIndex* current, QModelIndex* previous)
+///
 void k_fileplacesview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QListView
@@ -4898,6 +5506,7 @@ void k_fileplacesview_on_current_changed(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_viewport_size_hint(void* self);
 
 /// Inherited from QListView
@@ -4907,6 +5516,7 @@ QSize* k_fileplacesview_viewport_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QListView
@@ -4917,6 +5527,7 @@ QSize* k_fileplacesview_qbase_viewport_size_hint(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
+///
 void k_fileplacesview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -4927,6 +5538,7 @@ void k_fileplacesview_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param selectionModel QItemSelectionModel*
+///
 void k_fileplacesview_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QAbstractItemView
@@ -4937,6 +5549,7 @@ void k_fileplacesview_set_selection_model(void* self, void* selectionModel);
 ///
 /// @param self KFilePlacesView*
 /// @param selectionModel QItemSelectionModel*
+///
 void k_fileplacesview_qbase_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QAbstractItemView
@@ -4947,6 +5560,7 @@ void k_fileplacesview_qbase_set_selection_model(void* self, void* selectionModel
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QItemSelectionModel* selectionModel)
+///
 void k_fileplacesview_on_set_selection_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -4957,6 +5571,7 @@ void k_fileplacesview_on_set_selection_model(void* self, void (*callback)(void*,
 ///
 /// @param self KFilePlacesView*
 /// @param search const char*
+///
 void k_fileplacesview_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
@@ -4967,6 +5582,7 @@ void k_fileplacesview_keyboard_search(void* self, const char* search);
 ///
 /// @param self KFilePlacesView*
 /// @param search const char*
+///
 void k_fileplacesview_qbase_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
@@ -4977,6 +5593,7 @@ void k_fileplacesview_qbase_keyboard_search(void* self, const char* search);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, const char* search)
+///
 void k_fileplacesview_on_keyboard_search(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractItemView
@@ -4987,6 +5604,7 @@ void k_fileplacesview_on_keyboard_search(void* self, void (*callback)(void*, con
 ///
 /// @param self KFilePlacesView*
 /// @param row int
+///
 int32_t k_fileplacesview_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
@@ -4997,6 +5615,7 @@ int32_t k_fileplacesview_size_hint_for_row(void* self, int row);
 ///
 /// @param self KFilePlacesView*
 /// @param row int
+///
 int32_t k_fileplacesview_qbase_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
@@ -5007,6 +5626,7 @@ int32_t k_fileplacesview_qbase_size_hint_for_row(void* self, int row);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func(KFilePlacesView* self, int row)
+///
 void k_fileplacesview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5017,6 +5637,7 @@ void k_fileplacesview_on_size_hint_for_row(void* self, int32_t (*callback)(void*
 ///
 /// @param self KFilePlacesView*
 /// @param column int
+///
 int32_t k_fileplacesview_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
@@ -5027,6 +5648,7 @@ int32_t k_fileplacesview_size_hint_for_column(void* self, int column);
 ///
 /// @param self KFilePlacesView*
 /// @param column int
+///
 int32_t k_fileplacesview_qbase_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
@@ -5037,6 +5659,7 @@ int32_t k_fileplacesview_qbase_size_hint_for_column(void* self, int column);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func(KFilePlacesView* self, int column)
+///
 void k_fileplacesview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5047,6 +5670,7 @@ void k_fileplacesview_on_size_hint_for_column(void* self, int32_t (*callback)(vo
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QAbstractItemDelegate* k_fileplacesview_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -5057,6 +5681,7 @@ QAbstractItemDelegate* k_fileplacesview_item_delegate_for_index(void* self, void
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QAbstractItemDelegate* k_fileplacesview_qbase_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -5067,6 +5692,7 @@ QAbstractItemDelegate* k_fileplacesview_qbase_item_delegate_for_index(void* self
 ///
 /// @param self KFilePlacesView*
 /// @param callback QAbstractItemDelegate* func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5077,6 +5703,7 @@ void k_fileplacesview_on_item_delegate_for_index(void* self, QAbstractItemDelega
 ///
 /// @param self KFilePlacesView*
 /// @param query enum Qt__InputMethodQuery
+///
 QVariant* k_fileplacesview_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
@@ -5087,6 +5714,7 @@ QVariant* k_fileplacesview_input_method_query(void* self, int64_t query);
 ///
 /// @param self KFilePlacesView*
 /// @param query enum Qt__InputMethodQuery
+///
 QVariant* k_fileplacesview_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
@@ -5097,6 +5725,7 @@ QVariant* k_fileplacesview_qbase_input_method_query(void* self, int64_t query);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QVariant* func(KFilePlacesView* self, enum Qt__InputMethodQuery query)
+///
 void k_fileplacesview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
@@ -5106,6 +5735,7 @@ void k_fileplacesview_on_input_method_query(void* self, QVariant* (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_select_all(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5115,6 +5745,7 @@ void k_fileplacesview_select_all(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_select_all(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5125,6 +5756,7 @@ void k_fileplacesview_qbase_select_all(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_select_all(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5134,6 +5766,7 @@ void k_fileplacesview_on_select_all(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5143,6 +5776,7 @@ void k_fileplacesview_update_editor_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5153,6 +5787,7 @@ void k_fileplacesview_qbase_update_editor_data(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_update_editor_data(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5162,6 +5797,7 @@ void k_fileplacesview_on_update_editor_data(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5171,6 +5807,7 @@ void k_fileplacesview_update_editor_geometries(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5181,6 +5818,7 @@ void k_fileplacesview_qbase_update_editor_geometries(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_update_editor_geometries(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5191,6 +5829,7 @@ void k_fileplacesview_on_update_editor_geometries(void* self, void (*callback)()
 ///
 /// @param self KFilePlacesView*
 /// @param action int
+///
 void k_fileplacesview_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -5201,6 +5840,7 @@ void k_fileplacesview_vertical_scrollbar_action(void* self, int action);
 ///
 /// @param self KFilePlacesView*
 /// @param action int
+///
 void k_fileplacesview_qbase_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -5211,6 +5851,7 @@ void k_fileplacesview_qbase_vertical_scrollbar_action(void* self, int action);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int action)
+///
 void k_fileplacesview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5221,6 +5862,7 @@ void k_fileplacesview_on_vertical_scrollbar_action(void* self, void (*callback)(
 ///
 /// @param self KFilePlacesView*
 /// @param action int
+///
 void k_fileplacesview_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -5231,6 +5873,7 @@ void k_fileplacesview_horizontal_scrollbar_action(void* self, int action);
 ///
 /// @param self KFilePlacesView*
 /// @param action int
+///
 void k_fileplacesview_qbase_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -5241,6 +5884,7 @@ void k_fileplacesview_qbase_horizontal_scrollbar_action(void* self, int action);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int action)
+///
 void k_fileplacesview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5251,6 +5895,7 @@ void k_fileplacesview_on_horizontal_scrollbar_action(void* self, void (*callback
 ///
 /// @param self KFilePlacesView*
 /// @param value int
+///
 void k_fileplacesview_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -5261,6 +5906,7 @@ void k_fileplacesview_vertical_scrollbar_value_changed(void* self, int value);
 ///
 /// @param self KFilePlacesView*
 /// @param value int
+///
 void k_fileplacesview_qbase_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -5271,6 +5917,7 @@ void k_fileplacesview_qbase_vertical_scrollbar_value_changed(void* self, int val
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int value)
+///
 void k_fileplacesview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5281,6 +5928,7 @@ void k_fileplacesview_on_vertical_scrollbar_value_changed(void* self, void (*cal
 ///
 /// @param self KFilePlacesView*
 /// @param value int
+///
 void k_fileplacesview_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -5291,6 +5939,7 @@ void k_fileplacesview_horizontal_scrollbar_value_changed(void* self, int value);
 ///
 /// @param self KFilePlacesView*
 /// @param value int
+///
 void k_fileplacesview_qbase_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -5301,6 +5950,7 @@ void k_fileplacesview_qbase_horizontal_scrollbar_value_changed(void* self, int v
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int value)
+///
 void k_fileplacesview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5312,6 +5962,7 @@ void k_fileplacesview_on_horizontal_scrollbar_value_changed(void* self, void (*c
 /// @param self KFilePlacesView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
+///
 void k_fileplacesview_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
@@ -5323,6 +5974,7 @@ void k_fileplacesview_close_editor(void* self, void* editor, int32_t hint);
 /// @param self KFilePlacesView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
+///
 void k_fileplacesview_qbase_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
@@ -5333,6 +5985,7 @@ void k_fileplacesview_qbase_close_editor(void* self, void* editor, int32_t hint)
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint)
+///
 void k_fileplacesview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -5343,6 +5996,7 @@ void k_fileplacesview_on_close_editor(void* self, void (*callback)(void*, void*,
 ///
 /// @param self KFilePlacesView*
 /// @param editor QWidget*
+///
 void k_fileplacesview_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -5353,6 +6007,7 @@ void k_fileplacesview_commit_data(void* self, void* editor);
 ///
 /// @param self KFilePlacesView*
 /// @param editor QWidget*
+///
 void k_fileplacesview_qbase_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -5363,6 +6018,7 @@ void k_fileplacesview_qbase_commit_data(void* self, void* editor);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QWidget* editor)
+///
 void k_fileplacesview_on_commit_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5373,6 +6029,7 @@ void k_fileplacesview_on_commit_data(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param editor QObject*
+///
 void k_fileplacesview_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -5383,6 +6040,7 @@ void k_fileplacesview_editor_destroyed(void* self, void* editor);
 ///
 /// @param self KFilePlacesView*
 /// @param editor QObject*
+///
 void k_fileplacesview_qbase_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -5393,6 +6051,7 @@ void k_fileplacesview_qbase_editor_destroyed(void* self, void* editor);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QObject* editor)
+///
 void k_fileplacesview_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5405,6 +6064,7 @@ void k_fileplacesview_on_editor_destroyed(void* self, void (*callback)(void*, vo
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
+///
 bool k_fileplacesview_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5417,6 +6077,7 @@ bool k_fileplacesview_edit2(void* self, void* index, int32_t trigger, void* even
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
+///
 bool k_fileplacesview_qbase_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5427,6 +6088,7 @@ bool k_fileplacesview_qbase_edit2(void* self, void* index, int32_t trigger, void
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
+///
 void k_fileplacesview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
@@ -5440,6 +6102,7 @@ void k_fileplacesview_on_edit2(void* self, bool (*callback)(void*, void*, int32_
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
+///
 int32_t k_fileplacesview_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5453,6 +6116,7 @@ int32_t k_fileplacesview_selection_command(void* self, void* index, void* event)
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
+///
 int32_t k_fileplacesview_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5463,6 +6127,7 @@ int32_t k_fileplacesview_qbase_selection_command(void* self, void* index, void* 
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func(KFilePlacesView* self, QModelIndex* index, QEvent* event)
+///
 void k_fileplacesview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5473,6 +6138,7 @@ void k_fileplacesview_on_selection_command(void* self, int32_t (*callback)(void*
 ///
 /// @param self KFilePlacesView*
 /// @param next bool
+///
 bool k_fileplacesview_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
@@ -5483,6 +6149,7 @@ bool k_fileplacesview_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KFilePlacesView*
 /// @param next bool
+///
 bool k_fileplacesview_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
@@ -5493,6 +6160,7 @@ bool k_fileplacesview_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, bool next)
+///
 void k_fileplacesview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QAbstractItemView
@@ -5503,6 +6171,7 @@ void k_fileplacesview_on_focus_next_prev_child(void* self, bool (*callback)(void
 ///
 /// @param self KFilePlacesView*
 /// @param event QEvent*
+///
 bool k_fileplacesview_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5513,6 +6182,7 @@ bool k_fileplacesview_viewport_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QEvent*
+///
 bool k_fileplacesview_qbase_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5523,6 +6193,7 @@ bool k_fileplacesview_qbase_viewport_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, QEvent* event)
+///
 void k_fileplacesview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5533,6 +6204,7 @@ void k_fileplacesview_on_viewport_event(void* self, bool (*callback)(void*, void
 ///
 /// @param self KFilePlacesView*
 /// @param event QMouseEvent*
+///
 void k_fileplacesview_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5543,6 +6215,7 @@ void k_fileplacesview_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QMouseEvent*
+///
 void k_fileplacesview_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5553,6 +6226,7 @@ void k_fileplacesview_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QMouseEvent* event)
+///
 void k_fileplacesview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5563,6 +6237,7 @@ void k_fileplacesview_on_mouse_double_click_event(void* self, void (*callback)(v
 ///
 /// @param self KFilePlacesView*
 /// @param event QFocusEvent*
+///
 void k_fileplacesview_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5573,6 +6248,7 @@ void k_fileplacesview_focus_in_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QFocusEvent*
+///
 void k_fileplacesview_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5583,6 +6259,7 @@ void k_fileplacesview_qbase_focus_in_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QFocusEvent* event)
+///
 void k_fileplacesview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5593,6 +6270,7 @@ void k_fileplacesview_on_focus_in_event(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesView*
 /// @param event QFocusEvent*
+///
 void k_fileplacesview_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5603,6 +6281,7 @@ void k_fileplacesview_focus_out_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QFocusEvent*
+///
 void k_fileplacesview_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5613,6 +6292,7 @@ void k_fileplacesview_qbase_focus_out_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QFocusEvent* event)
+///
 void k_fileplacesview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5623,6 +6303,7 @@ void k_fileplacesview_on_focus_out_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KFilePlacesView*
 /// @param event QInputMethodEvent*
+///
 void k_fileplacesview_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5633,6 +6314,7 @@ void k_fileplacesview_input_method_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QInputMethodEvent*
+///
 void k_fileplacesview_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5643,6 +6325,7 @@ void k_fileplacesview_qbase_input_method_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QInputMethodEvent* event)
+///
 void k_fileplacesview_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5654,6 +6337,7 @@ void k_fileplacesview_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param self KFilePlacesView*
 /// @param object QObject*
 /// @param event QEvent*
+///
 bool k_fileplacesview_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5665,6 +6349,7 @@ bool k_fileplacesview_event_filter(void* self, void* object, void* event);
 /// @param self KFilePlacesView*
 /// @param object QObject*
 /// @param event QEvent*
+///
 bool k_fileplacesview_qbase_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
@@ -5675,6 +6360,7 @@ bool k_fileplacesview_qbase_event_filter(void* self, void* object, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, QObject* object, QEvent* event)
+///
 void k_fileplacesview_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5684,6 +6370,7 @@ void k_fileplacesview_on_event_filter(void* self, bool (*callback)(void*, void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5693,6 +6380,7 @@ QSize* k_fileplacesview_minimum_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5703,6 +6391,7 @@ QSize* k_fileplacesview_qbase_minimum_size_hint(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
+///
 void k_fileplacesview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5713,6 +6402,7 @@ void k_fileplacesview_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param viewport QWidget*
+///
 void k_fileplacesview_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -5723,6 +6413,7 @@ void k_fileplacesview_setup_viewport(void* self, void* viewport);
 ///
 /// @param self KFilePlacesView*
 /// @param viewport QWidget*
+///
 void k_fileplacesview_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -5733,6 +6424,7 @@ void k_fileplacesview_qbase_setup_viewport(void* self, void* viewport);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QWidget* viewport)
+///
 void k_fileplacesview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -5743,6 +6435,7 @@ void k_fileplacesview_on_setup_viewport(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QEvent*
+///
 void k_fileplacesview_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5753,6 +6446,7 @@ void k_fileplacesview_change_event(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QEvent*
+///
 void k_fileplacesview_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5763,6 +6457,7 @@ void k_fileplacesview_qbase_change_event(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QEvent* param1)
+///
 void k_fileplacesview_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -5773,6 +6468,7 @@ void k_fileplacesview_on_change_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFilePlacesView*
 /// @param option QStyleOptionFrame*
+///
 void k_fileplacesview_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -5783,6 +6479,7 @@ void k_fileplacesview_init_style_option(void* self, void* option);
 ///
 /// @param self KFilePlacesView*
 /// @param option QStyleOptionFrame*
+///
 void k_fileplacesview_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -5793,6 +6490,7 @@ void k_fileplacesview_qbase_init_style_option(void* self, void* option);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QStyleOptionFrame* option)
+///
 void k_fileplacesview_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5802,6 +6500,7 @@ void k_fileplacesview_on_init_style_option(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -5811,6 +6510,7 @@ int32_t k_fileplacesview_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -5821,6 +6521,7 @@ int32_t k_fileplacesview_qbase_dev_type(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func()
+///
 void k_fileplacesview_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -5831,6 +6532,7 @@ void k_fileplacesview_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param visible bool
+///
 void k_fileplacesview_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -5841,6 +6543,7 @@ void k_fileplacesview_set_visible(void* self, bool visible);
 ///
 /// @param self KFilePlacesView*
 /// @param visible bool
+///
 void k_fileplacesview_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -5851,6 +6554,7 @@ void k_fileplacesview_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, bool visible)
+///
 void k_fileplacesview_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -5861,6 +6565,7 @@ void k_fileplacesview_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KFilePlacesView*
 /// @param param1 int
+///
 int32_t k_fileplacesview_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -5871,6 +6576,7 @@ int32_t k_fileplacesview_height_for_width(void* self, int param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 int
+///
 int32_t k_fileplacesview_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -5881,6 +6587,7 @@ int32_t k_fileplacesview_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func(KFilePlacesView* self, int param1)
+///
 void k_fileplacesview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -5890,6 +6597,7 @@ void k_fileplacesview_on_height_for_width(void* self, int32_t (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -5899,6 +6607,7 @@ bool k_fileplacesview_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -5909,6 +6618,7 @@ bool k_fileplacesview_qbase_has_height_for_width(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func()
+///
 void k_fileplacesview_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5918,6 +6628,7 @@ void k_fileplacesview_on_has_height_for_width(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QPaintEngine* k_fileplacesview_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -5927,6 +6638,7 @@ QPaintEngine* k_fileplacesview_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QPaintEngine* k_fileplacesview_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -5937,6 +6649,7 @@ QPaintEngine* k_fileplacesview_qbase_paint_engine(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QPaintEngine* func()
+///
 void k_fileplacesview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -5947,6 +6660,7 @@ void k_fileplacesview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param event QKeyEvent*
+///
 void k_fileplacesview_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5957,6 +6671,7 @@ void k_fileplacesview_key_release_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QKeyEvent*
+///
 void k_fileplacesview_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5967,6 +6682,7 @@ void k_fileplacesview_qbase_key_release_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QKeyEvent* event)
+///
 void k_fileplacesview_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5977,6 +6693,7 @@ void k_fileplacesview_on_key_release_event(void* self, void (*callback)(void*, v
 ///
 /// @param self KFilePlacesView*
 /// @param event QEnterEvent*
+///
 void k_fileplacesview_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5987,6 +6704,7 @@ void k_fileplacesview_enter_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QEnterEvent*
+///
 void k_fileplacesview_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5997,6 +6715,7 @@ void k_fileplacesview_qbase_enter_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QEnterEvent* event)
+///
 void k_fileplacesview_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6007,6 +6726,7 @@ void k_fileplacesview_on_enter_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param event QEvent*
+///
 void k_fileplacesview_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6017,6 +6737,7 @@ void k_fileplacesview_leave_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QEvent*
+///
 void k_fileplacesview_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6027,6 +6748,7 @@ void k_fileplacesview_qbase_leave_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QEvent* event)
+///
 void k_fileplacesview_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6037,6 +6759,7 @@ void k_fileplacesview_on_leave_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param event QMoveEvent*
+///
 void k_fileplacesview_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6047,6 +6770,7 @@ void k_fileplacesview_move_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QMoveEvent*
+///
 void k_fileplacesview_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6057,6 +6781,7 @@ void k_fileplacesview_qbase_move_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QMoveEvent* event)
+///
 void k_fileplacesview_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6067,6 +6792,7 @@ void k_fileplacesview_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFilePlacesView*
 /// @param event QCloseEvent*
+///
 void k_fileplacesview_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6077,6 +6803,7 @@ void k_fileplacesview_close_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QCloseEvent*
+///
 void k_fileplacesview_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6087,6 +6814,7 @@ void k_fileplacesview_qbase_close_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QCloseEvent* event)
+///
 void k_fileplacesview_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6097,6 +6825,7 @@ void k_fileplacesview_on_close_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param event QTabletEvent*
+///
 void k_fileplacesview_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6107,6 +6836,7 @@ void k_fileplacesview_tablet_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QTabletEvent*
+///
 void k_fileplacesview_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6117,6 +6847,7 @@ void k_fileplacesview_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QTabletEvent* event)
+///
 void k_fileplacesview_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6127,6 +6858,7 @@ void k_fileplacesview_on_tablet_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFilePlacesView*
 /// @param event QActionEvent*
+///
 void k_fileplacesview_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6137,6 +6869,7 @@ void k_fileplacesview_action_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QActionEvent*
+///
 void k_fileplacesview_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -6147,6 +6880,7 @@ void k_fileplacesview_qbase_action_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QActionEvent* event)
+///
 void k_fileplacesview_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6159,6 +6893,7 @@ void k_fileplacesview_on_action_event(void* self, void (*callback)(void*, void*)
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_fileplacesview_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -6171,6 +6906,7 @@ bool k_fileplacesview_native_event(void* self, const char* eventType, void* mess
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_fileplacesview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -6181,6 +6917,7 @@ bool k_fileplacesview_qbase_native_event(void* self, const char* eventType, void
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, const char* eventType, void* message, intptr_t* result)
+///
 void k_fileplacesview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -6191,6 +6928,7 @@ void k_fileplacesview_on_native_event(void* self, bool (*callback)(void*, const 
 ///
 /// @param self KFilePlacesView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_fileplacesview_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -6201,6 +6939,7 @@ int32_t k_fileplacesview_metric(void* self, int32_t param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_fileplacesview_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -6211,6 +6950,7 @@ int32_t k_fileplacesview_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func(KFilePlacesView* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void k_fileplacesview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -6221,6 +6961,7 @@ void k_fileplacesview_on_metric(void* self, int32_t (*callback)(void*, int32_t))
 ///
 /// @param self KFilePlacesView*
 /// @param painter QPainter*
+///
 void k_fileplacesview_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -6231,6 +6972,7 @@ void k_fileplacesview_init_painter(void* self, void* painter);
 ///
 /// @param self KFilePlacesView*
 /// @param painter QPainter*
+///
 void k_fileplacesview_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -6241,6 +6983,7 @@ void k_fileplacesview_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QPainter* painter)
+///
 void k_fileplacesview_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6251,6 +6994,7 @@ void k_fileplacesview_on_init_painter(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFilePlacesView*
 /// @param offset QPoint*
+///
 QPaintDevice* k_fileplacesview_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -6261,6 +7005,7 @@ QPaintDevice* k_fileplacesview_redirected(void* self, void* offset);
 ///
 /// @param self KFilePlacesView*
 /// @param offset QPoint*
+///
 QPaintDevice* k_fileplacesview_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -6271,6 +7016,7 @@ QPaintDevice* k_fileplacesview_qbase_redirected(void* self, void* offset);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QPaintDevice* func(KFilePlacesView* self, QPoint* offset)
+///
 void k_fileplacesview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6280,6 +7026,7 @@ void k_fileplacesview_on_redirected(void* self, QPaintDevice* (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QPainter* k_fileplacesview_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -6289,6 +7036,7 @@ QPainter* k_fileplacesview_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QPainter* k_fileplacesview_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -6299,6 +7047,7 @@ QPainter* k_fileplacesview_qbase_shared_painter(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QPainter* func()
+///
 void k_fileplacesview_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
@@ -6309,6 +7058,7 @@ void k_fileplacesview_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param event QChildEvent*
+///
 void k_fileplacesview_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -6319,6 +7069,7 @@ void k_fileplacesview_child_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QChildEvent*
+///
 void k_fileplacesview_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -6329,6 +7080,7 @@ void k_fileplacesview_qbase_child_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QChildEvent* event)
+///
 void k_fileplacesview_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6339,6 +7091,7 @@ void k_fileplacesview_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesView*
 /// @param event QEvent*
+///
 void k_fileplacesview_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -6349,6 +7102,7 @@ void k_fileplacesview_custom_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param event QEvent*
+///
 void k_fileplacesview_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -6359,6 +7113,7 @@ void k_fileplacesview_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QEvent* event)
+///
 void k_fileplacesview_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6369,6 +7124,7 @@ void k_fileplacesview_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFilePlacesView*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesview_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6379,6 +7135,7 @@ void k_fileplacesview_connect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesview_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6389,6 +7146,7 @@ void k_fileplacesview_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QMetaMethod* signal)
+///
 void k_fileplacesview_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6399,6 +7157,7 @@ void k_fileplacesview_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesView*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesview_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6409,6 +7168,7 @@ void k_fileplacesview_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesview_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6419,6 +7179,7 @@ void k_fileplacesview_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QMetaMethod* signal)
+///
 void k_fileplacesview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -6430,6 +7191,7 @@ void k_fileplacesview_on_disconnect_notify(void* self, void (*callback)(void*, v
 /// @param self KFilePlacesView*
 /// @param width int
 /// @param height int
+///
 void k_fileplacesview_resize_contents(void* self, int width, int height);
 
 /// Inherited from QListView
@@ -6441,6 +7203,7 @@ void k_fileplacesview_resize_contents(void* self, int width, int height);
 /// @param self KFilePlacesView*
 /// @param width int
 /// @param height int
+///
 void k_fileplacesview_qbase_resize_contents(void* self, int width, int height);
 
 /// Inherited from QListView
@@ -6451,6 +7214,7 @@ void k_fileplacesview_qbase_resize_contents(void* self, int width, int height);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int width, int height)
+///
 void k_fileplacesview_on_resize_contents(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
@@ -6460,6 +7224,7 @@ void k_fileplacesview_on_resize_contents(void* self, void (*callback)(void*, int
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_contents_size(void* self);
 
 /// Inherited from QListView
@@ -6469,6 +7234,7 @@ QSize* k_fileplacesview_contents_size(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QSize* k_fileplacesview_qbase_contents_size(void* self);
 
 /// Inherited from QListView
@@ -6479,6 +7245,7 @@ QSize* k_fileplacesview_qbase_contents_size(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
+///
 void k_fileplacesview_on_contents_size(void* self, QSize* (*callback)());
 
 /// Inherited from QListView
@@ -6489,6 +7256,7 @@ void k_fileplacesview_on_contents_size(void* self, QSize* (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QRect* k_fileplacesview_rect_for_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -6499,6 +7267,7 @@ QRect* k_fileplacesview_rect_for_index(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param index QModelIndex*
+///
 QRect* k_fileplacesview_qbase_rect_for_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -6509,6 +7278,7 @@ QRect* k_fileplacesview_qbase_rect_for_index(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QRect* func(KFilePlacesView* self, QModelIndex* index)
+///
 void k_fileplacesview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -6520,6 +7290,7 @@ void k_fileplacesview_on_rect_for_index(void* self, QRect* (*callback)(void*, vo
 /// @param self KFilePlacesView*
 /// @param position QPoint*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_set_position_for_index(void* self, void* position, void* index);
 
 /// Inherited from QListView
@@ -6531,6 +7302,7 @@ void k_fileplacesview_set_position_for_index(void* self, void* position, void* i
 /// @param self KFilePlacesView*
 /// @param position QPoint*
 /// @param index QModelIndex*
+///
 void k_fileplacesview_qbase_set_position_for_index(void* self, void* position, void* index);
 
 /// Inherited from QListView
@@ -6541,6 +7313,7 @@ void k_fileplacesview_qbase_set_position_for_index(void* self, void* position, v
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QPoint* position, QModelIndex* index)
+///
 void k_fileplacesview_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6552,6 +7325,7 @@ void k_fileplacesview_on_set_position_for_index(void* self, void (*callback)(voi
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__State
+///
 int32_t k_fileplacesview_state(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6563,6 +7337,7 @@ int32_t k_fileplacesview_state(void* self);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__State
+///
 int32_t k_fileplacesview_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6573,6 +7348,7 @@ int32_t k_fileplacesview_qbase_state(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func()
+///
 void k_fileplacesview_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6583,6 +7359,7 @@ void k_fileplacesview_on_state(void* self, int32_t (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param state enum QAbstractItemView__State
+///
 void k_fileplacesview_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
@@ -6593,6 +7370,7 @@ void k_fileplacesview_set_state(void* self, int32_t state);
 ///
 /// @param self KFilePlacesView*
 /// @param state enum QAbstractItemView__State
+///
 void k_fileplacesview_qbase_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
@@ -6603,6 +7381,7 @@ void k_fileplacesview_qbase_set_state(void* self, int32_t state);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, enum QAbstractItemView__State state)
+///
 void k_fileplacesview_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6612,6 +7391,7 @@ void k_fileplacesview_on_set_state(void* self, void (*callback)(void*, int32_t))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6621,6 +7401,7 @@ void k_fileplacesview_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6631,6 +7412,7 @@ void k_fileplacesview_qbase_schedule_delayed_items_layout(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_schedule_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6640,6 +7422,7 @@ void k_fileplacesview_on_schedule_delayed_items_layout(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6649,6 +7432,7 @@ void k_fileplacesview_execute_delayed_items_layout(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6659,6 +7443,7 @@ void k_fileplacesview_qbase_execute_delayed_items_layout(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_execute_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6669,6 +7454,7 @@ void k_fileplacesview_on_execute_delayed_items_layout(void* self, void (*callbac
 ///
 /// @param self KFilePlacesView*
 /// @param region QRegion*
+///
 void k_fileplacesview_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
@@ -6679,6 +7465,7 @@ void k_fileplacesview_set_dirty_region(void* self, void* region);
 ///
 /// @param self KFilePlacesView*
 /// @param region QRegion*
+///
 void k_fileplacesview_qbase_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
@@ -6689,6 +7476,7 @@ void k_fileplacesview_qbase_set_dirty_region(void* self, void* region);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QRegion* region)
+///
 void k_fileplacesview_on_set_dirty_region(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6700,6 +7488,7 @@ void k_fileplacesview_on_set_dirty_region(void* self, void (*callback)(void*, vo
 /// @param self KFilePlacesView*
 /// @param dx int
 /// @param dy int
+///
 void k_fileplacesview_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
@@ -6711,6 +7500,7 @@ void k_fileplacesview_scroll_dirty_region(void* self, int dx, int dy);
 /// @param self KFilePlacesView*
 /// @param dx int
 /// @param dy int
+///
 void k_fileplacesview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
@@ -6721,6 +7511,7 @@ void k_fileplacesview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int dx, int dy)
+///
 void k_fileplacesview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -6730,6 +7521,7 @@ void k_fileplacesview_on_scroll_dirty_region(void* self, void (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QPoint* k_fileplacesview_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6739,6 +7531,7 @@ QPoint* k_fileplacesview_dirty_region_offset(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QPoint* k_fileplacesview_qbase_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6749,6 +7542,7 @@ QPoint* k_fileplacesview_qbase_dirty_region_offset(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QPoint* func()
+///
 void k_fileplacesview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6758,6 +7552,7 @@ void k_fileplacesview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6767,6 +7562,7 @@ void k_fileplacesview_start_auto_scroll(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6777,6 +7573,7 @@ void k_fileplacesview_qbase_start_auto_scroll(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_start_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6786,6 +7583,7 @@ void k_fileplacesview_on_start_auto_scroll(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6795,6 +7593,7 @@ void k_fileplacesview_stop_auto_scroll(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6805,6 +7604,7 @@ void k_fileplacesview_qbase_stop_auto_scroll(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_stop_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6814,6 +7614,7 @@ void k_fileplacesview_on_stop_auto_scroll(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6823,6 +7624,7 @@ void k_fileplacesview_do_auto_scroll(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6833,6 +7635,7 @@ void k_fileplacesview_qbase_do_auto_scroll(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_do_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6844,6 +7647,7 @@ void k_fileplacesview_on_do_auto_scroll(void* self, void (*callback)());
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
+///
 int32_t k_fileplacesview_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6855,6 +7659,7 @@ int32_t k_fileplacesview_drop_indicator_position(void* self);
 /// @param self KFilePlacesView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
+///
 int32_t k_fileplacesview_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6865,6 +7670,7 @@ int32_t k_fileplacesview_qbase_drop_indicator_position(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func()
+///
 void k_fileplacesview_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6878,6 +7684,7 @@ void k_fileplacesview_on_drop_indicator_position(void* self, int32_t (*callback)
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_fileplacesview_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -6891,6 +7698,7 @@ void k_fileplacesview_set_viewport_margins(void* self, int left, int top, int ri
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_fileplacesview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -6901,6 +7709,7 @@ void k_fileplacesview_qbase_set_viewport_margins(void* self, int left, int top, 
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, int left, int top, int right, int bottom)
+///
 void k_fileplacesview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -6910,6 +7719,7 @@ void k_fileplacesview_on_set_viewport_margins(void* self, void (*callback)(void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QMargins* k_fileplacesview_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -6919,6 +7729,7 @@ QMargins* k_fileplacesview_viewport_margins(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QMargins* k_fileplacesview_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -6929,6 +7740,7 @@ QMargins* k_fileplacesview_qbase_viewport_margins(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QMargins* func()
+///
 void k_fileplacesview_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -6939,6 +7751,7 @@ void k_fileplacesview_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPainter*
+///
 void k_fileplacesview_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -6949,6 +7762,7 @@ void k_fileplacesview_draw_frame(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param param1 QPainter*
+///
 void k_fileplacesview_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -6959,6 +7773,7 @@ void k_fileplacesview_qbase_draw_frame(void* self, void* param1);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, QPainter* param1)
+///
 void k_fileplacesview_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6968,6 +7783,7 @@ void k_fileplacesview_on_draw_frame(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -6977,6 +7793,7 @@ void k_fileplacesview_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -6987,6 +7804,7 @@ void k_fileplacesview_qbase_update_micro_focus(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -6996,6 +7814,7 @@ void k_fileplacesview_on_update_micro_focus(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_create(void* self);
 
 /// Inherited from QWidget
@@ -7005,6 +7824,7 @@ void k_fileplacesview_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -7015,6 +7835,7 @@ void k_fileplacesview_qbase_create(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7024,6 +7845,7 @@ void k_fileplacesview_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_destroy(void* self);
 
 /// Inherited from QWidget
@@ -7033,6 +7855,7 @@ void k_fileplacesview_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -7043,6 +7866,7 @@ void k_fileplacesview_qbase_destroy(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func()
+///
 void k_fileplacesview_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7052,6 +7876,7 @@ void k_fileplacesview_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -7061,6 +7886,7 @@ bool k_fileplacesview_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -7071,6 +7897,7 @@ bool k_fileplacesview_qbase_focus_next_child(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func()
+///
 void k_fileplacesview_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -7080,6 +7907,7 @@ void k_fileplacesview_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -7089,6 +7917,7 @@ bool k_fileplacesview_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 bool k_fileplacesview_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -7099,6 +7928,7 @@ bool k_fileplacesview_qbase_focus_previous_child(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func()
+///
 void k_fileplacesview_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -7108,6 +7938,7 @@ void k_fileplacesview_on_focus_previous_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QObject* k_fileplacesview_sender(void* self);
 
 /// Inherited from QObject
@@ -7117,6 +7948,7 @@ QObject* k_fileplacesview_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 QObject* k_fileplacesview_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -7127,6 +7959,7 @@ QObject* k_fileplacesview_qbase_sender(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QObject* func()
+///
 void k_fileplacesview_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -7136,6 +7969,7 @@ void k_fileplacesview_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -7145,6 +7979,7 @@ int32_t k_fileplacesview_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
+///
 int32_t k_fileplacesview_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -7155,6 +7990,7 @@ int32_t k_fileplacesview_qbase_sender_signal_index(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func()
+///
 void k_fileplacesview_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -7165,6 +8001,7 @@ void k_fileplacesview_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self KFilePlacesView*
 /// @param signal const char*
+///
 int32_t k_fileplacesview_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -7175,6 +8012,7 @@ int32_t k_fileplacesview_receivers(void* self, const char* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param signal const char*
+///
 int32_t k_fileplacesview_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -7185,6 +8023,7 @@ int32_t k_fileplacesview_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param callback int32_t func(KFilePlacesView* self, const char* signal)
+///
 void k_fileplacesview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -7195,6 +8034,7 @@ void k_fileplacesview_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// @param self KFilePlacesView*
 /// @param signal QMetaMethod*
+///
 bool k_fileplacesview_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -7205,6 +8045,7 @@ bool k_fileplacesview_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param signal QMetaMethod*
+///
 bool k_fileplacesview_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -7215,6 +8056,7 @@ bool k_fileplacesview_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KFilePlacesView*
 /// @param callback bool func(KFilePlacesView* self, QMetaMethod* signal)
+///
 void k_fileplacesview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7226,6 +8068,7 @@ void k_fileplacesview_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param self KFilePlacesView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_fileplacesview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -7237,6 +8080,7 @@ double k_fileplacesview_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// @param self KFilePlacesView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_fileplacesview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -7247,6 +8091,7 @@ double k_fileplacesview_qbase_get_decoded_metric_f(void* self, int32_t metricA, 
 ///
 /// @param self KFilePlacesView*
 /// @param callback double func(KFilePlacesView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void k_fileplacesview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -7257,6 +8102,7 @@ void k_fileplacesview_on_get_decoded_metric_f(void* self, double (*callback)(voi
 ///
 /// @param self KFilePlacesView*
 /// @param callback void func(KFilePlacesView* self, const char* objectName)
+///
 void k_fileplacesview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dtor.KFilePlacesView)
@@ -7264,6 +8110,7 @@ void k_fileplacesview_on_object_name_changed(void* self, void (*callback)(void*,
 /// Delete this object from C++ memory.
 ///
 /// @param self KFilePlacesView*
+///
 void k_fileplacesview_delete(void* self);
 
 #endif

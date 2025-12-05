@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kbackup.html
+/// [Upstream resources](https://api.kde.org/kbackup.html)
 
 /// [Upstream resources](https://api.kde.org/kbackup.html#simpleBackupFile)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
 /// @param param3 const char*
+///
 bool k_backup_simple_backup_file(const char* param1, const char* param2, const char* param3);
 
 /// [Upstream resources](https://api.kde.org/kbackup.html#numberedBackupFile)
@@ -26,5 +27,6 @@ bool k_backup_simple_backup_file(const char* param1, const char* param2, const c
 /// @param param2 const char*
 /// @param param3 const char*
 /// @param param4 uint32_t
+///
 bool k_backup_numbered_backup_file(const char* param1, const char* param2, const char* param3, uint32_t param4);
 #endif

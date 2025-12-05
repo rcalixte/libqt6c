@@ -11,21 +11,24 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qstringconverter.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
 /// @param self QStringConverter*
+///
 bool q_stringconverter_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
 ///
 /// @param self QStringConverter*
+///
 void q_stringconverter_reset_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
 /// @param self QStringConverter*
+///
 bool q_stringconverter_has_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
@@ -33,6 +36,7 @@ bool q_stringconverter_has_error(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringConverter*
+///
 const char* q_stringconverter_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
@@ -40,6 +44,7 @@ const char* q_stringconverter_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param e enum QStringConverter__Encoding
+///
 const char* q_stringconverter_name_for_encoding(int32_t e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
@@ -48,25 +53,30 @@ const char* q_stringconverter_name_for_encoding(int32_t e);
 ///
 const char** q_stringconverter_available_codecs();
 
-/// https://doc.qt.io/qt-6/qstringconverterbase-state.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html)
 
 /// q_stringconverterbase__state_new constructs a new QStringConverterBase::State object.
 ///
 QStringConverterBase__State* q_stringconverterbase__state_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html)
+
 /// q_stringconverterbase__state_new2 constructs a new QStringConverterBase::State object.
 ///
 /// @param f flag of enum QStringConverterBase__Flag
+///
 QStringConverterBase__State* q_stringconverterbase__state_new2(int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#clear)
 ///
 /// @param self QStringConverterBase__State*
+///
 void q_stringconverterbase__state_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#reset)
 ///
 /// @param self QStringConverterBase__State*
+///
 void q_stringconverterbase__state_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
@@ -74,53 +84,62 @@ void q_stringconverterbase__state_reset(void* self);
 /// @param self QStringConverterBase__State*
 ///
 /// @return flag of enum QStringConverterBase__Flag
+///
 int32_t q_stringconverterbase__state_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param flags flag of enum QStringConverterBase__Flag
+///
 void q_stringconverterbase__state_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
 ///
 /// @param self QStringConverterBase__State*
+///
 int32_t q_stringconverterbase__state_internal_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param internalState int
+///
 void q_stringconverterbase__state_set_internal_state(void* self, int internalState);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
 ///
 /// @param self QStringConverterBase__State*
+///
 int64_t q_stringconverterbase__state_remaining_chars(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param remainingChars int64_t
+///
 void q_stringconverterbase__state_set_remaining_chars(void* self, int64_t remainingChars);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
 ///
 /// @param self QStringConverterBase__State*
+///
 int64_t q_stringconverterbase__state_invalid_chars(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param invalidChars int64_t
+///
 void q_stringconverterbase__state_set_invalid_chars(void* self, int64_t invalidChars);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self QStringConverterBase__State*
+///
 void q_stringconverterbase__state_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qstringconverter-base.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter-base.html#public-types)
 
 typedef enum {
     QSTRINGCONVERTERBASE_FLAG_DEFAULT = 0,
@@ -130,6 +149,8 @@ typedef enum {
     QSTRINGCONVERTERBASE_FLAG_CONVERTINITIALBOM = 8,
     QSTRINGCONVERTERBASE_FLAG_USESICU = 16
 } QStringConverterBase__Flag;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter-base.html#public-types)
 
 typedef enum {
     QSTRINGCONVERTER_ENCODING_UTF8 = 0,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qpassworddigestor.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qpassworddigestor.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf1)
 ///
@@ -22,6 +22,7 @@
 /// @param param3 const char*
 /// @param param4 int
 /// @param param5 uint64_t
+///
 char* q_passworddigestor_derive_key_pbkdf1(int32_t param1, const char* param2, const char* param3, int param4, uint64_t param5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf2)
@@ -33,5 +34,6 @@ char* q_passworddigestor_derive_key_pbkdf1(int32_t param1, const char* param2, c
 /// @param param3 const char*
 /// @param param4 int
 /// @param param5 uint64_t
+///
 char* q_passworddigestor_derive_key_pbkdf2(int32_t param1, const char* param2, const char* param3, int param4, uint64_t param5);
 #endif

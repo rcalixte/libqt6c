@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/klanguagename.html
+/// [Upstream resources](https://api.kde.org/klanguagename.html)
 
 /// [Upstream resources](https://api.kde.org/klanguagename.html#nameForCode)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_languagename_name_for_code(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/klanguagename.html#nameForCodeInLocale)
@@ -26,6 +27,7 @@ const char* k_languagename_name_for_code(const char* param1);
 ///
 /// @param param1 const char*
 /// @param param2 const char*
+///
 const char* k_languagename_name_for_code_in_locale(const char* param1, const char* param2);
 
 /// [Upstream resources](https://api.kde.org/klanguagename.html#allLanguageCodes)

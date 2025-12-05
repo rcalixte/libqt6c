@@ -11,47 +11,60 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ktextedit.html
+/// [Upstream resources](https://api.kde.org/ktextedit.html)
 
 /// k_textedit_new constructs a new KTextEdit object.
 ///
 /// @param parent QWidget*
+///
 KTextEdit* k_textedit_new(void* parent);
+
+/// [Upstream resources](https://api.kde.org/ktextedit.html)
 
 /// k_textedit_new2 constructs a new KTextEdit object.
 ///
 /// @param text const char*
+///
 KTextEdit* k_textedit_new2(const char* text);
+
+/// [Upstream resources](https://api.kde.org/ktextedit.html)
 
 /// k_textedit_new3 constructs a new KTextEdit object.
 ///
 KTextEdit* k_textedit_new3();
 
+/// [Upstream resources](https://api.kde.org/ktextedit.html)
+
 /// k_textedit_new4 constructs a new KTextEdit object.
 ///
 /// @param text const char*
 /// @param parent QWidget*
+///
 KTextEdit* k_textedit_new4(const char* text, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KTextEdit*
+///
 const QMetaObject* k_textedit_meta_object(void* self);
 
 /// @param self KTextEdit*
 /// @param param1 const char*
+///
 void* k_textedit_metacast(void* self, const char* param1);
 
 /// @param self KTextEdit*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_textedit_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KTextEdit*
 /// @param callback int32_t func(KTextEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_textedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -60,6 +73,7 @@ void k_textedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_textedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -67,12 +81,14 @@ int32_t k_textedit_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_textedit_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setReadOnly)
 ///
 /// @param self KTextEdit*
 /// @param readOnly bool
+///
 void k_textedit_set_read_only(void* self, bool readOnly);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setReadOnly)
@@ -81,6 +97,7 @@ void k_textedit_set_read_only(void* self, bool readOnly);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool readOnly)
+///
 void k_textedit_on_set_read_only(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setReadOnly)
@@ -89,12 +106,14 @@ void k_textedit_on_set_read_only(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KTextEdit*
 /// @param readOnly bool
+///
 void k_textedit_qbase_set_read_only(void* self, bool readOnly);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
 ///
 /// @param self KTextEdit*
 /// @param check bool
+///
 void k_textedit_set_check_spelling_enabled(void* self, bool check);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
@@ -103,6 +122,7 @@ void k_textedit_set_check_spelling_enabled(void* self, bool check);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool check)
+///
 void k_textedit_on_set_check_spelling_enabled(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
@@ -111,11 +131,13 @@ void k_textedit_on_set_check_spelling_enabled(void* self, void (*callback)(void*
 ///
 /// @param self KTextEdit*
 /// @param check bool
+///
 void k_textedit_qbase_set_check_spelling_enabled(void* self, bool check);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_check_spelling_enabled(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
@@ -124,6 +146,7 @@ bool k_textedit_check_spelling_enabled(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func()
+///
 void k_textedit_on_check_spelling_enabled(void* self, bool (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
@@ -131,12 +154,14 @@ void k_textedit_on_check_spelling_enabled(void* self, bool (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_qbase_check_spelling_enabled(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
 ///
 /// @param self KTextEdit*
 /// @param block const char*
+///
 bool k_textedit_should_block_be_spell_checked(void* self, const char* block);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
@@ -145,6 +170,7 @@ bool k_textedit_should_block_be_spell_checked(void* self, const char* block);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, const char* block)
+///
 void k_textedit_on_should_block_be_spell_checked(void* self, bool (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
@@ -153,6 +179,7 @@ void k_textedit_on_should_block_be_spell_checked(void* self, bool (*callback)(vo
 ///
 /// @param self KTextEdit*
 /// @param block const char*
+///
 bool k_textedit_qbase_should_block_be_spell_checked(void* self, const char* block);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#highlightWord)
@@ -160,11 +187,13 @@ bool k_textedit_qbase_should_block_be_spell_checked(void* self, const char* bloc
 /// @param self KTextEdit*
 /// @param length int
 /// @param pos int
+///
 void k_textedit_highlight_word(void* self, int length, int pos);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#createHighlighter)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_create_highlighter(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#createHighlighter)
@@ -173,6 +202,7 @@ void k_textedit_create_highlighter(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_create_highlighter(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#createHighlighter)
@@ -180,22 +210,26 @@ void k_textedit_on_create_highlighter(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_create_highlighter(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#highlighter)
 ///
 /// @param self KTextEdit*
+///
 Sonnet__Highlighter* k_textedit_highlighter(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setHighlighter)
 ///
 /// @param self KTextEdit*
 /// @param _highLighter Sonnet__Highlighter*
+///
 void k_textedit_set_highlighter(void* self, void* _highLighter);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#mousePopupMenu)
 ///
 /// @param self KTextEdit*
+///
 QMenu* k_textedit_mouse_popup_menu(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#mousePopupMenu)
@@ -204,6 +238,7 @@ QMenu* k_textedit_mouse_popup_menu(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QMenu* func()
+///
 void k_textedit_on_mouse_popup_menu(void* self, QMenu* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#mousePopupMenu)
@@ -211,12 +246,14 @@ void k_textedit_on_mouse_popup_menu(void* self, QMenu* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 QMenu* k_textedit_qbase_mouse_popup_menu(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#enableFindReplace)
 ///
 /// @param self KTextEdit*
 /// @param enabled bool
+///
 void k_textedit_enable_find_replace(void* self, bool enabled);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckingLanguage)
@@ -224,71 +261,83 @@ void k_textedit_enable_find_replace(void* self, bool enabled);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_spell_checking_language(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#showTabAction)
 ///
 /// @param self KTextEdit*
 /// @param show bool
+///
 void k_textedit_show_tab_action(void* self, bool show);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#showAutoCorrectButton)
 ///
 /// @param self KTextEdit*
 /// @param show bool
+///
 void k_textedit_show_auto_correct_button(void* self, bool show);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#forceSpellChecking)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_force_spell_checking(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#checkSpellingChanged)
 ///
 /// @param self KTextEdit*
 /// @param param1 bool
+///
 void k_textedit_check_spelling_changed(void* self, bool param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#checkSpellingChanged)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool param1)
+///
 void k_textedit_on_check_spelling_changed(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckStatus)
 ///
 /// @param self KTextEdit*
 /// @param param1 const char*
+///
 void k_textedit_spell_check_status(void* self, const char* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckStatus)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* param1)
+///
 void k_textedit_on_spell_check_status(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#languageChanged)
 ///
 /// @param self KTextEdit*
 /// @param language const char*
+///
 void k_textedit_language_changed(void* self, const char* language);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#languageChanged)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* language)
+///
 void k_textedit_on_language_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#aboutToShowContextMenu)
 ///
 /// @param self KTextEdit*
 /// @param menu QMenu*
+///
 void k_textedit_about_to_show_context_menu(void* self, void* menu);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#aboutToShowContextMenu)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMenu* menu)
+///
 void k_textedit_on_about_to_show_context_menu(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckerAutoCorrect)
@@ -296,71 +345,84 @@ void k_textedit_on_about_to_show_context_menu(void* self, void (*callback)(void*
 /// @param self KTextEdit*
 /// @param currentWord const char*
 /// @param autoCorrectWord const char*
+///
 void k_textedit_spell_checker_auto_correct(void* self, const char* currentWord, const char* autoCorrectWord);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckerAutoCorrect)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* currentWord, const char* autoCorrectWord)
+///
 void k_textedit_on_spell_checker_auto_correct(void* self, void (*callback)(void*, const char*, const char*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckingFinished)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_spell_checking_finished(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckingFinished)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
+///
 void k_textedit_on_spell_checking_finished(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckingCanceled)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_spell_checking_canceled(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckingCanceled)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
+///
 void k_textedit_on_spell_checking_canceled(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#setSpellCheckingLanguage)
 ///
 /// @param self KTextEdit*
 /// @param language const char*
+///
 void k_textedit_set_spell_checking_language(void* self, const char* language);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#checkSpelling)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_check_spelling(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#showSpellConfigDialog)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_show_spell_config_dialog(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#replace)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_replace(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#addTextDecorator)
 ///
 /// @param self KTextEdit*
 /// @param decorator Sonnet__SpellCheckDecorator*
+///
 void k_textedit_add_text_decorator(void* self, void* decorator);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#clearDecorator)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_clear_decorator(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotDoReplace)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_do_replace(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotDoReplace)
@@ -369,6 +431,7 @@ void k_textedit_slot_do_replace(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_do_replace(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotDoReplace)
@@ -376,11 +439,13 @@ void k_textedit_on_slot_do_replace(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_do_replace(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotReplaceNext)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_replace_next(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotReplaceNext)
@@ -389,6 +454,7 @@ void k_textedit_slot_replace_next(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_replace_next(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotReplaceNext)
@@ -396,11 +462,13 @@ void k_textedit_on_slot_replace_next(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_replace_next(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotDoFind)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_do_find(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotDoFind)
@@ -409,6 +477,7 @@ void k_textedit_slot_do_find(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_do_find(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotDoFind)
@@ -416,11 +485,13 @@ void k_textedit_on_slot_do_find(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_do_find(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFind)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_find(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFind)
@@ -429,6 +500,7 @@ void k_textedit_slot_find(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_find(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFind)
@@ -436,11 +508,13 @@ void k_textedit_on_slot_find(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_find(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFindNext)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_find_next(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFindNext)
@@ -449,6 +523,7 @@ void k_textedit_slot_find_next(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_find_next(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFindNext)
@@ -456,11 +531,13 @@ void k_textedit_on_slot_find_next(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_find_next(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFindPrevious)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_find_previous(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFindPrevious)
@@ -469,6 +546,7 @@ void k_textedit_slot_find_previous(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_find_previous(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotFindPrevious)
@@ -476,11 +554,13 @@ void k_textedit_on_slot_find_previous(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_find_previous(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotReplace)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_replace(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotReplace)
@@ -489,6 +569,7 @@ void k_textedit_slot_replace(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_replace(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotReplace)
@@ -496,11 +577,13 @@ void k_textedit_on_slot_replace(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_replace(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotSpeakText)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_slot_speak_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotSpeakText)
@@ -509,6 +592,7 @@ void k_textedit_slot_speak_text(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_slot_speak_text(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#slotSpeakText)
@@ -516,12 +600,14 @@ void k_textedit_on_slot_speak_text(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_slot_speak_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#event)
 ///
 /// @param self KTextEdit*
 /// @param param1 QEvent*
+///
 bool k_textedit_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#event)
@@ -530,6 +616,7 @@ bool k_textedit_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, QEvent* param1)
+///
 void k_textedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#event)
@@ -538,12 +625,14 @@ void k_textedit_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param param1 QEvent*
+///
 bool k_textedit_qbase_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#keyPressEvent)
 ///
 /// @param self KTextEdit*
 /// @param param1 QKeyEvent*
+///
 void k_textedit_key_press_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#keyPressEvent)
@@ -552,6 +641,7 @@ void k_textedit_key_press_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QKeyEvent* param1)
+///
 void k_textedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#keyPressEvent)
@@ -560,12 +650,14 @@ void k_textedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param param1 QKeyEvent*
+///
 void k_textedit_qbase_key_press_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#focusInEvent)
 ///
 /// @param self KTextEdit*
 /// @param param1 QFocusEvent*
+///
 void k_textedit_focus_in_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#focusInEvent)
@@ -574,6 +666,7 @@ void k_textedit_focus_in_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QFocusEvent* param1)
+///
 void k_textedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#focusInEvent)
@@ -582,11 +675,13 @@ void k_textedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param param1 QFocusEvent*
+///
 void k_textedit_qbase_focus_in_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#deleteWordBack)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_delete_word_back(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#deleteWordBack)
@@ -595,6 +690,7 @@ void k_textedit_delete_word_back(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_delete_word_back(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#deleteWordBack)
@@ -602,11 +698,13 @@ void k_textedit_on_delete_word_back(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_delete_word_back(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#deleteWordForward)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_delete_word_forward(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#deleteWordForward)
@@ -615,6 +713,7 @@ void k_textedit_delete_word_forward(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_delete_word_forward(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#deleteWordForward)
@@ -622,12 +721,14 @@ void k_textedit_on_delete_word_forward(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_delete_word_forward(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#contextMenuEvent)
 ///
 /// @param self KTextEdit*
 /// @param param1 QContextMenuEvent*
+///
 void k_textedit_context_menu_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#contextMenuEvent)
@@ -636,6 +737,7 @@ void k_textedit_context_menu_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QContextMenuEvent* param1)
+///
 void k_textedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#contextMenuEvent)
@@ -644,6 +746,7 @@ void k_textedit_on_context_menu_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KTextEdit*
 /// @param param1 QContextMenuEvent*
+///
 void k_textedit_qbase_context_menu_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -652,6 +755,7 @@ void k_textedit_qbase_context_menu_event(void* self, void* param1);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_textedit_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -661,12 +765,14 @@ const char* k_textedit_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_textedit_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#showSpellConfigDialog)
 ///
 /// @param self KTextEdit*
 /// @param windowIcon const char*
+///
 void k_textedit_show_spell_config_dialog1(void* self, const char* windowIcon);
 
 /// Inherited from QTextEdit
@@ -675,6 +781,7 @@ void k_textedit_show_spell_config_dialog1(void* self, const char* windowIcon);
 ///
 /// @param self KTextEdit*
 /// @param document QTextDocument*
+///
 void k_textedit_set_document(void* self, void* document);
 
 /// Inherited from QTextEdit
@@ -682,6 +789,7 @@ void k_textedit_set_document(void* self, void* document);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#document)
 ///
 /// @param self KTextEdit*
+///
 QTextDocument* k_textedit_document(void* self);
 
 /// Inherited from QTextEdit
@@ -690,6 +798,7 @@ QTextDocument* k_textedit_document(void* self);
 ///
 /// @param self KTextEdit*
 /// @param placeholderText const char*
+///
 void k_textedit_set_placeholder_text(void* self, const char* placeholderText);
 
 /// Inherited from QTextEdit
@@ -699,6 +808,7 @@ void k_textedit_set_placeholder_text(void* self, const char* placeholderText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_placeholder_text(void* self);
 
 /// Inherited from QTextEdit
@@ -707,6 +817,7 @@ const char* k_textedit_placeholder_text(void* self);
 ///
 /// @param self KTextEdit*
 /// @param cursor QTextCursor*
+///
 void k_textedit_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
@@ -714,6 +825,7 @@ void k_textedit_set_text_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textCursor)
 ///
 /// @param self KTextEdit*
+///
 QTextCursor* k_textedit_text_cursor(void* self);
 
 /// Inherited from QTextEdit
@@ -721,6 +833,7 @@ QTextCursor* k_textedit_text_cursor(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#isReadOnly)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_read_only(void* self);
 
 /// Inherited from QTextEdit
@@ -729,6 +842,7 @@ bool k_textedit_is_read_only(void* self);
 ///
 /// @param self KTextEdit*
 /// @param flags flag of enum Qt__TextInteractionFlag
+///
 void k_textedit_set_text_interaction_flags(void* self, int32_t flags);
 
 /// Inherited from QTextEdit
@@ -738,6 +852,7 @@ void k_textedit_set_text_interaction_flags(void* self, int32_t flags);
 /// @param self KTextEdit*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
+///
 int32_t k_textedit_text_interaction_flags(void* self);
 
 /// Inherited from QTextEdit
@@ -745,6 +860,7 @@ int32_t k_textedit_text_interaction_flags(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontPointSize)
 ///
 /// @param self KTextEdit*
+///
 double k_textedit_font_point_size(void* self);
 
 /// Inherited from QTextEdit
@@ -754,6 +870,7 @@ double k_textedit_font_point_size(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_font_family(void* self);
 
 /// Inherited from QTextEdit
@@ -761,6 +878,7 @@ const char* k_textedit_font_family(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontWeight)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_font_weight(void* self);
 
 /// Inherited from QTextEdit
@@ -768,6 +886,7 @@ int32_t k_textedit_font_weight(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontUnderline)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_font_underline(void* self);
 
 /// Inherited from QTextEdit
@@ -775,6 +894,7 @@ bool k_textedit_font_underline(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontItalic)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_font_italic(void* self);
 
 /// Inherited from QTextEdit
@@ -782,6 +902,7 @@ bool k_textedit_font_italic(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textColor)
 ///
 /// @param self KTextEdit*
+///
 QColor* k_textedit_text_color(void* self);
 
 /// Inherited from QTextEdit
@@ -789,6 +910,7 @@ QColor* k_textedit_text_color(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textBackgroundColor)
 ///
 /// @param self KTextEdit*
+///
 QColor* k_textedit_text_background_color(void* self);
 
 /// Inherited from QTextEdit
@@ -796,6 +918,7 @@ QColor* k_textedit_text_background_color(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#currentFont)
 ///
 /// @param self KTextEdit*
+///
 QFont* k_textedit_current_font(void* self);
 
 /// Inherited from QTextEdit
@@ -805,6 +928,7 @@ QFont* k_textedit_current_font(void* self);
 /// @param self KTextEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t k_textedit_alignment(void* self);
 
 /// Inherited from QTextEdit
@@ -813,6 +937,7 @@ int32_t k_textedit_alignment(void* self);
 ///
 /// @param self KTextEdit*
 /// @param modifier QTextCharFormat*
+///
 void k_textedit_merge_current_char_format(void* self, void* modifier);
 
 /// Inherited from QTextEdit
@@ -821,6 +946,7 @@ void k_textedit_merge_current_char_format(void* self, void* modifier);
 ///
 /// @param self KTextEdit*
 /// @param format QTextCharFormat*
+///
 void k_textedit_set_current_char_format(void* self, void* format);
 
 /// Inherited from QTextEdit
@@ -828,6 +954,7 @@ void k_textedit_set_current_char_format(void* self, void* format);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormat)
 ///
 /// @param self KTextEdit*
+///
 QTextCharFormat* k_textedit_current_char_format(void* self);
 
 /// Inherited from QTextEdit
@@ -837,6 +964,7 @@ QTextCharFormat* k_textedit_current_char_format(void* self);
 /// @param self KTextEdit*
 ///
 /// @return flag of enum QTextEdit__AutoFormattingFlag
+///
 int64_t k_textedit_auto_formatting(void* self);
 
 /// Inherited from QTextEdit
@@ -845,6 +973,7 @@ int64_t k_textedit_auto_formatting(void* self);
 ///
 /// @param self KTextEdit*
 /// @param features flag of enum QTextEdit__AutoFormattingFlag
+///
 void k_textedit_set_auto_formatting(void* self, int64_t features);
 
 /// Inherited from QTextEdit
@@ -852,6 +981,7 @@ void k_textedit_set_auto_formatting(void* self, int64_t features);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#tabChangesFocus)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_tab_changes_focus(void* self);
 
 /// Inherited from QTextEdit
@@ -860,6 +990,7 @@ bool k_textedit_tab_changes_focus(void* self);
 ///
 /// @param self KTextEdit*
 /// @param b bool
+///
 void k_textedit_set_tab_changes_focus(void* self, bool b);
 
 /// Inherited from QTextEdit
@@ -868,6 +999,7 @@ void k_textedit_set_tab_changes_focus(void* self, bool b);
 ///
 /// @param self KTextEdit*
 /// @param title const char*
+///
 void k_textedit_set_document_title(void* self, const char* title);
 
 /// Inherited from QTextEdit
@@ -877,6 +1009,7 @@ void k_textedit_set_document_title(void* self, const char* title);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_document_title(void* self);
 
 /// Inherited from QTextEdit
@@ -884,6 +1017,7 @@ const char* k_textedit_document_title(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#isUndoRedoEnabled)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_undo_redo_enabled(void* self);
 
 /// Inherited from QTextEdit
@@ -892,6 +1026,7 @@ bool k_textedit_is_undo_redo_enabled(void* self);
 ///
 /// @param self KTextEdit*
 /// @param enable bool
+///
 void k_textedit_set_undo_redo_enabled(void* self, bool enable);
 
 /// Inherited from QTextEdit
@@ -901,6 +1036,7 @@ void k_textedit_set_undo_redo_enabled(void* self, bool enable);
 /// @param self KTextEdit*
 ///
 /// @return enum QTextEdit__LineWrapMode
+///
 int32_t k_textedit_line_wrap_mode(void* self);
 
 /// Inherited from QTextEdit
@@ -909,6 +1045,7 @@ int32_t k_textedit_line_wrap_mode(void* self);
 ///
 /// @param self KTextEdit*
 /// @param mode enum QTextEdit__LineWrapMode
+///
 void k_textedit_set_line_wrap_mode(void* self, int32_t mode);
 
 /// Inherited from QTextEdit
@@ -916,6 +1053,7 @@ void k_textedit_set_line_wrap_mode(void* self, int32_t mode);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#lineWrapColumnOrWidth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_line_wrap_column_or_width(void* self);
 
 /// Inherited from QTextEdit
@@ -924,6 +1062,7 @@ int32_t k_textedit_line_wrap_column_or_width(void* self);
 ///
 /// @param self KTextEdit*
 /// @param w int
+///
 void k_textedit_set_line_wrap_column_or_width(void* self, int w);
 
 /// Inherited from QTextEdit
@@ -933,6 +1072,7 @@ void k_textedit_set_line_wrap_column_or_width(void* self, int w);
 /// @param self KTextEdit*
 ///
 /// @return enum QTextOption__WrapMode
+///
 int32_t k_textedit_word_wrap_mode(void* self);
 
 /// Inherited from QTextEdit
@@ -941,6 +1081,7 @@ int32_t k_textedit_word_wrap_mode(void* self);
 ///
 /// @param self KTextEdit*
 /// @param policy enum QTextOption__WrapMode
+///
 void k_textedit_set_word_wrap_mode(void* self, int32_t policy);
 
 /// Inherited from QTextEdit
@@ -949,6 +1090,7 @@ void k_textedit_set_word_wrap_mode(void* self, int32_t policy);
 ///
 /// @param self KTextEdit*
 /// @param exp const char*
+///
 bool k_textedit_find(void* self, const char* exp);
 
 /// Inherited from QTextEdit
@@ -957,6 +1099,7 @@ bool k_textedit_find(void* self, const char* exp);
 ///
 /// @param self KTextEdit*
 /// @param exp QRegularExpression*
+///
 bool k_textedit_find2(void* self, void* exp);
 
 /// Inherited from QTextEdit
@@ -966,6 +1109,7 @@ bool k_textedit_find2(void* self, void* exp);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_to_plain_text(void* self);
 
 /// Inherited from QTextEdit
@@ -975,6 +1119,7 @@ const char* k_textedit_to_plain_text(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_to_html(void* self);
 
 /// Inherited from QTextEdit
@@ -984,6 +1129,7 @@ const char* k_textedit_to_html(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_to_markdown(void* self);
 
 /// Inherited from QTextEdit
@@ -991,6 +1137,7 @@ const char* k_textedit_to_markdown(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#ensureCursorVisible)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_ensure_cursor_visible(void* self);
 
 /// Inherited from QTextEdit
@@ -998,6 +1145,7 @@ void k_textedit_ensure_cursor_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#createStandardContextMenu)
 ///
 /// @param self KTextEdit*
+///
 QMenu* k_textedit_create_standard_context_menu(void* self);
 
 /// Inherited from QTextEdit
@@ -1006,6 +1154,7 @@ QMenu* k_textedit_create_standard_context_menu(void* self);
 ///
 /// @param self KTextEdit*
 /// @param position QPoint*
+///
 QMenu* k_textedit_create_standard_context_menu2(void* self, void* position);
 
 /// Inherited from QTextEdit
@@ -1014,6 +1163,7 @@ QMenu* k_textedit_create_standard_context_menu2(void* self, void* position);
 ///
 /// @param self KTextEdit*
 /// @param pos QPoint*
+///
 QTextCursor* k_textedit_cursor_for_position(void* self, void* pos);
 
 /// Inherited from QTextEdit
@@ -1022,6 +1172,7 @@ QTextCursor* k_textedit_cursor_for_position(void* self, void* pos);
 ///
 /// @param self KTextEdit*
 /// @param cursor QTextCursor*
+///
 QRect* k_textedit_cursor_rect(void* self, void* cursor);
 
 /// Inherited from QTextEdit
@@ -1029,6 +1180,7 @@ QRect* k_textedit_cursor_rect(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cursorRect)
 ///
 /// @param self KTextEdit*
+///
 QRect* k_textedit_cursor_rect2(void* self);
 
 /// Inherited from QTextEdit
@@ -1039,6 +1191,7 @@ QRect* k_textedit_cursor_rect2(void* self);
 ///
 /// @param self KTextEdit*
 /// @param pos QPoint*
+///
 const char* k_textedit_anchor_at(void* self, void* pos);
 
 /// Inherited from QTextEdit
@@ -1046,6 +1199,7 @@ const char* k_textedit_anchor_at(void* self, void* pos);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#overwriteMode)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_overwrite_mode(void* self);
 
 /// Inherited from QTextEdit
@@ -1054,6 +1208,7 @@ bool k_textedit_overwrite_mode(void* self);
 ///
 /// @param self KTextEdit*
 /// @param overwrite bool
+///
 void k_textedit_set_overwrite_mode(void* self, bool overwrite);
 
 /// Inherited from QTextEdit
@@ -1061,6 +1216,7 @@ void k_textedit_set_overwrite_mode(void* self, bool overwrite);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#tabStopDistance)
 ///
 /// @param self KTextEdit*
+///
 double k_textedit_tab_stop_distance(void* self);
 
 /// Inherited from QTextEdit
@@ -1069,6 +1225,7 @@ double k_textedit_tab_stop_distance(void* self);
 ///
 /// @param self KTextEdit*
 /// @param distance double
+///
 void k_textedit_set_tab_stop_distance(void* self, double distance);
 
 /// Inherited from QTextEdit
@@ -1076,6 +1233,7 @@ void k_textedit_set_tab_stop_distance(void* self, double distance);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cursorWidth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_cursor_width(void* self);
 
 /// Inherited from QTextEdit
@@ -1084,6 +1242,7 @@ int32_t k_textedit_cursor_width(void* self);
 ///
 /// @param self KTextEdit*
 /// @param width int
+///
 void k_textedit_set_cursor_width(void* self, int width);
 
 /// Inherited from QTextEdit
@@ -1091,6 +1250,7 @@ void k_textedit_set_cursor_width(void* self, int width);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#acceptRichText)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_accept_rich_text(void* self);
 
 /// Inherited from QTextEdit
@@ -1099,6 +1259,7 @@ bool k_textedit_accept_rich_text(void* self);
 ///
 /// @param self KTextEdit*
 /// @param accept bool
+///
 void k_textedit_set_accept_rich_text(void* self, bool accept);
 
 /// Inherited from QTextEdit
@@ -1107,6 +1268,7 @@ void k_textedit_set_accept_rich_text(void* self, bool accept);
 ///
 /// @param self KTextEdit*
 /// @param selections libqt_list /* of QTextEdit__ExtraSelection* */
+///
 void k_textedit_set_extra_selections(void* self, libqt_list selections);
 
 /// Inherited from QTextEdit
@@ -1114,6 +1276,7 @@ void k_textedit_set_extra_selections(void* self, libqt_list selections);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#extraSelections)
 ///
 /// @param self KTextEdit*
+///
 libqt_list /* of QTextEdit__ExtraSelection* */ k_textedit_extra_selections(void* self);
 
 /// Inherited from QTextEdit
@@ -1122,6 +1285,7 @@ libqt_list /* of QTextEdit__ExtraSelection* */ k_textedit_extra_selections(void*
 ///
 /// @param self KTextEdit*
 /// @param operation enum QTextCursor__MoveOperation
+///
 void k_textedit_move_cursor(void* self, int32_t operation);
 
 /// Inherited from QTextEdit
@@ -1129,6 +1293,7 @@ void k_textedit_move_cursor(void* self, int32_t operation);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#canPaste)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_can_paste(void* self);
 
 /// Inherited from QTextEdit
@@ -1137,6 +1302,7 @@ bool k_textedit_can_paste(void* self);
 ///
 /// @param self KTextEdit*
 /// @param printer QPagedPaintDevice*
+///
 void k_textedit_print(void* self, void* printer);
 
 /// Inherited from QTextEdit
@@ -1146,6 +1312,7 @@ void k_textedit_print(void* self, void* printer);
 /// @param self KTextEdit*
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
+///
 QVariant* k_textedit_input_method_query2(void* self, int64_t query, void* argument);
 
 /// Inherited from QTextEdit
@@ -1154,6 +1321,7 @@ QVariant* k_textedit_input_method_query2(void* self, int64_t query, void* argume
 ///
 /// @param self KTextEdit*
 /// @param s double
+///
 void k_textedit_set_font_point_size(void* self, double s);
 
 /// Inherited from QTextEdit
@@ -1162,6 +1330,7 @@ void k_textedit_set_font_point_size(void* self, double s);
 ///
 /// @param self KTextEdit*
 /// @param fontFamily const char*
+///
 void k_textedit_set_font_family(void* self, const char* fontFamily);
 
 /// Inherited from QTextEdit
@@ -1170,6 +1339,7 @@ void k_textedit_set_font_family(void* self, const char* fontFamily);
 ///
 /// @param self KTextEdit*
 /// @param w int
+///
 void k_textedit_set_font_weight(void* self, int w);
 
 /// Inherited from QTextEdit
@@ -1178,6 +1348,7 @@ void k_textedit_set_font_weight(void* self, int w);
 ///
 /// @param self KTextEdit*
 /// @param b bool
+///
 void k_textedit_set_font_underline(void* self, bool b);
 
 /// Inherited from QTextEdit
@@ -1186,6 +1357,7 @@ void k_textedit_set_font_underline(void* self, bool b);
 ///
 /// @param self KTextEdit*
 /// @param b bool
+///
 void k_textedit_set_font_italic(void* self, bool b);
 
 /// Inherited from QTextEdit
@@ -1194,6 +1366,7 @@ void k_textedit_set_font_italic(void* self, bool b);
 ///
 /// @param self KTextEdit*
 /// @param c QColor*
+///
 void k_textedit_set_text_color(void* self, void* c);
 
 /// Inherited from QTextEdit
@@ -1202,6 +1375,7 @@ void k_textedit_set_text_color(void* self, void* c);
 ///
 /// @param self KTextEdit*
 /// @param c QColor*
+///
 void k_textedit_set_text_background_color(void* self, void* c);
 
 /// Inherited from QTextEdit
@@ -1210,6 +1384,7 @@ void k_textedit_set_text_background_color(void* self, void* c);
 ///
 /// @param self KTextEdit*
 /// @param f QFont*
+///
 void k_textedit_set_current_font(void* self, void* f);
 
 /// Inherited from QTextEdit
@@ -1218,6 +1393,7 @@ void k_textedit_set_current_font(void* self, void* f);
 ///
 /// @param self KTextEdit*
 /// @param a flag of enum Qt__AlignmentFlag
+///
 void k_textedit_set_alignment(void* self, int32_t a);
 
 /// Inherited from QTextEdit
@@ -1226,6 +1402,7 @@ void k_textedit_set_alignment(void* self, int32_t a);
 ///
 /// @param self KTextEdit*
 /// @param text const char*
+///
 void k_textedit_set_plain_text(void* self, const char* text);
 
 /// Inherited from QTextEdit
@@ -1234,6 +1411,7 @@ void k_textedit_set_plain_text(void* self, const char* text);
 ///
 /// @param self KTextEdit*
 /// @param text const char*
+///
 void k_textedit_set_html(void* self, const char* text);
 
 /// Inherited from QTextEdit
@@ -1242,6 +1420,7 @@ void k_textedit_set_html(void* self, const char* text);
 ///
 /// @param self KTextEdit*
 /// @param markdown const char*
+///
 void k_textedit_set_markdown(void* self, const char* markdown);
 
 /// Inherited from QTextEdit
@@ -1250,6 +1429,7 @@ void k_textedit_set_markdown(void* self, const char* markdown);
 ///
 /// @param self KTextEdit*
 /// @param text const char*
+///
 void k_textedit_set_text(void* self, const char* text);
 
 /// Inherited from QTextEdit
@@ -1257,6 +1437,7 @@ void k_textedit_set_text(void* self, const char* text);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cut)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_cut(void* self);
 
 /// Inherited from QTextEdit
@@ -1264,6 +1445,7 @@ void k_textedit_cut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#copy)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_copy(void* self);
 
 /// Inherited from QTextEdit
@@ -1271,6 +1453,7 @@ void k_textedit_copy(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#paste)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_paste(void* self);
 
 /// Inherited from QTextEdit
@@ -1278,6 +1461,7 @@ void k_textedit_paste(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#undo)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_undo(void* self);
 
 /// Inherited from QTextEdit
@@ -1285,6 +1469,7 @@ void k_textedit_undo(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#redo)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_redo(void* self);
 
 /// Inherited from QTextEdit
@@ -1292,6 +1477,7 @@ void k_textedit_redo(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#clear)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_clear(void* self);
 
 /// Inherited from QTextEdit
@@ -1299,6 +1485,7 @@ void k_textedit_clear(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#selectAll)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_select_all(void* self);
 
 /// Inherited from QTextEdit
@@ -1307,6 +1494,7 @@ void k_textedit_select_all(void* self);
 ///
 /// @param self KTextEdit*
 /// @param text const char*
+///
 void k_textedit_insert_plain_text(void* self, const char* text);
 
 /// Inherited from QTextEdit
@@ -1315,6 +1503,7 @@ void k_textedit_insert_plain_text(void* self, const char* text);
 ///
 /// @param self KTextEdit*
 /// @param text const char*
+///
 void k_textedit_insert_html(void* self, const char* text);
 
 /// Inherited from QTextEdit
@@ -1323,6 +1512,7 @@ void k_textedit_insert_html(void* self, const char* text);
 ///
 /// @param self KTextEdit*
 /// @param text const char*
+///
 void k_textedit_append(void* self, const char* text);
 
 /// Inherited from QTextEdit
@@ -1331,6 +1521,7 @@ void k_textedit_append(void* self, const char* text);
 ///
 /// @param self KTextEdit*
 /// @param name const char*
+///
 void k_textedit_scroll_to_anchor(void* self, const char* name);
 
 /// Inherited from QTextEdit
@@ -1338,6 +1529,7 @@ void k_textedit_scroll_to_anchor(void* self, const char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#zoomIn)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_zoom_in(void* self);
 
 /// Inherited from QTextEdit
@@ -1345,6 +1537,7 @@ void k_textedit_zoom_in(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#zoomOut)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_zoom_out(void* self);
 
 /// Inherited from QTextEdit
@@ -1352,6 +1545,7 @@ void k_textedit_zoom_out(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textChanged)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_text_changed(void* self);
 
 /// Inherited from QTextEdit
@@ -1360,6 +1554,7 @@ void k_textedit_text_changed(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
+///
 void k_textedit_on_text_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
@@ -1368,6 +1563,7 @@ void k_textedit_on_text_changed(void* self, void (*callback)(void*));
 ///
 /// @param self KTextEdit*
 /// @param b bool
+///
 void k_textedit_undo_available(void* self, bool b);
 
 /// Inherited from QTextEdit
@@ -1376,6 +1572,7 @@ void k_textedit_undo_available(void* self, bool b);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool b)
+///
 void k_textedit_on_undo_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1384,6 +1581,7 @@ void k_textedit_on_undo_available(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KTextEdit*
 /// @param b bool
+///
 void k_textedit_redo_available(void* self, bool b);
 
 /// Inherited from QTextEdit
@@ -1392,6 +1590,7 @@ void k_textedit_redo_available(void* self, bool b);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool b)
+///
 void k_textedit_on_redo_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1400,6 +1599,7 @@ void k_textedit_on_redo_available(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KTextEdit*
 /// @param format QTextCharFormat*
+///
 void k_textedit_current_char_format_changed(void* self, void* format);
 
 /// Inherited from QTextEdit
@@ -1408,6 +1608,7 @@ void k_textedit_current_char_format_changed(void* self, void* format);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QTextCharFormat* format)
+///
 void k_textedit_on_current_char_format_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -1416,6 +1617,7 @@ void k_textedit_on_current_char_format_changed(void* self, void (*callback)(void
 ///
 /// @param self KTextEdit*
 /// @param b bool
+///
 void k_textedit_copy_available(void* self, bool b);
 
 /// Inherited from QTextEdit
@@ -1424,6 +1626,7 @@ void k_textedit_copy_available(void* self, bool b);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool b)
+///
 void k_textedit_on_copy_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1431,6 +1634,7 @@ void k_textedit_on_copy_available(void* self, void (*callback)(void*, bool));
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#selectionChanged)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_selection_changed(void* self);
 
 /// Inherited from QTextEdit
@@ -1439,6 +1643,7 @@ void k_textedit_selection_changed(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
+///
 void k_textedit_on_selection_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
@@ -1446,6 +1651,7 @@ void k_textedit_on_selection_changed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cursorPositionChanged)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_cursor_position_changed(void* self);
 
 /// Inherited from QTextEdit
@@ -1454,6 +1660,7 @@ void k_textedit_cursor_position_changed(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
+///
 void k_textedit_on_cursor_position_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
@@ -1463,6 +1670,7 @@ void k_textedit_on_cursor_position_changed(void* self, void (*callback)(void*));
 /// @param self KTextEdit*
 /// @param exp const char*
 /// @param options flag of enum QTextDocument__FindFlag
+///
 bool k_textedit_find22(void* self, const char* exp, int32_t options);
 
 /// Inherited from QTextEdit
@@ -1472,6 +1680,7 @@ bool k_textedit_find22(void* self, const char* exp, int32_t options);
 /// @param self KTextEdit*
 /// @param exp QRegularExpression*
 /// @param options flag of enum QTextDocument__FindFlag
+///
 bool k_textedit_find23(void* self, void* exp, int32_t options);
 
 /// Inherited from QTextEdit
@@ -1482,6 +1691,7 @@ bool k_textedit_find23(void* self, void* exp, int32_t options);
 ///
 /// @param self KTextEdit*
 /// @param features flag of enum QTextDocument__MarkdownFeature
+///
 const char* k_textedit_to_markdown1(void* self, int32_t features);
 
 /// Inherited from QTextEdit
@@ -1491,6 +1701,7 @@ const char* k_textedit_to_markdown1(void* self, int32_t features);
 /// @param self KTextEdit*
 /// @param operation enum QTextCursor__MoveOperation
 /// @param mode enum QTextCursor__MoveMode
+///
 void k_textedit_move_cursor2(void* self, int32_t operation, int32_t mode);
 
 /// Inherited from QTextEdit
@@ -1499,6 +1710,7 @@ void k_textedit_move_cursor2(void* self, int32_t operation, int32_t mode);
 ///
 /// @param self KTextEdit*
 /// @param range int
+///
 void k_textedit_zoom_in1(void* self, int range);
 
 /// Inherited from QTextEdit
@@ -1507,6 +1719,7 @@ void k_textedit_zoom_in1(void* self, int range);
 ///
 /// @param self KTextEdit*
 /// @param range int
+///
 void k_textedit_zoom_out1(void* self, int range);
 
 /// Inherited from QAbstractScrollArea
@@ -1516,6 +1729,7 @@ void k_textedit_zoom_out1(void* self, int range);
 /// @param self KTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
+///
 int32_t k_textedit_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1524,6 +1738,7 @@ int32_t k_textedit_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self KTextEdit*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
+///
 void k_textedit_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
@@ -1531,6 +1746,7 @@ void k_textedit_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrol
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
 /// @param self KTextEdit*
+///
 QScrollBar* k_textedit_vertical_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1539,6 +1755,7 @@ QScrollBar* k_textedit_vertical_scroll_bar(void* self);
 ///
 /// @param self KTextEdit*
 /// @param scrollbar QScrollBar*
+///
 void k_textedit_set_vertical_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
@@ -1548,6 +1765,7 @@ void k_textedit_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self KTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
+///
 int32_t k_textedit_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1556,6 +1774,7 @@ int32_t k_textedit_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self KTextEdit*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
+///
 void k_textedit_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
@@ -1563,6 +1782,7 @@ void k_textedit_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalS
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
 /// @param self KTextEdit*
+///
 QScrollBar* k_textedit_horizontal_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1571,6 +1791,7 @@ QScrollBar* k_textedit_horizontal_scroll_bar(void* self);
 ///
 /// @param self KTextEdit*
 /// @param scrollbar QScrollBar*
+///
 void k_textedit_set_horizontal_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
@@ -1578,6 +1799,7 @@ void k_textedit_set_horizontal_scroll_bar(void* self, void* scrollbar);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_corner_widget(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1586,6 +1808,7 @@ QWidget* k_textedit_corner_widget(void* self);
 ///
 /// @param self KTextEdit*
 /// @param widget QWidget*
+///
 void k_textedit_set_corner_widget(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
@@ -1595,6 +1818,7 @@ void k_textedit_set_corner_widget(void* self, void* widget);
 /// @param self KTextEdit*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 void k_textedit_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
@@ -1603,6 +1827,7 @@ void k_textedit_add_scroll_bar_widget(void* self, void* widget, int32_t alignmen
 ///
 /// @param self KTextEdit*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 libqt_list /* of QWidget* */ k_textedit_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
@@ -1610,6 +1835,7 @@ libqt_list /* of QWidget* */ k_textedit_scroll_bar_widgets(void* self, int32_t a
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_viewport(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1618,6 +1844,7 @@ QWidget* k_textedit_viewport(void* self);
 ///
 /// @param self KTextEdit*
 /// @param widget QWidget*
+///
 void k_textedit_set_viewport(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
@@ -1625,6 +1852,7 @@ void k_textedit_set_viewport(void* self, void* widget);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_maximum_viewport_size(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1634,6 +1862,7 @@ QSize* k_textedit_maximum_viewport_size(void* self);
 /// @param self KTextEdit*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
+///
 int32_t k_textedit_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -1642,6 +1871,7 @@ int32_t k_textedit_size_adjust_policy(void* self);
 ///
 /// @param self KTextEdit*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
+///
 void k_textedit_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
@@ -1649,6 +1879,7 @@ void k_textedit_set_size_adjust_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_frame_style(void* self);
 
 /// Inherited from QFrame
@@ -1657,6 +1888,7 @@ int32_t k_textedit_frame_style(void* self);
 ///
 /// @param self KTextEdit*
 /// @param frameStyle int
+///
 void k_textedit_set_frame_style(void* self, int frameStyle);
 
 /// Inherited from QFrame
@@ -1664,6 +1896,7 @@ void k_textedit_set_frame_style(void* self, int frameStyle);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_frame_width(void* self);
 
 /// Inherited from QFrame
@@ -1673,6 +1906,7 @@ int32_t k_textedit_frame_width(void* self);
 /// @param self KTextEdit*
 ///
 /// @return enum QFrame__Shape
+///
 int32_t k_textedit_frame_shape(void* self);
 
 /// Inherited from QFrame
@@ -1681,6 +1915,7 @@ int32_t k_textedit_frame_shape(void* self);
 ///
 /// @param self KTextEdit*
 /// @param frameShape enum QFrame__Shape
+///
 void k_textedit_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
@@ -1690,6 +1925,7 @@ void k_textedit_set_frame_shape(void* self, int32_t frameShape);
 /// @param self KTextEdit*
 ///
 /// @return enum QFrame__Shadow
+///
 int32_t k_textedit_frame_shadow(void* self);
 
 /// Inherited from QFrame
@@ -1698,6 +1934,7 @@ int32_t k_textedit_frame_shadow(void* self);
 ///
 /// @param self KTextEdit*
 /// @param frameShadow enum QFrame__Shadow
+///
 void k_textedit_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
@@ -1705,6 +1942,7 @@ void k_textedit_set_frame_shadow(void* self, int32_t frameShadow);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_line_width(void* self);
 
 /// Inherited from QFrame
@@ -1713,6 +1951,7 @@ int32_t k_textedit_line_width(void* self);
 ///
 /// @param self KTextEdit*
 /// @param lineWidth int
+///
 void k_textedit_set_line_width(void* self, int lineWidth);
 
 /// Inherited from QFrame
@@ -1720,6 +1959,7 @@ void k_textedit_set_line_width(void* self, int lineWidth);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_mid_line_width(void* self);
 
 /// Inherited from QFrame
@@ -1728,6 +1968,7 @@ int32_t k_textedit_mid_line_width(void* self);
 ///
 /// @param self KTextEdit*
 /// @param midLineWidth int
+///
 void k_textedit_set_mid_line_width(void* self, int midLineWidth);
 
 /// Inherited from QFrame
@@ -1735,6 +1976,7 @@ void k_textedit_set_mid_line_width(void* self, int midLineWidth);
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
 /// @param self KTextEdit*
+///
 QRect* k_textedit_frame_rect(void* self);
 
 /// Inherited from QFrame
@@ -1743,6 +1985,7 @@ QRect* k_textedit_frame_rect(void* self);
 ///
 /// @param self KTextEdit*
 /// @param frameRect QRect*
+///
 void k_textedit_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
@@ -1750,6 +1993,7 @@ void k_textedit_set_frame_rect(void* self, void* frameRect);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KTextEdit*
+///
 uintptr_t k_textedit_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1757,6 +2001,7 @@ uintptr_t k_textedit_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1764,6 +2009,7 @@ void k_textedit_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KTextEdit*
+///
 uintptr_t k_textedit_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1771,6 +2017,7 @@ uintptr_t k_textedit_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KTextEdit*
+///
 uintptr_t k_textedit_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1778,6 +2025,7 @@ uintptr_t k_textedit_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KTextEdit*
+///
 QStyle* k_textedit_style(void* self);
 
 /// Inherited from QWidget
@@ -1786,6 +2034,7 @@ QStyle* k_textedit_style(void* self);
 ///
 /// @param self KTextEdit*
 /// @param style QStyle*
+///
 void k_textedit_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -1793,6 +2042,7 @@ void k_textedit_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -1800,6 +2050,7 @@ bool k_textedit_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_window(void* self);
 
 /// Inherited from QWidget
@@ -1807,6 +2058,7 @@ bool k_textedit_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -1816,6 +2068,7 @@ bool k_textedit_is_modal(void* self);
 /// @param self KTextEdit*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t k_textedit_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -1824,6 +2077,7 @@ int32_t k_textedit_window_modality(void* self);
 ///
 /// @param self KTextEdit*
 /// @param windowModality enum Qt__WindowModality
+///
 void k_textedit_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -1831,6 +2085,7 @@ void k_textedit_set_window_modality(void* self, int32_t windowModality);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1839,6 +2094,7 @@ bool k_textedit_is_enabled(void* self);
 ///
 /// @param self KTextEdit*
 /// @param param1 QWidget*
+///
 bool k_textedit_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1847,6 +2103,7 @@ bool k_textedit_is_enabled_to(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param enabled bool
+///
 void k_textedit_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -1855,6 +2112,7 @@ void k_textedit_set_enabled(void* self, bool enabled);
 ///
 /// @param self KTextEdit*
 /// @param disabled bool
+///
 void k_textedit_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -1863,6 +2121,7 @@ void k_textedit_set_disabled(void* self, bool disabled);
 ///
 /// @param self KTextEdit*
 /// @param windowModified bool
+///
 void k_textedit_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -1870,6 +2129,7 @@ void k_textedit_set_window_modified(void* self, bool windowModified);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KTextEdit*
+///
 QRect* k_textedit_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1877,6 +2137,7 @@ QRect* k_textedit_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KTextEdit*
+///
 const QRect* k_textedit_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1884,6 +2145,7 @@ const QRect* k_textedit_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KTextEdit*
+///
 QRect* k_textedit_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1891,6 +2153,7 @@ QRect* k_textedit_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_x(void* self);
 
 /// Inherited from QWidget
@@ -1898,6 +2161,7 @@ int32_t k_textedit_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_y(void* self);
 
 /// Inherited from QWidget
@@ -1905,6 +2169,7 @@ int32_t k_textedit_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KTextEdit*
+///
 QPoint* k_textedit_pos(void* self);
 
 /// Inherited from QWidget
@@ -1912,6 +2177,7 @@ QPoint* k_textedit_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -1919,6 +2185,7 @@ QSize* k_textedit_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_size(void* self);
 
 /// Inherited from QWidget
@@ -1926,6 +2193,7 @@ QSize* k_textedit_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_width(void* self);
 
 /// Inherited from QWidget
@@ -1933,6 +2201,7 @@ int32_t k_textedit_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_height(void* self);
 
 /// Inherited from QWidget
@@ -1940,6 +2209,7 @@ int32_t k_textedit_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KTextEdit*
+///
 QRect* k_textedit_rect(void* self);
 
 /// Inherited from QWidget
@@ -1947,6 +2217,7 @@ QRect* k_textedit_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KTextEdit*
+///
 QRect* k_textedit_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -1954,6 +2225,7 @@ QRect* k_textedit_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KTextEdit*
+///
 QRegion* k_textedit_children_region(void* self);
 
 /// Inherited from QWidget
@@ -1961,6 +2233,7 @@ QRegion* k_textedit_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -1968,6 +2241,7 @@ QSize* k_textedit_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -1975,6 +2249,7 @@ QSize* k_textedit_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -1982,6 +2257,7 @@ int32_t k_textedit_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -1989,6 +2265,7 @@ int32_t k_textedit_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -1996,6 +2273,7 @@ int32_t k_textedit_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -2004,6 +2282,7 @@ int32_t k_textedit_maximum_height(void* self);
 ///
 /// @param self KTextEdit*
 /// @param minimumSize QSize*
+///
 void k_textedit_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -2013,6 +2292,7 @@ void k_textedit_set_minimum_size(void* self, void* minimumSize);
 /// @param self KTextEdit*
 /// @param minw int
 /// @param minh int
+///
 void k_textedit_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -2021,6 +2301,7 @@ void k_textedit_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self KTextEdit*
 /// @param maximumSize QSize*
+///
 void k_textedit_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -2030,6 +2311,7 @@ void k_textedit_set_maximum_size(void* self, void* maximumSize);
 /// @param self KTextEdit*
 /// @param maxw int
 /// @param maxh int
+///
 void k_textedit_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -2038,6 +2320,7 @@ void k_textedit_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self KTextEdit*
 /// @param minw int
+///
 void k_textedit_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -2046,6 +2329,7 @@ void k_textedit_set_minimum_width(void* self, int minw);
 ///
 /// @param self KTextEdit*
 /// @param minh int
+///
 void k_textedit_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -2054,6 +2338,7 @@ void k_textedit_set_minimum_height(void* self, int minh);
 ///
 /// @param self KTextEdit*
 /// @param maxw int
+///
 void k_textedit_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -2062,6 +2347,7 @@ void k_textedit_set_maximum_width(void* self, int maxw);
 ///
 /// @param self KTextEdit*
 /// @param maxh int
+///
 void k_textedit_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -2069,6 +2355,7 @@ void k_textedit_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -2077,6 +2364,7 @@ QSize* k_textedit_size_increment(void* self);
 ///
 /// @param self KTextEdit*
 /// @param sizeIncrement QSize*
+///
 void k_textedit_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -2086,6 +2374,7 @@ void k_textedit_set_size_increment(void* self, void* sizeIncrement);
 /// @param self KTextEdit*
 /// @param w int
 /// @param h int
+///
 void k_textedit_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -2093,6 +2382,7 @@ void k_textedit_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_base_size(void* self);
 
 /// Inherited from QWidget
@@ -2101,6 +2391,7 @@ QSize* k_textedit_base_size(void* self);
 ///
 /// @param self KTextEdit*
 /// @param baseSize QSize*
+///
 void k_textedit_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -2110,6 +2401,7 @@ void k_textedit_set_base_size(void* self, void* baseSize);
 /// @param self KTextEdit*
 /// @param basew int
 /// @param baseh int
+///
 void k_textedit_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -2118,6 +2410,7 @@ void k_textedit_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self KTextEdit*
 /// @param fixedSize QSize*
+///
 void k_textedit_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -2127,6 +2420,7 @@ void k_textedit_set_fixed_size(void* self, void* fixedSize);
 /// @param self KTextEdit*
 /// @param w int
 /// @param h int
+///
 void k_textedit_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -2135,6 +2429,7 @@ void k_textedit_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self KTextEdit*
 /// @param w int
+///
 void k_textedit_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -2143,6 +2438,7 @@ void k_textedit_set_fixed_width(void* self, int w);
 ///
 /// @param self KTextEdit*
 /// @param h int
+///
 void k_textedit_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -2151,6 +2447,7 @@ void k_textedit_set_fixed_height(void* self, int h);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPointF*
+///
 QPointF* k_textedit_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2159,6 +2456,7 @@ QPointF* k_textedit_map_to_global(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPoint*
+///
 QPoint* k_textedit_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2167,6 +2465,7 @@ QPoint* k_textedit_map_to_global2(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPointF*
+///
 QPointF* k_textedit_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2175,6 +2474,7 @@ QPointF* k_textedit_map_from_global(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPoint*
+///
 QPoint* k_textedit_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2183,6 +2483,7 @@ QPoint* k_textedit_map_from_global2(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPointF*
+///
 QPointF* k_textedit_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2191,6 +2492,7 @@ QPointF* k_textedit_map_to_parent(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPoint*
+///
 QPoint* k_textedit_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2199,6 +2501,7 @@ QPoint* k_textedit_map_to_parent2(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPointF*
+///
 QPointF* k_textedit_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2207,6 +2510,7 @@ QPointF* k_textedit_map_from_parent(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPoint*
+///
 QPoint* k_textedit_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2216,6 +2520,7 @@ QPoint* k_textedit_map_from_parent2(void* self, void* param1);
 /// @param self KTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_textedit_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2225,6 +2530,7 @@ QPointF* k_textedit_map_to(void* self, void* param1, void* param2);
 /// @param self KTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_textedit_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2234,6 +2540,7 @@ QPoint* k_textedit_map_to2(void* self, void* param1, void* param2);
 /// @param self KTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_textedit_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2243,6 +2550,7 @@ QPointF* k_textedit_map_from(void* self, void* param1, void* param2);
 /// @param self KTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_textedit_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2250,6 +2558,7 @@ QPoint* k_textedit_map_from2(void* self, void* param1, void* param2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_window(void* self);
 
 /// Inherited from QWidget
@@ -2257,6 +2566,7 @@ QWidget* k_textedit_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2264,6 +2574,7 @@ QWidget* k_textedit_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -2271,6 +2582,7 @@ QWidget* k_textedit_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KTextEdit*
+///
 const QPalette* k_textedit_palette(void* self);
 
 /// Inherited from QWidget
@@ -2279,6 +2591,7 @@ const QPalette* k_textedit_palette(void* self);
 ///
 /// @param self KTextEdit*
 /// @param palette QPalette*
+///
 void k_textedit_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -2287,6 +2600,7 @@ void k_textedit_set_palette(void* self, void* palette);
 ///
 /// @param self KTextEdit*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void k_textedit_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -2296,6 +2610,7 @@ void k_textedit_set_background_role(void* self, int32_t backgroundRole);
 /// @param self KTextEdit*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_textedit_background_role(void* self);
 
 /// Inherited from QWidget
@@ -2304,6 +2619,7 @@ int32_t k_textedit_background_role(void* self);
 ///
 /// @param self KTextEdit*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void k_textedit_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -2313,6 +2629,7 @@ void k_textedit_set_foreground_role(void* self, int32_t foregroundRole);
 /// @param self KTextEdit*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_textedit_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -2320,6 +2637,7 @@ int32_t k_textedit_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KTextEdit*
+///
 const QFont* k_textedit_font(void* self);
 
 /// Inherited from QWidget
@@ -2328,6 +2646,7 @@ const QFont* k_textedit_font(void* self);
 ///
 /// @param self KTextEdit*
 /// @param font QFont*
+///
 void k_textedit_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -2335,6 +2654,7 @@ void k_textedit_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KTextEdit*
+///
 QFontMetrics* k_textedit_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -2342,6 +2662,7 @@ QFontMetrics* k_textedit_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KTextEdit*
+///
 QFontInfo* k_textedit_font_info(void* self);
 
 /// Inherited from QWidget
@@ -2349,6 +2670,7 @@ QFontInfo* k_textedit_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KTextEdit*
+///
 QCursor* k_textedit_cursor(void* self);
 
 /// Inherited from QWidget
@@ -2357,6 +2679,7 @@ QCursor* k_textedit_cursor(void* self);
 ///
 /// @param self KTextEdit*
 /// @param cursor QCursor*
+///
 void k_textedit_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -2364,6 +2687,7 @@ void k_textedit_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -2372,6 +2696,7 @@ void k_textedit_unset_cursor(void* self);
 ///
 /// @param self KTextEdit*
 /// @param enable bool
+///
 void k_textedit_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -2379,6 +2704,7 @@ void k_textedit_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -2386,6 +2712,7 @@ bool k_textedit_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2394,6 +2721,7 @@ bool k_textedit_under_mouse(void* self);
 ///
 /// @param self KTextEdit*
 /// @param enable bool
+///
 void k_textedit_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -2401,6 +2729,7 @@ void k_textedit_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -2409,6 +2738,7 @@ bool k_textedit_has_tablet_tracking(void* self);
 ///
 /// @param self KTextEdit*
 /// @param mask QBitmap*
+///
 void k_textedit_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -2417,6 +2747,7 @@ void k_textedit_set_mask(void* self, void* mask);
 ///
 /// @param self KTextEdit*
 /// @param mask QRegion*
+///
 void k_textedit_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -2424,6 +2755,7 @@ void k_textedit_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KTextEdit*
+///
 QRegion* k_textedit_mask(void* self);
 
 /// Inherited from QWidget
@@ -2431,6 +2763,7 @@ QRegion* k_textedit_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -2439,6 +2772,7 @@ void k_textedit_clear_mask(void* self);
 ///
 /// @param self KTextEdit*
 /// @param target QPaintDevice*
+///
 void k_textedit_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -2447,6 +2781,7 @@ void k_textedit_render(void* self, void* target);
 ///
 /// @param self KTextEdit*
 /// @param painter QPainter*
+///
 void k_textedit_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -2454,6 +2789,7 @@ void k_textedit_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KTextEdit*
+///
 QPixmap* k_textedit_grab(void* self);
 
 /// Inherited from QWidget
@@ -2461,6 +2797,7 @@ QPixmap* k_textedit_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KTextEdit*
+///
 QGraphicsEffect* k_textedit_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -2469,6 +2806,7 @@ QGraphicsEffect* k_textedit_graphics_effect(void* self);
 ///
 /// @param self KTextEdit*
 /// @param effect QGraphicsEffect*
+///
 void k_textedit_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -2477,6 +2815,7 @@ void k_textedit_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self KTextEdit*
 /// @param type enum Qt__GestureType
+///
 void k_textedit_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2485,6 +2824,7 @@ void k_textedit_grab_gesture(void* self, int64_t type);
 ///
 /// @param self KTextEdit*
 /// @param type enum Qt__GestureType
+///
 void k_textedit_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2493,6 +2833,7 @@ void k_textedit_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self KTextEdit*
 /// @param windowTitle const char*
+///
 void k_textedit_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -2501,6 +2842,7 @@ void k_textedit_set_window_title(void* self, const char* windowTitle);
 ///
 /// @param self KTextEdit*
 /// @param styleSheet const char*
+///
 void k_textedit_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -2510,6 +2852,7 @@ void k_textedit_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -2519,6 +2862,7 @@ const char* k_textedit_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_window_title(void* self);
 
 /// Inherited from QWidget
@@ -2527,6 +2871,7 @@ const char* k_textedit_window_title(void* self);
 ///
 /// @param self KTextEdit*
 /// @param icon QIcon*
+///
 void k_textedit_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2534,6 +2879,7 @@ void k_textedit_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KTextEdit*
+///
 QIcon* k_textedit_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -2542,6 +2888,7 @@ QIcon* k_textedit_window_icon(void* self);
 ///
 /// @param self KTextEdit*
 /// @param windowIconText const char*
+///
 void k_textedit_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -2551,6 +2898,7 @@ void k_textedit_set_window_icon_text(void* self, const char* windowIconText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -2559,6 +2907,7 @@ const char* k_textedit_window_icon_text(void* self);
 ///
 /// @param self KTextEdit*
 /// @param windowRole const char*
+///
 void k_textedit_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -2568,6 +2917,7 @@ void k_textedit_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_window_role(void* self);
 
 /// Inherited from QWidget
@@ -2576,6 +2926,7 @@ const char* k_textedit_window_role(void* self);
 ///
 /// @param self KTextEdit*
 /// @param filePath const char*
+///
 void k_textedit_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -2585,6 +2936,7 @@ void k_textedit_set_window_file_path(void* self, const char* filePath);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -2593,6 +2945,7 @@ const char* k_textedit_window_file_path(void* self);
 ///
 /// @param self KTextEdit*
 /// @param level double
+///
 void k_textedit_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -2600,6 +2953,7 @@ void k_textedit_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KTextEdit*
+///
 double k_textedit_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -2607,6 +2961,7 @@ double k_textedit_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -2615,6 +2970,7 @@ bool k_textedit_is_window_modified(void* self);
 ///
 /// @param self KTextEdit*
 /// @param toolTip const char*
+///
 void k_textedit_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -2624,6 +2980,7 @@ void k_textedit_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -2632,6 +2989,7 @@ const char* k_textedit_tool_tip(void* self);
 ///
 /// @param self KTextEdit*
 /// @param msec int
+///
 void k_textedit_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -2639,6 +2997,7 @@ void k_textedit_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -2647,6 +3006,7 @@ int32_t k_textedit_tool_tip_duration(void* self);
 ///
 /// @param self KTextEdit*
 /// @param statusTip const char*
+///
 void k_textedit_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -2656,6 +3016,7 @@ void k_textedit_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -2664,6 +3025,7 @@ const char* k_textedit_status_tip(void* self);
 ///
 /// @param self KTextEdit*
 /// @param whatsThis const char*
+///
 void k_textedit_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -2673,6 +3035,7 @@ void k_textedit_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -2682,6 +3045,7 @@ const char* k_textedit_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -2690,6 +3054,7 @@ const char* k_textedit_accessible_name(void* self);
 ///
 /// @param self KTextEdit*
 /// @param name const char*
+///
 void k_textedit_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -2699,6 +3064,7 @@ void k_textedit_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -2707,6 +3073,7 @@ const char* k_textedit_accessible_description(void* self);
 ///
 /// @param self KTextEdit*
 /// @param description const char*
+///
 void k_textedit_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -2715,6 +3082,7 @@ void k_textedit_set_accessible_description(void* self, const char* description);
 ///
 /// @param self KTextEdit*
 /// @param direction enum Qt__LayoutDirection
+///
 void k_textedit_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -2724,6 +3092,7 @@ void k_textedit_set_layout_direction(void* self, int32_t direction);
 /// @param self KTextEdit*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t k_textedit_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -2731,6 +3100,7 @@ int32_t k_textedit_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -2739,6 +3109,7 @@ void k_textedit_unset_layout_direction(void* self);
 ///
 /// @param self KTextEdit*
 /// @param locale QLocale*
+///
 void k_textedit_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -2746,6 +3117,7 @@ void k_textedit_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KTextEdit*
+///
 QLocale* k_textedit_locale(void* self);
 
 /// Inherited from QWidget
@@ -2753,6 +3125,7 @@ QLocale* k_textedit_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -2760,6 +3133,7 @@ void k_textedit_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -2767,6 +3141,7 @@ bool k_textedit_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -2774,6 +3149,7 @@ bool k_textedit_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -2781,6 +3157,7 @@ void k_textedit_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -2788,6 +3165,7 @@ bool k_textedit_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -2795,6 +3173,7 @@ void k_textedit_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -2803,6 +3182,7 @@ void k_textedit_clear_focus(void* self);
 ///
 /// @param self KTextEdit*
 /// @param reason enum Qt__FocusReason
+///
 void k_textedit_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -2812,6 +3192,7 @@ void k_textedit_set_focus2(void* self, int32_t reason);
 /// @param self KTextEdit*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t k_textedit_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -2820,6 +3201,7 @@ int32_t k_textedit_focus_policy(void* self);
 ///
 /// @param self KTextEdit*
 /// @param policy enum Qt__FocusPolicy
+///
 void k_textedit_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -2827,6 +3209,7 @@ void k_textedit_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -2835,6 +3218,7 @@ bool k_textedit_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void k_textedit_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2843,6 +3227,7 @@ void k_textedit_set_tab_order(void* param1, void* param2);
 ///
 /// @param self KTextEdit*
 /// @param focusProxy QWidget*
+///
 void k_textedit_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -2850,6 +3235,7 @@ void k_textedit_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -2859,6 +3245,7 @@ QWidget* k_textedit_focus_proxy(void* self);
 /// @param self KTextEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t k_textedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -2867,6 +3254,7 @@ int32_t k_textedit_context_menu_policy(void* self);
 ///
 /// @param self KTextEdit*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void k_textedit_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -2874,6 +3262,7 @@ void k_textedit_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2882,6 +3271,7 @@ void k_textedit_grab_mouse(void* self);
 ///
 /// @param self KTextEdit*
 /// @param param1 QCursor*
+///
 void k_textedit_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2889,6 +3279,7 @@ void k_textedit_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2896,6 +3287,7 @@ void k_textedit_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -2903,6 +3295,7 @@ void k_textedit_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -2911,6 +3304,7 @@ void k_textedit_release_keyboard(void* self);
 ///
 /// @param self KTextEdit*
 /// @param key QKeySequence*
+///
 int32_t k_textedit_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -2919,6 +3313,7 @@ int32_t k_textedit_grab_shortcut(void* self, void* key);
 ///
 /// @param self KTextEdit*
 /// @param id int
+///
 void k_textedit_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -2927,6 +3322,7 @@ void k_textedit_release_shortcut(void* self, int id);
 ///
 /// @param self KTextEdit*
 /// @param id int
+///
 void k_textedit_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -2935,6 +3331,7 @@ void k_textedit_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self KTextEdit*
 /// @param id int
+///
 void k_textedit_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -2954,6 +3351,7 @@ QWidget* k_textedit_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -2962,6 +3360,7 @@ bool k_textedit_updates_enabled(void* self);
 ///
 /// @param self KTextEdit*
 /// @param enable bool
+///
 void k_textedit_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -2969,6 +3368,7 @@ void k_textedit_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KTextEdit*
+///
 QGraphicsProxyWidget* k_textedit_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -2976,6 +3376,7 @@ QGraphicsProxyWidget* k_textedit_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_update(void* self);
 
 /// Inherited from QWidget
@@ -2983,6 +3384,7 @@ void k_textedit_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_repaint(void* self);
 
 /// Inherited from QWidget
@@ -2994,6 +3396,7 @@ void k_textedit_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_textedit_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -3002,6 +3405,7 @@ void k_textedit_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KTextEdit*
 /// @param param1 QRect*
+///
 void k_textedit_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3010,6 +3414,7 @@ void k_textedit_update3(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QRegion*
+///
 void k_textedit_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3021,6 +3426,7 @@ void k_textedit_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_textedit_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -3029,6 +3435,7 @@ void k_textedit_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KTextEdit*
 /// @param param1 QRect*
+///
 void k_textedit_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3037,6 +3444,7 @@ void k_textedit_repaint3(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QRegion*
+///
 void k_textedit_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3045,6 +3453,7 @@ void k_textedit_repaint4(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param hidden bool
+///
 void k_textedit_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -3052,6 +3461,7 @@ void k_textedit_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_show(void* self);
 
 /// Inherited from QWidget
@@ -3059,6 +3469,7 @@ void k_textedit_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_hide(void* self);
 
 /// Inherited from QWidget
@@ -3066,6 +3477,7 @@ void k_textedit_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -3073,6 +3485,7 @@ void k_textedit_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -3080,6 +3493,7 @@ void k_textedit_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -3087,6 +3501,7 @@ void k_textedit_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -3094,6 +3509,7 @@ void k_textedit_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_close(void* self);
 
 /// Inherited from QWidget
@@ -3101,6 +3517,7 @@ bool k_textedit_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_raise(void* self);
 
 /// Inherited from QWidget
@@ -3108,6 +3525,7 @@ void k_textedit_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_lower(void* self);
 
 /// Inherited from QWidget
@@ -3116,6 +3534,7 @@ void k_textedit_lower(void* self);
 ///
 /// @param self KTextEdit*
 /// @param param1 QWidget*
+///
 void k_textedit_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3125,6 +3544,7 @@ void k_textedit_stack_under(void* self, void* param1);
 /// @param self KTextEdit*
 /// @param x int
 /// @param y int
+///
 void k_textedit_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -3133,6 +3553,7 @@ void k_textedit_move(void* self, int x, int y);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPoint*
+///
 void k_textedit_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3142,6 +3563,7 @@ void k_textedit_move2(void* self, void* param1);
 /// @param self KTextEdit*
 /// @param w int
 /// @param h int
+///
 void k_textedit_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -3150,6 +3572,7 @@ void k_textedit_resize(void* self, int w, int h);
 ///
 /// @param self KTextEdit*
 /// @param param1 QSize*
+///
 void k_textedit_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3161,6 +3584,7 @@ void k_textedit_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_textedit_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -3169,6 +3593,7 @@ void k_textedit_set_geometry(void* self, int x, int y, int w, int h);
 ///
 /// @param self KTextEdit*
 /// @param geometry QRect*
+///
 void k_textedit_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -3178,6 +3603,7 @@ void k_textedit_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 char* k_textedit_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -3186,6 +3612,7 @@ char* k_textedit_save_geometry(void* self);
 ///
 /// @param self KTextEdit*
 /// @param geometry const char*
+///
 bool k_textedit_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -3193,6 +3620,7 @@ bool k_textedit_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -3200,6 +3628,7 @@ void k_textedit_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -3208,6 +3637,7 @@ bool k_textedit_is_visible(void* self);
 ///
 /// @param self KTextEdit*
 /// @param param1 QWidget*
+///
 bool k_textedit_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3215,6 +3645,7 @@ bool k_textedit_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -3222,6 +3653,7 @@ bool k_textedit_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -3229,6 +3661,7 @@ bool k_textedit_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -3236,6 +3669,7 @@ bool k_textedit_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -3245,6 +3679,7 @@ bool k_textedit_is_full_screen(void* self);
 /// @param self KTextEdit*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t k_textedit_window_state(void* self);
 
 /// Inherited from QWidget
@@ -3253,6 +3688,7 @@ int32_t k_textedit_window_state(void* self);
 ///
 /// @param self KTextEdit*
 /// @param state flag of enum Qt__WindowState
+///
 void k_textedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -3261,6 +3697,7 @@ void k_textedit_set_window_state(void* self, int32_t state);
 ///
 /// @param self KTextEdit*
 /// @param state flag of enum Qt__WindowState
+///
 void k_textedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -3268,6 +3705,7 @@ void k_textedit_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KTextEdit*
+///
 QSizePolicy* k_textedit_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -3276,6 +3714,7 @@ QSizePolicy* k_textedit_size_policy(void* self);
 ///
 /// @param self KTextEdit*
 /// @param sizePolicy QSizePolicy*
+///
 void k_textedit_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -3285,6 +3724,7 @@ void k_textedit_set_size_policy(void* self, void* sizePolicy);
 /// @param self KTextEdit*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void k_textedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -3292,6 +3732,7 @@ void k_textedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertica
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KTextEdit*
+///
 QRegion* k_textedit_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -3303,6 +3744,7 @@ QRegion* k_textedit_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_textedit_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -3311,6 +3753,7 @@ void k_textedit_set_contents_margins(void* self, int left, int top, int right, i
 ///
 /// @param self KTextEdit*
 /// @param margins QMargins*
+///
 void k_textedit_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -3318,6 +3761,7 @@ void k_textedit_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KTextEdit*
+///
 QMargins* k_textedit_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -3325,6 +3769,7 @@ QMargins* k_textedit_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KTextEdit*
+///
 QRect* k_textedit_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -3332,6 +3777,7 @@ QRect* k_textedit_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KTextEdit*
+///
 QLayout* k_textedit_layout(void* self);
 
 /// Inherited from QWidget
@@ -3340,6 +3786,7 @@ QLayout* k_textedit_layout(void* self);
 ///
 /// @param self KTextEdit*
 /// @param layout QLayout*
+///
 void k_textedit_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -3347,6 +3794,7 @@ void k_textedit_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -3355,6 +3803,7 @@ void k_textedit_update_geometry(void* self);
 ///
 /// @param self KTextEdit*
 /// @param parent QWidget*
+///
 void k_textedit_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -3364,6 +3813,7 @@ void k_textedit_set_parent(void* self, void* parent);
 /// @param self KTextEdit*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void k_textedit_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -3373,6 +3823,7 @@ void k_textedit_set_parent2(void* self, void* parent, int64_t f);
 /// @param self KTextEdit*
 /// @param dx int
 /// @param dy int
+///
 void k_textedit_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -3383,6 +3834,7 @@ void k_textedit_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void k_textedit_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -3390,6 +3842,7 @@ void k_textedit_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -3397,6 +3850,7 @@ QWidget* k_textedit_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -3404,6 +3858,7 @@ QWidget* k_textedit_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -3411,6 +3866,7 @@ QWidget* k_textedit_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -3419,6 +3875,7 @@ bool k_textedit_accept_drops(void* self);
 ///
 /// @param self KTextEdit*
 /// @param on bool
+///
 void k_textedit_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -3427,6 +3884,7 @@ void k_textedit_set_accept_drops(void* self, bool on);
 ///
 /// @param self KTextEdit*
 /// @param action QAction*
+///
 void k_textedit_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -3435,6 +3893,7 @@ void k_textedit_add_action(void* self, void* action);
 ///
 /// @param self KTextEdit*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_textedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -3444,6 +3903,7 @@ void k_textedit_add_actions(void* self, libqt_list actions);
 /// @param self KTextEdit*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_textedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -3453,6 +3913,7 @@ void k_textedit_insert_actions(void* self, void* before, libqt_list actions);
 /// @param self KTextEdit*
 /// @param before QAction*
 /// @param action QAction*
+///
 void k_textedit_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -3461,6 +3922,7 @@ void k_textedit_insert_action(void* self, void* before, void* action);
 ///
 /// @param self KTextEdit*
 /// @param action QAction*
+///
 void k_textedit_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -3468,6 +3930,7 @@ void k_textedit_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KTextEdit*
+///
 libqt_list /* of QAction* */ k_textedit_actions(void* self);
 
 /// Inherited from QWidget
@@ -3476,6 +3939,7 @@ libqt_list /* of QAction* */ k_textedit_actions(void* self);
 ///
 /// @param self KTextEdit*
 /// @param text const char*
+///
 QAction* k_textedit_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -3485,6 +3949,7 @@ QAction* k_textedit_add_action2(void* self, const char* text);
 /// @param self KTextEdit*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* k_textedit_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -3494,6 +3959,7 @@ QAction* k_textedit_add_action3(void* self, void* icon, const char* text);
 /// @param self KTextEdit*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_textedit_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -3504,6 +3970,7 @@ QAction* k_textedit_add_action4(void* self, const char* text, void* shortcut);
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_textedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -3511,6 +3978,7 @@ QAction* k_textedit_add_action5(void* self, void* icon, const char* text, void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KTextEdit*
+///
 QWidget* k_textedit_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -3519,6 +3987,7 @@ QWidget* k_textedit_parent_widget(void* self);
 ///
 /// @param self KTextEdit*
 /// @param type flag of enum Qt__WindowType
+///
 void k_textedit_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -3528,6 +3997,7 @@ void k_textedit_set_window_flags(void* self, int64_t type);
 /// @param self KTextEdit*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t k_textedit_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -3536,6 +4006,7 @@ int64_t k_textedit_window_flags(void* self);
 ///
 /// @param self KTextEdit*
 /// @param param1 enum Qt__WindowType
+///
 void k_textedit_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3544,6 +4015,7 @@ void k_textedit_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self KTextEdit*
 /// @param type flag of enum Qt__WindowType
+///
 void k_textedit_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -3553,6 +4025,7 @@ void k_textedit_override_window_flags(void* self, int64_t type);
 /// @param self KTextEdit*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t k_textedit_window_type(void* self);
 
 /// Inherited from QWidget
@@ -3562,6 +4035,7 @@ int64_t k_textedit_window_type(void* self);
 /// @param self KTextEdit*
 /// @param x int
 /// @param y int
+///
 QWidget* k_textedit_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -3570,6 +4044,7 @@ QWidget* k_textedit_child_at(void* self, int x, int y);
 ///
 /// @param self KTextEdit*
 /// @param p QPoint*
+///
 QWidget* k_textedit_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -3578,6 +4053,7 @@ QWidget* k_textedit_child_at2(void* self, void* p);
 ///
 /// @param self KTextEdit*
 /// @param p QPointF*
+///
 QWidget* k_textedit_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -3586,6 +4062,7 @@ QWidget* k_textedit_child_at3(void* self, void* p);
 ///
 /// @param self KTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void k_textedit_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3594,6 +4071,7 @@ void k_textedit_set_attribute(void* self, int32_t param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool k_textedit_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3601,6 +4079,7 @@ bool k_textedit_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -3609,6 +4088,7 @@ void k_textedit_ensure_polished(void* self);
 ///
 /// @param self KTextEdit*
 /// @param child QWidget*
+///
 bool k_textedit_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -3616,6 +4096,7 @@ bool k_textedit_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -3624,6 +4105,7 @@ bool k_textedit_auto_fill_background(void* self);
 ///
 /// @param self KTextEdit*
 /// @param enabled bool
+///
 void k_textedit_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -3631,6 +4113,7 @@ void k_textedit_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KTextEdit*
+///
 QBackingStore* k_textedit_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -3638,6 +4121,7 @@ QBackingStore* k_textedit_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KTextEdit*
+///
 QWindow* k_textedit_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -3645,6 +4129,7 @@ QWindow* k_textedit_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KTextEdit*
+///
 QScreen* k_textedit_screen(void* self);
 
 /// Inherited from QWidget
@@ -3653,6 +4138,7 @@ QScreen* k_textedit_screen(void* self);
 ///
 /// @param self KTextEdit*
 /// @param screen QScreen*
+///
 void k_textedit_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -3660,6 +4146,7 @@ void k_textedit_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* k_textedit_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -3668,6 +4155,7 @@ QWidget* k_textedit_create_window_container(void* window);
 ///
 /// @param self KTextEdit*
 /// @param title const char*
+///
 void k_textedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -3676,6 +4164,7 @@ void k_textedit_window_title_changed(void* self, const char* title);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* title)
+///
 void k_textedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3684,6 +4173,7 @@ void k_textedit_on_window_title_changed(void* self, void (*callback)(void*, cons
 ///
 /// @param self KTextEdit*
 /// @param icon QIcon*
+///
 void k_textedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -3692,6 +4182,7 @@ void k_textedit_window_icon_changed(void* self, void* icon);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QIcon* icon)
+///
 void k_textedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3700,6 +4191,7 @@ void k_textedit_on_window_icon_changed(void* self, void (*callback)(void*, void*
 ///
 /// @param self KTextEdit*
 /// @param iconText const char*
+///
 void k_textedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -3708,6 +4200,7 @@ void k_textedit_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* iconText)
+///
 void k_textedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3716,6 +4209,7 @@ void k_textedit_on_window_icon_text_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self KTextEdit*
 /// @param pos QPoint*
+///
 void k_textedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -3724,6 +4218,7 @@ void k_textedit_custom_context_menu_requested(void* self, void* pos);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QPoint* pos)
+///
 void k_textedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3733,6 +4228,7 @@ void k_textedit_on_custom_context_menu_requested(void* self, void (*callback)(vo
 /// @param self KTextEdit*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t k_textedit_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -3741,6 +4237,7 @@ int64_t k_textedit_input_method_hints(void* self);
 ///
 /// @param self KTextEdit*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void k_textedit_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -3750,6 +4247,7 @@ void k_textedit_set_input_method_hints(void* self, int64_t hints);
 /// @param self KTextEdit*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void k_textedit_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -3760,6 +4258,7 @@ void k_textedit_render22(void* self, void* target, void* targetOffset);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_textedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -3771,6 +4270,7 @@ void k_textedit_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_textedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -3780,6 +4280,7 @@ void k_textedit_render4(void* self, void* target, void* targetOffset, void* sour
 /// @param self KTextEdit*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void k_textedit_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -3790,6 +4291,7 @@ void k_textedit_render23(void* self, void* painter, void* targetOffset);
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_textedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -3801,6 +4303,7 @@ void k_textedit_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_textedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -3809,6 +4312,7 @@ void k_textedit_render42(void* self, void* painter, void* targetOffset, void* so
 ///
 /// @param self KTextEdit*
 /// @param rectangle QRect*
+///
 QPixmap* k_textedit_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -3818,6 +4322,7 @@ QPixmap* k_textedit_grab1(void* self, void* rectangle);
 /// @param self KTextEdit*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void k_textedit_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -3827,6 +4332,7 @@ void k_textedit_grab_gesture2(void* self, int64_t type, int32_t flags);
 /// @param self KTextEdit*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t k_textedit_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -3836,6 +4342,7 @@ int32_t k_textedit_grab_shortcut2(void* self, void* key, int32_t context);
 /// @param self KTextEdit*
 /// @param id int
 /// @param enable bool
+///
 void k_textedit_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -3845,6 +4352,7 @@ void k_textedit_set_shortcut_enabled2(void* self, int id, bool enable);
 /// @param self KTextEdit*
 /// @param id int
 /// @param enable bool
+///
 void k_textedit_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -3854,6 +4362,7 @@ void k_textedit_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param self KTextEdit*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void k_textedit_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -3863,6 +4372,7 @@ void k_textedit_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self KTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void k_textedit_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -3871,6 +4381,7 @@ void k_textedit_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* k_textedit_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -3880,6 +4391,7 @@ QWidget* k_textedit_create_window_container2(void* window, void* parent);
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* k_textedit_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -3889,6 +4401,7 @@ QWidget* k_textedit_create_window_container3(void* window, void* parent, int64_t
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char* k_textedit_object_name(void* self);
 
 /// Inherited from QObject
@@ -3897,6 +4410,7 @@ const char* k_textedit_object_name(void* self);
 ///
 /// @param self KTextEdit*
 /// @param name char*
+///
 void k_textedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -3904,6 +4418,7 @@ void k_textedit_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -3911,6 +4426,7 @@ bool k_textedit_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -3918,6 +4434,7 @@ bool k_textedit_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -3925,6 +4442,7 @@ bool k_textedit_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -3933,6 +4451,7 @@ bool k_textedit_signals_blocked(void* self);
 ///
 /// @param self KTextEdit*
 /// @param b bool
+///
 bool k_textedit_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -3940,6 +4459,7 @@ bool k_textedit_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KTextEdit*
+///
 QThread* k_textedit_thread(void* self);
 
 /// Inherited from QObject
@@ -3948,6 +4468,7 @@ QThread* k_textedit_thread(void* self);
 ///
 /// @param self KTextEdit*
 /// @param thread QThread*
+///
 bool k_textedit_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -3956,6 +4477,7 @@ bool k_textedit_move_to_thread(void* self, void* thread);
 ///
 /// @param self KTextEdit*
 /// @param interval int
+///
 int32_t k_textedit_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -3964,6 +4486,7 @@ int32_t k_textedit_start_timer(void* self, int interval);
 ///
 /// @param self KTextEdit*
 /// @param id int
+///
 void k_textedit_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -3972,6 +4495,7 @@ void k_textedit_kill_timer(void* self, int id);
 ///
 /// @param self KTextEdit*
 /// @param id enum Qt__TimerId
+///
 void k_textedit_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -3979,6 +4503,7 @@ void k_textedit_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KTextEdit*
+///
 libqt_list /* of QObject* */ k_textedit_children(void* self);
 
 /// Inherited from QObject
@@ -3987,6 +4512,7 @@ libqt_list /* of QObject* */ k_textedit_children(void* self);
 ///
 /// @param self KTextEdit*
 /// @param filterObj QObject*
+///
 void k_textedit_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -3995,6 +4521,7 @@ void k_textedit_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KTextEdit*
 /// @param obj QObject*
+///
 void k_textedit_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -4005,6 +4532,7 @@ void k_textedit_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_textedit_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -4015,6 +4543,7 @@ QMetaObject__Connection* k_textedit_connect(void* sender, void* signal, void* re
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_textedit_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -4025,6 +4554,7 @@ QMetaObject__Connection* k_textedit_connect2(void* self, void* sender, const cha
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_textedit_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -4032,6 +4562,7 @@ bool k_textedit_disconnect(void* sender, void* signal, void* receiver, void* mem
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_textedit_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -4039,6 +4570,7 @@ bool k_textedit_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -4046,6 +4578,7 @@ void k_textedit_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -4055,6 +4588,7 @@ void k_textedit_dump_object_info(void* self);
 /// @param self KTextEdit*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_textedit_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -4063,6 +4597,7 @@ bool k_textedit_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KTextEdit*
 /// @param name const char*
+///
 QVariant* k_textedit_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -4072,6 +4607,7 @@ QVariant* k_textedit_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
+///
 const char** k_textedit_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -4079,6 +4615,7 @@ const char** k_textedit_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KTextEdit*
+///
 QBindingStorage* k_textedit_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -4086,6 +4623,7 @@ QBindingStorage* k_textedit_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KTextEdit*
+///
 const QBindingStorage* k_textedit_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -4093,6 +4631,7 @@ const QBindingStorage* k_textedit_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_destroyed(void* self);
 
 /// Inherited from QObject
@@ -4101,6 +4640,7 @@ void k_textedit_destroyed(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
+///
 void k_textedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4108,6 +4648,7 @@ void k_textedit_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KTextEdit*
+///
 QObject* k_textedit_parent(void* self);
 
 /// Inherited from QObject
@@ -4116,6 +4657,7 @@ QObject* k_textedit_parent(void* self);
 ///
 /// @param self KTextEdit*
 /// @param classname const char*
+///
 bool k_textedit_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -4123,6 +4665,7 @@ bool k_textedit_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_delete_later(void* self);
 
 /// Inherited from QObject
@@ -4132,6 +4675,7 @@ void k_textedit_delete_later(void* self);
 /// @param self KTextEdit*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_textedit_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -4141,6 +4685,7 @@ bool k_textedit_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KTextEdit*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_textedit_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -4152,6 +4697,7 @@ int32_t k_textedit_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_textedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -4163,6 +4709,7 @@ QMetaObject__Connection* k_textedit_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_textedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -4171,6 +4718,7 @@ QMetaObject__Connection* k_textedit_connect4(void* self, void* sender, const cha
 ///
 /// @param self KTextEdit*
 /// @param param1 QObject*
+///
 void k_textedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -4179,6 +4727,7 @@ void k_textedit_destroyed1(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QObject* param1)
+///
 void k_textedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4186,6 +4735,7 @@ void k_textedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -4193,6 +4743,7 @@ bool k_textedit_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -4200,6 +4751,7 @@ int32_t k_textedit_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -4207,6 +4759,7 @@ int32_t k_textedit_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -4214,6 +4767,7 @@ int32_t k_textedit_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -4221,6 +4775,7 @@ int32_t k_textedit_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -4228,6 +4783,7 @@ int32_t k_textedit_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -4235,6 +4791,7 @@ int32_t k_textedit_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KTextEdit*
+///
 double k_textedit_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -4242,6 +4799,7 @@ double k_textedit_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KTextEdit*
+///
 double k_textedit_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -4249,6 +4807,7 @@ double k_textedit_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -4256,6 +4815,7 @@ int32_t k_textedit_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -4270,6 +4830,7 @@ double k_textedit_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t k_textedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QTextEdit
@@ -4281,6 +4842,7 @@ int32_t k_textedit_encode_metric_f(int32_t metric, double value);
 /// @param self KTextEdit*
 /// @param type int
 /// @param name QUrl*
+///
 QVariant* k_textedit_load_resource(void* self, int type, void* name);
 
 /// Inherited from QTextEdit
@@ -4292,6 +4854,7 @@ QVariant* k_textedit_load_resource(void* self, int type, void* name);
 /// @param self KTextEdit*
 /// @param type int
 /// @param name QUrl*
+///
 QVariant* k_textedit_qbase_load_resource(void* self, int type, void* name);
 
 /// Inherited from QTextEdit
@@ -4302,6 +4865,7 @@ QVariant* k_textedit_qbase_load_resource(void* self, int type, void* name);
 ///
 /// @param self KTextEdit*
 /// @param callback QVariant* func(KTextEdit* self, int type, QUrl* name)
+///
 void k_textedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QTextEdit
@@ -4312,6 +4876,7 @@ void k_textedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, v
 ///
 /// @param self KTextEdit*
 /// @param property enum Qt__InputMethodQuery
+///
 QVariant* k_textedit_input_method_query(void* self, int64_t property);
 
 /// Inherited from QTextEdit
@@ -4322,6 +4887,7 @@ QVariant* k_textedit_input_method_query(void* self, int64_t property);
 ///
 /// @param self KTextEdit*
 /// @param property enum Qt__InputMethodQuery
+///
 QVariant* k_textedit_qbase_input_method_query(void* self, int64_t property);
 
 /// Inherited from QTextEdit
@@ -4332,6 +4898,7 @@ QVariant* k_textedit_qbase_input_method_query(void* self, int64_t property);
 ///
 /// @param self KTextEdit*
 /// @param callback QVariant* func(KTextEdit* self, enum Qt__InputMethodQuery property)
+///
 void k_textedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QTextEdit
@@ -4342,6 +4909,7 @@ void k_textedit_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 /// @param self KTextEdit*
 /// @param e QTimerEvent*
+///
 void k_textedit_timer_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4352,6 +4920,7 @@ void k_textedit_timer_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QTimerEvent*
+///
 void k_textedit_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4362,6 +4931,7 @@ void k_textedit_qbase_timer_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QTimerEvent* e)
+///
 void k_textedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4372,6 +4942,7 @@ void k_textedit_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QKeyEvent*
+///
 void k_textedit_key_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4382,6 +4953,7 @@ void k_textedit_key_release_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QKeyEvent*
+///
 void k_textedit_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4392,6 +4964,7 @@ void k_textedit_qbase_key_release_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QKeyEvent* e)
+///
 void k_textedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4402,6 +4975,7 @@ void k_textedit_on_key_release_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KTextEdit*
 /// @param e QResizeEvent*
+///
 void k_textedit_resize_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4412,6 +4986,7 @@ void k_textedit_resize_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QResizeEvent*
+///
 void k_textedit_qbase_resize_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4422,6 +4997,7 @@ void k_textedit_qbase_resize_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QResizeEvent* e)
+///
 void k_textedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4432,6 +5008,7 @@ void k_textedit_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QPaintEvent*
+///
 void k_textedit_paint_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4442,6 +5019,7 @@ void k_textedit_paint_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QPaintEvent*
+///
 void k_textedit_qbase_paint_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4452,6 +5030,7 @@ void k_textedit_qbase_paint_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QPaintEvent* e)
+///
 void k_textedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4462,6 +5041,7 @@ void k_textedit_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_mouse_press_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4472,6 +5052,7 @@ void k_textedit_mouse_press_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_qbase_mouse_press_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4482,6 +5063,7 @@ void k_textedit_qbase_mouse_press_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMouseEvent* e)
+///
 void k_textedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4492,6 +5074,7 @@ void k_textedit_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_mouse_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4502,6 +5085,7 @@ void k_textedit_mouse_move_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_qbase_mouse_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4512,6 +5096,7 @@ void k_textedit_qbase_mouse_move_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMouseEvent* e)
+///
 void k_textedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4522,6 +5107,7 @@ void k_textedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_mouse_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4532,6 +5118,7 @@ void k_textedit_mouse_release_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4542,6 +5129,7 @@ void k_textedit_qbase_mouse_release_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMouseEvent* e)
+///
 void k_textedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4552,6 +5140,7 @@ void k_textedit_on_mouse_release_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4562,6 +5151,7 @@ void k_textedit_mouse_double_click_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QMouseEvent*
+///
 void k_textedit_qbase_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4572,6 +5162,7 @@ void k_textedit_qbase_mouse_double_click_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMouseEvent* e)
+///
 void k_textedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4582,6 +5173,7 @@ void k_textedit_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 /// @param self KTextEdit*
 /// @param next bool
+///
 bool k_textedit_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QTextEdit
@@ -4592,6 +5184,7 @@ bool k_textedit_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KTextEdit*
 /// @param next bool
+///
 bool k_textedit_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QTextEdit
@@ -4602,6 +5195,7 @@ bool k_textedit_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, bool next)
+///
 void k_textedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -4612,6 +5206,7 @@ void k_textedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 ///
 /// @param self KTextEdit*
 /// @param e QDragEnterEvent*
+///
 void k_textedit_drag_enter_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4622,6 +5217,7 @@ void k_textedit_drag_enter_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QDragEnterEvent*
+///
 void k_textedit_qbase_drag_enter_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4632,6 +5228,7 @@ void k_textedit_qbase_drag_enter_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QDragEnterEvent* e)
+///
 void k_textedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4642,6 +5239,7 @@ void k_textedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QDragLeaveEvent*
+///
 void k_textedit_drag_leave_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4652,6 +5250,7 @@ void k_textedit_drag_leave_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QDragLeaveEvent*
+///
 void k_textedit_qbase_drag_leave_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4662,6 +5261,7 @@ void k_textedit_qbase_drag_leave_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QDragLeaveEvent* e)
+///
 void k_textedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4672,6 +5272,7 @@ void k_textedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QDragMoveEvent*
+///
 void k_textedit_drag_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4682,6 +5283,7 @@ void k_textedit_drag_move_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QDragMoveEvent*
+///
 void k_textedit_qbase_drag_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4692,6 +5294,7 @@ void k_textedit_qbase_drag_move_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QDragMoveEvent* e)
+///
 void k_textedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4702,6 +5305,7 @@ void k_textedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QDropEvent*
+///
 void k_textedit_drop_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4712,6 +5316,7 @@ void k_textedit_drop_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QDropEvent*
+///
 void k_textedit_qbase_drop_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4722,6 +5327,7 @@ void k_textedit_qbase_drop_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QDropEvent* e)
+///
 void k_textedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4732,6 +5338,7 @@ void k_textedit_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QFocusEvent*
+///
 void k_textedit_focus_out_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4742,6 +5349,7 @@ void k_textedit_focus_out_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QFocusEvent*
+///
 void k_textedit_qbase_focus_out_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4752,6 +5360,7 @@ void k_textedit_qbase_focus_out_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QFocusEvent* e)
+///
 void k_textedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4762,6 +5371,7 @@ void k_textedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param param1 QShowEvent*
+///
 void k_textedit_show_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -4772,6 +5382,7 @@ void k_textedit_show_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QShowEvent*
+///
 void k_textedit_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -4782,6 +5393,7 @@ void k_textedit_qbase_show_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QShowEvent* param1)
+///
 void k_textedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4792,6 +5404,7 @@ void k_textedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QEvent*
+///
 void k_textedit_change_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4802,6 +5415,7 @@ void k_textedit_change_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QEvent*
+///
 void k_textedit_qbase_change_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4812,6 +5426,7 @@ void k_textedit_qbase_change_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QEvent* e)
+///
 void k_textedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4822,6 +5437,7 @@ void k_textedit_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param e QWheelEvent*
+///
 void k_textedit_wheel_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4832,6 +5448,7 @@ void k_textedit_wheel_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param e QWheelEvent*
+///
 void k_textedit_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4842,6 +5459,7 @@ void k_textedit_qbase_wheel_event(void* self, void* e);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QWheelEvent* e)
+///
 void k_textedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4851,6 +5469,7 @@ void k_textedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QMimeData* k_textedit_create_mime_data_from_selection(void* self);
 
 /// Inherited from QTextEdit
@@ -4860,6 +5479,7 @@ QMimeData* k_textedit_create_mime_data_from_selection(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QMimeData* k_textedit_qbase_create_mime_data_from_selection(void* self);
 
 /// Inherited from QTextEdit
@@ -4870,6 +5490,7 @@ QMimeData* k_textedit_qbase_create_mime_data_from_selection(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QMimeData* func()
+///
 void k_textedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)());
 
 /// Inherited from QTextEdit
@@ -4880,6 +5501,7 @@ void k_textedit_on_create_mime_data_from_selection(void* self, QMimeData* (*call
 ///
 /// @param self KTextEdit*
 /// @param source QMimeData*
+///
 bool k_textedit_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4890,6 +5512,7 @@ bool k_textedit_can_insert_from_mime_data(void* self, void* source);
 ///
 /// @param self KTextEdit*
 /// @param source QMimeData*
+///
 bool k_textedit_qbase_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4900,6 +5523,7 @@ bool k_textedit_qbase_can_insert_from_mime_data(void* self, void* source);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, QMimeData* source)
+///
 void k_textedit_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4910,6 +5534,7 @@ void k_textedit_on_can_insert_from_mime_data(void* self, bool (*callback)(void*,
 ///
 /// @param self KTextEdit*
 /// @param source QMimeData*
+///
 void k_textedit_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4920,6 +5545,7 @@ void k_textedit_insert_from_mime_data(void* self, void* source);
 ///
 /// @param self KTextEdit*
 /// @param source QMimeData*
+///
 void k_textedit_qbase_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4930,6 +5556,7 @@ void k_textedit_qbase_insert_from_mime_data(void* self, void* source);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMimeData* source)
+///
 void k_textedit_on_insert_from_mime_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4940,6 +5567,7 @@ void k_textedit_on_insert_from_mime_data(void* self, void (*callback)(void*, voi
 ///
 /// @param self KTextEdit*
 /// @param param1 QInputMethodEvent*
+///
 void k_textedit_input_method_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -4950,6 +5578,7 @@ void k_textedit_input_method_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QInputMethodEvent*
+///
 void k_textedit_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -4960,6 +5589,7 @@ void k_textedit_qbase_input_method_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QInputMethodEvent* param1)
+///
 void k_textedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4971,6 +5601,7 @@ void k_textedit_on_input_method_event(void* self, void (*callback)(void*, void*)
 /// @param self KTextEdit*
 /// @param dx int
 /// @param dy int
+///
 void k_textedit_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTextEdit
@@ -4982,6 +5613,7 @@ void k_textedit_scroll_contents_by(void* self, int dx, int dy);
 /// @param self KTextEdit*
 /// @param dx int
 /// @param dy int
+///
 void k_textedit_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTextEdit
@@ -4992,6 +5624,7 @@ void k_textedit_qbase_scroll_contents_by(void* self, int dx, int dy);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, int dx, int dy)
+///
 void k_textedit_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QTextEdit
@@ -5002,6 +5635,7 @@ void k_textedit_on_scroll_contents_by(void* self, void (*callback)(void*, int, i
 ///
 /// @param self KTextEdit*
 /// @param cursor QTextCursor*
+///
 void k_textedit_do_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
@@ -5012,6 +5646,7 @@ void k_textedit_do_set_text_cursor(void* self, void* cursor);
 ///
 /// @param self KTextEdit*
 /// @param cursor QTextCursor*
+///
 void k_textedit_qbase_do_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
@@ -5022,6 +5657,7 @@ void k_textedit_qbase_do_set_text_cursor(void* self, void* cursor);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QTextCursor* cursor)
+///
 void k_textedit_on_do_set_text_cursor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5031,6 +5667,7 @@ void k_textedit_on_do_set_text_cursor(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5040,6 +5677,7 @@ QSize* k_textedit_minimum_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5050,6 +5688,7 @@ QSize* k_textedit_qbase_minimum_size_hint(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QSize* func()
+///
 void k_textedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5059,6 +5698,7 @@ void k_textedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5068,6 +5708,7 @@ QSize* k_textedit_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5078,6 +5719,7 @@ QSize* k_textedit_qbase_size_hint(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QSize* func()
+///
 void k_textedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5088,6 +5730,7 @@ void k_textedit_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// @param self KTextEdit*
 /// @param viewport QWidget*
+///
 void k_textedit_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -5098,6 +5741,7 @@ void k_textedit_setup_viewport(void* self, void* viewport);
 ///
 /// @param self KTextEdit*
 /// @param viewport QWidget*
+///
 void k_textedit_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -5108,6 +5752,7 @@ void k_textedit_qbase_setup_viewport(void* self, void* viewport);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QWidget* viewport)
+///
 void k_textedit_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5119,6 +5764,7 @@ void k_textedit_on_setup_viewport(void* self, void (*callback)(void*, void*));
 /// @param self KTextEdit*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool k_textedit_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
@@ -5130,6 +5776,7 @@ bool k_textedit_event_filter(void* self, void* param1, void* param2);
 /// @param self KTextEdit*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool k_textedit_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
@@ -5140,6 +5787,7 @@ bool k_textedit_qbase_event_filter(void* self, void* param1, void* param2);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, QObject* param1, QEvent* param2)
+///
 void k_textedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5150,6 +5798,7 @@ void k_textedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 /// @param self KTextEdit*
 /// @param param1 QEvent*
+///
 bool k_textedit_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -5160,6 +5809,7 @@ bool k_textedit_viewport_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QEvent*
+///
 bool k_textedit_qbase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -5170,6 +5820,7 @@ bool k_textedit_qbase_viewport_event(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, QEvent* param1)
+///
 void k_textedit_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5179,6 +5830,7 @@ void k_textedit_on_viewport_event(void* self, bool (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5188,6 +5840,7 @@ QSize* k_textedit_viewport_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QSize* k_textedit_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5198,6 +5851,7 @@ QSize* k_textedit_qbase_viewport_size_hint(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QSize* func()
+///
 void k_textedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
@@ -5208,6 +5862,7 @@ void k_textedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 /// @param self KTextEdit*
 /// @param option QStyleOptionFrame*
+///
 void k_textedit_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -5218,6 +5873,7 @@ void k_textedit_init_style_option(void* self, void* option);
 ///
 /// @param self KTextEdit*
 /// @param option QStyleOptionFrame*
+///
 void k_textedit_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -5228,6 +5884,7 @@ void k_textedit_qbase_init_style_option(void* self, void* option);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QStyleOptionFrame* option)
+///
 void k_textedit_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5237,6 +5894,7 @@ void k_textedit_on_init_style_option(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -5246,6 +5904,7 @@ int32_t k_textedit_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -5256,6 +5915,7 @@ int32_t k_textedit_qbase_dev_type(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback int32_t func()
+///
 void k_textedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -5266,6 +5926,7 @@ void k_textedit_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self KTextEdit*
 /// @param visible bool
+///
 void k_textedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -5276,6 +5937,7 @@ void k_textedit_set_visible(void* self, bool visible);
 ///
 /// @param self KTextEdit*
 /// @param visible bool
+///
 void k_textedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -5286,6 +5948,7 @@ void k_textedit_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool visible)
+///
 void k_textedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -5296,6 +5959,7 @@ void k_textedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KTextEdit*
 /// @param param1 int
+///
 int32_t k_textedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -5306,6 +5970,7 @@ int32_t k_textedit_height_for_width(void* self, int param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 int
+///
 int32_t k_textedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -5316,6 +5981,7 @@ int32_t k_textedit_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self KTextEdit*
 /// @param callback int32_t func(KTextEdit* self, int param1)
+///
 void k_textedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -5325,6 +5991,7 @@ void k_textedit_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -5334,6 +6001,7 @@ bool k_textedit_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -5344,6 +6012,7 @@ bool k_textedit_qbase_has_height_for_width(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func()
+///
 void k_textedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5353,6 +6022,7 @@ void k_textedit_on_has_height_for_width(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QPaintEngine* k_textedit_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -5362,6 +6032,7 @@ QPaintEngine* k_textedit_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QPaintEngine* k_textedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -5372,6 +6043,7 @@ QPaintEngine* k_textedit_qbase_paint_engine(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QPaintEngine* func()
+///
 void k_textedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -5382,6 +6054,7 @@ void k_textedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self KTextEdit*
 /// @param event QEnterEvent*
+///
 void k_textedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5392,6 +6065,7 @@ void k_textedit_enter_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QEnterEvent*
+///
 void k_textedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5402,6 +6076,7 @@ void k_textedit_qbase_enter_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QEnterEvent* event)
+///
 void k_textedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5412,6 +6087,7 @@ void k_textedit_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param event QEvent*
+///
 void k_textedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5422,6 +6098,7 @@ void k_textedit_leave_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QEvent*
+///
 void k_textedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5432,6 +6109,7 @@ void k_textedit_qbase_leave_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QEvent* event)
+///
 void k_textedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5442,6 +6120,7 @@ void k_textedit_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param event QMoveEvent*
+///
 void k_textedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5452,6 +6131,7 @@ void k_textedit_move_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QMoveEvent*
+///
 void k_textedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5462,6 +6142,7 @@ void k_textedit_qbase_move_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMoveEvent* event)
+///
 void k_textedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5472,6 +6153,7 @@ void k_textedit_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param event QCloseEvent*
+///
 void k_textedit_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5482,6 +6164,7 @@ void k_textedit_close_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QCloseEvent*
+///
 void k_textedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5492,6 +6175,7 @@ void k_textedit_qbase_close_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QCloseEvent* event)
+///
 void k_textedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5502,6 +6186,7 @@ void k_textedit_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param event QTabletEvent*
+///
 void k_textedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5512,6 +6197,7 @@ void k_textedit_tablet_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QTabletEvent*
+///
 void k_textedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5522,6 +6208,7 @@ void k_textedit_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QTabletEvent* event)
+///
 void k_textedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5532,6 +6219,7 @@ void k_textedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param event QActionEvent*
+///
 void k_textedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5542,6 +6230,7 @@ void k_textedit_action_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QActionEvent*
+///
 void k_textedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5552,6 +6241,7 @@ void k_textedit_qbase_action_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QActionEvent* event)
+///
 void k_textedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5562,6 +6252,7 @@ void k_textedit_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param event QHideEvent*
+///
 void k_textedit_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5572,6 +6263,7 @@ void k_textedit_hide_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QHideEvent*
+///
 void k_textedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5582,6 +6274,7 @@ void k_textedit_qbase_hide_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QHideEvent* event)
+///
 void k_textedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5594,6 +6287,7 @@ void k_textedit_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_textedit_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -5606,6 +6300,7 @@ bool k_textedit_native_event(void* self, const char* eventType, void* message, i
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_textedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -5616,6 +6311,7 @@ bool k_textedit_qbase_native_event(void* self, const char* eventType, void* mess
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, const char* eventType, void* message, intptr_t* result)
+///
 void k_textedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -5626,6 +6322,7 @@ void k_textedit_on_native_event(void* self, bool (*callback)(void*, const char*,
 ///
 /// @param self KTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_textedit_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -5636,6 +6333,7 @@ int32_t k_textedit_metric(void* self, int32_t param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_textedit_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -5646,6 +6344,7 @@ int32_t k_textedit_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self KTextEdit*
 /// @param callback int32_t func(KTextEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void k_textedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -5656,6 +6355,7 @@ void k_textedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// @param self KTextEdit*
 /// @param painter QPainter*
+///
 void k_textedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -5666,6 +6366,7 @@ void k_textedit_init_painter(void* self, void* painter);
 ///
 /// @param self KTextEdit*
 /// @param painter QPainter*
+///
 void k_textedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -5676,6 +6377,7 @@ void k_textedit_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QPainter* painter)
+///
 void k_textedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5686,6 +6388,7 @@ void k_textedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param offset QPoint*
+///
 QPaintDevice* k_textedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -5696,6 +6399,7 @@ QPaintDevice* k_textedit_redirected(void* self, void* offset);
 ///
 /// @param self KTextEdit*
 /// @param offset QPoint*
+///
 QPaintDevice* k_textedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -5706,6 +6410,7 @@ QPaintDevice* k_textedit_qbase_redirected(void* self, void* offset);
 ///
 /// @param self KTextEdit*
 /// @param callback QPaintDevice* func(KTextEdit* self, QPoint* offset)
+///
 void k_textedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5715,6 +6420,7 @@ void k_textedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QPainter* k_textedit_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -5724,6 +6430,7 @@ QPainter* k_textedit_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QPainter* k_textedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -5734,6 +6441,7 @@ QPainter* k_textedit_qbase_shared_painter(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QPainter* func()
+///
 void k_textedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
@@ -5744,6 +6452,7 @@ void k_textedit_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// @param self KTextEdit*
 /// @param event QChildEvent*
+///
 void k_textedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5754,6 +6463,7 @@ void k_textedit_child_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QChildEvent*
+///
 void k_textedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5764,6 +6474,7 @@ void k_textedit_qbase_child_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QChildEvent* event)
+///
 void k_textedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5774,6 +6485,7 @@ void k_textedit_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param event QEvent*
+///
 void k_textedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5784,6 +6496,7 @@ void k_textedit_custom_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param event QEvent*
+///
 void k_textedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5794,6 +6507,7 @@ void k_textedit_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QEvent* event)
+///
 void k_textedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5804,6 +6518,7 @@ void k_textedit_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param signal QMetaMethod*
+///
 void k_textedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5814,6 +6529,7 @@ void k_textedit_connect_notify(void* self, void* signal);
 ///
 /// @param self KTextEdit*
 /// @param signal QMetaMethod*
+///
 void k_textedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5824,6 +6540,7 @@ void k_textedit_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMetaMethod* signal)
+///
 void k_textedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5834,6 +6551,7 @@ void k_textedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KTextEdit*
 /// @param signal QMetaMethod*
+///
 void k_textedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5844,6 +6562,7 @@ void k_textedit_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KTextEdit*
 /// @param signal QMetaMethod*
+///
 void k_textedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5854,6 +6573,7 @@ void k_textedit_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMetaMethod* signal)
+///
 void k_textedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -5864,6 +6584,7 @@ void k_textedit_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KTextEdit*
 /// @param range float
+///
 void k_textedit_zoom_in_f(void* self, float range);
 
 /// Inherited from QTextEdit
@@ -5874,6 +6595,7 @@ void k_textedit_zoom_in_f(void* self, float range);
 ///
 /// @param self KTextEdit*
 /// @param range float
+///
 void k_textedit_qbase_zoom_in_f(void* self, float range);
 
 /// Inherited from QTextEdit
@@ -5884,6 +6606,7 @@ void k_textedit_qbase_zoom_in_f(void* self, float range);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, float range)
+///
 void k_textedit_on_zoom_in_f(void* self, void (*callback)(void*, float));
 
 /// Inherited from QAbstractScrollArea
@@ -5897,6 +6620,7 @@ void k_textedit_on_zoom_in_f(void* self, void (*callback)(void*, float));
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_textedit_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -5910,6 +6634,7 @@ void k_textedit_set_viewport_margins(void* self, int left, int top, int right, i
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_textedit_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -5920,6 +6645,7 @@ void k_textedit_qbase_set_viewport_margins(void* self, int left, int top, int ri
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, int left, int top, int right, int bottom)
+///
 void k_textedit_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -5929,6 +6655,7 @@ void k_textedit_on_set_viewport_margins(void* self, void (*callback)(void*, int,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QMargins* k_textedit_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5938,6 +6665,7 @@ QMargins* k_textedit_viewport_margins(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QMargins* k_textedit_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5948,6 +6676,7 @@ QMargins* k_textedit_qbase_viewport_margins(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QMargins* func()
+///
 void k_textedit_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -5958,6 +6687,7 @@ void k_textedit_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 /// @param self KTextEdit*
 /// @param param1 QPainter*
+///
 void k_textedit_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5968,6 +6698,7 @@ void k_textedit_draw_frame(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param param1 QPainter*
+///
 void k_textedit_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5978,6 +6709,7 @@ void k_textedit_qbase_draw_frame(void* self, void* param1);
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QPainter* param1)
+///
 void k_textedit_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5987,6 +6719,7 @@ void k_textedit_on_draw_frame(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -5996,6 +6729,7 @@ void k_textedit_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -6006,6 +6740,7 @@ void k_textedit_qbase_update_micro_focus(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -6015,6 +6750,7 @@ void k_textedit_on_update_micro_focus(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_create(void* self);
 
 /// Inherited from QWidget
@@ -6024,6 +6760,7 @@ void k_textedit_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -6034,6 +6771,7 @@ void k_textedit_qbase_create(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -6043,6 +6781,7 @@ void k_textedit_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_destroy(void* self);
 
 /// Inherited from QWidget
@@ -6052,6 +6791,7 @@ void k_textedit_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -6062,6 +6802,7 @@ void k_textedit_qbase_destroy(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback void func()
+///
 void k_textedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -6071,6 +6812,7 @@ void k_textedit_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -6080,6 +6822,7 @@ bool k_textedit_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -6090,6 +6833,7 @@ bool k_textedit_qbase_focus_next_child(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func()
+///
 void k_textedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -6099,6 +6843,7 @@ void k_textedit_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -6108,6 +6853,7 @@ bool k_textedit_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 bool k_textedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -6118,6 +6864,7 @@ bool k_textedit_qbase_focus_previous_child(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func()
+///
 void k_textedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -6127,6 +6874,7 @@ void k_textedit_on_focus_previous_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QObject* k_textedit_sender(void* self);
 
 /// Inherited from QObject
@@ -6136,6 +6884,7 @@ QObject* k_textedit_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 QObject* k_textedit_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -6146,6 +6895,7 @@ QObject* k_textedit_qbase_sender(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback QObject* func()
+///
 void k_textedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -6155,6 +6905,7 @@ void k_textedit_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -6164,6 +6915,7 @@ int32_t k_textedit_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEdit*
+///
 int32_t k_textedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -6174,6 +6926,7 @@ int32_t k_textedit_qbase_sender_signal_index(void* self);
 ///
 /// @param self KTextEdit*
 /// @param callback int32_t func()
+///
 void k_textedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -6184,6 +6937,7 @@ void k_textedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self KTextEdit*
 /// @param signal const char*
+///
 int32_t k_textedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -6194,6 +6948,7 @@ int32_t k_textedit_receivers(void* self, const char* signal);
 ///
 /// @param self KTextEdit*
 /// @param signal const char*
+///
 int32_t k_textedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -6204,6 +6959,7 @@ int32_t k_textedit_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KTextEdit*
 /// @param callback int32_t func(KTextEdit* self, const char* signal)
+///
 void k_textedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -6214,6 +6970,7 @@ void k_textedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// @param self KTextEdit*
 /// @param signal QMetaMethod*
+///
 bool k_textedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6224,6 +6981,7 @@ bool k_textedit_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KTextEdit*
 /// @param signal QMetaMethod*
+///
 bool k_textedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6234,6 +6992,7 @@ bool k_textedit_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KTextEdit*
 /// @param callback bool func(KTextEdit* self, QMetaMethod* signal)
+///
 void k_textedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -6245,6 +7004,7 @@ void k_textedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param self KTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_textedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -6256,6 +7016,7 @@ double k_textedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
 /// @param self KTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_textedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -6266,6 +7027,7 @@ double k_textedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 ///
 /// @param self KTextEdit*
 /// @param callback double func(KTextEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void k_textedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -6276,6 +7038,7 @@ void k_textedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* objectName)
+///
 void k_textedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/ktextedit.html#dtor.KTextEdit)
@@ -6283,6 +7046,7 @@ void k_textedit_on_object_name_changed(void* self, void (*callback)(void*, const
 /// Delete this object from C++ memory.
 ///
 /// @param self KTextEdit*
+///
 void k_textedit_delete(void* self);
 
 #endif

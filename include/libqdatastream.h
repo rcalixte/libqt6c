@@ -11,36 +11,45 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qdatastream.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html)
 
 /// q_datastream_new constructs a new QDataStream object.
 ///
 QDataStream* q_datastream_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html)
+
 /// q_datastream_new2 constructs a new QDataStream object.
 ///
 /// @param param1 QIODevice*
+///
 QDataStream* q_datastream_new2(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html)
 
 /// q_datastream_new3 constructs a new QDataStream object.
 ///
 /// @param param1 const char*
+///
 QDataStream* q_datastream_new3(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#device)
 ///
 /// @param self QDataStream*
+///
 QIODevice* q_datastream_device(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setDevice)
 ///
 /// @param self QDataStream*
 /// @param device QIODevice*
+///
 void q_datastream_set_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#atEnd)
 ///
 /// @param self QDataStream*
+///
 bool q_datastream_at_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#status)
@@ -48,17 +57,20 @@ bool q_datastream_at_end(void* self);
 /// @param self QDataStream*
 ///
 /// @return enum QDataStream__Status
+///
 int32_t q_datastream_status(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setStatus)
 ///
 /// @param self QDataStream*
 /// @param status enum QDataStream__Status
+///
 void q_datastream_set_status(void* self, int32_t status);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#resetStatus)
 ///
 /// @param self QDataStream*
+///
 void q_datastream_reset_status(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#floatingPointPrecision)
@@ -66,12 +78,14 @@ void q_datastream_reset_status(void* self);
 /// @param self QDataStream*
 ///
 /// @return enum QDataStream__FloatingPointPrecision
+///
 int32_t q_datastream_floating_point_precision(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setFloatingPointPrecision)
 ///
 /// @param self QDataStream*
 /// @param precision enum QDataStream__FloatingPointPrecision
+///
 void q_datastream_set_floating_point_precision(void* self, int32_t precision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#byteOrder)
@@ -79,173 +93,202 @@ void q_datastream_set_floating_point_precision(void* self, int32_t precision);
 /// @param self QDataStream*
 ///
 /// @return enum QDataStream__ByteOrder
+///
 int32_t q_datastream_byte_order(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setByteOrder)
 ///
 /// @param self QDataStream*
 /// @param byteOrder enum QDataStream__ByteOrder
+///
 void q_datastream_set_byte_order(void* self, int32_t byteOrder);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#version)
 ///
 /// @param self QDataStream*
+///
 int32_t q_datastream_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setVersion)
 ///
 /// @param self QDataStream*
 /// @param version int
+///
 void q_datastream_set_version(void* self, int version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i char*
+///
 void q_datastream_operator_shift_right(void* self, char* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i signed char*
+///
 void q_datastream_operator_shift_right2(void* self, signed char* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i unsigned char*
+///
 void q_datastream_operator_shift_right3(void* self, unsigned char* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i short*
+///
 void q_datastream_operator_shift_right4(void* self, short* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i unsigned short*
+///
 void q_datastream_operator_shift_right5(void* self, unsigned short* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i int*
+///
 void q_datastream_operator_shift_right6(void* self, int* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i uint32_t*
+///
 void q_datastream_operator_shift_right7(void* self, uint32_t* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i long long*
+///
 void q_datastream_operator_shift_right8(void* self, long long* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i uint64_t*
+///
 void q_datastream_operator_shift_right9(void* self, uint64_t* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param i bool*
+///
 void q_datastream_operator_shift_right11(void* self, bool* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param f float*
+///
 void q_datastream_operator_shift_right12(void* self, float* f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param f double*
+///
 void q_datastream_operator_shift_right13(void* self, double* f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
 /// @param str char*
+///
 void q_datastream_operator_shift_right14(void* self, char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i char
+///
 void q_datastream_operator_shift_left(void* self, char i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i signed char
+///
 void q_datastream_operator_shift_left2(void* self, signed char i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i unsigned char
+///
 void q_datastream_operator_shift_left3(void* self, unsigned char i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i short
+///
 void q_datastream_operator_shift_left4(void* self, short i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i unsigned short
+///
 void q_datastream_operator_shift_left5(void* self, unsigned short i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i int
+///
 void q_datastream_operator_shift_left6(void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i uint32_t
+///
 void q_datastream_operator_shift_left7(void* self, uint32_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i long long
+///
 void q_datastream_operator_shift_left8(void* self, long long i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param i uint64_t
+///
 void q_datastream_operator_shift_left9(void* self, uint64_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param f float
+///
 void q_datastream_operator_shift_left11(void* self, float f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param f double
+///
 void q_datastream_operator_shift_left12(void* self, double f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
 /// @param str const char*
+///
 void q_datastream_operator_shift_left13(void* self, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#readBytes)
@@ -253,6 +296,7 @@ void q_datastream_operator_shift_left13(void* self, const char* str);
 /// @param self QDataStream*
 /// @param param1 char*
 /// @param lenVal uint32_t*
+///
 QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#readBytes)
@@ -260,6 +304,7 @@ QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* lenVal)
 /// @param self QDataStream*
 /// @param param1 char*
 /// @param lenVal long long*
+///
 QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#readRawData)
@@ -267,6 +312,7 @@ QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* lenVa
 /// @param self QDataStream*
 /// @param param1 char*
 /// @param lenVal long long
+///
 long long q_datastream_read_raw_data(void* self, char* param1, long long lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#writeBytes)
@@ -274,6 +320,7 @@ long long q_datastream_read_raw_data(void* self, char* param1, long long lenVal)
 /// @param self QDataStream*
 /// @param param1 const char*
 /// @param lenVal long long
+///
 void q_datastream_write_bytes(void* self, const char* param1, long long lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#writeRawData)
@@ -281,37 +328,44 @@ void q_datastream_write_bytes(void* self, const char* param1, long long lenVal);
 /// @param self QDataStream*
 /// @param param1 const char*
 /// @param lenVal long long
+///
 long long q_datastream_write_raw_data(void* self, const char* param1, long long lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#skipRawData)
 ///
 /// @param self QDataStream*
 /// @param lenVal long long
+///
 long long q_datastream_skip_raw_data(void* self, long long lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#startTransaction)
 ///
 /// @param self QDataStream*
+///
 void q_datastream_start_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#commitTransaction)
 ///
 /// @param self QDataStream*
+///
 bool q_datastream_commit_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#rollbackTransaction)
 ///
 /// @param self QDataStream*
+///
 void q_datastream_rollback_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#abortTransaction)
 ///
 /// @param self QDataStream*
+///
 void q_datastream_abort_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#isDeviceTransactionStarted)
 ///
 /// @param self QDataStream*
+///
 bool q_datastream_is_device_transaction_started(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#dtor.QDataStream)
@@ -319,9 +373,10 @@ bool q_datastream_is_device_transaction_started(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QDataStream*
+///
 void q_datastream_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qdatastream.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#public-types)
 
 typedef enum {
     QDATASTREAM_VERSION_QT_1_0 = 1,
@@ -368,10 +423,14 @@ typedef enum {
     QDATASTREAM_VERSION_QT_DEFAULTCOMPILEDVERSION = 22
 } QDataStream__Version;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#public-types)
+
 typedef enum {
     QDATASTREAM_BYTEORDER_BIGENDIAN = 0,
     QDATASTREAM_BYTEORDER_LITTLEENDIAN = 1
 } QDataStream__ByteOrder;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#public-types)
 
 typedef enum {
     QDATASTREAM_STATUS_OK = 0,
@@ -380,6 +439,8 @@ typedef enum {
     QDATASTREAM_STATUS_WRITEFAILED = 3,
     QDATASTREAM_STATUS_SIZELIMITEXCEEDED = 4
 } QDataStream__Status;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#public-types)
 
 typedef enum {
     QDATASTREAM_FLOATINGPOINTPRECISION_SINGLEPRECISION = 0,

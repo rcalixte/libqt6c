@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kio.html
+/// [Upstream resources](https://api.kde.org/kio.html)
 
 /// [Upstream resources](https://api.kde.org/kio.html#buildErrorString)
 ///
@@ -19,6 +19,7 @@
 ///
 /// @param param1 int
 /// @param param2 const char*
+///
 const char* k_io_build_error_string(int param1, const char* param2);
 
 /// [Upstream resources](https://api.kde.org/kio.html#rawErrorDetail)
@@ -29,5 +30,6 @@ const char* k_io_build_error_string(int param1, const char* param2);
 /// @param param2 const char*
 /// @param param3 QUrl*
 /// @param param4 int
+///
 char* k_io_raw_error_detail(int param1, const char* param2, void* param3, int param4);
 #endif

@@ -11,21 +11,24 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/solid-storagevolume.html
+/// [Upstream resources](https://api.kde.org/solid-storagevolume.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Solid__StorageVolume*
+///
 const QMetaObject* k_solid__storagevolume_meta_object(void* self);
 
 /// @param self Solid__StorageVolume*
 /// @param param1 const char*
+///
 void* k_solid__storagevolume_metacast(void* self, const char* param1);
 
 /// @param self Solid__StorageVolume*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_solid__storagevolume_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -33,17 +36,19 @@ int32_t k_solid__storagevolume_metacall(void* self, int32_t param1, int param2, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_solid__storagevolume_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#deviceInterfaceType)
 ///
-///
 /// @return enum Solid__DeviceInterface__Type
+///
 int32_t k_solid__storagevolume_device_interface_type();
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#isIgnored)
 ///
 /// @param self Solid__StorageVolume*
+///
 bool k_solid__storagevolume_is_ignored(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#usage)
@@ -51,6 +56,7 @@ bool k_solid__storagevolume_is_ignored(void* self);
 /// @param self Solid__StorageVolume*
 ///
 /// @return enum Solid__StorageVolume__UsageType
+///
 int32_t k_solid__storagevolume_usage(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#fsType)
@@ -58,6 +64,7 @@ int32_t k_solid__storagevolume_usage(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__StorageVolume*
+///
 const char* k_solid__storagevolume_fs_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#label)
@@ -65,6 +72,7 @@ const char* k_solid__storagevolume_fs_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__StorageVolume*
+///
 const char* k_solid__storagevolume_label(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#uuid)
@@ -72,11 +80,13 @@ const char* k_solid__storagevolume_label(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__StorageVolume*
+///
 const char* k_solid__storagevolume_uuid(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#size)
 ///
 /// @param self Solid__StorageVolume*
+///
 uint64_t k_solid__storagevolume_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -85,6 +95,7 @@ uint64_t k_solid__storagevolume_size(void* self);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_solid__storagevolume_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -94,6 +105,7 @@ const char* k_solid__storagevolume_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_solid__storagevolume_tr3(const char* s, const char* c, int n);
 
 /// Inherited from Solid::DeviceInterface
@@ -101,6 +113,7 @@ const char* k_solid__storagevolume_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#isValid)
 ///
 /// @param self Solid__StorageVolume*
+///
 bool k_solid__storagevolume_is_valid(void* self);
 
 /// Inherited from Solid::DeviceInterface
@@ -110,6 +123,7 @@ bool k_solid__storagevolume_is_valid(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
+///
 const char* k_solid__storagevolume_type_to_string(int32_t type);
 
 /// Inherited from Solid::DeviceInterface
@@ -119,6 +133,7 @@ const char* k_solid__storagevolume_type_to_string(int32_t type);
 /// @param type const char*
 ///
 /// @return enum Solid__DeviceInterface__Type
+///
 int32_t k_solid__storagevolume_string_to_type(const char* type);
 
 /// Inherited from Solid::DeviceInterface
@@ -128,6 +143,7 @@ int32_t k_solid__storagevolume_string_to_type(const char* type);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
+///
 const char* k_solid__storagevolume_type_description(int32_t type);
 
 /// Inherited from QObject
@@ -136,6 +152,7 @@ const char* k_solid__storagevolume_type_description(int32_t type);
 ///
 /// @param self Solid__StorageVolume*
 /// @param event QEvent*
+///
 bool k_solid__storagevolume_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -145,6 +162,7 @@ bool k_solid__storagevolume_event(void* self, void* event);
 /// @param self Solid__StorageVolume*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_solid__storagevolume_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -154,6 +172,7 @@ bool k_solid__storagevolume_event_filter(void* self, void* watched, void* event)
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__StorageVolume*
+///
 const char* k_solid__storagevolume_object_name(void* self);
 
 /// Inherited from QObject
@@ -162,6 +181,7 @@ const char* k_solid__storagevolume_object_name(void* self);
 ///
 /// @param self Solid__StorageVolume*
 /// @param name char*
+///
 void k_solid__storagevolume_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -169,6 +189,7 @@ void k_solid__storagevolume_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self Solid__StorageVolume*
+///
 bool k_solid__storagevolume_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -176,6 +197,7 @@ bool k_solid__storagevolume_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self Solid__StorageVolume*
+///
 bool k_solid__storagevolume_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -183,6 +205,7 @@ bool k_solid__storagevolume_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self Solid__StorageVolume*
+///
 bool k_solid__storagevolume_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -190,6 +213,7 @@ bool k_solid__storagevolume_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self Solid__StorageVolume*
+///
 bool k_solid__storagevolume_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -198,6 +222,7 @@ bool k_solid__storagevolume_signals_blocked(void* self);
 ///
 /// @param self Solid__StorageVolume*
 /// @param b bool
+///
 bool k_solid__storagevolume_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -205,6 +230,7 @@ bool k_solid__storagevolume_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self Solid__StorageVolume*
+///
 QThread* k_solid__storagevolume_thread(void* self);
 
 /// Inherited from QObject
@@ -213,6 +239,7 @@ QThread* k_solid__storagevolume_thread(void* self);
 ///
 /// @param self Solid__StorageVolume*
 /// @param thread QThread*
+///
 bool k_solid__storagevolume_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -221,6 +248,7 @@ bool k_solid__storagevolume_move_to_thread(void* self, void* thread);
 ///
 /// @param self Solid__StorageVolume*
 /// @param interval int
+///
 int32_t k_solid__storagevolume_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -229,6 +257,7 @@ int32_t k_solid__storagevolume_start_timer(void* self, int interval);
 ///
 /// @param self Solid__StorageVolume*
 /// @param id int
+///
 void k_solid__storagevolume_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -237,6 +266,7 @@ void k_solid__storagevolume_kill_timer(void* self, int id);
 ///
 /// @param self Solid__StorageVolume*
 /// @param id enum Qt__TimerId
+///
 void k_solid__storagevolume_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -244,6 +274,7 @@ void k_solid__storagevolume_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self Solid__StorageVolume*
+///
 libqt_list /* of QObject* */ k_solid__storagevolume_children(void* self);
 
 /// Inherited from QObject
@@ -252,6 +283,7 @@ libqt_list /* of QObject* */ k_solid__storagevolume_children(void* self);
 ///
 /// @param self Solid__StorageVolume*
 /// @param parent QObject*
+///
 void k_solid__storagevolume_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -260,6 +292,7 @@ void k_solid__storagevolume_set_parent(void* self, void* parent);
 ///
 /// @param self Solid__StorageVolume*
 /// @param filterObj QObject*
+///
 void k_solid__storagevolume_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -268,6 +301,7 @@ void k_solid__storagevolume_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self Solid__StorageVolume*
 /// @param obj QObject*
+///
 void k_solid__storagevolume_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -278,6 +312,7 @@ void k_solid__storagevolume_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_solid__storagevolume_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -288,6 +323,7 @@ QMetaObject__Connection* k_solid__storagevolume_connect(void* sender, void* sign
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_solid__storagevolume_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -298,6 +334,7 @@ QMetaObject__Connection* k_solid__storagevolume_connect2(void* self, void* sende
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_solid__storagevolume_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -305,6 +342,7 @@ bool k_solid__storagevolume_disconnect(void* sender, void* signal, void* receive
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_solid__storagevolume_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -312,6 +350,7 @@ bool k_solid__storagevolume_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self Solid__StorageVolume*
+///
 void k_solid__storagevolume_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -319,6 +358,7 @@ void k_solid__storagevolume_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self Solid__StorageVolume*
+///
 void k_solid__storagevolume_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -328,6 +368,7 @@ void k_solid__storagevolume_dump_object_info(void* self);
 /// @param self Solid__StorageVolume*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_solid__storagevolume_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -336,6 +377,7 @@ bool k_solid__storagevolume_set_property(void* self, const char* name, void* val
 ///
 /// @param self Solid__StorageVolume*
 /// @param name const char*
+///
 QVariant* k_solid__storagevolume_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -345,6 +387,7 @@ QVariant* k_solid__storagevolume_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__StorageVolume*
+///
 const char** k_solid__storagevolume_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -352,6 +395,7 @@ const char** k_solid__storagevolume_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Solid__StorageVolume*
+///
 QBindingStorage* k_solid__storagevolume_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -359,6 +403,7 @@ QBindingStorage* k_solid__storagevolume_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Solid__StorageVolume*
+///
 const QBindingStorage* k_solid__storagevolume_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -366,6 +411,7 @@ const QBindingStorage* k_solid__storagevolume_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Solid__StorageVolume*
+///
 void k_solid__storagevolume_destroyed(void* self);
 
 /// Inherited from QObject
@@ -374,6 +420,7 @@ void k_solid__storagevolume_destroyed(void* self);
 ///
 /// @param self Solid__StorageVolume*
 /// @param callback void func(Solid__StorageVolume* self)
+///
 void k_solid__storagevolume_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -381,6 +428,7 @@ void k_solid__storagevolume_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self Solid__StorageVolume*
+///
 QObject* k_solid__storagevolume_parent(void* self);
 
 /// Inherited from QObject
@@ -389,6 +437,7 @@ QObject* k_solid__storagevolume_parent(void* self);
 ///
 /// @param self Solid__StorageVolume*
 /// @param classname const char*
+///
 bool k_solid__storagevolume_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -396,6 +445,7 @@ bool k_solid__storagevolume_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self Solid__StorageVolume*
+///
 void k_solid__storagevolume_delete_later(void* self);
 
 /// Inherited from QObject
@@ -405,6 +455,7 @@ void k_solid__storagevolume_delete_later(void* self);
 /// @param self Solid__StorageVolume*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_solid__storagevolume_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -414,6 +465,7 @@ bool k_solid__storagevolume_move_to_thread2(void* self, void* thread, void* para
 /// @param self Solid__StorageVolume*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_solid__storagevolume_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -425,6 +477,7 @@ int32_t k_solid__storagevolume_start_timer22(void* self, int interval, int32_t t
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_solid__storagevolume_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -436,6 +489,7 @@ QMetaObject__Connection* k_solid__storagevolume_connect5(void* sender, void* sig
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_solid__storagevolume_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -444,6 +498,7 @@ QMetaObject__Connection* k_solid__storagevolume_connect4(void* self, void* sende
 ///
 /// @param self Solid__StorageVolume*
 /// @param param1 QObject*
+///
 void k_solid__storagevolume_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -452,6 +507,7 @@ void k_solid__storagevolume_destroyed1(void* self, void* param1);
 ///
 /// @param self Solid__StorageVolume*
 /// @param callback void func(Solid__StorageVolume* self, QObject* param1)
+///
 void k_solid__storagevolume_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -462,14 +518,16 @@ void k_solid__storagevolume_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 /// @param self Solid__StorageVolume*
 /// @param callback void func(Solid__StorageVolume* self, const char* objectName)
+///
 void k_solid__storagevolume_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
 ///
 /// @param self Solid__StorageVolume*
+///
 void k_solid__storagevolume_delete(void* self);
 
-/// https://api.kde.org/solid-storagevolume.html#types
+/// [Upstream resources](https://api.kde.org/solid-storagevolume.html#public-types)
 
 typedef enum {
     SOLID_STORAGEVOLUME_USAGETYPE_OTHER = 0,

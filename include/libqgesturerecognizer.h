@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qgesturerecognizer.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html)
 
 /// q_gesturerecognizer_new constructs a new QGestureRecognizer object.
 ///
@@ -21,6 +21,7 @@ QGestureRecognizer* q_gesturerecognizer_new();
 ///
 /// @param self QGestureRecognizer*
 /// @param target QObject*
+///
 QGesture* q_gesturerecognizer_create(void* self, void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#create)
@@ -29,6 +30,7 @@ QGesture* q_gesturerecognizer_create(void* self, void* target);
 ///
 /// @param self QGestureRecognizer*
 /// @param callback QGesture* func(QGestureRecognizer* self, QObject* target)
+///
 void q_gesturerecognizer_on_create(void* self, QGesture* (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#create)
@@ -37,6 +39,7 @@ void q_gesturerecognizer_on_create(void* self, QGesture* (*callback)(void*, void
 ///
 /// @param self QGestureRecognizer*
 /// @param target QObject*
+///
 QGesture* q_gesturerecognizer_qbase_create(void* self, void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
@@ -47,6 +50,7 @@ QGesture* q_gesturerecognizer_qbase_create(void* self, void* target);
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
+///
 int32_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
@@ -55,6 +59,7 @@ int32_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, vo
 ///
 /// @param self QGestureRecognizer*
 /// @param callback int32_t func(QGestureRecognizer* self, QGesture* state, QObject* watched, QEvent* event)
+///
 void q_gesturerecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
@@ -67,12 +72,14 @@ void q_gesturerecognizer_on_recognize(void* self, int32_t (*callback)(void*, voi
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
+///
 int32_t q_gesturerecognizer_qbase_recognize(void* self, void* state, void* watched, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)
 ///
 /// @param self QGestureRecognizer*
 /// @param state QGesture*
+///
 void q_gesturerecognizer_reset(void* self, void* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)
@@ -81,6 +88,7 @@ void q_gesturerecognizer_reset(void* self, void* state);
 ///
 /// @param self QGestureRecognizer*
 /// @param callback void func(QGestureRecognizer* self, QGesture* state)
+///
 void q_gesturerecognizer_on_reset(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)
@@ -89,6 +97,7 @@ void q_gesturerecognizer_on_reset(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QGestureRecognizer*
 /// @param state QGesture*
+///
 void q_gesturerecognizer_qbase_reset(void* self, void* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#registerRecognizer)
@@ -96,17 +105,20 @@ void q_gesturerecognizer_qbase_reset(void* self, void* state);
 /// @param recognizer QGestureRecognizer*
 ///
 /// @return enum Qt__GestureType
+///
 int64_t q_gesturerecognizer_register_recognizer(void* recognizer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#unregisterRecognizer)
 ///
 /// @param type enum Qt__GestureType
+///
 void q_gesturerecognizer_unregister_recognizer(int64_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#operator-eq)
 ///
 /// @param self QGestureRecognizer*
 /// @param param1 QGestureRecognizer*
+///
 void q_gesturerecognizer_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#dtor.QGestureRecognizer)
@@ -114,9 +126,10 @@ void q_gesturerecognizer_operator_assign(void* self, void* param1);
 /// Delete this object from C++ memory.
 ///
 /// @param self QGestureRecognizer*
+///
 void q_gesturerecognizer_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qgesturerecognizer.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#public-types)
 
 typedef enum {
     QGESTURERECOGNIZER_RESULTFLAG_IGNORE = 1,

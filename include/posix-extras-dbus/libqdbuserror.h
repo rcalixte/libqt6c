@@ -11,44 +11,56 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qdbuserror.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
 
 /// q_dbuserror_new constructs a new QDBusError object.
 ///
 QDBusError* q_dbuserror_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
+
 /// q_dbuserror_new2 constructs a new QDBusError object.
 ///
 /// @param msg QDBusMessage*
+///
 QDBusError* q_dbuserror_new2(void* msg);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
 
 /// q_dbuserror_new3 constructs a new QDBusError object.
 ///
 /// @param error enum QDBusError__ErrorType
 /// @param message const char*
+///
 QDBusError* q_dbuserror_new3(int32_t error, const char* message);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
 
 /// q_dbuserror_new4 constructs a new QDBusError object.
 ///
 /// @param other QDBusError*
+///
 QDBusError* q_dbuserror_new4(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
 ///
 /// @param self QDBusError*
 /// @param other QDBusError*
+///
 void q_dbuserror_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
 ///
 /// @param self QDBusError*
 /// @param msg QDBusMessage*
+///
 void q_dbuserror_operator_assign2(void* self, void* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#swap)
 ///
 /// @param self QDBusError*
 /// @param other QDBusError*
+///
 void q_dbuserror_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#type)
@@ -56,6 +68,7 @@ void q_dbuserror_swap(void* self, void* other);
 /// @param self QDBusError*
 ///
 /// @return enum QDBusError__ErrorType
+///
 int32_t q_dbuserror_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#name)
@@ -63,6 +76,7 @@ int32_t q_dbuserror_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusError*
+///
 const char* q_dbuserror_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#message)
@@ -70,11 +84,13 @@ const char* q_dbuserror_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusError*
+///
 const char* q_dbuserror_message(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#isValid)
 ///
 /// @param self QDBusError*
+///
 bool q_dbuserror_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#errorString)
@@ -82,6 +98,7 @@ bool q_dbuserror_is_valid(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param error enum QDBusError__ErrorType
+///
 const char* q_dbuserror_error_string(int32_t error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#dtor.QDBusError)
@@ -89,9 +106,10 @@ const char* q_dbuserror_error_string(int32_t error);
 /// Delete this object from C++ memory.
 ///
 /// @param self QDBusError*
+///
 void q_dbuserror_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qdbuserror.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#public-types)
 
 typedef enum {
     QDBUSERROR_ERRORTYPE_NOERROR = 0,

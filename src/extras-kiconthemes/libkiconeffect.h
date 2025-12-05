@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kiconeffect.html
+/// [Upstream resources](https://api.kde.org/kiconeffect.html)
 
 /// k_iconeffect_new constructs a new KIconEffect object.
 ///
@@ -20,6 +20,7 @@ KIconEffect* k_iconeffect_new();
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#init)
 ///
 /// @param self KIconEffect*
+///
 void k_iconeffect_init(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#hasEffect)
@@ -27,6 +28,7 @@ void k_iconeffect_init(void* self);
 /// @param self KIconEffect*
 /// @param group int
 /// @param state int
+///
 bool k_iconeffect_has_effect(void* self, int group, int state);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#fingerprint)
@@ -36,6 +38,7 @@ bool k_iconeffect_has_effect(void* self, int group, int state);
 /// @param self KIconEffect*
 /// @param group int
 /// @param state int
+///
 const char* k_iconeffect_fingerprint(void* self, int group, int state);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#apply)
@@ -44,6 +47,7 @@ const char* k_iconeffect_fingerprint(void* self, int group, int state);
 /// @param src QImage*
 /// @param group int
 /// @param state int
+///
 QImage* k_iconeffect_apply(void* self, void* src, int group, int state);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#apply)
@@ -54,6 +58,7 @@ QImage* k_iconeffect_apply(void* self, void* src, int group, int state);
 /// @param value float
 /// @param rgb QColor*
 /// @param trans bool
+///
 QImage* k_iconeffect_apply2(void* self, void* src, int effect, float value, void* rgb, bool trans);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#apply)
@@ -65,6 +70,7 @@ QImage* k_iconeffect_apply2(void* self, void* src, int effect, float value, void
 /// @param rgb QColor*
 /// @param rgb2 QColor*
 /// @param trans bool
+///
 QImage* k_iconeffect_apply3(void* self, void* src, int effect, float value, void* rgb, void* rgb2, bool trans);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#apply)
@@ -73,6 +79,7 @@ QImage* k_iconeffect_apply3(void* self, void* src, int effect, float value, void
 /// @param src QPixmap*
 /// @param group int
 /// @param state int
+///
 QPixmap* k_iconeffect_apply4(void* self, void* src, int group, int state);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#apply)
@@ -83,6 +90,7 @@ QPixmap* k_iconeffect_apply4(void* self, void* src, int group, int state);
 /// @param value float
 /// @param rgb QColor*
 /// @param trans bool
+///
 QPixmap* k_iconeffect_apply5(void* self, void* src, int effect, float value, void* rgb, bool trans);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#apply)
@@ -94,18 +102,21 @@ QPixmap* k_iconeffect_apply5(void* self, void* src, int effect, float value, voi
 /// @param rgb QColor*
 /// @param rgb2 QColor*
 /// @param trans bool
+///
 QPixmap* k_iconeffect_apply6(void* self, void* src, int effect, float value, void* rgb, void* rgb2, bool trans);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#doublePixels)
 ///
 /// @param self KIconEffect*
 /// @param src QImage*
+///
 QImage* k_iconeffect_double_pixels(void* self, void* src);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#toGray)
 ///
 /// @param image QImage*
 /// @param value float
+///
 void k_iconeffect_to_gray(void* image, float value);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#colorize)
@@ -113,6 +124,7 @@ void k_iconeffect_to_gray(void* image, float value);
 /// @param image QImage*
 /// @param col QColor*
 /// @param value float
+///
 void k_iconeffect_colorize(void* image, void* col, float value);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#toMonochrome)
@@ -121,54 +133,64 @@ void k_iconeffect_colorize(void* image, void* col, float value);
 /// @param black QColor*
 /// @param white QColor*
 /// @param value float
+///
 void k_iconeffect_to_monochrome(void* image, void* black, void* white, float value);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#deSaturate)
 ///
 /// @param image QImage*
 /// @param value float
+///
 void k_iconeffect_de_saturate(void* image, float value);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#toGamma)
 ///
 /// @param image QImage*
 /// @param value float
+///
 void k_iconeffect_to_gamma(void* image, float value);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#semiTransparent)
 ///
 /// @param image QImage*
+///
 void k_iconeffect_semi_transparent(void* image);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#semiTransparent)
 ///
 /// @param pixmap QPixmap*
+///
 void k_iconeffect_semi_transparent2(void* pixmap);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#overlay)
 ///
 /// @param src QImage*
 /// @param overlay QImage*
+///
 void k_iconeffect_overlay(void* src, void* overlay);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#toDisabled)
 ///
 /// @param image QImage*
+///
 void k_iconeffect_to_disabled(void* image);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#toDisabled)
 ///
 /// @param pixmap QPixmap*
+///
 void k_iconeffect_to_disabled2(void* pixmap);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#toActive)
 ///
 /// @param image QImage*
+///
 void k_iconeffect_to_active(void* image);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#toActive)
 ///
 /// @param pixmap QPixmap*
+///
 void k_iconeffect_to_active2(void* pixmap);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#dtor.KIconEffect)
@@ -176,9 +198,10 @@ void k_iconeffect_to_active2(void* pixmap);
 /// Delete this object from C++ memory.
 ///
 /// @param self KIconEffect*
+///
 void k_iconeffect_delete(void* self);
 
-/// https://api.kde.org/kiconeffect.html#types
+/// [Upstream resources](https://api.kde.org/kiconeffect.html#public-types)
 
 typedef enum {
     KICONEFFECT_EFFECTS_NOEFFECT = 0,

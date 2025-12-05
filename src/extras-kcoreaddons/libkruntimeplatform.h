@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kruntimeplatform.html
+/// [Upstream resources](https://api.kde.org/kruntimeplatform.html)
 
 /// [Upstream resources](https://api.kde.org/kruntimeplatform.html#runtimePlatform)
 ///

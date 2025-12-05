@@ -11,27 +11,36 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kiconengine.html
+/// [Upstream resources](https://api.kde.org/kiconengine.html)
 
 /// k_iconengine_new constructs a new KIconEngine object.
 ///
 /// @param iconName const char*
 /// @param iconLoader KIconLoader*
 /// @param overlays const char**
+///
 KIconEngine* k_iconengine_new(const char* iconName, void* iconLoader, const char* overlays[static 1]);
+
+/// [Upstream resources](https://api.kde.org/kiconengine.html)
 
 /// k_iconengine_new2 constructs a new KIconEngine object.
 ///
 /// @param iconName const char*
 /// @param iconLoader KIconLoader*
+///
 KIconEngine* k_iconengine_new2(const char* iconName, void* iconLoader);
+
+/// [Upstream resources](https://api.kde.org/kiconengine.html)
 
 /// k_iconengine_new3 constructs a new KIconEngine object.
 ///
 /// @param iconName const char*
 /// @param colors KIconColors*
 /// @param iconLoader KIconLoader*
+///
 KIconEngine* k_iconengine_new3(const char* iconName, void* colors, void* iconLoader);
+
+/// [Upstream resources](https://api.kde.org/kiconengine.html)
 
 /// k_iconengine_new4 constructs a new KIconEngine object.
 ///
@@ -39,11 +48,15 @@ KIconEngine* k_iconengine_new3(const char* iconName, void* colors, void* iconLoa
 /// @param colors KIconColors*
 /// @param iconLoader KIconLoader*
 /// @param overlays const char**
+///
 KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoader, const char* overlays[static 1]);
+
+/// [Upstream resources](https://api.kde.org/kiconengine.html)
 
 /// k_iconengine_new5 constructs a new KIconEngine object.
 ///
 /// @param param1 KIconEngine*
+///
 KIconEngine* k_iconengine_new5(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#actualSize)
@@ -52,6 +65,7 @@ KIconEngine* k_iconengine_new5(void* param1);
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QSize* k_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#actualSize)
@@ -60,6 +74,7 @@ QSize* k_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t st
 ///
 /// @param self KIconEngine*
 /// @param callback QSize* func(KIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void k_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#actualSize)
@@ -70,6 +85,7 @@ void k_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, in
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QSize* k_iconengine_qbase_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#paint)
@@ -79,6 +95,7 @@ QSize* k_iconengine_qbase_actual_size(void* self, void* size, int32_t mode, int3
 /// @param rect QRect*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void k_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#paint)
@@ -87,6 +104,7 @@ void k_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int
 ///
 /// @param self KIconEngine*
 /// @param callback void func(KIconEngine* self, QPainter* painter, QRect* rect, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void k_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#paint)
@@ -98,6 +116,7 @@ void k_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int
 /// @param rect QRect*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void k_iconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#pixmap)
@@ -106,6 +125,7 @@ void k_iconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mod
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QPixmap* k_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#pixmap)
@@ -114,6 +134,7 @@ QPixmap* k_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state
 ///
 /// @param self KIconEngine*
 /// @param callback QPixmap* func(KIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void k_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#pixmap)
@@ -124,6 +145,7 @@ void k_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QPixmap* k_iconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#scaledPixmap)
@@ -133,6 +155,7 @@ QPixmap* k_iconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 /// @param scale double
+///
 QPixmap* k_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#scaledPixmap)
@@ -141,6 +164,7 @@ QPixmap* k_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_
 ///
 /// @param self KIconEngine*
 /// @param callback QPixmap* func(KIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state, double scale)
+///
 void k_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#scaledPixmap)
@@ -152,6 +176,7 @@ void k_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 /// @param scale double
+///
 QPixmap* k_iconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#iconName)
@@ -159,6 +184,7 @@ QPixmap* k_iconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconEngine*
+///
 const char* k_iconengine_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#iconName)
@@ -167,6 +193,7 @@ const char* k_iconengine_icon_name(void* self);
 ///
 /// @param self KIconEngine*
 /// @param callback const char* func()
+///
 void k_iconengine_on_icon_name(void* self, const char* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#iconName)
@@ -174,6 +201,7 @@ void k_iconengine_on_icon_name(void* self, const char* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KIconEngine*
+///
 const char* k_iconengine_qbase_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#availableSizes)
@@ -181,6 +209,7 @@ const char* k_iconengine_qbase_icon_name(void* self);
 /// @param self KIconEngine*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 libqt_list /* of QSize* */ k_iconengine_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#availableSizes)
@@ -189,6 +218,7 @@ libqt_list /* of QSize* */ k_iconengine_available_sizes(void* self, int32_t mode
 ///
 /// @param self KIconEngine*
 /// @param callback QSize** func(KIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void k_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int32_t, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#availableSizes)
@@ -198,11 +228,13 @@ void k_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int3
 /// @param self KIconEngine*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 libqt_list /* of QSize* */ k_iconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#isNull)
 ///
 /// @param self KIconEngine*
+///
 bool k_iconengine_is_null(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#isNull)
@@ -211,6 +243,7 @@ bool k_iconengine_is_null(void* self);
 ///
 /// @param self KIconEngine*
 /// @param callback bool func()
+///
 void k_iconengine_on_is_null(void* self, bool (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#isNull)
@@ -218,6 +251,7 @@ void k_iconengine_on_is_null(void* self, bool (*callback)());
 /// Base class method implementation
 ///
 /// @param self KIconEngine*
+///
 bool k_iconengine_qbase_is_null(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#key)
@@ -225,6 +259,7 @@ bool k_iconengine_qbase_is_null(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconEngine*
+///
 const char* k_iconengine_key(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#key)
@@ -233,6 +268,7 @@ const char* k_iconengine_key(void* self);
 ///
 /// @param self KIconEngine*
 /// @param callback const char* func()
+///
 void k_iconengine_on_key(void* self, const char* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#key)
@@ -240,11 +276,13 @@ void k_iconengine_on_key(void* self, const char* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KIconEngine*
+///
 const char* k_iconengine_qbase_key(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#clone)
 ///
 /// @param self KIconEngine*
+///
 QIconEngine* k_iconengine_clone(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#clone)
@@ -253,6 +291,7 @@ QIconEngine* k_iconengine_clone(void* self);
 ///
 /// @param self KIconEngine*
 /// @param callback QIconEngine* func()
+///
 void k_iconengine_on_clone(void* self, QIconEngine* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#clone)
@@ -260,12 +299,14 @@ void k_iconengine_on_clone(void* self, QIconEngine* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KIconEngine*
+///
 QIconEngine* k_iconengine_qbase_clone(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#read)
 ///
 /// @param self KIconEngine*
 /// @param in QDataStream*
+///
 bool k_iconengine_read(void* self, void* in);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#read)
@@ -274,6 +315,7 @@ bool k_iconengine_read(void* self, void* in);
 ///
 /// @param self KIconEngine*
 /// @param callback bool func(KIconEngine* self, QDataStream* in)
+///
 void k_iconengine_on_read(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#read)
@@ -282,12 +324,14 @@ void k_iconengine_on_read(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self KIconEngine*
 /// @param in QDataStream*
+///
 bool k_iconengine_qbase_read(void* self, void* in);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#write)
 ///
 /// @param self KIconEngine*
 /// @param out QDataStream*
+///
 bool k_iconengine_write(void* self, void* out);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#write)
@@ -296,6 +340,7 @@ bool k_iconengine_write(void* self, void* out);
 ///
 /// @param self KIconEngine*
 /// @param callback bool func(KIconEngine* self, QDataStream* out)
+///
 void k_iconengine_on_write(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#write)
@@ -304,6 +349,7 @@ void k_iconengine_on_write(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self KIconEngine*
 /// @param out QDataStream*
+///
 bool k_iconengine_qbase_write(void* self, void* out);
 
 /// Inherited from QIconEngine
@@ -316,6 +362,7 @@ bool k_iconengine_qbase_write(void* self, void* out);
 /// @param pixmap QPixmap*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void k_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
@@ -328,6 +375,7 @@ void k_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t sta
 /// @param pixmap QPixmap*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void k_iconengine_qbase_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
@@ -338,6 +386,7 @@ void k_iconengine_qbase_add_pixmap(void* self, void* pixmap, int32_t mode, int32
 ///
 /// @param self KIconEngine*
 /// @param callback void func(KIconEngine* self, QPixmap* pixmap, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void k_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t));
 
 /// Inherited from QIconEngine
@@ -351,6 +400,7 @@ void k_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void k_iconengine_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
@@ -364,6 +414,7 @@ void k_iconengine_add_file(void* self, const char* fileName, void* size, int32_t
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void k_iconengine_qbase_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
@@ -374,6 +425,7 @@ void k_iconengine_qbase_add_file(void* self, const char* fileName, void* size, i
 ///
 /// @param self KIconEngine*
 /// @param callback void func(KIconEngine* self, const char* fileName, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void k_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t));
 
 /// Inherited from QIconEngine
@@ -385,6 +437,7 @@ void k_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, v
 /// @param self KIconEngine*
 /// @param id int
 /// @param data void*
+///
 void k_iconengine_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from QIconEngine
@@ -396,6 +449,7 @@ void k_iconengine_virtual_hook(void* self, int id, void* data);
 /// @param self KIconEngine*
 /// @param id int
 /// @param data void*
+///
 void k_iconengine_qbase_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from QIconEngine
@@ -406,6 +460,7 @@ void k_iconengine_qbase_virtual_hook(void* self, int id, void* data);
 ///
 /// @param self KIconEngine*
 /// @param callback void func(KIconEngine* self, int id, void* data)
+///
 void k_iconengine_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#dtor.KIconEngine)
@@ -413,6 +468,7 @@ void k_iconengine_on_virtual_hook(void* self, void (*callback)(void*, int, void*
 /// Delete this object from C++ memory.
 ///
 /// @param self KIconEngine*
+///
 void k_iconengine_delete(void* self);
 
 #endif

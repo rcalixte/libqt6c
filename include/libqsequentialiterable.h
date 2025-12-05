@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsequentialiterable.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qsequentialiterable.html#public-types)
 
 typedef enum {
     QSEQUENTIALITERABLE_POSITION_UNSPECIFIED = 0,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kstyleextensions.html
+/// [Upstream resources](https://api.kde.org/kstyleextensions.html)
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customControlElement)
 ///
@@ -19,6 +19,7 @@
 /// @param param2 QWidget*
 ///
 /// @return enum QStyle__ControlElement
+///
 int64_t k_styleextensions_custom_control_element(const char* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customStyleHint)
@@ -27,6 +28,7 @@ int64_t k_styleextensions_custom_control_element(const char* param1, void* param
 /// @param param2 QWidget*
 ///
 /// @return enum QStyle__StyleHint
+///
 int64_t k_styleextensions_custom_style_hint(const char* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customSubElement)
@@ -35,5 +37,6 @@ int64_t k_styleextensions_custom_style_hint(const char* param1, void* param2);
 /// @param param2 QWidget*
 ///
 /// @return enum QStyle__SubElement
+///
 int64_t k_styleextensions_custom_sub_element(const char* param1, void* param2);
 #endif

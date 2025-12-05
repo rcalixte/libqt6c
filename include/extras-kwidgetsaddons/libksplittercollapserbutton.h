@@ -11,33 +11,38 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ksplittercollapserbutton.html
+/// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html)
 
 /// k_splittercollapserbutton_new constructs a new KSplitterCollapserButton object.
 ///
 /// @param childWidget QWidget*
 /// @param splitter QSplitter*
+///
 KSplitterCollapserButton* k_splittercollapserbutton_new(void* childWidget, void* splitter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSplitterCollapserButton*
+///
 const QMetaObject* k_splittercollapserbutton_meta_object(void* self);
 
 /// @param self KSplitterCollapserButton*
 /// @param param1 const char*
+///
 void* k_splittercollapserbutton_metacast(void* self, const char* param1);
 
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_splittercollapserbutton_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback int32_t func(KSplitterCollapserButton* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_splittercollapserbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -46,6 +51,7 @@ void k_splittercollapserbutton_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_splittercollapserbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -53,16 +59,19 @@ int32_t k_splittercollapserbutton_qbase_metacall(void* self, int32_t param1, int
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_splittercollapserbutton_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#isWidgetCollapsed)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_widget_collapsed(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#sizeHint)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#sizeHint)
@@ -71,6 +80,7 @@ QSize* k_splittercollapserbutton_size_hint(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QSize* func()
+///
 void k_splittercollapserbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#sizeHint)
@@ -78,22 +88,26 @@ void k_splittercollapserbutton_on_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_qbase_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#collapse)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_collapse(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#restore)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_restore(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#setCollapsed)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param collapsed bool
+///
 void k_splittercollapserbutton_set_collapsed(void* self, bool collapsed);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#eventFilter)
@@ -101,6 +115,7 @@ void k_splittercollapserbutton_set_collapsed(void* self, bool collapsed);
 /// @param self KSplitterCollapserButton*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool k_splittercollapserbutton_event_filter(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#eventFilter)
@@ -109,6 +124,7 @@ bool k_splittercollapserbutton_event_filter(void* self, void* param1, void* para
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func(KSplitterCollapserButton* self, QObject* param1, QEvent* param2)
+///
 void k_splittercollapserbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#eventFilter)
@@ -118,12 +134,14 @@ void k_splittercollapserbutton_on_event_filter(void* self, bool (*callback)(void
 /// @param self KSplitterCollapserButton*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool k_splittercollapserbutton_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#paintEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPaintEvent*
+///
 void k_splittercollapserbutton_paint_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#paintEvent)
@@ -132,6 +150,7 @@ void k_splittercollapserbutton_paint_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QPaintEvent* param1)
+///
 void k_splittercollapserbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#paintEvent)
@@ -140,12 +159,14 @@ void k_splittercollapserbutton_on_paint_event(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPaintEvent*
+///
 void k_splittercollapserbutton_qbase_paint_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#enterEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEnterEvent*
+///
 void k_splittercollapserbutton_enter_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#enterEvent)
@@ -154,6 +175,7 @@ void k_splittercollapserbutton_enter_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QEnterEvent* event)
+///
 void k_splittercollapserbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#enterEvent)
@@ -162,12 +184,14 @@ void k_splittercollapserbutton_on_enter_event(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEnterEvent*
+///
 void k_splittercollapserbutton_qbase_enter_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#leaveEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEvent*
+///
 void k_splittercollapserbutton_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#leaveEvent)
@@ -176,6 +200,7 @@ void k_splittercollapserbutton_leave_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QEvent* event)
+///
 void k_splittercollapserbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#leaveEvent)
@@ -184,12 +209,14 @@ void k_splittercollapserbutton_on_leave_event(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEvent*
+///
 void k_splittercollapserbutton_qbase_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#showEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QShowEvent*
+///
 void k_splittercollapserbutton_show_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#showEvent)
@@ -198,6 +225,7 @@ void k_splittercollapserbutton_show_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QShowEvent* event)
+///
 void k_splittercollapserbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#showEvent)
@@ -206,6 +234,7 @@ void k_splittercollapserbutton_on_show_event(void* self, void (*callback)(void*,
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QShowEvent*
+///
 void k_splittercollapserbutton_qbase_show_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -214,6 +243,7 @@ void k_splittercollapserbutton_qbase_show_event(void* self, void* event);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_splittercollapserbutton_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -223,6 +253,7 @@ const char* k_splittercollapserbutton_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_splittercollapserbutton_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QToolButton
@@ -232,6 +263,7 @@ const char* k_splittercollapserbutton_tr3(const char* s, const char* c, int n);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum Qt__ToolButtonStyle
+///
 int32_t k_splittercollapserbutton_tool_button_style(void* self);
 
 /// Inherited from QToolButton
@@ -241,6 +273,7 @@ int32_t k_splittercollapserbutton_tool_button_style(void* self);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum Qt__ArrowType
+///
 int32_t k_splittercollapserbutton_arrow_type(void* self);
 
 /// Inherited from QToolButton
@@ -249,6 +282,7 @@ int32_t k_splittercollapserbutton_arrow_type(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param type enum Qt__ArrowType
+///
 void k_splittercollapserbutton_set_arrow_type(void* self, int32_t type);
 
 /// Inherited from QToolButton
@@ -257,6 +291,7 @@ void k_splittercollapserbutton_set_arrow_type(void* self, int32_t type);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param menu QMenu*
+///
 void k_splittercollapserbutton_set_menu(void* self, void* menu);
 
 /// Inherited from QToolButton
@@ -264,6 +299,7 @@ void k_splittercollapserbutton_set_menu(void* self, void* menu);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#menu)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QMenu* k_splittercollapserbutton_menu(void* self);
 
 /// Inherited from QToolButton
@@ -272,6 +308,7 @@ QMenu* k_splittercollapserbutton_menu(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param mode enum QToolButton__ToolButtonPopupMode
+///
 void k_splittercollapserbutton_set_popup_mode(void* self, int32_t mode);
 
 /// Inherited from QToolButton
@@ -281,6 +318,7 @@ void k_splittercollapserbutton_set_popup_mode(void* self, int32_t mode);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum QToolButton__ToolButtonPopupMode
+///
 int32_t k_splittercollapserbutton_popup_mode(void* self);
 
 /// Inherited from QToolButton
@@ -288,6 +326,7 @@ int32_t k_splittercollapserbutton_popup_mode(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#defaultAction)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QAction* k_splittercollapserbutton_default_action(void* self);
 
 /// Inherited from QToolButton
@@ -296,6 +335,7 @@ QAction* k_splittercollapserbutton_default_action(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param enable bool
+///
 void k_splittercollapserbutton_set_auto_raise(void* self, bool enable);
 
 /// Inherited from QToolButton
@@ -303,6 +343,7 @@ void k_splittercollapserbutton_set_auto_raise(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#autoRaise)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_auto_raise(void* self);
 
 /// Inherited from QToolButton
@@ -310,6 +351,7 @@ bool k_splittercollapserbutton_auto_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#showMenu)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_show_menu(void* self);
 
 /// Inherited from QToolButton
@@ -318,6 +360,7 @@ void k_splittercollapserbutton_show_menu(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param style enum Qt__ToolButtonStyle
+///
 void k_splittercollapserbutton_set_tool_button_style(void* self, int32_t style);
 
 /// Inherited from QToolButton
@@ -326,6 +369,7 @@ void k_splittercollapserbutton_set_tool_button_style(void* self, int32_t style);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param defaultAction QAction*
+///
 void k_splittercollapserbutton_set_default_action(void* self, void* defaultAction);
 
 /// Inherited from QToolButton
@@ -334,6 +378,7 @@ void k_splittercollapserbutton_set_default_action(void* self, void* defaultActio
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QAction*
+///
 void k_splittercollapserbutton_triggered(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -342,6 +387,7 @@ void k_splittercollapserbutton_triggered(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QAction* param1)
+///
 void k_splittercollapserbutton_on_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -350,6 +396,7 @@ void k_splittercollapserbutton_on_triggered(void* self, void (*callback)(void*, 
 ///
 /// @param self KSplitterCollapserButton*
 /// @param text const char*
+///
 void k_splittercollapserbutton_set_text(void* self, const char* text);
 
 /// Inherited from QAbstractButton
@@ -359,6 +406,7 @@ void k_splittercollapserbutton_set_text(void* self, const char* text);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_text(void* self);
 
 /// Inherited from QAbstractButton
@@ -367,6 +415,7 @@ const char* k_splittercollapserbutton_text(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param icon QIcon*
+///
 void k_splittercollapserbutton_set_icon(void* self, void* icon);
 
 /// Inherited from QAbstractButton
@@ -374,6 +423,7 @@ void k_splittercollapserbutton_set_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#icon)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QIcon* k_splittercollapserbutton_icon(void* self);
 
 /// Inherited from QAbstractButton
@@ -381,6 +431,7 @@ QIcon* k_splittercollapserbutton_icon(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#iconSize)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_icon_size(void* self);
 
 /// Inherited from QAbstractButton
@@ -389,6 +440,7 @@ QSize* k_splittercollapserbutton_icon_size(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param key QKeySequence*
+///
 void k_splittercollapserbutton_set_shortcut(void* self, void* key);
 
 /// Inherited from QAbstractButton
@@ -396,6 +448,7 @@ void k_splittercollapserbutton_set_shortcut(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#shortcut)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QKeySequence* k_splittercollapserbutton_shortcut(void* self);
 
 /// Inherited from QAbstractButton
@@ -404,6 +457,7 @@ QKeySequence* k_splittercollapserbutton_shortcut(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param checkable bool
+///
 void k_splittercollapserbutton_set_checkable(void* self, bool checkable);
 
 /// Inherited from QAbstractButton
@@ -411,6 +465,7 @@ void k_splittercollapserbutton_set_checkable(void* self, bool checkable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isCheckable)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_checkable(void* self);
 
 /// Inherited from QAbstractButton
@@ -418,6 +473,7 @@ bool k_splittercollapserbutton_is_checkable(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isChecked)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_checked(void* self);
 
 /// Inherited from QAbstractButton
@@ -426,6 +482,7 @@ bool k_splittercollapserbutton_is_checked(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param down bool
+///
 void k_splittercollapserbutton_set_down(void* self, bool down);
 
 /// Inherited from QAbstractButton
@@ -433,6 +490,7 @@ void k_splittercollapserbutton_set_down(void* self, bool down);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isDown)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_down(void* self);
 
 /// Inherited from QAbstractButton
@@ -441,6 +499,7 @@ bool k_splittercollapserbutton_is_down(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param autoRepeat bool
+///
 void k_splittercollapserbutton_set_auto_repeat(void* self, bool autoRepeat);
 
 /// Inherited from QAbstractButton
@@ -448,6 +507,7 @@ void k_splittercollapserbutton_set_auto_repeat(void* self, bool autoRepeat);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeat)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_auto_repeat(void* self);
 
 /// Inherited from QAbstractButton
@@ -456,6 +516,7 @@ bool k_splittercollapserbutton_auto_repeat(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param autoRepeatDelay int
+///
 void k_splittercollapserbutton_set_auto_repeat_delay(void* self, int autoRepeatDelay);
 
 /// Inherited from QAbstractButton
@@ -463,6 +524,7 @@ void k_splittercollapserbutton_set_auto_repeat_delay(void* self, int autoRepeatD
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatDelay)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_auto_repeat_delay(void* self);
 
 /// Inherited from QAbstractButton
@@ -471,6 +533,7 @@ int32_t k_splittercollapserbutton_auto_repeat_delay(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param autoRepeatInterval int
+///
 void k_splittercollapserbutton_set_auto_repeat_interval(void* self, int autoRepeatInterval);
 
 /// Inherited from QAbstractButton
@@ -478,6 +541,7 @@ void k_splittercollapserbutton_set_auto_repeat_interval(void* self, int autoRepe
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatInterval)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_auto_repeat_interval(void* self);
 
 /// Inherited from QAbstractButton
@@ -486,6 +550,7 @@ int32_t k_splittercollapserbutton_auto_repeat_interval(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param autoExclusive bool
+///
 void k_splittercollapserbutton_set_auto_exclusive(void* self, bool autoExclusive);
 
 /// Inherited from QAbstractButton
@@ -493,6 +558,7 @@ void k_splittercollapserbutton_set_auto_exclusive(void* self, bool autoExclusive
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoExclusive)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_auto_exclusive(void* self);
 
 /// Inherited from QAbstractButton
@@ -500,6 +566,7 @@ bool k_splittercollapserbutton_auto_exclusive(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#group)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QButtonGroup* k_splittercollapserbutton_group(void* self);
 
 /// Inherited from QAbstractButton
@@ -508,6 +575,7 @@ QButtonGroup* k_splittercollapserbutton_group(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param size QSize*
+///
 void k_splittercollapserbutton_set_icon_size(void* self, void* size);
 
 /// Inherited from QAbstractButton
@@ -515,6 +583,7 @@ void k_splittercollapserbutton_set_icon_size(void* self, void* size);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#animateClick)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_animate_click(void* self);
 
 /// Inherited from QAbstractButton
@@ -522,6 +591,7 @@ void k_splittercollapserbutton_animate_click(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#click)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_click(void* self);
 
 /// Inherited from QAbstractButton
@@ -529,6 +599,7 @@ void k_splittercollapserbutton_click(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#toggle)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_toggle(void* self);
 
 /// Inherited from QAbstractButton
@@ -537,6 +608,7 @@ void k_splittercollapserbutton_toggle(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param checked bool
+///
 void k_splittercollapserbutton_set_checked(void* self, bool checked);
 
 /// Inherited from QAbstractButton
@@ -544,6 +616,7 @@ void k_splittercollapserbutton_set_checked(void* self, bool checked);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_pressed(void* self);
 
 /// Inherited from QAbstractButton
@@ -552,6 +625,7 @@ void k_splittercollapserbutton_pressed(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self)
+///
 void k_splittercollapserbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -559,6 +633,7 @@ void k_splittercollapserbutton_on_pressed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_released(void* self);
 
 /// Inherited from QAbstractButton
@@ -567,6 +642,7 @@ void k_splittercollapserbutton_released(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self)
+///
 void k_splittercollapserbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -574,6 +650,7 @@ void k_splittercollapserbutton_on_released(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_clicked(void* self);
 
 /// Inherited from QAbstractButton
@@ -582,6 +659,7 @@ void k_splittercollapserbutton_clicked(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self)
+///
 void k_splittercollapserbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -590,6 +668,7 @@ void k_splittercollapserbutton_on_clicked(void* self, void (*callback)(void*));
 ///
 /// @param self KSplitterCollapserButton*
 /// @param checked bool
+///
 void k_splittercollapserbutton_toggled(void* self, bool checked);
 
 /// Inherited from QAbstractButton
@@ -598,6 +677,7 @@ void k_splittercollapserbutton_toggled(void* self, bool checked);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, bool checked)
+///
 void k_splittercollapserbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -606,6 +686,7 @@ void k_splittercollapserbutton_on_toggled(void* self, void (*callback)(void*, bo
 ///
 /// @param self KSplitterCollapserButton*
 /// @param checked bool
+///
 void k_splittercollapserbutton_clicked1(void* self, bool checked);
 
 /// Inherited from QAbstractButton
@@ -614,6 +695,7 @@ void k_splittercollapserbutton_clicked1(void* self, bool checked);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, bool checked)
+///
 void k_splittercollapserbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -621,6 +703,7 @@ void k_splittercollapserbutton_on_clicked1(void* self, void (*callback)(void*, b
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KSplitterCollapserButton*
+///
 uintptr_t k_splittercollapserbutton_win_id(void* self);
 
 /// Inherited from QWidget
@@ -628,6 +711,7 @@ uintptr_t k_splittercollapserbutton_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -635,6 +719,7 @@ void k_splittercollapserbutton_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KSplitterCollapserButton*
+///
 uintptr_t k_splittercollapserbutton_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -642,6 +727,7 @@ uintptr_t k_splittercollapserbutton_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KSplitterCollapserButton*
+///
 uintptr_t k_splittercollapserbutton_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -649,6 +735,7 @@ uintptr_t k_splittercollapserbutton_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QStyle* k_splittercollapserbutton_style(void* self);
 
 /// Inherited from QWidget
@@ -657,6 +744,7 @@ QStyle* k_splittercollapserbutton_style(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param style QStyle*
+///
 void k_splittercollapserbutton_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -664,6 +752,7 @@ void k_splittercollapserbutton_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -671,6 +760,7 @@ bool k_splittercollapserbutton_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_window(void* self);
 
 /// Inherited from QWidget
@@ -678,6 +768,7 @@ bool k_splittercollapserbutton_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -687,6 +778,7 @@ bool k_splittercollapserbutton_is_modal(void* self);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t k_splittercollapserbutton_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -695,6 +787,7 @@ int32_t k_splittercollapserbutton_window_modality(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param windowModality enum Qt__WindowModality
+///
 void k_splittercollapserbutton_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -702,6 +795,7 @@ void k_splittercollapserbutton_set_window_modality(void* self, int32_t windowMod
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -710,6 +804,7 @@ bool k_splittercollapserbutton_is_enabled(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QWidget*
+///
 bool k_splittercollapserbutton_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -718,6 +813,7 @@ bool k_splittercollapserbutton_is_enabled_to(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param enabled bool
+///
 void k_splittercollapserbutton_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -726,6 +822,7 @@ void k_splittercollapserbutton_set_enabled(void* self, bool enabled);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param disabled bool
+///
 void k_splittercollapserbutton_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -734,6 +831,7 @@ void k_splittercollapserbutton_set_disabled(void* self, bool disabled);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param windowModified bool
+///
 void k_splittercollapserbutton_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -741,6 +839,7 @@ void k_splittercollapserbutton_set_window_modified(void* self, bool windowModifi
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRect* k_splittercollapserbutton_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -748,6 +847,7 @@ QRect* k_splittercollapserbutton_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KSplitterCollapserButton*
+///
 const QRect* k_splittercollapserbutton_geometry(void* self);
 
 /// Inherited from QWidget
@@ -755,6 +855,7 @@ const QRect* k_splittercollapserbutton_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRect* k_splittercollapserbutton_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -762,6 +863,7 @@ QRect* k_splittercollapserbutton_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_x(void* self);
 
 /// Inherited from QWidget
@@ -769,6 +871,7 @@ int32_t k_splittercollapserbutton_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_y(void* self);
 
 /// Inherited from QWidget
@@ -776,6 +879,7 @@ int32_t k_splittercollapserbutton_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QPoint* k_splittercollapserbutton_pos(void* self);
 
 /// Inherited from QWidget
@@ -783,6 +887,7 @@ QPoint* k_splittercollapserbutton_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -790,6 +895,7 @@ QSize* k_splittercollapserbutton_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_size(void* self);
 
 /// Inherited from QWidget
@@ -797,6 +903,7 @@ QSize* k_splittercollapserbutton_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_width(void* self);
 
 /// Inherited from QWidget
@@ -804,6 +911,7 @@ int32_t k_splittercollapserbutton_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_height(void* self);
 
 /// Inherited from QWidget
@@ -811,6 +919,7 @@ int32_t k_splittercollapserbutton_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRect* k_splittercollapserbutton_rect(void* self);
 
 /// Inherited from QWidget
@@ -818,6 +927,7 @@ QRect* k_splittercollapserbutton_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRect* k_splittercollapserbutton_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -825,6 +935,7 @@ QRect* k_splittercollapserbutton_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRegion* k_splittercollapserbutton_children_region(void* self);
 
 /// Inherited from QWidget
@@ -832,6 +943,7 @@ QRegion* k_splittercollapserbutton_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -839,6 +951,7 @@ QSize* k_splittercollapserbutton_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -846,6 +959,7 @@ QSize* k_splittercollapserbutton_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -853,6 +967,7 @@ int32_t k_splittercollapserbutton_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -860,6 +975,7 @@ int32_t k_splittercollapserbutton_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -867,6 +983,7 @@ int32_t k_splittercollapserbutton_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -875,6 +992,7 @@ int32_t k_splittercollapserbutton_maximum_height(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param minimumSize QSize*
+///
 void k_splittercollapserbutton_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -884,6 +1002,7 @@ void k_splittercollapserbutton_set_minimum_size(void* self, void* minimumSize);
 /// @param self KSplitterCollapserButton*
 /// @param minw int
 /// @param minh int
+///
 void k_splittercollapserbutton_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -892,6 +1011,7 @@ void k_splittercollapserbutton_set_minimum_size2(void* self, int minw, int minh)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param maximumSize QSize*
+///
 void k_splittercollapserbutton_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -901,6 +1021,7 @@ void k_splittercollapserbutton_set_maximum_size(void* self, void* maximumSize);
 /// @param self KSplitterCollapserButton*
 /// @param maxw int
 /// @param maxh int
+///
 void k_splittercollapserbutton_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -909,6 +1030,7 @@ void k_splittercollapserbutton_set_maximum_size2(void* self, int maxw, int maxh)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param minw int
+///
 void k_splittercollapserbutton_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -917,6 +1039,7 @@ void k_splittercollapserbutton_set_minimum_width(void* self, int minw);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param minh int
+///
 void k_splittercollapserbutton_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -925,6 +1048,7 @@ void k_splittercollapserbutton_set_minimum_height(void* self, int minh);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param maxw int
+///
 void k_splittercollapserbutton_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -933,6 +1057,7 @@ void k_splittercollapserbutton_set_maximum_width(void* self, int maxw);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param maxh int
+///
 void k_splittercollapserbutton_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -940,6 +1065,7 @@ void k_splittercollapserbutton_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -948,6 +1074,7 @@ QSize* k_splittercollapserbutton_size_increment(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param sizeIncrement QSize*
+///
 void k_splittercollapserbutton_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -957,6 +1084,7 @@ void k_splittercollapserbutton_set_size_increment(void* self, void* sizeIncremen
 /// @param self KSplitterCollapserButton*
 /// @param w int
 /// @param h int
+///
 void k_splittercollapserbutton_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -964,6 +1092,7 @@ void k_splittercollapserbutton_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_base_size(void* self);
 
 /// Inherited from QWidget
@@ -972,6 +1101,7 @@ QSize* k_splittercollapserbutton_base_size(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param baseSize QSize*
+///
 void k_splittercollapserbutton_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -981,6 +1111,7 @@ void k_splittercollapserbutton_set_base_size(void* self, void* baseSize);
 /// @param self KSplitterCollapserButton*
 /// @param basew int
 /// @param baseh int
+///
 void k_splittercollapserbutton_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -989,6 +1120,7 @@ void k_splittercollapserbutton_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param fixedSize QSize*
+///
 void k_splittercollapserbutton_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -998,6 +1130,7 @@ void k_splittercollapserbutton_set_fixed_size(void* self, void* fixedSize);
 /// @param self KSplitterCollapserButton*
 /// @param w int
 /// @param h int
+///
 void k_splittercollapserbutton_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1006,6 +1139,7 @@ void k_splittercollapserbutton_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param w int
+///
 void k_splittercollapserbutton_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -1014,6 +1148,7 @@ void k_splittercollapserbutton_set_fixed_width(void* self, int w);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param h int
+///
 void k_splittercollapserbutton_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -1022,6 +1157,7 @@ void k_splittercollapserbutton_set_fixed_height(void* self, int h);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPointF*
+///
 QPointF* k_splittercollapserbutton_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1030,6 +1166,7 @@ QPointF* k_splittercollapserbutton_map_to_global(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPoint*
+///
 QPoint* k_splittercollapserbutton_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1038,6 +1175,7 @@ QPoint* k_splittercollapserbutton_map_to_global2(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPointF*
+///
 QPointF* k_splittercollapserbutton_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1046,6 +1184,7 @@ QPointF* k_splittercollapserbutton_map_from_global(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPoint*
+///
 QPoint* k_splittercollapserbutton_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1054,6 +1193,7 @@ QPoint* k_splittercollapserbutton_map_from_global2(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPointF*
+///
 QPointF* k_splittercollapserbutton_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1062,6 +1202,7 @@ QPointF* k_splittercollapserbutton_map_to_parent(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPoint*
+///
 QPoint* k_splittercollapserbutton_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1070,6 +1211,7 @@ QPoint* k_splittercollapserbutton_map_to_parent2(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPointF*
+///
 QPointF* k_splittercollapserbutton_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1078,6 +1220,7 @@ QPointF* k_splittercollapserbutton_map_from_parent(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPoint*
+///
 QPoint* k_splittercollapserbutton_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1087,6 +1230,7 @@ QPoint* k_splittercollapserbutton_map_from_parent2(void* self, void* param1);
 /// @param self KSplitterCollapserButton*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_splittercollapserbutton_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1096,6 +1240,7 @@ QPointF* k_splittercollapserbutton_map_to(void* self, void* param1, void* param2
 /// @param self KSplitterCollapserButton*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_splittercollapserbutton_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1105,6 +1250,7 @@ QPoint* k_splittercollapserbutton_map_to2(void* self, void* param1, void* param2
 /// @param self KSplitterCollapserButton*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_splittercollapserbutton_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1114,6 +1260,7 @@ QPointF* k_splittercollapserbutton_map_from(void* self, void* param1, void* para
 /// @param self KSplitterCollapserButton*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_splittercollapserbutton_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1121,6 +1268,7 @@ QPoint* k_splittercollapserbutton_map_from2(void* self, void* param1, void* para
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_window(void* self);
 
 /// Inherited from QWidget
@@ -1128,6 +1276,7 @@ QWidget* k_splittercollapserbutton_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -1135,6 +1284,7 @@ QWidget* k_splittercollapserbutton_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -1142,6 +1292,7 @@ QWidget* k_splittercollapserbutton_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KSplitterCollapserButton*
+///
 const QPalette* k_splittercollapserbutton_palette(void* self);
 
 /// Inherited from QWidget
@@ -1150,6 +1301,7 @@ const QPalette* k_splittercollapserbutton_palette(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param palette QPalette*
+///
 void k_splittercollapserbutton_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -1158,6 +1310,7 @@ void k_splittercollapserbutton_set_palette(void* self, void* palette);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void k_splittercollapserbutton_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -1167,6 +1320,7 @@ void k_splittercollapserbutton_set_background_role(void* self, int32_t backgroun
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_splittercollapserbutton_background_role(void* self);
 
 /// Inherited from QWidget
@@ -1175,6 +1329,7 @@ int32_t k_splittercollapserbutton_background_role(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void k_splittercollapserbutton_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -1184,6 +1339,7 @@ void k_splittercollapserbutton_set_foreground_role(void* self, int32_t foregroun
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_splittercollapserbutton_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -1191,6 +1347,7 @@ int32_t k_splittercollapserbutton_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KSplitterCollapserButton*
+///
 const QFont* k_splittercollapserbutton_font(void* self);
 
 /// Inherited from QWidget
@@ -1199,6 +1356,7 @@ const QFont* k_splittercollapserbutton_font(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param font QFont*
+///
 void k_splittercollapserbutton_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -1206,6 +1364,7 @@ void k_splittercollapserbutton_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QFontMetrics* k_splittercollapserbutton_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -1213,6 +1372,7 @@ QFontMetrics* k_splittercollapserbutton_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QFontInfo* k_splittercollapserbutton_font_info(void* self);
 
 /// Inherited from QWidget
@@ -1220,6 +1380,7 @@ QFontInfo* k_splittercollapserbutton_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QCursor* k_splittercollapserbutton_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1228,6 +1389,7 @@ QCursor* k_splittercollapserbutton_cursor(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param cursor QCursor*
+///
 void k_splittercollapserbutton_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -1235,6 +1397,7 @@ void k_splittercollapserbutton_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1243,6 +1406,7 @@ void k_splittercollapserbutton_unset_cursor(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param enable bool
+///
 void k_splittercollapserbutton_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1250,6 +1414,7 @@ void k_splittercollapserbutton_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1257,6 +1422,7 @@ bool k_splittercollapserbutton_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1265,6 +1431,7 @@ bool k_splittercollapserbutton_under_mouse(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param enable bool
+///
 void k_splittercollapserbutton_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1272,6 +1439,7 @@ void k_splittercollapserbutton_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1280,6 +1448,7 @@ bool k_splittercollapserbutton_has_tablet_tracking(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param mask QBitmap*
+///
 void k_splittercollapserbutton_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1288,6 +1457,7 @@ void k_splittercollapserbutton_set_mask(void* self, void* mask);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param mask QRegion*
+///
 void k_splittercollapserbutton_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1295,6 +1465,7 @@ void k_splittercollapserbutton_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRegion* k_splittercollapserbutton_mask(void* self);
 
 /// Inherited from QWidget
@@ -1302,6 +1473,7 @@ QRegion* k_splittercollapserbutton_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -1310,6 +1482,7 @@ void k_splittercollapserbutton_clear_mask(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param target QPaintDevice*
+///
 void k_splittercollapserbutton_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -1318,6 +1491,7 @@ void k_splittercollapserbutton_render(void* self, void* target);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param painter QPainter*
+///
 void k_splittercollapserbutton_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -1325,6 +1499,7 @@ void k_splittercollapserbutton_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QPixmap* k_splittercollapserbutton_grab(void* self);
 
 /// Inherited from QWidget
@@ -1332,6 +1507,7 @@ QPixmap* k_splittercollapserbutton_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QGraphicsEffect* k_splittercollapserbutton_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -1340,6 +1516,7 @@ QGraphicsEffect* k_splittercollapserbutton_graphics_effect(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param effect QGraphicsEffect*
+///
 void k_splittercollapserbutton_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -1348,6 +1525,7 @@ void k_splittercollapserbutton_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param type enum Qt__GestureType
+///
 void k_splittercollapserbutton_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1356,6 +1534,7 @@ void k_splittercollapserbutton_grab_gesture(void* self, int64_t type);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param type enum Qt__GestureType
+///
 void k_splittercollapserbutton_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1364,6 +1543,7 @@ void k_splittercollapserbutton_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param windowTitle const char*
+///
 void k_splittercollapserbutton_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -1372,6 +1552,7 @@ void k_splittercollapserbutton_set_window_title(void* self, const char* windowTi
 ///
 /// @param self KSplitterCollapserButton*
 /// @param styleSheet const char*
+///
 void k_splittercollapserbutton_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -1381,6 +1562,7 @@ void k_splittercollapserbutton_set_style_sheet(void* self, const char* styleShee
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -1390,6 +1572,7 @@ const char* k_splittercollapserbutton_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_window_title(void* self);
 
 /// Inherited from QWidget
@@ -1398,6 +1581,7 @@ const char* k_splittercollapserbutton_window_title(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param icon QIcon*
+///
 void k_splittercollapserbutton_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -1405,6 +1589,7 @@ void k_splittercollapserbutton_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QIcon* k_splittercollapserbutton_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -1413,6 +1598,7 @@ QIcon* k_splittercollapserbutton_window_icon(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param windowIconText const char*
+///
 void k_splittercollapserbutton_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -1422,6 +1608,7 @@ void k_splittercollapserbutton_set_window_icon_text(void* self, const char* wind
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -1430,6 +1617,7 @@ const char* k_splittercollapserbutton_window_icon_text(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param windowRole const char*
+///
 void k_splittercollapserbutton_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -1439,6 +1627,7 @@ void k_splittercollapserbutton_set_window_role(void* self, const char* windowRol
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_window_role(void* self);
 
 /// Inherited from QWidget
@@ -1447,6 +1636,7 @@ const char* k_splittercollapserbutton_window_role(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param filePath const char*
+///
 void k_splittercollapserbutton_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -1456,6 +1646,7 @@ void k_splittercollapserbutton_set_window_file_path(void* self, const char* file
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -1464,6 +1655,7 @@ const char* k_splittercollapserbutton_window_file_path(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param level double
+///
 void k_splittercollapserbutton_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -1471,6 +1663,7 @@ void k_splittercollapserbutton_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KSplitterCollapserButton*
+///
 double k_splittercollapserbutton_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -1478,6 +1671,7 @@ double k_splittercollapserbutton_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -1486,6 +1680,7 @@ bool k_splittercollapserbutton_is_window_modified(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param toolTip const char*
+///
 void k_splittercollapserbutton_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -1495,6 +1690,7 @@ void k_splittercollapserbutton_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -1503,6 +1699,7 @@ const char* k_splittercollapserbutton_tool_tip(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param msec int
+///
 void k_splittercollapserbutton_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -1510,6 +1707,7 @@ void k_splittercollapserbutton_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -1518,6 +1716,7 @@ int32_t k_splittercollapserbutton_tool_tip_duration(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param statusTip const char*
+///
 void k_splittercollapserbutton_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -1527,6 +1726,7 @@ void k_splittercollapserbutton_set_status_tip(void* self, const char* statusTip)
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -1535,6 +1735,7 @@ const char* k_splittercollapserbutton_status_tip(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param whatsThis const char*
+///
 void k_splittercollapserbutton_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -1544,6 +1745,7 @@ void k_splittercollapserbutton_set_whats_this(void* self, const char* whatsThis)
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -1553,6 +1755,7 @@ const char* k_splittercollapserbutton_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -1561,6 +1764,7 @@ const char* k_splittercollapserbutton_accessible_name(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param name const char*
+///
 void k_splittercollapserbutton_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -1570,6 +1774,7 @@ void k_splittercollapserbutton_set_accessible_name(void* self, const char* name)
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -1578,6 +1783,7 @@ const char* k_splittercollapserbutton_accessible_description(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param description const char*
+///
 void k_splittercollapserbutton_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -1586,6 +1792,7 @@ void k_splittercollapserbutton_set_accessible_description(void* self, const char
 ///
 /// @param self KSplitterCollapserButton*
 /// @param direction enum Qt__LayoutDirection
+///
 void k_splittercollapserbutton_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -1595,6 +1802,7 @@ void k_splittercollapserbutton_set_layout_direction(void* self, int32_t directio
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t k_splittercollapserbutton_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1602,6 +1810,7 @@ int32_t k_splittercollapserbutton_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1610,6 +1819,7 @@ void k_splittercollapserbutton_unset_layout_direction(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param locale QLocale*
+///
 void k_splittercollapserbutton_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -1617,6 +1827,7 @@ void k_splittercollapserbutton_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QLocale* k_splittercollapserbutton_locale(void* self);
 
 /// Inherited from QWidget
@@ -1624,6 +1835,7 @@ QLocale* k_splittercollapserbutton_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -1631,6 +1843,7 @@ void k_splittercollapserbutton_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -1638,6 +1851,7 @@ bool k_splittercollapserbutton_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -1645,6 +1859,7 @@ bool k_splittercollapserbutton_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -1652,6 +1867,7 @@ void k_splittercollapserbutton_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -1659,6 +1875,7 @@ bool k_splittercollapserbutton_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -1666,6 +1883,7 @@ void k_splittercollapserbutton_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -1674,6 +1892,7 @@ void k_splittercollapserbutton_clear_focus(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param reason enum Qt__FocusReason
+///
 void k_splittercollapserbutton_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -1683,6 +1902,7 @@ void k_splittercollapserbutton_set_focus2(void* self, int32_t reason);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t k_splittercollapserbutton_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -1691,6 +1911,7 @@ int32_t k_splittercollapserbutton_focus_policy(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param policy enum Qt__FocusPolicy
+///
 void k_splittercollapserbutton_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1698,6 +1919,7 @@ void k_splittercollapserbutton_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -1706,6 +1928,7 @@ bool k_splittercollapserbutton_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void k_splittercollapserbutton_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1714,6 +1937,7 @@ void k_splittercollapserbutton_set_tab_order(void* param1, void* param2);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param focusProxy QWidget*
+///
 void k_splittercollapserbutton_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -1721,6 +1945,7 @@ void k_splittercollapserbutton_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -1730,6 +1955,7 @@ QWidget* k_splittercollapserbutton_focus_proxy(void* self);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t k_splittercollapserbutton_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -1738,6 +1964,7 @@ int32_t k_splittercollapserbutton_context_menu_policy(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void k_splittercollapserbutton_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1745,6 +1972,7 @@ void k_splittercollapserbutton_set_context_menu_policy(void* self, int32_t polic
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1753,6 +1981,7 @@ void k_splittercollapserbutton_grab_mouse(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QCursor*
+///
 void k_splittercollapserbutton_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1760,6 +1989,7 @@ void k_splittercollapserbutton_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1767,6 +1997,7 @@ void k_splittercollapserbutton_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1774,6 +2005,7 @@ void k_splittercollapserbutton_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1782,6 +2014,7 @@ void k_splittercollapserbutton_release_keyboard(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param key QKeySequence*
+///
 int32_t k_splittercollapserbutton_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -1790,6 +2023,7 @@ int32_t k_splittercollapserbutton_grab_shortcut(void* self, void* key);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param id int
+///
 void k_splittercollapserbutton_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -1798,6 +2032,7 @@ void k_splittercollapserbutton_release_shortcut(void* self, int id);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param id int
+///
 void k_splittercollapserbutton_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -1806,6 +2041,7 @@ void k_splittercollapserbutton_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param id int
+///
 void k_splittercollapserbutton_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -1825,6 +2061,7 @@ QWidget* k_splittercollapserbutton_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1833,6 +2070,7 @@ bool k_splittercollapserbutton_updates_enabled(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param enable bool
+///
 void k_splittercollapserbutton_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1840,6 +2078,7 @@ void k_splittercollapserbutton_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QGraphicsProxyWidget* k_splittercollapserbutton_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -1847,6 +2086,7 @@ QGraphicsProxyWidget* k_splittercollapserbutton_graphics_proxy_widget(void* self
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_update(void* self);
 
 /// Inherited from QWidget
@@ -1854,6 +2094,7 @@ void k_splittercollapserbutton_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_repaint(void* self);
 
 /// Inherited from QWidget
@@ -1865,6 +2106,7 @@ void k_splittercollapserbutton_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_splittercollapserbutton_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1873,6 +2115,7 @@ void k_splittercollapserbutton_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QRect*
+///
 void k_splittercollapserbutton_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1881,6 +2124,7 @@ void k_splittercollapserbutton_update3(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QRegion*
+///
 void k_splittercollapserbutton_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1892,6 +2136,7 @@ void k_splittercollapserbutton_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_splittercollapserbutton_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1900,6 +2145,7 @@ void k_splittercollapserbutton_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QRect*
+///
 void k_splittercollapserbutton_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1908,6 +2154,7 @@ void k_splittercollapserbutton_repaint3(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QRegion*
+///
 void k_splittercollapserbutton_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1916,6 +2163,7 @@ void k_splittercollapserbutton_repaint4(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param hidden bool
+///
 void k_splittercollapserbutton_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -1923,6 +2171,7 @@ void k_splittercollapserbutton_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_show(void* self);
 
 /// Inherited from QWidget
@@ -1930,6 +2179,7 @@ void k_splittercollapserbutton_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_hide(void* self);
 
 /// Inherited from QWidget
@@ -1937,6 +2187,7 @@ void k_splittercollapserbutton_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1944,6 +2195,7 @@ void k_splittercollapserbutton_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1951,6 +2203,7 @@ void k_splittercollapserbutton_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1958,6 +2211,7 @@ void k_splittercollapserbutton_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -1965,6 +2219,7 @@ void k_splittercollapserbutton_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_close(void* self);
 
 /// Inherited from QWidget
@@ -1972,6 +2227,7 @@ bool k_splittercollapserbutton_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_raise(void* self);
 
 /// Inherited from QWidget
@@ -1979,6 +2235,7 @@ void k_splittercollapserbutton_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_lower(void* self);
 
 /// Inherited from QWidget
@@ -1987,6 +2244,7 @@ void k_splittercollapserbutton_lower(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QWidget*
+///
 void k_splittercollapserbutton_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1996,6 +2254,7 @@ void k_splittercollapserbutton_stack_under(void* self, void* param1);
 /// @param self KSplitterCollapserButton*
 /// @param x int
 /// @param y int
+///
 void k_splittercollapserbutton_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2004,6 +2263,7 @@ void k_splittercollapserbutton_move(void* self, int x, int y);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPoint*
+///
 void k_splittercollapserbutton_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2013,6 +2273,7 @@ void k_splittercollapserbutton_move2(void* self, void* param1);
 /// @param self KSplitterCollapserButton*
 /// @param w int
 /// @param h int
+///
 void k_splittercollapserbutton_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -2021,6 +2282,7 @@ void k_splittercollapserbutton_resize(void* self, int w, int h);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QSize*
+///
 void k_splittercollapserbutton_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2032,6 +2294,7 @@ void k_splittercollapserbutton_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_splittercollapserbutton_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -2040,6 +2303,7 @@ void k_splittercollapserbutton_set_geometry(void* self, int x, int y, int w, int
 ///
 /// @param self KSplitterCollapserButton*
 /// @param geometry QRect*
+///
 void k_splittercollapserbutton_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -2049,6 +2313,7 @@ void k_splittercollapserbutton_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 char* k_splittercollapserbutton_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -2057,6 +2322,7 @@ char* k_splittercollapserbutton_save_geometry(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param geometry const char*
+///
 bool k_splittercollapserbutton_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -2064,6 +2330,7 @@ bool k_splittercollapserbutton_restore_geometry(void* self, const char* geometry
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -2071,6 +2338,7 @@ void k_splittercollapserbutton_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -2079,6 +2347,7 @@ bool k_splittercollapserbutton_is_visible(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QWidget*
+///
 bool k_splittercollapserbutton_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2086,6 +2355,7 @@ bool k_splittercollapserbutton_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -2093,6 +2363,7 @@ bool k_splittercollapserbutton_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -2100,6 +2371,7 @@ bool k_splittercollapserbutton_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -2107,6 +2379,7 @@ bool k_splittercollapserbutton_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -2116,6 +2389,7 @@ bool k_splittercollapserbutton_is_full_screen(void* self);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t k_splittercollapserbutton_window_state(void* self);
 
 /// Inherited from QWidget
@@ -2124,6 +2398,7 @@ int32_t k_splittercollapserbutton_window_state(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param state flag of enum Qt__WindowState
+///
 void k_splittercollapserbutton_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2132,6 +2407,7 @@ void k_splittercollapserbutton_set_window_state(void* self, int32_t state);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param state flag of enum Qt__WindowState
+///
 void k_splittercollapserbutton_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2139,6 +2415,7 @@ void k_splittercollapserbutton_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSizePolicy* k_splittercollapserbutton_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -2147,6 +2424,7 @@ QSizePolicy* k_splittercollapserbutton_size_policy(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param sizePolicy QSizePolicy*
+///
 void k_splittercollapserbutton_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -2156,6 +2434,7 @@ void k_splittercollapserbutton_set_size_policy(void* self, void* sizePolicy);
 /// @param self KSplitterCollapserButton*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void k_splittercollapserbutton_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -2163,6 +2442,7 @@ void k_splittercollapserbutton_set_size_policy2(void* self, int32_t horizontal, 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRegion* k_splittercollapserbutton_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -2174,6 +2454,7 @@ QRegion* k_splittercollapserbutton_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_splittercollapserbutton_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -2182,6 +2463,7 @@ void k_splittercollapserbutton_set_contents_margins(void* self, int left, int to
 ///
 /// @param self KSplitterCollapserButton*
 /// @param margins QMargins*
+///
 void k_splittercollapserbutton_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -2189,6 +2471,7 @@ void k_splittercollapserbutton_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QMargins* k_splittercollapserbutton_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -2196,6 +2479,7 @@ QMargins* k_splittercollapserbutton_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QRect* k_splittercollapserbutton_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -2203,6 +2487,7 @@ QRect* k_splittercollapserbutton_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QLayout* k_splittercollapserbutton_layout(void* self);
 
 /// Inherited from QWidget
@@ -2211,6 +2496,7 @@ QLayout* k_splittercollapserbutton_layout(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param layout QLayout*
+///
 void k_splittercollapserbutton_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -2218,6 +2504,7 @@ void k_splittercollapserbutton_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -2226,6 +2513,7 @@ void k_splittercollapserbutton_update_geometry(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param parent QWidget*
+///
 void k_splittercollapserbutton_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -2235,6 +2523,7 @@ void k_splittercollapserbutton_set_parent(void* self, void* parent);
 /// @param self KSplitterCollapserButton*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void k_splittercollapserbutton_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -2244,6 +2533,7 @@ void k_splittercollapserbutton_set_parent2(void* self, void* parent, int64_t f);
 /// @param self KSplitterCollapserButton*
 /// @param dx int
 /// @param dy int
+///
 void k_splittercollapserbutton_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -2254,6 +2544,7 @@ void k_splittercollapserbutton_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void k_splittercollapserbutton_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -2261,6 +2552,7 @@ void k_splittercollapserbutton_scroll2(void* self, int dx, int dy, void* param3)
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -2268,6 +2560,7 @@ QWidget* k_splittercollapserbutton_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2275,6 +2568,7 @@ QWidget* k_splittercollapserbutton_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2282,6 +2576,7 @@ QWidget* k_splittercollapserbutton_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -2290,6 +2585,7 @@ bool k_splittercollapserbutton_accept_drops(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param on bool
+///
 void k_splittercollapserbutton_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -2298,6 +2594,7 @@ void k_splittercollapserbutton_set_accept_drops(void* self, bool on);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param action QAction*
+///
 void k_splittercollapserbutton_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2306,6 +2603,7 @@ void k_splittercollapserbutton_add_action(void* self, void* action);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_splittercollapserbutton_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2315,6 +2613,7 @@ void k_splittercollapserbutton_add_actions(void* self, libqt_list actions);
 /// @param self KSplitterCollapserButton*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_splittercollapserbutton_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2324,6 +2623,7 @@ void k_splittercollapserbutton_insert_actions(void* self, void* before, libqt_li
 /// @param self KSplitterCollapserButton*
 /// @param before QAction*
 /// @param action QAction*
+///
 void k_splittercollapserbutton_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -2332,6 +2632,7 @@ void k_splittercollapserbutton_insert_action(void* self, void* before, void* act
 ///
 /// @param self KSplitterCollapserButton*
 /// @param action QAction*
+///
 void k_splittercollapserbutton_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2339,6 +2640,7 @@ void k_splittercollapserbutton_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KSplitterCollapserButton*
+///
 libqt_list /* of QAction* */ k_splittercollapserbutton_actions(void* self);
 
 /// Inherited from QWidget
@@ -2347,6 +2649,7 @@ libqt_list /* of QAction* */ k_splittercollapserbutton_actions(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param text const char*
+///
 QAction* k_splittercollapserbutton_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -2356,6 +2659,7 @@ QAction* k_splittercollapserbutton_add_action2(void* self, const char* text);
 /// @param self KSplitterCollapserButton*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* k_splittercollapserbutton_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -2365,6 +2669,7 @@ QAction* k_splittercollapserbutton_add_action3(void* self, void* icon, const cha
 /// @param self KSplitterCollapserButton*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_splittercollapserbutton_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2375,6 +2680,7 @@ QAction* k_splittercollapserbutton_add_action4(void* self, const char* text, voi
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_splittercollapserbutton_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2382,6 +2688,7 @@ QAction* k_splittercollapserbutton_add_action5(void* self, void* icon, const cha
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWidget* k_splittercollapserbutton_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2390,6 +2697,7 @@ QWidget* k_splittercollapserbutton_parent_widget(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param type flag of enum Qt__WindowType
+///
 void k_splittercollapserbutton_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2399,6 +2707,7 @@ void k_splittercollapserbutton_set_window_flags(void* self, int64_t type);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t k_splittercollapserbutton_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -2407,6 +2716,7 @@ int64_t k_splittercollapserbutton_window_flags(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum Qt__WindowType
+///
 void k_splittercollapserbutton_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -2415,6 +2725,7 @@ void k_splittercollapserbutton_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param type flag of enum Qt__WindowType
+///
 void k_splittercollapserbutton_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2424,6 +2735,7 @@ void k_splittercollapserbutton_override_window_flags(void* self, int64_t type);
 /// @param self KSplitterCollapserButton*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t k_splittercollapserbutton_window_type(void* self);
 
 /// Inherited from QWidget
@@ -2431,6 +2743,7 @@ int64_t k_splittercollapserbutton_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* k_splittercollapserbutton_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -2440,6 +2753,7 @@ QWidget* k_splittercollapserbutton_find(uint64_t param1);
 /// @param self KSplitterCollapserButton*
 /// @param x int
 /// @param y int
+///
 QWidget* k_splittercollapserbutton_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2448,6 +2762,7 @@ QWidget* k_splittercollapserbutton_child_at(void* self, int x, int y);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param p QPoint*
+///
 QWidget* k_splittercollapserbutton_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2456,6 +2771,7 @@ QWidget* k_splittercollapserbutton_child_at2(void* self, void* p);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param p QPointF*
+///
 QWidget* k_splittercollapserbutton_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2464,6 +2780,7 @@ QWidget* k_splittercollapserbutton_child_at3(void* self, void* p);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void k_splittercollapserbutton_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2472,6 +2789,7 @@ void k_splittercollapserbutton_set_attribute(void* self, int32_t param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool k_splittercollapserbutton_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2479,6 +2797,7 @@ bool k_splittercollapserbutton_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -2487,6 +2806,7 @@ void k_splittercollapserbutton_ensure_polished(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param child QWidget*
+///
 bool k_splittercollapserbutton_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -2494,6 +2814,7 @@ bool k_splittercollapserbutton_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -2502,6 +2823,7 @@ bool k_splittercollapserbutton_auto_fill_background(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param enabled bool
+///
 void k_splittercollapserbutton_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -2509,6 +2831,7 @@ void k_splittercollapserbutton_set_auto_fill_background(void* self, bool enabled
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QBackingStore* k_splittercollapserbutton_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -2516,6 +2839,7 @@ QBackingStore* k_splittercollapserbutton_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QWindow* k_splittercollapserbutton_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -2523,6 +2847,7 @@ QWindow* k_splittercollapserbutton_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QScreen* k_splittercollapserbutton_screen(void* self);
 
 /// Inherited from QWidget
@@ -2531,6 +2856,7 @@ QScreen* k_splittercollapserbutton_screen(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param screen QScreen*
+///
 void k_splittercollapserbutton_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -2538,6 +2864,7 @@ void k_splittercollapserbutton_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* k_splittercollapserbutton_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -2546,6 +2873,7 @@ QWidget* k_splittercollapserbutton_create_window_container(void* window);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param title const char*
+///
 void k_splittercollapserbutton_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -2554,6 +2882,7 @@ void k_splittercollapserbutton_window_title_changed(void* self, const char* titl
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, const char* title)
+///
 void k_splittercollapserbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2562,6 +2891,7 @@ void k_splittercollapserbutton_on_window_title_changed(void* self, void (*callba
 ///
 /// @param self KSplitterCollapserButton*
 /// @param icon QIcon*
+///
 void k_splittercollapserbutton_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2570,6 +2900,7 @@ void k_splittercollapserbutton_window_icon_changed(void* self, void* icon);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QIcon* icon)
+///
 void k_splittercollapserbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2578,6 +2909,7 @@ void k_splittercollapserbutton_on_window_icon_changed(void* self, void (*callbac
 ///
 /// @param self KSplitterCollapserButton*
 /// @param iconText const char*
+///
 void k_splittercollapserbutton_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -2586,6 +2918,7 @@ void k_splittercollapserbutton_window_icon_text_changed(void* self, const char* 
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, const char* iconText)
+///
 void k_splittercollapserbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2594,6 +2927,7 @@ void k_splittercollapserbutton_on_window_icon_text_changed(void* self, void (*ca
 ///
 /// @param self KSplitterCollapserButton*
 /// @param pos QPoint*
+///
 void k_splittercollapserbutton_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -2602,6 +2936,7 @@ void k_splittercollapserbutton_custom_context_menu_requested(void* self, void* p
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QPoint* pos)
+///
 void k_splittercollapserbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2611,6 +2946,7 @@ void k_splittercollapserbutton_on_custom_context_menu_requested(void* self, void
 /// @param self KSplitterCollapserButton*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t k_splittercollapserbutton_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -2619,6 +2955,7 @@ int64_t k_splittercollapserbutton_input_method_hints(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void k_splittercollapserbutton_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -2628,6 +2965,7 @@ void k_splittercollapserbutton_set_input_method_hints(void* self, int64_t hints)
 /// @param self KSplitterCollapserButton*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void k_splittercollapserbutton_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2638,6 +2976,7 @@ void k_splittercollapserbutton_render22(void* self, void* target, void* targetOf
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_splittercollapserbutton_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2649,6 +2988,7 @@ void k_splittercollapserbutton_render3(void* self, void* target, void* targetOff
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_splittercollapserbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2658,6 +2998,7 @@ void k_splittercollapserbutton_render4(void* self, void* target, void* targetOff
 /// @param self KSplitterCollapserButton*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void k_splittercollapserbutton_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2668,6 +3009,7 @@ void k_splittercollapserbutton_render23(void* self, void* painter, void* targetO
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_splittercollapserbutton_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2679,6 +3021,7 @@ void k_splittercollapserbutton_render32(void* self, void* painter, void* targetO
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_splittercollapserbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2687,6 +3030,7 @@ void k_splittercollapserbutton_render42(void* self, void* painter, void* targetO
 ///
 /// @param self KSplitterCollapserButton*
 /// @param rectangle QRect*
+///
 QPixmap* k_splittercollapserbutton_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -2696,6 +3040,7 @@ QPixmap* k_splittercollapserbutton_grab1(void* self, void* rectangle);
 /// @param self KSplitterCollapserButton*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void k_splittercollapserbutton_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -2705,6 +3050,7 @@ void k_splittercollapserbutton_grab_gesture2(void* self, int64_t type, int32_t f
 /// @param self KSplitterCollapserButton*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t k_splittercollapserbutton_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -2714,6 +3060,7 @@ int32_t k_splittercollapserbutton_grab_shortcut2(void* self, void* key, int32_t 
 /// @param self KSplitterCollapserButton*
 /// @param id int
 /// @param enable bool
+///
 void k_splittercollapserbutton_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2723,6 +3070,7 @@ void k_splittercollapserbutton_set_shortcut_enabled2(void* self, int id, bool en
 /// @param self KSplitterCollapserButton*
 /// @param id int
 /// @param enable bool
+///
 void k_splittercollapserbutton_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2732,6 +3080,7 @@ void k_splittercollapserbutton_set_shortcut_auto_repeat2(void* self, int id, boo
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void k_splittercollapserbutton_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2741,6 +3090,7 @@ void k_splittercollapserbutton_set_window_flag2(void* self, int64_t param1, bool
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void k_splittercollapserbutton_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2749,6 +3099,7 @@ void k_splittercollapserbutton_set_attribute2(void* self, int32_t param1, bool o
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* k_splittercollapserbutton_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -2758,6 +3109,7 @@ QWidget* k_splittercollapserbutton_create_window_container2(void* window, void* 
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* k_splittercollapserbutton_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -2767,6 +3119,7 @@ QWidget* k_splittercollapserbutton_create_window_container3(void* window, void* 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char* k_splittercollapserbutton_object_name(void* self);
 
 /// Inherited from QObject
@@ -2775,6 +3128,7 @@ const char* k_splittercollapserbutton_object_name(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param name char*
+///
 void k_splittercollapserbutton_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -2782,6 +3136,7 @@ void k_splittercollapserbutton_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -2789,6 +3144,7 @@ bool k_splittercollapserbutton_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -2796,6 +3152,7 @@ bool k_splittercollapserbutton_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -2803,6 +3160,7 @@ bool k_splittercollapserbutton_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -2811,6 +3169,7 @@ bool k_splittercollapserbutton_signals_blocked(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param b bool
+///
 bool k_splittercollapserbutton_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -2818,6 +3177,7 @@ bool k_splittercollapserbutton_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QThread* k_splittercollapserbutton_thread(void* self);
 
 /// Inherited from QObject
@@ -2826,6 +3186,7 @@ QThread* k_splittercollapserbutton_thread(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param thread QThread*
+///
 bool k_splittercollapserbutton_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -2834,6 +3195,7 @@ bool k_splittercollapserbutton_move_to_thread(void* self, void* thread);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param interval int
+///
 int32_t k_splittercollapserbutton_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -2842,6 +3204,7 @@ int32_t k_splittercollapserbutton_start_timer(void* self, int interval);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param id int
+///
 void k_splittercollapserbutton_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -2850,6 +3213,7 @@ void k_splittercollapserbutton_kill_timer(void* self, int id);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param id enum Qt__TimerId
+///
 void k_splittercollapserbutton_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -2857,6 +3221,7 @@ void k_splittercollapserbutton_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KSplitterCollapserButton*
+///
 libqt_list /* of QObject* */ k_splittercollapserbutton_children(void* self);
 
 /// Inherited from QObject
@@ -2865,6 +3230,7 @@ libqt_list /* of QObject* */ k_splittercollapserbutton_children(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param filterObj QObject*
+///
 void k_splittercollapserbutton_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -2873,6 +3239,7 @@ void k_splittercollapserbutton_install_event_filter(void* self, void* filterObj)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param obj QObject*
+///
 void k_splittercollapserbutton_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -2883,6 +3250,7 @@ void k_splittercollapserbutton_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_splittercollapserbutton_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -2893,6 +3261,7 @@ QMetaObject__Connection* k_splittercollapserbutton_connect(void* sender, void* s
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_splittercollapserbutton_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -2903,6 +3272,7 @@ QMetaObject__Connection* k_splittercollapserbutton_connect2(void* self, void* se
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_splittercollapserbutton_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -2910,6 +3280,7 @@ bool k_splittercollapserbutton_disconnect(void* sender, void* signal, void* rece
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_splittercollapserbutton_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -2917,6 +3288,7 @@ bool k_splittercollapserbutton_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -2924,6 +3296,7 @@ void k_splittercollapserbutton_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -2933,6 +3306,7 @@ void k_splittercollapserbutton_dump_object_info(void* self);
 /// @param self KSplitterCollapserButton*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_splittercollapserbutton_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -2941,6 +3315,7 @@ bool k_splittercollapserbutton_set_property(void* self, const char* name, void* 
 ///
 /// @param self KSplitterCollapserButton*
 /// @param name const char*
+///
 QVariant* k_splittercollapserbutton_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -2950,6 +3325,7 @@ QVariant* k_splittercollapserbutton_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSplitterCollapserButton*
+///
 const char** k_splittercollapserbutton_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -2957,6 +3333,7 @@ const char** k_splittercollapserbutton_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QBindingStorage* k_splittercollapserbutton_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -2964,6 +3341,7 @@ QBindingStorage* k_splittercollapserbutton_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KSplitterCollapserButton*
+///
 const QBindingStorage* k_splittercollapserbutton_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -2971,6 +3349,7 @@ const QBindingStorage* k_splittercollapserbutton_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_destroyed(void* self);
 
 /// Inherited from QObject
@@ -2979,6 +3358,7 @@ void k_splittercollapserbutton_destroyed(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self)
+///
 void k_splittercollapserbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2986,6 +3366,7 @@ void k_splittercollapserbutton_on_destroyed(void* self, void (*callback)(void*))
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KSplitterCollapserButton*
+///
 QObject* k_splittercollapserbutton_parent(void* self);
 
 /// Inherited from QObject
@@ -2994,6 +3375,7 @@ QObject* k_splittercollapserbutton_parent(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param classname const char*
+///
 bool k_splittercollapserbutton_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -3001,6 +3383,7 @@ bool k_splittercollapserbutton_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_delete_later(void* self);
 
 /// Inherited from QObject
@@ -3010,6 +3393,7 @@ void k_splittercollapserbutton_delete_later(void* self);
 /// @param self KSplitterCollapserButton*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_splittercollapserbutton_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -3019,6 +3403,7 @@ bool k_splittercollapserbutton_move_to_thread2(void* self, void* thread, void* p
 /// @param self KSplitterCollapserButton*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_splittercollapserbutton_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -3030,6 +3415,7 @@ int32_t k_splittercollapserbutton_start_timer22(void* self, int interval, int32_
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_splittercollapserbutton_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -3041,6 +3427,7 @@ QMetaObject__Connection* k_splittercollapserbutton_connect5(void* sender, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_splittercollapserbutton_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -3049,6 +3436,7 @@ QMetaObject__Connection* k_splittercollapserbutton_connect4(void* self, void* se
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QObject*
+///
 void k_splittercollapserbutton_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -3057,6 +3445,7 @@ void k_splittercollapserbutton_destroyed1(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QObject* param1)
+///
 void k_splittercollapserbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3064,6 +3453,7 @@ void k_splittercollapserbutton_on_destroyed1(void* self, void (*callback)(void*,
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -3071,6 +3461,7 @@ bool k_splittercollapserbutton_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3078,6 +3469,7 @@ int32_t k_splittercollapserbutton_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3085,6 +3477,7 @@ int32_t k_splittercollapserbutton_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3092,6 +3485,7 @@ int32_t k_splittercollapserbutton_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3099,6 +3493,7 @@ int32_t k_splittercollapserbutton_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3106,6 +3501,7 @@ int32_t k_splittercollapserbutton_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3113,6 +3509,7 @@ int32_t k_splittercollapserbutton_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KSplitterCollapserButton*
+///
 double k_splittercollapserbutton_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -3120,6 +3517,7 @@ double k_splittercollapserbutton_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KSplitterCollapserButton*
+///
 double k_splittercollapserbutton_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -3127,6 +3525,7 @@ double k_splittercollapserbutton_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -3134,6 +3533,7 @@ int32_t k_splittercollapserbutton_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -3148,6 +3548,7 @@ double k_splittercollapserbutton_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t k_splittercollapserbutton_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QToolButton
@@ -3157,6 +3558,7 @@ int32_t k_splittercollapserbutton_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_minimum_size_hint(void* self);
 
 /// Inherited from QToolButton
@@ -3166,6 +3568,7 @@ QSize* k_splittercollapserbutton_minimum_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QSize* k_splittercollapserbutton_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QToolButton
@@ -3176,6 +3579,7 @@ QSize* k_splittercollapserbutton_qbase_minimum_size_hint(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QSize* func()
+///
 void k_splittercollapserbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QToolButton
@@ -3186,6 +3590,7 @@ void k_splittercollapserbutton_on_minimum_size_hint(void* self, QSize* (*callbac
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QEvent*
+///
 bool k_splittercollapserbutton_event(void* self, void* e);
 
 /// Inherited from QToolButton
@@ -3196,6 +3601,7 @@ bool k_splittercollapserbutton_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QEvent*
+///
 bool k_splittercollapserbutton_qbase_event(void* self, void* e);
 
 /// Inherited from QToolButton
@@ -3206,6 +3612,7 @@ bool k_splittercollapserbutton_qbase_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func(KSplitterCollapserButton* self, QEvent* e)
+///
 void k_splittercollapserbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3216,6 +3623,7 @@ void k_splittercollapserbutton_on_event(void* self, bool (*callback)(void*, void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QMouseEvent*
+///
 void k_splittercollapserbutton_mouse_press_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3226,6 +3634,7 @@ void k_splittercollapserbutton_mouse_press_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QMouseEvent*
+///
 void k_splittercollapserbutton_qbase_mouse_press_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3236,6 +3645,7 @@ void k_splittercollapserbutton_qbase_mouse_press_event(void* self, void* param1)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QMouseEvent* param1)
+///
 void k_splittercollapserbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3246,6 +3656,7 @@ void k_splittercollapserbutton_on_mouse_press_event(void* self, void (*callback)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QMouseEvent*
+///
 void k_splittercollapserbutton_mouse_release_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3256,6 +3667,7 @@ void k_splittercollapserbutton_mouse_release_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QMouseEvent*
+///
 void k_splittercollapserbutton_qbase_mouse_release_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3266,6 +3678,7 @@ void k_splittercollapserbutton_qbase_mouse_release_event(void* self, void* param
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QMouseEvent* param1)
+///
 void k_splittercollapserbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3276,6 +3689,7 @@ void k_splittercollapserbutton_on_mouse_release_event(void* self, void (*callbac
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QActionEvent*
+///
 void k_splittercollapserbutton_action_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3286,6 +3700,7 @@ void k_splittercollapserbutton_action_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QActionEvent*
+///
 void k_splittercollapserbutton_qbase_action_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3296,6 +3711,7 @@ void k_splittercollapserbutton_qbase_action_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QActionEvent* param1)
+///
 void k_splittercollapserbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3306,6 +3722,7 @@ void k_splittercollapserbutton_on_action_event(void* self, void (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QTimerEvent*
+///
 void k_splittercollapserbutton_timer_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3316,6 +3733,7 @@ void k_splittercollapserbutton_timer_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QTimerEvent*
+///
 void k_splittercollapserbutton_qbase_timer_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3326,6 +3744,7 @@ void k_splittercollapserbutton_qbase_timer_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QTimerEvent* param1)
+///
 void k_splittercollapserbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3336,6 +3755,7 @@ void k_splittercollapserbutton_on_timer_event(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QEvent*
+///
 void k_splittercollapserbutton_change_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3346,6 +3766,7 @@ void k_splittercollapserbutton_change_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QEvent*
+///
 void k_splittercollapserbutton_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QToolButton
@@ -3356,6 +3777,7 @@ void k_splittercollapserbutton_qbase_change_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QEvent* param1)
+///
 void k_splittercollapserbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3366,6 +3788,7 @@ void k_splittercollapserbutton_on_change_event(void* self, void (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param pos QPoint*
+///
 bool k_splittercollapserbutton_hit_button(void* self, void* pos);
 
 /// Inherited from QToolButton
@@ -3376,6 +3799,7 @@ bool k_splittercollapserbutton_hit_button(void* self, void* pos);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param pos QPoint*
+///
 bool k_splittercollapserbutton_qbase_hit_button(void* self, void* pos);
 
 /// Inherited from QToolButton
@@ -3386,6 +3810,7 @@ bool k_splittercollapserbutton_qbase_hit_button(void* self, void* pos);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func(KSplitterCollapserButton* self, QPoint* pos)
+///
 void k_splittercollapserbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3395,6 +3820,7 @@ void k_splittercollapserbutton_on_hit_button(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_check_state_set(void* self);
 
 /// Inherited from QToolButton
@@ -3404,6 +3830,7 @@ void k_splittercollapserbutton_check_state_set(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_qbase_check_state_set(void* self);
 
 /// Inherited from QToolButton
@@ -3414,6 +3841,7 @@ void k_splittercollapserbutton_qbase_check_state_set(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func()
+///
 void k_splittercollapserbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QToolButton
@@ -3423,6 +3851,7 @@ void k_splittercollapserbutton_on_check_state_set(void* self, void (*callback)()
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_next_check_state(void* self);
 
 /// Inherited from QToolButton
@@ -3432,6 +3861,7 @@ void k_splittercollapserbutton_next_check_state(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_qbase_next_check_state(void* self);
 
 /// Inherited from QToolButton
@@ -3442,6 +3872,7 @@ void k_splittercollapserbutton_qbase_next_check_state(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func()
+///
 void k_splittercollapserbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QToolButton
@@ -3452,6 +3883,7 @@ void k_splittercollapserbutton_on_next_check_state(void* self, void (*callback)(
 ///
 /// @param self KSplitterCollapserButton*
 /// @param option QStyleOptionToolButton*
+///
 void k_splittercollapserbutton_init_style_option(void* self, void* option);
 
 /// Inherited from QToolButton
@@ -3462,6 +3894,7 @@ void k_splittercollapserbutton_init_style_option(void* self, void* option);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param option QStyleOptionToolButton*
+///
 void k_splittercollapserbutton_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QToolButton
@@ -3472,6 +3905,7 @@ void k_splittercollapserbutton_qbase_init_style_option(void* self, void* option)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QStyleOptionToolButton* option)
+///
 void k_splittercollapserbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3482,6 +3916,7 @@ void k_splittercollapserbutton_on_init_style_option(void* self, void (*callback)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QKeyEvent*
+///
 void k_splittercollapserbutton_key_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3492,6 +3927,7 @@ void k_splittercollapserbutton_key_press_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QKeyEvent*
+///
 void k_splittercollapserbutton_qbase_key_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3502,6 +3938,7 @@ void k_splittercollapserbutton_qbase_key_press_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QKeyEvent* e)
+///
 void k_splittercollapserbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3512,6 +3949,7 @@ void k_splittercollapserbutton_on_key_press_event(void* self, void (*callback)(v
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QKeyEvent*
+///
 void k_splittercollapserbutton_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3522,6 +3960,7 @@ void k_splittercollapserbutton_key_release_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QKeyEvent*
+///
 void k_splittercollapserbutton_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3532,6 +3971,7 @@ void k_splittercollapserbutton_qbase_key_release_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QKeyEvent* e)
+///
 void k_splittercollapserbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3542,6 +3982,7 @@ void k_splittercollapserbutton_on_key_release_event(void* self, void (*callback)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QMouseEvent*
+///
 void k_splittercollapserbutton_mouse_move_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3552,6 +3993,7 @@ void k_splittercollapserbutton_mouse_move_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QMouseEvent*
+///
 void k_splittercollapserbutton_qbase_mouse_move_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3562,6 +4004,7 @@ void k_splittercollapserbutton_qbase_mouse_move_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QMouseEvent* e)
+///
 void k_splittercollapserbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3572,6 +4015,7 @@ void k_splittercollapserbutton_on_mouse_move_event(void* self, void (*callback)(
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QFocusEvent*
+///
 void k_splittercollapserbutton_focus_in_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3582,6 +4026,7 @@ void k_splittercollapserbutton_focus_in_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QFocusEvent*
+///
 void k_splittercollapserbutton_qbase_focus_in_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3592,6 +4037,7 @@ void k_splittercollapserbutton_qbase_focus_in_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QFocusEvent* e)
+///
 void k_splittercollapserbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3602,6 +4048,7 @@ void k_splittercollapserbutton_on_focus_in_event(void* self, void (*callback)(vo
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QFocusEvent*
+///
 void k_splittercollapserbutton_focus_out_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3612,6 +4059,7 @@ void k_splittercollapserbutton_focus_out_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param e QFocusEvent*
+///
 void k_splittercollapserbutton_qbase_focus_out_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3622,6 +4070,7 @@ void k_splittercollapserbutton_qbase_focus_out_event(void* self, void* e);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QFocusEvent* e)
+///
 void k_splittercollapserbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3631,6 +4080,7 @@ void k_splittercollapserbutton_on_focus_out_event(void* self, void (*callback)(v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3640,6 +4090,7 @@ int32_t k_splittercollapserbutton_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3650,6 +4101,7 @@ int32_t k_splittercollapserbutton_qbase_dev_type(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback int32_t func()
+///
 void k_splittercollapserbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3660,6 +4112,7 @@ void k_splittercollapserbutton_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self KSplitterCollapserButton*
 /// @param visible bool
+///
 void k_splittercollapserbutton_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3670,6 +4123,7 @@ void k_splittercollapserbutton_set_visible(void* self, bool visible);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param visible bool
+///
 void k_splittercollapserbutton_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3680,6 +4134,7 @@ void k_splittercollapserbutton_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, bool visible)
+///
 void k_splittercollapserbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3690,6 +4145,7 @@ void k_splittercollapserbutton_on_set_visible(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 int
+///
 int32_t k_splittercollapserbutton_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3700,6 +4156,7 @@ int32_t k_splittercollapserbutton_height_for_width(void* self, int param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 int
+///
 int32_t k_splittercollapserbutton_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3710,6 +4167,7 @@ int32_t k_splittercollapserbutton_qbase_height_for_width(void* self, int param1)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback int32_t func(KSplitterCollapserButton* self, int param1)
+///
 void k_splittercollapserbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3719,6 +4177,7 @@ void k_splittercollapserbutton_on_height_for_width(void* self, int32_t (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3728,6 +4187,7 @@ bool k_splittercollapserbutton_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3738,6 +4198,7 @@ bool k_splittercollapserbutton_qbase_has_height_for_width(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func()
+///
 void k_splittercollapserbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3747,6 +4208,7 @@ void k_splittercollapserbutton_on_has_height_for_width(void* self, bool (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QPaintEngine* k_splittercollapserbutton_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3756,6 +4218,7 @@ QPaintEngine* k_splittercollapserbutton_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QPaintEngine* k_splittercollapserbutton_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3766,6 +4229,7 @@ QPaintEngine* k_splittercollapserbutton_qbase_paint_engine(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QPaintEngine* func()
+///
 void k_splittercollapserbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3776,6 +4240,7 @@ void k_splittercollapserbutton_on_paint_engine(void* self, QPaintEngine* (*callb
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QMouseEvent*
+///
 void k_splittercollapserbutton_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3786,6 +4251,7 @@ void k_splittercollapserbutton_mouse_double_click_event(void* self, void* event)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QMouseEvent*
+///
 void k_splittercollapserbutton_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3796,6 +4262,7 @@ void k_splittercollapserbutton_qbase_mouse_double_click_event(void* self, void* 
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QMouseEvent* event)
+///
 void k_splittercollapserbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3806,6 +4273,7 @@ void k_splittercollapserbutton_on_mouse_double_click_event(void* self, void (*ca
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QWheelEvent*
+///
 void k_splittercollapserbutton_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3816,6 +4284,7 @@ void k_splittercollapserbutton_wheel_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QWheelEvent*
+///
 void k_splittercollapserbutton_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3826,6 +4295,7 @@ void k_splittercollapserbutton_qbase_wheel_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QWheelEvent* event)
+///
 void k_splittercollapserbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3836,6 +4306,7 @@ void k_splittercollapserbutton_on_wheel_event(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QMoveEvent*
+///
 void k_splittercollapserbutton_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3846,6 +4317,7 @@ void k_splittercollapserbutton_move_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QMoveEvent*
+///
 void k_splittercollapserbutton_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3856,6 +4328,7 @@ void k_splittercollapserbutton_qbase_move_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QMoveEvent* event)
+///
 void k_splittercollapserbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3866,6 +4339,7 @@ void k_splittercollapserbutton_on_move_event(void* self, void (*callback)(void*,
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QResizeEvent*
+///
 void k_splittercollapserbutton_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3876,6 +4350,7 @@ void k_splittercollapserbutton_resize_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QResizeEvent*
+///
 void k_splittercollapserbutton_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3886,6 +4361,7 @@ void k_splittercollapserbutton_qbase_resize_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QResizeEvent* event)
+///
 void k_splittercollapserbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3896,6 +4372,7 @@ void k_splittercollapserbutton_on_resize_event(void* self, void (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QCloseEvent*
+///
 void k_splittercollapserbutton_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3906,6 +4383,7 @@ void k_splittercollapserbutton_close_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QCloseEvent*
+///
 void k_splittercollapserbutton_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3916,6 +4394,7 @@ void k_splittercollapserbutton_qbase_close_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QCloseEvent* event)
+///
 void k_splittercollapserbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3926,6 +4405,7 @@ void k_splittercollapserbutton_on_close_event(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QContextMenuEvent*
+///
 void k_splittercollapserbutton_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3936,6 +4416,7 @@ void k_splittercollapserbutton_context_menu_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QContextMenuEvent*
+///
 void k_splittercollapserbutton_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3946,6 +4427,7 @@ void k_splittercollapserbutton_qbase_context_menu_event(void* self, void* event)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QContextMenuEvent* event)
+///
 void k_splittercollapserbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3956,6 +4438,7 @@ void k_splittercollapserbutton_on_context_menu_event(void* self, void (*callback
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QTabletEvent*
+///
 void k_splittercollapserbutton_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3966,6 +4449,7 @@ void k_splittercollapserbutton_tablet_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QTabletEvent*
+///
 void k_splittercollapserbutton_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3976,6 +4460,7 @@ void k_splittercollapserbutton_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QTabletEvent* event)
+///
 void k_splittercollapserbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3986,6 +4471,7 @@ void k_splittercollapserbutton_on_tablet_event(void* self, void (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDragEnterEvent*
+///
 void k_splittercollapserbutton_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3996,6 +4482,7 @@ void k_splittercollapserbutton_drag_enter_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDragEnterEvent*
+///
 void k_splittercollapserbutton_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4006,6 +4493,7 @@ void k_splittercollapserbutton_qbase_drag_enter_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QDragEnterEvent* event)
+///
 void k_splittercollapserbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4016,6 +4504,7 @@ void k_splittercollapserbutton_on_drag_enter_event(void* self, void (*callback)(
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDragMoveEvent*
+///
 void k_splittercollapserbutton_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4026,6 +4515,7 @@ void k_splittercollapserbutton_drag_move_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDragMoveEvent*
+///
 void k_splittercollapserbutton_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4036,6 +4526,7 @@ void k_splittercollapserbutton_qbase_drag_move_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QDragMoveEvent* event)
+///
 void k_splittercollapserbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4046,6 +4537,7 @@ void k_splittercollapserbutton_on_drag_move_event(void* self, void (*callback)(v
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDragLeaveEvent*
+///
 void k_splittercollapserbutton_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4056,6 +4548,7 @@ void k_splittercollapserbutton_drag_leave_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDragLeaveEvent*
+///
 void k_splittercollapserbutton_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4066,6 +4559,7 @@ void k_splittercollapserbutton_qbase_drag_leave_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QDragLeaveEvent* event)
+///
 void k_splittercollapserbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4076,6 +4570,7 @@ void k_splittercollapserbutton_on_drag_leave_event(void* self, void (*callback)(
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDropEvent*
+///
 void k_splittercollapserbutton_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4086,6 +4581,7 @@ void k_splittercollapserbutton_drop_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QDropEvent*
+///
 void k_splittercollapserbutton_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4096,6 +4592,7 @@ void k_splittercollapserbutton_qbase_drop_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QDropEvent* event)
+///
 void k_splittercollapserbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4106,6 +4603,7 @@ void k_splittercollapserbutton_on_drop_event(void* self, void (*callback)(void*,
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QHideEvent*
+///
 void k_splittercollapserbutton_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4116,6 +4614,7 @@ void k_splittercollapserbutton_hide_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QHideEvent*
+///
 void k_splittercollapserbutton_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4126,6 +4625,7 @@ void k_splittercollapserbutton_qbase_hide_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QHideEvent* event)
+///
 void k_splittercollapserbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4138,6 +4638,7 @@ void k_splittercollapserbutton_on_hide_event(void* self, void (*callback)(void*,
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_splittercollapserbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4150,6 +4651,7 @@ bool k_splittercollapserbutton_native_event(void* self, const char* eventType, v
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_splittercollapserbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4160,6 +4662,7 @@ bool k_splittercollapserbutton_qbase_native_event(void* self, const char* eventT
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func(KSplitterCollapserButton* self, const char* eventType, void* message, intptr_t* result)
+///
 void k_splittercollapserbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4170,6 +4673,7 @@ void k_splittercollapserbutton_on_native_event(void* self, bool (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_splittercollapserbutton_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4180,6 +4684,7 @@ int32_t k_splittercollapserbutton_metric(void* self, int32_t param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_splittercollapserbutton_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4190,6 +4695,7 @@ int32_t k_splittercollapserbutton_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback int32_t func(KSplitterCollapserButton* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void k_splittercollapserbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4200,6 +4706,7 @@ void k_splittercollapserbutton_on_metric(void* self, int32_t (*callback)(void*, 
 ///
 /// @param self KSplitterCollapserButton*
 /// @param painter QPainter*
+///
 void k_splittercollapserbutton_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4210,6 +4717,7 @@ void k_splittercollapserbutton_init_painter(void* self, void* painter);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param painter QPainter*
+///
 void k_splittercollapserbutton_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4220,6 +4728,7 @@ void k_splittercollapserbutton_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QPainter* painter)
+///
 void k_splittercollapserbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4230,6 +4739,7 @@ void k_splittercollapserbutton_on_init_painter(void* self, void (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param offset QPoint*
+///
 QPaintDevice* k_splittercollapserbutton_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4240,6 +4750,7 @@ QPaintDevice* k_splittercollapserbutton_redirected(void* self, void* offset);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param offset QPoint*
+///
 QPaintDevice* k_splittercollapserbutton_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4250,6 +4761,7 @@ QPaintDevice* k_splittercollapserbutton_qbase_redirected(void* self, void* offse
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QPaintDevice* func(KSplitterCollapserButton* self, QPoint* offset)
+///
 void k_splittercollapserbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4259,6 +4771,7 @@ void k_splittercollapserbutton_on_redirected(void* self, QPaintDevice* (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QPainter* k_splittercollapserbutton_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4268,6 +4781,7 @@ QPainter* k_splittercollapserbutton_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QPainter* k_splittercollapserbutton_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4278,6 +4792,7 @@ QPainter* k_splittercollapserbutton_qbase_shared_painter(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QPainter* func()
+///
 void k_splittercollapserbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4288,6 +4803,7 @@ void k_splittercollapserbutton_on_shared_painter(void* self, QPainter* (*callbac
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QInputMethodEvent*
+///
 void k_splittercollapserbutton_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4298,6 +4814,7 @@ void k_splittercollapserbutton_input_method_event(void* self, void* param1);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QInputMethodEvent*
+///
 void k_splittercollapserbutton_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4308,6 +4825,7 @@ void k_splittercollapserbutton_qbase_input_method_event(void* self, void* param1
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QInputMethodEvent* param1)
+///
 void k_splittercollapserbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4318,6 +4836,7 @@ void k_splittercollapserbutton_on_input_method_event(void* self, void (*callback
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_splittercollapserbutton_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4328,6 +4847,7 @@ QVariant* k_splittercollapserbutton_input_method_query(void* self, int64_t param
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_splittercollapserbutton_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4338,6 +4858,7 @@ QVariant* k_splittercollapserbutton_qbase_input_method_query(void* self, int64_t
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QVariant* func(KSplitterCollapserButton* self, enum Qt__InputMethodQuery param1)
+///
 void k_splittercollapserbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4348,6 +4869,7 @@ void k_splittercollapserbutton_on_input_method_query(void* self, QVariant* (*cal
 ///
 /// @param self KSplitterCollapserButton*
 /// @param next bool
+///
 bool k_splittercollapserbutton_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4358,6 +4880,7 @@ bool k_splittercollapserbutton_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param next bool
+///
 bool k_splittercollapserbutton_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4368,6 +4891,7 @@ bool k_splittercollapserbutton_qbase_focus_next_prev_child(void* self, bool next
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func(KSplitterCollapserButton* self, bool next)
+///
 void k_splittercollapserbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4378,6 +4902,7 @@ void k_splittercollapserbutton_on_focus_next_prev_child(void* self, bool (*callb
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QChildEvent*
+///
 void k_splittercollapserbutton_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4388,6 +4913,7 @@ void k_splittercollapserbutton_child_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QChildEvent*
+///
 void k_splittercollapserbutton_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4398,6 +4924,7 @@ void k_splittercollapserbutton_qbase_child_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QChildEvent* event)
+///
 void k_splittercollapserbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4408,6 +4935,7 @@ void k_splittercollapserbutton_on_child_event(void* self, void (*callback)(void*
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEvent*
+///
 void k_splittercollapserbutton_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4418,6 +4946,7 @@ void k_splittercollapserbutton_custom_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEvent*
+///
 void k_splittercollapserbutton_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4428,6 +4957,7 @@ void k_splittercollapserbutton_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QEvent* event)
+///
 void k_splittercollapserbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4438,6 +4968,7 @@ void k_splittercollapserbutton_on_custom_event(void* self, void (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal QMetaMethod*
+///
 void k_splittercollapserbutton_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4448,6 +4979,7 @@ void k_splittercollapserbutton_connect_notify(void* self, void* signal);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal QMetaMethod*
+///
 void k_splittercollapserbutton_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4458,6 +4990,7 @@ void k_splittercollapserbutton_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QMetaMethod* signal)
+///
 void k_splittercollapserbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4468,6 +5001,7 @@ void k_splittercollapserbutton_on_connect_notify(void* self, void (*callback)(vo
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal QMetaMethod*
+///
 void k_splittercollapserbutton_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4478,6 +5012,7 @@ void k_splittercollapserbutton_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal QMetaMethod*
+///
 void k_splittercollapserbutton_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4488,6 +5023,7 @@ void k_splittercollapserbutton_qbase_disconnect_notify(void* self, void* signal)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, QMetaMethod* signal)
+///
 void k_splittercollapserbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4497,6 +5033,7 @@ void k_splittercollapserbutton_on_disconnect_notify(void* self, void (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4506,6 +5043,7 @@ void k_splittercollapserbutton_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4516,6 +5054,7 @@ void k_splittercollapserbutton_qbase_update_micro_focus(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func()
+///
 void k_splittercollapserbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4525,6 +5064,7 @@ void k_splittercollapserbutton_on_update_micro_focus(void* self, void (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_create(void* self);
 
 /// Inherited from QWidget
@@ -4534,6 +5074,7 @@ void k_splittercollapserbutton_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4544,6 +5085,7 @@ void k_splittercollapserbutton_qbase_create(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func()
+///
 void k_splittercollapserbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4553,6 +5095,7 @@ void k_splittercollapserbutton_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4562,6 +5105,7 @@ void k_splittercollapserbutton_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4572,6 +5116,7 @@ void k_splittercollapserbutton_qbase_destroy(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func()
+///
 void k_splittercollapserbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4581,6 +5126,7 @@ void k_splittercollapserbutton_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4590,6 +5136,7 @@ bool k_splittercollapserbutton_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4600,6 +5147,7 @@ bool k_splittercollapserbutton_qbase_focus_next_child(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func()
+///
 void k_splittercollapserbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4609,6 +5157,7 @@ void k_splittercollapserbutton_on_focus_next_child(void* self, bool (*callback)(
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4618,6 +5167,7 @@ bool k_splittercollapserbutton_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 bool k_splittercollapserbutton_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4628,6 +5178,7 @@ bool k_splittercollapserbutton_qbase_focus_previous_child(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func()
+///
 void k_splittercollapserbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4637,6 +5188,7 @@ void k_splittercollapserbutton_on_focus_previous_child(void* self, bool (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QObject* k_splittercollapserbutton_sender(void* self);
 
 /// Inherited from QObject
@@ -4646,6 +5198,7 @@ QObject* k_splittercollapserbutton_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 QObject* k_splittercollapserbutton_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4656,6 +5209,7 @@ QObject* k_splittercollapserbutton_qbase_sender(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QObject* func()
+///
 void k_splittercollapserbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4665,6 +5219,7 @@ void k_splittercollapserbutton_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4674,6 +5229,7 @@ int32_t k_splittercollapserbutton_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSplitterCollapserButton*
+///
 int32_t k_splittercollapserbutton_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4684,6 +5240,7 @@ int32_t k_splittercollapserbutton_qbase_sender_signal_index(void* self);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback int32_t func()
+///
 void k_splittercollapserbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4694,6 +5251,7 @@ void k_splittercollapserbutton_on_sender_signal_index(void* self, int32_t (*call
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal const char*
+///
 int32_t k_splittercollapserbutton_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4704,6 +5262,7 @@ int32_t k_splittercollapserbutton_receivers(void* self, const char* signal);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal const char*
+///
 int32_t k_splittercollapserbutton_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4714,6 +5273,7 @@ int32_t k_splittercollapserbutton_qbase_receivers(void* self, const char* signal
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback int32_t func(KSplitterCollapserButton* self, const char* signal)
+///
 void k_splittercollapserbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4724,6 +5284,7 @@ void k_splittercollapserbutton_on_receivers(void* self, int32_t (*callback)(void
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal QMetaMethod*
+///
 bool k_splittercollapserbutton_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4734,6 +5295,7 @@ bool k_splittercollapserbutton_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KSplitterCollapserButton*
 /// @param signal QMetaMethod*
+///
 bool k_splittercollapserbutton_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4744,6 +5306,7 @@ bool k_splittercollapserbutton_qbase_is_signal_connected(void* self, void* signa
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback bool func(KSplitterCollapserButton* self, QMetaMethod* signal)
+///
 void k_splittercollapserbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4755,6 +5318,7 @@ void k_splittercollapserbutton_on_is_signal_connected(void* self, bool (*callbac
 /// @param self KSplitterCollapserButton*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_splittercollapserbutton_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4766,6 +5330,7 @@ double k_splittercollapserbutton_get_decoded_metric_f(void* self, int32_t metric
 /// @param self KSplitterCollapserButton*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_splittercollapserbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4776,6 +5341,7 @@ double k_splittercollapserbutton_qbase_get_decoded_metric_f(void* self, int32_t 
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback double func(KSplitterCollapserButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void k_splittercollapserbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4786,6 +5352,7 @@ void k_splittercollapserbutton_on_get_decoded_metric_f(void* self, double (*call
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback void func(KSplitterCollapserButton* self, const char* objectName)
+///
 void k_splittercollapserbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/ksplittercollapserbutton.html#dtor.KSplitterCollapserButton)
@@ -4793,6 +5360,7 @@ void k_splittercollapserbutton_on_object_name_changed(void* self, void (*callbac
 /// Delete this object from C++ memory.
 ///
 /// @param self KSplitterCollapserButton*
+///
 void k_splittercollapserbutton_delete(void* self);
 
 #endif

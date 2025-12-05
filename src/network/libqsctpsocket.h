@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsctpsocket.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html)
 
 /// q_sctpsocket_new constructs a new QSctpSocket object.
 ///
 QSctpSocket* q_sctpsocket_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html)
+
 /// q_sctpsocket_new2 constructs a new QSctpSocket object.
 ///
 /// @param parent QObject*
+///
 QSctpSocket* q_sctpsocket_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QSctpSocket*
+///
 const QMetaObject* q_sctpsocket_meta_object(void* self);
 
 /// @param self QSctpSocket*
 /// @param param1 const char*
+///
 void* q_sctpsocket_metacast(void* self, const char* param1);
 
 /// @param self QSctpSocket*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_sctpsocket_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSctpSocket*
 /// @param callback int32_t func(QSctpSocket* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_sctpsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_sctpsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_sctpsocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,11 +64,13 @@ int32_t q_sctpsocket_qbase_metacall(void* self, int32_t param1, int param2, void
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_sctpsocket_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#close)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#close)
@@ -69,6 +79,7 @@ void q_sctpsocket_close(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func()
+///
 void q_sctpsocket_on_close(void* self, void (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#close)
@@ -76,11 +87,13 @@ void q_sctpsocket_on_close(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_qbase_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#disconnectFromHost)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_disconnect_from_host(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#disconnectFromHost)
@@ -89,6 +102,7 @@ void q_sctpsocket_disconnect_from_host(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func()
+///
 void q_sctpsocket_on_disconnect_from_host(void* self, void (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#disconnectFromHost)
@@ -96,33 +110,39 @@ void q_sctpsocket_on_disconnect_from_host(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_qbase_disconnect_from_host(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#setMaximumChannelCount)
 ///
 /// @param self QSctpSocket*
 /// @param count int
+///
 void q_sctpsocket_set_maximum_channel_count(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#maximumChannelCount)
 ///
 /// @param self QSctpSocket*
+///
 int32_t q_sctpsocket_maximum_channel_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#isInDatagramMode)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_in_datagram_mode(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#readDatagram)
 ///
 /// @param self QSctpSocket*
+///
 QNetworkDatagram* q_sctpsocket_read_datagram(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#writeDatagram)
 ///
 /// @param self QSctpSocket*
 /// @param datagram QNetworkDatagram*
+///
 bool q_sctpsocket_write_datagram(void* self, void* datagram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#readData)
@@ -130,6 +150,7 @@ bool q_sctpsocket_write_datagram(void* self, void* datagram);
 /// @param self QSctpSocket*
 /// @param data char*
 /// @param maxlen long long
+///
 long long q_sctpsocket_read_data(void* self, char* data, long long maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#readData)
@@ -138,6 +159,7 @@ long long q_sctpsocket_read_data(void* self, char* data, long long maxlen);
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func(QSctpSocket* self, char* data, long long maxlen)
+///
 void q_sctpsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#readData)
@@ -147,6 +169,7 @@ void q_sctpsocket_on_read_data(void* self, long long (*callback)(void*, char*, l
 /// @param self QSctpSocket*
 /// @param data char*
 /// @param maxlen long long
+///
 long long q_sctpsocket_qbase_read_data(void* self, char* data, long long maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#readLineData)
@@ -154,6 +177,7 @@ long long q_sctpsocket_qbase_read_data(void* self, char* data, long long maxlen)
 /// @param self QSctpSocket*
 /// @param data char*
 /// @param maxlen long long
+///
 long long q_sctpsocket_read_line_data(void* self, char* data, long long maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#readLineData)
@@ -162,6 +186,7 @@ long long q_sctpsocket_read_line_data(void* self, char* data, long long maxlen);
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func(QSctpSocket* self, char* data, long long maxlen)
+///
 void q_sctpsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#readLineData)
@@ -171,6 +196,7 @@ void q_sctpsocket_on_read_line_data(void* self, long long (*callback)(void*, cha
 /// @param self QSctpSocket*
 /// @param data char*
 /// @param maxlen long long
+///
 long long q_sctpsocket_qbase_read_line_data(void* self, char* data, long long maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -179,6 +205,7 @@ long long q_sctpsocket_qbase_read_line_data(void* self, char* data, long long ma
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_sctpsocket_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -188,6 +215,7 @@ const char* q_sctpsocket_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_sctpsocket_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QTcpSocket
@@ -197,6 +225,7 @@ const char* q_sctpsocket_tr3(const char* s, const char* c, int n);
 /// @param self QSctpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
+///
 bool q_sctpsocket_bind2(void* self, int32_t addr, unsigned short port);
 
 /// Inherited from QTcpSocket
@@ -207,6 +236,7 @@ bool q_sctpsocket_bind2(void* self, int32_t addr, unsigned short port);
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
+///
 bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
@@ -216,6 +246,7 @@ bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t m
 /// @param self QSctpSocket*
 ///
 /// @return flag of enum QAbstractSocket__PauseMode
+///
 int32_t q_sctpsocket_pause_mode(void* self);
 
 /// Inherited from QAbstractSocket
@@ -224,6 +255,7 @@ int32_t q_sctpsocket_pause_mode(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param pauseMode flag of enum QAbstractSocket__PauseMode
+///
 void q_sctpsocket_set_pause_mode(void* self, int32_t pauseMode);
 
 /// Inherited from QAbstractSocket
@@ -233,6 +265,7 @@ void q_sctpsocket_set_pause_mode(void* self, int32_t pauseMode);
 /// @param self QSctpSocket*
 /// @param address QHostAddress*
 /// @param port unsigned short
+///
 void q_sctpsocket_connect_to_host2(void* self, void* address, unsigned short port);
 
 /// Inherited from QAbstractSocket
@@ -240,6 +273,7 @@ void q_sctpsocket_connect_to_host2(void* self, void* address, unsigned short por
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#isValid)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_valid(void* self);
 
 /// Inherited from QAbstractSocket
@@ -247,6 +281,7 @@ bool q_sctpsocket_is_valid(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#localPort)
 ///
 /// @param self QSctpSocket*
+///
 unsigned short q_sctpsocket_local_port(void* self);
 
 /// Inherited from QAbstractSocket
@@ -254,6 +289,7 @@ unsigned short q_sctpsocket_local_port(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#localAddress)
 ///
 /// @param self QSctpSocket*
+///
 QHostAddress* q_sctpsocket_local_address(void* self);
 
 /// Inherited from QAbstractSocket
@@ -261,6 +297,7 @@ QHostAddress* q_sctpsocket_local_address(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#peerPort)
 ///
 /// @param self QSctpSocket*
+///
 unsigned short q_sctpsocket_peer_port(void* self);
 
 /// Inherited from QAbstractSocket
@@ -268,6 +305,7 @@ unsigned short q_sctpsocket_peer_port(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#peerAddress)
 ///
 /// @param self QSctpSocket*
+///
 QHostAddress* q_sctpsocket_peer_address(void* self);
 
 /// Inherited from QAbstractSocket
@@ -277,6 +315,7 @@ QHostAddress* q_sctpsocket_peer_address(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpSocket*
+///
 const char* q_sctpsocket_peer_name(void* self);
 
 /// Inherited from QAbstractSocket
@@ -284,6 +323,7 @@ const char* q_sctpsocket_peer_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#readBufferSize)
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_read_buffer_size(void* self);
 
 /// Inherited from QAbstractSocket
@@ -291,6 +331,7 @@ long long q_sctpsocket_read_buffer_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#abort)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_abort(void* self);
 
 /// Inherited from QAbstractSocket
@@ -300,6 +341,7 @@ void q_sctpsocket_abort(void* self);
 /// @param self QSctpSocket*
 ///
 /// @return enum QAbstractSocket__SocketType
+///
 int32_t q_sctpsocket_socket_type(void* self);
 
 /// Inherited from QAbstractSocket
@@ -309,6 +351,7 @@ int32_t q_sctpsocket_socket_type(void* self);
 /// @param self QSctpSocket*
 ///
 /// @return enum QAbstractSocket__SocketState
+///
 int32_t q_sctpsocket_state(void* self);
 
 /// Inherited from QAbstractSocket
@@ -318,6 +361,7 @@ int32_t q_sctpsocket_state(void* self);
 /// @param self QSctpSocket*
 ///
 /// @return enum QAbstractSocket__SocketError
+///
 int32_t q_sctpsocket_error(void* self);
 
 /// Inherited from QAbstractSocket
@@ -325,6 +369,7 @@ int32_t q_sctpsocket_error(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#flush)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_flush(void* self);
 
 /// Inherited from QAbstractSocket
@@ -333,6 +378,7 @@ bool q_sctpsocket_flush(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param networkProxy QNetworkProxy*
+///
 void q_sctpsocket_set_proxy(void* self, void* networkProxy);
 
 /// Inherited from QAbstractSocket
@@ -340,6 +386,7 @@ void q_sctpsocket_set_proxy(void* self, void* networkProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#proxy)
 ///
 /// @param self QSctpSocket*
+///
 QNetworkProxy* q_sctpsocket_proxy(void* self);
 
 /// Inherited from QAbstractSocket
@@ -349,6 +396,7 @@ QNetworkProxy* q_sctpsocket_proxy(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpSocket*
+///
 const char* q_sctpsocket_protocol_tag(void* self);
 
 /// Inherited from QAbstractSocket
@@ -357,6 +405,7 @@ const char* q_sctpsocket_protocol_tag(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param tag const char*
+///
 void q_sctpsocket_set_protocol_tag(void* self, const char* tag);
 
 /// Inherited from QAbstractSocket
@@ -364,6 +413,7 @@ void q_sctpsocket_set_protocol_tag(void* self, const char* tag);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_host_found(void* self);
 
 /// Inherited from QAbstractSocket
@@ -372,6 +422,7 @@ void q_sctpsocket_host_found(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self)
+///
 void q_sctpsocket_on_host_found(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSocket
@@ -379,6 +430,7 @@ void q_sctpsocket_on_host_found(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_connected(void* self);
 
 /// Inherited from QAbstractSocket
@@ -387,6 +439,7 @@ void q_sctpsocket_connected(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self)
+///
 void q_sctpsocket_on_connected(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSocket
@@ -394,6 +447,7 @@ void q_sctpsocket_on_connected(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_disconnected(void* self);
 
 /// Inherited from QAbstractSocket
@@ -402,6 +456,7 @@ void q_sctpsocket_disconnected(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self)
+///
 void q_sctpsocket_on_disconnected(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSocket
@@ -410,6 +465,7 @@ void q_sctpsocket_on_disconnected(void* self, void (*callback)(void*));
 ///
 /// @param self QSctpSocket*
 /// @param param1 enum QAbstractSocket__SocketState
+///
 void q_sctpsocket_state_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
@@ -418,6 +474,7 @@ void q_sctpsocket_state_changed(void* self, int32_t param1);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, enum QAbstractSocket__SocketState param1)
+///
 void q_sctpsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -426,6 +483,7 @@ void q_sctpsocket_on_state_changed(void* self, void (*callback)(void*, int32_t))
 ///
 /// @param self QSctpSocket*
 /// @param param1 enum QAbstractSocket__SocketError
+///
 void q_sctpsocket_error_occurred(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
@@ -434,6 +492,7 @@ void q_sctpsocket_error_occurred(void* self, int32_t param1);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, enum QAbstractSocket__SocketError param1)
+///
 void q_sctpsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -443,6 +502,7 @@ void q_sctpsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t)
 /// @param self QSctpSocket*
 /// @param proxy QNetworkProxy*
 /// @param authenticator QAuthenticator*
+///
 void q_sctpsocket_proxy_authentication_required(void* self, void* proxy, void* authenticator);
 
 /// Inherited from QAbstractSocket
@@ -451,6 +511,7 @@ void q_sctpsocket_proxy_authentication_required(void* self, void* proxy, void* a
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QNetworkProxy* proxy, QAuthenticator* authenticator)
+///
 void q_sctpsocket_on_proxy_authentication_required(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -459,6 +520,7 @@ void q_sctpsocket_on_proxy_authentication_required(void* self, void (*callback)(
 ///
 /// @param self QSctpSocket*
 /// @param port unsigned short
+///
 bool q_sctpsocket_bind1(void* self, unsigned short port);
 
 /// Inherited from QAbstractSocket
@@ -468,6 +530,7 @@ bool q_sctpsocket_bind1(void* self, unsigned short port);
 /// @param self QSctpSocket*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
+///
 bool q_sctpsocket_bind22(void* self, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
@@ -478,6 +541,7 @@ bool q_sctpsocket_bind22(void* self, unsigned short port, int32_t mode);
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
 void q_sctpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QIODevice
@@ -487,6 +551,7 @@ void q_sctpsocket_connect_to_host3(void* self, void* address, unsigned short por
 /// @param self QSctpSocket*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
+///
 int32_t q_sctpsocket_open_mode(void* self);
 
 /// Inherited from QIODevice
@@ -495,6 +560,7 @@ int32_t q_sctpsocket_open_mode(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param enabled bool
+///
 void q_sctpsocket_set_text_mode_enabled(void* self, bool enabled);
 
 /// Inherited from QIODevice
@@ -502,6 +568,7 @@ void q_sctpsocket_set_text_mode_enabled(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_text_mode_enabled(void* self);
 
 /// Inherited from QIODevice
@@ -509,6 +576,7 @@ bool q_sctpsocket_is_text_mode_enabled(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_open(void* self);
 
 /// Inherited from QIODevice
@@ -516,6 +584,7 @@ bool q_sctpsocket_is_open(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_readable(void* self);
 
 /// Inherited from QIODevice
@@ -523,6 +592,7 @@ bool q_sctpsocket_is_readable(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_writable(void* self);
 
 /// Inherited from QIODevice
@@ -530,6 +600,7 @@ bool q_sctpsocket_is_writable(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
 /// @param self QSctpSocket*
+///
 int32_t q_sctpsocket_read_channel_count(void* self);
 
 /// Inherited from QIODevice
@@ -537,6 +608,7 @@ int32_t q_sctpsocket_read_channel_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
 /// @param self QSctpSocket*
+///
 int32_t q_sctpsocket_write_channel_count(void* self);
 
 /// Inherited from QIODevice
@@ -544,6 +616,7 @@ int32_t q_sctpsocket_write_channel_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
 /// @param self QSctpSocket*
+///
 int32_t q_sctpsocket_current_read_channel(void* self);
 
 /// Inherited from QIODevice
@@ -552,6 +625,7 @@ int32_t q_sctpsocket_current_read_channel(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param channel int
+///
 void q_sctpsocket_set_current_read_channel(void* self, int channel);
 
 /// Inherited from QIODevice
@@ -559,6 +633,7 @@ void q_sctpsocket_set_current_read_channel(void* self, int channel);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
 /// @param self QSctpSocket*
+///
 int32_t q_sctpsocket_current_write_channel(void* self);
 
 /// Inherited from QIODevice
@@ -567,6 +642,7 @@ int32_t q_sctpsocket_current_write_channel(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param channel int
+///
 void q_sctpsocket_set_current_write_channel(void* self, int channel);
 
 /// Inherited from QIODevice
@@ -576,6 +652,7 @@ void q_sctpsocket_set_current_write_channel(void* self, int channel);
 /// @param self QSctpSocket*
 /// @param data char*
 /// @param maxlen long long
+///
 long long q_sctpsocket_read(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
@@ -586,6 +663,7 @@ long long q_sctpsocket_read(void* self, char* data, long long maxlen);
 ///
 /// @param self QSctpSocket*
 /// @param maxlen long long
+///
 char* q_sctpsocket_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
@@ -595,6 +673,7 @@ char* q_sctpsocket_read2(void* self, long long maxlen);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpSocket*
+///
 char* q_sctpsocket_read_all(void* self);
 
 /// Inherited from QIODevice
@@ -604,6 +683,7 @@ char* q_sctpsocket_read_all(void* self);
 /// @param self QSctpSocket*
 /// @param data char*
 /// @param maxlen long long
+///
 long long q_sctpsocket_read_line(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
@@ -613,6 +693,7 @@ long long q_sctpsocket_read_line(void* self, char* data, long long maxlen);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpSocket*
+///
 char* q_sctpsocket_read_line2(void* self);
 
 /// Inherited from QIODevice
@@ -620,6 +701,7 @@ char* q_sctpsocket_read_line2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#startTransaction)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_start_transaction(void* self);
 
 /// Inherited from QIODevice
@@ -627,6 +709,7 @@ void q_sctpsocket_start_transaction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#commitTransaction)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_commit_transaction(void* self);
 
 /// Inherited from QIODevice
@@ -634,6 +717,7 @@ void q_sctpsocket_commit_transaction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#rollbackTransaction)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_rollback_transaction(void* self);
 
 /// Inherited from QIODevice
@@ -641,6 +725,7 @@ void q_sctpsocket_rollback_transaction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_transaction_started(void* self);
 
 /// Inherited from QIODevice
@@ -650,6 +735,7 @@ bool q_sctpsocket_is_transaction_started(void* self);
 /// @param self QSctpSocket*
 /// @param data const char*
 /// @param lenVal long long
+///
 long long q_sctpsocket_write(void* self, const char* data, long long lenVal);
 
 /// Inherited from QIODevice
@@ -658,6 +744,7 @@ long long q_sctpsocket_write(void* self, const char* data, long long lenVal);
 ///
 /// @param self QSctpSocket*
 /// @param data const char*
+///
 long long q_sctpsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
@@ -666,6 +753,7 @@ long long q_sctpsocket_write2(void* self, const char* data);
 ///
 /// @param self QSctpSocket*
 /// @param data const char*
+///
 long long q_sctpsocket_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
@@ -675,6 +763,7 @@ long long q_sctpsocket_write3(void* self, const char* data);
 /// @param self QSctpSocket*
 /// @param data char*
 /// @param maxlen long long
+///
 long long q_sctpsocket_peek(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
@@ -685,6 +774,7 @@ long long q_sctpsocket_peek(void* self, char* data, long long maxlen);
 ///
 /// @param self QSctpSocket*
 /// @param maxlen long long
+///
 char* q_sctpsocket_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
@@ -693,6 +783,7 @@ char* q_sctpsocket_peek2(void* self, long long maxlen);
 ///
 /// @param self QSctpSocket*
 /// @param maxSize long long
+///
 long long q_sctpsocket_skip(void* self, long long maxSize);
 
 /// Inherited from QIODevice
@@ -701,6 +792,7 @@ long long q_sctpsocket_skip(void* self, long long maxSize);
 ///
 /// @param self QSctpSocket*
 /// @param c char
+///
 void q_sctpsocket_unget_char(void* self, char c);
 
 /// Inherited from QIODevice
@@ -709,6 +801,7 @@ void q_sctpsocket_unget_char(void* self, char c);
 ///
 /// @param self QSctpSocket*
 /// @param c char
+///
 bool q_sctpsocket_put_char(void* self, char c);
 
 /// Inherited from QIODevice
@@ -717,6 +810,7 @@ bool q_sctpsocket_put_char(void* self, char c);
 ///
 /// @param self QSctpSocket*
 /// @param c char*
+///
 bool q_sctpsocket_get_char(void* self, char* c);
 
 /// Inherited from QIODevice
@@ -726,6 +820,7 @@ bool q_sctpsocket_get_char(void* self, char* c);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpSocket*
+///
 const char* q_sctpsocket_error_string(void* self);
 
 /// Inherited from QIODevice
@@ -733,6 +828,7 @@ const char* q_sctpsocket_error_string(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_ready_read(void* self);
 
 /// Inherited from QIODevice
@@ -741,6 +837,7 @@ void q_sctpsocket_ready_read(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self)
+///
 void q_sctpsocket_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -749,6 +846,7 @@ void q_sctpsocket_on_ready_read(void* self, void (*callback)(void*));
 ///
 /// @param self QSctpSocket*
 /// @param channel int
+///
 void q_sctpsocket_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
@@ -757,6 +855,7 @@ void q_sctpsocket_channel_ready_read(void* self, int channel);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, int channel)
+///
 void q_sctpsocket_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -765,6 +864,7 @@ void q_sctpsocket_on_channel_ready_read(void* self, void (*callback)(void*, int)
 ///
 /// @param self QSctpSocket*
 /// @param bytes long long
+///
 void q_sctpsocket_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
@@ -773,6 +873,7 @@ void q_sctpsocket_bytes_written(void* self, long long bytes);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, long long bytes)
+///
 void q_sctpsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -782,6 +883,7 @@ void q_sctpsocket_on_bytes_written(void* self, void (*callback)(void*, long long
 /// @param self QSctpSocket*
 /// @param channel int
 /// @param bytes long long
+///
 void q_sctpsocket_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
@@ -790,6 +892,7 @@ void q_sctpsocket_channel_bytes_written(void* self, int channel, long long bytes
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, int channel, long long bytes)
+///
 void q_sctpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -797,6 +900,7 @@ void q_sctpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, i
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_about_to_close(void* self);
 
 /// Inherited from QIODevice
@@ -805,6 +909,7 @@ void q_sctpsocket_about_to_close(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self)
+///
 void q_sctpsocket_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -812,6 +917,7 @@ void q_sctpsocket_on_about_to_close(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
@@ -820,6 +926,7 @@ void q_sctpsocket_read_channel_finished(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self)
+///
 void q_sctpsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -830,6 +937,7 @@ void q_sctpsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// @param self QSctpSocket*
 /// @param maxlen long long
+///
 char* q_sctpsocket_read_line1(void* self, long long maxlen);
 
 /// Inherited from QObject
@@ -839,6 +947,7 @@ char* q_sctpsocket_read_line1(void* self, long long maxlen);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpSocket*
+///
 const char* q_sctpsocket_object_name(void* self);
 
 /// Inherited from QObject
@@ -847,6 +956,7 @@ const char* q_sctpsocket_object_name(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param name char*
+///
 void q_sctpsocket_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -854,6 +964,7 @@ void q_sctpsocket_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -861,6 +972,7 @@ bool q_sctpsocket_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -868,6 +980,7 @@ bool q_sctpsocket_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -875,6 +988,7 @@ bool q_sctpsocket_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -883,6 +997,7 @@ bool q_sctpsocket_signals_blocked(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param b bool
+///
 bool q_sctpsocket_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -890,6 +1005,7 @@ bool q_sctpsocket_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QSctpSocket*
+///
 QThread* q_sctpsocket_thread(void* self);
 
 /// Inherited from QObject
@@ -898,6 +1014,7 @@ QThread* q_sctpsocket_thread(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param thread QThread*
+///
 bool q_sctpsocket_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -906,6 +1023,7 @@ bool q_sctpsocket_move_to_thread(void* self, void* thread);
 ///
 /// @param self QSctpSocket*
 /// @param interval int
+///
 int32_t q_sctpsocket_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -914,6 +1032,7 @@ int32_t q_sctpsocket_start_timer(void* self, int interval);
 ///
 /// @param self QSctpSocket*
 /// @param id int
+///
 void q_sctpsocket_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -922,6 +1041,7 @@ void q_sctpsocket_kill_timer(void* self, int id);
 ///
 /// @param self QSctpSocket*
 /// @param id enum Qt__TimerId
+///
 void q_sctpsocket_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -929,6 +1049,7 @@ void q_sctpsocket_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QSctpSocket*
+///
 libqt_list /* of QObject* */ q_sctpsocket_children(void* self);
 
 /// Inherited from QObject
@@ -937,6 +1058,7 @@ libqt_list /* of QObject* */ q_sctpsocket_children(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param parent QObject*
+///
 void q_sctpsocket_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -945,6 +1067,7 @@ void q_sctpsocket_set_parent(void* self, void* parent);
 ///
 /// @param self QSctpSocket*
 /// @param filterObj QObject*
+///
 void q_sctpsocket_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -953,6 +1076,7 @@ void q_sctpsocket_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QSctpSocket*
 /// @param obj QObject*
+///
 void q_sctpsocket_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -963,6 +1087,7 @@ void q_sctpsocket_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_sctpsocket_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -973,6 +1098,7 @@ QMetaObject__Connection* q_sctpsocket_connect(void* sender, void* signal, void* 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_sctpsocket_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -983,6 +1109,7 @@ QMetaObject__Connection* q_sctpsocket_connect2(void* self, void* sender, const c
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_sctpsocket_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -990,6 +1117,7 @@ bool q_sctpsocket_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_sctpsocket_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -997,6 +1125,7 @@ bool q_sctpsocket_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -1004,6 +1133,7 @@ void q_sctpsocket_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -1013,6 +1143,7 @@ void q_sctpsocket_dump_object_info(void* self);
 /// @param self QSctpSocket*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_sctpsocket_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -1021,6 +1152,7 @@ bool q_sctpsocket_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QSctpSocket*
 /// @param name const char*
+///
 QVariant* q_sctpsocket_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -1030,6 +1162,7 @@ QVariant* q_sctpsocket_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpSocket*
+///
 const char** q_sctpsocket_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -1037,6 +1170,7 @@ const char** q_sctpsocket_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QSctpSocket*
+///
 QBindingStorage* q_sctpsocket_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -1044,6 +1178,7 @@ QBindingStorage* q_sctpsocket_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QSctpSocket*
+///
 const QBindingStorage* q_sctpsocket_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -1051,6 +1186,7 @@ const QBindingStorage* q_sctpsocket_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1059,6 +1195,7 @@ void q_sctpsocket_destroyed(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self)
+///
 void q_sctpsocket_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1066,6 +1203,7 @@ void q_sctpsocket_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QSctpSocket*
+///
 QObject* q_sctpsocket_parent(void* self);
 
 /// Inherited from QObject
@@ -1074,6 +1212,7 @@ QObject* q_sctpsocket_parent(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param classname const char*
+///
 bool q_sctpsocket_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1081,6 +1220,7 @@ bool q_sctpsocket_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1090,6 +1230,7 @@ void q_sctpsocket_delete_later(void* self);
 /// @param self QSctpSocket*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_sctpsocket_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1099,6 +1240,7 @@ bool q_sctpsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSctpSocket*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_sctpsocket_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1110,6 +1252,7 @@ int32_t q_sctpsocket_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_sctpsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1121,6 +1264,7 @@ QMetaObject__Connection* q_sctpsocket_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_sctpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1129,6 +1273,7 @@ QMetaObject__Connection* q_sctpsocket_connect4(void* self, void* sender, const c
 ///
 /// @param self QSctpSocket*
 /// @param param1 QObject*
+///
 void q_sctpsocket_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1137,6 +1282,7 @@ void q_sctpsocket_destroyed1(void* self, void* param1);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QObject* param1)
+///
 void q_sctpsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -1146,6 +1292,7 @@ void q_sctpsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_resume(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1155,6 +1302,7 @@ void q_sctpsocket_resume(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_qbase_resume(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1165,6 +1313,7 @@ void q_sctpsocket_qbase_resume(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func()
+///
 void q_sctpsocket_on_resume(void* self, void (*callback)());
 
 /// Inherited from QAbstractSocket
@@ -1177,6 +1326,7 @@ void q_sctpsocket_on_resume(void* self, void (*callback)());
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
+///
 bool q_sctpsocket_bind(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
@@ -1189,6 +1339,7 @@ bool q_sctpsocket_bind(void* self, void* address, unsigned short port, int32_t m
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
+///
 bool q_sctpsocket_qbase_bind(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
@@ -1199,6 +1350,7 @@ bool q_sctpsocket_qbase_bind(void* self, void* address, unsigned short port, int
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, QHostAddress* address, unsigned short port, flag of enum QAbstractSocket__BindFlag mode)
+///
 void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -1212,6 +1364,7 @@ void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned sh
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
+///
 void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
@@ -1225,6 +1378,7 @@ void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned sho
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
+///
 void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
@@ -1235,6 +1389,7 @@ void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsign
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
+///
 void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -1244,6 +1399,7 @@ void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const c
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_bytes_available(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1253,6 +1409,7 @@ long long q_sctpsocket_bytes_available(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_qbase_bytes_available(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1263,6 +1420,7 @@ long long q_sctpsocket_qbase_bytes_available(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func()
+///
 void q_sctpsocket_on_bytes_available(void* self, long long (*callback)());
 
 /// Inherited from QAbstractSocket
@@ -1272,6 +1430,7 @@ void q_sctpsocket_on_bytes_available(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_bytes_to_write(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1281,6 +1440,7 @@ long long q_sctpsocket_bytes_to_write(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_qbase_bytes_to_write(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1291,6 +1451,7 @@ long long q_sctpsocket_qbase_bytes_to_write(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func()
+///
 void q_sctpsocket_on_bytes_to_write(void* self, long long (*callback)());
 
 /// Inherited from QAbstractSocket
@@ -1301,6 +1462,7 @@ void q_sctpsocket_on_bytes_to_write(void* self, long long (*callback)());
 ///
 /// @param self QSctpSocket*
 /// @param size long long
+///
 void q_sctpsocket_set_read_buffer_size(void* self, long long size);
 
 /// Inherited from QAbstractSocket
@@ -1311,6 +1473,7 @@ void q_sctpsocket_set_read_buffer_size(void* self, long long size);
 ///
 /// @param self QSctpSocket*
 /// @param size long long
+///
 void q_sctpsocket_qbase_set_read_buffer_size(void* self, long long size);
 
 /// Inherited from QAbstractSocket
@@ -1321,6 +1484,7 @@ void q_sctpsocket_qbase_set_read_buffer_size(void* self, long long size);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, long long size)
+///
 void q_sctpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QAbstractSocket
@@ -1330,6 +1494,7 @@ void q_sctpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, lo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 intptr_t q_sctpsocket_socket_descriptor(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1339,6 +1504,7 @@ intptr_t q_sctpsocket_socket_descriptor(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 intptr_t q_sctpsocket_qbase_socket_descriptor(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1349,6 +1515,7 @@ intptr_t q_sctpsocket_qbase_socket_descriptor(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback intptr_t func()
+///
 void q_sctpsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 
 /// Inherited from QAbstractSocket
@@ -1361,6 +1528,7 @@ void q_sctpsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
+///
 bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// Inherited from QAbstractSocket
@@ -1373,6 +1541,7 @@ bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, i
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
+///
 bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// Inherited from QAbstractSocket
@@ -1383,6 +1552,7 @@ bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescrip
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, flag of enum QIODeviceBase__OpenModeFlag openMode)
+///
 void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -1394,6 +1564,7 @@ void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, i
 /// @param self QSctpSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
+///
 void q_sctpsocket_set_socket_option(void* self, int32_t option, void* value);
 
 /// Inherited from QAbstractSocket
@@ -1405,6 +1576,7 @@ void q_sctpsocket_set_socket_option(void* self, int32_t option, void* value);
 /// @param self QSctpSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
+///
 void q_sctpsocket_qbase_set_socket_option(void* self, int32_t option, void* value);
 
 /// Inherited from QAbstractSocket
@@ -1415,6 +1587,7 @@ void q_sctpsocket_qbase_set_socket_option(void* self, int32_t option, void* valu
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, enum QAbstractSocket__SocketOption option, QVariant* value)
+///
 void q_sctpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
 
 /// Inherited from QAbstractSocket
@@ -1425,6 +1598,7 @@ void q_sctpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32
 ///
 /// @param self QSctpSocket*
 /// @param option enum QAbstractSocket__SocketOption
+///
 QVariant* q_sctpsocket_socket_option(void* self, int32_t option);
 
 /// Inherited from QAbstractSocket
@@ -1435,6 +1609,7 @@ QVariant* q_sctpsocket_socket_option(void* self, int32_t option);
 ///
 /// @param self QSctpSocket*
 /// @param option enum QAbstractSocket__SocketOption
+///
 QVariant* q_sctpsocket_qbase_socket_option(void* self, int32_t option);
 
 /// Inherited from QAbstractSocket
@@ -1445,6 +1620,7 @@ QVariant* q_sctpsocket_qbase_socket_option(void* self, int32_t option);
 ///
 /// @param self QSctpSocket*
 /// @param callback QVariant* func(QSctpSocket* self, enum QAbstractSocket__SocketOption option)
+///
 void q_sctpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -1454,6 +1630,7 @@ void q_sctpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int3
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_is_sequential(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1463,6 +1640,7 @@ bool q_sctpsocket_is_sequential(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_qbase_is_sequential(void* self);
 
 /// Inherited from QAbstractSocket
@@ -1473,6 +1651,7 @@ bool q_sctpsocket_qbase_is_sequential(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func()
+///
 void q_sctpsocket_on_is_sequential(void* self, bool (*callback)());
 
 /// Inherited from QAbstractSocket
@@ -1483,6 +1662,7 @@ void q_sctpsocket_on_is_sequential(void* self, bool (*callback)());
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_wait_for_connected(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1493,6 +1673,7 @@ bool q_sctpsocket_wait_for_connected(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_qbase_wait_for_connected(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1503,6 +1684,7 @@ bool q_sctpsocket_qbase_wait_for_connected(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, int msecs)
+///
 void q_sctpsocket_on_wait_for_connected(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QAbstractSocket
@@ -1513,6 +1695,7 @@ void q_sctpsocket_on_wait_for_connected(void* self, bool (*callback)(void*, int)
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1523,6 +1706,7 @@ bool q_sctpsocket_wait_for_ready_read(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_qbase_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1533,6 +1717,7 @@ bool q_sctpsocket_qbase_wait_for_ready_read(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, int msecs)
+///
 void q_sctpsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QAbstractSocket
@@ -1543,6 +1728,7 @@ void q_sctpsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1553,6 +1739,7 @@ bool q_sctpsocket_wait_for_bytes_written(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_qbase_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1563,6 +1750,7 @@ bool q_sctpsocket_qbase_wait_for_bytes_written(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, int msecs)
+///
 void q_sctpsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QAbstractSocket
@@ -1573,6 +1761,7 @@ void q_sctpsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, 
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_wait_for_disconnected(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1583,6 +1772,7 @@ bool q_sctpsocket_wait_for_disconnected(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param msecs int
+///
 bool q_sctpsocket_qbase_wait_for_disconnected(void* self, int msecs);
 
 /// Inherited from QAbstractSocket
@@ -1593,6 +1783,7 @@ bool q_sctpsocket_qbase_wait_for_disconnected(void* self, int msecs);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, int msecs)
+///
 void q_sctpsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QAbstractSocket
@@ -1603,6 +1794,7 @@ void q_sctpsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, i
 ///
 /// @param self QSctpSocket*
 /// @param maxSize long long
+///
 long long q_sctpsocket_skip_data(void* self, long long maxSize);
 
 /// Inherited from QAbstractSocket
@@ -1613,6 +1805,7 @@ long long q_sctpsocket_skip_data(void* self, long long maxSize);
 ///
 /// @param self QSctpSocket*
 /// @param maxSize long long
+///
 long long q_sctpsocket_qbase_skip_data(void* self, long long maxSize);
 
 /// Inherited from QAbstractSocket
@@ -1623,6 +1816,7 @@ long long q_sctpsocket_qbase_skip_data(void* self, long long maxSize);
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func(QSctpSocket* self, long long maxSize)
+///
 void q_sctpsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// Inherited from QAbstractSocket
@@ -1634,6 +1828,7 @@ void q_sctpsocket_on_skip_data(void* self, long long (*callback)(void*, long lon
 /// @param self QSctpSocket*
 /// @param data const char*
 /// @param lenVal long long
+///
 long long q_sctpsocket_write_data(void* self, const char* data, long long lenVal);
 
 /// Inherited from QAbstractSocket
@@ -1645,6 +1840,7 @@ long long q_sctpsocket_write_data(void* self, const char* data, long long lenVal
 /// @param self QSctpSocket*
 /// @param data const char*
 /// @param lenVal long long
+///
 long long q_sctpsocket_qbase_write_data(void* self, const char* data, long long lenVal);
 
 /// Inherited from QAbstractSocket
@@ -1655,6 +1851,7 @@ long long q_sctpsocket_qbase_write_data(void* self, const char* data, long long 
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func(QSctpSocket* self, const char* data, long long lenVal)
+///
 void q_sctpsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// Inherited from QIODevice
@@ -1665,6 +1862,7 @@ void q_sctpsocket_on_write_data(void* self, long long (*callback)(void*, const c
 ///
 /// @param self QSctpSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
 bool q_sctpsocket_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
@@ -1675,6 +1873,7 @@ bool q_sctpsocket_open(void* self, int32_t mode);
 ///
 /// @param self QSctpSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
 bool q_sctpsocket_qbase_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
@@ -1685,6 +1884,7 @@ bool q_sctpsocket_qbase_open(void* self, int32_t mode);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, flag of enum QIODeviceBase__OpenModeFlag mode)
+///
 void q_sctpsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
@@ -1694,6 +1894,7 @@ void q_sctpsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_pos(void* self);
 
 /// Inherited from QIODevice
@@ -1703,6 +1904,7 @@ long long q_sctpsocket_pos(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_qbase_pos(void* self);
 
 /// Inherited from QIODevice
@@ -1713,6 +1915,7 @@ long long q_sctpsocket_qbase_pos(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func()
+///
 void q_sctpsocket_on_pos(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1722,6 +1925,7 @@ void q_sctpsocket_on_pos(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_size(void* self);
 
 /// Inherited from QIODevice
@@ -1731,6 +1935,7 @@ long long q_sctpsocket_size(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 long long q_sctpsocket_qbase_size(void* self);
 
 /// Inherited from QIODevice
@@ -1741,6 +1946,7 @@ long long q_sctpsocket_qbase_size(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback long long func()
+///
 void q_sctpsocket_on_size(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1751,6 +1957,7 @@ void q_sctpsocket_on_size(void* self, long long (*callback)());
 ///
 /// @param self QSctpSocket*
 /// @param pos long long
+///
 bool q_sctpsocket_seek(void* self, long long pos);
 
 /// Inherited from QIODevice
@@ -1761,6 +1968,7 @@ bool q_sctpsocket_seek(void* self, long long pos);
 ///
 /// @param self QSctpSocket*
 /// @param pos long long
+///
 bool q_sctpsocket_qbase_seek(void* self, long long pos);
 
 /// Inherited from QIODevice
@@ -1771,6 +1979,7 @@ bool q_sctpsocket_qbase_seek(void* self, long long pos);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, long long pos)
+///
 void q_sctpsocket_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1780,6 +1989,7 @@ void q_sctpsocket_on_seek(void* self, bool (*callback)(void*, long long));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_at_end(void* self);
 
 /// Inherited from QIODevice
@@ -1789,6 +1999,7 @@ bool q_sctpsocket_at_end(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_qbase_at_end(void* self);
 
 /// Inherited from QIODevice
@@ -1799,6 +2010,7 @@ bool q_sctpsocket_qbase_at_end(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func()
+///
 void q_sctpsocket_on_at_end(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1808,6 +2020,7 @@ void q_sctpsocket_on_at_end(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_reset(void* self);
 
 /// Inherited from QIODevice
@@ -1817,6 +2030,7 @@ bool q_sctpsocket_reset(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_qbase_reset(void* self);
 
 /// Inherited from QIODevice
@@ -1827,6 +2041,7 @@ bool q_sctpsocket_qbase_reset(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func()
+///
 void q_sctpsocket_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1836,6 +2051,7 @@ void q_sctpsocket_on_reset(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_can_read_line(void* self);
 
 /// Inherited from QIODevice
@@ -1845,6 +2061,7 @@ bool q_sctpsocket_can_read_line(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 bool q_sctpsocket_qbase_can_read_line(void* self);
 
 /// Inherited from QIODevice
@@ -1855,6 +2072,7 @@ bool q_sctpsocket_qbase_can_read_line(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func()
+///
 void q_sctpsocket_on_can_read_line(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -1865,6 +2083,7 @@ void q_sctpsocket_on_can_read_line(void* self, bool (*callback)());
 ///
 /// @param self QSctpSocket*
 /// @param event QEvent*
+///
 bool q_sctpsocket_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1875,6 +2094,7 @@ bool q_sctpsocket_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param event QEvent*
+///
 bool q_sctpsocket_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1885,6 +2105,7 @@ bool q_sctpsocket_qbase_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, QEvent* event)
+///
 void q_sctpsocket_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1896,6 +2117,7 @@ void q_sctpsocket_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QSctpSocket*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_sctpsocket_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1907,6 +2129,7 @@ bool q_sctpsocket_event_filter(void* self, void* watched, void* event);
 /// @param self QSctpSocket*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_sctpsocket_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1917,6 +2140,7 @@ bool q_sctpsocket_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, QObject* watched, QEvent* event)
+///
 void q_sctpsocket_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1927,6 +2151,7 @@ void q_sctpsocket_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 /// @param self QSctpSocket*
 /// @param event QTimerEvent*
+///
 void q_sctpsocket_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1937,6 +2162,7 @@ void q_sctpsocket_timer_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param event QTimerEvent*
+///
 void q_sctpsocket_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1947,6 +2173,7 @@ void q_sctpsocket_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QTimerEvent* event)
+///
 void q_sctpsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1957,6 +2184,7 @@ void q_sctpsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QSctpSocket*
 /// @param event QChildEvent*
+///
 void q_sctpsocket_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1967,6 +2195,7 @@ void q_sctpsocket_child_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param event QChildEvent*
+///
 void q_sctpsocket_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1977,6 +2206,7 @@ void q_sctpsocket_qbase_child_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QChildEvent* event)
+///
 void q_sctpsocket_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1987,6 +2217,7 @@ void q_sctpsocket_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QSctpSocket*
 /// @param event QEvent*
+///
 void q_sctpsocket_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1997,6 +2228,7 @@ void q_sctpsocket_custom_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param event QEvent*
+///
 void q_sctpsocket_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2007,6 +2239,7 @@ void q_sctpsocket_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QEvent* event)
+///
 void q_sctpsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2017,6 +2250,7 @@ void q_sctpsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QSctpSocket*
 /// @param signal QMetaMethod*
+///
 void q_sctpsocket_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2027,6 +2261,7 @@ void q_sctpsocket_connect_notify(void* self, void* signal);
 ///
 /// @param self QSctpSocket*
 /// @param signal QMetaMethod*
+///
 void q_sctpsocket_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2037,6 +2272,7 @@ void q_sctpsocket_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QMetaMethod* signal)
+///
 void q_sctpsocket_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2047,6 +2283,7 @@ void q_sctpsocket_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QSctpSocket*
 /// @param signal QMetaMethod*
+///
 void q_sctpsocket_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2057,6 +2294,7 @@ void q_sctpsocket_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QSctpSocket*
 /// @param signal QMetaMethod*
+///
 void q_sctpsocket_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2067,6 +2305,7 @@ void q_sctpsocket_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QMetaMethod* signal)
+///
 void q_sctpsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2077,6 +2316,7 @@ void q_sctpsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// @param self QSctpSocket*
 /// @param state enum QAbstractSocket__SocketState
+///
 void q_sctpsocket_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
@@ -2087,6 +2327,7 @@ void q_sctpsocket_set_socket_state(void* self, int32_t state);
 ///
 /// @param self QSctpSocket*
 /// @param state enum QAbstractSocket__SocketState
+///
 void q_sctpsocket_qbase_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
@@ -2097,6 +2338,7 @@ void q_sctpsocket_qbase_set_socket_state(void* self, int32_t state);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, enum QAbstractSocket__SocketState state)
+///
 void q_sctpsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -2107,6 +2349,7 @@ void q_sctpsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_
 ///
 /// @param self QSctpSocket*
 /// @param socketError enum QAbstractSocket__SocketError
+///
 void q_sctpsocket_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
@@ -2117,6 +2360,7 @@ void q_sctpsocket_set_socket_error(void* self, int32_t socketError);
 ///
 /// @param self QSctpSocket*
 /// @param socketError enum QAbstractSocket__SocketError
+///
 void q_sctpsocket_qbase_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
@@ -2127,6 +2371,7 @@ void q_sctpsocket_qbase_set_socket_error(void* self, int32_t socketError);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, enum QAbstractSocket__SocketError socketError)
+///
 void q_sctpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -2137,6 +2382,7 @@ void q_sctpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_
 ///
 /// @param self QSctpSocket*
 /// @param port unsigned short
+///
 void q_sctpsocket_set_local_port(void* self, unsigned short port);
 
 /// Inherited from QAbstractSocket
@@ -2147,6 +2393,7 @@ void q_sctpsocket_set_local_port(void* self, unsigned short port);
 ///
 /// @param self QSctpSocket*
 /// @param port unsigned short
+///
 void q_sctpsocket_qbase_set_local_port(void* self, unsigned short port);
 
 /// Inherited from QAbstractSocket
@@ -2157,6 +2404,7 @@ void q_sctpsocket_qbase_set_local_port(void* self, unsigned short port);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, unsigned short port)
+///
 void q_sctpsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short));
 
 /// Inherited from QAbstractSocket
@@ -2167,6 +2415,7 @@ void q_sctpsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned
 ///
 /// @param self QSctpSocket*
 /// @param address QHostAddress*
+///
 void q_sctpsocket_set_local_address(void* self, void* address);
 
 /// Inherited from QAbstractSocket
@@ -2177,6 +2426,7 @@ void q_sctpsocket_set_local_address(void* self, void* address);
 ///
 /// @param self QSctpSocket*
 /// @param address QHostAddress*
+///
 void q_sctpsocket_qbase_set_local_address(void* self, void* address);
 
 /// Inherited from QAbstractSocket
@@ -2187,6 +2437,7 @@ void q_sctpsocket_qbase_set_local_address(void* self, void* address);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QHostAddress* address)
+///
 void q_sctpsocket_on_set_local_address(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2197,6 +2448,7 @@ void q_sctpsocket_on_set_local_address(void* self, void (*callback)(void*, void*
 ///
 /// @param self QSctpSocket*
 /// @param port unsigned short
+///
 void q_sctpsocket_set_peer_port(void* self, unsigned short port);
 
 /// Inherited from QAbstractSocket
@@ -2207,6 +2459,7 @@ void q_sctpsocket_set_peer_port(void* self, unsigned short port);
 ///
 /// @param self QSctpSocket*
 /// @param port unsigned short
+///
 void q_sctpsocket_qbase_set_peer_port(void* self, unsigned short port);
 
 /// Inherited from QAbstractSocket
@@ -2217,6 +2470,7 @@ void q_sctpsocket_qbase_set_peer_port(void* self, unsigned short port);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, unsigned short port)
+///
 void q_sctpsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short));
 
 /// Inherited from QAbstractSocket
@@ -2227,6 +2481,7 @@ void q_sctpsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned 
 ///
 /// @param self QSctpSocket*
 /// @param address QHostAddress*
+///
 void q_sctpsocket_set_peer_address(void* self, void* address);
 
 /// Inherited from QAbstractSocket
@@ -2237,6 +2492,7 @@ void q_sctpsocket_set_peer_address(void* self, void* address);
 ///
 /// @param self QSctpSocket*
 /// @param address QHostAddress*
+///
 void q_sctpsocket_qbase_set_peer_address(void* self, void* address);
 
 /// Inherited from QAbstractSocket
@@ -2247,6 +2503,7 @@ void q_sctpsocket_qbase_set_peer_address(void* self, void* address);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, QHostAddress* address)
+///
 void q_sctpsocket_on_set_peer_address(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2257,6 +2514,7 @@ void q_sctpsocket_on_set_peer_address(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QSctpSocket*
 /// @param name const char*
+///
 void q_sctpsocket_set_peer_name(void* self, const char* name);
 
 /// Inherited from QAbstractSocket
@@ -2267,6 +2525,7 @@ void q_sctpsocket_set_peer_name(void* self, const char* name);
 ///
 /// @param self QSctpSocket*
 /// @param name const char*
+///
 void q_sctpsocket_qbase_set_peer_name(void* self, const char* name);
 
 /// Inherited from QAbstractSocket
@@ -2277,6 +2536,7 @@ void q_sctpsocket_qbase_set_peer_name(void* self, const char* name);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, const char* name)
+///
 void q_sctpsocket_on_set_peer_name(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QIODevice
@@ -2287,6 +2547,7 @@ void q_sctpsocket_on_set_peer_name(void* self, void (*callback)(void*, const cha
 ///
 /// @param self QSctpSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
+///
 void q_sctpsocket_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
@@ -2297,6 +2558,7 @@ void q_sctpsocket_set_open_mode(void* self, int32_t openMode);
 ///
 /// @param self QSctpSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
+///
 void q_sctpsocket_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
@@ -2307,6 +2569,7 @@ void q_sctpsocket_qbase_set_open_mode(void* self, int32_t openMode);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
+///
 void q_sctpsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
@@ -2317,6 +2580,7 @@ void q_sctpsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t))
 ///
 /// @param self QSctpSocket*
 /// @param errorString const char*
+///
 void q_sctpsocket_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
@@ -2327,6 +2591,7 @@ void q_sctpsocket_set_error_string(void* self, const char* errorString);
 ///
 /// @param self QSctpSocket*
 /// @param errorString const char*
+///
 void q_sctpsocket_qbase_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
@@ -2337,6 +2602,7 @@ void q_sctpsocket_qbase_set_error_string(void* self, const char* errorString);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, const char* errorString)
+///
 void q_sctpsocket_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2346,6 +2612,7 @@ void q_sctpsocket_on_set_error_string(void* self, void (*callback)(void*, const 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 QObject* q_sctpsocket_sender(void* self);
 
 /// Inherited from QObject
@@ -2355,6 +2622,7 @@ QObject* q_sctpsocket_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 QObject* q_sctpsocket_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2365,6 +2633,7 @@ QObject* q_sctpsocket_qbase_sender(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback QObject* func()
+///
 void q_sctpsocket_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2374,6 +2643,7 @@ void q_sctpsocket_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 int32_t q_sctpsocket_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2383,6 +2653,7 @@ int32_t q_sctpsocket_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSctpSocket*
+///
 int32_t q_sctpsocket_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2393,6 +2664,7 @@ int32_t q_sctpsocket_qbase_sender_signal_index(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param callback int32_t func()
+///
 void q_sctpsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2403,6 +2675,7 @@ void q_sctpsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QSctpSocket*
 /// @param signal const char*
+///
 int32_t q_sctpsocket_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2413,6 +2686,7 @@ int32_t q_sctpsocket_receivers(void* self, const char* signal);
 ///
 /// @param self QSctpSocket*
 /// @param signal const char*
+///
 int32_t q_sctpsocket_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2423,6 +2697,7 @@ int32_t q_sctpsocket_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QSctpSocket*
 /// @param callback int32_t func(QSctpSocket* self, const char* signal)
+///
 void q_sctpsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2433,6 +2708,7 @@ void q_sctpsocket_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// @param self QSctpSocket*
 /// @param signal QMetaMethod*
+///
 bool q_sctpsocket_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2443,6 +2719,7 @@ bool q_sctpsocket_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QSctpSocket*
 /// @param signal QMetaMethod*
+///
 bool q_sctpsocket_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2453,6 +2730,7 @@ bool q_sctpsocket_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, QMetaMethod* signal)
+///
 void q_sctpsocket_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2463,6 +2741,7 @@ void q_sctpsocket_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, const char* objectName)
+///
 void q_sctpsocket_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsctpsocket.html#dtor.QSctpSocket)
@@ -2470,6 +2749,7 @@ void q_sctpsocket_on_object_name_changed(void* self, void (*callback)(void*, con
 /// Delete this object from C++ memory.
 ///
 /// @param self QSctpSocket*
+///
 void q_sctpsocket_delete(void* self);
 
 #endif

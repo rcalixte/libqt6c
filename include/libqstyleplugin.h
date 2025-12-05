@@ -11,36 +11,43 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qstyleplugin.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleplugin.html)
 
 /// q_styleplugin_new constructs a new QStylePlugin object.
 ///
 QStylePlugin* q_styleplugin_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleplugin.html)
+
 /// q_styleplugin_new2 constructs a new QStylePlugin object.
 ///
 /// @param parent QObject*
+///
 QStylePlugin* q_styleplugin_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QStylePlugin*
+///
 const QMetaObject* q_styleplugin_meta_object(void* self);
 
 /// @param self QStylePlugin*
 /// @param param1 const char*
+///
 void* q_styleplugin_metacast(void* self, const char* param1);
 
 /// @param self QStylePlugin*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_styleplugin_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QStylePlugin*
 /// @param callback int32_t func(QStylePlugin* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_styleplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_styleplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_styleplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,12 +64,14 @@ int32_t q_styleplugin_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_styleplugin_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleplugin.html#create)
 ///
 /// @param self QStylePlugin*
 /// @param key const char*
+///
 QStyle* q_styleplugin_create(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleplugin.html#create)
@@ -70,6 +80,7 @@ QStyle* q_styleplugin_create(void* self, const char* key);
 ///
 /// @param self QStylePlugin*
 /// @param callback QStyle* func(QStylePlugin* self, const char* key)
+///
 void q_styleplugin_on_create(void* self, QStyle* (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleplugin.html#create)
@@ -78,6 +89,7 @@ void q_styleplugin_on_create(void* self, QStyle* (*callback)(void*, const char*)
 ///
 /// @param self QStylePlugin*
 /// @param key const char*
+///
 QStyle* q_styleplugin_qbase_create(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -86,6 +98,7 @@ QStyle* q_styleplugin_qbase_create(void* self, const char* key);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_styleplugin_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -95,6 +108,7 @@ const char* q_styleplugin_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_styleplugin_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -104,6 +118,7 @@ const char* q_styleplugin_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStylePlugin*
+///
 const char* q_styleplugin_object_name(void* self);
 
 /// Inherited from QObject
@@ -112,6 +127,7 @@ const char* q_styleplugin_object_name(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param name char*
+///
 void q_styleplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -119,6 +135,7 @@ void q_styleplugin_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QStylePlugin*
+///
 bool q_styleplugin_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -126,6 +143,7 @@ bool q_styleplugin_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QStylePlugin*
+///
 bool q_styleplugin_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -133,6 +151,7 @@ bool q_styleplugin_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QStylePlugin*
+///
 bool q_styleplugin_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -140,6 +159,7 @@ bool q_styleplugin_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QStylePlugin*
+///
 bool q_styleplugin_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -148,6 +168,7 @@ bool q_styleplugin_signals_blocked(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param b bool
+///
 bool q_styleplugin_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -155,6 +176,7 @@ bool q_styleplugin_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QStylePlugin*
+///
 QThread* q_styleplugin_thread(void* self);
 
 /// Inherited from QObject
@@ -163,6 +185,7 @@ QThread* q_styleplugin_thread(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param thread QThread*
+///
 bool q_styleplugin_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -171,6 +194,7 @@ bool q_styleplugin_move_to_thread(void* self, void* thread);
 ///
 /// @param self QStylePlugin*
 /// @param interval int
+///
 int32_t q_styleplugin_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -179,6 +203,7 @@ int32_t q_styleplugin_start_timer(void* self, int interval);
 ///
 /// @param self QStylePlugin*
 /// @param id int
+///
 void q_styleplugin_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -187,6 +212,7 @@ void q_styleplugin_kill_timer(void* self, int id);
 ///
 /// @param self QStylePlugin*
 /// @param id enum Qt__TimerId
+///
 void q_styleplugin_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -194,6 +220,7 @@ void q_styleplugin_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QStylePlugin*
+///
 libqt_list /* of QObject* */ q_styleplugin_children(void* self);
 
 /// Inherited from QObject
@@ -202,6 +229,7 @@ libqt_list /* of QObject* */ q_styleplugin_children(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param parent QObject*
+///
 void q_styleplugin_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -210,6 +238,7 @@ void q_styleplugin_set_parent(void* self, void* parent);
 ///
 /// @param self QStylePlugin*
 /// @param filterObj QObject*
+///
 void q_styleplugin_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -218,6 +247,7 @@ void q_styleplugin_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QStylePlugin*
 /// @param obj QObject*
+///
 void q_styleplugin_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -228,6 +258,7 @@ void q_styleplugin_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_styleplugin_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -238,6 +269,7 @@ QMetaObject__Connection* q_styleplugin_connect(void* sender, void* signal, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_styleplugin_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -248,6 +280,7 @@ QMetaObject__Connection* q_styleplugin_connect2(void* self, void* sender, const 
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_styleplugin_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -255,6 +288,7 @@ bool q_styleplugin_disconnect(void* sender, void* signal, void* receiver, void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_styleplugin_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -262,6 +296,7 @@ bool q_styleplugin_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QStylePlugin*
+///
 void q_styleplugin_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -269,6 +304,7 @@ void q_styleplugin_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QStylePlugin*
+///
 void q_styleplugin_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -278,6 +314,7 @@ void q_styleplugin_dump_object_info(void* self);
 /// @param self QStylePlugin*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_styleplugin_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -286,6 +323,7 @@ bool q_styleplugin_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QStylePlugin*
 /// @param name const char*
+///
 QVariant* q_styleplugin_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -295,6 +333,7 @@ QVariant* q_styleplugin_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStylePlugin*
+///
 const char** q_styleplugin_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -302,6 +341,7 @@ const char** q_styleplugin_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStylePlugin*
+///
 QBindingStorage* q_styleplugin_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -309,6 +349,7 @@ QBindingStorage* q_styleplugin_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStylePlugin*
+///
 const QBindingStorage* q_styleplugin_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -316,6 +357,7 @@ const QBindingStorage* q_styleplugin_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStylePlugin*
+///
 void q_styleplugin_destroyed(void* self);
 
 /// Inherited from QObject
@@ -324,6 +366,7 @@ void q_styleplugin_destroyed(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self)
+///
 void q_styleplugin_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -331,6 +374,7 @@ void q_styleplugin_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QStylePlugin*
+///
 QObject* q_styleplugin_parent(void* self);
 
 /// Inherited from QObject
@@ -339,6 +383,7 @@ QObject* q_styleplugin_parent(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param classname const char*
+///
 bool q_styleplugin_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -346,6 +391,7 @@ bool q_styleplugin_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QStylePlugin*
+///
 void q_styleplugin_delete_later(void* self);
 
 /// Inherited from QObject
@@ -355,6 +401,7 @@ void q_styleplugin_delete_later(void* self);
 /// @param self QStylePlugin*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_styleplugin_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -364,6 +411,7 @@ bool q_styleplugin_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QStylePlugin*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_styleplugin_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -375,6 +423,7 @@ int32_t q_styleplugin_start_timer22(void* self, int interval, int32_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_styleplugin_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -386,6 +435,7 @@ QMetaObject__Connection* q_styleplugin_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_styleplugin_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -394,6 +444,7 @@ QMetaObject__Connection* q_styleplugin_connect4(void* self, void* sender, const 
 ///
 /// @param self QStylePlugin*
 /// @param param1 QObject*
+///
 void q_styleplugin_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -402,6 +453,7 @@ void q_styleplugin_destroyed1(void* self, void* param1);
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self, QObject* param1)
+///
 void q_styleplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -412,6 +464,7 @@ void q_styleplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStylePlugin*
 /// @param event QEvent*
+///
 bool q_styleplugin_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -422,6 +475,7 @@ bool q_styleplugin_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param event QEvent*
+///
 bool q_styleplugin_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -432,6 +486,7 @@ bool q_styleplugin_qbase_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param callback bool func(QStylePlugin* self, QEvent* event)
+///
 void q_styleplugin_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -443,6 +498,7 @@ void q_styleplugin_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QStylePlugin*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_styleplugin_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -454,6 +510,7 @@ bool q_styleplugin_event_filter(void* self, void* watched, void* event);
 /// @param self QStylePlugin*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_styleplugin_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -464,6 +521,7 @@ bool q_styleplugin_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param callback bool func(QStylePlugin* self, QObject* watched, QEvent* event)
+///
 void q_styleplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -474,6 +532,7 @@ void q_styleplugin_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 /// @param self QStylePlugin*
 /// @param event QTimerEvent*
+///
 void q_styleplugin_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -484,6 +543,7 @@ void q_styleplugin_timer_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param event QTimerEvent*
+///
 void q_styleplugin_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -494,6 +554,7 @@ void q_styleplugin_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self, QTimerEvent* event)
+///
 void q_styleplugin_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -504,6 +565,7 @@ void q_styleplugin_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStylePlugin*
 /// @param event QChildEvent*
+///
 void q_styleplugin_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -514,6 +576,7 @@ void q_styleplugin_child_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param event QChildEvent*
+///
 void q_styleplugin_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -524,6 +587,7 @@ void q_styleplugin_qbase_child_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self, QChildEvent* event)
+///
 void q_styleplugin_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -534,6 +598,7 @@ void q_styleplugin_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStylePlugin*
 /// @param event QEvent*
+///
 void q_styleplugin_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -544,6 +609,7 @@ void q_styleplugin_custom_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param event QEvent*
+///
 void q_styleplugin_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -554,6 +620,7 @@ void q_styleplugin_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self, QEvent* event)
+///
 void q_styleplugin_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -564,6 +631,7 @@ void q_styleplugin_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStylePlugin*
 /// @param signal QMetaMethod*
+///
 void q_styleplugin_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -574,6 +642,7 @@ void q_styleplugin_connect_notify(void* self, void* signal);
 ///
 /// @param self QStylePlugin*
 /// @param signal QMetaMethod*
+///
 void q_styleplugin_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -584,6 +653,7 @@ void q_styleplugin_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self, QMetaMethod* signal)
+///
 void q_styleplugin_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -594,6 +664,7 @@ void q_styleplugin_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QStylePlugin*
 /// @param signal QMetaMethod*
+///
 void q_styleplugin_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -604,6 +675,7 @@ void q_styleplugin_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStylePlugin*
 /// @param signal QMetaMethod*
+///
 void q_styleplugin_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -614,6 +686,7 @@ void q_styleplugin_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self, QMetaMethod* signal)
+///
 void q_styleplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -623,6 +696,7 @@ void q_styleplugin_on_disconnect_notify(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStylePlugin*
+///
 QObject* q_styleplugin_sender(void* self);
 
 /// Inherited from QObject
@@ -632,6 +706,7 @@ QObject* q_styleplugin_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStylePlugin*
+///
 QObject* q_styleplugin_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -642,6 +717,7 @@ QObject* q_styleplugin_qbase_sender(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param callback QObject* func()
+///
 void q_styleplugin_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -651,6 +727,7 @@ void q_styleplugin_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStylePlugin*
+///
 int32_t q_styleplugin_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -660,6 +737,7 @@ int32_t q_styleplugin_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStylePlugin*
+///
 int32_t q_styleplugin_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -670,6 +748,7 @@ int32_t q_styleplugin_qbase_sender_signal_index(void* self);
 ///
 /// @param self QStylePlugin*
 /// @param callback int32_t func()
+///
 void q_styleplugin_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -680,6 +759,7 @@ void q_styleplugin_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QStylePlugin*
 /// @param signal const char*
+///
 int32_t q_styleplugin_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -690,6 +770,7 @@ int32_t q_styleplugin_receivers(void* self, const char* signal);
 ///
 /// @param self QStylePlugin*
 /// @param signal const char*
+///
 int32_t q_styleplugin_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -700,6 +781,7 @@ int32_t q_styleplugin_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QStylePlugin*
 /// @param callback int32_t func(QStylePlugin* self, const char* signal)
+///
 void q_styleplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -710,6 +792,7 @@ void q_styleplugin_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// @param self QStylePlugin*
 /// @param signal QMetaMethod*
+///
 bool q_styleplugin_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -720,6 +803,7 @@ bool q_styleplugin_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStylePlugin*
 /// @param signal QMetaMethod*
+///
 bool q_styleplugin_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -730,6 +814,7 @@ bool q_styleplugin_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStylePlugin*
 /// @param callback bool func(QStylePlugin* self, QMetaMethod* signal)
+///
 void q_styleplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -740,6 +825,7 @@ void q_styleplugin_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 /// @param self QStylePlugin*
 /// @param callback void func(QStylePlugin* self, const char* objectName)
+///
 void q_styleplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleplugin.html#dtor.QStylePlugin)
@@ -747,6 +833,7 @@ void q_styleplugin_on_object_name_changed(void* self, void (*callback)(void*, co
 /// Delete this object from C++ memory.
 ///
 /// @param self QStylePlugin*
+///
 void q_styleplugin_delete(void* self);
 
 #endif

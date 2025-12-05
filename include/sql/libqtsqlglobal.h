@@ -11,12 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qtsqlglobal.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qtsqlglobal.html#public-types)
 
 typedef enum {
     QSQL_LOCATION_BEFOREFIRSTROW = -1,
     QSQL_LOCATION_AFTERLASTROW = -2
 } QSql__Location;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtsqlglobal.html#public-types)
 
 typedef enum {
     QSQL_PARAMTYPEFLAG_IN = 1,
@@ -25,12 +27,16 @@ typedef enum {
     QSQL_PARAMTYPEFLAG_BINARY = 4
 } QSql__ParamTypeFlag;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtsqlglobal.html#public-types)
+
 typedef enum {
     QSQL_TABLETYPE_TABLES = 1,
     QSQL_TABLETYPE_SYSTEMTABLES = 2,
     QSQL_TABLETYPE_VIEWS = 4,
     QSQL_TABLETYPE_ALLTABLES = 255
 } QSql__TableType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtsqlglobal.html#public-types)
 
 typedef enum {
     QSQL_NUMERICALPRECISIONPOLICY_LOWPRECISIONINT32 = 1,

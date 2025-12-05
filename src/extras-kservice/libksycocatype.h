@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ksycocatype.html#types
+/// [Upstream resources](https://api.kde.org/ksycocatype.html#public-types)
 
 typedef enum {
     KSYCOCATYPE_KST_KSYCOCAENTRY = 0,
@@ -23,6 +23,8 @@ typedef enum {
     KSYCOCATYPE_KST_KSERVICESEPARATOR = 10,
     KSYCOCATYPE_KST_KCUSTOM = 1000
 } KSycocaType__;
+
+/// [Upstream resources](https://api.kde.org/ksycocatype.html#public-types)
 
 typedef enum {
     KSYCOCAFACTORYID_KST_KSERVICEFACTORY = 1,

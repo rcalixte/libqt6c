@@ -11,35 +11,40 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qprintengine.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#setProperty)
 ///
 /// @param self QPrintEngine*
 /// @param key enum QPrintEngine__PrintEnginePropertyKey
 /// @param value QVariant*
+///
 void q_printengine_set_property(void* self, int32_t key, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#property)
 ///
 /// @param self QPrintEngine*
 /// @param key enum QPrintEngine__PrintEnginePropertyKey
+///
 QVariant* q_printengine_property(void* self, int32_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#newPage)
 ///
 /// @param self QPrintEngine*
+///
 bool q_printengine_new_page(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#abort)
 ///
 /// @param self QPrintEngine*
+///
 bool q_printengine_abort(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#metric)
 ///
 /// @param self QPrintEngine*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t q_printengine_metric(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#printerState)
@@ -47,12 +52,14 @@ int32_t q_printengine_metric(void* self, int32_t param1);
 /// @param self QPrintEngine*
 ///
 /// @return enum QPrinter__PrinterState
+///
 int32_t q_printengine_printer_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#operator-eq)
 ///
 /// @param self QPrintEngine*
 /// @param param1 QPrintEngine*
+///
 void q_printengine_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#dtor.QPrintEngine)
@@ -60,9 +67,10 @@ void q_printengine_operator_assign(void* self, void* param1);
 /// Delete this object from C++ memory.
 ///
 /// @param self QPrintEngine*
+///
 void q_printengine_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qprintengine.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#public-types)
 
 typedef enum {
     QPRINTENGINE_PRINTENGINEPROPERTYKEY_PPK_COLLATECOPIES = 0,

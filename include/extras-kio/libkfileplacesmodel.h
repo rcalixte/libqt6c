@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kfileplacesmodel.html
+/// [Upstream resources](https://api.kde.org/kfileplacesmodel.html)
 
 /// k_fileplacesmodel_new constructs a new KFilePlacesModel object.
 ///
 KFilePlacesModel* k_fileplacesmodel_new();
 
+/// [Upstream resources](https://api.kde.org/kfileplacesmodel.html)
+
 /// k_fileplacesmodel_new2 constructs a new KFilePlacesModel object.
 ///
 /// @param parent QObject*
+///
 KFilePlacesModel* k_fileplacesmodel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFilePlacesModel*
+///
 const QMetaObject* k_fileplacesmodel_meta_object(void* self);
 
 /// @param self KFilePlacesModel*
 /// @param param1 const char*
+///
 void* k_fileplacesmodel_metacast(void* self, const char* param1);
 
 /// @param self KFilePlacesModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_fileplacesmodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func(KFilePlacesModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_fileplacesmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void k_fileplacesmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_fileplacesmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,36 +64,42 @@ int32_t k_fileplacesmodel_qbase_metacall(void* self, int32_t param1, int param2,
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_fileplacesmodel_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#url)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QUrl* k_fileplacesmodel_url(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#setupNeeded)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_setup_needed(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#isTeardownAllowed)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_is_teardown_allowed(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#isEjectAllowed)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_is_eject_allowed(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#isTeardownOverlayRecommended)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_is_teardown_overlay_recommended(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#deviceAccessibility)
@@ -94,12 +108,14 @@ bool k_fileplacesmodel_is_teardown_overlay_recommended(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return enum KFilePlacesModel__DeviceAccessibility
+///
 int32_t k_fileplacesmodel_device_accessibility(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#icon)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QIcon* k_fileplacesmodel_icon(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#text)
@@ -108,48 +124,56 @@ QIcon* k_fileplacesmodel_icon(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 const char* k_fileplacesmodel_text(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#isHidden)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_is_hidden(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#isGroupHidden)
 ///
 /// @param self KFilePlacesModel*
 /// @param type enum KFilePlacesModel__GroupType
+///
 bool k_fileplacesmodel_is_group_hidden(void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#isGroupHidden)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_is_group_hidden2(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#isDevice)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_is_device(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#deviceForIndex)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 Solid__Device* k_fileplacesmodel_device_for_index(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#bookmarkForIndex)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 KBookmark* k_fileplacesmodel_bookmark_for_index(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#bookmarkForUrl)
 ///
 /// @param self KFilePlacesModel*
 /// @param searchUrl QUrl*
+///
 KBookmark* k_fileplacesmodel_bookmark_for_url(void* self, void* searchUrl);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#groupType)
@@ -158,48 +182,56 @@ KBookmark* k_fileplacesmodel_bookmark_for_url(void* self, void* searchUrl);
 /// @param index QModelIndex*
 ///
 /// @return enum KFilePlacesModel__GroupType
+///
 int32_t k_fileplacesmodel_group_type(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#groupIndexes)
 ///
 /// @param self KFilePlacesModel*
 /// @param type enum KFilePlacesModel__GroupType
+///
 libqt_list /* of QModelIndex* */ k_fileplacesmodel_group_indexes(void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#teardownActionForIndex)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QAction* k_fileplacesmodel_teardown_action_for_index(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#ejectActionForIndex)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QAction* k_fileplacesmodel_eject_action_for_index(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#partitionActionForIndex)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QAction* k_fileplacesmodel_partition_action_for_index(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#requestTeardown)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 void k_fileplacesmodel_request_teardown(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#requestEject)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 void k_fileplacesmodel_request_eject(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#requestSetup)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 void k_fileplacesmodel_request_setup(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#addPlace)
@@ -207,6 +239,7 @@ void k_fileplacesmodel_request_setup(void* self, void* index);
 /// @param self KFilePlacesModel*
 /// @param text const char*
 /// @param url QUrl*
+///
 void k_fileplacesmodel_add_place(void* self, const char* text, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#addPlace)
@@ -217,6 +250,7 @@ void k_fileplacesmodel_add_place(void* self, const char* text, void* url);
 /// @param iconName const char*
 /// @param appName const char*
 /// @param after QModelIndex*
+///
 void k_fileplacesmodel_add_place2(void* self, const char* text, void* url, const char* iconName, const char* appName, void* after);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#editPlace)
@@ -225,12 +259,14 @@ void k_fileplacesmodel_add_place2(void* self, const char* text, void* url, const
 /// @param index QModelIndex*
 /// @param text const char*
 /// @param url QUrl*
+///
 void k_fileplacesmodel_edit_place(void* self, void* index, const char* text, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#removePlace)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 void k_fileplacesmodel_remove_place(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#setPlaceHidden)
@@ -238,6 +274,7 @@ void k_fileplacesmodel_remove_place(void* self, void* index);
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param hidden bool
+///
 void k_fileplacesmodel_set_place_hidden(void* self, void* index, bool hidden);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#setGroupHidden)
@@ -245,6 +282,7 @@ void k_fileplacesmodel_set_place_hidden(void* self, void* index, bool hidden);
 /// @param self KFilePlacesModel*
 /// @param type enum KFilePlacesModel__GroupType
 /// @param hidden bool
+///
 void k_fileplacesmodel_set_group_hidden(void* self, int32_t type, bool hidden);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#movePlace)
@@ -252,11 +290,13 @@ void k_fileplacesmodel_set_group_hidden(void* self, int32_t type, bool hidden);
 /// @param self KFilePlacesModel*
 /// @param itemRow int
 /// @param row int
+///
 bool k_fileplacesmodel_move_place(void* self, int itemRow, int row);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#hiddenCount)
 ///
 /// @param self KFilePlacesModel*
+///
 int32_t k_fileplacesmodel_hidden_count(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#data)
@@ -264,6 +304,7 @@ int32_t k_fileplacesmodel_hidden_count(void* self);
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_fileplacesmodel_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#data)
@@ -272,6 +313,7 @@ QVariant* k_fileplacesmodel_data(void* self, void* index, int role);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QVariant* func(KFilePlacesModel* self, QModelIndex* index, int role)
+///
 void k_fileplacesmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#data)
@@ -281,6 +323,7 @@ void k_fileplacesmodel_on_data(void* self, QVariant* (*callback)(void*, void*, i
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_fileplacesmodel_qbase_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#index)
@@ -289,6 +332,7 @@ QVariant* k_fileplacesmodel_qbase_data(void* self, void* index, int role);
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#index)
@@ -297,6 +341,7 @@ QModelIndex* k_fileplacesmodel_index(void* self, int row, int column, void* pare
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, int row, int column, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#index)
@@ -307,12 +352,14 @@ void k_fileplacesmodel_on_index(void* self, QModelIndex* (*callback)(void*, int,
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#parent)
 ///
 /// @param self KFilePlacesModel*
 /// @param child QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_parent(void* self, void* child);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#parent)
@@ -321,6 +368,7 @@ QModelIndex* k_fileplacesmodel_parent(void* self, void* child);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, QModelIndex* child)
+///
 void k_fileplacesmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#parent)
@@ -329,11 +377,13 @@ void k_fileplacesmodel_on_parent(void* self, QModelIndex* (*callback)(void*, voi
 ///
 /// @param self KFilePlacesModel*
 /// @param child QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_qbase_parent(void* self, void* child);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#roleNames)
 ///
 /// @param self KFilePlacesModel*
+///
 libqt_map /* of int to char* */ k_fileplacesmodel_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#roleNames)
@@ -342,6 +392,7 @@ libqt_map /* of int to char* */ k_fileplacesmodel_role_names(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void k_fileplacesmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#roleNames)
@@ -349,12 +400,14 @@ void k_fileplacesmodel_on_role_names(void* self, libqt_map /* of int to char* */
 /// Base class method implementation
 ///
 /// @param self KFilePlacesModel*
+///
 libqt_map /* of int to char* */ k_fileplacesmodel_qbase_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#rowCount)
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 int32_t k_fileplacesmodel_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#rowCount)
@@ -363,6 +416,7 @@ int32_t k_fileplacesmodel_row_count(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func(KFilePlacesModel* self, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#rowCount)
@@ -371,12 +425,14 @@ void k_fileplacesmodel_on_row_count(void* self, int32_t (*callback)(void*, void*
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 int32_t k_fileplacesmodel_qbase_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#columnCount)
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 int32_t k_fileplacesmodel_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#columnCount)
@@ -385,6 +441,7 @@ int32_t k_fileplacesmodel_column_count(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func(KFilePlacesModel* self, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#columnCount)
@@ -393,12 +450,14 @@ void k_fileplacesmodel_on_column_count(void* self, int32_t (*callback)(void*, vo
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 int32_t k_fileplacesmodel_qbase_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#closestItem)
 ///
 /// @param self KFilePlacesModel*
 /// @param url QUrl*
+///
 QModelIndex* k_fileplacesmodel_closest_item(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#supportedDropActions)
@@ -406,6 +465,7 @@ QModelIndex* k_fileplacesmodel_closest_item(void* self, void* url);
 /// @param self KFilePlacesModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_fileplacesmodel_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#supportedDropActions)
@@ -414,6 +474,7 @@ int32_t k_fileplacesmodel_supported_drop_actions(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func()
+///
 void k_fileplacesmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#supportedDropActions)
@@ -423,6 +484,7 @@ void k_fileplacesmodel_on_supported_drop_actions(void* self, int32_t (*callback)
 /// @param self KFilePlacesModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_fileplacesmodel_qbase_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#flags)
@@ -431,6 +493,7 @@ int32_t k_fileplacesmodel_qbase_supported_drop_actions(void* self);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_fileplacesmodel_flags(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#flags)
@@ -439,6 +502,7 @@ int32_t k_fileplacesmodel_flags(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func(KFilePlacesModel* self, QModelIndex* index)
+///
 void k_fileplacesmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#flags)
@@ -449,6 +513,7 @@ void k_fileplacesmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_fileplacesmodel_qbase_flags(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#mimeTypes)
@@ -456,6 +521,7 @@ int32_t k_fileplacesmodel_qbase_flags(void* self, void* index);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesModel*
+///
 const char** k_fileplacesmodel_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#mimeTypes)
@@ -464,6 +530,7 @@ const char** k_fileplacesmodel_mime_types(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback const char** func()
+///
 void k_fileplacesmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#mimeTypes)
@@ -471,12 +538,14 @@ void k_fileplacesmodel_on_mime_types(void* self, const char** (*callback)());
 /// Base class method implementation
 ///
 /// @param self KFilePlacesModel*
+///
 const char** k_fileplacesmodel_qbase_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#mimeData)
 ///
 /// @param self KFilePlacesModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_fileplacesmodel_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#mimeData)
@@ -485,6 +554,7 @@ QMimeData* k_fileplacesmodel_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QMimeData* func(KFilePlacesModel* self, QModelIndex** indexes)
+///
 void k_fileplacesmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#mimeData)
@@ -493,6 +563,7 @@ void k_fileplacesmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QM
 ///
 /// @param self KFilePlacesModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_fileplacesmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#dropMimeData)
@@ -503,6 +574,7 @@ QMimeData* k_fileplacesmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#dropMimeData)
@@ -511,6 +583,7 @@ bool k_fileplacesmodel_drop_mime_data(void* self, void* data, int32_t action, in
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#dropMimeData)
@@ -523,22 +596,26 @@ void k_fileplacesmodel_on_drop_mime_data(void* self, bool (*callback)(void*, voi
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#refresh)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_refresh(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#convertedUrl)
 ///
 /// @param url QUrl*
+///
 QUrl* k_fileplacesmodel_converted_url(void* url);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#setSupportedSchemes)
 ///
 /// @param self KFilePlacesModel*
 /// @param schemes const char**
+///
 void k_fileplacesmodel_set_supported_schemes(void* self, const char* schemes[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#supportedSchemes)
@@ -546,18 +623,21 @@ void k_fileplacesmodel_set_supported_schemes(void* self, const char* schemes[sta
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesModel*
+///
 const char** k_fileplacesmodel_supported_schemes(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#errorMessage)
 ///
 /// @param self KFilePlacesModel*
 /// @param message const char*
+///
 void k_fileplacesmodel_error_message(void* self, const char* message);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#errorMessage)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, const char* message)
+///
 void k_fileplacesmodel_on_error_message(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#setupDone)
@@ -565,12 +645,14 @@ void k_fileplacesmodel_on_error_message(void* self, void (*callback)(void*, cons
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param success bool
+///
 void k_fileplacesmodel_setup_done(void* self, void* index, bool success);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#setupDone)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* index, bool success)
+///
 void k_fileplacesmodel_on_setup_done(void* self, void (*callback)(void*, void*, bool));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#teardownDone)
@@ -579,12 +661,14 @@ void k_fileplacesmodel_on_setup_done(void* self, void (*callback)(void*, void*, 
 /// @param index QModelIndex*
 /// @param error enum Solid__ErrorType
 /// @param errorData QVariant*
+///
 void k_fileplacesmodel_teardown_done(void* self, void* index, int32_t error, void* errorData);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#teardownDone)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* index, enum Solid__ErrorType error, QVariant* errorData)
+///
 void k_fileplacesmodel_on_teardown_done(void* self, void (*callback)(void*, void*, int32_t, void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#groupHiddenChanged)
@@ -592,34 +676,40 @@ void k_fileplacesmodel_on_teardown_done(void* self, void (*callback)(void*, void
 /// @param self KFilePlacesModel*
 /// @param group enum KFilePlacesModel__GroupType
 /// @param hidden bool
+///
 void k_fileplacesmodel_group_hidden_changed(void* self, int32_t group, bool hidden);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#groupHiddenChanged)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, enum KFilePlacesModel__GroupType group, bool hidden)
+///
 void k_fileplacesmodel_on_group_hidden_changed(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#reloaded)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_reloaded(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#reloaded)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self)
+///
 void k_fileplacesmodel_on_reloaded(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#supportedSchemesChanged)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_supported_schemes_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#supportedSchemesChanged)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self)
+///
 void k_fileplacesmodel_on_supported_schemes_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -628,6 +718,7 @@ void k_fileplacesmodel_on_supported_schemes_changed(void* self, void (*callback)
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_fileplacesmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -637,6 +728,7 @@ const char* k_fileplacesmodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_fileplacesmodel_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#addPlace)
@@ -645,6 +737,7 @@ const char* k_fileplacesmodel_tr3(const char* s, const char* c, int n);
 /// @param text const char*
 /// @param url QUrl*
 /// @param iconName const char*
+///
 void k_fileplacesmodel_add_place3(void* self, const char* text, void* url, const char* iconName);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#addPlace)
@@ -654,6 +747,7 @@ void k_fileplacesmodel_add_place3(void* self, const char* text, void* url, const
 /// @param url QUrl*
 /// @param iconName const char*
 /// @param appName const char*
+///
 void k_fileplacesmodel_add_place4(void* self, const char* text, void* url, const char* iconName, const char* appName);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#editPlace)
@@ -663,6 +757,7 @@ void k_fileplacesmodel_add_place4(void* self, const char* text, void* url, const
 /// @param text const char*
 /// @param url QUrl*
 /// @param iconName const char*
+///
 void k_fileplacesmodel_edit_place4(void* self, void* index, const char* text, void* url, const char* iconName);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#editPlace)
@@ -673,6 +768,7 @@ void k_fileplacesmodel_edit_place4(void* self, void* index, const char* text, vo
 /// @param url QUrl*
 /// @param iconName const char*
 /// @param appName const char*
+///
 void k_fileplacesmodel_edit_place5(void* self, void* index, const char* text, void* url, const char* iconName, const char* appName);
 
 /// Inherited from QAbstractItemModel
@@ -682,6 +778,7 @@ void k_fileplacesmodel_edit_place5(void* self, void* index, const char* text, vo
 /// @param self KFilePlacesModel*
 /// @param row int
 /// @param column int
+///
 bool k_fileplacesmodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -690,6 +787,7 @@ bool k_fileplacesmodel_has_index(void* self, int row, int column);
 ///
 /// @param self KFilePlacesModel*
 /// @param row int
+///
 bool k_fileplacesmodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -698,6 +796,7 @@ bool k_fileplacesmodel_insert_row(void* self, int row);
 ///
 /// @param self KFilePlacesModel*
 /// @param column int
+///
 bool k_fileplacesmodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -706,6 +805,7 @@ bool k_fileplacesmodel_insert_column(void* self, int column);
 ///
 /// @param self KFilePlacesModel*
 /// @param row int
+///
 bool k_fileplacesmodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -714,6 +814,7 @@ bool k_fileplacesmodel_remove_row(void* self, int row);
 ///
 /// @param self KFilePlacesModel*
 /// @param column int
+///
 bool k_fileplacesmodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -725,6 +826,7 @@ bool k_fileplacesmodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_fileplacesmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -736,6 +838,7 @@ bool k_fileplacesmodel_move_row(void* self, void* sourceParent, int sourceRow, v
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_fileplacesmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -744,6 +847,7 @@ bool k_fileplacesmodel_move_column(void* self, void* sourceParent, int sourceCol
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -753,6 +857,7 @@ bool k_fileplacesmodel_check_index(void* self, void* index);
 /// @param self KFilePlacesModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void k_fileplacesmodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -761,6 +866,7 @@ void k_fileplacesmodel_data_changed(void* self, void* topLeft, void* bottomRight
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void k_fileplacesmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -771,6 +877,7 @@ void k_fileplacesmodel_on_data_changed(void* self, void (*callback)(void*, void*
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -779,6 +886,7 @@ void k_fileplacesmodel_header_data_changed(void* self, int32_t orientation, int 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void k_fileplacesmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -786,6 +894,7 @@ void k_fileplacesmodel_on_header_data_changed(void* self, void (*callback)(void*
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -794,6 +903,7 @@ void k_fileplacesmodel_layout_changed(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self)
+///
 void k_fileplacesmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -801,6 +911,7 @@ void k_fileplacesmodel_on_layout_changed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -809,6 +920,7 @@ void k_fileplacesmodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self)
+///
 void k_fileplacesmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -819,6 +931,7 @@ void k_fileplacesmodel_on_layout_about_to_be_changed(void* self, void (*callback
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -828,6 +941,7 @@ bool k_fileplacesmodel_has_index3(void* self, int row, int column, void* parent)
 /// @param self KFilePlacesModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -837,6 +951,7 @@ bool k_fileplacesmodel_insert_row2(void* self, int row, void* parent);
 /// @param self KFilePlacesModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -846,6 +961,7 @@ bool k_fileplacesmodel_insert_column2(void* self, int column, void* parent);
 /// @param self KFilePlacesModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -855,6 +971,7 @@ bool k_fileplacesmodel_remove_row2(void* self, int row, void* parent);
 /// @param self KFilePlacesModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -864,6 +981,7 @@ bool k_fileplacesmodel_remove_column2(void* self, int column, void* parent);
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool k_fileplacesmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -874,6 +992,7 @@ bool k_fileplacesmodel_check_index2(void* self, void* index, int32_t options);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void k_fileplacesmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -882,6 +1001,7 @@ void k_fileplacesmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void k_fileplacesmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -890,6 +1010,7 @@ void k_fileplacesmodel_on_data_changed3(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_fileplacesmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -898,6 +1019,7 @@ void k_fileplacesmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QPersistentModelIndex** parents)
+///
 void k_fileplacesmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -907,6 +1029,7 @@ void k_fileplacesmodel_on_layout_changed1(void* self, void (*callback)(void*, QP
 /// @param self KFilePlacesModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_fileplacesmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -915,6 +1038,7 @@ void k_fileplacesmodel_layout_changed2(void* self, libqt_list parents, int32_t h
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_fileplacesmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -923,6 +1047,7 @@ void k_fileplacesmodel_on_layout_changed2(void* self, void (*callback)(void*, QP
 ///
 /// @param self KFilePlacesModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_fileplacesmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -931,6 +1056,7 @@ void k_fileplacesmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QPersistentModelIndex** parents)
+///
 void k_fileplacesmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -940,6 +1066,7 @@ void k_fileplacesmodel_on_layout_about_to_be_changed1(void* self, void (*callbac
 /// @param self KFilePlacesModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_fileplacesmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -948,6 +1075,7 @@ void k_fileplacesmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_fileplacesmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -957,6 +1085,7 @@ void k_fileplacesmodel_on_layout_about_to_be_changed2(void* self, void (*callbac
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesModel*
+///
 const char* k_fileplacesmodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -965,6 +1094,7 @@ const char* k_fileplacesmodel_object_name(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param name char*
+///
 void k_fileplacesmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -972,6 +1102,7 @@ void k_fileplacesmodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KFilePlacesModel*
+///
 bool k_fileplacesmodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -979,6 +1110,7 @@ bool k_fileplacesmodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KFilePlacesModel*
+///
 bool k_fileplacesmodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -986,6 +1118,7 @@ bool k_fileplacesmodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KFilePlacesModel*
+///
 bool k_fileplacesmodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -993,6 +1126,7 @@ bool k_fileplacesmodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KFilePlacesModel*
+///
 bool k_fileplacesmodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -1001,6 +1135,7 @@ bool k_fileplacesmodel_signals_blocked(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param b bool
+///
 bool k_fileplacesmodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -1008,6 +1143,7 @@ bool k_fileplacesmodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KFilePlacesModel*
+///
 QThread* k_fileplacesmodel_thread(void* self);
 
 /// Inherited from QObject
@@ -1016,6 +1152,7 @@ QThread* k_fileplacesmodel_thread(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param thread QThread*
+///
 bool k_fileplacesmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -1024,6 +1161,7 @@ bool k_fileplacesmodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self KFilePlacesModel*
 /// @param interval int
+///
 int32_t k_fileplacesmodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -1032,6 +1170,7 @@ int32_t k_fileplacesmodel_start_timer(void* self, int interval);
 ///
 /// @param self KFilePlacesModel*
 /// @param id int
+///
 void k_fileplacesmodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -1040,6 +1179,7 @@ void k_fileplacesmodel_kill_timer(void* self, int id);
 ///
 /// @param self KFilePlacesModel*
 /// @param id enum Qt__TimerId
+///
 void k_fileplacesmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -1047,6 +1187,7 @@ void k_fileplacesmodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KFilePlacesModel*
+///
 libqt_list /* of QObject* */ k_fileplacesmodel_children(void* self);
 
 /// Inherited from QObject
@@ -1055,6 +1196,7 @@ libqt_list /* of QObject* */ k_fileplacesmodel_children(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QObject*
+///
 void k_fileplacesmodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -1063,6 +1205,7 @@ void k_fileplacesmodel_set_parent(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param filterObj QObject*
+///
 void k_fileplacesmodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -1071,6 +1214,7 @@ void k_fileplacesmodel_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KFilePlacesModel*
 /// @param obj QObject*
+///
 void k_fileplacesmodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -1081,6 +1225,7 @@ void k_fileplacesmodel_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_fileplacesmodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -1091,6 +1236,7 @@ QMetaObject__Connection* k_fileplacesmodel_connect(void* sender, void* signal, v
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_fileplacesmodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -1101,6 +1247,7 @@ QMetaObject__Connection* k_fileplacesmodel_connect2(void* self, void* sender, co
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_fileplacesmodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -1108,6 +1255,7 @@ bool k_fileplacesmodel_disconnect(void* sender, void* signal, void* receiver, vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_fileplacesmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -1115,6 +1263,7 @@ bool k_fileplacesmodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -1122,6 +1271,7 @@ void k_fileplacesmodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -1131,6 +1281,7 @@ void k_fileplacesmodel_dump_object_info(void* self);
 /// @param self KFilePlacesModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_fileplacesmodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -1139,6 +1290,7 @@ bool k_fileplacesmodel_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KFilePlacesModel*
 /// @param name const char*
+///
 QVariant* k_fileplacesmodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -1148,6 +1300,7 @@ QVariant* k_fileplacesmodel_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFilePlacesModel*
+///
 const char** k_fileplacesmodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -1155,6 +1308,7 @@ const char** k_fileplacesmodel_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KFilePlacesModel*
+///
 QBindingStorage* k_fileplacesmodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -1162,6 +1316,7 @@ QBindingStorage* k_fileplacesmodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KFilePlacesModel*
+///
 const QBindingStorage* k_fileplacesmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -1169,6 +1324,7 @@ const QBindingStorage* k_fileplacesmodel_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1177,6 +1333,7 @@ void k_fileplacesmodel_destroyed(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self)
+///
 void k_fileplacesmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1185,6 +1342,7 @@ void k_fileplacesmodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// @param self KFilePlacesModel*
 /// @param classname const char*
+///
 bool k_fileplacesmodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1192,6 +1350,7 @@ bool k_fileplacesmodel_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1201,6 +1360,7 @@ void k_fileplacesmodel_delete_later(void* self);
 /// @param self KFilePlacesModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_fileplacesmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1210,6 +1370,7 @@ bool k_fileplacesmodel_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KFilePlacesModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_fileplacesmodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1221,6 +1382,7 @@ int32_t k_fileplacesmodel_start_timer22(void* self, int interval, int32_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_fileplacesmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1232,6 +1394,7 @@ QMetaObject__Connection* k_fileplacesmodel_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_fileplacesmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1240,6 +1403,7 @@ QMetaObject__Connection* k_fileplacesmodel_connect4(void* self, void* sender, co
 ///
 /// @param self KFilePlacesModel*
 /// @param param1 QObject*
+///
 void k_fileplacesmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1248,6 +1412,7 @@ void k_fileplacesmodel_destroyed1(void* self, void* param1);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QObject* param1)
+///
 void k_fileplacesmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1260,6 +1425,7 @@ void k_fileplacesmodel_on_destroyed1(void* self, void (*callback)(void*, void*))
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -1272,6 +1438,7 @@ QModelIndex* k_fileplacesmodel_sibling(void* self, int row, int column, void* id
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -1282,6 +1449,7 @@ QModelIndex* k_fileplacesmodel_qbase_sibling(void* self, int row, int column, vo
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, int row, int column, QModelIndex* idx)
+///
 void k_fileplacesmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1292,6 +1460,7 @@ void k_fileplacesmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, in
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1302,6 +1471,7 @@ bool k_fileplacesmodel_has_children(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1312,6 +1482,7 @@ bool k_fileplacesmodel_qbase_has_children(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1324,6 +1495,7 @@ void k_fileplacesmodel_on_has_children(void* self, bool (*callback)(void*, void*
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_fileplacesmodel_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1336,6 +1508,7 @@ bool k_fileplacesmodel_set_data(void* self, void* index, void* value, int role);
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_fileplacesmodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1346,6 +1519,7 @@ bool k_fileplacesmodel_qbase_set_data(void* self, void* index, void* value, int 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* index, QVariant* value, int role)
+///
 void k_fileplacesmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1358,6 +1532,7 @@ void k_fileplacesmodel_on_set_data(void* self, bool (*callback)(void*, void*, vo
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_fileplacesmodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1370,6 +1545,7 @@ QVariant* k_fileplacesmodel_header_data(void* self, int section, int32_t orienta
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_fileplacesmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1380,6 +1556,7 @@ QVariant* k_fileplacesmodel_qbase_header_data(void* self, int section, int32_t o
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QVariant* func(KFilePlacesModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void k_fileplacesmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -1393,6 +1570,7 @@ void k_fileplacesmodel_on_header_data(void* self, QVariant* (*callback)(void*, i
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_fileplacesmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1406,6 +1584,7 @@ bool k_fileplacesmodel_set_header_data(void* self, int section, int32_t orientat
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_fileplacesmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1416,6 +1595,7 @@ bool k_fileplacesmodel_qbase_set_header_data(void* self, int section, int32_t or
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void k_fileplacesmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1426,6 +1606,7 @@ void k_fileplacesmodel_on_set_header_data(void* self, bool (*callback)(void*, in
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_fileplacesmodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1436,6 +1617,7 @@ libqt_map /* of int to QVariant* */ k_fileplacesmodel_item_data(void* self, void
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_fileplacesmodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1446,6 +1628,7 @@ libqt_map /* of int to QVariant* */ k_fileplacesmodel_qbase_item_data(void* self
 ///
 /// @param self KFilePlacesModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(KFilePlacesModel* self, QModelIndex* index)
+///
 void k_fileplacesmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1457,6 +1640,7 @@ void k_fileplacesmodel_on_item_data(void* self, libqt_map /* of int to QVariant*
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_fileplacesmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1468,6 +1652,7 @@ bool k_fileplacesmodel_set_item_data(void* self, void* index, libqt_map /* of in
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_fileplacesmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1478,6 +1663,7 @@ bool k_fileplacesmodel_qbase_set_item_data(void* self, void* index, libqt_map /*
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void k_fileplacesmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1488,6 +1674,7 @@ void k_fileplacesmodel_on_set_item_data(void* self, bool (*callback)(void*, void
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1498,6 +1685,7 @@ bool k_fileplacesmodel_clear_item_data(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 bool k_fileplacesmodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1508,6 +1696,7 @@ bool k_fileplacesmodel_qbase_clear_item_data(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* index)
+///
 void k_fileplacesmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1522,6 +1711,7 @@ void k_fileplacesmodel_on_clear_item_data(void* self, bool (*callback)(void*, vo
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1536,6 +1726,7 @@ bool k_fileplacesmodel_can_drop_mime_data(void* self, void* data, int32_t action
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1546,6 +1737,7 @@ bool k_fileplacesmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1557,6 +1749,7 @@ void k_fileplacesmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
 /// @param self KFilePlacesModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_fileplacesmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1568,6 +1761,7 @@ int32_t k_fileplacesmodel_supported_drag_actions(void* self);
 /// @param self KFilePlacesModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_fileplacesmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1578,6 +1772,7 @@ int32_t k_fileplacesmodel_qbase_supported_drag_actions(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func()
+///
 void k_fileplacesmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1590,6 +1785,7 @@ void k_fileplacesmodel_on_supported_drag_actions(void* self, int32_t (*callback)
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1602,6 +1798,7 @@ bool k_fileplacesmodel_insert_rows(void* self, int row, int count, void* parent)
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1612,6 +1809,7 @@ bool k_fileplacesmodel_qbase_insert_rows(void* self, int row, int count, void* p
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, int row, int count, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1624,6 +1822,7 @@ void k_fileplacesmodel_on_insert_rows(void* self, bool (*callback)(void*, int, i
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1636,6 +1835,7 @@ bool k_fileplacesmodel_insert_columns(void* self, int column, int count, void* p
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1646,6 +1846,7 @@ bool k_fileplacesmodel_qbase_insert_columns(void* self, int column, int count, v
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, int column, int count, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1658,6 +1859,7 @@ void k_fileplacesmodel_on_insert_columns(void* self, bool (*callback)(void*, int
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1670,6 +1872,7 @@ bool k_fileplacesmodel_remove_rows(void* self, int row, int count, void* parent)
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1680,6 +1883,7 @@ bool k_fileplacesmodel_qbase_remove_rows(void* self, int row, int count, void* p
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, int row, int count, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1692,6 +1896,7 @@ void k_fileplacesmodel_on_remove_rows(void* self, bool (*callback)(void*, int, i
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1704,6 +1909,7 @@ bool k_fileplacesmodel_remove_columns(void* self, int column, int count, void* p
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1714,6 +1920,7 @@ bool k_fileplacesmodel_qbase_remove_columns(void* self, int column, int count, v
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, int column, int count, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1728,6 +1935,7 @@ void k_fileplacesmodel_on_remove_columns(void* self, bool (*callback)(void*, int
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_fileplacesmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1742,6 +1950,7 @@ bool k_fileplacesmodel_move_rows(void* self, void* sourceParent, int sourceRow, 
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_fileplacesmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1752,6 +1961,7 @@ bool k_fileplacesmodel_qbase_move_rows(void* self, void* sourceParent, int sourc
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_fileplacesmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1766,6 +1976,7 @@ void k_fileplacesmodel_on_move_rows(void* self, bool (*callback)(void*, void*, i
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_fileplacesmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1780,6 +1991,7 @@ bool k_fileplacesmodel_move_columns(void* self, void* sourceParent, int sourceCo
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_fileplacesmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1790,6 +2002,7 @@ bool k_fileplacesmodel_qbase_move_columns(void* self, void* sourceParent, int so
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_fileplacesmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1800,6 +2013,7 @@ void k_fileplacesmodel_on_move_columns(void* self, bool (*callback)(void*, void*
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 void k_fileplacesmodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1810,6 +2024,7 @@ void k_fileplacesmodel_fetch_more(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 void k_fileplacesmodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1820,6 +2035,7 @@ void k_fileplacesmodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1830,6 +2046,7 @@ void k_fileplacesmodel_on_fetch_more(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1840,6 +2057,7 @@ bool k_fileplacesmodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param parent QModelIndex*
+///
 bool k_fileplacesmodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1850,6 +2068,7 @@ bool k_fileplacesmodel_qbase_can_fetch_more(void* self, void* parent);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* parent)
+///
 void k_fileplacesmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1861,6 +2080,7 @@ void k_fileplacesmodel_on_can_fetch_more(void* self, bool (*callback)(void*, voi
 /// @param self KFilePlacesModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_fileplacesmodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1872,6 +2092,7 @@ void k_fileplacesmodel_sort(void* self, int column, int32_t order);
 /// @param self KFilePlacesModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_fileplacesmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1882,6 +2103,7 @@ void k_fileplacesmodel_qbase_sort(void* self, int column, int32_t order);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, int column, enum Qt__SortOrder order)
+///
 void k_fileplacesmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1892,6 +2114,7 @@ void k_fileplacesmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1902,6 +2125,7 @@ QModelIndex* k_fileplacesmodel_buddy(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_fileplacesmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1912,6 +2136,7 @@ QModelIndex* k_fileplacesmodel_qbase_buddy(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, QModelIndex* index)
+///
 void k_fileplacesmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1926,6 +2151,7 @@ void k_fileplacesmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_fileplacesmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1940,6 +2166,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesmodel_match(void* self, void* start
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_fileplacesmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1950,6 +2177,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesmodel_qbase_match(void* self, void*
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex** func(KFilePlacesModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void k_fileplacesmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1960,6 +2188,7 @@ void k_fileplacesmodel_on_match(void* self, QModelIndex** (*callback)(void*, voi
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QSize* k_fileplacesmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1970,6 +2199,7 @@ QSize* k_fileplacesmodel_span(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
+///
 QSize* k_fileplacesmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1980,6 +2210,7 @@ QSize* k_fileplacesmodel_qbase_span(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QSize* func(KFilePlacesModel* self, QModelIndex* index)
+///
 void k_fileplacesmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1991,6 +2222,7 @@ void k_fileplacesmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_fileplacesmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -2002,6 +2234,7 @@ void k_fileplacesmodel_multi_data(void* self, void* index, void* roleDataSpan);
 /// @param self KFilePlacesModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_fileplacesmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -2012,6 +2245,7 @@ void k_fileplacesmodel_qbase_multi_data(void* self, void* index, void* roleDataS
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void k_fileplacesmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2021,6 +2255,7 @@ void k_fileplacesmodel_on_multi_data(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 bool k_fileplacesmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2030,6 +2265,7 @@ bool k_fileplacesmodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 bool k_fileplacesmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2040,6 +2276,7 @@ bool k_fileplacesmodel_qbase_submit(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func()
+///
 void k_fileplacesmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2049,6 +2286,7 @@ void k_fileplacesmodel_on_submit(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2058,6 +2296,7 @@ void k_fileplacesmodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2068,6 +2307,7 @@ void k_fileplacesmodel_qbase_revert(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2077,6 +2317,7 @@ void k_fileplacesmodel_on_revert(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2086,6 +2327,7 @@ void k_fileplacesmodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2096,6 +2338,7 @@ void k_fileplacesmodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2106,6 +2349,7 @@ void k_fileplacesmodel_on_reset_internal_data(void* self, void (*callback)());
 ///
 /// @param self KFilePlacesModel*
 /// @param event QEvent*
+///
 bool k_fileplacesmodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2116,6 +2360,7 @@ bool k_fileplacesmodel_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param event QEvent*
+///
 bool k_fileplacesmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2126,6 +2371,7 @@ bool k_fileplacesmodel_qbase_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QEvent* event)
+///
 void k_fileplacesmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2137,6 +2383,7 @@ void k_fileplacesmodel_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KFilePlacesModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_fileplacesmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2148,6 +2395,7 @@ bool k_fileplacesmodel_event_filter(void* self, void* watched, void* event);
 /// @param self KFilePlacesModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_fileplacesmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2158,6 +2406,7 @@ bool k_fileplacesmodel_qbase_event_filter(void* self, void* watched, void* event
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QObject* watched, QEvent* event)
+///
 void k_fileplacesmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2168,6 +2417,7 @@ void k_fileplacesmodel_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 /// @param self KFilePlacesModel*
 /// @param event QTimerEvent*
+///
 void k_fileplacesmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2178,6 +2428,7 @@ void k_fileplacesmodel_timer_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param event QTimerEvent*
+///
 void k_fileplacesmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2188,6 +2439,7 @@ void k_fileplacesmodel_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QTimerEvent* event)
+///
 void k_fileplacesmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2198,6 +2450,7 @@ void k_fileplacesmodel_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFilePlacesModel*
 /// @param event QChildEvent*
+///
 void k_fileplacesmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2208,6 +2461,7 @@ void k_fileplacesmodel_child_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param event QChildEvent*
+///
 void k_fileplacesmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2218,6 +2472,7 @@ void k_fileplacesmodel_qbase_child_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QChildEvent* event)
+///
 void k_fileplacesmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2228,6 +2483,7 @@ void k_fileplacesmodel_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFilePlacesModel*
 /// @param event QEvent*
+///
 void k_fileplacesmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2238,6 +2494,7 @@ void k_fileplacesmodel_custom_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param event QEvent*
+///
 void k_fileplacesmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2248,6 +2505,7 @@ void k_fileplacesmodel_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QEvent* event)
+///
 void k_fileplacesmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2258,6 +2516,7 @@ void k_fileplacesmodel_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self KFilePlacesModel*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2268,6 +2527,7 @@ void k_fileplacesmodel_connect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2278,6 +2538,7 @@ void k_fileplacesmodel_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QMetaMethod* signal)
+///
 void k_fileplacesmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2288,6 +2549,7 @@ void k_fileplacesmodel_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 /// @param self KFilePlacesModel*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2298,6 +2560,7 @@ void k_fileplacesmodel_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param signal QMetaMethod*
+///
 void k_fileplacesmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2308,6 +2571,7 @@ void k_fileplacesmodel_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QMetaMethod* signal)
+///
 void k_fileplacesmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2319,6 +2583,7 @@ void k_fileplacesmodel_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param self KFilePlacesModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_fileplacesmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2330,6 +2595,7 @@ QModelIndex* k_fileplacesmodel_create_index(void* self, int row, int column);
 /// @param self KFilePlacesModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_fileplacesmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2340,6 +2606,7 @@ QModelIndex* k_fileplacesmodel_qbase_create_index(void* self, int row, int colum
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, int row, int column)
+///
 void k_fileplacesmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2351,6 +2618,7 @@ void k_fileplacesmodel_on_create_index(void* self, QModelIndex* (*callback)(void
 /// @param self KFilePlacesModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_fileplacesmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2362,6 +2630,7 @@ void k_fileplacesmodel_encode_data(void* self, libqt_list indexes, void* stream)
 /// @param self KFilePlacesModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_fileplacesmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2372,6 +2641,7 @@ void k_fileplacesmodel_qbase_encode_data(void* self, libqt_list indexes, void* s
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void k_fileplacesmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2385,6 +2655,7 @@ void k_fileplacesmodel_on_encode_data(void* self, void (*callback)(void*, QModel
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_fileplacesmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2398,6 +2669,7 @@ bool k_fileplacesmodel_decode_data(void* self, int row, int column, void* parent
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_fileplacesmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2408,6 +2680,7 @@ bool k_fileplacesmodel_qbase_decode_data(void* self, int row, int column, void* 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void k_fileplacesmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2420,6 +2693,7 @@ void k_fileplacesmodel_on_decode_data(void* self, bool (*callback)(void*, int, i
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2432,6 +2706,7 @@ void k_fileplacesmodel_begin_insert_rows(void* self, void* parent, int first, in
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2442,6 +2717,7 @@ void k_fileplacesmodel_qbase_begin_insert_rows(void* self, void* parent, int fir
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2451,6 +2727,7 @@ void k_fileplacesmodel_on_begin_insert_rows(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2460,6 +2737,7 @@ void k_fileplacesmodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2470,6 +2748,7 @@ void k_fileplacesmodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2482,6 +2761,7 @@ void k_fileplacesmodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2494,6 +2774,7 @@ void k_fileplacesmodel_begin_remove_rows(void* self, void* parent, int first, in
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2504,6 +2785,7 @@ void k_fileplacesmodel_qbase_begin_remove_rows(void* self, void* parent, int fir
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2513,6 +2795,7 @@ void k_fileplacesmodel_on_begin_remove_rows(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2522,6 +2805,7 @@ void k_fileplacesmodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2532,6 +2816,7 @@ void k_fileplacesmodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2546,6 +2831,7 @@ void k_fileplacesmodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_fileplacesmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2560,6 +2846,7 @@ bool k_fileplacesmodel_begin_move_rows(void* self, void* sourceParent, int sourc
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_fileplacesmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2570,6 +2857,7 @@ bool k_fileplacesmodel_qbase_begin_move_rows(void* self, void* sourceParent, int
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void k_fileplacesmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2579,6 +2867,7 @@ void k_fileplacesmodel_on_begin_move_rows(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2588,6 +2877,7 @@ void k_fileplacesmodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2598,6 +2888,7 @@ void k_fileplacesmodel_qbase_end_move_rows(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2610,6 +2901,7 @@ void k_fileplacesmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2622,6 +2914,7 @@ void k_fileplacesmodel_begin_insert_columns(void* self, void* parent, int first,
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2632,6 +2925,7 @@ void k_fileplacesmodel_qbase_begin_insert_columns(void* self, void* parent, int 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2641,6 +2935,7 @@ void k_fileplacesmodel_on_begin_insert_columns(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2650,6 +2945,7 @@ void k_fileplacesmodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2660,6 +2956,7 @@ void k_fileplacesmodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2672,6 +2969,7 @@ void k_fileplacesmodel_on_end_insert_columns(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2684,6 +2982,7 @@ void k_fileplacesmodel_begin_remove_columns(void* self, void* parent, int first,
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_fileplacesmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2694,6 +2993,7 @@ void k_fileplacesmodel_qbase_begin_remove_columns(void* self, void* parent, int 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2703,6 +3003,7 @@ void k_fileplacesmodel_on_begin_remove_columns(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2712,6 +3013,7 @@ void k_fileplacesmodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2722,6 +3024,7 @@ void k_fileplacesmodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2736,6 +3039,7 @@ void k_fileplacesmodel_on_end_remove_columns(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_fileplacesmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2750,6 +3054,7 @@ bool k_fileplacesmodel_begin_move_columns(void* self, void* sourceParent, int so
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_fileplacesmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2760,6 +3065,7 @@ bool k_fileplacesmodel_qbase_begin_move_columns(void* self, void* sourceParent, 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_fileplacesmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2769,6 +3075,7 @@ void k_fileplacesmodel_on_begin_move_columns(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2778,6 +3085,7 @@ void k_fileplacesmodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2788,6 +3096,7 @@ void k_fileplacesmodel_qbase_end_move_columns(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2797,6 +3106,7 @@ void k_fileplacesmodel_on_end_move_columns(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2806,6 +3116,7 @@ void k_fileplacesmodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2816,6 +3127,7 @@ void k_fileplacesmodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2825,6 +3137,7 @@ void k_fileplacesmodel_on_begin_reset_model(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2834,6 +3147,7 @@ void k_fileplacesmodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2844,6 +3158,7 @@ void k_fileplacesmodel_qbase_end_reset_model(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func()
+///
 void k_fileplacesmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2855,6 +3170,7 @@ void k_fileplacesmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param self KFilePlacesModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_fileplacesmodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2866,6 +3182,7 @@ void k_fileplacesmodel_change_persistent_index(void* self, void* from, void* to)
 /// @param self KFilePlacesModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_fileplacesmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2876,6 +3193,7 @@ void k_fileplacesmodel_qbase_change_persistent_index(void* self, void* from, voi
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* from, QModelIndex* to)
+///
 void k_fileplacesmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2887,6 +3205,7 @@ void k_fileplacesmodel_on_change_persistent_index(void* self, void (*callback)(v
 /// @param self KFilePlacesModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_fileplacesmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2898,6 +3217,7 @@ void k_fileplacesmodel_change_persistent_index_list(void* self, libqt_list from,
 /// @param self KFilePlacesModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_fileplacesmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2908,6 +3228,7 @@ void k_fileplacesmodel_qbase_change_persistent_index_list(void* self, libqt_list
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex** from, QModelIndex** to)
+///
 void k_fileplacesmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -2917,6 +3238,7 @@ void k_fileplacesmodel_on_change_persistent_index_list(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 libqt_list /* of QModelIndex* */ k_fileplacesmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2926,6 +3248,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesmodel_persistent_index_list(void* s
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 libqt_list /* of QModelIndex* */ k_fileplacesmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2936,6 +3259,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesmodel_qbase_persistent_index_list(v
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex** func()
+///
 void k_fileplacesmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -2945,6 +3269,7 @@ void k_fileplacesmodel_on_persistent_index_list(void* self, QModelIndex** (*call
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 QObject* k_fileplacesmodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2954,6 +3279,7 @@ QObject* k_fileplacesmodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 QObject* k_fileplacesmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2964,6 +3290,7 @@ QObject* k_fileplacesmodel_qbase_sender(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QObject* func()
+///
 void k_fileplacesmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2973,6 +3300,7 @@ void k_fileplacesmodel_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 int32_t k_fileplacesmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2982,6 +3310,7 @@ int32_t k_fileplacesmodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlacesModel*
+///
 int32_t k_fileplacesmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2992,6 +3321,7 @@ int32_t k_fileplacesmodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func()
+///
 void k_fileplacesmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3002,6 +3332,7 @@ void k_fileplacesmodel_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 /// @param self KFilePlacesModel*
 /// @param signal const char*
+///
 int32_t k_fileplacesmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3012,6 +3343,7 @@ int32_t k_fileplacesmodel_receivers(void* self, const char* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param signal const char*
+///
 int32_t k_fileplacesmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3022,6 +3354,7 @@ int32_t k_fileplacesmodel_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback int32_t func(KFilePlacesModel* self, const char* signal)
+///
 void k_fileplacesmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3032,6 +3365,7 @@ void k_fileplacesmodel_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 /// @param self KFilePlacesModel*
 /// @param signal QMetaMethod*
+///
 bool k_fileplacesmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3042,6 +3376,7 @@ bool k_fileplacesmodel_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param signal QMetaMethod*
+///
 bool k_fileplacesmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3052,6 +3387,7 @@ bool k_fileplacesmodel_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback bool func(KFilePlacesModel* self, QMetaMethod* signal)
+///
 void k_fileplacesmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3062,6 +3398,7 @@ void k_fileplacesmodel_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3072,6 +3409,7 @@ void k_fileplacesmodel_on_rows_about_to_be_inserted(void* self, void (*callback)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3082,6 +3420,7 @@ void k_fileplacesmodel_on_rows_inserted(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3092,6 +3431,7 @@ void k_fileplacesmodel_on_rows_about_to_be_removed(void* self, void (*callback)(
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3102,6 +3442,7 @@ void k_fileplacesmodel_on_rows_removed(void* self, void (*callback)(void*, void*
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3112,6 +3453,7 @@ void k_fileplacesmodel_on_columns_about_to_be_inserted(void* self, void (*callba
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3122,6 +3464,7 @@ void k_fileplacesmodel_on_columns_inserted(void* self, void (*callback)(void*, v
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3132,6 +3475,7 @@ void k_fileplacesmodel_on_columns_about_to_be_removed(void* self, void (*callbac
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* parent, int first, int last)
+///
 void k_fileplacesmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3142,6 +3486,7 @@ void k_fileplacesmodel_on_columns_removed(void* self, void (*callback)(void*, vo
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self)
+///
 void k_fileplacesmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3152,6 +3497,7 @@ void k_fileplacesmodel_on_model_about_to_be_reset(void* self, void (*callback)(v
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self)
+///
 void k_fileplacesmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3162,6 +3508,7 @@ void k_fileplacesmodel_on_model_reset(void* self, void (*callback)(void*));
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_fileplacesmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3172,6 +3519,7 @@ void k_fileplacesmodel_on_rows_about_to_be_moved(void* self, void (*callback)(vo
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_fileplacesmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3182,6 +3530,7 @@ void k_fileplacesmodel_on_rows_moved(void* self, void (*callback)(void*, void*, 
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_fileplacesmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3192,6 +3541,7 @@ void k_fileplacesmodel_on_columns_about_to_be_moved(void* self, void (*callback)
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_fileplacesmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3202,6 +3552,7 @@ void k_fileplacesmodel_on_columns_moved(void* self, void (*callback)(void*, void
 ///
 /// @param self KFilePlacesModel*
 /// @param callback void func(KFilePlacesModel* self, const char* objectName)
+///
 void k_fileplacesmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#dtor.KFilePlacesModel)
@@ -3209,9 +3560,10 @@ void k_fileplacesmodel_on_object_name_changed(void* self, void (*callback)(void*
 /// Delete this object from C++ memory.
 ///
 /// @param self KFilePlacesModel*
+///
 void k_fileplacesmodel_delete(void* self);
 
-/// https://api.kde.org/kfileplacesmodel.html#types
+/// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#public-types)
 
 typedef enum {
     KFILEPLACESMODEL_ADDITIONALROLES_URLROLE = 110940459,
@@ -3228,6 +3580,8 @@ typedef enum {
     KFILEPLACESMODEL_ADDITIONALROLES_DEVICEACCESSIBILITYROLE = 37748115
 } KFilePlacesModel__AdditionalRoles;
 
+/// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#public-types)
+
 typedef enum {
     KFILEPLACESMODEL_GROUPTYPE_PLACESTYPE = 0,
     KFILEPLACESMODEL_GROUPTYPE_REMOTETYPE = 1,
@@ -3238,6 +3592,8 @@ typedef enum {
     KFILEPLACESMODEL_GROUPTYPE_UNKNOWNTYPE = 6,
     KFILEPLACESMODEL_GROUPTYPE_TAGSTYPE = 7
 } KFilePlacesModel__GroupType;
+
+/// [Upstream resources](https://api.kde.org/kfileplacesmodel.html#public-types)
 
 typedef enum {
     KFILEPLACESMODEL_DEVICEACCESSIBILITY_SETUPNEEDED = 0,

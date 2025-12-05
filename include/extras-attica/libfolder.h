@@ -11,27 +11,32 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/attica-folder.html
+/// [Upstream resources](https://api.kde.org/attica-folder.html)
 
 /// k_attica__folder_new constructs a new Attica::Folder object.
 ///
 Attica__Folder* k_attica__folder_new();
 
+/// [Upstream resources](https://api.kde.org/attica-folder.html)
+
 /// k_attica__folder_new2 constructs a new Attica::Folder object.
 ///
 /// @param other Attica__Folder*
+///
 Attica__Folder* k_attica__folder_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#operator-eq)
 ///
 /// @param self Attica__Folder*
 /// @param other Attica__Folder*
+///
 void k_attica__folder_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setId)
 ///
 /// @param self Attica__Folder*
 /// @param id const char*
+///
 void k_attica__folder_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#id)
@@ -39,12 +44,14 @@ void k_attica__folder_set_id(void* self, const char* id);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Folder*
+///
 const char* k_attica__folder_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setName)
 ///
 /// @param self Attica__Folder*
 /// @param name const char*
+///
 void k_attica__folder_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#name)
@@ -52,23 +59,27 @@ void k_attica__folder_set_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Folder*
+///
 const char* k_attica__folder_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setMessageCount)
 ///
 /// @param self Attica__Folder*
 /// @param messageCount int
+///
 void k_attica__folder_set_message_count(void* self, int messageCount);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#messageCount)
 ///
 /// @param self Attica__Folder*
+///
 int32_t k_attica__folder_message_count(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setType)
 ///
 /// @param self Attica__Folder*
 /// @param type const char*
+///
 void k_attica__folder_set_type(void* self, const char* type);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#type)
@@ -76,16 +87,19 @@ void k_attica__folder_set_type(void* self, const char* type);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Folder*
+///
 const char* k_attica__folder_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#isValid)
 ///
 /// @param self Attica__Folder*
+///
 bool k_attica__folder_is_valid(void* self);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self Attica__Folder*
+///
 void k_attica__folder_delete(void* self);
 
 #endif

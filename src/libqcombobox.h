@@ -11,12 +11,15 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qcombobox.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html)
 
 /// q_combobox_new constructs a new QComboBox object.
 ///
 /// @param parent QWidget*
+///
 QComboBox* q_combobox_new(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html)
 
 /// q_combobox_new2 constructs a new QComboBox object.
 ///
@@ -25,22 +28,26 @@ QComboBox* q_combobox_new2();
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QComboBox*
+///
 const QMetaObject* q_combobox_meta_object(void* self);
 
 /// @param self QComboBox*
 /// @param param1 const char*
+///
 void* q_combobox_metacast(void* self, const char* param1);
 
 /// @param self QComboBox*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_combobox_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QComboBox*
 /// @param callback int32_t func(QComboBox* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_combobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_combobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_combobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,67 +64,79 @@ int32_t q_combobox_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_combobox_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxVisibleItems)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_max_visible_items(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setMaxVisibleItems)
 ///
 /// @param self QComboBox*
 /// @param maxItems int
+///
 void q_combobox_set_max_visible_items(void* self, int maxItems);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#count)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setMaxCount)
 ///
 /// @param self QComboBox*
 /// @param max int
+///
 void q_combobox_set_max_count(void* self, int max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxCount)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_max_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#duplicatesEnabled)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_duplicates_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setDuplicatesEnabled)
 ///
 /// @param self QComboBox*
 /// @param enable bool
+///
 void q_combobox_set_duplicates_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setFrame)
 ///
 /// @param self QComboBox*
 /// @param frame bool
+///
 void q_combobox_set_frame(void* self, bool frame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hasFrame)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_has_frame(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
 ///
 /// @param self QComboBox*
 /// @param text const char*
+///
 int32_t q_combobox_find_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
 /// @param self QComboBox*
 /// @param data QVariant*
+///
 int32_t q_combobox_find_data(void* self, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertPolicy)
@@ -124,12 +144,14 @@ int32_t q_combobox_find_data(void* self, void* data);
 /// @param self QComboBox*
 ///
 /// @return enum QComboBox__InsertPolicy
+///
 int32_t q_combobox_insert_policy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setInsertPolicy)
 ///
 /// @param self QComboBox*
 /// @param policy enum QComboBox__InsertPolicy
+///
 void q_combobox_set_insert_policy(void* self, int32_t policy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeAdjustPolicy)
@@ -137,40 +159,47 @@ void q_combobox_set_insert_policy(void* self, int32_t policy);
 /// @param self QComboBox*
 ///
 /// @return enum QComboBox__SizeAdjustPolicy
+///
 int32_t q_combobox_size_adjust_policy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setSizeAdjustPolicy)
 ///
 /// @param self QComboBox*
 /// @param policy enum QComboBox__SizeAdjustPolicy
+///
 void q_combobox_set_size_adjust_policy(void* self, int32_t policy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#minimumContentsLength)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_minimum_contents_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setMinimumContentsLength)
 ///
 /// @param self QComboBox*
 /// @param characters int
+///
 void q_combobox_set_minimum_contents_length(void* self, int characters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#iconSize)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_icon_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setIconSize)
 ///
 /// @param self QComboBox*
 /// @param size QSize*
+///
 void q_combobox_set_icon_size(void* self, void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setPlaceholderText)
 ///
 /// @param self QComboBox*
 /// @param placeholderText const char*
+///
 void q_combobox_set_placeholder_text(void* self, const char* placeholderText);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#placeholderText)
@@ -178,72 +207,85 @@ void q_combobox_set_placeholder_text(void* self, const char* placeholderText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_placeholder_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#isEditable)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_editable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setEditable)
 ///
 /// @param self QComboBox*
 /// @param editable bool
+///
 void q_combobox_set_editable(void* self, bool editable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setLineEdit)
 ///
 /// @param self QComboBox*
 /// @param edit QLineEdit*
+///
 void q_combobox_set_line_edit(void* self, void* edit);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#lineEdit)
 ///
 /// @param self QComboBox*
+///
 QLineEdit* q_combobox_line_edit(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setValidator)
 ///
 /// @param self QComboBox*
 /// @param v QValidator*
+///
 void q_combobox_set_validator(void* self, void* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#validator)
 ///
 /// @param self QComboBox*
+///
 const QValidator* q_combobox_validator(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setCompleter)
 ///
 /// @param self QComboBox*
 /// @param c QCompleter*
+///
 void q_combobox_set_completer(void* self, void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#completer)
 ///
 /// @param self QComboBox*
+///
 QCompleter* q_combobox_completer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemDelegate)
 ///
 /// @param self QComboBox*
+///
 QAbstractItemDelegate* q_combobox_item_delegate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setItemDelegate)
 ///
 /// @param self QComboBox*
 /// @param delegate QAbstractItemDelegate*
+///
 void q_combobox_set_item_delegate(void* self, void* delegate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#model)
 ///
 /// @param self QComboBox*
+///
 QAbstractItemModel* q_combobox_model(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setModel)
 ///
 /// @param self QComboBox*
 /// @param model QAbstractItemModel*
+///
 void q_combobox_set_model(void* self, void* model);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setModel)
@@ -252,6 +294,7 @@ void q_combobox_set_model(void* self, void* model);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QAbstractItemModel* model)
+///
 void q_combobox_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setModel)
@@ -260,33 +303,39 @@ void q_combobox_on_set_model(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param model QAbstractItemModel*
+///
 void q_combobox_qbase_set_model(void* self, void* model);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#rootModelIndex)
 ///
 /// @param self QComboBox*
+///
 QModelIndex* q_combobox_root_model_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setRootModelIndex)
 ///
 /// @param self QComboBox*
 /// @param index QModelIndex*
+///
 void q_combobox_set_root_model_index(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#modelColumn)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_model_column(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setModelColumn)
 ///
 /// @param self QComboBox*
 /// @param visibleColumn int
+///
 void q_combobox_set_model_column(void* self, int visibleColumn);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentIndex)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_current_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentText)
@@ -294,11 +343,13 @@ int32_t q_combobox_current_index(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_current_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
 /// @param self QComboBox*
+///
 QVariant* q_combobox_current_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemText)
@@ -307,24 +358,28 @@ QVariant* q_combobox_current_data(void* self);
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 const char* q_combobox_item_text(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemIcon)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 QIcon* q_combobox_item_icon(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 QVariant* q_combobox_item_data(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#addItem)
 ///
 /// @param self QComboBox*
 /// @param text const char*
+///
 void q_combobox_add_item(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#addItem)
@@ -332,12 +387,14 @@ void q_combobox_add_item(void* self, const char* text);
 /// @param self QComboBox*
 /// @param icon QIcon*
 /// @param text const char*
+///
 void q_combobox_add_item2(void* self, void* icon, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#addItems)
 ///
 /// @param self QComboBox*
 /// @param texts const char**
+///
 void q_combobox_add_items(void* self, const char* texts[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertItem)
@@ -345,6 +402,7 @@ void q_combobox_add_items(void* self, const char* texts[static 1]);
 /// @param self QComboBox*
 /// @param index int
 /// @param text const char*
+///
 void q_combobox_insert_item(void* self, int index, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertItem)
@@ -353,6 +411,7 @@ void q_combobox_insert_item(void* self, int index, const char* text);
 /// @param index int
 /// @param icon QIcon*
 /// @param text const char*
+///
 void q_combobox_insert_item2(void* self, int index, void* icon, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertItems)
@@ -360,18 +419,21 @@ void q_combobox_insert_item2(void* self, int index, void* icon, const char* text
 /// @param self QComboBox*
 /// @param index int
 /// @param texts const char**
+///
 void q_combobox_insert_items(void* self, int index, const char* texts[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertSeparator)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 void q_combobox_insert_separator(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#removeItem)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 void q_combobox_remove_item(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setItemText)
@@ -379,6 +441,7 @@ void q_combobox_remove_item(void* self, int index);
 /// @param self QComboBox*
 /// @param index int
 /// @param text const char*
+///
 void q_combobox_set_item_text(void* self, int index, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setItemIcon)
@@ -386,6 +449,7 @@ void q_combobox_set_item_text(void* self, int index, const char* text);
 /// @param self QComboBox*
 /// @param index int
 /// @param icon QIcon*
+///
 void q_combobox_set_item_icon(void* self, int index, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setItemData)
@@ -393,22 +457,26 @@ void q_combobox_set_item_icon(void* self, int index, void* icon);
 /// @param self QComboBox*
 /// @param index int
 /// @param value QVariant*
+///
 void q_combobox_set_item_data(void* self, int index, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#view)
 ///
 /// @param self QComboBox*
+///
 QAbstractItemView* q_combobox_view(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setView)
 ///
 /// @param self QComboBox*
 /// @param itemView QAbstractItemView*
+///
 void q_combobox_set_view(void* self, void* itemView);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeHint)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeHint)
@@ -417,6 +485,7 @@ QSize* q_combobox_size_hint(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback QSize* func()
+///
 void q_combobox_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeHint)
@@ -424,11 +493,13 @@ void q_combobox_on_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_qbase_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#minimumSizeHint)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_minimum_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#minimumSizeHint)
@@ -437,6 +508,7 @@ QSize* q_combobox_minimum_size_hint(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback QSize* func()
+///
 void q_combobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#minimumSizeHint)
@@ -444,11 +516,13 @@ void q_combobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_qbase_minimum_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_show_popup(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
@@ -457,6 +531,7 @@ void q_combobox_show_popup(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback void func()
+///
 void q_combobox_on_show_popup(void* self, void (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
@@ -464,11 +539,13 @@ void q_combobox_on_show_popup(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self QComboBox*
+///
 void q_combobox_qbase_show_popup(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_hide_popup(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
@@ -477,6 +554,7 @@ void q_combobox_hide_popup(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback void func()
+///
 void q_combobox_on_hide_popup(void* self, void (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
@@ -484,12 +562,14 @@ void q_combobox_on_hide_popup(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self QComboBox*
+///
 void q_combobox_qbase_hide_popup(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#event)
 ///
 /// @param self QComboBox*
 /// @param event QEvent*
+///
 bool q_combobox_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#event)
@@ -498,6 +578,7 @@ bool q_combobox_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback bool func(QComboBox* self, QEvent* event)
+///
 void q_combobox_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#event)
@@ -506,12 +587,14 @@ void q_combobox_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QEvent*
+///
 bool q_combobox_qbase_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
 ///
 /// @param self QComboBox*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* q_combobox_input_method_query(void* self, int64_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
@@ -520,6 +603,7 @@ QVariant* q_combobox_input_method_query(void* self, int64_t param1);
 ///
 /// @param self QComboBox*
 /// @param callback QVariant* func(QComboBox* self, enum Qt__InputMethodQuery param1)
+///
 void q_combobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
@@ -528,6 +612,7 @@ void q_combobox_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 /// @param self QComboBox*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* q_combobox_qbase_input_method_query(void* self, int64_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
@@ -535,124 +620,145 @@ QVariant* q_combobox_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QComboBox*
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
+///
 QVariant* q_combobox_input_method_query2(void* self, int64_t query, void* argument);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#clear)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#clearEditText)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_clear_edit_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setEditText)
 ///
 /// @param self QComboBox*
 /// @param text const char*
+///
 void q_combobox_set_edit_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setCurrentIndex)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 void q_combobox_set_current_index(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setCurrentText)
 ///
 /// @param self QComboBox*
 /// @param text const char*
+///
 void q_combobox_set_current_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
 ///
 /// @param self QComboBox*
 /// @param param1 const char*
+///
 void q_combobox_edit_text_changed(void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, const char* param1)
+///
 void q_combobox_on_edit_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#activated)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 void q_combobox_activated(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#activated)
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, int index)
+///
 void q_combobox_on_activated(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
 ///
 /// @param self QComboBox*
 /// @param param1 const char*
+///
 void q_combobox_text_activated(void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, const char* param1)
+///
 void q_combobox_on_text_activated(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#highlighted)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 void q_combobox_highlighted(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#highlighted)
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, int index)
+///
 void q_combobox_on_highlighted(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
 ///
 /// @param self QComboBox*
 /// @param param1 const char*
+///
 void q_combobox_text_highlighted(void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, const char* param1)
+///
 void q_combobox_on_text_highlighted(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
 ///
 /// @param self QComboBox*
 /// @param index int
+///
 void q_combobox_current_index_changed(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, int index)
+///
 void q_combobox_on_current_index_changed(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
 ///
 /// @param self QComboBox*
 /// @param param1 const char*
+///
 void q_combobox_current_text_changed(void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, const char* param1)
+///
 void q_combobox_on_current_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
 ///
 /// @param self QComboBox*
 /// @param e QFocusEvent*
+///
 void q_combobox_focus_in_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
@@ -661,6 +767,7 @@ void q_combobox_focus_in_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QFocusEvent* e)
+///
 void q_combobox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
@@ -669,12 +776,14 @@ void q_combobox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QFocusEvent*
+///
 void q_combobox_qbase_focus_in_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
 ///
 /// @param self QComboBox*
 /// @param e QFocusEvent*
+///
 void q_combobox_focus_out_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
@@ -683,6 +792,7 @@ void q_combobox_focus_out_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QFocusEvent* e)
+///
 void q_combobox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
@@ -691,12 +801,14 @@ void q_combobox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QFocusEvent*
+///
 void q_combobox_qbase_focus_out_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
 ///
 /// @param self QComboBox*
 /// @param e QEvent*
+///
 void q_combobox_change_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
@@ -705,6 +817,7 @@ void q_combobox_change_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QEvent* e)
+///
 void q_combobox_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
@@ -713,12 +826,14 @@ void q_combobox_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QEvent*
+///
 void q_combobox_qbase_change_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
 ///
 /// @param self QComboBox*
 /// @param e QResizeEvent*
+///
 void q_combobox_resize_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
@@ -727,6 +842,7 @@ void q_combobox_resize_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QResizeEvent* e)
+///
 void q_combobox_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
@@ -735,12 +851,14 @@ void q_combobox_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QResizeEvent*
+///
 void q_combobox_qbase_resize_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
 ///
 /// @param self QComboBox*
 /// @param e QPaintEvent*
+///
 void q_combobox_paint_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
@@ -749,6 +867,7 @@ void q_combobox_paint_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QPaintEvent* e)
+///
 void q_combobox_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
@@ -757,12 +876,14 @@ void q_combobox_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QPaintEvent*
+///
 void q_combobox_qbase_paint_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
 ///
 /// @param self QComboBox*
 /// @param e QShowEvent*
+///
 void q_combobox_show_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
@@ -771,6 +892,7 @@ void q_combobox_show_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QShowEvent* e)
+///
 void q_combobox_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
@@ -779,12 +901,14 @@ void q_combobox_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QShowEvent*
+///
 void q_combobox_qbase_show_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
 ///
 /// @param self QComboBox*
 /// @param e QHideEvent*
+///
 void q_combobox_hide_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
@@ -793,6 +917,7 @@ void q_combobox_hide_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QHideEvent* e)
+///
 void q_combobox_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
@@ -801,12 +926,14 @@ void q_combobox_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QHideEvent*
+///
 void q_combobox_qbase_hide_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
 ///
 /// @param self QComboBox*
 /// @param e QMouseEvent*
+///
 void q_combobox_mouse_press_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
@@ -815,6 +942,7 @@ void q_combobox_mouse_press_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QMouseEvent* e)
+///
 void q_combobox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
@@ -823,12 +951,14 @@ void q_combobox_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QComboBox*
 /// @param e QMouseEvent*
+///
 void q_combobox_qbase_mouse_press_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
 ///
 /// @param self QComboBox*
 /// @param e QMouseEvent*
+///
 void q_combobox_mouse_release_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
@@ -837,6 +967,7 @@ void q_combobox_mouse_release_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QMouseEvent* e)
+///
 void q_combobox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
@@ -845,12 +976,14 @@ void q_combobox_on_mouse_release_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QComboBox*
 /// @param e QMouseEvent*
+///
 void q_combobox_qbase_mouse_release_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
 ///
 /// @param self QComboBox*
 /// @param e QKeyEvent*
+///
 void q_combobox_key_press_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
@@ -859,6 +992,7 @@ void q_combobox_key_press_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QKeyEvent* e)
+///
 void q_combobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
@@ -867,12 +1001,14 @@ void q_combobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QKeyEvent*
+///
 void q_combobox_qbase_key_press_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
 ///
 /// @param self QComboBox*
 /// @param e QKeyEvent*
+///
 void q_combobox_key_release_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
@@ -881,6 +1017,7 @@ void q_combobox_key_release_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QKeyEvent* e)
+///
 void q_combobox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
@@ -889,12 +1026,14 @@ void q_combobox_on_key_release_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QComboBox*
 /// @param e QKeyEvent*
+///
 void q_combobox_qbase_key_release_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
 ///
 /// @param self QComboBox*
 /// @param e QWheelEvent*
+///
 void q_combobox_wheel_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
@@ -903,6 +1042,7 @@ void q_combobox_wheel_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QWheelEvent* e)
+///
 void q_combobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
@@ -911,12 +1051,14 @@ void q_combobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param e QWheelEvent*
+///
 void q_combobox_qbase_wheel_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
 ///
 /// @param self QComboBox*
 /// @param e QContextMenuEvent*
+///
 void q_combobox_context_menu_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
@@ -925,6 +1067,7 @@ void q_combobox_context_menu_event(void* self, void* e);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QContextMenuEvent* e)
+///
 void q_combobox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
@@ -933,12 +1076,14 @@ void q_combobox_on_context_menu_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QComboBox*
 /// @param e QContextMenuEvent*
+///
 void q_combobox_qbase_context_menu_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
 ///
 /// @param self QComboBox*
 /// @param param1 QInputMethodEvent*
+///
 void q_combobox_input_method_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
@@ -947,6 +1092,7 @@ void q_combobox_input_method_event(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QInputMethodEvent* param1)
+///
 void q_combobox_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
@@ -955,12 +1101,14 @@ void q_combobox_on_input_method_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QComboBox*
 /// @param param1 QInputMethodEvent*
+///
 void q_combobox_qbase_input_method_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
 ///
 /// @param self QComboBox*
 /// @param option QStyleOptionComboBox*
+///
 void q_combobox_init_style_option(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
@@ -969,6 +1117,7 @@ void q_combobox_init_style_option(void* self, void* option);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QStyleOptionComboBox* option)
+///
 void q_combobox_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
@@ -977,6 +1126,7 @@ void q_combobox_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QComboBox*
 /// @param option QStyleOptionComboBox*
+///
 void q_combobox_qbase_init_style_option(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -985,6 +1135,7 @@ void q_combobox_qbase_init_style_option(void* self, void* option);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_combobox_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -994,6 +1145,7 @@ const char* q_combobox_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_combobox_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
@@ -1001,6 +1153,7 @@ const char* q_combobox_tr3(const char* s, const char* c, int n);
 /// @param self QComboBox*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
+///
 int32_t q_combobox_find_text2(void* self, const char* text, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
@@ -1008,6 +1161,7 @@ int32_t q_combobox_find_text2(void* self, const char* text, int32_t flags);
 /// @param self QComboBox*
 /// @param data QVariant*
 /// @param role int
+///
 int32_t q_combobox_find_data2(void* self, void* data, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
@@ -1016,12 +1170,14 @@ int32_t q_combobox_find_data2(void* self, void* data, int role);
 /// @param data QVariant*
 /// @param role int
 /// @param flags flag of enum Qt__MatchFlag
+///
 int32_t q_combobox_find_data3(void* self, void* data, int role, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
 /// @param self QComboBox*
 /// @param role int
+///
 QVariant* q_combobox_current_data1(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
@@ -1029,6 +1185,7 @@ QVariant* q_combobox_current_data1(void* self, int role);
 /// @param self QComboBox*
 /// @param index int
 /// @param role int
+///
 QVariant* q_combobox_item_data2(void* self, int index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#addItem)
@@ -1036,6 +1193,7 @@ QVariant* q_combobox_item_data2(void* self, int index, int role);
 /// @param self QComboBox*
 /// @param text const char*
 /// @param userData QVariant*
+///
 void q_combobox_add_item22(void* self, const char* text, void* userData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#addItem)
@@ -1044,6 +1202,7 @@ void q_combobox_add_item22(void* self, const char* text, void* userData);
 /// @param icon QIcon*
 /// @param text const char*
 /// @param userData QVariant*
+///
 void q_combobox_add_item3(void* self, void* icon, const char* text, void* userData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertItem)
@@ -1052,6 +1211,7 @@ void q_combobox_add_item3(void* self, void* icon, const char* text, void* userDa
 /// @param index int
 /// @param text const char*
 /// @param userData QVariant*
+///
 void q_combobox_insert_item3(void* self, int index, const char* text, void* userData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertItem)
@@ -1061,6 +1221,7 @@ void q_combobox_insert_item3(void* self, int index, const char* text, void* user
 /// @param icon QIcon*
 /// @param text const char*
 /// @param userData QVariant*
+///
 void q_combobox_insert_item4(void* self, int index, void* icon, const char* text, void* userData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setItemData)
@@ -1069,6 +1230,7 @@ void q_combobox_insert_item4(void* self, int index, void* icon, const char* text
 /// @param index int
 /// @param value QVariant*
 /// @param role int
+///
 void q_combobox_set_item_data3(void* self, int index, void* value, int role);
 
 /// Inherited from QWidget
@@ -1076,6 +1238,7 @@ void q_combobox_set_item_data3(void* self, int index, void* value, int role);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QComboBox*
+///
 uintptr_t q_combobox_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1083,6 +1246,7 @@ uintptr_t q_combobox_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1090,6 +1254,7 @@ void q_combobox_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self QComboBox*
+///
 uintptr_t q_combobox_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1097,6 +1262,7 @@ uintptr_t q_combobox_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self QComboBox*
+///
 uintptr_t q_combobox_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -1104,6 +1270,7 @@ uintptr_t q_combobox_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self QComboBox*
+///
 QStyle* q_combobox_style(void* self);
 
 /// Inherited from QWidget
@@ -1112,6 +1279,7 @@ QStyle* q_combobox_style(void* self);
 ///
 /// @param self QComboBox*
 /// @param style QStyle*
+///
 void q_combobox_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -1119,6 +1287,7 @@ void q_combobox_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -1126,6 +1295,7 @@ bool q_combobox_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_window(void* self);
 
 /// Inherited from QWidget
@@ -1133,6 +1303,7 @@ bool q_combobox_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -1142,6 +1313,7 @@ bool q_combobox_is_modal(void* self);
 /// @param self QComboBox*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t q_combobox_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -1150,6 +1322,7 @@ int32_t q_combobox_window_modality(void* self);
 ///
 /// @param self QComboBox*
 /// @param windowModality enum Qt__WindowModality
+///
 void q_combobox_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -1157,6 +1330,7 @@ void q_combobox_set_window_modality(void* self, int32_t windowModality);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1165,6 +1339,7 @@ bool q_combobox_is_enabled(void* self);
 ///
 /// @param self QComboBox*
 /// @param param1 QWidget*
+///
 bool q_combobox_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1173,6 +1348,7 @@ bool q_combobox_is_enabled_to(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param enabled bool
+///
 void q_combobox_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -1181,6 +1357,7 @@ void q_combobox_set_enabled(void* self, bool enabled);
 ///
 /// @param self QComboBox*
 /// @param disabled bool
+///
 void q_combobox_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -1189,6 +1366,7 @@ void q_combobox_set_disabled(void* self, bool disabled);
 ///
 /// @param self QComboBox*
 /// @param windowModified bool
+///
 void q_combobox_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -1196,6 +1374,7 @@ void q_combobox_set_window_modified(void* self, bool windowModified);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self QComboBox*
+///
 QRect* q_combobox_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1203,6 +1382,7 @@ QRect* q_combobox_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self QComboBox*
+///
 const QRect* q_combobox_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1210,6 +1390,7 @@ const QRect* q_combobox_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self QComboBox*
+///
 QRect* q_combobox_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1217,6 +1398,7 @@ QRect* q_combobox_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_x(void* self);
 
 /// Inherited from QWidget
@@ -1224,6 +1406,7 @@ int32_t q_combobox_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_y(void* self);
 
 /// Inherited from QWidget
@@ -1231,6 +1414,7 @@ int32_t q_combobox_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self QComboBox*
+///
 QPoint* q_combobox_pos(void* self);
 
 /// Inherited from QWidget
@@ -1238,6 +1422,7 @@ QPoint* q_combobox_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -1245,6 +1430,7 @@ QSize* q_combobox_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_size(void* self);
 
 /// Inherited from QWidget
@@ -1252,6 +1438,7 @@ QSize* q_combobox_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_width(void* self);
 
 /// Inherited from QWidget
@@ -1259,6 +1446,7 @@ int32_t q_combobox_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_height(void* self);
 
 /// Inherited from QWidget
@@ -1266,6 +1454,7 @@ int32_t q_combobox_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self QComboBox*
+///
 QRect* q_combobox_rect(void* self);
 
 /// Inherited from QWidget
@@ -1273,6 +1462,7 @@ QRect* q_combobox_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self QComboBox*
+///
 QRect* q_combobox_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -1280,6 +1470,7 @@ QRect* q_combobox_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self QComboBox*
+///
 QRegion* q_combobox_children_region(void* self);
 
 /// Inherited from QWidget
@@ -1287,6 +1478,7 @@ QRegion* q_combobox_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -1294,6 +1486,7 @@ QSize* q_combobox_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -1301,6 +1494,7 @@ QSize* q_combobox_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -1308,6 +1502,7 @@ int32_t q_combobox_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -1315,6 +1510,7 @@ int32_t q_combobox_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -1322,6 +1518,7 @@ int32_t q_combobox_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -1330,6 +1527,7 @@ int32_t q_combobox_maximum_height(void* self);
 ///
 /// @param self QComboBox*
 /// @param minimumSize QSize*
+///
 void q_combobox_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -1339,6 +1537,7 @@ void q_combobox_set_minimum_size(void* self, void* minimumSize);
 /// @param self QComboBox*
 /// @param minw int
 /// @param minh int
+///
 void q_combobox_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -1347,6 +1546,7 @@ void q_combobox_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self QComboBox*
 /// @param maximumSize QSize*
+///
 void q_combobox_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -1356,6 +1556,7 @@ void q_combobox_set_maximum_size(void* self, void* maximumSize);
 /// @param self QComboBox*
 /// @param maxw int
 /// @param maxh int
+///
 void q_combobox_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -1364,6 +1565,7 @@ void q_combobox_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self QComboBox*
 /// @param minw int
+///
 void q_combobox_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -1372,6 +1574,7 @@ void q_combobox_set_minimum_width(void* self, int minw);
 ///
 /// @param self QComboBox*
 /// @param minh int
+///
 void q_combobox_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -1380,6 +1583,7 @@ void q_combobox_set_minimum_height(void* self, int minh);
 ///
 /// @param self QComboBox*
 /// @param maxw int
+///
 void q_combobox_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -1388,6 +1592,7 @@ void q_combobox_set_maximum_width(void* self, int maxw);
 ///
 /// @param self QComboBox*
 /// @param maxh int
+///
 void q_combobox_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -1395,6 +1600,7 @@ void q_combobox_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -1403,6 +1609,7 @@ QSize* q_combobox_size_increment(void* self);
 ///
 /// @param self QComboBox*
 /// @param sizeIncrement QSize*
+///
 void q_combobox_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -1412,6 +1619,7 @@ void q_combobox_set_size_increment(void* self, void* sizeIncrement);
 /// @param self QComboBox*
 /// @param w int
 /// @param h int
+///
 void q_combobox_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1419,6 +1627,7 @@ void q_combobox_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self QComboBox*
+///
 QSize* q_combobox_base_size(void* self);
 
 /// Inherited from QWidget
@@ -1427,6 +1636,7 @@ QSize* q_combobox_base_size(void* self);
 ///
 /// @param self QComboBox*
 /// @param baseSize QSize*
+///
 void q_combobox_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -1436,6 +1646,7 @@ void q_combobox_set_base_size(void* self, void* baseSize);
 /// @param self QComboBox*
 /// @param basew int
 /// @param baseh int
+///
 void q_combobox_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -1444,6 +1655,7 @@ void q_combobox_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self QComboBox*
 /// @param fixedSize QSize*
+///
 void q_combobox_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -1453,6 +1665,7 @@ void q_combobox_set_fixed_size(void* self, void* fixedSize);
 /// @param self QComboBox*
 /// @param w int
 /// @param h int
+///
 void q_combobox_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1461,6 +1674,7 @@ void q_combobox_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self QComboBox*
 /// @param w int
+///
 void q_combobox_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -1469,6 +1683,7 @@ void q_combobox_set_fixed_width(void* self, int w);
 ///
 /// @param self QComboBox*
 /// @param h int
+///
 void q_combobox_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -1477,6 +1692,7 @@ void q_combobox_set_fixed_height(void* self, int h);
 ///
 /// @param self QComboBox*
 /// @param param1 QPointF*
+///
 QPointF* q_combobox_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1485,6 +1701,7 @@ QPointF* q_combobox_map_to_global(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QPoint*
+///
 QPoint* q_combobox_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1493,6 +1710,7 @@ QPoint* q_combobox_map_to_global2(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QPointF*
+///
 QPointF* q_combobox_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1501,6 +1719,7 @@ QPointF* q_combobox_map_from_global(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QPoint*
+///
 QPoint* q_combobox_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1509,6 +1728,7 @@ QPoint* q_combobox_map_from_global2(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QPointF*
+///
 QPointF* q_combobox_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1517,6 +1737,7 @@ QPointF* q_combobox_map_to_parent(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QPoint*
+///
 QPoint* q_combobox_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1525,6 +1746,7 @@ QPoint* q_combobox_map_to_parent2(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QPointF*
+///
 QPointF* q_combobox_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1533,6 +1755,7 @@ QPointF* q_combobox_map_from_parent(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QPoint*
+///
 QPoint* q_combobox_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1542,6 +1765,7 @@ QPoint* q_combobox_map_from_parent2(void* self, void* param1);
 /// @param self QComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* q_combobox_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1551,6 +1775,7 @@ QPointF* q_combobox_map_to(void* self, void* param1, void* param2);
 /// @param self QComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* q_combobox_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1560,6 +1785,7 @@ QPoint* q_combobox_map_to2(void* self, void* param1, void* param2);
 /// @param self QComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* q_combobox_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1569,6 +1795,7 @@ QPointF* q_combobox_map_from(void* self, void* param1, void* param2);
 /// @param self QComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* q_combobox_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1576,6 +1803,7 @@ QPoint* q_combobox_map_from2(void* self, void* param1, void* param2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_window(void* self);
 
 /// Inherited from QWidget
@@ -1583,6 +1811,7 @@ QWidget* q_combobox_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -1590,6 +1819,7 @@ QWidget* q_combobox_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -1597,6 +1827,7 @@ QWidget* q_combobox_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self QComboBox*
+///
 const QPalette* q_combobox_palette(void* self);
 
 /// Inherited from QWidget
@@ -1605,6 +1836,7 @@ const QPalette* q_combobox_palette(void* self);
 ///
 /// @param self QComboBox*
 /// @param palette QPalette*
+///
 void q_combobox_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -1613,6 +1845,7 @@ void q_combobox_set_palette(void* self, void* palette);
 ///
 /// @param self QComboBox*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void q_combobox_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -1622,6 +1855,7 @@ void q_combobox_set_background_role(void* self, int32_t backgroundRole);
 /// @param self QComboBox*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t q_combobox_background_role(void* self);
 
 /// Inherited from QWidget
@@ -1630,6 +1864,7 @@ int32_t q_combobox_background_role(void* self);
 ///
 /// @param self QComboBox*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void q_combobox_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -1639,6 +1874,7 @@ void q_combobox_set_foreground_role(void* self, int32_t foregroundRole);
 /// @param self QComboBox*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t q_combobox_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -1646,6 +1882,7 @@ int32_t q_combobox_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self QComboBox*
+///
 const QFont* q_combobox_font(void* self);
 
 /// Inherited from QWidget
@@ -1654,6 +1891,7 @@ const QFont* q_combobox_font(void* self);
 ///
 /// @param self QComboBox*
 /// @param font QFont*
+///
 void q_combobox_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -1661,6 +1899,7 @@ void q_combobox_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self QComboBox*
+///
 QFontMetrics* q_combobox_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -1668,6 +1907,7 @@ QFontMetrics* q_combobox_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self QComboBox*
+///
 QFontInfo* q_combobox_font_info(void* self);
 
 /// Inherited from QWidget
@@ -1675,6 +1915,7 @@ QFontInfo* q_combobox_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self QComboBox*
+///
 QCursor* q_combobox_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1683,6 +1924,7 @@ QCursor* q_combobox_cursor(void* self);
 ///
 /// @param self QComboBox*
 /// @param cursor QCursor*
+///
 void q_combobox_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -1690,6 +1932,7 @@ void q_combobox_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1698,6 +1941,7 @@ void q_combobox_unset_cursor(void* self);
 ///
 /// @param self QComboBox*
 /// @param enable bool
+///
 void q_combobox_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1705,6 +1949,7 @@ void q_combobox_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1712,6 +1957,7 @@ bool q_combobox_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1720,6 +1966,7 @@ bool q_combobox_under_mouse(void* self);
 ///
 /// @param self QComboBox*
 /// @param enable bool
+///
 void q_combobox_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1727,6 +1974,7 @@ void q_combobox_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1735,6 +1983,7 @@ bool q_combobox_has_tablet_tracking(void* self);
 ///
 /// @param self QComboBox*
 /// @param mask QBitmap*
+///
 void q_combobox_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1743,6 +1992,7 @@ void q_combobox_set_mask(void* self, void* mask);
 ///
 /// @param self QComboBox*
 /// @param mask QRegion*
+///
 void q_combobox_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1750,6 +2000,7 @@ void q_combobox_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self QComboBox*
+///
 QRegion* q_combobox_mask(void* self);
 
 /// Inherited from QWidget
@@ -1757,6 +2008,7 @@ QRegion* q_combobox_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -1765,6 +2017,7 @@ void q_combobox_clear_mask(void* self);
 ///
 /// @param self QComboBox*
 /// @param target QPaintDevice*
+///
 void q_combobox_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -1773,6 +2026,7 @@ void q_combobox_render(void* self, void* target);
 ///
 /// @param self QComboBox*
 /// @param painter QPainter*
+///
 void q_combobox_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -1780,6 +2034,7 @@ void q_combobox_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self QComboBox*
+///
 QPixmap* q_combobox_grab(void* self);
 
 /// Inherited from QWidget
@@ -1787,6 +2042,7 @@ QPixmap* q_combobox_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self QComboBox*
+///
 QGraphicsEffect* q_combobox_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -1795,6 +2051,7 @@ QGraphicsEffect* q_combobox_graphics_effect(void* self);
 ///
 /// @param self QComboBox*
 /// @param effect QGraphicsEffect*
+///
 void q_combobox_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -1803,6 +2060,7 @@ void q_combobox_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self QComboBox*
 /// @param type enum Qt__GestureType
+///
 void q_combobox_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1811,6 +2069,7 @@ void q_combobox_grab_gesture(void* self, int64_t type);
 ///
 /// @param self QComboBox*
 /// @param type enum Qt__GestureType
+///
 void q_combobox_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1819,6 +2078,7 @@ void q_combobox_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self QComboBox*
 /// @param windowTitle const char*
+///
 void q_combobox_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -1827,6 +2087,7 @@ void q_combobox_set_window_title(void* self, const char* windowTitle);
 ///
 /// @param self QComboBox*
 /// @param styleSheet const char*
+///
 void q_combobox_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -1836,6 +2097,7 @@ void q_combobox_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -1845,6 +2107,7 @@ const char* q_combobox_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_window_title(void* self);
 
 /// Inherited from QWidget
@@ -1853,6 +2116,7 @@ const char* q_combobox_window_title(void* self);
 ///
 /// @param self QComboBox*
 /// @param icon QIcon*
+///
 void q_combobox_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -1860,6 +2124,7 @@ void q_combobox_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self QComboBox*
+///
 QIcon* q_combobox_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -1868,6 +2133,7 @@ QIcon* q_combobox_window_icon(void* self);
 ///
 /// @param self QComboBox*
 /// @param windowIconText const char*
+///
 void q_combobox_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -1877,6 +2143,7 @@ void q_combobox_set_window_icon_text(void* self, const char* windowIconText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -1885,6 +2152,7 @@ const char* q_combobox_window_icon_text(void* self);
 ///
 /// @param self QComboBox*
 /// @param windowRole const char*
+///
 void q_combobox_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -1894,6 +2162,7 @@ void q_combobox_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_window_role(void* self);
 
 /// Inherited from QWidget
@@ -1902,6 +2171,7 @@ const char* q_combobox_window_role(void* self);
 ///
 /// @param self QComboBox*
 /// @param filePath const char*
+///
 void q_combobox_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -1911,6 +2181,7 @@ void q_combobox_set_window_file_path(void* self, const char* filePath);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -1919,6 +2190,7 @@ const char* q_combobox_window_file_path(void* self);
 ///
 /// @param self QComboBox*
 /// @param level double
+///
 void q_combobox_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -1926,6 +2198,7 @@ void q_combobox_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self QComboBox*
+///
 double q_combobox_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -1933,6 +2206,7 @@ double q_combobox_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -1941,6 +2215,7 @@ bool q_combobox_is_window_modified(void* self);
 ///
 /// @param self QComboBox*
 /// @param toolTip const char*
+///
 void q_combobox_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -1950,6 +2225,7 @@ void q_combobox_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -1958,6 +2234,7 @@ const char* q_combobox_tool_tip(void* self);
 ///
 /// @param self QComboBox*
 /// @param msec int
+///
 void q_combobox_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -1965,6 +2242,7 @@ void q_combobox_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -1973,6 +2251,7 @@ int32_t q_combobox_tool_tip_duration(void* self);
 ///
 /// @param self QComboBox*
 /// @param statusTip const char*
+///
 void q_combobox_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -1982,6 +2261,7 @@ void q_combobox_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -1990,6 +2270,7 @@ const char* q_combobox_status_tip(void* self);
 ///
 /// @param self QComboBox*
 /// @param whatsThis const char*
+///
 void q_combobox_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -1999,6 +2280,7 @@ void q_combobox_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -2008,6 +2290,7 @@ const char* q_combobox_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -2016,6 +2299,7 @@ const char* q_combobox_accessible_name(void* self);
 ///
 /// @param self QComboBox*
 /// @param name const char*
+///
 void q_combobox_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -2025,6 +2309,7 @@ void q_combobox_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -2033,6 +2318,7 @@ const char* q_combobox_accessible_description(void* self);
 ///
 /// @param self QComboBox*
 /// @param description const char*
+///
 void q_combobox_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -2041,6 +2327,7 @@ void q_combobox_set_accessible_description(void* self, const char* description);
 ///
 /// @param self QComboBox*
 /// @param direction enum Qt__LayoutDirection
+///
 void q_combobox_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -2050,6 +2337,7 @@ void q_combobox_set_layout_direction(void* self, int32_t direction);
 /// @param self QComboBox*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t q_combobox_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -2057,6 +2345,7 @@ int32_t q_combobox_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -2065,6 +2354,7 @@ void q_combobox_unset_layout_direction(void* self);
 ///
 /// @param self QComboBox*
 /// @param locale QLocale*
+///
 void q_combobox_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -2072,6 +2362,7 @@ void q_combobox_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self QComboBox*
+///
 QLocale* q_combobox_locale(void* self);
 
 /// Inherited from QWidget
@@ -2079,6 +2370,7 @@ QLocale* q_combobox_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -2086,6 +2378,7 @@ void q_combobox_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -2093,6 +2386,7 @@ bool q_combobox_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -2100,6 +2394,7 @@ bool q_combobox_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -2107,6 +2402,7 @@ void q_combobox_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -2114,6 +2410,7 @@ bool q_combobox_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -2121,6 +2418,7 @@ void q_combobox_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -2129,6 +2427,7 @@ void q_combobox_clear_focus(void* self);
 ///
 /// @param self QComboBox*
 /// @param reason enum Qt__FocusReason
+///
 void q_combobox_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -2138,6 +2437,7 @@ void q_combobox_set_focus2(void* self, int32_t reason);
 /// @param self QComboBox*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t q_combobox_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -2146,6 +2446,7 @@ int32_t q_combobox_focus_policy(void* self);
 ///
 /// @param self QComboBox*
 /// @param policy enum Qt__FocusPolicy
+///
 void q_combobox_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -2153,6 +2454,7 @@ void q_combobox_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -2161,6 +2463,7 @@ bool q_combobox_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void q_combobox_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -2169,6 +2472,7 @@ void q_combobox_set_tab_order(void* param1, void* param2);
 ///
 /// @param self QComboBox*
 /// @param focusProxy QWidget*
+///
 void q_combobox_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -2176,6 +2480,7 @@ void q_combobox_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -2185,6 +2490,7 @@ QWidget* q_combobox_focus_proxy(void* self);
 /// @param self QComboBox*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t q_combobox_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -2193,6 +2499,7 @@ int32_t q_combobox_context_menu_policy(void* self);
 ///
 /// @param self QComboBox*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void q_combobox_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -2200,6 +2507,7 @@ void q_combobox_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2208,6 +2516,7 @@ void q_combobox_grab_mouse(void* self);
 ///
 /// @param self QComboBox*
 /// @param param1 QCursor*
+///
 void q_combobox_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2215,6 +2524,7 @@ void q_combobox_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -2222,6 +2532,7 @@ void q_combobox_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -2229,6 +2540,7 @@ void q_combobox_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -2237,6 +2549,7 @@ void q_combobox_release_keyboard(void* self);
 ///
 /// @param self QComboBox*
 /// @param key QKeySequence*
+///
 int32_t q_combobox_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -2245,6 +2558,7 @@ int32_t q_combobox_grab_shortcut(void* self, void* key);
 ///
 /// @param self QComboBox*
 /// @param id int
+///
 void q_combobox_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -2253,6 +2567,7 @@ void q_combobox_release_shortcut(void* self, int id);
 ///
 /// @param self QComboBox*
 /// @param id int
+///
 void q_combobox_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -2261,6 +2576,7 @@ void q_combobox_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self QComboBox*
 /// @param id int
+///
 void q_combobox_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -2280,6 +2596,7 @@ QWidget* q_combobox_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -2288,6 +2605,7 @@ bool q_combobox_updates_enabled(void* self);
 ///
 /// @param self QComboBox*
 /// @param enable bool
+///
 void q_combobox_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -2295,6 +2613,7 @@ void q_combobox_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self QComboBox*
+///
 QGraphicsProxyWidget* q_combobox_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -2302,6 +2621,7 @@ QGraphicsProxyWidget* q_combobox_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_update(void* self);
 
 /// Inherited from QWidget
@@ -2309,6 +2629,7 @@ void q_combobox_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_repaint(void* self);
 
 /// Inherited from QWidget
@@ -2320,6 +2641,7 @@ void q_combobox_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_combobox_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -2328,6 +2650,7 @@ void q_combobox_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self QComboBox*
 /// @param param1 QRect*
+///
 void q_combobox_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2336,6 +2659,7 @@ void q_combobox_update3(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QRegion*
+///
 void q_combobox_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2347,6 +2671,7 @@ void q_combobox_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_combobox_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -2355,6 +2680,7 @@ void q_combobox_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self QComboBox*
 /// @param param1 QRect*
+///
 void q_combobox_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2363,6 +2689,7 @@ void q_combobox_repaint3(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param param1 QRegion*
+///
 void q_combobox_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2371,6 +2698,7 @@ void q_combobox_repaint4(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param hidden bool
+///
 void q_combobox_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -2378,6 +2706,7 @@ void q_combobox_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_show(void* self);
 
 /// Inherited from QWidget
@@ -2385,6 +2714,7 @@ void q_combobox_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_hide(void* self);
 
 /// Inherited from QWidget
@@ -2392,6 +2722,7 @@ void q_combobox_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -2399,6 +2730,7 @@ void q_combobox_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -2406,6 +2738,7 @@ void q_combobox_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -2413,6 +2746,7 @@ void q_combobox_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -2420,6 +2754,7 @@ void q_combobox_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_close(void* self);
 
 /// Inherited from QWidget
@@ -2427,6 +2762,7 @@ bool q_combobox_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_raise(void* self);
 
 /// Inherited from QWidget
@@ -2434,6 +2770,7 @@ void q_combobox_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_lower(void* self);
 
 /// Inherited from QWidget
@@ -2442,6 +2779,7 @@ void q_combobox_lower(void* self);
 ///
 /// @param self QComboBox*
 /// @param param1 QWidget*
+///
 void q_combobox_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2451,6 +2789,7 @@ void q_combobox_stack_under(void* self, void* param1);
 /// @param self QComboBox*
 /// @param x int
 /// @param y int
+///
 void q_combobox_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2459,6 +2798,7 @@ void q_combobox_move(void* self, int x, int y);
 ///
 /// @param self QComboBox*
 /// @param param1 QPoint*
+///
 void q_combobox_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2468,6 +2808,7 @@ void q_combobox_move2(void* self, void* param1);
 /// @param self QComboBox*
 /// @param w int
 /// @param h int
+///
 void q_combobox_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -2476,6 +2817,7 @@ void q_combobox_resize(void* self, int w, int h);
 ///
 /// @param self QComboBox*
 /// @param param1 QSize*
+///
 void q_combobox_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2487,6 +2829,7 @@ void q_combobox_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_combobox_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -2495,6 +2838,7 @@ void q_combobox_set_geometry(void* self, int x, int y, int w, int h);
 ///
 /// @param self QComboBox*
 /// @param geometry QRect*
+///
 void q_combobox_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -2504,6 +2848,7 @@ void q_combobox_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 char* q_combobox_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -2512,6 +2857,7 @@ char* q_combobox_save_geometry(void* self);
 ///
 /// @param self QComboBox*
 /// @param geometry const char*
+///
 bool q_combobox_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -2519,6 +2865,7 @@ bool q_combobox_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -2526,6 +2873,7 @@ void q_combobox_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -2534,6 +2882,7 @@ bool q_combobox_is_visible(void* self);
 ///
 /// @param self QComboBox*
 /// @param param1 QWidget*
+///
 bool q_combobox_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2541,6 +2890,7 @@ bool q_combobox_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -2548,6 +2898,7 @@ bool q_combobox_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -2555,6 +2906,7 @@ bool q_combobox_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -2562,6 +2914,7 @@ bool q_combobox_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -2571,6 +2924,7 @@ bool q_combobox_is_full_screen(void* self);
 /// @param self QComboBox*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t q_combobox_window_state(void* self);
 
 /// Inherited from QWidget
@@ -2579,6 +2933,7 @@ int32_t q_combobox_window_state(void* self);
 ///
 /// @param self QComboBox*
 /// @param state flag of enum Qt__WindowState
+///
 void q_combobox_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2587,6 +2942,7 @@ void q_combobox_set_window_state(void* self, int32_t state);
 ///
 /// @param self QComboBox*
 /// @param state flag of enum Qt__WindowState
+///
 void q_combobox_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2594,6 +2950,7 @@ void q_combobox_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self QComboBox*
+///
 QSizePolicy* q_combobox_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -2602,6 +2959,7 @@ QSizePolicy* q_combobox_size_policy(void* self);
 ///
 /// @param self QComboBox*
 /// @param sizePolicy QSizePolicy*
+///
 void q_combobox_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -2611,6 +2969,7 @@ void q_combobox_set_size_policy(void* self, void* sizePolicy);
 /// @param self QComboBox*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void q_combobox_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -2618,6 +2977,7 @@ void q_combobox_set_size_policy2(void* self, int32_t horizontal, int32_t vertica
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self QComboBox*
+///
 QRegion* q_combobox_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -2629,6 +2989,7 @@ QRegion* q_combobox_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void q_combobox_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -2637,6 +2998,7 @@ void q_combobox_set_contents_margins(void* self, int left, int top, int right, i
 ///
 /// @param self QComboBox*
 /// @param margins QMargins*
+///
 void q_combobox_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -2644,6 +3006,7 @@ void q_combobox_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self QComboBox*
+///
 QMargins* q_combobox_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -2651,6 +3014,7 @@ QMargins* q_combobox_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self QComboBox*
+///
 QRect* q_combobox_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -2658,6 +3022,7 @@ QRect* q_combobox_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self QComboBox*
+///
 QLayout* q_combobox_layout(void* self);
 
 /// Inherited from QWidget
@@ -2666,6 +3031,7 @@ QLayout* q_combobox_layout(void* self);
 ///
 /// @param self QComboBox*
 /// @param layout QLayout*
+///
 void q_combobox_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -2673,6 +3039,7 @@ void q_combobox_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -2681,6 +3048,7 @@ void q_combobox_update_geometry(void* self);
 ///
 /// @param self QComboBox*
 /// @param parent QWidget*
+///
 void q_combobox_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -2690,6 +3058,7 @@ void q_combobox_set_parent(void* self, void* parent);
 /// @param self QComboBox*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void q_combobox_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -2699,6 +3068,7 @@ void q_combobox_set_parent2(void* self, void* parent, int64_t f);
 /// @param self QComboBox*
 /// @param dx int
 /// @param dy int
+///
 void q_combobox_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -2709,6 +3079,7 @@ void q_combobox_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void q_combobox_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -2716,6 +3087,7 @@ void q_combobox_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -2723,6 +3095,7 @@ QWidget* q_combobox_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2730,6 +3103,7 @@ QWidget* q_combobox_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2737,6 +3111,7 @@ QWidget* q_combobox_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -2745,6 +3120,7 @@ bool q_combobox_accept_drops(void* self);
 ///
 /// @param self QComboBox*
 /// @param on bool
+///
 void q_combobox_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -2753,6 +3129,7 @@ void q_combobox_set_accept_drops(void* self, bool on);
 ///
 /// @param self QComboBox*
 /// @param action QAction*
+///
 void q_combobox_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2761,6 +3138,7 @@ void q_combobox_add_action(void* self, void* action);
 ///
 /// @param self QComboBox*
 /// @param actions libqt_list /* of QAction* */
+///
 void q_combobox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2770,6 +3148,7 @@ void q_combobox_add_actions(void* self, libqt_list actions);
 /// @param self QComboBox*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void q_combobox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2779,6 +3158,7 @@ void q_combobox_insert_actions(void* self, void* before, libqt_list actions);
 /// @param self QComboBox*
 /// @param before QAction*
 /// @param action QAction*
+///
 void q_combobox_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -2787,6 +3167,7 @@ void q_combobox_insert_action(void* self, void* before, void* action);
 ///
 /// @param self QComboBox*
 /// @param action QAction*
+///
 void q_combobox_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2794,6 +3175,7 @@ void q_combobox_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self QComboBox*
+///
 libqt_list /* of QAction* */ q_combobox_actions(void* self);
 
 /// Inherited from QWidget
@@ -2802,6 +3184,7 @@ libqt_list /* of QAction* */ q_combobox_actions(void* self);
 ///
 /// @param self QComboBox*
 /// @param text const char*
+///
 QAction* q_combobox_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -2811,6 +3194,7 @@ QAction* q_combobox_add_action2(void* self, const char* text);
 /// @param self QComboBox*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* q_combobox_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -2820,6 +3204,7 @@ QAction* q_combobox_add_action3(void* self, void* icon, const char* text);
 /// @param self QComboBox*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* q_combobox_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2830,6 +3215,7 @@ QAction* q_combobox_add_action4(void* self, const char* text, void* shortcut);
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* q_combobox_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2837,6 +3223,7 @@ QAction* q_combobox_add_action5(void* self, void* icon, const char* text, void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self QComboBox*
+///
 QWidget* q_combobox_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2845,6 +3232,7 @@ QWidget* q_combobox_parent_widget(void* self);
 ///
 /// @param self QComboBox*
 /// @param type flag of enum Qt__WindowType
+///
 void q_combobox_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2854,6 +3242,7 @@ void q_combobox_set_window_flags(void* self, int64_t type);
 /// @param self QComboBox*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t q_combobox_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -2862,6 +3251,7 @@ int64_t q_combobox_window_flags(void* self);
 ///
 /// @param self QComboBox*
 /// @param param1 enum Qt__WindowType
+///
 void q_combobox_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -2870,6 +3260,7 @@ void q_combobox_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self QComboBox*
 /// @param type flag of enum Qt__WindowType
+///
 void q_combobox_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2879,6 +3270,7 @@ void q_combobox_override_window_flags(void* self, int64_t type);
 /// @param self QComboBox*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t q_combobox_window_type(void* self);
 
 /// Inherited from QWidget
@@ -2886,6 +3278,7 @@ int64_t q_combobox_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* q_combobox_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -2895,6 +3288,7 @@ QWidget* q_combobox_find(uint64_t param1);
 /// @param self QComboBox*
 /// @param x int
 /// @param y int
+///
 QWidget* q_combobox_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2903,6 +3297,7 @@ QWidget* q_combobox_child_at(void* self, int x, int y);
 ///
 /// @param self QComboBox*
 /// @param p QPoint*
+///
 QWidget* q_combobox_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2911,6 +3306,7 @@ QWidget* q_combobox_child_at2(void* self, void* p);
 ///
 /// @param self QComboBox*
 /// @param p QPointF*
+///
 QWidget* q_combobox_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2919,6 +3315,7 @@ QWidget* q_combobox_child_at3(void* self, void* p);
 ///
 /// @param self QComboBox*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void q_combobox_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2927,6 +3324,7 @@ void q_combobox_set_attribute(void* self, int32_t param1);
 ///
 /// @param self QComboBox*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool q_combobox_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2934,6 +3332,7 @@ bool q_combobox_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -2942,6 +3341,7 @@ void q_combobox_ensure_polished(void* self);
 ///
 /// @param self QComboBox*
 /// @param child QWidget*
+///
 bool q_combobox_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -2949,6 +3349,7 @@ bool q_combobox_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -2957,6 +3358,7 @@ bool q_combobox_auto_fill_background(void* self);
 ///
 /// @param self QComboBox*
 /// @param enabled bool
+///
 void q_combobox_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -2964,6 +3366,7 @@ void q_combobox_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self QComboBox*
+///
 QBackingStore* q_combobox_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -2971,6 +3374,7 @@ QBackingStore* q_combobox_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self QComboBox*
+///
 QWindow* q_combobox_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -2978,6 +3382,7 @@ QWindow* q_combobox_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self QComboBox*
+///
 QScreen* q_combobox_screen(void* self);
 
 /// Inherited from QWidget
@@ -2986,6 +3391,7 @@ QScreen* q_combobox_screen(void* self);
 ///
 /// @param self QComboBox*
 /// @param screen QScreen*
+///
 void q_combobox_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -2993,6 +3399,7 @@ void q_combobox_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* q_combobox_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -3001,6 +3408,7 @@ QWidget* q_combobox_create_window_container(void* window);
 ///
 /// @param self QComboBox*
 /// @param title const char*
+///
 void q_combobox_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -3009,6 +3417,7 @@ void q_combobox_window_title_changed(void* self, const char* title);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, const char* title)
+///
 void q_combobox_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3017,6 +3426,7 @@ void q_combobox_on_window_title_changed(void* self, void (*callback)(void*, cons
 ///
 /// @param self QComboBox*
 /// @param icon QIcon*
+///
 void q_combobox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -3025,6 +3435,7 @@ void q_combobox_window_icon_changed(void* self, void* icon);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QIcon* icon)
+///
 void q_combobox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3033,6 +3444,7 @@ void q_combobox_on_window_icon_changed(void* self, void (*callback)(void*, void*
 ///
 /// @param self QComboBox*
 /// @param iconText const char*
+///
 void q_combobox_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -3041,6 +3453,7 @@ void q_combobox_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, const char* iconText)
+///
 void q_combobox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3049,6 +3462,7 @@ void q_combobox_on_window_icon_text_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QComboBox*
 /// @param pos QPoint*
+///
 void q_combobox_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -3057,6 +3471,7 @@ void q_combobox_custom_context_menu_requested(void* self, void* pos);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QPoint* pos)
+///
 void q_combobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3066,6 +3481,7 @@ void q_combobox_on_custom_context_menu_requested(void* self, void (*callback)(vo
 /// @param self QComboBox*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t q_combobox_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -3074,6 +3490,7 @@ int64_t q_combobox_input_method_hints(void* self);
 ///
 /// @param self QComboBox*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void q_combobox_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -3083,6 +3500,7 @@ void q_combobox_set_input_method_hints(void* self, int64_t hints);
 /// @param self QComboBox*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void q_combobox_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -3093,6 +3511,7 @@ void q_combobox_render22(void* self, void* target, void* targetOffset);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void q_combobox_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -3104,6 +3523,7 @@ void q_combobox_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void q_combobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -3113,6 +3533,7 @@ void q_combobox_render4(void* self, void* target, void* targetOffset, void* sour
 /// @param self QComboBox*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void q_combobox_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -3123,6 +3544,7 @@ void q_combobox_render23(void* self, void* painter, void* targetOffset);
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void q_combobox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -3134,6 +3556,7 @@ void q_combobox_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void q_combobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -3142,6 +3565,7 @@ void q_combobox_render42(void* self, void* painter, void* targetOffset, void* so
 ///
 /// @param self QComboBox*
 /// @param rectangle QRect*
+///
 QPixmap* q_combobox_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -3151,6 +3575,7 @@ QPixmap* q_combobox_grab1(void* self, void* rectangle);
 /// @param self QComboBox*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void q_combobox_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -3160,6 +3585,7 @@ void q_combobox_grab_gesture2(void* self, int64_t type, int32_t flags);
 /// @param self QComboBox*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t q_combobox_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -3169,6 +3595,7 @@ int32_t q_combobox_grab_shortcut2(void* self, void* key, int32_t context);
 /// @param self QComboBox*
 /// @param id int
 /// @param enable bool
+///
 void q_combobox_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -3178,6 +3605,7 @@ void q_combobox_set_shortcut_enabled2(void* self, int id, bool enable);
 /// @param self QComboBox*
 /// @param id int
 /// @param enable bool
+///
 void q_combobox_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -3187,6 +3615,7 @@ void q_combobox_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param self QComboBox*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void q_combobox_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -3196,6 +3625,7 @@ void q_combobox_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QComboBox*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void q_combobox_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -3204,6 +3634,7 @@ void q_combobox_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* q_combobox_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -3213,6 +3644,7 @@ QWidget* q_combobox_create_window_container2(void* window, void* parent);
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* q_combobox_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -3222,6 +3654,7 @@ QWidget* q_combobox_create_window_container3(void* window, void* parent, int64_t
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char* q_combobox_object_name(void* self);
 
 /// Inherited from QObject
@@ -3230,6 +3663,7 @@ const char* q_combobox_object_name(void* self);
 ///
 /// @param self QComboBox*
 /// @param name char*
+///
 void q_combobox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -3237,6 +3671,7 @@ void q_combobox_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -3244,6 +3679,7 @@ bool q_combobox_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -3251,6 +3687,7 @@ bool q_combobox_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -3258,6 +3695,7 @@ bool q_combobox_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -3266,6 +3704,7 @@ bool q_combobox_signals_blocked(void* self);
 ///
 /// @param self QComboBox*
 /// @param b bool
+///
 bool q_combobox_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -3273,6 +3712,7 @@ bool q_combobox_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QComboBox*
+///
 QThread* q_combobox_thread(void* self);
 
 /// Inherited from QObject
@@ -3281,6 +3721,7 @@ QThread* q_combobox_thread(void* self);
 ///
 /// @param self QComboBox*
 /// @param thread QThread*
+///
 bool q_combobox_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -3289,6 +3730,7 @@ bool q_combobox_move_to_thread(void* self, void* thread);
 ///
 /// @param self QComboBox*
 /// @param interval int
+///
 int32_t q_combobox_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -3297,6 +3739,7 @@ int32_t q_combobox_start_timer(void* self, int interval);
 ///
 /// @param self QComboBox*
 /// @param id int
+///
 void q_combobox_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -3305,6 +3748,7 @@ void q_combobox_kill_timer(void* self, int id);
 ///
 /// @param self QComboBox*
 /// @param id enum Qt__TimerId
+///
 void q_combobox_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -3312,6 +3756,7 @@ void q_combobox_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QComboBox*
+///
 libqt_list /* of QObject* */ q_combobox_children(void* self);
 
 /// Inherited from QObject
@@ -3320,6 +3765,7 @@ libqt_list /* of QObject* */ q_combobox_children(void* self);
 ///
 /// @param self QComboBox*
 /// @param filterObj QObject*
+///
 void q_combobox_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -3328,6 +3774,7 @@ void q_combobox_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QComboBox*
 /// @param obj QObject*
+///
 void q_combobox_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -3338,6 +3785,7 @@ void q_combobox_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_combobox_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -3348,6 +3796,7 @@ QMetaObject__Connection* q_combobox_connect(void* sender, void* signal, void* re
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_combobox_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -3358,6 +3807,7 @@ QMetaObject__Connection* q_combobox_connect2(void* self, void* sender, const cha
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_combobox_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -3365,6 +3815,7 @@ bool q_combobox_disconnect(void* sender, void* signal, void* receiver, void* mem
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_combobox_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -3372,6 +3823,7 @@ bool q_combobox_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -3379,6 +3831,7 @@ void q_combobox_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -3388,6 +3841,7 @@ void q_combobox_dump_object_info(void* self);
 /// @param self QComboBox*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_combobox_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -3396,6 +3850,7 @@ bool q_combobox_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QComboBox*
 /// @param name const char*
+///
 QVariant* q_combobox_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -3405,6 +3860,7 @@ QVariant* q_combobox_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QComboBox*
+///
 const char** q_combobox_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -3412,6 +3868,7 @@ const char** q_combobox_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QComboBox*
+///
 QBindingStorage* q_combobox_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -3419,6 +3876,7 @@ QBindingStorage* q_combobox_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QComboBox*
+///
 const QBindingStorage* q_combobox_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -3426,6 +3884,7 @@ const QBindingStorage* q_combobox_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_destroyed(void* self);
 
 /// Inherited from QObject
@@ -3434,6 +3893,7 @@ void q_combobox_destroyed(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self)
+///
 void q_combobox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3441,6 +3901,7 @@ void q_combobox_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QComboBox*
+///
 QObject* q_combobox_parent(void* self);
 
 /// Inherited from QObject
@@ -3449,6 +3910,7 @@ QObject* q_combobox_parent(void* self);
 ///
 /// @param self QComboBox*
 /// @param classname const char*
+///
 bool q_combobox_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -3456,6 +3918,7 @@ bool q_combobox_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QComboBox*
+///
 void q_combobox_delete_later(void* self);
 
 /// Inherited from QObject
@@ -3465,6 +3928,7 @@ void q_combobox_delete_later(void* self);
 /// @param self QComboBox*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_combobox_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -3474,6 +3938,7 @@ bool q_combobox_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QComboBox*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_combobox_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -3485,6 +3950,7 @@ int32_t q_combobox_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_combobox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -3496,6 +3962,7 @@ QMetaObject__Connection* q_combobox_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_combobox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -3504,6 +3971,7 @@ QMetaObject__Connection* q_combobox_connect4(void* self, void* sender, const cha
 ///
 /// @param self QComboBox*
 /// @param param1 QObject*
+///
 void q_combobox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -3512,6 +3980,7 @@ void q_combobox_destroyed1(void* self, void* param1);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QObject* param1)
+///
 void q_combobox_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3519,6 +3988,7 @@ void q_combobox_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -3526,6 +3996,7 @@ bool q_combobox_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3533,6 +4004,7 @@ int32_t q_combobox_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3540,6 +4012,7 @@ int32_t q_combobox_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3547,6 +4020,7 @@ int32_t q_combobox_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3554,6 +4028,7 @@ int32_t q_combobox_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3561,6 +4036,7 @@ int32_t q_combobox_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3568,6 +4044,7 @@ int32_t q_combobox_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self QComboBox*
+///
 double q_combobox_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -3575,6 +4052,7 @@ double q_combobox_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self QComboBox*
+///
 double q_combobox_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -3582,6 +4060,7 @@ double q_combobox_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -3589,6 +4068,7 @@ int32_t q_combobox_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -3603,6 +4083,7 @@ double q_combobox_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t q_combobox_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
@@ -3612,6 +4093,7 @@ int32_t q_combobox_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3621,6 +4103,7 @@ int32_t q_combobox_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3631,6 +4114,7 @@ int32_t q_combobox_qbase_dev_type(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback int32_t func()
+///
 void q_combobox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3641,6 +4125,7 @@ void q_combobox_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self QComboBox*
 /// @param visible bool
+///
 void q_combobox_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3651,6 +4136,7 @@ void q_combobox_set_visible(void* self, bool visible);
 ///
 /// @param self QComboBox*
 /// @param visible bool
+///
 void q_combobox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3661,6 +4147,7 @@ void q_combobox_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, bool visible)
+///
 void q_combobox_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3671,6 +4158,7 @@ void q_combobox_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// @param self QComboBox*
 /// @param param1 int
+///
 int32_t q_combobox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3681,6 +4169,7 @@ int32_t q_combobox_height_for_width(void* self, int param1);
 ///
 /// @param self QComboBox*
 /// @param param1 int
+///
 int32_t q_combobox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3691,6 +4180,7 @@ int32_t q_combobox_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self QComboBox*
 /// @param callback int32_t func(QComboBox* self, int param1)
+///
 void q_combobox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3700,6 +4190,7 @@ void q_combobox_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3709,6 +4200,7 @@ bool q_combobox_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3719,6 +4211,7 @@ bool q_combobox_qbase_has_height_for_width(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback bool func()
+///
 void q_combobox_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3728,6 +4221,7 @@ void q_combobox_on_has_height_for_width(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 QPaintEngine* q_combobox_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3737,6 +4231,7 @@ QPaintEngine* q_combobox_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 QPaintEngine* q_combobox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3747,6 +4242,7 @@ QPaintEngine* q_combobox_qbase_paint_engine(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback QPaintEngine* func()
+///
 void q_combobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3757,6 +4253,7 @@ void q_combobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self QComboBox*
 /// @param event QMouseEvent*
+///
 void q_combobox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3767,6 +4264,7 @@ void q_combobox_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QMouseEvent*
+///
 void q_combobox_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3777,6 +4275,7 @@ void q_combobox_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QMouseEvent* event)
+///
 void q_combobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3787,6 +4286,7 @@ void q_combobox_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 /// @param self QComboBox*
 /// @param event QMouseEvent*
+///
 void q_combobox_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3797,6 +4297,7 @@ void q_combobox_mouse_move_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QMouseEvent*
+///
 void q_combobox_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3807,6 +4308,7 @@ void q_combobox_qbase_mouse_move_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QMouseEvent* event)
+///
 void q_combobox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3817,6 +4319,7 @@ void q_combobox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QEnterEvent*
+///
 void q_combobox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3827,6 +4330,7 @@ void q_combobox_enter_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QEnterEvent*
+///
 void q_combobox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3837,6 +4341,7 @@ void q_combobox_qbase_enter_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QEnterEvent* event)
+///
 void q_combobox_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3847,6 +4352,7 @@ void q_combobox_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QEvent*
+///
 void q_combobox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3857,6 +4363,7 @@ void q_combobox_leave_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QEvent*
+///
 void q_combobox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3867,6 +4374,7 @@ void q_combobox_qbase_leave_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QEvent* event)
+///
 void q_combobox_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3877,6 +4385,7 @@ void q_combobox_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QMoveEvent*
+///
 void q_combobox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3887,6 +4396,7 @@ void q_combobox_move_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QMoveEvent*
+///
 void q_combobox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3897,6 +4407,7 @@ void q_combobox_qbase_move_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QMoveEvent* event)
+///
 void q_combobox_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3907,6 +4418,7 @@ void q_combobox_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QCloseEvent*
+///
 void q_combobox_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3917,6 +4429,7 @@ void q_combobox_close_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QCloseEvent*
+///
 void q_combobox_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3927,6 +4440,7 @@ void q_combobox_qbase_close_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QCloseEvent* event)
+///
 void q_combobox_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3937,6 +4451,7 @@ void q_combobox_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QTabletEvent*
+///
 void q_combobox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3947,6 +4462,7 @@ void q_combobox_tablet_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QTabletEvent*
+///
 void q_combobox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3957,6 +4473,7 @@ void q_combobox_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QTabletEvent* event)
+///
 void q_combobox_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3967,6 +4484,7 @@ void q_combobox_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QActionEvent*
+///
 void q_combobox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3977,6 +4495,7 @@ void q_combobox_action_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QActionEvent*
+///
 void q_combobox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3987,6 +4506,7 @@ void q_combobox_qbase_action_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QActionEvent* event)
+///
 void q_combobox_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3997,6 +4517,7 @@ void q_combobox_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QDragEnterEvent*
+///
 void q_combobox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4007,6 +4528,7 @@ void q_combobox_drag_enter_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QDragEnterEvent*
+///
 void q_combobox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4017,6 +4539,7 @@ void q_combobox_qbase_drag_enter_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QDragEnterEvent* event)
+///
 void q_combobox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4027,6 +4550,7 @@ void q_combobox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QDragMoveEvent*
+///
 void q_combobox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4037,6 +4561,7 @@ void q_combobox_drag_move_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QDragMoveEvent*
+///
 void q_combobox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4047,6 +4572,7 @@ void q_combobox_qbase_drag_move_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QDragMoveEvent* event)
+///
 void q_combobox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4057,6 +4583,7 @@ void q_combobox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QDragLeaveEvent*
+///
 void q_combobox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4067,6 +4594,7 @@ void q_combobox_drag_leave_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QDragLeaveEvent*
+///
 void q_combobox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4077,6 +4605,7 @@ void q_combobox_qbase_drag_leave_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QDragLeaveEvent* event)
+///
 void q_combobox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4087,6 +4616,7 @@ void q_combobox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QDropEvent*
+///
 void q_combobox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4097,6 +4627,7 @@ void q_combobox_drop_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QDropEvent*
+///
 void q_combobox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4107,6 +4638,7 @@ void q_combobox_qbase_drop_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QDropEvent* event)
+///
 void q_combobox_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4119,6 +4651,7 @@ void q_combobox_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_combobox_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4131,6 +4664,7 @@ bool q_combobox_native_event(void* self, const char* eventType, void* message, i
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_combobox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4141,6 +4675,7 @@ bool q_combobox_qbase_native_event(void* self, const char* eventType, void* mess
 ///
 /// @param self QComboBox*
 /// @param callback bool func(QComboBox* self, const char* eventType, void* message, intptr_t* result)
+///
 void q_combobox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4151,6 +4686,7 @@ void q_combobox_on_native_event(void* self, bool (*callback)(void*, const char*,
 ///
 /// @param self QComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t q_combobox_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4161,6 +4697,7 @@ int32_t q_combobox_metric(void* self, int32_t param1);
 ///
 /// @param self QComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t q_combobox_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4171,6 +4708,7 @@ int32_t q_combobox_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self QComboBox*
 /// @param callback int32_t func(QComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void q_combobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4181,6 +4719,7 @@ void q_combobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// @param self QComboBox*
 /// @param painter QPainter*
+///
 void q_combobox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4191,6 +4730,7 @@ void q_combobox_init_painter(void* self, void* painter);
 ///
 /// @param self QComboBox*
 /// @param painter QPainter*
+///
 void q_combobox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4201,6 +4741,7 @@ void q_combobox_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QPainter* painter)
+///
 void q_combobox_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4211,6 +4752,7 @@ void q_combobox_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param offset QPoint*
+///
 QPaintDevice* q_combobox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4221,6 +4763,7 @@ QPaintDevice* q_combobox_redirected(void* self, void* offset);
 ///
 /// @param self QComboBox*
 /// @param offset QPoint*
+///
 QPaintDevice* q_combobox_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4231,6 +4774,7 @@ QPaintDevice* q_combobox_qbase_redirected(void* self, void* offset);
 ///
 /// @param self QComboBox*
 /// @param callback QPaintDevice* func(QComboBox* self, QPoint* offset)
+///
 void q_combobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4240,6 +4784,7 @@ void q_combobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 QPainter* q_combobox_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4249,6 +4794,7 @@ QPainter* q_combobox_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 QPainter* q_combobox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4259,6 +4805,7 @@ QPainter* q_combobox_qbase_shared_painter(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback QPainter* func()
+///
 void q_combobox_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4269,6 +4816,7 @@ void q_combobox_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// @param self QComboBox*
 /// @param next bool
+///
 bool q_combobox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4279,6 +4827,7 @@ bool q_combobox_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self QComboBox*
 /// @param next bool
+///
 bool q_combobox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4289,6 +4838,7 @@ bool q_combobox_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self QComboBox*
 /// @param callback bool func(QComboBox* self, bool next)
+///
 void q_combobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4300,6 +4850,7 @@ void q_combobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 /// @param self QComboBox*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_combobox_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -4311,6 +4862,7 @@ bool q_combobox_event_filter(void* self, void* watched, void* event);
 /// @param self QComboBox*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_combobox_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -4321,6 +4873,7 @@ bool q_combobox_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback bool func(QComboBox* self, QObject* watched, QEvent* event)
+///
 void q_combobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4331,6 +4884,7 @@ void q_combobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 /// @param self QComboBox*
 /// @param event QTimerEvent*
+///
 void q_combobox_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4341,6 +4895,7 @@ void q_combobox_timer_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QTimerEvent*
+///
 void q_combobox_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4351,6 +4906,7 @@ void q_combobox_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QTimerEvent* event)
+///
 void q_combobox_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4361,6 +4917,7 @@ void q_combobox_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QChildEvent*
+///
 void q_combobox_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4371,6 +4928,7 @@ void q_combobox_child_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QChildEvent*
+///
 void q_combobox_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4381,6 +4939,7 @@ void q_combobox_qbase_child_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QChildEvent* event)
+///
 void q_combobox_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4391,6 +4950,7 @@ void q_combobox_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param event QEvent*
+///
 void q_combobox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4401,6 +4961,7 @@ void q_combobox_custom_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param event QEvent*
+///
 void q_combobox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4411,6 +4972,7 @@ void q_combobox_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QEvent* event)
+///
 void q_combobox_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4421,6 +4983,7 @@ void q_combobox_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param signal QMetaMethod*
+///
 void q_combobox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4431,6 +4994,7 @@ void q_combobox_connect_notify(void* self, void* signal);
 ///
 /// @param self QComboBox*
 /// @param signal QMetaMethod*
+///
 void q_combobox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4441,6 +5005,7 @@ void q_combobox_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QMetaMethod* signal)
+///
 void q_combobox_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4451,6 +5016,7 @@ void q_combobox_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QComboBox*
 /// @param signal QMetaMethod*
+///
 void q_combobox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4461,6 +5027,7 @@ void q_combobox_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QComboBox*
 /// @param signal QMetaMethod*
+///
 void q_combobox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4471,6 +5038,7 @@ void q_combobox_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, QMetaMethod* signal)
+///
 void q_combobox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4480,6 +5048,7 @@ void q_combobox_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 void q_combobox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4489,6 +5058,7 @@ void q_combobox_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 void q_combobox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4499,6 +5069,7 @@ void q_combobox_qbase_update_micro_focus(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback void func()
+///
 void q_combobox_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4508,6 +5079,7 @@ void q_combobox_on_update_micro_focus(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 void q_combobox_create(void* self);
 
 /// Inherited from QWidget
@@ -4517,6 +5089,7 @@ void q_combobox_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 void q_combobox_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4527,6 +5100,7 @@ void q_combobox_qbase_create(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback void func()
+///
 void q_combobox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4536,6 +5110,7 @@ void q_combobox_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 void q_combobox_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4545,6 +5120,7 @@ void q_combobox_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 void q_combobox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4555,6 +5131,7 @@ void q_combobox_qbase_destroy(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback void func()
+///
 void q_combobox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4564,6 +5141,7 @@ void q_combobox_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4573,6 +5151,7 @@ bool q_combobox_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4583,6 +5162,7 @@ bool q_combobox_qbase_focus_next_child(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback bool func()
+///
 void q_combobox_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4592,6 +5172,7 @@ void q_combobox_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4601,6 +5182,7 @@ bool q_combobox_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 bool q_combobox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4611,6 +5193,7 @@ bool q_combobox_qbase_focus_previous_child(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback bool func()
+///
 void q_combobox_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4620,6 +5203,7 @@ void q_combobox_on_focus_previous_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 QObject* q_combobox_sender(void* self);
 
 /// Inherited from QObject
@@ -4629,6 +5213,7 @@ QObject* q_combobox_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 QObject* q_combobox_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4639,6 +5224,7 @@ QObject* q_combobox_qbase_sender(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback QObject* func()
+///
 void q_combobox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4648,6 +5234,7 @@ void q_combobox_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4657,6 +5244,7 @@ int32_t q_combobox_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QComboBox*
+///
 int32_t q_combobox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4667,6 +5255,7 @@ int32_t q_combobox_qbase_sender_signal_index(void* self);
 ///
 /// @param self QComboBox*
 /// @param callback int32_t func()
+///
 void q_combobox_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4677,6 +5266,7 @@ void q_combobox_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QComboBox*
 /// @param signal const char*
+///
 int32_t q_combobox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4687,6 +5277,7 @@ int32_t q_combobox_receivers(void* self, const char* signal);
 ///
 /// @param self QComboBox*
 /// @param signal const char*
+///
 int32_t q_combobox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4697,6 +5288,7 @@ int32_t q_combobox_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QComboBox*
 /// @param callback int32_t func(QComboBox* self, const char* signal)
+///
 void q_combobox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4707,6 +5299,7 @@ void q_combobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// @param self QComboBox*
 /// @param signal QMetaMethod*
+///
 bool q_combobox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4717,6 +5310,7 @@ bool q_combobox_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QComboBox*
 /// @param signal QMetaMethod*
+///
 bool q_combobox_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4727,6 +5321,7 @@ bool q_combobox_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QComboBox*
 /// @param callback bool func(QComboBox* self, QMetaMethod* signal)
+///
 void q_combobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4738,6 +5333,7 @@ void q_combobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param self QComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double q_combobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4749,6 +5345,7 @@ double q_combobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
 /// @param self QComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double q_combobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4759,6 +5356,7 @@ double q_combobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 ///
 /// @param self QComboBox*
 /// @param callback double func(QComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void q_combobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4769,6 +5367,7 @@ void q_combobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 ///
 /// @param self QComboBox*
 /// @param callback void func(QComboBox* self, const char* objectName)
+///
 void q_combobox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#dtor.QComboBox)
@@ -4776,9 +5375,10 @@ void q_combobox_on_object_name_changed(void* self, void (*callback)(void*, const
 /// Delete this object from C++ memory.
 ///
 /// @param self QComboBox*
+///
 void q_combobox_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qcombobox.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#public-types)
 
 typedef enum {
     QCOMBOBOX_INSERTPOLICY_NOINSERT = 0,
@@ -4789,6 +5389,8 @@ typedef enum {
     QCOMBOBOX_INSERTPOLICY_INSERTBEFORECURRENT = 5,
     QCOMBOBOX_INSERTPOLICY_INSERTALPHABETICALLY = 6
 } QComboBox__InsertPolicy;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#public-types)
 
 typedef enum {
     QCOMBOBOX_SIZEADJUSTPOLICY_ADJUSTTOCONTENTS = 0,

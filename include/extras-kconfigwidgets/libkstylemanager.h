@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kstylemanager.html
+/// [Upstream resources](https://api.kde.org/kstylemanager.html)
 
 /// [Upstream resources](https://api.kde.org/kstylemanager.html#initStyle)
 ///
@@ -20,5 +20,6 @@ void k_stylemanager_init_style();
 /// [Upstream resources](https://api.kde.org/kstylemanager.html#createConfigureAction)
 ///
 /// @param param1 QObject*
+///
 QAction* k_stylemanager_create_configure_action(void* param1);
 #endif

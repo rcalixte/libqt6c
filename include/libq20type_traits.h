@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/q20.html
+/// [Upstream resources](https://doc.qt.io/qt-6/q20.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/q20.html#is_constant_evaluated)
 ///

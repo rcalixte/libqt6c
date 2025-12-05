@@ -11,66 +11,77 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qarraydata.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
 ///
 /// @param self QArrayData*
 ///
 /// @return flag of enum QArrayData__ArrayOption
+///
 int32_t q_arraydata_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
 ///
 /// @param self QArrayData*
 /// @param flags flag of enum QArrayData__ArrayOption
+///
 void q_arraydata_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
 ///
 /// @param self QArrayData*
+///
 int64_t q_arraydata_alloc(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
 ///
 /// @param self QArrayData*
 /// @param alloc int64_t
+///
 void q_arraydata_set_alloc(void* self, int64_t alloc);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#allocatedCapacity)
 ///
 /// @param self QArrayData*
+///
 int64_t q_arraydata_allocated_capacity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#constAllocatedCapacity)
 ///
 /// @param self QArrayData*
+///
 int64_t q_arraydata_const_allocated_capacity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#ref)
 ///
 /// @param self QArrayData*
+///
 bool q_arraydata_ref(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#deref)
 ///
 /// @param self QArrayData*
+///
 bool q_arraydata_deref(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#isShared)
 ///
 /// @param self QArrayData*
+///
 bool q_arraydata_is_shared(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#needsDetach)
 ///
 /// @param self QArrayData*
+///
 bool q_arraydata_needs_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#detachCapacity)
 ///
 /// @param self QArrayData*
 /// @param newSize int64_t
+///
 int64_t q_arraydata_detach_capacity(void* self, int64_t newSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#reallocateUnaligned)
@@ -80,6 +91,7 @@ int64_t q_arraydata_detach_capacity(void* self, int64_t newSize);
 /// @param objectSize int64_t
 /// @param newCapacity int64_t
 /// @param option enum QArrayData__AllocationOption
+///
 libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned(void* data, void* dataPointer, int64_t objectSize, int64_t newCapacity, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#deallocate)
@@ -87,6 +99,7 @@ libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned
 /// @param data QArrayData*
 /// @param objectSize int64_t
 /// @param alignment int64_t
+///
 void q_arraydata_deallocate(void* data, int64_t objectSize, int64_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#dtor.QArrayData)
@@ -94,24 +107,31 @@ void q_arraydata_deallocate(void* data, int64_t objectSize, int64_t alignment);
 /// Delete this object from C++ memory.
 ///
 /// @param self QArrayData*
+///
 void q_arraydata_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qarraydata.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#public-types)
 
 typedef enum {
     QARRAYDATA_ALLOCATIONOPTION_GROW = 0,
     QARRAYDATA_ALLOCATIONOPTION_KEEPSIZE = 1
 } QArrayData__AllocationOption;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#public-types)
+
 typedef enum {
     QARRAYDATA_GROWTHPOSITION_GROWSATEND = 0,
     QARRAYDATA_GROWTHPOSITION_GROWSATBEGINNING = 1
 } QArrayData__GrowthPosition;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#public-types)
+
 typedef enum {
     QARRAYDATA_ARRAYOPTION_ARRAYOPTIONDEFAULT = 0,
     QARRAYDATA_ARRAYOPTION_CAPACITYRESERVED = 1
 } QArrayData__ArrayOption;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qarraydata.html#public-types)
 
 typedef enum {
     QTPRIVATE_QCONTAINERIMPLHELPER_CUTRESULT_NULL = 0,

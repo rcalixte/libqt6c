@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qtvideo.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qtvideo.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtvideo.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QtVideo__Rotation
+///
 const QMetaObject* q_tvideo_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtvideo.html#qt_getEnumName)
@@ -23,9 +24,10 @@ const QMetaObject* q_tvideo_get_enum_meta_object(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QtVideo__Rotation
+///
 const char* q_tvideo_get_enum_name(int32_t param1);
 
-/// https://doc.qt.io/qt-6/qtvideo.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qtvideo.html#public-types)
 
 typedef enum {
     QTVIDEO_ROTATION_NONE = 0,

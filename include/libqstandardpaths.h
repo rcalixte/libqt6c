@@ -11,13 +11,14 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qstandardpaths.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#writableLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
+///
 const char* q_standardpaths_writable_location(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#standardLocations)
@@ -25,6 +26,7 @@ const char* q_standardpaths_writable_location(int32_t type);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
+///
 const char** q_standardpaths_standard_locations(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#locate)
@@ -33,6 +35,7 @@ const char** q_standardpaths_standard_locations(int32_t type);
 ///
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
+///
 const char* q_standardpaths_locate(int32_t type, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
@@ -41,6 +44,7 @@ const char* q_standardpaths_locate(int32_t type, const char* fileName);
 ///
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
+///
 const char** q_standardpaths_locate_all(int32_t type, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#displayName)
@@ -48,6 +52,7 @@ const char** q_standardpaths_locate_all(int32_t type, const char* fileName);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
+///
 const char* q_standardpaths_display_name(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
@@ -55,11 +60,13 @@ const char* q_standardpaths_display_name(int32_t type);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param executableName const char*
+///
 const char* q_standardpaths_find_executable(const char* executableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#setTestModeEnabled)
 ///
 /// @param testMode bool
+///
 void q_standardpaths_set_test_mode_enabled(bool testMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#isTestModeEnabled)
@@ -73,6 +80,7 @@ bool q_standardpaths_is_test_mode_enabled();
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
 /// @param options flag of enum QStandardPaths__LocateOption
+///
 const char* q_standardpaths_locate3(int32_t type, const char* fileName, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
@@ -82,6 +90,7 @@ const char* q_standardpaths_locate3(int32_t type, const char* fileName, int32_t 
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
 /// @param options flag of enum QStandardPaths__LocateOption
+///
 const char** q_standardpaths_locate_all3(int32_t type, const char* fileName, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
@@ -90,9 +99,10 @@ const char** q_standardpaths_locate_all3(int32_t type, const char* fileName, int
 ///
 /// @param executableName const char*
 /// @param paths const char**
+///
 const char* q_standardpaths_find_executable2(const char* executableName, const char* paths[static 1]);
 
-/// https://doc.qt.io/qt-6/qstandardpaths.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#public-types)
 
 typedef enum {
     QSTANDARDPATHS_STANDARDLOCATION_DESKTOPLOCATION = 0,
@@ -119,6 +129,8 @@ typedef enum {
     QSTANDARDPATHS_STANDARDLOCATION_STATELOCATION = 21,
     QSTANDARDPATHS_STANDARDLOCATION_GENERICSTATELOCATION = 22
 } QStandardPaths__StandardLocation;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#public-types)
 
 typedef enum {
     QSTANDARDPATHS_LOCATEOPTION_LOCATEFILE = 0,

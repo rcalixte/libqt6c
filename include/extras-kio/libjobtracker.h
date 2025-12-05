@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kio.html
+/// [Upstream resources](https://api.kde.org/kio.html)
 
 /// [Upstream resources](https://api.kde.org/kio.html#getJobTracker)
 ///
@@ -20,5 +20,6 @@ KJobTrackerInterface* k_io_get_job_tracker();
 /// [Upstream resources](https://api.kde.org/kio.html#setJobTracker)
 ///
 /// @param param1 KJobTrackerInterface*
+///
 void k_io_set_job_tracker(void* param1);
 #endif

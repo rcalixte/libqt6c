@@ -11,33 +11,38 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/klocalimagecacheimplementation.html
+/// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html)
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#lastModifiedTime)
 ///
 /// @param self KLocalImageCacheImplementation*
+///
 QDateTime* k_localimagecacheimplementation_last_modified_time(void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#pixmapCaching)
 ///
 /// @param self KLocalImageCacheImplementation*
+///
 bool k_localimagecacheimplementation_pixmap_caching(void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#setPixmapCaching)
 ///
 /// @param self KLocalImageCacheImplementation*
 /// @param enable bool
+///
 void k_localimagecacheimplementation_set_pixmap_caching(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#pixmapCacheLimit)
 ///
 /// @param self KLocalImageCacheImplementation*
+///
 int32_t k_localimagecacheimplementation_pixmap_cache_limit(void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#setPixmapCacheLimit)
 ///
 /// @param self KLocalImageCacheImplementation*
 /// @param size int
+///
 void k_localimagecacheimplementation_set_pixmap_cache_limit(void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#dtor.KLocalImageCacheImplementation)
@@ -45,6 +50,7 @@ void k_localimagecacheimplementation_set_pixmap_cache_limit(void* self, int size
 /// Delete this object from C++ memory.
 ///
 /// @param self KLocalImageCacheImplementation*
+///
 void k_localimagecacheimplementation_delete(void* self);
 
 #endif

@@ -11,34 +11,41 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qtooltip.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html)
 
 /// q_tooltip_new constructs a new QToolTip object.
 ///
 /// @param other QToolTip*
+///
 QToolTip* q_tooltip_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html)
 
 /// q_tooltip_new2 constructs a new QToolTip object and invalidates the source QToolTip object.
 ///
 /// @param other QToolTip*
+///
 QToolTip* q_tooltip_new2(void* other);
 
 /// q_tooltip_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QToolTip*
 /// @param other QToolTip*
+///
 void q_tooltip_copy_assign(void* self, void* other);
 
 /// q_tooltip_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QToolTip*
 /// @param other QToolTip*
+///
 void q_tooltip_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
 /// @param pos QPoint*
 /// @param text const char*
+///
 void q_tooltip_show_text(void* pos, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#hideText)
@@ -62,6 +69,7 @@ QPalette* q_tooltip_palette();
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#setPalette)
 ///
 /// @param palette QPalette*
+///
 void q_tooltip_set_palette(void* palette);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#font)
@@ -71,6 +79,7 @@ QFont* q_tooltip_font();
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#setFont)
 ///
 /// @param font QFont*
+///
 void q_tooltip_set_font(void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
@@ -78,6 +87,7 @@ void q_tooltip_set_font(void* font);
 /// @param pos QPoint*
 /// @param text const char*
 /// @param w QWidget*
+///
 void q_tooltip_show_text3(void* pos, const char* text, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
@@ -86,6 +96,7 @@ void q_tooltip_show_text3(void* pos, const char* text, void* w);
 /// @param text const char*
 /// @param w QWidget*
 /// @param rect QRect*
+///
 void q_tooltip_show_text4(void* pos, const char* text, void* w, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
@@ -95,6 +106,7 @@ void q_tooltip_show_text4(void* pos, const char* text, void* w, void* rect);
 /// @param w QWidget*
 /// @param rect QRect*
 /// @param msecShowTime int
+///
 void q_tooltip_show_text5(void* pos, const char* text, void* w, void* rect, int msecShowTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#dtor.QToolTip)
@@ -102,6 +114,7 @@ void q_tooltip_show_text5(void* pos, const char* text, void* w, void* rect, int 
 /// Delete this object from C++ memory.
 ///
 /// @param self QToolTip*
+///
 void q_tooltip_delete(void* self);
 
 #endif

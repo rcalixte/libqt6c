@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kio.html
+/// [Upstream resources](https://api.kde.org/kio.html)
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSize)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
+///
 const char* k_io_convert_size(uint64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#number)
@@ -25,6 +26,7 @@ const char* k_io_convert_size(uint64_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
+///
 const char* k_io_number(uint64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSizeFromKiB)
@@ -32,6 +34,7 @@ const char* k_io_number(uint64_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
+///
 const char* k_io_convert_size_from_ki_b(uint64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#calculateRemainingSeconds)
@@ -39,6 +42,7 @@ const char* k_io_convert_size_from_ki_b(uint64_t param1);
 /// @param param1 uint64_t
 /// @param param2 uint64_t
 /// @param param3 uint64_t
+///
 uint32_t k_io_calculate_remaining_seconds(uint64_t param1, uint64_t param2, uint64_t param3);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSeconds)
@@ -46,6 +50,7 @@ uint32_t k_io_calculate_remaining_seconds(uint64_t param1, uint64_t param2, uint
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint32_t
+///
 const char* k_io_convert_seconds(uint32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#itemsSummaryString)
@@ -57,6 +62,7 @@ const char* k_io_convert_seconds(uint32_t param1);
 /// @param param3 uint32_t
 /// @param param4 uint64_t
 /// @param param5 bool
+///
 const char* k_io_items_summary_string(uint32_t param1, uint32_t param2, uint32_t param3, uint64_t param4, bool param5);
 
 /// [Upstream resources](https://api.kde.org/kio.html#encodeFileName)
@@ -64,6 +70,7 @@ const char* k_io_items_summary_string(uint32_t param1, uint32_t param2, uint32_t
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_io_encode_file_name(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#decodeFileName)
@@ -71,6 +78,7 @@ const char* k_io_encode_file_name(const char* param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_io_decode_file_name(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#parseCacheControl)
@@ -78,6 +86,7 @@ const char* k_io_decode_file_name(const char* param1);
 /// @param param1 const char*
 ///
 /// @return enum KIO__CacheControl
+///
 int32_t k_io_parse_cache_control(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#getCacheControlString)
@@ -85,6 +94,7 @@ int32_t k_io_parse_cache_control(const char* param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KIO__CacheControl
+///
 const char* k_io_get_cache_control_string(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#favIconForUrl)
@@ -92,6 +102,7 @@ const char* k_io_get_cache_control_string(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
+///
 const char* k_io_fav_icon_for_url(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertPermissions)
@@ -99,6 +110,7 @@ const char* k_io_fav_icon_for_url(void* param1);
 /// @param param1 int
 ///
 /// @return flag of enum QFileDevice__Permission
+///
 int32_t k_io_convert_permissions(int param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#iconNameForUrl)
@@ -106,14 +118,16 @@ int32_t k_io_convert_permissions(int param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
+///
 const char* k_io_icon_name_for_url(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#upUrl)
 ///
 /// @param param1 QUrl*
+///
 QUrl* k_io_up_url(void* param1);
 
-/// https://api.kde.org/kio-global.html#types
+/// [Upstream resources](https://api.kde.org/kio-global.html#public-types)
 
 typedef enum {
     KIO_ERROR_ERR_CANNOT_OPEN_FOR_READING = 101,
@@ -195,6 +209,8 @@ typedef enum {
     KIO_ERROR_ERR_TRASH_FILE_TOO_LARGE = 179
 } KIO__Error;
 
+/// [Upstream resources](https://api.kde.org/kio-global.html#public-types)
+
 typedef enum {
     KIO_CACHECONTROL_CC_CACHEONLY = 0,
     KIO_CACHECONTROL_CC_CACHE = 1,
@@ -203,11 +219,15 @@ typedef enum {
     KIO_CACHECONTROL_CC_RELOAD = 4
 } KIO__CacheControl;
 
+/// [Upstream resources](https://api.kde.org/kio-global.html#public-types)
+
 typedef enum {
     KIO_PRIVILEGEOPERATIONSTATUS_OPERATIONALLOWED = 1,
     KIO_PRIVILEGEOPERATIONSTATUS_OPERATIONCANCELED = 2,
     KIO_PRIVILEGEOPERATIONSTATUS_OPERATIONNOTALLOWED = 3
 } KIO__PrivilegeOperationStatus;
+
+/// [Upstream resources](https://api.kde.org/kio-global.html#public-types)
 
 typedef enum {
     KIO_STATDETAIL_STATNODETAILS = 0,

@@ -11,12 +11,13 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kapplicationtrader.html
+/// [Upstream resources](https://api.kde.org/kapplicationtrader.html)
 
 /// [Upstream resources](https://api.kde.org/kapplicationtrader.html#isSubsequence)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
 /// @param param3 enum Qt__CaseSensitivity
+///
 bool k_applicationtrader_is_subsequence(const char* param1, const char* param2, int32_t param3);
 #endif

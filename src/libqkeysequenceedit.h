@@ -11,47 +11,60 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qkeysequenceedit.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html)
 
 /// q_keysequenceedit_new constructs a new QKeySequenceEdit object.
 ///
 /// @param parent QWidget*
+///
 QKeySequenceEdit* q_keysequenceedit_new(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html)
 
 /// q_keysequenceedit_new2 constructs a new QKeySequenceEdit object.
 ///
 QKeySequenceEdit* q_keysequenceedit_new2();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html)
+
 /// q_keysequenceedit_new3 constructs a new QKeySequenceEdit object.
 ///
 /// @param keySequence QKeySequence*
+///
 QKeySequenceEdit* q_keysequenceedit_new3(void* keySequence);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html)
 
 /// q_keysequenceedit_new4 constructs a new QKeySequenceEdit object.
 ///
 /// @param keySequence QKeySequence*
 /// @param parent QWidget*
+///
 QKeySequenceEdit* q_keysequenceedit_new4(void* keySequence, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QKeySequenceEdit*
+///
 const QMetaObject* q_keysequenceedit_meta_object(void* self);
 
 /// @param self QKeySequenceEdit*
 /// @param param1 const char*
+///
 void* q_keysequenceedit_metacast(void* self, const char* param1);
 
 /// @param self QKeySequenceEdit*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_keysequenceedit_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback int32_t func(QKeySequenceEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_keysequenceedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -60,6 +73,7 @@ void q_keysequenceedit_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_keysequenceedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -67,84 +81,99 @@ int32_t q_keysequenceedit_qbase_metacall(void* self, int32_t param1, int param2,
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_keysequenceedit_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequence)
 ///
 /// @param self QKeySequenceEdit*
+///
 QKeySequence* q_keysequenceedit_key_sequence(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#maximumSequenceLength)
 ///
 /// @param self QKeySequenceEdit*
+///
 int64_t q_keysequenceedit_maximum_sequence_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#setClearButtonEnabled)
 ///
 /// @param self QKeySequenceEdit*
 /// @param enable bool
+///
 void q_keysequenceedit_set_clear_button_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#isClearButtonEnabled)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_clear_button_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#setFinishingKeyCombinations)
 ///
 /// @param self QKeySequenceEdit*
 /// @param finishingKeyCombinations libqt_list /* of QKeyCombination* */
+///
 void q_keysequenceedit_set_finishing_key_combinations(void* self, libqt_list finishingKeyCombinations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#finishingKeyCombinations)
 ///
 /// @param self QKeySequenceEdit*
+///
 libqt_list /* of QKeyCombination* */ q_keysequenceedit_finishing_key_combinations(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#setKeySequence)
 ///
 /// @param self QKeySequenceEdit*
 /// @param keySequence QKeySequence*
+///
 void q_keysequenceedit_set_key_sequence(void* self, void* keySequence);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#clear)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#setMaximumSequenceLength)
 ///
 /// @param self QKeySequenceEdit*
 /// @param count int64_t
+///
 void q_keysequenceedit_set_maximum_sequence_length(void* self, int64_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#editingFinished)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_editing_finished(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#editingFinished)
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self)
+///
 void q_keysequenceedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequenceChanged)
 ///
 /// @param self QKeySequenceEdit*
 /// @param keySequence QKeySequence*
+///
 void q_keysequenceedit_key_sequence_changed(void* self, void* keySequence);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequenceChanged)
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QKeySequence* keySequence)
+///
 void q_keysequenceedit_on_key_sequence_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QEvent*
+///
 bool q_keysequenceedit_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
@@ -153,6 +182,7 @@ bool q_keysequenceedit_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func(QKeySequenceEdit* self, QEvent* param1)
+///
 void q_keysequenceedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
@@ -161,12 +191,14 @@ void q_keysequenceedit_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QEvent*
+///
 bool q_keysequenceedit_qbase_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyPressEvent)
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QKeyEvent*
+///
 void q_keysequenceedit_key_press_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyPressEvent)
@@ -175,6 +207,7 @@ void q_keysequenceedit_key_press_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QKeyEvent* param1)
+///
 void q_keysequenceedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyPressEvent)
@@ -183,12 +216,14 @@ void q_keysequenceedit_on_key_press_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QKeyEvent*
+///
 void q_keysequenceedit_qbase_key_press_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyReleaseEvent)
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QKeyEvent*
+///
 void q_keysequenceedit_key_release_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyReleaseEvent)
@@ -197,6 +232,7 @@ void q_keysequenceedit_key_release_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QKeyEvent* param1)
+///
 void q_keysequenceedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyReleaseEvent)
@@ -205,12 +241,14 @@ void q_keysequenceedit_on_key_release_event(void* self, void (*callback)(void*, 
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QKeyEvent*
+///
 void q_keysequenceedit_qbase_key_release_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#timerEvent)
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QTimerEvent*
+///
 void q_keysequenceedit_timer_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#timerEvent)
@@ -219,6 +257,7 @@ void q_keysequenceedit_timer_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QTimerEvent* param1)
+///
 void q_keysequenceedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#timerEvent)
@@ -227,12 +266,14 @@ void q_keysequenceedit_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QTimerEvent*
+///
 void q_keysequenceedit_qbase_timer_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#focusOutEvent)
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QFocusEvent*
+///
 void q_keysequenceedit_focus_out_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#focusOutEvent)
@@ -241,6 +282,7 @@ void q_keysequenceedit_focus_out_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QFocusEvent* param1)
+///
 void q_keysequenceedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#focusOutEvent)
@@ -249,6 +291,7 @@ void q_keysequenceedit_on_focus_out_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QFocusEvent*
+///
 void q_keysequenceedit_qbase_focus_out_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -257,6 +300,7 @@ void q_keysequenceedit_qbase_focus_out_event(void* self, void* param1);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_keysequenceedit_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -266,6 +310,7 @@ const char* q_keysequenceedit_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_keysequenceedit_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
@@ -273,6 +318,7 @@ const char* q_keysequenceedit_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QKeySequenceEdit*
+///
 uintptr_t q_keysequenceedit_win_id(void* self);
 
 /// Inherited from QWidget
@@ -280,6 +326,7 @@ uintptr_t q_keysequenceedit_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -287,6 +334,7 @@ void q_keysequenceedit_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self QKeySequenceEdit*
+///
 uintptr_t q_keysequenceedit_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -294,6 +342,7 @@ uintptr_t q_keysequenceedit_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self QKeySequenceEdit*
+///
 uintptr_t q_keysequenceedit_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -301,6 +350,7 @@ uintptr_t q_keysequenceedit_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self QKeySequenceEdit*
+///
 QStyle* q_keysequenceedit_style(void* self);
 
 /// Inherited from QWidget
@@ -309,6 +359,7 @@ QStyle* q_keysequenceedit_style(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param style QStyle*
+///
 void q_keysequenceedit_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -316,6 +367,7 @@ void q_keysequenceedit_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -323,6 +375,7 @@ bool q_keysequenceedit_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_window(void* self);
 
 /// Inherited from QWidget
@@ -330,6 +383,7 @@ bool q_keysequenceedit_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -339,6 +393,7 @@ bool q_keysequenceedit_is_modal(void* self);
 /// @param self QKeySequenceEdit*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t q_keysequenceedit_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -347,6 +402,7 @@ int32_t q_keysequenceedit_window_modality(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param windowModality enum Qt__WindowModality
+///
 void q_keysequenceedit_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -354,6 +410,7 @@ void q_keysequenceedit_set_window_modality(void* self, int32_t windowModality);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -362,6 +419,7 @@ bool q_keysequenceedit_is_enabled(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QWidget*
+///
 bool q_keysequenceedit_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -370,6 +428,7 @@ bool q_keysequenceedit_is_enabled_to(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param enabled bool
+///
 void q_keysequenceedit_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -378,6 +437,7 @@ void q_keysequenceedit_set_enabled(void* self, bool enabled);
 ///
 /// @param self QKeySequenceEdit*
 /// @param disabled bool
+///
 void q_keysequenceedit_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -386,6 +446,7 @@ void q_keysequenceedit_set_disabled(void* self, bool disabled);
 ///
 /// @param self QKeySequenceEdit*
 /// @param windowModified bool
+///
 void q_keysequenceedit_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -393,6 +454,7 @@ void q_keysequenceedit_set_window_modified(void* self, bool windowModified);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRect* q_keysequenceedit_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -400,6 +462,7 @@ QRect* q_keysequenceedit_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self QKeySequenceEdit*
+///
 const QRect* q_keysequenceedit_geometry(void* self);
 
 /// Inherited from QWidget
@@ -407,6 +470,7 @@ const QRect* q_keysequenceedit_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRect* q_keysequenceedit_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -414,6 +478,7 @@ QRect* q_keysequenceedit_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_x(void* self);
 
 /// Inherited from QWidget
@@ -421,6 +486,7 @@ int32_t q_keysequenceedit_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_y(void* self);
 
 /// Inherited from QWidget
@@ -428,6 +494,7 @@ int32_t q_keysequenceedit_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self QKeySequenceEdit*
+///
 QPoint* q_keysequenceedit_pos(void* self);
 
 /// Inherited from QWidget
@@ -435,6 +502,7 @@ QPoint* q_keysequenceedit_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -442,6 +510,7 @@ QSize* q_keysequenceedit_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_size(void* self);
 
 /// Inherited from QWidget
@@ -449,6 +518,7 @@ QSize* q_keysequenceedit_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_width(void* self);
 
 /// Inherited from QWidget
@@ -456,6 +526,7 @@ int32_t q_keysequenceedit_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_height(void* self);
 
 /// Inherited from QWidget
@@ -463,6 +534,7 @@ int32_t q_keysequenceedit_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRect* q_keysequenceedit_rect(void* self);
 
 /// Inherited from QWidget
@@ -470,6 +542,7 @@ QRect* q_keysequenceedit_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRect* q_keysequenceedit_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -477,6 +550,7 @@ QRect* q_keysequenceedit_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRegion* q_keysequenceedit_children_region(void* self);
 
 /// Inherited from QWidget
@@ -484,6 +558,7 @@ QRegion* q_keysequenceedit_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -491,6 +566,7 @@ QSize* q_keysequenceedit_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -498,6 +574,7 @@ QSize* q_keysequenceedit_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -505,6 +582,7 @@ int32_t q_keysequenceedit_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -512,6 +590,7 @@ int32_t q_keysequenceedit_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -519,6 +598,7 @@ int32_t q_keysequenceedit_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -527,6 +607,7 @@ int32_t q_keysequenceedit_maximum_height(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param minimumSize QSize*
+///
 void q_keysequenceedit_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -536,6 +617,7 @@ void q_keysequenceedit_set_minimum_size(void* self, void* minimumSize);
 /// @param self QKeySequenceEdit*
 /// @param minw int
 /// @param minh int
+///
 void q_keysequenceedit_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -544,6 +626,7 @@ void q_keysequenceedit_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self QKeySequenceEdit*
 /// @param maximumSize QSize*
+///
 void q_keysequenceedit_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -553,6 +636,7 @@ void q_keysequenceedit_set_maximum_size(void* self, void* maximumSize);
 /// @param self QKeySequenceEdit*
 /// @param maxw int
 /// @param maxh int
+///
 void q_keysequenceedit_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -561,6 +645,7 @@ void q_keysequenceedit_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self QKeySequenceEdit*
 /// @param minw int
+///
 void q_keysequenceedit_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -569,6 +654,7 @@ void q_keysequenceedit_set_minimum_width(void* self, int minw);
 ///
 /// @param self QKeySequenceEdit*
 /// @param minh int
+///
 void q_keysequenceedit_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -577,6 +663,7 @@ void q_keysequenceedit_set_minimum_height(void* self, int minh);
 ///
 /// @param self QKeySequenceEdit*
 /// @param maxw int
+///
 void q_keysequenceedit_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -585,6 +672,7 @@ void q_keysequenceedit_set_maximum_width(void* self, int maxw);
 ///
 /// @param self QKeySequenceEdit*
 /// @param maxh int
+///
 void q_keysequenceedit_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -592,6 +680,7 @@ void q_keysequenceedit_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -600,6 +689,7 @@ QSize* q_keysequenceedit_size_increment(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param sizeIncrement QSize*
+///
 void q_keysequenceedit_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -609,6 +699,7 @@ void q_keysequenceedit_set_size_increment(void* self, void* sizeIncrement);
 /// @param self QKeySequenceEdit*
 /// @param w int
 /// @param h int
+///
 void q_keysequenceedit_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -616,6 +707,7 @@ void q_keysequenceedit_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_base_size(void* self);
 
 /// Inherited from QWidget
@@ -624,6 +716,7 @@ QSize* q_keysequenceedit_base_size(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param baseSize QSize*
+///
 void q_keysequenceedit_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -633,6 +726,7 @@ void q_keysequenceedit_set_base_size(void* self, void* baseSize);
 /// @param self QKeySequenceEdit*
 /// @param basew int
 /// @param baseh int
+///
 void q_keysequenceedit_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -641,6 +735,7 @@ void q_keysequenceedit_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self QKeySequenceEdit*
 /// @param fixedSize QSize*
+///
 void q_keysequenceedit_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -650,6 +745,7 @@ void q_keysequenceedit_set_fixed_size(void* self, void* fixedSize);
 /// @param self QKeySequenceEdit*
 /// @param w int
 /// @param h int
+///
 void q_keysequenceedit_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -658,6 +754,7 @@ void q_keysequenceedit_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self QKeySequenceEdit*
 /// @param w int
+///
 void q_keysequenceedit_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -666,6 +763,7 @@ void q_keysequenceedit_set_fixed_width(void* self, int w);
 ///
 /// @param self QKeySequenceEdit*
 /// @param h int
+///
 void q_keysequenceedit_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -674,6 +772,7 @@ void q_keysequenceedit_set_fixed_height(void* self, int h);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPointF*
+///
 QPointF* q_keysequenceedit_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -682,6 +781,7 @@ QPointF* q_keysequenceedit_map_to_global(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPoint*
+///
 QPoint* q_keysequenceedit_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -690,6 +790,7 @@ QPoint* q_keysequenceedit_map_to_global2(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPointF*
+///
 QPointF* q_keysequenceedit_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -698,6 +799,7 @@ QPointF* q_keysequenceedit_map_from_global(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPoint*
+///
 QPoint* q_keysequenceedit_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -706,6 +808,7 @@ QPoint* q_keysequenceedit_map_from_global2(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPointF*
+///
 QPointF* q_keysequenceedit_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -714,6 +817,7 @@ QPointF* q_keysequenceedit_map_to_parent(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPoint*
+///
 QPoint* q_keysequenceedit_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -722,6 +826,7 @@ QPoint* q_keysequenceedit_map_to_parent2(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPointF*
+///
 QPointF* q_keysequenceedit_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -730,6 +835,7 @@ QPointF* q_keysequenceedit_map_from_parent(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPoint*
+///
 QPoint* q_keysequenceedit_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -739,6 +845,7 @@ QPoint* q_keysequenceedit_map_from_parent2(void* self, void* param1);
 /// @param self QKeySequenceEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* q_keysequenceedit_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -748,6 +855,7 @@ QPointF* q_keysequenceedit_map_to(void* self, void* param1, void* param2);
 /// @param self QKeySequenceEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* q_keysequenceedit_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -757,6 +865,7 @@ QPoint* q_keysequenceedit_map_to2(void* self, void* param1, void* param2);
 /// @param self QKeySequenceEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* q_keysequenceedit_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -766,6 +875,7 @@ QPointF* q_keysequenceedit_map_from(void* self, void* param1, void* param2);
 /// @param self QKeySequenceEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* q_keysequenceedit_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -773,6 +883,7 @@ QPoint* q_keysequenceedit_map_from2(void* self, void* param1, void* param2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_window(void* self);
 
 /// Inherited from QWidget
@@ -780,6 +891,7 @@ QWidget* q_keysequenceedit_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -787,6 +899,7 @@ QWidget* q_keysequenceedit_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -794,6 +907,7 @@ QWidget* q_keysequenceedit_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self QKeySequenceEdit*
+///
 const QPalette* q_keysequenceedit_palette(void* self);
 
 /// Inherited from QWidget
@@ -802,6 +916,7 @@ const QPalette* q_keysequenceedit_palette(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param palette QPalette*
+///
 void q_keysequenceedit_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -810,6 +925,7 @@ void q_keysequenceedit_set_palette(void* self, void* palette);
 ///
 /// @param self QKeySequenceEdit*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void q_keysequenceedit_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -819,6 +935,7 @@ void q_keysequenceedit_set_background_role(void* self, int32_t backgroundRole);
 /// @param self QKeySequenceEdit*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t q_keysequenceedit_background_role(void* self);
 
 /// Inherited from QWidget
@@ -827,6 +944,7 @@ int32_t q_keysequenceedit_background_role(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void q_keysequenceedit_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -836,6 +954,7 @@ void q_keysequenceedit_set_foreground_role(void* self, int32_t foregroundRole);
 /// @param self QKeySequenceEdit*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t q_keysequenceedit_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -843,6 +962,7 @@ int32_t q_keysequenceedit_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self QKeySequenceEdit*
+///
 const QFont* q_keysequenceedit_font(void* self);
 
 /// Inherited from QWidget
@@ -851,6 +971,7 @@ const QFont* q_keysequenceedit_font(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param font QFont*
+///
 void q_keysequenceedit_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -858,6 +979,7 @@ void q_keysequenceedit_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self QKeySequenceEdit*
+///
 QFontMetrics* q_keysequenceedit_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -865,6 +987,7 @@ QFontMetrics* q_keysequenceedit_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self QKeySequenceEdit*
+///
 QFontInfo* q_keysequenceedit_font_info(void* self);
 
 /// Inherited from QWidget
@@ -872,6 +995,7 @@ QFontInfo* q_keysequenceedit_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self QKeySequenceEdit*
+///
 QCursor* q_keysequenceedit_cursor(void* self);
 
 /// Inherited from QWidget
@@ -880,6 +1004,7 @@ QCursor* q_keysequenceedit_cursor(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param cursor QCursor*
+///
 void q_keysequenceedit_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -887,6 +1012,7 @@ void q_keysequenceedit_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -895,6 +1021,7 @@ void q_keysequenceedit_unset_cursor(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param enable bool
+///
 void q_keysequenceedit_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -902,6 +1029,7 @@ void q_keysequenceedit_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -909,6 +1037,7 @@ bool q_keysequenceedit_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -917,6 +1046,7 @@ bool q_keysequenceedit_under_mouse(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param enable bool
+///
 void q_keysequenceedit_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -924,6 +1054,7 @@ void q_keysequenceedit_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -932,6 +1063,7 @@ bool q_keysequenceedit_has_tablet_tracking(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param mask QBitmap*
+///
 void q_keysequenceedit_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -940,6 +1072,7 @@ void q_keysequenceedit_set_mask(void* self, void* mask);
 ///
 /// @param self QKeySequenceEdit*
 /// @param mask QRegion*
+///
 void q_keysequenceedit_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -947,6 +1080,7 @@ void q_keysequenceedit_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRegion* q_keysequenceedit_mask(void* self);
 
 /// Inherited from QWidget
@@ -954,6 +1088,7 @@ QRegion* q_keysequenceedit_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -962,6 +1097,7 @@ void q_keysequenceedit_clear_mask(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param target QPaintDevice*
+///
 void q_keysequenceedit_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -970,6 +1106,7 @@ void q_keysequenceedit_render(void* self, void* target);
 ///
 /// @param self QKeySequenceEdit*
 /// @param painter QPainter*
+///
 void q_keysequenceedit_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -977,6 +1114,7 @@ void q_keysequenceedit_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self QKeySequenceEdit*
+///
 QPixmap* q_keysequenceedit_grab(void* self);
 
 /// Inherited from QWidget
@@ -984,6 +1122,7 @@ QPixmap* q_keysequenceedit_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self QKeySequenceEdit*
+///
 QGraphicsEffect* q_keysequenceedit_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -992,6 +1131,7 @@ QGraphicsEffect* q_keysequenceedit_graphics_effect(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param effect QGraphicsEffect*
+///
 void q_keysequenceedit_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -1000,6 +1140,7 @@ void q_keysequenceedit_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self QKeySequenceEdit*
 /// @param type enum Qt__GestureType
+///
 void q_keysequenceedit_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1008,6 +1149,7 @@ void q_keysequenceedit_grab_gesture(void* self, int64_t type);
 ///
 /// @param self QKeySequenceEdit*
 /// @param type enum Qt__GestureType
+///
 void q_keysequenceedit_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1016,6 +1158,7 @@ void q_keysequenceedit_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self QKeySequenceEdit*
 /// @param windowTitle const char*
+///
 void q_keysequenceedit_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -1024,6 +1167,7 @@ void q_keysequenceedit_set_window_title(void* self, const char* windowTitle);
 ///
 /// @param self QKeySequenceEdit*
 /// @param styleSheet const char*
+///
 void q_keysequenceedit_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -1033,6 +1177,7 @@ void q_keysequenceedit_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -1042,6 +1187,7 @@ const char* q_keysequenceedit_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_window_title(void* self);
 
 /// Inherited from QWidget
@@ -1050,6 +1196,7 @@ const char* q_keysequenceedit_window_title(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param icon QIcon*
+///
 void q_keysequenceedit_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -1057,6 +1204,7 @@ void q_keysequenceedit_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self QKeySequenceEdit*
+///
 QIcon* q_keysequenceedit_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -1065,6 +1213,7 @@ QIcon* q_keysequenceedit_window_icon(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param windowIconText const char*
+///
 void q_keysequenceedit_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -1074,6 +1223,7 @@ void q_keysequenceedit_set_window_icon_text(void* self, const char* windowIconTe
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -1082,6 +1232,7 @@ const char* q_keysequenceedit_window_icon_text(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param windowRole const char*
+///
 void q_keysequenceedit_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -1091,6 +1242,7 @@ void q_keysequenceedit_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_window_role(void* self);
 
 /// Inherited from QWidget
@@ -1099,6 +1251,7 @@ const char* q_keysequenceedit_window_role(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param filePath const char*
+///
 void q_keysequenceedit_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -1108,6 +1261,7 @@ void q_keysequenceedit_set_window_file_path(void* self, const char* filePath);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -1116,6 +1270,7 @@ const char* q_keysequenceedit_window_file_path(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param level double
+///
 void q_keysequenceedit_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -1123,6 +1278,7 @@ void q_keysequenceedit_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self QKeySequenceEdit*
+///
 double q_keysequenceedit_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -1130,6 +1286,7 @@ double q_keysequenceedit_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -1138,6 +1295,7 @@ bool q_keysequenceedit_is_window_modified(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param toolTip const char*
+///
 void q_keysequenceedit_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -1147,6 +1305,7 @@ void q_keysequenceedit_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -1155,6 +1314,7 @@ const char* q_keysequenceedit_tool_tip(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param msec int
+///
 void q_keysequenceedit_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -1162,6 +1322,7 @@ void q_keysequenceedit_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -1170,6 +1331,7 @@ int32_t q_keysequenceedit_tool_tip_duration(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param statusTip const char*
+///
 void q_keysequenceedit_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -1179,6 +1341,7 @@ void q_keysequenceedit_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -1187,6 +1350,7 @@ const char* q_keysequenceedit_status_tip(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param whatsThis const char*
+///
 void q_keysequenceedit_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -1196,6 +1360,7 @@ void q_keysequenceedit_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -1205,6 +1370,7 @@ const char* q_keysequenceedit_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -1213,6 +1379,7 @@ const char* q_keysequenceedit_accessible_name(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param name const char*
+///
 void q_keysequenceedit_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -1222,6 +1389,7 @@ void q_keysequenceedit_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -1230,6 +1398,7 @@ const char* q_keysequenceedit_accessible_description(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param description const char*
+///
 void q_keysequenceedit_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -1238,6 +1407,7 @@ void q_keysequenceedit_set_accessible_description(void* self, const char* descri
 ///
 /// @param self QKeySequenceEdit*
 /// @param direction enum Qt__LayoutDirection
+///
 void q_keysequenceedit_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -1247,6 +1417,7 @@ void q_keysequenceedit_set_layout_direction(void* self, int32_t direction);
 /// @param self QKeySequenceEdit*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t q_keysequenceedit_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1254,6 +1425,7 @@ int32_t q_keysequenceedit_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1262,6 +1434,7 @@ void q_keysequenceedit_unset_layout_direction(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param locale QLocale*
+///
 void q_keysequenceedit_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -1269,6 +1442,7 @@ void q_keysequenceedit_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self QKeySequenceEdit*
+///
 QLocale* q_keysequenceedit_locale(void* self);
 
 /// Inherited from QWidget
@@ -1276,6 +1450,7 @@ QLocale* q_keysequenceedit_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -1283,6 +1458,7 @@ void q_keysequenceedit_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -1290,6 +1466,7 @@ bool q_keysequenceedit_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -1297,6 +1474,7 @@ bool q_keysequenceedit_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -1304,6 +1482,7 @@ void q_keysequenceedit_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -1311,6 +1490,7 @@ bool q_keysequenceedit_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -1318,6 +1498,7 @@ void q_keysequenceedit_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -1326,6 +1507,7 @@ void q_keysequenceedit_clear_focus(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param reason enum Qt__FocusReason
+///
 void q_keysequenceedit_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -1335,6 +1517,7 @@ void q_keysequenceedit_set_focus2(void* self, int32_t reason);
 /// @param self QKeySequenceEdit*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t q_keysequenceedit_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -1343,6 +1526,7 @@ int32_t q_keysequenceedit_focus_policy(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param policy enum Qt__FocusPolicy
+///
 void q_keysequenceedit_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1350,6 +1534,7 @@ void q_keysequenceedit_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -1358,6 +1543,7 @@ bool q_keysequenceedit_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void q_keysequenceedit_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1366,6 +1552,7 @@ void q_keysequenceedit_set_tab_order(void* param1, void* param2);
 ///
 /// @param self QKeySequenceEdit*
 /// @param focusProxy QWidget*
+///
 void q_keysequenceedit_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -1373,6 +1560,7 @@ void q_keysequenceedit_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -1382,6 +1570,7 @@ QWidget* q_keysequenceedit_focus_proxy(void* self);
 /// @param self QKeySequenceEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t q_keysequenceedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -1390,6 +1579,7 @@ int32_t q_keysequenceedit_context_menu_policy(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void q_keysequenceedit_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1397,6 +1587,7 @@ void q_keysequenceedit_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1405,6 +1596,7 @@ void q_keysequenceedit_grab_mouse(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QCursor*
+///
 void q_keysequenceedit_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1412,6 +1604,7 @@ void q_keysequenceedit_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1419,6 +1612,7 @@ void q_keysequenceedit_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1426,6 +1620,7 @@ void q_keysequenceedit_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1434,6 +1629,7 @@ void q_keysequenceedit_release_keyboard(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param key QKeySequence*
+///
 int32_t q_keysequenceedit_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -1442,6 +1638,7 @@ int32_t q_keysequenceedit_grab_shortcut(void* self, void* key);
 ///
 /// @param self QKeySequenceEdit*
 /// @param id int
+///
 void q_keysequenceedit_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -1450,6 +1647,7 @@ void q_keysequenceedit_release_shortcut(void* self, int id);
 ///
 /// @param self QKeySequenceEdit*
 /// @param id int
+///
 void q_keysequenceedit_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -1458,6 +1656,7 @@ void q_keysequenceedit_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self QKeySequenceEdit*
 /// @param id int
+///
 void q_keysequenceedit_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -1477,6 +1676,7 @@ QWidget* q_keysequenceedit_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1485,6 +1685,7 @@ bool q_keysequenceedit_updates_enabled(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param enable bool
+///
 void q_keysequenceedit_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1492,6 +1693,7 @@ void q_keysequenceedit_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self QKeySequenceEdit*
+///
 QGraphicsProxyWidget* q_keysequenceedit_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -1499,6 +1701,7 @@ QGraphicsProxyWidget* q_keysequenceedit_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_update(void* self);
 
 /// Inherited from QWidget
@@ -1506,6 +1709,7 @@ void q_keysequenceedit_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_repaint(void* self);
 
 /// Inherited from QWidget
@@ -1517,6 +1721,7 @@ void q_keysequenceedit_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_keysequenceedit_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1525,6 +1730,7 @@ void q_keysequenceedit_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QRect*
+///
 void q_keysequenceedit_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1533,6 +1739,7 @@ void q_keysequenceedit_update3(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QRegion*
+///
 void q_keysequenceedit_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1544,6 +1751,7 @@ void q_keysequenceedit_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_keysequenceedit_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1552,6 +1760,7 @@ void q_keysequenceedit_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QRect*
+///
 void q_keysequenceedit_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1560,6 +1769,7 @@ void q_keysequenceedit_repaint3(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QRegion*
+///
 void q_keysequenceedit_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1568,6 +1778,7 @@ void q_keysequenceedit_repaint4(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param hidden bool
+///
 void q_keysequenceedit_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -1575,6 +1786,7 @@ void q_keysequenceedit_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_show(void* self);
 
 /// Inherited from QWidget
@@ -1582,6 +1794,7 @@ void q_keysequenceedit_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_hide(void* self);
 
 /// Inherited from QWidget
@@ -1589,6 +1802,7 @@ void q_keysequenceedit_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1596,6 +1810,7 @@ void q_keysequenceedit_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1603,6 +1818,7 @@ void q_keysequenceedit_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1610,6 +1826,7 @@ void q_keysequenceedit_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -1617,6 +1834,7 @@ void q_keysequenceedit_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_close(void* self);
 
 /// Inherited from QWidget
@@ -1624,6 +1842,7 @@ bool q_keysequenceedit_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_raise(void* self);
 
 /// Inherited from QWidget
@@ -1631,6 +1850,7 @@ void q_keysequenceedit_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_lower(void* self);
 
 /// Inherited from QWidget
@@ -1639,6 +1859,7 @@ void q_keysequenceedit_lower(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QWidget*
+///
 void q_keysequenceedit_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1648,6 +1869,7 @@ void q_keysequenceedit_stack_under(void* self, void* param1);
 /// @param self QKeySequenceEdit*
 /// @param x int
 /// @param y int
+///
 void q_keysequenceedit_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -1656,6 +1878,7 @@ void q_keysequenceedit_move(void* self, int x, int y);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QPoint*
+///
 void q_keysequenceedit_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1665,6 +1888,7 @@ void q_keysequenceedit_move2(void* self, void* param1);
 /// @param self QKeySequenceEdit*
 /// @param w int
 /// @param h int
+///
 void q_keysequenceedit_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1673,6 +1897,7 @@ void q_keysequenceedit_resize(void* self, int w, int h);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QSize*
+///
 void q_keysequenceedit_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1684,6 +1909,7 @@ void q_keysequenceedit_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void q_keysequenceedit_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1692,6 +1918,7 @@ void q_keysequenceedit_set_geometry(void* self, int x, int y, int w, int h);
 ///
 /// @param self QKeySequenceEdit*
 /// @param geometry QRect*
+///
 void q_keysequenceedit_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -1701,6 +1928,7 @@ void q_keysequenceedit_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 char* q_keysequenceedit_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1709,6 +1937,7 @@ char* q_keysequenceedit_save_geometry(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param geometry const char*
+///
 bool q_keysequenceedit_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -1716,6 +1945,7 @@ bool q_keysequenceedit_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -1723,6 +1953,7 @@ void q_keysequenceedit_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -1731,6 +1962,7 @@ bool q_keysequenceedit_is_visible(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QWidget*
+///
 bool q_keysequenceedit_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1738,6 +1970,7 @@ bool q_keysequenceedit_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -1745,6 +1978,7 @@ bool q_keysequenceedit_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1752,6 +1986,7 @@ bool q_keysequenceedit_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1759,6 +1994,7 @@ bool q_keysequenceedit_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1768,6 +2004,7 @@ bool q_keysequenceedit_is_full_screen(void* self);
 /// @param self QKeySequenceEdit*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t q_keysequenceedit_window_state(void* self);
 
 /// Inherited from QWidget
@@ -1776,6 +2013,7 @@ int32_t q_keysequenceedit_window_state(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param state flag of enum Qt__WindowState
+///
 void q_keysequenceedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -1784,6 +2022,7 @@ void q_keysequenceedit_set_window_state(void* self, int32_t state);
 ///
 /// @param self QKeySequenceEdit*
 /// @param state flag of enum Qt__WindowState
+///
 void q_keysequenceedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -1791,6 +2030,7 @@ void q_keysequenceedit_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self QKeySequenceEdit*
+///
 QSizePolicy* q_keysequenceedit_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -1799,6 +2039,7 @@ QSizePolicy* q_keysequenceedit_size_policy(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param sizePolicy QSizePolicy*
+///
 void q_keysequenceedit_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -1808,6 +2049,7 @@ void q_keysequenceedit_set_size_policy(void* self, void* sizePolicy);
 /// @param self QKeySequenceEdit*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void q_keysequenceedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -1815,6 +2057,7 @@ void q_keysequenceedit_set_size_policy2(void* self, int32_t horizontal, int32_t 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRegion* q_keysequenceedit_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -1826,6 +2069,7 @@ QRegion* q_keysequenceedit_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void q_keysequenceedit_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -1834,6 +2078,7 @@ void q_keysequenceedit_set_contents_margins(void* self, int left, int top, int r
 ///
 /// @param self QKeySequenceEdit*
 /// @param margins QMargins*
+///
 void q_keysequenceedit_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -1841,6 +2086,7 @@ void q_keysequenceedit_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self QKeySequenceEdit*
+///
 QMargins* q_keysequenceedit_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -1848,6 +2094,7 @@ QMargins* q_keysequenceedit_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self QKeySequenceEdit*
+///
 QRect* q_keysequenceedit_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -1855,6 +2102,7 @@ QRect* q_keysequenceedit_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self QKeySequenceEdit*
+///
 QLayout* q_keysequenceedit_layout(void* self);
 
 /// Inherited from QWidget
@@ -1863,6 +2111,7 @@ QLayout* q_keysequenceedit_layout(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param layout QLayout*
+///
 void q_keysequenceedit_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -1870,6 +2119,7 @@ void q_keysequenceedit_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1878,6 +2128,7 @@ void q_keysequenceedit_update_geometry(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param parent QWidget*
+///
 void q_keysequenceedit_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -1887,6 +2138,7 @@ void q_keysequenceedit_set_parent(void* self, void* parent);
 /// @param self QKeySequenceEdit*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void q_keysequenceedit_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -1896,6 +2148,7 @@ void q_keysequenceedit_set_parent2(void* self, void* parent, int64_t f);
 /// @param self QKeySequenceEdit*
 /// @param dx int
 /// @param dy int
+///
 void q_keysequenceedit_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -1906,6 +2159,7 @@ void q_keysequenceedit_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void q_keysequenceedit_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -1913,6 +2167,7 @@ void q_keysequenceedit_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -1920,6 +2175,7 @@ QWidget* q_keysequenceedit_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -1927,6 +2183,7 @@ QWidget* q_keysequenceedit_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -1934,6 +2191,7 @@ QWidget* q_keysequenceedit_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -1942,6 +2200,7 @@ bool q_keysequenceedit_accept_drops(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param on bool
+///
 void q_keysequenceedit_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -1950,6 +2209,7 @@ void q_keysequenceedit_set_accept_drops(void* self, bool on);
 ///
 /// @param self QKeySequenceEdit*
 /// @param action QAction*
+///
 void q_keysequenceedit_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -1958,6 +2218,7 @@ void q_keysequenceedit_add_action(void* self, void* action);
 ///
 /// @param self QKeySequenceEdit*
 /// @param actions libqt_list /* of QAction* */
+///
 void q_keysequenceedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -1967,6 +2228,7 @@ void q_keysequenceedit_add_actions(void* self, libqt_list actions);
 /// @param self QKeySequenceEdit*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void q_keysequenceedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -1976,6 +2238,7 @@ void q_keysequenceedit_insert_actions(void* self, void* before, libqt_list actio
 /// @param self QKeySequenceEdit*
 /// @param before QAction*
 /// @param action QAction*
+///
 void q_keysequenceedit_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -1984,6 +2247,7 @@ void q_keysequenceedit_insert_action(void* self, void* before, void* action);
 ///
 /// @param self QKeySequenceEdit*
 /// @param action QAction*
+///
 void q_keysequenceedit_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -1991,6 +2255,7 @@ void q_keysequenceedit_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self QKeySequenceEdit*
+///
 libqt_list /* of QAction* */ q_keysequenceedit_actions(void* self);
 
 /// Inherited from QWidget
@@ -1999,6 +2264,7 @@ libqt_list /* of QAction* */ q_keysequenceedit_actions(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param text const char*
+///
 QAction* q_keysequenceedit_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -2008,6 +2274,7 @@ QAction* q_keysequenceedit_add_action2(void* self, const char* text);
 /// @param self QKeySequenceEdit*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* q_keysequenceedit_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -2017,6 +2284,7 @@ QAction* q_keysequenceedit_add_action3(void* self, void* icon, const char* text)
 /// @param self QKeySequenceEdit*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* q_keysequenceedit_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2027,6 +2295,7 @@ QAction* q_keysequenceedit_add_action4(void* self, const char* text, void* short
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* q_keysequenceedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2034,6 +2303,7 @@ QAction* q_keysequenceedit_add_action5(void* self, void* icon, const char* text,
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWidget* q_keysequenceedit_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2042,6 +2312,7 @@ QWidget* q_keysequenceedit_parent_widget(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param type flag of enum Qt__WindowType
+///
 void q_keysequenceedit_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2051,6 +2322,7 @@ void q_keysequenceedit_set_window_flags(void* self, int64_t type);
 /// @param self QKeySequenceEdit*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t q_keysequenceedit_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -2059,6 +2331,7 @@ int64_t q_keysequenceedit_window_flags(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 enum Qt__WindowType
+///
 void q_keysequenceedit_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -2067,6 +2340,7 @@ void q_keysequenceedit_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param type flag of enum Qt__WindowType
+///
 void q_keysequenceedit_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2076,6 +2350,7 @@ void q_keysequenceedit_override_window_flags(void* self, int64_t type);
 /// @param self QKeySequenceEdit*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t q_keysequenceedit_window_type(void* self);
 
 /// Inherited from QWidget
@@ -2083,6 +2358,7 @@ int64_t q_keysequenceedit_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* q_keysequenceedit_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -2092,6 +2368,7 @@ QWidget* q_keysequenceedit_find(uint64_t param1);
 /// @param self QKeySequenceEdit*
 /// @param x int
 /// @param y int
+///
 QWidget* q_keysequenceedit_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2100,6 +2377,7 @@ QWidget* q_keysequenceedit_child_at(void* self, int x, int y);
 ///
 /// @param self QKeySequenceEdit*
 /// @param p QPoint*
+///
 QWidget* q_keysequenceedit_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2108,6 +2386,7 @@ QWidget* q_keysequenceedit_child_at2(void* self, void* p);
 ///
 /// @param self QKeySequenceEdit*
 /// @param p QPointF*
+///
 QWidget* q_keysequenceedit_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2116,6 +2395,7 @@ QWidget* q_keysequenceedit_child_at3(void* self, void* p);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void q_keysequenceedit_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2124,6 +2404,7 @@ void q_keysequenceedit_set_attribute(void* self, int32_t param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool q_keysequenceedit_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2131,6 +2412,7 @@ bool q_keysequenceedit_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -2139,6 +2421,7 @@ void q_keysequenceedit_ensure_polished(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param child QWidget*
+///
 bool q_keysequenceedit_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -2146,6 +2429,7 @@ bool q_keysequenceedit_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -2154,6 +2438,7 @@ bool q_keysequenceedit_auto_fill_background(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param enabled bool
+///
 void q_keysequenceedit_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -2161,6 +2446,7 @@ void q_keysequenceedit_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self QKeySequenceEdit*
+///
 QBackingStore* q_keysequenceedit_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -2168,6 +2454,7 @@ QBackingStore* q_keysequenceedit_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self QKeySequenceEdit*
+///
 QWindow* q_keysequenceedit_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -2175,6 +2462,7 @@ QWindow* q_keysequenceedit_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self QKeySequenceEdit*
+///
 QScreen* q_keysequenceedit_screen(void* self);
 
 /// Inherited from QWidget
@@ -2183,6 +2471,7 @@ QScreen* q_keysequenceedit_screen(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param screen QScreen*
+///
 void q_keysequenceedit_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -2190,6 +2479,7 @@ void q_keysequenceedit_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* q_keysequenceedit_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -2198,6 +2488,7 @@ QWidget* q_keysequenceedit_create_window_container(void* window);
 ///
 /// @param self QKeySequenceEdit*
 /// @param title const char*
+///
 void q_keysequenceedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -2206,6 +2497,7 @@ void q_keysequenceedit_window_title_changed(void* self, const char* title);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, const char* title)
+///
 void q_keysequenceedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2214,6 +2506,7 @@ void q_keysequenceedit_on_window_title_changed(void* self, void (*callback)(void
 ///
 /// @param self QKeySequenceEdit*
 /// @param icon QIcon*
+///
 void q_keysequenceedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2222,6 +2515,7 @@ void q_keysequenceedit_window_icon_changed(void* self, void* icon);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QIcon* icon)
+///
 void q_keysequenceedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2230,6 +2524,7 @@ void q_keysequenceedit_on_window_icon_changed(void* self, void (*callback)(void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param iconText const char*
+///
 void q_keysequenceedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -2238,6 +2533,7 @@ void q_keysequenceedit_window_icon_text_changed(void* self, const char* iconText
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, const char* iconText)
+///
 void q_keysequenceedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2246,6 +2542,7 @@ void q_keysequenceedit_on_window_icon_text_changed(void* self, void (*callback)(
 ///
 /// @param self QKeySequenceEdit*
 /// @param pos QPoint*
+///
 void q_keysequenceedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -2254,6 +2551,7 @@ void q_keysequenceedit_custom_context_menu_requested(void* self, void* pos);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QPoint* pos)
+///
 void q_keysequenceedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2263,6 +2561,7 @@ void q_keysequenceedit_on_custom_context_menu_requested(void* self, void (*callb
 /// @param self QKeySequenceEdit*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t q_keysequenceedit_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -2271,6 +2570,7 @@ int64_t q_keysequenceedit_input_method_hints(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void q_keysequenceedit_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -2280,6 +2580,7 @@ void q_keysequenceedit_set_input_method_hints(void* self, int64_t hints);
 /// @param self QKeySequenceEdit*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void q_keysequenceedit_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2290,6 +2591,7 @@ void q_keysequenceedit_render22(void* self, void* target, void* targetOffset);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void q_keysequenceedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2301,6 +2603,7 @@ void q_keysequenceedit_render3(void* self, void* target, void* targetOffset, voi
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void q_keysequenceedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2310,6 +2613,7 @@ void q_keysequenceedit_render4(void* self, void* target, void* targetOffset, voi
 /// @param self QKeySequenceEdit*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void q_keysequenceedit_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2320,6 +2624,7 @@ void q_keysequenceedit_render23(void* self, void* painter, void* targetOffset);
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void q_keysequenceedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2331,6 +2636,7 @@ void q_keysequenceedit_render32(void* self, void* painter, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void q_keysequenceedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2339,6 +2645,7 @@ void q_keysequenceedit_render42(void* self, void* painter, void* targetOffset, v
 ///
 /// @param self QKeySequenceEdit*
 /// @param rectangle QRect*
+///
 QPixmap* q_keysequenceedit_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -2348,6 +2655,7 @@ QPixmap* q_keysequenceedit_grab1(void* self, void* rectangle);
 /// @param self QKeySequenceEdit*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void q_keysequenceedit_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -2357,6 +2665,7 @@ void q_keysequenceedit_grab_gesture2(void* self, int64_t type, int32_t flags);
 /// @param self QKeySequenceEdit*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t q_keysequenceedit_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -2366,6 +2675,7 @@ int32_t q_keysequenceedit_grab_shortcut2(void* self, void* key, int32_t context)
 /// @param self QKeySequenceEdit*
 /// @param id int
 /// @param enable bool
+///
 void q_keysequenceedit_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2375,6 +2685,7 @@ void q_keysequenceedit_set_shortcut_enabled2(void* self, int id, bool enable);
 /// @param self QKeySequenceEdit*
 /// @param id int
 /// @param enable bool
+///
 void q_keysequenceedit_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2384,6 +2695,7 @@ void q_keysequenceedit_set_shortcut_auto_repeat2(void* self, int id, bool enable
 /// @param self QKeySequenceEdit*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void q_keysequenceedit_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2393,6 +2705,7 @@ void q_keysequenceedit_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QKeySequenceEdit*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void q_keysequenceedit_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2401,6 +2714,7 @@ void q_keysequenceedit_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* q_keysequenceedit_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -2410,6 +2724,7 @@ QWidget* q_keysequenceedit_create_window_container2(void* window, void* parent);
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* q_keysequenceedit_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -2419,6 +2734,7 @@ QWidget* q_keysequenceedit_create_window_container3(void* window, void* parent, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char* q_keysequenceedit_object_name(void* self);
 
 /// Inherited from QObject
@@ -2427,6 +2743,7 @@ const char* q_keysequenceedit_object_name(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param name char*
+///
 void q_keysequenceedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -2434,6 +2751,7 @@ void q_keysequenceedit_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -2441,6 +2759,7 @@ bool q_keysequenceedit_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -2448,6 +2767,7 @@ bool q_keysequenceedit_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -2455,6 +2775,7 @@ bool q_keysequenceedit_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -2463,6 +2784,7 @@ bool q_keysequenceedit_signals_blocked(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param b bool
+///
 bool q_keysequenceedit_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -2470,6 +2792,7 @@ bool q_keysequenceedit_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QKeySequenceEdit*
+///
 QThread* q_keysequenceedit_thread(void* self);
 
 /// Inherited from QObject
@@ -2478,6 +2801,7 @@ QThread* q_keysequenceedit_thread(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param thread QThread*
+///
 bool q_keysequenceedit_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -2486,6 +2810,7 @@ bool q_keysequenceedit_move_to_thread(void* self, void* thread);
 ///
 /// @param self QKeySequenceEdit*
 /// @param interval int
+///
 int32_t q_keysequenceedit_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -2494,6 +2819,7 @@ int32_t q_keysequenceedit_start_timer(void* self, int interval);
 ///
 /// @param self QKeySequenceEdit*
 /// @param id int
+///
 void q_keysequenceedit_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -2502,6 +2828,7 @@ void q_keysequenceedit_kill_timer(void* self, int id);
 ///
 /// @param self QKeySequenceEdit*
 /// @param id enum Qt__TimerId
+///
 void q_keysequenceedit_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -2509,6 +2836,7 @@ void q_keysequenceedit_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QKeySequenceEdit*
+///
 libqt_list /* of QObject* */ q_keysequenceedit_children(void* self);
 
 /// Inherited from QObject
@@ -2517,6 +2845,7 @@ libqt_list /* of QObject* */ q_keysequenceedit_children(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param filterObj QObject*
+///
 void q_keysequenceedit_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -2525,6 +2854,7 @@ void q_keysequenceedit_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QKeySequenceEdit*
 /// @param obj QObject*
+///
 void q_keysequenceedit_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -2535,6 +2865,7 @@ void q_keysequenceedit_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_keysequenceedit_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -2545,6 +2876,7 @@ QMetaObject__Connection* q_keysequenceedit_connect(void* sender, void* signal, v
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_keysequenceedit_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -2555,6 +2887,7 @@ QMetaObject__Connection* q_keysequenceedit_connect2(void* self, void* sender, co
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_keysequenceedit_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -2562,6 +2895,7 @@ bool q_keysequenceedit_disconnect(void* sender, void* signal, void* receiver, vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_keysequenceedit_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -2569,6 +2903,7 @@ bool q_keysequenceedit_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -2576,6 +2911,7 @@ void q_keysequenceedit_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -2585,6 +2921,7 @@ void q_keysequenceedit_dump_object_info(void* self);
 /// @param self QKeySequenceEdit*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_keysequenceedit_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -2593,6 +2930,7 @@ bool q_keysequenceedit_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QKeySequenceEdit*
 /// @param name const char*
+///
 QVariant* q_keysequenceedit_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -2602,6 +2940,7 @@ QVariant* q_keysequenceedit_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeySequenceEdit*
+///
 const char** q_keysequenceedit_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -2609,6 +2948,7 @@ const char** q_keysequenceedit_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QKeySequenceEdit*
+///
 QBindingStorage* q_keysequenceedit_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -2616,6 +2956,7 @@ QBindingStorage* q_keysequenceedit_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QKeySequenceEdit*
+///
 const QBindingStorage* q_keysequenceedit_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -2623,6 +2964,7 @@ const QBindingStorage* q_keysequenceedit_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_destroyed(void* self);
 
 /// Inherited from QObject
@@ -2631,6 +2973,7 @@ void q_keysequenceedit_destroyed(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self)
+///
 void q_keysequenceedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2638,6 +2981,7 @@ void q_keysequenceedit_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QKeySequenceEdit*
+///
 QObject* q_keysequenceedit_parent(void* self);
 
 /// Inherited from QObject
@@ -2646,6 +2990,7 @@ QObject* q_keysequenceedit_parent(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param classname const char*
+///
 bool q_keysequenceedit_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -2653,6 +2998,7 @@ bool q_keysequenceedit_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_delete_later(void* self);
 
 /// Inherited from QObject
@@ -2662,6 +3008,7 @@ void q_keysequenceedit_delete_later(void* self);
 /// @param self QKeySequenceEdit*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_keysequenceedit_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -2671,6 +3018,7 @@ bool q_keysequenceedit_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QKeySequenceEdit*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_keysequenceedit_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -2682,6 +3030,7 @@ int32_t q_keysequenceedit_start_timer22(void* self, int interval, int32_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_keysequenceedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -2693,6 +3042,7 @@ QMetaObject__Connection* q_keysequenceedit_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_keysequenceedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -2701,6 +3051,7 @@ QMetaObject__Connection* q_keysequenceedit_connect4(void* self, void* sender, co
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QObject*
+///
 void q_keysequenceedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -2709,6 +3060,7 @@ void q_keysequenceedit_destroyed1(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QObject* param1)
+///
 void q_keysequenceedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2716,6 +3068,7 @@ void q_keysequenceedit_on_destroyed1(void* self, void (*callback)(void*, void*))
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -2723,6 +3076,7 @@ bool q_keysequenceedit_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -2730,6 +3084,7 @@ int32_t q_keysequenceedit_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -2737,6 +3092,7 @@ int32_t q_keysequenceedit_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -2744,6 +3100,7 @@ int32_t q_keysequenceedit_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -2751,6 +3108,7 @@ int32_t q_keysequenceedit_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -2758,6 +3116,7 @@ int32_t q_keysequenceedit_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -2765,6 +3124,7 @@ int32_t q_keysequenceedit_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self QKeySequenceEdit*
+///
 double q_keysequenceedit_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -2772,6 +3132,7 @@ double q_keysequenceedit_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self QKeySequenceEdit*
+///
 double q_keysequenceedit_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -2779,6 +3140,7 @@ double q_keysequenceedit_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -2786,6 +3148,7 @@ int32_t q_keysequenceedit_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -2800,6 +3163,7 @@ double q_keysequenceedit_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t q_keysequenceedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
@@ -2809,6 +3173,7 @@ int32_t q_keysequenceedit_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2818,6 +3183,7 @@ int32_t q_keysequenceedit_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2828,6 +3194,7 @@ int32_t q_keysequenceedit_qbase_dev_type(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback int32_t func()
+///
 void q_keysequenceedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2838,6 +3205,7 @@ void q_keysequenceedit_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self QKeySequenceEdit*
 /// @param visible bool
+///
 void q_keysequenceedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2848,6 +3216,7 @@ void q_keysequenceedit_set_visible(void* self, bool visible);
 ///
 /// @param self QKeySequenceEdit*
 /// @param visible bool
+///
 void q_keysequenceedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2858,6 +3227,7 @@ void q_keysequenceedit_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, bool visible)
+///
 void q_keysequenceedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2867,6 +3237,7 @@ void q_keysequenceedit_on_set_visible(void* self, void (*callback)(void*, bool))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2876,6 +3247,7 @@ QSize* q_keysequenceedit_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2886,6 +3258,7 @@ QSize* q_keysequenceedit_qbase_size_hint(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback QSize* func()
+///
 void q_keysequenceedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2895,6 +3268,7 @@ void q_keysequenceedit_on_size_hint(void* self, QSize* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2904,6 +3278,7 @@ QSize* q_keysequenceedit_minimum_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QSize* q_keysequenceedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2914,6 +3289,7 @@ QSize* q_keysequenceedit_qbase_minimum_size_hint(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback QSize* func()
+///
 void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2924,6 +3300,7 @@ void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 int
+///
 int32_t q_keysequenceedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2934,6 +3311,7 @@ int32_t q_keysequenceedit_height_for_width(void* self, int param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 int
+///
 int32_t q_keysequenceedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2944,6 +3322,7 @@ int32_t q_keysequenceedit_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback int32_t func(QKeySequenceEdit* self, int param1)
+///
 void q_keysequenceedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2953,6 +3332,7 @@ void q_keysequenceedit_on_height_for_width(void* self, int32_t (*callback)(void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2962,6 +3342,7 @@ bool q_keysequenceedit_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2972,6 +3353,7 @@ bool q_keysequenceedit_qbase_has_height_for_width(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func()
+///
 void q_keysequenceedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2981,6 +3363,7 @@ void q_keysequenceedit_on_has_height_for_width(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QPaintEngine* q_keysequenceedit_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2990,6 +3373,7 @@ QPaintEngine* q_keysequenceedit_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QPaintEngine* q_keysequenceedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3000,6 +3384,7 @@ QPaintEngine* q_keysequenceedit_qbase_paint_engine(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback QPaintEngine* func()
+///
 void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3010,6 +3395,7 @@ void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3020,6 +3406,7 @@ void q_keysequenceedit_mouse_press_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3030,6 +3417,7 @@ void q_keysequenceedit_qbase_mouse_press_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
+///
 void q_keysequenceedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3040,6 +3428,7 @@ void q_keysequenceedit_on_mouse_press_event(void* self, void (*callback)(void*, 
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3050,6 +3439,7 @@ void q_keysequenceedit_mouse_release_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3060,6 +3450,7 @@ void q_keysequenceedit_qbase_mouse_release_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
+///
 void q_keysequenceedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3070,6 +3461,7 @@ void q_keysequenceedit_on_mouse_release_event(void* self, void (*callback)(void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3080,6 +3472,7 @@ void q_keysequenceedit_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3090,6 +3483,7 @@ void q_keysequenceedit_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
+///
 void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3100,6 +3494,7 @@ void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3110,6 +3505,7 @@ void q_keysequenceedit_mouse_move_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMouseEvent*
+///
 void q_keysequenceedit_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3120,6 +3516,7 @@ void q_keysequenceedit_qbase_mouse_move_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
+///
 void q_keysequenceedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3130,6 +3527,7 @@ void q_keysequenceedit_on_mouse_move_event(void* self, void (*callback)(void*, v
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QWheelEvent*
+///
 void q_keysequenceedit_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3140,6 +3538,7 @@ void q_keysequenceedit_wheel_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QWheelEvent*
+///
 void q_keysequenceedit_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3150,6 +3549,7 @@ void q_keysequenceedit_qbase_wheel_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QWheelEvent* event)
+///
 void q_keysequenceedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3160,6 +3560,7 @@ void q_keysequenceedit_on_wheel_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QFocusEvent*
+///
 void q_keysequenceedit_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3170,6 +3571,7 @@ void q_keysequenceedit_focus_in_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QFocusEvent*
+///
 void q_keysequenceedit_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3180,6 +3582,7 @@ void q_keysequenceedit_qbase_focus_in_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QFocusEvent* event)
+///
 void q_keysequenceedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3190,6 +3593,7 @@ void q_keysequenceedit_on_focus_in_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QEnterEvent*
+///
 void q_keysequenceedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3200,6 +3604,7 @@ void q_keysequenceedit_enter_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QEnterEvent*
+///
 void q_keysequenceedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3210,6 +3615,7 @@ void q_keysequenceedit_qbase_enter_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QEnterEvent* event)
+///
 void q_keysequenceedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3220,6 +3626,7 @@ void q_keysequenceedit_on_enter_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QEvent*
+///
 void q_keysequenceedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3230,6 +3637,7 @@ void q_keysequenceedit_leave_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QEvent*
+///
 void q_keysequenceedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3240,6 +3648,7 @@ void q_keysequenceedit_qbase_leave_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QEvent* event)
+///
 void q_keysequenceedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3250,6 +3659,7 @@ void q_keysequenceedit_on_leave_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QPaintEvent*
+///
 void q_keysequenceedit_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3260,6 +3670,7 @@ void q_keysequenceedit_paint_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QPaintEvent*
+///
 void q_keysequenceedit_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3270,6 +3681,7 @@ void q_keysequenceedit_qbase_paint_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QPaintEvent* event)
+///
 void q_keysequenceedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3280,6 +3692,7 @@ void q_keysequenceedit_on_paint_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMoveEvent*
+///
 void q_keysequenceedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3290,6 +3703,7 @@ void q_keysequenceedit_move_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QMoveEvent*
+///
 void q_keysequenceedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3300,6 +3714,7 @@ void q_keysequenceedit_qbase_move_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QMoveEvent* event)
+///
 void q_keysequenceedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3310,6 +3725,7 @@ void q_keysequenceedit_on_move_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QResizeEvent*
+///
 void q_keysequenceedit_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3320,6 +3736,7 @@ void q_keysequenceedit_resize_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QResizeEvent*
+///
 void q_keysequenceedit_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3330,6 +3747,7 @@ void q_keysequenceedit_qbase_resize_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QResizeEvent* event)
+///
 void q_keysequenceedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3340,6 +3758,7 @@ void q_keysequenceedit_on_resize_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QCloseEvent*
+///
 void q_keysequenceedit_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3350,6 +3769,7 @@ void q_keysequenceedit_close_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QCloseEvent*
+///
 void q_keysequenceedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3360,6 +3780,7 @@ void q_keysequenceedit_qbase_close_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QCloseEvent* event)
+///
 void q_keysequenceedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3370,6 +3791,7 @@ void q_keysequenceedit_on_close_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QContextMenuEvent*
+///
 void q_keysequenceedit_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3380,6 +3802,7 @@ void q_keysequenceedit_context_menu_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QContextMenuEvent*
+///
 void q_keysequenceedit_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3390,6 +3813,7 @@ void q_keysequenceedit_qbase_context_menu_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QContextMenuEvent* event)
+///
 void q_keysequenceedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3400,6 +3824,7 @@ void q_keysequenceedit_on_context_menu_event(void* self, void (*callback)(void*,
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QTabletEvent*
+///
 void q_keysequenceedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3410,6 +3835,7 @@ void q_keysequenceedit_tablet_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QTabletEvent*
+///
 void q_keysequenceedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3420,6 +3846,7 @@ void q_keysequenceedit_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QTabletEvent* event)
+///
 void q_keysequenceedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3430,6 +3857,7 @@ void q_keysequenceedit_on_tablet_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QActionEvent*
+///
 void q_keysequenceedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3440,6 +3868,7 @@ void q_keysequenceedit_action_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QActionEvent*
+///
 void q_keysequenceedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3450,6 +3879,7 @@ void q_keysequenceedit_qbase_action_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QActionEvent* event)
+///
 void q_keysequenceedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3460,6 +3890,7 @@ void q_keysequenceedit_on_action_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDragEnterEvent*
+///
 void q_keysequenceedit_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3470,6 +3901,7 @@ void q_keysequenceedit_drag_enter_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDragEnterEvent*
+///
 void q_keysequenceedit_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3480,6 +3912,7 @@ void q_keysequenceedit_qbase_drag_enter_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QDragEnterEvent* event)
+///
 void q_keysequenceedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3490,6 +3923,7 @@ void q_keysequenceedit_on_drag_enter_event(void* self, void (*callback)(void*, v
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDragMoveEvent*
+///
 void q_keysequenceedit_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3500,6 +3934,7 @@ void q_keysequenceedit_drag_move_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDragMoveEvent*
+///
 void q_keysequenceedit_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3510,6 +3945,7 @@ void q_keysequenceedit_qbase_drag_move_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QDragMoveEvent* event)
+///
 void q_keysequenceedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3520,6 +3956,7 @@ void q_keysequenceedit_on_drag_move_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDragLeaveEvent*
+///
 void q_keysequenceedit_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3530,6 +3967,7 @@ void q_keysequenceedit_drag_leave_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDragLeaveEvent*
+///
 void q_keysequenceedit_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3540,6 +3978,7 @@ void q_keysequenceedit_qbase_drag_leave_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QDragLeaveEvent* event)
+///
 void q_keysequenceedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3550,6 +3989,7 @@ void q_keysequenceedit_on_drag_leave_event(void* self, void (*callback)(void*, v
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDropEvent*
+///
 void q_keysequenceedit_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3560,6 +4000,7 @@ void q_keysequenceedit_drop_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QDropEvent*
+///
 void q_keysequenceedit_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3570,6 +4011,7 @@ void q_keysequenceedit_qbase_drop_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QDropEvent* event)
+///
 void q_keysequenceedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3580,6 +4022,7 @@ void q_keysequenceedit_on_drop_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QShowEvent*
+///
 void q_keysequenceedit_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3590,6 +4033,7 @@ void q_keysequenceedit_show_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QShowEvent*
+///
 void q_keysequenceedit_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3600,6 +4044,7 @@ void q_keysequenceedit_qbase_show_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QShowEvent* event)
+///
 void q_keysequenceedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3610,6 +4055,7 @@ void q_keysequenceedit_on_show_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QHideEvent*
+///
 void q_keysequenceedit_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3620,6 +4066,7 @@ void q_keysequenceedit_hide_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QHideEvent*
+///
 void q_keysequenceedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3630,6 +4077,7 @@ void q_keysequenceedit_qbase_hide_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QHideEvent* event)
+///
 void q_keysequenceedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3642,6 +4090,7 @@ void q_keysequenceedit_on_hide_event(void* self, void (*callback)(void*, void*))
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_keysequenceedit_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3654,6 +4103,7 @@ bool q_keysequenceedit_native_event(void* self, const char* eventType, void* mes
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3664,6 +4114,7 @@ bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, voi
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func(QKeySequenceEdit* self, const char* eventType, void* message, intptr_t* result)
+///
 void q_keysequenceedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3674,6 +4125,7 @@ void q_keysequenceedit_on_native_event(void* self, bool (*callback)(void*, const
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QEvent*
+///
 void q_keysequenceedit_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3684,6 +4136,7 @@ void q_keysequenceedit_change_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QEvent*
+///
 void q_keysequenceedit_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3694,6 +4147,7 @@ void q_keysequenceedit_qbase_change_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QEvent* param1)
+///
 void q_keysequenceedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3704,6 +4158,7 @@ void q_keysequenceedit_on_change_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t q_keysequenceedit_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3714,6 +4169,7 @@ int32_t q_keysequenceedit_metric(void* self, int32_t param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t q_keysequenceedit_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3724,6 +4180,7 @@ int32_t q_keysequenceedit_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback int32_t func(QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void q_keysequenceedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3734,6 +4191,7 @@ void q_keysequenceedit_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 /// @param self QKeySequenceEdit*
 /// @param painter QPainter*
+///
 void q_keysequenceedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3744,6 +4202,7 @@ void q_keysequenceedit_init_painter(void* self, void* painter);
 ///
 /// @param self QKeySequenceEdit*
 /// @param painter QPainter*
+///
 void q_keysequenceedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3754,6 +4213,7 @@ void q_keysequenceedit_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QPainter* painter)
+///
 void q_keysequenceedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3764,6 +4224,7 @@ void q_keysequenceedit_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param offset QPoint*
+///
 QPaintDevice* q_keysequenceedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3774,6 +4235,7 @@ QPaintDevice* q_keysequenceedit_redirected(void* self, void* offset);
 ///
 /// @param self QKeySequenceEdit*
 /// @param offset QPoint*
+///
 QPaintDevice* q_keysequenceedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3784,6 +4246,7 @@ QPaintDevice* q_keysequenceedit_qbase_redirected(void* self, void* offset);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback QPaintDevice* func(QKeySequenceEdit* self, QPoint* offset)
+///
 void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3793,6 +4256,7 @@ void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*callback)(void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QPainter* q_keysequenceedit_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3802,6 +4266,7 @@ QPainter* q_keysequenceedit_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QPainter* q_keysequenceedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3812,6 +4277,7 @@ QPainter* q_keysequenceedit_qbase_shared_painter(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback QPainter* func()
+///
 void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3822,6 +4288,7 @@ void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QInputMethodEvent*
+///
 void q_keysequenceedit_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3832,6 +4299,7 @@ void q_keysequenceedit_input_method_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 QInputMethodEvent*
+///
 void q_keysequenceedit_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3842,6 +4310,7 @@ void q_keysequenceedit_qbase_input_method_event(void* self, void* param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QInputMethodEvent* param1)
+///
 void q_keysequenceedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3852,6 +4321,7 @@ void q_keysequenceedit_on_input_method_event(void* self, void (*callback)(void*,
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* q_keysequenceedit_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3862,6 +4332,7 @@ QVariant* q_keysequenceedit_input_method_query(void* self, int64_t param1);
 ///
 /// @param self QKeySequenceEdit*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* q_keysequenceedit_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3872,6 +4343,7 @@ QVariant* q_keysequenceedit_qbase_input_method_query(void* self, int64_t param1)
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback QVariant* func(QKeySequenceEdit* self, enum Qt__InputMethodQuery param1)
+///
 void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3882,6 +4354,7 @@ void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*callback)(v
 ///
 /// @param self QKeySequenceEdit*
 /// @param next bool
+///
 bool q_keysequenceedit_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3892,6 +4365,7 @@ bool q_keysequenceedit_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self QKeySequenceEdit*
 /// @param next bool
+///
 bool q_keysequenceedit_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3902,6 +4376,7 @@ bool q_keysequenceedit_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func(QKeySequenceEdit* self, bool next)
+///
 void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3913,6 +4388,7 @@ void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*callback)(voi
 /// @param self QKeySequenceEdit*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_keysequenceedit_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3924,6 +4400,7 @@ bool q_keysequenceedit_event_filter(void* self, void* watched, void* event);
 /// @param self QKeySequenceEdit*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_keysequenceedit_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3934,6 +4411,7 @@ bool q_keysequenceedit_qbase_event_filter(void* self, void* watched, void* event
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func(QKeySequenceEdit* self, QObject* watched, QEvent* event)
+///
 void q_keysequenceedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3944,6 +4422,7 @@ void q_keysequenceedit_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QChildEvent*
+///
 void q_keysequenceedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3954,6 +4433,7 @@ void q_keysequenceedit_child_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QChildEvent*
+///
 void q_keysequenceedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3964,6 +4444,7 @@ void q_keysequenceedit_qbase_child_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QChildEvent* event)
+///
 void q_keysequenceedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3974,6 +4455,7 @@ void q_keysequenceedit_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QEvent*
+///
 void q_keysequenceedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3984,6 +4466,7 @@ void q_keysequenceedit_custom_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param event QEvent*
+///
 void q_keysequenceedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3994,6 +4477,7 @@ void q_keysequenceedit_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QEvent* event)
+///
 void q_keysequenceedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4004,6 +4488,7 @@ void q_keysequenceedit_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal QMetaMethod*
+///
 void q_keysequenceedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4014,6 +4499,7 @@ void q_keysequenceedit_connect_notify(void* self, void* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal QMetaMethod*
+///
 void q_keysequenceedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4024,6 +4510,7 @@ void q_keysequenceedit_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QMetaMethod* signal)
+///
 void q_keysequenceedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4034,6 +4521,7 @@ void q_keysequenceedit_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal QMetaMethod*
+///
 void q_keysequenceedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4044,6 +4532,7 @@ void q_keysequenceedit_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal QMetaMethod*
+///
 void q_keysequenceedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4054,6 +4543,7 @@ void q_keysequenceedit_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, QMetaMethod* signal)
+///
 void q_keysequenceedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4063,6 +4553,7 @@ void q_keysequenceedit_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4072,6 +4563,7 @@ void q_keysequenceedit_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4082,6 +4574,7 @@ void q_keysequenceedit_qbase_update_micro_focus(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func()
+///
 void q_keysequenceedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4091,6 +4584,7 @@ void q_keysequenceedit_on_update_micro_focus(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_create(void* self);
 
 /// Inherited from QWidget
@@ -4100,6 +4594,7 @@ void q_keysequenceedit_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4110,6 +4605,7 @@ void q_keysequenceedit_qbase_create(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func()
+///
 void q_keysequenceedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4119,6 +4615,7 @@ void q_keysequenceedit_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4128,6 +4625,7 @@ void q_keysequenceedit_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4138,6 +4636,7 @@ void q_keysequenceedit_qbase_destroy(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func()
+///
 void q_keysequenceedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4147,6 +4646,7 @@ void q_keysequenceedit_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4156,6 +4656,7 @@ bool q_keysequenceedit_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4166,6 +4667,7 @@ bool q_keysequenceedit_qbase_focus_next_child(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func()
+///
 void q_keysequenceedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4175,6 +4677,7 @@ void q_keysequenceedit_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4184,6 +4687,7 @@ bool q_keysequenceedit_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 bool q_keysequenceedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4194,6 +4698,7 @@ bool q_keysequenceedit_qbase_focus_previous_child(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func()
+///
 void q_keysequenceedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4203,6 +4708,7 @@ void q_keysequenceedit_on_focus_previous_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QObject* q_keysequenceedit_sender(void* self);
 
 /// Inherited from QObject
@@ -4212,6 +4718,7 @@ QObject* q_keysequenceedit_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 QObject* q_keysequenceedit_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4222,6 +4729,7 @@ QObject* q_keysequenceedit_qbase_sender(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback QObject* func()
+///
 void q_keysequenceedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4231,6 +4739,7 @@ void q_keysequenceedit_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4240,6 +4749,7 @@ int32_t q_keysequenceedit_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
+///
 int32_t q_keysequenceedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4250,6 +4760,7 @@ int32_t q_keysequenceedit_qbase_sender_signal_index(void* self);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback int32_t func()
+///
 void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4260,6 +4771,7 @@ void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal const char*
+///
 int32_t q_keysequenceedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4270,6 +4782,7 @@ int32_t q_keysequenceedit_receivers(void* self, const char* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal const char*
+///
 int32_t q_keysequenceedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4280,6 +4793,7 @@ int32_t q_keysequenceedit_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback int32_t func(QKeySequenceEdit* self, const char* signal)
+///
 void q_keysequenceedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4290,6 +4804,7 @@ void q_keysequenceedit_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal QMetaMethod*
+///
 bool q_keysequenceedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4300,6 +4815,7 @@ bool q_keysequenceedit_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param signal QMetaMethod*
+///
 bool q_keysequenceedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4310,6 +4826,7 @@ bool q_keysequenceedit_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback bool func(QKeySequenceEdit* self, QMetaMethod* signal)
+///
 void q_keysequenceedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4321,6 +4838,7 @@ void q_keysequenceedit_on_is_signal_connected(void* self, bool (*callback)(void*
 /// @param self QKeySequenceEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double q_keysequenceedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4332,6 +4850,7 @@ double q_keysequenceedit_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// @param self QKeySequenceEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double q_keysequenceedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4342,6 +4861,7 @@ double q_keysequenceedit_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback double func(QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4352,6 +4872,7 @@ void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*callback)(vo
 ///
 /// @param self QKeySequenceEdit*
 /// @param callback void func(QKeySequenceEdit* self, const char* objectName)
+///
 void q_keysequenceedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#dtor.QKeySequenceEdit)
@@ -4359,6 +4880,7 @@ void q_keysequenceedit_on_object_name_changed(void* self, void (*callback)(void*
 /// Delete this object from C++ memory.
 ///
 /// @param self QKeySequenceEdit*
+///
 void q_keysequenceedit_delete(void* self);
 
 #endif

@@ -11,36 +11,43 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html)
 
 /// q_concatenatetablesproxymodel_new constructs a new QConcatenateTablesProxyModel object.
 ///
 QConcatenateTablesProxyModel* q_concatenatetablesproxymodel_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html)
+
 /// q_concatenatetablesproxymodel_new2 constructs a new QConcatenateTablesProxyModel object.
 ///
 /// @param parent QObject*
+///
 QConcatenateTablesProxyModel* q_concatenatetablesproxymodel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 const QMetaObject* q_concatenatetablesproxymodel_meta_object(void* self);
 
 /// @param self QConcatenateTablesProxyModel*
 /// @param param1 const char*
+///
 void* q_concatenatetablesproxymodel_metacast(void* self, const char* param1);
 
 /// @param self QConcatenateTablesProxyModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_concatenatetablesproxymodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func(QConcatenateTablesProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*callback)(v
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_concatenatetablesproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,35 +64,41 @@ int32_t q_concatenatetablesproxymodel_qbase_metacall(void* self, int32_t param1,
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_concatenatetablesproxymodel_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#sourceModels)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 libqt_list /* of QAbstractItemModel* */ q_concatenatetablesproxymodel_source_models(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#addSourceModel)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param sourceModel QAbstractItemModel*
+///
 void q_concatenatetablesproxymodel_add_source_model(void* self, void* sourceModel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#removeSourceModel)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param sourceModel QAbstractItemModel*
+///
 void q_concatenatetablesproxymodel_remove_source_model(void* self, void* sourceModel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mapFromSource)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param sourceIndex QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_map_from_source(void* self, void* sourceIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mapToSource)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param proxyIndex QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_map_to_source(void* self, void* proxyIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#data)
@@ -92,6 +106,7 @@ QModelIndex* q_concatenatetablesproxymodel_map_to_source(void* self, void* proxy
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* q_concatenatetablesproxymodel_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#data)
@@ -100,6 +115,7 @@ QVariant* q_concatenatetablesproxymodel_data(void* self, void* index, int role);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QVariant* func(QConcatenateTablesProxyModel* self, QModelIndex* index, int role)
+///
 void q_concatenatetablesproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#data)
@@ -109,6 +125,7 @@ void q_concatenatetablesproxymodel_on_data(void* self, QVariant* (*callback)(voi
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* q_concatenatetablesproxymodel_qbase_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
@@ -117,6 +134,7 @@ QVariant* q_concatenatetablesproxymodel_qbase_data(void* self, void* index, int 
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_concatenatetablesproxymodel_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
@@ -125,6 +143,7 @@ bool q_concatenatetablesproxymodel_set_data(void* self, void* index, void* value
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* index, QVariant* value, int role)
+///
 void q_concatenatetablesproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
@@ -135,12 +154,14 @@ void q_concatenatetablesproxymodel_on_set_data(void* self, bool (*callback)(void
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_concatenatetablesproxymodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param proxyIndex QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_item_data(void* self, void* proxyIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
@@ -149,6 +170,7 @@ libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_item_data(void
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(QConcatenateTablesProxyModel* self, QModelIndex* proxyIndex)
+///
 void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
@@ -157,6 +179,7 @@ void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map /* of int 
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param proxyIndex QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_qbase_item_data(void* self, void* proxyIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
@@ -164,6 +187,7 @@ libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_qbase_item_dat
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_concatenatetablesproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
@@ -172,6 +196,7 @@ bool q_concatenatetablesproxymodel_set_item_data(void* self, void* index, libqt_
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
@@ -181,6 +206,7 @@ void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_concatenatetablesproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
@@ -189,6 +215,7 @@ bool q_concatenatetablesproxymodel_qbase_set_item_data(void* self, void* index, 
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_concatenatetablesproxymodel_flags(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
@@ -197,6 +224,7 @@ int32_t q_concatenatetablesproxymodel_flags(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func(QConcatenateTablesProxyModel* self, QModelIndex* index)
+///
 void q_concatenatetablesproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
@@ -207,6 +235,7 @@ void q_concatenatetablesproxymodel_on_flags(void* self, int32_t (*callback)(void
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_concatenatetablesproxymodel_qbase_flags(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
@@ -215,6 +244,7 @@ int32_t q_concatenatetablesproxymodel_qbase_flags(void* self, void* index);
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
@@ -223,6 +253,7 @@ QModelIndex* q_concatenatetablesproxymodel_index(void* self, int row, int column
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
@@ -233,12 +264,14 @@ void q_concatenatetablesproxymodel_on_index(void* self, QModelIndex* (*callback)
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_parent(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
@@ -247,6 +280,7 @@ QModelIndex* q_concatenatetablesproxymodel_parent(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, QModelIndex* index)
+///
 void q_concatenatetablesproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
@@ -255,12 +289,14 @@ void q_concatenatetablesproxymodel_on_parent(void* self, QModelIndex* (*callback
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_qbase_parent(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 int32_t q_concatenatetablesproxymodel_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
@@ -269,6 +305,7 @@ int32_t q_concatenatetablesproxymodel_row_count(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func(QConcatenateTablesProxyModel* self, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
@@ -277,6 +314,7 @@ void q_concatenatetablesproxymodel_on_row_count(void* self, int32_t (*callback)(
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 int32_t q_concatenatetablesproxymodel_qbase_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
@@ -285,6 +323,7 @@ int32_t q_concatenatetablesproxymodel_qbase_row_count(void* self, void* parent);
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_concatenatetablesproxymodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
@@ -293,6 +332,7 @@ QVariant* q_concatenatetablesproxymodel_header_data(void* self, int section, int
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QVariant* func(QConcatenateTablesProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
@@ -303,12 +343,14 @@ void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callba
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_concatenatetablesproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 int32_t q_concatenatetablesproxymodel_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
@@ -317,6 +359,7 @@ int32_t q_concatenatetablesproxymodel_column_count(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func(QConcatenateTablesProxyModel* self, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
@@ -325,6 +368,7 @@ void q_concatenatetablesproxymodel_on_column_count(void* self, int32_t (*callbac
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 int32_t q_concatenatetablesproxymodel_qbase_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
@@ -332,6 +376,7 @@ int32_t q_concatenatetablesproxymodel_qbase_column_count(void* self, void* paren
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 const char** q_concatenatetablesproxymodel_mime_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
@@ -340,6 +385,7 @@ const char** q_concatenatetablesproxymodel_mime_types(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback const char** func()
+///
 void q_concatenatetablesproxymodel_on_mime_types(void* self, const char** (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
@@ -347,12 +393,14 @@ void q_concatenatetablesproxymodel_on_mime_types(void* self, const char** (*call
 /// Base class method implementation
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 const char** q_concatenatetablesproxymodel_qbase_mime_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
@@ -361,6 +409,7 @@ QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list indexe
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QMimeData* func(QConcatenateTablesProxyModel* self, QModelIndex** indexes)
+///
 void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
@@ -369,6 +418,7 @@ void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callbac
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
@@ -379,6 +429,7 @@ QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list 
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
@@ -387,6 +438,7 @@ bool q_concatenatetablesproxymodel_can_drop_mime_data(void* self, void* data, in
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
@@ -399,6 +451,7 @@ void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*call
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
@@ -409,6 +462,7 @@ bool q_concatenatetablesproxymodel_qbase_can_drop_mime_data(void* self, void* da
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
@@ -417,6 +471,7 @@ bool q_concatenatetablesproxymodel_drop_mime_data(void* self, void* data, int32_
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
@@ -429,12 +484,14 @@ void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*callback
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 QSize* q_concatenatetablesproxymodel_span(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
@@ -443,6 +500,7 @@ QSize* q_concatenatetablesproxymodel_span(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QSize* func(QConcatenateTablesProxyModel* self, QModelIndex* index)
+///
 void q_concatenatetablesproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
@@ -451,6 +509,7 @@ void q_concatenatetablesproxymodel_on_span(void* self, QSize* (*callback)(void*,
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 QSize* q_concatenatetablesproxymodel_qbase_span(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -459,6 +518,7 @@ QSize* q_concatenatetablesproxymodel_qbase_span(void* self, void* index);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_concatenatetablesproxymodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -468,6 +528,7 @@ const char* q_concatenatetablesproxymodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_concatenatetablesproxymodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractItemModel
@@ -477,6 +538,7 @@ const char* q_concatenatetablesproxymodel_tr3(const char* s, const char* c, int 
 /// @param self QConcatenateTablesProxyModel*
 /// @param row int
 /// @param column int
+///
 bool q_concatenatetablesproxymodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -485,6 +547,7 @@ bool q_concatenatetablesproxymodel_has_index(void* self, int row, int column);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param row int
+///
 bool q_concatenatetablesproxymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -493,6 +556,7 @@ bool q_concatenatetablesproxymodel_insert_row(void* self, int row);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param column int
+///
 bool q_concatenatetablesproxymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -501,6 +565,7 @@ bool q_concatenatetablesproxymodel_insert_column(void* self, int column);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param row int
+///
 bool q_concatenatetablesproxymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -509,6 +574,7 @@ bool q_concatenatetablesproxymodel_remove_row(void* self, int row);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param column int
+///
 bool q_concatenatetablesproxymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -520,6 +586,7 @@ bool q_concatenatetablesproxymodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_concatenatetablesproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -531,6 +598,7 @@ bool q_concatenatetablesproxymodel_move_row(void* self, void* sourceParent, int 
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_concatenatetablesproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -539,6 +607,7 @@ bool q_concatenatetablesproxymodel_move_column(void* self, void* sourceParent, i
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 bool q_concatenatetablesproxymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -548,6 +617,7 @@ bool q_concatenatetablesproxymodel_check_index(void* self, void* index);
 /// @param self QConcatenateTablesProxyModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void q_concatenatetablesproxymodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -556,6 +626,7 @@ void q_concatenatetablesproxymodel_data_changed(void* self, void* topLeft, void*
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void q_concatenatetablesproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -566,6 +637,7 @@ void q_concatenatetablesproxymodel_on_data_changed(void* self, void (*callback)(
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -574,6 +646,7 @@ void q_concatenatetablesproxymodel_header_data_changed(void* self, int32_t orien
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -581,6 +654,7 @@ void q_concatenatetablesproxymodel_on_header_data_changed(void* self, void (*cal
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -589,6 +663,7 @@ void q_concatenatetablesproxymodel_layout_changed(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self)
+///
 void q_concatenatetablesproxymodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -596,6 +671,7 @@ void q_concatenatetablesproxymodel_on_layout_changed(void* self, void (*callback
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -604,6 +680,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self)
+///
 void q_concatenatetablesproxymodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -614,6 +691,7 @@ void q_concatenatetablesproxymodel_on_layout_about_to_be_changed(void* self, voi
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -623,6 +701,7 @@ bool q_concatenatetablesproxymodel_has_index3(void* self, int row, int column, v
 /// @param self QConcatenateTablesProxyModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -632,6 +711,7 @@ bool q_concatenatetablesproxymodel_insert_row2(void* self, int row, void* parent
 /// @param self QConcatenateTablesProxyModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -641,6 +721,7 @@ bool q_concatenatetablesproxymodel_insert_column2(void* self, int column, void* 
 /// @param self QConcatenateTablesProxyModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -650,6 +731,7 @@ bool q_concatenatetablesproxymodel_remove_row2(void* self, int row, void* parent
 /// @param self QConcatenateTablesProxyModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -659,6 +741,7 @@ bool q_concatenatetablesproxymodel_remove_column2(void* self, int column, void* 
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool q_concatenatetablesproxymodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -669,6 +752,7 @@ bool q_concatenatetablesproxymodel_check_index2(void* self, void* index, int32_t
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -677,6 +761,7 @@ void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -685,6 +770,7 @@ void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*callback)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -693,6 +779,7 @@ void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list parent
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents)
+///
 void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -702,6 +789,7 @@ void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callbac
 /// @param self QConcatenateTablesProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -710,6 +798,7 @@ void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parent
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -718,6 +807,7 @@ void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callbac
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -726,6 +816,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents)
+///
 void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -735,6 +826,7 @@ void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, vo
 /// @param self QConcatenateTablesProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -743,6 +835,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -752,6 +845,7 @@ void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, vo
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 const char* q_concatenatetablesproxymodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -760,6 +854,7 @@ const char* q_concatenatetablesproxymodel_object_name(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param name char*
+///
 void q_concatenatetablesproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -767,6 +862,7 @@ void q_concatenatetablesproxymodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 bool q_concatenatetablesproxymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -774,6 +870,7 @@ bool q_concatenatetablesproxymodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 bool q_concatenatetablesproxymodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -781,6 +878,7 @@ bool q_concatenatetablesproxymodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 bool q_concatenatetablesproxymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -788,6 +886,7 @@ bool q_concatenatetablesproxymodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 bool q_concatenatetablesproxymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -796,6 +895,7 @@ bool q_concatenatetablesproxymodel_signals_blocked(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param b bool
+///
 bool q_concatenatetablesproxymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -803,6 +903,7 @@ bool q_concatenatetablesproxymodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 QThread* q_concatenatetablesproxymodel_thread(void* self);
 
 /// Inherited from QObject
@@ -811,6 +912,7 @@ QThread* q_concatenatetablesproxymodel_thread(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param thread QThread*
+///
 bool q_concatenatetablesproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -819,6 +921,7 @@ bool q_concatenatetablesproxymodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param interval int
+///
 int32_t q_concatenatetablesproxymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -827,6 +930,7 @@ int32_t q_concatenatetablesproxymodel_start_timer(void* self, int interval);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param id int
+///
 void q_concatenatetablesproxymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -835,6 +939,7 @@ void q_concatenatetablesproxymodel_kill_timer(void* self, int id);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param id enum Qt__TimerId
+///
 void q_concatenatetablesproxymodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -842,6 +947,7 @@ void q_concatenatetablesproxymodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 libqt_list /* of QObject* */ q_concatenatetablesproxymodel_children(void* self);
 
 /// Inherited from QObject
@@ -850,6 +956,7 @@ libqt_list /* of QObject* */ q_concatenatetablesproxymodel_children(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QObject*
+///
 void q_concatenatetablesproxymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -858,6 +965,7 @@ void q_concatenatetablesproxymodel_set_parent(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param filterObj QObject*
+///
 void q_concatenatetablesproxymodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -866,6 +974,7 @@ void q_concatenatetablesproxymodel_install_event_filter(void* self, void* filter
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param obj QObject*
+///
 void q_concatenatetablesproxymodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -876,6 +985,7 @@ void q_concatenatetablesproxymodel_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -886,6 +996,7 @@ QMetaObject__Connection* q_concatenatetablesproxymodel_connect(void* sender, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -896,6 +1007,7 @@ QMetaObject__Connection* q_concatenatetablesproxymodel_connect2(void* self, void
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_concatenatetablesproxymodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -903,6 +1015,7 @@ bool q_concatenatetablesproxymodel_disconnect(void* sender, void* signal, void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_concatenatetablesproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -910,6 +1023,7 @@ bool q_concatenatetablesproxymodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -917,6 +1031,7 @@ void q_concatenatetablesproxymodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -926,6 +1041,7 @@ void q_concatenatetablesproxymodel_dump_object_info(void* self);
 /// @param self QConcatenateTablesProxyModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_concatenatetablesproxymodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -934,6 +1050,7 @@ bool q_concatenatetablesproxymodel_set_property(void* self, const char* name, vo
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param name const char*
+///
 QVariant* q_concatenatetablesproxymodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -943,6 +1060,7 @@ QVariant* q_concatenatetablesproxymodel_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 const char** q_concatenatetablesproxymodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -950,6 +1068,7 @@ const char** q_concatenatetablesproxymodel_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 QBindingStorage* q_concatenatetablesproxymodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -957,6 +1076,7 @@ QBindingStorage* q_concatenatetablesproxymodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 const QBindingStorage* q_concatenatetablesproxymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -964,6 +1084,7 @@ const QBindingStorage* q_concatenatetablesproxymodel_binding_storage2(void* self
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -972,6 +1093,7 @@ void q_concatenatetablesproxymodel_destroyed(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self)
+///
 void q_concatenatetablesproxymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -980,6 +1102,7 @@ void q_concatenatetablesproxymodel_on_destroyed(void* self, void (*callback)(voi
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param classname const char*
+///
 bool q_concatenatetablesproxymodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -987,6 +1110,7 @@ bool q_concatenatetablesproxymodel_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -996,6 +1120,7 @@ void q_concatenatetablesproxymodel_delete_later(void* self);
 /// @param self QConcatenateTablesProxyModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_concatenatetablesproxymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1005,6 +1130,7 @@ bool q_concatenatetablesproxymodel_move_to_thread2(void* self, void* thread, voi
 /// @param self QConcatenateTablesProxyModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_concatenatetablesproxymodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1016,6 +1142,7 @@ int32_t q_concatenatetablesproxymodel_start_timer22(void* self, int interval, in
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1027,6 +1154,7 @@ QMetaObject__Connection* q_concatenatetablesproxymodel_connect5(void* sender, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1035,6 +1163,7 @@ QMetaObject__Connection* q_concatenatetablesproxymodel_connect4(void* self, void
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param param1 QObject*
+///
 void q_concatenatetablesproxymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1043,6 +1172,7 @@ void q_concatenatetablesproxymodel_destroyed1(void* self, void* param1);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QObject* param1)
+///
 void q_concatenatetablesproxymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1055,6 +1185,7 @@ void q_concatenatetablesproxymodel_on_destroyed1(void* self, void (*callback)(vo
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -1067,6 +1198,7 @@ QModelIndex* q_concatenatetablesproxymodel_sibling(void* self, int row, int colu
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -1077,6 +1209,7 @@ QModelIndex* q_concatenatetablesproxymodel_qbase_sibling(void* self, int row, in
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* idx)
+///
 void q_concatenatetablesproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1087,6 +1220,7 @@ void q_concatenatetablesproxymodel_on_sibling(void* self, QModelIndex* (*callbac
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1097,6 +1231,7 @@ bool q_concatenatetablesproxymodel_has_children(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1107,6 +1242,7 @@ bool q_concatenatetablesproxymodel_qbase_has_children(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1120,6 +1256,7 @@ void q_concatenatetablesproxymodel_on_has_children(void* self, bool (*callback)(
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1133,6 +1270,7 @@ bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int3
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_concatenatetablesproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1143,6 +1281,7 @@ bool q_concatenatetablesproxymodel_qbase_set_header_data(void* self, int section
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1153,6 +1292,7 @@ void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*callbac
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 bool q_concatenatetablesproxymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1163,6 +1303,7 @@ bool q_concatenatetablesproxymodel_clear_item_data(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1173,6 +1314,7 @@ bool q_concatenatetablesproxymodel_qbase_clear_item_data(void* self, void* index
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* index)
+///
 void q_concatenatetablesproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1184,6 +1326,7 @@ void q_concatenatetablesproxymodel_on_clear_item_data(void* self, bool (*callbac
 /// @param self QConcatenateTablesProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_concatenatetablesproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1195,6 +1338,7 @@ int32_t q_concatenatetablesproxymodel_supported_drop_actions(void* self);
 /// @param self QConcatenateTablesProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_concatenatetablesproxymodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1205,6 +1349,7 @@ int32_t q_concatenatetablesproxymodel_qbase_supported_drop_actions(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func()
+///
 void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1216,6 +1361,7 @@ void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int32_t
 /// @param self QConcatenateTablesProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_concatenatetablesproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1227,6 +1373,7 @@ int32_t q_concatenatetablesproxymodel_supported_drag_actions(void* self);
 /// @param self QConcatenateTablesProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_concatenatetablesproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1237,6 +1384,7 @@ int32_t q_concatenatetablesproxymodel_qbase_supported_drag_actions(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func()
+///
 void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1249,6 +1397,7 @@ void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int32_t
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1261,6 +1410,7 @@ bool q_concatenatetablesproxymodel_insert_rows(void* self, int row, int count, v
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1271,6 +1421,7 @@ bool q_concatenatetablesproxymodel_qbase_insert_rows(void* self, int row, int co
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, int row, int count, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1283,6 +1434,7 @@ void q_concatenatetablesproxymodel_on_insert_rows(void* self, bool (*callback)(v
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1295,6 +1447,7 @@ bool q_concatenatetablesproxymodel_insert_columns(void* self, int column, int co
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1305,6 +1458,7 @@ bool q_concatenatetablesproxymodel_qbase_insert_columns(void* self, int column, 
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, int column, int count, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1317,6 +1471,7 @@ void q_concatenatetablesproxymodel_on_insert_columns(void* self, bool (*callback
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1329,6 +1484,7 @@ bool q_concatenatetablesproxymodel_remove_rows(void* self, int row, int count, v
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1339,6 +1495,7 @@ bool q_concatenatetablesproxymodel_qbase_remove_rows(void* self, int row, int co
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, int row, int count, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1351,6 +1508,7 @@ void q_concatenatetablesproxymodel_on_remove_rows(void* self, bool (*callback)(v
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1363,6 +1521,7 @@ bool q_concatenatetablesproxymodel_remove_columns(void* self, int column, int co
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1373,6 +1532,7 @@ bool q_concatenatetablesproxymodel_qbase_remove_columns(void* self, int column, 
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, int column, int count, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1387,6 +1547,7 @@ void q_concatenatetablesproxymodel_on_remove_columns(void* self, bool (*callback
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_concatenatetablesproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1401,6 +1562,7 @@ bool q_concatenatetablesproxymodel_move_rows(void* self, void* sourceParent, int
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_concatenatetablesproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1411,6 +1573,7 @@ bool q_concatenatetablesproxymodel_qbase_move_rows(void* self, void* sourceParen
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_concatenatetablesproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1425,6 +1588,7 @@ void q_concatenatetablesproxymodel_on_move_rows(void* self, bool (*callback)(voi
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_concatenatetablesproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1439,6 +1603,7 @@ bool q_concatenatetablesproxymodel_move_columns(void* self, void* sourceParent, 
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_concatenatetablesproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1449,6 +1614,7 @@ bool q_concatenatetablesproxymodel_qbase_move_columns(void* self, void* sourcePa
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_concatenatetablesproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1459,6 +1625,7 @@ void q_concatenatetablesproxymodel_on_move_columns(void* self, bool (*callback)(
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 void q_concatenatetablesproxymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1469,6 +1636,7 @@ void q_concatenatetablesproxymodel_fetch_more(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 void q_concatenatetablesproxymodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1479,6 +1647,7 @@ void q_concatenatetablesproxymodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1489,6 +1658,7 @@ void q_concatenatetablesproxymodel_on_fetch_more(void* self, void (*callback)(vo
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1499,6 +1669,7 @@ bool q_concatenatetablesproxymodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
+///
 bool q_concatenatetablesproxymodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1509,6 +1680,7 @@ bool q_concatenatetablesproxymodel_qbase_can_fetch_more(void* self, void* parent
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* parent)
+///
 void q_concatenatetablesproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1520,6 +1692,7 @@ void q_concatenatetablesproxymodel_on_can_fetch_more(void* self, bool (*callback
 /// @param self QConcatenateTablesProxyModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_concatenatetablesproxymodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1531,6 +1704,7 @@ void q_concatenatetablesproxymodel_sort(void* self, int column, int32_t order);
 /// @param self QConcatenateTablesProxyModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_concatenatetablesproxymodel_qbase_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1541,6 +1715,7 @@ void q_concatenatetablesproxymodel_qbase_sort(void* self, int column, int32_t or
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, int column, enum Qt__SortOrder order)
+///
 void q_concatenatetablesproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1551,6 +1726,7 @@ void q_concatenatetablesproxymodel_on_sort(void* self, void (*callback)(void*, i
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1561,6 +1737,7 @@ QModelIndex* q_concatenatetablesproxymodel_buddy(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_concatenatetablesproxymodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1571,6 +1748,7 @@ QModelIndex* q_concatenatetablesproxymodel_qbase_buddy(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, QModelIndex* index)
+///
 void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1585,6 +1763,7 @@ void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*callback)
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1599,6 +1778,7 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_match(void* self,
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1609,6 +1789,7 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_match(void*
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex** func(QConcatenateTablesProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void q_concatenatetablesproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1618,6 +1799,7 @@ void q_concatenatetablesproxymodel_on_match(void* self, QModelIndex** (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 libqt_map /* of int to char* */ q_concatenatetablesproxymodel_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1627,6 +1809,7 @@ libqt_map /* of int to char* */ q_concatenatetablesproxymodel_role_names(void* s
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 libqt_map /* of int to char* */ q_concatenatetablesproxymodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1637,6 +1820,7 @@ libqt_map /* of int to char* */ q_concatenatetablesproxymodel_qbase_role_names(v
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1648,6 +1832,7 @@ void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_concatenatetablesproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1659,6 +1844,7 @@ void q_concatenatetablesproxymodel_multi_data(void* self, void* index, void* rol
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_concatenatetablesproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1669,6 +1855,7 @@ void q_concatenatetablesproxymodel_qbase_multi_data(void* self, void* index, voi
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void q_concatenatetablesproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1678,6 +1865,7 @@ void q_concatenatetablesproxymodel_on_multi_data(void* self, void (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 bool q_concatenatetablesproxymodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1687,6 +1875,7 @@ bool q_concatenatetablesproxymodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 bool q_concatenatetablesproxymodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1697,6 +1886,7 @@ bool q_concatenatetablesproxymodel_qbase_submit(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func()
+///
 void q_concatenatetablesproxymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1706,6 +1896,7 @@ void q_concatenatetablesproxymodel_on_submit(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1715,6 +1906,7 @@ void q_concatenatetablesproxymodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1725,6 +1917,7 @@ void q_concatenatetablesproxymodel_qbase_revert(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1734,6 +1927,7 @@ void q_concatenatetablesproxymodel_on_revert(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1743,6 +1937,7 @@ void q_concatenatetablesproxymodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1753,6 +1948,7 @@ void q_concatenatetablesproxymodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1763,6 +1959,7 @@ void q_concatenatetablesproxymodel_on_reset_internal_data(void* self, void (*cal
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QEvent*
+///
 bool q_concatenatetablesproxymodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1773,6 +1970,7 @@ bool q_concatenatetablesproxymodel_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QEvent*
+///
 bool q_concatenatetablesproxymodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1783,6 +1981,7 @@ bool q_concatenatetablesproxymodel_qbase_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QEvent* event)
+///
 void q_concatenatetablesproxymodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1794,6 +1993,7 @@ void q_concatenatetablesproxymodel_on_event(void* self, bool (*callback)(void*, 
 /// @param self QConcatenateTablesProxyModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_concatenatetablesproxymodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1805,6 +2005,7 @@ bool q_concatenatetablesproxymodel_event_filter(void* self, void* watched, void*
 /// @param self QConcatenateTablesProxyModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_concatenatetablesproxymodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1815,6 +2016,7 @@ bool q_concatenatetablesproxymodel_qbase_event_filter(void* self, void* watched,
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QObject* watched, QEvent* event)
+///
 void q_concatenatetablesproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1825,6 +2027,7 @@ void q_concatenatetablesproxymodel_on_event_filter(void* self, bool (*callback)(
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QTimerEvent*
+///
 void q_concatenatetablesproxymodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1835,6 +2038,7 @@ void q_concatenatetablesproxymodel_timer_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QTimerEvent*
+///
 void q_concatenatetablesproxymodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1845,6 +2049,7 @@ void q_concatenatetablesproxymodel_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QTimerEvent* event)
+///
 void q_concatenatetablesproxymodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1855,6 +2060,7 @@ void q_concatenatetablesproxymodel_on_timer_event(void* self, void (*callback)(v
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QChildEvent*
+///
 void q_concatenatetablesproxymodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1865,6 +2071,7 @@ void q_concatenatetablesproxymodel_child_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QChildEvent*
+///
 void q_concatenatetablesproxymodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1875,6 +2082,7 @@ void q_concatenatetablesproxymodel_qbase_child_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QChildEvent* event)
+///
 void q_concatenatetablesproxymodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1885,6 +2093,7 @@ void q_concatenatetablesproxymodel_on_child_event(void* self, void (*callback)(v
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QEvent*
+///
 void q_concatenatetablesproxymodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1895,6 +2104,7 @@ void q_concatenatetablesproxymodel_custom_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QEvent*
+///
 void q_concatenatetablesproxymodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1905,6 +2115,7 @@ void q_concatenatetablesproxymodel_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QEvent* event)
+///
 void q_concatenatetablesproxymodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1915,6 +2126,7 @@ void q_concatenatetablesproxymodel_on_custom_event(void* self, void (*callback)(
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
+///
 void q_concatenatetablesproxymodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1925,6 +2137,7 @@ void q_concatenatetablesproxymodel_connect_notify(void* self, void* signal);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
+///
 void q_concatenatetablesproxymodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1935,6 +2148,7 @@ void q_concatenatetablesproxymodel_qbase_connect_notify(void* self, void* signal
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QMetaMethod* signal)
+///
 void q_concatenatetablesproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1945,6 +2159,7 @@ void q_concatenatetablesproxymodel_on_connect_notify(void* self, void (*callback
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
+///
 void q_concatenatetablesproxymodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1955,6 +2170,7 @@ void q_concatenatetablesproxymodel_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
+///
 void q_concatenatetablesproxymodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1965,6 +2181,7 @@ void q_concatenatetablesproxymodel_qbase_disconnect_notify(void* self, void* sig
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QMetaMethod* signal)
+///
 void q_concatenatetablesproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1976,6 +2193,7 @@ void q_concatenatetablesproxymodel_on_disconnect_notify(void* self, void (*callb
 /// @param self QConcatenateTablesProxyModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_concatenatetablesproxymodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1987,6 +2205,7 @@ QModelIndex* q_concatenatetablesproxymodel_create_index(void* self, int row, int
 /// @param self QConcatenateTablesProxyModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_concatenatetablesproxymodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1997,6 +2216,7 @@ QModelIndex* q_concatenatetablesproxymodel_qbase_create_index(void* self, int ro
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, int row, int column)
+///
 void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2008,6 +2228,7 @@ void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*ca
 /// @param self QConcatenateTablesProxyModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2019,6 +2240,7 @@ void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, v
 /// @param self QConcatenateTablesProxyModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2029,6 +2251,7 @@ void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list inde
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2042,6 +2265,7 @@ void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(v
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_concatenatetablesproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2055,6 +2279,7 @@ bool q_concatenatetablesproxymodel_decode_data(void* self, int row, int column, 
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_concatenatetablesproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2065,6 +2290,7 @@ bool q_concatenatetablesproxymodel_qbase_decode_data(void* self, int row, int co
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void q_concatenatetablesproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2077,6 +2303,7 @@ void q_concatenatetablesproxymodel_on_decode_data(void* self, bool (*callback)(v
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2089,6 +2316,7 @@ void q_concatenatetablesproxymodel_begin_insert_rows(void* self, void* parent, i
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2099,6 +2327,7 @@ void q_concatenatetablesproxymodel_qbase_begin_insert_rows(void* self, void* par
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2108,6 +2337,7 @@ void q_concatenatetablesproxymodel_on_begin_insert_rows(void* self, void (*callb
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2117,6 +2347,7 @@ void q_concatenatetablesproxymodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2127,6 +2358,7 @@ void q_concatenatetablesproxymodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2139,6 +2371,7 @@ void q_concatenatetablesproxymodel_on_end_insert_rows(void* self, void (*callbac
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2151,6 +2384,7 @@ void q_concatenatetablesproxymodel_begin_remove_rows(void* self, void* parent, i
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2161,6 +2395,7 @@ void q_concatenatetablesproxymodel_qbase_begin_remove_rows(void* self, void* par
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2170,6 +2405,7 @@ void q_concatenatetablesproxymodel_on_begin_remove_rows(void* self, void (*callb
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2179,6 +2415,7 @@ void q_concatenatetablesproxymodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2189,6 +2426,7 @@ void q_concatenatetablesproxymodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2203,6 +2441,7 @@ void q_concatenatetablesproxymodel_on_end_remove_rows(void* self, void (*callbac
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_concatenatetablesproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2217,6 +2456,7 @@ bool q_concatenatetablesproxymodel_begin_move_rows(void* self, void* sourceParen
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_concatenatetablesproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2227,6 +2467,7 @@ bool q_concatenatetablesproxymodel_qbase_begin_move_rows(void* self, void* sourc
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void q_concatenatetablesproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2236,6 +2477,7 @@ void q_concatenatetablesproxymodel_on_begin_move_rows(void* self, bool (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2245,6 +2487,7 @@ void q_concatenatetablesproxymodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2255,6 +2498,7 @@ void q_concatenatetablesproxymodel_qbase_end_move_rows(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2267,6 +2511,7 @@ void q_concatenatetablesproxymodel_on_end_move_rows(void* self, void (*callback)
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2279,6 +2524,7 @@ void q_concatenatetablesproxymodel_begin_insert_columns(void* self, void* parent
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2289,6 +2535,7 @@ void q_concatenatetablesproxymodel_qbase_begin_insert_columns(void* self, void* 
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2298,6 +2545,7 @@ void q_concatenatetablesproxymodel_on_begin_insert_columns(void* self, void (*ca
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2307,6 +2555,7 @@ void q_concatenatetablesproxymodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2317,6 +2566,7 @@ void q_concatenatetablesproxymodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2329,6 +2579,7 @@ void q_concatenatetablesproxymodel_on_end_insert_columns(void* self, void (*call
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2341,6 +2592,7 @@ void q_concatenatetablesproxymodel_begin_remove_columns(void* self, void* parent
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_concatenatetablesproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2351,6 +2603,7 @@ void q_concatenatetablesproxymodel_qbase_begin_remove_columns(void* self, void* 
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2360,6 +2613,7 @@ void q_concatenatetablesproxymodel_on_begin_remove_columns(void* self, void (*ca
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2369,6 +2623,7 @@ void q_concatenatetablesproxymodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2379,6 +2634,7 @@ void q_concatenatetablesproxymodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2393,6 +2649,7 @@ void q_concatenatetablesproxymodel_on_end_remove_columns(void* self, void (*call
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_concatenatetablesproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2407,6 +2664,7 @@ bool q_concatenatetablesproxymodel_begin_move_columns(void* self, void* sourcePa
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_concatenatetablesproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2417,6 +2675,7 @@ bool q_concatenatetablesproxymodel_qbase_begin_move_columns(void* self, void* so
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_concatenatetablesproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2426,6 +2685,7 @@ void q_concatenatetablesproxymodel_on_begin_move_columns(void* self, bool (*call
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2435,6 +2695,7 @@ void q_concatenatetablesproxymodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2445,6 +2706,7 @@ void q_concatenatetablesproxymodel_qbase_end_move_columns(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2454,6 +2716,7 @@ void q_concatenatetablesproxymodel_on_end_move_columns(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2463,6 +2726,7 @@ void q_concatenatetablesproxymodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2473,6 +2737,7 @@ void q_concatenatetablesproxymodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2482,6 +2747,7 @@ void q_concatenatetablesproxymodel_on_begin_reset_model(void* self, void (*callb
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2491,6 +2757,7 @@ void q_concatenatetablesproxymodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2501,6 +2768,7 @@ void q_concatenatetablesproxymodel_qbase_end_reset_model(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func()
+///
 void q_concatenatetablesproxymodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2512,6 +2780,7 @@ void q_concatenatetablesproxymodel_on_end_reset_model(void* self, void (*callbac
 /// @param self QConcatenateTablesProxyModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_concatenatetablesproxymodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2523,6 +2792,7 @@ void q_concatenatetablesproxymodel_change_persistent_index(void* self, void* fro
 /// @param self QConcatenateTablesProxyModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_concatenatetablesproxymodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2533,6 +2803,7 @@ void q_concatenatetablesproxymodel_qbase_change_persistent_index(void* self, voi
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* from, QModelIndex* to)
+///
 void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2544,6 +2815,7 @@ void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (
 /// @param self QConcatenateTablesProxyModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2555,6 +2827,7 @@ void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libq
 /// @param self QConcatenateTablesProxyModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2565,6 +2838,7 @@ void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex** from, QModelIndex** to)
+///
 void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -2574,6 +2848,7 @@ void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2583,6 +2858,7 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_persistent_index_
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2593,6 +2869,7 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_persistent_
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex** func()
+///
 void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -2602,6 +2879,7 @@ void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, QModelIn
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 QObject* q_concatenatetablesproxymodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2611,6 +2889,7 @@ QObject* q_concatenatetablesproxymodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 QObject* q_concatenatetablesproxymodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2621,6 +2900,7 @@ QObject* q_concatenatetablesproxymodel_qbase_sender(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QObject* func()
+///
 void q_concatenatetablesproxymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2630,6 +2910,7 @@ void q_concatenatetablesproxymodel_on_sender(void* self, QObject* (*callback)())
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 int32_t q_concatenatetablesproxymodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2639,6 +2920,7 @@ int32_t q_concatenatetablesproxymodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 int32_t q_concatenatetablesproxymodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2649,6 +2931,7 @@ int32_t q_concatenatetablesproxymodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func()
+///
 void q_concatenatetablesproxymodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2659,6 +2942,7 @@ void q_concatenatetablesproxymodel_on_sender_signal_index(void* self, int32_t (*
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal const char*
+///
 int32_t q_concatenatetablesproxymodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2669,6 +2953,7 @@ int32_t q_concatenatetablesproxymodel_receivers(void* self, const char* signal);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal const char*
+///
 int32_t q_concatenatetablesproxymodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2679,6 +2964,7 @@ int32_t q_concatenatetablesproxymodel_qbase_receivers(void* self, const char* si
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback int32_t func(QConcatenateTablesProxyModel* self, const char* signal)
+///
 void q_concatenatetablesproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2689,6 +2975,7 @@ void q_concatenatetablesproxymodel_on_receivers(void* self, int32_t (*callback)(
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
+///
 bool q_concatenatetablesproxymodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2699,6 +2986,7 @@ bool q_concatenatetablesproxymodel_is_signal_connected(void* self, void* signal)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
+///
 bool q_concatenatetablesproxymodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2709,6 +2997,7 @@ bool q_concatenatetablesproxymodel_qbase_is_signal_connected(void* self, void* s
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback bool func(QConcatenateTablesProxyModel* self, QMetaMethod* signal)
+///
 void q_concatenatetablesproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2719,6 +3008,7 @@ void q_concatenatetablesproxymodel_on_is_signal_connected(void* self, bool (*cal
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2729,6 +3019,7 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2739,6 +3030,7 @@ void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*callback)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2749,6 +3041,7 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void 
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2759,6 +3052,7 @@ void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*callback)(
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2769,6 +3063,7 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, v
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2779,6 +3074,7 @@ void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*callba
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2789,6 +3085,7 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, vo
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last)
+///
 void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2799,6 +3096,7 @@ void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*callbac
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self)
+///
 void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2809,6 +3107,7 @@ void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self)
+///
 void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2819,6 +3118,7 @@ void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*callback)(v
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2829,6 +3129,7 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2839,6 +3140,7 @@ void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*callback)(vo
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2849,6 +3151,7 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2859,6 +3162,7 @@ void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*callback)
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback void func(QConcatenateTablesProxyModel* self, const char* objectName)
+///
 void q_concatenatetablesproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dtor.QConcatenateTablesProxyModel)
@@ -2866,6 +3170,7 @@ void q_concatenatetablesproxymodel_on_object_name_changed(void* self, void (*cal
 /// Delete this object from C++ memory.
 ///
 /// @param self QConcatenateTablesProxyModel*
+///
 void q_concatenatetablesproxymodel_delete(void* self);
 
 #endif

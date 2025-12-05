@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kusertimestamp.html
+/// [Upstream resources](https://api.kde.org/kusertimestamp.html)
 
 /// [Upstream resources](https://api.kde.org/kusertimestamp.html#userTimestamp)
 ///
@@ -20,5 +20,6 @@ uint64_t k_usertimestamp_user_timestamp();
 /// [Upstream resources](https://api.kde.org/kusertimestamp.html#updateUserTimestamp)
 ///
 /// @param param1 uint64_t
+///
 void k_usertimestamp_update_user_timestamp(uint64_t param1);
 #endif

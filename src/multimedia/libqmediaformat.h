@@ -11,32 +11,40 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qmediaformat.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html)
 
 /// q_mediaformat_new constructs a new QMediaFormat object.
 ///
 QMediaFormat* q_mediaformat_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html)
+
 /// q_mediaformat_new2 constructs a new QMediaFormat object.
 ///
 /// @param other QMediaFormat*
+///
 QMediaFormat* q_mediaformat_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html)
 
 /// q_mediaformat_new3 constructs a new QMediaFormat object.
 ///
 /// @param format enum QMediaFormat__FileFormat
+///
 QMediaFormat* q_mediaformat_new3(int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#operator-eq)
 ///
 /// @param self QMediaFormat*
 /// @param other QMediaFormat*
+///
 void q_mediaformat_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#swap)
 ///
 /// @param self QMediaFormat*
 /// @param other QMediaFormat*
+///
 void q_mediaformat_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#fileFormat)
@@ -44,18 +52,21 @@ void q_mediaformat_swap(void* self, void* other);
 /// @param self QMediaFormat*
 ///
 /// @return enum QMediaFormat__FileFormat
+///
 int32_t q_mediaformat_file_format(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#setFileFormat)
 ///
 /// @param self QMediaFormat*
 /// @param f enum QMediaFormat__FileFormat
+///
 void q_mediaformat_set_file_format(void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#setVideoCodec)
 ///
 /// @param self QMediaFormat*
 /// @param codec enum QMediaFormat__VideoCodec
+///
 void q_mediaformat_set_video_codec(void* self, int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#videoCodec)
@@ -63,12 +74,14 @@ void q_mediaformat_set_video_codec(void* self, int32_t codec);
 /// @param self QMediaFormat*
 ///
 /// @return enum QMediaFormat__VideoCodec
+///
 int32_t q_mediaformat_video_codec(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#setAudioCodec)
 ///
 /// @param self QMediaFormat*
 /// @param codec enum QMediaFormat__AudioCodec
+///
 void q_mediaformat_set_audio_codec(void* self, int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#audioCodec)
@@ -76,17 +89,20 @@ void q_mediaformat_set_audio_codec(void* self, int32_t codec);
 /// @param self QMediaFormat*
 ///
 /// @return enum QMediaFormat__AudioCodec
+///
 int32_t q_mediaformat_audio_codec(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#isSupported)
 ///
 /// @param self QMediaFormat*
 /// @param mode enum QMediaFormat__ConversionMode
+///
 bool q_mediaformat_is_supported(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#mimeType)
 ///
 /// @param self QMediaFormat*
+///
 QMimeType* q_mediaformat_mime_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#supportedFileFormats)
@@ -95,6 +111,7 @@ QMimeType* q_mediaformat_mime_type(void* self);
 /// @param m enum QMediaFormat__ConversionMode
 ///
 /// @return libqt_list of enum QMediaFormat__FileFormat
+///
 libqt_list /* of int32_t */ q_mediaformat_supported_file_formats(void* self, int32_t m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#supportedVideoCodecs)
@@ -103,6 +120,7 @@ libqt_list /* of int32_t */ q_mediaformat_supported_file_formats(void* self, int
 /// @param m enum QMediaFormat__ConversionMode
 ///
 /// @return libqt_list of enum QMediaFormat__VideoCodec
+///
 libqt_list /* of int32_t */ q_mediaformat_supported_video_codecs(void* self, int32_t m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#supportedAudioCodecs)
@@ -111,6 +129,7 @@ libqt_list /* of int32_t */ q_mediaformat_supported_video_codecs(void* self, int
 /// @param m enum QMediaFormat__ConversionMode
 ///
 /// @return libqt_list of enum QMediaFormat__AudioCodec
+///
 libqt_list /* of int32_t */ q_mediaformat_supported_audio_codecs(void* self, int32_t m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#fileFormatName)
@@ -118,6 +137,7 @@ libqt_list /* of int32_t */ q_mediaformat_supported_audio_codecs(void* self, int
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param fileFormat enum QMediaFormat__FileFormat
+///
 const char* q_mediaformat_file_format_name(int32_t fileFormat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#audioCodecName)
@@ -125,6 +145,7 @@ const char* q_mediaformat_file_format_name(int32_t fileFormat);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__AudioCodec
+///
 const char* q_mediaformat_audio_codec_name(int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#videoCodecName)
@@ -132,6 +153,7 @@ const char* q_mediaformat_audio_codec_name(int32_t codec);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__VideoCodec
+///
 const char* q_mediaformat_video_codec_name(int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#fileFormatDescription)
@@ -139,6 +161,7 @@ const char* q_mediaformat_video_codec_name(int32_t codec);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param fileFormat enum QMediaFormat__FileFormat
+///
 const char* q_mediaformat_file_format_description(int32_t fileFormat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#audioCodecDescription)
@@ -146,6 +169,7 @@ const char* q_mediaformat_file_format_description(int32_t fileFormat);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__AudioCodec
+///
 const char* q_mediaformat_audio_codec_description(int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#videoCodecDescription)
@@ -153,24 +177,28 @@ const char* q_mediaformat_audio_codec_description(int32_t codec);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__VideoCodec
+///
 const char* q_mediaformat_video_codec_description(int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#operator-eq-eq)
 ///
 /// @param self QMediaFormat*
 /// @param other QMediaFormat*
+///
 bool q_mediaformat_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#operator-not-eq)
 ///
 /// @param self QMediaFormat*
 /// @param other QMediaFormat*
+///
 bool q_mediaformat_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#resolveForEncoding)
 ///
 /// @param self QMediaFormat*
 /// @param flags enum QMediaFormat__ResolveFlags
+///
 void q_mediaformat_resolve_for_encoding(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#dtor.QMediaFormat)
@@ -178,9 +206,10 @@ void q_mediaformat_resolve_for_encoding(void* self, int32_t flags);
 /// Delete this object from C++ memory.
 ///
 /// @param self QMediaFormat*
+///
 void q_mediaformat_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qmediaformat.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#public-types)
 
 typedef enum {
     QMEDIAFORMAT_FILEFORMAT_UNSPECIFIEDFORMAT = -1,
@@ -200,6 +229,8 @@ typedef enum {
     QMEDIAFORMAT_FILEFORMAT_LASTFILEFORMAT = 12
 } QMediaFormat__FileFormat;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#public-types)
+
 typedef enum {
     QMEDIAFORMAT_AUDIOCODEC_UNSPECIFIED = -1,
     QMEDIAFORMAT_AUDIOCODEC_MP3 = 0,
@@ -215,6 +246,8 @@ typedef enum {
     QMEDIAFORMAT_AUDIOCODEC_ALAC = 10,
     QMEDIAFORMAT_AUDIOCODEC_LASTAUDIOCODEC = 10
 } QMediaFormat__AudioCodec;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#public-types)
 
 typedef enum {
     QMEDIAFORMAT_VIDEOCODEC_UNSPECIFIED = -1,
@@ -232,10 +265,14 @@ typedef enum {
     QMEDIAFORMAT_VIDEOCODEC_LASTVIDEOCODEC = 10
 } QMediaFormat__VideoCodec;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#public-types)
+
 typedef enum {
     QMEDIAFORMAT_CONVERSIONMODE_ENCODE = 0,
     QMEDIAFORMAT_CONVERSIONMODE_DECODE = 1
 } QMediaFormat__ConversionMode;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#public-types)
 
 typedef enum {
     QMEDIAFORMAT_RESOLVEFLAGS_NOFLAGS = 0,

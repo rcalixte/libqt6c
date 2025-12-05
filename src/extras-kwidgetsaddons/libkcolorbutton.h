@@ -11,60 +11,79 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kcolorbutton.html
+/// [Upstream resources](https://api.kde.org/kcolorbutton.html)
 
 /// k_colorbutton_new constructs a new KColorButton object.
 ///
 /// @param parent QWidget*
+///
 KColorButton* k_colorbutton_new(void* parent);
+
+/// [Upstream resources](https://api.kde.org/kcolorbutton.html)
 
 /// k_colorbutton_new2 constructs a new KColorButton object.
 ///
 KColorButton* k_colorbutton_new2();
 
+/// [Upstream resources](https://api.kde.org/kcolorbutton.html)
+
 /// k_colorbutton_new3 constructs a new KColorButton object.
 ///
 /// @param c QColor*
+///
 KColorButton* k_colorbutton_new3(void* c);
+
+/// [Upstream resources](https://api.kde.org/kcolorbutton.html)
 
 /// k_colorbutton_new4 constructs a new KColorButton object.
 ///
 /// @param c QColor*
 /// @param defaultColor QColor*
+///
 KColorButton* k_colorbutton_new4(void* c, void* defaultColor);
+
+/// [Upstream resources](https://api.kde.org/kcolorbutton.html)
 
 /// k_colorbutton_new5 constructs a new KColorButton object.
 ///
 /// @param c QColor*
 /// @param parent QWidget*
+///
 KColorButton* k_colorbutton_new5(void* c, void* parent);
+
+/// [Upstream resources](https://api.kde.org/kcolorbutton.html)
 
 /// k_colorbutton_new6 constructs a new KColorButton object.
 ///
 /// @param c QColor*
 /// @param defaultColor QColor*
 /// @param parent QWidget*
+///
 KColorButton* k_colorbutton_new6(void* c, void* defaultColor, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KColorButton*
+///
 const QMetaObject* k_colorbutton_meta_object(void* self);
 
 /// @param self KColorButton*
 /// @param param1 const char*
+///
 void* k_colorbutton_metacast(void* self, const char* param1);
 
 /// @param self KColorButton*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_colorbutton_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
 /// @param callback int32_t func(KColorButton* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_colorbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -73,6 +92,7 @@ void k_colorbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_colorbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -80,44 +100,52 @@ int32_t k_colorbutton_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_colorbutton_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#color)
 ///
 /// @param self KColorButton*
+///
 QColor* k_colorbutton_color(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#setColor)
 ///
 /// @param self KColorButton*
 /// @param c QColor*
+///
 void k_colorbutton_set_color(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#setAlphaChannelEnabled)
 ///
 /// @param self KColorButton*
 /// @param alpha bool
+///
 void k_colorbutton_set_alpha_channel_enabled(void* self, bool alpha);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#isAlphaChannelEnabled)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_alpha_channel_enabled(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#defaultColor)
 ///
 /// @param self KColorButton*
+///
 QColor* k_colorbutton_default_color(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#setDefaultColor)
 ///
 /// @param self KColorButton*
 /// @param c QColor*
+///
 void k_colorbutton_set_default_color(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#sizeHint)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#sizeHint)
@@ -126,6 +154,7 @@ QSize* k_colorbutton_size_hint(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback QSize* func()
+///
 void k_colorbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#sizeHint)
@@ -133,11 +162,13 @@ void k_colorbutton_on_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_qbase_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#minimumSizeHint)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_minimum_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#minimumSizeHint)
@@ -146,6 +177,7 @@ QSize* k_colorbutton_minimum_size_hint(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback QSize* func()
+///
 void k_colorbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#minimumSizeHint)
@@ -153,24 +185,28 @@ void k_colorbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_qbase_minimum_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#changed)
 ///
 /// @param self KColorButton*
 /// @param newColor QColor*
+///
 void k_colorbutton_changed(void* self, void* newColor);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#changed)
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QColor* newColor)
+///
 void k_colorbutton_on_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#paintEvent)
 ///
 /// @param self KColorButton*
 /// @param pe QPaintEvent*
+///
 void k_colorbutton_paint_event(void* self, void* pe);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#paintEvent)
@@ -179,6 +215,7 @@ void k_colorbutton_paint_event(void* self, void* pe);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QPaintEvent* pe)
+///
 void k_colorbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#paintEvent)
@@ -187,12 +224,14 @@ void k_colorbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param pe QPaintEvent*
+///
 void k_colorbutton_qbase_paint_event(void* self, void* pe);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#dragEnterEvent)
 ///
 /// @param self KColorButton*
 /// @param param1 QDragEnterEvent*
+///
 void k_colorbutton_drag_enter_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#dragEnterEvent)
@@ -201,6 +240,7 @@ void k_colorbutton_drag_enter_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QDragEnterEvent* param1)
+///
 void k_colorbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#dragEnterEvent)
@@ -209,12 +249,14 @@ void k_colorbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self KColorButton*
 /// @param param1 QDragEnterEvent*
+///
 void k_colorbutton_qbase_drag_enter_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#dropEvent)
 ///
 /// @param self KColorButton*
 /// @param param1 QDropEvent*
+///
 void k_colorbutton_drop_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#dropEvent)
@@ -223,6 +265,7 @@ void k_colorbutton_drop_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QDropEvent* param1)
+///
 void k_colorbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#dropEvent)
@@ -231,12 +274,14 @@ void k_colorbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param param1 QDropEvent*
+///
 void k_colorbutton_qbase_drop_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#mousePressEvent)
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
+///
 void k_colorbutton_mouse_press_event(void* self, void* e);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#mousePressEvent)
@@ -245,6 +290,7 @@ void k_colorbutton_mouse_press_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QMouseEvent* e)
+///
 void k_colorbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#mousePressEvent)
@@ -253,12 +299,14 @@ void k_colorbutton_on_mouse_press_event(void* self, void (*callback)(void*, void
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
+///
 void k_colorbutton_qbase_mouse_press_event(void* self, void* e);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#mouseMoveEvent)
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
+///
 void k_colorbutton_mouse_move_event(void* self, void* e);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#mouseMoveEvent)
@@ -267,6 +315,7 @@ void k_colorbutton_mouse_move_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QMouseEvent* e)
+///
 void k_colorbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#mouseMoveEvent)
@@ -275,12 +324,14 @@ void k_colorbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
+///
 void k_colorbutton_qbase_mouse_move_event(void* self, void* e);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#keyPressEvent)
 ///
 /// @param self KColorButton*
 /// @param e QKeyEvent*
+///
 void k_colorbutton_key_press_event(void* self, void* e);
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#keyPressEvent)
@@ -289,6 +340,7 @@ void k_colorbutton_key_press_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QKeyEvent* e)
+///
 void k_colorbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#keyPressEvent)
@@ -297,6 +349,7 @@ void k_colorbutton_on_key_press_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KColorButton*
 /// @param e QKeyEvent*
+///
 void k_colorbutton_qbase_key_press_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -305,6 +358,7 @@ void k_colorbutton_qbase_key_press_event(void* self, void* e);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_colorbutton_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -314,6 +368,7 @@ const char* k_colorbutton_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_colorbutton_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QPushButton
@@ -321,6 +376,7 @@ const char* k_colorbutton_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#autoDefault)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_auto_default(void* self);
 
 /// Inherited from QPushButton
@@ -329,6 +385,7 @@ bool k_colorbutton_auto_default(void* self);
 ///
 /// @param self KColorButton*
 /// @param autoDefault bool
+///
 void k_colorbutton_set_auto_default(void* self, bool autoDefault);
 
 /// Inherited from QPushButton
@@ -336,6 +393,7 @@ void k_colorbutton_set_auto_default(void* self, bool autoDefault);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#isDefault)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_default(void* self);
 
 /// Inherited from QPushButton
@@ -344,6 +402,7 @@ bool k_colorbutton_is_default(void* self);
 ///
 /// @param self KColorButton*
 /// @param defaultVal bool
+///
 void k_colorbutton_set_default(void* self, bool defaultVal);
 
 /// Inherited from QPushButton
@@ -352,6 +411,7 @@ void k_colorbutton_set_default(void* self, bool defaultVal);
 ///
 /// @param self KColorButton*
 /// @param menu QMenu*
+///
 void k_colorbutton_set_menu(void* self, void* menu);
 
 /// Inherited from QPushButton
@@ -359,6 +419,7 @@ void k_colorbutton_set_menu(void* self, void* menu);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#menu)
 ///
 /// @param self KColorButton*
+///
 QMenu* k_colorbutton_menu(void* self);
 
 /// Inherited from QPushButton
@@ -367,6 +428,7 @@ QMenu* k_colorbutton_menu(void* self);
 ///
 /// @param self KColorButton*
 /// @param flat bool
+///
 void k_colorbutton_set_flat(void* self, bool flat);
 
 /// Inherited from QPushButton
@@ -374,6 +436,7 @@ void k_colorbutton_set_flat(void* self, bool flat);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#isFlat)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_flat(void* self);
 
 /// Inherited from QPushButton
@@ -381,6 +444,7 @@ bool k_colorbutton_is_flat(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#showMenu)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_show_menu(void* self);
 
 /// Inherited from QAbstractButton
@@ -389,6 +453,7 @@ void k_colorbutton_show_menu(void* self);
 ///
 /// @param self KColorButton*
 /// @param text const char*
+///
 void k_colorbutton_set_text(void* self, const char* text);
 
 /// Inherited from QAbstractButton
@@ -398,6 +463,7 @@ void k_colorbutton_set_text(void* self, const char* text);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_text(void* self);
 
 /// Inherited from QAbstractButton
@@ -406,6 +472,7 @@ const char* k_colorbutton_text(void* self);
 ///
 /// @param self KColorButton*
 /// @param icon QIcon*
+///
 void k_colorbutton_set_icon(void* self, void* icon);
 
 /// Inherited from QAbstractButton
@@ -413,6 +480,7 @@ void k_colorbutton_set_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#icon)
 ///
 /// @param self KColorButton*
+///
 QIcon* k_colorbutton_icon(void* self);
 
 /// Inherited from QAbstractButton
@@ -420,6 +488,7 @@ QIcon* k_colorbutton_icon(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#iconSize)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_icon_size(void* self);
 
 /// Inherited from QAbstractButton
@@ -428,6 +497,7 @@ QSize* k_colorbutton_icon_size(void* self);
 ///
 /// @param self KColorButton*
 /// @param key QKeySequence*
+///
 void k_colorbutton_set_shortcut(void* self, void* key);
 
 /// Inherited from QAbstractButton
@@ -435,6 +505,7 @@ void k_colorbutton_set_shortcut(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#shortcut)
 ///
 /// @param self KColorButton*
+///
 QKeySequence* k_colorbutton_shortcut(void* self);
 
 /// Inherited from QAbstractButton
@@ -443,6 +514,7 @@ QKeySequence* k_colorbutton_shortcut(void* self);
 ///
 /// @param self KColorButton*
 /// @param checkable bool
+///
 void k_colorbutton_set_checkable(void* self, bool checkable);
 
 /// Inherited from QAbstractButton
@@ -450,6 +522,7 @@ void k_colorbutton_set_checkable(void* self, bool checkable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isCheckable)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_checkable(void* self);
 
 /// Inherited from QAbstractButton
@@ -457,6 +530,7 @@ bool k_colorbutton_is_checkable(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isChecked)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_checked(void* self);
 
 /// Inherited from QAbstractButton
@@ -465,6 +539,7 @@ bool k_colorbutton_is_checked(void* self);
 ///
 /// @param self KColorButton*
 /// @param down bool
+///
 void k_colorbutton_set_down(void* self, bool down);
 
 /// Inherited from QAbstractButton
@@ -472,6 +547,7 @@ void k_colorbutton_set_down(void* self, bool down);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isDown)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_down(void* self);
 
 /// Inherited from QAbstractButton
@@ -480,6 +556,7 @@ bool k_colorbutton_is_down(void* self);
 ///
 /// @param self KColorButton*
 /// @param autoRepeat bool
+///
 void k_colorbutton_set_auto_repeat(void* self, bool autoRepeat);
 
 /// Inherited from QAbstractButton
@@ -487,6 +564,7 @@ void k_colorbutton_set_auto_repeat(void* self, bool autoRepeat);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeat)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_auto_repeat(void* self);
 
 /// Inherited from QAbstractButton
@@ -495,6 +573,7 @@ bool k_colorbutton_auto_repeat(void* self);
 ///
 /// @param self KColorButton*
 /// @param autoRepeatDelay int
+///
 void k_colorbutton_set_auto_repeat_delay(void* self, int autoRepeatDelay);
 
 /// Inherited from QAbstractButton
@@ -502,6 +581,7 @@ void k_colorbutton_set_auto_repeat_delay(void* self, int autoRepeatDelay);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatDelay)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_auto_repeat_delay(void* self);
 
 /// Inherited from QAbstractButton
@@ -510,6 +590,7 @@ int32_t k_colorbutton_auto_repeat_delay(void* self);
 ///
 /// @param self KColorButton*
 /// @param autoRepeatInterval int
+///
 void k_colorbutton_set_auto_repeat_interval(void* self, int autoRepeatInterval);
 
 /// Inherited from QAbstractButton
@@ -517,6 +598,7 @@ void k_colorbutton_set_auto_repeat_interval(void* self, int autoRepeatInterval);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatInterval)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_auto_repeat_interval(void* self);
 
 /// Inherited from QAbstractButton
@@ -525,6 +607,7 @@ int32_t k_colorbutton_auto_repeat_interval(void* self);
 ///
 /// @param self KColorButton*
 /// @param autoExclusive bool
+///
 void k_colorbutton_set_auto_exclusive(void* self, bool autoExclusive);
 
 /// Inherited from QAbstractButton
@@ -532,6 +615,7 @@ void k_colorbutton_set_auto_exclusive(void* self, bool autoExclusive);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoExclusive)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_auto_exclusive(void* self);
 
 /// Inherited from QAbstractButton
@@ -539,6 +623,7 @@ bool k_colorbutton_auto_exclusive(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#group)
 ///
 /// @param self KColorButton*
+///
 QButtonGroup* k_colorbutton_group(void* self);
 
 /// Inherited from QAbstractButton
@@ -547,6 +632,7 @@ QButtonGroup* k_colorbutton_group(void* self);
 ///
 /// @param self KColorButton*
 /// @param size QSize*
+///
 void k_colorbutton_set_icon_size(void* self, void* size);
 
 /// Inherited from QAbstractButton
@@ -554,6 +640,7 @@ void k_colorbutton_set_icon_size(void* self, void* size);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#animateClick)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_animate_click(void* self);
 
 /// Inherited from QAbstractButton
@@ -561,6 +648,7 @@ void k_colorbutton_animate_click(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#click)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_click(void* self);
 
 /// Inherited from QAbstractButton
@@ -568,6 +656,7 @@ void k_colorbutton_click(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#toggle)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_toggle(void* self);
 
 /// Inherited from QAbstractButton
@@ -576,6 +665,7 @@ void k_colorbutton_toggle(void* self);
 ///
 /// @param self KColorButton*
 /// @param checked bool
+///
 void k_colorbutton_set_checked(void* self, bool checked);
 
 /// Inherited from QAbstractButton
@@ -583,6 +673,7 @@ void k_colorbutton_set_checked(void* self, bool checked);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_pressed(void* self);
 
 /// Inherited from QAbstractButton
@@ -591,6 +682,7 @@ void k_colorbutton_pressed(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self)
+///
 void k_colorbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -598,6 +690,7 @@ void k_colorbutton_on_pressed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_released(void* self);
 
 /// Inherited from QAbstractButton
@@ -606,6 +699,7 @@ void k_colorbutton_released(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self)
+///
 void k_colorbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -613,6 +707,7 @@ void k_colorbutton_on_released(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_clicked(void* self);
 
 /// Inherited from QAbstractButton
@@ -621,6 +716,7 @@ void k_colorbutton_clicked(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self)
+///
 void k_colorbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -629,6 +725,7 @@ void k_colorbutton_on_clicked(void* self, void (*callback)(void*));
 ///
 /// @param self KColorButton*
 /// @param checked bool
+///
 void k_colorbutton_toggled(void* self, bool checked);
 
 /// Inherited from QAbstractButton
@@ -637,6 +734,7 @@ void k_colorbutton_toggled(void* self, bool checked);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, bool checked)
+///
 void k_colorbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -645,6 +743,7 @@ void k_colorbutton_on_toggled(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KColorButton*
 /// @param checked bool
+///
 void k_colorbutton_clicked1(void* self, bool checked);
 
 /// Inherited from QAbstractButton
@@ -653,6 +752,7 @@ void k_colorbutton_clicked1(void* self, bool checked);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, bool checked)
+///
 void k_colorbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -660,6 +760,7 @@ void k_colorbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KColorButton*
+///
 uintptr_t k_colorbutton_win_id(void* self);
 
 /// Inherited from QWidget
@@ -667,6 +768,7 @@ uintptr_t k_colorbutton_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -674,6 +776,7 @@ void k_colorbutton_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KColorButton*
+///
 uintptr_t k_colorbutton_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -681,6 +784,7 @@ uintptr_t k_colorbutton_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KColorButton*
+///
 uintptr_t k_colorbutton_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -688,6 +792,7 @@ uintptr_t k_colorbutton_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KColorButton*
+///
 QStyle* k_colorbutton_style(void* self);
 
 /// Inherited from QWidget
@@ -696,6 +801,7 @@ QStyle* k_colorbutton_style(void* self);
 ///
 /// @param self KColorButton*
 /// @param style QStyle*
+///
 void k_colorbutton_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -703,6 +809,7 @@ void k_colorbutton_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -710,6 +817,7 @@ bool k_colorbutton_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_window(void* self);
 
 /// Inherited from QWidget
@@ -717,6 +825,7 @@ bool k_colorbutton_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -726,6 +835,7 @@ bool k_colorbutton_is_modal(void* self);
 /// @param self KColorButton*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t k_colorbutton_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -734,6 +844,7 @@ int32_t k_colorbutton_window_modality(void* self);
 ///
 /// @param self KColorButton*
 /// @param windowModality enum Qt__WindowModality
+///
 void k_colorbutton_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -741,6 +852,7 @@ void k_colorbutton_set_window_modality(void* self, int32_t windowModality);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -749,6 +861,7 @@ bool k_colorbutton_is_enabled(void* self);
 ///
 /// @param self KColorButton*
 /// @param param1 QWidget*
+///
 bool k_colorbutton_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -757,6 +870,7 @@ bool k_colorbutton_is_enabled_to(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param enabled bool
+///
 void k_colorbutton_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -765,6 +879,7 @@ void k_colorbutton_set_enabled(void* self, bool enabled);
 ///
 /// @param self KColorButton*
 /// @param disabled bool
+///
 void k_colorbutton_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -773,6 +888,7 @@ void k_colorbutton_set_disabled(void* self, bool disabled);
 ///
 /// @param self KColorButton*
 /// @param windowModified bool
+///
 void k_colorbutton_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -780,6 +896,7 @@ void k_colorbutton_set_window_modified(void* self, bool windowModified);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KColorButton*
+///
 QRect* k_colorbutton_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -787,6 +904,7 @@ QRect* k_colorbutton_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KColorButton*
+///
 const QRect* k_colorbutton_geometry(void* self);
 
 /// Inherited from QWidget
@@ -794,6 +912,7 @@ const QRect* k_colorbutton_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KColorButton*
+///
 QRect* k_colorbutton_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -801,6 +920,7 @@ QRect* k_colorbutton_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_x(void* self);
 
 /// Inherited from QWidget
@@ -808,6 +928,7 @@ int32_t k_colorbutton_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_y(void* self);
 
 /// Inherited from QWidget
@@ -815,6 +936,7 @@ int32_t k_colorbutton_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KColorButton*
+///
 QPoint* k_colorbutton_pos(void* self);
 
 /// Inherited from QWidget
@@ -822,6 +944,7 @@ QPoint* k_colorbutton_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -829,6 +952,7 @@ QSize* k_colorbutton_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_size(void* self);
 
 /// Inherited from QWidget
@@ -836,6 +960,7 @@ QSize* k_colorbutton_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_width(void* self);
 
 /// Inherited from QWidget
@@ -843,6 +968,7 @@ int32_t k_colorbutton_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_height(void* self);
 
 /// Inherited from QWidget
@@ -850,6 +976,7 @@ int32_t k_colorbutton_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KColorButton*
+///
 QRect* k_colorbutton_rect(void* self);
 
 /// Inherited from QWidget
@@ -857,6 +984,7 @@ QRect* k_colorbutton_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KColorButton*
+///
 QRect* k_colorbutton_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -864,6 +992,7 @@ QRect* k_colorbutton_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KColorButton*
+///
 QRegion* k_colorbutton_children_region(void* self);
 
 /// Inherited from QWidget
@@ -871,6 +1000,7 @@ QRegion* k_colorbutton_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -878,6 +1008,7 @@ QSize* k_colorbutton_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -885,6 +1016,7 @@ QSize* k_colorbutton_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -892,6 +1024,7 @@ int32_t k_colorbutton_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -899,6 +1032,7 @@ int32_t k_colorbutton_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -906,6 +1040,7 @@ int32_t k_colorbutton_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -914,6 +1049,7 @@ int32_t k_colorbutton_maximum_height(void* self);
 ///
 /// @param self KColorButton*
 /// @param minimumSize QSize*
+///
 void k_colorbutton_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -923,6 +1059,7 @@ void k_colorbutton_set_minimum_size(void* self, void* minimumSize);
 /// @param self KColorButton*
 /// @param minw int
 /// @param minh int
+///
 void k_colorbutton_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -931,6 +1068,7 @@ void k_colorbutton_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self KColorButton*
 /// @param maximumSize QSize*
+///
 void k_colorbutton_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -940,6 +1078,7 @@ void k_colorbutton_set_maximum_size(void* self, void* maximumSize);
 /// @param self KColorButton*
 /// @param maxw int
 /// @param maxh int
+///
 void k_colorbutton_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -948,6 +1087,7 @@ void k_colorbutton_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self KColorButton*
 /// @param minw int
+///
 void k_colorbutton_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -956,6 +1096,7 @@ void k_colorbutton_set_minimum_width(void* self, int minw);
 ///
 /// @param self KColorButton*
 /// @param minh int
+///
 void k_colorbutton_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -964,6 +1105,7 @@ void k_colorbutton_set_minimum_height(void* self, int minh);
 ///
 /// @param self KColorButton*
 /// @param maxw int
+///
 void k_colorbutton_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -972,6 +1114,7 @@ void k_colorbutton_set_maximum_width(void* self, int maxw);
 ///
 /// @param self KColorButton*
 /// @param maxh int
+///
 void k_colorbutton_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -979,6 +1122,7 @@ void k_colorbutton_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -987,6 +1131,7 @@ QSize* k_colorbutton_size_increment(void* self);
 ///
 /// @param self KColorButton*
 /// @param sizeIncrement QSize*
+///
 void k_colorbutton_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -996,6 +1141,7 @@ void k_colorbutton_set_size_increment(void* self, void* sizeIncrement);
 /// @param self KColorButton*
 /// @param w int
 /// @param h int
+///
 void k_colorbutton_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1003,6 +1149,7 @@ void k_colorbutton_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KColorButton*
+///
 QSize* k_colorbutton_base_size(void* self);
 
 /// Inherited from QWidget
@@ -1011,6 +1158,7 @@ QSize* k_colorbutton_base_size(void* self);
 ///
 /// @param self KColorButton*
 /// @param baseSize QSize*
+///
 void k_colorbutton_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -1020,6 +1168,7 @@ void k_colorbutton_set_base_size(void* self, void* baseSize);
 /// @param self KColorButton*
 /// @param basew int
 /// @param baseh int
+///
 void k_colorbutton_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -1028,6 +1177,7 @@ void k_colorbutton_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self KColorButton*
 /// @param fixedSize QSize*
+///
 void k_colorbutton_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -1037,6 +1187,7 @@ void k_colorbutton_set_fixed_size(void* self, void* fixedSize);
 /// @param self KColorButton*
 /// @param w int
 /// @param h int
+///
 void k_colorbutton_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1045,6 +1196,7 @@ void k_colorbutton_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self KColorButton*
 /// @param w int
+///
 void k_colorbutton_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -1053,6 +1205,7 @@ void k_colorbutton_set_fixed_width(void* self, int w);
 ///
 /// @param self KColorButton*
 /// @param h int
+///
 void k_colorbutton_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -1061,6 +1214,7 @@ void k_colorbutton_set_fixed_height(void* self, int h);
 ///
 /// @param self KColorButton*
 /// @param param1 QPointF*
+///
 QPointF* k_colorbutton_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1069,6 +1223,7 @@ QPointF* k_colorbutton_map_to_global(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QPoint*
+///
 QPoint* k_colorbutton_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1077,6 +1232,7 @@ QPoint* k_colorbutton_map_to_global2(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QPointF*
+///
 QPointF* k_colorbutton_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1085,6 +1241,7 @@ QPointF* k_colorbutton_map_from_global(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QPoint*
+///
 QPoint* k_colorbutton_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1093,6 +1250,7 @@ QPoint* k_colorbutton_map_from_global2(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QPointF*
+///
 QPointF* k_colorbutton_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1101,6 +1259,7 @@ QPointF* k_colorbutton_map_to_parent(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QPoint*
+///
 QPoint* k_colorbutton_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1109,6 +1268,7 @@ QPoint* k_colorbutton_map_to_parent2(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QPointF*
+///
 QPointF* k_colorbutton_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1117,6 +1277,7 @@ QPointF* k_colorbutton_map_from_parent(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QPoint*
+///
 QPoint* k_colorbutton_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1126,6 +1287,7 @@ QPoint* k_colorbutton_map_from_parent2(void* self, void* param1);
 /// @param self KColorButton*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_colorbutton_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1135,6 +1297,7 @@ QPointF* k_colorbutton_map_to(void* self, void* param1, void* param2);
 /// @param self KColorButton*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_colorbutton_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1144,6 +1307,7 @@ QPoint* k_colorbutton_map_to2(void* self, void* param1, void* param2);
 /// @param self KColorButton*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_colorbutton_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1153,6 +1317,7 @@ QPointF* k_colorbutton_map_from(void* self, void* param1, void* param2);
 /// @param self KColorButton*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_colorbutton_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1160,6 +1325,7 @@ QPoint* k_colorbutton_map_from2(void* self, void* param1, void* param2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_window(void* self);
 
 /// Inherited from QWidget
@@ -1167,6 +1333,7 @@ QWidget* k_colorbutton_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -1174,6 +1341,7 @@ QWidget* k_colorbutton_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -1181,6 +1349,7 @@ QWidget* k_colorbutton_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KColorButton*
+///
 const QPalette* k_colorbutton_palette(void* self);
 
 /// Inherited from QWidget
@@ -1189,6 +1358,7 @@ const QPalette* k_colorbutton_palette(void* self);
 ///
 /// @param self KColorButton*
 /// @param palette QPalette*
+///
 void k_colorbutton_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -1197,6 +1367,7 @@ void k_colorbutton_set_palette(void* self, void* palette);
 ///
 /// @param self KColorButton*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void k_colorbutton_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -1206,6 +1377,7 @@ void k_colorbutton_set_background_role(void* self, int32_t backgroundRole);
 /// @param self KColorButton*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_colorbutton_background_role(void* self);
 
 /// Inherited from QWidget
@@ -1214,6 +1386,7 @@ int32_t k_colorbutton_background_role(void* self);
 ///
 /// @param self KColorButton*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void k_colorbutton_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -1223,6 +1396,7 @@ void k_colorbutton_set_foreground_role(void* self, int32_t foregroundRole);
 /// @param self KColorButton*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_colorbutton_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -1230,6 +1404,7 @@ int32_t k_colorbutton_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KColorButton*
+///
 const QFont* k_colorbutton_font(void* self);
 
 /// Inherited from QWidget
@@ -1238,6 +1413,7 @@ const QFont* k_colorbutton_font(void* self);
 ///
 /// @param self KColorButton*
 /// @param font QFont*
+///
 void k_colorbutton_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -1245,6 +1421,7 @@ void k_colorbutton_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KColorButton*
+///
 QFontMetrics* k_colorbutton_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -1252,6 +1429,7 @@ QFontMetrics* k_colorbutton_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KColorButton*
+///
 QFontInfo* k_colorbutton_font_info(void* self);
 
 /// Inherited from QWidget
@@ -1259,6 +1437,7 @@ QFontInfo* k_colorbutton_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KColorButton*
+///
 QCursor* k_colorbutton_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1267,6 +1446,7 @@ QCursor* k_colorbutton_cursor(void* self);
 ///
 /// @param self KColorButton*
 /// @param cursor QCursor*
+///
 void k_colorbutton_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -1274,6 +1454,7 @@ void k_colorbutton_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -1282,6 +1463,7 @@ void k_colorbutton_unset_cursor(void* self);
 ///
 /// @param self KColorButton*
 /// @param enable bool
+///
 void k_colorbutton_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1289,6 +1471,7 @@ void k_colorbutton_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1296,6 +1479,7 @@ bool k_colorbutton_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1304,6 +1488,7 @@ bool k_colorbutton_under_mouse(void* self);
 ///
 /// @param self KColorButton*
 /// @param enable bool
+///
 void k_colorbutton_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1311,6 +1496,7 @@ void k_colorbutton_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -1319,6 +1505,7 @@ bool k_colorbutton_has_tablet_tracking(void* self);
 ///
 /// @param self KColorButton*
 /// @param mask QBitmap*
+///
 void k_colorbutton_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1327,6 +1514,7 @@ void k_colorbutton_set_mask(void* self, void* mask);
 ///
 /// @param self KColorButton*
 /// @param mask QRegion*
+///
 void k_colorbutton_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -1334,6 +1522,7 @@ void k_colorbutton_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KColorButton*
+///
 QRegion* k_colorbutton_mask(void* self);
 
 /// Inherited from QWidget
@@ -1341,6 +1530,7 @@ QRegion* k_colorbutton_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -1349,6 +1539,7 @@ void k_colorbutton_clear_mask(void* self);
 ///
 /// @param self KColorButton*
 /// @param target QPaintDevice*
+///
 void k_colorbutton_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -1357,6 +1548,7 @@ void k_colorbutton_render(void* self, void* target);
 ///
 /// @param self KColorButton*
 /// @param painter QPainter*
+///
 void k_colorbutton_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -1364,6 +1556,7 @@ void k_colorbutton_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KColorButton*
+///
 QPixmap* k_colorbutton_grab(void* self);
 
 /// Inherited from QWidget
@@ -1371,6 +1564,7 @@ QPixmap* k_colorbutton_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KColorButton*
+///
 QGraphicsEffect* k_colorbutton_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -1379,6 +1573,7 @@ QGraphicsEffect* k_colorbutton_graphics_effect(void* self);
 ///
 /// @param self KColorButton*
 /// @param effect QGraphicsEffect*
+///
 void k_colorbutton_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -1387,6 +1582,7 @@ void k_colorbutton_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self KColorButton*
 /// @param type enum Qt__GestureType
+///
 void k_colorbutton_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1395,6 +1591,7 @@ void k_colorbutton_grab_gesture(void* self, int64_t type);
 ///
 /// @param self KColorButton*
 /// @param type enum Qt__GestureType
+///
 void k_colorbutton_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -1403,6 +1600,7 @@ void k_colorbutton_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self KColorButton*
 /// @param windowTitle const char*
+///
 void k_colorbutton_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -1411,6 +1609,7 @@ void k_colorbutton_set_window_title(void* self, const char* windowTitle);
 ///
 /// @param self KColorButton*
 /// @param styleSheet const char*
+///
 void k_colorbutton_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -1420,6 +1619,7 @@ void k_colorbutton_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -1429,6 +1629,7 @@ const char* k_colorbutton_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_window_title(void* self);
 
 /// Inherited from QWidget
@@ -1437,6 +1638,7 @@ const char* k_colorbutton_window_title(void* self);
 ///
 /// @param self KColorButton*
 /// @param icon QIcon*
+///
 void k_colorbutton_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -1444,6 +1646,7 @@ void k_colorbutton_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KColorButton*
+///
 QIcon* k_colorbutton_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -1452,6 +1655,7 @@ QIcon* k_colorbutton_window_icon(void* self);
 ///
 /// @param self KColorButton*
 /// @param windowIconText const char*
+///
 void k_colorbutton_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -1461,6 +1665,7 @@ void k_colorbutton_set_window_icon_text(void* self, const char* windowIconText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -1469,6 +1674,7 @@ const char* k_colorbutton_window_icon_text(void* self);
 ///
 /// @param self KColorButton*
 /// @param windowRole const char*
+///
 void k_colorbutton_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -1478,6 +1684,7 @@ void k_colorbutton_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_window_role(void* self);
 
 /// Inherited from QWidget
@@ -1486,6 +1693,7 @@ const char* k_colorbutton_window_role(void* self);
 ///
 /// @param self KColorButton*
 /// @param filePath const char*
+///
 void k_colorbutton_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -1495,6 +1703,7 @@ void k_colorbutton_set_window_file_path(void* self, const char* filePath);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -1503,6 +1712,7 @@ const char* k_colorbutton_window_file_path(void* self);
 ///
 /// @param self KColorButton*
 /// @param level double
+///
 void k_colorbutton_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -1510,6 +1720,7 @@ void k_colorbutton_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KColorButton*
+///
 double k_colorbutton_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -1517,6 +1728,7 @@ double k_colorbutton_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -1525,6 +1737,7 @@ bool k_colorbutton_is_window_modified(void* self);
 ///
 /// @param self KColorButton*
 /// @param toolTip const char*
+///
 void k_colorbutton_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -1534,6 +1747,7 @@ void k_colorbutton_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -1542,6 +1756,7 @@ const char* k_colorbutton_tool_tip(void* self);
 ///
 /// @param self KColorButton*
 /// @param msec int
+///
 void k_colorbutton_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -1549,6 +1764,7 @@ void k_colorbutton_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -1557,6 +1773,7 @@ int32_t k_colorbutton_tool_tip_duration(void* self);
 ///
 /// @param self KColorButton*
 /// @param statusTip const char*
+///
 void k_colorbutton_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -1566,6 +1783,7 @@ void k_colorbutton_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -1574,6 +1792,7 @@ const char* k_colorbutton_status_tip(void* self);
 ///
 /// @param self KColorButton*
 /// @param whatsThis const char*
+///
 void k_colorbutton_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -1583,6 +1802,7 @@ void k_colorbutton_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -1592,6 +1812,7 @@ const char* k_colorbutton_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -1600,6 +1821,7 @@ const char* k_colorbutton_accessible_name(void* self);
 ///
 /// @param self KColorButton*
 /// @param name const char*
+///
 void k_colorbutton_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -1609,6 +1831,7 @@ void k_colorbutton_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -1617,6 +1840,7 @@ const char* k_colorbutton_accessible_description(void* self);
 ///
 /// @param self KColorButton*
 /// @param description const char*
+///
 void k_colorbutton_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -1625,6 +1849,7 @@ void k_colorbutton_set_accessible_description(void* self, const char* descriptio
 ///
 /// @param self KColorButton*
 /// @param direction enum Qt__LayoutDirection
+///
 void k_colorbutton_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -1634,6 +1859,7 @@ void k_colorbutton_set_layout_direction(void* self, int32_t direction);
 /// @param self KColorButton*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t k_colorbutton_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1641,6 +1867,7 @@ int32_t k_colorbutton_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1649,6 +1876,7 @@ void k_colorbutton_unset_layout_direction(void* self);
 ///
 /// @param self KColorButton*
 /// @param locale QLocale*
+///
 void k_colorbutton_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -1656,6 +1884,7 @@ void k_colorbutton_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KColorButton*
+///
 QLocale* k_colorbutton_locale(void* self);
 
 /// Inherited from QWidget
@@ -1663,6 +1892,7 @@ QLocale* k_colorbutton_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -1670,6 +1900,7 @@ void k_colorbutton_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -1677,6 +1908,7 @@ bool k_colorbutton_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -1684,6 +1916,7 @@ bool k_colorbutton_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -1691,6 +1924,7 @@ void k_colorbutton_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -1698,6 +1932,7 @@ bool k_colorbutton_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -1705,6 +1940,7 @@ void k_colorbutton_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -1713,6 +1949,7 @@ void k_colorbutton_clear_focus(void* self);
 ///
 /// @param self KColorButton*
 /// @param reason enum Qt__FocusReason
+///
 void k_colorbutton_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -1722,6 +1959,7 @@ void k_colorbutton_set_focus2(void* self, int32_t reason);
 /// @param self KColorButton*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t k_colorbutton_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -1730,6 +1968,7 @@ int32_t k_colorbutton_focus_policy(void* self);
 ///
 /// @param self KColorButton*
 /// @param policy enum Qt__FocusPolicy
+///
 void k_colorbutton_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1737,6 +1976,7 @@ void k_colorbutton_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -1745,6 +1985,7 @@ bool k_colorbutton_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void k_colorbutton_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1753,6 +1994,7 @@ void k_colorbutton_set_tab_order(void* param1, void* param2);
 ///
 /// @param self KColorButton*
 /// @param focusProxy QWidget*
+///
 void k_colorbutton_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -1760,6 +2002,7 @@ void k_colorbutton_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -1769,6 +2012,7 @@ QWidget* k_colorbutton_focus_proxy(void* self);
 /// @param self KColorButton*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t k_colorbutton_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -1777,6 +2021,7 @@ int32_t k_colorbutton_context_menu_policy(void* self);
 ///
 /// @param self KColorButton*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void k_colorbutton_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1784,6 +2029,7 @@ void k_colorbutton_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1792,6 +2038,7 @@ void k_colorbutton_grab_mouse(void* self);
 ///
 /// @param self KColorButton*
 /// @param param1 QCursor*
+///
 void k_colorbutton_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1799,6 +2046,7 @@ void k_colorbutton_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1806,6 +2054,7 @@ void k_colorbutton_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1813,6 +2062,7 @@ void k_colorbutton_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1821,6 +2071,7 @@ void k_colorbutton_release_keyboard(void* self);
 ///
 /// @param self KColorButton*
 /// @param key QKeySequence*
+///
 int32_t k_colorbutton_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -1829,6 +2080,7 @@ int32_t k_colorbutton_grab_shortcut(void* self, void* key);
 ///
 /// @param self KColorButton*
 /// @param id int
+///
 void k_colorbutton_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -1837,6 +2089,7 @@ void k_colorbutton_release_shortcut(void* self, int id);
 ///
 /// @param self KColorButton*
 /// @param id int
+///
 void k_colorbutton_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -1845,6 +2098,7 @@ void k_colorbutton_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self KColorButton*
 /// @param id int
+///
 void k_colorbutton_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -1864,6 +2118,7 @@ QWidget* k_colorbutton_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1872,6 +2127,7 @@ bool k_colorbutton_updates_enabled(void* self);
 ///
 /// @param self KColorButton*
 /// @param enable bool
+///
 void k_colorbutton_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1879,6 +2135,7 @@ void k_colorbutton_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KColorButton*
+///
 QGraphicsProxyWidget* k_colorbutton_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -1886,6 +2143,7 @@ QGraphicsProxyWidget* k_colorbutton_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_update(void* self);
 
 /// Inherited from QWidget
@@ -1893,6 +2151,7 @@ void k_colorbutton_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_repaint(void* self);
 
 /// Inherited from QWidget
@@ -1904,6 +2163,7 @@ void k_colorbutton_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_colorbutton_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1912,6 +2172,7 @@ void k_colorbutton_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KColorButton*
 /// @param param1 QRect*
+///
 void k_colorbutton_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1920,6 +2181,7 @@ void k_colorbutton_update3(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QRegion*
+///
 void k_colorbutton_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1931,6 +2193,7 @@ void k_colorbutton_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_colorbutton_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1939,6 +2202,7 @@ void k_colorbutton_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KColorButton*
 /// @param param1 QRect*
+///
 void k_colorbutton_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1947,6 +2211,7 @@ void k_colorbutton_repaint3(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QRegion*
+///
 void k_colorbutton_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1955,6 +2220,7 @@ void k_colorbutton_repaint4(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param hidden bool
+///
 void k_colorbutton_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -1962,6 +2228,7 @@ void k_colorbutton_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_show(void* self);
 
 /// Inherited from QWidget
@@ -1969,6 +2236,7 @@ void k_colorbutton_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_hide(void* self);
 
 /// Inherited from QWidget
@@ -1976,6 +2244,7 @@ void k_colorbutton_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1983,6 +2252,7 @@ void k_colorbutton_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1990,6 +2260,7 @@ void k_colorbutton_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1997,6 +2268,7 @@ void k_colorbutton_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -2004,6 +2276,7 @@ void k_colorbutton_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_close(void* self);
 
 /// Inherited from QWidget
@@ -2011,6 +2284,7 @@ bool k_colorbutton_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_raise(void* self);
 
 /// Inherited from QWidget
@@ -2018,6 +2292,7 @@ void k_colorbutton_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_lower(void* self);
 
 /// Inherited from QWidget
@@ -2026,6 +2301,7 @@ void k_colorbutton_lower(void* self);
 ///
 /// @param self KColorButton*
 /// @param param1 QWidget*
+///
 void k_colorbutton_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2035,6 +2311,7 @@ void k_colorbutton_stack_under(void* self, void* param1);
 /// @param self KColorButton*
 /// @param x int
 /// @param y int
+///
 void k_colorbutton_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2043,6 +2320,7 @@ void k_colorbutton_move(void* self, int x, int y);
 ///
 /// @param self KColorButton*
 /// @param param1 QPoint*
+///
 void k_colorbutton_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2052,6 +2330,7 @@ void k_colorbutton_move2(void* self, void* param1);
 /// @param self KColorButton*
 /// @param w int
 /// @param h int
+///
 void k_colorbutton_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -2060,6 +2339,7 @@ void k_colorbutton_resize(void* self, int w, int h);
 ///
 /// @param self KColorButton*
 /// @param param1 QSize*
+///
 void k_colorbutton_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2071,6 +2351,7 @@ void k_colorbutton_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_colorbutton_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -2079,6 +2360,7 @@ void k_colorbutton_set_geometry(void* self, int x, int y, int w, int h);
 ///
 /// @param self KColorButton*
 /// @param geometry QRect*
+///
 void k_colorbutton_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -2088,6 +2370,7 @@ void k_colorbutton_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 char* k_colorbutton_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -2096,6 +2379,7 @@ char* k_colorbutton_save_geometry(void* self);
 ///
 /// @param self KColorButton*
 /// @param geometry const char*
+///
 bool k_colorbutton_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -2103,6 +2387,7 @@ bool k_colorbutton_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -2110,6 +2395,7 @@ void k_colorbutton_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -2118,6 +2404,7 @@ bool k_colorbutton_is_visible(void* self);
 ///
 /// @param self KColorButton*
 /// @param param1 QWidget*
+///
 bool k_colorbutton_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -2125,6 +2412,7 @@ bool k_colorbutton_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -2132,6 +2420,7 @@ bool k_colorbutton_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -2139,6 +2428,7 @@ bool k_colorbutton_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -2146,6 +2436,7 @@ bool k_colorbutton_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -2155,6 +2446,7 @@ bool k_colorbutton_is_full_screen(void* self);
 /// @param self KColorButton*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t k_colorbutton_window_state(void* self);
 
 /// Inherited from QWidget
@@ -2163,6 +2455,7 @@ int32_t k_colorbutton_window_state(void* self);
 ///
 /// @param self KColorButton*
 /// @param state flag of enum Qt__WindowState
+///
 void k_colorbutton_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2171,6 +2464,7 @@ void k_colorbutton_set_window_state(void* self, int32_t state);
 ///
 /// @param self KColorButton*
 /// @param state flag of enum Qt__WindowState
+///
 void k_colorbutton_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -2178,6 +2472,7 @@ void k_colorbutton_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KColorButton*
+///
 QSizePolicy* k_colorbutton_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -2186,6 +2481,7 @@ QSizePolicy* k_colorbutton_size_policy(void* self);
 ///
 /// @param self KColorButton*
 /// @param sizePolicy QSizePolicy*
+///
 void k_colorbutton_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -2195,6 +2491,7 @@ void k_colorbutton_set_size_policy(void* self, void* sizePolicy);
 /// @param self KColorButton*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void k_colorbutton_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -2202,6 +2499,7 @@ void k_colorbutton_set_size_policy2(void* self, int32_t horizontal, int32_t vert
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KColorButton*
+///
 QRegion* k_colorbutton_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -2213,6 +2511,7 @@ QRegion* k_colorbutton_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_colorbutton_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -2221,6 +2520,7 @@ void k_colorbutton_set_contents_margins(void* self, int left, int top, int right
 ///
 /// @param self KColorButton*
 /// @param margins QMargins*
+///
 void k_colorbutton_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -2228,6 +2528,7 @@ void k_colorbutton_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KColorButton*
+///
 QMargins* k_colorbutton_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -2235,6 +2536,7 @@ QMargins* k_colorbutton_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KColorButton*
+///
 QRect* k_colorbutton_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -2242,6 +2544,7 @@ QRect* k_colorbutton_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KColorButton*
+///
 QLayout* k_colorbutton_layout(void* self);
 
 /// Inherited from QWidget
@@ -2250,6 +2553,7 @@ QLayout* k_colorbutton_layout(void* self);
 ///
 /// @param self KColorButton*
 /// @param layout QLayout*
+///
 void k_colorbutton_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -2257,6 +2561,7 @@ void k_colorbutton_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -2265,6 +2570,7 @@ void k_colorbutton_update_geometry(void* self);
 ///
 /// @param self KColorButton*
 /// @param parent QWidget*
+///
 void k_colorbutton_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -2274,6 +2580,7 @@ void k_colorbutton_set_parent(void* self, void* parent);
 /// @param self KColorButton*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void k_colorbutton_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -2283,6 +2590,7 @@ void k_colorbutton_set_parent2(void* self, void* parent, int64_t f);
 /// @param self KColorButton*
 /// @param dx int
 /// @param dy int
+///
 void k_colorbutton_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -2293,6 +2601,7 @@ void k_colorbutton_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void k_colorbutton_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -2300,6 +2609,7 @@ void k_colorbutton_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -2307,6 +2617,7 @@ QWidget* k_colorbutton_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2314,6 +2625,7 @@ QWidget* k_colorbutton_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -2321,6 +2633,7 @@ QWidget* k_colorbutton_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -2329,6 +2642,7 @@ bool k_colorbutton_accept_drops(void* self);
 ///
 /// @param self KColorButton*
 /// @param on bool
+///
 void k_colorbutton_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -2337,6 +2651,7 @@ void k_colorbutton_set_accept_drops(void* self, bool on);
 ///
 /// @param self KColorButton*
 /// @param action QAction*
+///
 void k_colorbutton_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2345,6 +2660,7 @@ void k_colorbutton_add_action(void* self, void* action);
 ///
 /// @param self KColorButton*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_colorbutton_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2354,6 +2670,7 @@ void k_colorbutton_add_actions(void* self, libqt_list actions);
 /// @param self KColorButton*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_colorbutton_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -2363,6 +2680,7 @@ void k_colorbutton_insert_actions(void* self, void* before, libqt_list actions);
 /// @param self KColorButton*
 /// @param before QAction*
 /// @param action QAction*
+///
 void k_colorbutton_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -2371,6 +2689,7 @@ void k_colorbutton_insert_action(void* self, void* before, void* action);
 ///
 /// @param self KColorButton*
 /// @param action QAction*
+///
 void k_colorbutton_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -2378,6 +2697,7 @@ void k_colorbutton_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KColorButton*
+///
 libqt_list /* of QAction* */ k_colorbutton_actions(void* self);
 
 /// Inherited from QWidget
@@ -2386,6 +2706,7 @@ libqt_list /* of QAction* */ k_colorbutton_actions(void* self);
 ///
 /// @param self KColorButton*
 /// @param text const char*
+///
 QAction* k_colorbutton_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -2395,6 +2716,7 @@ QAction* k_colorbutton_add_action2(void* self, const char* text);
 /// @param self KColorButton*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* k_colorbutton_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -2404,6 +2726,7 @@ QAction* k_colorbutton_add_action3(void* self, void* icon, const char* text);
 /// @param self KColorButton*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_colorbutton_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2414,6 +2737,7 @@ QAction* k_colorbutton_add_action4(void* self, const char* text, void* shortcut)
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_colorbutton_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2421,6 +2745,7 @@ QAction* k_colorbutton_add_action5(void* self, void* icon, const char* text, voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KColorButton*
+///
 QWidget* k_colorbutton_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2429,6 +2754,7 @@ QWidget* k_colorbutton_parent_widget(void* self);
 ///
 /// @param self KColorButton*
 /// @param type flag of enum Qt__WindowType
+///
 void k_colorbutton_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2438,6 +2764,7 @@ void k_colorbutton_set_window_flags(void* self, int64_t type);
 /// @param self KColorButton*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t k_colorbutton_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -2446,6 +2773,7 @@ int64_t k_colorbutton_window_flags(void* self);
 ///
 /// @param self KColorButton*
 /// @param param1 enum Qt__WindowType
+///
 void k_colorbutton_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -2454,6 +2782,7 @@ void k_colorbutton_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self KColorButton*
 /// @param type flag of enum Qt__WindowType
+///
 void k_colorbutton_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2463,6 +2792,7 @@ void k_colorbutton_override_window_flags(void* self, int64_t type);
 /// @param self KColorButton*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t k_colorbutton_window_type(void* self);
 
 /// Inherited from QWidget
@@ -2470,6 +2800,7 @@ int64_t k_colorbutton_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* k_colorbutton_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -2479,6 +2810,7 @@ QWidget* k_colorbutton_find(uint64_t param1);
 /// @param self KColorButton*
 /// @param x int
 /// @param y int
+///
 QWidget* k_colorbutton_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2487,6 +2819,7 @@ QWidget* k_colorbutton_child_at(void* self, int x, int y);
 ///
 /// @param self KColorButton*
 /// @param p QPoint*
+///
 QWidget* k_colorbutton_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2495,6 +2828,7 @@ QWidget* k_colorbutton_child_at2(void* self, void* p);
 ///
 /// @param self KColorButton*
 /// @param p QPointF*
+///
 QWidget* k_colorbutton_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2503,6 +2837,7 @@ QWidget* k_colorbutton_child_at3(void* self, void* p);
 ///
 /// @param self KColorButton*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void k_colorbutton_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2511,6 +2846,7 @@ void k_colorbutton_set_attribute(void* self, int32_t param1);
 ///
 /// @param self KColorButton*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool k_colorbutton_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2518,6 +2854,7 @@ bool k_colorbutton_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -2526,6 +2863,7 @@ void k_colorbutton_ensure_polished(void* self);
 ///
 /// @param self KColorButton*
 /// @param child QWidget*
+///
 bool k_colorbutton_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -2533,6 +2871,7 @@ bool k_colorbutton_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -2541,6 +2880,7 @@ bool k_colorbutton_auto_fill_background(void* self);
 ///
 /// @param self KColorButton*
 /// @param enabled bool
+///
 void k_colorbutton_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -2548,6 +2888,7 @@ void k_colorbutton_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KColorButton*
+///
 QBackingStore* k_colorbutton_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -2555,6 +2896,7 @@ QBackingStore* k_colorbutton_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KColorButton*
+///
 QWindow* k_colorbutton_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -2562,6 +2904,7 @@ QWindow* k_colorbutton_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KColorButton*
+///
 QScreen* k_colorbutton_screen(void* self);
 
 /// Inherited from QWidget
@@ -2570,6 +2913,7 @@ QScreen* k_colorbutton_screen(void* self);
 ///
 /// @param self KColorButton*
 /// @param screen QScreen*
+///
 void k_colorbutton_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -2577,6 +2921,7 @@ void k_colorbutton_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* k_colorbutton_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -2585,6 +2930,7 @@ QWidget* k_colorbutton_create_window_container(void* window);
 ///
 /// @param self KColorButton*
 /// @param title const char*
+///
 void k_colorbutton_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -2593,6 +2939,7 @@ void k_colorbutton_window_title_changed(void* self, const char* title);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, const char* title)
+///
 void k_colorbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2601,6 +2948,7 @@ void k_colorbutton_on_window_title_changed(void* self, void (*callback)(void*, c
 ///
 /// @param self KColorButton*
 /// @param icon QIcon*
+///
 void k_colorbutton_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2609,6 +2957,7 @@ void k_colorbutton_window_icon_changed(void* self, void* icon);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QIcon* icon)
+///
 void k_colorbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2617,6 +2966,7 @@ void k_colorbutton_on_window_icon_changed(void* self, void (*callback)(void*, vo
 ///
 /// @param self KColorButton*
 /// @param iconText const char*
+///
 void k_colorbutton_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -2625,6 +2975,7 @@ void k_colorbutton_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, const char* iconText)
+///
 void k_colorbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2633,6 +2984,7 @@ void k_colorbutton_on_window_icon_text_changed(void* self, void (*callback)(void
 ///
 /// @param self KColorButton*
 /// @param pos QPoint*
+///
 void k_colorbutton_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -2641,6 +2993,7 @@ void k_colorbutton_custom_context_menu_requested(void* self, void* pos);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QPoint* pos)
+///
 void k_colorbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2650,6 +3003,7 @@ void k_colorbutton_on_custom_context_menu_requested(void* self, void (*callback)
 /// @param self KColorButton*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t k_colorbutton_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -2658,6 +3012,7 @@ int64_t k_colorbutton_input_method_hints(void* self);
 ///
 /// @param self KColorButton*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void k_colorbutton_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -2667,6 +3022,7 @@ void k_colorbutton_set_input_method_hints(void* self, int64_t hints);
 /// @param self KColorButton*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void k_colorbutton_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2677,6 +3033,7 @@ void k_colorbutton_render22(void* self, void* target, void* targetOffset);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_colorbutton_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2688,6 +3045,7 @@ void k_colorbutton_render3(void* self, void* target, void* targetOffset, void* s
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_colorbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2697,6 +3055,7 @@ void k_colorbutton_render4(void* self, void* target, void* targetOffset, void* s
 /// @param self KColorButton*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void k_colorbutton_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2707,6 +3066,7 @@ void k_colorbutton_render23(void* self, void* painter, void* targetOffset);
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_colorbutton_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2718,6 +3078,7 @@ void k_colorbutton_render32(void* self, void* painter, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_colorbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2726,6 +3087,7 @@ void k_colorbutton_render42(void* self, void* painter, void* targetOffset, void*
 ///
 /// @param self KColorButton*
 /// @param rectangle QRect*
+///
 QPixmap* k_colorbutton_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -2735,6 +3097,7 @@ QPixmap* k_colorbutton_grab1(void* self, void* rectangle);
 /// @param self KColorButton*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void k_colorbutton_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -2744,6 +3107,7 @@ void k_colorbutton_grab_gesture2(void* self, int64_t type, int32_t flags);
 /// @param self KColorButton*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t k_colorbutton_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -2753,6 +3117,7 @@ int32_t k_colorbutton_grab_shortcut2(void* self, void* key, int32_t context);
 /// @param self KColorButton*
 /// @param id int
 /// @param enable bool
+///
 void k_colorbutton_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2762,6 +3127,7 @@ void k_colorbutton_set_shortcut_enabled2(void* self, int id, bool enable);
 /// @param self KColorButton*
 /// @param id int
 /// @param enable bool
+///
 void k_colorbutton_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2771,6 +3137,7 @@ void k_colorbutton_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param self KColorButton*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void k_colorbutton_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2780,6 +3147,7 @@ void k_colorbutton_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self KColorButton*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void k_colorbutton_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2788,6 +3156,7 @@ void k_colorbutton_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* k_colorbutton_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -2797,6 +3166,7 @@ QWidget* k_colorbutton_create_window_container2(void* window, void* parent);
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* k_colorbutton_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -2806,6 +3176,7 @@ QWidget* k_colorbutton_create_window_container3(void* window, void* parent, int6
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char* k_colorbutton_object_name(void* self);
 
 /// Inherited from QObject
@@ -2814,6 +3185,7 @@ const char* k_colorbutton_object_name(void* self);
 ///
 /// @param self KColorButton*
 /// @param name char*
+///
 void k_colorbutton_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -2821,6 +3193,7 @@ void k_colorbutton_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -2828,6 +3201,7 @@ bool k_colorbutton_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -2835,6 +3209,7 @@ bool k_colorbutton_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -2842,6 +3217,7 @@ bool k_colorbutton_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -2850,6 +3226,7 @@ bool k_colorbutton_signals_blocked(void* self);
 ///
 /// @param self KColorButton*
 /// @param b bool
+///
 bool k_colorbutton_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -2857,6 +3234,7 @@ bool k_colorbutton_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KColorButton*
+///
 QThread* k_colorbutton_thread(void* self);
 
 /// Inherited from QObject
@@ -2865,6 +3243,7 @@ QThread* k_colorbutton_thread(void* self);
 ///
 /// @param self KColorButton*
 /// @param thread QThread*
+///
 bool k_colorbutton_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -2873,6 +3252,7 @@ bool k_colorbutton_move_to_thread(void* self, void* thread);
 ///
 /// @param self KColorButton*
 /// @param interval int
+///
 int32_t k_colorbutton_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -2881,6 +3261,7 @@ int32_t k_colorbutton_start_timer(void* self, int interval);
 ///
 /// @param self KColorButton*
 /// @param id int
+///
 void k_colorbutton_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -2889,6 +3270,7 @@ void k_colorbutton_kill_timer(void* self, int id);
 ///
 /// @param self KColorButton*
 /// @param id enum Qt__TimerId
+///
 void k_colorbutton_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -2896,6 +3278,7 @@ void k_colorbutton_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KColorButton*
+///
 libqt_list /* of QObject* */ k_colorbutton_children(void* self);
 
 /// Inherited from QObject
@@ -2904,6 +3287,7 @@ libqt_list /* of QObject* */ k_colorbutton_children(void* self);
 ///
 /// @param self KColorButton*
 /// @param filterObj QObject*
+///
 void k_colorbutton_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -2912,6 +3296,7 @@ void k_colorbutton_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KColorButton*
 /// @param obj QObject*
+///
 void k_colorbutton_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -2922,6 +3307,7 @@ void k_colorbutton_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_colorbutton_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -2932,6 +3318,7 @@ QMetaObject__Connection* k_colorbutton_connect(void* sender, void* signal, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_colorbutton_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -2942,6 +3329,7 @@ QMetaObject__Connection* k_colorbutton_connect2(void* self, void* sender, const 
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_colorbutton_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -2949,6 +3337,7 @@ bool k_colorbutton_disconnect(void* sender, void* signal, void* receiver, void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_colorbutton_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -2956,6 +3345,7 @@ bool k_colorbutton_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -2963,6 +3353,7 @@ void k_colorbutton_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -2972,6 +3363,7 @@ void k_colorbutton_dump_object_info(void* self);
 /// @param self KColorButton*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_colorbutton_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -2980,6 +3372,7 @@ bool k_colorbutton_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KColorButton*
 /// @param name const char*
+///
 QVariant* k_colorbutton_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -2989,6 +3382,7 @@ QVariant* k_colorbutton_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorButton*
+///
 const char** k_colorbutton_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -2996,6 +3390,7 @@ const char** k_colorbutton_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KColorButton*
+///
 QBindingStorage* k_colorbutton_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -3003,6 +3398,7 @@ QBindingStorage* k_colorbutton_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KColorButton*
+///
 const QBindingStorage* k_colorbutton_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -3010,6 +3406,7 @@ const QBindingStorage* k_colorbutton_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_destroyed(void* self);
 
 /// Inherited from QObject
@@ -3018,6 +3415,7 @@ void k_colorbutton_destroyed(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self)
+///
 void k_colorbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3025,6 +3423,7 @@ void k_colorbutton_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KColorButton*
+///
 QObject* k_colorbutton_parent(void* self);
 
 /// Inherited from QObject
@@ -3033,6 +3432,7 @@ QObject* k_colorbutton_parent(void* self);
 ///
 /// @param self KColorButton*
 /// @param classname const char*
+///
 bool k_colorbutton_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -3040,6 +3440,7 @@ bool k_colorbutton_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_delete_later(void* self);
 
 /// Inherited from QObject
@@ -3049,6 +3450,7 @@ void k_colorbutton_delete_later(void* self);
 /// @param self KColorButton*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_colorbutton_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -3058,6 +3460,7 @@ bool k_colorbutton_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KColorButton*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_colorbutton_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -3069,6 +3472,7 @@ int32_t k_colorbutton_start_timer22(void* self, int interval, int32_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_colorbutton_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -3080,6 +3484,7 @@ QMetaObject__Connection* k_colorbutton_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_colorbutton_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -3088,6 +3493,7 @@ QMetaObject__Connection* k_colorbutton_connect4(void* self, void* sender, const 
 ///
 /// @param self KColorButton*
 /// @param param1 QObject*
+///
 void k_colorbutton_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -3096,6 +3502,7 @@ void k_colorbutton_destroyed1(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QObject* param1)
+///
 void k_colorbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3103,6 +3510,7 @@ void k_colorbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -3110,6 +3518,7 @@ bool k_colorbutton_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3117,6 +3526,7 @@ int32_t k_colorbutton_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -3124,6 +3534,7 @@ int32_t k_colorbutton_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3131,6 +3542,7 @@ int32_t k_colorbutton_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3138,6 +3550,7 @@ int32_t k_colorbutton_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -3145,6 +3558,7 @@ int32_t k_colorbutton_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -3152,6 +3566,7 @@ int32_t k_colorbutton_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KColorButton*
+///
 double k_colorbutton_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -3159,6 +3574,7 @@ double k_colorbutton_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KColorButton*
+///
 double k_colorbutton_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -3166,6 +3582,7 @@ double k_colorbutton_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -3173,6 +3590,7 @@ int32_t k_colorbutton_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -3187,6 +3605,7 @@ double k_colorbutton_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t k_colorbutton_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPushButton
@@ -3197,6 +3616,7 @@ int32_t k_colorbutton_encode_metric_f(int32_t metric, double value);
 ///
 /// @param self KColorButton*
 /// @param e QEvent*
+///
 bool k_colorbutton_event(void* self, void* e);
 
 /// Inherited from QPushButton
@@ -3207,6 +3627,7 @@ bool k_colorbutton_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param e QEvent*
+///
 bool k_colorbutton_qbase_event(void* self, void* e);
 
 /// Inherited from QPushButton
@@ -3217,6 +3638,7 @@ bool k_colorbutton_qbase_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback bool func(KColorButton* self, QEvent* e)
+///
 void k_colorbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3227,6 +3649,7 @@ void k_colorbutton_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param param1 QFocusEvent*
+///
 void k_colorbutton_focus_in_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -3237,6 +3660,7 @@ void k_colorbutton_focus_in_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QFocusEvent*
+///
 void k_colorbutton_qbase_focus_in_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -3247,6 +3671,7 @@ void k_colorbutton_qbase_focus_in_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QFocusEvent* param1)
+///
 void k_colorbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3257,6 +3682,7 @@ void k_colorbutton_on_focus_in_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KColorButton*
 /// @param param1 QFocusEvent*
+///
 void k_colorbutton_focus_out_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -3267,6 +3693,7 @@ void k_colorbutton_focus_out_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QFocusEvent*
+///
 void k_colorbutton_qbase_focus_out_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -3277,6 +3704,7 @@ void k_colorbutton_qbase_focus_out_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QFocusEvent* param1)
+///
 void k_colorbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3287,6 +3715,7 @@ void k_colorbutton_on_focus_out_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KColorButton*
 /// @param option QStyleOptionButton*
+///
 void k_colorbutton_init_style_option(void* self, void* option);
 
 /// Inherited from QPushButton
@@ -3297,6 +3726,7 @@ void k_colorbutton_init_style_option(void* self, void* option);
 ///
 /// @param self KColorButton*
 /// @param option QStyleOptionButton*
+///
 void k_colorbutton_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QPushButton
@@ -3307,6 +3737,7 @@ void k_colorbutton_qbase_init_style_option(void* self, void* option);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QStyleOptionButton* option)
+///
 void k_colorbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3317,6 +3748,7 @@ void k_colorbutton_on_init_style_option(void* self, void (*callback)(void*, void
 ///
 /// @param self KColorButton*
 /// @param pos QPoint*
+///
 bool k_colorbutton_hit_button(void* self, void* pos);
 
 /// Inherited from QPushButton
@@ -3327,6 +3759,7 @@ bool k_colorbutton_hit_button(void* self, void* pos);
 ///
 /// @param self KColorButton*
 /// @param pos QPoint*
+///
 bool k_colorbutton_qbase_hit_button(void* self, void* pos);
 
 /// Inherited from QPushButton
@@ -3337,6 +3770,7 @@ bool k_colorbutton_qbase_hit_button(void* self, void* pos);
 ///
 /// @param self KColorButton*
 /// @param callback bool func(KColorButton* self, QPoint* pos)
+///
 void k_colorbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3346,6 +3780,7 @@ void k_colorbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_check_state_set(void* self);
 
 /// Inherited from QAbstractButton
@@ -3355,6 +3790,7 @@ void k_colorbutton_check_state_set(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_qbase_check_state_set(void* self);
 
 /// Inherited from QAbstractButton
@@ -3365,6 +3801,7 @@ void k_colorbutton_qbase_check_state_set(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func()
+///
 void k_colorbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3374,6 +3811,7 @@ void k_colorbutton_on_check_state_set(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_next_check_state(void* self);
 
 /// Inherited from QAbstractButton
@@ -3383,6 +3821,7 @@ void k_colorbutton_next_check_state(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_qbase_next_check_state(void* self);
 
 /// Inherited from QAbstractButton
@@ -3393,6 +3832,7 @@ void k_colorbutton_qbase_next_check_state(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func()
+///
 void k_colorbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3403,6 +3843,7 @@ void k_colorbutton_on_next_check_state(void* self, void (*callback)());
 ///
 /// @param self KColorButton*
 /// @param e QKeyEvent*
+///
 void k_colorbutton_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3413,6 +3854,7 @@ void k_colorbutton_key_release_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param e QKeyEvent*
+///
 void k_colorbutton_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3423,6 +3865,7 @@ void k_colorbutton_qbase_key_release_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QKeyEvent* e)
+///
 void k_colorbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3433,6 +3876,7 @@ void k_colorbutton_on_key_release_event(void* self, void (*callback)(void*, void
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
+///
 void k_colorbutton_mouse_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3443,6 +3887,7 @@ void k_colorbutton_mouse_release_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
+///
 void k_colorbutton_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3453,6 +3898,7 @@ void k_colorbutton_qbase_mouse_release_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QMouseEvent* e)
+///
 void k_colorbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3463,6 +3909,7 @@ void k_colorbutton_on_mouse_release_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self KColorButton*
 /// @param e QEvent*
+///
 void k_colorbutton_change_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3473,6 +3920,7 @@ void k_colorbutton_change_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param e QEvent*
+///
 void k_colorbutton_qbase_change_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3483,6 +3931,7 @@ void k_colorbutton_qbase_change_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QEvent* e)
+///
 void k_colorbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3493,6 +3942,7 @@ void k_colorbutton_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param e QTimerEvent*
+///
 void k_colorbutton_timer_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3503,6 +3953,7 @@ void k_colorbutton_timer_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param e QTimerEvent*
+///
 void k_colorbutton_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3513,6 +3964,7 @@ void k_colorbutton_qbase_timer_event(void* self, void* e);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QTimerEvent* e)
+///
 void k_colorbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3522,6 +3974,7 @@ void k_colorbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3531,6 +3984,7 @@ int32_t k_colorbutton_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3541,6 +3995,7 @@ int32_t k_colorbutton_qbase_dev_type(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback int32_t func()
+///
 void k_colorbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3551,6 +4006,7 @@ void k_colorbutton_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self KColorButton*
 /// @param visible bool
+///
 void k_colorbutton_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3561,6 +4017,7 @@ void k_colorbutton_set_visible(void* self, bool visible);
 ///
 /// @param self KColorButton*
 /// @param visible bool
+///
 void k_colorbutton_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3571,6 +4028,7 @@ void k_colorbutton_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, bool visible)
+///
 void k_colorbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3581,6 +4039,7 @@ void k_colorbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KColorButton*
 /// @param param1 int
+///
 int32_t k_colorbutton_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3591,6 +4050,7 @@ int32_t k_colorbutton_height_for_width(void* self, int param1);
 ///
 /// @param self KColorButton*
 /// @param param1 int
+///
 int32_t k_colorbutton_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3601,6 +4061,7 @@ int32_t k_colorbutton_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self KColorButton*
 /// @param callback int32_t func(KColorButton* self, int param1)
+///
 void k_colorbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3610,6 +4071,7 @@ void k_colorbutton_on_height_for_width(void* self, int32_t (*callback)(void*, in
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3619,6 +4081,7 @@ bool k_colorbutton_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3629,6 +4092,7 @@ bool k_colorbutton_qbase_has_height_for_width(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback bool func()
+///
 void k_colorbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3638,6 +4102,7 @@ void k_colorbutton_on_has_height_for_width(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 QPaintEngine* k_colorbutton_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3647,6 +4112,7 @@ QPaintEngine* k_colorbutton_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 QPaintEngine* k_colorbutton_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3657,6 +4123,7 @@ QPaintEngine* k_colorbutton_qbase_paint_engine(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback QPaintEngine* func()
+///
 void k_colorbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3667,6 +4134,7 @@ void k_colorbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self KColorButton*
 /// @param event QMouseEvent*
+///
 void k_colorbutton_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3677,6 +4145,7 @@ void k_colorbutton_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QMouseEvent*
+///
 void k_colorbutton_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3687,6 +4156,7 @@ void k_colorbutton_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QMouseEvent* event)
+///
 void k_colorbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3697,6 +4167,7 @@ void k_colorbutton_on_mouse_double_click_event(void* self, void (*callback)(void
 ///
 /// @param self KColorButton*
 /// @param event QWheelEvent*
+///
 void k_colorbutton_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3707,6 +4178,7 @@ void k_colorbutton_wheel_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QWheelEvent*
+///
 void k_colorbutton_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3717,6 +4189,7 @@ void k_colorbutton_qbase_wheel_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QWheelEvent* event)
+///
 void k_colorbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3727,6 +4200,7 @@ void k_colorbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QEnterEvent*
+///
 void k_colorbutton_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3737,6 +4211,7 @@ void k_colorbutton_enter_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QEnterEvent*
+///
 void k_colorbutton_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3747,6 +4222,7 @@ void k_colorbutton_qbase_enter_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QEnterEvent* event)
+///
 void k_colorbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3757,6 +4233,7 @@ void k_colorbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QEvent*
+///
 void k_colorbutton_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3767,6 +4244,7 @@ void k_colorbutton_leave_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QEvent*
+///
 void k_colorbutton_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3777,6 +4255,7 @@ void k_colorbutton_qbase_leave_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QEvent* event)
+///
 void k_colorbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3787,6 +4266,7 @@ void k_colorbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QMoveEvent*
+///
 void k_colorbutton_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3797,6 +4277,7 @@ void k_colorbutton_move_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QMoveEvent*
+///
 void k_colorbutton_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3807,6 +4288,7 @@ void k_colorbutton_qbase_move_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QMoveEvent* event)
+///
 void k_colorbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3817,6 +4299,7 @@ void k_colorbutton_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QResizeEvent*
+///
 void k_colorbutton_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3827,6 +4310,7 @@ void k_colorbutton_resize_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QResizeEvent*
+///
 void k_colorbutton_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3837,6 +4321,7 @@ void k_colorbutton_qbase_resize_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QResizeEvent* event)
+///
 void k_colorbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3847,6 +4332,7 @@ void k_colorbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QCloseEvent*
+///
 void k_colorbutton_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3857,6 +4343,7 @@ void k_colorbutton_close_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QCloseEvent*
+///
 void k_colorbutton_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3867,6 +4354,7 @@ void k_colorbutton_qbase_close_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QCloseEvent* event)
+///
 void k_colorbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3877,6 +4365,7 @@ void k_colorbutton_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QContextMenuEvent*
+///
 void k_colorbutton_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3887,6 +4376,7 @@ void k_colorbutton_context_menu_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QContextMenuEvent*
+///
 void k_colorbutton_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3897,6 +4387,7 @@ void k_colorbutton_qbase_context_menu_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QContextMenuEvent* event)
+///
 void k_colorbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3907,6 +4398,7 @@ void k_colorbutton_on_context_menu_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KColorButton*
 /// @param event QTabletEvent*
+///
 void k_colorbutton_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3917,6 +4409,7 @@ void k_colorbutton_tablet_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QTabletEvent*
+///
 void k_colorbutton_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3927,6 +4420,7 @@ void k_colorbutton_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QTabletEvent* event)
+///
 void k_colorbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3937,6 +4431,7 @@ void k_colorbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QActionEvent*
+///
 void k_colorbutton_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3947,6 +4442,7 @@ void k_colorbutton_action_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QActionEvent*
+///
 void k_colorbutton_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3957,6 +4453,7 @@ void k_colorbutton_qbase_action_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QActionEvent* event)
+///
 void k_colorbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3967,6 +4464,7 @@ void k_colorbutton_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QDragMoveEvent*
+///
 void k_colorbutton_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3977,6 +4475,7 @@ void k_colorbutton_drag_move_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QDragMoveEvent*
+///
 void k_colorbutton_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3987,6 +4486,7 @@ void k_colorbutton_qbase_drag_move_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QDragMoveEvent* event)
+///
 void k_colorbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3997,6 +4497,7 @@ void k_colorbutton_on_drag_move_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KColorButton*
 /// @param event QDragLeaveEvent*
+///
 void k_colorbutton_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4007,6 +4508,7 @@ void k_colorbutton_drag_leave_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QDragLeaveEvent*
+///
 void k_colorbutton_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4017,6 +4519,7 @@ void k_colorbutton_qbase_drag_leave_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QDragLeaveEvent* event)
+///
 void k_colorbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4027,6 +4530,7 @@ void k_colorbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self KColorButton*
 /// @param event QShowEvent*
+///
 void k_colorbutton_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4037,6 +4541,7 @@ void k_colorbutton_show_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QShowEvent*
+///
 void k_colorbutton_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4047,6 +4552,7 @@ void k_colorbutton_qbase_show_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QShowEvent* event)
+///
 void k_colorbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4057,6 +4563,7 @@ void k_colorbutton_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QHideEvent*
+///
 void k_colorbutton_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4067,6 +4574,7 @@ void k_colorbutton_hide_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QHideEvent*
+///
 void k_colorbutton_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4077,6 +4585,7 @@ void k_colorbutton_qbase_hide_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QHideEvent* event)
+///
 void k_colorbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4089,6 +4598,7 @@ void k_colorbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_colorbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4101,6 +4611,7 @@ bool k_colorbutton_native_event(void* self, const char* eventType, void* message
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_colorbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4111,6 +4622,7 @@ bool k_colorbutton_qbase_native_event(void* self, const char* eventType, void* m
 ///
 /// @param self KColorButton*
 /// @param callback bool func(KColorButton* self, const char* eventType, void* message, intptr_t* result)
+///
 void k_colorbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4121,6 +4633,7 @@ void k_colorbutton_on_native_event(void* self, bool (*callback)(void*, const cha
 ///
 /// @param self KColorButton*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_colorbutton_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4131,6 +4644,7 @@ int32_t k_colorbutton_metric(void* self, int32_t param1);
 ///
 /// @param self KColorButton*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_colorbutton_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -4141,6 +4655,7 @@ int32_t k_colorbutton_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self KColorButton*
 /// @param callback int32_t func(KColorButton* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void k_colorbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4151,6 +4666,7 @@ void k_colorbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// @param self KColorButton*
 /// @param painter QPainter*
+///
 void k_colorbutton_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4161,6 +4677,7 @@ void k_colorbutton_init_painter(void* self, void* painter);
 ///
 /// @param self KColorButton*
 /// @param painter QPainter*
+///
 void k_colorbutton_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4171,6 +4688,7 @@ void k_colorbutton_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QPainter* painter)
+///
 void k_colorbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4181,6 +4699,7 @@ void k_colorbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param offset QPoint*
+///
 QPaintDevice* k_colorbutton_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4191,6 +4710,7 @@ QPaintDevice* k_colorbutton_redirected(void* self, void* offset);
 ///
 /// @param self KColorButton*
 /// @param offset QPoint*
+///
 QPaintDevice* k_colorbutton_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4201,6 +4721,7 @@ QPaintDevice* k_colorbutton_qbase_redirected(void* self, void* offset);
 ///
 /// @param self KColorButton*
 /// @param callback QPaintDevice* func(KColorButton* self, QPoint* offset)
+///
 void k_colorbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4210,6 +4731,7 @@ void k_colorbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 QPainter* k_colorbutton_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4219,6 +4741,7 @@ QPainter* k_colorbutton_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 QPainter* k_colorbutton_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4229,6 +4752,7 @@ QPainter* k_colorbutton_qbase_shared_painter(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback QPainter* func()
+///
 void k_colorbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4239,6 +4763,7 @@ void k_colorbutton_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// @param self KColorButton*
 /// @param param1 QInputMethodEvent*
+///
 void k_colorbutton_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4249,6 +4774,7 @@ void k_colorbutton_input_method_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param param1 QInputMethodEvent*
+///
 void k_colorbutton_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4259,6 +4785,7 @@ void k_colorbutton_qbase_input_method_event(void* self, void* param1);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QInputMethodEvent* param1)
+///
 void k_colorbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4269,6 +4796,7 @@ void k_colorbutton_on_input_method_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KColorButton*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_colorbutton_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4279,6 +4807,7 @@ QVariant* k_colorbutton_input_method_query(void* self, int64_t param1);
 ///
 /// @param self KColorButton*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_colorbutton_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4289,6 +4818,7 @@ QVariant* k_colorbutton_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// @param self KColorButton*
 /// @param callback QVariant* func(KColorButton* self, enum Qt__InputMethodQuery param1)
+///
 void k_colorbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4299,6 +4829,7 @@ void k_colorbutton_on_input_method_query(void* self, QVariant* (*callback)(void*
 ///
 /// @param self KColorButton*
 /// @param next bool
+///
 bool k_colorbutton_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4309,6 +4840,7 @@ bool k_colorbutton_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KColorButton*
 /// @param next bool
+///
 bool k_colorbutton_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4319,6 +4851,7 @@ bool k_colorbutton_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KColorButton*
 /// @param callback bool func(KColorButton* self, bool next)
+///
 void k_colorbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4330,6 +4863,7 @@ void k_colorbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, 
 /// @param self KColorButton*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_colorbutton_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -4341,6 +4875,7 @@ bool k_colorbutton_event_filter(void* self, void* watched, void* event);
 /// @param self KColorButton*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_colorbutton_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -4351,6 +4886,7 @@ bool k_colorbutton_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback bool func(KColorButton* self, QObject* watched, QEvent* event)
+///
 void k_colorbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4361,6 +4897,7 @@ void k_colorbutton_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 /// @param self KColorButton*
 /// @param event QChildEvent*
+///
 void k_colorbutton_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4371,6 +4908,7 @@ void k_colorbutton_child_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QChildEvent*
+///
 void k_colorbutton_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4381,6 +4919,7 @@ void k_colorbutton_qbase_child_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QChildEvent* event)
+///
 void k_colorbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4391,6 +4930,7 @@ void k_colorbutton_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param event QEvent*
+///
 void k_colorbutton_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4401,6 +4941,7 @@ void k_colorbutton_custom_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param event QEvent*
+///
 void k_colorbutton_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4411,6 +4952,7 @@ void k_colorbutton_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QEvent* event)
+///
 void k_colorbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4421,6 +4963,7 @@ void k_colorbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KColorButton*
 /// @param signal QMetaMethod*
+///
 void k_colorbutton_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4431,6 +4974,7 @@ void k_colorbutton_connect_notify(void* self, void* signal);
 ///
 /// @param self KColorButton*
 /// @param signal QMetaMethod*
+///
 void k_colorbutton_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4441,6 +4985,7 @@ void k_colorbutton_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QMetaMethod* signal)
+///
 void k_colorbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4451,6 +4996,7 @@ void k_colorbutton_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KColorButton*
 /// @param signal QMetaMethod*
+///
 void k_colorbutton_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4461,6 +5007,7 @@ void k_colorbutton_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KColorButton*
 /// @param signal QMetaMethod*
+///
 void k_colorbutton_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4471,6 +5018,7 @@ void k_colorbutton_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QMetaMethod* signal)
+///
 void k_colorbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4480,6 +5028,7 @@ void k_colorbutton_on_disconnect_notify(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4489,6 +5038,7 @@ void k_colorbutton_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4499,6 +5049,7 @@ void k_colorbutton_qbase_update_micro_focus(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func()
+///
 void k_colorbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4508,6 +5059,7 @@ void k_colorbutton_on_update_micro_focus(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_create(void* self);
 
 /// Inherited from QWidget
@@ -4517,6 +5069,7 @@ void k_colorbutton_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4527,6 +5080,7 @@ void k_colorbutton_qbase_create(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func()
+///
 void k_colorbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4536,6 +5090,7 @@ void k_colorbutton_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4545,6 +5100,7 @@ void k_colorbutton_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4555,6 +5111,7 @@ void k_colorbutton_qbase_destroy(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback void func()
+///
 void k_colorbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4564,6 +5121,7 @@ void k_colorbutton_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4573,6 +5131,7 @@ bool k_colorbutton_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4583,6 +5142,7 @@ bool k_colorbutton_qbase_focus_next_child(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback bool func()
+///
 void k_colorbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4592,6 +5152,7 @@ void k_colorbutton_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4601,6 +5162,7 @@ bool k_colorbutton_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 bool k_colorbutton_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4611,6 +5173,7 @@ bool k_colorbutton_qbase_focus_previous_child(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback bool func()
+///
 void k_colorbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4620,6 +5183,7 @@ void k_colorbutton_on_focus_previous_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 QObject* k_colorbutton_sender(void* self);
 
 /// Inherited from QObject
@@ -4629,6 +5193,7 @@ QObject* k_colorbutton_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 QObject* k_colorbutton_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4639,6 +5204,7 @@ QObject* k_colorbutton_qbase_sender(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback QObject* func()
+///
 void k_colorbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4648,6 +5214,7 @@ void k_colorbutton_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4657,6 +5224,7 @@ int32_t k_colorbutton_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorButton*
+///
 int32_t k_colorbutton_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4667,6 +5235,7 @@ int32_t k_colorbutton_qbase_sender_signal_index(void* self);
 ///
 /// @param self KColorButton*
 /// @param callback int32_t func()
+///
 void k_colorbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4677,6 +5246,7 @@ void k_colorbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self KColorButton*
 /// @param signal const char*
+///
 int32_t k_colorbutton_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4687,6 +5257,7 @@ int32_t k_colorbutton_receivers(void* self, const char* signal);
 ///
 /// @param self KColorButton*
 /// @param signal const char*
+///
 int32_t k_colorbutton_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4697,6 +5268,7 @@ int32_t k_colorbutton_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KColorButton*
 /// @param callback int32_t func(KColorButton* self, const char* signal)
+///
 void k_colorbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4707,6 +5279,7 @@ void k_colorbutton_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// @param self KColorButton*
 /// @param signal QMetaMethod*
+///
 bool k_colorbutton_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4717,6 +5290,7 @@ bool k_colorbutton_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KColorButton*
 /// @param signal QMetaMethod*
+///
 bool k_colorbutton_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4727,6 +5301,7 @@ bool k_colorbutton_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KColorButton*
 /// @param callback bool func(KColorButton* self, QMetaMethod* signal)
+///
 void k_colorbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4738,6 +5313,7 @@ void k_colorbutton_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// @param self KColorButton*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_colorbutton_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4749,6 +5325,7 @@ double k_colorbutton_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 /// @param self KColorButton*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_colorbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4759,6 +5336,7 @@ double k_colorbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 ///
 /// @param self KColorButton*
 /// @param callback double func(KColorButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void k_colorbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4769,6 +5347,7 @@ void k_colorbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, const char* objectName)
+///
 void k_colorbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kcolorbutton.html#dtor.KColorButton)
@@ -4776,6 +5355,7 @@ void k_colorbutton_on_object_name_changed(void* self, void (*callback)(void*, co
 /// Delete this object from C++ memory.
 ///
 /// @param self KColorButton*
+///
 void k_colorbutton_delete(void* self);
 
 #endif

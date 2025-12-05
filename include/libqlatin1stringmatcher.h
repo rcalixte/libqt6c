@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qlatin1stringmatcher.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html)
 
 /// q_latin1stringmatcher_new constructs a new QLatin1StringMatcher object.
 ///
@@ -21,6 +21,7 @@ QLatin1StringMatcher* q_latin1stringmatcher_new();
 ///
 /// @param self QLatin1StringMatcher*
 /// @param cs enum Qt__CaseSensitivity
+///
 void q_latin1stringmatcher_set_case_sensitivity(void* self, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#caseSensitivity)
@@ -28,6 +29,7 @@ void q_latin1stringmatcher_set_case_sensitivity(void* self, int32_t cs);
 /// @param self QLatin1StringMatcher*
 ///
 /// @return enum Qt__CaseSensitivity
+///
 int32_t q_latin1stringmatcher_case_sensitivity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#dtor.QLatin1StringMatcher)
@@ -35,6 +37,7 @@ int32_t q_latin1stringmatcher_case_sensitivity(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QLatin1StringMatcher*
+///
 void q_latin1stringmatcher_delete(void* self);
 
 #endif

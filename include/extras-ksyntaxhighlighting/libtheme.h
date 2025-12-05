@@ -11,26 +11,31 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ksyntaxhighlighting-theme.html
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html)
 
 /// k_syntaxhighlighting__theme_new constructs a new KSyntaxHighlighting::Theme object.
 ///
 KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new();
 
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html)
+
 /// k_syntaxhighlighting__theme_new2 constructs a new KSyntaxHighlighting::Theme object.
 ///
 /// @param copyVal KSyntaxHighlighting__Theme*
+///
 KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new2(void* copyVal);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#operator-eq)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param other KSyntaxHighlighting__Theme*
+///
 void k_syntaxhighlighting__theme_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isValid)
 ///
 /// @param self KSyntaxHighlighting__Theme*
+///
 bool k_syntaxhighlighting__theme_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#name)
@@ -38,6 +43,7 @@ bool k_syntaxhighlighting__theme_is_valid(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
+///
 const char* k_syntaxhighlighting__theme_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#translatedName)
@@ -45,11 +51,13 @@ const char* k_syntaxhighlighting__theme_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
+///
 const char* k_syntaxhighlighting__theme_translated_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isReadOnly)
 ///
 /// @param self KSyntaxHighlighting__Theme*
+///
 bool k_syntaxhighlighting__theme_is_read_only(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#filePath)
@@ -57,68 +65,79 @@ bool k_syntaxhighlighting__theme_is_read_only(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
+///
 const char* k_syntaxhighlighting__theme_file_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#textColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 uint32_t k_syntaxhighlighting__theme_text_color(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#selectedTextColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 uint32_t k_syntaxhighlighting__theme_selected_text_color(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#backgroundColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 uint32_t k_syntaxhighlighting__theme_background_color(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#selectedBackgroundColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 uint32_t k_syntaxhighlighting__theme_selected_background_color(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isBold)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 bool k_syntaxhighlighting__theme_is_bold(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isItalic)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 bool k_syntaxhighlighting__theme_is_italic(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isUnderline)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 bool k_syntaxhighlighting__theme_is_underline(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#isStrikeThrough)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param style enum KSyntaxHighlighting__Theme__TextStyle
+///
 bool k_syntaxhighlighting__theme_is_strike_through(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#editorColor)
 ///
 /// @param self KSyntaxHighlighting__Theme*
 /// @param role enum KSyntaxHighlighting__Theme__EditorColorRole
+///
 uint32_t k_syntaxhighlighting__theme_editor_color(void* self, int32_t role);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self KSyntaxHighlighting__Theme*
+///
 void k_syntaxhighlighting__theme_delete(void* self);
 
-/// https://api.kde.org/ksyntaxhighlighting-theme.html#types
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#public-types)
 
 typedef enum {
     KSYNTAXHIGHLIGHTING_THEME_TEXTSTYLE_NORMAL = 0,
@@ -153,6 +172,8 @@ typedef enum {
     KSYNTAXHIGHLIGHTING_THEME_TEXTSTYLE_ERROR = 29,
     KSYNTAXHIGHLIGHTING_THEME_TEXTSTYLE_OTHERS = 30
 } KSyntaxHighlighting__Theme__TextStyle;
+
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#public-types)
 
 typedef enum {
     KSYNTAXHIGHLIGHTING_THEME_EDITORCOLORROLE_BACKGROUNDCOLOR = 0,

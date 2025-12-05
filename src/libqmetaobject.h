@@ -11,37 +11,48 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qmetamethod.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html)
 
 /// q_metamethod_new constructs a new QMetaMethod object.
 ///
 /// @param other QMetaMethod*
+///
 QMetaMethod* q_metamethod_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html)
 
 /// q_metamethod_new2 constructs a new QMetaMethod object and invalidates the source QMetaMethod object.
 ///
 /// @param other QMetaMethod*
+///
 QMetaMethod* q_metamethod_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html)
 
 /// q_metamethod_new3 constructs a new QMetaMethod object.
 ///
 QMetaMethod* q_metamethod_new3();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html)
+
 /// q_metamethod_new4 constructs a new QMetaMethod object.
 ///
 /// @param param1 QMetaMethod*
+///
 QMetaMethod* q_metamethod_new4(void* param1);
 
 /// q_metamethod_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QMetaMethod*
 /// @param other QMetaMethod*
+///
 void q_metamethod_copy_assign(void* self, void* other);
 
 /// q_metamethod_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QMetaMethod*
 /// @param other QMetaMethod*
+///
 void q_metamethod_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#methodSignature)
@@ -49,6 +60,7 @@ void q_metamethod_move_assign(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
+///
 char* q_metamethod_method_signature(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#name)
@@ -56,6 +68,7 @@ char* q_metamethod_method_signature(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
+///
 char* q_metamethod_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#typeName)
@@ -63,39 +76,46 @@ char* q_metamethod_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
+///
 const char* q_metamethod_type_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#returnType)
 ///
 /// @param self QMetaMethod*
+///
 int32_t q_metamethod_return_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#returnMetaType)
 ///
 /// @param self QMetaMethod*
+///
 QMetaType* q_metamethod_return_meta_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterCount)
 ///
 /// @param self QMetaMethod*
+///
 int32_t q_metamethod_parameter_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterType)
 ///
 /// @param self QMetaMethod*
 /// @param index int
+///
 int32_t q_metamethod_parameter_type(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterMetaType)
 ///
 /// @param self QMetaMethod*
 /// @param index int
+///
 QMetaType* q_metamethod_parameter_meta_type(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#getParameterTypes)
 ///
 /// @param self QMetaMethod*
 /// @param types int*
+///
 void q_metamethod_get_parameter_types(void* self, int* types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterTypes)
@@ -103,6 +123,7 @@ void q_metamethod_get_parameter_types(void* self, int* types);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
+///
 const char** q_metamethod_parameter_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterTypeName)
@@ -111,6 +132,7 @@ const char** q_metamethod_parameter_types(void* self);
 ///
 /// @param self QMetaMethod*
 /// @param index int
+///
 char* q_metamethod_parameter_type_name(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterNames)
@@ -118,6 +140,7 @@ char* q_metamethod_parameter_type_name(void* self, int index);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
+///
 const char** q_metamethod_parameter_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#tag)
@@ -125,6 +148,7 @@ const char** q_metamethod_parameter_names(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
+///
 const char* q_metamethod_tag(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#access)
@@ -132,6 +156,7 @@ const char* q_metamethod_tag(void* self);
 /// @param self QMetaMethod*
 ///
 /// @return enum QMetaMethod__Access
+///
 int32_t q_metamethod_access(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#methodType)
@@ -139,36 +164,43 @@ int32_t q_metamethod_access(void* self);
 /// @param self QMetaMethod*
 ///
 /// @return enum QMetaMethod__MethodType
+///
 int32_t q_metamethod_method_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#attributes)
 ///
 /// @param self QMetaMethod*
+///
 int32_t q_metamethod_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#methodIndex)
 ///
 /// @param self QMetaMethod*
+///
 int32_t q_metamethod_method_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#relativeMethodIndex)
 ///
 /// @param self QMetaMethod*
+///
 int32_t q_metamethod_relative_method_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#revision)
 ///
 /// @param self QMetaMethod*
+///
 int32_t q_metamethod_revision(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#isConst)
 ///
 /// @param self QMetaMethod*
+///
 bool q_metamethod_is_const(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#enclosingMetaObject)
 ///
 /// @param self QMetaMethod*
+///
 const QMetaObject* q_metamethod_enclosing_meta_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -177,6 +209,7 @@ const QMetaObject* q_metamethod_enclosing_meta_object(void* self);
 /// @param object QObject*
 /// @param connectionType enum Qt__ConnectionType
 /// @param returnValue QGenericReturnArgument*
+///
 bool q_metamethod_invoke(void* self, void* object, int32_t connectionType, void* returnValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -184,6 +217,7 @@ bool q_metamethod_invoke(void* self, void* object, int32_t connectionType, void*
 /// @param self QMetaMethod*
 /// @param object QObject*
 /// @param returnValue QGenericReturnArgument*
+///
 bool q_metamethod_invoke2(void* self, void* object, void* returnValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -192,6 +226,7 @@ bool q_metamethod_invoke2(void* self, void* object, void* returnValue);
 /// @param object QObject*
 /// @param connectionType enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
+///
 bool q_metamethod_invoke3(void* self, void* object, int32_t connectionType, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -199,6 +234,7 @@ bool q_metamethod_invoke3(void* self, void* object, int32_t connectionType, void
 /// @param self QMetaMethod*
 /// @param object QObject*
 /// @param val0 QGenericArgument*
+///
 bool q_metamethod_invoke4(void* self, void* object, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -206,6 +242,7 @@ bool q_metamethod_invoke4(void* self, void* object, void* val0);
 /// @param self QMetaMethod*
 /// @param gadget void*
 /// @param returnValue QGenericReturnArgument*
+///
 bool q_metamethod_invoke_on_gadget(void* self, void* gadget, void* returnValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -213,11 +250,13 @@ bool q_metamethod_invoke_on_gadget(void* self, void* gadget, void* returnValue);
 /// @param self QMetaMethod*
 /// @param gadget void*
 /// @param val0 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget2(void* self, void* gadget, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#isValid)
 ///
 /// @param self QMetaMethod*
+///
 bool q_metamethod_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -227,6 +266,7 @@ bool q_metamethod_is_valid(void* self);
 /// @param connectionType enum Qt__ConnectionType
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
+///
 bool q_metamethod_invoke42(void* self, void* object, int32_t connectionType, void* returnValue, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -237,6 +277,7 @@ bool q_metamethod_invoke42(void* self, void* object, int32_t connectionType, voi
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
+///
 bool q_metamethod_invoke5(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -248,6 +289,7 @@ bool q_metamethod_invoke5(void* self, void* object, int32_t connectionType, void
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
+///
 bool q_metamethod_invoke6(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -260,6 +302,7 @@ bool q_metamethod_invoke6(void* self, void* object, int32_t connectionType, void
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
+///
 bool q_metamethod_invoke7(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -273,6 +316,7 @@ bool q_metamethod_invoke7(void* self, void* object, int32_t connectionType, void
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
+///
 bool q_metamethod_invoke8(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -287,6 +331,7 @@ bool q_metamethod_invoke8(void* self, void* object, int32_t connectionType, void
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
+///
 bool q_metamethod_invoke9(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -302,6 +347,7 @@ bool q_metamethod_invoke9(void* self, void* object, int32_t connectionType, void
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
+///
 bool q_metamethod_invoke10(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -318,6 +364,7 @@ bool q_metamethod_invoke10(void* self, void* object, int32_t connectionType, voi
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
+///
 bool q_metamethod_invoke11(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -335,6 +382,7 @@ bool q_metamethod_invoke11(void* self, void* object, int32_t connectionType, voi
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
+///
 bool q_metamethod_invoke12(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -353,6 +401,7 @@ bool q_metamethod_invoke12(void* self, void* object, int32_t connectionType, voi
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
+///
 bool q_metamethod_invoke13(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -361,6 +410,7 @@ bool q_metamethod_invoke13(void* self, void* object, int32_t connectionType, voi
 /// @param object QObject*
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
+///
 bool q_metamethod_invoke32(void* self, void* object, void* returnValue, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -370,6 +420,7 @@ bool q_metamethod_invoke32(void* self, void* object, void* returnValue, void* va
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
+///
 bool q_metamethod_invoke43(void* self, void* object, void* returnValue, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -380,6 +431,7 @@ bool q_metamethod_invoke43(void* self, void* object, void* returnValue, void* va
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
+///
 bool q_metamethod_invoke52(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -391,6 +443,7 @@ bool q_metamethod_invoke52(void* self, void* object, void* returnValue, void* va
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
+///
 bool q_metamethod_invoke62(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -403,6 +456,7 @@ bool q_metamethod_invoke62(void* self, void* object, void* returnValue, void* va
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
+///
 bool q_metamethod_invoke72(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -416,6 +470,7 @@ bool q_metamethod_invoke72(void* self, void* object, void* returnValue, void* va
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
+///
 bool q_metamethod_invoke82(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -430,6 +485,7 @@ bool q_metamethod_invoke82(void* self, void* object, void* returnValue, void* va
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
+///
 bool q_metamethod_invoke92(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -445,6 +501,7 @@ bool q_metamethod_invoke92(void* self, void* object, void* returnValue, void* va
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
+///
 bool q_metamethod_invoke102(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -461,6 +518,7 @@ bool q_metamethod_invoke102(void* self, void* object, void* returnValue, void* v
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
+///
 bool q_metamethod_invoke112(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -478,6 +536,7 @@ bool q_metamethod_invoke112(void* self, void* object, void* returnValue, void* v
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
+///
 bool q_metamethod_invoke122(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -487,6 +546,7 @@ bool q_metamethod_invoke122(void* self, void* object, void* returnValue, void* v
 /// @param connectionType enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
+///
 bool q_metamethod_invoke44(void* self, void* object, int32_t connectionType, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -497,6 +557,7 @@ bool q_metamethod_invoke44(void* self, void* object, int32_t connectionType, voi
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
+///
 bool q_metamethod_invoke53(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -508,6 +569,7 @@ bool q_metamethod_invoke53(void* self, void* object, int32_t connectionType, voi
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
+///
 bool q_metamethod_invoke63(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -520,6 +582,7 @@ bool q_metamethod_invoke63(void* self, void* object, int32_t connectionType, voi
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
+///
 bool q_metamethod_invoke73(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -533,6 +596,7 @@ bool q_metamethod_invoke73(void* self, void* object, int32_t connectionType, voi
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
+///
 bool q_metamethod_invoke83(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -547,6 +611,7 @@ bool q_metamethod_invoke83(void* self, void* object, int32_t connectionType, voi
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
+///
 bool q_metamethod_invoke93(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -562,6 +627,7 @@ bool q_metamethod_invoke93(void* self, void* object, int32_t connectionType, voi
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
+///
 bool q_metamethod_invoke103(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -578,6 +644,7 @@ bool q_metamethod_invoke103(void* self, void* object, int32_t connectionType, vo
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
+///
 bool q_metamethod_invoke113(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -595,6 +662,7 @@ bool q_metamethod_invoke113(void* self, void* object, int32_t connectionType, vo
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
+///
 bool q_metamethod_invoke123(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -603,6 +671,7 @@ bool q_metamethod_invoke123(void* self, void* object, int32_t connectionType, vo
 /// @param object QObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
+///
 bool q_metamethod_invoke33(void* self, void* object, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -612,6 +681,7 @@ bool q_metamethod_invoke33(void* self, void* object, void* val0, void* val1);
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
+///
 bool q_metamethod_invoke45(void* self, void* object, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -622,6 +692,7 @@ bool q_metamethod_invoke45(void* self, void* object, void* val0, void* val1, voi
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
+///
 bool q_metamethod_invoke54(void* self, void* object, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -633,6 +704,7 @@ bool q_metamethod_invoke54(void* self, void* object, void* val0, void* val1, voi
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
+///
 bool q_metamethod_invoke64(void* self, void* object, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -645,6 +717,7 @@ bool q_metamethod_invoke64(void* self, void* object, void* val0, void* val1, voi
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
+///
 bool q_metamethod_invoke74(void* self, void* object, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -658,6 +731,7 @@ bool q_metamethod_invoke74(void* self, void* object, void* val0, void* val1, voi
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
+///
 bool q_metamethod_invoke84(void* self, void* object, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -672,6 +746,7 @@ bool q_metamethod_invoke84(void* self, void* object, void* val0, void* val1, voi
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
+///
 bool q_metamethod_invoke94(void* self, void* object, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -687,6 +762,7 @@ bool q_metamethod_invoke94(void* self, void* object, void* val0, void* val1, voi
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
+///
 bool q_metamethod_invoke104(void* self, void* object, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
@@ -703,6 +779,7 @@ bool q_metamethod_invoke104(void* self, void* object, void* val0, void* val1, vo
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
+///
 bool q_metamethod_invoke114(void* self, void* object, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -711,6 +788,7 @@ bool q_metamethod_invoke114(void* self, void* object, void* val0, void* val1, vo
 /// @param gadget void*
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget3(void* self, void* gadget, void* returnValue, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -720,6 +798,7 @@ bool q_metamethod_invoke_on_gadget3(void* self, void* gadget, void* returnValue,
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget4(void* self, void* gadget, void* returnValue, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -730,6 +809,7 @@ bool q_metamethod_invoke_on_gadget4(void* self, void* gadget, void* returnValue,
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget5(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -741,6 +821,7 @@ bool q_metamethod_invoke_on_gadget5(void* self, void* gadget, void* returnValue,
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget6(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -753,6 +834,7 @@ bool q_metamethod_invoke_on_gadget6(void* self, void* gadget, void* returnValue,
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget7(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -766,6 +848,7 @@ bool q_metamethod_invoke_on_gadget7(void* self, void* gadget, void* returnValue,
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget8(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -780,6 +863,7 @@ bool q_metamethod_invoke_on_gadget8(void* self, void* gadget, void* returnValue,
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget9(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -795,6 +879,7 @@ bool q_metamethod_invoke_on_gadget9(void* self, void* gadget, void* returnValue,
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget10(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -811,6 +896,7 @@ bool q_metamethod_invoke_on_gadget10(void* self, void* gadget, void* returnValue
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget11(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -828,6 +914,7 @@ bool q_metamethod_invoke_on_gadget11(void* self, void* gadget, void* returnValue
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget12(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -836,6 +923,7 @@ bool q_metamethod_invoke_on_gadget12(void* self, void* gadget, void* returnValue
 /// @param gadget void*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget32(void* self, void* gadget, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -845,6 +933,7 @@ bool q_metamethod_invoke_on_gadget32(void* self, void* gadget, void* val0, void*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget42(void* self, void* gadget, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -855,6 +944,7 @@ bool q_metamethod_invoke_on_gadget42(void* self, void* gadget, void* val0, void*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget52(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -866,6 +956,7 @@ bool q_metamethod_invoke_on_gadget52(void* self, void* gadget, void* val0, void*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget62(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -878,6 +969,7 @@ bool q_metamethod_invoke_on_gadget62(void* self, void* gadget, void* val0, void*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget72(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -891,6 +983,7 @@ bool q_metamethod_invoke_on_gadget72(void* self, void* gadget, void* val0, void*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget82(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -905,6 +998,7 @@ bool q_metamethod_invoke_on_gadget82(void* self, void* gadget, void* val0, void*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget92(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -920,6 +1014,7 @@ bool q_metamethod_invoke_on_gadget92(void* self, void* gadget, void* val0, void*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget102(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
@@ -936,6 +1031,7 @@ bool q_metamethod_invoke_on_gadget102(void* self, void* gadget, void* val0, void
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
+///
 bool q_metamethod_invoke_on_gadget112(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#dtor.QMetaMethod)
@@ -943,39 +1039,51 @@ bool q_metamethod_invoke_on_gadget112(void* self, void* gadget, void* val0, void
 /// Delete this object from C++ memory.
 ///
 /// @param self QMetaMethod*
+///
 void q_metamethod_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qmetaenum.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html)
 
 /// q_metaenum_new constructs a new QMetaEnum object.
 ///
 /// @param other QMetaEnum*
+///
 QMetaEnum* q_metaenum_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html)
 
 /// q_metaenum_new2 constructs a new QMetaEnum object and invalidates the source QMetaEnum object.
 ///
 /// @param other QMetaEnum*
+///
 QMetaEnum* q_metaenum_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html)
 
 /// q_metaenum_new3 constructs a new QMetaEnum object.
 ///
 QMetaEnum* q_metaenum_new3();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html)
+
 /// q_metaenum_new4 constructs a new QMetaEnum object.
 ///
 /// @param param1 QMetaEnum*
+///
 QMetaEnum* q_metaenum_new4(void* param1);
 
 /// q_metaenum_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QMetaEnum*
 /// @param other QMetaEnum*
+///
 void q_metaenum_copy_assign(void* self, void* other);
 
 /// q_metaenum_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QMetaEnum*
 /// @param other QMetaEnum*
+///
 void q_metaenum_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#name)
@@ -983,6 +1091,7 @@ void q_metaenum_move_assign(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
+///
 const char* q_metaenum_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#enumName)
@@ -990,26 +1099,31 @@ const char* q_metaenum_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
+///
 const char* q_metaenum_enum_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#metaType)
 ///
 /// @param self QMetaEnum*
+///
 QMetaType* q_metaenum_meta_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#isFlag)
 ///
 /// @param self QMetaEnum*
+///
 bool q_metaenum_is_flag(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#isScoped)
 ///
 /// @param self QMetaEnum*
+///
 bool q_metaenum_is_scoped(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#keyCount)
 ///
 /// @param self QMetaEnum*
+///
 int32_t q_metaenum_key_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#key)
@@ -1018,12 +1132,14 @@ int32_t q_metaenum_key_count(void* self);
 ///
 /// @param self QMetaEnum*
 /// @param index int
+///
 const char* q_metaenum_key(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#value)
 ///
 /// @param self QMetaEnum*
 /// @param index int
+///
 int32_t q_metaenum_value(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#scope)
@@ -1031,12 +1147,14 @@ int32_t q_metaenum_value(void* self, int index);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
+///
 const char* q_metaenum_scope(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#keyToValue)
 ///
 /// @param self QMetaEnum*
 /// @param key const char*
+///
 int32_t q_metaenum_key_to_value(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#valueToKey)
@@ -1045,12 +1163,14 @@ int32_t q_metaenum_key_to_value(void* self, const char* key);
 ///
 /// @param self QMetaEnum*
 /// @param value int
+///
 const char* q_metaenum_value_to_key(void* self, int value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#keysToValue)
 ///
 /// @param self QMetaEnum*
 /// @param keys const char*
+///
 int32_t q_metaenum_keys_to_value(void* self, const char* keys);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#valueToKeys)
@@ -1059,16 +1179,19 @@ int32_t q_metaenum_keys_to_value(void* self, const char* keys);
 ///
 /// @param self QMetaEnum*
 /// @param value int
+///
 char* q_metaenum_value_to_keys(void* self, int value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#enclosingMetaObject)
 ///
 /// @param self QMetaEnum*
+///
 const QMetaObject* q_metaenum_enclosing_meta_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#isValid)
 ///
 /// @param self QMetaEnum*
+///
 bool q_metaenum_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#keyToValue)
@@ -1076,6 +1199,7 @@ bool q_metaenum_is_valid(void* self);
 /// @param self QMetaEnum*
 /// @param key const char*
 /// @param ok bool*
+///
 int32_t q_metaenum_key_to_value2(void* self, const char* key, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#keysToValue)
@@ -1083,6 +1207,7 @@ int32_t q_metaenum_key_to_value2(void* self, const char* key, bool* ok);
 /// @param self QMetaEnum*
 /// @param keys const char*
 /// @param ok bool*
+///
 int32_t q_metaenum_keys_to_value2(void* self, const char* keys, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#dtor.QMetaEnum)
@@ -1090,19 +1215,26 @@ int32_t q_metaenum_keys_to_value2(void* self, const char* keys, bool* ok);
 /// Delete this object from C++ memory.
 ///
 /// @param self QMetaEnum*
+///
 void q_metaenum_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qmetaproperty.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html)
 
 /// q_metaproperty_new constructs a new QMetaProperty object.
 ///
 /// @param other QMetaProperty*
+///
 QMetaProperty* q_metaproperty_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html)
 
 /// q_metaproperty_new2 constructs a new QMetaProperty object and invalidates the source QMetaProperty object.
 ///
 /// @param other QMetaProperty*
+///
 QMetaProperty* q_metaproperty_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html)
 
 /// q_metaproperty_new3 constructs a new QMetaProperty object.
 ///
@@ -1112,12 +1244,14 @@ QMetaProperty* q_metaproperty_new3();
 ///
 /// @param self QMetaProperty*
 /// @param other QMetaProperty*
+///
 void q_metaproperty_copy_assign(void* self, void* other);
 
 /// q_metaproperty_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QMetaProperty*
 /// @param other QMetaProperty*
+///
 void q_metaproperty_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#name)
@@ -1125,6 +1259,7 @@ void q_metaproperty_move_assign(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaProperty*
+///
 const char* q_metaproperty_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#typeName)
@@ -1132,6 +1267,7 @@ const char* q_metaproperty_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaProperty*
+///
 const char* q_metaproperty_type_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#type)
@@ -1139,127 +1275,152 @@ const char* q_metaproperty_type_name(void* self);
 /// @param self QMetaProperty*
 ///
 /// @return enum QVariant__Type
+///
 int64_t q_metaproperty_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#userType)
 ///
 /// @param self QMetaProperty*
+///
 int32_t q_metaproperty_user_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#typeId)
 ///
 /// @param self QMetaProperty*
+///
 int32_t q_metaproperty_type_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#metaType)
 ///
 /// @param self QMetaProperty*
+///
 QMetaType* q_metaproperty_meta_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#propertyIndex)
 ///
 /// @param self QMetaProperty*
+///
 int32_t q_metaproperty_property_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#relativePropertyIndex)
 ///
 /// @param self QMetaProperty*
+///
 int32_t q_metaproperty_relative_property_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isReadable)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_readable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isWritable)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_writable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isResettable)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_resettable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isDesignable)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_designable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isScriptable)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_scriptable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isStored)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_stored(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isUser)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_user(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isConstant)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_constant(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isFinal)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_final(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isRequired)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_required(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isBindable)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_bindable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isFlagType)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_flag_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isEnumType)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_enum_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#enumerator)
 ///
 /// @param self QMetaProperty*
+///
 QMetaEnum* q_metaproperty_enumerator(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#hasNotifySignal)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_has_notify_signal(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#notifySignal)
 ///
 /// @param self QMetaProperty*
+///
 QMetaMethod* q_metaproperty_notify_signal(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#notifySignalIndex)
 ///
 /// @param self QMetaProperty*
+///
 int32_t q_metaproperty_notify_signal_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#revision)
 ///
 /// @param self QMetaProperty*
+///
 int32_t q_metaproperty_revision(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#read)
 ///
 /// @param self QMetaProperty*
 /// @param obj QObject*
+///
 QVariant* q_metaproperty_read(void* self, void* obj);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#write)
@@ -1267,24 +1428,28 @@ QVariant* q_metaproperty_read(void* self, void* obj);
 /// @param self QMetaProperty*
 /// @param obj QObject*
 /// @param value QVariant*
+///
 bool q_metaproperty_write(void* self, void* obj, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#reset)
 ///
 /// @param self QMetaProperty*
 /// @param obj QObject*
+///
 bool q_metaproperty_reset(void* self, void* obj);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#bindable)
 ///
 /// @param self QMetaProperty*
 /// @param object QObject*
+///
 QUntypedBindable* q_metaproperty_bindable(void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#readOnGadget)
 ///
 /// @param self QMetaProperty*
 /// @param gadget void*
+///
 QVariant* q_metaproperty_read_on_gadget(void* self, void* gadget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#writeOnGadget)
@@ -1292,32 +1457,38 @@ QVariant* q_metaproperty_read_on_gadget(void* self, void* gadget);
 /// @param self QMetaProperty*
 /// @param gadget void*
 /// @param value QVariant*
+///
 bool q_metaproperty_write_on_gadget(void* self, void* gadget, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#resetOnGadget)
 ///
 /// @param self QMetaProperty*
 /// @param gadget void*
+///
 bool q_metaproperty_reset_on_gadget(void* self, void* gadget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#hasStdCppSet)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_has_std_cpp_set(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isAlias)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_alias(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#isValid)
 ///
 /// @param self QMetaProperty*
+///
 bool q_metaproperty_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#enclosingMetaObject)
 ///
 /// @param self QMetaProperty*
+///
 const QMetaObject* q_metaproperty_enclosing_meta_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#dtor.QMetaProperty)
@@ -1325,39 +1496,51 @@ const QMetaObject* q_metaproperty_enclosing_meta_object(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QMetaProperty*
+///
 void q_metaproperty_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qmetaclassinfo.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html)
 
 /// q_metaclassinfo_new constructs a new QMetaClassInfo object.
 ///
 /// @param other QMetaClassInfo*
+///
 QMetaClassInfo* q_metaclassinfo_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html)
 
 /// q_metaclassinfo_new2 constructs a new QMetaClassInfo object and invalidates the source QMetaClassInfo object.
 ///
 /// @param other QMetaClassInfo*
+///
 QMetaClassInfo* q_metaclassinfo_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html)
 
 /// q_metaclassinfo_new3 constructs a new QMetaClassInfo object.
 ///
 QMetaClassInfo* q_metaclassinfo_new3();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html)
+
 /// q_metaclassinfo_new4 constructs a new QMetaClassInfo object.
 ///
 /// @param param1 QMetaClassInfo*
+///
 QMetaClassInfo* q_metaclassinfo_new4(void* param1);
 
 /// q_metaclassinfo_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QMetaClassInfo*
 /// @param other QMetaClassInfo*
+///
 void q_metaclassinfo_copy_assign(void* self, void* other);
 
 /// q_metaclassinfo_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QMetaClassInfo*
 /// @param other QMetaClassInfo*
+///
 void q_metaclassinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#name)
@@ -1365,6 +1548,7 @@ void q_metaclassinfo_move_assign(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaClassInfo*
+///
 const char* q_metaclassinfo_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#value)
@@ -1372,11 +1556,13 @@ const char* q_metaclassinfo_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaClassInfo*
+///
 const char* q_metaclassinfo_value(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#enclosingMetaObject)
 ///
 /// @param self QMetaClassInfo*
+///
 const QMetaObject* q_metaclassinfo_enclosing_meta_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#dtor.QMetaClassInfo)
@@ -1384,9 +1570,10 @@ const QMetaObject* q_metaclassinfo_enclosing_meta_object(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QMetaClassInfo*
+///
 void q_metaclassinfo_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qmetaobject.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#public-types)
 
 typedef enum {
     QMETAMETHOD_ACCESS_PRIVATE = 0,
@@ -1394,12 +1581,16 @@ typedef enum {
     QMETAMETHOD_ACCESS_PUBLIC = 2
 } QMetaMethod__Access;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#public-types)
+
 typedef enum {
     QMETAMETHOD_METHODTYPE_METHOD = 0,
     QMETAMETHOD_METHODTYPE_SIGNAL = 1,
     QMETAMETHOD_METHODTYPE_SLOT = 2,
     QMETAMETHOD_METHODTYPE_CONSTRUCTOR = 3
 } QMetaMethod__MethodType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#public-types)
 
 typedef enum {
     QMETAMETHOD_ATTRIBUTES_COMPATIBILITY = 1,
