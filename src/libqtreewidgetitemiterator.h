@@ -11,78 +11,99 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qtreewidgetitemiterator.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html)
 
 /// q_treewidgetitemiterator_new constructs a new QTreeWidgetItemIterator object.
 ///
 /// @param it QTreeWidgetItemIterator*
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new(void* it);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html)
 
 /// q_treewidgetitemiterator_new2 constructs a new QTreeWidgetItemIterator object.
 ///
 /// @param widget QTreeWidget*
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new2(void* widget);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html)
 
 /// q_treewidgetitemiterator_new3 constructs a new QTreeWidgetItemIterator object.
 ///
 /// @param item QTreeWidgetItem*
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new3(void* item);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html)
 
 /// q_treewidgetitemiterator_new4 constructs a new QTreeWidgetItemIterator object.
 ///
 /// @param widget QTreeWidget*
 /// @param flags flag of enum QTreeWidgetItemIterator__IteratorFlag
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new4(void* widget, int32_t flags);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html)
 
 /// q_treewidgetitemiterator_new5 constructs a new QTreeWidgetItemIterator object.
 ///
 /// @param item QTreeWidgetItem*
 /// @param flags flag of enum QTreeWidgetItemIterator__IteratorFlag
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-eq)
 ///
 /// @param self QTreeWidgetItemIterator*
 /// @param it QTreeWidgetItemIterator*
+///
 void q_treewidgetitemiterator_operator_assign(void* self, void* it);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2b-2b)
 ///
 /// @param self QTreeWidgetItemIterator*
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_plus_plus(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2b-2b)
 ///
 /// @param self QTreeWidgetItemIterator*
 /// @param param1 int
+///
 const QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_plus_plus2(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2b-eq)
 ///
 /// @param self QTreeWidgetItemIterator*
 /// @param n int
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_plus_assign(void* self, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator--)
 ///
 /// @param self QTreeWidgetItemIterator*
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_minus(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator--)
 ///
 /// @param self QTreeWidgetItemIterator*
 /// @param param1 int
+///
 const QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_minus2(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator--eq)
 ///
 /// @param self QTreeWidgetItemIterator*
 /// @param n int
+///
 QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_assign(void* self, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2a)
 ///
 /// @param self QTreeWidgetItemIterator*
+///
 QTreeWidgetItem* q_treewidgetitemiterator_operator_multiply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#dtor.QTreeWidgetItemIterator)
@@ -90,9 +111,10 @@ QTreeWidgetItem* q_treewidgetitemiterator_operator_multiply(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QTreeWidgetItemIterator*
+///
 void q_treewidgetitemiterator_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#public-types)
 
 typedef enum {
     QTREEWIDGETITEMITERATOR_ITERATORFLAG_ALL = 0,

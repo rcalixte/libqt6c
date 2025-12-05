@@ -11,65 +11,79 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qeasingcurve.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html)
 
 /// q_easingcurve_new constructs a new QEasingCurve object.
 ///
 QEasingCurve* q_easingcurve_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html)
+
 /// q_easingcurve_new2 constructs a new QEasingCurve object.
 ///
 /// @param other QEasingCurve*
+///
 QEasingCurve* q_easingcurve_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html)
 
 /// q_easingcurve_new3 constructs a new QEasingCurve object.
 ///
 /// @param type enum QEasingCurve__Type
+///
 QEasingCurve* q_easingcurve_new3(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#operator-eq)
 ///
 /// @param self QEasingCurve*
 /// @param other QEasingCurve*
+///
 void q_easingcurve_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#swap)
 ///
 /// @param self QEasingCurve*
 /// @param other QEasingCurve*
+///
 void q_easingcurve_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#amplitude)
 ///
 /// @param self QEasingCurve*
+///
 double q_easingcurve_amplitude(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#setAmplitude)
 ///
 /// @param self QEasingCurve*
 /// @param amplitude double
+///
 void q_easingcurve_set_amplitude(void* self, double amplitude);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#period)
 ///
 /// @param self QEasingCurve*
+///
 double q_easingcurve_period(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#setPeriod)
 ///
 /// @param self QEasingCurve*
 /// @param period double
+///
 void q_easingcurve_set_period(void* self, double period);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#overshoot)
 ///
 /// @param self QEasingCurve*
+///
 double q_easingcurve_overshoot(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#setOvershoot)
 ///
 /// @param self QEasingCurve*
 /// @param overshoot double
+///
 void q_easingcurve_set_overshoot(void* self, double overshoot);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#addCubicBezierSegment)
@@ -78,6 +92,7 @@ void q_easingcurve_set_overshoot(void* self, double overshoot);
 /// @param c1 QPointF*
 /// @param c2 QPointF*
 /// @param endPoint QPointF*
+///
 void q_easingcurve_add_cubic_bezier_segment(void* self, void* c1, void* c2, void* endPoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#addTCBSegment)
@@ -87,11 +102,13 @@ void q_easingcurve_add_cubic_bezier_segment(void* self, void* c1, void* c2, void
 /// @param t double
 /// @param c double
 /// @param b double
+///
 void q_easingcurve_add_t_c_b_segment(void* self, void* nextPoint, double t, double c, double b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#toCubicSpline)
 ///
 /// @param self QEasingCurve*
+///
 libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#type)
@@ -99,18 +116,21 @@ libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(void* self);
 /// @param self QEasingCurve*
 ///
 /// @return enum QEasingCurve__Type
+///
 int32_t q_easingcurve_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#setType)
 ///
 /// @param self QEasingCurve*
 /// @param type enum QEasingCurve__Type
+///
 void q_easingcurve_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#valueForProgress)
 ///
 /// @param self QEasingCurve*
 /// @param progress double
+///
 double q_easingcurve_value_for_progress(void* self, double progress);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#dtor.QEasingCurve)
@@ -118,9 +138,10 @@ double q_easingcurve_value_for_progress(void* self, double progress);
 /// Delete this object from C++ memory.
 ///
 /// @param self QEasingCurve*
+///
 void q_easingcurve_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qeasingcurve.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#public-types)
 
 typedef enum {
     QEASINGCURVE_TYPE_LINEAR = 0,

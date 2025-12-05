@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qwebenginesettings.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontFamily)
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
 /// @param family const char*
+///
 void q_webenginesettings_set_font_family(void* self, int32_t which, const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#fontFamily)
@@ -26,12 +27,14 @@ void q_webenginesettings_set_font_family(void* self, int32_t which, const char* 
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
+///
 const char* q_webenginesettings_font_family(void* self, int32_t which);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontFamily)
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
+///
 void q_webenginesettings_reset_font_family(void* self, int32_t which);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontSize)
@@ -39,18 +42,21 @@ void q_webenginesettings_reset_font_family(void* self, int32_t which);
 /// @param self QWebEngineSettings*
 /// @param type enum QWebEngineSettings__FontSize
 /// @param size int
+///
 void q_webenginesettings_set_font_size(void* self, int32_t type, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#fontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param type enum QWebEngineSettings__FontSize
+///
 int32_t q_webenginesettings_font_size(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param type enum QWebEngineSettings__FontSize
+///
 void q_webenginesettings_reset_font_size(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setAttribute)
@@ -58,24 +64,28 @@ void q_webenginesettings_reset_font_size(void* self, int32_t type);
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
 /// @param on bool
+///
 void q_webenginesettings_set_attribute(void* self, int32_t attr, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#testAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
+///
 bool q_webenginesettings_test_attribute(void* self, int32_t attr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
+///
 void q_webenginesettings_reset_attribute(void* self, int32_t attr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setDefaultTextEncoding)
 ///
 /// @param self QWebEngineSettings*
 /// @param encoding const char*
+///
 void q_webenginesettings_set_default_text_encoding(void* self, const char* encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#defaultTextEncoding)
@@ -83,6 +93,7 @@ void q_webenginesettings_set_default_text_encoding(void* self, const char* encod
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineSettings*
+///
 const char* q_webenginesettings_default_text_encoding(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#unknownUrlSchemePolicy)
@@ -90,23 +101,27 @@ const char* q_webenginesettings_default_text_encoding(void* self);
 /// @param self QWebEngineSettings*
 ///
 /// @return enum QWebEngineSettings__UnknownUrlSchemePolicy
+///
 int32_t q_webenginesettings_unknown_url_scheme_policy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setUnknownUrlSchemePolicy)
 ///
 /// @param self QWebEngineSettings*
 /// @param policy enum QWebEngineSettings__UnknownUrlSchemePolicy
+///
 void q_webenginesettings_set_unknown_url_scheme_policy(void* self, int32_t policy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetUnknownUrlSchemePolicy)
 ///
 /// @param self QWebEngineSettings*
+///
 void q_webenginesettings_reset_unknown_url_scheme_policy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#setImageAnimationPolicy)
 ///
 /// @param self QWebEngineSettings*
 /// @param policy enum QWebEngineSettings__ImageAnimationPolicy
+///
 void q_webenginesettings_set_image_animation_policy(void* self, uint8_t policy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#imageAnimationPolicy)
@@ -114,11 +129,13 @@ void q_webenginesettings_set_image_animation_policy(void* self, uint8_t policy);
 /// @param self QWebEngineSettings*
 ///
 /// @return enum QWebEngineSettings__ImageAnimationPolicy
+///
 uint8_t q_webenginesettings_image_animation_policy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#resetImageAnimationPolicy)
 ///
 /// @param self QWebEngineSettings*
+///
 void q_webenginesettings_reset_image_animation_policy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#dtor.QWebEngineSettings)
@@ -126,9 +143,10 @@ void q_webenginesettings_reset_image_animation_policy(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QWebEngineSettings*
+///
 void q_webenginesettings_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qwebenginesettings.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#public-types)
 
 typedef enum {
     QWEBENGINESETTINGS_FONTFAMILY_STANDARDFONT = 0,
@@ -139,6 +157,8 @@ typedef enum {
     QWEBENGINESETTINGS_FONTFAMILY_FANTASYFONT = 5,
     QWEBENGINESETTINGS_FONTFAMILY_PICTOGRAPHFONT = 6
 } QWebEngineSettings__FontFamily;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#public-types)
 
 typedef enum {
     QWEBENGINESETTINGS_WEBATTRIBUTE_AUTOLOADIMAGES = 0,
@@ -177,6 +197,8 @@ typedef enum {
     QWEBENGINESETTINGS_WEBATTRIBUTE_FORCEDARKMODE = 33
 } QWebEngineSettings__WebAttribute;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#public-types)
+
 typedef enum {
     QWEBENGINESETTINGS_FONTSIZE_MINIMUMFONTSIZE = 0,
     QWEBENGINESETTINGS_FONTSIZE_MINIMUMLOGICALFONTSIZE = 1,
@@ -184,12 +206,16 @@ typedef enum {
     QWEBENGINESETTINGS_FONTSIZE_DEFAULTFIXEDFONTSIZE = 3
 } QWebEngineSettings__FontSize;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#public-types)
+
 typedef enum {
     QWEBENGINESETTINGS_UNKNOWNURLSCHEMEPOLICY_INHERITEDUNKNOWNURLSCHEMEPOLICY = 0,
     QWEBENGINESETTINGS_UNKNOWNURLSCHEMEPOLICY_DISALLOWUNKNOWNURLSCHEMES = 1,
     QWEBENGINESETTINGS_UNKNOWNURLSCHEMEPOLICY_ALLOWUNKNOWNURLSCHEMESFROMUSERINTERACTION = 2,
     QWEBENGINESETTINGS_UNKNOWNURLSCHEMEPOLICY_ALLOWALLUNKNOWNURLSCHEMES = 3
 } QWebEngineSettings__UnknownUrlSchemePolicy;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#public-types)
 
 typedef enum {
     QWEBENGINESETTINGS_IMAGEANIMATIONPOLICY_INHERITED = 0,

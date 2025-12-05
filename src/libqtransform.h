@@ -11,26 +11,37 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qtransform.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
 /// q_transform_new constructs a new QTransform object.
 ///
 /// @param other QTransform*
+///
 QTransform* q_transform_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
 /// q_transform_new2 constructs a new QTransform object and invalidates the source QTransform object.
 ///
 /// @param other QTransform*
+///
 QTransform* q_transform_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
 /// q_transform_new3 constructs a new QTransform object.
 ///
 /// @param param1 enum Qt__Initialization
+///
 QTransform* q_transform_new3(int32_t param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
 /// q_transform_new4 constructs a new QTransform object.
 ///
 QTransform* q_transform_new4();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
 /// q_transform_new5 constructs a new QTransform object.
 ///
@@ -43,7 +54,10 @@ QTransform* q_transform_new4();
 /// @param h31 double
 /// @param h32 double
 /// @param h33 double
+///
 QTransform* q_transform_new5(double h11, double h12, double h13, double h21, double h22, double h23, double h31, double h32, double h33);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
 /// q_transform_new6 constructs a new QTransform object.
 ///
@@ -53,59 +67,72 @@ QTransform* q_transform_new5(double h11, double h12, double h13, double h21, dou
 /// @param h22 double
 /// @param dx double
 /// @param dy double
+///
 QTransform* q_transform_new6(double h11, double h12, double h21, double h22, double dx, double dy);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
 /// q_transform_new7 constructs a new QTransform object.
 ///
 /// @param other QTransform*
+///
 QTransform* q_transform_new7(void* other);
 
 /// q_transform_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QTransform*
 /// @param other QTransform*
+///
 void q_transform_copy_assign(void* self, void* other);
 
 /// q_transform_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QTransform*
 /// @param other QTransform*
+///
 void q_transform_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-eq)
 ///
 /// @param self QTransform*
 /// @param param1 QTransform*
+///
 void q_transform_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isAffine)
 ///
 /// @param self QTransform*
+///
 bool q_transform_is_affine(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isIdentity)
 ///
 /// @param self QTransform*
+///
 bool q_transform_is_identity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isInvertible)
 ///
 /// @param self QTransform*
+///
 bool q_transform_is_invertible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isScaling)
 ///
 /// @param self QTransform*
+///
 bool q_transform_is_scaling(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isRotating)
 ///
 /// @param self QTransform*
+///
 bool q_transform_is_rotating(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isTranslating)
 ///
 /// @param self QTransform*
+///
 bool q_transform_is_translating(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#type)
@@ -113,66 +140,79 @@ bool q_transform_is_translating(void* self);
 /// @param self QTransform*
 ///
 /// @return enum QTransform__TransformationType
+///
 int32_t q_transform_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#determinant)
 ///
 /// @param self QTransform*
+///
 double q_transform_determinant(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m11)
 ///
 /// @param self QTransform*
+///
 double q_transform_m11(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m12)
 ///
 /// @param self QTransform*
+///
 double q_transform_m12(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m13)
 ///
 /// @param self QTransform*
+///
 double q_transform_m13(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m21)
 ///
 /// @param self QTransform*
+///
 double q_transform_m21(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m22)
 ///
 /// @param self QTransform*
+///
 double q_transform_m22(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m23)
 ///
 /// @param self QTransform*
+///
 double q_transform_m23(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m31)
 ///
 /// @param self QTransform*
+///
 double q_transform_m31(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m32)
 ///
 /// @param self QTransform*
+///
 double q_transform_m32(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m33)
 ///
 /// @param self QTransform*
+///
 double q_transform_m33(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#dx)
 ///
 /// @param self QTransform*
+///
 double q_transform_dx(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#dy)
 ///
 /// @param self QTransform*
+///
 double q_transform_dy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#setMatrix)
@@ -187,21 +227,25 @@ double q_transform_dy(void* self);
 /// @param m31 double
 /// @param m32 double
 /// @param m33 double
+///
 void q_transform_set_matrix(void* self, double m11, double m12, double m13, double m21, double m22, double m23, double m31, double m32, double m33);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#inverted)
 ///
 /// @param self QTransform*
+///
 QTransform* q_transform_inverted(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#adjoint)
 ///
 /// @param self QTransform*
+///
 QTransform* q_transform_adjoint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#transposed)
 ///
 /// @param self QTransform*
+///
 QTransform* q_transform_transposed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#translate)
@@ -209,6 +253,7 @@ QTransform* q_transform_transposed(void* self);
 /// @param self QTransform*
 /// @param dx double
 /// @param dy double
+///
 QTransform* q_transform_translate(void* self, double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#scale)
@@ -216,6 +261,7 @@ QTransform* q_transform_translate(void* self, double dx, double dy);
 /// @param self QTransform*
 /// @param sx double
 /// @param sy double
+///
 QTransform* q_transform_scale(void* self, double sx, double sy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#shear)
@@ -223,6 +269,7 @@ QTransform* q_transform_scale(void* self, double sx, double sy);
 /// @param self QTransform*
 /// @param sh double
 /// @param sv double
+///
 QTransform* q_transform_shear(void* self, double sh, double sv);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#rotate)
@@ -231,12 +278,14 @@ QTransform* q_transform_shear(void* self, double sh, double sv);
 /// @param a double
 /// @param axis enum Qt__Axis
 /// @param distanceToPlane double
+///
 QTransform* q_transform_rotate(void* self, double a, int32_t axis, double distanceToPlane);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#rotate)
 ///
 /// @param self QTransform*
 /// @param a double
+///
 QTransform* q_transform_rotate2(void* self, double a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
@@ -245,94 +294,110 @@ QTransform* q_transform_rotate2(void* self, double a);
 /// @param a double
 /// @param axis enum Qt__Axis
 /// @param distanceToPlane double
+///
 QTransform* q_transform_rotate_radians(void* self, double a, int32_t axis, double distanceToPlane);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
 ///
 /// @param self QTransform*
 /// @param a double
+///
 QTransform* q_transform_rotate_radians2(void* self, double a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-eq-eq)
 ///
 /// @param self QTransform*
 /// @param param1 QTransform*
+///
 bool q_transform_operator_equal(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-not-eq)
 ///
 /// @param self QTransform*
 /// @param param1 QTransform*
+///
 bool q_transform_operator_not_equal(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2a-eq)
 ///
 /// @param self QTransform*
 /// @param param1 QTransform*
+///
 QTransform* q_transform_operator_multiply_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2a)
 ///
 /// @param self QTransform*
 /// @param o QTransform*
+///
 QTransform* q_transform_operator_multiply(void* self, void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator)
 ///
 /// @param self QTransform*
+///
 QVariant* q_transform_to_q_variant(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#reset)
 ///
 /// @param self QTransform*
+///
 void q_transform_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// @param self QTransform*
 /// @param p QPoint*
+///
 QPoint* q_transform_map(void* self, void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// @param self QTransform*
 /// @param p QPointF*
+///
 QPointF* q_transform_map2(void* self, void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// @param self QTransform*
 /// @param l QLine*
+///
 QLine* q_transform_map3(void* self, void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// @param self QTransform*
 /// @param l QLineF*
+///
 QLineF* q_transform_map4(void* self, void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// @param self QTransform*
 /// @param r QRegion*
+///
 QRegion* q_transform_map7(void* self, void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// @param self QTransform*
 /// @param p QPainterPath*
+///
 QPainterPath* q_transform_map8(void* self, void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#mapRect)
 ///
 /// @param self QTransform*
 /// @param param1 QRect*
+///
 QRect* q_transform_map_rect(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#mapRect)
 ///
 /// @param self QTransform*
 /// @param param1 QRectF*
+///
 QRectF* q_transform_map_rect2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
@@ -342,6 +407,7 @@ QRectF* q_transform_map_rect2(void* self, void* param1);
 /// @param y int
 /// @param tx int*
 /// @param ty int*
+///
 void q_transform_map9(void* self, int x, int y, int* tx, int* ty);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
@@ -351,48 +417,56 @@ void q_transform_map9(void* self, int x, int y, int* tx, int* ty);
 /// @param y double
 /// @param tx double*
 /// @param ty double*
+///
 void q_transform_map10(void* self, double x, double y, double* tx, double* ty);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2a-eq)
 ///
 /// @param self QTransform*
 /// @param div double
+///
 QTransform* q_transform_operator_multiply_assign2(void* self, double div);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2f-eq)
 ///
 /// @param self QTransform*
 /// @param div double
+///
 QTransform* q_transform_operator_divide_assign(void* self, double div);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2b-eq)
 ///
 /// @param self QTransform*
 /// @param div double
+///
 QTransform* q_transform_operator_plus_assign(void* self, double div);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator--eq)
 ///
 /// @param self QTransform*
 /// @param div double
+///
 QTransform* q_transform_operator_minus_assign(void* self, double div);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#fromTranslate)
 ///
 /// @param dx double
 /// @param dy double
+///
 QTransform* q_transform_from_translate(double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#fromScale)
 ///
 /// @param dx double
 /// @param dy double
+///
 QTransform* q_transform_from_scale(double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#inverted)
 ///
 /// @param self QTransform*
 /// @param invertible bool*
+///
 QTransform* q_transform_inverted1(void* self, bool* invertible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#rotate)
@@ -400,6 +474,7 @@ QTransform* q_transform_inverted1(void* self, bool* invertible);
 /// @param self QTransform*
 /// @param a double
 /// @param axis enum Qt__Axis
+///
 QTransform* q_transform_rotate22(void* self, double a, int32_t axis);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
@@ -407,6 +482,7 @@ QTransform* q_transform_rotate22(void* self, double a, int32_t axis);
 /// @param self QTransform*
 /// @param a double
 /// @param axis enum Qt__Axis
+///
 QTransform* q_transform_rotate_radians22(void* self, double a, int32_t axis);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#dtor.QTransform)
@@ -414,9 +490,10 @@ QTransform* q_transform_rotate_radians22(void* self, double a, int32_t axis);
 /// Delete this object from C++ memory.
 ///
 /// @param self QTransform*
+///
 void q_transform_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qtransform.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#public-types)
 
 typedef enum {
     QTRANSFORM_TRANSFORMATIONTYPE_TXNONE = 0,

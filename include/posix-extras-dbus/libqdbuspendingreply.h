@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qdbuspendingreplybase.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingreplybase.html)
 
 /// Inherited from QDBusPendingCall
 ///
@@ -19,6 +19,7 @@
 ///
 /// @param self QDBusPendingReplyBase*
 /// @param other QDBusPendingCall*
+///
 void q_dbuspendingreplybase_operator_assign(void* self, void* other);
 
 /// Inherited from QDBusPendingCall
@@ -27,6 +28,7 @@ void q_dbuspendingreplybase_operator_assign(void* self, void* other);
 ///
 /// @param self QDBusPendingReplyBase*
 /// @param other QDBusPendingCall*
+///
 void q_dbuspendingreplybase_swap(void* self, void* other);
 
 /// Inherited from QDBusPendingCall
@@ -34,6 +36,7 @@ void q_dbuspendingreplybase_swap(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isFinished)
 ///
 /// @param self QDBusPendingReplyBase*
+///
 bool q_dbuspendingreplybase_is_finished(void* self);
 
 /// Inherited from QDBusPendingCall
@@ -41,6 +44,7 @@ bool q_dbuspendingreplybase_is_finished(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#waitForFinished)
 ///
 /// @param self QDBusPendingReplyBase*
+///
 void q_dbuspendingreplybase_wait_for_finished(void* self);
 
 /// Inherited from QDBusPendingCall
@@ -48,6 +52,7 @@ void q_dbuspendingreplybase_wait_for_finished(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isError)
 ///
 /// @param self QDBusPendingReplyBase*
+///
 bool q_dbuspendingreplybase_is_error(void* self);
 
 /// Inherited from QDBusPendingCall
@@ -55,6 +60,7 @@ bool q_dbuspendingreplybase_is_error(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isValid)
 ///
 /// @param self QDBusPendingReplyBase*
+///
 bool q_dbuspendingreplybase_is_valid(void* self);
 
 /// Inherited from QDBusPendingCall
@@ -62,6 +68,7 @@ bool q_dbuspendingreplybase_is_valid(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#error)
 ///
 /// @param self QDBusPendingReplyBase*
+///
 QDBusError* q_dbuspendingreplybase_error(void* self);
 
 /// Inherited from QDBusPendingCall
@@ -69,6 +76,7 @@ QDBusError* q_dbuspendingreplybase_error(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#reply)
 ///
 /// @param self QDBusPendingReplyBase*
+///
 QDBusMessage* q_dbuspendingreplybase_reply(void* self);
 
 /// Inherited from QDBusPendingCall
@@ -76,6 +84,7 @@ QDBusMessage* q_dbuspendingreplybase_reply(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromError)
 ///
 /// @param error QDBusError*
+///
 QDBusPendingCall* q_dbuspendingreplybase_from_error(void* error);
 
 /// Inherited from QDBusPendingCall
@@ -83,5 +92,6 @@ QDBusPendingCall* q_dbuspendingreplybase_from_error(void* error);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromCompletedCall)
 ///
 /// @param message QDBusMessage*
+///
 QDBusPendingCall* q_dbuspendingreplybase_from_completed_call(void* message);
 #endif

@@ -11,16 +11,18 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/knscore-searchpreset.html
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html)
 
 /// k_nscore__searchpreset_new constructs a new KNSCore::SearchPreset object.
 ///
 /// @param param1 KNSCore__SearchPreset*
+///
 KNSCore__SearchPreset* k_nscore__searchpreset_new(void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#request)
 ///
 /// @param self KNSCore__SearchPreset*
+///
 KNSCore__SearchRequest* k_nscore__searchpreset_request(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#displayName)
@@ -28,6 +30,7 @@ KNSCore__SearchRequest* k_nscore__searchpreset_request(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchPreset*
+///
 const char* k_nscore__searchpreset_display_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#iconName)
@@ -35,6 +38,7 @@ const char* k_nscore__searchpreset_display_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchPreset*
+///
 const char* k_nscore__searchpreset_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#type)
@@ -42,6 +46,7 @@ const char* k_nscore__searchpreset_icon_name(void* self);
 /// @param self KNSCore__SearchPreset*
 ///
 /// @return enum KNSCore__SearchPreset__Type
+///
 int32_t k_nscore__searchpreset_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#providerId)
@@ -49,14 +54,16 @@ int32_t k_nscore__searchpreset_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchPreset*
+///
 const char* k_nscore__searchpreset_provider_id(void* self);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self KNSCore__SearchPreset*
+///
 void k_nscore__searchpreset_delete(void* self);
 
-/// https://api.kde.org/knscore-searchpreset.html#types
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#public-types)
 
 typedef enum {
     KNSCORE_SEARCHPRESET_TYPE_NOPRESETTYPE = 0,

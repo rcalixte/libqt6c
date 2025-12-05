@@ -11,50 +11,63 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsslerror.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html)
 
 /// q_sslerror_new constructs a new QSslError object.
 ///
 QSslError* q_sslerror_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html)
+
 /// q_sslerror_new2 constructs a new QSslError object.
 ///
 /// @param error enum QSslError__SslError
+///
 QSslError* q_sslerror_new2(int32_t error);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html)
 
 /// q_sslerror_new3 constructs a new QSslError object.
 ///
 /// @param error enum QSslError__SslError
 /// @param certificate QSslCertificate*
+///
 QSslError* q_sslerror_new3(int32_t error, void* certificate);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html)
 
 /// q_sslerror_new4 constructs a new QSslError object.
 ///
 /// @param other QSslError*
+///
 QSslError* q_sslerror_new4(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#swap)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
+///
 void q_sslerror_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#operator-eq)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
+///
 void q_sslerror_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#operator-eq-eq)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
+///
 bool q_sslerror_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#operator-not-eq)
 ///
 /// @param self QSslError*
 /// @param other QSslError*
+///
 bool q_sslerror_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#error)
@@ -62,6 +75,7 @@ bool q_sslerror_operator_not_equal(void* self, void* other);
 /// @param self QSslError*
 ///
 /// @return enum QSslError__SslError
+///
 int32_t q_sslerror_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#errorString)
@@ -69,11 +83,13 @@ int32_t q_sslerror_error(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslError*
+///
 const char* q_sslerror_error_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#certificate)
 ///
 /// @param self QSslError*
+///
 QSslCertificate* q_sslerror_certificate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#dtor.QSslError)
@@ -81,9 +97,10 @@ QSslCertificate* q_sslerror_certificate(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QSslError*
+///
 void q_sslerror_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qsslerror.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#public-types)
 
 typedef enum {
     QSSLERROR_SSLERROR_NOERROR = 0,

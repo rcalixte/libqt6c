@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qstyle.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html)
 
 /// q_style_new constructs a new QStyle object.
 ///
@@ -20,22 +20,26 @@ QStyle* q_style_new();
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QStyle*
+///
 const QMetaObject* q_style_meta_object(void* self);
 
 /// @param self QStyle*
 /// @param param1 const char*
+///
 void* q_style_metacast(void* self, const char* param1);
 
 /// @param self QStyle*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_style_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QStyle*
 /// @param callback int32_t func(QStyle* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_style_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -44,6 +48,7 @@ void q_style_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_style_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -51,6 +56,7 @@ int32_t q_style_qbase_metacall(void* self, int32_t param1, int param2, void* par
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_style_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#name)
@@ -58,12 +64,14 @@ const char* q_style_tr(const char* s);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStyle*
+///
 const char* q_style_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// @param self QStyle*
 /// @param widget QWidget*
+///
 void q_style_polish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
@@ -72,6 +80,7 @@ void q_style_polish(void* self, void* widget);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QWidget* widget)
+///
 void q_style_on_polish(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
@@ -80,12 +89,14 @@ void q_style_on_polish(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param widget QWidget*
+///
 void q_style_qbase_polish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
 /// @param self QStyle*
 /// @param widget QWidget*
+///
 void q_style_unpolish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
@@ -94,6 +105,7 @@ void q_style_unpolish(void* self, void* widget);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QWidget* widget)
+///
 void q_style_on_unpolish(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
@@ -102,12 +114,14 @@ void q_style_on_unpolish(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param widget QWidget*
+///
 void q_style_qbase_unpolish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// @param self QStyle*
 /// @param application QApplication*
+///
 void q_style_polish2(void* self, void* application);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
@@ -116,6 +130,7 @@ void q_style_polish2(void* self, void* application);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QApplication* application)
+///
 void q_style_on_polish2(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
@@ -124,12 +139,14 @@ void q_style_on_polish2(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param application QApplication*
+///
 void q_style_qbase_polish2(void* self, void* application);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
 /// @param self QStyle*
 /// @param application QApplication*
+///
 void q_style_unpolish2(void* self, void* application);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
@@ -138,6 +155,7 @@ void q_style_unpolish2(void* self, void* application);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QApplication* application)
+///
 void q_style_on_unpolish2(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
@@ -146,12 +164,14 @@ void q_style_on_unpolish2(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param application QApplication*
+///
 void q_style_qbase_unpolish2(void* self, void* application);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// @param self QStyle*
 /// @param palette QPalette*
+///
 void q_style_polish3(void* self, void* palette);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
@@ -160,6 +180,7 @@ void q_style_polish3(void* self, void* palette);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QPalette* palette)
+///
 void q_style_on_polish3(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
@@ -168,6 +189,7 @@ void q_style_on_polish3(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param palette QPalette*
+///
 void q_style_qbase_polish3(void* self, void* palette);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
@@ -178,6 +200,7 @@ void q_style_qbase_polish3(void* self, void* palette);
 /// @param flags int
 /// @param enabled bool
 /// @param text const char*
+///
 QRect* q_style_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
@@ -186,6 +209,7 @@ QRect* q_style_item_text_rect(void* self, void* fm, void* r, int flags, bool ena
 ///
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text)
+///
 void q_style_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
@@ -198,6 +222,7 @@ void q_style_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void
 /// @param flags int
 /// @param enabled bool
 /// @param text const char*
+///
 QRect* q_style_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
@@ -206,6 +231,7 @@ QRect* q_style_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bo
 /// @param r QRect*
 /// @param flags int
 /// @param pixmap QPixmap*
+///
 QRect* q_style_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
@@ -214,6 +240,7 @@ QRect* q_style_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 ///
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, QRect* r, int flags, QPixmap* pixmap)
+///
 void q_style_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
@@ -224,6 +251,7 @@ void q_style_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, in
 /// @param r QRect*
 /// @param flags int
 /// @param pixmap QPixmap*
+///
 QRect* q_style_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
@@ -236,6 +264,7 @@ QRect* q_style_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixm
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
+///
 void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
@@ -244,6 +273,7 @@ void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, vo
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole)
+///
 void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
@@ -258,6 +288,7 @@ void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*,
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
+///
 void q_style_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
@@ -267,6 +298,7 @@ void q_style_qbase_draw_item_text(void* self, void* painter, void* rect, int fla
 /// @param rect QRect*
 /// @param alignment int
 /// @param pixmap QPixmap*
+///
 void q_style_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
@@ -275,6 +307,7 @@ void q_style_draw_item_pixmap(void* self, void* painter, void* rect, int alignme
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap)
+///
 void q_style_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
@@ -286,11 +319,13 @@ void q_style_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void
 /// @param rect QRect*
 /// @param alignment int
 /// @param pixmap QPixmap*
+///
 void q_style_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
 ///
 /// @param self QStyle*
+///
 QPalette* q_style_standard_palette(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
@@ -299,6 +334,7 @@ QPalette* q_style_standard_palette(void* self);
 ///
 /// @param self QStyle*
 /// @param callback QPalette* func()
+///
 void q_style_on_standard_palette(void* self, QPalette* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
@@ -306,6 +342,7 @@ void q_style_on_standard_palette(void* self, QPalette* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QStyle*
+///
 QPalette* q_style_qbase_standard_palette(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
@@ -315,6 +352,7 @@ QPalette* q_style_qbase_standard_palette(void* self);
 /// @param opt QStyleOption*
 /// @param p QPainter*
 /// @param w QWidget*
+///
 void q_style_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
@@ -323,6 +361,7 @@ void q_style_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w)
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, enum QStyle__PrimitiveElement pe, QStyleOption* opt, QPainter* p, QWidget* w)
+///
 void q_style_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
@@ -334,6 +373,7 @@ void q_style_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void
 /// @param opt QStyleOption*
 /// @param p QPainter*
 /// @param w QWidget*
+///
 void q_style_qbase_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawControl)
@@ -343,6 +383,7 @@ void q_style_qbase_draw_primitive(void* self, int32_t pe, void* opt, void* p, vo
 /// @param opt QStyleOption*
 /// @param p QPainter*
 /// @param w QWidget*
+///
 void q_style_draw_control(void* self, int64_t element, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawControl)
@@ -351,6 +392,7 @@ void q_style_draw_control(void* self, int64_t element, void* opt, void* p, void*
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, enum QStyle__ControlElement element, QStyleOption* opt, QPainter* p, QWidget* w)
+///
 void q_style_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawControl)
@@ -362,6 +404,7 @@ void q_style_on_draw_control(void* self, void (*callback)(void*, int64_t, void*,
 /// @param opt QStyleOption*
 /// @param p QPainter*
 /// @param w QWidget*
+///
 void q_style_qbase_draw_control(void* self, int64_t element, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
@@ -370,6 +413,7 @@ void q_style_qbase_draw_control(void* self, int64_t element, void* opt, void* p,
 /// @param subElement enum QStyle__SubElement
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QRect* q_style_sub_element_rect(void* self, int64_t subElement, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
@@ -378,6 +422,7 @@ QRect* q_style_sub_element_rect(void* self, int64_t subElement, void* option, vo
 ///
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, enum QStyle__SubElement subElement, QStyleOption* option, QWidget* widget)
+///
 void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
@@ -388,6 +433,7 @@ void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, 
 /// @param subElement enum QStyle__SubElement
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QRect* q_style_qbase_sub_element_rect(void* self, int64_t subElement, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
@@ -397,6 +443,7 @@ QRect* q_style_qbase_sub_element_rect(void* self, int64_t subElement, void* opti
 /// @param opt QStyleOptionComplex*
 /// @param p QPainter*
 /// @param widget QWidget*
+///
 void q_style_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
@@ -405,6 +452,7 @@ void q_style_draw_complex_control(void* self, int64_t cc, void* opt, void* p, vo
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPainter* p, QWidget* widget)
+///
 void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
@@ -416,6 +464,7 @@ void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int64_t
 /// @param opt QStyleOptionComplex*
 /// @param p QPainter*
 /// @param widget QWidget*
+///
 void q_style_qbase_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
@@ -427,6 +476,7 @@ void q_style_qbase_draw_complex_control(void* self, int64_t cc, void* opt, void*
 /// @param widget QWidget*
 ///
 /// @return enum QStyle__SubControl
+///
 int64_t q_style_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
@@ -435,6 +485,7 @@ int64_t q_style_hit_test_complex_control(void* self, int64_t cc, void* opt, void
 ///
 /// @param self QStyle*
 /// @param callback int64_t func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPoint* pt, QWidget* widget)
+///
 void q_style_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
@@ -448,6 +499,7 @@ void q_style_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, 
 /// @param widget QWidget*
 ///
 /// @return enum QStyle__SubControl
+///
 int64_t q_style_qbase_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
@@ -457,6 +509,7 @@ int64_t q_style_qbase_hit_test_complex_control(void* self, int64_t cc, void* opt
 /// @param opt QStyleOptionComplex*
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
+///
 QRect* q_style_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
@@ -465,6 +518,7 @@ QRect* q_style_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, v
 ///
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget)
+///
 void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
@@ -476,6 +530,7 @@ void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, 
 /// @param opt QStyleOptionComplex*
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
+///
 QRect* q_style_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
@@ -484,6 +539,7 @@ QRect* q_style_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t
 /// @param metric enum QStyle__PixelMetric
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_style_pixel_metric(void* self, int64_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
@@ -492,6 +548,7 @@ int32_t q_style_pixel_metric(void* self, int64_t metric, void* option, void* wid
 ///
 /// @param self QStyle*
 /// @param callback int32_t func(QStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget)
+///
 void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
@@ -502,6 +559,7 @@ void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, voi
 /// @param metric enum QStyle__PixelMetric
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_style_qbase_pixel_metric(void* self, int64_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
@@ -511,6 +569,7 @@ int32_t q_style_qbase_pixel_metric(void* self, int64_t metric, void* option, voi
 /// @param opt QStyleOption*
 /// @param contentsSize QSize*
 /// @param w QWidget*
+///
 QSize* q_style_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
@@ -519,6 +578,7 @@ QSize* q_style_size_from_contents(void* self, int64_t ct, void* opt, void* conte
 ///
 /// @param self QStyle*
 /// @param callback QSize* func(QStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* w)
+///
 void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
@@ -530,6 +590,7 @@ void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t
 /// @param opt QStyleOption*
 /// @param contentsSize QSize*
 /// @param w QWidget*
+///
 QSize* q_style_qbase_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
@@ -539,6 +600,7 @@ QSize* q_style_qbase_size_from_contents(void* self, int64_t ct, void* opt, void*
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
+///
 int32_t q_style_style_hint(void* self, int64_t stylehint, void* opt, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
@@ -547,6 +609,7 @@ int32_t q_style_style_hint(void* self, int64_t stylehint, void* opt, void* widge
 ///
 /// @param self QStyle*
 /// @param callback int32_t func(QStyle* self, enum QStyle__StyleHint stylehint, QStyleOption* opt, QWidget* widget, QStyleHintReturn* returnData)
+///
 void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
@@ -558,6 +621,7 @@ void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
+///
 int32_t q_style_qbase_style_hint(void* self, int64_t stylehint, void* opt, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
@@ -566,6 +630,7 @@ int32_t q_style_qbase_style_hint(void* self, int64_t stylehint, void* opt, void*
 /// @param standardPixmap enum QStyle__StandardPixmap
 /// @param opt QStyleOption*
 /// @param widget QWidget*
+///
 QPixmap* q_style_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
@@ -574,6 +639,7 @@ QPixmap* q_style_standard_pixmap(void* self, int64_t standardPixmap, void* opt, 
 ///
 /// @param self QStyle*
 /// @param callback QPixmap* func(QStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget)
+///
 void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
@@ -584,6 +650,7 @@ void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t,
 /// @param standardPixmap enum QStyle__StandardPixmap
 /// @param opt QStyleOption*
 /// @param widget QWidget*
+///
 QPixmap* q_style_qbase_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
@@ -592,6 +659,7 @@ QPixmap* q_style_qbase_standard_pixmap(void* self, int64_t standardPixmap, void*
 /// @param standardIcon enum QStyle__StandardPixmap
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QIcon* q_style_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
@@ -600,6 +668,7 @@ QIcon* q_style_standard_icon(void* self, int64_t standardIcon, void* option, voi
 ///
 /// @param self QStyle*
 /// @param callback QIcon* func(QStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget)
+///
 void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
@@ -610,6 +679,7 @@ void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, voi
 /// @param standardIcon enum QStyle__StandardPixmap
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 QIcon* q_style_qbase_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
@@ -618,6 +688,7 @@ QIcon* q_style_qbase_standard_icon(void* self, int64_t standardIcon, void* optio
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
+///
 QPixmap* q_style_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
@@ -626,6 +697,7 @@ QPixmap* q_style_generated_icon_pixmap(void* self, int32_t iconMode, void* pixma
 ///
 /// @param self QStyle*
 /// @param callback QPixmap* func(QStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
+///
 void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
@@ -636,6 +708,7 @@ void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, in
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
+///
 QPixmap* q_style_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#visualRect)
@@ -643,6 +716,7 @@ QPixmap* q_style_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void*
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalRect QRect*
+///
 QRect* q_style_visual_rect(int32_t direction, void* boundingRect, void* logicalRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#visualPos)
@@ -650,6 +724,7 @@ QRect* q_style_visual_rect(int32_t direction, void* boundingRect, void* logicalR
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalPos QPoint*
+///
 QPoint* q_style_visual_pos(int32_t direction, void* boundingRect, void* logicalPos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderPositionFromValue)
@@ -658,6 +733,7 @@ QPoint* q_style_visual_pos(int32_t direction, void* boundingRect, void* logicalP
 /// @param max int
 /// @param val int
 /// @param space int
+///
 int32_t q_style_slider_position_from_value(int min, int max, int val, int space);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderValueFromPosition)
@@ -666,6 +742,7 @@ int32_t q_style_slider_position_from_value(int min, int max, int val, int space)
 /// @param max int
 /// @param pos int
 /// @param space int
+///
 int32_t q_style_slider_value_from_position(int min, int max, int pos, int space);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#visualAlignment)
@@ -674,6 +751,7 @@ int32_t q_style_slider_value_from_position(int min, int max, int pos, int space)
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t q_style_visual_alignment(int32_t direction, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#alignedRect)
@@ -682,6 +760,7 @@ int32_t q_style_visual_alignment(int32_t direction, int32_t alignment);
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param size QSize*
 /// @param rectangle QRect*
+///
 QRect* q_style_aligned_rect(int32_t direction, int32_t alignment, void* size, void* rectangle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
@@ -692,6 +771,7 @@ QRect* q_style_aligned_rect(int32_t direction, int32_t alignment, void* size, vo
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_style_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
@@ -700,6 +780,7 @@ int32_t q_style_layout_spacing(void* self, int32_t control1, int32_t control2, i
 ///
 /// @param self QStyle*
 /// @param callback int32_t func(QStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget)
+///
 void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
@@ -712,6 +793,7 @@ void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_style_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
@@ -720,11 +802,13 @@ int32_t q_style_qbase_layout_spacing(void* self, int32_t control1, int32_t contr
 /// @param controls1 flag of enum QSizePolicy__ControlType
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
+///
 int32_t q_style_combined_layout_spacing(void* self, int32_t controls1, int32_t controls2, int32_t orientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#proxy)
 ///
 /// @param self QStyle*
+///
 const QStyle* q_style_proxy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -733,6 +817,7 @@ const QStyle* q_style_proxy(void* self);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_style_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -742,6 +827,7 @@ const char* q_style_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_style_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderPositionFromValue)
@@ -751,6 +837,7 @@ const char* q_style_tr3(const char* s, const char* c, int n);
 /// @param val int
 /// @param space int
 /// @param upsideDown bool
+///
 int32_t q_style_slider_position_from_value5(int min, int max, int val, int space, bool upsideDown);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sliderValueFromPosition)
@@ -760,6 +847,7 @@ int32_t q_style_slider_position_from_value5(int min, int max, int val, int space
 /// @param pos int
 /// @param space int
 /// @param upsideDown bool
+///
 int32_t q_style_slider_value_from_position5(int min, int max, int pos, int space, bool upsideDown);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
@@ -769,6 +857,7 @@ int32_t q_style_slider_value_from_position5(int min, int max, int pos, int space
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
+///
 int32_t q_style_combined_layout_spacing4(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
@@ -779,6 +868,7 @@ int32_t q_style_combined_layout_spacing4(void* self, int32_t controls1, int32_t 
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
+///
 int32_t q_style_combined_layout_spacing5(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option, void* widget);
 
 /// Inherited from QObject
@@ -788,6 +878,7 @@ int32_t q_style_combined_layout_spacing5(void* self, int32_t controls1, int32_t 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStyle*
+///
 const char* q_style_object_name(void* self);
 
 /// Inherited from QObject
@@ -796,6 +887,7 @@ const char* q_style_object_name(void* self);
 ///
 /// @param self QStyle*
 /// @param name char*
+///
 void q_style_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -803,6 +895,7 @@ void q_style_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QStyle*
+///
 bool q_style_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -810,6 +903,7 @@ bool q_style_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QStyle*
+///
 bool q_style_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -817,6 +911,7 @@ bool q_style_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QStyle*
+///
 bool q_style_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -824,6 +919,7 @@ bool q_style_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QStyle*
+///
 bool q_style_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -832,6 +928,7 @@ bool q_style_signals_blocked(void* self);
 ///
 /// @param self QStyle*
 /// @param b bool
+///
 bool q_style_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -839,6 +936,7 @@ bool q_style_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QStyle*
+///
 QThread* q_style_thread(void* self);
 
 /// Inherited from QObject
@@ -847,6 +945,7 @@ QThread* q_style_thread(void* self);
 ///
 /// @param self QStyle*
 /// @param thread QThread*
+///
 bool q_style_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -855,6 +954,7 @@ bool q_style_move_to_thread(void* self, void* thread);
 ///
 /// @param self QStyle*
 /// @param interval int
+///
 int32_t q_style_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -863,6 +963,7 @@ int32_t q_style_start_timer(void* self, int interval);
 ///
 /// @param self QStyle*
 /// @param id int
+///
 void q_style_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -871,6 +972,7 @@ void q_style_kill_timer(void* self, int id);
 ///
 /// @param self QStyle*
 /// @param id enum Qt__TimerId
+///
 void q_style_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -878,6 +980,7 @@ void q_style_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QStyle*
+///
 libqt_list /* of QObject* */ q_style_children(void* self);
 
 /// Inherited from QObject
@@ -886,6 +989,7 @@ libqt_list /* of QObject* */ q_style_children(void* self);
 ///
 /// @param self QStyle*
 /// @param parent QObject*
+///
 void q_style_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -894,6 +998,7 @@ void q_style_set_parent(void* self, void* parent);
 ///
 /// @param self QStyle*
 /// @param filterObj QObject*
+///
 void q_style_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -902,6 +1007,7 @@ void q_style_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QStyle*
 /// @param obj QObject*
+///
 void q_style_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -912,6 +1018,7 @@ void q_style_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_style_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -922,6 +1029,7 @@ QMetaObject__Connection* q_style_connect(void* sender, void* signal, void* recei
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_style_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -932,6 +1040,7 @@ QMetaObject__Connection* q_style_connect2(void* self, void* sender, const char* 
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_style_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -939,6 +1048,7 @@ bool q_style_disconnect(void* sender, void* signal, void* receiver, void* member
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_style_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -946,6 +1056,7 @@ bool q_style_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QStyle*
+///
 void q_style_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -953,6 +1064,7 @@ void q_style_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QStyle*
+///
 void q_style_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -962,6 +1074,7 @@ void q_style_dump_object_info(void* self);
 /// @param self QStyle*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_style_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -970,6 +1083,7 @@ bool q_style_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QStyle*
 /// @param name const char*
+///
 QVariant* q_style_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -979,6 +1093,7 @@ QVariant* q_style_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStyle*
+///
 const char** q_style_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -986,6 +1101,7 @@ const char** q_style_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStyle*
+///
 QBindingStorage* q_style_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -993,6 +1109,7 @@ QBindingStorage* q_style_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStyle*
+///
 const QBindingStorage* q_style_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -1000,6 +1117,7 @@ const QBindingStorage* q_style_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStyle*
+///
 void q_style_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1008,6 +1126,7 @@ void q_style_destroyed(void* self);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self)
+///
 void q_style_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1015,6 +1134,7 @@ void q_style_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QStyle*
+///
 QObject* q_style_parent(void* self);
 
 /// Inherited from QObject
@@ -1023,6 +1143,7 @@ QObject* q_style_parent(void* self);
 ///
 /// @param self QStyle*
 /// @param classname const char*
+///
 bool q_style_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1030,6 +1151,7 @@ bool q_style_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QStyle*
+///
 void q_style_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1039,6 +1161,7 @@ void q_style_delete_later(void* self);
 /// @param self QStyle*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_style_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1048,6 +1171,7 @@ bool q_style_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QStyle*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_style_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1059,6 +1183,7 @@ int32_t q_style_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_style_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1070,6 +1195,7 @@ QMetaObject__Connection* q_style_connect5(void* sender, void* signal, void* rece
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_style_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1078,6 +1204,7 @@ QMetaObject__Connection* q_style_connect4(void* self, void* sender, const char* 
 ///
 /// @param self QStyle*
 /// @param param1 QObject*
+///
 void q_style_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1086,6 +1213,7 @@ void q_style_destroyed1(void* self, void* param1);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QObject* param1)
+///
 void q_style_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1096,6 +1224,7 @@ void q_style_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param event QEvent*
+///
 bool q_style_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1106,6 +1235,7 @@ bool q_style_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param event QEvent*
+///
 bool q_style_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1116,6 +1246,7 @@ bool q_style_qbase_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param callback bool func(QStyle* self, QEvent* event)
+///
 void q_style_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1127,6 +1258,7 @@ void q_style_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QStyle*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_style_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1138,6 +1270,7 @@ bool q_style_event_filter(void* self, void* watched, void* event);
 /// @param self QStyle*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_style_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1148,6 +1281,7 @@ bool q_style_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QStyle*
 /// @param callback bool func(QStyle* self, QObject* watched, QEvent* event)
+///
 void q_style_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1158,6 +1292,7 @@ void q_style_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 ///
 /// @param self QStyle*
 /// @param event QTimerEvent*
+///
 void q_style_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1168,6 +1303,7 @@ void q_style_timer_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param event QTimerEvent*
+///
 void q_style_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1178,6 +1314,7 @@ void q_style_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QTimerEvent* event)
+///
 void q_style_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1188,6 +1325,7 @@ void q_style_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param event QChildEvent*
+///
 void q_style_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1198,6 +1336,7 @@ void q_style_child_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param event QChildEvent*
+///
 void q_style_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1208,6 +1347,7 @@ void q_style_qbase_child_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QChildEvent* event)
+///
 void q_style_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1218,6 +1358,7 @@ void q_style_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param event QEvent*
+///
 void q_style_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1228,6 +1369,7 @@ void q_style_custom_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param event QEvent*
+///
 void q_style_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1238,6 +1380,7 @@ void q_style_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QEvent* event)
+///
 void q_style_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1248,6 +1391,7 @@ void q_style_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param signal QMetaMethod*
+///
 void q_style_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1258,6 +1402,7 @@ void q_style_connect_notify(void* self, void* signal);
 ///
 /// @param self QStyle*
 /// @param signal QMetaMethod*
+///
 void q_style_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1268,6 +1413,7 @@ void q_style_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QMetaMethod* signal)
+///
 void q_style_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1278,6 +1424,7 @@ void q_style_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param signal QMetaMethod*
+///
 void q_style_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1288,6 +1435,7 @@ void q_style_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStyle*
 /// @param signal QMetaMethod*
+///
 void q_style_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1298,6 +1446,7 @@ void q_style_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, QMetaMethod* signal)
+///
 void q_style_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1307,6 +1456,7 @@ void q_style_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStyle*
+///
 QObject* q_style_sender(void* self);
 
 /// Inherited from QObject
@@ -1316,6 +1466,7 @@ QObject* q_style_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStyle*
+///
 QObject* q_style_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1326,6 +1477,7 @@ QObject* q_style_qbase_sender(void* self);
 ///
 /// @param self QStyle*
 /// @param callback QObject* func()
+///
 void q_style_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1335,6 +1487,7 @@ void q_style_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStyle*
+///
 int32_t q_style_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1344,6 +1497,7 @@ int32_t q_style_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStyle*
+///
 int32_t q_style_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1354,6 +1508,7 @@ int32_t q_style_qbase_sender_signal_index(void* self);
 ///
 /// @param self QStyle*
 /// @param callback int32_t func()
+///
 void q_style_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1364,6 +1519,7 @@ void q_style_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QStyle*
 /// @param signal const char*
+///
 int32_t q_style_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1374,6 +1530,7 @@ int32_t q_style_receivers(void* self, const char* signal);
 ///
 /// @param self QStyle*
 /// @param signal const char*
+///
 int32_t q_style_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1384,6 +1541,7 @@ int32_t q_style_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QStyle*
 /// @param callback int32_t func(QStyle* self, const char* signal)
+///
 void q_style_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1394,6 +1552,7 @@ void q_style_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// @param self QStyle*
 /// @param signal QMetaMethod*
+///
 bool q_style_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1404,6 +1563,7 @@ bool q_style_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStyle*
 /// @param signal QMetaMethod*
+///
 bool q_style_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1414,6 +1574,7 @@ bool q_style_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStyle*
 /// @param callback bool func(QStyle* self, QMetaMethod* signal)
+///
 void q_style_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1424,6 +1585,7 @@ void q_style_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, const char* objectName)
+///
 void q_style_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#dtor.QStyle)
@@ -1431,9 +1593,10 @@ void q_style_on_object_name_changed(void* self, void (*callback)(void*, const ch
 /// Delete this object from C++ memory.
 ///
 /// @param self QStyle*
+///
 void q_style_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qstyle.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
 
 typedef enum {
     QSTYLE_STATEFLAG_STATE_NONE = 0,
@@ -1465,6 +1628,8 @@ typedef enum {
     QSTYLE_STATEFLAG_STATE_SMALL = 67108864,
     QSTYLE_STATEFLAG_STATE_MINI = 134217728
 } QStyle__StateFlag;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
 
 typedef enum {
     QSTYLE_PRIMITIVEELEMENT_PE_FRAME = 0,
@@ -1521,6 +1686,8 @@ typedef enum {
     QSTYLE_PRIMITIVEELEMENT_PE_CUSTOMBASE = 251658240
 } QStyle__PrimitiveElement;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
+
 typedef enum {
     QSTYLE_CONTROLELEMENT_CE_PUSHBUTTON = 0,
     QSTYLE_CONTROLELEMENT_CE_PUSHBUTTONBEVEL = 1,
@@ -1571,6 +1738,8 @@ typedef enum {
     QSTYLE_CONTROLELEMENT_CE_SHAPEDFRAME = 46,
     QSTYLE_CONTROLELEMENT_CE_CUSTOMBASE = 4026531840
 } QStyle__ControlElement;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
 
 typedef enum {
     QSTYLE_SUBELEMENT_SE_PUSHBUTTONCONTENTS = 0,
@@ -1634,6 +1803,8 @@ typedef enum {
     QSTYLE_SUBELEMENT_SE_CUSTOMBASE = 4026531840
 } QStyle__SubElement;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
+
 typedef enum {
     QSTYLE_COMPLEXCONTROL_CC_SPINBOX = 0,
     QSTYLE_COMPLEXCONTROL_CC_COMBOBOX = 1,
@@ -1646,6 +1817,8 @@ typedef enum {
     QSTYLE_COMPLEXCONTROL_CC_MDICONTROLS = 8,
     QSTYLE_COMPLEXCONTROL_CC_CUSTOMBASE = 4026531840
 } QStyle__ComplexControl;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
 
 typedef enum {
     QSTYLE_SUBCONTROL_SC_NONE = 0,
@@ -1692,6 +1865,8 @@ typedef enum {
     QSTYLE_SUBCONTROL_SC_CUSTOMBASE = 4026531840,
     QSTYLE_SUBCONTROL_SC_ALL = 4294967295
 } QStyle__SubControl;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
 
 typedef enum {
     QSTYLE_PIXELMETRIC_PM_BUTTONMARGIN = 0,
@@ -1789,6 +1964,8 @@ typedef enum {
     QSTYLE_PIXELMETRIC_PM_CUSTOMBASE = 4026531840
 } QStyle__PixelMetric;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
+
 typedef enum {
     QSTYLE_CONTENTSTYPE_CT_PUSHBUTTON = 0,
     QSTYLE_CONTENTSTYPE_CT_CHECKBOX = 1,
@@ -1816,10 +1993,14 @@ typedef enum {
     QSTYLE_CONTENTSTYPE_CT_CUSTOMBASE = 4026531840
 } QStyle__ContentsType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
+
 typedef enum {
     QSTYLE_REQUESTSOFTWAREINPUTPANEL_RSIP_ONMOUSECLICKANDALREADYFOCUSED = 0,
     QSTYLE_REQUESTSOFTWAREINPUTPANEL_RSIP_ONMOUSECLICK = 1
 } QStyle__RequestSoftwareInputPanel;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
 
 typedef enum {
     QSTYLE_STYLEHINT_SH_ETCHDISABLEDTEXT = 0,
@@ -1944,6 +2125,8 @@ typedef enum {
     QSTYLE_STYLEHINT_SH_SPINBOX_SELECTONSTEP = 119,
     QSTYLE_STYLEHINT_SH_CUSTOMBASE = 4026531840
 } QStyle__StyleHint;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
 
 typedef enum {
     QSTYLE_STANDARDPIXMAP_SP_TITLEBARMENUBUTTON = 0,

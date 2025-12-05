@@ -11,20 +11,22 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qiodevicebase.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevicebase.html)
 
 /// q_iodevicebase_new constructs a new QIODeviceBase object.
 ///
 /// @param other QIODeviceBase*
+///
 QIODeviceBase* q_iodevicebase_new(void* other);
 
 /// q_iodevicebase_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QIODeviceBase*
 /// @param other QIODeviceBase*
+///
 void q_iodevicebase_copy_assign(void* self, void* other);
 
-/// https://doc.qt.io/qt-6/qiodevicebase.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qiodevicebase.html#public-types)
 
 typedef enum {
     QIODEVICEBASE_OPENMODEFLAG_NOTOPEN = 0,

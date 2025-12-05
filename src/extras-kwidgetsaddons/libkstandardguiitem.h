@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kstandardguiitem.html
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html)
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#guiItem)
 ///
 /// @param param1 enum KStandardGuiItem__StandardItem
+///
 KGuiItem* k_standardguiitem_gui_item(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#standardItem)
@@ -23,6 +24,7 @@ KGuiItem* k_standardguiitem_gui_item(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardGuiItem__StandardItem
+///
 const char* k_standardguiitem_standard_item(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#ok)
@@ -116,11 +118,13 @@ KGuiItem* k_standardguiitem_open();
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#back)
 ///
 /// @param param1 enum KStandardGuiItem__BidiMode
+///
 KGuiItem* k_standardguiitem_back(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#forward)
 ///
 /// @param param1 enum KStandardGuiItem__BidiMode
+///
 KGuiItem* k_standardguiitem_forward(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#configure)
@@ -159,14 +163,17 @@ KGuiItem* k_standardguiitem_test();
 ///
 /// @param param1 QPushButton*
 /// @param param2 enum KStandardGuiItem__StandardItem
+///
 void k_standardguiitem_assign(void* param1, int32_t param2);
 
-/// https://api.kde.org/kstandardguiitem.html#types
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#public-types)
 
 typedef enum {
     KSTANDARDGUIITEM_BIDIMODE_USERTL = 0,
     KSTANDARDGUIITEM_BIDIMODE_IGNORERTL = 1
 } KStandardGuiItem__BidiMode;
+
+/// [Upstream resources](https://api.kde.org/kstandardguiitem.html#public-types)
 
 typedef enum {
     KSTANDARDGUIITEM_STANDARDITEM_OK = 1,

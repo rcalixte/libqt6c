@@ -31,7 +31,7 @@ type FormatBatch struct {
 }
 
 func processFormatBatch(batch *FormatBatch) error {
-	numCPU := runtime.NumCPU()
+	numCPU := int(float64(runtime.NumCPU()) * 0.85)
 	var wg sync.WaitGroup
 	errors := make(chan error, numCPU)
 

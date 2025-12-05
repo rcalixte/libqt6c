@@ -11,14 +11,15 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kuit.html
+/// [Upstream resources](https://api.kde.org/kuit.html)
 
 /// [Upstream resources](https://api.kde.org/kuit.html#setupForDomain)
 ///
 /// @param param1 const char*
+///
 KuitSetup* k_uit_setup_for_domain(const char* param1);
 
-/// https://api.kde.org/kuitsetup.html
+/// [Upstream resources](https://api.kde.org/kuitsetup.html)
 
 /// [Upstream resources](https://api.kde.org/kuitsetup.html#setTagPattern)
 ///
@@ -27,6 +28,7 @@ KuitSetup* k_uit_setup_for_domain(const char* param1);
 /// @param attribNames const char**
 /// @param format enum Kuit__VisualFormat
 /// @param pattern KLocalizedString*
+///
 void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[static 1], int32_t format, void* pattern);
 
 /// [Upstream resources](https://api.kde.org/kuitsetup.html#setTagClass)
@@ -34,6 +36,7 @@ void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* att
 /// @param self KuitSetup*
 /// @param tagName const char*
 /// @param aClass enum Kuit__TagClass
+///
 void k_uitsetup_set_tag_class(void* self, const char* tagName, int32_t aClass);
 
 /// [Upstream resources](https://api.kde.org/kuitsetup.html#setFormatForMarker)
@@ -41,6 +44,7 @@ void k_uitsetup_set_tag_class(void* self, const char* tagName, int32_t aClass);
 /// @param self KuitSetup*
 /// @param marker const char*
 /// @param format enum Kuit__VisualFormat
+///
 void k_uitsetup_set_format_for_marker(void* self, const char* marker, int32_t format);
 
 /// [Upstream resources](https://api.kde.org/kuitsetup.html#dtor.KuitSetup)
@@ -48,9 +52,10 @@ void k_uitsetup_set_format_for_marker(void* self, const char* marker, int32_t fo
 /// Delete this object from C++ memory.
 ///
 /// @param self KuitSetup*
+///
 void k_uitsetup_delete(void* self);
 
-/// https://api.kde.org/kuitsetup.html#types
+/// [Upstream resources](https://api.kde.org/kuitsetup.html#public-types)
 
 typedef enum {
     KUIT_VISUALFORMAT_UNDEFINEDFORMAT = 0,
@@ -58,6 +63,8 @@ typedef enum {
     KUIT_VISUALFORMAT_RICHTEXT = 20,
     KUIT_VISUALFORMAT_TERMTEXT = 30
 } Kuit__VisualFormat;
+
+/// [Upstream resources](https://api.kde.org/kuitsetup.html#public-types)
 
 typedef enum {
     KUIT_TAGCLASS_PHRASETAG = 0,

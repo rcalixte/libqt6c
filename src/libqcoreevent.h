@@ -11,11 +11,12 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qevent.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qevent.html)
 
 /// q_event_new constructs a new QEvent object.
 ///
 /// @param type enum QEvent__Type
+///
 QEvent* q_event_new(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
@@ -23,17 +24,20 @@ QEvent* q_event_new(int32_t type);
 /// @param self QEvent*
 ///
 /// @return enum QEvent__Type
+///
 int32_t q_event_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
 /// @param self QEvent*
+///
 bool q_event_spontaneous(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// @param self QEvent*
 /// @param accepted bool
+///
 void q_event_set_accepted(void* self, bool accepted);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -42,6 +46,7 @@ void q_event_set_accepted(void* self, bool accepted);
 ///
 /// @param self QEvent*
 /// @param callback void func(QEvent* self, bool accepted)
+///
 void q_event_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -50,36 +55,43 @@ void q_event_on_set_accepted(void* self, void (*callback)(void*, bool));
 ///
 /// @param self QEvent*
 /// @param accepted bool
+///
 void q_event_qbase_set_accepted(void* self, bool accepted);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
 /// @param self QEvent*
+///
 bool q_event_is_accepted(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
 /// @param self QEvent*
+///
 void q_event_accept(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
 /// @param self QEvent*
+///
 void q_event_ignore(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
 /// @param self QEvent*
+///
 bool q_event_is_input_event(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
 /// @param self QEvent*
+///
 bool q_event_is_pointer_event(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
 /// @param self QEvent*
+///
 bool q_event_is_single_point_event(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#registerEventType)
@@ -89,6 +101,7 @@ int32_t q_event_register_event_type();
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
 ///
 /// @param self QEvent*
+///
 QEvent* q_event_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -97,6 +110,7 @@ QEvent* q_event_clone(void* self);
 ///
 /// @param self QEvent*
 /// @param callback QEvent* func()
+///
 void q_event_on_clone(void* self, QEvent* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -104,11 +118,13 @@ void q_event_on_clone(void* self, QEvent* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QEvent*
+///
 QEvent* q_event_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
 /// @param hint int
+///
 int32_t q_event_register_event_type1(int hint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#dtor.QEvent)
@@ -116,23 +132,29 @@ int32_t q_event_register_event_type1(int hint);
 /// Delete this object from C++ memory.
 ///
 /// @param self QEvent*
+///
 void q_event_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qtimerevent.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html)
 
 /// q_timerevent_new constructs a new QTimerEvent object.
 ///
 /// @param timerId int
+///
 QTimerEvent* q_timerevent_new(int timerId);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html)
 
 /// q_timerevent_new2 constructs a new QTimerEvent object.
 ///
 /// @param timerId enum Qt__TimerId
+///
 QTimerEvent* q_timerevent_new2(int32_t timerId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html#clone)
 ///
 /// @param self QTimerEvent*
+///
 QTimerEvent* q_timerevent_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html#clone)
@@ -141,6 +163,7 @@ QTimerEvent* q_timerevent_clone(void* self);
 ///
 /// @param self QTimerEvent*
 /// @param callback QTimerEvent* func()
+///
 void q_timerevent_on_clone(void* self, QTimerEvent* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html#clone)
@@ -148,11 +171,13 @@ void q_timerevent_on_clone(void* self, QTimerEvent* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QTimerEvent*
+///
 QTimerEvent* q_timerevent_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html#timerId)
 ///
 /// @param self QTimerEvent*
+///
 int32_t q_timerevent_timer_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html#id)
@@ -160,6 +185,7 @@ int32_t q_timerevent_timer_id(void* self);
 /// @param self QTimerEvent*
 ///
 /// @return enum Qt__TimerId
+///
 int32_t q_timerevent_id(void* self);
 
 /// Inherited from QEvent
@@ -169,6 +195,7 @@ int32_t q_timerevent_id(void* self);
 /// @param self QTimerEvent*
 ///
 /// @return enum QEvent__Type
+///
 int32_t q_timerevent_type(void* self);
 
 /// Inherited from QEvent
@@ -176,6 +203,7 @@ int32_t q_timerevent_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
 /// @param self QTimerEvent*
+///
 bool q_timerevent_spontaneous(void* self);
 
 /// Inherited from QEvent
@@ -183,6 +211,7 @@ bool q_timerevent_spontaneous(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
 /// @param self QTimerEvent*
+///
 bool q_timerevent_is_accepted(void* self);
 
 /// Inherited from QEvent
@@ -190,6 +219,7 @@ bool q_timerevent_is_accepted(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
 /// @param self QTimerEvent*
+///
 void q_timerevent_accept(void* self);
 
 /// Inherited from QEvent
@@ -197,6 +227,7 @@ void q_timerevent_accept(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
 /// @param self QTimerEvent*
+///
 void q_timerevent_ignore(void* self);
 
 /// Inherited from QEvent
@@ -204,6 +235,7 @@ void q_timerevent_ignore(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
 /// @param self QTimerEvent*
+///
 bool q_timerevent_is_input_event(void* self);
 
 /// Inherited from QEvent
@@ -211,6 +243,7 @@ bool q_timerevent_is_input_event(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
 /// @param self QTimerEvent*
+///
 bool q_timerevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
@@ -218,6 +251,7 @@ bool q_timerevent_is_pointer_event(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
 /// @param self QTimerEvent*
+///
 bool q_timerevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
@@ -231,6 +265,7 @@ int32_t q_timerevent_register_event_type();
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
 /// @param hint int
+///
 int32_t q_timerevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -241,6 +276,7 @@ int32_t q_timerevent_register_event_type1(int hint);
 ///
 /// @param self QTimerEvent*
 /// @param accepted bool
+///
 void q_timerevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -251,6 +287,7 @@ void q_timerevent_set_accepted(void* self, bool accepted);
 ///
 /// @param self QTimerEvent*
 /// @param accepted bool
+///
 void q_timerevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -261,6 +298,7 @@ void q_timerevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// @param self QTimerEvent*
 /// @param callback void func(QTimerEvent* self, bool accepted)
+///
 void q_timerevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html#dtor.QTimerEvent)
@@ -268,19 +306,22 @@ void q_timerevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 /// Delete this object from C++ memory.
 ///
 /// @param self QTimerEvent*
+///
 void q_timerevent_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qchildevent.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html)
 
 /// q_childevent_new constructs a new QChildEvent object.
 ///
 /// @param type enum QEvent__Type
 /// @param child QObject*
+///
 QChildEvent* q_childevent_new(int32_t type, void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#clone)
 ///
 /// @param self QChildEvent*
+///
 QChildEvent* q_childevent_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#clone)
@@ -289,6 +330,7 @@ QChildEvent* q_childevent_clone(void* self);
 ///
 /// @param self QChildEvent*
 /// @param callback QChildEvent* func()
+///
 void q_childevent_on_clone(void* self, QChildEvent* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#clone)
@@ -296,26 +338,31 @@ void q_childevent_on_clone(void* self, QChildEvent* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QChildEvent*
+///
 QChildEvent* q_childevent_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#child)
 ///
 /// @param self QChildEvent*
+///
 QObject* q_childevent_child(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#added)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_added(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#polished)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_polished(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#removed)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_removed(void* self);
 
 /// Inherited from QEvent
@@ -325,6 +372,7 @@ bool q_childevent_removed(void* self);
 /// @param self QChildEvent*
 ///
 /// @return enum QEvent__Type
+///
 int32_t q_childevent_type(void* self);
 
 /// Inherited from QEvent
@@ -332,6 +380,7 @@ int32_t q_childevent_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_spontaneous(void* self);
 
 /// Inherited from QEvent
@@ -339,6 +388,7 @@ bool q_childevent_spontaneous(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_is_accepted(void* self);
 
 /// Inherited from QEvent
@@ -346,6 +396,7 @@ bool q_childevent_is_accepted(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
 /// @param self QChildEvent*
+///
 void q_childevent_accept(void* self);
 
 /// Inherited from QEvent
@@ -353,6 +404,7 @@ void q_childevent_accept(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
 /// @param self QChildEvent*
+///
 void q_childevent_ignore(void* self);
 
 /// Inherited from QEvent
@@ -360,6 +412,7 @@ void q_childevent_ignore(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_is_input_event(void* self);
 
 /// Inherited from QEvent
@@ -367,6 +420,7 @@ bool q_childevent_is_input_event(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
@@ -374,6 +428,7 @@ bool q_childevent_is_pointer_event(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
 /// @param self QChildEvent*
+///
 bool q_childevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
@@ -387,6 +442,7 @@ int32_t q_childevent_register_event_type();
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
 /// @param hint int
+///
 int32_t q_childevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -397,6 +453,7 @@ int32_t q_childevent_register_event_type1(int hint);
 ///
 /// @param self QChildEvent*
 /// @param accepted bool
+///
 void q_childevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -407,6 +464,7 @@ void q_childevent_set_accepted(void* self, bool accepted);
 ///
 /// @param self QChildEvent*
 /// @param accepted bool
+///
 void q_childevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -417,6 +475,7 @@ void q_childevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// @param self QChildEvent*
 /// @param callback void func(QChildEvent* self, bool accepted)
+///
 void q_childevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#dtor.QChildEvent)
@@ -424,18 +483,21 @@ void q_childevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 /// Delete this object from C++ memory.
 ///
 /// @param self QChildEvent*
+///
 void q_childevent_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html)
 
 /// q_dynamicpropertychangeevent_new constructs a new QDynamicPropertyChangeEvent object.
 ///
 /// @param name const char*
+///
 QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#clone)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#clone)
@@ -444,6 +506,7 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_clone(void* self);
 ///
 /// @param self QDynamicPropertyChangeEvent*
 /// @param callback QDynamicPropertyChangeEvent* func()
+///
 void q_dynamicpropertychangeevent_on_clone(void* self, QDynamicPropertyChangeEvent* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#clone)
@@ -451,6 +514,7 @@ void q_dynamicpropertychangeevent_on_clone(void* self, QDynamicPropertyChangeEve
 /// Base class method implementation
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#propertyName)
@@ -458,6 +522,7 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_qbase_clone(void* self
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 char* q_dynamicpropertychangeevent_property_name(void* self);
 
 /// Inherited from QEvent
@@ -467,6 +532,7 @@ char* q_dynamicpropertychangeevent_property_name(void* self);
 /// @param self QDynamicPropertyChangeEvent*
 ///
 /// @return enum QEvent__Type
+///
 int32_t q_dynamicpropertychangeevent_type(void* self);
 
 /// Inherited from QEvent
@@ -474,6 +540,7 @@ int32_t q_dynamicpropertychangeevent_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 bool q_dynamicpropertychangeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
@@ -481,6 +548,7 @@ bool q_dynamicpropertychangeevent_spontaneous(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 bool q_dynamicpropertychangeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
@@ -488,6 +556,7 @@ bool q_dynamicpropertychangeevent_is_accepted(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 void q_dynamicpropertychangeevent_accept(void* self);
 
 /// Inherited from QEvent
@@ -495,6 +564,7 @@ void q_dynamicpropertychangeevent_accept(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 void q_dynamicpropertychangeevent_ignore(void* self);
 
 /// Inherited from QEvent
@@ -502,6 +572,7 @@ void q_dynamicpropertychangeevent_ignore(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 bool q_dynamicpropertychangeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
@@ -509,6 +580,7 @@ bool q_dynamicpropertychangeevent_is_input_event(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 bool q_dynamicpropertychangeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
@@ -516,6 +588,7 @@ bool q_dynamicpropertychangeevent_is_pointer_event(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 bool q_dynamicpropertychangeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
@@ -529,6 +602,7 @@ int32_t q_dynamicpropertychangeevent_register_event_type();
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
 /// @param hint int
+///
 int32_t q_dynamicpropertychangeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -539,6 +613,7 @@ int32_t q_dynamicpropertychangeevent_register_event_type1(int hint);
 ///
 /// @param self QDynamicPropertyChangeEvent*
 /// @param accepted bool
+///
 void q_dynamicpropertychangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -549,6 +624,7 @@ void q_dynamicpropertychangeevent_set_accepted(void* self, bool accepted);
 ///
 /// @param self QDynamicPropertyChangeEvent*
 /// @param accepted bool
+///
 void q_dynamicpropertychangeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -559,6 +635,7 @@ void q_dynamicpropertychangeevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// @param self QDynamicPropertyChangeEvent*
 /// @param callback void func(QDynamicPropertyChangeEvent* self, bool accepted)
+///
 void q_dynamicpropertychangeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#dtor.QDynamicPropertyChangeEvent)
@@ -566,9 +643,10 @@ void q_dynamicpropertychangeevent_on_set_accepted(void* self, void (*callback)(v
 /// Delete this object from C++ memory.
 ///
 /// @param self QDynamicPropertyChangeEvent*
+///
 void q_dynamicpropertychangeevent_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qcoreevent.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreevent.html#public-types)
 
 typedef enum {
     QEVENT_TYPE_NONE = 0,

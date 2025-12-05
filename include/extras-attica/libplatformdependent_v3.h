@@ -11,21 +11,24 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/attica-platformdependentv3.html
+/// [Upstream resources](https://api.kde.org/attica-platformdependentv3.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 const QMetaObject* k_attica__platformdependentv3_meta_object(void* self);
 
 /// @param self Attica__PlatformDependentV3*
 /// @param param1 const char*
+///
 void* k_attica__platformdependentv3_metacast(void* self, const char* param1);
 
 /// @param self Attica__PlatformDependentV3*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_attica__platformdependentv3_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -33,22 +36,26 @@ int32_t k_attica__platformdependentv3_metacall(void* self, int32_t param1, int p
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_attica__platformdependentv3_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv3.html#isReady)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 bool k_attica__platformdependentv3_is_ready(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv3.html#readyChanged)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 void k_attica__platformdependentv3_ready_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv3.html#readyChanged)
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param callback void func(Attica__PlatformDependentV3* self)
+///
 void k_attica__platformdependentv3_on_ready_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -57,6 +64,7 @@ void k_attica__platformdependentv3_on_ready_changed(void* self, void (*callback)
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_attica__platformdependentv3_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -66,6 +74,7 @@ const char* k_attica__platformdependentv3_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_attica__platformdependentv3_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -74,6 +83,7 @@ const char* k_attica__platformdependentv3_tr3(const char* s, const char* c, int 
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param event QEvent*
+///
 bool k_attica__platformdependentv3_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -83,6 +93,7 @@ bool k_attica__platformdependentv3_event(void* self, void* event);
 /// @param self Attica__PlatformDependentV3*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_attica__platformdependentv3_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -92,6 +103,7 @@ bool k_attica__platformdependentv3_event_filter(void* self, void* watched, void*
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 const char* k_attica__platformdependentv3_object_name(void* self);
 
 /// Inherited from QObject
@@ -100,6 +112,7 @@ const char* k_attica__platformdependentv3_object_name(void* self);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param name char*
+///
 void k_attica__platformdependentv3_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -107,6 +120,7 @@ void k_attica__platformdependentv3_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 bool k_attica__platformdependentv3_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -114,6 +128,7 @@ bool k_attica__platformdependentv3_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 bool k_attica__platformdependentv3_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -121,6 +136,7 @@ bool k_attica__platformdependentv3_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 bool k_attica__platformdependentv3_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -128,6 +144,7 @@ bool k_attica__platformdependentv3_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 bool k_attica__platformdependentv3_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -136,6 +153,7 @@ bool k_attica__platformdependentv3_signals_blocked(void* self);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param b bool
+///
 bool k_attica__platformdependentv3_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -143,6 +161,7 @@ bool k_attica__platformdependentv3_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 QThread* k_attica__platformdependentv3_thread(void* self);
 
 /// Inherited from QObject
@@ -151,6 +170,7 @@ QThread* k_attica__platformdependentv3_thread(void* self);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param thread QThread*
+///
 bool k_attica__platformdependentv3_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -159,6 +179,7 @@ bool k_attica__platformdependentv3_move_to_thread(void* self, void* thread);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param interval int
+///
 int32_t k_attica__platformdependentv3_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -167,6 +188,7 @@ int32_t k_attica__platformdependentv3_start_timer(void* self, int interval);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param id int
+///
 void k_attica__platformdependentv3_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -175,6 +197,7 @@ void k_attica__platformdependentv3_kill_timer(void* self, int id);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param id enum Qt__TimerId
+///
 void k_attica__platformdependentv3_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -182,6 +205,7 @@ void k_attica__platformdependentv3_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 libqt_list /* of QObject* */ k_attica__platformdependentv3_children(void* self);
 
 /// Inherited from QObject
@@ -190,6 +214,7 @@ libqt_list /* of QObject* */ k_attica__platformdependentv3_children(void* self);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param parent QObject*
+///
 void k_attica__platformdependentv3_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -198,6 +223,7 @@ void k_attica__platformdependentv3_set_parent(void* self, void* parent);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param filterObj QObject*
+///
 void k_attica__platformdependentv3_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -206,6 +232,7 @@ void k_attica__platformdependentv3_install_event_filter(void* self, void* filter
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param obj QObject*
+///
 void k_attica__platformdependentv3_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -216,6 +243,7 @@ void k_attica__platformdependentv3_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_attica__platformdependentv3_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -226,6 +254,7 @@ QMetaObject__Connection* k_attica__platformdependentv3_connect(void* sender, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_attica__platformdependentv3_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -236,6 +265,7 @@ QMetaObject__Connection* k_attica__platformdependentv3_connect2(void* self, void
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_attica__platformdependentv3_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -243,6 +273,7 @@ bool k_attica__platformdependentv3_disconnect(void* sender, void* signal, void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_attica__platformdependentv3_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -250,6 +281,7 @@ bool k_attica__platformdependentv3_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 void k_attica__platformdependentv3_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -257,6 +289,7 @@ void k_attica__platformdependentv3_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 void k_attica__platformdependentv3_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -266,6 +299,7 @@ void k_attica__platformdependentv3_dump_object_info(void* self);
 /// @param self Attica__PlatformDependentV3*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_attica__platformdependentv3_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -274,6 +308,7 @@ bool k_attica__platformdependentv3_set_property(void* self, const char* name, vo
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param name const char*
+///
 QVariant* k_attica__platformdependentv3_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -283,6 +318,7 @@ QVariant* k_attica__platformdependentv3_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 const char** k_attica__platformdependentv3_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -290,6 +326,7 @@ const char** k_attica__platformdependentv3_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 QBindingStorage* k_attica__platformdependentv3_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -297,6 +334,7 @@ QBindingStorage* k_attica__platformdependentv3_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 const QBindingStorage* k_attica__platformdependentv3_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -304,6 +342,7 @@ const QBindingStorage* k_attica__platformdependentv3_binding_storage2(void* self
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 void k_attica__platformdependentv3_destroyed(void* self);
 
 /// Inherited from QObject
@@ -312,6 +351,7 @@ void k_attica__platformdependentv3_destroyed(void* self);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param callback void func(Attica__PlatformDependentV3* self)
+///
 void k_attica__platformdependentv3_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -319,6 +359,7 @@ void k_attica__platformdependentv3_on_destroyed(void* self, void (*callback)(voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 QObject* k_attica__platformdependentv3_parent(void* self);
 
 /// Inherited from QObject
@@ -327,6 +368,7 @@ QObject* k_attica__platformdependentv3_parent(void* self);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param classname const char*
+///
 bool k_attica__platformdependentv3_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -334,6 +376,7 @@ bool k_attica__platformdependentv3_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 void k_attica__platformdependentv3_delete_later(void* self);
 
 /// Inherited from QObject
@@ -343,6 +386,7 @@ void k_attica__platformdependentv3_delete_later(void* self);
 /// @param self Attica__PlatformDependentV3*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_attica__platformdependentv3_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -352,6 +396,7 @@ bool k_attica__platformdependentv3_move_to_thread2(void* self, void* thread, voi
 /// @param self Attica__PlatformDependentV3*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_attica__platformdependentv3_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -363,6 +408,7 @@ int32_t k_attica__platformdependentv3_start_timer22(void* self, int interval, in
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_attica__platformdependentv3_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -374,6 +420,7 @@ QMetaObject__Connection* k_attica__platformdependentv3_connect5(void* sender, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_attica__platformdependentv3_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -382,6 +429,7 @@ QMetaObject__Connection* k_attica__platformdependentv3_connect4(void* self, void
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param param1 QObject*
+///
 void k_attica__platformdependentv3_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -390,6 +438,7 @@ void k_attica__platformdependentv3_destroyed1(void* self, void* param1);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param callback void func(Attica__PlatformDependentV3* self, QObject* param1)
+///
 void k_attica__platformdependentv3_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from Attica::PlatformDependentV2
@@ -398,6 +447,7 @@ void k_attica__platformdependentv3_on_destroyed1(void* self, void (*callback)(vo
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
+///
 QNetworkReply* k_attica__platformdependentv3_delete_resource(void* self, void* request);
 
 /// Inherited from Attica::PlatformDependentV2
@@ -407,6 +457,7 @@ QNetworkReply* k_attica__platformdependentv3_delete_resource(void* self, void* r
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
+///
 QNetworkReply* k_attica__platformdependentv3_put(void* self, void* request, void* data);
 
 /// Inherited from Attica::PlatformDependentV2
@@ -416,6 +467,7 @@ QNetworkReply* k_attica__platformdependentv3_put(void* self, void* request, void
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
 /// @param data const char*
+///
 QNetworkReply* k_attica__platformdependentv3_put2(void* self, void* request, const char* data);
 
 /// Inherited from Attica::PlatformDependentV2
@@ -424,6 +476,7 @@ QNetworkReply* k_attica__platformdependentv3_put2(void* self, void* request, con
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param param1 Attica__PlatformDependentV2*
+///
 void k_attica__platformdependentv3_operator_assign(void* self, void* param1);
 
 /// Inherited from Attica::PlatformDependent
@@ -431,6 +484,7 @@ void k_attica__platformdependentv3_operator_assign(void* self, void* param1);
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#getDefaultProviderFiles)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 libqt_list /* of QUrl* */ k_attica__platformdependentv3_get_default_provider_files(void* self);
 
 /// Inherited from Attica::PlatformDependent
@@ -439,6 +493,7 @@ libqt_list /* of QUrl* */ k_attica__platformdependentv3_get_default_provider_fil
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param url QUrl*
+///
 void k_attica__platformdependentv3_add_default_provider_file(void* self, void* url);
 
 /// Inherited from Attica::PlatformDependent
@@ -447,6 +502,7 @@ void k_attica__platformdependentv3_add_default_provider_file(void* self, void* u
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param url QUrl*
+///
 void k_attica__platformdependentv3_remove_default_provider_file(void* self, void* url);
 
 /// Inherited from Attica::PlatformDependent
@@ -456,6 +512,7 @@ void k_attica__platformdependentv3_remove_default_provider_file(void* self, void
 /// @param self Attica__PlatformDependentV3*
 /// @param baseUrl QUrl*
 /// @param enabled bool
+///
 void k_attica__platformdependentv3_enable_provider(void* self, void* baseUrl, bool enabled);
 
 /// Inherited from Attica::PlatformDependent
@@ -464,6 +521,7 @@ void k_attica__platformdependentv3_enable_provider(void* self, void* baseUrl, bo
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param baseUrl QUrl*
+///
 bool k_attica__platformdependentv3_is_enabled(void* self, void* baseUrl);
 
 /// Inherited from Attica::PlatformDependent
@@ -472,6 +530,7 @@ bool k_attica__platformdependentv3_is_enabled(void* self, void* baseUrl);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param baseUrl QUrl*
+///
 bool k_attica__platformdependentv3_has_credentials(void* self, void* baseUrl);
 
 /// Inherited from Attica::PlatformDependent
@@ -482,6 +541,7 @@ bool k_attica__platformdependentv3_has_credentials(void* self, void* baseUrl);
 /// @param baseUrl QUrl*
 /// @param user const char*
 /// @param password const char*
+///
 bool k_attica__platformdependentv3_load_credentials(void* self, void* baseUrl, const char* user, const char* password);
 
 /// Inherited from Attica::PlatformDependent
@@ -492,6 +552,7 @@ bool k_attica__platformdependentv3_load_credentials(void* self, void* baseUrl, c
 /// @param baseUrl QUrl*
 /// @param user const char*
 /// @param password const char*
+///
 bool k_attica__platformdependentv3_ask_for_credentials(void* self, void* baseUrl, const char* user, const char* password);
 
 /// Inherited from Attica::PlatformDependent
@@ -502,6 +563,7 @@ bool k_attica__platformdependentv3_ask_for_credentials(void* self, void* baseUrl
 /// @param baseUrl QUrl*
 /// @param user const char*
 /// @param password const char*
+///
 bool k_attica__platformdependentv3_save_credentials(void* self, void* baseUrl, const char* user, const char* password);
 
 /// Inherited from Attica::PlatformDependent
@@ -510,6 +572,7 @@ bool k_attica__platformdependentv3_save_credentials(void* self, void* baseUrl, c
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
+///
 QNetworkReply* k_attica__platformdependentv3_get(void* self, void* request);
 
 /// Inherited from Attica::PlatformDependent
@@ -519,6 +582,7 @@ QNetworkReply* k_attica__platformdependentv3_get(void* self, void* request);
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
+///
 QNetworkReply* k_attica__platformdependentv3_post(void* self, void* request, void* data);
 
 /// Inherited from Attica::PlatformDependent
@@ -528,6 +592,7 @@ QNetworkReply* k_attica__platformdependentv3_post(void* self, void* request, voi
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
 /// @param data const char*
+///
 QNetworkReply* k_attica__platformdependentv3_post2(void* self, void* request, const char* data);
 
 /// Inherited from Attica::PlatformDependent
@@ -536,6 +601,7 @@ QNetworkReply* k_attica__platformdependentv3_post2(void* self, void* request, co
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param nam QNetworkAccessManager*
+///
 void k_attica__platformdependentv3_set_nam(void* self, void* nam);
 
 /// Inherited from Attica::PlatformDependent
@@ -543,6 +609,7 @@ void k_attica__platformdependentv3_set_nam(void* self, void* nam);
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#nam)
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 QNetworkAccessManager* k_attica__platformdependentv3_nam(void* self);
 
 /// Inherited from QObject
@@ -553,11 +620,13 @@ QNetworkAccessManager* k_attica__platformdependentv3_nam(void* self);
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param callback void func(Attica__PlatformDependentV3* self, const char* objectName)
+///
 void k_attica__platformdependentv3_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
 ///
 /// @param self Attica__PlatformDependentV3*
+///
 void k_attica__platformdependentv3_delete(void* self);
 
 #endif

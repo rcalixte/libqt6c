@@ -11,28 +11,34 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsysinfo.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html)
 
 /// q_sysinfo_new constructs a new QSysInfo object.
 ///
 /// @param other QSysInfo*
+///
 QSysInfo* q_sysinfo_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html)
 
 /// q_sysinfo_new2 constructs a new QSysInfo object and invalidates the source QSysInfo object.
 ///
 /// @param other QSysInfo*
+///
 QSysInfo* q_sysinfo_new2(void* other);
 
 /// q_sysinfo_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QSysInfo*
 /// @param other QSysInfo*
+///
 void q_sysinfo_copy_assign(void* self, void* other);
 
 /// q_sysinfo_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QSysInfo*
 /// @param other QSysInfo*
+///
 void q_sysinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#buildCpuArchitecture)
@@ -106,13 +112,16 @@ char* q_sysinfo_boot_unique_id();
 /// Delete this object from C++ memory.
 ///
 /// @param self QSysInfo*
+///
 void q_sysinfo_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qsysinfo.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#public-types)
 
 typedef enum {
     QSYSINFO_SIZES_WORDSIZE = 64
 } QSysInfo__Sizes;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#public-types)
 
 typedef enum {
     QSYSINFO_ENDIAN_BIGENDIAN = 0,

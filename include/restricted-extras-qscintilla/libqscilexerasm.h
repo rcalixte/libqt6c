@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 
 /// q_scilexerasm_new constructs a new QsciLexerAsm object.
 ///
 QsciLexerAsm* q_scilexerasm_new();
 
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
+
 /// q_scilexerasm_new2 constructs a new QsciLexerAsm object.
 ///
 /// @param parent QObject*
+///
 QsciLexerAsm* q_scilexerasm_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QsciLexerAsm*
+///
 const QMetaObject* q_scilexerasm_meta_object(void* self);
 
 /// @param self QsciLexerAsm*
 /// @param param1 const char*
+///
 void* q_scilexerasm_metacast(void* self, const char* param1);
 
 /// @param self QsciLexerAsm*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_scilexerasm_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func(QsciLexerAsm* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_scilexerasm_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_scilexerasm_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_scilexerasm_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,30 +64,35 @@ int32_t q_scilexerasm_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_scilexerasm_tr(const char* s);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_default_color(void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 bool q_scilexerasm_default_eol_fill(void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QFont* q_scilexerasm_default_font(void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_default_paper(void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -88,6 +101,7 @@ QColor* q_scilexerasm_default_paper(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param set int
+///
 const char* q_scilexerasm_keywords(void* self, int set);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -96,37 +110,44 @@ const char* q_scilexerasm_keywords(void* self, int set);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 const char* q_scilexerasm_description(void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
+///
 void q_scilexerasm_refresh_properties(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_fold_comments(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_fold_compact(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
+///
 QChar* q_scilexerasm_comment_delimiter(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_fold_syntax_based(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param fold bool
+///
 void q_scilexerasm_set_fold_comments(void* self, bool fold);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -135,6 +156,7 @@ void q_scilexerasm_set_fold_comments(void* self, bool fold);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, bool fold)
+///
 void q_scilexerasm_on_set_fold_comments(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -143,12 +165,14 @@ void q_scilexerasm_on_set_fold_comments(void* self, void (*callback)(void*, bool
 ///
 /// @param self QsciLexerAsm*
 /// @param fold bool
+///
 void q_scilexerasm_qbase_set_fold_comments(void* self, bool fold);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param fold bool
+///
 void q_scilexerasm_set_fold_compact(void* self, bool fold);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -157,6 +181,7 @@ void q_scilexerasm_set_fold_compact(void* self, bool fold);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, bool fold)
+///
 void q_scilexerasm_on_set_fold_compact(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -165,12 +190,14 @@ void q_scilexerasm_on_set_fold_compact(void* self, void (*callback)(void*, bool)
 ///
 /// @param self QsciLexerAsm*
 /// @param fold bool
+///
 void q_scilexerasm_qbase_set_fold_compact(void* self, bool fold);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param delimeter QChar*
+///
 void q_scilexerasm_set_comment_delimiter(void* self, void* delimeter);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -179,6 +206,7 @@ void q_scilexerasm_set_comment_delimiter(void* self, void* delimeter);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QChar* delimeter)
+///
 void q_scilexerasm_on_set_comment_delimiter(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -187,12 +215,14 @@ void q_scilexerasm_on_set_comment_delimiter(void* self, void (*callback)(void*, 
 ///
 /// @param self QsciLexerAsm*
 /// @param delimeter QChar*
+///
 void q_scilexerasm_qbase_set_comment_delimiter(void* self, void* delimeter);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
 ///
 /// @param self QsciLexerAsm*
 /// @param syntax_based bool
+///
 void q_scilexerasm_set_fold_syntax_based(void* self, bool syntax_based);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -201,6 +231,7 @@ void q_scilexerasm_set_fold_syntax_based(void* self, bool syntax_based);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, bool syntax_based)
+///
 void q_scilexerasm_on_set_fold_syntax_based(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -209,6 +240,7 @@ void q_scilexerasm_on_set_fold_syntax_based(void* self, void (*callback)(void*, 
 ///
 /// @param self QsciLexerAsm*
 /// @param syntax_based bool
+///
 void q_scilexerasm_qbase_set_fold_syntax_based(void* self, bool syntax_based);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -216,6 +248,7 @@ void q_scilexerasm_qbase_set_fold_syntax_based(void* self, bool syntax_based);
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
 /// @param prefix const char*
+///
 bool q_scilexerasm_read_properties(void* self, void* qs, const char* prefix);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -224,6 +257,7 @@ bool q_scilexerasm_read_properties(void* self, void* qs, const char* prefix);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback bool func(QsciLexerAsm* self, QSettings* qs, const char* prefix)
+///
 void q_scilexerasm_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -233,6 +267,7 @@ void q_scilexerasm_on_read_properties(void* self, bool (*callback)(void*, void*,
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
 /// @param prefix const char*
+///
 bool q_scilexerasm_qbase_read_properties(void* self, void* qs, const char* prefix);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -240,6 +275,7 @@ bool q_scilexerasm_qbase_read_properties(void* self, void* qs, const char* prefi
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
 /// @param prefix const char*
+///
 bool q_scilexerasm_write_properties(void* self, void* qs, const char* prefix);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -248,6 +284,7 @@ bool q_scilexerasm_write_properties(void* self, void* qs, const char* prefix);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback bool func(QsciLexerAsm* self, QSettings* qs, const char* prefix)
+///
 void q_scilexerasm_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -257,6 +294,7 @@ void q_scilexerasm_on_write_properties(void* self, bool (*callback)(void*, void*
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
 /// @param prefix const char*
+///
 bool q_scilexerasm_qbase_write_properties(void* self, void* qs, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -265,6 +303,7 @@ bool q_scilexerasm_qbase_write_properties(void* self, void* qs, const char* pref
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_scilexerasm_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -274,6 +313,7 @@ const char* q_scilexerasm_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_scilexerasm_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QsciLexer
@@ -281,6 +321,7 @@ const char* q_scilexerasm_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerAsm*
+///
 QsciAbstractAPIs* q_scilexerasm_apis(void* self);
 
 /// Inherited from QsciLexer
@@ -288,6 +329,7 @@ QsciAbstractAPIs* q_scilexerasm_apis(void* self);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_auto_indent_style(void* self);
 
 /// Inherited from QsciLexer
@@ -295,6 +337,7 @@ int32_t q_scilexerasm_auto_indent_style(void* self);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerAsm*
+///
 QsciScintilla* q_scilexerasm_editor(void* self);
 
 /// Inherited from QsciLexer
@@ -303,6 +346,7 @@ QsciScintilla* q_scilexerasm_editor(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param apis QsciAbstractAPIs*
+///
 void q_scilexerasm_set_a_p_is(void* self, void* apis);
 
 /// Inherited from QsciLexer
@@ -311,6 +355,7 @@ void q_scilexerasm_set_a_p_is(void* self, void* apis);
 ///
 /// @param self QsciLexerAsm*
 /// @param c QColor*
+///
 void q_scilexerasm_set_default_color(void* self, void* c);
 
 /// Inherited from QsciLexer
@@ -319,6 +364,7 @@ void q_scilexerasm_set_default_color(void* self, void* c);
 ///
 /// @param self QsciLexerAsm*
 /// @param f QFont*
+///
 void q_scilexerasm_set_default_font(void* self, void* f);
 
 /// Inherited from QsciLexer
@@ -327,6 +373,7 @@ void q_scilexerasm_set_default_font(void* self, void* f);
 ///
 /// @param self QsciLexerAsm*
 /// @param c QColor*
+///
 void q_scilexerasm_set_default_paper(void* self, void* c);
 
 /// Inherited from QsciLexer
@@ -335,6 +382,7 @@ void q_scilexerasm_set_default_paper(void* self, void* c);
 ///
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
+///
 bool q_scilexerasm_read_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
@@ -343,6 +391,7 @@ bool q_scilexerasm_read_settings(void* self, void* qs);
 ///
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
+///
 bool q_scilexerasm_write_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
@@ -352,6 +401,7 @@ bool q_scilexerasm_write_settings(void* self, void* qs);
 /// @param self QsciLexerAsm*
 /// @param c QColor*
 /// @param style int
+///
 void q_scilexerasm_color_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -360,6 +410,7 @@ void q_scilexerasm_color_changed(void* self, void* c, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QColor* c, int style)
+///
 void q_scilexerasm_on_color_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -369,6 +420,7 @@ void q_scilexerasm_on_color_changed(void* self, void (*callback)(void*, void*, i
 /// @param self QsciLexerAsm*
 /// @param eolfilled bool
 /// @param style int
+///
 void q_scilexerasm_eol_fill_changed(void* self, bool eolfilled, int style);
 
 /// Inherited from QsciLexer
@@ -377,6 +429,7 @@ void q_scilexerasm_eol_fill_changed(void* self, bool eolfilled, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, bool eolfilled, int style)
+///
 void q_scilexerasm_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -386,6 +439,7 @@ void q_scilexerasm_on_eol_fill_changed(void* self, void (*callback)(void*, bool,
 /// @param self QsciLexerAsm*
 /// @param f QFont*
 /// @param style int
+///
 void q_scilexerasm_font_changed(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
@@ -394,6 +448,7 @@ void q_scilexerasm_font_changed(void* self, void* f, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QFont* f, int style)
+///
 void q_scilexerasm_on_font_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -403,6 +458,7 @@ void q_scilexerasm_on_font_changed(void* self, void (*callback)(void*, void*, in
 /// @param self QsciLexerAsm*
 /// @param c QColor*
 /// @param style int
+///
 void q_scilexerasm_paper_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -411,6 +467,7 @@ void q_scilexerasm_paper_changed(void* self, void* c, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QColor* c, int style)
+///
 void q_scilexerasm_on_paper_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -420,6 +477,7 @@ void q_scilexerasm_on_paper_changed(void* self, void (*callback)(void*, void*, i
 /// @param self QsciLexerAsm*
 /// @param prop const char*
 /// @param val const char*
+///
 void q_scilexerasm_property_changed(void* self, const char* prop, const char* val);
 
 /// Inherited from QsciLexer
@@ -428,6 +486,7 @@ void q_scilexerasm_property_changed(void* self, const char* prop, const char* va
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, const char* prop, const char* val)
+///
 void q_scilexerasm_on_property_changed(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -437,6 +496,7 @@ void q_scilexerasm_on_property_changed(void* self, void (*callback)(void*, const
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
 /// @param prefix const char*
+///
 bool q_scilexerasm_read_settings2(void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
@@ -446,6 +506,7 @@ bool q_scilexerasm_read_settings2(void* self, void* qs, const char* prefix);
 /// @param self QsciLexerAsm*
 /// @param qs QSettings*
 /// @param prefix const char*
+///
 bool q_scilexerasm_write_settings2(void* self, void* qs, const char* prefix);
 
 /// Inherited from QObject
@@ -455,6 +516,7 @@ bool q_scilexerasm_write_settings2(void* self, void* qs, const char* prefix);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_object_name(void* self);
 
 /// Inherited from QObject
@@ -463,6 +525,7 @@ const char* q_scilexerasm_object_name(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param name char*
+///
 void q_scilexerasm_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -470,6 +533,7 @@ void q_scilexerasm_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -477,6 +541,7 @@ bool q_scilexerasm_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -484,6 +549,7 @@ bool q_scilexerasm_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -491,6 +557,7 @@ bool q_scilexerasm_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -499,6 +566,7 @@ bool q_scilexerasm_signals_blocked(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param b bool
+///
 bool q_scilexerasm_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -506,6 +574,7 @@ bool q_scilexerasm_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QsciLexerAsm*
+///
 QThread* q_scilexerasm_thread(void* self);
 
 /// Inherited from QObject
@@ -514,6 +583,7 @@ QThread* q_scilexerasm_thread(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param thread QThread*
+///
 bool q_scilexerasm_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -522,6 +592,7 @@ bool q_scilexerasm_move_to_thread(void* self, void* thread);
 ///
 /// @param self QsciLexerAsm*
 /// @param interval int
+///
 int32_t q_scilexerasm_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -530,6 +601,7 @@ int32_t q_scilexerasm_start_timer(void* self, int interval);
 ///
 /// @param self QsciLexerAsm*
 /// @param id int
+///
 void q_scilexerasm_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -538,6 +610,7 @@ void q_scilexerasm_kill_timer(void* self, int id);
 ///
 /// @param self QsciLexerAsm*
 /// @param id enum Qt__TimerId
+///
 void q_scilexerasm_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -545,6 +618,7 @@ void q_scilexerasm_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QsciLexerAsm*
+///
 libqt_list /* of QObject* */ q_scilexerasm_children(void* self);
 
 /// Inherited from QObject
@@ -553,6 +627,7 @@ libqt_list /* of QObject* */ q_scilexerasm_children(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param parent QObject*
+///
 void q_scilexerasm_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -561,6 +636,7 @@ void q_scilexerasm_set_parent(void* self, void* parent);
 ///
 /// @param self QsciLexerAsm*
 /// @param filterObj QObject*
+///
 void q_scilexerasm_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -569,6 +645,7 @@ void q_scilexerasm_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QsciLexerAsm*
 /// @param obj QObject*
+///
 void q_scilexerasm_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -579,6 +656,7 @@ void q_scilexerasm_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_scilexerasm_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -589,6 +667,7 @@ QMetaObject__Connection* q_scilexerasm_connect(void* sender, void* signal, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_scilexerasm_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -599,6 +678,7 @@ QMetaObject__Connection* q_scilexerasm_connect2(void* self, void* sender, const 
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_scilexerasm_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -606,6 +686,7 @@ bool q_scilexerasm_disconnect(void* sender, void* signal, void* receiver, void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_scilexerasm_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -613,6 +694,7 @@ bool q_scilexerasm_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QsciLexerAsm*
+///
 void q_scilexerasm_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -620,6 +702,7 @@ void q_scilexerasm_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QsciLexerAsm*
+///
 void q_scilexerasm_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -629,6 +712,7 @@ void q_scilexerasm_dump_object_info(void* self);
 /// @param self QsciLexerAsm*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_scilexerasm_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -637,6 +721,7 @@ bool q_scilexerasm_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QsciLexerAsm*
 /// @param name const char*
+///
 QVariant* q_scilexerasm_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -646,6 +731,7 @@ QVariant* q_scilexerasm_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerAsm*
+///
 const char** q_scilexerasm_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -653,6 +739,7 @@ const char** q_scilexerasm_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QsciLexerAsm*
+///
 QBindingStorage* q_scilexerasm_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -660,6 +747,7 @@ QBindingStorage* q_scilexerasm_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QsciLexerAsm*
+///
 const QBindingStorage* q_scilexerasm_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -667,6 +755,7 @@ const QBindingStorage* q_scilexerasm_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerAsm*
+///
 void q_scilexerasm_destroyed(void* self);
 
 /// Inherited from QObject
@@ -675,6 +764,7 @@ void q_scilexerasm_destroyed(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self)
+///
 void q_scilexerasm_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -682,6 +772,7 @@ void q_scilexerasm_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QsciLexerAsm*
+///
 QObject* q_scilexerasm_parent(void* self);
 
 /// Inherited from QObject
@@ -690,6 +781,7 @@ QObject* q_scilexerasm_parent(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param classname const char*
+///
 bool q_scilexerasm_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -697,6 +789,7 @@ bool q_scilexerasm_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QsciLexerAsm*
+///
 void q_scilexerasm_delete_later(void* self);
 
 /// Inherited from QObject
@@ -706,6 +799,7 @@ void q_scilexerasm_delete_later(void* self);
 /// @param self QsciLexerAsm*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_scilexerasm_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -715,6 +809,7 @@ bool q_scilexerasm_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QsciLexerAsm*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_scilexerasm_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -726,6 +821,7 @@ int32_t q_scilexerasm_start_timer22(void* self, int interval, int32_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_scilexerasm_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -737,6 +833,7 @@ QMetaObject__Connection* q_scilexerasm_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_scilexerasm_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -745,6 +842,7 @@ QMetaObject__Connection* q_scilexerasm_connect4(void* self, void* sender, const 
 ///
 /// @param self QsciLexerAsm*
 /// @param param1 QObject*
+///
 void q_scilexerasm_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -753,6 +851,7 @@ void q_scilexerasm_destroyed1(void* self, void* param1);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QObject* param1)
+///
 void q_scilexerasm_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -764,6 +863,7 @@ void q_scilexerasm_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_language(void* self);
 
 /// Inherited from QsciLexer
@@ -775,6 +875,7 @@ const char* q_scilexerasm_language(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_qbase_language(void* self);
 
 /// Inherited from QsciLexer
@@ -785,6 +886,7 @@ const char* q_scilexerasm_qbase_language(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func()
+///
 void q_scilexerasm_on_language(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -796,6 +898,7 @@ void q_scilexerasm_on_language(void* self, const char* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_lexer(void* self);
 
 /// Inherited from QsciLexer
@@ -807,6 +910,7 @@ const char* q_scilexerasm_lexer(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_qbase_lexer(void* self);
 
 /// Inherited from QsciLexer
@@ -817,6 +921,7 @@ const char* q_scilexerasm_qbase_lexer(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func()
+///
 void q_scilexerasm_on_lexer(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -826,6 +931,7 @@ void q_scilexerasm_on_lexer(void* self, const char* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_lexer_id(void* self);
 
 /// Inherited from QsciLexer
@@ -835,6 +941,7 @@ int32_t q_scilexerasm_lexer_id(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_qbase_lexer_id(void* self);
 
 /// Inherited from QsciLexer
@@ -845,6 +952,7 @@ int32_t q_scilexerasm_qbase_lexer_id(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func()
+///
 void q_scilexerasm_on_lexer_id(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -856,6 +964,7 @@ void q_scilexerasm_on_lexer_id(void* self, int32_t (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
@@ -867,6 +976,7 @@ const char* q_scilexerasm_auto_completion_fillups(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_qbase_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
@@ -877,6 +987,7 @@ const char* q_scilexerasm_qbase_auto_completion_fillups(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func()
+///
 void q_scilexerasm_on_auto_completion_fillups(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -888,6 +999,7 @@ void q_scilexerasm_on_auto_completion_fillups(void* self, const char* (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char** q_scilexerasm_auto_completion_word_separators(void* self);
 
 /// Inherited from QsciLexer
@@ -899,6 +1011,7 @@ const char** q_scilexerasm_auto_completion_word_separators(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char** q_scilexerasm_qbase_auto_completion_word_separators(void* self);
 
 /// Inherited from QsciLexer
@@ -909,6 +1022,7 @@ const char** q_scilexerasm_qbase_auto_completion_word_separators(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char** func()
+///
 void q_scilexerasm_on_auto_completion_word_separators(void* self, const char** (*callback)());
 
 /// Inherited from QsciLexer
@@ -921,6 +1035,7 @@ void q_scilexerasm_on_auto_completion_word_separators(void* self, const char** (
 ///
 /// @param self QsciLexerAsm*
 /// @param style int*
+///
 const char* q_scilexerasm_block_end(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -933,6 +1048,7 @@ const char* q_scilexerasm_block_end(void* self, int* style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int*
+///
 const char* q_scilexerasm_qbase_block_end(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -943,6 +1059,7 @@ const char* q_scilexerasm_qbase_block_end(void* self, int* style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func(QsciLexerAsm* self, int* style)
+///
 void q_scilexerasm_on_block_end(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -952,6 +1069,7 @@ void q_scilexerasm_on_block_end(void* self, const char* (*callback)(void*, int*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_block_lookback(void* self);
 
 /// Inherited from QsciLexer
@@ -961,6 +1079,7 @@ int32_t q_scilexerasm_block_lookback(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_qbase_block_lookback(void* self);
 
 /// Inherited from QsciLexer
@@ -971,6 +1090,7 @@ int32_t q_scilexerasm_qbase_block_lookback(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func()
+///
 void q_scilexerasm_on_block_lookback(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -983,6 +1103,7 @@ void q_scilexerasm_on_block_lookback(void* self, int32_t (*callback)());
 ///
 /// @param self QsciLexerAsm*
 /// @param style int*
+///
 const char* q_scilexerasm_block_start(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -995,6 +1116,7 @@ const char* q_scilexerasm_block_start(void* self, int* style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int*
+///
 const char* q_scilexerasm_qbase_block_start(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -1005,6 +1127,7 @@ const char* q_scilexerasm_qbase_block_start(void* self, int* style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func(QsciLexerAsm* self, int* style)
+///
 void q_scilexerasm_on_block_start(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -1017,6 +1140,7 @@ void q_scilexerasm_on_block_start(void* self, const char* (*callback)(void*, int
 ///
 /// @param self QsciLexerAsm*
 /// @param style int*
+///
 const char* q_scilexerasm_block_start_keyword(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -1029,6 +1153,7 @@ const char* q_scilexerasm_block_start_keyword(void* self, int* style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int*
+///
 const char* q_scilexerasm_qbase_block_start_keyword(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -1039,6 +1164,7 @@ const char* q_scilexerasm_qbase_block_start_keyword(void* self, int* style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func(QsciLexerAsm* self, int* style)
+///
 void q_scilexerasm_on_block_start_keyword(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -1048,6 +1174,7 @@ void q_scilexerasm_on_block_start_keyword(void* self, const char* (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_brace_style(void* self);
 
 /// Inherited from QsciLexer
@@ -1057,6 +1184,7 @@ int32_t q_scilexerasm_brace_style(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_qbase_brace_style(void* self);
 
 /// Inherited from QsciLexer
@@ -1067,6 +1195,7 @@ int32_t q_scilexerasm_qbase_brace_style(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func()
+///
 void q_scilexerasm_on_brace_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1076,6 +1205,7 @@ void q_scilexerasm_on_brace_style(void* self, int32_t (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
@@ -1085,6 +1215,7 @@ bool q_scilexerasm_case_sensitive(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 bool q_scilexerasm_qbase_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
@@ -1095,6 +1226,7 @@ bool q_scilexerasm_qbase_case_sensitive(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback bool func()
+///
 void q_scilexerasm_on_case_sensitive(void* self, bool (*callback)());
 
 /// Inherited from QsciLexer
@@ -1105,6 +1237,7 @@ void q_scilexerasm_on_case_sensitive(void* self, bool (*callback)());
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_color(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1115,6 +1248,7 @@ QColor* q_scilexerasm_color(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_qbase_color(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1125,6 +1259,7 @@ QColor* q_scilexerasm_qbase_color(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback QColor* func(QsciLexerAsm* self, int style)
+///
 void q_scilexerasm_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1135,6 +1270,7 @@ void q_scilexerasm_on_color(void* self, QColor* (*callback)(void*, int));
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 bool q_scilexerasm_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1145,6 +1281,7 @@ bool q_scilexerasm_eol_fill(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 bool q_scilexerasm_qbase_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1155,6 +1292,7 @@ bool q_scilexerasm_qbase_eol_fill(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback bool func(QsciLexerAsm* self, int style)
+///
 void q_scilexerasm_on_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1165,6 +1303,7 @@ void q_scilexerasm_on_eol_fill(void* self, bool (*callback)(void*, int));
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QFont* q_scilexerasm_font(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1175,6 +1314,7 @@ QFont* q_scilexerasm_font(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QFont* q_scilexerasm_qbase_font(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1185,6 +1325,7 @@ QFont* q_scilexerasm_qbase_font(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback QFont* func(QsciLexerAsm* self, int style)
+///
 void q_scilexerasm_on_font(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1194,6 +1335,7 @@ void q_scilexerasm_on_font(void* self, QFont* (*callback)(void*, int));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
@@ -1203,6 +1345,7 @@ int32_t q_scilexerasm_indentation_guide_view(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_qbase_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
@@ -1213,6 +1356,7 @@ int32_t q_scilexerasm_qbase_indentation_guide_view(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func()
+///
 void q_scilexerasm_on_indentation_guide_view(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1222,6 +1366,7 @@ void q_scilexerasm_on_indentation_guide_view(void* self, int32_t (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_default_style(void* self);
 
 /// Inherited from QsciLexer
@@ -1231,6 +1376,7 @@ int32_t q_scilexerasm_default_style(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_qbase_default_style(void* self);
 
 /// Inherited from QsciLexer
@@ -1241,6 +1387,7 @@ int32_t q_scilexerasm_qbase_default_style(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func()
+///
 void q_scilexerasm_on_default_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1251,6 +1398,7 @@ void q_scilexerasm_on_default_style(void* self, int32_t (*callback)());
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_paper(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1261,6 +1409,7 @@ QColor* q_scilexerasm_paper(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_qbase_paper(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1271,6 +1420,7 @@ QColor* q_scilexerasm_qbase_paper(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback QColor* func(QsciLexerAsm* self, int style)
+///
 void q_scilexerasm_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1281,6 +1431,7 @@ void q_scilexerasm_on_paper(void* self, QColor* (*callback)(void*, int));
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1291,6 +1442,7 @@ QColor* q_scilexerasm_default_color2(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_qbase_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1301,6 +1453,7 @@ QColor* q_scilexerasm_qbase_default_color2(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback QColor* func(QsciLexerAsm* self, int style)
+///
 void q_scilexerasm_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1311,6 +1464,7 @@ void q_scilexerasm_on_default_color2(void* self, QColor* (*callback)(void*, int)
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QFont* q_scilexerasm_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1321,6 +1475,7 @@ QFont* q_scilexerasm_default_font2(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QFont* q_scilexerasm_qbase_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1331,6 +1486,7 @@ QFont* q_scilexerasm_qbase_default_font2(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback QFont* func(QsciLexerAsm* self, int style)
+///
 void q_scilexerasm_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1341,6 +1497,7 @@ void q_scilexerasm_on_default_font2(void* self, QFont* (*callback)(void*, int));
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1351,6 +1508,7 @@ QColor* q_scilexerasm_default_paper2(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param style int
+///
 QColor* q_scilexerasm_qbase_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1361,6 +1519,7 @@ QColor* q_scilexerasm_qbase_default_paper2(void* self, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback QColor* func(QsciLexerAsm* self, int style)
+///
 void q_scilexerasm_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1371,6 +1530,7 @@ void q_scilexerasm_on_default_paper2(void* self, QColor* (*callback)(void*, int)
 ///
 /// @param self QsciLexerAsm*
 /// @param editor QsciScintilla*
+///
 void q_scilexerasm_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
@@ -1381,6 +1541,7 @@ void q_scilexerasm_set_editor(void* self, void* editor);
 ///
 /// @param self QsciLexerAsm*
 /// @param editor QsciScintilla*
+///
 void q_scilexerasm_qbase_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
@@ -1391,6 +1552,7 @@ void q_scilexerasm_qbase_set_editor(void* self, void* editor);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QsciScintilla* editor)
+///
 void q_scilexerasm_on_set_editor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1400,6 +1562,7 @@ void q_scilexerasm_on_set_editor(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
@@ -1409,6 +1572,7 @@ int32_t q_scilexerasm_style_bits_needed(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_qbase_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
@@ -1419,6 +1583,7 @@ int32_t q_scilexerasm_qbase_style_bits_needed(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func()
+///
 void q_scilexerasm_on_style_bits_needed(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1430,6 +1595,7 @@ void q_scilexerasm_on_style_bits_needed(void* self, int32_t (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_word_characters(void* self);
 
 /// Inherited from QsciLexer
@@ -1441,6 +1607,7 @@ const char* q_scilexerasm_word_characters(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 const char* q_scilexerasm_qbase_word_characters(void* self);
 
 /// Inherited from QsciLexer
@@ -1451,6 +1618,7 @@ const char* q_scilexerasm_qbase_word_characters(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func()
+///
 void q_scilexerasm_on_word_characters(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -1461,6 +1629,7 @@ void q_scilexerasm_on_word_characters(void* self, const char* (*callback)());
 ///
 /// @param self QsciLexerAsm*
 /// @param autoindentstyle int
+///
 void q_scilexerasm_set_auto_indent_style(void* self, int autoindentstyle);
 
 /// Inherited from QsciLexer
@@ -1471,6 +1640,7 @@ void q_scilexerasm_set_auto_indent_style(void* self, int autoindentstyle);
 ///
 /// @param self QsciLexerAsm*
 /// @param autoindentstyle int
+///
 void q_scilexerasm_qbase_set_auto_indent_style(void* self, int autoindentstyle);
 
 /// Inherited from QsciLexer
@@ -1481,6 +1651,7 @@ void q_scilexerasm_qbase_set_auto_indent_style(void* self, int autoindentstyle);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, int autoindentstyle)
+///
 void q_scilexerasm_on_set_auto_indent_style(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1492,6 +1663,7 @@ void q_scilexerasm_on_set_auto_indent_style(void* self, void (*callback)(void*, 
 /// @param self QsciLexerAsm*
 /// @param c QColor*
 /// @param style int
+///
 void q_scilexerasm_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1503,6 +1675,7 @@ void q_scilexerasm_set_color(void* self, void* c, int style);
 /// @param self QsciLexerAsm*
 /// @param c QColor*
 /// @param style int
+///
 void q_scilexerasm_qbase_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1513,6 +1686,7 @@ void q_scilexerasm_qbase_set_color(void* self, void* c, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QColor* c, int style)
+///
 void q_scilexerasm_on_set_color(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1524,6 +1698,7 @@ void q_scilexerasm_on_set_color(void* self, void (*callback)(void*, void*, int))
 /// @param self QsciLexerAsm*
 /// @param eoffill bool
 /// @param style int
+///
 void q_scilexerasm_set_eol_fill(void* self, bool eoffill, int style);
 
 /// Inherited from QsciLexer
@@ -1535,6 +1710,7 @@ void q_scilexerasm_set_eol_fill(void* self, bool eoffill, int style);
 /// @param self QsciLexerAsm*
 /// @param eoffill bool
 /// @param style int
+///
 void q_scilexerasm_qbase_set_eol_fill(void* self, bool eoffill, int style);
 
 /// Inherited from QsciLexer
@@ -1545,6 +1721,7 @@ void q_scilexerasm_qbase_set_eol_fill(void* self, bool eoffill, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, bool eoffill, int style)
+///
 void q_scilexerasm_on_set_eol_fill(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -1556,6 +1733,7 @@ void q_scilexerasm_on_set_eol_fill(void* self, void (*callback)(void*, bool, int
 /// @param self QsciLexerAsm*
 /// @param f QFont*
 /// @param style int
+///
 void q_scilexerasm_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
@@ -1567,6 +1745,7 @@ void q_scilexerasm_set_font(void* self, void* f, int style);
 /// @param self QsciLexerAsm*
 /// @param f QFont*
 /// @param style int
+///
 void q_scilexerasm_qbase_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
@@ -1577,6 +1756,7 @@ void q_scilexerasm_qbase_set_font(void* self, void* f, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QFont* f, int style)
+///
 void q_scilexerasm_on_set_font(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1588,6 +1768,7 @@ void q_scilexerasm_on_set_font(void* self, void (*callback)(void*, void*, int));
 /// @param self QsciLexerAsm*
 /// @param c QColor*
 /// @param style int
+///
 void q_scilexerasm_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1599,6 +1780,7 @@ void q_scilexerasm_set_paper(void* self, void* c, int style);
 /// @param self QsciLexerAsm*
 /// @param c QColor*
 /// @param style int
+///
 void q_scilexerasm_qbase_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1609,6 +1791,7 @@ void q_scilexerasm_qbase_set_paper(void* self, void* c, int style);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QColor* c, int style)
+///
 void q_scilexerasm_on_set_paper(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QObject
@@ -1619,6 +1802,7 @@ void q_scilexerasm_on_set_paper(void* self, void (*callback)(void*, void*, int))
 ///
 /// @param self QsciLexerAsm*
 /// @param event QEvent*
+///
 bool q_scilexerasm_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1629,6 +1813,7 @@ bool q_scilexerasm_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param event QEvent*
+///
 bool q_scilexerasm_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1639,6 +1824,7 @@ bool q_scilexerasm_qbase_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback bool func(QsciLexerAsm* self, QEvent* event)
+///
 void q_scilexerasm_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1650,6 +1836,7 @@ void q_scilexerasm_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QsciLexerAsm*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_scilexerasm_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1661,6 +1848,7 @@ bool q_scilexerasm_event_filter(void* self, void* watched, void* event);
 /// @param self QsciLexerAsm*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_scilexerasm_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1671,6 +1859,7 @@ bool q_scilexerasm_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback bool func(QsciLexerAsm* self, QObject* watched, QEvent* event)
+///
 void q_scilexerasm_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1681,6 +1870,7 @@ void q_scilexerasm_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 /// @param self QsciLexerAsm*
 /// @param event QTimerEvent*
+///
 void q_scilexerasm_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1691,6 +1881,7 @@ void q_scilexerasm_timer_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param event QTimerEvent*
+///
 void q_scilexerasm_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1701,6 +1892,7 @@ void q_scilexerasm_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QTimerEvent* event)
+///
 void q_scilexerasm_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1711,6 +1903,7 @@ void q_scilexerasm_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QsciLexerAsm*
 /// @param event QChildEvent*
+///
 void q_scilexerasm_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1721,6 +1914,7 @@ void q_scilexerasm_child_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param event QChildEvent*
+///
 void q_scilexerasm_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1731,6 +1925,7 @@ void q_scilexerasm_qbase_child_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QChildEvent* event)
+///
 void q_scilexerasm_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1741,6 +1936,7 @@ void q_scilexerasm_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QsciLexerAsm*
 /// @param event QEvent*
+///
 void q_scilexerasm_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1751,6 +1947,7 @@ void q_scilexerasm_custom_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param event QEvent*
+///
 void q_scilexerasm_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1761,6 +1958,7 @@ void q_scilexerasm_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QEvent* event)
+///
 void q_scilexerasm_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1771,6 +1969,7 @@ void q_scilexerasm_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QsciLexerAsm*
 /// @param signal QMetaMethod*
+///
 void q_scilexerasm_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1781,6 +1980,7 @@ void q_scilexerasm_connect_notify(void* self, void* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param signal QMetaMethod*
+///
 void q_scilexerasm_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1791,6 +1991,7 @@ void q_scilexerasm_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QMetaMethod* signal)
+///
 void q_scilexerasm_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1801,6 +2002,7 @@ void q_scilexerasm_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QsciLexerAsm*
 /// @param signal QMetaMethod*
+///
 void q_scilexerasm_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1811,6 +2013,7 @@ void q_scilexerasm_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param signal QMetaMethod*
+///
 void q_scilexerasm_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1821,6 +2024,7 @@ void q_scilexerasm_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, QMetaMethod* signal)
+///
 void q_scilexerasm_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1833,6 +2037,7 @@ void q_scilexerasm_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// @param self QsciLexerAsm*
 /// @param text const char*
+///
 char* q_scilexerasm_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
@@ -1845,6 +2050,7 @@ char* q_scilexerasm_text_as_bytes(void* self, const char* text);
 ///
 /// @param self QsciLexerAsm*
 /// @param text const char*
+///
 char* q_scilexerasm_qbase_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
@@ -1855,6 +2061,7 @@ char* q_scilexerasm_qbase_text_as_bytes(void* self, const char* text);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback char* func(QsciLexerAsm* self, const char* text)
+///
 void q_scilexerasm_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
@@ -1868,6 +2075,7 @@ void q_scilexerasm_on_text_as_bytes(void* self, char* (*callback)(void*, const c
 /// @param self QsciLexerAsm*
 /// @param bytes const char*
 /// @param size int
+///
 const char* q_scilexerasm_bytes_as_text(void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
@@ -1881,6 +2089,7 @@ const char* q_scilexerasm_bytes_as_text(void* self, const char* bytes, int size)
 /// @param self QsciLexerAsm*
 /// @param bytes const char*
 /// @param size int
+///
 const char* q_scilexerasm_qbase_bytes_as_text(void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
@@ -1891,6 +2100,7 @@ const char* q_scilexerasm_qbase_bytes_as_text(void* self, const char* bytes, int
 ///
 /// @param self QsciLexerAsm*
 /// @param callback const char* func(QsciLexerAsm* self, const char* bytes, int size)
+///
 void q_scilexerasm_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
 
 /// Inherited from QObject
@@ -1900,6 +2110,7 @@ void q_scilexerasm_on_bytes_as_text(void* self, const char* (*callback)(void*, c
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 QObject* q_scilexerasm_sender(void* self);
 
 /// Inherited from QObject
@@ -1909,6 +2120,7 @@ QObject* q_scilexerasm_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 QObject* q_scilexerasm_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1919,6 +2131,7 @@ QObject* q_scilexerasm_qbase_sender(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback QObject* func()
+///
 void q_scilexerasm_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1928,6 +2141,7 @@ void q_scilexerasm_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1937,6 +2151,7 @@ int32_t q_scilexerasm_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciLexerAsm*
+///
 int32_t q_scilexerasm_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1947,6 +2162,7 @@ int32_t q_scilexerasm_qbase_sender_signal_index(void* self);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func()
+///
 void q_scilexerasm_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1957,6 +2173,7 @@ void q_scilexerasm_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QsciLexerAsm*
 /// @param signal const char*
+///
 int32_t q_scilexerasm_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1967,6 +2184,7 @@ int32_t q_scilexerasm_receivers(void* self, const char* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param signal const char*
+///
 int32_t q_scilexerasm_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1977,6 +2195,7 @@ int32_t q_scilexerasm_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback int32_t func(QsciLexerAsm* self, const char* signal)
+///
 void q_scilexerasm_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1987,6 +2206,7 @@ void q_scilexerasm_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// @param self QsciLexerAsm*
 /// @param signal QMetaMethod*
+///
 bool q_scilexerasm_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1997,6 +2217,7 @@ bool q_scilexerasm_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param signal QMetaMethod*
+///
 bool q_scilexerasm_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2007,6 +2228,7 @@ bool q_scilexerasm_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QsciLexerAsm*
 /// @param callback bool func(QsciLexerAsm* self, QMetaMethod* signal)
+///
 void q_scilexerasm_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2017,6 +2239,7 @@ void q_scilexerasm_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 /// @param self QsciLexerAsm*
 /// @param callback void func(QsciLexerAsm* self, const char* objectName)
+///
 void q_scilexerasm_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAsm.html)
@@ -2024,6 +2247,7 @@ void q_scilexerasm_on_object_name_changed(void* self, void (*callback)(void*, co
 /// Delete this object from C++ memory.
 ///
 /// @param self QsciLexerAsm*
+///
 void q_scilexerasm_delete(void* self);
 
 typedef enum {

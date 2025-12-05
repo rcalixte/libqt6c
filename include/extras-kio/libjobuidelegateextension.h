@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kio-jobuidelegateextension.html
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html)
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#askDeleteConfirmation)
 ///
@@ -19,6 +19,7 @@
 /// @param urls libqt_list /* of QUrl* */
 /// @param deletionType enum KIO__JobUiDelegateExtension__DeletionType
 /// @param confirmationType enum KIO__JobUiDelegateExtension__ConfirmationType
+///
 bool k_io__jobuidelegateextension_ask_delete_confirmation(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType);
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#updateUrlInClipboard)
@@ -26,9 +27,10 @@ bool k_io__jobuidelegateextension_ask_delete_confirmation(void* self, libqt_list
 /// @param self KIO__JobUiDelegateExtension*
 /// @param src QUrl*
 /// @param dest QUrl*
+///
 void k_io__jobuidelegateextension_update_url_in_clipboard(void* self, void* src, void* dest);
 
-/// https://api.kde.org/kio.html
+/// [Upstream resources](https://api.kde.org/kio.html)
 
 /// [Upstream resources](https://api.kde.org/kio.html#defaultJobUiDelegateExtension)
 ///
@@ -37,9 +39,10 @@ KIO__JobUiDelegateExtension* k_io_default_job_ui_delegate_extension();
 /// [Upstream resources](https://api.kde.org/kio.html#setDefaultJobUiDelegateExtension)
 ///
 /// @param param1 KIO__JobUiDelegateExtension*
+///
 void k_io_set_default_job_ui_delegate_extension(void* param1);
 
-/// https://api.kde.org/kio-jobuidelegateextension.html#types
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#public-types)
 
 typedef enum {
     KIO_RENAMEDIALOG_OPTION_RENAMEDIALOG_OVERWRITE = 1,
@@ -52,11 +55,15 @@ typedef enum {
     KIO_RENAMEDIALOG_OPTION_RENAMEDIALOG_SOURCEISDIRECTORY = 256
 } KIO__RenameDialog_Option;
 
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#public-types)
+
 typedef enum {
     KIO_SKIPDIALOG_OPTION_SKIPDIALOG_MULTIPLEITEMS = 8,
     KIO_SKIPDIALOG_OPTION_SKIPDIALOG_REPLACE_INVALID_CHARS = 16,
     KIO_SKIPDIALOG_OPTION_SKIPDIALOG_HIDE_RETRY = 32
 } KIO__SkipDialog_Option;
+
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#public-types)
 
 typedef enum {
     KIO_RENAMEDIALOG_RESULT_RESULT_CANCEL = 0,
@@ -74,16 +81,22 @@ typedef enum {
     KIO_RENAMEDIALOG_RESULT_RESULT_REPLACEALLINVALIDCHARS = 12
 } KIO__RenameDialog_Result;
 
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#public-types)
+
 typedef enum {
     KIO_JOBUIDELEGATEEXTENSION_DELETIONTYPE_DELETE = 0,
     KIO_JOBUIDELEGATEEXTENSION_DELETIONTYPE_TRASH = 1,
     KIO_JOBUIDELEGATEEXTENSION_DELETIONTYPE_EMPTYTRASH = 2
 } KIO__JobUiDelegateExtension__DeletionType;
 
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#public-types)
+
 typedef enum {
     KIO_JOBUIDELEGATEEXTENSION_CONFIRMATIONTYPE_DEFAULTCONFIRMATION = 0,
     KIO_JOBUIDELEGATEEXTENSION_CONFIRMATIONTYPE_FORCECONFIRMATION = 1
 } KIO__JobUiDelegateExtension__ConfirmationType;
+
+/// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#public-types)
 
 typedef enum {
     KIO_JOBUIDELEGATEEXTENSION_CLIPBOARDUPDATERMODE_UPDATECONTENT = 0,

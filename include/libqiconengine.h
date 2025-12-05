@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qiconengine.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html)
 
 /// q_iconengine_new constructs a new QIconEngine object.
 ///
@@ -24,6 +24,7 @@ QIconEngine* q_iconengine_new();
 /// @param rect QRect*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#paint)
@@ -32,6 +33,7 @@ void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int
 ///
 /// @param self QIconEngine*
 /// @param callback void func(QIconEngine* self, QPainter* painter, QRect* rect, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#paint)
@@ -43,6 +45,7 @@ void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int
 /// @param rect QRect*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void q_iconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
@@ -51,6 +54,7 @@ void q_iconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mod
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QSize* q_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
@@ -59,6 +63,7 @@ QSize* q_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t st
 ///
 /// @param self QIconEngine*
 /// @param callback QSize* func(QIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
@@ -69,6 +74,7 @@ void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, in
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QSize* q_iconengine_qbase_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
@@ -77,6 +83,7 @@ QSize* q_iconengine_qbase_actual_size(void* self, void* size, int32_t mode, int3
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QPixmap* q_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
@@ -85,6 +92,7 @@ QPixmap* q_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state
 ///
 /// @param self QIconEngine*
 /// @param callback QPixmap* func(QIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
@@ -95,6 +103,7 @@ void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 QPixmap* q_iconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
@@ -103,6 +112,7 @@ QPixmap* q_iconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t
 /// @param pixmap QPixmap*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void q_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
@@ -111,6 +121,7 @@ void q_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t sta
 ///
 /// @param self QIconEngine*
 /// @param callback void func(QIconEngine* self, QPixmap* pixmap, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
@@ -121,6 +132,7 @@ void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32
 /// @param pixmap QPixmap*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void q_iconengine_qbase_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addFile)
@@ -130,6 +142,7 @@ void q_iconengine_qbase_add_pixmap(void* self, void* pixmap, int32_t mode, int32
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void q_iconengine_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addFile)
@@ -138,6 +151,7 @@ void q_iconengine_add_file(void* self, const char* fileName, void* size, int32_t
 ///
 /// @param self QIconEngine*
 /// @param callback void func(QIconEngine* self, const char* fileName, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addFile)
@@ -149,6 +163,7 @@ void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, v
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 void q_iconengine_qbase_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#key)
@@ -156,6 +171,7 @@ void q_iconengine_qbase_add_file(void* self, const char* fileName, void* size, i
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QIconEngine*
+///
 const char* q_iconengine_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#key)
@@ -164,6 +180,7 @@ const char* q_iconengine_key(void* self);
 ///
 /// @param self QIconEngine*
 /// @param callback const char* func()
+///
 void q_iconengine_on_key(void* self, const char* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#key)
@@ -171,11 +188,13 @@ void q_iconengine_on_key(void* self, const char* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QIconEngine*
+///
 const char* q_iconengine_qbase_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#clone)
 ///
 /// @param self QIconEngine*
+///
 QIconEngine* q_iconengine_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#clone)
@@ -184,6 +203,7 @@ QIconEngine* q_iconengine_clone(void* self);
 ///
 /// @param self QIconEngine*
 /// @param callback QIconEngine* func()
+///
 void q_iconengine_on_clone(void* self, QIconEngine* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#clone)
@@ -191,12 +211,14 @@ void q_iconengine_on_clone(void* self, QIconEngine* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QIconEngine*
+///
 QIconEngine* q_iconengine_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#read)
 ///
 /// @param self QIconEngine*
 /// @param in QDataStream*
+///
 bool q_iconengine_read(void* self, void* in);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#read)
@@ -205,6 +227,7 @@ bool q_iconengine_read(void* self, void* in);
 ///
 /// @param self QIconEngine*
 /// @param callback bool func(QIconEngine* self, QDataStream* in)
+///
 void q_iconengine_on_read(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#read)
@@ -213,12 +236,14 @@ void q_iconengine_on_read(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QIconEngine*
 /// @param in QDataStream*
+///
 bool q_iconengine_qbase_read(void* self, void* in);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#write)
 ///
 /// @param self QIconEngine*
 /// @param out QDataStream*
+///
 bool q_iconengine_write(void* self, void* out);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#write)
@@ -227,6 +252,7 @@ bool q_iconengine_write(void* self, void* out);
 ///
 /// @param self QIconEngine*
 /// @param callback bool func(QIconEngine* self, QDataStream* out)
+///
 void q_iconengine_on_write(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#write)
@@ -235,6 +261,7 @@ void q_iconengine_on_write(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QIconEngine*
 /// @param out QDataStream*
+///
 bool q_iconengine_qbase_write(void* self, void* out);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
@@ -242,6 +269,7 @@ bool q_iconengine_qbase_write(void* self, void* out);
 /// @param self QIconEngine*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
@@ -250,6 +278,7 @@ libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int32_t mode
 ///
 /// @param self QIconEngine*
 /// @param callback QSize** func(QIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
+///
 void q_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
@@ -259,6 +288,7 @@ void q_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int3
 /// @param self QIconEngine*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
+///
 libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
@@ -266,6 +296,7 @@ libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int32_
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QIconEngine*
+///
 const char* q_iconengine_icon_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
@@ -274,6 +305,7 @@ const char* q_iconengine_icon_name(void* self);
 ///
 /// @param self QIconEngine*
 /// @param callback const char* func()
+///
 void q_iconengine_on_icon_name(void* self, const char* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
@@ -281,11 +313,13 @@ void q_iconengine_on_icon_name(void* self, const char* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QIconEngine*
+///
 const char* q_iconengine_qbase_icon_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#isNull)
 ///
 /// @param self QIconEngine*
+///
 bool q_iconengine_is_null(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#isNull)
@@ -294,6 +328,7 @@ bool q_iconengine_is_null(void* self);
 ///
 /// @param self QIconEngine*
 /// @param callback bool func()
+///
 void q_iconengine_on_is_null(void* self, bool (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#isNull)
@@ -301,6 +336,7 @@ void q_iconengine_on_is_null(void* self, bool (*callback)());
 /// Base class method implementation
 ///
 /// @param self QIconEngine*
+///
 bool q_iconengine_qbase_is_null(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#scaledPixmap)
@@ -310,6 +346,7 @@ bool q_iconengine_qbase_is_null(void* self);
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 /// @param scale double
+///
 QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#scaledPixmap)
@@ -318,6 +355,7 @@ QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_
 ///
 /// @param self QIconEngine*
 /// @param callback QPixmap* func(QIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state, double scale)
+///
 void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#scaledPixmap)
@@ -329,6 +367,7 @@ void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 /// @param scale double
+///
 QPixmap* q_iconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#virtual_hook)
@@ -336,6 +375,7 @@ QPixmap* q_iconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, 
 /// @param self QIconEngine*
 /// @param id int
 /// @param data void*
+///
 void q_iconengine_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#virtual_hook)
@@ -344,6 +384,7 @@ void q_iconengine_virtual_hook(void* self, int id, void* data);
 ///
 /// @param self QIconEngine*
 /// @param callback void func(QIconEngine* self, int id, void* data)
+///
 void q_iconengine_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#virtual_hook)
@@ -353,6 +394,7 @@ void q_iconengine_on_virtual_hook(void* self, void (*callback)(void*, int, void*
 /// @param self QIconEngine*
 /// @param id int
 /// @param data void*
+///
 void q_iconengine_qbase_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#dtor.QIconEngine)
@@ -360,24 +402,28 @@ void q_iconengine_qbase_virtual_hook(void* self, int id, void* data);
 /// Delete this object from C++ memory.
 ///
 /// @param self QIconEngine*
+///
 void q_iconengine_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html)
 
 /// q_iconengine__scaledpixmapargument_new constructs a new QIconEngine::ScaledPixmapArgument object.
 ///
 /// @param param1 QIconEngine__ScaledPixmapArgument*
+///
 QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#size-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
+///
 QSize* q_iconengine__scaledpixmapargument_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#size-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
 /// @param size QSize*
+///
 void q_iconengine__scaledpixmapargument_set_size(void* self, void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#mode-var)
@@ -385,12 +431,14 @@ void q_iconengine__scaledpixmapargument_set_size(void* self, void* size);
 /// @param self QIconEngine__ScaledPixmapArgument*
 ///
 /// @return enum QIcon__Mode
+///
 int32_t q_iconengine__scaledpixmapargument_mode(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#mode-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
 /// @param mode enum QIcon__Mode
+///
 void q_iconengine__scaledpixmapargument_set_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#state-var)
@@ -398,48 +446,56 @@ void q_iconengine__scaledpixmapargument_set_mode(void* self, int32_t mode);
 /// @param self QIconEngine__ScaledPixmapArgument*
 ///
 /// @return enum QIcon__State
+///
 int32_t q_iconengine__scaledpixmapargument_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#state-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
 /// @param state enum QIcon__State
+///
 void q_iconengine__scaledpixmapargument_set_state(void* self, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#scale-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
+///
 double q_iconengine__scaledpixmapargument_scale(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#scale-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
 /// @param scale double
+///
 void q_iconengine__scaledpixmapargument_set_scale(void* self, double scale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#pixmap-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
+///
 QPixmap* q_iconengine__scaledpixmapargument_pixmap(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#pixmap-var)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
 /// @param pixmap QPixmap*
+///
 void q_iconengine__scaledpixmapargument_set_pixmap(void* self, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#operator-eq)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
 /// @param param1 QIconEngine__ScaledPixmapArgument*
+///
 void q_iconengine__scaledpixmapargument_operator_assign(void* self, void* param1);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*
+///
 void q_iconengine__scaledpixmapargument_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qiconengine.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#public-types)
 
 typedef enum {
     QICONENGINE_ICONENGINEHOOK_ISNULLHOOK = 3,

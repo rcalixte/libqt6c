@@ -11,16 +11,18 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kjobwindows.html
+/// [Upstream resources](https://api.kde.org/kjobwindows.html)
 
 /// [Upstream resources](https://api.kde.org/kjobwindows.html#setWindow)
 ///
 /// @param param1 QObject*
 /// @param param2 QWindow*
+///
 void k_jobwindows_set_window(void* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kjobwindows.html#window)
 ///
 /// @param param1 QObject*
+///
 QWindow* k_jobwindows_window(void* param1);
 #endif

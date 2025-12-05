@@ -11,12 +11,15 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qlayout.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html)
 
 /// q_layout_new constructs a new QLayout object.
 ///
 /// @param parent QWidget*
+///
 QLayout* q_layout_new(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html)
 
 /// q_layout_new2 constructs a new QLayout object.
 ///
@@ -25,22 +28,26 @@ QLayout* q_layout_new2();
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QLayout*
+///
 const QMetaObject* q_layout_meta_object(void* self);
 
 /// @param self QLayout*
 /// @param param1 const char*
+///
 void* q_layout_metacast(void* self, const char* param1);
 
 /// @param self QLayout*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_layout_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_layout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_layout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_layout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,11 +64,13 @@ int32_t q_layout_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_layout_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#spacing)
 ///
 /// @param self QLayout*
+///
 int32_t q_layout_spacing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#spacing)
@@ -69,6 +79,7 @@ int32_t q_layout_spacing(void* self);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func()
+///
 void q_layout_on_spacing(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#spacing)
@@ -76,12 +87,14 @@ void q_layout_on_spacing(void* self, int32_t (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 int32_t q_layout_qbase_spacing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
 ///
 /// @param self QLayout*
 /// @param spacing int
+///
 void q_layout_set_spacing(void* self, int spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
@@ -90,6 +103,7 @@ void q_layout_set_spacing(void* self, int spacing);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, int spacing)
+///
 void q_layout_on_set_spacing(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
@@ -98,6 +112,7 @@ void q_layout_on_set_spacing(void* self, void (*callback)(void*, int));
 ///
 /// @param self QLayout*
 /// @param spacing int
+///
 void q_layout_qbase_set_spacing(void* self, int spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
@@ -107,17 +122,20 @@ void q_layout_qbase_set_spacing(void* self, int spacing);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void q_layout_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// @param self QLayout*
 /// @param margins QMargins*
+///
 void q_layout_set_contents_margins2(void* self, void* margins);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#unsetContentsMargins)
 ///
 /// @param self QLayout*
+///
 void q_layout_unset_contents_margins(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#getContentsMargins)
@@ -127,16 +145,19 @@ void q_layout_unset_contents_margins(void* self);
 /// @param top int*
 /// @param right int*
 /// @param bottom int*
+///
 void q_layout_get_contents_margins(void* self, int* left, int* top, int* right, int* bottom);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#contentsMargins)
 ///
 /// @param self QLayout*
+///
 QMargins* q_layout_contents_margins(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#contentsRect)
 ///
 /// @param self QLayout*
+///
 QRect* q_layout_contents_rect(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setAlignment)
@@ -144,6 +165,7 @@ QRect* q_layout_contents_rect(void* self);
 /// @param self QLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 bool q_layout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setAlignment)
@@ -151,12 +173,14 @@ bool q_layout_set_alignment(void* self, void* w, int32_t alignment);
 /// @param self QLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
+///
 bool q_layout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setSizeConstraint)
 ///
 /// @param self QLayout*
 /// @param sizeConstraint enum QLayout__SizeConstraint
+///
 void q_layout_set_size_constraint(void* self, int32_t sizeConstraint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#sizeConstraint)
@@ -164,27 +188,32 @@ void q_layout_set_size_constraint(void* self, int32_t sizeConstraint);
 /// @param self QLayout*
 ///
 /// @return enum QLayout__SizeConstraint
+///
 int32_t q_layout_size_constraint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setMenuBar)
 ///
 /// @param self QLayout*
 /// @param w QWidget*
+///
 void q_layout_set_menu_bar(void* self, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#menuBar)
 ///
 /// @param self QLayout*
+///
 QWidget* q_layout_menu_bar(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#parentWidget)
 ///
 /// @param self QLayout*
+///
 QWidget* q_layout_parent_widget(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#invalidate)
 ///
 /// @param self QLayout*
+///
 void q_layout_invalidate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#invalidate)
@@ -193,6 +222,7 @@ void q_layout_invalidate(void* self);
 ///
 /// @param self QLayout*
 /// @param callback void func()
+///
 void q_layout_on_invalidate(void* self, void (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#invalidate)
@@ -200,11 +230,13 @@ void q_layout_on_invalidate(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 void q_layout_qbase_invalidate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)
 ///
 /// @param self QLayout*
+///
 QRect* q_layout_geometry(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)
@@ -213,6 +245,7 @@ QRect* q_layout_geometry(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QRect* func()
+///
 void q_layout_on_geometry(void* self, QRect* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)
@@ -220,28 +253,33 @@ void q_layout_on_geometry(void* self, QRect* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 QRect* q_layout_qbase_geometry(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#activate)
 ///
 /// @param self QLayout*
+///
 bool q_layout_activate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#update)
 ///
 /// @param self QLayout*
+///
 void q_layout_update(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addWidget)
 ///
 /// @param self QLayout*
 /// @param w QWidget*
+///
 void q_layout_add_widget(void* self, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addItem)
 ///
 /// @param self QLayout*
 /// @param param1 QLayoutItem*
+///
 void q_layout_add_item(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addItem)
@@ -250,6 +288,7 @@ void q_layout_add_item(void* self, void* param1);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QLayoutItem* param1)
+///
 void q_layout_on_add_item(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addItem)
@@ -258,18 +297,21 @@ void q_layout_on_add_item(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param param1 QLayoutItem*
+///
 void q_layout_qbase_add_item(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#removeWidget)
 ///
 /// @param self QLayout*
 /// @param w QWidget*
+///
 void q_layout_remove_widget(void* self, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#removeItem)
 ///
 /// @param self QLayout*
 /// @param param1 QLayoutItem*
+///
 void q_layout_remove_item(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
@@ -277,6 +319,7 @@ void q_layout_remove_item(void* self, void* param1);
 /// @param self QLayout*
 ///
 /// @return flag of enum Qt__Orientation
+///
 int32_t q_layout_expanding_directions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
@@ -285,6 +328,7 @@ int32_t q_layout_expanding_directions(void* self);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func()
+///
 void q_layout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
@@ -294,11 +338,13 @@ void q_layout_on_expanding_directions(void* self, int32_t (*callback)());
 /// @param self QLayout*
 ///
 /// @return flag of enum Qt__Orientation
+///
 int32_t q_layout_qbase_expanding_directions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#minimumSize)
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#minimumSize)
@@ -307,6 +353,7 @@ QSize* q_layout_minimum_size(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QSize* func()
+///
 void q_layout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#minimumSize)
@@ -314,11 +361,13 @@ void q_layout_on_minimum_size(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_qbase_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_maximum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
@@ -327,6 +376,7 @@ QSize* q_layout_maximum_size(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QSize* func()
+///
 void q_layout_on_maximum_size(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
@@ -334,12 +384,14 @@ void q_layout_on_maximum_size(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_qbase_maximum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setGeometry)
 ///
 /// @param self QLayout*
 /// @param geometry QRect*
+///
 void q_layout_set_geometry(void* self, void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setGeometry)
@@ -348,6 +400,7 @@ void q_layout_set_geometry(void* self, void* geometry);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QRect* geometry)
+///
 void q_layout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setGeometry)
@@ -356,12 +409,14 @@ void q_layout_on_set_geometry(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param geometry QRect*
+///
 void q_layout_qbase_set_geometry(void* self, void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#itemAt)
 ///
 /// @param self QLayout*
 /// @param index int
+///
 QLayoutItem* q_layout_item_at(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#itemAt)
@@ -370,6 +425,7 @@ QLayoutItem* q_layout_item_at(void* self, int index);
 ///
 /// @param self QLayout*
 /// @param callback QLayoutItem* func(QLayout* self, int index)
+///
 void q_layout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#itemAt)
@@ -378,12 +434,14 @@ void q_layout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int));
 ///
 /// @param self QLayout*
 /// @param index int
+///
 QLayoutItem* q_layout_qbase_item_at(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#takeAt)
 ///
 /// @param self QLayout*
 /// @param index int
+///
 QLayoutItem* q_layout_take_at(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#takeAt)
@@ -392,6 +450,7 @@ QLayoutItem* q_layout_take_at(void* self, int index);
 ///
 /// @param self QLayout*
 /// @param callback QLayoutItem* func(QLayout* self, int index)
+///
 void q_layout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#takeAt)
@@ -400,12 +459,14 @@ void q_layout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 ///
 /// @param self QLayout*
 /// @param index int
+///
 QLayoutItem* q_layout_qbase_take_at(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// @param self QLayout*
 /// @param param1 QWidget*
+///
 int32_t q_layout_index_of(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
@@ -414,6 +475,7 @@ int32_t q_layout_index_of(void* self, void* param1);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, QWidget* param1)
+///
 void q_layout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
@@ -422,12 +484,14 @@ void q_layout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param param1 QWidget*
+///
 int32_t q_layout_qbase_index_of(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// @param self QLayout*
 /// @param param1 QLayoutItem*
+///
 int32_t q_layout_index_of2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
@@ -436,6 +500,7 @@ int32_t q_layout_index_of2(void* self, void* param1);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, QLayoutItem* param1)
+///
 void q_layout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
@@ -444,11 +509,13 @@ void q_layout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param param1 QLayoutItem*
+///
 int32_t q_layout_qbase_index_of2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#count)
 ///
 /// @param self QLayout*
+///
 int32_t q_layout_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#count)
@@ -457,6 +524,7 @@ int32_t q_layout_count(void* self);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func()
+///
 void q_layout_on_count(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#count)
@@ -464,11 +532,13 @@ void q_layout_on_count(void* self, int32_t (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 int32_t q_layout_qbase_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
 ///
 /// @param self QLayout*
+///
 bool q_layout_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
@@ -477,6 +547,7 @@ bool q_layout_is_empty(void* self);
 ///
 /// @param self QLayout*
 /// @param callback bool func()
+///
 void q_layout_on_is_empty(void* self, bool (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
@@ -484,6 +555,7 @@ void q_layout_on_is_empty(void* self, bool (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 bool q_layout_qbase_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
@@ -491,6 +563,7 @@ bool q_layout_qbase_is_empty(void* self);
 /// @param self QLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
+///
 int32_t q_layout_control_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
@@ -499,6 +572,7 @@ int32_t q_layout_control_types(void* self);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func()
+///
 void q_layout_on_control_types(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
@@ -508,6 +582,7 @@ void q_layout_on_control_types(void* self, int32_t (*callback)());
 /// @param self QLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
+///
 int32_t q_layout_qbase_control_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
@@ -516,6 +591,7 @@ int32_t q_layout_qbase_control_types(void* self);
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
+///
 QLayoutItem* q_layout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
@@ -524,6 +600,7 @@ QLayoutItem* q_layout_replace_widget(void* self, void* from, void* to, int32_t o
 ///
 /// @param self QLayout*
 /// @param callback QLayoutItem* func(QLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
+///
 void q_layout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
@@ -534,38 +611,45 @@ void q_layout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
+///
 QLayoutItem* q_layout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#totalMinimumHeightForWidth)
 ///
 /// @param self QLayout*
 /// @param w int
+///
 int32_t q_layout_total_minimum_height_for_width(void* self, int w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#totalHeightForWidth)
 ///
 /// @param self QLayout*
 /// @param w int
+///
 int32_t q_layout_total_height_for_width(void* self, int w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#totalMinimumSize)
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_total_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#totalMaximumSize)
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_total_maximum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#totalSizeHint)
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_total_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#layout)
 ///
 /// @param self QLayout*
+///
 QLayout* q_layout_layout(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#layout)
@@ -574,6 +658,7 @@ QLayout* q_layout_layout(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QLayout* func()
+///
 void q_layout_on_layout(void* self, QLayout* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#layout)
@@ -581,29 +666,34 @@ void q_layout_on_layout(void* self, QLayout* (*callback)());
 /// Base class method implementation
 ///
 /// @param self QLayout*
+///
 QLayout* q_layout_qbase_layout(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setEnabled)
 ///
 /// @param self QLayout*
 /// @param enabled bool
+///
 void q_layout_set_enabled(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#isEnabled)
 ///
 /// @param self QLayout*
+///
 bool q_layout_is_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#closestAcceptableSize)
 ///
 /// @param w QWidget*
 /// @param s QSize*
+///
 QSize* q_layout_closest_acceptable_size(void* w, void* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
 ///
 /// @param self QLayout*
 /// @param param1 QEvent*
+///
 void q_layout_widget_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
@@ -612,6 +702,7 @@ void q_layout_widget_event(void* self, void* param1);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QEvent* param1)
+///
 void q_layout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
@@ -620,12 +711,14 @@ void q_layout_on_widget_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param param1 QEvent*
+///
 void q_layout_qbase_widget_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#childEvent)
 ///
 /// @param self QLayout*
 /// @param e QChildEvent*
+///
 void q_layout_child_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#childEvent)
@@ -634,6 +727,7 @@ void q_layout_child_event(void* self, void* e);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QChildEvent* e)
+///
 void q_layout_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#childEvent)
@@ -642,12 +736,14 @@ void q_layout_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param e QChildEvent*
+///
 void q_layout_qbase_child_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
 ///
 /// @param self QLayout*
 /// @param l QLayout*
+///
 void q_layout_add_child_layout(void* self, void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
@@ -656,6 +752,7 @@ void q_layout_add_child_layout(void* self, void* l);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QLayout* l)
+///
 void q_layout_on_add_child_layout(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
@@ -664,12 +761,14 @@ void q_layout_on_add_child_layout(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param l QLayout*
+///
 void q_layout_qbase_add_child_layout(void* self, void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
 ///
 /// @param self QLayout*
 /// @param w QWidget*
+///
 void q_layout_add_child_widget(void* self, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
@@ -678,6 +777,7 @@ void q_layout_add_child_widget(void* self, void* w);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QWidget* w)
+///
 void q_layout_on_add_child_widget(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
@@ -686,12 +786,14 @@ void q_layout_on_add_child_widget(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param w QWidget*
+///
 void q_layout_qbase_add_child_widget(void* self, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
 ///
 /// @param self QLayout*
 /// @param layout QLayout*
+///
 bool q_layout_adopt_layout(void* self, void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
@@ -700,6 +802,7 @@ bool q_layout_adopt_layout(void* self, void* layout);
 ///
 /// @param self QLayout*
 /// @param callback bool func(QLayout* self, QLayout* layout)
+///
 void q_layout_on_adopt_layout(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
@@ -708,12 +811,14 @@ void q_layout_on_adopt_layout(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param layout QLayout*
+///
 bool q_layout_qbase_adopt_layout(void* self, void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
 ///
 /// @param self QLayout*
 /// @param param1 QRect*
+///
 QRect* q_layout_alignment_rect(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
@@ -722,6 +827,7 @@ QRect* q_layout_alignment_rect(void* self, void* param1);
 ///
 /// @param self QLayout*
 /// @param callback QRect* func(QLayout* self, QRect* param1)
+///
 void q_layout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
@@ -730,6 +836,7 @@ void q_layout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param param1 QRect*
+///
 QRect* q_layout_qbase_alignment_rect(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -738,6 +845,7 @@ QRect* q_layout_qbase_alignment_rect(void* self, void* param1);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_layout_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -747,6 +855,7 @@ const char* q_layout_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_layout_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -756,6 +865,7 @@ const char* q_layout_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QLayout*
+///
 const char* q_layout_object_name(void* self);
 
 /// Inherited from QObject
@@ -764,6 +874,7 @@ const char* q_layout_object_name(void* self);
 ///
 /// @param self QLayout*
 /// @param name char*
+///
 void q_layout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -771,6 +882,7 @@ void q_layout_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QLayout*
+///
 bool q_layout_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -778,6 +890,7 @@ bool q_layout_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QLayout*
+///
 bool q_layout_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -785,6 +898,7 @@ bool q_layout_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QLayout*
+///
 bool q_layout_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -792,6 +906,7 @@ bool q_layout_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QLayout*
+///
 bool q_layout_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -800,6 +915,7 @@ bool q_layout_signals_blocked(void* self);
 ///
 /// @param self QLayout*
 /// @param b bool
+///
 bool q_layout_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -807,6 +923,7 @@ bool q_layout_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QLayout*
+///
 QThread* q_layout_thread(void* self);
 
 /// Inherited from QObject
@@ -815,6 +932,7 @@ QThread* q_layout_thread(void* self);
 ///
 /// @param self QLayout*
 /// @param thread QThread*
+///
 bool q_layout_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -823,6 +941,7 @@ bool q_layout_move_to_thread(void* self, void* thread);
 ///
 /// @param self QLayout*
 /// @param interval int
+///
 int32_t q_layout_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -831,6 +950,7 @@ int32_t q_layout_start_timer(void* self, int interval);
 ///
 /// @param self QLayout*
 /// @param id int
+///
 void q_layout_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -839,6 +959,7 @@ void q_layout_kill_timer(void* self, int id);
 ///
 /// @param self QLayout*
 /// @param id enum Qt__TimerId
+///
 void q_layout_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -846,6 +967,7 @@ void q_layout_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QLayout*
+///
 libqt_list /* of QObject* */ q_layout_children(void* self);
 
 /// Inherited from QObject
@@ -854,6 +976,7 @@ libqt_list /* of QObject* */ q_layout_children(void* self);
 ///
 /// @param self QLayout*
 /// @param parent QObject*
+///
 void q_layout_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -862,6 +985,7 @@ void q_layout_set_parent(void* self, void* parent);
 ///
 /// @param self QLayout*
 /// @param filterObj QObject*
+///
 void q_layout_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -870,6 +994,7 @@ void q_layout_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QLayout*
 /// @param obj QObject*
+///
 void q_layout_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -880,6 +1005,7 @@ void q_layout_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_layout_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -890,6 +1016,7 @@ QMetaObject__Connection* q_layout_connect(void* sender, void* signal, void* rece
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_layout_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -900,6 +1027,7 @@ QMetaObject__Connection* q_layout_connect2(void* self, void* sender, const char*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_layout_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -907,6 +1035,7 @@ bool q_layout_disconnect(void* sender, void* signal, void* receiver, void* membe
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_layout_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -914,6 +1043,7 @@ bool q_layout_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QLayout*
+///
 void q_layout_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -921,6 +1051,7 @@ void q_layout_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QLayout*
+///
 void q_layout_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -930,6 +1061,7 @@ void q_layout_dump_object_info(void* self);
 /// @param self QLayout*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_layout_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -938,6 +1070,7 @@ bool q_layout_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QLayout*
 /// @param name const char*
+///
 QVariant* q_layout_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -947,6 +1080,7 @@ QVariant* q_layout_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QLayout*
+///
 const char** q_layout_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -954,6 +1088,7 @@ const char** q_layout_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QLayout*
+///
 QBindingStorage* q_layout_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -961,6 +1096,7 @@ QBindingStorage* q_layout_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QLayout*
+///
 const QBindingStorage* q_layout_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -968,6 +1104,7 @@ const QBindingStorage* q_layout_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLayout*
+///
 void q_layout_destroyed(void* self);
 
 /// Inherited from QObject
@@ -976,6 +1113,7 @@ void q_layout_destroyed(void* self);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self)
+///
 void q_layout_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -983,6 +1121,7 @@ void q_layout_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QLayout*
+///
 QObject* q_layout_parent(void* self);
 
 /// Inherited from QObject
@@ -991,6 +1130,7 @@ QObject* q_layout_parent(void* self);
 ///
 /// @param self QLayout*
 /// @param classname const char*
+///
 bool q_layout_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -998,6 +1138,7 @@ bool q_layout_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QLayout*
+///
 void q_layout_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1007,6 +1148,7 @@ void q_layout_delete_later(void* self);
 /// @param self QLayout*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_layout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1016,6 +1158,7 @@ bool q_layout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QLayout*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_layout_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1027,6 +1170,7 @@ int32_t q_layout_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_layout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1038,6 +1182,7 @@ QMetaObject__Connection* q_layout_connect5(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_layout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1046,6 +1191,7 @@ QMetaObject__Connection* q_layout_connect4(void* self, void* sender, const char*
 ///
 /// @param self QLayout*
 /// @param param1 QObject*
+///
 void q_layout_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1054,6 +1200,7 @@ void q_layout_destroyed1(void* self, void* param1);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QObject* param1)
+///
 void q_layout_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1063,6 +1210,7 @@ void q_layout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t q_layout_alignment(void* self);
 
 /// Inherited from QObject
@@ -1073,6 +1221,7 @@ int32_t q_layout_alignment(void* self);
 ///
 /// @param self QLayout*
 /// @param event QEvent*
+///
 bool q_layout_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1083,6 +1232,7 @@ bool q_layout_event(void* self, void* event);
 ///
 /// @param self QLayout*
 /// @param event QEvent*
+///
 bool q_layout_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1093,6 +1243,7 @@ bool q_layout_qbase_event(void* self, void* event);
 ///
 /// @param self QLayout*
 /// @param callback bool func(QLayout* self, QEvent* event)
+///
 void q_layout_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1104,6 +1255,7 @@ void q_layout_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QLayout*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_layout_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1115,6 +1267,7 @@ bool q_layout_event_filter(void* self, void* watched, void* event);
 /// @param self QLayout*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_layout_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1125,6 +1278,7 @@ bool q_layout_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QLayout*
 /// @param callback bool func(QLayout* self, QObject* watched, QEvent* event)
+///
 void q_layout_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1135,6 +1289,7 @@ void q_layout_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 /// @param self QLayout*
 /// @param event QTimerEvent*
+///
 void q_layout_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1145,6 +1300,7 @@ void q_layout_timer_event(void* self, void* event);
 ///
 /// @param self QLayout*
 /// @param event QTimerEvent*
+///
 void q_layout_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1155,6 +1311,7 @@ void q_layout_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QTimerEvent* event)
+///
 void q_layout_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1165,6 +1322,7 @@ void q_layout_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param event QEvent*
+///
 void q_layout_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1175,6 +1333,7 @@ void q_layout_custom_event(void* self, void* event);
 ///
 /// @param self QLayout*
 /// @param event QEvent*
+///
 void q_layout_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1185,6 +1344,7 @@ void q_layout_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QEvent* event)
+///
 void q_layout_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1195,6 +1355,7 @@ void q_layout_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param signal QMetaMethod*
+///
 void q_layout_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1205,6 +1366,7 @@ void q_layout_connect_notify(void* self, void* signal);
 ///
 /// @param self QLayout*
 /// @param signal QMetaMethod*
+///
 void q_layout_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1215,6 +1377,7 @@ void q_layout_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QMetaMethod* signal)
+///
 void q_layout_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1225,6 +1388,7 @@ void q_layout_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLayout*
 /// @param signal QMetaMethod*
+///
 void q_layout_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1235,6 +1399,7 @@ void q_layout_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QLayout*
 /// @param signal QMetaMethod*
+///
 void q_layout_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1245,6 +1410,7 @@ void q_layout_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, QMetaMethod* signal)
+///
 void q_layout_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1254,6 +1420,7 @@ void q_layout_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_size_hint(void* self);
 
 /// Inherited from QLayoutItem
@@ -1263,6 +1430,7 @@ QSize* q_layout_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLayout*
+///
 QSize* q_layout_qbase_size_hint(void* self);
 
 /// Inherited from QLayoutItem
@@ -1273,6 +1441,7 @@ QSize* q_layout_qbase_size_hint(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QSize* func()
+///
 void q_layout_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1282,6 +1451,7 @@ void q_layout_on_size_hint(void* self, QSize* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLayout*
+///
 bool q_layout_has_height_for_width(void* self);
 
 /// Inherited from QLayoutItem
@@ -1291,6 +1461,7 @@ bool q_layout_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLayout*
+///
 bool q_layout_qbase_has_height_for_width(void* self);
 
 /// Inherited from QLayoutItem
@@ -1301,6 +1472,7 @@ bool q_layout_qbase_has_height_for_width(void* self);
 ///
 /// @param self QLayout*
 /// @param callback bool func()
+///
 void q_layout_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1311,6 +1483,7 @@ void q_layout_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// @param self QLayout*
 /// @param param1 int
+///
 int32_t q_layout_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
@@ -1321,6 +1494,7 @@ int32_t q_layout_height_for_width(void* self, int param1);
 ///
 /// @param self QLayout*
 /// @param param1 int
+///
 int32_t q_layout_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
@@ -1331,6 +1505,7 @@ int32_t q_layout_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, int param1)
+///
 void q_layout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QLayoutItem
@@ -1341,6 +1516,7 @@ void q_layout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 ///
 /// @param self QLayout*
 /// @param param1 int
+///
 int32_t q_layout_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
@@ -1351,6 +1527,7 @@ int32_t q_layout_minimum_height_for_width(void* self, int param1);
 ///
 /// @param self QLayout*
 /// @param param1 int
+///
 int32_t q_layout_qbase_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
@@ -1361,6 +1538,7 @@ int32_t q_layout_qbase_minimum_height_for_width(void* self, int param1);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, int param1)
+///
 void q_layout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QLayoutItem
@@ -1370,6 +1548,7 @@ void q_layout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLayout*
+///
 QWidget* q_layout_widget(void* self);
 
 /// Inherited from QLayoutItem
@@ -1379,6 +1558,7 @@ QWidget* q_layout_widget(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLayout*
+///
 QWidget* q_layout_qbase_widget(void* self);
 
 /// Inherited from QLayoutItem
@@ -1389,6 +1569,7 @@ QWidget* q_layout_qbase_widget(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QWidget* func()
+///
 void q_layout_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1398,6 +1579,7 @@ void q_layout_on_widget(void* self, QWidget* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLayout*
+///
 QSpacerItem* q_layout_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
@@ -1407,6 +1589,7 @@ QSpacerItem* q_layout_spacer_item(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLayout*
+///
 QSpacerItem* q_layout_qbase_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
@@ -1417,6 +1600,7 @@ QSpacerItem* q_layout_qbase_spacer_item(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QSpacerItem* func()
+///
 void q_layout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// Inherited from QObject
@@ -1426,6 +1610,7 @@ void q_layout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLayout*
+///
 QObject* q_layout_sender(void* self);
 
 /// Inherited from QObject
@@ -1435,6 +1620,7 @@ QObject* q_layout_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLayout*
+///
 QObject* q_layout_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1445,6 +1631,7 @@ QObject* q_layout_qbase_sender(void* self);
 ///
 /// @param self QLayout*
 /// @param callback QObject* func()
+///
 void q_layout_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1454,6 +1641,7 @@ void q_layout_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLayout*
+///
 int32_t q_layout_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1463,6 +1651,7 @@ int32_t q_layout_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLayout*
+///
 int32_t q_layout_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1473,6 +1662,7 @@ int32_t q_layout_qbase_sender_signal_index(void* self);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func()
+///
 void q_layout_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1483,6 +1673,7 @@ void q_layout_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QLayout*
 /// @param signal const char*
+///
 int32_t q_layout_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1493,6 +1684,7 @@ int32_t q_layout_receivers(void* self, const char* signal);
 ///
 /// @param self QLayout*
 /// @param signal const char*
+///
 int32_t q_layout_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1503,6 +1695,7 @@ int32_t q_layout_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, const char* signal)
+///
 void q_layout_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1513,6 +1706,7 @@ void q_layout_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// @param self QLayout*
 /// @param signal QMetaMethod*
+///
 bool q_layout_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1523,6 +1717,7 @@ bool q_layout_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QLayout*
 /// @param signal QMetaMethod*
+///
 bool q_layout_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1533,6 +1728,7 @@ bool q_layout_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QLayout*
 /// @param callback bool func(QLayout* self, QMetaMethod* signal)
+///
 void q_layout_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1543,6 +1739,7 @@ void q_layout_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 ///
 /// @param self QLayout*
 /// @param callback void func(QLayout* self, const char* objectName)
+///
 void q_layout_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#dtor.QLayout)
@@ -1550,9 +1747,10 @@ void q_layout_on_object_name_changed(void* self, void (*callback)(void*, const c
 /// Delete this object from C++ memory.
 ///
 /// @param self QLayout*
+///
 void q_layout_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qlayout.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#public-types)
 
 typedef enum {
     QLAYOUT_SIZECONSTRAINT_SETDEFAULTCONSTRAINT = 0,

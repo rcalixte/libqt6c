@@ -11,12 +11,15 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kwidgetjobtracker.html
+/// [Upstream resources](https://api.kde.org/kwidgetjobtracker.html)
 
 /// k_widgetjobtracker_new constructs a new KWidgetJobTracker object.
 ///
 /// @param parent QWidget*
+///
 KWidgetJobTracker* k_widgetjobtracker_new(void* parent);
+
+/// [Upstream resources](https://api.kde.org/kwidgetjobtracker.html)
 
 /// k_widgetjobtracker_new2 constructs a new KWidgetJobTracker object.
 ///
@@ -25,16 +28,19 @@ KWidgetJobTracker* k_widgetjobtracker_new2();
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KWidgetJobTracker*
+///
 const QMetaObject* k_widgetjobtracker_meta_object(void* self);
 
 /// @param self KWidgetJobTracker*
 /// @param param1 const char*
+///
 void* k_widgetjobtracker_metacast(void* self, const char* param1);
 
 /// @param self KWidgetJobTracker*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_widgetjobtracker_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -42,30 +48,35 @@ int32_t k_widgetjobtracker_metacall(void* self, int32_t param1, int param2, void
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_widgetjobtracker_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kwidgetjobtracker.html#widget)
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 QWidget* k_widgetjobtracker_widget(void* self, void* job);
 
 /// [Upstream resources](https://api.kde.org/kwidgetjobtracker.html#registerJob)
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 void k_widgetjobtracker_register_job(void* self, void* job);
 
 /// [Upstream resources](https://api.kde.org/kwidgetjobtracker.html#unregisterJob)
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 void k_widgetjobtracker_unregister_job(void* self, void* job);
 
 /// [Upstream resources](https://api.kde.org/kwidgetjobtracker.html#keepOpen)
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 bool k_widgetjobtracker_keep_open(void* self, void* job);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -74,6 +85,7 @@ bool k_widgetjobtracker_keep_open(void* self, void* job);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_widgetjobtracker_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -83,6 +95,7 @@ const char* k_widgetjobtracker_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_widgetjobtracker_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -92,6 +105,7 @@ const char* k_widgetjobtracker_tr3(const char* s, const char* c, int n);
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
 /// @param stopOnClose bool
+///
 void k_widgetjobtracker_set_stop_on_close(void* self, void* job, bool stopOnClose);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -100,6 +114,7 @@ void k_widgetjobtracker_set_stop_on_close(void* self, void* job, bool stopOnClos
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 bool k_widgetjobtracker_stop_on_close(void* self, void* job);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -109,6 +124,7 @@ bool k_widgetjobtracker_stop_on_close(void* self, void* job);
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
 /// @param autoDelete bool
+///
 void k_widgetjobtracker_set_auto_delete(void* self, void* job, bool autoDelete);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -117,6 +133,7 @@ void k_widgetjobtracker_set_auto_delete(void* self, void* job, bool autoDelete);
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 bool k_widgetjobtracker_auto_delete(void* self, void* job);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -125,6 +142,7 @@ bool k_widgetjobtracker_auto_delete(void* self, void* job);
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 void k_widgetjobtracker_stopped(void* self, void* job);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -133,6 +151,7 @@ void k_widgetjobtracker_stopped(void* self, void* job);
 ///
 /// @param self KWidgetJobTracker*
 /// @param callback void func(KWidgetJobTracker* self, KJob* job)
+///
 void k_widgetjobtracker_on_stopped(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -141,6 +160,7 @@ void k_widgetjobtracker_on_stopped(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 void k_widgetjobtracker_suspend(void* self, void* job);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -149,6 +169,7 @@ void k_widgetjobtracker_suspend(void* self, void* job);
 ///
 /// @param self KWidgetJobTracker*
 /// @param callback void func(KWidgetJobTracker* self, KJob* job)
+///
 void k_widgetjobtracker_on_suspend(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -157,6 +178,7 @@ void k_widgetjobtracker_on_suspend(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KWidgetJobTracker*
 /// @param job KJob*
+///
 void k_widgetjobtracker_resume(void* self, void* job);
 
 /// Inherited from KAbstractWidgetJobTracker
@@ -165,6 +187,7 @@ void k_widgetjobtracker_resume(void* self, void* job);
 ///
 /// @param self KWidgetJobTracker*
 /// @param callback void func(KWidgetJobTracker* self, KJob* job)
+///
 void k_widgetjobtracker_on_resume(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -173,6 +196,7 @@ void k_widgetjobtracker_on_resume(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KWidgetJobTracker*
 /// @param event QEvent*
+///
 bool k_widgetjobtracker_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -182,6 +206,7 @@ bool k_widgetjobtracker_event(void* self, void* event);
 /// @param self KWidgetJobTracker*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_widgetjobtracker_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -191,6 +216,7 @@ bool k_widgetjobtracker_event_filter(void* self, void* watched, void* event);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KWidgetJobTracker*
+///
 const char* k_widgetjobtracker_object_name(void* self);
 
 /// Inherited from QObject
@@ -199,6 +225,7 @@ const char* k_widgetjobtracker_object_name(void* self);
 ///
 /// @param self KWidgetJobTracker*
 /// @param name char*
+///
 void k_widgetjobtracker_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -206,6 +233,7 @@ void k_widgetjobtracker_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KWidgetJobTracker*
+///
 bool k_widgetjobtracker_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -213,6 +241,7 @@ bool k_widgetjobtracker_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KWidgetJobTracker*
+///
 bool k_widgetjobtracker_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -220,6 +249,7 @@ bool k_widgetjobtracker_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KWidgetJobTracker*
+///
 bool k_widgetjobtracker_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -227,6 +257,7 @@ bool k_widgetjobtracker_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KWidgetJobTracker*
+///
 bool k_widgetjobtracker_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -235,6 +266,7 @@ bool k_widgetjobtracker_signals_blocked(void* self);
 ///
 /// @param self KWidgetJobTracker*
 /// @param b bool
+///
 bool k_widgetjobtracker_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -242,6 +274,7 @@ bool k_widgetjobtracker_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KWidgetJobTracker*
+///
 QThread* k_widgetjobtracker_thread(void* self);
 
 /// Inherited from QObject
@@ -250,6 +283,7 @@ QThread* k_widgetjobtracker_thread(void* self);
 ///
 /// @param self KWidgetJobTracker*
 /// @param thread QThread*
+///
 bool k_widgetjobtracker_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -258,6 +292,7 @@ bool k_widgetjobtracker_move_to_thread(void* self, void* thread);
 ///
 /// @param self KWidgetJobTracker*
 /// @param interval int
+///
 int32_t k_widgetjobtracker_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -266,6 +301,7 @@ int32_t k_widgetjobtracker_start_timer(void* self, int interval);
 ///
 /// @param self KWidgetJobTracker*
 /// @param id int
+///
 void k_widgetjobtracker_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -274,6 +310,7 @@ void k_widgetjobtracker_kill_timer(void* self, int id);
 ///
 /// @param self KWidgetJobTracker*
 /// @param id enum Qt__TimerId
+///
 void k_widgetjobtracker_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -281,6 +318,7 @@ void k_widgetjobtracker_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KWidgetJobTracker*
+///
 libqt_list /* of QObject* */ k_widgetjobtracker_children(void* self);
 
 /// Inherited from QObject
@@ -289,6 +327,7 @@ libqt_list /* of QObject* */ k_widgetjobtracker_children(void* self);
 ///
 /// @param self KWidgetJobTracker*
 /// @param parent QObject*
+///
 void k_widgetjobtracker_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -297,6 +336,7 @@ void k_widgetjobtracker_set_parent(void* self, void* parent);
 ///
 /// @param self KWidgetJobTracker*
 /// @param filterObj QObject*
+///
 void k_widgetjobtracker_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -305,6 +345,7 @@ void k_widgetjobtracker_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KWidgetJobTracker*
 /// @param obj QObject*
+///
 void k_widgetjobtracker_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -315,6 +356,7 @@ void k_widgetjobtracker_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_widgetjobtracker_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -325,6 +367,7 @@ QMetaObject__Connection* k_widgetjobtracker_connect(void* sender, void* signal, 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_widgetjobtracker_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -335,6 +378,7 @@ QMetaObject__Connection* k_widgetjobtracker_connect2(void* self, void* sender, c
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_widgetjobtracker_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -342,6 +386,7 @@ bool k_widgetjobtracker_disconnect(void* sender, void* signal, void* receiver, v
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_widgetjobtracker_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -349,6 +394,7 @@ bool k_widgetjobtracker_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KWidgetJobTracker*
+///
 void k_widgetjobtracker_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -356,6 +402,7 @@ void k_widgetjobtracker_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KWidgetJobTracker*
+///
 void k_widgetjobtracker_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -365,6 +412,7 @@ void k_widgetjobtracker_dump_object_info(void* self);
 /// @param self KWidgetJobTracker*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_widgetjobtracker_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -373,6 +421,7 @@ bool k_widgetjobtracker_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KWidgetJobTracker*
 /// @param name const char*
+///
 QVariant* k_widgetjobtracker_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -382,6 +431,7 @@ QVariant* k_widgetjobtracker_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KWidgetJobTracker*
+///
 const char** k_widgetjobtracker_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -389,6 +439,7 @@ const char** k_widgetjobtracker_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KWidgetJobTracker*
+///
 QBindingStorage* k_widgetjobtracker_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -396,6 +447,7 @@ QBindingStorage* k_widgetjobtracker_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KWidgetJobTracker*
+///
 const QBindingStorage* k_widgetjobtracker_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -403,6 +455,7 @@ const QBindingStorage* k_widgetjobtracker_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KWidgetJobTracker*
+///
 void k_widgetjobtracker_destroyed(void* self);
 
 /// Inherited from QObject
@@ -411,6 +464,7 @@ void k_widgetjobtracker_destroyed(void* self);
 ///
 /// @param self KWidgetJobTracker*
 /// @param callback void func(KWidgetJobTracker* self)
+///
 void k_widgetjobtracker_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -418,6 +472,7 @@ void k_widgetjobtracker_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KWidgetJobTracker*
+///
 QObject* k_widgetjobtracker_parent(void* self);
 
 /// Inherited from QObject
@@ -426,6 +481,7 @@ QObject* k_widgetjobtracker_parent(void* self);
 ///
 /// @param self KWidgetJobTracker*
 /// @param classname const char*
+///
 bool k_widgetjobtracker_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -433,6 +489,7 @@ bool k_widgetjobtracker_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KWidgetJobTracker*
+///
 void k_widgetjobtracker_delete_later(void* self);
 
 /// Inherited from QObject
@@ -442,6 +499,7 @@ void k_widgetjobtracker_delete_later(void* self);
 /// @param self KWidgetJobTracker*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_widgetjobtracker_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -451,6 +509,7 @@ bool k_widgetjobtracker_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KWidgetJobTracker*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_widgetjobtracker_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -462,6 +521,7 @@ int32_t k_widgetjobtracker_start_timer22(void* self, int interval, int32_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_widgetjobtracker_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -473,6 +533,7 @@ QMetaObject__Connection* k_widgetjobtracker_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_widgetjobtracker_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -481,6 +542,7 @@ QMetaObject__Connection* k_widgetjobtracker_connect4(void* self, void* sender, c
 ///
 /// @param self KWidgetJobTracker*
 /// @param param1 QObject*
+///
 void k_widgetjobtracker_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -489,6 +551,7 @@ void k_widgetjobtracker_destroyed1(void* self, void* param1);
 ///
 /// @param self KWidgetJobTracker*
 /// @param callback void func(KWidgetJobTracker* self, QObject* param1)
+///
 void k_widgetjobtracker_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -499,6 +562,7 @@ void k_widgetjobtracker_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KWidgetJobTracker*
 /// @param callback void func(KWidgetJobTracker* self, const char* objectName)
+///
 void k_widgetjobtracker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kwidgetjobtracker.html#dtor.KWidgetJobTracker)
@@ -506,6 +570,7 @@ void k_widgetjobtracker_on_object_name_changed(void* self, void (*callback)(void
 /// Delete this object from C++ memory.
 ///
 /// @param self KWidgetJobTracker*
+///
 void k_widgetjobtracker_delete(void* self);
 
 #endif

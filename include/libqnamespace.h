@@ -11,37 +11,48 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/disambiguated-t.html
+/// [Upstream resources](https://doc.qt.io/qt-6/disambiguated-t.html)
 
 /// q_disambiguated_t_new constructs a new Qt::Disambiguated_t object.
 ///
 /// @param other Disambiguated_t*
+///
 Disambiguated_t* q_disambiguated_t_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/disambiguated-t.html)
 
 /// q_disambiguated_t_new2 constructs a new Qt::Disambiguated_t object and invalidates the source Qt::Disambiguated_t object.
 ///
 /// @param other Disambiguated_t*
+///
 Disambiguated_t* q_disambiguated_t_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/disambiguated-t.html)
 
 /// q_disambiguated_t_new3 constructs a new Qt::Disambiguated_t object.
 ///
 Disambiguated_t* q_disambiguated_t_new3();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/disambiguated-t.html)
+
 /// q_disambiguated_t_new4 constructs a new Qt::Disambiguated_t object.
 ///
 /// @param param1 Disambiguated_t*
+///
 Disambiguated_t* q_disambiguated_t_new4(void* param1);
 
 /// q_disambiguated_t_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self Disambiguated_t*
 /// @param other Disambiguated_t*
+///
 void q_disambiguated_t_copy_assign(void* self, void* other);
 
 /// q_disambiguated_t_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self Disambiguated_t*
 /// @param other Disambiguated_t*
+///
 void q_disambiguated_t_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/disambiguated-t.html#dtor.Disambiguated_t)
@@ -49,36 +60,44 @@ void q_disambiguated_t_move_assign(void* self, void* other);
 /// Delete this object from C++ memory.
 ///
 /// @param self Disambiguated_t*
+///
 void q_disambiguated_t_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qinternal.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qinternal.html)
 
 /// q_internal_new constructs a new QInternal object.
 ///
 /// @param other QInternal*
+///
 QInternal* q_internal_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qinternal.html)
 
 /// q_internal_new2 constructs a new QInternal object and invalidates the source QInternal object.
 ///
 /// @param other QInternal*
+///
 QInternal* q_internal_new2(void* other);
 
 /// q_internal_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QInternal*
 /// @param other QInternal*
+///
 void q_internal_copy_assign(void* self, void* other);
 
 /// q_internal_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QInternal*
 /// @param other QInternal*
+///
 void q_internal_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinternal.html#activateCallbacks)
 ///
 /// @param param1 enum QInternal__Callback
 /// @param param2 void*
+///
 bool q_internal_activate_callbacks(int32_t param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinternal.html#dtor.QInternal)
@@ -86,66 +105,93 @@ bool q_internal_activate_callbacks(int32_t param1, void* param2);
 /// Delete this object from C++ memory.
 ///
 /// @param self QInternal*
+///
 void q_internal_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qkeycombination.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new constructs a new QKeyCombination object.
 ///
 /// @param other QKeyCombination*
+///
 QKeyCombination* q_keycombination_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new2 constructs a new QKeyCombination object and invalidates the source QKeyCombination object.
 ///
 /// @param other QKeyCombination*
+///
 QKeyCombination* q_keycombination_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new3 constructs a new QKeyCombination object.
 ///
 QKeyCombination* q_keycombination_new3();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
+
 /// q_keycombination_new4 constructs a new QKeyCombination object.
 ///
 /// @param modifiers flag of enum Qt__Modifier
+///
 QKeyCombination* q_keycombination_new4(int64_t modifiers);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new5 constructs a new QKeyCombination object.
 ///
 /// @param modifiers flag of enum Qt__KeyboardModifier
+///
 QKeyCombination* q_keycombination_new5(int64_t modifiers);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new6 constructs a new QKeyCombination object.
 ///
 /// @param param1 QKeyCombination*
+///
 QKeyCombination* q_keycombination_new6(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new7 constructs a new QKeyCombination object.
 ///
 /// @param key enum Qt__Key
+///
 QKeyCombination* q_keycombination_new7(int32_t key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new8 constructs a new QKeyCombination object.
 ///
 /// @param modifiers flag of enum Qt__Modifier
 /// @param key enum Qt__Key
+///
 QKeyCombination* q_keycombination_new8(int64_t modifiers, int32_t key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
 /// q_keycombination_new9 constructs a new QKeyCombination object.
 ///
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param key enum Qt__Key
+///
 QKeyCombination* q_keycombination_new9(int64_t modifiers, int32_t key);
 
 /// q_keycombination_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QKeyCombination*
 /// @param other QKeyCombination*
+///
 void q_keycombination_copy_assign(void* self, void* other);
 
 /// q_keycombination_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QKeyCombination*
 /// @param other QKeyCombination*
+///
 void q_keycombination_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#keyboardModifiers)
@@ -153,6 +199,7 @@ void q_keycombination_move_assign(void* self, void* other);
 /// @param self QKeyCombination*
 ///
 /// @return flag of enum Qt__KeyboardModifier
+///
 int64_t q_keycombination_keyboard_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#key)
@@ -160,21 +207,25 @@ int64_t q_keycombination_keyboard_modifiers(void* self);
 /// @param self QKeyCombination*
 ///
 /// @return enum Qt__Key
+///
 int32_t q_keycombination_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#fromCombined)
 ///
 /// @param combined int
+///
 QKeyCombination* q_keycombination_from_combined(int combined);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#toCombined)
 ///
 /// @param self QKeyCombination*
+///
 int32_t q_keycombination_to_combined(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#operator)
 ///
 /// @param self QKeyCombination*
+///
 int32_t q_keycombination_to_int(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#dtor.QKeyCombination)
@@ -182,9 +233,10 @@ int32_t q_keycombination_to_int(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QKeyCombination*
+///
 void q_keycombination_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qt.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_GLOBALCOLOR_COLOR0 = 0,
@@ -209,11 +261,15 @@ typedef enum {
     QT_GLOBALCOLOR_TRANSPARENT = 19
 } Qt__GlobalColor;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_COLORSCHEME_UNKNOWN = 0,
     QT_COLORSCHEME_LIGHT = 1,
     QT_COLORSCHEME_DARK = 2
 } Qt__ColorScheme;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_MOUSEBUTTON_NOBUTTON = 0,
@@ -254,10 +310,14 @@ typedef enum {
     QT_MOUSEBUTTON_MOUSEBUTTONMASK = 4294967295
 } Qt__MouseButton;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_ORIENTATION_HORIZONTAL = 1,
     QT_ORIENTATION_VERTICAL = 2
 } Qt__Orientation;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_FOCUSPOLICY_NOFOCUS = 0,
@@ -267,6 +327,8 @@ typedef enum {
     QT_FOCUSPOLICY_WHEELFOCUS = 15
 } Qt__FocusPolicy;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TABFOCUSBEHAVIOR_NOTABFOCUS = 0,
     QT_TABFOCUSBEHAVIOR_TABFOCUSTEXTCONTROLS = 1,
@@ -274,21 +336,29 @@ typedef enum {
     QT_TABFOCUSBEHAVIOR_TABFOCUSALLCONTROLS = 255
 } Qt__TabFocusBehavior;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_SORTORDER_ASCENDINGORDER = 0,
     QT_SORTORDER_DESCENDINGORDER = 1
 } Qt__SortOrder;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_SPLITBEHAVIORFLAGS_KEEPEMPTYPARTS = 0,
     QT_SPLITBEHAVIORFLAGS_SKIPEMPTYPARTS = 1
 } Qt__SplitBehaviorFlags;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TILERULE_STRETCHTILE = 0,
     QT_TILERULE_REPEATTILE = 1,
     QT_TILERULE_ROUNDTILE = 2
 } Qt__TileRule;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_ALIGNMENTFLAG_ALIGNLEFT = 1,
@@ -307,6 +377,8 @@ typedef enum {
     QT_ALIGNMENTFLAG_ALIGNCENTER = 132
 } Qt__AlignmentFlag;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TEXTFLAG_TEXTSINGLELINE = 256,
     QT_TEXTFLAG_TEXTDONTCLIP = 512,
@@ -323,12 +395,16 @@ typedef enum {
     QT_TEXTFLAG_TEXTLONGESTVARIANT = 524288
 } Qt__TextFlag;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TEXTELIDEMODE_ELIDELEFT = 0,
     QT_TEXTELIDEMODE_ELIDERIGHT = 1,
     QT_TEXTELIDEMODE_ELIDEMIDDLE = 2,
     QT_TEXTELIDEMODE_ELIDENONE = 3
 } Qt__TextElideMode;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_WHITESPACEMODE_WHITESPACENORMAL = 0,
@@ -337,10 +413,14 @@ typedef enum {
     QT_WHITESPACEMODE_WHITESPACEMODEUNDEFINED = -1
 } Qt__WhiteSpaceMode;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_HITTESTACCURACY_EXACTHIT = 0,
     QT_HITTESTACCURACY_FUZZYHIT = 1
 } Qt__HitTestAccuracy;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_WINDOWTYPE_WIDGET = 0,
@@ -383,6 +463,8 @@ typedef enum {
     QT_WINDOWTYPE_WINDOWFULLSCREENBUTTONHINT = 2147483648
 } Qt__WindowType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_WINDOWSTATE_WINDOWNOSTATE = 0,
     QT_WINDOWSTATE_WINDOWMINIMIZED = 1,
@@ -391,12 +473,16 @@ typedef enum {
     QT_WINDOWSTATE_WINDOWACTIVE = 8
 } Qt__WindowState;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_APPLICATIONSTATE_APPLICATIONSUSPENDED = 0,
     QT_APPLICATIONSTATE_APPLICATIONHIDDEN = 1,
     QT_APPLICATIONSTATE_APPLICATIONINACTIVE = 2,
     QT_APPLICATIONSTATE_APPLICATIONACTIVE = 4
 } Qt__ApplicationState;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_SCREENORIENTATION_PRIMARYORIENTATION = 0,
@@ -405,6 +491,8 @@ typedef enum {
     QT_SCREENORIENTATION_INVERTEDPORTRAITORIENTATION = 4,
     QT_SCREENORIENTATION_INVERTEDLANDSCAPEORIENTATION = 8
 } Qt__ScreenOrientation;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_WIDGETATTRIBUTE_WA_DISABLED = 0,
@@ -512,6 +600,8 @@ typedef enum {
     QT_WIDGETATTRIBUTE_WA_ATTRIBUTECOUNT = 132
 } Qt__WidgetAttribute;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_APPLICATIONATTRIBUTE_AA_QTQUICKUSEDEFAULTSIZEPOLICY = 1,
     QT_APPLICATIONATTRIBUTE_AA_DONTSHOWICONSINMENUS = 2,
@@ -546,6 +636,8 @@ typedef enum {
     QT_APPLICATIONATTRIBUTE_AA_ATTRIBUTECOUNT = 32
 } Qt__ApplicationAttribute;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_IMAGECONVERSIONFLAG_COLORMODE_MASK = 3,
     QT_IMAGECONVERSIONFLAG_AUTOCOLOR = 0,
@@ -568,10 +660,14 @@ typedef enum {
     QT_IMAGECONVERSIONFLAG_NOFORMATCONVERSION = 512
 } Qt__ImageConversionFlag;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_BGMODE_TRANSPARENTMODE = 0,
     QT_BGMODE_OPAQUEMODE = 1
 } Qt__BGMode;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_KEY_Key_Space = 32,
@@ -1046,6 +1142,8 @@ typedef enum {
     QT_KEY_Key_unknown = 33554431
 } Qt__Key;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_KEYBOARDMODIFIER_NOMODIFIER = 0,
     QT_KEYBOARDMODIFIER_SHIFTMODIFIER = 33554432,
@@ -1057,6 +1155,8 @@ typedef enum {
     QT_KEYBOARDMODIFIER_KEYBOARDMODIFIERMASK = 4261412864
 } Qt__KeyboardModifier;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_MODIFIER_META = 268435456,
     QT_MODIFIER_SHIFT = 33554432,
@@ -1065,6 +1165,8 @@ typedef enum {
     QT_MODIFIER_MODIFIER_MASK = 4261412864
 } Qt__Modifier;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_ARROWTYPE_NOARROW = 0,
     QT_ARROWTYPE_UPARROW = 1,
@@ -1072,6 +1174,8 @@ typedef enum {
     QT_ARROWTYPE_LEFTARROW = 3,
     QT_ARROWTYPE_RIGHTARROW = 4
 } Qt__ArrowType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_PENSTYLE_NOPEN = 0,
@@ -1084,12 +1188,16 @@ typedef enum {
     QT_PENSTYLE_MPENSTYLE = 15
 } Qt__PenStyle;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_PENCAPSTYLE_FLATCAP = 0,
     QT_PENCAPSTYLE_SQUARECAP = 16,
     QT_PENCAPSTYLE_ROUNDCAP = 32,
     QT_PENCAPSTYLE_MPENCAPSTYLE = 48
 } Qt__PenCapStyle;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_PENJOINSTYLE_MITERJOIN = 0,
@@ -1098,6 +1206,8 @@ typedef enum {
     QT_PENJOINSTYLE_SVGMITERJOIN = 256,
     QT_PENJOINSTYLE_MPENJOINSTYLE = 448
 } Qt__PenJoinStyle;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_BRUSHSTYLE_NOBRUSH = 0,
@@ -1121,10 +1231,14 @@ typedef enum {
     QT_BRUSHSTYLE_TEXTUREPATTERN = 24
 } Qt__BrushStyle;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_SIZEMODE_ABSOLUTESIZE = 0,
     QT_SIZEMODE_RELATIVESIZE = 1
 } Qt__SizeMode;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_UIEFFECT_UI_GENERAL = 0,
@@ -1135,6 +1249,8 @@ typedef enum {
     QT_UIEFFECT_UI_FADETOOLTIP = 5,
     QT_UIEFFECT_UI_ANIMATETOOLBOX = 6
 } Qt__UIEffect;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_CURSORSHAPE_ARROWCURSOR = 0,
@@ -1164,6 +1280,8 @@ typedef enum {
     QT_CURSORSHAPE_CUSTOMCURSOR = 25
 } Qt__CursorShape;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TEXTFORMAT_PLAINTEXT = 0,
     QT_TEXTFORMAT_RICHTEXT = 1,
@@ -1171,11 +1289,15 @@ typedef enum {
     QT_TEXTFORMAT_MARKDOWNTEXT = 3
 } Qt__TextFormat;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_ASPECTRATIOMODE_IGNOREASPECTRATIO = 0,
     QT_ASPECTRATIOMODE_KEEPASPECTRATIO = 1,
     QT_ASPECTRATIOMODE_KEEPASPECTRATIOBYEXPANDING = 2
 } Qt__AspectRatioMode;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_DOCKWIDGETAREA_LEFTDOCKWIDGETAREA = 1,
@@ -1187,9 +1309,13 @@ typedef enum {
     QT_DOCKWIDGETAREA_NODOCKWIDGETAREA = 0
 } Qt__DockWidgetArea;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_DOCKWIDGETAREASIZES_NDOCKWIDGETAREAS = 4
 } Qt__DockWidgetAreaSizes;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_TOOLBARAREA_LEFTTOOLBARAREA = 1,
@@ -1201,9 +1327,13 @@ typedef enum {
     QT_TOOLBARAREA_NOTOOLBARAREA = 0
 } Qt__ToolBarArea;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TOOLBARAREASIZES_NTOOLBARAREAS = 4
 } Qt__ToolBarAreaSizes;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_DATEFORMAT_TEXTDATE = 0,
@@ -1212,12 +1342,16 @@ typedef enum {
     QT_DATEFORMAT_ISODATEWITHMS = 9
 } Qt__DateFormat;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TIMESPEC_LOCALTIME = 0,
     QT_TIMESPEC_UTC = 1,
     QT_TIMESPEC_OFFSETFROMUTC = 2,
     QT_TIMESPEC_TIMEZONE = 3
 } Qt__TimeSpec;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_DAYOFWEEK_MONDAY = 1,
@@ -1229,16 +1363,22 @@ typedef enum {
     QT_DAYOFWEEK_SUNDAY = 7
 } Qt__DayOfWeek;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_SCROLLBARPOLICY_SCROLLBARASNEEDED = 0,
     QT_SCROLLBARPOLICY_SCROLLBARALWAYSOFF = 1,
     QT_SCROLLBARPOLICY_SCROLLBARALWAYSON = 2
 } Qt__ScrollBarPolicy;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_CASESENSITIVITY_CASEINSENSITIVE = 0,
     QT_CASESENSITIVITY_CASESENSITIVE = 1
 } Qt__CaseSensitivity;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_CORNER_TOPLEFTCORNER = 0,
@@ -1247,12 +1387,16 @@ typedef enum {
     QT_CORNER_BOTTOMRIGHTCORNER = 3
 } Qt__Corner;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_EDGE_TOPEDGE = 1,
     QT_EDGE_LEFTEDGE = 2,
     QT_EDGE_RIGHTEDGE = 4,
     QT_EDGE_BOTTOMEDGE = 8
 } Qt__Edge;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_CONNECTIONTYPE_AUTOCONNECTION = 0,
@@ -1263,6 +1407,8 @@ typedef enum {
     QT_CONNECTIONTYPE_SINGLESHOTCONNECTION = 256
 } Qt__ConnectionType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_SHORTCUTCONTEXT_WIDGETSHORTCUT = 0,
     QT_SHORTCUTCONTEXT_WINDOWSHORTCUT = 1,
@@ -1270,21 +1416,29 @@ typedef enum {
     QT_SHORTCUTCONTEXT_WIDGETWITHCHILDRENSHORTCUT = 3
 } Qt__ShortcutContext;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_FILLRULE_ODDEVENFILL = 0,
     QT_FILLRULE_WINDINGFILL = 1
 } Qt__FillRule;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_MASKMODE_MASKINCOLOR = 0,
     QT_MASKMODE_MASKOUTCOLOR = 1
 } Qt__MaskMode;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_CLIPOPERATION_NOCLIP = 0,
     QT_CLIPOPERATION_REPLACECLIP = 1,
     QT_CLIPOPERATION_INTERSECTCLIP = 2
 } Qt__ClipOperation;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_ITEMSELECTIONMODE_CONTAINSITEMSHAPE = 0,
@@ -1293,21 +1447,29 @@ typedef enum {
     QT_ITEMSELECTIONMODE_INTERSECTSITEMBOUNDINGRECT = 3
 } Qt__ItemSelectionMode;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_ITEMSELECTIONOPERATION_REPLACESELECTION = 0,
     QT_ITEMSELECTIONOPERATION_ADDTOSELECTION = 1
 } Qt__ItemSelectionOperation;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_TRANSFORMATIONMODE_FASTTRANSFORMATION = 0,
     QT_TRANSFORMATIONMODE_SMOOTHTRANSFORMATION = 1
 } Qt__TransformationMode;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_AXIS_XAXIS = 0,
     QT_AXIS_YAXIS = 1,
     QT_AXIS_ZAXIS = 2
 } Qt__Axis;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_FOCUSREASON_MOUSEFOCUSREASON = 0,
@@ -1321,6 +1483,8 @@ typedef enum {
     QT_FOCUSREASON_NOFOCUSREASON = 8
 } Qt__FocusReason;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_CONTEXTMENUPOLICY_NOCONTEXTMENU = 0,
     QT_CONTEXTMENUPOLICY_DEFAULTCONTEXTMENU = 1,
@@ -1329,10 +1493,14 @@ typedef enum {
     QT_CONTEXTMENUPOLICY_PREVENTCONTEXTMENU = 4
 } Qt__ContextMenuPolicy;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_CONTEXTMENUTRIGGER_PRESS = 0,
     QT_CONTEXTMENUTRIGGER_RELEASE = 1
 } Qt__ContextMenuTrigger;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_INPUTMETHODQUERY_IMENABLED = 1,
@@ -1356,6 +1524,8 @@ typedef enum {
     QT_INPUTMETHODQUERY_IMQUERYINPUT = 16570,
     QT_INPUTMETHODQUERY_IMQUERYALL = 4294967295
 } Qt__InputMethodQuery;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_INPUTMETHODHINT_IMHNONE = 0,
@@ -1383,6 +1553,8 @@ typedef enum {
     QT_INPUTMETHODHINT_IMHEXCLUSIVEINPUTMASK = 4294901760
 } Qt__InputMethodHint;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_ENTERKEYTYPE_ENTERKEYDEFAULT = 0,
     QT_ENTERKEYTYPE_ENTERKEYRETURN = 1,
@@ -1394,6 +1566,8 @@ typedef enum {
     QT_ENTERKEYTYPE_ENTERKEYPREVIOUS = 7
 } Qt__EnterKeyType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TOOLBUTTONSTYLE_TOOLBUTTONICONONLY = 0,
     QT_TOOLBUTTONSTYLE_TOOLBUTTONTEXTONLY = 1,
@@ -1402,11 +1576,15 @@ typedef enum {
     QT_TOOLBUTTONSTYLE_TOOLBUTTONFOLLOWSTYLE = 4
 } Qt__ToolButtonStyle;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_LAYOUTDIRECTION_LEFTTORIGHT = 0,
     QT_LAYOUTDIRECTION_RIGHTTOLEFT = 1,
     QT_LAYOUTDIRECTION_LAYOUTDIRECTIONAUTO = 2
 } Qt__LayoutDirection;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_ANCHORPOINT_ANCHORLEFT = 0,
@@ -1417,10 +1595,14 @@ typedef enum {
     QT_ANCHORPOINT_ANCHORBOTTOM = 5
 } Qt__AnchorPoint;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_FINDCHILDOPTION_FINDDIRECTCHILDRENONLY = 0,
     QT_FINDCHILDOPTION_FINDCHILDRENRECURSIVELY = 1
 } Qt__FindChildOption;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_DROPACTION_COPYACTION = 1,
@@ -1431,11 +1613,15 @@ typedef enum {
     QT_DROPACTION_IGNOREACTION = 0
 } Qt__DropAction;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_CHECKSTATE_UNCHECKED = 0,
     QT_CHECKSTATE_PARTIALLYCHECKED = 1,
     QT_CHECKSTATE_CHECKED = 2
 } Qt__CheckState;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_ITEMDATAROLE_DISPLAYROLE = 0,
@@ -1461,6 +1647,8 @@ typedef enum {
     QT_ITEMDATAROLE_USERROLE = 256
 } Qt__ItemDataRole;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_ITEMFLAG_NOITEMFLAGS = 0,
     QT_ITEMFLAG_ITEMISSELECTABLE = 1,
@@ -1473,6 +1661,8 @@ typedef enum {
     QT_ITEMFLAG_ITEMNEVERHASCHILDREN = 128,
     QT_ITEMFLAG_ITEMISUSERTRISTATE = 256
 } Qt__ItemFlag;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_MATCHFLAG_MATCHEXACTLY = 0,
@@ -1488,11 +1678,15 @@ typedef enum {
     QT_MATCHFLAG_MATCHRECURSIVE = 64
 } Qt__MatchFlag;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_WINDOWMODALITY_NONMODAL = 0,
     QT_WINDOWMODALITY_WINDOWMODAL = 1,
     QT_WINDOWMODALITY_APPLICATIONMODAL = 2
 } Qt__WindowModality;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_TEXTINTERACTIONFLAG_NOTEXTINTERACTION = 0,
@@ -1505,11 +1699,15 @@ typedef enum {
     QT_TEXTINTERACTIONFLAG_TEXTBROWSERINTERACTION = 13
 } Qt__TextInteractionFlag;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_EVENTPRIORITY_HIGHEVENTPRIORITY = 1,
     QT_EVENTPRIORITY_NORMALEVENTPRIORITY = 0,
     QT_EVENTPRIORITY_LOWEVENTPRIORITY = -1
 } Qt__EventPriority;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_SIZEHINT_MINIMUMSIZE = 0,
@@ -1518,6 +1716,8 @@ typedef enum {
     QT_SIZEHINT_MINIMUMDESCENT = 3,
     QT_SIZEHINT_NSIZEHINTS = 4
 } Qt__SizeHint;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_WINDOWFRAMESECTION_NOSECTION = 0,
@@ -1532,14 +1732,20 @@ typedef enum {
     QT_WINDOWFRAMESECTION_TITLEBARAREA = 9
 } Qt__WindowFrameSection;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_INITIALIZATION_UNINITIALIZED = 0
 } Qt__Initialization;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_COORDINATESYSTEM_DEVICECOORDINATES = 0,
     QT_COORDINATESYSTEM_LOGICALCOORDINATES = 1
 } Qt__CoordinateSystem;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_TOUCHPOINTSTATE_TOUCHPOINTUNKNOWNSTATE = 0,
@@ -1549,6 +1755,8 @@ typedef enum {
     QT_TOUCHPOINTSTATE_TOUCHPOINTRELEASED = 8
 } Qt__TouchPointState;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_GESTURESTATE_NOGESTURE = 0,
     QT_GESTURESTATE_GESTURESTARTED = 1,
@@ -1556,6 +1764,8 @@ typedef enum {
     QT_GESTURESTATE_GESTUREFINISHED = 3,
     QT_GESTURESTATE_GESTURECANCELED = 4
 } Qt__GestureState;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_GESTURETYPE_TAPGESTURE = 1,
@@ -1567,11 +1777,15 @@ typedef enum {
     QT_GESTURETYPE_LASTGESTURETYPE = 4294967295
 } Qt__GestureType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_GESTUREFLAG_DONTSTARTGESTUREONCHILDREN = 1,
     QT_GESTUREFLAG_RECEIVEPARTIALGESTURES = 2,
     QT_GESTUREFLAG_IGNOREDGESTURESPROPAGATETOPARENT = 4
 } Qt__GestureFlag;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_NATIVEGESTURETYPE_BEGINNATIVEGESTURE = 0,
@@ -1583,6 +1797,8 @@ typedef enum {
     QT_NATIVEGESTURETYPE_SWIPENATIVEGESTURE = 6
 } Qt__NativeGestureType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_NAVIGATIONMODE_NAVIGATIONMODENONE = 0,
     QT_NAVIGATIONMODE_NAVIGATIONMODEKEYPADTABORDER = 1,
@@ -1591,10 +1807,14 @@ typedef enum {
     QT_NAVIGATIONMODE_NAVIGATIONMODECURSORFORCEVISIBLE = 4
 } Qt__NavigationMode;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_CURSORMOVESTYLE_LOGICALMOVESTYLE = 0,
     QT_CURSORMOVESTYLE_VISUALMOVESTYLE = 1
 } Qt__CursorMoveStyle;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_TIMERTYPE_PRECISETIMER = 0,
@@ -1602,9 +1822,13 @@ typedef enum {
     QT_TIMERTYPE_VERYCOARSETIMER = 2
 } Qt__TimerType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_TIMERID_INVALID = 0
 } Qt__TimerId;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_SCROLLPHASE_NOSCROLLPHASE = 0,
@@ -1614,6 +1838,8 @@ typedef enum {
     QT_SCROLLPHASE_SCROLLMOMENTUM = 4
 } Qt__ScrollPhase;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_MOUSEEVENTSOURCE_MOUSEEVENTNOTSYNTHESIZED = 0,
     QT_MOUSEEVENTSOURCE_MOUSEEVENTSYNTHESIZEDBYSYSTEM = 1,
@@ -1621,16 +1847,22 @@ typedef enum {
     QT_MOUSEEVENTSOURCE_MOUSEEVENTSYNTHESIZEDBYAPPLICATION = 3
 } Qt__MouseEventSource;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_MOUSEEVENTFLAG_NOMOUSEEVENTFLAG = 0,
     QT_MOUSEEVENTFLAG_MOUSEEVENTCREATEDDOUBLECLICK = 1,
     QT_MOUSEEVENTFLAG_MOUSEEVENTFLAGMASK = 255
 } Qt__MouseEventFlag;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_CHECKSUMTYPE_CHECKSUMISO3309 = 0,
     QT_CHECKSUMTYPE_CHECKSUMITUV41 = 1
 } Qt__ChecksumType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QT_HIGHDPISCALEFACTORROUNDINGPOLICY_UNSET = 0,
@@ -1641,15 +1873,21 @@ typedef enum {
     QT_HIGHDPISCALEFACTORROUNDINGPOLICY_PASSTHROUGH = 5
 } Qt__HighDpiScaleFactorRoundingPolicy;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_PERMISSIONSTATUS_UNDETERMINED = 0,
     QT_PERMISSIONSTATUS_GRANTED = 1,
     QT_PERMISSIONSTATUS_DENIED = 2
 } Qt__PermissionStatus;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QT_RETURNBYVALUECONSTANT_RETURNBYVALUE = 0
 } Qt__ReturnByValueConstant;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QINTERNAL_PAINTDEVICEFLAGS_UNKNOWNDEVICE = 0,
@@ -1665,11 +1903,15 @@ typedef enum {
     QINTERNAL_PAINTDEVICEFLAGS_OPENGL = 11
 } QInternal__PaintDeviceFlags;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
+
 typedef enum {
     QINTERNAL_RELAYOUTTYPE_RELAYOUTNORMAL = 0,
     QINTERNAL_RELAYOUTTYPE_RELAYOUTDRAGGING = 1,
     QINTERNAL_RELAYOUTTYPE_RELAYOUTDROPPED = 2
 } QInternal__RelayoutType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QINTERNAL_DOCKPOSITION_LEFTDOCK = 0,
@@ -1678,6 +1920,8 @@ typedef enum {
     QINTERNAL_DOCKPOSITION_BOTTOMDOCK = 3,
     QINTERNAL_DOCKPOSITION_DOCKCOUNT = 4
 } QInternal__DockPosition;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
 
 typedef enum {
     QINTERNAL_CALLBACK_EVENTNOTIFYCALLBACK = 0,

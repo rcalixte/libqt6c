@@ -11,12 +11,13 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/attica-platformdependentv2.html
+/// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html)
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#deleteResource)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
+///
 QNetworkReply* k_attica__platformdependentv2_delete_resource(void* self, void* request);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#put)
@@ -24,6 +25,7 @@ QNetworkReply* k_attica__platformdependentv2_delete_resource(void* self, void* r
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
+///
 QNetworkReply* k_attica__platformdependentv2_put(void* self, void* request, void* data);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#put)
@@ -31,12 +33,14 @@ QNetworkReply* k_attica__platformdependentv2_put(void* self, void* request, void
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
 /// @param data const char*
+///
 QNetworkReply* k_attica__platformdependentv2_put2(void* self, void* request, const char* data);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#operator-eq)
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param param1 Attica__PlatformDependentV2*
+///
 void k_attica__platformdependentv2_operator_assign(void* self, void* param1);
 
 /// Inherited from Attica::PlatformDependent
@@ -44,6 +48,7 @@ void k_attica__platformdependentv2_operator_assign(void* self, void* param1);
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#getDefaultProviderFiles)
 ///
 /// @param self Attica__PlatformDependentV2*
+///
 libqt_list /* of QUrl* */ k_attica__platformdependentv2_get_default_provider_files(void* self);
 
 /// Inherited from Attica::PlatformDependent
@@ -52,6 +57,7 @@ libqt_list /* of QUrl* */ k_attica__platformdependentv2_get_default_provider_fil
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param url QUrl*
+///
 void k_attica__platformdependentv2_add_default_provider_file(void* self, void* url);
 
 /// Inherited from Attica::PlatformDependent
@@ -60,6 +66,7 @@ void k_attica__platformdependentv2_add_default_provider_file(void* self, void* u
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param url QUrl*
+///
 void k_attica__platformdependentv2_remove_default_provider_file(void* self, void* url);
 
 /// Inherited from Attica::PlatformDependent
@@ -69,6 +76,7 @@ void k_attica__platformdependentv2_remove_default_provider_file(void* self, void
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
 /// @param enabled bool
+///
 void k_attica__platformdependentv2_enable_provider(void* self, void* baseUrl, bool enabled);
 
 /// Inherited from Attica::PlatformDependent
@@ -77,6 +85,7 @@ void k_attica__platformdependentv2_enable_provider(void* self, void* baseUrl, bo
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
+///
 bool k_attica__platformdependentv2_is_enabled(void* self, void* baseUrl);
 
 /// Inherited from Attica::PlatformDependent
@@ -85,6 +94,7 @@ bool k_attica__platformdependentv2_is_enabled(void* self, void* baseUrl);
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param baseUrl QUrl*
+///
 bool k_attica__platformdependentv2_has_credentials(void* self, void* baseUrl);
 
 /// Inherited from Attica::PlatformDependent
@@ -95,6 +105,7 @@ bool k_attica__platformdependentv2_has_credentials(void* self, void* baseUrl);
 /// @param baseUrl QUrl*
 /// @param user const char*
 /// @param password const char*
+///
 bool k_attica__platformdependentv2_load_credentials(void* self, void* baseUrl, const char* user, const char* password);
 
 /// Inherited from Attica::PlatformDependent
@@ -105,6 +116,7 @@ bool k_attica__platformdependentv2_load_credentials(void* self, void* baseUrl, c
 /// @param baseUrl QUrl*
 /// @param user const char*
 /// @param password const char*
+///
 bool k_attica__platformdependentv2_ask_for_credentials(void* self, void* baseUrl, const char* user, const char* password);
 
 /// Inherited from Attica::PlatformDependent
@@ -115,6 +127,7 @@ bool k_attica__platformdependentv2_ask_for_credentials(void* self, void* baseUrl
 /// @param baseUrl QUrl*
 /// @param user const char*
 /// @param password const char*
+///
 bool k_attica__platformdependentv2_save_credentials(void* self, void* baseUrl, const char* user, const char* password);
 
 /// Inherited from Attica::PlatformDependent
@@ -123,6 +136,7 @@ bool k_attica__platformdependentv2_save_credentials(void* self, void* baseUrl, c
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
+///
 QNetworkReply* k_attica__platformdependentv2_get(void* self, void* request);
 
 /// Inherited from Attica::PlatformDependent
@@ -132,6 +146,7 @@ QNetworkReply* k_attica__platformdependentv2_get(void* self, void* request);
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
+///
 QNetworkReply* k_attica__platformdependentv2_post(void* self, void* request, void* data);
 
 /// Inherited from Attica::PlatformDependent
@@ -141,6 +156,7 @@ QNetworkReply* k_attica__platformdependentv2_post(void* self, void* request, voi
 /// @param self Attica__PlatformDependentV2*
 /// @param request QNetworkRequest*
 /// @param data const char*
+///
 QNetworkReply* k_attica__platformdependentv2_post2(void* self, void* request, const char* data);
 
 /// Inherited from Attica::PlatformDependent
@@ -149,6 +165,7 @@ QNetworkReply* k_attica__platformdependentv2_post2(void* self, void* request, co
 ///
 /// @param self Attica__PlatformDependentV2*
 /// @param nam QNetworkAccessManager*
+///
 void k_attica__platformdependentv2_set_nam(void* self, void* nam);
 
 /// Inherited from Attica::PlatformDependent
@@ -156,11 +173,13 @@ void k_attica__platformdependentv2_set_nam(void* self, void* nam);
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#nam)
 ///
 /// @param self Attica__PlatformDependentV2*
+///
 QNetworkAccessManager* k_attica__platformdependentv2_nam(void* self);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self Attica__PlatformDependentV2*
+///
 void k_attica__platformdependentv2_delete(void* self);
 
 #endif

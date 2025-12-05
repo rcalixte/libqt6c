@@ -11,51 +11,65 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kcharselect.html
+/// [Upstream resources](https://api.kde.org/kcharselect.html)
 
 /// k_charselect_new constructs a new KCharSelect object.
 ///
 /// @param parent QWidget*
+///
 KCharSelect* k_charselect_new(void* parent);
+
+/// [Upstream resources](https://api.kde.org/kcharselect.html)
 
 /// k_charselect_new2 constructs a new KCharSelect object.
 ///
 /// @param parent QWidget*
 /// @param actionParent QObject*
+///
 KCharSelect* k_charselect_new2(void* parent, void* actionParent);
+
+/// [Upstream resources](https://api.kde.org/kcharselect.html)
 
 /// k_charselect_new3 constructs a new KCharSelect object.
 ///
 /// @param parent QWidget*
 /// @param controls flag of enum KCharSelect__Control
+///
 KCharSelect* k_charselect_new3(void* parent, const int32_t controls);
+
+/// [Upstream resources](https://api.kde.org/kcharselect.html)
 
 /// k_charselect_new4 constructs a new KCharSelect object.
 ///
 /// @param parent QWidget*
 /// @param actionParent QObject*
 /// @param controls flag of enum KCharSelect__Control
+///
 KCharSelect* k_charselect_new4(void* parent, void* actionParent, const int32_t controls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCharSelect*
+///
 const QMetaObject* k_charselect_meta_object(void* self);
 
 /// @param self KCharSelect*
 /// @param param1 const char*
+///
 void* k_charselect_metacast(void* self, const char* param1);
 
 /// @param self KCharSelect*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_charselect_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KCharSelect*
 /// @param callback int32_t func(KCharSelect* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_charselect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -64,6 +78,7 @@ void k_charselect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_charselect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -71,11 +86,13 @@ int32_t k_charselect_qbase_metacall(void* self, int32_t param1, int param2, void
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_charselect_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#sizeHint)
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#sizeHint)
@@ -84,6 +101,7 @@ QSize* k_charselect_size_hint(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback QSize* func()
+///
 void k_charselect_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#sizeHint)
@@ -91,131 +109,154 @@ void k_charselect_on_size_hint(void* self, QSize* (*callback)());
 /// Base class method implementation
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_qbase_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#setAllPlanesEnabled)
 ///
 /// @param self KCharSelect*
 /// @param all bool
+///
 void k_charselect_set_all_planes_enabled(void* self, bool all);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#allPlanesEnabled)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_all_planes_enabled(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentChar)
 ///
 /// @param self KCharSelect*
+///
 QChar* k_charselect_current_char(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentCodePoint)
 ///
 /// @param self KCharSelect*
+///
 uint32_t k_charselect_current_code_point(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentFont)
 ///
 /// @param self KCharSelect*
+///
 QFont* k_charselect_current_font(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#displayedChars)
 ///
 /// @param self KCharSelect*
+///
 libqt_list /* of QChar* */ k_charselect_displayed_chars(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#displayedCodePoints)
 ///
 /// @param self KCharSelect*
+///
 libqt_list /* of uint32_t */ k_charselect_displayed_code_points(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#setCurrentChar)
 ///
 /// @param self KCharSelect*
 /// @param c QChar*
+///
 void k_charselect_set_current_char(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#setCurrentCodePoint)
 ///
 /// @param self KCharSelect*
 /// @param codePoint uint32_t
+///
 void k_charselect_set_current_code_point(void* self, uint32_t codePoint);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#setCurrentFont)
 ///
 /// @param self KCharSelect*
 /// @param font QFont*
+///
 void k_charselect_set_current_font(void* self, void* font);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentFontChanged)
 ///
 /// @param self KCharSelect*
 /// @param font QFont*
+///
 void k_charselect_current_font_changed(void* self, void* font);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentFontChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QFont* font)
+///
 void k_charselect_on_current_font_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentCharChanged)
 ///
 /// @param self KCharSelect*
 /// @param c QChar*
+///
 void k_charselect_current_char_changed(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentCharChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QChar* c)
+///
 void k_charselect_on_current_char_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentCodePointChanged)
 ///
 /// @param self KCharSelect*
 /// @param codePoint uint32_t
+///
 void k_charselect_current_code_point_changed(void* self, uint32_t codePoint);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#currentCodePointChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, uint32_t codePoint)
+///
 void k_charselect_on_current_code_point_changed(void* self, void (*callback)(void*, uint32_t));
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#displayedCharsChanged)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_displayed_chars_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#displayedCharsChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self)
+///
 void k_charselect_on_displayed_chars_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#charSelected)
 ///
 /// @param self KCharSelect*
 /// @param c QChar*
+///
 void k_charselect_char_selected(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#charSelected)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QChar* c)
+///
 void k_charselect_on_char_selected(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#codePointSelected)
 ///
 /// @param self KCharSelect*
 /// @param codePoint uint32_t
+///
 void k_charselect_code_point_selected(void* self, uint32_t codePoint);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#codePointSelected)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, uint32_t codePoint)
+///
 void k_charselect_on_code_point_selected(void* self, void (*callback)(void*, uint32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -224,6 +265,7 @@ void k_charselect_on_code_point_selected(void* self, void (*callback)(void*, uin
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_charselect_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -233,6 +275,7 @@ const char* k_charselect_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_charselect_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
@@ -240,6 +283,7 @@ const char* k_charselect_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KCharSelect*
+///
 uintptr_t k_charselect_win_id(void* self);
 
 /// Inherited from QWidget
@@ -247,6 +291,7 @@ uintptr_t k_charselect_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -254,6 +299,7 @@ void k_charselect_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self KCharSelect*
+///
 uintptr_t k_charselect_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -261,6 +307,7 @@ uintptr_t k_charselect_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self KCharSelect*
+///
 uintptr_t k_charselect_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -268,6 +315,7 @@ uintptr_t k_charselect_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self KCharSelect*
+///
 QStyle* k_charselect_style(void* self);
 
 /// Inherited from QWidget
@@ -276,6 +324,7 @@ QStyle* k_charselect_style(void* self);
 ///
 /// @param self KCharSelect*
 /// @param style QStyle*
+///
 void k_charselect_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -283,6 +332,7 @@ void k_charselect_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -290,6 +340,7 @@ bool k_charselect_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_window(void* self);
 
 /// Inherited from QWidget
@@ -297,6 +348,7 @@ bool k_charselect_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -306,6 +358,7 @@ bool k_charselect_is_modal(void* self);
 /// @param self KCharSelect*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t k_charselect_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -314,6 +367,7 @@ int32_t k_charselect_window_modality(void* self);
 ///
 /// @param self KCharSelect*
 /// @param windowModality enum Qt__WindowModality
+///
 void k_charselect_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -321,6 +375,7 @@ void k_charselect_set_window_modality(void* self, int32_t windowModality);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -329,6 +384,7 @@ bool k_charselect_is_enabled(void* self);
 ///
 /// @param self KCharSelect*
 /// @param param1 QWidget*
+///
 bool k_charselect_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -337,6 +393,7 @@ bool k_charselect_is_enabled_to(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param enabled bool
+///
 void k_charselect_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -345,6 +402,7 @@ void k_charselect_set_enabled(void* self, bool enabled);
 ///
 /// @param self KCharSelect*
 /// @param disabled bool
+///
 void k_charselect_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -353,6 +411,7 @@ void k_charselect_set_disabled(void* self, bool disabled);
 ///
 /// @param self KCharSelect*
 /// @param windowModified bool
+///
 void k_charselect_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -360,6 +419,7 @@ void k_charselect_set_window_modified(void* self, bool windowModified);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self KCharSelect*
+///
 QRect* k_charselect_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -367,6 +427,7 @@ QRect* k_charselect_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self KCharSelect*
+///
 const QRect* k_charselect_geometry(void* self);
 
 /// Inherited from QWidget
@@ -374,6 +435,7 @@ const QRect* k_charselect_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self KCharSelect*
+///
 QRect* k_charselect_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -381,6 +443,7 @@ QRect* k_charselect_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_x(void* self);
 
 /// Inherited from QWidget
@@ -388,6 +451,7 @@ int32_t k_charselect_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_y(void* self);
 
 /// Inherited from QWidget
@@ -395,6 +459,7 @@ int32_t k_charselect_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self KCharSelect*
+///
 QPoint* k_charselect_pos(void* self);
 
 /// Inherited from QWidget
@@ -402,6 +467,7 @@ QPoint* k_charselect_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -409,6 +475,7 @@ QSize* k_charselect_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_size(void* self);
 
 /// Inherited from QWidget
@@ -416,6 +483,7 @@ QSize* k_charselect_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_width(void* self);
 
 /// Inherited from QWidget
@@ -423,6 +491,7 @@ int32_t k_charselect_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_height(void* self);
 
 /// Inherited from QWidget
@@ -430,6 +499,7 @@ int32_t k_charselect_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self KCharSelect*
+///
 QRect* k_charselect_rect(void* self);
 
 /// Inherited from QWidget
@@ -437,6 +507,7 @@ QRect* k_charselect_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self KCharSelect*
+///
 QRect* k_charselect_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -444,6 +515,7 @@ QRect* k_charselect_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self KCharSelect*
+///
 QRegion* k_charselect_children_region(void* self);
 
 /// Inherited from QWidget
@@ -451,6 +523,7 @@ QRegion* k_charselect_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -458,6 +531,7 @@ QSize* k_charselect_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -465,6 +539,7 @@ QSize* k_charselect_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -472,6 +547,7 @@ int32_t k_charselect_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -479,6 +555,7 @@ int32_t k_charselect_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -486,6 +563,7 @@ int32_t k_charselect_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -494,6 +572,7 @@ int32_t k_charselect_maximum_height(void* self);
 ///
 /// @param self KCharSelect*
 /// @param minimumSize QSize*
+///
 void k_charselect_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -503,6 +582,7 @@ void k_charselect_set_minimum_size(void* self, void* minimumSize);
 /// @param self KCharSelect*
 /// @param minw int
 /// @param minh int
+///
 void k_charselect_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -511,6 +591,7 @@ void k_charselect_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self KCharSelect*
 /// @param maximumSize QSize*
+///
 void k_charselect_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -520,6 +601,7 @@ void k_charselect_set_maximum_size(void* self, void* maximumSize);
 /// @param self KCharSelect*
 /// @param maxw int
 /// @param maxh int
+///
 void k_charselect_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -528,6 +610,7 @@ void k_charselect_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self KCharSelect*
 /// @param minw int
+///
 void k_charselect_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -536,6 +619,7 @@ void k_charselect_set_minimum_width(void* self, int minw);
 ///
 /// @param self KCharSelect*
 /// @param minh int
+///
 void k_charselect_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -544,6 +628,7 @@ void k_charselect_set_minimum_height(void* self, int minh);
 ///
 /// @param self KCharSelect*
 /// @param maxw int
+///
 void k_charselect_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -552,6 +637,7 @@ void k_charselect_set_maximum_width(void* self, int maxw);
 ///
 /// @param self KCharSelect*
 /// @param maxh int
+///
 void k_charselect_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -559,6 +645,7 @@ void k_charselect_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -567,6 +654,7 @@ QSize* k_charselect_size_increment(void* self);
 ///
 /// @param self KCharSelect*
 /// @param sizeIncrement QSize*
+///
 void k_charselect_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -576,6 +664,7 @@ void k_charselect_set_size_increment(void* self, void* sizeIncrement);
 /// @param self KCharSelect*
 /// @param w int
 /// @param h int
+///
 void k_charselect_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -583,6 +672,7 @@ void k_charselect_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_base_size(void* self);
 
 /// Inherited from QWidget
@@ -591,6 +681,7 @@ QSize* k_charselect_base_size(void* self);
 ///
 /// @param self KCharSelect*
 /// @param baseSize QSize*
+///
 void k_charselect_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -600,6 +691,7 @@ void k_charselect_set_base_size(void* self, void* baseSize);
 /// @param self KCharSelect*
 /// @param basew int
 /// @param baseh int
+///
 void k_charselect_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -608,6 +700,7 @@ void k_charselect_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self KCharSelect*
 /// @param fixedSize QSize*
+///
 void k_charselect_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -617,6 +710,7 @@ void k_charselect_set_fixed_size(void* self, void* fixedSize);
 /// @param self KCharSelect*
 /// @param w int
 /// @param h int
+///
 void k_charselect_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -625,6 +719,7 @@ void k_charselect_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self KCharSelect*
 /// @param w int
+///
 void k_charselect_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -633,6 +728,7 @@ void k_charselect_set_fixed_width(void* self, int w);
 ///
 /// @param self KCharSelect*
 /// @param h int
+///
 void k_charselect_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -641,6 +737,7 @@ void k_charselect_set_fixed_height(void* self, int h);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPointF*
+///
 QPointF* k_charselect_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -649,6 +746,7 @@ QPointF* k_charselect_map_to_global(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPoint*
+///
 QPoint* k_charselect_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -657,6 +755,7 @@ QPoint* k_charselect_map_to_global2(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPointF*
+///
 QPointF* k_charselect_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -665,6 +764,7 @@ QPointF* k_charselect_map_from_global(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPoint*
+///
 QPoint* k_charselect_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -673,6 +773,7 @@ QPoint* k_charselect_map_from_global2(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPointF*
+///
 QPointF* k_charselect_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -681,6 +782,7 @@ QPointF* k_charselect_map_to_parent(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPoint*
+///
 QPoint* k_charselect_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -689,6 +791,7 @@ QPoint* k_charselect_map_to_parent2(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPointF*
+///
 QPointF* k_charselect_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -697,6 +800,7 @@ QPointF* k_charselect_map_from_parent(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPoint*
+///
 QPoint* k_charselect_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -706,6 +810,7 @@ QPoint* k_charselect_map_from_parent2(void* self, void* param1);
 /// @param self KCharSelect*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_charselect_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -715,6 +820,7 @@ QPointF* k_charselect_map_to(void* self, void* param1, void* param2);
 /// @param self KCharSelect*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_charselect_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -724,6 +830,7 @@ QPoint* k_charselect_map_to2(void* self, void* param1, void* param2);
 /// @param self KCharSelect*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_charselect_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -733,6 +840,7 @@ QPointF* k_charselect_map_from(void* self, void* param1, void* param2);
 /// @param self KCharSelect*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_charselect_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -740,6 +848,7 @@ QPoint* k_charselect_map_from2(void* self, void* param1, void* param2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_window(void* self);
 
 /// Inherited from QWidget
@@ -747,6 +856,7 @@ QWidget* k_charselect_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -754,6 +864,7 @@ QWidget* k_charselect_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -761,6 +872,7 @@ QWidget* k_charselect_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self KCharSelect*
+///
 const QPalette* k_charselect_palette(void* self);
 
 /// Inherited from QWidget
@@ -769,6 +881,7 @@ const QPalette* k_charselect_palette(void* self);
 ///
 /// @param self KCharSelect*
 /// @param palette QPalette*
+///
 void k_charselect_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -777,6 +890,7 @@ void k_charselect_set_palette(void* self, void* palette);
 ///
 /// @param self KCharSelect*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void k_charselect_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -786,6 +900,7 @@ void k_charselect_set_background_role(void* self, int32_t backgroundRole);
 /// @param self KCharSelect*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_charselect_background_role(void* self);
 
 /// Inherited from QWidget
@@ -794,6 +909,7 @@ int32_t k_charselect_background_role(void* self);
 ///
 /// @param self KCharSelect*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void k_charselect_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -803,6 +919,7 @@ void k_charselect_set_foreground_role(void* self, int32_t foregroundRole);
 /// @param self KCharSelect*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_charselect_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -810,6 +927,7 @@ int32_t k_charselect_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self KCharSelect*
+///
 const QFont* k_charselect_font(void* self);
 
 /// Inherited from QWidget
@@ -818,6 +936,7 @@ const QFont* k_charselect_font(void* self);
 ///
 /// @param self KCharSelect*
 /// @param font QFont*
+///
 void k_charselect_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -825,6 +944,7 @@ void k_charselect_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self KCharSelect*
+///
 QFontMetrics* k_charselect_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -832,6 +952,7 @@ QFontMetrics* k_charselect_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self KCharSelect*
+///
 QFontInfo* k_charselect_font_info(void* self);
 
 /// Inherited from QWidget
@@ -839,6 +960,7 @@ QFontInfo* k_charselect_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self KCharSelect*
+///
 QCursor* k_charselect_cursor(void* self);
 
 /// Inherited from QWidget
@@ -847,6 +969,7 @@ QCursor* k_charselect_cursor(void* self);
 ///
 /// @param self KCharSelect*
 /// @param cursor QCursor*
+///
 void k_charselect_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -854,6 +977,7 @@ void k_charselect_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -862,6 +986,7 @@ void k_charselect_unset_cursor(void* self);
 ///
 /// @param self KCharSelect*
 /// @param enable bool
+///
 void k_charselect_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -869,6 +994,7 @@ void k_charselect_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -876,6 +1002,7 @@ bool k_charselect_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -884,6 +1011,7 @@ bool k_charselect_under_mouse(void* self);
 ///
 /// @param self KCharSelect*
 /// @param enable bool
+///
 void k_charselect_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -891,6 +1019,7 @@ void k_charselect_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -899,6 +1028,7 @@ bool k_charselect_has_tablet_tracking(void* self);
 ///
 /// @param self KCharSelect*
 /// @param mask QBitmap*
+///
 void k_charselect_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -907,6 +1037,7 @@ void k_charselect_set_mask(void* self, void* mask);
 ///
 /// @param self KCharSelect*
 /// @param mask QRegion*
+///
 void k_charselect_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -914,6 +1045,7 @@ void k_charselect_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self KCharSelect*
+///
 QRegion* k_charselect_mask(void* self);
 
 /// Inherited from QWidget
@@ -921,6 +1053,7 @@ QRegion* k_charselect_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -929,6 +1062,7 @@ void k_charselect_clear_mask(void* self);
 ///
 /// @param self KCharSelect*
 /// @param target QPaintDevice*
+///
 void k_charselect_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -937,6 +1071,7 @@ void k_charselect_render(void* self, void* target);
 ///
 /// @param self KCharSelect*
 /// @param painter QPainter*
+///
 void k_charselect_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -944,6 +1079,7 @@ void k_charselect_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self KCharSelect*
+///
 QPixmap* k_charselect_grab(void* self);
 
 /// Inherited from QWidget
@@ -951,6 +1087,7 @@ QPixmap* k_charselect_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self KCharSelect*
+///
 QGraphicsEffect* k_charselect_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -959,6 +1096,7 @@ QGraphicsEffect* k_charselect_graphics_effect(void* self);
 ///
 /// @param self KCharSelect*
 /// @param effect QGraphicsEffect*
+///
 void k_charselect_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -967,6 +1105,7 @@ void k_charselect_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self KCharSelect*
 /// @param type enum Qt__GestureType
+///
 void k_charselect_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -975,6 +1114,7 @@ void k_charselect_grab_gesture(void* self, int64_t type);
 ///
 /// @param self KCharSelect*
 /// @param type enum Qt__GestureType
+///
 void k_charselect_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -983,6 +1123,7 @@ void k_charselect_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self KCharSelect*
 /// @param windowTitle const char*
+///
 void k_charselect_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -991,6 +1132,7 @@ void k_charselect_set_window_title(void* self, const char* windowTitle);
 ///
 /// @param self KCharSelect*
 /// @param styleSheet const char*
+///
 void k_charselect_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -1000,6 +1142,7 @@ void k_charselect_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -1009,6 +1152,7 @@ const char* k_charselect_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_window_title(void* self);
 
 /// Inherited from QWidget
@@ -1017,6 +1161,7 @@ const char* k_charselect_window_title(void* self);
 ///
 /// @param self KCharSelect*
 /// @param icon QIcon*
+///
 void k_charselect_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -1024,6 +1169,7 @@ void k_charselect_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self KCharSelect*
+///
 QIcon* k_charselect_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -1032,6 +1178,7 @@ QIcon* k_charselect_window_icon(void* self);
 ///
 /// @param self KCharSelect*
 /// @param windowIconText const char*
+///
 void k_charselect_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -1041,6 +1188,7 @@ void k_charselect_set_window_icon_text(void* self, const char* windowIconText);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -1049,6 +1197,7 @@ const char* k_charselect_window_icon_text(void* self);
 ///
 /// @param self KCharSelect*
 /// @param windowRole const char*
+///
 void k_charselect_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -1058,6 +1207,7 @@ void k_charselect_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_window_role(void* self);
 
 /// Inherited from QWidget
@@ -1066,6 +1216,7 @@ const char* k_charselect_window_role(void* self);
 ///
 /// @param self KCharSelect*
 /// @param filePath const char*
+///
 void k_charselect_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -1075,6 +1226,7 @@ void k_charselect_set_window_file_path(void* self, const char* filePath);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -1083,6 +1235,7 @@ const char* k_charselect_window_file_path(void* self);
 ///
 /// @param self KCharSelect*
 /// @param level double
+///
 void k_charselect_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -1090,6 +1243,7 @@ void k_charselect_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self KCharSelect*
+///
 double k_charselect_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -1097,6 +1251,7 @@ double k_charselect_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -1105,6 +1260,7 @@ bool k_charselect_is_window_modified(void* self);
 ///
 /// @param self KCharSelect*
 /// @param toolTip const char*
+///
 void k_charselect_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -1114,6 +1270,7 @@ void k_charselect_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -1122,6 +1279,7 @@ const char* k_charselect_tool_tip(void* self);
 ///
 /// @param self KCharSelect*
 /// @param msec int
+///
 void k_charselect_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -1129,6 +1287,7 @@ void k_charselect_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -1137,6 +1296,7 @@ int32_t k_charselect_tool_tip_duration(void* self);
 ///
 /// @param self KCharSelect*
 /// @param statusTip const char*
+///
 void k_charselect_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -1146,6 +1306,7 @@ void k_charselect_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -1154,6 +1315,7 @@ const char* k_charselect_status_tip(void* self);
 ///
 /// @param self KCharSelect*
 /// @param whatsThis const char*
+///
 void k_charselect_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -1163,6 +1325,7 @@ void k_charselect_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -1172,6 +1335,7 @@ const char* k_charselect_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -1180,6 +1344,7 @@ const char* k_charselect_accessible_name(void* self);
 ///
 /// @param self KCharSelect*
 /// @param name const char*
+///
 void k_charselect_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -1189,6 +1354,7 @@ void k_charselect_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -1197,6 +1363,7 @@ const char* k_charselect_accessible_description(void* self);
 ///
 /// @param self KCharSelect*
 /// @param description const char*
+///
 void k_charselect_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -1205,6 +1372,7 @@ void k_charselect_set_accessible_description(void* self, const char* description
 ///
 /// @param self KCharSelect*
 /// @param direction enum Qt__LayoutDirection
+///
 void k_charselect_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -1214,6 +1382,7 @@ void k_charselect_set_layout_direction(void* self, int32_t direction);
 /// @param self KCharSelect*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t k_charselect_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1221,6 +1390,7 @@ int32_t k_charselect_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1229,6 +1399,7 @@ void k_charselect_unset_layout_direction(void* self);
 ///
 /// @param self KCharSelect*
 /// @param locale QLocale*
+///
 void k_charselect_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -1236,6 +1407,7 @@ void k_charselect_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self KCharSelect*
+///
 QLocale* k_charselect_locale(void* self);
 
 /// Inherited from QWidget
@@ -1243,6 +1415,7 @@ QLocale* k_charselect_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -1250,6 +1423,7 @@ void k_charselect_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -1257,6 +1431,7 @@ bool k_charselect_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -1264,6 +1439,7 @@ bool k_charselect_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -1271,6 +1447,7 @@ void k_charselect_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -1278,6 +1455,7 @@ bool k_charselect_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -1285,6 +1463,7 @@ void k_charselect_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -1293,6 +1472,7 @@ void k_charselect_clear_focus(void* self);
 ///
 /// @param self KCharSelect*
 /// @param reason enum Qt__FocusReason
+///
 void k_charselect_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -1302,6 +1482,7 @@ void k_charselect_set_focus2(void* self, int32_t reason);
 /// @param self KCharSelect*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t k_charselect_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -1310,6 +1491,7 @@ int32_t k_charselect_focus_policy(void* self);
 ///
 /// @param self KCharSelect*
 /// @param policy enum Qt__FocusPolicy
+///
 void k_charselect_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1317,6 +1499,7 @@ void k_charselect_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -1325,6 +1508,7 @@ bool k_charselect_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void k_charselect_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1333,6 +1517,7 @@ void k_charselect_set_tab_order(void* param1, void* param2);
 ///
 /// @param self KCharSelect*
 /// @param focusProxy QWidget*
+///
 void k_charselect_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -1340,6 +1525,7 @@ void k_charselect_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -1349,6 +1535,7 @@ QWidget* k_charselect_focus_proxy(void* self);
 /// @param self KCharSelect*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t k_charselect_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -1357,6 +1544,7 @@ int32_t k_charselect_context_menu_policy(void* self);
 ///
 /// @param self KCharSelect*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void k_charselect_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1364,6 +1552,7 @@ void k_charselect_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1372,6 +1561,7 @@ void k_charselect_grab_mouse(void* self);
 ///
 /// @param self KCharSelect*
 /// @param param1 QCursor*
+///
 void k_charselect_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1379,6 +1569,7 @@ void k_charselect_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1386,6 +1577,7 @@ void k_charselect_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1393,6 +1585,7 @@ void k_charselect_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1401,6 +1594,7 @@ void k_charselect_release_keyboard(void* self);
 ///
 /// @param self KCharSelect*
 /// @param key QKeySequence*
+///
 int32_t k_charselect_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -1409,6 +1603,7 @@ int32_t k_charselect_grab_shortcut(void* self, void* key);
 ///
 /// @param self KCharSelect*
 /// @param id int
+///
 void k_charselect_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -1417,6 +1612,7 @@ void k_charselect_release_shortcut(void* self, int id);
 ///
 /// @param self KCharSelect*
 /// @param id int
+///
 void k_charselect_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -1425,6 +1621,7 @@ void k_charselect_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self KCharSelect*
 /// @param id int
+///
 void k_charselect_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -1444,6 +1641,7 @@ QWidget* k_charselect_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1452,6 +1650,7 @@ bool k_charselect_updates_enabled(void* self);
 ///
 /// @param self KCharSelect*
 /// @param enable bool
+///
 void k_charselect_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1459,6 +1658,7 @@ void k_charselect_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self KCharSelect*
+///
 QGraphicsProxyWidget* k_charselect_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -1466,6 +1666,7 @@ QGraphicsProxyWidget* k_charselect_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_update(void* self);
 
 /// Inherited from QWidget
@@ -1473,6 +1674,7 @@ void k_charselect_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_repaint(void* self);
 
 /// Inherited from QWidget
@@ -1484,6 +1686,7 @@ void k_charselect_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_charselect_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1492,6 +1695,7 @@ void k_charselect_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KCharSelect*
 /// @param param1 QRect*
+///
 void k_charselect_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1500,6 +1704,7 @@ void k_charselect_update3(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QRegion*
+///
 void k_charselect_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1511,6 +1716,7 @@ void k_charselect_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_charselect_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1519,6 +1725,7 @@ void k_charselect_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self KCharSelect*
 /// @param param1 QRect*
+///
 void k_charselect_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1527,6 +1734,7 @@ void k_charselect_repaint3(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QRegion*
+///
 void k_charselect_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1535,6 +1743,7 @@ void k_charselect_repaint4(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param hidden bool
+///
 void k_charselect_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -1542,6 +1751,7 @@ void k_charselect_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_show(void* self);
 
 /// Inherited from QWidget
@@ -1549,6 +1759,7 @@ void k_charselect_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_hide(void* self);
 
 /// Inherited from QWidget
@@ -1556,6 +1767,7 @@ void k_charselect_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1563,6 +1775,7 @@ void k_charselect_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1570,6 +1783,7 @@ void k_charselect_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1577,6 +1791,7 @@ void k_charselect_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -1584,6 +1799,7 @@ void k_charselect_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_close(void* self);
 
 /// Inherited from QWidget
@@ -1591,6 +1807,7 @@ bool k_charselect_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_raise(void* self);
 
 /// Inherited from QWidget
@@ -1598,6 +1815,7 @@ void k_charselect_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_lower(void* self);
 
 /// Inherited from QWidget
@@ -1606,6 +1824,7 @@ void k_charselect_lower(void* self);
 ///
 /// @param self KCharSelect*
 /// @param param1 QWidget*
+///
 void k_charselect_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1615,6 +1834,7 @@ void k_charselect_stack_under(void* self, void* param1);
 /// @param self KCharSelect*
 /// @param x int
 /// @param y int
+///
 void k_charselect_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -1623,6 +1843,7 @@ void k_charselect_move(void* self, int x, int y);
 ///
 /// @param self KCharSelect*
 /// @param param1 QPoint*
+///
 void k_charselect_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1632,6 +1853,7 @@ void k_charselect_move2(void* self, void* param1);
 /// @param self KCharSelect*
 /// @param w int
 /// @param h int
+///
 void k_charselect_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1640,6 +1862,7 @@ void k_charselect_resize(void* self, int w, int h);
 ///
 /// @param self KCharSelect*
 /// @param param1 QSize*
+///
 void k_charselect_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1651,6 +1874,7 @@ void k_charselect_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_charselect_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1659,6 +1883,7 @@ void k_charselect_set_geometry(void* self, int x, int y, int w, int h);
 ///
 /// @param self KCharSelect*
 /// @param geometry QRect*
+///
 void k_charselect_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -1668,6 +1893,7 @@ void k_charselect_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 char* k_charselect_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1676,6 +1902,7 @@ char* k_charselect_save_geometry(void* self);
 ///
 /// @param self KCharSelect*
 /// @param geometry const char*
+///
 bool k_charselect_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -1683,6 +1910,7 @@ bool k_charselect_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -1690,6 +1918,7 @@ void k_charselect_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -1698,6 +1927,7 @@ bool k_charselect_is_visible(void* self);
 ///
 /// @param self KCharSelect*
 /// @param param1 QWidget*
+///
 bool k_charselect_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1705,6 +1935,7 @@ bool k_charselect_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -1712,6 +1943,7 @@ bool k_charselect_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1719,6 +1951,7 @@ bool k_charselect_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1726,6 +1959,7 @@ bool k_charselect_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1735,6 +1969,7 @@ bool k_charselect_is_full_screen(void* self);
 /// @param self KCharSelect*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t k_charselect_window_state(void* self);
 
 /// Inherited from QWidget
@@ -1743,6 +1978,7 @@ int32_t k_charselect_window_state(void* self);
 ///
 /// @param self KCharSelect*
 /// @param state flag of enum Qt__WindowState
+///
 void k_charselect_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -1751,6 +1987,7 @@ void k_charselect_set_window_state(void* self, int32_t state);
 ///
 /// @param self KCharSelect*
 /// @param state flag of enum Qt__WindowState
+///
 void k_charselect_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -1758,6 +1995,7 @@ void k_charselect_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self KCharSelect*
+///
 QSizePolicy* k_charselect_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -1766,6 +2004,7 @@ QSizePolicy* k_charselect_size_policy(void* self);
 ///
 /// @param self KCharSelect*
 /// @param sizePolicy QSizePolicy*
+///
 void k_charselect_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -1775,6 +2014,7 @@ void k_charselect_set_size_policy(void* self, void* sizePolicy);
 /// @param self KCharSelect*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void k_charselect_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -1782,6 +2022,7 @@ void k_charselect_set_size_policy2(void* self, int32_t horizontal, int32_t verti
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self KCharSelect*
+///
 QRegion* k_charselect_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -1793,6 +2034,7 @@ QRegion* k_charselect_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_charselect_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -1801,6 +2043,7 @@ void k_charselect_set_contents_margins(void* self, int left, int top, int right,
 ///
 /// @param self KCharSelect*
 /// @param margins QMargins*
+///
 void k_charselect_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -1808,6 +2051,7 @@ void k_charselect_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self KCharSelect*
+///
 QMargins* k_charselect_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -1815,6 +2059,7 @@ QMargins* k_charselect_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self KCharSelect*
+///
 QRect* k_charselect_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -1822,6 +2067,7 @@ QRect* k_charselect_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self KCharSelect*
+///
 QLayout* k_charselect_layout(void* self);
 
 /// Inherited from QWidget
@@ -1830,6 +2076,7 @@ QLayout* k_charselect_layout(void* self);
 ///
 /// @param self KCharSelect*
 /// @param layout QLayout*
+///
 void k_charselect_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -1837,6 +2084,7 @@ void k_charselect_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1845,6 +2093,7 @@ void k_charselect_update_geometry(void* self);
 ///
 /// @param self KCharSelect*
 /// @param parent QWidget*
+///
 void k_charselect_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -1854,6 +2103,7 @@ void k_charselect_set_parent(void* self, void* parent);
 /// @param self KCharSelect*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void k_charselect_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -1863,6 +2113,7 @@ void k_charselect_set_parent2(void* self, void* parent, int64_t f);
 /// @param self KCharSelect*
 /// @param dx int
 /// @param dy int
+///
 void k_charselect_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -1873,6 +2124,7 @@ void k_charselect_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void k_charselect_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -1880,6 +2132,7 @@ void k_charselect_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -1887,6 +2140,7 @@ QWidget* k_charselect_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -1894,6 +2148,7 @@ QWidget* k_charselect_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -1901,6 +2156,7 @@ QWidget* k_charselect_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -1909,6 +2165,7 @@ bool k_charselect_accept_drops(void* self);
 ///
 /// @param self KCharSelect*
 /// @param on bool
+///
 void k_charselect_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -1917,6 +2174,7 @@ void k_charselect_set_accept_drops(void* self, bool on);
 ///
 /// @param self KCharSelect*
 /// @param action QAction*
+///
 void k_charselect_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -1925,6 +2183,7 @@ void k_charselect_add_action(void* self, void* action);
 ///
 /// @param self KCharSelect*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_charselect_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -1934,6 +2193,7 @@ void k_charselect_add_actions(void* self, libqt_list actions);
 /// @param self KCharSelect*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_charselect_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -1943,6 +2203,7 @@ void k_charselect_insert_actions(void* self, void* before, libqt_list actions);
 /// @param self KCharSelect*
 /// @param before QAction*
 /// @param action QAction*
+///
 void k_charselect_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -1951,6 +2212,7 @@ void k_charselect_insert_action(void* self, void* before, void* action);
 ///
 /// @param self KCharSelect*
 /// @param action QAction*
+///
 void k_charselect_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -1958,6 +2220,7 @@ void k_charselect_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self KCharSelect*
+///
 libqt_list /* of QAction* */ k_charselect_actions(void* self);
 
 /// Inherited from QWidget
@@ -1966,6 +2229,7 @@ libqt_list /* of QAction* */ k_charselect_actions(void* self);
 ///
 /// @param self KCharSelect*
 /// @param text const char*
+///
 QAction* k_charselect_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -1975,6 +2239,7 @@ QAction* k_charselect_add_action2(void* self, const char* text);
 /// @param self KCharSelect*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* k_charselect_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -1984,6 +2249,7 @@ QAction* k_charselect_add_action3(void* self, void* icon, const char* text);
 /// @param self KCharSelect*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_charselect_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -1994,6 +2260,7 @@ QAction* k_charselect_add_action4(void* self, const char* text, void* shortcut);
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_charselect_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -2001,6 +2268,7 @@ QAction* k_charselect_add_action5(void* self, void* icon, const char* text, void
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self KCharSelect*
+///
 QWidget* k_charselect_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2009,6 +2277,7 @@ QWidget* k_charselect_parent_widget(void* self);
 ///
 /// @param self KCharSelect*
 /// @param type flag of enum Qt__WindowType
+///
 void k_charselect_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2018,6 +2287,7 @@ void k_charselect_set_window_flags(void* self, int64_t type);
 /// @param self KCharSelect*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t k_charselect_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -2026,6 +2296,7 @@ int64_t k_charselect_window_flags(void* self);
 ///
 /// @param self KCharSelect*
 /// @param param1 enum Qt__WindowType
+///
 void k_charselect_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -2034,6 +2305,7 @@ void k_charselect_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self KCharSelect*
 /// @param type flag of enum Qt__WindowType
+///
 void k_charselect_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2043,6 +2315,7 @@ void k_charselect_override_window_flags(void* self, int64_t type);
 /// @param self KCharSelect*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t k_charselect_window_type(void* self);
 
 /// Inherited from QWidget
@@ -2050,6 +2323,7 @@ int64_t k_charselect_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* k_charselect_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -2059,6 +2333,7 @@ QWidget* k_charselect_find(uint64_t param1);
 /// @param self KCharSelect*
 /// @param x int
 /// @param y int
+///
 QWidget* k_charselect_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2067,6 +2342,7 @@ QWidget* k_charselect_child_at(void* self, int x, int y);
 ///
 /// @param self KCharSelect*
 /// @param p QPoint*
+///
 QWidget* k_charselect_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2075,6 +2351,7 @@ QWidget* k_charselect_child_at2(void* self, void* p);
 ///
 /// @param self KCharSelect*
 /// @param p QPointF*
+///
 QWidget* k_charselect_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2083,6 +2360,7 @@ QWidget* k_charselect_child_at3(void* self, void* p);
 ///
 /// @param self KCharSelect*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void k_charselect_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2091,6 +2369,7 @@ void k_charselect_set_attribute(void* self, int32_t param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool k_charselect_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2098,6 +2377,7 @@ bool k_charselect_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -2106,6 +2386,7 @@ void k_charselect_ensure_polished(void* self);
 ///
 /// @param self KCharSelect*
 /// @param child QWidget*
+///
 bool k_charselect_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -2113,6 +2394,7 @@ bool k_charselect_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -2121,6 +2403,7 @@ bool k_charselect_auto_fill_background(void* self);
 ///
 /// @param self KCharSelect*
 /// @param enabled bool
+///
 void k_charselect_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -2128,6 +2411,7 @@ void k_charselect_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self KCharSelect*
+///
 QBackingStore* k_charselect_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -2135,6 +2419,7 @@ QBackingStore* k_charselect_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self KCharSelect*
+///
 QWindow* k_charselect_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -2142,6 +2427,7 @@ QWindow* k_charselect_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self KCharSelect*
+///
 QScreen* k_charselect_screen(void* self);
 
 /// Inherited from QWidget
@@ -2150,6 +2436,7 @@ QScreen* k_charselect_screen(void* self);
 ///
 /// @param self KCharSelect*
 /// @param screen QScreen*
+///
 void k_charselect_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -2157,6 +2444,7 @@ void k_charselect_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* k_charselect_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -2165,6 +2453,7 @@ QWidget* k_charselect_create_window_container(void* window);
 ///
 /// @param self KCharSelect*
 /// @param title const char*
+///
 void k_charselect_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -2173,6 +2462,7 @@ void k_charselect_window_title_changed(void* self, const char* title);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, const char* title)
+///
 void k_charselect_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2181,6 +2471,7 @@ void k_charselect_on_window_title_changed(void* self, void (*callback)(void*, co
 ///
 /// @param self KCharSelect*
 /// @param icon QIcon*
+///
 void k_charselect_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2189,6 +2480,7 @@ void k_charselect_window_icon_changed(void* self, void* icon);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QIcon* icon)
+///
 void k_charselect_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2197,6 +2489,7 @@ void k_charselect_on_window_icon_changed(void* self, void (*callback)(void*, voi
 ///
 /// @param self KCharSelect*
 /// @param iconText const char*
+///
 void k_charselect_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -2205,6 +2498,7 @@ void k_charselect_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, const char* iconText)
+///
 void k_charselect_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2213,6 +2507,7 @@ void k_charselect_on_window_icon_text_changed(void* self, void (*callback)(void*
 ///
 /// @param self KCharSelect*
 /// @param pos QPoint*
+///
 void k_charselect_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -2221,6 +2516,7 @@ void k_charselect_custom_context_menu_requested(void* self, void* pos);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QPoint* pos)
+///
 void k_charselect_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2230,6 +2526,7 @@ void k_charselect_on_custom_context_menu_requested(void* self, void (*callback)(
 /// @param self KCharSelect*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t k_charselect_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -2238,6 +2535,7 @@ int64_t k_charselect_input_method_hints(void* self);
 ///
 /// @param self KCharSelect*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void k_charselect_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -2247,6 +2545,7 @@ void k_charselect_set_input_method_hints(void* self, int64_t hints);
 /// @param self KCharSelect*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void k_charselect_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2257,6 +2556,7 @@ void k_charselect_render22(void* self, void* target, void* targetOffset);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_charselect_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2268,6 +2568,7 @@ void k_charselect_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_charselect_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2277,6 +2578,7 @@ void k_charselect_render4(void* self, void* target, void* targetOffset, void* so
 /// @param self KCharSelect*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void k_charselect_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2287,6 +2589,7 @@ void k_charselect_render23(void* self, void* painter, void* targetOffset);
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_charselect_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2298,6 +2601,7 @@ void k_charselect_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_charselect_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2306,6 +2610,7 @@ void k_charselect_render42(void* self, void* painter, void* targetOffset, void* 
 ///
 /// @param self KCharSelect*
 /// @param rectangle QRect*
+///
 QPixmap* k_charselect_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -2315,6 +2620,7 @@ QPixmap* k_charselect_grab1(void* self, void* rectangle);
 /// @param self KCharSelect*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void k_charselect_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -2324,6 +2630,7 @@ void k_charselect_grab_gesture2(void* self, int64_t type, int32_t flags);
 /// @param self KCharSelect*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t k_charselect_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -2333,6 +2640,7 @@ int32_t k_charselect_grab_shortcut2(void* self, void* key, int32_t context);
 /// @param self KCharSelect*
 /// @param id int
 /// @param enable bool
+///
 void k_charselect_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2342,6 +2650,7 @@ void k_charselect_set_shortcut_enabled2(void* self, int id, bool enable);
 /// @param self KCharSelect*
 /// @param id int
 /// @param enable bool
+///
 void k_charselect_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2351,6 +2660,7 @@ void k_charselect_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param self KCharSelect*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void k_charselect_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2360,6 +2670,7 @@ void k_charselect_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self KCharSelect*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void k_charselect_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2368,6 +2679,7 @@ void k_charselect_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* k_charselect_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -2377,6 +2689,7 @@ QWidget* k_charselect_create_window_container2(void* window, void* parent);
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* k_charselect_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -2386,6 +2699,7 @@ QWidget* k_charselect_create_window_container3(void* window, void* parent, int64
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char* k_charselect_object_name(void* self);
 
 /// Inherited from QObject
@@ -2394,6 +2708,7 @@ const char* k_charselect_object_name(void* self);
 ///
 /// @param self KCharSelect*
 /// @param name char*
+///
 void k_charselect_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -2401,6 +2716,7 @@ void k_charselect_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -2408,6 +2724,7 @@ bool k_charselect_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -2415,6 +2732,7 @@ bool k_charselect_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -2422,6 +2740,7 @@ bool k_charselect_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -2430,6 +2749,7 @@ bool k_charselect_signals_blocked(void* self);
 ///
 /// @param self KCharSelect*
 /// @param b bool
+///
 bool k_charselect_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -2437,6 +2757,7 @@ bool k_charselect_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KCharSelect*
+///
 QThread* k_charselect_thread(void* self);
 
 /// Inherited from QObject
@@ -2445,6 +2766,7 @@ QThread* k_charselect_thread(void* self);
 ///
 /// @param self KCharSelect*
 /// @param thread QThread*
+///
 bool k_charselect_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -2453,6 +2775,7 @@ bool k_charselect_move_to_thread(void* self, void* thread);
 ///
 /// @param self KCharSelect*
 /// @param interval int
+///
 int32_t k_charselect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -2461,6 +2784,7 @@ int32_t k_charselect_start_timer(void* self, int interval);
 ///
 /// @param self KCharSelect*
 /// @param id int
+///
 void k_charselect_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -2469,6 +2793,7 @@ void k_charselect_kill_timer(void* self, int id);
 ///
 /// @param self KCharSelect*
 /// @param id enum Qt__TimerId
+///
 void k_charselect_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -2476,6 +2801,7 @@ void k_charselect_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KCharSelect*
+///
 libqt_list /* of QObject* */ k_charselect_children(void* self);
 
 /// Inherited from QObject
@@ -2484,6 +2810,7 @@ libqt_list /* of QObject* */ k_charselect_children(void* self);
 ///
 /// @param self KCharSelect*
 /// @param filterObj QObject*
+///
 void k_charselect_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -2492,6 +2819,7 @@ void k_charselect_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KCharSelect*
 /// @param obj QObject*
+///
 void k_charselect_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -2502,6 +2830,7 @@ void k_charselect_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_charselect_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -2512,6 +2841,7 @@ QMetaObject__Connection* k_charselect_connect(void* sender, void* signal, void* 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_charselect_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -2522,6 +2852,7 @@ QMetaObject__Connection* k_charselect_connect2(void* self, void* sender, const c
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_charselect_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -2529,6 +2860,7 @@ bool k_charselect_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_charselect_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -2536,6 +2868,7 @@ bool k_charselect_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -2543,6 +2876,7 @@ void k_charselect_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -2552,6 +2886,7 @@ void k_charselect_dump_object_info(void* self);
 /// @param self KCharSelect*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_charselect_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -2560,6 +2895,7 @@ bool k_charselect_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KCharSelect*
 /// @param name const char*
+///
 QVariant* k_charselect_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -2569,6 +2905,7 @@ QVariant* k_charselect_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharSelect*
+///
 const char** k_charselect_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -2576,6 +2913,7 @@ const char** k_charselect_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KCharSelect*
+///
 QBindingStorage* k_charselect_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -2583,6 +2921,7 @@ QBindingStorage* k_charselect_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KCharSelect*
+///
 const QBindingStorage* k_charselect_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -2590,6 +2929,7 @@ const QBindingStorage* k_charselect_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_destroyed(void* self);
 
 /// Inherited from QObject
@@ -2598,6 +2938,7 @@ void k_charselect_destroyed(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self)
+///
 void k_charselect_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2605,6 +2946,7 @@ void k_charselect_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KCharSelect*
+///
 QObject* k_charselect_parent(void* self);
 
 /// Inherited from QObject
@@ -2613,6 +2955,7 @@ QObject* k_charselect_parent(void* self);
 ///
 /// @param self KCharSelect*
 /// @param classname const char*
+///
 bool k_charselect_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -2620,6 +2963,7 @@ bool k_charselect_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_delete_later(void* self);
 
 /// Inherited from QObject
@@ -2629,6 +2973,7 @@ void k_charselect_delete_later(void* self);
 /// @param self KCharSelect*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_charselect_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -2638,6 +2983,7 @@ bool k_charselect_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KCharSelect*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_charselect_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -2649,6 +2995,7 @@ int32_t k_charselect_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_charselect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -2660,6 +3007,7 @@ QMetaObject__Connection* k_charselect_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_charselect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -2668,6 +3016,7 @@ QMetaObject__Connection* k_charselect_connect4(void* self, void* sender, const c
 ///
 /// @param self KCharSelect*
 /// @param param1 QObject*
+///
 void k_charselect_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -2676,6 +3025,7 @@ void k_charselect_destroyed1(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QObject* param1)
+///
 void k_charselect_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2683,6 +3033,7 @@ void k_charselect_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -2690,6 +3041,7 @@ bool k_charselect_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -2697,6 +3049,7 @@ int32_t k_charselect_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -2704,6 +3057,7 @@ int32_t k_charselect_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -2711,6 +3065,7 @@ int32_t k_charselect_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -2718,6 +3073,7 @@ int32_t k_charselect_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -2725,6 +3081,7 @@ int32_t k_charselect_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -2732,6 +3089,7 @@ int32_t k_charselect_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self KCharSelect*
+///
 double k_charselect_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -2739,6 +3097,7 @@ double k_charselect_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self KCharSelect*
+///
 double k_charselect_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -2746,6 +3105,7 @@ double k_charselect_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -2753,6 +3113,7 @@ int32_t k_charselect_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -2767,6 +3128,7 @@ double k_charselect_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t k_charselect_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
@@ -2776,6 +3138,7 @@ int32_t k_charselect_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2785,6 +3148,7 @@ int32_t k_charselect_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2795,6 +3159,7 @@ int32_t k_charselect_qbase_dev_type(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback int32_t func()
+///
 void k_charselect_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2805,6 +3170,7 @@ void k_charselect_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self KCharSelect*
 /// @param visible bool
+///
 void k_charselect_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2815,6 +3181,7 @@ void k_charselect_set_visible(void* self, bool visible);
 ///
 /// @param self KCharSelect*
 /// @param visible bool
+///
 void k_charselect_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2825,6 +3192,7 @@ void k_charselect_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, bool visible)
+///
 void k_charselect_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2834,6 +3202,7 @@ void k_charselect_on_set_visible(void* self, void (*callback)(void*, bool));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2843,6 +3212,7 @@ QSize* k_charselect_minimum_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QSize* k_charselect_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2853,6 +3223,7 @@ QSize* k_charselect_qbase_minimum_size_hint(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback QSize* func()
+///
 void k_charselect_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2863,6 +3234,7 @@ void k_charselect_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// @param self KCharSelect*
 /// @param param1 int
+///
 int32_t k_charselect_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2873,6 +3245,7 @@ int32_t k_charselect_height_for_width(void* self, int param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 int
+///
 int32_t k_charselect_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2883,6 +3256,7 @@ int32_t k_charselect_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self KCharSelect*
 /// @param callback int32_t func(KCharSelect* self, int param1)
+///
 void k_charselect_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2892,6 +3266,7 @@ void k_charselect_on_height_for_width(void* self, int32_t (*callback)(void*, int
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2901,6 +3276,7 @@ bool k_charselect_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2911,6 +3287,7 @@ bool k_charselect_qbase_has_height_for_width(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback bool func()
+///
 void k_charselect_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2920,6 +3297,7 @@ void k_charselect_on_has_height_for_width(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QPaintEngine* k_charselect_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2929,6 +3307,7 @@ QPaintEngine* k_charselect_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QPaintEngine* k_charselect_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2939,6 +3318,7 @@ QPaintEngine* k_charselect_qbase_paint_engine(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback QPaintEngine* func()
+///
 void k_charselect_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2949,6 +3329,7 @@ void k_charselect_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self KCharSelect*
 /// @param event QEvent*
+///
 bool k_charselect_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2959,6 +3340,7 @@ bool k_charselect_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QEvent*
+///
 bool k_charselect_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2969,6 +3351,7 @@ bool k_charselect_qbase_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback bool func(KCharSelect* self, QEvent* event)
+///
 void k_charselect_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2979,6 +3362,7 @@ void k_charselect_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2989,6 +3373,7 @@ void k_charselect_mouse_press_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2999,6 +3384,7 @@ void k_charselect_qbase_mouse_press_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QMouseEvent* event)
+///
 void k_charselect_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3009,6 +3395,7 @@ void k_charselect_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3019,6 +3406,7 @@ void k_charselect_mouse_release_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3029,6 +3417,7 @@ void k_charselect_qbase_mouse_release_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QMouseEvent* event)
+///
 void k_charselect_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3039,6 +3428,7 @@ void k_charselect_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3049,6 +3439,7 @@ void k_charselect_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3059,6 +3450,7 @@ void k_charselect_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QMouseEvent* event)
+///
 void k_charselect_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3069,6 +3461,7 @@ void k_charselect_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3079,6 +3472,7 @@ void k_charselect_mouse_move_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QMouseEvent*
+///
 void k_charselect_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3089,6 +3483,7 @@ void k_charselect_qbase_mouse_move_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QMouseEvent* event)
+///
 void k_charselect_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3099,6 +3494,7 @@ void k_charselect_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KCharSelect*
 /// @param event QWheelEvent*
+///
 void k_charselect_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3109,6 +3505,7 @@ void k_charselect_wheel_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QWheelEvent*
+///
 void k_charselect_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3119,6 +3516,7 @@ void k_charselect_qbase_wheel_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QWheelEvent* event)
+///
 void k_charselect_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3129,6 +3527,7 @@ void k_charselect_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QKeyEvent*
+///
 void k_charselect_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3139,6 +3538,7 @@ void k_charselect_key_press_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QKeyEvent*
+///
 void k_charselect_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3149,6 +3549,7 @@ void k_charselect_qbase_key_press_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QKeyEvent* event)
+///
 void k_charselect_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3159,6 +3560,7 @@ void k_charselect_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KCharSelect*
 /// @param event QKeyEvent*
+///
 void k_charselect_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3169,6 +3571,7 @@ void k_charselect_key_release_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QKeyEvent*
+///
 void k_charselect_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3179,6 +3582,7 @@ void k_charselect_qbase_key_release_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QKeyEvent* event)
+///
 void k_charselect_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3189,6 +3593,7 @@ void k_charselect_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self KCharSelect*
 /// @param event QFocusEvent*
+///
 void k_charselect_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3199,6 +3604,7 @@ void k_charselect_focus_in_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QFocusEvent*
+///
 void k_charselect_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3209,6 +3615,7 @@ void k_charselect_qbase_focus_in_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QFocusEvent* event)
+///
 void k_charselect_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3219,6 +3626,7 @@ void k_charselect_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QFocusEvent*
+///
 void k_charselect_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3229,6 +3637,7 @@ void k_charselect_focus_out_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QFocusEvent*
+///
 void k_charselect_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3239,6 +3648,7 @@ void k_charselect_qbase_focus_out_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QFocusEvent* event)
+///
 void k_charselect_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3249,6 +3659,7 @@ void k_charselect_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KCharSelect*
 /// @param event QEnterEvent*
+///
 void k_charselect_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3259,6 +3670,7 @@ void k_charselect_enter_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QEnterEvent*
+///
 void k_charselect_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3269,6 +3681,7 @@ void k_charselect_qbase_enter_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QEnterEvent* event)
+///
 void k_charselect_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3279,6 +3692,7 @@ void k_charselect_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QEvent*
+///
 void k_charselect_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3289,6 +3703,7 @@ void k_charselect_leave_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QEvent*
+///
 void k_charselect_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3299,6 +3714,7 @@ void k_charselect_qbase_leave_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QEvent* event)
+///
 void k_charselect_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3309,6 +3725,7 @@ void k_charselect_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QPaintEvent*
+///
 void k_charselect_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3319,6 +3736,7 @@ void k_charselect_paint_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QPaintEvent*
+///
 void k_charselect_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3329,6 +3747,7 @@ void k_charselect_qbase_paint_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QPaintEvent* event)
+///
 void k_charselect_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3339,6 +3758,7 @@ void k_charselect_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QMoveEvent*
+///
 void k_charselect_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3349,6 +3769,7 @@ void k_charselect_move_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QMoveEvent*
+///
 void k_charselect_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3359,6 +3780,7 @@ void k_charselect_qbase_move_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QMoveEvent* event)
+///
 void k_charselect_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3369,6 +3791,7 @@ void k_charselect_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QResizeEvent*
+///
 void k_charselect_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3379,6 +3802,7 @@ void k_charselect_resize_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QResizeEvent*
+///
 void k_charselect_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3389,6 +3813,7 @@ void k_charselect_qbase_resize_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QResizeEvent* event)
+///
 void k_charselect_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3399,6 +3824,7 @@ void k_charselect_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QCloseEvent*
+///
 void k_charselect_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3409,6 +3835,7 @@ void k_charselect_close_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QCloseEvent*
+///
 void k_charselect_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3419,6 +3846,7 @@ void k_charselect_qbase_close_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QCloseEvent* event)
+///
 void k_charselect_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3429,6 +3857,7 @@ void k_charselect_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QContextMenuEvent*
+///
 void k_charselect_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3439,6 +3868,7 @@ void k_charselect_context_menu_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QContextMenuEvent*
+///
 void k_charselect_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3449,6 +3879,7 @@ void k_charselect_qbase_context_menu_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QContextMenuEvent* event)
+///
 void k_charselect_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3459,6 +3890,7 @@ void k_charselect_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 /// @param self KCharSelect*
 /// @param event QTabletEvent*
+///
 void k_charselect_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3469,6 +3901,7 @@ void k_charselect_tablet_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QTabletEvent*
+///
 void k_charselect_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3479,6 +3912,7 @@ void k_charselect_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QTabletEvent* event)
+///
 void k_charselect_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3489,6 +3923,7 @@ void k_charselect_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QActionEvent*
+///
 void k_charselect_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3499,6 +3934,7 @@ void k_charselect_action_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QActionEvent*
+///
 void k_charselect_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3509,6 +3945,7 @@ void k_charselect_qbase_action_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QActionEvent* event)
+///
 void k_charselect_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3519,6 +3956,7 @@ void k_charselect_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QDragEnterEvent*
+///
 void k_charselect_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3529,6 +3967,7 @@ void k_charselect_drag_enter_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QDragEnterEvent*
+///
 void k_charselect_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3539,6 +3978,7 @@ void k_charselect_qbase_drag_enter_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QDragEnterEvent* event)
+///
 void k_charselect_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3549,6 +3989,7 @@ void k_charselect_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KCharSelect*
 /// @param event QDragMoveEvent*
+///
 void k_charselect_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3559,6 +4000,7 @@ void k_charselect_drag_move_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QDragMoveEvent*
+///
 void k_charselect_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3569,6 +4011,7 @@ void k_charselect_qbase_drag_move_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QDragMoveEvent* event)
+///
 void k_charselect_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3579,6 +4022,7 @@ void k_charselect_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KCharSelect*
 /// @param event QDragLeaveEvent*
+///
 void k_charselect_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3589,6 +4033,7 @@ void k_charselect_drag_leave_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QDragLeaveEvent*
+///
 void k_charselect_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3599,6 +4044,7 @@ void k_charselect_qbase_drag_leave_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QDragLeaveEvent* event)
+///
 void k_charselect_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3609,6 +4055,7 @@ void k_charselect_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KCharSelect*
 /// @param event QDropEvent*
+///
 void k_charselect_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3619,6 +4066,7 @@ void k_charselect_drop_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QDropEvent*
+///
 void k_charselect_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3629,6 +4077,7 @@ void k_charselect_qbase_drop_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QDropEvent* event)
+///
 void k_charselect_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3639,6 +4088,7 @@ void k_charselect_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QShowEvent*
+///
 void k_charselect_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3649,6 +4099,7 @@ void k_charselect_show_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QShowEvent*
+///
 void k_charselect_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3659,6 +4110,7 @@ void k_charselect_qbase_show_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QShowEvent* event)
+///
 void k_charselect_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3669,6 +4121,7 @@ void k_charselect_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QHideEvent*
+///
 void k_charselect_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3679,6 +4132,7 @@ void k_charselect_hide_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QHideEvent*
+///
 void k_charselect_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3689,6 +4143,7 @@ void k_charselect_qbase_hide_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QHideEvent* event)
+///
 void k_charselect_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3701,6 +4156,7 @@ void k_charselect_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_charselect_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3713,6 +4169,7 @@ bool k_charselect_native_event(void* self, const char* eventType, void* message,
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_charselect_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3723,6 +4180,7 @@ bool k_charselect_qbase_native_event(void* self, const char* eventType, void* me
 ///
 /// @param self KCharSelect*
 /// @param callback bool func(KCharSelect* self, const char* eventType, void* message, intptr_t* result)
+///
 void k_charselect_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3733,6 +4191,7 @@ void k_charselect_on_native_event(void* self, bool (*callback)(void*, const char
 ///
 /// @param self KCharSelect*
 /// @param param1 QEvent*
+///
 void k_charselect_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3743,6 +4202,7 @@ void k_charselect_change_event(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QEvent*
+///
 void k_charselect_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3753,6 +4213,7 @@ void k_charselect_qbase_change_event(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QEvent* param1)
+///
 void k_charselect_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3763,6 +4224,7 @@ void k_charselect_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_charselect_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3773,6 +4235,7 @@ int32_t k_charselect_metric(void* self, int32_t param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_charselect_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3783,6 +4246,7 @@ int32_t k_charselect_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self KCharSelect*
 /// @param callback int32_t func(KCharSelect* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void k_charselect_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3793,6 +4257,7 @@ void k_charselect_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// @param self KCharSelect*
 /// @param painter QPainter*
+///
 void k_charselect_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3803,6 +4268,7 @@ void k_charselect_init_painter(void* self, void* painter);
 ///
 /// @param self KCharSelect*
 /// @param painter QPainter*
+///
 void k_charselect_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3813,6 +4279,7 @@ void k_charselect_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QPainter* painter)
+///
 void k_charselect_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3823,6 +4290,7 @@ void k_charselect_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param offset QPoint*
+///
 QPaintDevice* k_charselect_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3833,6 +4301,7 @@ QPaintDevice* k_charselect_redirected(void* self, void* offset);
 ///
 /// @param self KCharSelect*
 /// @param offset QPoint*
+///
 QPaintDevice* k_charselect_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3843,6 +4312,7 @@ QPaintDevice* k_charselect_qbase_redirected(void* self, void* offset);
 ///
 /// @param self KCharSelect*
 /// @param callback QPaintDevice* func(KCharSelect* self, QPoint* offset)
+///
 void k_charselect_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3852,6 +4322,7 @@ void k_charselect_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QPainter* k_charselect_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3861,6 +4332,7 @@ QPainter* k_charselect_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QPainter* k_charselect_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3871,6 +4343,7 @@ QPainter* k_charselect_qbase_shared_painter(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback QPainter* func()
+///
 void k_charselect_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3881,6 +4354,7 @@ void k_charselect_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// @param self KCharSelect*
 /// @param param1 QInputMethodEvent*
+///
 void k_charselect_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3891,6 +4365,7 @@ void k_charselect_input_method_event(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 QInputMethodEvent*
+///
 void k_charselect_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3901,6 +4376,7 @@ void k_charselect_qbase_input_method_event(void* self, void* param1);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QInputMethodEvent* param1)
+///
 void k_charselect_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3911,6 +4387,7 @@ void k_charselect_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 /// @param self KCharSelect*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_charselect_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3921,6 +4398,7 @@ QVariant* k_charselect_input_method_query(void* self, int64_t param1);
 ///
 /// @param self KCharSelect*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_charselect_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3931,6 +4409,7 @@ QVariant* k_charselect_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// @param self KCharSelect*
 /// @param callback QVariant* func(KCharSelect* self, enum Qt__InputMethodQuery param1)
+///
 void k_charselect_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3941,6 +4420,7 @@ void k_charselect_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 /// @param self KCharSelect*
 /// @param next bool
+///
 bool k_charselect_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3951,6 +4431,7 @@ bool k_charselect_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KCharSelect*
 /// @param next bool
+///
 bool k_charselect_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3961,6 +4442,7 @@ bool k_charselect_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self KCharSelect*
 /// @param callback bool func(KCharSelect* self, bool next)
+///
 void k_charselect_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3972,6 +4454,7 @@ void k_charselect_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param self KCharSelect*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_charselect_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3983,6 +4466,7 @@ bool k_charselect_event_filter(void* self, void* watched, void* event);
 /// @param self KCharSelect*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_charselect_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3993,6 +4477,7 @@ bool k_charselect_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback bool func(KCharSelect* self, QObject* watched, QEvent* event)
+///
 void k_charselect_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4003,6 +4488,7 @@ void k_charselect_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 /// @param self KCharSelect*
 /// @param event QTimerEvent*
+///
 void k_charselect_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4013,6 +4499,7 @@ void k_charselect_timer_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QTimerEvent*
+///
 void k_charselect_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4023,6 +4510,7 @@ void k_charselect_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QTimerEvent* event)
+///
 void k_charselect_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4033,6 +4521,7 @@ void k_charselect_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QChildEvent*
+///
 void k_charselect_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4043,6 +4532,7 @@ void k_charselect_child_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QChildEvent*
+///
 void k_charselect_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4053,6 +4543,7 @@ void k_charselect_qbase_child_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QChildEvent* event)
+///
 void k_charselect_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4063,6 +4554,7 @@ void k_charselect_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param event QEvent*
+///
 void k_charselect_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4073,6 +4565,7 @@ void k_charselect_custom_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param event QEvent*
+///
 void k_charselect_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4083,6 +4576,7 @@ void k_charselect_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QEvent* event)
+///
 void k_charselect_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4093,6 +4587,7 @@ void k_charselect_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param signal QMetaMethod*
+///
 void k_charselect_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4103,6 +4598,7 @@ void k_charselect_connect_notify(void* self, void* signal);
 ///
 /// @param self KCharSelect*
 /// @param signal QMetaMethod*
+///
 void k_charselect_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4113,6 +4609,7 @@ void k_charselect_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QMetaMethod* signal)
+///
 void k_charselect_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4123,6 +4620,7 @@ void k_charselect_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KCharSelect*
 /// @param signal QMetaMethod*
+///
 void k_charselect_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4133,6 +4631,7 @@ void k_charselect_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KCharSelect*
 /// @param signal QMetaMethod*
+///
 void k_charselect_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4143,6 +4642,7 @@ void k_charselect_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QMetaMethod* signal)
+///
 void k_charselect_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4152,6 +4652,7 @@ void k_charselect_on_disconnect_notify(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4161,6 +4662,7 @@ void k_charselect_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4171,6 +4673,7 @@ void k_charselect_qbase_update_micro_focus(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback void func()
+///
 void k_charselect_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4180,6 +4683,7 @@ void k_charselect_on_update_micro_focus(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_create(void* self);
 
 /// Inherited from QWidget
@@ -4189,6 +4693,7 @@ void k_charselect_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4199,6 +4704,7 @@ void k_charselect_qbase_create(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback void func()
+///
 void k_charselect_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4208,6 +4714,7 @@ void k_charselect_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4217,6 +4724,7 @@ void k_charselect_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4227,6 +4735,7 @@ void k_charselect_qbase_destroy(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback void func()
+///
 void k_charselect_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4236,6 +4745,7 @@ void k_charselect_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4245,6 +4755,7 @@ bool k_charselect_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4255,6 +4766,7 @@ bool k_charselect_qbase_focus_next_child(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback bool func()
+///
 void k_charselect_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4264,6 +4776,7 @@ void k_charselect_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4273,6 +4786,7 @@ bool k_charselect_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 bool k_charselect_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4283,6 +4797,7 @@ bool k_charselect_qbase_focus_previous_child(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback bool func()
+///
 void k_charselect_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4292,6 +4807,7 @@ void k_charselect_on_focus_previous_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QObject* k_charselect_sender(void* self);
 
 /// Inherited from QObject
@@ -4301,6 +4817,7 @@ QObject* k_charselect_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 QObject* k_charselect_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4311,6 +4828,7 @@ QObject* k_charselect_qbase_sender(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback QObject* func()
+///
 void k_charselect_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4320,6 +4838,7 @@ void k_charselect_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4329,6 +4848,7 @@ int32_t k_charselect_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCharSelect*
+///
 int32_t k_charselect_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4339,6 +4859,7 @@ int32_t k_charselect_qbase_sender_signal_index(void* self);
 ///
 /// @param self KCharSelect*
 /// @param callback int32_t func()
+///
 void k_charselect_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4349,6 +4870,7 @@ void k_charselect_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self KCharSelect*
 /// @param signal const char*
+///
 int32_t k_charselect_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4359,6 +4881,7 @@ int32_t k_charselect_receivers(void* self, const char* signal);
 ///
 /// @param self KCharSelect*
 /// @param signal const char*
+///
 int32_t k_charselect_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4369,6 +4892,7 @@ int32_t k_charselect_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KCharSelect*
 /// @param callback int32_t func(KCharSelect* self, const char* signal)
+///
 void k_charselect_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4379,6 +4903,7 @@ void k_charselect_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// @param self KCharSelect*
 /// @param signal QMetaMethod*
+///
 bool k_charselect_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4389,6 +4914,7 @@ bool k_charselect_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KCharSelect*
 /// @param signal QMetaMethod*
+///
 bool k_charselect_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4399,6 +4925,7 @@ bool k_charselect_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KCharSelect*
 /// @param callback bool func(KCharSelect* self, QMetaMethod* signal)
+///
 void k_charselect_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4410,6 +4937,7 @@ void k_charselect_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param self KCharSelect*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_charselect_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4421,6 +4949,7 @@ double k_charselect_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 /// @param self KCharSelect*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_charselect_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4431,6 +4960,7 @@ double k_charselect_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 ///
 /// @param self KCharSelect*
 /// @param callback double func(KCharSelect* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void k_charselect_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4441,6 +4971,7 @@ void k_charselect_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, const char* objectName)
+///
 void k_charselect_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#dtor.KCharSelect)
@@ -4448,9 +4979,10 @@ void k_charselect_on_object_name_changed(void* self, void (*callback)(void*, con
 /// Delete this object from C++ memory.
 ///
 /// @param self KCharSelect*
+///
 void k_charselect_delete(void* self);
 
-/// https://api.kde.org/kcharselect.html#types
+/// [Upstream resources](https://api.kde.org/kcharselect.html#public-types)
 
 typedef enum {
     KCHARSELECT_CONTROL_SEARCHLINE = 1,

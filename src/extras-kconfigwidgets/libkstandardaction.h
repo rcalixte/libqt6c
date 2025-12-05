@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kstandardaction.html
+/// [Upstream resources](https://api.kde.org/kstandardaction.html)
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#create)
 ///
@@ -19,12 +19,14 @@
 /// @param param2 QObject*
 /// @param param3 const char*
 /// @param param4 QObject*
+///
 QAction* k_standardaction_create(int32_t param1, void* param2, const char* param3, void* param4);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#_k_createInternal)
 ///
 /// @param param1 enum KStandardAction__StandardAction
 /// @param param2 QObject*
+///
 QAction* k_standardaction_k_create_internal(int32_t param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#name)
@@ -32,6 +34,7 @@ QAction* k_standardaction_k_create_internal(int32_t param1, void* param2);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardAction__StandardAction
+///
 const char* k_standardaction_name(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#stdNames)
@@ -42,8 +45,8 @@ const char** k_standardaction_std_names();
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#actionIds)
 ///
-///
 /// @return libqt_list of enum KStandardAction__StandardAction
+///
 libqt_list /* of int32_t */ k_standardaction_action_ids();
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#shortcutForActionId)
@@ -51,6 +54,7 @@ libqt_list /* of int32_t */ k_standardaction_action_ids();
 /// @param param1 enum KStandardAction__StandardAction
 ///
 /// @return enum KStandardShortcut__StandardShortcut
+///
 int32_t k_standardaction_shortcut_for_action_id(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#openNew)
@@ -58,6 +62,7 @@ int32_t k_standardaction_shortcut_for_action_id(int32_t param1);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_open_new(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#open)
@@ -65,6 +70,7 @@ QAction* k_standardaction_open_new(void* param1, const char* param2, void* param
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_open(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#openRecent)
@@ -72,6 +78,7 @@ QAction* k_standardaction_open(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 KRecentFilesAction* k_standardaction_open_recent(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#save)
@@ -79,6 +86,7 @@ KRecentFilesAction* k_standardaction_open_recent(void* param1, const char* param
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_save(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#saveAs)
@@ -86,6 +94,7 @@ QAction* k_standardaction_save(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_save_as(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#revert)
@@ -93,6 +102,7 @@ QAction* k_standardaction_save_as(void* param1, const char* param2, void* param3
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_revert(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#close)
@@ -100,6 +110,7 @@ QAction* k_standardaction_revert(void* param1, const char* param2, void* param3)
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_close(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#print)
@@ -107,6 +118,7 @@ QAction* k_standardaction_close(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_print(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#printPreview)
@@ -114,6 +126,7 @@ QAction* k_standardaction_print(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_print_preview(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#mail)
@@ -121,6 +134,7 @@ QAction* k_standardaction_print_preview(void* param1, const char* param2, void* 
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_mail(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#quit)
@@ -128,6 +142,7 @@ QAction* k_standardaction_mail(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_quit(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#undo)
@@ -135,6 +150,7 @@ QAction* k_standardaction_quit(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_undo(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#redo)
@@ -142,31 +158,37 @@ QAction* k_standardaction_undo(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_redo(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#cut)
 ///
 /// @param param1 QObject*
+///
 QAction* k_standardaction_cut(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#copy)
 ///
 /// @param param1 QObject*
+///
 QAction* k_standardaction_copy(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#paste)
 ///
 /// @param param1 QObject*
+///
 QAction* k_standardaction_paste(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#clear)
 ///
 /// @param param1 QObject*
+///
 QAction* k_standardaction_clear(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#selectAll)
 ///
 /// @param param1 QObject*
+///
 QAction* k_standardaction_select_all(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#cut)
@@ -174,6 +196,7 @@ QAction* k_standardaction_select_all(void* param1);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_cut2(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#copy)
@@ -181,6 +204,7 @@ QAction* k_standardaction_cut2(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_copy2(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#paste)
@@ -188,6 +212,7 @@ QAction* k_standardaction_copy2(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_paste2(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#clear)
@@ -195,6 +220,7 @@ QAction* k_standardaction_paste2(void* param1, const char* param2, void* param3)
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_clear2(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#selectAll)
@@ -202,6 +228,7 @@ QAction* k_standardaction_clear2(void* param1, const char* param2, void* param3)
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_select_all2(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#deselect)
@@ -209,6 +236,7 @@ QAction* k_standardaction_select_all2(void* param1, const char* param2, void* pa
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_deselect(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#find)
@@ -216,6 +244,7 @@ QAction* k_standardaction_deselect(void* param1, const char* param2, void* param
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_find(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#findNext)
@@ -223,6 +252,7 @@ QAction* k_standardaction_find(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_find_next(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#findPrev)
@@ -230,6 +260,7 @@ QAction* k_standardaction_find_next(void* param1, const char* param2, void* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_find_prev(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#replace)
@@ -237,6 +268,7 @@ QAction* k_standardaction_find_prev(void* param1, const char* param2, void* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_replace(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#actualSize)
@@ -244,6 +276,7 @@ QAction* k_standardaction_replace(void* param1, const char* param2, void* param3
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_actual_size(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fitToPage)
@@ -251,6 +284,7 @@ QAction* k_standardaction_actual_size(void* param1, const char* param2, void* pa
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_fit_to_page(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fitToWidth)
@@ -258,6 +292,7 @@ QAction* k_standardaction_fit_to_page(void* param1, const char* param2, void* pa
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_fit_to_width(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fitToHeight)
@@ -265,6 +300,7 @@ QAction* k_standardaction_fit_to_width(void* param1, const char* param2, void* p
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_fit_to_height(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#zoomIn)
@@ -272,6 +308,7 @@ QAction* k_standardaction_fit_to_height(void* param1, const char* param2, void* 
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_zoom_in(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#zoomOut)
@@ -279,6 +316,7 @@ QAction* k_standardaction_zoom_in(void* param1, const char* param2, void* param3
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_zoom_out(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#zoom)
@@ -286,6 +324,7 @@ QAction* k_standardaction_zoom_out(void* param1, const char* param2, void* param
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_zoom(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#redisplay)
@@ -293,6 +332,7 @@ QAction* k_standardaction_zoom(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_redisplay(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#up)
@@ -300,6 +340,7 @@ QAction* k_standardaction_redisplay(void* param1, const char* param2, void* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_up(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#back)
@@ -307,6 +348,7 @@ QAction* k_standardaction_up(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_back(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#forward)
@@ -314,6 +356,7 @@ QAction* k_standardaction_back(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_forward(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#home)
@@ -321,6 +364,7 @@ QAction* k_standardaction_forward(void* param1, const char* param2, void* param3
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_home(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#prior)
@@ -328,6 +372,7 @@ QAction* k_standardaction_home(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_prior(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#next)
@@ -335,6 +380,7 @@ QAction* k_standardaction_prior(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_next(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#goTo)
@@ -342,6 +388,7 @@ QAction* k_standardaction_next(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_go_to(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#gotoPage)
@@ -349,6 +396,7 @@ QAction* k_standardaction_go_to(void* param1, const char* param2, void* param3);
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_goto_page(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#gotoLine)
@@ -356,6 +404,7 @@ QAction* k_standardaction_goto_page(void* param1, const char* param2, void* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_goto_line(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#firstPage)
@@ -363,6 +412,7 @@ QAction* k_standardaction_goto_line(void* param1, const char* param2, void* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_first_page(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#lastPage)
@@ -370,6 +420,7 @@ QAction* k_standardaction_first_page(void* param1, const char* param2, void* par
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_last_page(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#documentBack)
@@ -377,6 +428,7 @@ QAction* k_standardaction_last_page(void* param1, const char* param2, void* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_document_back(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#documentForward)
@@ -384,6 +436,7 @@ QAction* k_standardaction_document_back(void* param1, const char* param2, void* 
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_document_forward(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#addBookmark)
@@ -391,6 +444,7 @@ QAction* k_standardaction_document_forward(void* param1, const char* param2, voi
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_add_bookmark(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#editBookmarks)
@@ -398,6 +452,7 @@ QAction* k_standardaction_add_bookmark(void* param1, const char* param2, void* p
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_edit_bookmarks(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#spelling)
@@ -405,6 +460,7 @@ QAction* k_standardaction_edit_bookmarks(void* param1, const char* param2, void*
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_spelling(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#showMenubar)
@@ -412,6 +468,7 @@ QAction* k_standardaction_spelling(void* param1, const char* param2, void* param
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 KToggleAction* k_standardaction_show_menubar(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#showStatusbar)
@@ -419,6 +476,7 @@ KToggleAction* k_standardaction_show_menubar(void* param1, const char* param2, v
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 KToggleAction* k_standardaction_show_statusbar(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fullScreen)
@@ -427,6 +485,7 @@ KToggleAction* k_standardaction_show_statusbar(void* param1, const char* param2,
 /// @param param2 const char*
 /// @param param3 QWidget*
 /// @param param4 QObject*
+///
 KToggleFullScreenAction* k_standardaction_full_screen(void* param1, const char* param2, void* param3, void* param4);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#keyBindings)
@@ -434,6 +493,7 @@ KToggleFullScreenAction* k_standardaction_full_screen(void* param1, const char* 
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_key_bindings(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#preferences)
@@ -441,6 +501,7 @@ QAction* k_standardaction_key_bindings(void* param1, const char* param2, void* p
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_preferences(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#configureToolbars)
@@ -448,6 +509,7 @@ QAction* k_standardaction_preferences(void* param1, const char* param2, void* pa
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_configure_toolbars(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#configureNotifications)
@@ -455,6 +517,7 @@ QAction* k_standardaction_configure_toolbars(void* param1, const char* param2, v
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_configure_notifications(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#switchApplicationLanguage)
@@ -462,6 +525,7 @@ QAction* k_standardaction_configure_notifications(void* param1, const char* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_switch_application_language(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#helpContents)
@@ -469,6 +533,7 @@ QAction* k_standardaction_switch_application_language(void* param1, const char* 
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_help_contents(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#whatsThis)
@@ -476,6 +541,7 @@ QAction* k_standardaction_help_contents(void* param1, const char* param2, void* 
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_whats_this(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#reportBug)
@@ -483,6 +549,7 @@ QAction* k_standardaction_whats_this(void* param1, const char* param2, void* par
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_report_bug(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#aboutApp)
@@ -490,6 +557,7 @@ QAction* k_standardaction_report_bug(void* param1, const char* param2, void* par
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_about_app(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#aboutKDE)
@@ -497,6 +565,7 @@ QAction* k_standardaction_about_app(void* param1, const char* param2, void* para
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_about_k_d_e(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#deleteFile)
@@ -504,6 +573,7 @@ QAction* k_standardaction_about_k_d_e(void* param1, const char* param2, void* pa
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_delete_file(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#renameFile)
@@ -511,6 +581,7 @@ QAction* k_standardaction_delete_file(void* param1, const char* param2, void* pa
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_rename_file(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#moveToTrash)
@@ -518,6 +589,7 @@ QAction* k_standardaction_rename_file(void* param1, const char* param2, void* pa
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_move_to_trash(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#donate)
@@ -525,6 +597,7 @@ QAction* k_standardaction_move_to_trash(void* param1, const char* param2, void* 
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 QAction* k_standardaction_donate(void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#hamburgerMenu)
@@ -532,9 +605,10 @@ QAction* k_standardaction_donate(void* param1, const char* param2, void* param3)
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
+///
 KHamburgerMenu* k_standardaction_hamburger_menu(void* param1, const char* param2, void* param3);
 
-/// https://api.kde.org/kstandardaction.html#types
+/// [Upstream resources](https://api.kde.org/kstandardaction.html#public-types)
 
 typedef enum {
     KSTANDARDACTION_STANDARDACTION_ACTIONNONE = 0,

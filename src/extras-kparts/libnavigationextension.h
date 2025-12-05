@@ -11,32 +11,37 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kparts-navigationextension.html
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html)
 
 /// k_parts__navigationextension_new constructs a new KParts::NavigationExtension object.
 ///
 /// @param parent KParts__ReadOnlyPart*
+///
 KParts__NavigationExtension* k_parts__navigationextension_new(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KParts__NavigationExtension*
+///
 const QMetaObject* k_parts__navigationextension_meta_object(void* self);
 
 /// @param self KParts__NavigationExtension*
 /// @param param1 const char*
+///
 void* k_parts__navigationextension_metacast(void* self, const char* param1);
 
 /// @param self KParts__NavigationExtension*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_parts__navigationextension_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback int32_t func(KParts__NavigationExtension* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_parts__navigationextension_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -45,6 +50,7 @@ void k_parts__navigationextension_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_parts__navigationextension_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -52,11 +58,13 @@ int32_t k_parts__navigationextension_qbase_metacall(void* self, int32_t param1, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_parts__navigationextension_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#xOffset)
 ///
 /// @param self KParts__NavigationExtension*
+///
 int32_t k_parts__navigationextension_x_offset(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#xOffset)
@@ -65,6 +73,7 @@ int32_t k_parts__navigationextension_x_offset(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback int32_t func()
+///
 void k_parts__navigationextension_on_x_offset(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#xOffset)
@@ -72,11 +81,13 @@ void k_parts__navigationextension_on_x_offset(void* self, int32_t (*callback)())
 /// Base class method implementation
 ///
 /// @param self KParts__NavigationExtension*
+///
 int32_t k_parts__navigationextension_qbase_x_offset(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#yOffset)
 ///
 /// @param self KParts__NavigationExtension*
+///
 int32_t k_parts__navigationextension_y_offset(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#yOffset)
@@ -85,6 +96,7 @@ int32_t k_parts__navigationextension_y_offset(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback int32_t func()
+///
 void k_parts__navigationextension_on_y_offset(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#yOffset)
@@ -92,12 +104,14 @@ void k_parts__navigationextension_on_y_offset(void* self, int32_t (*callback)())
 /// Base class method implementation
 ///
 /// @param self KParts__NavigationExtension*
+///
 int32_t k_parts__navigationextension_qbase_y_offset(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#saveState)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param stream QDataStream*
+///
 void k_parts__navigationextension_save_state(void* self, void* stream);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#saveState)
@@ -106,6 +120,7 @@ void k_parts__navigationextension_save_state(void* self, void* stream);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QDataStream* stream)
+///
 void k_parts__navigationextension_on_save_state(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#saveState)
@@ -114,12 +129,14 @@ void k_parts__navigationextension_on_save_state(void* self, void (*callback)(voi
 ///
 /// @param self KParts__NavigationExtension*
 /// @param stream QDataStream*
+///
 void k_parts__navigationextension_qbase_save_state(void* self, void* stream);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#restoreState)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param stream QDataStream*
+///
 void k_parts__navigationextension_restore_state(void* self, void* stream);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#restoreState)
@@ -128,6 +145,7 @@ void k_parts__navigationextension_restore_state(void* self, void* stream);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QDataStream* stream)
+///
 void k_parts__navigationextension_on_restore_state(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#restoreState)
@@ -136,23 +154,27 @@ void k_parts__navigationextension_on_restore_state(void* self, void (*callback)(
 ///
 /// @param self KParts__NavigationExtension*
 /// @param stream QDataStream*
+///
 void k_parts__navigationextension_qbase_restore_state(void* self, void* stream);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#isURLDropHandlingEnabled)
 ///
 /// @param self KParts__NavigationExtension*
+///
 bool k_parts__navigationextension_is_u_r_l_drop_handling_enabled(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setURLDropHandlingEnabled)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param enable bool
+///
 void k_parts__navigationextension_set_u_r_l_drop_handling_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#isActionEnabled)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param name const char*
+///
 bool k_parts__navigationextension_is_action_enabled(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#actionText)
@@ -161,16 +183,19 @@ bool k_parts__navigationextension_is_action_enabled(void* self, const char* name
 ///
 /// @param self KParts__NavigationExtension*
 /// @param name const char*
+///
 const char* k_parts__navigationextension_action_text(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#childObject)
 ///
 /// @param obj QObject*
+///
 KParts__NavigationExtension* k_parts__navigationextension_child_object(void* obj);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#pasteRequest)
 ///
 /// @param self KParts__NavigationExtension*
+///
 void k_parts__navigationextension_paste_request(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#enableAction)
@@ -178,6 +203,7 @@ void k_parts__navigationextension_paste_request(void* self);
 /// @param self KParts__NavigationExtension*
 /// @param name const char*
 /// @param enabled bool
+///
 void k_parts__navigationextension_enable_action(void* self, const char* name, bool enabled);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setActionText)
@@ -185,12 +211,14 @@ void k_parts__navigationextension_enable_action(void* self, const char* name, bo
 /// @param self KParts__NavigationExtension*
 /// @param name const char*
 /// @param text const char*
+///
 void k_parts__navigationextension_set_action_text(void* self, const char* name, const char* text);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequest)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
+///
 void k_parts__navigationextension_open_url_request(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequestDelayed)
@@ -198,47 +226,55 @@ void k_parts__navigationextension_open_url_request(void* self, void* url);
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
 /// @param arguments KParts__OpenUrlArguments*
+///
 void k_parts__navigationextension_open_url_request_delayed(void* self, void* url, void* arguments);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlNotify)
 ///
 /// @param self KParts__NavigationExtension*
+///
 void k_parts__navigationextension_open_url_notify(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setLocationBarUrl)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param url const char*
+///
 void k_parts__navigationextension_set_location_bar_url(void* self, const char* url);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setIconUrl)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
+///
 void k_parts__navigationextension_set_icon_url(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#createNewWindow)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
+///
 void k_parts__navigationextension_create_new_window(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#loadingProgress)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param percent int
+///
 void k_parts__navigationextension_loading_progress(void* self, int percent);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#speedProgress)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param bytesPerSecond int
+///
 void k_parts__navigationextension_speed_progress(void* self, int bytesPerSecond);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#infoMessage)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param param1 const char*
+///
 void k_parts__navigationextension_info_message(void* self, const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -246,6 +282,7 @@ void k_parts__navigationextension_info_message(void* self, const char* param1);
 /// @param self KParts__NavigationExtension*
 /// @param global QPoint*
 /// @param items KFileItemList*
+///
 void k_parts__navigationextension_popup_menu(void* self, void* global, void* items);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -253,18 +290,21 @@ void k_parts__navigationextension_popup_menu(void* self, void* global, void* ite
 /// @param self KParts__NavigationExtension*
 /// @param global QPoint*
 /// @param url QUrl*
+///
 void k_parts__navigationextension_popup_menu2(void* self, void* global, void* url);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#selectionInfo)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param items KFileItemList*
+///
 void k_parts__navigationextension_selection_info(void* self, void* items);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#mouseOverInfo)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param item KFileItem*
+///
 void k_parts__navigationextension_mouse_over_info(void* self, void* item);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#addWebSideBar)
@@ -272,6 +312,7 @@ void k_parts__navigationextension_mouse_over_info(void* self, void* item);
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
 /// @param name const char*
+///
 void k_parts__navigationextension_add_web_side_bar(void* self, void* url, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#moveTopLevelWidget)
@@ -279,6 +320,7 @@ void k_parts__navigationextension_add_web_side_bar(void* self, void* url, const 
 /// @param self KParts__NavigationExtension*
 /// @param x int
 /// @param y int
+///
 void k_parts__navigationextension_move_top_level_widget(void* self, int x, int y);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#resizeTopLevelWidget)
@@ -286,24 +328,28 @@ void k_parts__navigationextension_move_top_level_widget(void* self, int x, int y
 /// @param self KParts__NavigationExtension*
 /// @param w int
 /// @param h int
+///
 void k_parts__navigationextension_resize_top_level_widget(void* self, int w, int h);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#requestFocus)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param part KParts__ReadOnlyPart*
+///
 void k_parts__navigationextension_request_focus(void* self, void* part);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setPageSecurity)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param pageSecurity int
+///
 void k_parts__navigationextension_set_page_security(void* self, int pageSecurity);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#itemsRemoved)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param items KFileItemList*
+///
 void k_parts__navigationextension_items_removed(void* self, void* items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -312,6 +358,7 @@ void k_parts__navigationextension_items_removed(void* self, void* items);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_parts__navigationextension_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -321,6 +368,7 @@ const char* k_parts__navigationextension_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_parts__navigationextension_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequest)
@@ -328,6 +376,7 @@ const char* k_parts__navigationextension_tr3(const char* s, const char* c, int n
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
 /// @param arguments KParts__OpenUrlArguments*
+///
 void k_parts__navigationextension_open_url_request2(void* self, void* url, void* arguments);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -336,6 +385,7 @@ void k_parts__navigationextension_open_url_request2(void* self, void* url, void*
 /// @param global QPoint*
 /// @param items KFileItemList*
 /// @param arguments KParts__OpenUrlArguments*
+///
 void k_parts__navigationextension_popup_menu3(void* self, void* global, void* items, void* arguments);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -345,6 +395,7 @@ void k_parts__navigationextension_popup_menu3(void* self, void* global, void* it
 /// @param items KFileItemList*
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
+///
 void k_parts__navigationextension_popup_menu4(void* self, void* global, void* items, void* arguments, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -355,6 +406,7 @@ void k_parts__navigationextension_popup_menu4(void* self, void* global, void* it
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
 /// @param actionGroups libqt_map /* of const char* to QAction* */
+///
 void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map /* of const char* to QAction* */ actionGroups);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -363,6 +415,7 @@ void k_parts__navigationextension_popup_menu5(void* self, void* global, void* it
 /// @param global QPoint*
 /// @param url QUrl*
 /// @param mode mode_t
+///
 void k_parts__navigationextension_popup_menu32(void* self, void* global, void* url, mode_t mode);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -372,6 +425,7 @@ void k_parts__navigationextension_popup_menu32(void* self, void* global, void* u
 /// @param url QUrl*
 /// @param mode mode_t
 /// @param arguments KParts__OpenUrlArguments*
+///
 void k_parts__navigationextension_popup_menu42(void* self, void* global, void* url, mode_t mode, void* arguments);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -382,6 +436,7 @@ void k_parts__navigationextension_popup_menu42(void* self, void* global, void* u
 /// @param mode mode_t
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
+///
 void k_parts__navigationextension_popup_menu52(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
@@ -393,6 +448,7 @@ void k_parts__navigationextension_popup_menu52(void* self, void* global, void* u
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
 /// @param actionGroups libqt_map /* of const char* to QAction* */
+///
 void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map /* of const char* to QAction* */ actionGroups);
 
 /// Inherited from QObject
@@ -402,6 +458,7 @@ void k_parts__navigationextension_popup_menu6(void* self, void* global, void* ur
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KParts__NavigationExtension*
+///
 const char* k_parts__navigationextension_object_name(void* self);
 
 /// Inherited from QObject
@@ -410,6 +467,7 @@ const char* k_parts__navigationextension_object_name(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param name char*
+///
 void k_parts__navigationextension_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -417,6 +475,7 @@ void k_parts__navigationextension_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KParts__NavigationExtension*
+///
 bool k_parts__navigationextension_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -424,6 +483,7 @@ bool k_parts__navigationextension_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KParts__NavigationExtension*
+///
 bool k_parts__navigationextension_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -431,6 +491,7 @@ bool k_parts__navigationextension_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KParts__NavigationExtension*
+///
 bool k_parts__navigationextension_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -438,6 +499,7 @@ bool k_parts__navigationextension_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KParts__NavigationExtension*
+///
 bool k_parts__navigationextension_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -446,6 +508,7 @@ bool k_parts__navigationextension_signals_blocked(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param b bool
+///
 bool k_parts__navigationextension_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -453,6 +516,7 @@ bool k_parts__navigationextension_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KParts__NavigationExtension*
+///
 QThread* k_parts__navigationextension_thread(void* self);
 
 /// Inherited from QObject
@@ -461,6 +525,7 @@ QThread* k_parts__navigationextension_thread(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param thread QThread*
+///
 bool k_parts__navigationextension_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -469,6 +534,7 @@ bool k_parts__navigationextension_move_to_thread(void* self, void* thread);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param interval int
+///
 int32_t k_parts__navigationextension_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -477,6 +543,7 @@ int32_t k_parts__navigationextension_start_timer(void* self, int interval);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param id int
+///
 void k_parts__navigationextension_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -485,6 +552,7 @@ void k_parts__navigationextension_kill_timer(void* self, int id);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param id enum Qt__TimerId
+///
 void k_parts__navigationextension_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -492,6 +560,7 @@ void k_parts__navigationextension_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KParts__NavigationExtension*
+///
 libqt_list /* of QObject* */ k_parts__navigationextension_children(void* self);
 
 /// Inherited from QObject
@@ -500,6 +569,7 @@ libqt_list /* of QObject* */ k_parts__navigationextension_children(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param parent QObject*
+///
 void k_parts__navigationextension_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -508,6 +578,7 @@ void k_parts__navigationextension_set_parent(void* self, void* parent);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param filterObj QObject*
+///
 void k_parts__navigationextension_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -516,6 +587,7 @@ void k_parts__navigationextension_install_event_filter(void* self, void* filterO
 ///
 /// @param self KParts__NavigationExtension*
 /// @param obj QObject*
+///
 void k_parts__navigationextension_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -526,6 +598,7 @@ void k_parts__navigationextension_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_parts__navigationextension_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -536,6 +609,7 @@ QMetaObject__Connection* k_parts__navigationextension_connect(void* sender, void
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_parts__navigationextension_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -546,6 +620,7 @@ QMetaObject__Connection* k_parts__navigationextension_connect2(void* self, void*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_parts__navigationextension_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -553,6 +628,7 @@ bool k_parts__navigationextension_disconnect(void* sender, void* signal, void* r
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_parts__navigationextension_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -560,6 +636,7 @@ bool k_parts__navigationextension_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KParts__NavigationExtension*
+///
 void k_parts__navigationextension_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -567,6 +644,7 @@ void k_parts__navigationextension_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KParts__NavigationExtension*
+///
 void k_parts__navigationextension_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -576,6 +654,7 @@ void k_parts__navigationextension_dump_object_info(void* self);
 /// @param self KParts__NavigationExtension*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_parts__navigationextension_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -584,6 +663,7 @@ bool k_parts__navigationextension_set_property(void* self, const char* name, voi
 ///
 /// @param self KParts__NavigationExtension*
 /// @param name const char*
+///
 QVariant* k_parts__navigationextension_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -593,6 +673,7 @@ QVariant* k_parts__navigationextension_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KParts__NavigationExtension*
+///
 const char** k_parts__navigationextension_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -600,6 +681,7 @@ const char** k_parts__navigationextension_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__NavigationExtension*
+///
 QBindingStorage* k_parts__navigationextension_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -607,6 +689,7 @@ QBindingStorage* k_parts__navigationextension_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KParts__NavigationExtension*
+///
 const QBindingStorage* k_parts__navigationextension_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -614,6 +697,7 @@ const QBindingStorage* k_parts__navigationextension_binding_storage2(void* self)
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KParts__NavigationExtension*
+///
 void k_parts__navigationextension_destroyed(void* self);
 
 /// Inherited from QObject
@@ -622,6 +706,7 @@ void k_parts__navigationextension_destroyed(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self)
+///
 void k_parts__navigationextension_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -629,6 +714,7 @@ void k_parts__navigationextension_on_destroyed(void* self, void (*callback)(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KParts__NavigationExtension*
+///
 QObject* k_parts__navigationextension_parent(void* self);
 
 /// Inherited from QObject
@@ -637,6 +723,7 @@ QObject* k_parts__navigationextension_parent(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param classname const char*
+///
 bool k_parts__navigationextension_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -644,6 +731,7 @@ bool k_parts__navigationextension_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KParts__NavigationExtension*
+///
 void k_parts__navigationextension_delete_later(void* self);
 
 /// Inherited from QObject
@@ -653,6 +741,7 @@ void k_parts__navigationextension_delete_later(void* self);
 /// @param self KParts__NavigationExtension*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_parts__navigationextension_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -662,6 +751,7 @@ bool k_parts__navigationextension_move_to_thread2(void* self, void* thread, void
 /// @param self KParts__NavigationExtension*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_parts__navigationextension_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -673,6 +763,7 @@ int32_t k_parts__navigationextension_start_timer22(void* self, int interval, int
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_parts__navigationextension_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -684,6 +775,7 @@ QMetaObject__Connection* k_parts__navigationextension_connect5(void* sender, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_parts__navigationextension_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -692,6 +784,7 @@ QMetaObject__Connection* k_parts__navigationextension_connect4(void* self, void*
 ///
 /// @param self KParts__NavigationExtension*
 /// @param param1 QObject*
+///
 void k_parts__navigationextension_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -700,6 +793,7 @@ void k_parts__navigationextension_destroyed1(void* self, void* param1);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QObject* param1)
+///
 void k_parts__navigationextension_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -710,6 +804,7 @@ void k_parts__navigationextension_on_destroyed1(void* self, void (*callback)(voi
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QEvent*
+///
 bool k_parts__navigationextension_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -720,6 +815,7 @@ bool k_parts__navigationextension_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QEvent*
+///
 bool k_parts__navigationextension_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -730,6 +826,7 @@ bool k_parts__navigationextension_qbase_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback bool func(KParts__NavigationExtension* self, QEvent* event)
+///
 void k_parts__navigationextension_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -741,6 +838,7 @@ void k_parts__navigationextension_on_event(void* self, bool (*callback)(void*, v
 /// @param self KParts__NavigationExtension*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_parts__navigationextension_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -752,6 +850,7 @@ bool k_parts__navigationextension_event_filter(void* self, void* watched, void* 
 /// @param self KParts__NavigationExtension*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_parts__navigationextension_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -762,6 +861,7 @@ bool k_parts__navigationextension_qbase_event_filter(void* self, void* watched, 
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback bool func(KParts__NavigationExtension* self, QObject* watched, QEvent* event)
+///
 void k_parts__navigationextension_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -772,6 +872,7 @@ void k_parts__navigationextension_on_event_filter(void* self, bool (*callback)(v
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QTimerEvent*
+///
 void k_parts__navigationextension_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -782,6 +883,7 @@ void k_parts__navigationextension_timer_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QTimerEvent*
+///
 void k_parts__navigationextension_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -792,6 +894,7 @@ void k_parts__navigationextension_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QTimerEvent* event)
+///
 void k_parts__navigationextension_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -802,6 +905,7 @@ void k_parts__navigationextension_on_timer_event(void* self, void (*callback)(vo
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QChildEvent*
+///
 void k_parts__navigationextension_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -812,6 +916,7 @@ void k_parts__navigationextension_child_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QChildEvent*
+///
 void k_parts__navigationextension_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -822,6 +927,7 @@ void k_parts__navigationextension_qbase_child_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QChildEvent* event)
+///
 void k_parts__navigationextension_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -832,6 +938,7 @@ void k_parts__navigationextension_on_child_event(void* self, void (*callback)(vo
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QEvent*
+///
 void k_parts__navigationextension_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -842,6 +949,7 @@ void k_parts__navigationextension_custom_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param event QEvent*
+///
 void k_parts__navigationextension_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -852,6 +960,7 @@ void k_parts__navigationextension_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QEvent* event)
+///
 void k_parts__navigationextension_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -862,6 +971,7 @@ void k_parts__navigationextension_on_custom_event(void* self, void (*callback)(v
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal QMetaMethod*
+///
 void k_parts__navigationextension_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -872,6 +982,7 @@ void k_parts__navigationextension_connect_notify(void* self, void* signal);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal QMetaMethod*
+///
 void k_parts__navigationextension_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -882,6 +993,7 @@ void k_parts__navigationextension_qbase_connect_notify(void* self, void* signal)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QMetaMethod* signal)
+///
 void k_parts__navigationextension_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -892,6 +1004,7 @@ void k_parts__navigationextension_on_connect_notify(void* self, void (*callback)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal QMetaMethod*
+///
 void k_parts__navigationextension_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -902,6 +1015,7 @@ void k_parts__navigationextension_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal QMetaMethod*
+///
 void k_parts__navigationextension_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -912,6 +1026,7 @@ void k_parts__navigationextension_qbase_disconnect_notify(void* self, void* sign
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, QMetaMethod* signal)
+///
 void k_parts__navigationextension_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -921,6 +1036,7 @@ void k_parts__navigationextension_on_disconnect_notify(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__NavigationExtension*
+///
 QObject* k_parts__navigationextension_sender(void* self);
 
 /// Inherited from QObject
@@ -930,6 +1046,7 @@ QObject* k_parts__navigationextension_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__NavigationExtension*
+///
 QObject* k_parts__navigationextension_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -940,6 +1057,7 @@ QObject* k_parts__navigationextension_qbase_sender(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback QObject* func()
+///
 void k_parts__navigationextension_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -949,6 +1067,7 @@ void k_parts__navigationextension_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__NavigationExtension*
+///
 int32_t k_parts__navigationextension_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -958,6 +1077,7 @@ int32_t k_parts__navigationextension_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__NavigationExtension*
+///
 int32_t k_parts__navigationextension_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -968,6 +1088,7 @@ int32_t k_parts__navigationextension_qbase_sender_signal_index(void* self);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback int32_t func()
+///
 void k_parts__navigationextension_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -978,6 +1099,7 @@ void k_parts__navigationextension_on_sender_signal_index(void* self, int32_t (*c
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal const char*
+///
 int32_t k_parts__navigationextension_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -988,6 +1110,7 @@ int32_t k_parts__navigationextension_receivers(void* self, const char* signal);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal const char*
+///
 int32_t k_parts__navigationextension_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -998,6 +1121,7 @@ int32_t k_parts__navigationextension_qbase_receivers(void* self, const char* sig
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback int32_t func(KParts__NavigationExtension* self, const char* signal)
+///
 void k_parts__navigationextension_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1008,6 +1132,7 @@ void k_parts__navigationextension_on_receivers(void* self, int32_t (*callback)(v
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal QMetaMethod*
+///
 bool k_parts__navigationextension_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1018,6 +1143,7 @@ bool k_parts__navigationextension_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KParts__NavigationExtension*
 /// @param signal QMetaMethod*
+///
 bool k_parts__navigationextension_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1028,6 +1154,7 @@ bool k_parts__navigationextension_qbase_is_signal_connected(void* self, void* si
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback bool func(KParts__NavigationExtension* self, QMetaMethod* signal)
+///
 void k_parts__navigationextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1038,14 +1165,16 @@ void k_parts__navigationextension_on_is_signal_connected(void* self, bool (*call
 ///
 /// @param self KParts__NavigationExtension*
 /// @param callback void func(KParts__NavigationExtension* self, const char* objectName)
+///
 void k_parts__navigationextension_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
 ///
 /// @param self KParts__NavigationExtension*
+///
 void k_parts__navigationextension_delete(void* self);
 
-/// https://api.kde.org/kparts-navigationextension.html#types
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#public-types)
 
 typedef enum {
     KPARTS_NAVIGATIONEXTENSION_POPUPFLAG_DEFAULTPOPUPITEMS = 0,

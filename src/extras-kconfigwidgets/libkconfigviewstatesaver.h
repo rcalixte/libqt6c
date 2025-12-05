@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kconfigviewstatesaver.html
+/// [Upstream resources](https://api.kde.org/kconfigviewstatesaver.html)
 
 /// k_configviewstatesaver_new constructs a new KConfigViewStateSaver object.
 ///
 KConfigViewStateSaver* k_configviewstatesaver_new();
 
+/// [Upstream resources](https://api.kde.org/kconfigviewstatesaver.html)
+
 /// k_configviewstatesaver_new2 constructs a new KConfigViewStateSaver object.
 ///
 /// @param parent QObject*
+///
 KConfigViewStateSaver* k_configviewstatesaver_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KConfigViewStateSaver*
+///
 const QMetaObject* k_configviewstatesaver_meta_object(void* self);
 
 /// @param self KConfigViewStateSaver*
 /// @param param1 const char*
+///
 void* k_configviewstatesaver_metacast(void* self, const char* param1);
 
 /// @param self KConfigViewStateSaver*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_configviewstatesaver_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback int32_t func(KConfigViewStateSaver* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_configviewstatesaver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void k_configviewstatesaver_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_configviewstatesaver_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,18 +64,21 @@ int32_t k_configviewstatesaver_qbase_metacall(void* self, int32_t param1, int pa
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_configviewstatesaver_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kconfigviewstatesaver.html#saveState)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param configGroup KConfigGroup*
+///
 void k_configviewstatesaver_save_state(void* self, void* configGroup);
 
 /// [Upstream resources](https://api.kde.org/kconfigviewstatesaver.html#restoreState)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param configGroup KConfigGroup*
+///
 void k_configviewstatesaver_restore_state(void* self, void* configGroup);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -76,6 +87,7 @@ void k_configviewstatesaver_restore_state(void* self, void* configGroup);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_configviewstatesaver_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -85,6 +97,7 @@ const char* k_configviewstatesaver_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_configviewstatesaver_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KViewStateSerializer
@@ -92,6 +105,7 @@ const char* k_configviewstatesaver_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#view)
 ///
 /// @param self KConfigViewStateSaver*
+///
 QAbstractItemView* k_configviewstatesaver_view(void* self);
 
 /// Inherited from KViewStateSerializer
@@ -100,6 +114,7 @@ QAbstractItemView* k_configviewstatesaver_view(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param view QAbstractItemView*
+///
 void k_configviewstatesaver_set_view(void* self, void* view);
 
 /// Inherited from KViewStateSerializer
@@ -107,6 +122,7 @@ void k_configviewstatesaver_set_view(void* self, void* view);
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#selectionModel)
 ///
 /// @param self KConfigViewStateSaver*
+///
 QItemSelectionModel* k_configviewstatesaver_selection_model(void* self);
 
 /// Inherited from KViewStateSerializer
@@ -115,6 +131,7 @@ QItemSelectionModel* k_configviewstatesaver_selection_model(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param selectionModel QItemSelectionModel*
+///
 void k_configviewstatesaver_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from KViewStateSerializer
@@ -124,6 +141,7 @@ void k_configviewstatesaver_set_selection_model(void* self, void* selectionModel
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigViewStateSaver*
+///
 const char** k_configviewstatesaver_selection_keys(void* self);
 
 /// Inherited from KViewStateSerializer
@@ -133,6 +151,7 @@ const char** k_configviewstatesaver_selection_keys(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigViewStateSaver*
+///
 const char** k_configviewstatesaver_expansion_keys(void* self);
 
 /// Inherited from KViewStateSerializer
@@ -142,6 +161,7 @@ const char** k_configviewstatesaver_expansion_keys(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigViewStateSaver*
+///
 const char* k_configviewstatesaver_current_index_key(void* self);
 
 /// Inherited from KViewStateSerializer
@@ -149,6 +169,7 @@ const char* k_configviewstatesaver_current_index_key(void* self);
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#scrollState)
 ///
 /// @param self KConfigViewStateSaver*
+///
 libqt_pair /* tuple of int and int */ k_configviewstatesaver_scroll_state(void* self);
 
 /// Inherited from KViewStateSerializer
@@ -157,6 +178,7 @@ libqt_pair /* tuple of int and int */ k_configviewstatesaver_scroll_state(void* 
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexStrings const char**
+///
 void k_configviewstatesaver_restore_selection(void* self, const char* indexStrings[static 1]);
 
 /// Inherited from KViewStateSerializer
@@ -165,6 +187,7 @@ void k_configviewstatesaver_restore_selection(void* self, const char* indexStrin
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexString const char*
+///
 void k_configviewstatesaver_restore_current_item(void* self, const char* indexString);
 
 /// Inherited from KViewStateSerializer
@@ -173,6 +196,7 @@ void k_configviewstatesaver_restore_current_item(void* self, const char* indexSt
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexStrings const char**
+///
 void k_configviewstatesaver_restore_expanded(void* self, const char* indexStrings[static 1]);
 
 /// Inherited from KViewStateSerializer
@@ -182,6 +206,7 @@ void k_configviewstatesaver_restore_expanded(void* self, const char* indexString
 /// @param self KConfigViewStateSaver*
 /// @param verticalScoll int
 /// @param horizontalScroll int
+///
 void k_configviewstatesaver_restore_scroll_state(void* self, int verticalScoll, int horizontalScroll);
 
 /// Inherited from QObject
@@ -191,6 +216,7 @@ void k_configviewstatesaver_restore_scroll_state(void* self, int verticalScoll, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigViewStateSaver*
+///
 const char* k_configviewstatesaver_object_name(void* self);
 
 /// Inherited from QObject
@@ -199,6 +225,7 @@ const char* k_configviewstatesaver_object_name(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param name char*
+///
 void k_configviewstatesaver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -206,6 +233,7 @@ void k_configviewstatesaver_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KConfigViewStateSaver*
+///
 bool k_configviewstatesaver_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -213,6 +241,7 @@ bool k_configviewstatesaver_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KConfigViewStateSaver*
+///
 bool k_configviewstatesaver_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -220,6 +249,7 @@ bool k_configviewstatesaver_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KConfigViewStateSaver*
+///
 bool k_configviewstatesaver_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -227,6 +257,7 @@ bool k_configviewstatesaver_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KConfigViewStateSaver*
+///
 bool k_configviewstatesaver_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -235,6 +266,7 @@ bool k_configviewstatesaver_signals_blocked(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param b bool
+///
 bool k_configviewstatesaver_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -242,6 +274,7 @@ bool k_configviewstatesaver_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KConfigViewStateSaver*
+///
 QThread* k_configviewstatesaver_thread(void* self);
 
 /// Inherited from QObject
@@ -250,6 +283,7 @@ QThread* k_configviewstatesaver_thread(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param thread QThread*
+///
 bool k_configviewstatesaver_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -258,6 +292,7 @@ bool k_configviewstatesaver_move_to_thread(void* self, void* thread);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param interval int
+///
 int32_t k_configviewstatesaver_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -266,6 +301,7 @@ int32_t k_configviewstatesaver_start_timer(void* self, int interval);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param id int
+///
 void k_configviewstatesaver_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -274,6 +310,7 @@ void k_configviewstatesaver_kill_timer(void* self, int id);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param id enum Qt__TimerId
+///
 void k_configviewstatesaver_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -281,6 +318,7 @@ void k_configviewstatesaver_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KConfigViewStateSaver*
+///
 libqt_list /* of QObject* */ k_configviewstatesaver_children(void* self);
 
 /// Inherited from QObject
@@ -289,6 +327,7 @@ libqt_list /* of QObject* */ k_configviewstatesaver_children(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param parent QObject*
+///
 void k_configviewstatesaver_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -297,6 +336,7 @@ void k_configviewstatesaver_set_parent(void* self, void* parent);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param filterObj QObject*
+///
 void k_configviewstatesaver_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -305,6 +345,7 @@ void k_configviewstatesaver_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param obj QObject*
+///
 void k_configviewstatesaver_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -315,6 +356,7 @@ void k_configviewstatesaver_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_configviewstatesaver_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -325,6 +367,7 @@ QMetaObject__Connection* k_configviewstatesaver_connect(void* sender, void* sign
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_configviewstatesaver_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -335,6 +378,7 @@ QMetaObject__Connection* k_configviewstatesaver_connect2(void* self, void* sende
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_configviewstatesaver_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -342,6 +386,7 @@ bool k_configviewstatesaver_disconnect(void* sender, void* signal, void* receive
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_configviewstatesaver_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -349,6 +394,7 @@ bool k_configviewstatesaver_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KConfigViewStateSaver*
+///
 void k_configviewstatesaver_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -356,6 +402,7 @@ void k_configviewstatesaver_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KConfigViewStateSaver*
+///
 void k_configviewstatesaver_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -365,6 +412,7 @@ void k_configviewstatesaver_dump_object_info(void* self);
 /// @param self KConfigViewStateSaver*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_configviewstatesaver_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -373,6 +421,7 @@ bool k_configviewstatesaver_set_property(void* self, const char* name, void* val
 ///
 /// @param self KConfigViewStateSaver*
 /// @param name const char*
+///
 QVariant* k_configviewstatesaver_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -382,6 +431,7 @@ QVariant* k_configviewstatesaver_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigViewStateSaver*
+///
 const char** k_configviewstatesaver_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -389,6 +439,7 @@ const char** k_configviewstatesaver_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KConfigViewStateSaver*
+///
 QBindingStorage* k_configviewstatesaver_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -396,6 +447,7 @@ QBindingStorage* k_configviewstatesaver_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KConfigViewStateSaver*
+///
 const QBindingStorage* k_configviewstatesaver_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -403,6 +455,7 @@ const QBindingStorage* k_configviewstatesaver_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigViewStateSaver*
+///
 void k_configviewstatesaver_destroyed(void* self);
 
 /// Inherited from QObject
@@ -411,6 +464,7 @@ void k_configviewstatesaver_destroyed(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self)
+///
 void k_configviewstatesaver_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -418,6 +472,7 @@ void k_configviewstatesaver_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KConfigViewStateSaver*
+///
 QObject* k_configviewstatesaver_parent(void* self);
 
 /// Inherited from QObject
@@ -426,6 +481,7 @@ QObject* k_configviewstatesaver_parent(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param classname const char*
+///
 bool k_configviewstatesaver_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -433,6 +489,7 @@ bool k_configviewstatesaver_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KConfigViewStateSaver*
+///
 void k_configviewstatesaver_delete_later(void* self);
 
 /// Inherited from QObject
@@ -442,6 +499,7 @@ void k_configviewstatesaver_delete_later(void* self);
 /// @param self KConfigViewStateSaver*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_configviewstatesaver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -451,6 +509,7 @@ bool k_configviewstatesaver_move_to_thread2(void* self, void* thread, void* para
 /// @param self KConfigViewStateSaver*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_configviewstatesaver_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -462,6 +521,7 @@ int32_t k_configviewstatesaver_start_timer22(void* self, int interval, int32_t t
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_configviewstatesaver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -473,6 +533,7 @@ QMetaObject__Connection* k_configviewstatesaver_connect5(void* sender, void* sig
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_configviewstatesaver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -481,6 +542,7 @@ QMetaObject__Connection* k_configviewstatesaver_connect4(void* self, void* sende
 ///
 /// @param self KConfigViewStateSaver*
 /// @param param1 QObject*
+///
 void k_configviewstatesaver_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -489,6 +551,7 @@ void k_configviewstatesaver_destroyed1(void* self, void* param1);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self, QObject* param1)
+///
 void k_configviewstatesaver_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KViewStateSerializer
@@ -500,6 +563,7 @@ void k_configviewstatesaver_on_destroyed1(void* self, void (*callback)(void*, vo
 /// @param self KConfigViewStateSaver*
 /// @param model QAbstractItemModel*
 /// @param key const char*
+///
 QModelIndex* k_configviewstatesaver_index_from_config_string(void* self, void* model, const char* key);
 
 /// Inherited from KViewStateSerializer
@@ -511,6 +575,7 @@ QModelIndex* k_configviewstatesaver_index_from_config_string(void* self, void* m
 /// @param self KConfigViewStateSaver*
 /// @param model QAbstractItemModel*
 /// @param key const char*
+///
 QModelIndex* k_configviewstatesaver_qbase_index_from_config_string(void* self, void* model, const char* key);
 
 /// Inherited from KViewStateSerializer
@@ -521,6 +586,7 @@ QModelIndex* k_configviewstatesaver_qbase_index_from_config_string(void* self, v
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback QModelIndex* func(KConfigViewStateSaver* self, QAbstractItemModel* model, const char* key)
+///
 void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex* (*callback)(void*, void*, const char*));
 
 /// Inherited from KViewStateSerializer
@@ -533,6 +599,7 @@ void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex*
 ///
 /// @param self KConfigViewStateSaver*
 /// @param index QModelIndex*
+///
 const char* k_configviewstatesaver_index_to_config_string(void* self, void* index);
 
 /// Inherited from KViewStateSerializer
@@ -545,6 +612,7 @@ const char* k_configviewstatesaver_index_to_config_string(void* self, void* inde
 ///
 /// @param self KConfigViewStateSaver*
 /// @param index QModelIndex*
+///
 const char* k_configviewstatesaver_qbase_index_to_config_string(void* self, void* index);
 
 /// Inherited from KViewStateSerializer
@@ -555,6 +623,7 @@ const char* k_configviewstatesaver_qbase_index_to_config_string(void* self, void
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback const char* func(KConfigViewStateSaver* self, QModelIndex* index)
+///
 void k_configviewstatesaver_on_index_to_config_string(void* self, const char* (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -565,6 +634,7 @@ void k_configviewstatesaver_on_index_to_config_string(void* self, const char* (*
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QEvent*
+///
 bool k_configviewstatesaver_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -575,6 +645,7 @@ bool k_configviewstatesaver_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QEvent*
+///
 bool k_configviewstatesaver_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -585,6 +656,7 @@ bool k_configviewstatesaver_qbase_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback bool func(KConfigViewStateSaver* self, QEvent* event)
+///
 void k_configviewstatesaver_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -596,6 +668,7 @@ void k_configviewstatesaver_on_event(void* self, bool (*callback)(void*, void*))
 /// @param self KConfigViewStateSaver*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_configviewstatesaver_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -607,6 +680,7 @@ bool k_configviewstatesaver_event_filter(void* self, void* watched, void* event)
 /// @param self KConfigViewStateSaver*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_configviewstatesaver_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -617,6 +691,7 @@ bool k_configviewstatesaver_qbase_event_filter(void* self, void* watched, void* 
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback bool func(KConfigViewStateSaver* self, QObject* watched, QEvent* event)
+///
 void k_configviewstatesaver_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -627,6 +702,7 @@ void k_configviewstatesaver_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QTimerEvent*
+///
 void k_configviewstatesaver_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -637,6 +713,7 @@ void k_configviewstatesaver_timer_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QTimerEvent*
+///
 void k_configviewstatesaver_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -647,6 +724,7 @@ void k_configviewstatesaver_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self, QTimerEvent* event)
+///
 void k_configviewstatesaver_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -657,6 +735,7 @@ void k_configviewstatesaver_on_timer_event(void* self, void (*callback)(void*, v
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QChildEvent*
+///
 void k_configviewstatesaver_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -667,6 +746,7 @@ void k_configviewstatesaver_child_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QChildEvent*
+///
 void k_configviewstatesaver_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -677,6 +757,7 @@ void k_configviewstatesaver_qbase_child_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self, QChildEvent* event)
+///
 void k_configviewstatesaver_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -687,6 +768,7 @@ void k_configviewstatesaver_on_child_event(void* self, void (*callback)(void*, v
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QEvent*
+///
 void k_configviewstatesaver_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -697,6 +779,7 @@ void k_configviewstatesaver_custom_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param event QEvent*
+///
 void k_configviewstatesaver_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -707,6 +790,7 @@ void k_configviewstatesaver_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self, QEvent* event)
+///
 void k_configviewstatesaver_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -717,6 +801,7 @@ void k_configviewstatesaver_on_custom_event(void* self, void (*callback)(void*, 
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal QMetaMethod*
+///
 void k_configviewstatesaver_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -727,6 +812,7 @@ void k_configviewstatesaver_connect_notify(void* self, void* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal QMetaMethod*
+///
 void k_configviewstatesaver_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -737,6 +823,7 @@ void k_configviewstatesaver_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self, QMetaMethod* signal)
+///
 void k_configviewstatesaver_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -747,6 +834,7 @@ void k_configviewstatesaver_on_connect_notify(void* self, void (*callback)(void*
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal QMetaMethod*
+///
 void k_configviewstatesaver_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -757,6 +845,7 @@ void k_configviewstatesaver_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal QMetaMethod*
+///
 void k_configviewstatesaver_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -767,6 +856,7 @@ void k_configviewstatesaver_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self, QMetaMethod* signal)
+///
 void k_configviewstatesaver_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -776,6 +866,7 @@ void k_configviewstatesaver_on_disconnect_notify(void* self, void (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KConfigViewStateSaver*
+///
 QObject* k_configviewstatesaver_sender(void* self);
 
 /// Inherited from QObject
@@ -785,6 +876,7 @@ QObject* k_configviewstatesaver_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KConfigViewStateSaver*
+///
 QObject* k_configviewstatesaver_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -795,6 +887,7 @@ QObject* k_configviewstatesaver_qbase_sender(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback QObject* func()
+///
 void k_configviewstatesaver_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -804,6 +897,7 @@ void k_configviewstatesaver_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KConfigViewStateSaver*
+///
 int32_t k_configviewstatesaver_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -813,6 +907,7 @@ int32_t k_configviewstatesaver_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KConfigViewStateSaver*
+///
 int32_t k_configviewstatesaver_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -823,6 +918,7 @@ int32_t k_configviewstatesaver_qbase_sender_signal_index(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback int32_t func()
+///
 void k_configviewstatesaver_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -833,6 +929,7 @@ void k_configviewstatesaver_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal const char*
+///
 int32_t k_configviewstatesaver_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -843,6 +940,7 @@ int32_t k_configviewstatesaver_receivers(void* self, const char* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal const char*
+///
 int32_t k_configviewstatesaver_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -853,6 +951,7 @@ int32_t k_configviewstatesaver_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback int32_t func(KConfigViewStateSaver* self, const char* signal)
+///
 void k_configviewstatesaver_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -863,6 +962,7 @@ void k_configviewstatesaver_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal QMetaMethod*
+///
 bool k_configviewstatesaver_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -873,6 +973,7 @@ bool k_configviewstatesaver_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param signal QMetaMethod*
+///
 bool k_configviewstatesaver_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -883,6 +984,7 @@ bool k_configviewstatesaver_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback bool func(KConfigViewStateSaver* self, QMetaMethod* signal)
+///
 void k_configviewstatesaver_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -893,6 +995,7 @@ void k_configviewstatesaver_on_is_signal_connected(void* self, bool (*callback)(
 ///
 /// @param self KConfigViewStateSaver*
 /// @param callback void func(KConfigViewStateSaver* self, const char* objectName)
+///
 void k_configviewstatesaver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kconfigviewstatesaver.html#dtor.KConfigViewStateSaver)
@@ -900,6 +1003,7 @@ void k_configviewstatesaver_on_object_name_changed(void* self, void (*callback)(
 /// Delete this object from C++ memory.
 ///
 /// @param self KConfigViewStateSaver*
+///
 void k_configviewstatesaver_delete(void* self);
 
 #endif

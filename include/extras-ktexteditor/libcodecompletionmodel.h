@@ -11,32 +11,37 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ktexteditor-codecompletionmodel.html
+/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html)
 
 /// k_texteditor__codecompletionmodel_new constructs a new KTextEditor::CodeCompletionModel object.
 ///
 /// @param parent QObject*
+///
 KTextEditor__CodeCompletionModel* k_texteditor__codecompletionmodel_new(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 const QMetaObject* k_texteditor__codecompletionmodel_meta_object(void* self);
 
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param param1 const char*
+///
 void* k_texteditor__codecompletionmodel_metacast(void* self, const char* param1);
 
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_texteditor__codecompletionmodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func(KTextEditor__CodeCompletionModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_texteditor__codecompletionmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -45,6 +50,7 @@ void k_texteditor__codecompletionmodel_on_metacall(void* self, int32_t (*callbac
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_texteditor__codecompletionmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -52,12 +58,14 @@ int32_t k_texteditor__codecompletionmodel_qbase_metacall(void* self, int32_t par
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_texteditor__codecompletionmodel_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setRowCount)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param rowCount int
+///
 void k_texteditor__codecompletionmodel_set_row_count(void* self, int rowCount);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
@@ -66,6 +74,7 @@ void k_texteditor__codecompletionmodel_set_row_count(void* self, int rowCount);
 /// @param view KTextEditor__View*
 /// @param range KTextEditor__Range*
 /// @param invocationType enum KTextEditor__CodeCompletionModel__InvocationType
+///
 void k_texteditor__codecompletionmodel_completion_invoked(void* self, void* view, void* range, int32_t invocationType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
@@ -74,6 +83,7 @@ void k_texteditor__codecompletionmodel_completion_invoked(void* self, void* view
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, KTextEditor__View* view, KTextEditor__Range* range, enum KTextEditor__CodeCompletionModel__InvocationType invocationType)
+///
 void k_texteditor__codecompletionmodel_on_completion_invoked(void* self, void (*callback)(void*, void*, void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#completionInvoked)
@@ -84,6 +94,7 @@ void k_texteditor__codecompletionmodel_on_completion_invoked(void* self, void (*
 /// @param view KTextEditor__View*
 /// @param range KTextEditor__Range*
 /// @param invocationType enum KTextEditor__CodeCompletionModel__InvocationType
+///
 void k_texteditor__codecompletionmodel_qbase_completion_invoked(void* self, void* view, void* range, int32_t invocationType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
@@ -92,6 +103,7 @@ void k_texteditor__codecompletionmodel_qbase_completion_invoked(void* self, void
 /// @param view KTextEditor__View*
 /// @param word KTextEditor__Range*
 /// @param index QModelIndex*
+///
 void k_texteditor__codecompletionmodel_execute_completion_item(void* self, void* view, void* word, void* index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
@@ -100,6 +112,7 @@ void k_texteditor__codecompletionmodel_execute_completion_item(void* self, void*
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, KTextEditor__View* view, KTextEditor__Range* word, QModelIndex* index)
+///
 void k_texteditor__codecompletionmodel_on_execute_completion_item(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#executeCompletionItem)
@@ -110,12 +123,14 @@ void k_texteditor__codecompletionmodel_on_execute_completion_item(void* self, vo
 /// @param view KTextEditor__View*
 /// @param word KTextEditor__Range*
 /// @param index QModelIndex*
+///
 void k_texteditor__codecompletionmodel_qbase_execute_completion_item(void* self, void* view, void* word, void* index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 int32_t k_texteditor__codecompletionmodel_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
@@ -124,6 +139,7 @@ int32_t k_texteditor__codecompletionmodel_column_count(void* self, void* parent)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#columnCount)
@@ -132,6 +148,7 @@ void k_texteditor__codecompletionmodel_on_column_count(void* self, int32_t (*cal
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 int32_t k_texteditor__codecompletionmodel_qbase_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
@@ -140,6 +157,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_column_count(void* self, void* p
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
@@ -148,6 +166,7 @@ QModelIndex* k_texteditor__codecompletionmodel_index(void* self, int row, int co
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, int row, int column, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#index)
@@ -158,12 +177,14 @@ void k_texteditor__codecompletionmodel_on_index(void* self, QModelIndex* (*callb
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_item_data(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
@@ -172,6 +193,7 @@ libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_item_data(
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
 void k_texteditor__codecompletionmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#itemData)
@@ -180,12 +202,14 @@ void k_texteditor__codecompletionmodel_on_item_data(void* self, libqt_map /* of 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_qbase_item_data(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_parent(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
@@ -194,6 +218,7 @@ QModelIndex* k_texteditor__codecompletionmodel_parent(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
 void k_texteditor__codecompletionmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#parent)
@@ -202,12 +227,14 @@ void k_texteditor__codecompletionmodel_on_parent(void* self, QModelIndex* (*call
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_qbase_parent(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 int32_t k_texteditor__codecompletionmodel_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
@@ -216,6 +243,7 @@ int32_t k_texteditor__codecompletionmodel_row_count(void* self, void* parent);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#rowCount)
@@ -224,22 +252,26 @@ void k_texteditor__codecompletionmodel_on_row_count(void* self, int32_t (*callba
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 int32_t k_texteditor__codecompletionmodel_qbase_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroups)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 bool k_texteditor__codecompletionmodel_has_groups(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#waitForReset)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_wait_for_reset(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#waitForReset)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
+///
 void k_texteditor__codecompletionmodel_on_wait_for_reset(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroupsChanged)
@@ -247,18 +279,21 @@ void k_texteditor__codecompletionmodel_on_wait_for_reset(void* self, void (*call
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param model KTextEditor__CodeCompletionModel*
 /// @param hasGroups bool
+///
 void k_texteditor__codecompletionmodel_has_groups_changed(void* self, void* model, bool hasGroups);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#hasGroupsChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, KTextEditor__CodeCompletionModel* model, bool hasGroups)
+///
 void k_texteditor__codecompletionmodel_on_has_groups_changed(void* self, void (*callback)(void*, void*, bool));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param hasGroups bool
+///
 void k_texteditor__codecompletionmodel_set_has_groups(void* self, bool hasGroups);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
@@ -267,6 +302,7 @@ void k_texteditor__codecompletionmodel_set_has_groups(void* self, bool hasGroups
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, bool hasGroups)
+///
 void k_texteditor__codecompletionmodel_on_set_has_groups(void* self, void (*callback)(void*, bool));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodel.html#setHasGroups)
@@ -275,6 +311,7 @@ void k_texteditor__codecompletionmodel_on_set_has_groups(void* self, void (*call
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param hasGroups bool
+///
 void k_texteditor__codecompletionmodel_qbase_set_has_groups(void* self, bool hasGroups);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -283,6 +320,7 @@ void k_texteditor__codecompletionmodel_qbase_set_has_groups(void* self, bool has
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_texteditor__codecompletionmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -292,6 +330,7 @@ const char* k_texteditor__codecompletionmodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_texteditor__codecompletionmodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractItemModel
@@ -301,6 +340,7 @@ const char* k_texteditor__codecompletionmodel_tr3(const char* s, const char* c, 
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
 /// @param column int
+///
 bool k_texteditor__codecompletionmodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -309,6 +349,7 @@ bool k_texteditor__codecompletionmodel_has_index(void* self, int row, int column
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
+///
 bool k_texteditor__codecompletionmodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -317,6 +358,7 @@ bool k_texteditor__codecompletionmodel_insert_row(void* self, int row);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
+///
 bool k_texteditor__codecompletionmodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -325,6 +367,7 @@ bool k_texteditor__codecompletionmodel_insert_column(void* self, int column);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
+///
 bool k_texteditor__codecompletionmodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -333,6 +376,7 @@ bool k_texteditor__codecompletionmodel_remove_row(void* self, int row);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
+///
 bool k_texteditor__codecompletionmodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -344,6 +388,7 @@ bool k_texteditor__codecompletionmodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_texteditor__codecompletionmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -355,6 +400,7 @@ bool k_texteditor__codecompletionmodel_move_row(void* self, void* sourceParent, 
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_texteditor__codecompletionmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -363,6 +409,7 @@ bool k_texteditor__codecompletionmodel_move_column(void* self, void* sourceParen
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -372,6 +419,7 @@ bool k_texteditor__codecompletionmodel_check_index(void* self, void* index);
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void k_texteditor__codecompletionmodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -380,6 +428,7 @@ void k_texteditor__codecompletionmodel_data_changed(void* self, void* topLeft, v
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void k_texteditor__codecompletionmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -390,6 +439,7 @@ void k_texteditor__codecompletionmodel_on_data_changed(void* self, void (*callba
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -398,6 +448,7 @@ void k_texteditor__codecompletionmodel_header_data_changed(void* self, int32_t o
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -405,6 +456,7 @@ void k_texteditor__codecompletionmodel_on_header_data_changed(void* self, void (
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -413,6 +465,7 @@ void k_texteditor__codecompletionmodel_layout_changed(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
+///
 void k_texteditor__codecompletionmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -420,6 +473,7 @@ void k_texteditor__codecompletionmodel_on_layout_changed(void* self, void (*call
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -428,6 +482,7 @@ void k_texteditor__codecompletionmodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
+///
 void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -438,6 +493,7 @@ void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed(void* self,
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -447,6 +503,7 @@ bool k_texteditor__codecompletionmodel_has_index3(void* self, int row, int colum
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -456,6 +513,7 @@ bool k_texteditor__codecompletionmodel_insert_row2(void* self, int row, void* pa
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -465,6 +523,7 @@ bool k_texteditor__codecompletionmodel_insert_column2(void* self, int column, vo
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -474,6 +533,7 @@ bool k_texteditor__codecompletionmodel_remove_row2(void* self, int row, void* pa
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -483,6 +543,7 @@ bool k_texteditor__codecompletionmodel_remove_column2(void* self, int column, vo
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool k_texteditor__codecompletionmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -493,6 +554,7 @@ bool k_texteditor__codecompletionmodel_check_index2(void* self, void* index, int
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void k_texteditor__codecompletionmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -501,6 +563,7 @@ void k_texteditor__codecompletionmodel_data_changed3(void* self, void* topLeft, 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void k_texteditor__codecompletionmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -509,6 +572,7 @@ void k_texteditor__codecompletionmodel_on_data_changed3(void* self, void (*callb
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_texteditor__codecompletionmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -517,6 +581,7 @@ void k_texteditor__codecompletionmodel_layout_changed1(void* self, libqt_list pa
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents)
+///
 void k_texteditor__codecompletionmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -526,6 +591,7 @@ void k_texteditor__codecompletionmodel_on_layout_changed1(void* self, void (*cal
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_texteditor__codecompletionmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -534,6 +600,7 @@ void k_texteditor__codecompletionmodel_layout_changed2(void* self, libqt_list pa
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_texteditor__codecompletionmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -542,6 +609,7 @@ void k_texteditor__codecompletionmodel_on_layout_changed2(void* self, void (*cal
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_texteditor__codecompletionmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -550,6 +618,7 @@ void k_texteditor__codecompletionmodel_layout_about_to_be_changed1(void* self, l
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents)
+///
 void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -559,6 +628,7 @@ void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed1(void* self
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_texteditor__codecompletionmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -567,6 +637,7 @@ void k_texteditor__codecompletionmodel_layout_about_to_be_changed2(void* self, l
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -576,6 +647,7 @@ void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed2(void* self
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 const char* k_texteditor__codecompletionmodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -584,6 +656,7 @@ const char* k_texteditor__codecompletionmodel_object_name(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param name char*
+///
 void k_texteditor__codecompletionmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -591,6 +664,7 @@ void k_texteditor__codecompletionmodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 bool k_texteditor__codecompletionmodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -598,6 +672,7 @@ bool k_texteditor__codecompletionmodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 bool k_texteditor__codecompletionmodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -605,6 +680,7 @@ bool k_texteditor__codecompletionmodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 bool k_texteditor__codecompletionmodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -612,6 +688,7 @@ bool k_texteditor__codecompletionmodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 bool k_texteditor__codecompletionmodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -620,6 +697,7 @@ bool k_texteditor__codecompletionmodel_signals_blocked(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param b bool
+///
 bool k_texteditor__codecompletionmodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -627,6 +705,7 @@ bool k_texteditor__codecompletionmodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 QThread* k_texteditor__codecompletionmodel_thread(void* self);
 
 /// Inherited from QObject
@@ -635,6 +714,7 @@ QThread* k_texteditor__codecompletionmodel_thread(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param thread QThread*
+///
 bool k_texteditor__codecompletionmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -643,6 +723,7 @@ bool k_texteditor__codecompletionmodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param interval int
+///
 int32_t k_texteditor__codecompletionmodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -651,6 +732,7 @@ int32_t k_texteditor__codecompletionmodel_start_timer(void* self, int interval);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param id int
+///
 void k_texteditor__codecompletionmodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -659,6 +741,7 @@ void k_texteditor__codecompletionmodel_kill_timer(void* self, int id);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param id enum Qt__TimerId
+///
 void k_texteditor__codecompletionmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -666,6 +749,7 @@ void k_texteditor__codecompletionmodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 libqt_list /* of QObject* */ k_texteditor__codecompletionmodel_children(void* self);
 
 /// Inherited from QObject
@@ -674,6 +758,7 @@ libqt_list /* of QObject* */ k_texteditor__codecompletionmodel_children(void* se
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QObject*
+///
 void k_texteditor__codecompletionmodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -682,6 +767,7 @@ void k_texteditor__codecompletionmodel_set_parent(void* self, void* parent);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param filterObj QObject*
+///
 void k_texteditor__codecompletionmodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -690,6 +776,7 @@ void k_texteditor__codecompletionmodel_install_event_filter(void* self, void* fi
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param obj QObject*
+///
 void k_texteditor__codecompletionmodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -700,6 +787,7 @@ void k_texteditor__codecompletionmodel_remove_event_filter(void* self, void* obj
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_texteditor__codecompletionmodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -710,6 +798,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect(void* sender,
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_texteditor__codecompletionmodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -720,6 +809,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect2(void* self, 
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_texteditor__codecompletionmodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -727,6 +817,7 @@ bool k_texteditor__codecompletionmodel_disconnect(void* sender, void* signal, vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_texteditor__codecompletionmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -734,6 +825,7 @@ bool k_texteditor__codecompletionmodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -741,6 +833,7 @@ void k_texteditor__codecompletionmodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -750,6 +843,7 @@ void k_texteditor__codecompletionmodel_dump_object_info(void* self);
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_texteditor__codecompletionmodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -758,6 +852,7 @@ bool k_texteditor__codecompletionmodel_set_property(void* self, const char* name
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param name const char*
+///
 QVariant* k_texteditor__codecompletionmodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -767,6 +862,7 @@ QVariant* k_texteditor__codecompletionmodel_property(void* self, const char* nam
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 const char** k_texteditor__codecompletionmodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -774,6 +870,7 @@ const char** k_texteditor__codecompletionmodel_dynamic_property_names(void* self
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 QBindingStorage* k_texteditor__codecompletionmodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -781,6 +878,7 @@ QBindingStorage* k_texteditor__codecompletionmodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 const QBindingStorage* k_texteditor__codecompletionmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -788,6 +886,7 @@ const QBindingStorage* k_texteditor__codecompletionmodel_binding_storage2(void* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -796,6 +895,7 @@ void k_texteditor__codecompletionmodel_destroyed(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
+///
 void k_texteditor__codecompletionmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -804,6 +904,7 @@ void k_texteditor__codecompletionmodel_on_destroyed(void* self, void (*callback)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param classname const char*
+///
 bool k_texteditor__codecompletionmodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -811,6 +912,7 @@ bool k_texteditor__codecompletionmodel_inherits(void* self, const char* classnam
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -820,6 +922,7 @@ void k_texteditor__codecompletionmodel_delete_later(void* self);
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_texteditor__codecompletionmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -829,6 +932,7 @@ bool k_texteditor__codecompletionmodel_move_to_thread2(void* self, void* thread,
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_texteditor__codecompletionmodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -840,6 +944,7 @@ int32_t k_texteditor__codecompletionmodel_start_timer22(void* self, int interval
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_texteditor__codecompletionmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -851,6 +956,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect5(void* sender
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_texteditor__codecompletionmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -859,6 +965,7 @@ QMetaObject__Connection* k_texteditor__codecompletionmodel_connect4(void* self, 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param param1 QObject*
+///
 void k_texteditor__codecompletionmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -867,6 +974,7 @@ void k_texteditor__codecompletionmodel_destroyed1(void* self, void* param1);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QObject* param1)
+///
 void k_texteditor__codecompletionmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -879,6 +987,7 @@ void k_texteditor__codecompletionmodel_on_destroyed1(void* self, void (*callback
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -891,6 +1000,7 @@ QModelIndex* k_texteditor__codecompletionmodel_sibling(void* self, int row, int 
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -901,6 +1011,7 @@ QModelIndex* k_texteditor__codecompletionmodel_qbase_sibling(void* self, int row
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, int row, int column, QModelIndex* idx)
+///
 void k_texteditor__codecompletionmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -911,6 +1022,7 @@ void k_texteditor__codecompletionmodel_on_sibling(void* self, QModelIndex* (*cal
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -921,6 +1033,7 @@ bool k_texteditor__codecompletionmodel_has_children(void* self, void* parent);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -931,6 +1044,7 @@ bool k_texteditor__codecompletionmodel_qbase_has_children(void* self, void* pare
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -942,6 +1056,7 @@ void k_texteditor__codecompletionmodel_on_has_children(void* self, bool (*callba
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_texteditor__codecompletionmodel_data(void* self, void* index, int role);
 
 /// Inherited from QAbstractItemModel
@@ -953,6 +1068,7 @@ QVariant* k_texteditor__codecompletionmodel_data(void* self, void* index, int ro
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_texteditor__codecompletionmodel_qbase_data(void* self, void* index, int role);
 
 /// Inherited from QAbstractItemModel
@@ -963,6 +1079,7 @@ QVariant* k_texteditor__codecompletionmodel_qbase_data(void* self, void* index, 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QVariant* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index, int role)
+///
 void k_texteditor__codecompletionmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -975,6 +1092,7 @@ void k_texteditor__codecompletionmodel_on_data(void* self, QVariant* (*callback)
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_texteditor__codecompletionmodel_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -987,6 +1105,7 @@ bool k_texteditor__codecompletionmodel_set_data(void* self, void* index, void* v
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_texteditor__codecompletionmodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -997,6 +1116,7 @@ bool k_texteditor__codecompletionmodel_qbase_set_data(void* self, void* index, v
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* index, QVariant* value, int role)
+///
 void k_texteditor__codecompletionmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1009,6 +1129,7 @@ void k_texteditor__codecompletionmodel_on_set_data(void* self, bool (*callback)(
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_texteditor__codecompletionmodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1021,6 +1142,7 @@ QVariant* k_texteditor__codecompletionmodel_header_data(void* self, int section,
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_texteditor__codecompletionmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1031,6 +1153,7 @@ QVariant* k_texteditor__codecompletionmodel_qbase_header_data(void* self, int se
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QVariant* func(KTextEditor__CodeCompletionModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void k_texteditor__codecompletionmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -1044,6 +1167,7 @@ void k_texteditor__codecompletionmodel_on_header_data(void* self, QVariant* (*ca
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_texteditor__codecompletionmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1057,6 +1181,7 @@ bool k_texteditor__codecompletionmodel_set_header_data(void* self, int section, 
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_texteditor__codecompletionmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1067,6 +1192,7 @@ bool k_texteditor__codecompletionmodel_qbase_set_header_data(void* self, int sec
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void k_texteditor__codecompletionmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1078,6 +1204,7 @@ void k_texteditor__codecompletionmodel_on_set_header_data(void* self, bool (*cal
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_texteditor__codecompletionmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1089,6 +1216,7 @@ bool k_texteditor__codecompletionmodel_set_item_data(void* self, void* index, li
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_texteditor__codecompletionmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1099,6 +1227,7 @@ bool k_texteditor__codecompletionmodel_qbase_set_item_data(void* self, void* ind
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void k_texteditor__codecompletionmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1109,6 +1238,7 @@ void k_texteditor__codecompletionmodel_on_set_item_data(void* self, bool (*callb
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1119,6 +1249,7 @@ bool k_texteditor__codecompletionmodel_clear_item_data(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1129,6 +1260,7 @@ bool k_texteditor__codecompletionmodel_qbase_clear_item_data(void* self, void* i
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
 void k_texteditor__codecompletionmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1140,6 +1272,7 @@ void k_texteditor__codecompletionmodel_on_clear_item_data(void* self, bool (*cal
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 const char** k_texteditor__codecompletionmodel_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1151,6 +1284,7 @@ const char** k_texteditor__codecompletionmodel_mime_types(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 const char** k_texteditor__codecompletionmodel_qbase_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1161,6 +1295,7 @@ const char** k_texteditor__codecompletionmodel_qbase_mime_types(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback const char** func()
+///
 void k_texteditor__codecompletionmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1171,6 +1306,7 @@ void k_texteditor__codecompletionmodel_on_mime_types(void* self, const char** (*
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_texteditor__codecompletionmodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -1181,6 +1317,7 @@ QMimeData* k_texteditor__codecompletionmodel_mime_data(void* self, libqt_list in
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_texteditor__codecompletionmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -1191,6 +1328,7 @@ QMimeData* k_texteditor__codecompletionmodel_qbase_mime_data(void* self, libqt_l
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QMimeData* func(KTextEditor__CodeCompletionModel* self, QModelIndex** indexes)
+///
 void k_texteditor__codecompletionmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -1205,6 +1343,7 @@ void k_texteditor__codecompletionmodel_on_mime_data(void* self, QMimeData* (*cal
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1219,6 +1358,7 @@ bool k_texteditor__codecompletionmodel_can_drop_mime_data(void* self, void* data
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1229,6 +1369,7 @@ bool k_texteditor__codecompletionmodel_qbase_can_drop_mime_data(void* self, void
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1243,6 +1384,7 @@ void k_texteditor__codecompletionmodel_on_can_drop_mime_data(void* self, bool (*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1257,6 +1399,7 @@ bool k_texteditor__codecompletionmodel_drop_mime_data(void* self, void* data, in
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1267,6 +1410,7 @@ bool k_texteditor__codecompletionmodel_qbase_drop_mime_data(void* self, void* da
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1278,6 +1422,7 @@ void k_texteditor__codecompletionmodel_on_drop_mime_data(void* self, bool (*call
 /// @param self KTextEditor__CodeCompletionModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_texteditor__codecompletionmodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1289,6 +1434,7 @@ int32_t k_texteditor__codecompletionmodel_supported_drop_actions(void* self);
 /// @param self KTextEditor__CodeCompletionModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_texteditor__codecompletionmodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1299,6 +1445,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_supported_drop_actions(void* sel
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func()
+///
 void k_texteditor__codecompletionmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1310,6 +1457,7 @@ void k_texteditor__codecompletionmodel_on_supported_drop_actions(void* self, int
 /// @param self KTextEditor__CodeCompletionModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_texteditor__codecompletionmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1321,6 +1469,7 @@ int32_t k_texteditor__codecompletionmodel_supported_drag_actions(void* self);
 /// @param self KTextEditor__CodeCompletionModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_texteditor__codecompletionmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1331,6 +1480,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_supported_drag_actions(void* sel
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func()
+///
 void k_texteditor__codecompletionmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1343,6 +1493,7 @@ void k_texteditor__codecompletionmodel_on_supported_drag_actions(void* self, int
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1355,6 +1506,7 @@ bool k_texteditor__codecompletionmodel_insert_rows(void* self, int row, int coun
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1365,6 +1517,7 @@ bool k_texteditor__codecompletionmodel_qbase_insert_rows(void* self, int row, in
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, int row, int count, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1377,6 +1530,7 @@ void k_texteditor__codecompletionmodel_on_insert_rows(void* self, bool (*callbac
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1389,6 +1543,7 @@ bool k_texteditor__codecompletionmodel_insert_columns(void* self, int column, in
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1399,6 +1554,7 @@ bool k_texteditor__codecompletionmodel_qbase_insert_columns(void* self, int colu
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, int column, int count, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1411,6 +1567,7 @@ void k_texteditor__codecompletionmodel_on_insert_columns(void* self, bool (*call
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1423,6 +1580,7 @@ bool k_texteditor__codecompletionmodel_remove_rows(void* self, int row, int coun
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1433,6 +1591,7 @@ bool k_texteditor__codecompletionmodel_qbase_remove_rows(void* self, int row, in
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, int row, int count, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1445,6 +1604,7 @@ void k_texteditor__codecompletionmodel_on_remove_rows(void* self, bool (*callbac
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1457,6 +1617,7 @@ bool k_texteditor__codecompletionmodel_remove_columns(void* self, int column, in
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1467,6 +1628,7 @@ bool k_texteditor__codecompletionmodel_qbase_remove_columns(void* self, int colu
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, int column, int count, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1481,6 +1643,7 @@ void k_texteditor__codecompletionmodel_on_remove_columns(void* self, bool (*call
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_texteditor__codecompletionmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1495,6 +1658,7 @@ bool k_texteditor__codecompletionmodel_move_rows(void* self, void* sourceParent,
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_texteditor__codecompletionmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1505,6 +1669,7 @@ bool k_texteditor__codecompletionmodel_qbase_move_rows(void* self, void* sourceP
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_texteditor__codecompletionmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1519,6 +1684,7 @@ void k_texteditor__codecompletionmodel_on_move_rows(void* self, bool (*callback)
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_texteditor__codecompletionmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1533,6 +1699,7 @@ bool k_texteditor__codecompletionmodel_move_columns(void* self, void* sourcePare
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_texteditor__codecompletionmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1543,6 +1710,7 @@ bool k_texteditor__codecompletionmodel_qbase_move_columns(void* self, void* sour
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_texteditor__codecompletionmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1553,6 +1721,7 @@ void k_texteditor__codecompletionmodel_on_move_columns(void* self, bool (*callba
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 void k_texteditor__codecompletionmodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1563,6 +1732,7 @@ void k_texteditor__codecompletionmodel_fetch_more(void* self, void* parent);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 void k_texteditor__codecompletionmodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1573,6 +1743,7 @@ void k_texteditor__codecompletionmodel_qbase_fetch_more(void* self, void* parent
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1583,6 +1754,7 @@ void k_texteditor__codecompletionmodel_on_fetch_more(void* self, void (*callback
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1593,6 +1765,7 @@ bool k_texteditor__codecompletionmodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param parent QModelIndex*
+///
 bool k_texteditor__codecompletionmodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1603,6 +1776,7 @@ bool k_texteditor__codecompletionmodel_qbase_can_fetch_more(void* self, void* pa
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent)
+///
 void k_texteditor__codecompletionmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1615,6 +1789,7 @@ void k_texteditor__codecompletionmodel_on_can_fetch_more(void* self, bool (*call
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_texteditor__codecompletionmodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1627,6 +1802,7 @@ int32_t k_texteditor__codecompletionmodel_flags(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_texteditor__codecompletionmodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1637,6 +1813,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_flags(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
 void k_texteditor__codecompletionmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1648,6 +1825,7 @@ void k_texteditor__codecompletionmodel_on_flags(void* self, int32_t (*callback)(
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_texteditor__codecompletionmodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1659,6 +1837,7 @@ void k_texteditor__codecompletionmodel_sort(void* self, int column, int32_t orde
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_texteditor__codecompletionmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1669,6 +1848,7 @@ void k_texteditor__codecompletionmodel_qbase_sort(void* self, int column, int32_
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, int column, enum Qt__SortOrder order)
+///
 void k_texteditor__codecompletionmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1679,6 +1859,7 @@ void k_texteditor__codecompletionmodel_on_sort(void* self, void (*callback)(void
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1689,6 +1870,7 @@ QModelIndex* k_texteditor__codecompletionmodel_buddy(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_texteditor__codecompletionmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1699,6 +1881,7 @@ QModelIndex* k_texteditor__codecompletionmodel_qbase_buddy(void* self, void* ind
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
 void k_texteditor__codecompletionmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1713,6 +1896,7 @@ void k_texteditor__codecompletionmodel_on_buddy(void* self, QModelIndex* (*callb
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1727,6 +1911,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_match(void* s
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1737,6 +1922,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_match(v
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex** func(KTextEditor__CodeCompletionModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void k_texteditor__codecompletionmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1747,6 +1933,7 @@ void k_texteditor__codecompletionmodel_on_match(void* self, QModelIndex** (*call
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 QSize* k_texteditor__codecompletionmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1757,6 +1944,7 @@ QSize* k_texteditor__codecompletionmodel_span(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
+///
 QSize* k_texteditor__codecompletionmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1767,6 +1955,7 @@ QSize* k_texteditor__codecompletionmodel_qbase_span(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QSize* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
 void k_texteditor__codecompletionmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1776,6 +1965,7 @@ void k_texteditor__codecompletionmodel_on_span(void* self, QSize* (*callback)(vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1785,6 +1975,7 @@ libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_role_names(voi
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1795,6 +1986,7 @@ libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_qbase_role_nam
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void k_texteditor__codecompletionmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1806,6 +1998,7 @@ void k_texteditor__codecompletionmodel_on_role_names(void* self, libqt_map /* of
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_texteditor__codecompletionmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1817,6 +2010,7 @@ void k_texteditor__codecompletionmodel_multi_data(void* self, void* index, void*
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_texteditor__codecompletionmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1827,6 +2021,7 @@ void k_texteditor__codecompletionmodel_qbase_multi_data(void* self, void* index,
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void k_texteditor__codecompletionmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1836,6 +2031,7 @@ void k_texteditor__codecompletionmodel_on_multi_data(void* self, void (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 bool k_texteditor__codecompletionmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1845,6 +2041,7 @@ bool k_texteditor__codecompletionmodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 bool k_texteditor__codecompletionmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1855,6 +2052,7 @@ bool k_texteditor__codecompletionmodel_qbase_submit(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func()
+///
 void k_texteditor__codecompletionmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1864,6 +2062,7 @@ void k_texteditor__codecompletionmodel_on_submit(void* self, bool (*callback)())
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1873,6 +2072,7 @@ void k_texteditor__codecompletionmodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1883,6 +2083,7 @@ void k_texteditor__codecompletionmodel_qbase_revert(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1892,6 +2093,7 @@ void k_texteditor__codecompletionmodel_on_revert(void* self, void (*callback)())
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1901,6 +2103,7 @@ void k_texteditor__codecompletionmodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1911,6 +2114,7 @@ void k_texteditor__codecompletionmodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1921,6 +2125,7 @@ void k_texteditor__codecompletionmodel_on_reset_internal_data(void* self, void (
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QEvent*
+///
 bool k_texteditor__codecompletionmodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1931,6 +2136,7 @@ bool k_texteditor__codecompletionmodel_event(void* self, void* event);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QEvent*
+///
 bool k_texteditor__codecompletionmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1941,6 +2147,7 @@ bool k_texteditor__codecompletionmodel_qbase_event(void* self, void* event);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QEvent* event)
+///
 void k_texteditor__codecompletionmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1952,6 +2159,7 @@ void k_texteditor__codecompletionmodel_on_event(void* self, bool (*callback)(voi
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_texteditor__codecompletionmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1963,6 +2171,7 @@ bool k_texteditor__codecompletionmodel_event_filter(void* self, void* watched, v
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_texteditor__codecompletionmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1973,6 +2182,7 @@ bool k_texteditor__codecompletionmodel_qbase_event_filter(void* self, void* watc
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QObject* watched, QEvent* event)
+///
 void k_texteditor__codecompletionmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1983,6 +2193,7 @@ void k_texteditor__codecompletionmodel_on_event_filter(void* self, bool (*callba
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QTimerEvent*
+///
 void k_texteditor__codecompletionmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1993,6 +2204,7 @@ void k_texteditor__codecompletionmodel_timer_event(void* self, void* event);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QTimerEvent*
+///
 void k_texteditor__codecompletionmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2003,6 +2215,7 @@ void k_texteditor__codecompletionmodel_qbase_timer_event(void* self, void* event
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QTimerEvent* event)
+///
 void k_texteditor__codecompletionmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2013,6 +2226,7 @@ void k_texteditor__codecompletionmodel_on_timer_event(void* self, void (*callbac
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QChildEvent*
+///
 void k_texteditor__codecompletionmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2023,6 +2237,7 @@ void k_texteditor__codecompletionmodel_child_event(void* self, void* event);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QChildEvent*
+///
 void k_texteditor__codecompletionmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2033,6 +2248,7 @@ void k_texteditor__codecompletionmodel_qbase_child_event(void* self, void* event
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QChildEvent* event)
+///
 void k_texteditor__codecompletionmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2043,6 +2259,7 @@ void k_texteditor__codecompletionmodel_on_child_event(void* self, void (*callbac
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QEvent*
+///
 void k_texteditor__codecompletionmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2053,6 +2270,7 @@ void k_texteditor__codecompletionmodel_custom_event(void* self, void* event);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param event QEvent*
+///
 void k_texteditor__codecompletionmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2063,6 +2281,7 @@ void k_texteditor__codecompletionmodel_qbase_custom_event(void* self, void* even
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QEvent* event)
+///
 void k_texteditor__codecompletionmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2073,6 +2292,7 @@ void k_texteditor__codecompletionmodel_on_custom_event(void* self, void (*callba
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal QMetaMethod*
+///
 void k_texteditor__codecompletionmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2083,6 +2303,7 @@ void k_texteditor__codecompletionmodel_connect_notify(void* self, void* signal);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal QMetaMethod*
+///
 void k_texteditor__codecompletionmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2093,6 +2314,7 @@ void k_texteditor__codecompletionmodel_qbase_connect_notify(void* self, void* si
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QMetaMethod* signal)
+///
 void k_texteditor__codecompletionmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2103,6 +2325,7 @@ void k_texteditor__codecompletionmodel_on_connect_notify(void* self, void (*call
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal QMetaMethod*
+///
 void k_texteditor__codecompletionmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2113,6 +2336,7 @@ void k_texteditor__codecompletionmodel_disconnect_notify(void* self, void* signa
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal QMetaMethod*
+///
 void k_texteditor__codecompletionmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2123,6 +2347,7 @@ void k_texteditor__codecompletionmodel_qbase_disconnect_notify(void* self, void*
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QMetaMethod* signal)
+///
 void k_texteditor__codecompletionmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2134,6 +2359,7 @@ void k_texteditor__codecompletionmodel_on_disconnect_notify(void* self, void (*c
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_texteditor__codecompletionmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2145,6 +2371,7 @@ QModelIndex* k_texteditor__codecompletionmodel_create_index(void* self, int row,
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_texteditor__codecompletionmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2155,6 +2382,7 @@ QModelIndex* k_texteditor__codecompletionmodel_qbase_create_index(void* self, in
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, int row, int column)
+///
 void k_texteditor__codecompletionmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2166,6 +2394,7 @@ void k_texteditor__codecompletionmodel_on_create_index(void* self, QModelIndex* 
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_texteditor__codecompletionmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2177,6 +2406,7 @@ void k_texteditor__codecompletionmodel_encode_data(void* self, libqt_list indexe
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_texteditor__codecompletionmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2187,6 +2417,7 @@ void k_texteditor__codecompletionmodel_qbase_encode_data(void* self, libqt_list 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void k_texteditor__codecompletionmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2200,6 +2431,7 @@ void k_texteditor__codecompletionmodel_on_encode_data(void* self, void (*callbac
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_texteditor__codecompletionmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2213,6 +2445,7 @@ bool k_texteditor__codecompletionmodel_decode_data(void* self, int row, int colu
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_texteditor__codecompletionmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2223,6 +2456,7 @@ bool k_texteditor__codecompletionmodel_qbase_decode_data(void* self, int row, in
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void k_texteditor__codecompletionmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2235,6 +2469,7 @@ void k_texteditor__codecompletionmodel_on_decode_data(void* self, bool (*callbac
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2247,6 +2482,7 @@ void k_texteditor__codecompletionmodel_begin_insert_rows(void* self, void* paren
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2257,6 +2493,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_insert_rows(void* self, void*
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2266,6 +2503,7 @@ void k_texteditor__codecompletionmodel_on_begin_insert_rows(void* self, void (*c
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2275,6 +2513,7 @@ void k_texteditor__codecompletionmodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2285,6 +2524,7 @@ void k_texteditor__codecompletionmodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2297,6 +2537,7 @@ void k_texteditor__codecompletionmodel_on_end_insert_rows(void* self, void (*cal
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2309,6 +2550,7 @@ void k_texteditor__codecompletionmodel_begin_remove_rows(void* self, void* paren
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2319,6 +2561,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_remove_rows(void* self, void*
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2328,6 +2571,7 @@ void k_texteditor__codecompletionmodel_on_begin_remove_rows(void* self, void (*c
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2337,6 +2581,7 @@ void k_texteditor__codecompletionmodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2347,6 +2592,7 @@ void k_texteditor__codecompletionmodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2361,6 +2607,7 @@ void k_texteditor__codecompletionmodel_on_end_remove_rows(void* self, void (*cal
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_texteditor__codecompletionmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2375,6 +2622,7 @@ bool k_texteditor__codecompletionmodel_begin_move_rows(void* self, void* sourceP
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_texteditor__codecompletionmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2385,6 +2633,7 @@ bool k_texteditor__codecompletionmodel_qbase_begin_move_rows(void* self, void* s
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void k_texteditor__codecompletionmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2394,6 +2643,7 @@ void k_texteditor__codecompletionmodel_on_begin_move_rows(void* self, bool (*cal
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2403,6 +2653,7 @@ void k_texteditor__codecompletionmodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2413,6 +2664,7 @@ void k_texteditor__codecompletionmodel_qbase_end_move_rows(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2425,6 +2677,7 @@ void k_texteditor__codecompletionmodel_on_end_move_rows(void* self, void (*callb
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2437,6 +2690,7 @@ void k_texteditor__codecompletionmodel_begin_insert_columns(void* self, void* pa
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2447,6 +2701,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_insert_columns(void* self, vo
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2456,6 +2711,7 @@ void k_texteditor__codecompletionmodel_on_begin_insert_columns(void* self, void 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2465,6 +2721,7 @@ void k_texteditor__codecompletionmodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2475,6 +2732,7 @@ void k_texteditor__codecompletionmodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2487,6 +2745,7 @@ void k_texteditor__codecompletionmodel_on_end_insert_columns(void* self, void (*
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2499,6 +2758,7 @@ void k_texteditor__codecompletionmodel_begin_remove_columns(void* self, void* pa
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_texteditor__codecompletionmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2509,6 +2769,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_remove_columns(void* self, vo
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2518,6 +2779,7 @@ void k_texteditor__codecompletionmodel_on_begin_remove_columns(void* self, void 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2527,6 +2789,7 @@ void k_texteditor__codecompletionmodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2537,6 +2800,7 @@ void k_texteditor__codecompletionmodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2551,6 +2815,7 @@ void k_texteditor__codecompletionmodel_on_end_remove_columns(void* self, void (*
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_texteditor__codecompletionmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2565,6 +2830,7 @@ bool k_texteditor__codecompletionmodel_begin_move_columns(void* self, void* sour
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_texteditor__codecompletionmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2575,6 +2841,7 @@ bool k_texteditor__codecompletionmodel_qbase_begin_move_columns(void* self, void
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_texteditor__codecompletionmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2584,6 +2851,7 @@ void k_texteditor__codecompletionmodel_on_begin_move_columns(void* self, bool (*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2593,6 +2861,7 @@ void k_texteditor__codecompletionmodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2603,6 +2872,7 @@ void k_texteditor__codecompletionmodel_qbase_end_move_columns(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2612,6 +2882,7 @@ void k_texteditor__codecompletionmodel_on_end_move_columns(void* self, void (*ca
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2621,6 +2892,7 @@ void k_texteditor__codecompletionmodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2631,6 +2903,7 @@ void k_texteditor__codecompletionmodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2640,6 +2913,7 @@ void k_texteditor__codecompletionmodel_on_begin_reset_model(void* self, void (*c
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2649,6 +2923,7 @@ void k_texteditor__codecompletionmodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2659,6 +2934,7 @@ void k_texteditor__codecompletionmodel_qbase_end_reset_model(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func()
+///
 void k_texteditor__codecompletionmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2670,6 +2946,7 @@ void k_texteditor__codecompletionmodel_on_end_reset_model(void* self, void (*cal
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_texteditor__codecompletionmodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2681,6 +2958,7 @@ void k_texteditor__codecompletionmodel_change_persistent_index(void* self, void*
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_texteditor__codecompletionmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2691,6 +2969,7 @@ void k_texteditor__codecompletionmodel_qbase_change_persistent_index(void* self,
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* from, QModelIndex* to)
+///
 void k_texteditor__codecompletionmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2702,6 +2981,7 @@ void k_texteditor__codecompletionmodel_on_change_persistent_index(void* self, vo
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_texteditor__codecompletionmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2713,6 +2993,7 @@ void k_texteditor__codecompletionmodel_change_persistent_index_list(void* self, 
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_texteditor__codecompletionmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2723,6 +3004,7 @@ void k_texteditor__codecompletionmodel_qbase_change_persistent_index_list(void* 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex** from, QModelIndex** to)
+///
 void k_texteditor__codecompletionmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -2732,6 +3014,7 @@ void k_texteditor__codecompletionmodel_on_change_persistent_index_list(void* sel
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2741,6 +3024,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_persistent_in
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2751,6 +3035,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_persist
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex** func()
+///
 void k_texteditor__codecompletionmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -2760,6 +3045,7 @@ void k_texteditor__codecompletionmodel_on_persistent_index_list(void* self, QMod
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 QObject* k_texteditor__codecompletionmodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2769,6 +3055,7 @@ QObject* k_texteditor__codecompletionmodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 QObject* k_texteditor__codecompletionmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2779,6 +3066,7 @@ QObject* k_texteditor__codecompletionmodel_qbase_sender(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QObject* func()
+///
 void k_texteditor__codecompletionmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2788,6 +3076,7 @@ void k_texteditor__codecompletionmodel_on_sender(void* self, QObject* (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 int32_t k_texteditor__codecompletionmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2797,6 +3086,7 @@ int32_t k_texteditor__codecompletionmodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 int32_t k_texteditor__codecompletionmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2807,6 +3097,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func()
+///
 void k_texteditor__codecompletionmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2817,6 +3108,7 @@ void k_texteditor__codecompletionmodel_on_sender_signal_index(void* self, int32_
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal const char*
+///
 int32_t k_texteditor__codecompletionmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2827,6 +3119,7 @@ int32_t k_texteditor__codecompletionmodel_receivers(void* self, const char* sign
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal const char*
+///
 int32_t k_texteditor__codecompletionmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2837,6 +3130,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_receivers(void* self, const char
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback int32_t func(KTextEditor__CodeCompletionModel* self, const char* signal)
+///
 void k_texteditor__codecompletionmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2847,6 +3141,7 @@ void k_texteditor__codecompletionmodel_on_receivers(void* self, int32_t (*callba
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal QMetaMethod*
+///
 bool k_texteditor__codecompletionmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2857,6 +3152,7 @@ bool k_texteditor__codecompletionmodel_is_signal_connected(void* self, void* sig
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param signal QMetaMethod*
+///
 bool k_texteditor__codecompletionmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2867,6 +3163,7 @@ bool k_texteditor__codecompletionmodel_qbase_is_signal_connected(void* self, voi
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback bool func(KTextEditor__CodeCompletionModel* self, QMetaMethod* signal)
+///
 void k_texteditor__codecompletionmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2877,6 +3174,7 @@ void k_texteditor__codecompletionmodel_on_is_signal_connected(void* self, bool (
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2887,6 +3185,7 @@ void k_texteditor__codecompletionmodel_on_rows_about_to_be_inserted(void* self, 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2897,6 +3196,7 @@ void k_texteditor__codecompletionmodel_on_rows_inserted(void* self, void (*callb
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2907,6 +3207,7 @@ void k_texteditor__codecompletionmodel_on_rows_about_to_be_removed(void* self, v
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2917,6 +3218,7 @@ void k_texteditor__codecompletionmodel_on_rows_removed(void* self, void (*callba
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2927,6 +3229,7 @@ void k_texteditor__codecompletionmodel_on_columns_about_to_be_inserted(void* sel
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2937,6 +3240,7 @@ void k_texteditor__codecompletionmodel_on_columns_inserted(void* self, void (*ca
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2947,6 +3251,7 @@ void k_texteditor__codecompletionmodel_on_columns_about_to_be_removed(void* self
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* parent, int first, int last)
+///
 void k_texteditor__codecompletionmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2957,6 +3262,7 @@ void k_texteditor__codecompletionmodel_on_columns_removed(void* self, void (*cal
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
+///
 void k_texteditor__codecompletionmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2967,6 +3273,7 @@ void k_texteditor__codecompletionmodel_on_model_about_to_be_reset(void* self, vo
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self)
+///
 void k_texteditor__codecompletionmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2977,6 +3284,7 @@ void k_texteditor__codecompletionmodel_on_model_reset(void* self, void (*callbac
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_texteditor__codecompletionmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2987,6 +3295,7 @@ void k_texteditor__codecompletionmodel_on_rows_about_to_be_moved(void* self, voi
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_texteditor__codecompletionmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2997,6 +3306,7 @@ void k_texteditor__codecompletionmodel_on_rows_moved(void* self, void (*callback
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_texteditor__codecompletionmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3007,6 +3317,7 @@ void k_texteditor__codecompletionmodel_on_columns_about_to_be_moved(void* self, 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_texteditor__codecompletionmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3017,14 +3328,16 @@ void k_texteditor__codecompletionmodel_on_columns_moved(void* self, void (*callb
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback void func(KTextEditor__CodeCompletionModel* self, const char* objectName)
+///
 void k_texteditor__codecompletionmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
 ///
 /// @param self KTextEditor__CodeCompletionModel*
+///
 void k_texteditor__codecompletionmodel_delete(void* self);
 
-/// https://api.kde.org/codecompletionmodel.html#types
+/// [Upstream resources](https://api.kde.org/codecompletionmodel.html#public-types)
 
 typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_COLUMNS_PREFIX = 0,
@@ -3034,6 +3347,8 @@ typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_COLUMNS_ARGUMENTS = 4,
     KTEXTEDITOR_CODECOMPLETIONMODEL_COLUMNS_POSTFIX = 5
 } KTextEditor__CodeCompletionModel__Columns;
+
+/// [Upstream resources](https://api.kde.org/codecompletionmodel.html#public-types)
 
 typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_COMPLETIONPROPERTY_NOPROPERTY = 0,
@@ -3064,11 +3379,15 @@ typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_COMPLETIONPROPERTY_LASTPROPERTY = 4194304
 } KTextEditor__CodeCompletionModel__CompletionProperty;
 
+/// [Upstream resources](https://api.kde.org/codecompletionmodel.html#public-types)
+
 typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_HIGHLIGHTMETHOD_NOHIGHLIGHTING = 0,
     KTEXTEDITOR_CODECOMPLETIONMODEL_HIGHLIGHTMETHOD_INTERNALHIGHLIGHTING = 1,
     KTEXTEDITOR_CODECOMPLETIONMODEL_HIGHLIGHTMETHOD_CUSTOMHIGHLIGHTING = 2
 } KTextEditor__CodeCompletionModel__HighlightMethod;
+
+/// [Upstream resources](https://api.kde.org/codecompletionmodel.html#public-types)
 
 typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_EXTRAITEMDATAROLES_COMPLETIONROLE = 256,
@@ -3090,6 +3409,8 @@ typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_EXTRAITEMDATAROLES_UNIMPORTANTITEMROLE = 272,
     KTEXTEDITOR_CODECOMPLETIONMODEL_EXTRAITEMDATAROLES_LASTEXTRAITEMDATAROLE = 273
 } KTextEditor__CodeCompletionModel__ExtraItemDataRoles;
+
+/// [Upstream resources](https://api.kde.org/codecompletionmodel.html#public-types)
 
 typedef enum {
     KTEXTEDITOR_CODECOMPLETIONMODEL_INVOCATIONTYPE_AUTOMATICINVOCATION = 0,

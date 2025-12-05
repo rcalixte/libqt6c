@@ -11,119 +11,144 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qfontmetrics.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html)
 
 /// q_fontmetrics_new constructs a new QFontMetrics object.
 ///
 /// @param param1 QFont*
+///
 QFontMetrics* q_fontmetrics_new(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html)
 
 /// q_fontmetrics_new2 constructs a new QFontMetrics object.
 ///
 /// @param font QFont*
 /// @param pd QPaintDevice*
+///
 QFontMetrics* q_fontmetrics_new2(void* font, void* pd);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html)
 
 /// q_fontmetrics_new3 constructs a new QFontMetrics object.
 ///
 /// @param param1 QFontMetrics*
+///
 QFontMetrics* q_fontmetrics_new3(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#operator-eq)
 ///
 /// @param self QFontMetrics*
 /// @param param1 QFontMetrics*
+///
 void q_fontmetrics_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#swap)
 ///
 /// @param self QFontMetrics*
 /// @param other QFontMetrics*
+///
 void q_fontmetrics_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#ascent)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_ascent(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#capHeight)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_cap_height(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#descent)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_descent(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#height)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_height(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#leading)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_leading(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#lineSpacing)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_line_spacing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#minLeftBearing)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_min_left_bearing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#minRightBearing)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_min_right_bearing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#maxWidth)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_max_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#xHeight)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_x_height(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#averageCharWidth)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_average_char_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#inFont)
 ///
 /// @param self QFontMetrics*
 /// @param param1 QChar*
+///
 bool q_fontmetrics_in_font(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#inFontUcs4)
 ///
 /// @param self QFontMetrics*
 /// @param ucs4 uint32_t
+///
 bool q_fontmetrics_in_font_ucs4(void* self, uint32_t ucs4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#leftBearing)
 ///
 /// @param self QFontMetrics*
 /// @param param1 QChar*
+///
 int32_t q_fontmetrics_left_bearing(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#rightBearing)
 ///
 /// @param self QFontMetrics*
 /// @param param1 QChar*
+///
 int32_t q_fontmetrics_right_bearing(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#horizontalAdvance)
 ///
 /// @param self QFontMetrics*
 /// @param param1 const char*
+///
 int32_t q_fontmetrics_horizontal_advance(void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#horizontalAdvance)
@@ -131,24 +156,28 @@ int32_t q_fontmetrics_horizontal_advance(void* self, const char* param1);
 /// @param self QFontMetrics*
 /// @param param1 const char*
 /// @param textOption QTextOption*
+///
 int32_t q_fontmetrics_horizontal_advance2(void* self, const char* param1, void* textOption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#horizontalAdvance)
 ///
 /// @param self QFontMetrics*
 /// @param param1 QChar*
+///
 int32_t q_fontmetrics_horizontal_advance3(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
 /// @param self QFontMetrics*
 /// @param param1 QChar*
+///
 QRect* q_fontmetrics_bounding_rect(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
 /// @param self QFontMetrics*
 /// @param text const char*
+///
 QRect* q_fontmetrics_bounding_rect2(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
@@ -156,6 +185,7 @@ QRect* q_fontmetrics_bounding_rect2(void* self, const char* text);
 /// @param self QFontMetrics*
 /// @param text const char*
 /// @param textOption QTextOption*
+///
 QRect* q_fontmetrics_bounding_rect3(void* self, const char* text, void* textOption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
@@ -164,6 +194,7 @@ QRect* q_fontmetrics_bounding_rect3(void* self, const char* text, void* textOpti
 /// @param r QRect*
 /// @param flags int
 /// @param text const char*
+///
 QRect* q_fontmetrics_bounding_rect4(void* self, void* r, int flags, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
@@ -175,6 +206,7 @@ QRect* q_fontmetrics_bounding_rect4(void* self, void* r, int flags, const char* 
 /// @param h int
 /// @param flags int
 /// @param text const char*
+///
 QRect* q_fontmetrics_bounding_rect5(void* self, int x, int y, int w, int h, int flags, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#size)
@@ -182,12 +214,14 @@ QRect* q_fontmetrics_bounding_rect5(void* self, int x, int y, int w, int h, int 
 /// @param self QFontMetrics*
 /// @param flags int
 /// @param str const char*
+///
 QSize* q_fontmetrics_size(void* self, int flags, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#tightBoundingRect)
 ///
 /// @param self QFontMetrics*
 /// @param text const char*
+///
 QRect* q_fontmetrics_tight_bounding_rect(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#tightBoundingRect)
@@ -195,6 +229,7 @@ QRect* q_fontmetrics_tight_bounding_rect(void* self, const char* text);
 /// @param self QFontMetrics*
 /// @param text const char*
 /// @param textOption QTextOption*
+///
 QRect* q_fontmetrics_tight_bounding_rect2(void* self, const char* text, void* textOption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#elidedText)
@@ -205,43 +240,51 @@ QRect* q_fontmetrics_tight_bounding_rect2(void* self, const char* text, void* te
 /// @param text const char*
 /// @param mode enum Qt__TextElideMode
 /// @param width int
+///
 const char* q_fontmetrics_elided_text(void* self, const char* text, int32_t mode, int width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#underlinePos)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_underline_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#overlinePos)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_overline_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#strikeOutPos)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_strike_out_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#lineWidth)
 ///
 /// @param self QFontMetrics*
+///
 int32_t q_fontmetrics_line_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#fontDpi)
 ///
 /// @param self QFontMetrics*
+///
 double q_fontmetrics_font_dpi(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#operator-eq-eq)
 ///
 /// @param self QFontMetrics*
 /// @param other QFontMetrics*
+///
 bool q_fontmetrics_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#operator-not-eq)
 ///
 /// @param self QFontMetrics*
 /// @param other QFontMetrics*
+///
 bool q_fontmetrics_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#horizontalAdvance)
@@ -249,6 +292,7 @@ bool q_fontmetrics_operator_not_equal(void* self, void* other);
 /// @param self QFontMetrics*
 /// @param param1 const char*
 /// @param lenVal int
+///
 int32_t q_fontmetrics_horizontal_advance22(void* self, const char* param1, int lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
@@ -258,6 +302,7 @@ int32_t q_fontmetrics_horizontal_advance22(void* self, const char* param1, int l
 /// @param flags int
 /// @param text const char*
 /// @param tabstops int
+///
 QRect* q_fontmetrics_bounding_rect42(void* self, void* r, int flags, const char* text, int tabstops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
@@ -268,6 +313,7 @@ QRect* q_fontmetrics_bounding_rect42(void* self, void* r, int flags, const char*
 /// @param text const char*
 /// @param tabstops int
 /// @param tabarray int*
+///
 QRect* q_fontmetrics_bounding_rect52(void* self, void* r, int flags, const char* text, int tabstops, int* tabarray);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
@@ -280,6 +326,7 @@ QRect* q_fontmetrics_bounding_rect52(void* self, void* r, int flags, const char*
 /// @param flags int
 /// @param text const char*
 /// @param tabstops int
+///
 QRect* q_fontmetrics_bounding_rect7(void* self, int x, int y, int w, int h, int flags, const char* text, int tabstops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
@@ -293,6 +340,7 @@ QRect* q_fontmetrics_bounding_rect7(void* self, int x, int y, int w, int h, int 
 /// @param text const char*
 /// @param tabstops int
 /// @param tabarray int*
+///
 QRect* q_fontmetrics_bounding_rect8(void* self, int x, int y, int w, int h, int flags, const char* text, int tabstops, int* tabarray);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#size)
@@ -301,6 +349,7 @@ QRect* q_fontmetrics_bounding_rect8(void* self, int x, int y, int w, int h, int 
 /// @param flags int
 /// @param str const char*
 /// @param tabstops int
+///
 QSize* q_fontmetrics_size3(void* self, int flags, const char* str, int tabstops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#size)
@@ -310,6 +359,7 @@ QSize* q_fontmetrics_size3(void* self, int flags, const char* str, int tabstops)
 /// @param str const char*
 /// @param tabstops int
 /// @param tabarray int*
+///
 QSize* q_fontmetrics_size4(void* self, int flags, const char* str, int tabstops, int* tabarray);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#elidedText)
@@ -321,6 +371,7 @@ QSize* q_fontmetrics_size4(void* self, int flags, const char* str, int tabstops,
 /// @param mode enum Qt__TextElideMode
 /// @param width int
 /// @param flags int
+///
 const char* q_fontmetrics_elided_text4(void* self, const char* text, int32_t mode, int width, int flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#dtor.QFontMetrics)
@@ -328,138 +379,169 @@ const char* q_fontmetrics_elided_text4(void* self, const char* text, int32_t mod
 /// Delete this object from C++ memory.
 ///
 /// @param self QFontMetrics*
+///
 void q_fontmetrics_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qfontmetricsf.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html)
 
 /// q_fontmetricsf_new constructs a new QFontMetricsF object.
 ///
 /// @param font QFont*
+///
 QFontMetricsF* q_fontmetricsf_new(void* font);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html)
 
 /// q_fontmetricsf_new2 constructs a new QFontMetricsF object.
 ///
 /// @param font QFont*
 /// @param pd QPaintDevice*
+///
 QFontMetricsF* q_fontmetricsf_new2(void* font, void* pd);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html)
 
 /// q_fontmetricsf_new3 constructs a new QFontMetricsF object.
 ///
 /// @param param1 QFontMetrics*
+///
 QFontMetricsF* q_fontmetricsf_new3(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html)
 
 /// q_fontmetricsf_new4 constructs a new QFontMetricsF object.
 ///
 /// @param param1 QFontMetricsF*
+///
 QFontMetricsF* q_fontmetricsf_new4(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-eq)
 ///
 /// @param self QFontMetricsF*
 /// @param param1 QFontMetricsF*
+///
 void q_fontmetricsf_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-eq)
 ///
 /// @param self QFontMetricsF*
 /// @param param1 QFontMetrics*
+///
 void q_fontmetricsf_operator_assign2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#swap)
 ///
 /// @param self QFontMetricsF*
 /// @param other QFontMetricsF*
+///
 void q_fontmetricsf_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#ascent)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_ascent(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#capHeight)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_cap_height(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#descent)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_descent(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#height)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_height(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#leading)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_leading(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#lineSpacing)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_line_spacing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#minLeftBearing)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_min_left_bearing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#minRightBearing)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_min_right_bearing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#maxWidth)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_max_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#xHeight)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_x_height(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#averageCharWidth)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_average_char_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#inFont)
 ///
 /// @param self QFontMetricsF*
 /// @param param1 QChar*
+///
 bool q_fontmetricsf_in_font(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#inFontUcs4)
 ///
 /// @param self QFontMetricsF*
 /// @param ucs4 uint32_t
+///
 bool q_fontmetricsf_in_font_ucs4(void* self, uint32_t ucs4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#leftBearing)
 ///
 /// @param self QFontMetricsF*
 /// @param param1 QChar*
+///
 double q_fontmetricsf_left_bearing(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#rightBearing)
 ///
 /// @param self QFontMetricsF*
 /// @param param1 QChar*
+///
 double q_fontmetricsf_right_bearing(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#horizontalAdvance)
 ///
 /// @param self QFontMetricsF*
 /// @param stringVal const char*
+///
 double q_fontmetricsf_horizontal_advance(void* self, const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#horizontalAdvance)
 ///
 /// @param self QFontMetricsF*
 /// @param param1 QChar*
+///
 double q_fontmetricsf_horizontal_advance2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#horizontalAdvance)
@@ -467,12 +549,14 @@ double q_fontmetricsf_horizontal_advance2(void* self, void* param1);
 /// @param self QFontMetricsF*
 /// @param stringVal const char*
 /// @param textOption QTextOption*
+///
 double q_fontmetricsf_horizontal_advance3(void* self, const char* stringVal, void* textOption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
 ///
 /// @param self QFontMetricsF*
 /// @param stringVal const char*
+///
 QRectF* q_fontmetricsf_bounding_rect(void* self, const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
@@ -480,12 +564,14 @@ QRectF* q_fontmetricsf_bounding_rect(void* self, const char* stringVal);
 /// @param self QFontMetricsF*
 /// @param text const char*
 /// @param textOption QTextOption*
+///
 QRectF* q_fontmetricsf_bounding_rect2(void* self, const char* text, void* textOption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
 ///
 /// @param self QFontMetricsF*
 /// @param param1 QChar*
+///
 QRectF* q_fontmetricsf_bounding_rect3(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
@@ -494,6 +580,7 @@ QRectF* q_fontmetricsf_bounding_rect3(void* self, void* param1);
 /// @param r QRectF*
 /// @param flags int
 /// @param stringVal const char*
+///
 QRectF* q_fontmetricsf_bounding_rect4(void* self, void* r, int flags, const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#size)
@@ -501,12 +588,14 @@ QRectF* q_fontmetricsf_bounding_rect4(void* self, void* r, int flags, const char
 /// @param self QFontMetricsF*
 /// @param flags int
 /// @param str const char*
+///
 QSizeF* q_fontmetricsf_size(void* self, int flags, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#tightBoundingRect)
 ///
 /// @param self QFontMetricsF*
 /// @param text const char*
+///
 QRectF* q_fontmetricsf_tight_bounding_rect(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#tightBoundingRect)
@@ -514,6 +603,7 @@ QRectF* q_fontmetricsf_tight_bounding_rect(void* self, const char* text);
 /// @param self QFontMetricsF*
 /// @param text const char*
 /// @param textOption QTextOption*
+///
 QRectF* q_fontmetricsf_tight_bounding_rect2(void* self, const char* text, void* textOption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#elidedText)
@@ -524,43 +614,51 @@ QRectF* q_fontmetricsf_tight_bounding_rect2(void* self, const char* text, void* 
 /// @param text const char*
 /// @param mode enum Qt__TextElideMode
 /// @param width double
+///
 const char* q_fontmetricsf_elided_text(void* self, const char* text, int32_t mode, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#underlinePos)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_underline_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#overlinePos)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_overline_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#strikeOutPos)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_strike_out_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#lineWidth)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_line_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#fontDpi)
 ///
 /// @param self QFontMetricsF*
+///
 double q_fontmetricsf_font_dpi(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-eq-eq)
 ///
 /// @param self QFontMetricsF*
 /// @param other QFontMetricsF*
+///
 bool q_fontmetricsf_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-not-eq)
 ///
 /// @param self QFontMetricsF*
 /// @param other QFontMetricsF*
+///
 bool q_fontmetricsf_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#horizontalAdvance)
@@ -568,6 +666,7 @@ bool q_fontmetricsf_operator_not_equal(void* self, void* other);
 /// @param self QFontMetricsF*
 /// @param stringVal const char*
 /// @param length int
+///
 double q_fontmetricsf_horizontal_advance22(void* self, const char* stringVal, int length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
@@ -577,6 +676,7 @@ double q_fontmetricsf_horizontal_advance22(void* self, const char* stringVal, in
 /// @param flags int
 /// @param stringVal const char*
 /// @param tabstops int
+///
 QRectF* q_fontmetricsf_bounding_rect42(void* self, void* r, int flags, const char* stringVal, int tabstops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
@@ -587,6 +687,7 @@ QRectF* q_fontmetricsf_bounding_rect42(void* self, void* r, int flags, const cha
 /// @param stringVal const char*
 /// @param tabstops int
 /// @param tabarray int*
+///
 QRectF* q_fontmetricsf_bounding_rect5(void* self, void* r, int flags, const char* stringVal, int tabstops, int* tabarray);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#size)
@@ -595,6 +696,7 @@ QRectF* q_fontmetricsf_bounding_rect5(void* self, void* r, int flags, const char
 /// @param flags int
 /// @param str const char*
 /// @param tabstops int
+///
 QSizeF* q_fontmetricsf_size3(void* self, int flags, const char* str, int tabstops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#size)
@@ -604,6 +706,7 @@ QSizeF* q_fontmetricsf_size3(void* self, int flags, const char* str, int tabstop
 /// @param str const char*
 /// @param tabstops int
 /// @param tabarray int*
+///
 QSizeF* q_fontmetricsf_size4(void* self, int flags, const char* str, int tabstops, int* tabarray);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#elidedText)
@@ -615,6 +718,7 @@ QSizeF* q_fontmetricsf_size4(void* self, int flags, const char* str, int tabstop
 /// @param mode enum Qt__TextElideMode
 /// @param width double
 /// @param flags int
+///
 const char* q_fontmetricsf_elided_text4(void* self, const char* text, int32_t mode, double width, int flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#dtor.QFontMetricsF)
@@ -622,6 +726,7 @@ const char* q_fontmetricsf_elided_text4(void* self, const char* text, int32_t mo
 /// Delete this object from C++ memory.
 ///
 /// @param self QFontMetricsF*
+///
 void q_fontmetricsf_delete(void* self);
 
 #endif

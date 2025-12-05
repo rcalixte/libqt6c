@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kdirmodel.html
+/// [Upstream resources](https://api.kde.org/kdirmodel.html)
 
 /// k_dirmodel_new constructs a new KDirModel object.
 ///
 KDirModel* k_dirmodel_new();
 
+/// [Upstream resources](https://api.kde.org/kdirmodel.html)
+
 /// k_dirmodel_new2 constructs a new KDirModel object.
 ///
 /// @param parent QObject*
+///
 KDirModel* k_dirmodel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KDirModel*
+///
 const QMetaObject* k_dirmodel_meta_object(void* self);
 
 /// @param self KDirModel*
 /// @param param1 const char*
+///
 void* k_dirmodel_metacast(void* self, const char* param1);
 
 /// @param self KDirModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_dirmodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func(KDirModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_dirmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void k_dirmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_dirmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,70 +64,82 @@ int32_t k_dirmodel_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_dirmodel_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#openUrl)
 ///
 /// @param self KDirModel*
 /// @param url QUrl*
+///
 void k_dirmodel_open_url(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setDirLister)
 ///
 /// @param self KDirModel*
 /// @param dirLister KDirLister*
+///
 void k_dirmodel_set_dir_lister(void* self, void* dirLister);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#dirLister)
 ///
 /// @param self KDirModel*
+///
 KDirLister* k_dirmodel_dir_lister(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#itemForIndex)
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 KFileItem* k_dirmodel_item_for_index(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#indexForItem)
 ///
 /// @param self KDirModel*
 /// @param param1 KFileItem*
+///
 QModelIndex* k_dirmodel_index_for_item(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#indexForUrl)
 ///
 /// @param self KDirModel*
 /// @param url QUrl*
+///
 QModelIndex* k_dirmodel_index_for_url(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#expandToUrl)
 ///
 /// @param self KDirModel*
 /// @param url QUrl*
+///
 void k_dirmodel_expand_to_url(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#itemChanged)
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 void k_dirmodel_item_changed(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#clearAllPreviews)
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_clear_all_previews(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setDropsAllowed)
 ///
 /// @param self KDirModel*
 /// @param dropsAllowed flag of enum KDirModel__DropsAllowedFlag
+///
 void k_dirmodel_set_drops_allowed(void* self, int32_t dropsAllowed);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#canFetchMore)
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_can_fetch_more(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#canFetchMore)
@@ -128,6 +148,7 @@ bool k_dirmodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* parent)
+///
 void k_dirmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#canFetchMore)
@@ -136,12 +157,14 @@ void k_dirmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#columnCount)
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 int32_t k_dirmodel_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#columnCount)
@@ -150,6 +173,7 @@ int32_t k_dirmodel_column_count(void* self, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func(KDirModel* self, QModelIndex* parent)
+///
 void k_dirmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#columnCount)
@@ -158,6 +182,7 @@ void k_dirmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 int32_t k_dirmodel_qbase_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#data)
@@ -165,6 +190,7 @@ int32_t k_dirmodel_qbase_column_count(void* self, void* parent);
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_dirmodel_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#data)
@@ -173,6 +199,7 @@ QVariant* k_dirmodel_data(void* self, void* index, int role);
 ///
 /// @param self KDirModel*
 /// @param callback QVariant* func(KDirModel* self, QModelIndex* index, int role)
+///
 void k_dirmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#data)
@@ -182,6 +209,7 @@ void k_dirmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* k_dirmodel_qbase_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#dropMimeData)
@@ -192,6 +220,7 @@ QVariant* k_dirmodel_qbase_data(void* self, void* index, int role);
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#dropMimeData)
@@ -200,6 +229,7 @@ bool k_dirmodel_drop_mime_data(void* self, void* data, int32_t action, int row, 
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_dirmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#dropMimeData)
@@ -212,12 +242,14 @@ void k_dirmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#fetchMore)
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 void k_dirmodel_fetch_more(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#fetchMore)
@@ -226,6 +258,7 @@ void k_dirmodel_fetch_more(void* self, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent)
+///
 void k_dirmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#fetchMore)
@@ -234,6 +267,7 @@ void k_dirmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 void k_dirmodel_qbase_fetch_more(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#flags)
@@ -242,6 +276,7 @@ void k_dirmodel_qbase_fetch_more(void* self, void* parent);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_dirmodel_flags(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#flags)
@@ -250,6 +285,7 @@ int32_t k_dirmodel_flags(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func(KDirModel* self, QModelIndex* index)
+///
 void k_dirmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#flags)
@@ -260,12 +296,14 @@ void k_dirmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t k_dirmodel_qbase_flags(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#hasChildren)
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_has_children(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#hasChildren)
@@ -274,6 +312,7 @@ bool k_dirmodel_has_children(void* self, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* parent)
+///
 void k_dirmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#hasChildren)
@@ -282,6 +321,7 @@ void k_dirmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_has_children(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#headerData)
@@ -290,6 +330,7 @@ bool k_dirmodel_qbase_has_children(void* self, void* parent);
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_dirmodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#headerData)
@@ -298,6 +339,7 @@ QVariant* k_dirmodel_header_data(void* self, int section, int32_t orientation, i
 ///
 /// @param self KDirModel*
 /// @param callback QVariant* func(KDirModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void k_dirmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#headerData)
@@ -308,6 +350,7 @@ void k_dirmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* k_dirmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#index)
@@ -316,6 +359,7 @@ QVariant* k_dirmodel_qbase_header_data(void* self, int section, int32_t orientat
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_dirmodel_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#index)
@@ -324,6 +368,7 @@ QModelIndex* k_dirmodel_index(void* self, int row, int column, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, int row, int column, QModelIndex* parent)
+///
 void k_dirmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#index)
@@ -334,12 +379,14 @@ void k_dirmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, v
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* k_dirmodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeData)
 ///
 /// @param self KDirModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_dirmodel_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeData)
@@ -348,6 +395,7 @@ QMimeData* k_dirmodel_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self KDirModel*
 /// @param callback QMimeData* func(KDirModel* self, QModelIndex** indexes)
+///
 void k_dirmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeData)
@@ -356,6 +404,7 @@ void k_dirmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelInd
 ///
 /// @param self KDirModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* k_dirmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeTypes)
@@ -363,6 +412,7 @@ QMimeData* k_dirmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDirModel*
+///
 const char** k_dirmodel_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeTypes)
@@ -371,6 +421,7 @@ const char** k_dirmodel_mime_types(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback const char** func()
+///
 void k_dirmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeTypes)
@@ -378,12 +429,14 @@ void k_dirmodel_on_mime_types(void* self, const char** (*callback)());
 /// Base class method implementation
 ///
 /// @param self KDirModel*
+///
 const char** k_dirmodel_qbase_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#parent)
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_dirmodel_parent(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#parent)
@@ -392,6 +445,7 @@ QModelIndex* k_dirmodel_parent(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, QModelIndex* index)
+///
 void k_dirmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#parent)
@@ -400,6 +454,7 @@ void k_dirmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_dirmodel_qbase_parent(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sibling)
@@ -408,6 +463,7 @@ QModelIndex* k_dirmodel_qbase_parent(void* self, void* index);
 /// @param row int
 /// @param column int
 /// @param index QModelIndex*
+///
 QModelIndex* k_dirmodel_sibling(void* self, int row, int column, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sibling)
@@ -416,6 +472,7 @@ QModelIndex* k_dirmodel_sibling(void* self, int row, int column, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, int row, int column, QModelIndex* index)
+///
 void k_dirmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sibling)
@@ -426,12 +483,14 @@ void k_dirmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int,
 /// @param row int
 /// @param column int
 /// @param index QModelIndex*
+///
 QModelIndex* k_dirmodel_qbase_sibling(void* self, int row, int column, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#rowCount)
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 int32_t k_dirmodel_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#rowCount)
@@ -440,6 +499,7 @@ int32_t k_dirmodel_row_count(void* self, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func(KDirModel* self, QModelIndex* parent)
+///
 void k_dirmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#rowCount)
@@ -448,6 +508,7 @@ void k_dirmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param parent QModelIndex*
+///
 int32_t k_dirmodel_qbase_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setData)
@@ -456,6 +517,7 @@ int32_t k_dirmodel_qbase_row_count(void* self, void* parent);
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_dirmodel_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setData)
@@ -464,6 +526,7 @@ bool k_dirmodel_set_data(void* self, void* index, void* value, int role);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* index, QVariant* value, int role)
+///
 void k_dirmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setData)
@@ -474,6 +537,7 @@ void k_dirmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, in
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool k_dirmodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sort)
@@ -481,6 +545,7 @@ bool k_dirmodel_qbase_set_data(void* self, void* index, void* value, int role);
 /// @param self KDirModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_dirmodel_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sort)
@@ -489,6 +554,7 @@ void k_dirmodel_sort(void* self, int column, int32_t order);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, int column, enum Qt__SortOrder order)
+///
 void k_dirmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sort)
@@ -498,11 +564,13 @@ void k_dirmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 /// @param self KDirModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void k_dirmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#roleNames)
 ///
 /// @param self KDirModel*
+///
 libqt_map /* of int to char* */ k_dirmodel_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#roleNames)
@@ -511,6 +579,7 @@ libqt_map /* of int to char* */ k_dirmodel_role_names(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void k_dirmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#roleNames)
@@ -518,11 +587,13 @@ void k_dirmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*call
 /// Base class method implementation
 ///
 /// @param self KDirModel*
+///
 libqt_map /* of int to char* */ k_dirmodel_qbase_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#simplifiedUrlList)
 ///
 /// @param urls libqt_list /* of QUrl* */
+///
 libqt_list /* of QUrl* */ k_dirmodel_simplified_url_list(libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#requestSequenceIcon)
@@ -530,17 +601,20 @@ libqt_list /* of QUrl* */ k_dirmodel_simplified_url_list(libqt_list urls);
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param sequenceIndex int
+///
 void k_dirmodel_request_sequence_icon(void* self, void* index, int sequenceIndex);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setJobTransfersVisible)
 ///
 /// @param self KDirModel*
 /// @param show bool
+///
 void k_dirmodel_set_job_transfers_visible(void* self, bool show);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#jobTransfersVisible)
 ///
 /// @param self KDirModel*
+///
 bool k_dirmodel_job_transfers_visible(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#supportedDropActions)
@@ -548,6 +622,7 @@ bool k_dirmodel_job_transfers_visible(void* self);
 /// @param self KDirModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_dirmodel_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#supportedDropActions)
@@ -556,6 +631,7 @@ int32_t k_dirmodel_supported_drop_actions(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func()
+///
 void k_dirmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#supportedDropActions)
@@ -565,18 +641,21 @@ void k_dirmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 /// @param self KDirModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_dirmodel_qbase_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#expand)
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 void k_dirmodel_expand(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#expand)
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* index)
+///
 void k_dirmodel_on_expand(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#needSequenceIcon)
@@ -584,12 +663,14 @@ void k_dirmodel_on_expand(void* self, void (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param sequenceIndex int
+///
 void k_dirmodel_need_sequence_icon(void* self, void* index, int sequenceIndex);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#needSequenceIcon)
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* index, int sequenceIndex)
+///
 void k_dirmodel_on_need_sequence_icon(void* self, void (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -598,6 +679,7 @@ void k_dirmodel_on_need_sequence_icon(void* self, void (*callback)(void*, void*,
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_dirmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -607,6 +689,7 @@ const char* k_dirmodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_dirmodel_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#openUrl)
@@ -614,6 +697,7 @@ const char* k_dirmodel_tr3(const char* s, const char* c, int n);
 /// @param self KDirModel*
 /// @param url QUrl*
 /// @param flags flag of enum KDirModel__OpenUrlFlag
+///
 void k_dirmodel_open_url2(void* self, void* url, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -623,6 +707,7 @@ void k_dirmodel_open_url2(void* self, void* url, int32_t flags);
 /// @param self KDirModel*
 /// @param row int
 /// @param column int
+///
 bool k_dirmodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -633,6 +718,7 @@ bool k_dirmodel_has_index(void* self, int row, int column);
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -643,6 +729,7 @@ bool k_dirmodel_insert_rows(void* self, int row, int count, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, int row, int count, QModelIndex* parent)
+///
 void k_dirmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -655,6 +742,7 @@ void k_dirmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, voi
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -665,6 +753,7 @@ bool k_dirmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -675,6 +764,7 @@ bool k_dirmodel_insert_columns(void* self, int column, int count, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, int column, int count, QModelIndex* parent)
+///
 void k_dirmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -687,6 +777,7 @@ void k_dirmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, 
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -697,6 +788,7 @@ bool k_dirmodel_qbase_insert_columns(void* self, int column, int count, void* pa
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -707,6 +799,7 @@ bool k_dirmodel_remove_rows(void* self, int row, int count, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, int row, int count, QModelIndex* parent)
+///
 void k_dirmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -719,6 +812,7 @@ void k_dirmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, voi
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -729,6 +823,7 @@ bool k_dirmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -739,6 +834,7 @@ bool k_dirmodel_remove_columns(void* self, int column, int count, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, int column, int count, QModelIndex* parent)
+///
 void k_dirmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -751,6 +847,7 @@ void k_dirmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, 
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -759,6 +856,7 @@ bool k_dirmodel_qbase_remove_columns(void* self, int column, int count, void* pa
 ///
 /// @param self KDirModel*
 /// @param row int
+///
 bool k_dirmodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -767,6 +865,7 @@ bool k_dirmodel_insert_row(void* self, int row);
 ///
 /// @param self KDirModel*
 /// @param column int
+///
 bool k_dirmodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -775,6 +874,7 @@ bool k_dirmodel_insert_column(void* self, int column);
 ///
 /// @param self KDirModel*
 /// @param row int
+///
 bool k_dirmodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -783,6 +883,7 @@ bool k_dirmodel_remove_row(void* self, int row);
 ///
 /// @param self KDirModel*
 /// @param column int
+///
 bool k_dirmodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -794,6 +895,7 @@ bool k_dirmodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_dirmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -805,6 +907,7 @@ bool k_dirmodel_move_row(void* self, void* sourceParent, int sourceRow, void* de
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_dirmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -813,6 +916,7 @@ bool k_dirmodel_move_column(void* self, void* sourceParent, int sourceColumn, vo
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 bool k_dirmodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -822,6 +926,7 @@ bool k_dirmodel_check_index(void* self, void* index);
 /// @param self KDirModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void k_dirmodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -830,6 +935,7 @@ void k_dirmodel_data_changed(void* self, void* topLeft, void* bottomRight);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void k_dirmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -840,6 +946,7 @@ void k_dirmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -848,6 +955,7 @@ void k_dirmodel_header_data_changed(void* self, int32_t orientation, int first, 
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void k_dirmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -855,6 +963,7 @@ void k_dirmodel_on_header_data_changed(void* self, void (*callback)(void*, int32
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -863,6 +972,7 @@ void k_dirmodel_layout_changed(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self)
+///
 void k_dirmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -870,6 +980,7 @@ void k_dirmodel_on_layout_changed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -878,6 +989,7 @@ void k_dirmodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self)
+///
 void k_dirmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -888,6 +1000,7 @@ void k_dirmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -897,6 +1010,7 @@ bool k_dirmodel_has_index3(void* self, int row, int column, void* parent);
 /// @param self KDirModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -906,6 +1020,7 @@ bool k_dirmodel_insert_row2(void* self, int row, void* parent);
 /// @param self KDirModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -915,6 +1030,7 @@ bool k_dirmodel_insert_column2(void* self, int column, void* parent);
 /// @param self KDirModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -924,6 +1040,7 @@ bool k_dirmodel_remove_row2(void* self, int row, void* parent);
 /// @param self KDirModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -933,6 +1050,7 @@ bool k_dirmodel_remove_column2(void* self, int column, void* parent);
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool k_dirmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -943,6 +1061,7 @@ bool k_dirmodel_check_index2(void* self, void* index, int32_t options);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void k_dirmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -951,6 +1070,7 @@ void k_dirmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libq
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void k_dirmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -959,6 +1079,7 @@ void k_dirmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void
 ///
 /// @param self KDirModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_dirmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -967,6 +1088,7 @@ void k_dirmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QPersistentModelIndex** parents)
+///
 void k_dirmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -976,6 +1098,7 @@ void k_dirmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersiste
 /// @param self KDirModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_dirmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -984,6 +1107,7 @@ void k_dirmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_dirmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -992,6 +1116,7 @@ void k_dirmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersiste
 ///
 /// @param self KDirModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void k_dirmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -1000,6 +1125,7 @@ void k_dirmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QPersistentModelIndex** parents)
+///
 void k_dirmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -1009,6 +1135,7 @@ void k_dirmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void
 /// @param self KDirModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void k_dirmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -1017,6 +1144,7 @@ void k_dirmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int3
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void k_dirmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -1026,6 +1154,7 @@ void k_dirmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDirModel*
+///
 const char* k_dirmodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -1034,6 +1163,7 @@ const char* k_dirmodel_object_name(void* self);
 ///
 /// @param self KDirModel*
 /// @param name char*
+///
 void k_dirmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -1041,6 +1171,7 @@ void k_dirmodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KDirModel*
+///
 bool k_dirmodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -1048,6 +1179,7 @@ bool k_dirmodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KDirModel*
+///
 bool k_dirmodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -1055,6 +1187,7 @@ bool k_dirmodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KDirModel*
+///
 bool k_dirmodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -1062,6 +1195,7 @@ bool k_dirmodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KDirModel*
+///
 bool k_dirmodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -1070,6 +1204,7 @@ bool k_dirmodel_signals_blocked(void* self);
 ///
 /// @param self KDirModel*
 /// @param b bool
+///
 bool k_dirmodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -1077,6 +1212,7 @@ bool k_dirmodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KDirModel*
+///
 QThread* k_dirmodel_thread(void* self);
 
 /// Inherited from QObject
@@ -1085,6 +1221,7 @@ QThread* k_dirmodel_thread(void* self);
 ///
 /// @param self KDirModel*
 /// @param thread QThread*
+///
 bool k_dirmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -1093,6 +1230,7 @@ bool k_dirmodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self KDirModel*
 /// @param interval int
+///
 int32_t k_dirmodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -1101,6 +1239,7 @@ int32_t k_dirmodel_start_timer(void* self, int interval);
 ///
 /// @param self KDirModel*
 /// @param id int
+///
 void k_dirmodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -1109,6 +1248,7 @@ void k_dirmodel_kill_timer(void* self, int id);
 ///
 /// @param self KDirModel*
 /// @param id enum Qt__TimerId
+///
 void k_dirmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -1116,6 +1256,7 @@ void k_dirmodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KDirModel*
+///
 libqt_list /* of QObject* */ k_dirmodel_children(void* self);
 
 /// Inherited from QObject
@@ -1124,6 +1265,7 @@ libqt_list /* of QObject* */ k_dirmodel_children(void* self);
 ///
 /// @param self KDirModel*
 /// @param parent QObject*
+///
 void k_dirmodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -1132,6 +1274,7 @@ void k_dirmodel_set_parent(void* self, void* parent);
 ///
 /// @param self KDirModel*
 /// @param filterObj QObject*
+///
 void k_dirmodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -1140,6 +1283,7 @@ void k_dirmodel_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KDirModel*
 /// @param obj QObject*
+///
 void k_dirmodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -1150,6 +1294,7 @@ void k_dirmodel_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_dirmodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -1160,6 +1305,7 @@ QMetaObject__Connection* k_dirmodel_connect(void* sender, void* signal, void* re
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_dirmodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -1170,6 +1316,7 @@ QMetaObject__Connection* k_dirmodel_connect2(void* self, void* sender, const cha
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_dirmodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -1177,6 +1324,7 @@ bool k_dirmodel_disconnect(void* sender, void* signal, void* receiver, void* mem
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_dirmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -1184,6 +1332,7 @@ bool k_dirmodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -1191,6 +1340,7 @@ void k_dirmodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -1200,6 +1350,7 @@ void k_dirmodel_dump_object_info(void* self);
 /// @param self KDirModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_dirmodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -1208,6 +1359,7 @@ bool k_dirmodel_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KDirModel*
 /// @param name const char*
+///
 QVariant* k_dirmodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -1217,6 +1369,7 @@ QVariant* k_dirmodel_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDirModel*
+///
 const char** k_dirmodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -1224,6 +1377,7 @@ const char** k_dirmodel_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KDirModel*
+///
 QBindingStorage* k_dirmodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -1231,6 +1385,7 @@ QBindingStorage* k_dirmodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KDirModel*
+///
 const QBindingStorage* k_dirmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -1238,6 +1393,7 @@ const QBindingStorage* k_dirmodel_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1246,6 +1402,7 @@ void k_dirmodel_destroyed(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self)
+///
 void k_dirmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1254,6 +1411,7 @@ void k_dirmodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// @param self KDirModel*
 /// @param classname const char*
+///
 bool k_dirmodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1261,6 +1419,7 @@ bool k_dirmodel_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1270,6 +1429,7 @@ void k_dirmodel_delete_later(void* self);
 /// @param self KDirModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_dirmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1279,6 +1439,7 @@ bool k_dirmodel_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KDirModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_dirmodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1290,6 +1451,7 @@ int32_t k_dirmodel_start_timer22(void* self, int interval, int32_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_dirmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1301,6 +1463,7 @@ QMetaObject__Connection* k_dirmodel_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_dirmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1309,6 +1472,7 @@ QMetaObject__Connection* k_dirmodel_connect4(void* self, void* sender, const cha
 ///
 /// @param self KDirModel*
 /// @param param1 QObject*
+///
 void k_dirmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1317,6 +1481,7 @@ void k_dirmodel_destroyed1(void* self, void* param1);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QObject* param1)
+///
 void k_dirmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1330,6 +1495,7 @@ void k_dirmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_dirmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1343,6 +1509,7 @@ bool k_dirmodel_set_header_data(void* self, int section, int32_t orientation, vo
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool k_dirmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1353,6 +1520,7 @@ bool k_dirmodel_qbase_set_header_data(void* self, int section, int32_t orientati
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void k_dirmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1363,6 +1531,7 @@ void k_dirmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int3
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_dirmodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1373,6 +1542,7 @@ libqt_map /* of int to QVariant* */ k_dirmodel_item_data(void* self, void* index
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ k_dirmodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1383,6 +1553,7 @@ libqt_map /* of int to QVariant* */ k_dirmodel_qbase_item_data(void* self, void*
 ///
 /// @param self KDirModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(KDirModel* self, QModelIndex* index)
+///
 void k_dirmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1394,6 +1565,7 @@ void k_dirmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*c
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_dirmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1405,6 +1577,7 @@ bool k_dirmodel_set_item_data(void* self, void* index, libqt_map /* of int to QV
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool k_dirmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
@@ -1415,6 +1588,7 @@ bool k_dirmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void k_dirmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1425,6 +1599,7 @@ void k_dirmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libq
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 bool k_dirmodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1435,6 +1610,7 @@ bool k_dirmodel_clear_item_data(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 bool k_dirmodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1445,6 +1621,7 @@ bool k_dirmodel_qbase_clear_item_data(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* index)
+///
 void k_dirmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1459,6 +1636,7 @@ void k_dirmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1473,6 +1651,7 @@ bool k_dirmodel_can_drop_mime_data(void* self, void* data, int32_t action, int r
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool k_dirmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1483,6 +1662,7 @@ bool k_dirmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action,
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void k_dirmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1494,6 +1674,7 @@ void k_dirmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*,
 /// @param self KDirModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_dirmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1505,6 +1686,7 @@ int32_t k_dirmodel_supported_drag_actions(void* self);
 /// @param self KDirModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t k_dirmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1515,6 +1697,7 @@ int32_t k_dirmodel_qbase_supported_drag_actions(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func()
+///
 void k_dirmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1529,6 +1712,7 @@ void k_dirmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_dirmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1543,6 +1727,7 @@ bool k_dirmodel_move_rows(void* self, void* sourceParent, int sourceRow, int cou
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_dirmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1553,6 +1738,7 @@ bool k_dirmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, i
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_dirmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1567,6 +1753,7 @@ void k_dirmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_dirmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1581,6 +1768,7 @@ bool k_dirmodel_move_columns(void* self, void* sourceParent, int sourceColumn, i
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool k_dirmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1591,6 +1779,7 @@ bool k_dirmodel_qbase_move_columns(void* self, void* sourceParent, int sourceCol
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void k_dirmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1601,6 +1790,7 @@ void k_dirmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, 
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_dirmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1611,6 +1801,7 @@ QModelIndex* k_dirmodel_buddy(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 QModelIndex* k_dirmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1621,6 +1812,7 @@ QModelIndex* k_dirmodel_qbase_buddy(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, QModelIndex* index)
+///
 void k_dirmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1635,6 +1827,7 @@ void k_dirmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_dirmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1649,6 +1842,7 @@ libqt_list /* of QModelIndex* */ k_dirmodel_match(void* self, void* start, int r
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ k_dirmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1659,6 +1853,7 @@ libqt_list /* of QModelIndex* */ k_dirmodel_qbase_match(void* self, void* start,
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex** func(KDirModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void k_dirmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1669,6 +1864,7 @@ void k_dirmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 QSize* k_dirmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1679,6 +1875,7 @@ QSize* k_dirmodel_span(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param index QModelIndex*
+///
 QSize* k_dirmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1689,6 +1886,7 @@ QSize* k_dirmodel_qbase_span(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback QSize* func(KDirModel* self, QModelIndex* index)
+///
 void k_dirmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1700,6 +1898,7 @@ void k_dirmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_dirmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1711,6 +1910,7 @@ void k_dirmodel_multi_data(void* self, void* index, void* roleDataSpan);
 /// @param self KDirModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void k_dirmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1721,6 +1921,7 @@ void k_dirmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void k_dirmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1730,6 +1931,7 @@ void k_dirmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 bool k_dirmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1739,6 +1941,7 @@ bool k_dirmodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 bool k_dirmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1749,6 +1952,7 @@ bool k_dirmodel_qbase_submit(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback bool func()
+///
 void k_dirmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1758,6 +1962,7 @@ void k_dirmodel_on_submit(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1767,6 +1972,7 @@ void k_dirmodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1777,6 +1983,7 @@ void k_dirmodel_qbase_revert(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1786,6 +1993,7 @@ void k_dirmodel_on_revert(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1795,6 +2003,7 @@ void k_dirmodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1805,6 +2014,7 @@ void k_dirmodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1815,6 +2025,7 @@ void k_dirmodel_on_reset_internal_data(void* self, void (*callback)());
 ///
 /// @param self KDirModel*
 /// @param event QEvent*
+///
 bool k_dirmodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1825,6 +2036,7 @@ bool k_dirmodel_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param event QEvent*
+///
 bool k_dirmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1835,6 +2047,7 @@ bool k_dirmodel_qbase_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QEvent* event)
+///
 void k_dirmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1846,6 +2059,7 @@ void k_dirmodel_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_dirmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1857,6 +2071,7 @@ bool k_dirmodel_event_filter(void* self, void* watched, void* event);
 /// @param self KDirModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_dirmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1867,6 +2082,7 @@ bool k_dirmodel_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QObject* watched, QEvent* event)
+///
 void k_dirmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1877,6 +2093,7 @@ void k_dirmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 /// @param self KDirModel*
 /// @param event QTimerEvent*
+///
 void k_dirmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1887,6 +2104,7 @@ void k_dirmodel_timer_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param event QTimerEvent*
+///
 void k_dirmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1897,6 +2115,7 @@ void k_dirmodel_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QTimerEvent* event)
+///
 void k_dirmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1907,6 +2126,7 @@ void k_dirmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param event QChildEvent*
+///
 void k_dirmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1917,6 +2137,7 @@ void k_dirmodel_child_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param event QChildEvent*
+///
 void k_dirmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1927,6 +2148,7 @@ void k_dirmodel_qbase_child_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QChildEvent* event)
+///
 void k_dirmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1937,6 +2159,7 @@ void k_dirmodel_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param event QEvent*
+///
 void k_dirmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1947,6 +2170,7 @@ void k_dirmodel_custom_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param event QEvent*
+///
 void k_dirmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1957,6 +2181,7 @@ void k_dirmodel_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QEvent* event)
+///
 void k_dirmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1967,6 +2192,7 @@ void k_dirmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
+///
 void k_dirmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1977,6 +2203,7 @@ void k_dirmodel_connect_notify(void* self, void* signal);
 ///
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
+///
 void k_dirmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1987,6 +2214,7 @@ void k_dirmodel_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QMetaMethod* signal)
+///
 void k_dirmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1997,6 +2225,7 @@ void k_dirmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
+///
 void k_dirmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2007,6 +2236,7 @@ void k_dirmodel_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
+///
 void k_dirmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2017,6 +2247,7 @@ void k_dirmodel_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QMetaMethod* signal)
+///
 void k_dirmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2028,6 +2259,7 @@ void k_dirmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KDirModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_dirmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2039,6 +2271,7 @@ QModelIndex* k_dirmodel_create_index(void* self, int row, int column);
 /// @param self KDirModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* k_dirmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2049,6 +2282,7 @@ QModelIndex* k_dirmodel_qbase_create_index(void* self, int row, int column);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, int row, int column)
+///
 void k_dirmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2060,6 +2294,7 @@ void k_dirmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int,
 /// @param self KDirModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_dirmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2071,6 +2306,7 @@ void k_dirmodel_encode_data(void* self, libqt_list indexes, void* stream);
 /// @param self KDirModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void k_dirmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2081,6 +2317,7 @@ void k_dirmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void k_dirmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2094,6 +2331,7 @@ void k_dirmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_dirmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2107,6 +2345,7 @@ bool k_dirmodel_decode_data(void* self, int row, int column, void* parent, void*
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool k_dirmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2117,6 +2356,7 @@ bool k_dirmodel_qbase_decode_data(void* self, int row, int column, void* parent,
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void k_dirmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2129,6 +2369,7 @@ void k_dirmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, voi
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2141,6 +2382,7 @@ void k_dirmodel_begin_insert_rows(void* self, void* parent, int first, int last)
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2151,6 +2393,7 @@ void k_dirmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2160,6 +2403,7 @@ void k_dirmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2169,6 +2413,7 @@ void k_dirmodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2179,6 +2424,7 @@ void k_dirmodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2191,6 +2437,7 @@ void k_dirmodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2203,6 +2450,7 @@ void k_dirmodel_begin_remove_rows(void* self, void* parent, int first, int last)
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2213,6 +2461,7 @@ void k_dirmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2222,6 +2471,7 @@ void k_dirmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2231,6 +2481,7 @@ void k_dirmodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2241,6 +2492,7 @@ void k_dirmodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2255,6 +2507,7 @@ void k_dirmodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_dirmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2269,6 +2522,7 @@ bool k_dirmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst,
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool k_dirmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2279,6 +2533,7 @@ bool k_dirmodel_qbase_begin_move_rows(void* self, void* sourceParent, int source
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void k_dirmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2288,6 +2543,7 @@ void k_dirmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, in
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2297,6 +2553,7 @@ void k_dirmodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2307,6 +2564,7 @@ void k_dirmodel_qbase_end_move_rows(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2319,6 +2577,7 @@ void k_dirmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2331,6 +2590,7 @@ void k_dirmodel_begin_insert_columns(void* self, void* parent, int first, int la
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2341,6 +2601,7 @@ void k_dirmodel_qbase_begin_insert_columns(void* self, void* parent, int first, 
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2350,6 +2611,7 @@ void k_dirmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2359,6 +2621,7 @@ void k_dirmodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2369,6 +2632,7 @@ void k_dirmodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2381,6 +2645,7 @@ void k_dirmodel_on_end_insert_columns(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2393,6 +2658,7 @@ void k_dirmodel_begin_remove_columns(void* self, void* parent, int first, int la
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void k_dirmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2403,6 +2669,7 @@ void k_dirmodel_qbase_begin_remove_columns(void* self, void* parent, int first, 
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2412,6 +2679,7 @@ void k_dirmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2421,6 +2689,7 @@ void k_dirmodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2431,6 +2700,7 @@ void k_dirmodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2445,6 +2715,7 @@ void k_dirmodel_on_end_remove_columns(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_dirmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2459,6 +2730,7 @@ bool k_dirmodel_begin_move_columns(void* self, void* sourceParent, int sourceFir
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool k_dirmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2469,6 +2741,7 @@ bool k_dirmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sou
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_dirmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2478,6 +2751,7 @@ void k_dirmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2487,6 +2761,7 @@ void k_dirmodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2497,6 +2772,7 @@ void k_dirmodel_qbase_end_move_columns(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2506,6 +2782,7 @@ void k_dirmodel_on_end_move_columns(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2515,6 +2792,7 @@ void k_dirmodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2525,6 +2803,7 @@ void k_dirmodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2534,6 +2813,7 @@ void k_dirmodel_on_begin_reset_model(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2543,6 +2823,7 @@ void k_dirmodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2553,6 +2834,7 @@ void k_dirmodel_qbase_end_reset_model(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback void func()
+///
 void k_dirmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2564,6 +2846,7 @@ void k_dirmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param self KDirModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_dirmodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2575,6 +2858,7 @@ void k_dirmodel_change_persistent_index(void* self, void* from, void* to);
 /// @param self KDirModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void k_dirmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2585,6 +2869,7 @@ void k_dirmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* from, QModelIndex* to)
+///
 void k_dirmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2596,6 +2881,7 @@ void k_dirmodel_on_change_persistent_index(void* self, void (*callback)(void*, v
 /// @param self KDirModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_dirmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2607,6 +2893,7 @@ void k_dirmodel_change_persistent_index_list(void* self, libqt_list from, libqt_
 /// @param self KDirModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void k_dirmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2617,6 +2904,7 @@ void k_dirmodel_qbase_change_persistent_index_list(void* self, libqt_list from, 
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex** from, QModelIndex** to)
+///
 void k_dirmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -2626,6 +2914,7 @@ void k_dirmodel_on_change_persistent_index_list(void* self, void (*callback)(voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 libqt_list /* of QModelIndex* */ k_dirmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2635,6 +2924,7 @@ libqt_list /* of QModelIndex* */ k_dirmodel_persistent_index_list(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 libqt_list /* of QModelIndex* */ k_dirmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2645,6 +2935,7 @@ libqt_list /* of QModelIndex* */ k_dirmodel_qbase_persistent_index_list(void* se
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex** func()
+///
 void k_dirmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -2654,6 +2945,7 @@ void k_dirmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 QObject* k_dirmodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2663,6 +2955,7 @@ QObject* k_dirmodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 QObject* k_dirmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2673,6 +2966,7 @@ QObject* k_dirmodel_qbase_sender(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback QObject* func()
+///
 void k_dirmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2682,6 +2976,7 @@ void k_dirmodel_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirModel*
+///
 int32_t k_dirmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2691,6 +2986,7 @@ int32_t k_dirmodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirModel*
+///
 int32_t k_dirmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2701,6 +2997,7 @@ int32_t k_dirmodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func()
+///
 void k_dirmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2711,6 +3008,7 @@ void k_dirmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self KDirModel*
 /// @param signal const char*
+///
 int32_t k_dirmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2721,6 +3019,7 @@ int32_t k_dirmodel_receivers(void* self, const char* signal);
 ///
 /// @param self KDirModel*
 /// @param signal const char*
+///
 int32_t k_dirmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2731,6 +3030,7 @@ int32_t k_dirmodel_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KDirModel*
 /// @param callback int32_t func(KDirModel* self, const char* signal)
+///
 void k_dirmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2741,6 +3041,7 @@ void k_dirmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
+///
 bool k_dirmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2751,6 +3052,7 @@ bool k_dirmodel_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
+///
 bool k_dirmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2761,6 +3063,7 @@ bool k_dirmodel_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KDirModel*
 /// @param callback bool func(KDirModel* self, QMetaMethod* signal)
+///
 void k_dirmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2771,6 +3074,7 @@ void k_dirmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2781,6 +3085,7 @@ void k_dirmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*,
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2791,6 +3096,7 @@ void k_dirmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int,
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2801,6 +3107,7 @@ void k_dirmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, 
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2811,6 +3118,7 @@ void k_dirmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, 
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2821,6 +3129,7 @@ void k_dirmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(voi
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2831,6 +3140,7 @@ void k_dirmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, i
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2841,6 +3151,7 @@ void k_dirmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* parent, int first, int last)
+///
 void k_dirmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2851,6 +3162,7 @@ void k_dirmodel_on_columns_removed(void* self, void (*callback)(void*, void*, in
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self)
+///
 void k_dirmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2861,6 +3173,7 @@ void k_dirmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self)
+///
 void k_dirmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2871,6 +3184,7 @@ void k_dirmodel_on_model_reset(void* self, void (*callback)(void*));
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_dirmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2881,6 +3195,7 @@ void k_dirmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, vo
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void k_dirmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2891,6 +3206,7 @@ void k_dirmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, in
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_dirmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2901,6 +3217,7 @@ void k_dirmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*,
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void k_dirmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2911,6 +3228,7 @@ void k_dirmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int,
 ///
 /// @param self KDirModel*
 /// @param callback void func(KDirModel* self, const char* objectName)
+///
 void k_dirmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#dtor.KDirModel)
@@ -2918,15 +3236,18 @@ void k_dirmodel_on_object_name_changed(void* self, void (*callback)(void*, const
 /// Delete this object from C++ memory.
 ///
 /// @param self KDirModel*
+///
 void k_dirmodel_delete(void* self);
 
-/// https://api.kde.org/kdirmodel.html#types
+/// [Upstream resources](https://api.kde.org/kdirmodel.html#public-types)
 
 typedef enum {
     KDIRMODEL_OPENURLFLAG_NOFLAGS = 0,
     KDIRMODEL_OPENURLFLAG_RELOAD = 1,
     KDIRMODEL_OPENURLFLAG_SHOWROOT = 2
 } KDirModel__OpenUrlFlag;
+
+/// [Upstream resources](https://api.kde.org/kdirmodel.html#public-types)
 
 typedef enum {
     KDIRMODEL_MODELCOLUMNS_NAME = 0,
@@ -2939,9 +3260,13 @@ typedef enum {
     KDIRMODEL_MODELCOLUMNS_COLUMNCOUNT = 7
 } KDirModel__ModelColumns;
 
+/// [Upstream resources](https://api.kde.org/kdirmodel.html#public-types)
+
 typedef enum {
     KDIRMODEL__CHILDCOUNTUNKNOWN = -1
 } KDirModel__;
+
+/// [Upstream resources](https://api.kde.org/kdirmodel.html#public-types)
 
 typedef enum {
     KDIRMODEL_ADDITIONALROLES_FILEITEMROLE = 128082943,
@@ -2949,6 +3274,8 @@ typedef enum {
     KDIRMODEL_ADDITIONALROLES_HASJOBROLE = 31806885,
     KDIRMODEL_ADDITIONALROLES_HANDLESEQUENCESROLE = 509878898
 } KDirModel__AdditionalRoles;
+
+/// [Upstream resources](https://api.kde.org/kdirmodel.html#public-types)
 
 typedef enum {
     KDIRMODEL_DROPSALLOWEDFLAG_NODROPS = 0,

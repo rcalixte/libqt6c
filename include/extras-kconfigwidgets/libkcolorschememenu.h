@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kcolorschememenu.html
+/// [Upstream resources](https://api.kde.org/kcolorschememenu.html)
 
 /// [Upstream resources](https://api.kde.org/kcolorschememenu.html#createMenu)
 ///
 /// @param param1 KColorSchemeManager*
 /// @param param2 QObject*
+///
 KActionMenu* k_colorschememenu_create_menu(void* param1, void* param2);
 #endif

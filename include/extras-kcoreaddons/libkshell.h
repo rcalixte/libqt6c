@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kshell.html
+/// [Upstream resources](https://api.kde.org/kshell.html)
 
 /// [Upstream resources](https://api.kde.org/kshell.html#splitArgs)
 ///
@@ -20,6 +20,7 @@
 /// @param param1 const char*
 /// @param param2 flag of enum KShell__Option
 /// @param param3 enum KShell__Errors*
+///
 const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* param3);
 
 /// [Upstream resources](https://api.kde.org/kshell.html#joinArgs)
@@ -27,6 +28,7 @@ const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* par
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char**
+///
 const char* k_shell_join_args(const char* param1[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kshell.html#quoteArg)
@@ -34,6 +36,7 @@ const char* k_shell_join_args(const char* param1[static 1]);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_shell_quote_arg(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kshell.html#tildeExpand)
@@ -41,6 +44,7 @@ const char* k_shell_quote_arg(const char* param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_shell_tilde_expand(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kshell.html#tildeCollapse)
@@ -48,15 +52,18 @@ const char* k_shell_tilde_expand(const char* param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_shell_tilde_collapse(const char* param1);
 
-/// https://api.kde.org/kshell.html#types
+/// [Upstream resources](https://api.kde.org/kshell.html#public-types)
 
 typedef enum {
     KSHELL_OPTION_NOOPTIONS = 0,
     KSHELL_OPTION_TILDEEXPAND = 1,
     KSHELL_OPTION_ABORTONMETA = 2
 } KShell__Option;
+
+/// [Upstream resources](https://api.kde.org/kshell.html#public-types)
 
 typedef enum {
     KSHELL_ERRORS_NOERROR = 0,

@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kstandardshortcut.html
+/// [Upstream resources](https://api.kde.org/kstandardshortcut.html)
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#shortcut)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
+///
 libqt_list /* of QKeySequence* */ k_standardshortcut_shortcut(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#name)
@@ -23,6 +24,7 @@ libqt_list /* of QKeySequence* */ k_standardshortcut_shortcut(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
+///
 const char* k_standardshortcut_name(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#label)
@@ -30,6 +32,7 @@ const char* k_standardshortcut_name(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
+///
 const char* k_standardshortcut_label(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#whatsThis)
@@ -37,6 +40,7 @@ const char* k_standardshortcut_label(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
+///
 const char* k_standardshortcut_whats_this(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#find)
@@ -44,6 +48,7 @@ const char* k_standardshortcut_whats_this(int32_t param1);
 /// @param param1 QKeySequence*
 ///
 /// @return enum KStandardShortcut__StandardShortcut
+///
 int32_t k_standardshortcut_find(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#findByName)
@@ -51,17 +56,20 @@ int32_t k_standardshortcut_find(void* param1);
 /// @param param1 const char*
 ///
 /// @return enum KStandardShortcut__StandardShortcut
+///
 int32_t k_standardshortcut_find_by_name(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#hardcodedDefaultShortcut)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
+///
 libqt_list /* of QKeySequence* */ k_standardshortcut_hardcoded_default_shortcut(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#saveShortcut)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 /// @param param2 libqt_list /* of QKeySequence* */
+///
 void k_standardshortcut_save_shortcut(int32_t param1, libqt_list param2);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#category)
@@ -69,6 +77,7 @@ void k_standardshortcut_save_shortcut(int32_t param1, libqt_list param2);
 /// @param param1 enum KStandardShortcut__StandardShortcut
 ///
 /// @return enum KStandardShortcut__Category
+///
 int32_t k_standardshortcut_category(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#open)
@@ -295,7 +304,7 @@ libqt_list /* of QKeySequence* */ k_standardshortcut_open_main_menu();
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_open_context_menu();
 
-/// https://api.kde.org/kstandardshortcut.html#types
+/// [Upstream resources](https://api.kde.org/kstandardshortcut.html#public-types)
 
 typedef enum {
     KSTANDARDSHORTCUT_STANDARDSHORTCUT_ACCELNONE = 0,
@@ -385,6 +394,8 @@ typedef enum {
     KSTANDARDSHORTCUT_STANDARDSHORTCUT_OPENCONTEXTMENU = 84,
     KSTANDARDSHORTCUT_STANDARDSHORTCUT_STANDARDSHORTCUTCOUNT = 85
 } KStandardShortcut__StandardShortcut;
+
+/// [Upstream resources](https://api.kde.org/kstandardshortcut.html#public-types)
 
 typedef enum {
     KSTANDARDSHORTCUT_CATEGORY_INVALIDCATEGORY = -1,

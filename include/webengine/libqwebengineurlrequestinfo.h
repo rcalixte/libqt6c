@@ -11,13 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#resourceType)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 ///
 /// @return enum QWebEngineUrlRequestInfo__ResourceType
+///
 int32_t q_webengineurlrequestinfo_resource_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#navigationType)
@@ -25,21 +26,25 @@ int32_t q_webengineurlrequestinfo_resource_type(void* self);
 /// @param self QWebEngineUrlRequestInfo*
 ///
 /// @return enum QWebEngineUrlRequestInfo__NavigationType
+///
 int32_t q_webengineurlrequestinfo_navigation_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestUrl)
 ///
 /// @param self QWebEngineUrlRequestInfo*
+///
 QUrl* q_webengineurlrequestinfo_request_url(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#firstPartyUrl)
 ///
 /// @param self QWebEngineUrlRequestInfo*
+///
 QUrl* q_webengineurlrequestinfo_first_party_url(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#initiator)
 ///
 /// @param self QWebEngineUrlRequestInfo*
+///
 QUrl* q_webengineurlrequestinfo_initiator(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestMethod)
@@ -47,28 +52,33 @@ QUrl* q_webengineurlrequestinfo_initiator(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineUrlRequestInfo*
+///
 char* q_webengineurlrequestinfo_request_method(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestBody)
 ///
 /// @param self QWebEngineUrlRequestInfo*
+///
 QIODevice* q_webengineurlrequestinfo_request_body(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#changed)
 ///
 /// @param self QWebEngineUrlRequestInfo*
+///
 bool q_webengineurlrequestinfo_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#block)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 /// @param shouldBlock bool
+///
 void q_webengineurlrequestinfo_block(void* self, bool shouldBlock);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#redirect)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 /// @param url QUrl*
+///
 void q_webengineurlrequestinfo_redirect(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#setHttpHeader)
@@ -76,9 +86,10 @@ void q_webengineurlrequestinfo_redirect(void* self, void* url);
 /// @param self QWebEngineUrlRequestInfo*
 /// @param name const char*
 /// @param value const char*
+///
 void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, const char* value);
 
-/// https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#public-types)
 
 typedef enum {
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPEMAINFRAME = 0,
@@ -106,6 +117,8 @@ typedef enum {
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPEWEBSOCKET = 254,
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPEUNKNOWN = 255
 } QWebEngineUrlRequestInfo__ResourceType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#public-types)
 
 typedef enum {
     QWEBENGINEURLREQUESTINFO_NAVIGATIONTYPE_NAVIGATIONTYPELINK = 0,

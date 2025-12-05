@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kpluginfactory.html
+/// [Upstream resources](https://api.kde.org/kpluginfactory.html)
 
 /// k_pluginfactory_new constructs a new KPluginFactory object.
 ///
@@ -20,22 +20,26 @@ KPluginFactory* k_pluginfactory_new();
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPluginFactory*
+///
 const QMetaObject* k_pluginfactory_meta_object(void* self);
 
 /// @param self KPluginFactory*
 /// @param param1 const char*
+///
 void* k_pluginfactory_metacast(void* self, const char* param1);
 
 /// @param self KPluginFactory*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_pluginfactory_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KPluginFactory*
 /// @param callback int32_t func(KPluginFactory* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_pluginfactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -44,6 +48,7 @@ void k_pluginfactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_pluginfactory_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -51,17 +56,20 @@ int32_t k_pluginfactory_qbase_metacall(void* self, int32_t param1, int param2, v
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_pluginfactory_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#metaData)
 ///
 /// @param self KPluginFactory*
+///
 KPluginMetaData* k_pluginfactory_meta_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#setMetaData)
 ///
 /// @param self KPluginFactory*
 /// @param metaData KPluginMetaData*
+///
 void k_pluginfactory_set_meta_data(void* self, void* metaData);
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#create)
@@ -71,6 +79,7 @@ void k_pluginfactory_set_meta_data(void* self, void* metaData);
 /// @param parentWidget QWidget*
 /// @param parent QObject*
 /// @param args libqt_list /* of QVariant* */
+///
 QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args);
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#create)
@@ -79,6 +88,7 @@ QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidge
 ///
 /// @param self KPluginFactory*
 /// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, QVariant** args)
+///
 void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, QVariant**));
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#create)
@@ -90,6 +100,7 @@ void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const cha
 /// @param parentWidget QWidget*
 /// @param parent QObject*
 /// @param args libqt_list /* of QVariant* */
+///
 QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -98,6 +109,7 @@ QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* paren
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_pluginfactory_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -107,6 +119,7 @@ const char* k_pluginfactory_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_pluginfactory_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -116,6 +129,7 @@ const char* k_pluginfactory_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginFactory*
+///
 const char* k_pluginfactory_object_name(void* self);
 
 /// Inherited from QObject
@@ -124,6 +138,7 @@ const char* k_pluginfactory_object_name(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param name char*
+///
 void k_pluginfactory_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -131,6 +146,7 @@ void k_pluginfactory_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KPluginFactory*
+///
 bool k_pluginfactory_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -138,6 +154,7 @@ bool k_pluginfactory_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KPluginFactory*
+///
 bool k_pluginfactory_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -145,6 +162,7 @@ bool k_pluginfactory_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KPluginFactory*
+///
 bool k_pluginfactory_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -152,6 +170,7 @@ bool k_pluginfactory_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KPluginFactory*
+///
 bool k_pluginfactory_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -160,6 +179,7 @@ bool k_pluginfactory_signals_blocked(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param b bool
+///
 bool k_pluginfactory_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -167,6 +187,7 @@ bool k_pluginfactory_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KPluginFactory*
+///
 QThread* k_pluginfactory_thread(void* self);
 
 /// Inherited from QObject
@@ -175,6 +196,7 @@ QThread* k_pluginfactory_thread(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param thread QThread*
+///
 bool k_pluginfactory_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -183,6 +205,7 @@ bool k_pluginfactory_move_to_thread(void* self, void* thread);
 ///
 /// @param self KPluginFactory*
 /// @param interval int
+///
 int32_t k_pluginfactory_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -191,6 +214,7 @@ int32_t k_pluginfactory_start_timer(void* self, int interval);
 ///
 /// @param self KPluginFactory*
 /// @param id int
+///
 void k_pluginfactory_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -199,6 +223,7 @@ void k_pluginfactory_kill_timer(void* self, int id);
 ///
 /// @param self KPluginFactory*
 /// @param id enum Qt__TimerId
+///
 void k_pluginfactory_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -206,6 +231,7 @@ void k_pluginfactory_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KPluginFactory*
+///
 libqt_list /* of QObject* */ k_pluginfactory_children(void* self);
 
 /// Inherited from QObject
@@ -214,6 +240,7 @@ libqt_list /* of QObject* */ k_pluginfactory_children(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param parent QObject*
+///
 void k_pluginfactory_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -222,6 +249,7 @@ void k_pluginfactory_set_parent(void* self, void* parent);
 ///
 /// @param self KPluginFactory*
 /// @param filterObj QObject*
+///
 void k_pluginfactory_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -230,6 +258,7 @@ void k_pluginfactory_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KPluginFactory*
 /// @param obj QObject*
+///
 void k_pluginfactory_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -240,6 +269,7 @@ void k_pluginfactory_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_pluginfactory_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -250,6 +280,7 @@ QMetaObject__Connection* k_pluginfactory_connect(void* sender, void* signal, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_pluginfactory_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -260,6 +291,7 @@ QMetaObject__Connection* k_pluginfactory_connect2(void* self, void* sender, cons
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_pluginfactory_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -267,6 +299,7 @@ bool k_pluginfactory_disconnect(void* sender, void* signal, void* receiver, void
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_pluginfactory_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -274,6 +307,7 @@ bool k_pluginfactory_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KPluginFactory*
+///
 void k_pluginfactory_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -281,6 +315,7 @@ void k_pluginfactory_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KPluginFactory*
+///
 void k_pluginfactory_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -290,6 +325,7 @@ void k_pluginfactory_dump_object_info(void* self);
 /// @param self KPluginFactory*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_pluginfactory_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -298,6 +334,7 @@ bool k_pluginfactory_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KPluginFactory*
 /// @param name const char*
+///
 QVariant* k_pluginfactory_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -307,6 +344,7 @@ QVariant* k_pluginfactory_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginFactory*
+///
 const char** k_pluginfactory_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -314,6 +352,7 @@ const char** k_pluginfactory_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KPluginFactory*
+///
 QBindingStorage* k_pluginfactory_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -321,6 +360,7 @@ QBindingStorage* k_pluginfactory_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KPluginFactory*
+///
 const QBindingStorage* k_pluginfactory_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -328,6 +368,7 @@ const QBindingStorage* k_pluginfactory_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPluginFactory*
+///
 void k_pluginfactory_destroyed(void* self);
 
 /// Inherited from QObject
@@ -336,6 +377,7 @@ void k_pluginfactory_destroyed(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self)
+///
 void k_pluginfactory_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -343,6 +385,7 @@ void k_pluginfactory_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KPluginFactory*
+///
 QObject* k_pluginfactory_parent(void* self);
 
 /// Inherited from QObject
@@ -351,6 +394,7 @@ QObject* k_pluginfactory_parent(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param classname const char*
+///
 bool k_pluginfactory_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -358,6 +402,7 @@ bool k_pluginfactory_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KPluginFactory*
+///
 void k_pluginfactory_delete_later(void* self);
 
 /// Inherited from QObject
@@ -367,6 +412,7 @@ void k_pluginfactory_delete_later(void* self);
 /// @param self KPluginFactory*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_pluginfactory_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -376,6 +422,7 @@ bool k_pluginfactory_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KPluginFactory*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_pluginfactory_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -387,6 +434,7 @@ int32_t k_pluginfactory_start_timer22(void* self, int interval, int32_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_pluginfactory_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -398,6 +446,7 @@ QMetaObject__Connection* k_pluginfactory_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_pluginfactory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -406,6 +455,7 @@ QMetaObject__Connection* k_pluginfactory_connect4(void* self, void* sender, cons
 ///
 /// @param self KPluginFactory*
 /// @param param1 QObject*
+///
 void k_pluginfactory_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -414,6 +464,7 @@ void k_pluginfactory_destroyed1(void* self, void* param1);
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self, QObject* param1)
+///
 void k_pluginfactory_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -424,6 +475,7 @@ void k_pluginfactory_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KPluginFactory*
 /// @param event QEvent*
+///
 bool k_pluginfactory_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -434,6 +486,7 @@ bool k_pluginfactory_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param event QEvent*
+///
 bool k_pluginfactory_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -444,6 +497,7 @@ bool k_pluginfactory_qbase_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param callback bool func(KPluginFactory* self, QEvent* event)
+///
 void k_pluginfactory_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -455,6 +509,7 @@ void k_pluginfactory_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KPluginFactory*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_pluginfactory_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -466,6 +521,7 @@ bool k_pluginfactory_event_filter(void* self, void* watched, void* event);
 /// @param self KPluginFactory*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_pluginfactory_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -476,6 +532,7 @@ bool k_pluginfactory_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param callback bool func(KPluginFactory* self, QObject* watched, QEvent* event)
+///
 void k_pluginfactory_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -486,6 +543,7 @@ void k_pluginfactory_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 /// @param self KPluginFactory*
 /// @param event QTimerEvent*
+///
 void k_pluginfactory_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -496,6 +554,7 @@ void k_pluginfactory_timer_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param event QTimerEvent*
+///
 void k_pluginfactory_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -506,6 +565,7 @@ void k_pluginfactory_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self, QTimerEvent* event)
+///
 void k_pluginfactory_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -516,6 +576,7 @@ void k_pluginfactory_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KPluginFactory*
 /// @param event QChildEvent*
+///
 void k_pluginfactory_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -526,6 +587,7 @@ void k_pluginfactory_child_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param event QChildEvent*
+///
 void k_pluginfactory_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -536,6 +598,7 @@ void k_pluginfactory_qbase_child_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self, QChildEvent* event)
+///
 void k_pluginfactory_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -546,6 +609,7 @@ void k_pluginfactory_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KPluginFactory*
 /// @param event QEvent*
+///
 void k_pluginfactory_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -556,6 +620,7 @@ void k_pluginfactory_custom_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param event QEvent*
+///
 void k_pluginfactory_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -566,6 +631,7 @@ void k_pluginfactory_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self, QEvent* event)
+///
 void k_pluginfactory_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -576,6 +642,7 @@ void k_pluginfactory_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KPluginFactory*
 /// @param signal QMetaMethod*
+///
 void k_pluginfactory_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -586,6 +653,7 @@ void k_pluginfactory_connect_notify(void* self, void* signal);
 ///
 /// @param self KPluginFactory*
 /// @param signal QMetaMethod*
+///
 void k_pluginfactory_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -596,6 +664,7 @@ void k_pluginfactory_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self, QMetaMethod* signal)
+///
 void k_pluginfactory_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -606,6 +675,7 @@ void k_pluginfactory_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 /// @param self KPluginFactory*
 /// @param signal QMetaMethod*
+///
 void k_pluginfactory_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -616,6 +686,7 @@ void k_pluginfactory_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KPluginFactory*
 /// @param signal QMetaMethod*
+///
 void k_pluginfactory_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -626,6 +697,7 @@ void k_pluginfactory_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self, QMetaMethod* signal)
+///
 void k_pluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -635,6 +707,7 @@ void k_pluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KPluginFactory*
+///
 QObject* k_pluginfactory_sender(void* self);
 
 /// Inherited from QObject
@@ -644,6 +717,7 @@ QObject* k_pluginfactory_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KPluginFactory*
+///
 QObject* k_pluginfactory_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -654,6 +728,7 @@ QObject* k_pluginfactory_qbase_sender(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param callback QObject* func()
+///
 void k_pluginfactory_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -663,6 +738,7 @@ void k_pluginfactory_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KPluginFactory*
+///
 int32_t k_pluginfactory_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -672,6 +748,7 @@ int32_t k_pluginfactory_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KPluginFactory*
+///
 int32_t k_pluginfactory_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -682,6 +759,7 @@ int32_t k_pluginfactory_qbase_sender_signal_index(void* self);
 ///
 /// @param self KPluginFactory*
 /// @param callback int32_t func()
+///
 void k_pluginfactory_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -692,6 +770,7 @@ void k_pluginfactory_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self KPluginFactory*
 /// @param signal const char*
+///
 int32_t k_pluginfactory_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -702,6 +781,7 @@ int32_t k_pluginfactory_receivers(void* self, const char* signal);
 ///
 /// @param self KPluginFactory*
 /// @param signal const char*
+///
 int32_t k_pluginfactory_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -712,6 +792,7 @@ int32_t k_pluginfactory_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KPluginFactory*
 /// @param callback int32_t func(KPluginFactory* self, const char* signal)
+///
 void k_pluginfactory_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -722,6 +803,7 @@ void k_pluginfactory_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// @param self KPluginFactory*
 /// @param signal QMetaMethod*
+///
 bool k_pluginfactory_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -732,6 +814,7 @@ bool k_pluginfactory_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KPluginFactory*
 /// @param signal QMetaMethod*
+///
 bool k_pluginfactory_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -742,6 +825,7 @@ bool k_pluginfactory_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KPluginFactory*
 /// @param callback bool func(KPluginFactory* self, QMetaMethod* signal)
+///
 void k_pluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -752,6 +836,7 @@ void k_pluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, 
 ///
 /// @param self KPluginFactory*
 /// @param callback void func(KPluginFactory* self, const char* objectName)
+///
 void k_pluginfactory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#dtor.KPluginFactory)
@@ -759,9 +844,10 @@ void k_pluginfactory_on_object_name_changed(void* self, void (*callback)(void*, 
 /// Delete this object from C++ memory.
 ///
 /// @param self KPluginFactory*
+///
 void k_pluginfactory_delete(void* self);
 
-/// https://api.kde.org/kpluginfactory.html#types
+/// [Upstream resources](https://api.kde.org/kpluginfactory.html#public-types)
 
 typedef enum {
     KPLUGINFACTORY_RESULTERRORREASON_NO_PLUGIN_ERROR = 0,

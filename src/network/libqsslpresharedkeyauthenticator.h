@@ -11,27 +11,32 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html)
 
 /// q_sslpresharedkeyauthenticator_new constructs a new QSslPreSharedKeyAuthenticator object.
 ///
 QSslPreSharedKeyAuthenticator* q_sslpresharedkeyauthenticator_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html)
+
 /// q_sslpresharedkeyauthenticator_new2 constructs a new QSslPreSharedKeyAuthenticator object.
 ///
 /// @param authenticator QSslPreSharedKeyAuthenticator*
+///
 QSslPreSharedKeyAuthenticator* q_sslpresharedkeyauthenticator_new2(void* authenticator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#operator-eq)
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
 /// @param authenticator QSslPreSharedKeyAuthenticator*
+///
 void q_sslpresharedkeyauthenticator_operator_assign(void* self, void* authenticator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#swap)
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
 /// @param other QSslPreSharedKeyAuthenticator*
+///
 void q_sslpresharedkeyauthenticator_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#identityHint)
@@ -39,12 +44,14 @@ void q_sslpresharedkeyauthenticator_swap(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
+///
 char* q_sslpresharedkeyauthenticator_identity_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#setIdentity)
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
 /// @param identity const char*
+///
 void q_sslpresharedkeyauthenticator_set_identity(void* self, const char* identity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#identity)
@@ -52,17 +59,20 @@ void q_sslpresharedkeyauthenticator_set_identity(void* self, const char* identit
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
+///
 char* q_sslpresharedkeyauthenticator_identity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#maximumIdentityLength)
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
+///
 int32_t q_sslpresharedkeyauthenticator_maximum_identity_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#setPreSharedKey)
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
 /// @param preSharedKey const char*
+///
 void q_sslpresharedkeyauthenticator_set_pre_shared_key(void* self, const char* preSharedKey);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#preSharedKey)
@@ -70,11 +80,13 @@ void q_sslpresharedkeyauthenticator_set_pre_shared_key(void* self, const char* p
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
+///
 char* q_sslpresharedkeyauthenticator_pre_shared_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#maximumPreSharedKeyLength)
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
+///
 int32_t q_sslpresharedkeyauthenticator_maximum_pre_shared_key_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#dtor.QSslPreSharedKeyAuthenticator)
@@ -82,6 +94,7 @@ int32_t q_sslpresharedkeyauthenticator_maximum_pre_shared_key_length(void* self)
 /// Delete this object from C++ memory.
 ///
 /// @param self QSslPreSharedKeyAuthenticator*
+///
 void q_sslpresharedkeyauthenticator_delete(void* self);
 
 #endif

@@ -11,58 +11,75 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qmetatype.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 
 /// q_metatype_new constructs a new QMetaType object.
 ///
 /// @param other QMetaType*
+///
 QMetaType* q_metatype_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 
 /// q_metatype_new2 constructs a new QMetaType object and invalidates the source QMetaType object.
 ///
 /// @param other QMetaType*
+///
 QMetaType* q_metatype_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 
 /// q_metatype_new3 constructs a new QMetaType object.
 ///
 /// @param type int
+///
 QMetaType* q_metatype_new3(int type);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 
 /// q_metatype_new4 constructs a new QMetaType object.
 ///
 QMetaType* q_metatype_new4();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
+
 /// q_metatype_new5 constructs a new QMetaType object.
 ///
 /// @param param1 QMetaType*
+///
 QMetaType* q_metatype_new5(void* param1);
 
 /// q_metatype_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QMetaType*
 /// @param other QMetaType*
+///
 void q_metatype_copy_assign(void* self, void* other);
 
 /// q_metatype_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QMetaType*
 /// @param other QMetaType*
+///
 void q_metatype_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#registerNormalizedTypedef)
 ///
 /// @param normalizedTypeName const char*
 /// @param type QMetaType*
+///
 void q_metatype_register_normalized_typedef(const char* normalizedTypeName, void* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#type)
 ///
 /// @param typeName const char*
+///
 int32_t q_metatype_type(const char* typeName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#type)
 ///
 /// @param typeName const char*
+///
 int32_t q_metatype_type2(const char* typeName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#typeName)
@@ -70,11 +87,13 @@ int32_t q_metatype_type2(const char* typeName);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param type int
+///
 const char* q_metatype_type_name(int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#sizeOf)
 ///
 /// @param type int
+///
 int32_t q_metatype_size_of(int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#typeFlags)
@@ -82,22 +101,26 @@ int32_t q_metatype_size_of(int type);
 /// @param type int
 ///
 /// @return flag of enum QMetaType__TypeFlag
+///
 int32_t q_metatype_type_flags(int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#metaObjectForType)
 ///
 /// @param type int
+///
 const QMetaObject* q_metatype_meta_object_for_type(int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
 /// @param type int
+///
 void* q_metatype_create(int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#destroy)
 ///
 /// @param type int
 /// @param data void*
+///
 void q_metatype_destroy(int type, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#construct)
@@ -105,47 +128,56 @@ void q_metatype_destroy(int type, void* data);
 /// @param type int
 /// @param where void*
 /// @param copyVal void*
+///
 void* q_metatype_construct(int type, void* where, void* copyVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#destruct)
 ///
 /// @param type int
 /// @param where void*
+///
 void q_metatype_destruct(int type, void* where);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isRegistered)
 ///
 /// @param type int
+///
 bool q_metatype_is_registered(int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isValid)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isRegistered)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_registered2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#registerType)
 ///
 /// @param self QMetaType*
+///
 void q_metatype_register_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#id)
 ///
 /// @param self QMetaType*
+///
 int32_t q_metatype_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#sizeOf)
 ///
 /// @param self QMetaType*
+///
 int64_t q_metatype_size_of2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#alignOf)
 ///
 /// @param self QMetaType*
+///
 int64_t q_metatype_align_of(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#flags)
@@ -153,11 +185,13 @@ int64_t q_metatype_align_of(void* self);
 /// @param self QMetaType*
 ///
 /// @return flag of enum QMetaType__TypeFlag
+///
 int32_t q_metatype_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QMetaType*
+///
 const QMetaObject* q_metatype_meta_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#name)
@@ -165,29 +199,34 @@ const QMetaObject* q_metatype_meta_object(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaType*
+///
 const char* q_metatype_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
 /// @param self QMetaType*
+///
 void* q_metatype_create2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#destroy)
 ///
 /// @param self QMetaType*
 /// @param data void*
+///
 void q_metatype_destroy2(void* self, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#construct)
 ///
 /// @param self QMetaType*
 /// @param where void*
+///
 void* q_metatype_construct2(void* self, void* where);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#destruct)
 ///
 /// @param self QMetaType*
 /// @param data void*
+///
 void q_metatype_destruct2(void* self, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#compare)
@@ -195,6 +234,7 @@ void q_metatype_destruct2(void* self, void* data);
 /// @param self QMetaType*
 /// @param lhs void*
 /// @param rhs void*
+///
 QPartialOrdering* q_metatype_compare(void* self, void* lhs, void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#equals)
@@ -202,36 +242,43 @@ QPartialOrdering* q_metatype_compare(void* self, void* lhs, void* rhs);
 /// @param self QMetaType*
 /// @param lhs void*
 /// @param rhs void*
+///
 bool q_metatype_equals(void* self, void* lhs, void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isDefaultConstructible)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_default_constructible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isCopyConstructible)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_copy_constructible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isMoveConstructible)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_move_constructible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isDestructible)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_destructible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isEqualityComparable)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_equality_comparable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#isOrdered)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_is_ordered(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#save)
@@ -239,6 +286,7 @@ bool q_metatype_is_ordered(void* self);
 /// @param self QMetaType*
 /// @param stream QDataStream*
 /// @param data void*
+///
 bool q_metatype_save(void* self, void* stream, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#load)
@@ -246,11 +294,13 @@ bool q_metatype_save(void* self, void* stream, void* data);
 /// @param self QMetaType*
 /// @param stream QDataStream*
 /// @param data void*
+///
 bool q_metatype_load(void* self, void* stream, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#hasRegisteredDataStreamOperators)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_has_registered_data_stream_operators(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#save)
@@ -258,6 +308,7 @@ bool q_metatype_has_registered_data_stream_operators(void* self);
 /// @param stream QDataStream*
 /// @param type int
 /// @param data void*
+///
 bool q_metatype_save2(void* stream, int type, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#load)
@@ -265,16 +316,19 @@ bool q_metatype_save2(void* stream, int type, void* data);
 /// @param stream QDataStream*
 /// @param type int
 /// @param data void*
+///
 bool q_metatype_load2(void* stream, int type, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#underlyingType)
 ///
 /// @param self QMetaType*
+///
 QMetaType* q_metatype_underlying_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#fromName)
 ///
 /// @param name const char*
+///
 QMetaType* q_metatype_from_name(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#debugStream)
@@ -282,11 +336,13 @@ QMetaType* q_metatype_from_name(const char* name);
 /// @param self QMetaType*
 /// @param dbg QDebug*
 /// @param rhs void*
+///
 bool q_metatype_debug_stream(void* self, void* dbg, void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#hasRegisteredDebugStreamOperator)
 ///
 /// @param self QMetaType*
+///
 bool q_metatype_has_registered_debug_stream_operator(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#debugStream)
@@ -294,11 +350,13 @@ bool q_metatype_has_registered_debug_stream_operator(void* self);
 /// @param dbg QDebug*
 /// @param rhs void*
 /// @param typeId int
+///
 bool q_metatype_debug_stream2(void* dbg, void* rhs, int typeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#hasRegisteredDebugStreamOperator)
 ///
 /// @param typeId int
+///
 bool q_metatype_has_registered_debug_stream_operator2(int typeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#convert)
@@ -307,12 +365,14 @@ bool q_metatype_has_registered_debug_stream_operator2(int typeId);
 /// @param from void*
 /// @param toType QMetaType*
 /// @param to void*
+///
 bool q_metatype_convert(void* fromType, void* from, void* toType, void* to);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#canConvert)
 ///
 /// @param fromType QMetaType*
 /// @param toType QMetaType*
+///
 bool q_metatype_can_convert(void* fromType, void* toType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#view)
@@ -321,12 +381,14 @@ bool q_metatype_can_convert(void* fromType, void* toType);
 /// @param from void*
 /// @param toType QMetaType*
 /// @param to void*
+///
 bool q_metatype_view(void* fromType, void* from, void* toType, void* to);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#canView)
 ///
 /// @param fromType QMetaType*
 /// @param toType QMetaType*
+///
 bool q_metatype_can_view(void* fromType, void* toType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#convert)
@@ -335,6 +397,7 @@ bool q_metatype_can_view(void* fromType, void* toType);
 /// @param fromTypeId int
 /// @param to void*
 /// @param toTypeId int
+///
 bool q_metatype_convert2(void* from, int fromTypeId, void* to, int toTypeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#compare)
@@ -343,6 +406,7 @@ bool q_metatype_convert2(void* from, int fromTypeId, void* to, int toTypeId);
 /// @param rhs void*
 /// @param typeId int
 /// @param result int*
+///
 bool q_metatype_compare2(void* lhs, void* rhs, int typeId, int* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#equals)
@@ -351,53 +415,62 @@ bool q_metatype_compare2(void* lhs, void* rhs, int typeId, int* result);
 /// @param rhs void*
 /// @param typeId int
 /// @param result int*
+///
 bool q_metatype_equals2(void* lhs, void* rhs, int typeId, int* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#hasRegisteredConverterFunction)
 ///
 /// @param fromType QMetaType*
 /// @param toType QMetaType*
+///
 bool q_metatype_has_registered_converter_function(void* fromType, void* toType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#hasRegisteredMutableViewFunction)
 ///
 /// @param fromType QMetaType*
 /// @param toType QMetaType*
+///
 bool q_metatype_has_registered_mutable_view_function(void* fromType, void* toType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#unregisterConverterFunction)
 ///
 /// @param from QMetaType*
 /// @param to QMetaType*
+///
 void q_metatype_unregister_converter_function(void* from, void* to);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#unregisterMutableViewFunction)
 ///
 /// @param from QMetaType*
 /// @param to QMetaType*
+///
 void q_metatype_unregister_mutable_view_function(void* from, void* to);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#unregisterMetaType)
 ///
 /// @param type QMetaType*
+///
 void q_metatype_unregister_meta_type(void* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
 /// @param type int
 /// @param copyVal void*
+///
 void* q_metatype_create22(int type, void* copyVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#id)
 ///
 /// @param self QMetaType*
 /// @param param1 int
+///
 int32_t q_metatype_id1(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
 /// @param self QMetaType*
 /// @param copyVal void*
+///
 void* q_metatype_create1(void* self, void* copyVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#construct)
@@ -405,6 +478,7 @@ void* q_metatype_create1(void* self, void* copyVal);
 /// @param self QMetaType*
 /// @param where void*
 /// @param copyVal void*
+///
 void* q_metatype_construct22(void* self, void* where, void* copyVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#dtor.QMetaType)
@@ -412,13 +486,16 @@ void* q_metatype_construct22(void* self, void* where, void* copyVal);
 /// Delete this object from C++ memory.
 ///
 /// @param self QMetaType*
+///
 void q_metatype_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qmetatype.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#public-types)
 
 typedef enum {
     QCborSimpleType_dummy = 0
 } QMETATYPE_QCborSimpleType__;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#public-types)
 
 typedef enum {
     QMETATYPE_TYPE_BOOL = 1,
@@ -514,6 +591,8 @@ typedef enum {
     QMETATYPE_TYPE_UNKNOWNTYPE = 0,
     QMETATYPE_TYPE_USER = 65536
 } QMetaType__Type;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#public-types)
 
 typedef enum {
     QMETATYPE_TYPEFLAG_NEEDSCONSTRUCTION = 1,

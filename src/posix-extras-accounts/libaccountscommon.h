@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Accountscommon.html
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Accountscommon.html)
 
 typedef enum {
     ACCOUNTS_REFERENCEMODE_ADDREFERENCE = 0,

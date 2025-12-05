@@ -11,32 +11,38 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qcapturablewindow.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html)
 
 /// q_capturablewindow_new constructs a new QCapturableWindow object.
 ///
 QCapturableWindow* q_capturablewindow_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html)
+
 /// q_capturablewindow_new2 constructs a new QCapturableWindow object.
 ///
 /// @param other QCapturableWindow*
+///
 QCapturableWindow* q_capturablewindow_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#operator-eq)
 ///
 /// @param self QCapturableWindow*
 /// @param other QCapturableWindow*
+///
 void q_capturablewindow_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#swap)
 ///
 /// @param self QCapturableWindow*
 /// @param other QCapturableWindow*
+///
 void q_capturablewindow_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#isValid)
 ///
 /// @param self QCapturableWindow*
+///
 bool q_capturablewindow_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#description)
@@ -44,6 +50,7 @@ bool q_capturablewindow_is_valid(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCapturableWindow*
+///
 const char* q_capturablewindow_description(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#dtor.QCapturableWindow)
@@ -51,6 +58,7 @@ const char* q_capturablewindow_description(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QCapturableWindow*
+///
 void q_capturablewindow_delete(void* self);
 
 #endif

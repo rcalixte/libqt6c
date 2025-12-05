@@ -39,6 +39,7 @@ const (
 
 var operatorLookup = map[rune]string{
 	'!': "-not",
+	'"': "-22",
 	'&': "-and",
 	'(': "-28",
 	')': "-29",
@@ -69,40 +70,45 @@ func operatorToUrl(cmdUrl string) string {
 	return ret
 }
 
+const (
+	preUrl  = "/// [Upstream resources]("
+	postUrl = ")\n"
+)
+
 func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	if strings.HasPrefix(pageName, "qsci") {
 		if pageType == EnumPage {
 			return ""
 		}
-		return "https://www.riverbankcomputing.com/static/Docs/QScintilla/class" + className + ".html"
+		return preUrl + "https://www.riverbankcomputing.com/static/Docs/QScintilla/class" + className + ".html" + postUrl
 	}
 
 	if strings.HasPrefix(pageName, "layershellqt") {
-		return "https://invent.kde.org/plasma/layer-shell-qt"
+		return preUrl + "https://invent.kde.org/plasma/layer-shell-qt" + postUrl
 	}
 
 	if strings.HasPrefix(pageName, "kcolorpicker") {
-		return "https://github.com/ksnip/kcolorpicker"
+		return preUrl + "https://github.com/ksnip/kcolorpicker" + postUrl
 	}
 
 	if strings.HasPrefix(pageName, "kimageannotator") {
-		return "https://github.com/ksnip/kImageAnnotator"
+		return preUrl + "https://github.com/ksnip/kImageAnnotator" + postUrl
 	}
 
 	if strings.HasPrefix(pageName, "packagekit") {
-		return "https://github.com/PackageKit/PackageKit-Qt"
+		return preUrl + "https://github.com/PackageKit/PackageKit-Qt" + postUrl
 	}
 
 	if strings.HasPrefix(pageName, "qkeychain") {
-		return "https://github.com/frankosterfeld/qtkeychain"
+		return preUrl + "https://github.com/frankosterfeld/qtkeychain" + postUrl
 	}
 
 	if strings.HasPrefix(pageName, "Accounts__") {
-		return "https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1" + strings.ToUpper(pageName[10:11]) + pageName[11:] + ".html"
+		return preUrl + "https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1" + strings.ToUpper(pageName[10:11]) + pageName[11:] + ".html" + postUrl
 	}
 
 	if strings.HasPrefix(pageName, "SignOn__") {
-		return "https://accounts-sso.gitlab.io/signond/classSignOn_1_1" + strings.ToUpper(pageName[8:9]) + pageName[9:] + ".html"
+		return preUrl + "https://accounts-sso.gitlab.io/signond/classSignOn_1_1" + strings.ToUpper(pageName[8:9]) + pageName[9:] + ".html" + postUrl
 	}
 
 	if pageType == DtorPage && strings.Contains(className, "__") {
@@ -111,11 +117,11 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 
 	if strings.HasPrefix(pageName, "qtermwidget") || strings.HasPrefix(className, "Keyboard") ||
 		strings.HasPrefix(className, "Konsole") || pageName == "emulation" || pageName == "filter" {
-		return "https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api"
+		return preUrl + "https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api" + postUrl
 	}
 
 	qtUrl := "https://doc.qt.io/qt-6/"
-	types := "types"
+	types := ifv(pageName == "qt", "types", "public-types")
 	if pageName[0] != 'q' && pageName != "disambiguated_t" &&
 		pageName != "partial_ordering" && pageName != "weak_ordering" && pageName != "strong_ordering" {
 		qtUrl = "https://api.kde.org/"
@@ -142,11 +148,11 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 			cmdURL = operatorToUrl(cmdURL)
 		}
 
-		return qtUrl + pageName + ".html" + ifv(cmdURL != "", "#"+cmdURL, "")
+		return preUrl + qtUrl + pageName + ".html" + ifv(cmdURL != "", "#"+cmdURL, "") + postUrl
 	case EnumPage:
-		return qtUrl + pageName + ".html#" + types
+		return preUrl + qtUrl + pageName + ".html#" + types + postUrl
 	case DtorPage:
-		return qtUrl + pageName + ".html#dtor." + className
+		return preUrl + qtUrl + pageName + ".html#dtor." + className + postUrl
 	}
 	return ""
 }
@@ -477,6 +483,10 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot bool) string {
 }
 
 func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool) string {
+	if len(params) == 0 {
+		return ""
+	}
+
 	tmp := make([]string, 0, len(params))
 
 	for i := 0; i < len(params); i++ {
@@ -539,18 +549,28 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 		}
 	}
 
+	var maybeNewLine, maybeFinalNewLine string
 	joinStr := "\n"
-	maybeNewL := ifv(len(tmp) > 0, "\n", "")
+
+	if len(tmp) > 0 {
+		maybeNewLine = "\n"
+		maybeFinalNewLine = "\n///"
+	}
 
 	if isSlot {
 		joinStr = ", "
-		maybeNewL = ""
+		maybeNewLine = ""
+		maybeFinalNewLine = ""
 	}
 
-	return maybeNewL + strings.Join(tmp, joinStr)
+	return maybeNewLine + strings.Join(tmp, joinStr) + maybeFinalNewLine
 }
 
 func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) string {
+	if len(params) == 0 {
+		return ""
+	}
+
 	tmp := make([]string, 0, len(params))
 
 	for i := 0; i < len(params); i++ {
@@ -621,13 +641,13 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 
 	if rt.IsKnownEnum() {
 		if strings.HasPrefix(rt.ParameterType, "QFlags<") {
-			returnComment = "///\n/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1]) + "\n"
+			returnComment = "/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1]) + "\n///\n"
 		} else {
-			returnComment = "///\n/// @return " + rt.RenderTypeC(cfs, false, true) + "\n"
+			returnComment = "/// @return " + rt.RenderTypeC(cfs, false, true) + "\n///\n"
 		}
 	} else if t, _, ok := rt.QListOf(); ok {
 		if _, ok := KnownEnums[t.ParameterType]; ok {
-			returnComment = "///\n/// @return libqt_list of enum " + cabiEnumClassName(t.ParameterType) + "\n"
+			returnComment = "/// @return libqt_list of enum " + cabiEnumClassName(t.ParameterType) + "\n///\n"
 		}
 	}
 
@@ -1079,6 +1099,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 		}
 
+		var ctorPageUrl string
+
 		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 ||
 			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}})) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
@@ -1088,7 +1110,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
 			pageName := ifv(isSpecialCase, cStructName, getPageName(cStructName)) + maybeCharts
-			ret.WriteString("\n\n/// " + getPageUrl(QtPage, pageName, "", cStructName) + "\n")
+			ctorPageUrl = "\n\n" + getPageUrl(QtPage, pageName, "", cStructName)
+			ret.WriteString(ctorPageUrl)
 		}
 
 		for i, ctor := range c.Ctors {
@@ -1108,20 +1131,26 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			cfs.castType = cStructName
+			commentParams := cfs.emitCommentParametersC(ctor.Parameters, false)
+
+			if i > 0 {
+				ret.WriteString(ctorPageUrl)
+			}
+
 			ret.WriteString("\n\n" + maybeMacro + "/// " + cMethodPrefix + "_new" + maybeSuffix(i) + " constructs a new " + c.ClassName + maybeMoveCtor +
-				" object.\n///" + cfs.emitCommentParametersC(ctor.Parameters, false) + "\n" +
+				" object.\n///" + commentParams + "\n" +
 				cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + ");\n" + maybeEndMacro + "\n\n")
 		}
 
 		if c.HasTrivialCopyAssign {
 			ret.WriteString("/// " + cMethodPrefix + "_copy_assign shallow copies `other` into `self`.\n///\n" +
-				"/// @param self " + cStructName + "*\n/// @param other " + cStructName + "*\n" +
+				"/// @param self " + cStructName + "*\n/// @param other " + cStructName + "*\n///\n" +
 				"void " + cMethodPrefix + "_copy_assign(void* self, void* other);\n\n")
 		}
 
 		if c.HasTrivialMoveAssign {
 			ret.WriteString("/// " + cMethodPrefix + "_move_assign moves `other` into `self` and invalidates `other`.\n///\n" +
-				"/// @param self " + cStructName + "*\n/// @param other " + cStructName + "*\n" +
+				"/// @param self " + cStructName + "*\n/// @param other " + cStructName + "*\n///\n" +
 				"void " + cMethodPrefix + "_move_assign(void* self, void* other);\n\n")
 		}
 
@@ -1231,7 +1260,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if m.InheritedInClass != "" {
-				inheritedFrom = "\n    /// Inherited from " + m.InheritedInClass + "\n    ///"
+				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n///"
 			}
 
 			needsPlatformMacro := false
@@ -1266,7 +1295,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
 				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
-				docCommentUrl = "\n/// [Upstream resources](" + pageURL + ")\n///"
+				docCommentUrl = "\n" + pageURL + "///"
 				ret.WriteString(docCommentUrl)
 			}
 
@@ -1287,17 +1316,19 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				commaParams = ", "
 			}
 
-			commentParam := "\n/// @param self " + cStructName + "* "
+			selfParam := "\n/// @param self " + cStructName + "* "
 
 			method := safeMethodName + "(void* self" + commaParams
 			if m.IsStatic && !m.IsProtected {
-				commentParam = ""
+				selfParam = ""
 				method = safeMethodName + "("
 			}
 
 			returnComment := cfs.emitReturnComment(m.ReturnType)
+			maybeFinalNewLine := ifv(selfParam != "" && len(m.Parameters) == 0 && returnComment == "", "///\n", "")
+			maybeNewLine := ifv(selfParam != "" && returnComment != "" && len(m.Parameters) == 0, "\n///", "")
 
-			ret.WriteString(commentParam + cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment +
+			ret.WriteString(selfParam + cfs.emitCommentParametersC(m.Parameters, false) + maybeNewLine + "\n" + returnComment + maybeFinalNewLine +
 				returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
 
 			if needsPlatformMacro {
@@ -1323,9 +1354,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					}
 
 					ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
-						cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n")
-
-					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
+						cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
+						"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 				}
 			}
@@ -1360,19 +1390,19 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeEndMacro = "#endif\n"
 				}
 
-				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
+				onDocComment := "\n/// Allows for overriding the related default method\n///"
 
 				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
 					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " func(" + maybeCommentStruct +
-					cfs.emitCommentParametersC(m.Parameters, true) + ")\n" +
+					cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
 					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 
-				qbaseDocComment := "\n/// Base class method implementation\n    ///"
+				qbaseDocComment := "\n/// Base class method implementation\n///"
 				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
 
 				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + qbaseDocComment +
-					commentParam + cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment +
+					selfParam + cfs.emitCommentParametersC(m.Parameters, false) + maybeNewLine + "\n" + returnComment + maybeFinalNewLine +
 					returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n" + maybeEndMacro + "\n\n")
 			}
 		}
@@ -1445,7 +1475,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "", "-qtcharts", "")
 			pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
-			documentationURL := "\n/// [Upstream resources](" + pageURL + ")\n///"
+			documentationURL := "\n" + pageURL + "///"
 
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
@@ -1456,9 +1486,11 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			allocComment := m.ReturnType.returnAllocComment(returnTypeDecl)
 			headerComment := "\n/// Wrapper to allow calling virtual or protected method\n ///\n"
+			maybeNewLine := ifv(len(m.Parameters) == 0 && returnComment != "", "\n///", "")
+			maybeFinalNewLine := ifv(len(m.Parameters) == 0 && returnComment == "", "///\n", "")
 
-			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " +
-				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment +
+			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " + maybeNewLine +
+				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
 				returnTypeDecl + " " + cmdMethodName + safeMethodName + "(void* self" + commaParams + cfsParams + ");\n")
 
 			if !AllowVirtual(m) {
@@ -1467,8 +1499,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			headerComment = "\n/// Wrapper to allow calling base class virtual or protected method\n ///\n"
 
-			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " +
-				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment +
+			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " + maybeNewLine +
+				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
 				returnTypeDecl + " " + cmdMethodName + "_qbase" + safeMethodName + "(void* self" + commaParams + cfsParams + ");\n")
 
 			var maybeCommentStruct, maybeVoid string
@@ -1489,7 +1521,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// @param self " + cStructName +
 				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " func(" + maybeCommentStruct +
-				cfs.emitCommentParametersC(m.Parameters, true) + ")\n" +
+				cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
 				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
@@ -1505,7 +1537,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if m.InheritedInClass != "" {
-				inheritedFrom = "\n    /// Inherited from " + m.InheritedInClass + "\n    ///"
+				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n///"
 			}
 
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
@@ -1528,16 +1560,15 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
 				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
-				docCommentUrl = "\n/// [Upstream resources](" + pageURL + ")\n///\n"
+				docCommentUrl = "\n" + pageURL + "///\n"
 			}
 
 			slotComma := ifv(len(m.Parameters) != 0, ", ", "")
 			headerComment := "/// Wrapper to allow calling private signal\n///"
 
 			ret.WriteString(inheritedFrom + docCommentUrl + headerComment + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
-				cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n")
-
-			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
+				cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
+				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
 				slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
 
@@ -1549,12 +1580,14 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
 			pageUrl := getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
-			ret.WriteString(ifv(pageUrl != "", "\n/// [Upstream resources]("+pageUrl+")\n///\n", "\n") +
+			ret.WriteString(ifv(pageUrl != "", "\n"+pageUrl+"///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
-				"/// @param self " + cStructName + "*\n" +
+				"/// @param self " + cStructName + "*\n///\n" +
 				"void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self);\n\n")
 		}
 	}
+
+	var maybeUrl string
 
 	if len(src.Enums) > 0 {
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
@@ -1573,8 +1606,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
 		pageName := maybeUrlPrefix + getPageName(cfs.currentHeaderName) + maybeCharts
 		pageUrl := getPageUrl(EnumPage, pageName, "", cfs.currentHeaderName)
-		maybeUrl := ifv(pageUrl != "", "\n\n/// "+pageUrl, "")
-		ret.WriteString(maybeUrl + "\n\n")
+		maybeUrl = ifv(pageUrl != "", "\n\n"+pageUrl, "")
 	}
 
 	for _, e := range src.Enums {
@@ -1584,7 +1616,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		cEnumName := cabiEnumClassName(e.EnumName) // Fully qualified name of the enum
 
-		ret.WriteString("\ntypedef enum {\n")
+		ret.WriteString(maybeUrl + "\n\ntypedef enum {\n")
 
 		if len(e.Entries) > 0 {
 			for i, ee := range e.Entries {
@@ -1682,18 +1714,18 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 
 		// TODO Remove this suffix hack once we have a better way to automate it
-		maybeSuffix := ""
+		maybeFileSuffix := ""
 		if (parentInclude == "" && strings.Contains(src.Filename, "KIO") && (refInc == "deletejob" || refInc == "metadata")) ||
 			(parentInclude == "" && strings.Contains(src.Filename, "KNS") && refInc == "provider") ||
 			(parentInclude == "" && strings.Contains(src.Filename, "KTextEditor") && (refInc == "application" || refInc == "mainwindow" || refInc == "message")) ||
 			(parentInclude == "" && strings.Contains(src.Filename, "PackageKit") && refInc == "transaction") {
-			maybeSuffix = "_1"
+			maybeFileSuffix = "_1"
 		}
 		if parentInclude == "" && strings.Contains(src.Filename, "Accounts") && refInc == "provider" {
-			maybeSuffix = "_2"
+			maybeFileSuffix = "_2"
 		}
 
-		ret.WriteString(`#include "` + parentInclude + "lib" + refInc + maybeSuffix + `.hpp"` + "\n")
+		ret.WriteString(`#include "` + parentInclude + "lib" + refInc + maybeFileSuffix + `.hpp"` + "\n")
 	}
 
 	// workaround for qtermwidget.h

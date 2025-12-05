@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/knscore-errorcode.html
+/// [Upstream resources](https://api.kde.org/knscore-errorcode.html)
 
 /// [Upstream resources](https://api.kde.org/knscore-errorcode.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum KNSCore__ErrorCode__ErrorCode
+///
 const QMetaObject* k_nscore__errorcode_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-errorcode.html#qt_getEnumName)
@@ -23,9 +24,10 @@ const QMetaObject* k_nscore__errorcode_get_enum_meta_object(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KNSCore__ErrorCode__ErrorCode
+///
 const char* k_nscore__errorcode_get_enum_name(int32_t param1);
 
-/// https://api.kde.org/knscore-errorcode.html#types
+/// [Upstream resources](https://api.kde.org/knscore-errorcode.html#public-types)
 
 typedef enum {
     KNSCORE_ERRORCODE_ERRORCODE_UNKNOWNERROR = 0,

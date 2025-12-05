@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qtsvgglobal.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qtsvgglobal.html#public-types)
 
 typedef enum {
     QTSVG_OPTION_NOOPTION = 0,

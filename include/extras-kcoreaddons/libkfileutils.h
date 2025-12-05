@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kfileutils.html
+/// [Upstream resources](https://api.kde.org/kfileutils.html)
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#suggestName)
 ///
@@ -19,6 +19,7 @@
 ///
 /// @param param1 QUrl*
 /// @param param2 const char*
+///
 const char* k_fileutils_suggest_name(void* param1, const char* param2);
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#makeSuggestedName)
@@ -26,6 +27,7 @@ const char* k_fileutils_suggest_name(void* param1, const char* param2);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
+///
 const char* k_fileutils_make_suggested_name(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#findAllUniqueFiles)
@@ -34,5 +36,6 @@ const char* k_fileutils_make_suggested_name(const char* param1);
 ///
 /// @param param1 const char**
 /// @param param2 const char**
+///
 const char** k_fileutils_find_all_unique_files(const char* param1[static 1], const char* param2[static 1]);
 #endif

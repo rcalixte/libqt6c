@@ -11,15 +11,16 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kio-sslui.html
+/// [Upstream resources](https://api.kde.org/kio-sslui.html)
 
 /// [Upstream resources](https://api.kde.org/kio-sslui.html#askIgnoreSslErrors)
 ///
 /// @param param1 KSslErrorUiData*
 /// @param param2 enum KIO__SslUi__RulesStorage
+///
 bool k_io__sslui_ask_ignore_ssl_errors(void* param1, int32_t param2);
 
-/// https://api.kde.org/kio-sslui.html#types
+/// [Upstream resources](https://api.kde.org/kio-sslui.html#public-types)
 
 typedef enum {
     KIO_SSLUI_RULESSTORAGE_RECALLRULES = 1,

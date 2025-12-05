@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kcolorschemewatcher.html
+/// [Upstream resources](https://api.kde.org/kcolorschemewatcher.html)
 
 /// k_colorschemewatcher_new constructs a new KColorSchemeWatcher object.
 ///
 KColorSchemeWatcher* k_colorschemewatcher_new();
 
+/// [Upstream resources](https://api.kde.org/kcolorschemewatcher.html)
+
 /// k_colorschemewatcher_new2 constructs a new KColorSchemeWatcher object.
 ///
 /// @param parent QObject*
+///
 KColorSchemeWatcher* k_colorschemewatcher_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KColorSchemeWatcher*
+///
 const QMetaObject* k_colorschemewatcher_meta_object(void* self);
 
 /// @param self KColorSchemeWatcher*
 /// @param param1 const char*
+///
 void* k_colorschemewatcher_metacast(void* self, const char* param1);
 
 /// @param self KColorSchemeWatcher*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_colorschemewatcher_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback int32_t func(KColorSchemeWatcher* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_colorschemewatcher_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void k_colorschemewatcher_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_colorschemewatcher_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,6 +64,7 @@ int32_t k_colorschemewatcher_qbase_metacall(void* self, int32_t param1, int para
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_colorschemewatcher_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kcolorschemewatcher.html#systemPreference)
@@ -63,17 +72,20 @@ const char* k_colorschemewatcher_tr(const char* s);
 /// @param self KColorSchemeWatcher*
 ///
 /// @return enum KColorSchemeWatcher__ColorPreference
+///
 int32_t k_colorschemewatcher_system_preference(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorschemewatcher.html#systemPreferenceChanged)
 ///
 /// @param self KColorSchemeWatcher*
+///
 void k_colorschemewatcher_system_preference_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorschemewatcher.html#systemPreferenceChanged)
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self)
+///
 void k_colorschemewatcher_on_system_preference_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -82,6 +94,7 @@ void k_colorschemewatcher_on_system_preference_changed(void* self, void (*callba
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_colorschemewatcher_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -91,6 +104,7 @@ const char* k_colorschemewatcher_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_colorschemewatcher_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -100,6 +114,7 @@ const char* k_colorschemewatcher_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorSchemeWatcher*
+///
 const char* k_colorschemewatcher_object_name(void* self);
 
 /// Inherited from QObject
@@ -108,6 +123,7 @@ const char* k_colorschemewatcher_object_name(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param name char*
+///
 void k_colorschemewatcher_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -115,6 +131,7 @@ void k_colorschemewatcher_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KColorSchemeWatcher*
+///
 bool k_colorschemewatcher_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -122,6 +139,7 @@ bool k_colorschemewatcher_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KColorSchemeWatcher*
+///
 bool k_colorschemewatcher_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -129,6 +147,7 @@ bool k_colorschemewatcher_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KColorSchemeWatcher*
+///
 bool k_colorschemewatcher_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -136,6 +155,7 @@ bool k_colorschemewatcher_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KColorSchemeWatcher*
+///
 bool k_colorschemewatcher_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -144,6 +164,7 @@ bool k_colorschemewatcher_signals_blocked(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param b bool
+///
 bool k_colorschemewatcher_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -151,6 +172,7 @@ bool k_colorschemewatcher_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KColorSchemeWatcher*
+///
 QThread* k_colorschemewatcher_thread(void* self);
 
 /// Inherited from QObject
@@ -159,6 +181,7 @@ QThread* k_colorschemewatcher_thread(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param thread QThread*
+///
 bool k_colorschemewatcher_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -167,6 +190,7 @@ bool k_colorschemewatcher_move_to_thread(void* self, void* thread);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param interval int
+///
 int32_t k_colorschemewatcher_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -175,6 +199,7 @@ int32_t k_colorschemewatcher_start_timer(void* self, int interval);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param id int
+///
 void k_colorschemewatcher_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -183,6 +208,7 @@ void k_colorschemewatcher_kill_timer(void* self, int id);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param id enum Qt__TimerId
+///
 void k_colorschemewatcher_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -190,6 +216,7 @@ void k_colorschemewatcher_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KColorSchemeWatcher*
+///
 libqt_list /* of QObject* */ k_colorschemewatcher_children(void* self);
 
 /// Inherited from QObject
@@ -198,6 +225,7 @@ libqt_list /* of QObject* */ k_colorschemewatcher_children(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param parent QObject*
+///
 void k_colorschemewatcher_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -206,6 +234,7 @@ void k_colorschemewatcher_set_parent(void* self, void* parent);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param filterObj QObject*
+///
 void k_colorschemewatcher_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -214,6 +243,7 @@ void k_colorschemewatcher_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param obj QObject*
+///
 void k_colorschemewatcher_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -224,6 +254,7 @@ void k_colorschemewatcher_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_colorschemewatcher_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -234,6 +265,7 @@ QMetaObject__Connection* k_colorschemewatcher_connect(void* sender, void* signal
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_colorschemewatcher_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -244,6 +276,7 @@ QMetaObject__Connection* k_colorschemewatcher_connect2(void* self, void* sender,
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_colorschemewatcher_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -251,6 +284,7 @@ bool k_colorschemewatcher_disconnect(void* sender, void* signal, void* receiver,
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_colorschemewatcher_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -258,6 +292,7 @@ bool k_colorschemewatcher_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KColorSchemeWatcher*
+///
 void k_colorschemewatcher_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -265,6 +300,7 @@ void k_colorschemewatcher_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KColorSchemeWatcher*
+///
 void k_colorschemewatcher_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -274,6 +310,7 @@ void k_colorschemewatcher_dump_object_info(void* self);
 /// @param self KColorSchemeWatcher*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_colorschemewatcher_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -282,6 +319,7 @@ bool k_colorschemewatcher_set_property(void* self, const char* name, void* value
 ///
 /// @param self KColorSchemeWatcher*
 /// @param name const char*
+///
 QVariant* k_colorschemewatcher_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -291,6 +329,7 @@ QVariant* k_colorschemewatcher_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorSchemeWatcher*
+///
 const char** k_colorschemewatcher_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -298,6 +337,7 @@ const char** k_colorschemewatcher_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KColorSchemeWatcher*
+///
 QBindingStorage* k_colorschemewatcher_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -305,6 +345,7 @@ QBindingStorage* k_colorschemewatcher_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KColorSchemeWatcher*
+///
 const QBindingStorage* k_colorschemewatcher_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -312,6 +353,7 @@ const QBindingStorage* k_colorschemewatcher_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColorSchemeWatcher*
+///
 void k_colorschemewatcher_destroyed(void* self);
 
 /// Inherited from QObject
@@ -320,6 +362,7 @@ void k_colorschemewatcher_destroyed(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self)
+///
 void k_colorschemewatcher_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -327,6 +370,7 @@ void k_colorschemewatcher_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KColorSchemeWatcher*
+///
 QObject* k_colorschemewatcher_parent(void* self);
 
 /// Inherited from QObject
@@ -335,6 +379,7 @@ QObject* k_colorschemewatcher_parent(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param classname const char*
+///
 bool k_colorschemewatcher_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -342,6 +387,7 @@ bool k_colorschemewatcher_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KColorSchemeWatcher*
+///
 void k_colorschemewatcher_delete_later(void* self);
 
 /// Inherited from QObject
@@ -351,6 +397,7 @@ void k_colorschemewatcher_delete_later(void* self);
 /// @param self KColorSchemeWatcher*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_colorschemewatcher_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -360,6 +407,7 @@ bool k_colorschemewatcher_move_to_thread2(void* self, void* thread, void* param2
 /// @param self KColorSchemeWatcher*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_colorschemewatcher_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -371,6 +419,7 @@ int32_t k_colorschemewatcher_start_timer22(void* self, int interval, int32_t tim
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_colorschemewatcher_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -382,6 +431,7 @@ QMetaObject__Connection* k_colorschemewatcher_connect5(void* sender, void* signa
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_colorschemewatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -390,6 +440,7 @@ QMetaObject__Connection* k_colorschemewatcher_connect4(void* self, void* sender,
 ///
 /// @param self KColorSchemeWatcher*
 /// @param param1 QObject*
+///
 void k_colorschemewatcher_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -398,6 +449,7 @@ void k_colorschemewatcher_destroyed1(void* self, void* param1);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self, QObject* param1)
+///
 void k_colorschemewatcher_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -408,6 +460,7 @@ void k_colorschemewatcher_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QEvent*
+///
 bool k_colorschemewatcher_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -418,6 +471,7 @@ bool k_colorschemewatcher_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QEvent*
+///
 bool k_colorschemewatcher_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -428,6 +482,7 @@ bool k_colorschemewatcher_qbase_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback bool func(KColorSchemeWatcher* self, QEvent* event)
+///
 void k_colorschemewatcher_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -439,6 +494,7 @@ void k_colorschemewatcher_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KColorSchemeWatcher*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_colorschemewatcher_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -450,6 +506,7 @@ bool k_colorschemewatcher_event_filter(void* self, void* watched, void* event);
 /// @param self KColorSchemeWatcher*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_colorschemewatcher_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -460,6 +517,7 @@ bool k_colorschemewatcher_qbase_event_filter(void* self, void* watched, void* ev
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback bool func(KColorSchemeWatcher* self, QObject* watched, QEvent* event)
+///
 void k_colorschemewatcher_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -470,6 +528,7 @@ void k_colorschemewatcher_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QTimerEvent*
+///
 void k_colorschemewatcher_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -480,6 +539,7 @@ void k_colorschemewatcher_timer_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QTimerEvent*
+///
 void k_colorschemewatcher_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -490,6 +550,7 @@ void k_colorschemewatcher_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self, QTimerEvent* event)
+///
 void k_colorschemewatcher_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -500,6 +561,7 @@ void k_colorschemewatcher_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QChildEvent*
+///
 void k_colorschemewatcher_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -510,6 +572,7 @@ void k_colorschemewatcher_child_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QChildEvent*
+///
 void k_colorschemewatcher_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -520,6 +583,7 @@ void k_colorschemewatcher_qbase_child_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self, QChildEvent* event)
+///
 void k_colorschemewatcher_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -530,6 +594,7 @@ void k_colorschemewatcher_on_child_event(void* self, void (*callback)(void*, voi
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QEvent*
+///
 void k_colorschemewatcher_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -540,6 +605,7 @@ void k_colorschemewatcher_custom_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param event QEvent*
+///
 void k_colorschemewatcher_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -550,6 +616,7 @@ void k_colorschemewatcher_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self, QEvent* event)
+///
 void k_colorschemewatcher_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -560,6 +627,7 @@ void k_colorschemewatcher_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal QMetaMethod*
+///
 void k_colorschemewatcher_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -570,6 +638,7 @@ void k_colorschemewatcher_connect_notify(void* self, void* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal QMetaMethod*
+///
 void k_colorschemewatcher_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -580,6 +649,7 @@ void k_colorschemewatcher_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self, QMetaMethod* signal)
+///
 void k_colorschemewatcher_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -590,6 +660,7 @@ void k_colorschemewatcher_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal QMetaMethod*
+///
 void k_colorschemewatcher_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -600,6 +671,7 @@ void k_colorschemewatcher_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal QMetaMethod*
+///
 void k_colorschemewatcher_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -610,6 +682,7 @@ void k_colorschemewatcher_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self, QMetaMethod* signal)
+///
 void k_colorschemewatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -619,6 +692,7 @@ void k_colorschemewatcher_on_disconnect_notify(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorSchemeWatcher*
+///
 QObject* k_colorschemewatcher_sender(void* self);
 
 /// Inherited from QObject
@@ -628,6 +702,7 @@ QObject* k_colorschemewatcher_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorSchemeWatcher*
+///
 QObject* k_colorschemewatcher_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -638,6 +713,7 @@ QObject* k_colorschemewatcher_qbase_sender(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback QObject* func()
+///
 void k_colorschemewatcher_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -647,6 +723,7 @@ void k_colorschemewatcher_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorSchemeWatcher*
+///
 int32_t k_colorschemewatcher_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -656,6 +733,7 @@ int32_t k_colorschemewatcher_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorSchemeWatcher*
+///
 int32_t k_colorschemewatcher_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -666,6 +744,7 @@ int32_t k_colorschemewatcher_qbase_sender_signal_index(void* self);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback int32_t func()
+///
 void k_colorschemewatcher_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -676,6 +755,7 @@ void k_colorschemewatcher_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal const char*
+///
 int32_t k_colorschemewatcher_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -686,6 +766,7 @@ int32_t k_colorschemewatcher_receivers(void* self, const char* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal const char*
+///
 int32_t k_colorschemewatcher_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -696,6 +777,7 @@ int32_t k_colorschemewatcher_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback int32_t func(KColorSchemeWatcher* self, const char* signal)
+///
 void k_colorschemewatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -706,6 +788,7 @@ void k_colorschemewatcher_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal QMetaMethod*
+///
 bool k_colorschemewatcher_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -716,6 +799,7 @@ bool k_colorschemewatcher_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param signal QMetaMethod*
+///
 bool k_colorschemewatcher_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -726,6 +810,7 @@ bool k_colorschemewatcher_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback bool func(KColorSchemeWatcher* self, QMetaMethod* signal)
+///
 void k_colorschemewatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -736,6 +821,7 @@ void k_colorschemewatcher_on_is_signal_connected(void* self, bool (*callback)(vo
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self, const char* objectName)
+///
 void k_colorschemewatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kcolorschemewatcher.html#dtor.KColorSchemeWatcher)
@@ -743,9 +829,10 @@ void k_colorschemewatcher_on_object_name_changed(void* self, void (*callback)(vo
 /// Delete this object from C++ memory.
 ///
 /// @param self KColorSchemeWatcher*
+///
 void k_colorschemewatcher_delete(void* self);
 
-/// https://api.kde.org/kcolorschemewatcher.html#types
+/// [Upstream resources](https://api.kde.org/kcolorschemewatcher.html#public-types)
 
 typedef enum {
     KCOLORSCHEMEWATCHER_COLORPREFERENCE_NOPREFERENCE = 0,

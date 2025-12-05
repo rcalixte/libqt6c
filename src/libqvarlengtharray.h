@@ -11,20 +11,23 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qvlabasebase.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qvlabasebase.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvlabasebase.html#capacity)
 ///
 /// @param self QVLABaseBase*
+///
 int64_t q_vlabasebase_capacity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvlabasebase.html#size)
 ///
 /// @param self QVLABaseBase*
+///
 int64_t q_vlabasebase_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvlabasebase.html#empty)
 ///
 /// @param self QVLABaseBase*
+///
 bool q_vlabasebase_empty(void* self);
 #endif

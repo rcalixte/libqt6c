@@ -11,19 +11,21 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qcborerror.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#c-var)
 ///
 /// @param self QCborError*
 ///
 /// @return enum QCborError__Code
+///
 int32_t q_cborerror_c(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#c-var)
 ///
 /// @param self QCborError*
 /// @param c enum QCborError__Code
+///
 void q_cborerror_set_c(void* self, int32_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#operator)
@@ -31,6 +33,7 @@ void q_cborerror_set_c(void* self, int32_t c);
 /// @param self QCborError*
 ///
 /// @return enum QCborError__Code
+///
 int32_t q_cborerror_to_q_cbor_error___code(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#toString)
@@ -38,6 +41,7 @@ int32_t q_cborerror_to_q_cbor_error___code(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QCborError*
+///
 const char* q_cborerror_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#dtor.QCborError)
@@ -45,9 +49,10 @@ const char* q_cborerror_to_string(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QCborError*
+///
 void q_cborerror_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qcborcommon.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#public-types)
 
 typedef enum {
     QCBORSIMPLETYPE_FALSE = 20,
@@ -56,9 +61,13 @@ typedef enum {
     QCBORSIMPLETYPE_UNDEFINED = 23
 } QCBORCOMMON_QCborSimpleType__;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#public-types)
+
 typedef enum {
     QCborTag_dummy = 0
 } QCborTag__;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#public-types)
 
 typedef enum {
     QCBORKNOWNTAGS_DATETIMESTRING = 0,
@@ -86,9 +95,13 @@ typedef enum {
     QCBORKNOWNTAGS_SIGNATURE = 55799
 } QCborKnownTags__;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#public-types)
+
 typedef enum {
     QCborNegativeInteger_dummy = 0
 } QCborNegativeInteger__;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#public-types)
 
 typedef enum {
     QCBORERROR_CODE_UNKNOWNERROR = 1,

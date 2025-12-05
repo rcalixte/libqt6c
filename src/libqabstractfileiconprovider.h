@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qabstractfileiconprovider.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html)
 
 /// q_abstractfileiconprovider_new constructs a new QAbstractFileIconProvider object.
 ///
@@ -21,6 +21,7 @@ QAbstractFileIconProvider* q_abstractfileiconprovider_new();
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 enum QAbstractFileIconProvider__IconType
+///
 QIcon* q_abstractfileiconprovider_icon(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
@@ -29,6 +30,7 @@ QIcon* q_abstractfileiconprovider_icon(void* self, int32_t param1);
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param callback QIcon* func(QAbstractFileIconProvider* self, enum QAbstractFileIconProvider__IconType param1)
+///
 void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
@@ -37,12 +39,14 @@ void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, in
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 enum QAbstractFileIconProvider__IconType
+///
 QIcon* q_abstractfileiconprovider_qbase_icon(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 QFileInfo*
+///
 QIcon* q_abstractfileiconprovider_icon2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
@@ -51,6 +55,7 @@ QIcon* q_abstractfileiconprovider_icon2(void* self, void* param1);
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param callback QIcon* func(QAbstractFileIconProvider* self, QFileInfo* param1)
+///
 void q_abstractfileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
@@ -59,6 +64,7 @@ void q_abstractfileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, v
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 QFileInfo*
+///
 QIcon* q_abstractfileiconprovider_qbase_icon2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
@@ -67,6 +73,7 @@ QIcon* q_abstractfileiconprovider_qbase_icon2(void* self, void* param1);
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 QFileInfo*
+///
 const char* q_abstractfileiconprovider_type(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
@@ -75,6 +82,7 @@ const char* q_abstractfileiconprovider_type(void* self, void* param1);
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param callback const char* func(QAbstractFileIconProvider* self, QFileInfo* param1)
+///
 void q_abstractfileiconprovider_on_type(void* self, const char* (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
@@ -83,12 +91,14 @@ void q_abstractfileiconprovider_on_type(void* self, const char* (*callback)(void
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 QFileInfo*
+///
 const char* q_abstractfileiconprovider_qbase_type(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param options flag of enum QAbstractFileIconProvider__Option
+///
 void q_abstractfileiconprovider_set_options(void* self, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
@@ -97,6 +107,7 @@ void q_abstractfileiconprovider_set_options(void* self, int32_t options);
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param callback void func(QAbstractFileIconProvider* self, flag of enum QAbstractFileIconProvider__Option options)
+///
 void q_abstractfileiconprovider_on_set_options(void* self, void (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
@@ -105,6 +116,7 @@ void q_abstractfileiconprovider_on_set_options(void* self, void (*callback)(void
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param options flag of enum QAbstractFileIconProvider__Option
+///
 void q_abstractfileiconprovider_qbase_set_options(void* self, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
@@ -112,6 +124,7 @@ void q_abstractfileiconprovider_qbase_set_options(void* self, int32_t options);
 /// @param self QAbstractFileIconProvider*
 ///
 /// @return flag of enum QAbstractFileIconProvider__Option
+///
 int32_t q_abstractfileiconprovider_options(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
@@ -120,6 +133,7 @@ int32_t q_abstractfileiconprovider_options(void* self);
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param callback int32_t func()
+///
 void q_abstractfileiconprovider_on_options(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
@@ -129,6 +143,7 @@ void q_abstractfileiconprovider_on_options(void* self, int32_t (*callback)());
 /// @param self QAbstractFileIconProvider*
 ///
 /// @return flag of enum QAbstractFileIconProvider__Option
+///
 int32_t q_abstractfileiconprovider_qbase_options(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#dtor.QAbstractFileIconProvider)
@@ -136,9 +151,10 @@ int32_t q_abstractfileiconprovider_qbase_options(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractFileIconProvider*
+///
 void q_abstractfileiconprovider_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qabstractfileiconprovider.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#public-types)
 
 typedef enum {
     QABSTRACTFILEICONPROVIDER_ICONTYPE_COMPUTER = 0,
@@ -149,6 +165,8 @@ typedef enum {
     QABSTRACTFILEICONPROVIDER_ICONTYPE_FOLDER = 5,
     QABSTRACTFILEICONPROVIDER_ICONTYPE_FILE = 6
 } QAbstractFileIconProvider__IconType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#public-types)
 
 typedef enum {
     QABSTRACTFILEICONPROVIDER_OPTION_DONTUSECUSTOMDIRECTORYICONS = 1

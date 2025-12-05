@@ -11,6 +11,4 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qtypeinfo.html#types
-
 #endif

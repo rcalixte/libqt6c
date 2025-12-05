@@ -11,28 +11,34 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qwhatsthis.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html)
 
 /// q_whatsthis_new constructs a new QWhatsThis object.
 ///
 /// @param other QWhatsThis*
+///
 QWhatsThis* q_whatsthis_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html)
 
 /// q_whatsthis_new2 constructs a new QWhatsThis object and invalidates the source QWhatsThis object.
 ///
 /// @param other QWhatsThis*
+///
 QWhatsThis* q_whatsthis_new2(void* other);
 
 /// q_whatsthis_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QWhatsThis*
 /// @param other QWhatsThis*
+///
 void q_whatsthis_copy_assign(void* self, void* other);
 
 /// q_whatsthis_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QWhatsThis*
 /// @param other QWhatsThis*
+///
 void q_whatsthis_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#enterWhatsThisMode)
@@ -51,6 +57,7 @@ void q_whatsthis_leave_whats_this_mode();
 ///
 /// @param pos QPoint*
 /// @param text const char*
+///
 void q_whatsthis_show_text(void* pos, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#hideText)
@@ -66,11 +73,13 @@ QAction* q_whatsthis_create_action();
 /// @param pos QPoint*
 /// @param text const char*
 /// @param w QWidget*
+///
 void q_whatsthis_show_text3(void* pos, const char* text, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#createAction)
 ///
 /// @param parent QObject*
+///
 QAction* q_whatsthis_create_action1(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#dtor.QWhatsThis)
@@ -78,6 +87,7 @@ QAction* q_whatsthis_create_action1(void* parent);
 /// Delete this object from C++ memory.
 ///
 /// @param self QWhatsThis*
+///
 void q_whatsthis_delete(void* self);
 
 #endif

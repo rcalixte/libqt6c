@@ -11,11 +11,13 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kdesktopfileaction.html
+/// [Upstream resources](https://api.kde.org/kdesktopfileaction.html)
 
 /// k_desktopfileaction_new constructs a new KDesktopFileAction object.
 ///
 KDesktopFileAction* k_desktopfileaction_new();
+
+/// [Upstream resources](https://api.kde.org/kdesktopfileaction.html)
 
 /// k_desktopfileaction_new2 constructs a new KDesktopFileAction object.
 ///
@@ -24,17 +26,22 @@ KDesktopFileAction* k_desktopfileaction_new();
 /// @param icon const char*
 /// @param exec const char*
 /// @param desktopFilePath const char*
+///
 KDesktopFileAction* k_desktopfileaction_new2(const char* name, const char* text, const char* icon, const char* exec, const char* desktopFilePath);
+
+/// [Upstream resources](https://api.kde.org/kdesktopfileaction.html)
 
 /// k_desktopfileaction_new3 constructs a new KDesktopFileAction object.
 ///
 /// @param other KDesktopFileAction*
+///
 KDesktopFileAction* k_desktopfileaction_new3(void* other);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#operator-eq)
 ///
 /// @param self KDesktopFileAction*
 /// @param other KDesktopFileAction*
+///
 void k_desktopfileaction_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#actionsKey)
@@ -42,6 +49,7 @@ void k_desktopfileaction_operator_assign(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFileAction*
+///
 const char* k_desktopfileaction_actions_key(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#desktopFilePath)
@@ -49,6 +57,7 @@ const char* k_desktopfileaction_actions_key(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFileAction*
+///
 const char* k_desktopfileaction_desktop_file_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#name)
@@ -56,6 +65,7 @@ const char* k_desktopfileaction_desktop_file_path(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFileAction*
+///
 const char* k_desktopfileaction_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#icon)
@@ -63,6 +73,7 @@ const char* k_desktopfileaction_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFileAction*
+///
 const char* k_desktopfileaction_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#exec)
@@ -70,11 +81,13 @@ const char* k_desktopfileaction_icon(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFileAction*
+///
 const char* k_desktopfileaction_exec(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#isSeparator)
 ///
 /// @param self KDesktopFileAction*
+///
 bool k_desktopfileaction_is_separator(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#dtor.KDesktopFileAction)
@@ -82,6 +95,7 @@ bool k_desktopfileaction_is_separator(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self KDesktopFileAction*
+///
 void k_desktopfileaction_delete(void* self);
 
 #endif

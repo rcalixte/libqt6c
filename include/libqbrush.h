@@ -11,86 +11,122 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qbrush.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new constructs a new QBrush object.
 ///
 QBrush* q_brush_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
+
 /// q_brush_new2 constructs a new QBrush object.
 ///
 /// @param bs enum Qt__BrushStyle
+///
 QBrush* q_brush_new2(int32_t bs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new3 constructs a new QBrush object.
 ///
 /// @param color QColor*
+///
 QBrush* q_brush_new3(void* color);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new4 constructs a new QBrush object.
 ///
 /// @param color enum Qt__GlobalColor
+///
 QBrush* q_brush_new4(int32_t color);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new5 constructs a new QBrush object.
 ///
 /// @param color QColor*
 /// @param pixmap QPixmap*
+///
 QBrush* q_brush_new5(void* color, void* pixmap);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new6 constructs a new QBrush object.
 ///
 /// @param color enum Qt__GlobalColor
 /// @param pixmap QPixmap*
+///
 QBrush* q_brush_new6(int32_t color, void* pixmap);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new7 constructs a new QBrush object.
 ///
 /// @param pixmap QPixmap*
+///
 QBrush* q_brush_new7(void* pixmap);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new8 constructs a new QBrush object.
 ///
 /// @param image QImage*
+///
 QBrush* q_brush_new8(void* image);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new9 constructs a new QBrush object.
 ///
 /// @param brush QBrush*
+///
 QBrush* q_brush_new9(void* brush);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new10 constructs a new QBrush object.
 ///
 /// @param gradient QGradient*
+///
 QBrush* q_brush_new10(void* gradient);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new11 constructs a new QBrush object.
 ///
 /// @param color QColor*
 /// @param bs enum Qt__BrushStyle
+///
 QBrush* q_brush_new11(void* color, int32_t bs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new12 constructs a new QBrush object.
 ///
 /// @param color enum Qt__GlobalColor
 /// @param bs enum Qt__BrushStyle
+///
 QBrush* q_brush_new12(int32_t color, int32_t bs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#operator-eq)
 ///
 /// @param self QBrush*
 /// @param brush QBrush*
+///
 void q_brush_operator_assign(void* self, void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#swap)
 ///
 /// @param self QBrush*
 /// @param other QBrush*
+///
 void q_brush_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#operator)
 ///
 /// @param self QBrush*
+///
 QVariant* q_brush_to_q_variant(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#style)
@@ -98,89 +134,105 @@ QVariant* q_brush_to_q_variant(void* self);
 /// @param self QBrush*
 ///
 /// @return enum Qt__BrushStyle
+///
 int32_t q_brush_style(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#setStyle)
 ///
 /// @param self QBrush*
 /// @param style enum Qt__BrushStyle
+///
 void q_brush_set_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#transform)
 ///
 /// @param self QBrush*
+///
 QTransform* q_brush_transform(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#setTransform)
 ///
 /// @param self QBrush*
 /// @param transform QTransform*
+///
 void q_brush_set_transform(void* self, void* transform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#texture)
 ///
 /// @param self QBrush*
+///
 QPixmap* q_brush_texture(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#setTexture)
 ///
 /// @param self QBrush*
 /// @param pixmap QPixmap*
+///
 void q_brush_set_texture(void* self, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#textureImage)
 ///
 /// @param self QBrush*
+///
 QImage* q_brush_texture_image(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#setTextureImage)
 ///
 /// @param self QBrush*
 /// @param image QImage*
+///
 void q_brush_set_texture_image(void* self, void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#color)
 ///
 /// @param self QBrush*
+///
 const QColor* q_brush_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#setColor)
 ///
 /// @param self QBrush*
 /// @param color QColor*
+///
 void q_brush_set_color(void* self, void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#setColor)
 ///
 /// @param self QBrush*
 /// @param color enum Qt__GlobalColor
+///
 void q_brush_set_color2(void* self, int32_t color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#gradient)
 ///
 /// @param self QBrush*
+///
 const QGradient* q_brush_gradient(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#isOpaque)
 ///
 /// @param self QBrush*
+///
 bool q_brush_is_opaque(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#operator-eq-eq)
 ///
 /// @param self QBrush*
 /// @param b QBrush*
+///
 bool q_brush_operator_equal(void* self, void* b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#operator-not-eq)
 ///
 /// @param self QBrush*
 /// @param b QBrush*
+///
 bool q_brush_operator_not_equal(void* self, void* b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#isDetached)
 ///
 /// @param self QBrush*
+///
 bool q_brush_is_detached(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#dtor.QBrush)
@@ -188,59 +240,72 @@ bool q_brush_is_detached(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QBrush*
+///
 void q_brush_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qbrushdata.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#style-var)
 ///
 /// @param self QBrushData*
 ///
 /// @return enum Qt__BrushStyle
+///
 int32_t q_brushdata_style(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#style-var)
 ///
 /// @param self QBrushData*
 /// @param style enum Qt__BrushStyle
+///
 void q_brushdata_set_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#color-var)
 ///
 /// @param self QBrushData*
+///
 QColor* q_brushdata_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#color-var)
 ///
 /// @param self QBrushData*
 /// @param color QColor*
+///
 void q_brushdata_set_color(void* self, void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#transform-var)
 ///
 /// @param self QBrushData*
+///
 QTransform* q_brushdata_transform(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#transform-var)
 ///
 /// @param self QBrushData*
 /// @param transform QTransform*
+///
 void q_brushdata_set_transform(void* self, void* transform);
 
-/// https://doc.qt.io/qt-6/qgradient.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html)
 
 /// q_gradient_new constructs a new QGradient object.
 ///
 QGradient* q_gradient_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html)
+
 /// q_gradient_new2 constructs a new QGradient object.
 ///
 /// @param param1 enum QGradient__Preset
+///
 QGradient* q_gradient_new2(int32_t param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html)
 
 /// q_gradient_new3 constructs a new QGradient object.
 ///
 /// @param param1 QGradient*
+///
 QGradient* q_gradient_new3(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#type)
@@ -248,12 +313,14 @@ QGradient* q_gradient_new3(void* param1);
 /// @param self QGradient*
 ///
 /// @return enum QGradient__Type
+///
 int32_t q_gradient_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setSpread)
 ///
 /// @param self QGradient*
 /// @param spread enum QGradient__Spread
+///
 void q_gradient_set_spread(void* self, int32_t spread);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#spread)
@@ -261,6 +328,7 @@ void q_gradient_set_spread(void* self, int32_t spread);
 /// @param self QGradient*
 ///
 /// @return enum QGradient__Spread
+///
 int32_t q_gradient_spread(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setColorAt)
@@ -268,11 +336,13 @@ int32_t q_gradient_spread(void* self);
 /// @param self QGradient*
 /// @param pos double
 /// @param color QColor*
+///
 void q_gradient_set_color_at(void* self, double pos, void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#stops)
 ///
 /// @param self QGradient*
+///
 libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_gradient_stops(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#coordinateMode)
@@ -280,12 +350,14 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_gradient_stops(vo
 /// @param self QGradient*
 ///
 /// @return enum QGradient__CoordinateMode
+///
 int32_t q_gradient_coordinate_mode(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setCoordinateMode)
 ///
 /// @param self QGradient*
 /// @param mode enum QGradient__CoordinateMode
+///
 void q_gradient_set_coordinate_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#interpolationMode)
@@ -293,24 +365,28 @@ void q_gradient_set_coordinate_mode(void* self, int32_t mode);
 /// @param self QGradient*
 ///
 /// @return enum QGradient__InterpolationMode
+///
 int32_t q_gradient_interpolation_mode(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setInterpolationMode)
 ///
 /// @param self QGradient*
 /// @param mode enum QGradient__InterpolationMode
+///
 void q_gradient_set_interpolation_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#operator-eq-eq)
 ///
 /// @param self QGradient*
 /// @param gradient QGradient*
+///
 bool q_gradient_operator_equal(void* self, void* gradient);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#operator-not-eq)
 ///
 /// @param self QGradient*
 /// @param other QGradient*
+///
 bool q_gradient_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#dtor.QGradient)
@@ -318,19 +394,25 @@ bool q_gradient_operator_not_equal(void* self, void* other);
 /// Delete this object from C++ memory.
 ///
 /// @param self QGradient*
+///
 void q_gradient_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qlineargradient.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html)
 
 /// q_lineargradient_new constructs a new QLinearGradient object.
 ///
 QLinearGradient* q_lineargradient_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html)
+
 /// q_lineargradient_new2 constructs a new QLinearGradient object.
 ///
 /// @param start QPointF*
 /// @param finalStop QPointF*
+///
 QLinearGradient* q_lineargradient_new2(void* start, void* finalStop);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html)
 
 /// q_lineargradient_new3 constructs a new QLinearGradient object.
 ///
@@ -338,22 +420,28 @@ QLinearGradient* q_lineargradient_new2(void* start, void* finalStop);
 /// @param yStart double
 /// @param xFinalStop double
 /// @param yFinalStop double
+///
 QLinearGradient* q_lineargradient_new3(double xStart, double yStart, double xFinalStop, double yFinalStop);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html)
 
 /// q_lineargradient_new4 constructs a new QLinearGradient object.
 ///
 /// @param param1 QLinearGradient*
+///
 QLinearGradient* q_lineargradient_new4(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html#start)
 ///
 /// @param self QLinearGradient*
+///
 QPointF* q_lineargradient_start(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html#setStart)
 ///
 /// @param self QLinearGradient*
 /// @param start QPointF*
+///
 void q_lineargradient_set_start(void* self, void* start);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html#setStart)
@@ -361,17 +449,20 @@ void q_lineargradient_set_start(void* self, void* start);
 /// @param self QLinearGradient*
 /// @param x double
 /// @param y double
+///
 void q_lineargradient_set_start2(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html#finalStop)
 ///
 /// @param self QLinearGradient*
+///
 QPointF* q_lineargradient_final_stop(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html#setFinalStop)
 ///
 /// @param self QLinearGradient*
 /// @param stop QPointF*
+///
 void q_lineargradient_set_final_stop(void* self, void* stop);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html#setFinalStop)
@@ -379,6 +470,7 @@ void q_lineargradient_set_final_stop(void* self, void* stop);
 /// @param self QLinearGradient*
 /// @param x double
 /// @param y double
+///
 void q_lineargradient_set_final_stop2(void* self, double x, double y);
 
 /// Inherited from QGradient
@@ -388,6 +480,7 @@ void q_lineargradient_set_final_stop2(void* self, double x, double y);
 /// @param self QLinearGradient*
 ///
 /// @return enum QGradient__Type
+///
 int32_t q_lineargradient_type(void* self);
 
 /// Inherited from QGradient
@@ -396,6 +489,7 @@ int32_t q_lineargradient_type(void* self);
 ///
 /// @param self QLinearGradient*
 /// @param spread enum QGradient__Spread
+///
 void q_lineargradient_set_spread(void* self, int32_t spread);
 
 /// Inherited from QGradient
@@ -405,6 +499,7 @@ void q_lineargradient_set_spread(void* self, int32_t spread);
 /// @param self QLinearGradient*
 ///
 /// @return enum QGradient__Spread
+///
 int32_t q_lineargradient_spread(void* self);
 
 /// Inherited from QGradient
@@ -414,6 +509,7 @@ int32_t q_lineargradient_spread(void* self);
 /// @param self QLinearGradient*
 /// @param pos double
 /// @param color QColor*
+///
 void q_lineargradient_set_color_at(void* self, double pos, void* color);
 
 /// Inherited from QGradient
@@ -421,6 +517,7 @@ void q_lineargradient_set_color_at(void* self, double pos, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#stops)
 ///
 /// @param self QLinearGradient*
+///
 libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_lineargradient_stops(void* self);
 
 /// Inherited from QGradient
@@ -430,6 +527,7 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_lineargradient_st
 /// @param self QLinearGradient*
 ///
 /// @return enum QGradient__CoordinateMode
+///
 int32_t q_lineargradient_coordinate_mode(void* self);
 
 /// Inherited from QGradient
@@ -438,6 +536,7 @@ int32_t q_lineargradient_coordinate_mode(void* self);
 ///
 /// @param self QLinearGradient*
 /// @param mode enum QGradient__CoordinateMode
+///
 void q_lineargradient_set_coordinate_mode(void* self, int32_t mode);
 
 /// Inherited from QGradient
@@ -447,6 +546,7 @@ void q_lineargradient_set_coordinate_mode(void* self, int32_t mode);
 /// @param self QLinearGradient*
 ///
 /// @return enum QGradient__InterpolationMode
+///
 int32_t q_lineargradient_interpolation_mode(void* self);
 
 /// Inherited from QGradient
@@ -455,6 +555,7 @@ int32_t q_lineargradient_interpolation_mode(void* self);
 ///
 /// @param self QLinearGradient*
 /// @param mode enum QGradient__InterpolationMode
+///
 void q_lineargradient_set_interpolation_mode(void* self, int32_t mode);
 
 /// Inherited from QGradient
@@ -463,6 +564,7 @@ void q_lineargradient_set_interpolation_mode(void* self, int32_t mode);
 ///
 /// @param self QLinearGradient*
 /// @param gradient QGradient*
+///
 bool q_lineargradient_operator_equal(void* self, void* gradient);
 
 /// Inherited from QGradient
@@ -471,6 +573,7 @@ bool q_lineargradient_operator_equal(void* self, void* gradient);
 ///
 /// @param self QLinearGradient*
 /// @param other QGradient*
+///
 bool q_lineargradient_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineargradient.html#dtor.QLinearGradient)
@@ -478,20 +581,26 @@ bool q_lineargradient_operator_not_equal(void* self, void* other);
 /// Delete this object from C++ memory.
 ///
 /// @param self QLinearGradient*
+///
 void q_lineargradient_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qradialgradient.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new constructs a new QRadialGradient object.
 ///
 QRadialGradient* q_radialgradient_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new2 constructs a new QRadialGradient object.
 ///
 /// @param center QPointF*
 /// @param radius double
 /// @param focalPoint QPointF*
+///
 QRadialGradient* q_radialgradient_new2(void* center, double radius, void* focalPoint);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new3 constructs a new QRadialGradient object.
 ///
@@ -500,20 +609,29 @@ QRadialGradient* q_radialgradient_new2(void* center, double radius, void* focalP
 /// @param radius double
 /// @param fx double
 /// @param fy double
+///
 QRadialGradient* q_radialgradient_new3(double cx, double cy, double radius, double fx, double fy);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new4 constructs a new QRadialGradient object.
 ///
 /// @param center QPointF*
 /// @param radius double
+///
 QRadialGradient* q_radialgradient_new4(void* center, double radius);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new5 constructs a new QRadialGradient object.
 ///
 /// @param cx double
 /// @param cy double
 /// @param radius double
+///
 QRadialGradient* q_radialgradient_new5(double cx, double cy, double radius);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new6 constructs a new QRadialGradient object.
 ///
@@ -521,7 +639,10 @@ QRadialGradient* q_radialgradient_new5(double cx, double cy, double radius);
 /// @param centerRadius double
 /// @param focalPoint QPointF*
 /// @param focalRadius double
+///
 QRadialGradient* q_radialgradient_new6(void* center, double centerRadius, void* focalPoint, double focalRadius);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new7 constructs a new QRadialGradient object.
 ///
@@ -531,22 +652,28 @@ QRadialGradient* q_radialgradient_new6(void* center, double centerRadius, void* 
 /// @param fx double
 /// @param fy double
 /// @param focalRadius double
+///
 QRadialGradient* q_radialgradient_new7(double cx, double cy, double centerRadius, double fx, double fy, double focalRadius);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html)
 
 /// q_radialgradient_new8 constructs a new QRadialGradient object.
 ///
 /// @param param1 QRadialGradient*
+///
 QRadialGradient* q_radialgradient_new8(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#center)
 ///
 /// @param self QRadialGradient*
+///
 QPointF* q_radialgradient_center(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#setCenter)
 ///
 /// @param self QRadialGradient*
 /// @param center QPointF*
+///
 void q_radialgradient_set_center(void* self, void* center);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#setCenter)
@@ -554,17 +681,20 @@ void q_radialgradient_set_center(void* self, void* center);
 /// @param self QRadialGradient*
 /// @param x double
 /// @param y double
+///
 void q_radialgradient_set_center2(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#focalPoint)
 ///
 /// @param self QRadialGradient*
+///
 QPointF* q_radialgradient_focal_point(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#setFocalPoint)
 ///
 /// @param self QRadialGradient*
 /// @param focalPoint QPointF*
+///
 void q_radialgradient_set_focal_point(void* self, void* focalPoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#setFocalPoint)
@@ -572,39 +702,46 @@ void q_radialgradient_set_focal_point(void* self, void* focalPoint);
 /// @param self QRadialGradient*
 /// @param x double
 /// @param y double
+///
 void q_radialgradient_set_focal_point2(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#radius)
 ///
 /// @param self QRadialGradient*
+///
 double q_radialgradient_radius(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#setRadius)
 ///
 /// @param self QRadialGradient*
 /// @param radius double
+///
 void q_radialgradient_set_radius(void* self, double radius);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#centerRadius)
 ///
 /// @param self QRadialGradient*
+///
 double q_radialgradient_center_radius(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#setCenterRadius)
 ///
 /// @param self QRadialGradient*
 /// @param radius double
+///
 void q_radialgradient_set_center_radius(void* self, double radius);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#focalRadius)
 ///
 /// @param self QRadialGradient*
+///
 double q_radialgradient_focal_radius(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#setFocalRadius)
 ///
 /// @param self QRadialGradient*
 /// @param radius double
+///
 void q_radialgradient_set_focal_radius(void* self, double radius);
 
 /// Inherited from QGradient
@@ -614,6 +751,7 @@ void q_radialgradient_set_focal_radius(void* self, double radius);
 /// @param self QRadialGradient*
 ///
 /// @return enum QGradient__Type
+///
 int32_t q_radialgradient_type(void* self);
 
 /// Inherited from QGradient
@@ -622,6 +760,7 @@ int32_t q_radialgradient_type(void* self);
 ///
 /// @param self QRadialGradient*
 /// @param spread enum QGradient__Spread
+///
 void q_radialgradient_set_spread(void* self, int32_t spread);
 
 /// Inherited from QGradient
@@ -631,6 +770,7 @@ void q_radialgradient_set_spread(void* self, int32_t spread);
 /// @param self QRadialGradient*
 ///
 /// @return enum QGradient__Spread
+///
 int32_t q_radialgradient_spread(void* self);
 
 /// Inherited from QGradient
@@ -640,6 +780,7 @@ int32_t q_radialgradient_spread(void* self);
 /// @param self QRadialGradient*
 /// @param pos double
 /// @param color QColor*
+///
 void q_radialgradient_set_color_at(void* self, double pos, void* color);
 
 /// Inherited from QGradient
@@ -647,6 +788,7 @@ void q_radialgradient_set_color_at(void* self, double pos, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#stops)
 ///
 /// @param self QRadialGradient*
+///
 libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_radialgradient_stops(void* self);
 
 /// Inherited from QGradient
@@ -656,6 +798,7 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_radialgradient_st
 /// @param self QRadialGradient*
 ///
 /// @return enum QGradient__CoordinateMode
+///
 int32_t q_radialgradient_coordinate_mode(void* self);
 
 /// Inherited from QGradient
@@ -664,6 +807,7 @@ int32_t q_radialgradient_coordinate_mode(void* self);
 ///
 /// @param self QRadialGradient*
 /// @param mode enum QGradient__CoordinateMode
+///
 void q_radialgradient_set_coordinate_mode(void* self, int32_t mode);
 
 /// Inherited from QGradient
@@ -673,6 +817,7 @@ void q_radialgradient_set_coordinate_mode(void* self, int32_t mode);
 /// @param self QRadialGradient*
 ///
 /// @return enum QGradient__InterpolationMode
+///
 int32_t q_radialgradient_interpolation_mode(void* self);
 
 /// Inherited from QGradient
@@ -681,6 +826,7 @@ int32_t q_radialgradient_interpolation_mode(void* self);
 ///
 /// @param self QRadialGradient*
 /// @param mode enum QGradient__InterpolationMode
+///
 void q_radialgradient_set_interpolation_mode(void* self, int32_t mode);
 
 /// Inherited from QGradient
@@ -689,6 +835,7 @@ void q_radialgradient_set_interpolation_mode(void* self, int32_t mode);
 ///
 /// @param self QRadialGradient*
 /// @param gradient QGradient*
+///
 bool q_radialgradient_operator_equal(void* self, void* gradient);
 
 /// Inherited from QGradient
@@ -697,6 +844,7 @@ bool q_radialgradient_operator_equal(void* self, void* gradient);
 ///
 /// @param self QRadialGradient*
 /// @param other QGradient*
+///
 bool q_radialgradient_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qradialgradient.html#dtor.QRadialGradient)
@@ -704,41 +852,53 @@ bool q_radialgradient_operator_not_equal(void* self, void* other);
 /// Delete this object from C++ memory.
 ///
 /// @param self QRadialGradient*
+///
 void q_radialgradient_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qconicalgradient.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html)
 
 /// q_conicalgradient_new constructs a new QConicalGradient object.
 ///
 QConicalGradient* q_conicalgradient_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html)
+
 /// q_conicalgradient_new2 constructs a new QConicalGradient object.
 ///
 /// @param center QPointF*
 /// @param startAngle double
+///
 QConicalGradient* q_conicalgradient_new2(void* center, double startAngle);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html)
 
 /// q_conicalgradient_new3 constructs a new QConicalGradient object.
 ///
 /// @param cx double
 /// @param cy double
 /// @param startAngle double
+///
 QConicalGradient* q_conicalgradient_new3(double cx, double cy, double startAngle);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html)
 
 /// q_conicalgradient_new4 constructs a new QConicalGradient object.
 ///
 /// @param param1 QConicalGradient*
+///
 QConicalGradient* q_conicalgradient_new4(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html#center)
 ///
 /// @param self QConicalGradient*
+///
 QPointF* q_conicalgradient_center(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html#setCenter)
 ///
 /// @param self QConicalGradient*
 /// @param center QPointF*
+///
 void q_conicalgradient_set_center(void* self, void* center);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html#setCenter)
@@ -746,17 +906,20 @@ void q_conicalgradient_set_center(void* self, void* center);
 /// @param self QConicalGradient*
 /// @param x double
 /// @param y double
+///
 void q_conicalgradient_set_center2(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html#angle)
 ///
 /// @param self QConicalGradient*
+///
 double q_conicalgradient_angle(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html#setAngle)
 ///
 /// @param self QConicalGradient*
 /// @param angle double
+///
 void q_conicalgradient_set_angle(void* self, double angle);
 
 /// Inherited from QGradient
@@ -766,6 +929,7 @@ void q_conicalgradient_set_angle(void* self, double angle);
 /// @param self QConicalGradient*
 ///
 /// @return enum QGradient__Type
+///
 int32_t q_conicalgradient_type(void* self);
 
 /// Inherited from QGradient
@@ -774,6 +938,7 @@ int32_t q_conicalgradient_type(void* self);
 ///
 /// @param self QConicalGradient*
 /// @param spread enum QGradient__Spread
+///
 void q_conicalgradient_set_spread(void* self, int32_t spread);
 
 /// Inherited from QGradient
@@ -783,6 +948,7 @@ void q_conicalgradient_set_spread(void* self, int32_t spread);
 /// @param self QConicalGradient*
 ///
 /// @return enum QGradient__Spread
+///
 int32_t q_conicalgradient_spread(void* self);
 
 /// Inherited from QGradient
@@ -792,6 +958,7 @@ int32_t q_conicalgradient_spread(void* self);
 /// @param self QConicalGradient*
 /// @param pos double
 /// @param color QColor*
+///
 void q_conicalgradient_set_color_at(void* self, double pos, void* color);
 
 /// Inherited from QGradient
@@ -799,6 +966,7 @@ void q_conicalgradient_set_color_at(void* self, double pos, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#stops)
 ///
 /// @param self QConicalGradient*
+///
 libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_conicalgradient_stops(void* self);
 
 /// Inherited from QGradient
@@ -808,6 +976,7 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_conicalgradient_s
 /// @param self QConicalGradient*
 ///
 /// @return enum QGradient__CoordinateMode
+///
 int32_t q_conicalgradient_coordinate_mode(void* self);
 
 /// Inherited from QGradient
@@ -816,6 +985,7 @@ int32_t q_conicalgradient_coordinate_mode(void* self);
 ///
 /// @param self QConicalGradient*
 /// @param mode enum QGradient__CoordinateMode
+///
 void q_conicalgradient_set_coordinate_mode(void* self, int32_t mode);
 
 /// Inherited from QGradient
@@ -825,6 +995,7 @@ void q_conicalgradient_set_coordinate_mode(void* self, int32_t mode);
 /// @param self QConicalGradient*
 ///
 /// @return enum QGradient__InterpolationMode
+///
 int32_t q_conicalgradient_interpolation_mode(void* self);
 
 /// Inherited from QGradient
@@ -833,6 +1004,7 @@ int32_t q_conicalgradient_interpolation_mode(void* self);
 ///
 /// @param self QConicalGradient*
 /// @param mode enum QGradient__InterpolationMode
+///
 void q_conicalgradient_set_interpolation_mode(void* self, int32_t mode);
 
 /// Inherited from QGradient
@@ -841,6 +1013,7 @@ void q_conicalgradient_set_interpolation_mode(void* self, int32_t mode);
 ///
 /// @param self QConicalGradient*
 /// @param gradient QGradient*
+///
 bool q_conicalgradient_operator_equal(void* self, void* gradient);
 
 /// Inherited from QGradient
@@ -849,6 +1022,7 @@ bool q_conicalgradient_operator_equal(void* self, void* gradient);
 ///
 /// @param self QConicalGradient*
 /// @param other QGradient*
+///
 bool q_conicalgradient_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconicalgradient.html#dtor.QConicalGradient)
@@ -856,21 +1030,24 @@ bool q_conicalgradient_operator_not_equal(void* self, void* other);
 /// Delete this object from C++ memory.
 ///
 /// @param self QConicalGradient*
+///
 void q_conicalgradient_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qgradient-qgradientdata.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qgradient-qgradientdata.html)
 
 /// q_gradient__qgradientdata_new constructs a new QGradient::QGradientData object.
 ///
 /// @param param1 QGradient__QGradientData*
+///
 QGradient__QGradientData* q_gradient__qgradientdata_new(void* param1);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self QGradient__QGradientData*
+///
 void q_gradient__qgradientdata_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qbrush.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#public-types)
 
 typedef enum {
     QGRADIENT_TYPE_LINEARGRADIENT = 0,
@@ -879,11 +1056,15 @@ typedef enum {
     QGRADIENT_TYPE_NOGRADIENT = 3
 } QGradient__Type;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#public-types)
+
 typedef enum {
     QGRADIENT_SPREAD_PADSPREAD = 0,
     QGRADIENT_SPREAD_REFLECTSPREAD = 1,
     QGRADIENT_SPREAD_REPEATSPREAD = 2
 } QGradient__Spread;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#public-types)
 
 typedef enum {
     QGRADIENT_COORDINATEMODE_LOGICALMODE = 0,
@@ -892,10 +1073,14 @@ typedef enum {
     QGRADIENT_COORDINATEMODE_OBJECTMODE = 3
 } QGradient__CoordinateMode;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#public-types)
+
 typedef enum {
     QGRADIENT_INTERPOLATIONMODE_COLORINTERPOLATION = 0,
     QGRADIENT_INTERPOLATIONMODE_COMPONENTINTERPOLATION = 1
 } QGradient__InterpolationMode;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#public-types)
 
 typedef enum {
     QGRADIENT_PRESET_WARMFLAME = 1,

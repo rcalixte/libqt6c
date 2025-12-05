@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ktimezone.html
+/// [Upstream resources](https://api.kde.org/ktimezone.html)
 
 /// [Upstream resources](https://api.kde.org/ktimezone.html#fromLocation)
 ///
@@ -19,10 +19,12 @@
 ///
 /// @param param1 float
 /// @param param2 float
+///
 const char* k_timezone_from_location(float param1, float param2);
 
 /// [Upstream resources](https://api.kde.org/ktimezone.html#country)
 ///
 /// @param param1 const char*
+///
 KCountry* k_timezone_country(const char* param1);
 #endif

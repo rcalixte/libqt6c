@@ -11,32 +11,37 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/sonnet-configdialog.html
+/// [Upstream resources](https://api.kde.org/sonnet-configdialog.html)
 
 /// k_sonnet__configdialog_new constructs a new Sonnet::ConfigDialog object.
 ///
 /// @param parent QWidget*
+///
 Sonnet__ConfigDialog* k_sonnet__configdialog_new(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const QMetaObject* k_sonnet__configdialog_meta_object(void* self);
 
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 const char*
+///
 void* k_sonnet__configdialog_metacast(void* self, const char* param1);
 
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_sonnet__configdialog_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback int32_t func(Sonnet__ConfigDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_sonnet__configdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -45,6 +50,7 @@ void k_sonnet__configdialog_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_sonnet__configdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -52,12 +58,14 @@ int32_t k_sonnet__configdialog_qbase_metacall(void* self, int32_t param1, int pa
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_sonnet__configdialog_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#setLanguage)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param language const char*
+///
 void k_sonnet__configdialog_set_language(void* self, const char* language);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#language)
@@ -65,11 +73,13 @@ void k_sonnet__configdialog_set_language(void* self, const char* language);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_language(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#slotOk)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_slot_ok(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#slotOk)
@@ -78,6 +88,7 @@ void k_sonnet__configdialog_slot_ok(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_slot_ok(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#slotOk)
@@ -85,11 +96,13 @@ void k_sonnet__configdialog_on_slot_ok(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_slot_ok(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#slotApply)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_slot_apply(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#slotApply)
@@ -98,6 +111,7 @@ void k_sonnet__configdialog_slot_apply(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_slot_apply(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#slotApply)
@@ -105,29 +119,34 @@ void k_sonnet__configdialog_on_slot_apply(void* self, void (*callback)());
 /// Base class method implementation
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_slot_apply(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#languageChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param language const char*
+///
 void k_sonnet__configdialog_language_changed(void* self, const char* language);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#languageChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, const char* language)
+///
 void k_sonnet__configdialog_on_language_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#configChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_config_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configdialog.html#configChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self)
+///
 void k_sonnet__configdialog_on_config_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -136,6 +155,7 @@ void k_sonnet__configdialog_on_config_changed(void* self, void (*callback)(void*
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_sonnet__configdialog_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -145,6 +165,7 @@ const char* k_sonnet__configdialog_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_sonnet__configdialog_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QDialog
@@ -152,6 +173,7 @@ const char* k_sonnet__configdialog_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_result(void* self);
 
 /// Inherited from QDialog
@@ -160,6 +182,7 @@ int32_t k_sonnet__configdialog_result(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param sizeGripEnabled bool
+///
 void k_sonnet__configdialog_set_size_grip_enabled(void* self, bool sizeGripEnabled);
 
 /// Inherited from QDialog
@@ -167,6 +190,7 @@ void k_sonnet__configdialog_set_size_grip_enabled(void* self, bool sizeGripEnabl
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_size_grip_enabled(void* self);
 
 /// Inherited from QDialog
@@ -175,6 +199,7 @@ bool k_sonnet__configdialog_is_size_grip_enabled(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param modal bool
+///
 void k_sonnet__configdialog_set_modal(void* self, bool modal);
 
 /// Inherited from QDialog
@@ -183,6 +208,7 @@ void k_sonnet__configdialog_set_modal(void* self, bool modal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param r int
+///
 void k_sonnet__configdialog_set_result(void* self, int r);
 
 /// Inherited from QDialog
@@ -191,6 +217,7 @@ void k_sonnet__configdialog_set_result(void* self, int r);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param result int
+///
 void k_sonnet__configdialog_finished(void* self, int result);
 
 /// Inherited from QDialog
@@ -199,6 +226,7 @@ void k_sonnet__configdialog_finished(void* self, int result);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, int result)
+///
 void k_sonnet__configdialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -206,6 +234,7 @@ void k_sonnet__configdialog_on_finished(void* self, void (*callback)(void*, int)
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_accepted(void* self);
 
 /// Inherited from QDialog
@@ -214,6 +243,7 @@ void k_sonnet__configdialog_accepted(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self)
+///
 void k_sonnet__configdialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -221,6 +251,7 @@ void k_sonnet__configdialog_on_accepted(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_rejected(void* self);
 
 /// Inherited from QDialog
@@ -229,6 +260,7 @@ void k_sonnet__configdialog_rejected(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self)
+///
 void k_sonnet__configdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -236,6 +268,7 @@ void k_sonnet__configdialog_on_rejected(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 uintptr_t k_sonnet__configdialog_win_id(void* self);
 
 /// Inherited from QWidget
@@ -243,6 +276,7 @@ uintptr_t k_sonnet__configdialog_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_create_win_id(void* self);
 
 /// Inherited from QWidget
@@ -250,6 +284,7 @@ void k_sonnet__configdialog_create_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 uintptr_t k_sonnet__configdialog_internal_win_id(void* self);
 
 /// Inherited from QWidget
@@ -257,6 +292,7 @@ uintptr_t k_sonnet__configdialog_internal_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 uintptr_t k_sonnet__configdialog_effective_win_id(void* self);
 
 /// Inherited from QWidget
@@ -264,6 +300,7 @@ uintptr_t k_sonnet__configdialog_effective_win_id(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QStyle* k_sonnet__configdialog_style(void* self);
 
 /// Inherited from QWidget
@@ -272,6 +309,7 @@ QStyle* k_sonnet__configdialog_style(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param style QStyle*
+///
 void k_sonnet__configdialog_set_style(void* self, void* style);
 
 /// Inherited from QWidget
@@ -279,6 +317,7 @@ void k_sonnet__configdialog_set_style(void* self, void* style);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_top_level(void* self);
 
 /// Inherited from QWidget
@@ -286,6 +325,7 @@ bool k_sonnet__configdialog_is_top_level(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_window(void* self);
 
 /// Inherited from QWidget
@@ -293,6 +333,7 @@ bool k_sonnet__configdialog_is_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_modal(void* self);
 
 /// Inherited from QWidget
@@ -302,6 +343,7 @@ bool k_sonnet__configdialog_is_modal(void* self);
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return enum Qt__WindowModality
+///
 int32_t k_sonnet__configdialog_window_modality(void* self);
 
 /// Inherited from QWidget
@@ -310,6 +352,7 @@ int32_t k_sonnet__configdialog_window_modality(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param windowModality enum Qt__WindowModality
+///
 void k_sonnet__configdialog_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
@@ -317,6 +360,7 @@ void k_sonnet__configdialog_set_window_modality(void* self, int32_t windowModali
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_enabled(void* self);
 
 /// Inherited from QWidget
@@ -325,6 +369,7 @@ bool k_sonnet__configdialog_is_enabled(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
+///
 bool k_sonnet__configdialog_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -333,6 +378,7 @@ bool k_sonnet__configdialog_is_enabled_to(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param enabled bool
+///
 void k_sonnet__configdialog_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -341,6 +387,7 @@ void k_sonnet__configdialog_set_enabled(void* self, bool enabled);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param disabled bool
+///
 void k_sonnet__configdialog_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
@@ -349,6 +396,7 @@ void k_sonnet__configdialog_set_disabled(void* self, bool disabled);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param windowModified bool
+///
 void k_sonnet__configdialog_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
@@ -356,6 +404,7 @@ void k_sonnet__configdialog_set_window_modified(void* self, bool windowModified)
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRect* k_sonnet__configdialog_frame_geometry(void* self);
 
 /// Inherited from QWidget
@@ -363,6 +412,7 @@ QRect* k_sonnet__configdialog_frame_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const QRect* k_sonnet__configdialog_geometry(void* self);
 
 /// Inherited from QWidget
@@ -370,6 +420,7 @@ const QRect* k_sonnet__configdialog_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRect* k_sonnet__configdialog_normal_geometry(void* self);
 
 /// Inherited from QWidget
@@ -377,6 +428,7 @@ QRect* k_sonnet__configdialog_normal_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_x(void* self);
 
 /// Inherited from QWidget
@@ -384,6 +436,7 @@ int32_t k_sonnet__configdialog_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_y(void* self);
 
 /// Inherited from QWidget
@@ -391,6 +444,7 @@ int32_t k_sonnet__configdialog_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QPoint* k_sonnet__configdialog_pos(void* self);
 
 /// Inherited from QWidget
@@ -398,6 +452,7 @@ QPoint* k_sonnet__configdialog_pos(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_frame_size(void* self);
 
 /// Inherited from QWidget
@@ -405,6 +460,7 @@ QSize* k_sonnet__configdialog_frame_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_size(void* self);
 
 /// Inherited from QWidget
@@ -412,6 +468,7 @@ QSize* k_sonnet__configdialog_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_width(void* self);
 
 /// Inherited from QWidget
@@ -419,6 +476,7 @@ int32_t k_sonnet__configdialog_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_height(void* self);
 
 /// Inherited from QWidget
@@ -426,6 +484,7 @@ int32_t k_sonnet__configdialog_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRect* k_sonnet__configdialog_rect(void* self);
 
 /// Inherited from QWidget
@@ -433,6 +492,7 @@ QRect* k_sonnet__configdialog_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRect* k_sonnet__configdialog_children_rect(void* self);
 
 /// Inherited from QWidget
@@ -440,6 +500,7 @@ QRect* k_sonnet__configdialog_children_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRegion* k_sonnet__configdialog_children_region(void* self);
 
 /// Inherited from QWidget
@@ -447,6 +508,7 @@ QRegion* k_sonnet__configdialog_children_region(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_minimum_size(void* self);
 
 /// Inherited from QWidget
@@ -454,6 +516,7 @@ QSize* k_sonnet__configdialog_minimum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_maximum_size(void* self);
 
 /// Inherited from QWidget
@@ -461,6 +524,7 @@ QSize* k_sonnet__configdialog_maximum_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_minimum_width(void* self);
 
 /// Inherited from QWidget
@@ -468,6 +532,7 @@ int32_t k_sonnet__configdialog_minimum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_minimum_height(void* self);
 
 /// Inherited from QWidget
@@ -475,6 +540,7 @@ int32_t k_sonnet__configdialog_minimum_height(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_maximum_width(void* self);
 
 /// Inherited from QWidget
@@ -482,6 +548,7 @@ int32_t k_sonnet__configdialog_maximum_width(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_maximum_height(void* self);
 
 /// Inherited from QWidget
@@ -490,6 +557,7 @@ int32_t k_sonnet__configdialog_maximum_height(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param minimumSize QSize*
+///
 void k_sonnet__configdialog_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
@@ -499,6 +567,7 @@ void k_sonnet__configdialog_set_minimum_size(void* self, void* minimumSize);
 /// @param self Sonnet__ConfigDialog*
 /// @param minw int
 /// @param minh int
+///
 void k_sonnet__configdialog_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
@@ -507,6 +576,7 @@ void k_sonnet__configdialog_set_minimum_size2(void* self, int minw, int minh);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param maximumSize QSize*
+///
 void k_sonnet__configdialog_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
@@ -516,6 +586,7 @@ void k_sonnet__configdialog_set_maximum_size(void* self, void* maximumSize);
 /// @param self Sonnet__ConfigDialog*
 /// @param maxw int
 /// @param maxh int
+///
 void k_sonnet__configdialog_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
@@ -524,6 +595,7 @@ void k_sonnet__configdialog_set_maximum_size2(void* self, int maxw, int maxh);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param minw int
+///
 void k_sonnet__configdialog_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
@@ -532,6 +604,7 @@ void k_sonnet__configdialog_set_minimum_width(void* self, int minw);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param minh int
+///
 void k_sonnet__configdialog_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
@@ -540,6 +613,7 @@ void k_sonnet__configdialog_set_minimum_height(void* self, int minh);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param maxw int
+///
 void k_sonnet__configdialog_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
@@ -548,6 +622,7 @@ void k_sonnet__configdialog_set_maximum_width(void* self, int maxw);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param maxh int
+///
 void k_sonnet__configdialog_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
@@ -555,6 +630,7 @@ void k_sonnet__configdialog_set_maximum_height(void* self, int maxh);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_size_increment(void* self);
 
 /// Inherited from QWidget
@@ -563,6 +639,7 @@ QSize* k_sonnet__configdialog_size_increment(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param sizeIncrement QSize*
+///
 void k_sonnet__configdialog_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
@@ -572,6 +649,7 @@ void k_sonnet__configdialog_set_size_increment(void* self, void* sizeIncrement);
 /// @param self Sonnet__ConfigDialog*
 /// @param w int
 /// @param h int
+///
 void k_sonnet__configdialog_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -579,6 +657,7 @@ void k_sonnet__configdialog_set_size_increment2(void* self, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_base_size(void* self);
 
 /// Inherited from QWidget
@@ -587,6 +666,7 @@ QSize* k_sonnet__configdialog_base_size(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param baseSize QSize*
+///
 void k_sonnet__configdialog_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
@@ -596,6 +676,7 @@ void k_sonnet__configdialog_set_base_size(void* self, void* baseSize);
 /// @param self Sonnet__ConfigDialog*
 /// @param basew int
 /// @param baseh int
+///
 void k_sonnet__configdialog_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
@@ -604,6 +685,7 @@ void k_sonnet__configdialog_set_base_size2(void* self, int basew, int baseh);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param fixedSize QSize*
+///
 void k_sonnet__configdialog_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
@@ -613,6 +695,7 @@ void k_sonnet__configdialog_set_fixed_size(void* self, void* fixedSize);
 /// @param self Sonnet__ConfigDialog*
 /// @param w int
 /// @param h int
+///
 void k_sonnet__configdialog_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -621,6 +704,7 @@ void k_sonnet__configdialog_set_fixed_size2(void* self, int w, int h);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param w int
+///
 void k_sonnet__configdialog_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
@@ -629,6 +713,7 @@ void k_sonnet__configdialog_set_fixed_width(void* self, int w);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param h int
+///
 void k_sonnet__configdialog_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
@@ -637,6 +722,7 @@ void k_sonnet__configdialog_set_fixed_height(void* self, int h);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPointF*
+///
 QPointF* k_sonnet__configdialog_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -645,6 +731,7 @@ QPointF* k_sonnet__configdialog_map_to_global(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPoint*
+///
 QPoint* k_sonnet__configdialog_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -653,6 +740,7 @@ QPoint* k_sonnet__configdialog_map_to_global2(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPointF*
+///
 QPointF* k_sonnet__configdialog_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -661,6 +749,7 @@ QPointF* k_sonnet__configdialog_map_from_global(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPoint*
+///
 QPoint* k_sonnet__configdialog_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -669,6 +758,7 @@ QPoint* k_sonnet__configdialog_map_from_global2(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPointF*
+///
 QPointF* k_sonnet__configdialog_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -677,6 +767,7 @@ QPointF* k_sonnet__configdialog_map_to_parent(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPoint*
+///
 QPoint* k_sonnet__configdialog_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -685,6 +776,7 @@ QPoint* k_sonnet__configdialog_map_to_parent2(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPointF*
+///
 QPointF* k_sonnet__configdialog_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -693,6 +785,7 @@ QPointF* k_sonnet__configdialog_map_from_parent(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPoint*
+///
 QPoint* k_sonnet__configdialog_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -702,6 +795,7 @@ QPoint* k_sonnet__configdialog_map_from_parent2(void* self, void* param1);
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_sonnet__configdialog_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -711,6 +805,7 @@ QPointF* k_sonnet__configdialog_map_to(void* self, void* param1, void* param2);
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_sonnet__configdialog_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -720,6 +815,7 @@ QPoint* k_sonnet__configdialog_map_to2(void* self, void* param1, void* param2);
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
+///
 QPointF* k_sonnet__configdialog_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -729,6 +825,7 @@ QPointF* k_sonnet__configdialog_map_from(void* self, void* param1, void* param2)
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
+///
 QPoint* k_sonnet__configdialog_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -736,6 +833,7 @@ QPoint* k_sonnet__configdialog_map_from2(void* self, void* param1, void* param2)
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_window(void* self);
 
 /// Inherited from QWidget
@@ -743,6 +841,7 @@ QWidget* k_sonnet__configdialog_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_native_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -750,6 +849,7 @@ QWidget* k_sonnet__configdialog_native_parent_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_top_level_widget(void* self);
 
 /// Inherited from QWidget
@@ -757,6 +857,7 @@ QWidget* k_sonnet__configdialog_top_level_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const QPalette* k_sonnet__configdialog_palette(void* self);
 
 /// Inherited from QWidget
@@ -765,6 +866,7 @@ const QPalette* k_sonnet__configdialog_palette(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param palette QPalette*
+///
 void k_sonnet__configdialog_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
@@ -773,6 +875,7 @@ void k_sonnet__configdialog_set_palette(void* self, void* palette);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param backgroundRole enum QPalette__ColorRole
+///
 void k_sonnet__configdialog_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
@@ -782,6 +885,7 @@ void k_sonnet__configdialog_set_background_role(void* self, int32_t backgroundRo
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_sonnet__configdialog_background_role(void* self);
 
 /// Inherited from QWidget
@@ -790,6 +894,7 @@ int32_t k_sonnet__configdialog_background_role(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param foregroundRole enum QPalette__ColorRole
+///
 void k_sonnet__configdialog_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
@@ -799,6 +904,7 @@ void k_sonnet__configdialog_set_foreground_role(void* self, int32_t foregroundRo
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return enum QPalette__ColorRole
+///
 int32_t k_sonnet__configdialog_foreground_role(void* self);
 
 /// Inherited from QWidget
@@ -806,6 +912,7 @@ int32_t k_sonnet__configdialog_foreground_role(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const QFont* k_sonnet__configdialog_font(void* self);
 
 /// Inherited from QWidget
@@ -814,6 +921,7 @@ const QFont* k_sonnet__configdialog_font(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param font QFont*
+///
 void k_sonnet__configdialog_set_font(void* self, void* font);
 
 /// Inherited from QWidget
@@ -821,6 +929,7 @@ void k_sonnet__configdialog_set_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QFontMetrics* k_sonnet__configdialog_font_metrics(void* self);
 
 /// Inherited from QWidget
@@ -828,6 +937,7 @@ QFontMetrics* k_sonnet__configdialog_font_metrics(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QFontInfo* k_sonnet__configdialog_font_info(void* self);
 
 /// Inherited from QWidget
@@ -835,6 +945,7 @@ QFontInfo* k_sonnet__configdialog_font_info(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QCursor* k_sonnet__configdialog_cursor(void* self);
 
 /// Inherited from QWidget
@@ -843,6 +954,7 @@ QCursor* k_sonnet__configdialog_cursor(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param cursor QCursor*
+///
 void k_sonnet__configdialog_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
@@ -850,6 +962,7 @@ void k_sonnet__configdialog_set_cursor(void* self, void* cursor);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_unset_cursor(void* self);
 
 /// Inherited from QWidget
@@ -858,6 +971,7 @@ void k_sonnet__configdialog_unset_cursor(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param enable bool
+///
 void k_sonnet__configdialog_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -865,6 +979,7 @@ void k_sonnet__configdialog_set_mouse_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
@@ -872,6 +987,7 @@ bool k_sonnet__configdialog_has_mouse_tracking(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_under_mouse(void* self);
 
 /// Inherited from QWidget
@@ -880,6 +996,7 @@ bool k_sonnet__configdialog_under_mouse(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param enable bool
+///
 void k_sonnet__configdialog_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -887,6 +1004,7 @@ void k_sonnet__configdialog_set_tablet_tracking(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
@@ -895,6 +1013,7 @@ bool k_sonnet__configdialog_has_tablet_tracking(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param mask QBitmap*
+///
 void k_sonnet__configdialog_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -903,6 +1022,7 @@ void k_sonnet__configdialog_set_mask(void* self, void* mask);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param mask QRegion*
+///
 void k_sonnet__configdialog_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
@@ -910,6 +1030,7 @@ void k_sonnet__configdialog_set_mask2(void* self, void* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRegion* k_sonnet__configdialog_mask(void* self);
 
 /// Inherited from QWidget
@@ -917,6 +1038,7 @@ QRegion* k_sonnet__configdialog_mask(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_clear_mask(void* self);
 
 /// Inherited from QWidget
@@ -925,6 +1047,7 @@ void k_sonnet__configdialog_clear_mask(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param target QPaintDevice*
+///
 void k_sonnet__configdialog_render(void* self, void* target);
 
 /// Inherited from QWidget
@@ -933,6 +1056,7 @@ void k_sonnet__configdialog_render(void* self, void* target);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param painter QPainter*
+///
 void k_sonnet__configdialog_render2(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -940,6 +1064,7 @@ void k_sonnet__configdialog_render2(void* self, void* painter);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QPixmap* k_sonnet__configdialog_grab(void* self);
 
 /// Inherited from QWidget
@@ -947,6 +1072,7 @@ QPixmap* k_sonnet__configdialog_grab(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QGraphicsEffect* k_sonnet__configdialog_graphics_effect(void* self);
 
 /// Inherited from QWidget
@@ -955,6 +1081,7 @@ QGraphicsEffect* k_sonnet__configdialog_graphics_effect(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param effect QGraphicsEffect*
+///
 void k_sonnet__configdialog_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
@@ -963,6 +1090,7 @@ void k_sonnet__configdialog_set_graphics_effect(void* self, void* effect);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param type enum Qt__GestureType
+///
 void k_sonnet__configdialog_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -971,6 +1099,7 @@ void k_sonnet__configdialog_grab_gesture(void* self, int64_t type);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param type enum Qt__GestureType
+///
 void k_sonnet__configdialog_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -979,6 +1108,7 @@ void k_sonnet__configdialog_ungrab_gesture(void* self, int64_t type);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param windowTitle const char*
+///
 void k_sonnet__configdialog_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
@@ -987,6 +1117,7 @@ void k_sonnet__configdialog_set_window_title(void* self, const char* windowTitle
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param styleSheet const char*
+///
 void k_sonnet__configdialog_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
@@ -996,6 +1127,7 @@ void k_sonnet__configdialog_set_style_sheet(void* self, const char* styleSheet);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_style_sheet(void* self);
 
 /// Inherited from QWidget
@@ -1005,6 +1137,7 @@ const char* k_sonnet__configdialog_style_sheet(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_window_title(void* self);
 
 /// Inherited from QWidget
@@ -1013,6 +1146,7 @@ const char* k_sonnet__configdialog_window_title(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param icon QIcon*
+///
 void k_sonnet__configdialog_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -1020,6 +1154,7 @@ void k_sonnet__configdialog_set_window_icon(void* self, void* icon);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QIcon* k_sonnet__configdialog_window_icon(void* self);
 
 /// Inherited from QWidget
@@ -1028,6 +1163,7 @@ QIcon* k_sonnet__configdialog_window_icon(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param windowIconText const char*
+///
 void k_sonnet__configdialog_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
@@ -1037,6 +1173,7 @@ void k_sonnet__configdialog_set_window_icon_text(void* self, const char* windowI
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_window_icon_text(void* self);
 
 /// Inherited from QWidget
@@ -1045,6 +1182,7 @@ const char* k_sonnet__configdialog_window_icon_text(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param windowRole const char*
+///
 void k_sonnet__configdialog_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
@@ -1054,6 +1192,7 @@ void k_sonnet__configdialog_set_window_role(void* self, const char* windowRole);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_window_role(void* self);
 
 /// Inherited from QWidget
@@ -1062,6 +1201,7 @@ const char* k_sonnet__configdialog_window_role(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param filePath const char*
+///
 void k_sonnet__configdialog_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
@@ -1071,6 +1211,7 @@ void k_sonnet__configdialog_set_window_file_path(void* self, const char* filePat
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_window_file_path(void* self);
 
 /// Inherited from QWidget
@@ -1079,6 +1220,7 @@ const char* k_sonnet__configdialog_window_file_path(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param level double
+///
 void k_sonnet__configdialog_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
@@ -1086,6 +1228,7 @@ void k_sonnet__configdialog_set_window_opacity(void* self, double level);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 double k_sonnet__configdialog_window_opacity(void* self);
 
 /// Inherited from QWidget
@@ -1093,6 +1236,7 @@ double k_sonnet__configdialog_window_opacity(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_window_modified(void* self);
 
 /// Inherited from QWidget
@@ -1101,6 +1245,7 @@ bool k_sonnet__configdialog_is_window_modified(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param toolTip const char*
+///
 void k_sonnet__configdialog_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
@@ -1110,6 +1255,7 @@ void k_sonnet__configdialog_set_tool_tip(void* self, const char* toolTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_tool_tip(void* self);
 
 /// Inherited from QWidget
@@ -1118,6 +1264,7 @@ const char* k_sonnet__configdialog_tool_tip(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param msec int
+///
 void k_sonnet__configdialog_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
@@ -1125,6 +1272,7 @@ void k_sonnet__configdialog_set_tool_tip_duration(void* self, int msec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
@@ -1133,6 +1281,7 @@ int32_t k_sonnet__configdialog_tool_tip_duration(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param statusTip const char*
+///
 void k_sonnet__configdialog_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
@@ -1142,6 +1291,7 @@ void k_sonnet__configdialog_set_status_tip(void* self, const char* statusTip);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_status_tip(void* self);
 
 /// Inherited from QWidget
@@ -1150,6 +1300,7 @@ const char* k_sonnet__configdialog_status_tip(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param whatsThis const char*
+///
 void k_sonnet__configdialog_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
@@ -1159,6 +1310,7 @@ void k_sonnet__configdialog_set_whats_this(void* self, const char* whatsThis);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_whats_this(void* self);
 
 /// Inherited from QWidget
@@ -1168,6 +1320,7 @@ const char* k_sonnet__configdialog_whats_this(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_accessible_name(void* self);
 
 /// Inherited from QWidget
@@ -1176,6 +1329,7 @@ const char* k_sonnet__configdialog_accessible_name(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param name const char*
+///
 void k_sonnet__configdialog_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
@@ -1185,6 +1339,7 @@ void k_sonnet__configdialog_set_accessible_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_accessible_description(void* self);
 
 /// Inherited from QWidget
@@ -1193,6 +1348,7 @@ const char* k_sonnet__configdialog_accessible_description(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param description const char*
+///
 void k_sonnet__configdialog_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
@@ -1201,6 +1357,7 @@ void k_sonnet__configdialog_set_accessible_description(void* self, const char* d
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param direction enum Qt__LayoutDirection
+///
 void k_sonnet__configdialog_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
@@ -1210,6 +1367,7 @@ void k_sonnet__configdialog_set_layout_direction(void* self, int32_t direction);
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return enum Qt__LayoutDirection
+///
 int32_t k_sonnet__configdialog_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1217,6 +1375,7 @@ int32_t k_sonnet__configdialog_layout_direction(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
@@ -1225,6 +1384,7 @@ void k_sonnet__configdialog_unset_layout_direction(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param locale QLocale*
+///
 void k_sonnet__configdialog_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
@@ -1232,6 +1392,7 @@ void k_sonnet__configdialog_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QLocale* k_sonnet__configdialog_locale(void* self);
 
 /// Inherited from QWidget
@@ -1239,6 +1400,7 @@ QLocale* k_sonnet__configdialog_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_unset_locale(void* self);
 
 /// Inherited from QWidget
@@ -1246,6 +1408,7 @@ void k_sonnet__configdialog_unset_locale(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_right_to_left(void* self);
 
 /// Inherited from QWidget
@@ -1253,6 +1416,7 @@ bool k_sonnet__configdialog_is_right_to_left(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_left_to_right(void* self);
 
 /// Inherited from QWidget
@@ -1260,6 +1424,7 @@ bool k_sonnet__configdialog_is_left_to_right(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_set_focus(void* self);
 
 /// Inherited from QWidget
@@ -1267,6 +1432,7 @@ void k_sonnet__configdialog_set_focus(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_active_window(void* self);
 
 /// Inherited from QWidget
@@ -1274,6 +1440,7 @@ bool k_sonnet__configdialog_is_active_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_activate_window(void* self);
 
 /// Inherited from QWidget
@@ -1281,6 +1448,7 @@ void k_sonnet__configdialog_activate_window(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_clear_focus(void* self);
 
 /// Inherited from QWidget
@@ -1289,6 +1457,7 @@ void k_sonnet__configdialog_clear_focus(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param reason enum Qt__FocusReason
+///
 void k_sonnet__configdialog_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
@@ -1298,6 +1467,7 @@ void k_sonnet__configdialog_set_focus2(void* self, int32_t reason);
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return enum Qt__FocusPolicy
+///
 int32_t k_sonnet__configdialog_focus_policy(void* self);
 
 /// Inherited from QWidget
@@ -1306,6 +1476,7 @@ int32_t k_sonnet__configdialog_focus_policy(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param policy enum Qt__FocusPolicy
+///
 void k_sonnet__configdialog_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1313,6 +1484,7 @@ void k_sonnet__configdialog_set_focus_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_has_focus(void* self);
 
 /// Inherited from QWidget
@@ -1321,6 +1493,7 @@ bool k_sonnet__configdialog_has_focus(void* self);
 ///
 /// @param param1 QWidget*
 /// @param param2 QWidget*
+///
 void k_sonnet__configdialog_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
@@ -1329,6 +1502,7 @@ void k_sonnet__configdialog_set_tab_order(void* param1, void* param2);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param focusProxy QWidget*
+///
 void k_sonnet__configdialog_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
@@ -1336,6 +1510,7 @@ void k_sonnet__configdialog_set_focus_proxy(void* self, void* focusProxy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_focus_proxy(void* self);
 
 /// Inherited from QWidget
@@ -1345,6 +1520,7 @@ QWidget* k_sonnet__configdialog_focus_proxy(void* self);
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return enum Qt__ContextMenuPolicy
+///
 int32_t k_sonnet__configdialog_context_menu_policy(void* self);
 
 /// Inherited from QWidget
@@ -1353,6 +1529,7 @@ int32_t k_sonnet__configdialog_context_menu_policy(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param policy enum Qt__ContextMenuPolicy
+///
 void k_sonnet__configdialog_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
@@ -1360,6 +1537,7 @@ void k_sonnet__configdialog_set_context_menu_policy(void* self, int32_t policy);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_grab_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1368,6 +1546,7 @@ void k_sonnet__configdialog_grab_mouse(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QCursor*
+///
 void k_sonnet__configdialog_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1375,6 +1554,7 @@ void k_sonnet__configdialog_grab_mouse2(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_release_mouse(void* self);
 
 /// Inherited from QWidget
@@ -1382,6 +1562,7 @@ void k_sonnet__configdialog_release_mouse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_grab_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1389,6 +1570,7 @@ void k_sonnet__configdialog_grab_keyboard(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_release_keyboard(void* self);
 
 /// Inherited from QWidget
@@ -1397,6 +1579,7 @@ void k_sonnet__configdialog_release_keyboard(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param key QKeySequence*
+///
 int32_t k_sonnet__configdialog_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
@@ -1405,6 +1588,7 @@ int32_t k_sonnet__configdialog_grab_shortcut(void* self, void* key);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param id int
+///
 void k_sonnet__configdialog_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
@@ -1413,6 +1597,7 @@ void k_sonnet__configdialog_release_shortcut(void* self, int id);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param id int
+///
 void k_sonnet__configdialog_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
@@ -1421,6 +1606,7 @@ void k_sonnet__configdialog_set_shortcut_enabled(void* self, int id);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param id int
+///
 void k_sonnet__configdialog_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
@@ -1440,6 +1626,7 @@ QWidget* k_sonnet__configdialog_keyboard_grabber();
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_updates_enabled(void* self);
 
 /// Inherited from QWidget
@@ -1448,6 +1635,7 @@ bool k_sonnet__configdialog_updates_enabled(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param enable bool
+///
 void k_sonnet__configdialog_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
@@ -1455,6 +1643,7 @@ void k_sonnet__configdialog_set_updates_enabled(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QGraphicsProxyWidget* k_sonnet__configdialog_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
@@ -1462,6 +1651,7 @@ QGraphicsProxyWidget* k_sonnet__configdialog_graphics_proxy_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_update(void* self);
 
 /// Inherited from QWidget
@@ -1469,6 +1659,7 @@ void k_sonnet__configdialog_update(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_repaint(void* self);
 
 /// Inherited from QWidget
@@ -1480,6 +1671,7 @@ void k_sonnet__configdialog_repaint(void* self);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_sonnet__configdialog_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1488,6 +1680,7 @@ void k_sonnet__configdialog_update2(void* self, int x, int y, int w, int h);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QRect*
+///
 void k_sonnet__configdialog_update3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1496,6 +1689,7 @@ void k_sonnet__configdialog_update3(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QRegion*
+///
 void k_sonnet__configdialog_update4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1507,6 +1701,7 @@ void k_sonnet__configdialog_update4(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_sonnet__configdialog_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1515,6 +1710,7 @@ void k_sonnet__configdialog_repaint2(void* self, int x, int y, int w, int h);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QRect*
+///
 void k_sonnet__configdialog_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1523,6 +1719,7 @@ void k_sonnet__configdialog_repaint3(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QRegion*
+///
 void k_sonnet__configdialog_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1531,6 +1728,7 @@ void k_sonnet__configdialog_repaint4(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param hidden bool
+///
 void k_sonnet__configdialog_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
@@ -1538,6 +1736,7 @@ void k_sonnet__configdialog_set_hidden(void* self, bool hidden);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_show(void* self);
 
 /// Inherited from QWidget
@@ -1545,6 +1744,7 @@ void k_sonnet__configdialog_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_hide(void* self);
 
 /// Inherited from QWidget
@@ -1552,6 +1752,7 @@ void k_sonnet__configdialog_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_show_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1559,6 +1760,7 @@ void k_sonnet__configdialog_show_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_show_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1566,6 +1768,7 @@ void k_sonnet__configdialog_show_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_show_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1573,6 +1776,7 @@ void k_sonnet__configdialog_show_full_screen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_show_normal(void* self);
 
 /// Inherited from QWidget
@@ -1580,6 +1784,7 @@ void k_sonnet__configdialog_show_normal(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_close(void* self);
 
 /// Inherited from QWidget
@@ -1587,6 +1792,7 @@ bool k_sonnet__configdialog_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_raise(void* self);
 
 /// Inherited from QWidget
@@ -1594,6 +1800,7 @@ void k_sonnet__configdialog_raise(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_lower(void* self);
 
 /// Inherited from QWidget
@@ -1602,6 +1809,7 @@ void k_sonnet__configdialog_lower(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
+///
 void k_sonnet__configdialog_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1611,6 +1819,7 @@ void k_sonnet__configdialog_stack_under(void* self, void* param1);
 /// @param self Sonnet__ConfigDialog*
 /// @param x int
 /// @param y int
+///
 void k_sonnet__configdialog_move(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -1619,6 +1828,7 @@ void k_sonnet__configdialog_move(void* self, int x, int y);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QPoint*
+///
 void k_sonnet__configdialog_move2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1628,6 +1838,7 @@ void k_sonnet__configdialog_move2(void* self, void* param1);
 /// @param self Sonnet__ConfigDialog*
 /// @param w int
 /// @param h int
+///
 void k_sonnet__configdialog_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
@@ -1636,6 +1847,7 @@ void k_sonnet__configdialog_resize(void* self, int w, int h);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QSize*
+///
 void k_sonnet__configdialog_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1647,6 +1859,7 @@ void k_sonnet__configdialog_resize2(void* self, void* param1);
 /// @param y int
 /// @param w int
 /// @param h int
+///
 void k_sonnet__configdialog_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
@@ -1655,6 +1868,7 @@ void k_sonnet__configdialog_set_geometry(void* self, int x, int y, int w, int h)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param geometry QRect*
+///
 void k_sonnet__configdialog_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
@@ -1664,6 +1878,7 @@ void k_sonnet__configdialog_set_geometry2(void* self, void* geometry);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 char* k_sonnet__configdialog_save_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1672,6 +1887,7 @@ char* k_sonnet__configdialog_save_geometry(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param geometry const char*
+///
 bool k_sonnet__configdialog_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
@@ -1679,6 +1895,7 @@ bool k_sonnet__configdialog_restore_geometry(void* self, const char* geometry);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_adjust_size(void* self);
 
 /// Inherited from QWidget
@@ -1686,6 +1903,7 @@ void k_sonnet__configdialog_adjust_size(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_visible(void* self);
 
 /// Inherited from QWidget
@@ -1694,6 +1912,7 @@ bool k_sonnet__configdialog_is_visible(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
+///
 bool k_sonnet__configdialog_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -1701,6 +1920,7 @@ bool k_sonnet__configdialog_is_visible_to(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_hidden(void* self);
 
 /// Inherited from QWidget
@@ -1708,6 +1928,7 @@ bool k_sonnet__configdialog_is_hidden(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_minimized(void* self);
 
 /// Inherited from QWidget
@@ -1715,6 +1936,7 @@ bool k_sonnet__configdialog_is_minimized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_maximized(void* self);
 
 /// Inherited from QWidget
@@ -1722,6 +1944,7 @@ bool k_sonnet__configdialog_is_maximized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_full_screen(void* self);
 
 /// Inherited from QWidget
@@ -1731,6 +1954,7 @@ bool k_sonnet__configdialog_is_full_screen(void* self);
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return flag of enum Qt__WindowState
+///
 int32_t k_sonnet__configdialog_window_state(void* self);
 
 /// Inherited from QWidget
@@ -1739,6 +1963,7 @@ int32_t k_sonnet__configdialog_window_state(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param state flag of enum Qt__WindowState
+///
 void k_sonnet__configdialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -1747,6 +1972,7 @@ void k_sonnet__configdialog_set_window_state(void* self, int32_t state);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param state flag of enum Qt__WindowState
+///
 void k_sonnet__configdialog_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
@@ -1754,6 +1980,7 @@ void k_sonnet__configdialog_override_window_state(void* self, int32_t state);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSizePolicy* k_sonnet__configdialog_size_policy(void* self);
 
 /// Inherited from QWidget
@@ -1762,6 +1989,7 @@ QSizePolicy* k_sonnet__configdialog_size_policy(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param sizePolicy QSizePolicy*
+///
 void k_sonnet__configdialog_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
@@ -1771,6 +1999,7 @@ void k_sonnet__configdialog_set_size_policy(void* self, void* sizePolicy);
 /// @param self Sonnet__ConfigDialog*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
+///
 void k_sonnet__configdialog_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
@@ -1778,6 +2007,7 @@ void k_sonnet__configdialog_set_size_policy2(void* self, int32_t horizontal, int
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRegion* k_sonnet__configdialog_visible_region(void* self);
 
 /// Inherited from QWidget
@@ -1789,6 +2019,7 @@ QRegion* k_sonnet__configdialog_visible_region(void* self);
 /// @param top int
 /// @param right int
 /// @param bottom int
+///
 void k_sonnet__configdialog_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
@@ -1797,6 +2028,7 @@ void k_sonnet__configdialog_set_contents_margins(void* self, int left, int top, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param margins QMargins*
+///
 void k_sonnet__configdialog_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
@@ -1804,6 +2036,7 @@ void k_sonnet__configdialog_set_contents_margins2(void* self, void* margins);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QMargins* k_sonnet__configdialog_contents_margins(void* self);
 
 /// Inherited from QWidget
@@ -1811,6 +2044,7 @@ QMargins* k_sonnet__configdialog_contents_margins(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QRect* k_sonnet__configdialog_contents_rect(void* self);
 
 /// Inherited from QWidget
@@ -1818,6 +2052,7 @@ QRect* k_sonnet__configdialog_contents_rect(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QLayout* k_sonnet__configdialog_layout(void* self);
 
 /// Inherited from QWidget
@@ -1826,6 +2061,7 @@ QLayout* k_sonnet__configdialog_layout(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param layout QLayout*
+///
 void k_sonnet__configdialog_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
@@ -1833,6 +2069,7 @@ void k_sonnet__configdialog_set_layout(void* self, void* layout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_update_geometry(void* self);
 
 /// Inherited from QWidget
@@ -1841,6 +2078,7 @@ void k_sonnet__configdialog_update_geometry(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param parent QWidget*
+///
 void k_sonnet__configdialog_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
@@ -1850,6 +2088,7 @@ void k_sonnet__configdialog_set_parent(void* self, void* parent);
 /// @param self Sonnet__ConfigDialog*
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
+///
 void k_sonnet__configdialog_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
@@ -1859,6 +2098,7 @@ void k_sonnet__configdialog_set_parent2(void* self, void* parent, int64_t f);
 /// @param self Sonnet__ConfigDialog*
 /// @param dx int
 /// @param dy int
+///
 void k_sonnet__configdialog_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
@@ -1869,6 +2109,7 @@ void k_sonnet__configdialog_scroll(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 /// @param param3 QRect*
+///
 void k_sonnet__configdialog_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
@@ -1876,6 +2117,7 @@ void k_sonnet__configdialog_scroll2(void* self, int dx, int dy, void* param3);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_focus_widget(void* self);
 
 /// Inherited from QWidget
@@ -1883,6 +2125,7 @@ QWidget* k_sonnet__configdialog_focus_widget(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -1890,6 +2133,7 @@ QWidget* k_sonnet__configdialog_next_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
@@ -1897,6 +2141,7 @@ QWidget* k_sonnet__configdialog_previous_in_focus_chain(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_accept_drops(void* self);
 
 /// Inherited from QWidget
@@ -1905,6 +2150,7 @@ bool k_sonnet__configdialog_accept_drops(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param on bool
+///
 void k_sonnet__configdialog_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
@@ -1913,6 +2159,7 @@ void k_sonnet__configdialog_set_accept_drops(void* self, bool on);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param action QAction*
+///
 void k_sonnet__configdialog_add_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -1921,6 +2168,7 @@ void k_sonnet__configdialog_add_action(void* self, void* action);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_sonnet__configdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
@@ -1930,6 +2178,7 @@ void k_sonnet__configdialog_add_actions(void* self, libqt_list actions);
 /// @param self Sonnet__ConfigDialog*
 /// @param before QAction*
 /// @param actions libqt_list /* of QAction* */
+///
 void k_sonnet__configdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
@@ -1939,6 +2188,7 @@ void k_sonnet__configdialog_insert_actions(void* self, void* before, libqt_list 
 /// @param self Sonnet__ConfigDialog*
 /// @param before QAction*
 /// @param action QAction*
+///
 void k_sonnet__configdialog_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
@@ -1947,6 +2197,7 @@ void k_sonnet__configdialog_insert_action(void* self, void* before, void* action
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param action QAction*
+///
 void k_sonnet__configdialog_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
@@ -1954,6 +2205,7 @@ void k_sonnet__configdialog_remove_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 libqt_list /* of QAction* */ k_sonnet__configdialog_actions(void* self);
 
 /// Inherited from QWidget
@@ -1962,6 +2214,7 @@ libqt_list /* of QAction* */ k_sonnet__configdialog_actions(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param text const char*
+///
 QAction* k_sonnet__configdialog_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
@@ -1971,6 +2224,7 @@ QAction* k_sonnet__configdialog_add_action2(void* self, const char* text);
 /// @param self Sonnet__ConfigDialog*
 /// @param icon QIcon*
 /// @param text const char*
+///
 QAction* k_sonnet__configdialog_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
@@ -1980,6 +2234,7 @@ QAction* k_sonnet__configdialog_add_action3(void* self, void* icon, const char* 
 /// @param self Sonnet__ConfigDialog*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_sonnet__configdialog_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -1990,6 +2245,7 @@ QAction* k_sonnet__configdialog_add_action4(void* self, const char* text, void* 
 /// @param icon QIcon*
 /// @param text const char*
 /// @param shortcut QKeySequence*
+///
 QAction* k_sonnet__configdialog_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
@@ -1997,6 +2253,7 @@ QAction* k_sonnet__configdialog_add_action5(void* self, void* icon, const char* 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWidget* k_sonnet__configdialog_parent_widget(void* self);
 
 /// Inherited from QWidget
@@ -2005,6 +2262,7 @@ QWidget* k_sonnet__configdialog_parent_widget(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param type flag of enum Qt__WindowType
+///
 void k_sonnet__configdialog_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2014,6 +2272,7 @@ void k_sonnet__configdialog_set_window_flags(void* self, int64_t type);
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return flag of enum Qt__WindowType
+///
 int64_t k_sonnet__configdialog_window_flags(void* self);
 
 /// Inherited from QWidget
@@ -2022,6 +2281,7 @@ int64_t k_sonnet__configdialog_window_flags(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum Qt__WindowType
+///
 void k_sonnet__configdialog_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -2030,6 +2290,7 @@ void k_sonnet__configdialog_set_window_flag(void* self, int64_t param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param type flag of enum Qt__WindowType
+///
 void k_sonnet__configdialog_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
@@ -2039,6 +2300,7 @@ void k_sonnet__configdialog_override_window_flags(void* self, int64_t type);
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return enum Qt__WindowType
+///
 int64_t k_sonnet__configdialog_window_type(void* self);
 
 /// Inherited from QWidget
@@ -2046,6 +2308,7 @@ int64_t k_sonnet__configdialog_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
 /// @param param1 uint64_t
+///
 QWidget* k_sonnet__configdialog_find(uint64_t param1);
 
 /// Inherited from QWidget
@@ -2055,6 +2318,7 @@ QWidget* k_sonnet__configdialog_find(uint64_t param1);
 /// @param self Sonnet__ConfigDialog*
 /// @param x int
 /// @param y int
+///
 QWidget* k_sonnet__configdialog_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
@@ -2063,6 +2327,7 @@ QWidget* k_sonnet__configdialog_child_at(void* self, int x, int y);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param p QPoint*
+///
 QWidget* k_sonnet__configdialog_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2071,6 +2336,7 @@ QWidget* k_sonnet__configdialog_child_at2(void* self, void* p);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param p QPointF*
+///
 QWidget* k_sonnet__configdialog_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
@@ -2079,6 +2345,7 @@ QWidget* k_sonnet__configdialog_child_at3(void* self, void* p);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum Qt__WidgetAttribute
+///
 void k_sonnet__configdialog_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2087,6 +2354,7 @@ void k_sonnet__configdialog_set_attribute(void* self, int32_t param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum Qt__WidgetAttribute
+///
 bool k_sonnet__configdialog_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -2094,6 +2362,7 @@ bool k_sonnet__configdialog_test_attribute(void* self, int32_t param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_ensure_polished(void* self);
 
 /// Inherited from QWidget
@@ -2102,6 +2371,7 @@ void k_sonnet__configdialog_ensure_polished(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param child QWidget*
+///
 bool k_sonnet__configdialog_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
@@ -2109,6 +2379,7 @@ bool k_sonnet__configdialog_is_ancestor_of(void* self, void* child);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_auto_fill_background(void* self);
 
 /// Inherited from QWidget
@@ -2117,6 +2388,7 @@ bool k_sonnet__configdialog_auto_fill_background(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param enabled bool
+///
 void k_sonnet__configdialog_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
@@ -2124,6 +2396,7 @@ void k_sonnet__configdialog_set_auto_fill_background(void* self, bool enabled);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QBackingStore* k_sonnet__configdialog_backing_store(void* self);
 
 /// Inherited from QWidget
@@ -2131,6 +2404,7 @@ QBackingStore* k_sonnet__configdialog_backing_store(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QWindow* k_sonnet__configdialog_window_handle(void* self);
 
 /// Inherited from QWidget
@@ -2138,6 +2412,7 @@ QWindow* k_sonnet__configdialog_window_handle(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QScreen* k_sonnet__configdialog_screen(void* self);
 
 /// Inherited from QWidget
@@ -2146,6 +2421,7 @@ QScreen* k_sonnet__configdialog_screen(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param screen QScreen*
+///
 void k_sonnet__configdialog_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
@@ -2153,6 +2429,7 @@ void k_sonnet__configdialog_set_screen(void* self, void* screen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
 /// @param window QWindow*
+///
 QWidget* k_sonnet__configdialog_create_window_container(void* window);
 
 /// Inherited from QWidget
@@ -2161,6 +2438,7 @@ QWidget* k_sonnet__configdialog_create_window_container(void* window);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param title const char*
+///
 void k_sonnet__configdialog_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
@@ -2169,6 +2447,7 @@ void k_sonnet__configdialog_window_title_changed(void* self, const char* title);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, const char* title)
+///
 void k_sonnet__configdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2177,6 +2456,7 @@ void k_sonnet__configdialog_on_window_title_changed(void* self, void (*callback)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param icon QIcon*
+///
 void k_sonnet__configdialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
@@ -2185,6 +2465,7 @@ void k_sonnet__configdialog_window_icon_changed(void* self, void* icon);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QIcon* icon)
+///
 void k_sonnet__configdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2193,6 +2474,7 @@ void k_sonnet__configdialog_on_window_icon_changed(void* self, void (*callback)(
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param iconText const char*
+///
 void k_sonnet__configdialog_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
@@ -2201,6 +2483,7 @@ void k_sonnet__configdialog_window_icon_text_changed(void* self, const char* ico
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, const char* iconText)
+///
 void k_sonnet__configdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2209,6 +2492,7 @@ void k_sonnet__configdialog_on_window_icon_text_changed(void* self, void (*callb
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param pos QPoint*
+///
 void k_sonnet__configdialog_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
@@ -2217,6 +2501,7 @@ void k_sonnet__configdialog_custom_context_menu_requested(void* self, void* pos)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QPoint* pos)
+///
 void k_sonnet__configdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2226,6 +2511,7 @@ void k_sonnet__configdialog_on_custom_context_menu_requested(void* self, void (*
 /// @param self Sonnet__ConfigDialog*
 ///
 /// @return flag of enum Qt__InputMethodHint
+///
 int64_t k_sonnet__configdialog_input_method_hints(void* self);
 
 /// Inherited from QWidget
@@ -2234,6 +2520,7 @@ int64_t k_sonnet__configdialog_input_method_hints(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param hints flag of enum Qt__InputMethodHint
+///
 void k_sonnet__configdialog_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
@@ -2243,6 +2530,7 @@ void k_sonnet__configdialog_set_input_method_hints(void* self, int64_t hints);
 /// @param self Sonnet__ConfigDialog*
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
+///
 void k_sonnet__configdialog_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2253,6 +2541,7 @@ void k_sonnet__configdialog_render22(void* self, void* target, void* targetOffse
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_sonnet__configdialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2264,6 +2553,7 @@ void k_sonnet__configdialog_render3(void* self, void* target, void* targetOffset
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_sonnet__configdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2273,6 +2563,7 @@ void k_sonnet__configdialog_render4(void* self, void* target, void* targetOffset
 /// @param self Sonnet__ConfigDialog*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
+///
 void k_sonnet__configdialog_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
@@ -2283,6 +2574,7 @@ void k_sonnet__configdialog_render23(void* self, void* painter, void* targetOffs
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
+///
 void k_sonnet__configdialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
@@ -2294,6 +2586,7 @@ void k_sonnet__configdialog_render32(void* self, void* painter, void* targetOffs
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
+///
 void k_sonnet__configdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
@@ -2302,6 +2595,7 @@ void k_sonnet__configdialog_render42(void* self, void* painter, void* targetOffs
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param rectangle QRect*
+///
 QPixmap* k_sonnet__configdialog_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
@@ -2311,6 +2605,7 @@ QPixmap* k_sonnet__configdialog_grab1(void* self, void* rectangle);
 /// @param self Sonnet__ConfigDialog*
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
+///
 void k_sonnet__configdialog_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
@@ -2320,6 +2615,7 @@ void k_sonnet__configdialog_grab_gesture2(void* self, int64_t type, int32_t flag
 /// @param self Sonnet__ConfigDialog*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
+///
 int32_t k_sonnet__configdialog_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
@@ -2329,6 +2625,7 @@ int32_t k_sonnet__configdialog_grab_shortcut2(void* self, void* key, int32_t con
 /// @param self Sonnet__ConfigDialog*
 /// @param id int
 /// @param enable bool
+///
 void k_sonnet__configdialog_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2338,6 +2635,7 @@ void k_sonnet__configdialog_set_shortcut_enabled2(void* self, int id, bool enabl
 /// @param self Sonnet__ConfigDialog*
 /// @param id int
 /// @param enable bool
+///
 void k_sonnet__configdialog_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
@@ -2347,6 +2645,7 @@ void k_sonnet__configdialog_set_shortcut_auto_repeat2(void* self, int id, bool e
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum Qt__WindowType
 /// @param on bool
+///
 void k_sonnet__configdialog_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2356,6 +2655,7 @@ void k_sonnet__configdialog_set_window_flag2(void* self, int64_t param1, bool on
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
+///
 void k_sonnet__configdialog_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
@@ -2364,6 +2664,7 @@ void k_sonnet__configdialog_set_attribute2(void* self, int32_t param1, bool on);
 ///
 /// @param window QWindow*
 /// @param parent QWidget*
+///
 QWidget* k_sonnet__configdialog_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
@@ -2373,6 +2674,7 @@ QWidget* k_sonnet__configdialog_create_window_container2(void* window, void* par
 /// @param window QWindow*
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
+///
 QWidget* k_sonnet__configdialog_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
@@ -2382,6 +2684,7 @@ QWidget* k_sonnet__configdialog_create_window_container3(void* window, void* par
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char* k_sonnet__configdialog_object_name(void* self);
 
 /// Inherited from QObject
@@ -2390,6 +2693,7 @@ const char* k_sonnet__configdialog_object_name(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param name char*
+///
 void k_sonnet__configdialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -2397,6 +2701,7 @@ void k_sonnet__configdialog_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -2404,6 +2709,7 @@ bool k_sonnet__configdialog_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -2411,6 +2717,7 @@ bool k_sonnet__configdialog_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -2418,6 +2725,7 @@ bool k_sonnet__configdialog_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -2426,6 +2734,7 @@ bool k_sonnet__configdialog_signals_blocked(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param b bool
+///
 bool k_sonnet__configdialog_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -2433,6 +2742,7 @@ bool k_sonnet__configdialog_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QThread* k_sonnet__configdialog_thread(void* self);
 
 /// Inherited from QObject
@@ -2441,6 +2751,7 @@ QThread* k_sonnet__configdialog_thread(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param thread QThread*
+///
 bool k_sonnet__configdialog_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -2449,6 +2760,7 @@ bool k_sonnet__configdialog_move_to_thread(void* self, void* thread);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param interval int
+///
 int32_t k_sonnet__configdialog_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -2457,6 +2769,7 @@ int32_t k_sonnet__configdialog_start_timer(void* self, int interval);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param id int
+///
 void k_sonnet__configdialog_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -2465,6 +2778,7 @@ void k_sonnet__configdialog_kill_timer(void* self, int id);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param id enum Qt__TimerId
+///
 void k_sonnet__configdialog_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -2472,6 +2786,7 @@ void k_sonnet__configdialog_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 libqt_list /* of QObject* */ k_sonnet__configdialog_children(void* self);
 
 /// Inherited from QObject
@@ -2480,6 +2795,7 @@ libqt_list /* of QObject* */ k_sonnet__configdialog_children(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param filterObj QObject*
+///
 void k_sonnet__configdialog_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -2488,6 +2804,7 @@ void k_sonnet__configdialog_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param obj QObject*
+///
 void k_sonnet__configdialog_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -2498,6 +2815,7 @@ void k_sonnet__configdialog_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_sonnet__configdialog_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -2508,6 +2826,7 @@ QMetaObject__Connection* k_sonnet__configdialog_connect(void* sender, void* sign
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_sonnet__configdialog_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -2518,6 +2837,7 @@ QMetaObject__Connection* k_sonnet__configdialog_connect2(void* self, void* sende
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_sonnet__configdialog_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -2525,6 +2845,7 @@ bool k_sonnet__configdialog_disconnect(void* sender, void* signal, void* receive
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_sonnet__configdialog_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -2532,6 +2853,7 @@ bool k_sonnet__configdialog_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -2539,6 +2861,7 @@ void k_sonnet__configdialog_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -2548,6 +2871,7 @@ void k_sonnet__configdialog_dump_object_info(void* self);
 /// @param self Sonnet__ConfigDialog*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_sonnet__configdialog_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -2556,6 +2880,7 @@ bool k_sonnet__configdialog_set_property(void* self, const char* name, void* val
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param name const char*
+///
 QVariant* k_sonnet__configdialog_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -2565,6 +2890,7 @@ QVariant* k_sonnet__configdialog_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const char** k_sonnet__configdialog_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -2572,6 +2898,7 @@ const char** k_sonnet__configdialog_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QBindingStorage* k_sonnet__configdialog_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -2579,6 +2906,7 @@ QBindingStorage* k_sonnet__configdialog_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 const QBindingStorage* k_sonnet__configdialog_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -2586,6 +2914,7 @@ const QBindingStorage* k_sonnet__configdialog_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_destroyed(void* self);
 
 /// Inherited from QObject
@@ -2594,6 +2923,7 @@ void k_sonnet__configdialog_destroyed(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self)
+///
 void k_sonnet__configdialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2601,6 +2931,7 @@ void k_sonnet__configdialog_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QObject* k_sonnet__configdialog_parent(void* self);
 
 /// Inherited from QObject
@@ -2609,6 +2940,7 @@ QObject* k_sonnet__configdialog_parent(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param classname const char*
+///
 bool k_sonnet__configdialog_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -2616,6 +2948,7 @@ bool k_sonnet__configdialog_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_delete_later(void* self);
 
 /// Inherited from QObject
@@ -2625,6 +2958,7 @@ void k_sonnet__configdialog_delete_later(void* self);
 /// @param self Sonnet__ConfigDialog*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_sonnet__configdialog_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -2634,6 +2968,7 @@ bool k_sonnet__configdialog_move_to_thread2(void* self, void* thread, void* para
 /// @param self Sonnet__ConfigDialog*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_sonnet__configdialog_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -2645,6 +2980,7 @@ int32_t k_sonnet__configdialog_start_timer22(void* self, int interval, int32_t t
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_sonnet__configdialog_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -2656,6 +2992,7 @@ QMetaObject__Connection* k_sonnet__configdialog_connect5(void* sender, void* sig
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_sonnet__configdialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -2664,6 +3001,7 @@ QMetaObject__Connection* k_sonnet__configdialog_connect4(void* self, void* sende
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QObject*
+///
 void k_sonnet__configdialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -2672,6 +3010,7 @@ void k_sonnet__configdialog_destroyed1(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QObject* param1)
+///
 void k_sonnet__configdialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2679,6 +3018,7 @@ void k_sonnet__configdialog_on_destroyed1(void* self, void (*callback)(void*, vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_painting_active(void* self);
 
 /// Inherited from QPaintDevice
@@ -2686,6 +3026,7 @@ bool k_sonnet__configdialog_painting_active(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -2693,6 +3034,7 @@ int32_t k_sonnet__configdialog_width_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
@@ -2700,6 +3042,7 @@ int32_t k_sonnet__configdialog_height_m_m(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -2707,6 +3050,7 @@ int32_t k_sonnet__configdialog_logical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -2714,6 +3058,7 @@ int32_t k_sonnet__configdialog_logical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
@@ -2721,6 +3066,7 @@ int32_t k_sonnet__configdialog_physical_dpi_x(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
@@ -2728,6 +3074,7 @@ int32_t k_sonnet__configdialog_physical_dpi_y(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 double k_sonnet__configdialog_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
@@ -2735,6 +3082,7 @@ double k_sonnet__configdialog_device_pixel_ratio(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 double k_sonnet__configdialog_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
@@ -2742,6 +3090,7 @@ double k_sonnet__configdialog_device_pixel_ratio_f(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_color_count(void* self);
 
 /// Inherited from QPaintDevice
@@ -2749,6 +3098,7 @@ int32_t k_sonnet__configdialog_color_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_depth(void* self);
 
 /// Inherited from QPaintDevice
@@ -2763,6 +3113,7 @@ double k_sonnet__configdialog_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
+///
 int32_t k_sonnet__configdialog_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QDialog
@@ -2773,6 +3124,7 @@ int32_t k_sonnet__configdialog_encode_metric_f(int32_t metric, double value);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param visible bool
+///
 void k_sonnet__configdialog_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
@@ -2783,6 +3135,7 @@ void k_sonnet__configdialog_set_visible(void* self, bool visible);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param visible bool
+///
 void k_sonnet__configdialog_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
@@ -2793,6 +3146,7 @@ void k_sonnet__configdialog_qbase_set_visible(void* self, bool visible);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, bool visible)
+///
 void k_sonnet__configdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -2802,6 +3156,7 @@ void k_sonnet__configdialog_on_set_visible(void* self, void (*callback)(void*, b
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -2811,6 +3166,7 @@ QSize* k_sonnet__configdialog_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_qbase_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -2821,6 +3177,7 @@ QSize* k_sonnet__configdialog_qbase_size_hint(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback QSize* func()
+///
 void k_sonnet__configdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2830,6 +3187,7 @@ void k_sonnet__configdialog_on_size_hint(void* self, QSize* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -2839,6 +3197,7 @@ QSize* k_sonnet__configdialog_minimum_size_hint(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QSize* k_sonnet__configdialog_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -2849,6 +3208,7 @@ QSize* k_sonnet__configdialog_qbase_minimum_size_hint(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback QSize* func()
+///
 void k_sonnet__configdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2858,6 +3218,7 @@ void k_sonnet__configdialog_on_minimum_size_hint(void* self, QSize* (*callback)(
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_open(void* self);
 
 /// Inherited from QDialog
@@ -2867,6 +3228,7 @@ void k_sonnet__configdialog_open(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_open(void* self);
 
 /// Inherited from QDialog
@@ -2877,6 +3239,7 @@ void k_sonnet__configdialog_qbase_open(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2886,6 +3249,7 @@ void k_sonnet__configdialog_on_open(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_exec(void* self);
 
 /// Inherited from QDialog
@@ -2895,6 +3259,7 @@ int32_t k_sonnet__configdialog_exec(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_qbase_exec(void* self);
 
 /// Inherited from QDialog
@@ -2905,6 +3270,7 @@ int32_t k_sonnet__configdialog_qbase_exec(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback int32_t func()
+///
 void k_sonnet__configdialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -2915,6 +3281,7 @@ void k_sonnet__configdialog_on_exec(void* self, int32_t (*callback)());
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 int
+///
 void k_sonnet__configdialog_done(void* self, int param1);
 
 /// Inherited from QDialog
@@ -2925,6 +3292,7 @@ void k_sonnet__configdialog_done(void* self, int param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 int
+///
 void k_sonnet__configdialog_qbase_done(void* self, int param1);
 
 /// Inherited from QDialog
@@ -2935,6 +3303,7 @@ void k_sonnet__configdialog_qbase_done(void* self, int param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, int param1)
+///
 void k_sonnet__configdialog_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -2944,6 +3313,7 @@ void k_sonnet__configdialog_on_done(void* self, void (*callback)(void*, int));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_accept(void* self);
 
 /// Inherited from QDialog
@@ -2953,6 +3323,7 @@ void k_sonnet__configdialog_accept(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_accept(void* self);
 
 /// Inherited from QDialog
@@ -2963,6 +3334,7 @@ void k_sonnet__configdialog_qbase_accept(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2972,6 +3344,7 @@ void k_sonnet__configdialog_on_accept(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_reject(void* self);
 
 /// Inherited from QDialog
@@ -2981,6 +3354,7 @@ void k_sonnet__configdialog_reject(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_reject(void* self);
 
 /// Inherited from QDialog
@@ -2991,6 +3365,7 @@ void k_sonnet__configdialog_qbase_reject(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3001,6 +3376,7 @@ void k_sonnet__configdialog_on_reject(void* self, void (*callback)());
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QKeyEvent*
+///
 void k_sonnet__configdialog_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3011,6 +3387,7 @@ void k_sonnet__configdialog_key_press_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QKeyEvent*
+///
 void k_sonnet__configdialog_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3021,6 +3398,7 @@ void k_sonnet__configdialog_qbase_key_press_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QKeyEvent* param1)
+///
 void k_sonnet__configdialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3031,6 +3409,7 @@ void k_sonnet__configdialog_on_key_press_event(void* self, void (*callback)(void
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QCloseEvent*
+///
 void k_sonnet__configdialog_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3041,6 +3420,7 @@ void k_sonnet__configdialog_close_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QCloseEvent*
+///
 void k_sonnet__configdialog_qbase_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3051,6 +3431,7 @@ void k_sonnet__configdialog_qbase_close_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QCloseEvent* param1)
+///
 void k_sonnet__configdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3061,6 +3442,7 @@ void k_sonnet__configdialog_on_close_event(void* self, void (*callback)(void*, v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QShowEvent*
+///
 void k_sonnet__configdialog_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3071,6 +3453,7 @@ void k_sonnet__configdialog_show_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QShowEvent*
+///
 void k_sonnet__configdialog_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3081,6 +3464,7 @@ void k_sonnet__configdialog_qbase_show_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QShowEvent* param1)
+///
 void k_sonnet__configdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3091,6 +3475,7 @@ void k_sonnet__configdialog_on_show_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QResizeEvent*
+///
 void k_sonnet__configdialog_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3101,6 +3486,7 @@ void k_sonnet__configdialog_resize_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QResizeEvent*
+///
 void k_sonnet__configdialog_qbase_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3111,6 +3497,7 @@ void k_sonnet__configdialog_qbase_resize_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QResizeEvent* param1)
+///
 void k_sonnet__configdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3121,6 +3508,7 @@ void k_sonnet__configdialog_on_resize_event(void* self, void (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QContextMenuEvent*
+///
 void k_sonnet__configdialog_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3131,6 +3519,7 @@ void k_sonnet__configdialog_context_menu_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QContextMenuEvent*
+///
 void k_sonnet__configdialog_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3141,6 +3530,7 @@ void k_sonnet__configdialog_qbase_context_menu_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QContextMenuEvent* param1)
+///
 void k_sonnet__configdialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3152,6 +3542,7 @@ void k_sonnet__configdialog_on_context_menu_event(void* self, void (*callback)(v
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool k_sonnet__configdialog_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
@@ -3163,6 +3554,7 @@ bool k_sonnet__configdialog_event_filter(void* self, void* param1, void* param2)
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QObject*
 /// @param param2 QEvent*
+///
 bool k_sonnet__configdialog_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
@@ -3173,6 +3565,7 @@ bool k_sonnet__configdialog_qbase_event_filter(void* self, void* param1, void* p
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func(Sonnet__ConfigDialog* self, QObject* param1, QEvent* param2)
+///
 void k_sonnet__configdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3182,6 +3575,7 @@ void k_sonnet__configdialog_on_event_filter(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3191,6 +3585,7 @@ int32_t k_sonnet__configdialog_dev_type(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3201,6 +3596,7 @@ int32_t k_sonnet__configdialog_qbase_dev_type(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback int32_t func()
+///
 void k_sonnet__configdialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3211,6 +3607,7 @@ void k_sonnet__configdialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 int
+///
 int32_t k_sonnet__configdialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3221,6 +3618,7 @@ int32_t k_sonnet__configdialog_height_for_width(void* self, int param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 int
+///
 int32_t k_sonnet__configdialog_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3231,6 +3629,7 @@ int32_t k_sonnet__configdialog_qbase_height_for_width(void* self, int param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback int32_t func(Sonnet__ConfigDialog* self, int param1)
+///
 void k_sonnet__configdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3240,6 +3639,7 @@ void k_sonnet__configdialog_on_height_for_width(void* self, int32_t (*callback)(
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3249,6 +3649,7 @@ bool k_sonnet__configdialog_has_height_for_width(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3259,6 +3660,7 @@ bool k_sonnet__configdialog_qbase_has_height_for_width(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func()
+///
 void k_sonnet__configdialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3268,6 +3670,7 @@ void k_sonnet__configdialog_on_has_height_for_width(void* self, bool (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QPaintEngine* k_sonnet__configdialog_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3277,6 +3680,7 @@ QPaintEngine* k_sonnet__configdialog_paint_engine(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QPaintEngine* k_sonnet__configdialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3287,6 +3691,7 @@ QPaintEngine* k_sonnet__configdialog_qbase_paint_engine(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback QPaintEngine* func()
+///
 void k_sonnet__configdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3297,6 +3702,7 @@ void k_sonnet__configdialog_on_paint_engine(void* self, QPaintEngine* (*callback
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEvent*
+///
 bool k_sonnet__configdialog_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3307,6 +3713,7 @@ bool k_sonnet__configdialog_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEvent*
+///
 bool k_sonnet__configdialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3317,6 +3724,7 @@ bool k_sonnet__configdialog_qbase_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func(Sonnet__ConfigDialog* self, QEvent* event)
+///
 void k_sonnet__configdialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3327,6 +3735,7 @@ void k_sonnet__configdialog_on_event(void* self, bool (*callback)(void*, void*))
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3337,6 +3746,7 @@ void k_sonnet__configdialog_mouse_press_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3347,6 +3757,7 @@ void k_sonnet__configdialog_qbase_mouse_press_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QMouseEvent* event)
+///
 void k_sonnet__configdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3357,6 +3768,7 @@ void k_sonnet__configdialog_on_mouse_press_event(void* self, void (*callback)(vo
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3367,6 +3779,7 @@ void k_sonnet__configdialog_mouse_release_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3377,6 +3790,7 @@ void k_sonnet__configdialog_qbase_mouse_release_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QMouseEvent* event)
+///
 void k_sonnet__configdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3387,6 +3801,7 @@ void k_sonnet__configdialog_on_mouse_release_event(void* self, void (*callback)(
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3397,6 +3812,7 @@ void k_sonnet__configdialog_mouse_double_click_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3407,6 +3823,7 @@ void k_sonnet__configdialog_qbase_mouse_double_click_event(void* self, void* eve
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QMouseEvent* event)
+///
 void k_sonnet__configdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3417,6 +3834,7 @@ void k_sonnet__configdialog_on_mouse_double_click_event(void* self, void (*callb
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3427,6 +3845,7 @@ void k_sonnet__configdialog_mouse_move_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMouseEvent*
+///
 void k_sonnet__configdialog_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3437,6 +3856,7 @@ void k_sonnet__configdialog_qbase_mouse_move_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QMouseEvent* event)
+///
 void k_sonnet__configdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3447,6 +3867,7 @@ void k_sonnet__configdialog_on_mouse_move_event(void* self, void (*callback)(voi
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QWheelEvent*
+///
 void k_sonnet__configdialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3457,6 +3878,7 @@ void k_sonnet__configdialog_wheel_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QWheelEvent*
+///
 void k_sonnet__configdialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3467,6 +3889,7 @@ void k_sonnet__configdialog_qbase_wheel_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QWheelEvent* event)
+///
 void k_sonnet__configdialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3477,6 +3900,7 @@ void k_sonnet__configdialog_on_wheel_event(void* self, void (*callback)(void*, v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QKeyEvent*
+///
 void k_sonnet__configdialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3487,6 +3911,7 @@ void k_sonnet__configdialog_key_release_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QKeyEvent*
+///
 void k_sonnet__configdialog_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3497,6 +3922,7 @@ void k_sonnet__configdialog_qbase_key_release_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QKeyEvent* event)
+///
 void k_sonnet__configdialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3507,6 +3933,7 @@ void k_sonnet__configdialog_on_key_release_event(void* self, void (*callback)(vo
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QFocusEvent*
+///
 void k_sonnet__configdialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3517,6 +3944,7 @@ void k_sonnet__configdialog_focus_in_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QFocusEvent*
+///
 void k_sonnet__configdialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3527,6 +3955,7 @@ void k_sonnet__configdialog_qbase_focus_in_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QFocusEvent* event)
+///
 void k_sonnet__configdialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3537,6 +3966,7 @@ void k_sonnet__configdialog_on_focus_in_event(void* self, void (*callback)(void*
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QFocusEvent*
+///
 void k_sonnet__configdialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3547,6 +3977,7 @@ void k_sonnet__configdialog_focus_out_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QFocusEvent*
+///
 void k_sonnet__configdialog_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3557,6 +3988,7 @@ void k_sonnet__configdialog_qbase_focus_out_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QFocusEvent* event)
+///
 void k_sonnet__configdialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3567,6 +3999,7 @@ void k_sonnet__configdialog_on_focus_out_event(void* self, void (*callback)(void
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEnterEvent*
+///
 void k_sonnet__configdialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3577,6 +4010,7 @@ void k_sonnet__configdialog_enter_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEnterEvent*
+///
 void k_sonnet__configdialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3587,6 +4021,7 @@ void k_sonnet__configdialog_qbase_enter_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QEnterEvent* event)
+///
 void k_sonnet__configdialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3597,6 +4032,7 @@ void k_sonnet__configdialog_on_enter_event(void* self, void (*callback)(void*, v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEvent*
+///
 void k_sonnet__configdialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3607,6 +4043,7 @@ void k_sonnet__configdialog_leave_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEvent*
+///
 void k_sonnet__configdialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3617,6 +4054,7 @@ void k_sonnet__configdialog_qbase_leave_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QEvent* event)
+///
 void k_sonnet__configdialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3627,6 +4065,7 @@ void k_sonnet__configdialog_on_leave_event(void* self, void (*callback)(void*, v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QPaintEvent*
+///
 void k_sonnet__configdialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3637,6 +4076,7 @@ void k_sonnet__configdialog_paint_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QPaintEvent*
+///
 void k_sonnet__configdialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3647,6 +4087,7 @@ void k_sonnet__configdialog_qbase_paint_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QPaintEvent* event)
+///
 void k_sonnet__configdialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3657,6 +4098,7 @@ void k_sonnet__configdialog_on_paint_event(void* self, void (*callback)(void*, v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMoveEvent*
+///
 void k_sonnet__configdialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3667,6 +4109,7 @@ void k_sonnet__configdialog_move_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QMoveEvent*
+///
 void k_sonnet__configdialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3677,6 +4120,7 @@ void k_sonnet__configdialog_qbase_move_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QMoveEvent* event)
+///
 void k_sonnet__configdialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3687,6 +4131,7 @@ void k_sonnet__configdialog_on_move_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QTabletEvent*
+///
 void k_sonnet__configdialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3697,6 +4142,7 @@ void k_sonnet__configdialog_tablet_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QTabletEvent*
+///
 void k_sonnet__configdialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3707,6 +4153,7 @@ void k_sonnet__configdialog_qbase_tablet_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QTabletEvent* event)
+///
 void k_sonnet__configdialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3717,6 +4164,7 @@ void k_sonnet__configdialog_on_tablet_event(void* self, void (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QActionEvent*
+///
 void k_sonnet__configdialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3727,6 +4175,7 @@ void k_sonnet__configdialog_action_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QActionEvent*
+///
 void k_sonnet__configdialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3737,6 +4186,7 @@ void k_sonnet__configdialog_qbase_action_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QActionEvent* event)
+///
 void k_sonnet__configdialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3747,6 +4197,7 @@ void k_sonnet__configdialog_on_action_event(void* self, void (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDragEnterEvent*
+///
 void k_sonnet__configdialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3757,6 +4208,7 @@ void k_sonnet__configdialog_drag_enter_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDragEnterEvent*
+///
 void k_sonnet__configdialog_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3767,6 +4219,7 @@ void k_sonnet__configdialog_qbase_drag_enter_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QDragEnterEvent* event)
+///
 void k_sonnet__configdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3777,6 +4230,7 @@ void k_sonnet__configdialog_on_drag_enter_event(void* self, void (*callback)(voi
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDragMoveEvent*
+///
 void k_sonnet__configdialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3787,6 +4241,7 @@ void k_sonnet__configdialog_drag_move_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDragMoveEvent*
+///
 void k_sonnet__configdialog_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3797,6 +4252,7 @@ void k_sonnet__configdialog_qbase_drag_move_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QDragMoveEvent* event)
+///
 void k_sonnet__configdialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3807,6 +4263,7 @@ void k_sonnet__configdialog_on_drag_move_event(void* self, void (*callback)(void
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDragLeaveEvent*
+///
 void k_sonnet__configdialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3817,6 +4274,7 @@ void k_sonnet__configdialog_drag_leave_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDragLeaveEvent*
+///
 void k_sonnet__configdialog_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3827,6 +4285,7 @@ void k_sonnet__configdialog_qbase_drag_leave_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QDragLeaveEvent* event)
+///
 void k_sonnet__configdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3837,6 +4296,7 @@ void k_sonnet__configdialog_on_drag_leave_event(void* self, void (*callback)(voi
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDropEvent*
+///
 void k_sonnet__configdialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3847,6 +4307,7 @@ void k_sonnet__configdialog_drop_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QDropEvent*
+///
 void k_sonnet__configdialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3857,6 +4318,7 @@ void k_sonnet__configdialog_qbase_drop_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QDropEvent* event)
+///
 void k_sonnet__configdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3867,6 +4329,7 @@ void k_sonnet__configdialog_on_drop_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QHideEvent*
+///
 void k_sonnet__configdialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3877,6 +4340,7 @@ void k_sonnet__configdialog_hide_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QHideEvent*
+///
 void k_sonnet__configdialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3887,6 +4351,7 @@ void k_sonnet__configdialog_qbase_hide_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QHideEvent* event)
+///
 void k_sonnet__configdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3899,6 +4364,7 @@ void k_sonnet__configdialog_on_hide_event(void* self, void (*callback)(void*, vo
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_sonnet__configdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3911,6 +4377,7 @@ bool k_sonnet__configdialog_native_event(void* self, const char* eventType, void
 /// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
+///
 bool k_sonnet__configdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3921,6 +4388,7 @@ bool k_sonnet__configdialog_qbase_native_event(void* self, const char* eventType
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func(Sonnet__ConfigDialog* self, const char* eventType, void* message, intptr_t* result)
+///
 void k_sonnet__configdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3931,6 +4399,7 @@ void k_sonnet__configdialog_on_native_event(void* self, bool (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QEvent*
+///
 void k_sonnet__configdialog_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3941,6 +4410,7 @@ void k_sonnet__configdialog_change_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QEvent*
+///
 void k_sonnet__configdialog_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3951,6 +4421,7 @@ void k_sonnet__configdialog_qbase_change_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QEvent* param1)
+///
 void k_sonnet__configdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3961,6 +4432,7 @@ void k_sonnet__configdialog_on_change_event(void* self, void (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_sonnet__configdialog_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3971,6 +4443,7 @@ int32_t k_sonnet__configdialog_metric(void* self, int32_t param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
+///
 int32_t k_sonnet__configdialog_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
@@ -3981,6 +4454,7 @@ int32_t k_sonnet__configdialog_qbase_metric(void* self, int32_t param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback int32_t func(Sonnet__ConfigDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
+///
 void k_sonnet__configdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3991,6 +4465,7 @@ void k_sonnet__configdialog_on_metric(void* self, int32_t (*callback)(void*, int
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param painter QPainter*
+///
 void k_sonnet__configdialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4001,6 +4476,7 @@ void k_sonnet__configdialog_init_painter(void* self, void* painter);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param painter QPainter*
+///
 void k_sonnet__configdialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4011,6 +4487,7 @@ void k_sonnet__configdialog_qbase_init_painter(void* self, void* painter);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QPainter* painter)
+///
 void k_sonnet__configdialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4021,6 +4498,7 @@ void k_sonnet__configdialog_on_init_painter(void* self, void (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param offset QPoint*
+///
 QPaintDevice* k_sonnet__configdialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4031,6 +4509,7 @@ QPaintDevice* k_sonnet__configdialog_redirected(void* self, void* offset);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param offset QPoint*
+///
 QPaintDevice* k_sonnet__configdialog_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4041,6 +4520,7 @@ QPaintDevice* k_sonnet__configdialog_qbase_redirected(void* self, void* offset);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback QPaintDevice* func(Sonnet__ConfigDialog* self, QPoint* offset)
+///
 void k_sonnet__configdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4050,6 +4530,7 @@ void k_sonnet__configdialog_on_redirected(void* self, QPaintDevice* (*callback)(
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QPainter* k_sonnet__configdialog_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4059,6 +4540,7 @@ QPainter* k_sonnet__configdialog_shared_painter(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QPainter* k_sonnet__configdialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4069,6 +4551,7 @@ QPainter* k_sonnet__configdialog_qbase_shared_painter(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback QPainter* func()
+///
 void k_sonnet__configdialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4079,6 +4562,7 @@ void k_sonnet__configdialog_on_shared_painter(void* self, QPainter* (*callback)(
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QInputMethodEvent*
+///
 void k_sonnet__configdialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4089,6 +4573,7 @@ void k_sonnet__configdialog_input_method_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QInputMethodEvent*
+///
 void k_sonnet__configdialog_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4099,6 +4584,7 @@ void k_sonnet__configdialog_qbase_input_method_event(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QInputMethodEvent* param1)
+///
 void k_sonnet__configdialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4109,6 +4595,7 @@ void k_sonnet__configdialog_on_input_method_event(void* self, void (*callback)(v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_sonnet__configdialog_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4119,6 +4606,7 @@ QVariant* k_sonnet__configdialog_input_method_query(void* self, int64_t param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 enum Qt__InputMethodQuery
+///
 QVariant* k_sonnet__configdialog_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4129,6 +4617,7 @@ QVariant* k_sonnet__configdialog_qbase_input_method_query(void* self, int64_t pa
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback QVariant* func(Sonnet__ConfigDialog* self, enum Qt__InputMethodQuery param1)
+///
 void k_sonnet__configdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4139,6 +4628,7 @@ void k_sonnet__configdialog_on_input_method_query(void* self, QVariant* (*callba
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param next bool
+///
 bool k_sonnet__configdialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4149,6 +4639,7 @@ bool k_sonnet__configdialog_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param next bool
+///
 bool k_sonnet__configdialog_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4159,6 +4650,7 @@ bool k_sonnet__configdialog_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func(Sonnet__ConfigDialog* self, bool next)
+///
 void k_sonnet__configdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4169,6 +4661,7 @@ void k_sonnet__configdialog_on_focus_next_prev_child(void* self, bool (*callback
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QTimerEvent*
+///
 void k_sonnet__configdialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4179,6 +4672,7 @@ void k_sonnet__configdialog_timer_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QTimerEvent*
+///
 void k_sonnet__configdialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4189,6 +4683,7 @@ void k_sonnet__configdialog_qbase_timer_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QTimerEvent* event)
+///
 void k_sonnet__configdialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4199,6 +4694,7 @@ void k_sonnet__configdialog_on_timer_event(void* self, void (*callback)(void*, v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QChildEvent*
+///
 void k_sonnet__configdialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4209,6 +4705,7 @@ void k_sonnet__configdialog_child_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QChildEvent*
+///
 void k_sonnet__configdialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4219,6 +4716,7 @@ void k_sonnet__configdialog_qbase_child_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QChildEvent* event)
+///
 void k_sonnet__configdialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4229,6 +4727,7 @@ void k_sonnet__configdialog_on_child_event(void* self, void (*callback)(void*, v
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEvent*
+///
 void k_sonnet__configdialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4239,6 +4738,7 @@ void k_sonnet__configdialog_custom_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param event QEvent*
+///
 void k_sonnet__configdialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4249,6 +4749,7 @@ void k_sonnet__configdialog_qbase_custom_event(void* self, void* event);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QEvent* event)
+///
 void k_sonnet__configdialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4259,6 +4760,7 @@ void k_sonnet__configdialog_on_custom_event(void* self, void (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal QMetaMethod*
+///
 void k_sonnet__configdialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4269,6 +4771,7 @@ void k_sonnet__configdialog_connect_notify(void* self, void* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal QMetaMethod*
+///
 void k_sonnet__configdialog_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4279,6 +4782,7 @@ void k_sonnet__configdialog_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QMetaMethod* signal)
+///
 void k_sonnet__configdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4289,6 +4793,7 @@ void k_sonnet__configdialog_on_connect_notify(void* self, void (*callback)(void*
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal QMetaMethod*
+///
 void k_sonnet__configdialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4299,6 +4804,7 @@ void k_sonnet__configdialog_disconnect_notify(void* self, void* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal QMetaMethod*
+///
 void k_sonnet__configdialog_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4309,6 +4815,7 @@ void k_sonnet__configdialog_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QMetaMethod* signal)
+///
 void k_sonnet__configdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4319,6 +4826,7 @@ void k_sonnet__configdialog_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
+///
 void k_sonnet__configdialog_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -4329,6 +4837,7 @@ void k_sonnet__configdialog_adjust_position(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param param1 QWidget*
+///
 void k_sonnet__configdialog_qbase_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -4339,6 +4848,7 @@ void k_sonnet__configdialog_qbase_adjust_position(void* self, void* param1);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, QWidget* param1)
+///
 void k_sonnet__configdialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4348,6 +4858,7 @@ void k_sonnet__configdialog_on_adjust_position(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4357,6 +4868,7 @@ void k_sonnet__configdialog_update_micro_focus(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4367,6 +4879,7 @@ void k_sonnet__configdialog_qbase_update_micro_focus(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4376,6 +4889,7 @@ void k_sonnet__configdialog_on_update_micro_focus(void* self, void (*callback)()
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_create(void* self);
 
 /// Inherited from QWidget
@@ -4385,6 +4899,7 @@ void k_sonnet__configdialog_create(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4395,6 +4910,7 @@ void k_sonnet__configdialog_qbase_create(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4404,6 +4920,7 @@ void k_sonnet__configdialog_on_create(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4413,6 +4930,7 @@ void k_sonnet__configdialog_destroy(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4423,6 +4941,7 @@ void k_sonnet__configdialog_qbase_destroy(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func()
+///
 void k_sonnet__configdialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4432,6 +4951,7 @@ void k_sonnet__configdialog_on_destroy(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4441,6 +4961,7 @@ bool k_sonnet__configdialog_focus_next_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4451,6 +4972,7 @@ bool k_sonnet__configdialog_qbase_focus_next_child(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func()
+///
 void k_sonnet__configdialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4460,6 +4982,7 @@ void k_sonnet__configdialog_on_focus_next_child(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4469,6 +4992,7 @@ bool k_sonnet__configdialog_focus_previous_child(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 bool k_sonnet__configdialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4479,6 +5003,7 @@ bool k_sonnet__configdialog_qbase_focus_previous_child(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func()
+///
 void k_sonnet__configdialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4488,6 +5013,7 @@ void k_sonnet__configdialog_on_focus_previous_child(void* self, bool (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QObject* k_sonnet__configdialog_sender(void* self);
 
 /// Inherited from QObject
@@ -4497,6 +5023,7 @@ QObject* k_sonnet__configdialog_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 QObject* k_sonnet__configdialog_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4507,6 +5034,7 @@ QObject* k_sonnet__configdialog_qbase_sender(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback QObject* func()
+///
 void k_sonnet__configdialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4516,6 +5044,7 @@ void k_sonnet__configdialog_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4525,6 +5054,7 @@ int32_t k_sonnet__configdialog_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 int32_t k_sonnet__configdialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4535,6 +5065,7 @@ int32_t k_sonnet__configdialog_qbase_sender_signal_index(void* self);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback int32_t func()
+///
 void k_sonnet__configdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4545,6 +5076,7 @@ void k_sonnet__configdialog_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal const char*
+///
 int32_t k_sonnet__configdialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4555,6 +5087,7 @@ int32_t k_sonnet__configdialog_receivers(void* self, const char* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal const char*
+///
 int32_t k_sonnet__configdialog_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4565,6 +5098,7 @@ int32_t k_sonnet__configdialog_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback int32_t func(Sonnet__ConfigDialog* self, const char* signal)
+///
 void k_sonnet__configdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4575,6 +5109,7 @@ void k_sonnet__configdialog_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal QMetaMethod*
+///
 bool k_sonnet__configdialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4585,6 +5120,7 @@ bool k_sonnet__configdialog_is_signal_connected(void* self, void* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param signal QMetaMethod*
+///
 bool k_sonnet__configdialog_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4595,6 +5131,7 @@ bool k_sonnet__configdialog_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback bool func(Sonnet__ConfigDialog* self, QMetaMethod* signal)
+///
 void k_sonnet__configdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4606,6 +5143,7 @@ void k_sonnet__configdialog_on_is_signal_connected(void* self, bool (*callback)(
 /// @param self Sonnet__ConfigDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_sonnet__configdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4617,6 +5155,7 @@ double k_sonnet__configdialog_get_decoded_metric_f(void* self, int32_t metricA, 
 /// @param self Sonnet__ConfigDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
+///
 double k_sonnet__configdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4627,6 +5166,7 @@ double k_sonnet__configdialog_qbase_get_decoded_metric_f(void* self, int32_t met
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback double func(Sonnet__ConfigDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
+///
 void k_sonnet__configdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4637,11 +5177,13 @@ void k_sonnet__configdialog_on_get_decoded_metric_f(void* self, double (*callbac
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, const char* objectName)
+///
 void k_sonnet__configdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
 ///
 /// @param self Sonnet__ConfigDialog*
+///
 void k_sonnet__configdialog_delete(void* self);
 
 #endif

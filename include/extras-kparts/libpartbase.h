@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kparts-partbase.html
+/// [Upstream resources](https://api.kde.org/kparts-partbase.html)
 
 /// k_parts__partbase_new constructs a new KParts::PartBase object.
 ///
@@ -21,11 +21,13 @@ KParts__PartBase* k_parts__partbase_new();
 ///
 /// @param self KParts__PartBase*
 /// @param object QObject*
+///
 void k_parts__partbase_set_part_object(void* self, void* object);
 
 /// [Upstream resources](https://api.kde.org/kparts-partbase.html#partObject)
 ///
 /// @param self KParts__PartBase*
+///
 QObject* k_parts__partbase_part_object(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -34,6 +36,7 @@ QObject* k_parts__partbase_part_object(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param name const char*
+///
 QAction* k_parts__partbase_action(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
@@ -42,6 +45,7 @@ QAction* k_parts__partbase_action(void* self, const char* name);
 ///
 /// @param self KParts__PartBase*
 /// @param doc QDomDocument*
+///
 void k_parts__partbase_set_x_m_l_g_u_i_build_document(void* self, void* doc);
 
 /// Inherited from KXMLGUIClient
@@ -49,6 +53,7 @@ void k_parts__partbase_set_x_m_l_g_u_i_build_document(void* self, void* doc);
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
 /// @param self KParts__PartBase*
+///
 QDomDocument* k_parts__partbase_xmlgui_build_document(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -57,6 +62,7 @@ QDomDocument* k_parts__partbase_xmlgui_build_document(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param factory KXMLGUIFactory*
+///
 void k_parts__partbase_set_factory(void* self, void* factory);
 
 /// Inherited from KXMLGUIClient
@@ -64,6 +70,7 @@ void k_parts__partbase_set_factory(void* self, void* factory);
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#factory)
 ///
 /// @param self KParts__PartBase*
+///
 KXMLGUIFactory* k_parts__partbase_factory(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -71,6 +78,7 @@ KXMLGUIFactory* k_parts__partbase_factory(void* self);
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
 /// @param self KParts__PartBase*
+///
 KXMLGUIClient* k_parts__partbase_parent_client(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -79,6 +87,7 @@ KXMLGUIClient* k_parts__partbase_parent_client(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param child KXMLGUIClient*
+///
 void k_parts__partbase_insert_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
@@ -87,6 +96,7 @@ void k_parts__partbase_insert_child_client(void* self, void* child);
 ///
 /// @param self KParts__PartBase*
 /// @param child KXMLGUIClient*
+///
 void k_parts__partbase_remove_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
@@ -94,6 +104,7 @@ void k_parts__partbase_remove_child_client(void* self, void* child);
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#childClients)
 ///
 /// @param self KParts__PartBase*
+///
 libqt_list /* of KXMLGUIClient* */ k_parts__partbase_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -102,6 +113,7 @@ libqt_list /* of KXMLGUIClient* */ k_parts__partbase_child_clients(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param builder KXMLGUIBuilder*
+///
 void k_parts__partbase_set_client_builder(void* self, void* builder);
 
 /// Inherited from KXMLGUIClient
@@ -109,6 +121,7 @@ void k_parts__partbase_set_client_builder(void* self, void* builder);
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
 /// @param self KParts__PartBase*
+///
 KXMLGUIBuilder* k_parts__partbase_client_builder(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -116,6 +129,7 @@ KXMLGUIBuilder* k_parts__partbase_client_builder(void* self);
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#reloadXML)
 ///
 /// @param self KParts__PartBase*
+///
 void k_parts__partbase_reload_x_m_l(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -125,6 +139,7 @@ void k_parts__partbase_reload_x_m_l(void* self);
 /// @param self KParts__PartBase*
 /// @param name const char*
 /// @param actionList libqt_list /* of QAction* */
+///
 void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list actionList);
 
 /// Inherited from KXMLGUIClient
@@ -133,6 +148,7 @@ void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list
 ///
 /// @param self KParts__PartBase*
 /// @param name const char*
+///
 void k_parts__partbase_unplug_action_list(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
@@ -143,6 +159,7 @@ void k_parts__partbase_unplug_action_list(void* self, const char* name);
 ///
 /// @param files const char**
 /// @param doc const char*
+///
 const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc);
 
 /// Inherited from KXMLGUIClient
@@ -152,6 +169,7 @@ const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[stat
 /// @param self KParts__PartBase*
 /// @param state const char*
 /// @param action const char*
+///
 void k_parts__partbase_add_state_action_enabled(void* self, const char* state, const char* action);
 
 /// Inherited from KXMLGUIClient
@@ -161,6 +179,7 @@ void k_parts__partbase_add_state_action_enabled(void* self, const char* state, c
 /// @param self KParts__PartBase*
 /// @param state const char*
 /// @param action const char*
+///
 void k_parts__partbase_add_state_action_disabled(void* self, const char* state, const char* action);
 
 /// Inherited from KXMLGUIClient
@@ -169,6 +188,7 @@ void k_parts__partbase_add_state_action_disabled(void* self, const char* state, 
 ///
 /// @param self KParts__PartBase*
 /// @param state const char*
+///
 KXMLGUIClient__StateChange* k_parts__partbase_get_actions_to_change_for_state(void* self, const char* state);
 
 /// Inherited from KXMLGUIClient
@@ -177,6 +197,7 @@ KXMLGUIClient__StateChange* k_parts__partbase_get_actions_to_change_for_state(vo
 ///
 /// @param self KParts__PartBase*
 /// @param param1 QWidget*
+///
 void k_parts__partbase_begin_x_m_l_plug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
@@ -184,6 +205,7 @@ void k_parts__partbase_begin_x_m_l_plug(void* self, void* param1);
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
 ///
 /// @param self KParts__PartBase*
+///
 void k_parts__partbase_end_x_m_l_plug(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -192,6 +214,7 @@ void k_parts__partbase_end_x_m_l_plug(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param param1 QWidget*
+///
 void k_parts__partbase_prepare_x_m_l_unplug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
@@ -201,6 +224,7 @@ void k_parts__partbase_prepare_x_m_l_unplug(void* self, void* param1);
 /// @param self KParts__PartBase*
 /// @param xmlfile const char*
 /// @param localxmlfile const char*
+///
 void k_parts__partbase_replace_x_m_l_file(void* self, const char* xmlfile, const char* localxmlfile);
 
 /// Inherited from KXMLGUIClient
@@ -210,6 +234,7 @@ void k_parts__partbase_replace_x_m_l_file(void* self, const char* xmlfile, const
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param xml const char*
+///
 const char* k_parts__partbase_find_version_number(const char* xml);
 
 /// Inherited from KXMLGUIClient
@@ -220,6 +245,7 @@ const char* k_parts__partbase_find_version_number(const char* xml);
 /// @param xmlfile const char*
 /// @param localxmlfile const char*
 /// @param merge bool
+///
 void k_parts__partbase_replace_x_m_l_file3(void* self, const char* xmlfile, const char* localxmlfile, bool merge);
 
 /// Inherited from KXMLGUIClient
@@ -230,6 +256,7 @@ void k_parts__partbase_replace_x_m_l_file3(void* self, const char* xmlfile, cons
 ///
 /// @param self KParts__PartBase*
 /// @param element QDomElement*
+///
 QAction* k_parts__partbase_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
@@ -240,6 +267,7 @@ QAction* k_parts__partbase_action2(void* self, void* element);
 ///
 /// @param self KParts__PartBase*
 /// @param element QDomElement*
+///
 QAction* k_parts__partbase_qbase_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
@@ -250,6 +278,7 @@ QAction* k_parts__partbase_qbase_action2(void* self, void* element);
 ///
 /// @param self KParts__PartBase*
 /// @param callback QAction* func(KParts__PartBase* self, QDomElement* element)
+///
 void k_parts__partbase_on_action2(void* self, QAction* (*callback)(void*, void*));
 
 /// Inherited from KXMLGUIClient
@@ -259,6 +288,7 @@ void k_parts__partbase_on_action2(void* self, QAction* (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 KActionCollection* k_parts__partbase_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -268,6 +298,7 @@ KActionCollection* k_parts__partbase_action_collection(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 KActionCollection* k_parts__partbase_qbase_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -278,6 +309,7 @@ KActionCollection* k_parts__partbase_qbase_action_collection(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param callback KActionCollection* func()
+///
 void k_parts__partbase_on_action_collection(void* self, KActionCollection* (*callback)());
 
 /// Inherited from KXMLGUIClient
@@ -289,6 +321,7 @@ void k_parts__partbase_on_action_collection(void* self, KActionCollection* (*cal
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -300,6 +333,7 @@ const char* k_parts__partbase_component_name(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_qbase_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -310,6 +344,7 @@ const char* k_parts__partbase_qbase_component_name(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param callback const char* func()
+///
 void k_parts__partbase_on_component_name(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
@@ -319,6 +354,7 @@ void k_parts__partbase_on_component_name(void* self, const char* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 QDomDocument* k_parts__partbase_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -328,6 +364,7 @@ QDomDocument* k_parts__partbase_dom_document(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 QDomDocument* k_parts__partbase_qbase_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -338,6 +375,7 @@ QDomDocument* k_parts__partbase_qbase_dom_document(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param callback QDomDocument* func()
+///
 void k_parts__partbase_on_dom_document(void* self, QDomDocument* (*callback)());
 
 /// Inherited from KXMLGUIClient
@@ -349,6 +387,7 @@ void k_parts__partbase_on_dom_document(void* self, QDomDocument* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -360,6 +399,7 @@ const char* k_parts__partbase_xml_file(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_qbase_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -370,6 +410,7 @@ const char* k_parts__partbase_qbase_xml_file(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param callback const char* func()
+///
 void k_parts__partbase_on_xml_file(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
@@ -381,6 +422,7 @@ void k_parts__partbase_on_xml_file(void* self, const char* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -392,6 +434,7 @@ const char* k_parts__partbase_local_x_m_l_file(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_qbase_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -402,6 +445,7 @@ const char* k_parts__partbase_qbase_local_x_m_l_file(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param callback const char* func()
+///
 void k_parts__partbase_on_local_x_m_l_file(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
@@ -413,6 +457,7 @@ void k_parts__partbase_on_local_x_m_l_file(void* self, const char* (*callback)()
 /// @param self KParts__PartBase*
 /// @param componentName const char*
 /// @param componentDisplayName const char*
+///
 void k_parts__partbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
 /// Inherited from KXMLGUIClient
@@ -424,6 +469,7 @@ void k_parts__partbase_set_component_name(void* self, const char* componentName,
 /// @param self KParts__PartBase*
 /// @param componentName const char*
 /// @param componentDisplayName const char*
+///
 void k_parts__partbase_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
 /// Inherited from KXMLGUIClient
@@ -434,6 +480,7 @@ void k_parts__partbase_qbase_set_component_name(void* self, const char* componen
 ///
 /// @param self KParts__PartBase*
 /// @param callback void func(KParts__PartBase* self, const char* componentName, const char* componentDisplayName)
+///
 void k_parts__partbase_on_set_component_name(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from KXMLGUIClient
@@ -446,6 +493,7 @@ void k_parts__partbase_on_set_component_name(void* self, void (*callback)(void*,
 /// @param file const char*
 /// @param merge bool
 /// @param setXMLDoc bool
+///
 void k_parts__partbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
 /// Inherited from KXMLGUIClient
@@ -458,6 +506,7 @@ void k_parts__partbase_set_x_m_l_file(void* self, const char* file, bool merge, 
 /// @param file const char*
 /// @param merge bool
 /// @param setXMLDoc bool
+///
 void k_parts__partbase_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
 /// Inherited from KXMLGUIClient
@@ -468,6 +517,7 @@ void k_parts__partbase_qbase_set_x_m_l_file(void* self, const char* file, bool m
 ///
 /// @param self KParts__PartBase*
 /// @param callback void func(KParts__PartBase* self, const char* file, bool merge, bool setXMLDoc)
+///
 void k_parts__partbase_on_set_x_m_l_file(void* self, void (*callback)(void*, const char*, bool, bool));
 
 /// Inherited from KXMLGUIClient
@@ -478,6 +528,7 @@ void k_parts__partbase_on_set_x_m_l_file(void* self, void (*callback)(void*, con
 ///
 /// @param self KParts__PartBase*
 /// @param file const char*
+///
 void k_parts__partbase_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
@@ -488,6 +539,7 @@ void k_parts__partbase_set_local_x_m_l_file(void* self, const char* file);
 ///
 /// @param self KParts__PartBase*
 /// @param file const char*
+///
 void k_parts__partbase_qbase_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
@@ -498,6 +550,7 @@ void k_parts__partbase_qbase_set_local_x_m_l_file(void* self, const char* file);
 ///
 /// @param self KParts__PartBase*
 /// @param callback void func(KParts__PartBase* self, const char* file)
+///
 void k_parts__partbase_on_set_local_x_m_l_file(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from KXMLGUIClient
@@ -509,6 +562,7 @@ void k_parts__partbase_on_set_local_x_m_l_file(void* self, void (*callback)(void
 /// @param self KParts__PartBase*
 /// @param document const char*
 /// @param merge bool
+///
 void k_parts__partbase_set_x_m_l(void* self, const char* document, bool merge);
 
 /// Inherited from KXMLGUIClient
@@ -520,6 +574,7 @@ void k_parts__partbase_set_x_m_l(void* self, const char* document, bool merge);
 /// @param self KParts__PartBase*
 /// @param document const char*
 /// @param merge bool
+///
 void k_parts__partbase_qbase_set_x_m_l(void* self, const char* document, bool merge);
 
 /// Inherited from KXMLGUIClient
@@ -530,6 +585,7 @@ void k_parts__partbase_qbase_set_x_m_l(void* self, const char* document, bool me
 ///
 /// @param self KParts__PartBase*
 /// @param callback void func(KParts__PartBase* self, const char* document, bool merge)
+///
 void k_parts__partbase_on_set_x_m_l(void* self, void (*callback)(void*, const char*, bool));
 
 /// Inherited from KXMLGUIClient
@@ -541,6 +597,7 @@ void k_parts__partbase_on_set_x_m_l(void* self, void (*callback)(void*, const ch
 /// @param self KParts__PartBase*
 /// @param document QDomDocument*
 /// @param merge bool
+///
 void k_parts__partbase_set_d_o_m_document(void* self, void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
@@ -552,6 +609,7 @@ void k_parts__partbase_set_d_o_m_document(void* self, void* document, bool merge
 /// @param self KParts__PartBase*
 /// @param document QDomDocument*
 /// @param merge bool
+///
 void k_parts__partbase_qbase_set_d_o_m_document(void* self, void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
@@ -562,6 +620,7 @@ void k_parts__partbase_qbase_set_d_o_m_document(void* self, void* document, bool
 ///
 /// @param self KParts__PartBase*
 /// @param callback void func(KParts__PartBase* self, QDomDocument* document, bool merge)
+///
 void k_parts__partbase_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool));
 
 /// Inherited from KXMLGUIClient
@@ -573,6 +632,7 @@ void k_parts__partbase_on_set_d_o_m_document(void* self, void (*callback)(void*,
 /// @param self KParts__PartBase*
 /// @param newstate const char*
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
+///
 void k_parts__partbase_state_changed(void* self, const char* newstate, int32_t reverse);
 
 /// Inherited from KXMLGUIClient
@@ -584,6 +644,7 @@ void k_parts__partbase_state_changed(void* self, const char* newstate, int32_t r
 /// @param self KParts__PartBase*
 /// @param newstate const char*
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
+///
 void k_parts__partbase_qbase_state_changed(void* self, const char* newstate, int32_t reverse);
 
 /// Inherited from KXMLGUIClient
@@ -594,6 +655,7 @@ void k_parts__partbase_qbase_state_changed(void* self, const char* newstate, int
 ///
 /// @param self KParts__PartBase*
 /// @param callback void func(KParts__PartBase* self, const char* newstate, enum KXMLGUIClient__ReverseStateChange reverse)
+///
 void k_parts__partbase_on_state_changed(void* self, void (*callback)(void*, const char*, int32_t));
 
 /// Inherited from KXMLGUIClient
@@ -605,6 +667,7 @@ void k_parts__partbase_on_state_changed(void* self, void (*callback)(void*, cons
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -616,6 +679,7 @@ const char* k_parts__partbase_standards_xml_file_location(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 const char* k_parts__partbase_qbase_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -626,6 +690,7 @@ const char* k_parts__partbase_qbase_standards_xml_file_location(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param callback const char* func()
+///
 void k_parts__partbase_on_standards_xml_file_location(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
@@ -635,6 +700,7 @@ void k_parts__partbase_on_standards_xml_file_location(void* self, const char* (*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 void k_parts__partbase_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -644,6 +710,7 @@ void k_parts__partbase_load_standards_xml_file(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KParts__PartBase*
+///
 void k_parts__partbase_qbase_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
@@ -654,11 +721,13 @@ void k_parts__partbase_qbase_load_standards_xml_file(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param callback void func()
+///
 void k_parts__partbase_on_load_standards_xml_file(void* self, void (*callback)());
 
 /// Delete this object from C++ memory.
 ///
 /// @param self KParts__PartBase*
+///
 void k_parts__partbase_delete(void* self);
 
 #endif

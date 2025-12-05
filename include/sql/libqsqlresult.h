@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsqlresult.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html#handle)
 ///
 /// @param self QSqlResult*
+///
 QVariant* q_sqlresult_handle(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html#dtor.QSqlResult)
@@ -23,9 +24,10 @@ QVariant* q_sqlresult_handle(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QSqlResult*
+///
 void q_sqlresult_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qsqlresult.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html#public-types)
 
 typedef enum {
     QSQLRESULT_BINDINGSYNTAX_POSITIONALBINDING = 0,

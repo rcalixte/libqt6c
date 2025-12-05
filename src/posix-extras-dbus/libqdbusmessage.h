@@ -11,27 +11,32 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qdbusmessage.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html)
 
 /// q_dbusmessage_new constructs a new QDBusMessage object.
 ///
 QDBusMessage* q_dbusmessage_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html)
+
 /// q_dbusmessage_new2 constructs a new QDBusMessage object.
 ///
 /// @param other QDBusMessage*
+///
 QDBusMessage* q_dbusmessage_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#operator-eq)
 ///
 /// @param self QDBusMessage*
 /// @param other QDBusMessage*
+///
 void q_dbusmessage_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#swap)
 ///
 /// @param self QDBusMessage*
 /// @param other QDBusMessage*
+///
 void q_dbusmessage_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createSignal)
@@ -39,6 +44,7 @@ void q_dbusmessage_swap(void* self, void* other);
 /// @param path const char*
 /// @param interface const char*
 /// @param name const char*
+///
 QDBusMessage* q_dbusmessage_create_signal(const char* path, const char* interface, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createTargetedSignal)
@@ -47,6 +53,7 @@ QDBusMessage* q_dbusmessage_create_signal(const char* path, const char* interfac
 /// @param path const char*
 /// @param interface const char*
 /// @param name const char*
+///
 QDBusMessage* q_dbusmessage_create_targeted_signal(const char* service, const char* path, const char* interface, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createMethodCall)
@@ -55,34 +62,40 @@ QDBusMessage* q_dbusmessage_create_targeted_signal(const char* service, const ch
 /// @param path const char*
 /// @param interface const char*
 /// @param method const char*
+///
 QDBusMessage* q_dbusmessage_create_method_call(const char* destination, const char* path, const char* interface, const char* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createError)
 ///
 /// @param name const char*
 /// @param msg const char*
+///
 QDBusMessage* q_dbusmessage_create_error(const char* name, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createError)
 ///
 /// @param err QDBusError*
+///
 QDBusMessage* q_dbusmessage_create_error2(void* err);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createError)
 ///
 /// @param type enum QDBusError__ErrorType
 /// @param msg const char*
+///
 QDBusMessage* q_dbusmessage_create_error3(int32_t type, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createReply)
 ///
 /// @param self QDBusMessage*
+///
 QDBusMessage* q_dbusmessage_create_reply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createReply)
 ///
 /// @param self QDBusMessage*
 /// @param argument QVariant*
+///
 QDBusMessage* q_dbusmessage_create_reply2(void* self, void* argument);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createErrorReply)
@@ -90,12 +103,14 @@ QDBusMessage* q_dbusmessage_create_reply2(void* self, void* argument);
 /// @param self QDBusMessage*
 /// @param name const char*
 /// @param msg const char*
+///
 QDBusMessage* q_dbusmessage_create_error_reply(void* self, const char* name, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createErrorReply)
 ///
 /// @param self QDBusMessage*
 /// @param err QDBusError*
+///
 QDBusMessage* q_dbusmessage_create_error_reply2(void* self, void* err);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createErrorReply)
@@ -103,6 +118,7 @@ QDBusMessage* q_dbusmessage_create_error_reply2(void* self, void* err);
 /// @param self QDBusMessage*
 /// @param type enum QDBusError__ErrorType
 /// @param msg const char*
+///
 QDBusMessage* q_dbusmessage_create_error_reply3(void* self, int32_t type, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#service)
@@ -110,6 +126,7 @@ QDBusMessage* q_dbusmessage_create_error_reply3(void* self, int32_t type, const 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
+///
 const char* q_dbusmessage_service(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#path)
@@ -117,6 +134,7 @@ const char* q_dbusmessage_service(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
+///
 const char* q_dbusmessage_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#interface)
@@ -124,6 +142,7 @@ const char* q_dbusmessage_path(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
+///
 const char* q_dbusmessage_interface(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#member)
@@ -131,6 +150,7 @@ const char* q_dbusmessage_interface(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
+///
 const char* q_dbusmessage_member(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#errorName)
@@ -138,6 +158,7 @@ const char* q_dbusmessage_member(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
+///
 const char* q_dbusmessage_error_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#errorMessage)
@@ -145,6 +166,7 @@ const char* q_dbusmessage_error_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
+///
 const char* q_dbusmessage_error_message(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#type)
@@ -152,6 +174,7 @@ const char* q_dbusmessage_error_message(void* self);
 /// @param self QDBusMessage*
 ///
 /// @return enum QDBusMessage__MessageType
+///
 int32_t q_dbusmessage_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#signature)
@@ -159,67 +182,79 @@ int32_t q_dbusmessage_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
+///
 const char* q_dbusmessage_signature(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#isReplyRequired)
 ///
 /// @param self QDBusMessage*
+///
 bool q_dbusmessage_is_reply_required(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#setDelayedReply)
 ///
 /// @param self QDBusMessage*
 /// @param enable bool
+///
 void q_dbusmessage_set_delayed_reply(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#isDelayedReply)
 ///
 /// @param self QDBusMessage*
+///
 bool q_dbusmessage_is_delayed_reply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#setAutoStartService)
 ///
 /// @param self QDBusMessage*
 /// @param enable bool
+///
 void q_dbusmessage_set_auto_start_service(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#autoStartService)
 ///
 /// @param self QDBusMessage*
+///
 bool q_dbusmessage_auto_start_service(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#setInteractiveAuthorizationAllowed)
 ///
 /// @param self QDBusMessage*
 /// @param enable bool
+///
 void q_dbusmessage_set_interactive_authorization_allowed(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#isInteractiveAuthorizationAllowed)
 ///
 /// @param self QDBusMessage*
+///
 bool q_dbusmessage_is_interactive_authorization_allowed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#setArguments)
 ///
 /// @param self QDBusMessage*
 /// @param arguments libqt_list /* of QVariant* */
+///
 void q_dbusmessage_set_arguments(void* self, libqt_list arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#arguments)
 ///
 /// @param self QDBusMessage*
+///
 libqt_list /* of QVariant* */ q_dbusmessage_arguments(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#operator-lt-lt)
 ///
 /// @param self QDBusMessage*
 /// @param arg QVariant*
+///
 QDBusMessage* q_dbusmessage_operator_shift_left(void* self, void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createReply)
 ///
 /// @param self QDBusMessage*
 /// @param arguments libqt_list /* of QVariant* */
+///
 QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#dtor.QDBusMessage)
@@ -227,9 +262,10 @@ QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list arguments);
 /// Delete this object from C++ memory.
 ///
 /// @param self QDBusMessage*
+///
 void q_dbusmessage_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qdbusmessage.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#public-types)
 
 typedef enum {
     QDBUSMESSAGE_MESSAGETYPE_INVALIDMESSAGE = 0,

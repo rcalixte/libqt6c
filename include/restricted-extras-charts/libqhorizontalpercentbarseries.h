@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html)
 
 /// q_horizontalpercentbarseries_new constructs a new QHorizontalPercentBarSeries object.
 ///
 QHorizontalPercentBarSeries* q_horizontalpercentbarseries_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html)
+
 /// q_horizontalpercentbarseries_new2 constructs a new QHorizontalPercentBarSeries object.
 ///
 /// @param parent QObject*
+///
 QHorizontalPercentBarSeries* q_horizontalpercentbarseries_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 const QMetaObject* q_horizontalpercentbarseries_meta_object(void* self);
 
 /// @param self QHorizontalPercentBarSeries*
 /// @param param1 const char*
+///
 void* q_horizontalpercentbarseries_metacast(void* self, const char* param1);
 
 /// @param self QHorizontalPercentBarSeries*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_horizontalpercentbarseries_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback int32_t func(QHorizontalPercentBarSeries* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_horizontalpercentbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_horizontalpercentbarseries_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_horizontalpercentbarseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,6 +64,7 @@ int32_t q_horizontalpercentbarseries_qbase_metacall(void* self, int32_t param1, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_horizontalpercentbarseries_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html#type)
@@ -63,6 +72,7 @@ const char* q_horizontalpercentbarseries_tr(const char* s);
 /// @param self QHorizontalPercentBarSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
+///
 int32_t q_horizontalpercentbarseries_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html#type)
@@ -71,6 +81,7 @@ int32_t q_horizontalpercentbarseries_type(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback int32_t func()
+///
 void q_horizontalpercentbarseries_on_type(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html#type)
@@ -80,6 +91,7 @@ void q_horizontalpercentbarseries_on_type(void* self, int32_t (*callback)());
 /// @param self QHorizontalPercentBarSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
+///
 int32_t q_horizontalpercentbarseries_qbase_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -88,6 +100,7 @@ int32_t q_horizontalpercentbarseries_qbase_type(void* self);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_horizontalpercentbarseries_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -97,6 +110,7 @@ const char* q_horizontalpercentbarseries_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_horizontalpercentbarseries_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractBarSeries
@@ -105,6 +119,7 @@ const char* q_horizontalpercentbarseries_tr3(const char* s, const char* c, int n
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param width double
+///
 void q_horizontalpercentbarseries_set_bar_width(void* self, double width);
 
 /// Inherited from QAbstractBarSeries
@@ -112,6 +127,7 @@ void q_horizontalpercentbarseries_set_bar_width(void* self, double width);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barWidth)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 double q_horizontalpercentbarseries_bar_width(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -120,6 +136,7 @@ double q_horizontalpercentbarseries_bar_width(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param set QBarSet*
+///
 bool q_horizontalpercentbarseries_append(void* self, void* set);
 
 /// Inherited from QAbstractBarSeries
@@ -128,6 +145,7 @@ bool q_horizontalpercentbarseries_append(void* self, void* set);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param set QBarSet*
+///
 bool q_horizontalpercentbarseries_remove(void* self, void* set);
 
 /// Inherited from QAbstractBarSeries
@@ -136,6 +154,7 @@ bool q_horizontalpercentbarseries_remove(void* self, void* set);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param set QBarSet*
+///
 bool q_horizontalpercentbarseries_take(void* self, void* set);
 
 /// Inherited from QAbstractBarSeries
@@ -144,6 +163,7 @@ bool q_horizontalpercentbarseries_take(void* self, void* set);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param sets libqt_list /* of QBarSet* */
+///
 bool q_horizontalpercentbarseries_append2(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
@@ -153,6 +173,7 @@ bool q_horizontalpercentbarseries_append2(void* self, libqt_list sets);
 /// @param self QHorizontalPercentBarSeries*
 /// @param index int
 /// @param set QBarSet*
+///
 bool q_horizontalpercentbarseries_insert(void* self, int index, void* set);
 
 /// Inherited from QAbstractBarSeries
@@ -160,6 +181,7 @@ bool q_horizontalpercentbarseries_insert(void* self, int index, void* set);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#count)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 int32_t q_horizontalpercentbarseries_count(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -167,6 +189,7 @@ int32_t q_horizontalpercentbarseries_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barSets)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 libqt_list /* of QBarSet* */ q_horizontalpercentbarseries_bar_sets(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -174,6 +197,7 @@ libqt_list /* of QBarSet* */ q_horizontalpercentbarseries_bar_sets(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#clear)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_clear(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -181,6 +205,7 @@ void q_horizontalpercentbarseries_clear(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#setLabelsVisible)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_set_labels_visible(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -188,6 +213,7 @@ void q_horizontalpercentbarseries_set_labels_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#isLabelsVisible)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 bool q_horizontalpercentbarseries_is_labels_visible(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -196,6 +222,7 @@ bool q_horizontalpercentbarseries_is_labels_visible(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param format const char*
+///
 void q_horizontalpercentbarseries_set_labels_format(void* self, const char* format);
 
 /// Inherited from QAbstractBarSeries
@@ -205,6 +232,7 @@ void q_horizontalpercentbarseries_set_labels_format(void* self, const char* form
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 const char* q_horizontalpercentbarseries_labels_format(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -213,6 +241,7 @@ const char* q_horizontalpercentbarseries_labels_format(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param angle double
+///
 void q_horizontalpercentbarseries_set_labels_angle(void* self, double angle);
 
 /// Inherited from QAbstractBarSeries
@@ -220,6 +249,7 @@ void q_horizontalpercentbarseries_set_labels_angle(void* self, double angle);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngle)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 double q_horizontalpercentbarseries_labels_angle(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -228,6 +258,7 @@ double q_horizontalpercentbarseries_labels_angle(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param position enum QAbstractBarSeries__LabelsPosition
+///
 void q_horizontalpercentbarseries_set_labels_position(void* self, int32_t position);
 
 /// Inherited from QAbstractBarSeries
@@ -237,6 +268,7 @@ void q_horizontalpercentbarseries_set_labels_position(void* self, int32_t positi
 /// @param self QHorizontalPercentBarSeries*
 ///
 /// @return enum QAbstractBarSeries__LabelsPosition
+///
 int32_t q_horizontalpercentbarseries_labels_position(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -245,6 +277,7 @@ int32_t q_horizontalpercentbarseries_labels_position(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param precision int
+///
 void q_horizontalpercentbarseries_set_labels_precision(void* self, int precision);
 
 /// Inherited from QAbstractBarSeries
@@ -252,6 +285,7 @@ void q_horizontalpercentbarseries_set_labels_precision(void* self, int precision
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecision)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 int32_t q_horizontalpercentbarseries_labels_precision(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -261,6 +295,7 @@ int32_t q_horizontalpercentbarseries_labels_precision(void* self);
 /// @param self QHorizontalPercentBarSeries*
 /// @param index int
 /// @param barset QBarSet*
+///
 void q_horizontalpercentbarseries_clicked(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
@@ -269,6 +304,7 @@ void q_horizontalpercentbarseries_clicked(void* self, int index, void* barset);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, int index, QBarSet* barset)
+///
 void q_horizontalpercentbarseries_on_clicked(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -279,6 +315,7 @@ void q_horizontalpercentbarseries_on_clicked(void* self, void (*callback)(void*,
 /// @param status bool
 /// @param index int
 /// @param barset QBarSet*
+///
 void q_horizontalpercentbarseries_hovered(void* self, bool status, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
@@ -287,6 +324,7 @@ void q_horizontalpercentbarseries_hovered(void* self, bool status, int index, vo
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, bool status, int index, QBarSet* barset)
+///
 void q_horizontalpercentbarseries_on_hovered(void* self, void (*callback)(void*, bool, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -296,6 +334,7 @@ void q_horizontalpercentbarseries_on_hovered(void* self, void (*callback)(void*,
 /// @param self QHorizontalPercentBarSeries*
 /// @param index int
 /// @param barset QBarSet*
+///
 void q_horizontalpercentbarseries_pressed(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
@@ -304,6 +343,7 @@ void q_horizontalpercentbarseries_pressed(void* self, int index, void* barset);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, int index, QBarSet* barset)
+///
 void q_horizontalpercentbarseries_on_pressed(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -313,6 +353,7 @@ void q_horizontalpercentbarseries_on_pressed(void* self, void (*callback)(void*,
 /// @param self QHorizontalPercentBarSeries*
 /// @param index int
 /// @param barset QBarSet*
+///
 void q_horizontalpercentbarseries_released(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
@@ -321,6 +362,7 @@ void q_horizontalpercentbarseries_released(void* self, int index, void* barset);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, int index, QBarSet* barset)
+///
 void q_horizontalpercentbarseries_on_released(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -330,6 +372,7 @@ void q_horizontalpercentbarseries_on_released(void* self, void (*callback)(void*
 /// @param self QHorizontalPercentBarSeries*
 /// @param index int
 /// @param barset QBarSet*
+///
 void q_horizontalpercentbarseries_double_clicked(void* self, int index, void* barset);
 
 /// Inherited from QAbstractBarSeries
@@ -338,6 +381,7 @@ void q_horizontalpercentbarseries_double_clicked(void* self, int index, void* ba
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, int index, QBarSet* barset)
+///
 void q_horizontalpercentbarseries_on_double_clicked(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -345,6 +389,7 @@ void q_horizontalpercentbarseries_on_double_clicked(void* self, void (*callback)
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_count_changed(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -353,6 +398,7 @@ void q_horizontalpercentbarseries_count_changed(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self)
+///
 void q_horizontalpercentbarseries_on_count_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -360,6 +406,7 @@ void q_horizontalpercentbarseries_on_count_changed(void* self, void (*callback)(
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_labels_visible_changed(void* self);
 
 /// Inherited from QAbstractBarSeries
@@ -368,6 +415,7 @@ void q_horizontalpercentbarseries_labels_visible_changed(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self)
+///
 void q_horizontalpercentbarseries_on_labels_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -376,6 +424,7 @@ void q_horizontalpercentbarseries_on_labels_visible_changed(void* self, void (*c
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param format const char*
+///
 void q_horizontalpercentbarseries_labels_format_changed(void* self, const char* format);
 
 /// Inherited from QAbstractBarSeries
@@ -384,6 +433,7 @@ void q_horizontalpercentbarseries_labels_format_changed(void* self, const char* 
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, const char* format)
+///
 void q_horizontalpercentbarseries_on_labels_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractBarSeries
@@ -392,6 +442,7 @@ void q_horizontalpercentbarseries_on_labels_format_changed(void* self, void (*ca
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param position enum QAbstractBarSeries__LabelsPosition
+///
 void q_horizontalpercentbarseries_labels_position_changed(void* self, int32_t position);
 
 /// Inherited from QAbstractBarSeries
@@ -400,6 +451,7 @@ void q_horizontalpercentbarseries_labels_position_changed(void* self, int32_t po
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, enum QAbstractBarSeries__LabelsPosition position)
+///
 void q_horizontalpercentbarseries_on_labels_position_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractBarSeries
@@ -408,6 +460,7 @@ void q_horizontalpercentbarseries_on_labels_position_changed(void* self, void (*
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param angle double
+///
 void q_horizontalpercentbarseries_labels_angle_changed(void* self, double angle);
 
 /// Inherited from QAbstractBarSeries
@@ -416,6 +469,7 @@ void q_horizontalpercentbarseries_labels_angle_changed(void* self, double angle)
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, double angle)
+///
 void q_horizontalpercentbarseries_on_labels_angle_changed(void* self, void (*callback)(void*, double));
 
 /// Inherited from QAbstractBarSeries
@@ -424,6 +478,7 @@ void q_horizontalpercentbarseries_on_labels_angle_changed(void* self, void (*cal
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param precision int
+///
 void q_horizontalpercentbarseries_labels_precision_changed(void* self, int precision);
 
 /// Inherited from QAbstractBarSeries
@@ -432,6 +487,7 @@ void q_horizontalpercentbarseries_labels_precision_changed(void* self, int preci
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, int precision)
+///
 void q_horizontalpercentbarseries_on_labels_precision_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractBarSeries
@@ -440,6 +496,7 @@ void q_horizontalpercentbarseries_on_labels_precision_changed(void* self, void (
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param sets libqt_list /* of QBarSet* */
+///
 void q_horizontalpercentbarseries_barsets_added(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
@@ -448,6 +505,7 @@ void q_horizontalpercentbarseries_barsets_added(void* self, libqt_list sets);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QBarSet** sets)
+///
 void q_horizontalpercentbarseries_on_barsets_added(void* self, void (*callback)(void*, QBarSet**));
 
 /// Inherited from QAbstractBarSeries
@@ -456,6 +514,7 @@ void q_horizontalpercentbarseries_on_barsets_added(void* self, void (*callback)(
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param sets libqt_list /* of QBarSet* */
+///
 void q_horizontalpercentbarseries_barsets_removed(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
@@ -464,6 +523,7 @@ void q_horizontalpercentbarseries_barsets_removed(void* self, libqt_list sets);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QBarSet** sets)
+///
 void q_horizontalpercentbarseries_on_barsets_removed(void* self, void (*callback)(void*, QBarSet**));
 
 /// Inherited from QAbstractBarSeries
@@ -472,6 +532,7 @@ void q_horizontalpercentbarseries_on_barsets_removed(void* self, void (*callback
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param visible bool
+///
 void q_horizontalpercentbarseries_set_labels_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractSeries
@@ -480,6 +541,7 @@ void q_horizontalpercentbarseries_set_labels_visible1(void* self, bool visible);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param name const char*
+///
 void q_horizontalpercentbarseries_set_name(void* self, const char* name);
 
 /// Inherited from QAbstractSeries
@@ -489,6 +551,7 @@ void q_horizontalpercentbarseries_set_name(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 const char* q_horizontalpercentbarseries_name(void* self);
 
 /// Inherited from QAbstractSeries
@@ -496,6 +559,7 @@ const char* q_horizontalpercentbarseries_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_set_visible(void* self);
 
 /// Inherited from QAbstractSeries
@@ -503,6 +567,7 @@ void q_horizontalpercentbarseries_set_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 bool q_horizontalpercentbarseries_is_visible(void* self);
 
 /// Inherited from QAbstractSeries
@@ -510,6 +575,7 @@ bool q_horizontalpercentbarseries_is_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 double q_horizontalpercentbarseries_opacity(void* self);
 
 /// Inherited from QAbstractSeries
@@ -518,6 +584,7 @@ double q_horizontalpercentbarseries_opacity(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param opacity double
+///
 void q_horizontalpercentbarseries_set_opacity(void* self, double opacity);
 
 /// Inherited from QAbstractSeries
@@ -525,6 +592,7 @@ void q_horizontalpercentbarseries_set_opacity(void* self, double opacity);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_set_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
@@ -532,6 +600,7 @@ void q_horizontalpercentbarseries_set_use_open_g_l(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 bool q_horizontalpercentbarseries_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
@@ -539,6 +608,7 @@ bool q_horizontalpercentbarseries_use_open_g_l(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 QChart* q_horizontalpercentbarseries_chart(void* self);
 
 /// Inherited from QAbstractSeries
@@ -547,6 +617,7 @@ QChart* q_horizontalpercentbarseries_chart(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param axis QAbstractAxis*
+///
 bool q_horizontalpercentbarseries_attach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
@@ -555,6 +626,7 @@ bool q_horizontalpercentbarseries_attach_axis(void* self, void* axis);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param axis QAbstractAxis*
+///
 bool q_horizontalpercentbarseries_detach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
@@ -562,6 +634,7 @@ bool q_horizontalpercentbarseries_detach_axis(void* self, void* axis);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 libqt_list /* of QAbstractAxis* */ q_horizontalpercentbarseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
@@ -569,6 +642,7 @@ libqt_list /* of QAbstractAxis* */ q_horizontalpercentbarseries_attached_axes(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#show)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_show(void* self);
 
 /// Inherited from QAbstractSeries
@@ -576,6 +650,7 @@ void q_horizontalpercentbarseries_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#hide)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_hide(void* self);
 
 /// Inherited from QAbstractSeries
@@ -583,6 +658,7 @@ void q_horizontalpercentbarseries_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
@@ -591,6 +667,7 @@ void q_horizontalpercentbarseries_name_changed(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self)
+///
 void q_horizontalpercentbarseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -598,6 +675,7 @@ void q_horizontalpercentbarseries_on_name_changed(void* self, void (*callback)(v
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
@@ -606,6 +684,7 @@ void q_horizontalpercentbarseries_visible_changed(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self)
+///
 void q_horizontalpercentbarseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -613,6 +692,7 @@ void q_horizontalpercentbarseries_on_visible_changed(void* self, void (*callback
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
@@ -621,6 +701,7 @@ void q_horizontalpercentbarseries_opacity_changed(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self)
+///
 void q_horizontalpercentbarseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -628,6 +709,7 @@ void q_horizontalpercentbarseries_on_opacity_changed(void* self, void (*callback
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
@@ -636,6 +718,7 @@ void q_horizontalpercentbarseries_use_open_g_l_changed(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self)
+///
 void q_horizontalpercentbarseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -644,6 +727,7 @@ void q_horizontalpercentbarseries_on_use_open_g_l_changed(void* self, void (*cal
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param visible bool
+///
 void q_horizontalpercentbarseries_set_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractSeries
@@ -652,6 +736,7 @@ void q_horizontalpercentbarseries_set_visible1(void* self, bool visible);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param enable bool
+///
 void q_horizontalpercentbarseries_set_use_open_g_l1(void* self, bool enable);
 
 /// Inherited from QObject
@@ -661,6 +746,7 @@ void q_horizontalpercentbarseries_set_use_open_g_l1(void* self, bool enable);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 const char* q_horizontalpercentbarseries_object_name(void* self);
 
 /// Inherited from QObject
@@ -669,6 +755,7 @@ const char* q_horizontalpercentbarseries_object_name(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param name char*
+///
 void q_horizontalpercentbarseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -676,6 +763,7 @@ void q_horizontalpercentbarseries_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 bool q_horizontalpercentbarseries_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -683,6 +771,7 @@ bool q_horizontalpercentbarseries_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 bool q_horizontalpercentbarseries_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -690,6 +779,7 @@ bool q_horizontalpercentbarseries_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 bool q_horizontalpercentbarseries_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -697,6 +787,7 @@ bool q_horizontalpercentbarseries_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 bool q_horizontalpercentbarseries_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -705,6 +796,7 @@ bool q_horizontalpercentbarseries_signals_blocked(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param b bool
+///
 bool q_horizontalpercentbarseries_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -712,6 +804,7 @@ bool q_horizontalpercentbarseries_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 QThread* q_horizontalpercentbarseries_thread(void* self);
 
 /// Inherited from QObject
@@ -720,6 +813,7 @@ QThread* q_horizontalpercentbarseries_thread(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param thread QThread*
+///
 bool q_horizontalpercentbarseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -728,6 +822,7 @@ bool q_horizontalpercentbarseries_move_to_thread(void* self, void* thread);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param interval int
+///
 int32_t q_horizontalpercentbarseries_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -736,6 +831,7 @@ int32_t q_horizontalpercentbarseries_start_timer(void* self, int interval);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param id int
+///
 void q_horizontalpercentbarseries_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -744,6 +840,7 @@ void q_horizontalpercentbarseries_kill_timer(void* self, int id);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param id enum Qt__TimerId
+///
 void q_horizontalpercentbarseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -751,6 +848,7 @@ void q_horizontalpercentbarseries_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 libqt_list /* of QObject* */ q_horizontalpercentbarseries_children(void* self);
 
 /// Inherited from QObject
@@ -759,6 +857,7 @@ libqt_list /* of QObject* */ q_horizontalpercentbarseries_children(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param parent QObject*
+///
 void q_horizontalpercentbarseries_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -767,6 +866,7 @@ void q_horizontalpercentbarseries_set_parent(void* self, void* parent);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param filterObj QObject*
+///
 void q_horizontalpercentbarseries_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -775,6 +875,7 @@ void q_horizontalpercentbarseries_install_event_filter(void* self, void* filterO
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param obj QObject*
+///
 void q_horizontalpercentbarseries_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -785,6 +886,7 @@ void q_horizontalpercentbarseries_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_horizontalpercentbarseries_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -795,6 +897,7 @@ QMetaObject__Connection* q_horizontalpercentbarseries_connect(void* sender, void
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_horizontalpercentbarseries_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -805,6 +908,7 @@ QMetaObject__Connection* q_horizontalpercentbarseries_connect2(void* self, void*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_horizontalpercentbarseries_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -812,6 +916,7 @@ bool q_horizontalpercentbarseries_disconnect(void* sender, void* signal, void* r
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_horizontalpercentbarseries_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -819,6 +924,7 @@ bool q_horizontalpercentbarseries_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -826,6 +932,7 @@ void q_horizontalpercentbarseries_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -835,6 +942,7 @@ void q_horizontalpercentbarseries_dump_object_info(void* self);
 /// @param self QHorizontalPercentBarSeries*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_horizontalpercentbarseries_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -843,6 +951,7 @@ bool q_horizontalpercentbarseries_set_property(void* self, const char* name, voi
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param name const char*
+///
 QVariant* q_horizontalpercentbarseries_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -852,6 +961,7 @@ QVariant* q_horizontalpercentbarseries_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 const char** q_horizontalpercentbarseries_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -859,6 +969,7 @@ const char** q_horizontalpercentbarseries_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 QBindingStorage* q_horizontalpercentbarseries_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -866,6 +977,7 @@ QBindingStorage* q_horizontalpercentbarseries_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 const QBindingStorage* q_horizontalpercentbarseries_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -873,6 +985,7 @@ const QBindingStorage* q_horizontalpercentbarseries_binding_storage2(void* self)
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_destroyed(void* self);
 
 /// Inherited from QObject
@@ -881,6 +994,7 @@ void q_horizontalpercentbarseries_destroyed(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self)
+///
 void q_horizontalpercentbarseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -888,6 +1002,7 @@ void q_horizontalpercentbarseries_on_destroyed(void* self, void (*callback)(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 QObject* q_horizontalpercentbarseries_parent(void* self);
 
 /// Inherited from QObject
@@ -896,6 +1011,7 @@ QObject* q_horizontalpercentbarseries_parent(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param classname const char*
+///
 bool q_horizontalpercentbarseries_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -903,6 +1019,7 @@ bool q_horizontalpercentbarseries_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_delete_later(void* self);
 
 /// Inherited from QObject
@@ -912,6 +1029,7 @@ void q_horizontalpercentbarseries_delete_later(void* self);
 /// @param self QHorizontalPercentBarSeries*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_horizontalpercentbarseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -921,6 +1039,7 @@ bool q_horizontalpercentbarseries_move_to_thread2(void* self, void* thread, void
 /// @param self QHorizontalPercentBarSeries*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_horizontalpercentbarseries_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -932,6 +1051,7 @@ int32_t q_horizontalpercentbarseries_start_timer22(void* self, int interval, int
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_horizontalpercentbarseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -943,6 +1063,7 @@ QMetaObject__Connection* q_horizontalpercentbarseries_connect5(void* sender, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_horizontalpercentbarseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -951,6 +1072,7 @@ QMetaObject__Connection* q_horizontalpercentbarseries_connect4(void* self, void*
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param param1 QObject*
+///
 void q_horizontalpercentbarseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -959,6 +1081,7 @@ void q_horizontalpercentbarseries_destroyed1(void* self, void* param1);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QObject* param1)
+///
 void q_horizontalpercentbarseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -969,6 +1092,7 @@ void q_horizontalpercentbarseries_on_destroyed1(void* self, void (*callback)(voi
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QEvent*
+///
 bool q_horizontalpercentbarseries_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -979,6 +1103,7 @@ bool q_horizontalpercentbarseries_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QEvent*
+///
 bool q_horizontalpercentbarseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -989,6 +1114,7 @@ bool q_horizontalpercentbarseries_qbase_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback bool func(QHorizontalPercentBarSeries* self, QEvent* event)
+///
 void q_horizontalpercentbarseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1000,6 +1126,7 @@ void q_horizontalpercentbarseries_on_event(void* self, bool (*callback)(void*, v
 /// @param self QHorizontalPercentBarSeries*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_horizontalpercentbarseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1011,6 +1138,7 @@ bool q_horizontalpercentbarseries_event_filter(void* self, void* watched, void* 
 /// @param self QHorizontalPercentBarSeries*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_horizontalpercentbarseries_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1021,6 +1149,7 @@ bool q_horizontalpercentbarseries_qbase_event_filter(void* self, void* watched, 
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback bool func(QHorizontalPercentBarSeries* self, QObject* watched, QEvent* event)
+///
 void q_horizontalpercentbarseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1031,6 +1160,7 @@ void q_horizontalpercentbarseries_on_event_filter(void* self, bool (*callback)(v
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QTimerEvent*
+///
 void q_horizontalpercentbarseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1041,6 +1171,7 @@ void q_horizontalpercentbarseries_timer_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QTimerEvent*
+///
 void q_horizontalpercentbarseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1051,6 +1182,7 @@ void q_horizontalpercentbarseries_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QTimerEvent* event)
+///
 void q_horizontalpercentbarseries_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1061,6 +1193,7 @@ void q_horizontalpercentbarseries_on_timer_event(void* self, void (*callback)(vo
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QChildEvent*
+///
 void q_horizontalpercentbarseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1071,6 +1204,7 @@ void q_horizontalpercentbarseries_child_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QChildEvent*
+///
 void q_horizontalpercentbarseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1081,6 +1215,7 @@ void q_horizontalpercentbarseries_qbase_child_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QChildEvent* event)
+///
 void q_horizontalpercentbarseries_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1091,6 +1226,7 @@ void q_horizontalpercentbarseries_on_child_event(void* self, void (*callback)(vo
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QEvent*
+///
 void q_horizontalpercentbarseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1101,6 +1237,7 @@ void q_horizontalpercentbarseries_custom_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param event QEvent*
+///
 void q_horizontalpercentbarseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1111,6 +1248,7 @@ void q_horizontalpercentbarseries_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QEvent* event)
+///
 void q_horizontalpercentbarseries_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1121,6 +1259,7 @@ void q_horizontalpercentbarseries_on_custom_event(void* self, void (*callback)(v
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal QMetaMethod*
+///
 void q_horizontalpercentbarseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1131,6 +1270,7 @@ void q_horizontalpercentbarseries_connect_notify(void* self, void* signal);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal QMetaMethod*
+///
 void q_horizontalpercentbarseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1141,6 +1281,7 @@ void q_horizontalpercentbarseries_qbase_connect_notify(void* self, void* signal)
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QMetaMethod* signal)
+///
 void q_horizontalpercentbarseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1151,6 +1292,7 @@ void q_horizontalpercentbarseries_on_connect_notify(void* self, void (*callback)
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal QMetaMethod*
+///
 void q_horizontalpercentbarseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1161,6 +1303,7 @@ void q_horizontalpercentbarseries_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal QMetaMethod*
+///
 void q_horizontalpercentbarseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1171,6 +1314,7 @@ void q_horizontalpercentbarseries_qbase_disconnect_notify(void* self, void* sign
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, QMetaMethod* signal)
+///
 void q_horizontalpercentbarseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1180,6 +1324,7 @@ void q_horizontalpercentbarseries_on_disconnect_notify(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 QObject* q_horizontalpercentbarseries_sender(void* self);
 
 /// Inherited from QObject
@@ -1189,6 +1334,7 @@ QObject* q_horizontalpercentbarseries_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 QObject* q_horizontalpercentbarseries_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1199,6 +1345,7 @@ QObject* q_horizontalpercentbarseries_qbase_sender(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback QObject* func()
+///
 void q_horizontalpercentbarseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1208,6 +1355,7 @@ void q_horizontalpercentbarseries_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 int32_t q_horizontalpercentbarseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1217,6 +1365,7 @@ int32_t q_horizontalpercentbarseries_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 int32_t q_horizontalpercentbarseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1227,6 +1376,7 @@ int32_t q_horizontalpercentbarseries_qbase_sender_signal_index(void* self);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback int32_t func()
+///
 void q_horizontalpercentbarseries_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1237,6 +1387,7 @@ void q_horizontalpercentbarseries_on_sender_signal_index(void* self, int32_t (*c
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal const char*
+///
 int32_t q_horizontalpercentbarseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1247,6 +1398,7 @@ int32_t q_horizontalpercentbarseries_receivers(void* self, const char* signal);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal const char*
+///
 int32_t q_horizontalpercentbarseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1257,6 +1409,7 @@ int32_t q_horizontalpercentbarseries_qbase_receivers(void* self, const char* sig
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback int32_t func(QHorizontalPercentBarSeries* self, const char* signal)
+///
 void q_horizontalpercentbarseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1267,6 +1420,7 @@ void q_horizontalpercentbarseries_on_receivers(void* self, int32_t (*callback)(v
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal QMetaMethod*
+///
 bool q_horizontalpercentbarseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1277,6 +1431,7 @@ bool q_horizontalpercentbarseries_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param signal QMetaMethod*
+///
 bool q_horizontalpercentbarseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1287,6 +1442,7 @@ bool q_horizontalpercentbarseries_qbase_is_signal_connected(void* self, void* si
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback bool func(QHorizontalPercentBarSeries* self, QMetaMethod* signal)
+///
 void q_horizontalpercentbarseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1297,6 +1453,7 @@ void q_horizontalpercentbarseries_on_is_signal_connected(void* self, bool (*call
 ///
 /// @param self QHorizontalPercentBarSeries*
 /// @param callback void func(QHorizontalPercentBarSeries* self, const char* objectName)
+///
 void q_horizontalpercentbarseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html#dtor.QHorizontalPercentBarSeries)
@@ -1304,6 +1461,7 @@ void q_horizontalpercentbarseries_on_object_name_changed(void* self, void (*call
 /// Delete this object from C++ memory.
 ///
 /// @param self QHorizontalPercentBarSeries*
+///
 void q_horizontalpercentbarseries_delete(void* self);
 
 #endif

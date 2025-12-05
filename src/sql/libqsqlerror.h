@@ -11,34 +11,48 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qsqlerror.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html)
 
 /// q_sqlerror_new constructs a new QSqlError object.
 ///
 QSqlError* q_sqlerror_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html)
+
 /// q_sqlerror_new2 constructs a new QSqlError object.
 ///
 /// @param other QSqlError*
+///
 QSqlError* q_sqlerror_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html)
 
 /// q_sqlerror_new3 constructs a new QSqlError object.
 ///
 /// @param driverText const char*
+///
 QSqlError* q_sqlerror_new3(const char* driverText);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html)
 
 /// q_sqlerror_new4 constructs a new QSqlError object.
 ///
 /// @param driverText const char*
 /// @param databaseText const char*
+///
 QSqlError* q_sqlerror_new4(const char* driverText, const char* databaseText);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html)
 
 /// q_sqlerror_new5 constructs a new QSqlError object.
 ///
 /// @param driverText const char*
 /// @param databaseText const char*
 /// @param type enum QSqlError__ErrorType
+///
 QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int32_t type);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html)
 
 /// q_sqlerror_new6 constructs a new QSqlError object.
 ///
@@ -46,30 +60,35 @@ QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int
 /// @param databaseText const char*
 /// @param type enum QSqlError__ErrorType
 /// @param errorCode const char*
+///
 QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int32_t type, const char* errorCode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
+///
 void q_sqlerror_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq-eq)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
+///
 bool q_sqlerror_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-not-eq)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
+///
 bool q_sqlerror_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#swap)
 ///
 /// @param self QSqlError*
 /// @param other QSqlError*
+///
 void q_sqlerror_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#driverText)
@@ -77,6 +96,7 @@ void q_sqlerror_swap(void* self, void* other);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
+///
 const char* q_sqlerror_driver_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#databaseText)
@@ -84,6 +104,7 @@ const char* q_sqlerror_driver_text(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
+///
 const char* q_sqlerror_database_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#type)
@@ -91,6 +112,7 @@ const char* q_sqlerror_database_text(void* self);
 /// @param self QSqlError*
 ///
 /// @return enum QSqlError__ErrorType
+///
 int32_t q_sqlerror_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#nativeErrorCode)
@@ -98,6 +120,7 @@ int32_t q_sqlerror_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
+///
 const char* q_sqlerror_native_error_code(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#text)
@@ -105,11 +128,13 @@ const char* q_sqlerror_native_error_code(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
+///
 const char* q_sqlerror_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#isValid)
 ///
 /// @param self QSqlError*
+///
 bool q_sqlerror_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#dtor.QSqlError)
@@ -117,9 +142,10 @@ bool q_sqlerror_is_valid(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self QSqlError*
+///
 void q_sqlerror_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qsqlerror.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#public-types)
 
 typedef enum {
     QSQLERROR_ERRORTYPE_NOERROR = 0,

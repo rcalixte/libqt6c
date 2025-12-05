@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/ktexteditor-texthintprovider.html
+/// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html)
 
 /// k_texteditor__texthintprovider_new constructs a new KTextEditor::TextHintProvider object.
 ///
@@ -24,6 +24,7 @@ KTextEditor__TextHintProvider* k_texteditor__texthintprovider_new();
 /// @param self KTextEditor__TextHintProvider*
 /// @param view KTextEditor__View*
 /// @param position KTextEditor__Cursor*
+///
 const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, void* position);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
@@ -32,6 +33,7 @@ const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, voi
 ///
 /// @param self KTextEditor__TextHintProvider*
 /// @param callback const char* func(KTextEditor__TextHintProvider* self, KTextEditor__View* view, KTextEditor__Cursor* position)
+///
 void k_texteditor__texthintprovider_on_text_hint(void* self, const char* (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
@@ -41,11 +43,13 @@ void k_texteditor__texthintprovider_on_text_hint(void* self, const char* (*callb
 /// @param self KTextEditor__TextHintProvider*
 /// @param view KTextEditor__View*
 /// @param position KTextEditor__Cursor*
+///
 const char* k_texteditor__texthintprovider_qbase_text_hint(void* self, void* view, void* position);
 
 /// Delete this object from C++ memory.
 ///
 /// @param self KTextEditor__TextHintProvider*
+///
 void k_texteditor__texthintprovider_delete(void* self);
 
 #endif

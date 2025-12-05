@@ -11,11 +11,12 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qssl.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__KeyType
+///
 const QMetaObject* q_ssl_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -23,11 +24,13 @@ const QMetaObject* q_ssl_get_enum_meta_object(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__KeyType
+///
 const char* q_ssl_get_enum_name(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__EncodingFormat
+///
 const QMetaObject* q_ssl_get_enum_meta_object2(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -35,11 +38,13 @@ const QMetaObject* q_ssl_get_enum_meta_object2(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__EncodingFormat
+///
 const char* q_ssl_get_enum_name2(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__KeyAlgorithm
+///
 const QMetaObject* q_ssl_get_enum_meta_object3(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -47,11 +52,13 @@ const QMetaObject* q_ssl_get_enum_meta_object3(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__KeyAlgorithm
+///
 const char* q_ssl_get_enum_name3(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__AlternativeNameEntryType
+///
 const QMetaObject* q_ssl_get_enum_meta_object4(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -59,11 +66,13 @@ const QMetaObject* q_ssl_get_enum_meta_object4(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__AlternativeNameEntryType
+///
 const char* q_ssl_get_enum_name4(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__SslProtocol
+///
 const QMetaObject* q_ssl_get_enum_meta_object5(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -71,11 +80,13 @@ const QMetaObject* q_ssl_get_enum_meta_object5(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__SslProtocol
+///
 const char* q_ssl_get_enum_name5(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__SslOption
+///
 const QMetaObject* q_ssl_get_enum_meta_object6(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -83,11 +94,13 @@ const QMetaObject* q_ssl_get_enum_meta_object6(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__SslOption
+///
 const char* q_ssl_get_enum_name6(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__AlertLevel
+///
 const QMetaObject* q_ssl_get_enum_meta_object7(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -95,11 +108,13 @@ const QMetaObject* q_ssl_get_enum_meta_object7(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__AlertLevel
+///
 const char* q_ssl_get_enum_name7(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__AlertType
+///
 const QMetaObject* q_ssl_get_enum_meta_object8(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -107,11 +122,13 @@ const QMetaObject* q_ssl_get_enum_meta_object8(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__AlertType
+///
 const char* q_ssl_get_enum_name8(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__ImplementedClass
+///
 const QMetaObject* q_ssl_get_enum_meta_object9(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -119,11 +136,13 @@ const QMetaObject* q_ssl_get_enum_meta_object9(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__ImplementedClass
+///
 const char* q_ssl_get_enum_name9(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum QSsl__SupportedFeature
+///
 const QMetaObject* q_ssl_get_enum_meta_object10(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
@@ -131,19 +150,24 @@ const QMetaObject* q_ssl_get_enum_meta_object10(int32_t param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QSsl__SupportedFeature
+///
 const char* q_ssl_get_enum_name10(int32_t param1);
 
-/// https://doc.qt.io/qt-6/qssl.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
 
 typedef enum {
     QSSL_KEYTYPE_PRIVATEKEY = 0,
     QSSL_KEYTYPE_PUBLICKEY = 1
 } QSsl__KeyType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
+
 typedef enum {
     QSSL_ENCODINGFORMAT_PEM = 0,
     QSSL_ENCODINGFORMAT_DER = 1
 } QSsl__EncodingFormat;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
 
 typedef enum {
     QSSL_KEYALGORITHM_OPAQUE = 0,
@@ -153,11 +177,15 @@ typedef enum {
     QSSL_KEYALGORITHM_DH = 4
 } QSsl__KeyAlgorithm;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
+
 typedef enum {
     QSSL_ALTERNATIVENAMEENTRYTYPE_EMAILENTRY = 0,
     QSSL_ALTERNATIVENAMEENTRYTYPE_DNSENTRY = 1,
     QSSL_ALTERNATIVENAMEENTRYTYPE_IPADDRESSENTRY = 2
 } QSsl__AlternativeNameEntryType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
 
 typedef enum {
     QSSL_SSLPROTOCOL_TLSV1_2 = 0,
@@ -171,6 +199,8 @@ typedef enum {
     QSSL_SSLPROTOCOL_UNKNOWNPROTOCOL = -1
 } QSsl__SslProtocol;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
+
 typedef enum {
     QSSL_SSLOPTION_SSLOPTIONDISABLEEMPTYFRAGMENTS = 1,
     QSSL_SSLOPTION_SSLOPTIONDISABLESESSIONTICKETS = 2,
@@ -182,11 +212,15 @@ typedef enum {
     QSSL_SSLOPTION_SSLOPTIONDISABLESERVERCIPHERPREFERENCE = 128
 } QSsl__SslOption;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
+
 typedef enum {
     QSSL_ALERTLEVEL_WARNING = 0,
     QSSL_ALERTLEVEL_FATAL = 1,
     QSSL_ALERTLEVEL_UNKNOWN = 2
 } QSsl__AlertLevel;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
 
 typedef enum {
     QSSL_ALERTTYPE_CLOSENOTIFY = 0,
@@ -225,6 +259,8 @@ typedef enum {
     QSSL_ALERTTYPE_UNKNOWNALERTMESSAGE = 255
 } QSsl__AlertType;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
+
 typedef enum {
     QSSL_IMPLEMENTEDCLASS_KEY = 0,
     QSSL_IMPLEMENTEDCLASS_CERTIFICATE = 1,
@@ -234,6 +270,8 @@ typedef enum {
     QSSL_IMPLEMENTEDCLASS_DTLS = 5,
     QSSL_IMPLEMENTEDCLASS_DTLSCOOKIE = 6
 } QSsl__ImplementedClass;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qssl.html#public-types)
 
 typedef enum {
     QSSL_SUPPORTEDFEATURE_CERTIFICATEVERIFICATION = 0,

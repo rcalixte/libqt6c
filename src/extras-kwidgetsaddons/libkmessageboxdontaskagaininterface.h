@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kmessageboxdontaskagaininterface.html
+/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html)
 
 /// k_messageboxdontaskagaininterface_new constructs a new KMessageBoxDontAskAgainInterface object.
 ///
@@ -22,6 +22,7 @@ KMessageBoxDontAskAgainInterface* k_messageboxdontaskagaininterface_new();
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
 /// @param result enum KMessageBox__ButtonCode*
+///
 bool k_messageboxdontaskagaininterface_should_be_shown_two_actions(void* self, const char* dontShowAgainName, int32_t* result);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownTwoActions)
@@ -30,6 +31,7 @@ bool k_messageboxdontaskagaininterface_should_be_shown_two_actions(void* self, c
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param callback bool func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName, enum KMessageBox__ButtonCode* result)
+///
 void k_messageboxdontaskagaininterface_on_should_be_shown_two_actions(void* self, bool (*callback)(void*, const char*, int32_t*));
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownTwoActions)
@@ -39,12 +41,14 @@ void k_messageboxdontaskagaininterface_on_should_be_shown_two_actions(void* self
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
 /// @param result enum KMessageBox__ButtonCode*
+///
 bool k_messageboxdontaskagaininterface_qbase_should_be_shown_two_actions(void* self, const char* dontShowAgainName, int32_t* result);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownContinue)
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
+///
 bool k_messageboxdontaskagaininterface_should_be_shown_continue(void* self, const char* dontShowAgainName);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownContinue)
@@ -53,6 +57,7 @@ bool k_messageboxdontaskagaininterface_should_be_shown_continue(void* self, cons
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param callback bool func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName)
+///
 void k_messageboxdontaskagaininterface_on_should_be_shown_continue(void* self, bool (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownContinue)
@@ -61,6 +66,7 @@ void k_messageboxdontaskagaininterface_on_should_be_shown_continue(void* self, b
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
+///
 bool k_messageboxdontaskagaininterface_qbase_should_be_shown_continue(void* self, const char* dontShowAgainName);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainTwoActions)
@@ -68,6 +74,7 @@ bool k_messageboxdontaskagaininterface_qbase_should_be_shown_continue(void* self
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
 /// @param result enum KMessageBox__ButtonCode
+///
 void k_messageboxdontaskagaininterface_save_dont_show_again_two_actions(void* self, const char* dontShowAgainName, int32_t result);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainTwoActions)
@@ -76,6 +83,7 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_two_actions(void* se
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param callback void func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName, enum KMessageBox__ButtonCode result)
+///
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_two_actions(void* self, void (*callback)(void*, const char*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainTwoActions)
@@ -85,12 +93,14 @@ void k_messageboxdontaskagaininterface_on_save_dont_show_again_two_actions(void*
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
 /// @param result enum KMessageBox__ButtonCode
+///
 void k_messageboxdontaskagaininterface_qbase_save_dont_show_again_two_actions(void* self, const char* dontShowAgainName, int32_t result);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainContinue)
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
+///
 void k_messageboxdontaskagaininterface_save_dont_show_again_continue(void* self, const char* dontShowAgainName);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainContinue)
@@ -99,6 +109,7 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_continue(void* self,
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param callback void func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName)
+///
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_continue(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainContinue)
@@ -107,11 +118,13 @@ void k_messageboxdontaskagaininterface_on_save_dont_show_again_continue(void* se
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
+///
 void k_messageboxdontaskagaininterface_qbase_save_dont_show_again_continue(void* self, const char* dontShowAgainName);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableAllMessages)
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
+///
 void k_messageboxdontaskagaininterface_enable_all_messages(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableAllMessages)
@@ -120,6 +133,7 @@ void k_messageboxdontaskagaininterface_enable_all_messages(void* self);
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param callback void func()
+///
 void k_messageboxdontaskagaininterface_on_enable_all_messages(void* self, void (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableAllMessages)
@@ -127,12 +141,14 @@ void k_messageboxdontaskagaininterface_on_enable_all_messages(void* self, void (
 /// Base class method implementation
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
+///
 void k_messageboxdontaskagaininterface_qbase_enable_all_messages(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableMessage)
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
+///
 void k_messageboxdontaskagaininterface_enable_message(void* self, const char* dontShowAgainName);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableMessage)
@@ -141,6 +157,7 @@ void k_messageboxdontaskagaininterface_enable_message(void* self, const char* do
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param callback void func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName)
+///
 void k_messageboxdontaskagaininterface_on_enable_message(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableMessage)
@@ -149,12 +166,14 @@ void k_messageboxdontaskagaininterface_on_enable_message(void* self, void (*call
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
+///
 void k_messageboxdontaskagaininterface_qbase_enable_message(void* self, const char* dontShowAgainName);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#setConfig)
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param config KConfig*
+///
 void k_messageboxdontaskagaininterface_set_config(void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#setConfig)
@@ -163,6 +182,7 @@ void k_messageboxdontaskagaininterface_set_config(void* self, void* config);
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param callback void func(KMessageBoxDontAskAgainInterface* self, KConfig* config)
+///
 void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#setConfig)
@@ -171,12 +191,14 @@ void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param config KConfig*
+///
 void k_messageboxdontaskagaininterface_qbase_set_config(void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#operator-eq)
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param param1 KMessageBoxDontAskAgainInterface*
+///
 void k_messageboxdontaskagaininterface_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#dtor.KMessageBoxDontAskAgainInterface)
@@ -184,6 +206,7 @@ void k_messageboxdontaskagaininterface_operator_assign(void* self, void* param1)
 /// Delete this object from C++ memory.
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
+///
 void k_messageboxdontaskagaininterface_delete(void* self);
 
 #endif

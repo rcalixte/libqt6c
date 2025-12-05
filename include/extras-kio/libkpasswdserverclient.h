@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kpasswdserverclient.html
+/// [Upstream resources](https://api.kde.org/kpasswdserverclient.html)
 
 /// k_passwdserverclient_new constructs a new KPasswdServerClient object.
 ///
@@ -23,6 +23,7 @@ KPasswdServerClient* k_passwdserverclient_new();
 /// @param info KIO__AuthInfo*
 /// @param windowId long long
 /// @param usertime long long
+///
 bool k_passwdserverclient_check_auth_info(void* self, void* info, long long windowId, long long usertime);
 
 /// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#queryAuthInfo)
@@ -32,6 +33,7 @@ bool k_passwdserverclient_check_auth_info(void* self, void* info, long long wind
 /// @param errorMsg const char*
 /// @param windowId long long
 /// @param usertime long long
+///
 int32_t k_passwdserverclient_query_auth_info(void* self, void* info, const char* errorMsg, long long windowId, long long usertime);
 
 /// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#addAuthInfo)
@@ -39,6 +41,7 @@ int32_t k_passwdserverclient_query_auth_info(void* self, void* info, const char*
 /// @param self KPasswdServerClient*
 /// @param info KIO__AuthInfo*
 /// @param windowId long long
+///
 void k_passwdserverclient_add_auth_info(void* self, void* info, long long windowId);
 
 /// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#removeAuthInfo)
@@ -47,6 +50,7 @@ void k_passwdserverclient_add_auth_info(void* self, void* info, long long window
 /// @param host const char*
 /// @param protocol const char*
 /// @param user const char*
+///
 void k_passwdserverclient_remove_auth_info(void* self, const char* host, const char* protocol, const char* user);
 
 /// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#dtor.KPasswdServerClient)
@@ -54,6 +58,7 @@ void k_passwdserverclient_remove_auth_info(void* self, const char* host, const c
 /// Delete this object from C++ memory.
 ///
 /// @param self KPasswdServerClient*
+///
 void k_passwdserverclient_delete(void* self);
 
 #endif

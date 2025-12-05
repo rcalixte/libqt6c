@@ -11,36 +11,43 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html)
 
 /// q_logvalueaxis_new constructs a new QLogValueAxis object.
 ///
 QLogValueAxis* q_logvalueaxis_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html)
+
 /// q_logvalueaxis_new2 constructs a new QLogValueAxis object.
 ///
 /// @param parent QObject*
+///
 QLogValueAxis* q_logvalueaxis_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QLogValueAxis*
+///
 const QMetaObject* q_logvalueaxis_meta_object(void* self);
 
 /// @param self QLogValueAxis*
 /// @param param1 const char*
+///
 void* q_logvalueaxis_metacast(void* self, const char* param1);
 
 /// @param self QLogValueAxis*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_logvalueaxis_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QLogValueAxis*
 /// @param callback int32_t func(QLogValueAxis* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_logvalueaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -49,6 +56,7 @@ void q_logvalueaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_logvalueaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -56,6 +64,7 @@ int32_t q_logvalueaxis_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_logvalueaxis_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#type)
@@ -63,6 +72,7 @@ const char* q_logvalueaxis_tr(const char* s);
 /// @param self QLogValueAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
+///
 int32_t q_logvalueaxis_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#type)
@@ -71,6 +81,7 @@ int32_t q_logvalueaxis_type(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param callback int32_t func()
+///
 void q_logvalueaxis_on_type(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#type)
@@ -80,28 +91,33 @@ void q_logvalueaxis_on_type(void* self, int32_t (*callback)());
 /// @param self QLogValueAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
+///
 int32_t q_logvalueaxis_qbase_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#setMin)
 ///
 /// @param self QLogValueAxis*
 /// @param min double
+///
 void q_logvalueaxis_set_min(void* self, double min);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#min)
 ///
 /// @param self QLogValueAxis*
+///
 double q_logvalueaxis_min(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#setMax)
 ///
 /// @param self QLogValueAxis*
 /// @param max double
+///
 void q_logvalueaxis_set_max(void* self, double max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#max)
 ///
 /// @param self QLogValueAxis*
+///
 double q_logvalueaxis_max(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#setRange)
@@ -109,12 +125,14 @@ double q_logvalueaxis_max(void* self);
 /// @param self QLogValueAxis*
 /// @param min double
 /// @param max double
+///
 void q_logvalueaxis_set_range(void* self, double min, double max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#setLabelFormat)
 ///
 /// @param self QLogValueAxis*
 /// @param format const char*
+///
 void q_logvalueaxis_set_label_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#labelFormat)
@@ -122,57 +140,67 @@ void q_logvalueaxis_set_label_format(void* self, const char* format);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QLogValueAxis*
+///
 const char* q_logvalueaxis_label_format(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#setBase)
 ///
 /// @param self QLogValueAxis*
 /// @param base double
+///
 void q_logvalueaxis_set_base(void* self, double base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#base)
 ///
 /// @param self QLogValueAxis*
+///
 double q_logvalueaxis_base(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#tickCount)
 ///
 /// @param self QLogValueAxis*
+///
 int32_t q_logvalueaxis_tick_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#setMinorTickCount)
 ///
 /// @param self QLogValueAxis*
 /// @param minorTickCount int
+///
 void q_logvalueaxis_set_minor_tick_count(void* self, int minorTickCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minorTickCount)
 ///
 /// @param self QLogValueAxis*
+///
 int32_t q_logvalueaxis_minor_tick_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param min double
+///
 void q_logvalueaxis_min_changed(void* self, double min);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, double min)
+///
 void q_logvalueaxis_on_min_changed(void* self, void (*callback)(void*, double));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#maxChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param max double
+///
 void q_logvalueaxis_max_changed(void* self, double max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#maxChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, double max)
+///
 void q_logvalueaxis_on_max_changed(void* self, void (*callback)(void*, double));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#rangeChanged)
@@ -180,60 +208,70 @@ void q_logvalueaxis_on_max_changed(void* self, void (*callback)(void*, double));
 /// @param self QLogValueAxis*
 /// @param min double
 /// @param max double
+///
 void q_logvalueaxis_range_changed(void* self, double min, double max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#rangeChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, double min, double max)
+///
 void q_logvalueaxis_on_range_changed(void* self, void (*callback)(void*, double, double));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#labelFormatChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param format const char*
+///
 void q_logvalueaxis_label_format_changed(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#labelFormatChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, const char* format)
+///
 void q_logvalueaxis_on_label_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#baseChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param base double
+///
 void q_logvalueaxis_base_changed(void* self, double base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#baseChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, double base)
+///
 void q_logvalueaxis_on_base_changed(void* self, void (*callback)(void*, double));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#tickCountChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param tickCount int
+///
 void q_logvalueaxis_tick_count_changed(void* self, int tickCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#tickCountChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, int tickCount)
+///
 void q_logvalueaxis_on_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minorTickCountChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param minorTickCount int
+///
 void q_logvalueaxis_minor_tick_count_changed(void* self, int minorTickCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minorTickCountChanged)
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, int minorTickCount)
+///
 void q_logvalueaxis_on_minor_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -242,6 +280,7 @@ void q_logvalueaxis_on_minor_tick_count_changed(void* self, void (*callback)(voi
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_logvalueaxis_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -251,6 +290,7 @@ const char* q_logvalueaxis_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_logvalueaxis_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractAxis
@@ -258,6 +298,7 @@ const char* q_logvalueaxis_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isVisible)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -265,6 +306,7 @@ bool q_logvalueaxis_is_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setVisible)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -272,6 +314,7 @@ void q_logvalueaxis_set_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#show)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_show(void* self);
 
 /// Inherited from QAbstractAxis
@@ -279,6 +322,7 @@ void q_logvalueaxis_show(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#hide)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_hide(void* self);
 
 /// Inherited from QAbstractAxis
@@ -286,6 +330,7 @@ void q_logvalueaxis_hide(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isLineVisible)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_line_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -293,6 +338,7 @@ bool q_logvalueaxis_is_line_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setLineVisible)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_line_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -301,6 +347,7 @@ void q_logvalueaxis_set_line_visible(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_set_line_pen(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -308,6 +355,7 @@ void q_logvalueaxis_set_line_pen(void* self, void* pen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#linePen)
 ///
 /// @param self QLogValueAxis*
+///
 QPen* q_logvalueaxis_line_pen(void* self);
 
 /// Inherited from QAbstractAxis
@@ -316,6 +364,7 @@ QPen* q_logvalueaxis_line_pen(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_set_line_pen_color(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -323,6 +372,7 @@ void q_logvalueaxis_set_line_pen_color(void* self, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#linePenColor)
 ///
 /// @param self QLogValueAxis*
+///
 QColor* q_logvalueaxis_line_pen_color(void* self);
 
 /// Inherited from QAbstractAxis
@@ -330,6 +380,7 @@ QColor* q_logvalueaxis_line_pen_color(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isGridLineVisible)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_grid_line_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -337,6 +388,7 @@ bool q_logvalueaxis_is_grid_line_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setGridLineVisible)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_grid_line_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -345,6 +397,7 @@ void q_logvalueaxis_set_grid_line_visible(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_set_grid_line_pen(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -352,6 +405,7 @@ void q_logvalueaxis_set_grid_line_pen(void* self, void* pen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePen)
 ///
 /// @param self QLogValueAxis*
+///
 QPen* q_logvalueaxis_grid_line_pen(void* self);
 
 /// Inherited from QAbstractAxis
@@ -359,6 +413,7 @@ QPen* q_logvalueaxis_grid_line_pen(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isMinorGridLineVisible)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_minor_grid_line_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -366,6 +421,7 @@ bool q_logvalueaxis_is_minor_grid_line_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setMinorGridLineVisible)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_minor_grid_line_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -374,6 +430,7 @@ void q_logvalueaxis_set_minor_grid_line_visible(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_set_minor_grid_line_pen(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -381,6 +438,7 @@ void q_logvalueaxis_set_minor_grid_line_pen(void* self, void* pen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePen)
 ///
 /// @param self QLogValueAxis*
+///
 QPen* q_logvalueaxis_minor_grid_line_pen(void* self);
 
 /// Inherited from QAbstractAxis
@@ -389,6 +447,7 @@ QPen* q_logvalueaxis_minor_grid_line_pen(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_set_grid_line_color(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -396,6 +455,7 @@ void q_logvalueaxis_set_grid_line_color(void* self, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColor)
 ///
 /// @param self QLogValueAxis*
+///
 QColor* q_logvalueaxis_grid_line_color(void* self);
 
 /// Inherited from QAbstractAxis
@@ -404,6 +464,7 @@ QColor* q_logvalueaxis_grid_line_color(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_set_minor_grid_line_color(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -411,6 +472,7 @@ void q_logvalueaxis_set_minor_grid_line_color(void* self, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColor)
 ///
 /// @param self QLogValueAxis*
+///
 QColor* q_logvalueaxis_minor_grid_line_color(void* self);
 
 /// Inherited from QAbstractAxis
@@ -418,6 +480,7 @@ QColor* q_logvalueaxis_minor_grid_line_color(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisible)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_labels_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -425,6 +488,7 @@ bool q_logvalueaxis_labels_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setLabelsVisible)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_labels_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -433,6 +497,7 @@ void q_logvalueaxis_set_labels_visible(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param brush QBrush*
+///
 void q_logvalueaxis_set_labels_brush(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
@@ -440,6 +505,7 @@ void q_logvalueaxis_set_labels_brush(void* self, void* brush);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrush)
 ///
 /// @param self QLogValueAxis*
+///
 QBrush* q_logvalueaxis_labels_brush(void* self);
 
 /// Inherited from QAbstractAxis
@@ -448,6 +514,7 @@ QBrush* q_logvalueaxis_labels_brush(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param font QFont*
+///
 void q_logvalueaxis_set_labels_font(void* self, void* font);
 
 /// Inherited from QAbstractAxis
@@ -455,6 +522,7 @@ void q_logvalueaxis_set_labels_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFont)
 ///
 /// @param self QLogValueAxis*
+///
 QFont* q_logvalueaxis_labels_font(void* self);
 
 /// Inherited from QAbstractAxis
@@ -463,6 +531,7 @@ QFont* q_logvalueaxis_labels_font(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param angle int
+///
 void q_logvalueaxis_set_labels_angle(void* self, int angle);
 
 /// Inherited from QAbstractAxis
@@ -470,6 +539,7 @@ void q_logvalueaxis_set_labels_angle(void* self, int angle);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngle)
 ///
 /// @param self QLogValueAxis*
+///
 int32_t q_logvalueaxis_labels_angle(void* self);
 
 /// Inherited from QAbstractAxis
@@ -478,6 +548,7 @@ int32_t q_logvalueaxis_labels_angle(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_set_labels_color(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -485,6 +556,7 @@ void q_logvalueaxis_set_labels_color(void* self, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColor)
 ///
 /// @param self QLogValueAxis*
+///
 QColor* q_logvalueaxis_labels_color(void* self);
 
 /// Inherited from QAbstractAxis
@@ -492,6 +564,7 @@ QColor* q_logvalueaxis_labels_color(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isTitleVisible)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_title_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -499,6 +572,7 @@ bool q_logvalueaxis_is_title_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setTitleVisible)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_title_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -507,6 +581,7 @@ void q_logvalueaxis_set_title_visible(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param brush QBrush*
+///
 void q_logvalueaxis_set_title_brush(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
@@ -514,6 +589,7 @@ void q_logvalueaxis_set_title_brush(void* self, void* brush);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrush)
 ///
 /// @param self QLogValueAxis*
+///
 QBrush* q_logvalueaxis_title_brush(void* self);
 
 /// Inherited from QAbstractAxis
@@ -522,6 +598,7 @@ QBrush* q_logvalueaxis_title_brush(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param font QFont*
+///
 void q_logvalueaxis_set_title_font(void* self, void* font);
 
 /// Inherited from QAbstractAxis
@@ -529,6 +606,7 @@ void q_logvalueaxis_set_title_font(void* self, void* font);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleFont)
 ///
 /// @param self QLogValueAxis*
+///
 QFont* q_logvalueaxis_title_font(void* self);
 
 /// Inherited from QAbstractAxis
@@ -537,6 +615,7 @@ QFont* q_logvalueaxis_title_font(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param title const char*
+///
 void q_logvalueaxis_set_title_text(void* self, const char* title);
 
 /// Inherited from QAbstractAxis
@@ -546,6 +625,7 @@ void q_logvalueaxis_set_title_text(void* self, const char* title);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QLogValueAxis*
+///
 const char* q_logvalueaxis_title_text(void* self);
 
 /// Inherited from QAbstractAxis
@@ -553,6 +633,7 @@ const char* q_logvalueaxis_title_text(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisible)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_shades_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -560,6 +641,7 @@ bool q_logvalueaxis_shades_visible(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setShadesVisible)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_shades_visible(void* self);
 
 /// Inherited from QAbstractAxis
@@ -568,6 +650,7 @@ void q_logvalueaxis_set_shades_visible(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_set_shades_pen(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -575,6 +658,7 @@ void q_logvalueaxis_set_shades_pen(void* self, void* pen);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPen)
 ///
 /// @param self QLogValueAxis*
+///
 QPen* q_logvalueaxis_shades_pen(void* self);
 
 /// Inherited from QAbstractAxis
@@ -583,6 +667,7 @@ QPen* q_logvalueaxis_shades_pen(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param brush QBrush*
+///
 void q_logvalueaxis_set_shades_brush(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
@@ -590,6 +675,7 @@ void q_logvalueaxis_set_shades_brush(void* self, void* brush);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrush)
 ///
 /// @param self QLogValueAxis*
+///
 QBrush* q_logvalueaxis_shades_brush(void* self);
 
 /// Inherited from QAbstractAxis
@@ -598,6 +684,7 @@ QBrush* q_logvalueaxis_shades_brush(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_set_shades_color(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -605,6 +692,7 @@ void q_logvalueaxis_set_shades_color(void* self, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColor)
 ///
 /// @param self QLogValueAxis*
+///
 QColor* q_logvalueaxis_shades_color(void* self);
 
 /// Inherited from QAbstractAxis
@@ -613,6 +701,7 @@ QColor* q_logvalueaxis_shades_color(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_set_shades_border_color(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -620,6 +709,7 @@ void q_logvalueaxis_set_shades_border_color(void* self, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColor)
 ///
 /// @param self QLogValueAxis*
+///
 QColor* q_logvalueaxis_shades_border_color(void* self);
 
 /// Inherited from QAbstractAxis
@@ -629,6 +719,7 @@ QColor* q_logvalueaxis_shades_border_color(void* self);
 /// @param self QLogValueAxis*
 ///
 /// @return enum Qt__Orientation
+///
 int32_t q_logvalueaxis_orientation(void* self);
 
 /// Inherited from QAbstractAxis
@@ -638,6 +729,7 @@ int32_t q_logvalueaxis_orientation(void* self);
 /// @param self QLogValueAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
+///
 int32_t q_logvalueaxis_alignment(void* self);
 
 /// Inherited from QAbstractAxis
@@ -645,6 +737,7 @@ int32_t q_logvalueaxis_alignment(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setReverse)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_reverse(void* self);
 
 /// Inherited from QAbstractAxis
@@ -652,6 +745,7 @@ void q_logvalueaxis_set_reverse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isReverse)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_reverse(void* self);
 
 /// Inherited from QAbstractAxis
@@ -659,6 +753,7 @@ bool q_logvalueaxis_is_reverse(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setLabelsEditable)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_labels_editable(void* self);
 
 /// Inherited from QAbstractAxis
@@ -666,6 +761,7 @@ void q_logvalueaxis_set_labels_editable(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditable)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_labels_editable(void* self);
 
 /// Inherited from QAbstractAxis
@@ -673,6 +769,7 @@ bool q_logvalueaxis_labels_editable(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncated)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_labels_truncated(void* self);
 
 /// Inherited from QAbstractAxis
@@ -680,6 +777,7 @@ bool q_logvalueaxis_labels_truncated(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#setTruncateLabels)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_set_truncate_labels(void* self);
 
 /// Inherited from QAbstractAxis
@@ -687,6 +785,7 @@ void q_logvalueaxis_set_truncate_labels(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabels)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_truncate_labels(void* self);
 
 /// Inherited from QAbstractAxis
@@ -695,6 +794,7 @@ bool q_logvalueaxis_truncate_labels(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -703,6 +803,7 @@ void q_logvalueaxis_visible_changed(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool visible)
+///
 void q_logvalueaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -711,6 +812,7 @@ void q_logvalueaxis_on_visible_changed(void* self, void (*callback)(void*, bool)
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -719,6 +821,7 @@ void q_logvalueaxis_line_pen_changed(void* self, void* pen);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QPen* pen)
+///
 void q_logvalueaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -727,6 +830,7 @@ void q_logvalueaxis_on_line_pen_changed(void* self, void (*callback)(void*, void
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_line_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -735,6 +839,7 @@ void q_logvalueaxis_line_visible_changed(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool visible)
+///
 void q_logvalueaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -743,6 +848,7 @@ void q_logvalueaxis_on_line_visible_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_labels_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -751,6 +857,7 @@ void q_logvalueaxis_labels_visible_changed(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool visible)
+///
 void q_logvalueaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -759,6 +866,7 @@ void q_logvalueaxis_on_labels_visible_changed(void* self, void (*callback)(void*
 ///
 /// @param self QLogValueAxis*
 /// @param brush QBrush*
+///
 void q_logvalueaxis_labels_brush_changed(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
@@ -767,6 +875,7 @@ void q_logvalueaxis_labels_brush_changed(void* self, void* brush);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QBrush* brush)
+///
 void q_logvalueaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -775,6 +884,7 @@ void q_logvalueaxis_on_labels_brush_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QLogValueAxis*
 /// @param pen QFont*
+///
 void q_logvalueaxis_labels_font_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -783,6 +893,7 @@ void q_logvalueaxis_labels_font_changed(void* self, void* pen);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QFont* pen)
+///
 void q_logvalueaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -791,6 +902,7 @@ void q_logvalueaxis_on_labels_font_changed(void* self, void (*callback)(void*, v
 ///
 /// @param self QLogValueAxis*
 /// @param angle int
+///
 void q_logvalueaxis_labels_angle_changed(void* self, int angle);
 
 /// Inherited from QAbstractAxis
@@ -799,6 +911,7 @@ void q_logvalueaxis_labels_angle_changed(void* self, int angle);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, int angle)
+///
 void q_logvalueaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -807,6 +920,7 @@ void q_logvalueaxis_on_labels_angle_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_grid_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -815,6 +929,7 @@ void q_logvalueaxis_grid_line_pen_changed(void* self, void* pen);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QPen* pen)
+///
 void q_logvalueaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -823,6 +938,7 @@ void q_logvalueaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*,
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_grid_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -831,6 +947,7 @@ void q_logvalueaxis_grid_visible_changed(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool visible)
+///
 void q_logvalueaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -839,6 +956,7 @@ void q_logvalueaxis_on_grid_visible_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_minor_grid_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -847,6 +965,7 @@ void q_logvalueaxis_minor_grid_visible_changed(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool visible)
+///
 void q_logvalueaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -855,6 +974,7 @@ void q_logvalueaxis_on_minor_grid_visible_changed(void* self, void (*callback)(v
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_minor_grid_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -863,6 +983,7 @@ void q_logvalueaxis_minor_grid_line_pen_changed(void* self, void* pen);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QPen* pen)
+///
 void q_logvalueaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -871,6 +992,7 @@ void q_logvalueaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_grid_line_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -879,6 +1001,7 @@ void q_logvalueaxis_grid_line_color_changed(void* self, void* color);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QColor* color)
+///
 void q_logvalueaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -887,6 +1010,7 @@ void q_logvalueaxis_on_grid_line_color_changed(void* self, void (*callback)(void
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_minor_grid_line_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -895,6 +1019,7 @@ void q_logvalueaxis_minor_grid_line_color_changed(void* self, void* color);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QColor* color)
+///
 void q_logvalueaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -903,6 +1028,7 @@ void q_logvalueaxis_on_minor_grid_line_color_changed(void* self, void (*callback
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -911,6 +1037,7 @@ void q_logvalueaxis_color_changed(void* self, void* color);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QColor* color)
+///
 void q_logvalueaxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -919,6 +1046,7 @@ void q_logvalueaxis_on_color_changed(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_labels_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -927,6 +1055,7 @@ void q_logvalueaxis_labels_color_changed(void* self, void* color);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QColor* color)
+///
 void q_logvalueaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -935,6 +1064,7 @@ void q_logvalueaxis_on_labels_color_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QLogValueAxis*
 /// @param title const char*
+///
 void q_logvalueaxis_title_text_changed(void* self, const char* title);
 
 /// Inherited from QAbstractAxis
@@ -943,6 +1073,7 @@ void q_logvalueaxis_title_text_changed(void* self, const char* title);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, const char* title)
+///
 void q_logvalueaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -951,6 +1082,7 @@ void q_logvalueaxis_on_title_text_changed(void* self, void (*callback)(void*, co
 ///
 /// @param self QLogValueAxis*
 /// @param brush QBrush*
+///
 void q_logvalueaxis_title_brush_changed(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
@@ -959,6 +1091,7 @@ void q_logvalueaxis_title_brush_changed(void* self, void* brush);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QBrush* brush)
+///
 void q_logvalueaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -967,6 +1100,7 @@ void q_logvalueaxis_on_title_brush_changed(void* self, void (*callback)(void*, v
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_title_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -975,6 +1109,7 @@ void q_logvalueaxis_title_visible_changed(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool visible)
+///
 void q_logvalueaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -983,6 +1118,7 @@ void q_logvalueaxis_on_title_visible_changed(void* self, void (*callback)(void*,
 ///
 /// @param self QLogValueAxis*
 /// @param font QFont*
+///
 void q_logvalueaxis_title_font_changed(void* self, void* font);
 
 /// Inherited from QAbstractAxis
@@ -991,6 +1127,7 @@ void q_logvalueaxis_title_font_changed(void* self, void* font);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QFont* font)
+///
 void q_logvalueaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -999,6 +1136,7 @@ void q_logvalueaxis_on_title_font_changed(void* self, void (*callback)(void*, vo
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_shades_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1007,6 +1145,7 @@ void q_logvalueaxis_shades_visible_changed(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool visible)
+///
 void q_logvalueaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1015,6 +1154,7 @@ void q_logvalueaxis_on_shades_visible_changed(void* self, void (*callback)(void*
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_shades_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -1023,6 +1163,7 @@ void q_logvalueaxis_shades_color_changed(void* self, void* color);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QColor* color)
+///
 void q_logvalueaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1031,6 +1172,7 @@ void q_logvalueaxis_on_shades_color_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QLogValueAxis*
 /// @param color QColor*
+///
 void q_logvalueaxis_shades_border_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
@@ -1039,6 +1181,7 @@ void q_logvalueaxis_shades_border_color_changed(void* self, void* color);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QColor* color)
+///
 void q_logvalueaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1047,6 +1190,7 @@ void q_logvalueaxis_on_shades_border_color_changed(void* self, void (*callback)(
 ///
 /// @param self QLogValueAxis*
 /// @param pen QPen*
+///
 void q_logvalueaxis_shades_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
@@ -1055,6 +1199,7 @@ void q_logvalueaxis_shades_pen_changed(void* self, void* pen);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QPen* pen)
+///
 void q_logvalueaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1063,6 +1208,7 @@ void q_logvalueaxis_on_shades_pen_changed(void* self, void (*callback)(void*, vo
 ///
 /// @param self QLogValueAxis*
 /// @param brush QBrush*
+///
 void q_logvalueaxis_shades_brush_changed(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
@@ -1071,6 +1217,7 @@ void q_logvalueaxis_shades_brush_changed(void* self, void* brush);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QBrush* brush)
+///
 void q_logvalueaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1079,6 +1226,7 @@ void q_logvalueaxis_on_shades_brush_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QLogValueAxis*
 /// @param reverse bool
+///
 void q_logvalueaxis_reverse_changed(void* self, bool reverse);
 
 /// Inherited from QAbstractAxis
@@ -1087,6 +1235,7 @@ void q_logvalueaxis_reverse_changed(void* self, bool reverse);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool reverse)
+///
 void q_logvalueaxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1095,6 +1244,7 @@ void q_logvalueaxis_on_reverse_changed(void* self, void (*callback)(void*, bool)
 ///
 /// @param self QLogValueAxis*
 /// @param editable bool
+///
 void q_logvalueaxis_labels_editable_changed(void* self, bool editable);
 
 /// Inherited from QAbstractAxis
@@ -1103,6 +1253,7 @@ void q_logvalueaxis_labels_editable_changed(void* self, bool editable);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool editable)
+///
 void q_logvalueaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1111,6 +1262,7 @@ void q_logvalueaxis_on_labels_editable_changed(void* self, void (*callback)(void
 ///
 /// @param self QLogValueAxis*
 /// @param labelsTruncated bool
+///
 void q_logvalueaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 
 /// Inherited from QAbstractAxis
@@ -1119,6 +1271,7 @@ void q_logvalueaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool labelsTruncated)
+///
 void q_logvalueaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1127,6 +1280,7 @@ void q_logvalueaxis_on_labels_truncated_changed(void* self, void (*callback)(voi
 ///
 /// @param self QLogValueAxis*
 /// @param truncateLabels bool
+///
 void q_logvalueaxis_truncate_labels_changed(void* self, bool truncateLabels);
 
 /// Inherited from QAbstractAxis
@@ -1135,6 +1289,7 @@ void q_logvalueaxis_truncate_labels_changed(void* self, bool truncateLabels);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, bool truncateLabels)
+///
 void q_logvalueaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1143,6 +1298,7 @@ void q_logvalueaxis_on_truncate_labels_changed(void* self, void (*callback)(void
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_set_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1151,6 +1307,7 @@ void q_logvalueaxis_set_visible1(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_set_line_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1159,6 +1316,7 @@ void q_logvalueaxis_set_line_visible1(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_set_grid_line_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1167,6 +1325,7 @@ void q_logvalueaxis_set_grid_line_visible1(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_set_minor_grid_line_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1175,6 +1334,7 @@ void q_logvalueaxis_set_minor_grid_line_visible1(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_set_labels_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1183,6 +1343,7 @@ void q_logvalueaxis_set_labels_visible1(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_set_title_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1191,6 +1352,7 @@ void q_logvalueaxis_set_title_visible1(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param visible bool
+///
 void q_logvalueaxis_set_shades_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
@@ -1199,6 +1361,7 @@ void q_logvalueaxis_set_shades_visible1(void* self, bool visible);
 ///
 /// @param self QLogValueAxis*
 /// @param reverse bool
+///
 void q_logvalueaxis_set_reverse1(void* self, bool reverse);
 
 /// Inherited from QAbstractAxis
@@ -1207,6 +1370,7 @@ void q_logvalueaxis_set_reverse1(void* self, bool reverse);
 ///
 /// @param self QLogValueAxis*
 /// @param editable bool
+///
 void q_logvalueaxis_set_labels_editable1(void* self, bool editable);
 
 /// Inherited from QAbstractAxis
@@ -1215,6 +1379,7 @@ void q_logvalueaxis_set_labels_editable1(void* self, bool editable);
 ///
 /// @param self QLogValueAxis*
 /// @param truncateLabels bool
+///
 void q_logvalueaxis_set_truncate_labels1(void* self, bool truncateLabels);
 
 /// Inherited from QObject
@@ -1224,6 +1389,7 @@ void q_logvalueaxis_set_truncate_labels1(void* self, bool truncateLabels);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QLogValueAxis*
+///
 const char* q_logvalueaxis_object_name(void* self);
 
 /// Inherited from QObject
@@ -1232,6 +1398,7 @@ const char* q_logvalueaxis_object_name(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param name char*
+///
 void q_logvalueaxis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -1239,6 +1406,7 @@ void q_logvalueaxis_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -1246,6 +1414,7 @@ bool q_logvalueaxis_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -1253,6 +1422,7 @@ bool q_logvalueaxis_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -1260,6 +1430,7 @@ bool q_logvalueaxis_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QLogValueAxis*
+///
 bool q_logvalueaxis_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -1268,6 +1439,7 @@ bool q_logvalueaxis_signals_blocked(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param b bool
+///
 bool q_logvalueaxis_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -1275,6 +1447,7 @@ bool q_logvalueaxis_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QLogValueAxis*
+///
 QThread* q_logvalueaxis_thread(void* self);
 
 /// Inherited from QObject
@@ -1283,6 +1456,7 @@ QThread* q_logvalueaxis_thread(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param thread QThread*
+///
 bool q_logvalueaxis_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -1291,6 +1465,7 @@ bool q_logvalueaxis_move_to_thread(void* self, void* thread);
 ///
 /// @param self QLogValueAxis*
 /// @param interval int
+///
 int32_t q_logvalueaxis_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -1299,6 +1474,7 @@ int32_t q_logvalueaxis_start_timer(void* self, int interval);
 ///
 /// @param self QLogValueAxis*
 /// @param id int
+///
 void q_logvalueaxis_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -1307,6 +1483,7 @@ void q_logvalueaxis_kill_timer(void* self, int id);
 ///
 /// @param self QLogValueAxis*
 /// @param id enum Qt__TimerId
+///
 void q_logvalueaxis_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -1314,6 +1491,7 @@ void q_logvalueaxis_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QLogValueAxis*
+///
 libqt_list /* of QObject* */ q_logvalueaxis_children(void* self);
 
 /// Inherited from QObject
@@ -1322,6 +1500,7 @@ libqt_list /* of QObject* */ q_logvalueaxis_children(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param parent QObject*
+///
 void q_logvalueaxis_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -1330,6 +1509,7 @@ void q_logvalueaxis_set_parent(void* self, void* parent);
 ///
 /// @param self QLogValueAxis*
 /// @param filterObj QObject*
+///
 void q_logvalueaxis_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -1338,6 +1518,7 @@ void q_logvalueaxis_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QLogValueAxis*
 /// @param obj QObject*
+///
 void q_logvalueaxis_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -1348,6 +1529,7 @@ void q_logvalueaxis_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_logvalueaxis_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -1358,6 +1540,7 @@ QMetaObject__Connection* q_logvalueaxis_connect(void* sender, void* signal, void
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_logvalueaxis_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -1368,6 +1551,7 @@ QMetaObject__Connection* q_logvalueaxis_connect2(void* self, void* sender, const
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_logvalueaxis_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -1375,6 +1559,7 @@ bool q_logvalueaxis_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_logvalueaxis_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -1382,6 +1567,7 @@ bool q_logvalueaxis_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -1389,6 +1575,7 @@ void q_logvalueaxis_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -1398,6 +1585,7 @@ void q_logvalueaxis_dump_object_info(void* self);
 /// @param self QLogValueAxis*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_logvalueaxis_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -1406,6 +1594,7 @@ bool q_logvalueaxis_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QLogValueAxis*
 /// @param name const char*
+///
 QVariant* q_logvalueaxis_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -1415,6 +1604,7 @@ QVariant* q_logvalueaxis_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QLogValueAxis*
+///
 const char** q_logvalueaxis_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -1422,6 +1612,7 @@ const char** q_logvalueaxis_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QLogValueAxis*
+///
 QBindingStorage* q_logvalueaxis_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -1429,6 +1620,7 @@ QBindingStorage* q_logvalueaxis_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QLogValueAxis*
+///
 const QBindingStorage* q_logvalueaxis_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -1436,6 +1628,7 @@ const QBindingStorage* q_logvalueaxis_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1444,6 +1637,7 @@ void q_logvalueaxis_destroyed(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self)
+///
 void q_logvalueaxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1451,6 +1645,7 @@ void q_logvalueaxis_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self QLogValueAxis*
+///
 QObject* q_logvalueaxis_parent(void* self);
 
 /// Inherited from QObject
@@ -1459,6 +1654,7 @@ QObject* q_logvalueaxis_parent(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param classname const char*
+///
 bool q_logvalueaxis_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1466,6 +1662,7 @@ bool q_logvalueaxis_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1475,6 +1672,7 @@ void q_logvalueaxis_delete_later(void* self);
 /// @param self QLogValueAxis*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_logvalueaxis_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1484,6 +1682,7 @@ bool q_logvalueaxis_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QLogValueAxis*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_logvalueaxis_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1495,6 +1694,7 @@ int32_t q_logvalueaxis_start_timer22(void* self, int interval, int32_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_logvalueaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1506,6 +1706,7 @@ QMetaObject__Connection* q_logvalueaxis_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_logvalueaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1514,6 +1715,7 @@ QMetaObject__Connection* q_logvalueaxis_connect4(void* self, void* sender, const
 ///
 /// @param self QLogValueAxis*
 /// @param param1 QObject*
+///
 void q_logvalueaxis_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1522,6 +1724,7 @@ void q_logvalueaxis_destroyed1(void* self, void* param1);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QObject* param1)
+///
 void q_logvalueaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1532,6 +1735,7 @@ void q_logvalueaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLogValueAxis*
 /// @param event QEvent*
+///
 bool q_logvalueaxis_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1542,6 +1746,7 @@ bool q_logvalueaxis_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param event QEvent*
+///
 bool q_logvalueaxis_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1552,6 +1757,7 @@ bool q_logvalueaxis_qbase_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param callback bool func(QLogValueAxis* self, QEvent* event)
+///
 void q_logvalueaxis_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1563,6 +1769,7 @@ void q_logvalueaxis_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QLogValueAxis*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_logvalueaxis_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1574,6 +1781,7 @@ bool q_logvalueaxis_event_filter(void* self, void* watched, void* event);
 /// @param self QLogValueAxis*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_logvalueaxis_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1584,6 +1792,7 @@ bool q_logvalueaxis_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param callback bool func(QLogValueAxis* self, QObject* watched, QEvent* event)
+///
 void q_logvalueaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1594,6 +1803,7 @@ void q_logvalueaxis_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 /// @param self QLogValueAxis*
 /// @param event QTimerEvent*
+///
 void q_logvalueaxis_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1604,6 +1814,7 @@ void q_logvalueaxis_timer_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param event QTimerEvent*
+///
 void q_logvalueaxis_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1614,6 +1825,7 @@ void q_logvalueaxis_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QTimerEvent* event)
+///
 void q_logvalueaxis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1624,6 +1836,7 @@ void q_logvalueaxis_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLogValueAxis*
 /// @param event QChildEvent*
+///
 void q_logvalueaxis_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1634,6 +1847,7 @@ void q_logvalueaxis_child_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param event QChildEvent*
+///
 void q_logvalueaxis_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1644,6 +1858,7 @@ void q_logvalueaxis_qbase_child_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QChildEvent* event)
+///
 void q_logvalueaxis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1654,6 +1869,7 @@ void q_logvalueaxis_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLogValueAxis*
 /// @param event QEvent*
+///
 void q_logvalueaxis_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1664,6 +1880,7 @@ void q_logvalueaxis_custom_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param event QEvent*
+///
 void q_logvalueaxis_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1674,6 +1891,7 @@ void q_logvalueaxis_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QEvent* event)
+///
 void q_logvalueaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1684,6 +1902,7 @@ void q_logvalueaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLogValueAxis*
 /// @param signal QMetaMethod*
+///
 void q_logvalueaxis_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1694,6 +1913,7 @@ void q_logvalueaxis_connect_notify(void* self, void* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param signal QMetaMethod*
+///
 void q_logvalueaxis_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1704,6 +1924,7 @@ void q_logvalueaxis_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QMetaMethod* signal)
+///
 void q_logvalueaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1714,6 +1935,7 @@ void q_logvalueaxis_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QLogValueAxis*
 /// @param signal QMetaMethod*
+///
 void q_logvalueaxis_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1724,6 +1946,7 @@ void q_logvalueaxis_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param signal QMetaMethod*
+///
 void q_logvalueaxis_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1734,6 +1957,7 @@ void q_logvalueaxis_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, QMetaMethod* signal)
+///
 void q_logvalueaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1743,6 +1967,7 @@ void q_logvalueaxis_on_disconnect_notify(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLogValueAxis*
+///
 QObject* q_logvalueaxis_sender(void* self);
 
 /// Inherited from QObject
@@ -1752,6 +1977,7 @@ QObject* q_logvalueaxis_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
+///
 QObject* q_logvalueaxis_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1762,6 +1988,7 @@ QObject* q_logvalueaxis_qbase_sender(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param callback QObject* func()
+///
 void q_logvalueaxis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1771,6 +1998,7 @@ void q_logvalueaxis_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLogValueAxis*
+///
 int32_t q_logvalueaxis_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1780,6 +2008,7 @@ int32_t q_logvalueaxis_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
+///
 int32_t q_logvalueaxis_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1790,6 +2019,7 @@ int32_t q_logvalueaxis_qbase_sender_signal_index(void* self);
 ///
 /// @param self QLogValueAxis*
 /// @param callback int32_t func()
+///
 void q_logvalueaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1800,6 +2030,7 @@ void q_logvalueaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self QLogValueAxis*
 /// @param signal const char*
+///
 int32_t q_logvalueaxis_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1810,6 +2041,7 @@ int32_t q_logvalueaxis_receivers(void* self, const char* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param signal const char*
+///
 int32_t q_logvalueaxis_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1820,6 +2052,7 @@ int32_t q_logvalueaxis_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param callback int32_t func(QLogValueAxis* self, const char* signal)
+///
 void q_logvalueaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1830,6 +2063,7 @@ void q_logvalueaxis_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// @param self QLogValueAxis*
 /// @param signal QMetaMethod*
+///
 bool q_logvalueaxis_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1840,6 +2074,7 @@ bool q_logvalueaxis_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param signal QMetaMethod*
+///
 bool q_logvalueaxis_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1850,6 +2085,7 @@ bool q_logvalueaxis_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QLogValueAxis*
 /// @param callback bool func(QLogValueAxis* self, QMetaMethod* signal)
+///
 void q_logvalueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1860,6 +2096,7 @@ void q_logvalueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 /// @param self QLogValueAxis*
 /// @param callback void func(QLogValueAxis* self, const char* objectName)
+///
 void q_logvalueaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#dtor.QLogValueAxis)
@@ -1867,6 +2104,7 @@ void q_logvalueaxis_on_object_name_changed(void* self, void (*callback)(void*, c
 /// Delete this object from C++ memory.
 ///
 /// @param self QLogValueAxis*
+///
 void q_logvalueaxis_delete(void* self);
 
 #endif

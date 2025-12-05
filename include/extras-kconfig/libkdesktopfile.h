@@ -11,27 +11,33 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kdesktopfile.html
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html)
 
 /// k_desktopfile_new constructs a new KDesktopFile object.
 ///
 /// @param resourceType enum QStandardPaths__StandardLocation
 /// @param fileName const char*
+///
 KDesktopFile* k_desktopfile_new(int32_t resourceType, const char* fileName);
+
+/// [Upstream resources](https://api.kde.org/kdesktopfile.html)
 
 /// k_desktopfile_new2 constructs a new KDesktopFile object.
 ///
 /// @param fileName const char*
+///
 KDesktopFile* k_desktopfile_new2(const char* fileName);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#isDesktopFile)
 ///
 /// @param path const char*
+///
 bool k_desktopfile_is_desktop_file(const char* path);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#isAuthorizedDesktopFile)
 ///
 /// @param path const char*
+///
 bool k_desktopfile_is_authorized_desktop_file(const char* path);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#locateLocal)
@@ -39,11 +45,13 @@ bool k_desktopfile_is_authorized_desktop_file(const char* path);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param path const char*
+///
 const char* k_desktopfile_locate_local(const char* path);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#desktopGroup)
 ///
 /// @param self KDesktopFile*
+///
 KConfigGroup* k_desktopfile_desktop_group(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readType)
@@ -51,6 +59,7 @@ KConfigGroup* k_desktopfile_desktop_group(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readIcon)
@@ -58,6 +67,7 @@ const char* k_desktopfile_read_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readName)
@@ -65,6 +75,7 @@ const char* k_desktopfile_read_icon(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readComment)
@@ -72,6 +83,7 @@ const char* k_desktopfile_read_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_comment(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readGenericName)
@@ -79,6 +91,7 @@ const char* k_desktopfile_read_comment(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_generic_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readPath)
@@ -86,6 +99,7 @@ const char* k_desktopfile_read_generic_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readUrl)
@@ -93,6 +107,7 @@ const char* k_desktopfile_read_path(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readActions)
@@ -100,6 +115,7 @@ const char* k_desktopfile_read_url(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char** k_desktopfile_read_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readMimeTypes)
@@ -107,44 +123,52 @@ const char** k_desktopfile_read_actions(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char** k_desktopfile_read_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#actionGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 KConfigGroup* k_desktopfile_action_group(void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#actionGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 KConfigGroup* k_desktopfile_action_group2(void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasActionGroup)
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 bool k_desktopfile_has_action_group(void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasLinkType)
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_has_link_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasApplicationType)
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_has_application_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#hasDeviceType)
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_has_device_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#tryExec)
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_try_exec(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readDocPath)
@@ -152,17 +176,20 @@ bool k_desktopfile_try_exec(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_read_doc_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#noDisplay)
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_no_display(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#copyTo)
 ///
 /// @param self KDesktopFile*
 /// @param file const char*
+///
 KDesktopFile* k_desktopfile_copy_to(void* self, const char* file);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#fileName)
@@ -170,11 +197,13 @@ KDesktopFile* k_desktopfile_copy_to(void* self, const char* file);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_file_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#actions)
 ///
 /// @param self KDesktopFile*
+///
 libqt_list /* of KDesktopFileAction* */ k_desktopfile_actions(void* self);
 
 /// Inherited from KConfig
@@ -184,6 +213,7 @@ libqt_list /* of KDesktopFileAction* */ k_desktopfile_actions(void* self);
 /// @param self KDesktopFile*
 ///
 /// @return enum QStandardPaths__StandardLocation
+///
 int32_t k_desktopfile_location_type(void* self);
 
 /// Inherited from KConfig
@@ -193,6 +223,7 @@ int32_t k_desktopfile_location_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_name(void* self);
 
 /// Inherited from KConfig
@@ -202,6 +233,7 @@ const char* k_desktopfile_name(void* self);
 /// @param self KDesktopFile*
 ///
 /// @return flag of enum KConfig__OpenFlag
+///
 int32_t k_desktopfile_open_flags(void* self);
 
 /// Inherited from KConfig
@@ -209,6 +241,7 @@ int32_t k_desktopfile_open_flags(void* self);
 /// [Upstream resources](https://api.kde.org/kconfig.html#isDirty)
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_is_dirty(void* self);
 
 /// Inherited from KConfig
@@ -217,6 +250,7 @@ bool k_desktopfile_is_dirty(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param warnUser bool
+///
 bool k_desktopfile_is_config_writable(void* self, bool warnUser);
 
 /// Inherited from KConfig
@@ -226,6 +260,7 @@ bool k_desktopfile_is_config_writable(void* self, bool warnUser);
 /// @param self KDesktopFile*
 /// @param id const char*
 /// @param updateFile const char*
+///
 void k_desktopfile_check_update(void* self, const char* id, const char* updateFile);
 
 /// Inherited from KConfig
@@ -233,6 +268,7 @@ void k_desktopfile_check_update(void* self, const char* id, const char* updateFi
 /// [Upstream resources](https://api.kde.org/kconfig.html#reparseConfiguration)
 ///
 /// @param self KDesktopFile*
+///
 void k_desktopfile_reparse_configuration(void* self);
 
 /// Inherited from KConfig
@@ -241,6 +277,7 @@ void k_desktopfile_reparse_configuration(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param sources const char**
+///
 void k_desktopfile_add_config_sources(void* self, const char* sources[static 1]);
 
 /// Inherited from KConfig
@@ -250,6 +287,7 @@ void k_desktopfile_add_config_sources(void* self, const char* sources[static 1])
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char** k_desktopfile_additional_config_sources(void* self);
 
 /// Inherited from KConfig
@@ -259,6 +297,7 @@ const char** k_desktopfile_additional_config_sources(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
+///
 const char* k_desktopfile_locale(void* self);
 
 /// Inherited from KConfig
@@ -267,6 +306,7 @@ const char* k_desktopfile_locale(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param aLocale const char*
+///
 bool k_desktopfile_set_locale(void* self, const char* aLocale);
 
 /// Inherited from KConfig
@@ -275,6 +315,7 @@ bool k_desktopfile_set_locale(void* self, const char* aLocale);
 ///
 /// @param self KDesktopFile*
 /// @param b bool
+///
 void k_desktopfile_set_read_defaults(void* self, bool b);
 
 /// Inherited from KConfig
@@ -282,6 +323,7 @@ void k_desktopfile_set_read_defaults(void* self, bool b);
 /// [Upstream resources](https://api.kde.org/kconfig.html#readDefaults)
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_read_defaults(void* self);
 
 /// Inherited from KConfig
@@ -289,6 +331,7 @@ bool k_desktopfile_read_defaults(void* self);
 /// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
 ///
 /// @param self KDesktopFile*
+///
 libqt_map /* of const char* to const char* */ k_desktopfile_entry_map(void* self);
 
 /// Inherited from KConfig
@@ -296,6 +339,7 @@ libqt_map /* of const char* to const char* */ k_desktopfile_entry_map(void* self
 /// [Upstream resources](https://api.kde.org/kconfig.html#setMainConfigName)
 ///
 /// @param str const char*
+///
 void k_desktopfile_set_main_config_name(const char* str);
 
 /// Inherited from KConfig
@@ -313,6 +357,7 @@ const char* k_desktopfile_main_config_name();
 /// @param self KDesktopFile*
 /// @param file const char*
 /// @param config KConfig*
+///
 KConfig* k_desktopfile_copy_to2(void* self, const char* file, void* config);
 
 /// Inherited from KConfig
@@ -321,6 +366,7 @@ KConfig* k_desktopfile_copy_to2(void* self, const char* file, void* config);
 ///
 /// @param self KDesktopFile*
 /// @param aGroup const char*
+///
 libqt_map /* of const char* to const char* */ k_desktopfile_entry_map1(void* self, const char* aGroup);
 
 /// Inherited from KConfigBase
@@ -329,6 +375,7 @@ libqt_map /* of const char* to const char* */ k_desktopfile_entry_map1(void* sel
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 bool k_desktopfile_has_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
@@ -337,6 +384,7 @@ bool k_desktopfile_has_group(void* self, const char* group);
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 KConfigGroup* k_desktopfile_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
@@ -345,6 +393,7 @@ KConfigGroup* k_desktopfile_group(void* self, const char* group);
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 const KConfigGroup* k_desktopfile_group2(void* self, const char* group);
 
 /// Inherited from KConfigBase
@@ -353,6 +402,7 @@ const KConfigGroup* k_desktopfile_group2(void* self, const char* group);
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 void k_desktopfile_delete_group(void* self, const char* group);
 
 /// Inherited from KConfigBase
@@ -361,6 +411,7 @@ void k_desktopfile_delete_group(void* self, const char* group);
 ///
 /// @param self KDesktopFile*
 /// @param group const char*
+///
 bool k_desktopfile_is_group_immutable(void* self, const char* group);
 
 /// Inherited from KConfigBase
@@ -370,6 +421,7 @@ bool k_desktopfile_is_group_immutable(void* self, const char* group);
 /// @param self KDesktopFile*
 /// @param group const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
+///
 void k_desktopfile_delete_group2(void* self, const char* group, int32_t flags);
 
 /// Inherited from KConfig
@@ -379,6 +431,7 @@ void k_desktopfile_delete_group2(void* self, const char* group, int32_t flags);
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_sync(void* self);
 
 /// Inherited from KConfig
@@ -388,6 +441,7 @@ bool k_desktopfile_sync(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_qbase_sync(void* self);
 
 /// Inherited from KConfig
@@ -398,6 +452,7 @@ bool k_desktopfile_qbase_sync(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param callback bool func()
+///
 void k_desktopfile_on_sync(void* self, bool (*callback)());
 
 /// Inherited from KConfig
@@ -407,6 +462,7 @@ void k_desktopfile_on_sync(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 void k_desktopfile_mark_as_clean(void* self);
 
 /// Inherited from KConfig
@@ -416,6 +472,7 @@ void k_desktopfile_mark_as_clean(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 void k_desktopfile_qbase_mark_as_clean(void* self);
 
 /// Inherited from KConfig
@@ -426,6 +483,7 @@ void k_desktopfile_qbase_mark_as_clean(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param callback void func()
+///
 void k_desktopfile_on_mark_as_clean(void* self, void (*callback)());
 
 /// Inherited from KConfig
@@ -437,6 +495,7 @@ void k_desktopfile_on_mark_as_clean(void* self, void (*callback)());
 /// @param self KDesktopFile*
 ///
 /// @return enum KConfigBase__AccessMode
+///
 int32_t k_desktopfile_access_mode(void* self);
 
 /// Inherited from KConfig
@@ -448,6 +507,7 @@ int32_t k_desktopfile_access_mode(void* self);
 /// @param self KDesktopFile*
 ///
 /// @return enum KConfigBase__AccessMode
+///
 int32_t k_desktopfile_qbase_access_mode(void* self);
 
 /// Inherited from KConfig
@@ -458,6 +518,7 @@ int32_t k_desktopfile_qbase_access_mode(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param callback int32_t func()
+///
 void k_desktopfile_on_access_mode(void* self, int32_t (*callback)());
 
 /// Inherited from KConfig
@@ -467,6 +528,7 @@ void k_desktopfile_on_access_mode(void* self, int32_t (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_is_immutable(void* self);
 
 /// Inherited from KConfig
@@ -476,6 +538,7 @@ bool k_desktopfile_is_immutable(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 bool k_desktopfile_qbase_is_immutable(void* self);
 
 /// Inherited from KConfig
@@ -486,6 +549,7 @@ bool k_desktopfile_qbase_is_immutable(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param callback bool func()
+///
 void k_desktopfile_on_is_immutable(void* self, bool (*callback)());
 
 /// Inherited from KConfig
@@ -497,6 +561,7 @@ void k_desktopfile_on_is_immutable(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 const char** k_desktopfile_group_list(void* self);
 
 /// Inherited from KConfig
@@ -508,6 +573,7 @@ const char** k_desktopfile_group_list(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDesktopFile*
+///
 const char** k_desktopfile_qbase_group_list(void* self);
 
 /// Inherited from KConfig
@@ -518,6 +584,7 @@ const char** k_desktopfile_qbase_group_list(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param callback const char** func()
+///
 void k_desktopfile_on_group_list(void* self, const char** (*callback)());
 
 /// Inherited from KConfig
@@ -528,6 +595,7 @@ void k_desktopfile_on_group_list(void* self, const char** (*callback)());
 ///
 /// @param self KDesktopFile*
 /// @param groupName const char*
+///
 bool k_desktopfile_has_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
@@ -538,6 +606,7 @@ bool k_desktopfile_has_group_impl(void* self, const char* groupName);
 ///
 /// @param self KDesktopFile*
 /// @param groupName const char*
+///
 bool k_desktopfile_qbase_has_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
@@ -548,6 +617,7 @@ bool k_desktopfile_qbase_has_group_impl(void* self, const char* groupName);
 ///
 /// @param self KDesktopFile*
 /// @param callback bool func(KDesktopFile* self, const char* groupName)
+///
 void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(void*, const char*));
 
 /// Inherited from KConfig
@@ -558,6 +628,7 @@ void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(void*, const c
 ///
 /// @param self KDesktopFile*
 /// @param groupName const char*
+///
 KConfigGroup* k_desktopfile_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
@@ -568,6 +639,7 @@ KConfigGroup* k_desktopfile_group_impl(void* self, const char* groupName);
 ///
 /// @param self KDesktopFile*
 /// @param groupName const char*
+///
 KConfigGroup* k_desktopfile_qbase_group_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
@@ -578,6 +650,7 @@ KConfigGroup* k_desktopfile_qbase_group_impl(void* self, const char* groupName);
 ///
 /// @param self KDesktopFile*
 /// @param callback KConfigGroup* func(KDesktopFile* self, const char* groupName)
+///
 void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
 
 /// Inherited from KConfig
@@ -589,6 +662,7 @@ void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, co
 /// @param self KDesktopFile*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
+///
 void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// Inherited from KConfig
@@ -600,6 +674,7 @@ void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t 
 /// @param self KDesktopFile*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
+///
 void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// Inherited from KConfig
@@ -610,6 +685,7 @@ void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, in
 ///
 /// @param self KDesktopFile*
 /// @param callback void func(KDesktopFile* self, const char* groupName, flag of enum KConfigBase__WriteConfigFlag flags)
+///
 void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t));
 
 /// Inherited from KConfig
@@ -620,6 +696,7 @@ void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, cons
 ///
 /// @param self KDesktopFile*
 /// @param groupName const char*
+///
 bool k_desktopfile_is_group_immutable_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
@@ -630,6 +707,7 @@ bool k_desktopfile_is_group_immutable_impl(void* self, const char* groupName);
 ///
 /// @param self KDesktopFile*
 /// @param groupName const char*
+///
 bool k_desktopfile_qbase_is_group_immutable_impl(void* self, const char* groupName);
 
 /// Inherited from KConfig
@@ -640,6 +718,7 @@ bool k_desktopfile_qbase_is_group_immutable_impl(void* self, const char* groupNa
 ///
 /// @param self KDesktopFile*
 /// @param callback bool func(KDesktopFile* self, const char* groupName)
+///
 void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*));
 
 /// Inherited from KConfig
@@ -651,6 +730,7 @@ void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(void*
 /// @param self KDesktopFile*
 /// @param id int
 /// @param data void*
+///
 void k_desktopfile_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KConfig
@@ -662,6 +742,7 @@ void k_desktopfile_virtual_hook(void* self, int id, void* data);
 /// @param self KDesktopFile*
 /// @param id int
 /// @param data void*
+///
 void k_desktopfile_qbase_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KConfig
@@ -672,6 +753,7 @@ void k_desktopfile_qbase_virtual_hook(void* self, int id, void* data);
 ///
 /// @param self KDesktopFile*
 /// @param callback void func(KDesktopFile* self, int id, void* data)
+///
 void k_desktopfile_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#dtor.KDesktopFile)
@@ -679,6 +761,7 @@ void k_desktopfile_on_virtual_hook(void* self, void (*callback)(void*, int, void
 /// Delete this object from C++ memory.
 ///
 /// @param self KDesktopFile*
+///
 void k_desktopfile_delete(void* self);
 
 #endif

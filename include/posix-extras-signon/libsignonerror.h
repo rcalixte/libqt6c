@@ -11,49 +11,62 @@
 
 #include "../qtlibc.h"
 
-/// https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 
 /// q_signon__error_new constructs a new SignOn::Error object.
 ///
 SignOn__Error* q_signon__error_new();
 
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
+
 /// q_signon__error_new2 constructs a new SignOn::Error object.
 ///
 /// @param src SignOn__Error*
+///
 SignOn__Error* q_signon__error_new2(void* src);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 
 /// q_signon__error_new3 constructs a new SignOn::Error object.
 ///
 /// @param type int
+///
 SignOn__Error* q_signon__error_new3(int type);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 
 /// q_signon__error_new4 constructs a new SignOn::Error object.
 ///
 /// @param type int
 /// @param message const char*
+///
 SignOn__Error* q_signon__error_new4(int type, const char* message);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
 /// @param src SignOn__Error*
+///
 void q_signon__error_operator_assign(void* self, void* src);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
 /// @param type int
+///
 void q_signon__error_set_type(void* self, int type);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
 /// @param message const char*
+///
 void q_signon__error_set_message(void* self, const char* message);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
+///
 int32_t q_signon__error_type(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
@@ -61,6 +74,7 @@ int32_t q_signon__error_type(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__Error*
+///
 const char* q_signon__error_message(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
@@ -68,9 +82,10 @@ const char* q_signon__error_message(void* self);
 /// Delete this object from C++ memory.
 ///
 /// @param self SignOn__Error*
+///
 void q_signon__error_delete(void* self);
 
-/// https://accounts-sso.gitlab.io/signond/classSignOn_1_1Signonerror.html
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Signonerror.html)
 
 typedef enum {
     SIGNON_ERROR_ERRORTYPE_UNKNOWN = 1,

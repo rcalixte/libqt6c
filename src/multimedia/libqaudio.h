@@ -11,16 +11,17 @@
 
 #include "../qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qaudio.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html#convertVolume)
 ///
 /// @param param1 float
 /// @param param2 enum QAudio__VolumeScale
 /// @param param3 enum QAudio__VolumeScale
+///
 float q_audio_convert_volume(float param1, int32_t param2, int32_t param3);
 
-/// https://doc.qt.io/qt-6/qaudio.html#types
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html#public-types)
 
 typedef enum {
     QAUDIO_ERROR_NOERROR = 0,
@@ -30,12 +31,16 @@ typedef enum {
     QAUDIO_ERROR_FATALERROR = 4
 } QAudio__Error;
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html#public-types)
+
 typedef enum {
     QAUDIO_STATE_ACTIVESTATE = 0,
     QAUDIO_STATE_SUSPENDEDSTATE = 1,
     QAUDIO_STATE_STOPPEDSTATE = 2,
     QAUDIO_STATE_IDLESTATE = 3
 } QAudio__State;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html#public-types)
 
 typedef enum {
     QAUDIO_VOLUMESCALE_LINEARVOLUMESCALE = 0,

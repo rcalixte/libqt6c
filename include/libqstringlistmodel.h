@@ -11,47 +11,60 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/qstringlistmodel.html
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html)
 
 /// q_stringlistmodel_new constructs a new QStringListModel object.
 ///
 QStringListModel* q_stringlistmodel_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html)
+
 /// q_stringlistmodel_new2 constructs a new QStringListModel object.
 ///
 /// @param strings const char**
+///
 QStringListModel* q_stringlistmodel_new2(const char* strings[static 1]);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html)
 
 /// q_stringlistmodel_new3 constructs a new QStringListModel object.
 ///
 /// @param parent QObject*
+///
 QStringListModel* q_stringlistmodel_new3(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html)
 
 /// q_stringlistmodel_new4 constructs a new QStringListModel object.
 ///
 /// @param strings const char**
 /// @param parent QObject*
+///
 QStringListModel* q_stringlistmodel_new4(const char* strings[static 1], void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QStringListModel*
+///
 const QMetaObject* q_stringlistmodel_meta_object(void* self);
 
 /// @param self QStringListModel*
 /// @param param1 const char*
+///
 void* q_stringlistmodel_metacast(void* self, const char* param1);
 
 /// @param self QStringListModel*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_stringlistmodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func(QStringListModel* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void q_stringlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -60,6 +73,7 @@ void q_stringlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t q_stringlistmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -67,12 +81,14 @@ int32_t q_stringlistmodel_qbase_metacall(void* self, int32_t param1, int param2,
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* q_stringlistmodel_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#rowCount)
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 int32_t q_stringlistmodel_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#rowCount)
@@ -81,6 +97,7 @@ int32_t q_stringlistmodel_row_count(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func(QStringListModel* self, QModelIndex* parent)
+///
 void q_stringlistmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#rowCount)
@@ -89,6 +106,7 @@ void q_stringlistmodel_on_row_count(void* self, int32_t (*callback)(void*, void*
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 int32_t q_stringlistmodel_qbase_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sibling)
@@ -97,6 +115,7 @@ int32_t q_stringlistmodel_qbase_row_count(void* self, void* parent);
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_stringlistmodel_sibling(void* self, int row, int column, void* idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sibling)
@@ -105,6 +124,7 @@ QModelIndex* q_stringlistmodel_sibling(void* self, int row, int column, void* id
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, int row, int column, QModelIndex* idx)
+///
 void q_stringlistmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sibling)
@@ -115,6 +135,7 @@ void q_stringlistmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, in
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
+///
 QModelIndex* q_stringlistmodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#data)
@@ -122,6 +143,7 @@ QModelIndex* q_stringlistmodel_qbase_sibling(void* self, int row, int column, vo
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* q_stringlistmodel_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#data)
@@ -130,6 +152,7 @@ QVariant* q_stringlistmodel_data(void* self, void* index, int role);
 ///
 /// @param self QStringListModel*
 /// @param callback QVariant* func(QStringListModel* self, QModelIndex* index, int role)
+///
 void q_stringlistmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#data)
@@ -139,6 +162,7 @@ void q_stringlistmodel_on_data(void* self, QVariant* (*callback)(void*, void*, i
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 /// @param role int
+///
 QVariant* q_stringlistmodel_qbase_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setData)
@@ -147,6 +171,7 @@ QVariant* q_stringlistmodel_qbase_data(void* self, void* index, int role);
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_stringlistmodel_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setData)
@@ -155,6 +180,7 @@ bool q_stringlistmodel_set_data(void* self, void* index, void* value, int role);
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* index, QVariant* value, int role)
+///
 void q_stringlistmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setData)
@@ -165,12 +191,14 @@ void q_stringlistmodel_on_set_data(void* self, bool (*callback)(void*, void*, vo
 /// @param index QModelIndex*
 /// @param value QVariant*
 /// @param role int
+///
 bool q_stringlistmodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#clearItemData)
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 bool q_stringlistmodel_clear_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#clearItemData)
@@ -179,6 +207,7 @@ bool q_stringlistmodel_clear_item_data(void* self, void* index);
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* index)
+///
 void q_stringlistmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#clearItemData)
@@ -187,6 +216,7 @@ void q_stringlistmodel_on_clear_item_data(void* self, bool (*callback)(void*, vo
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 bool q_stringlistmodel_qbase_clear_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#flags)
@@ -195,6 +225,7 @@ bool q_stringlistmodel_qbase_clear_item_data(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_stringlistmodel_flags(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#flags)
@@ -203,6 +234,7 @@ int32_t q_stringlistmodel_flags(void* self, void* index);
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func(QStringListModel* self, QModelIndex* index)
+///
 void q_stringlistmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#flags)
@@ -213,6 +245,7 @@ void q_stringlistmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
+///
 int32_t q_stringlistmodel_qbase_flags(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#insertRows)
@@ -221,6 +254,7 @@ int32_t q_stringlistmodel_qbase_flags(void* self, void* index);
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#insertRows)
@@ -229,6 +263,7 @@ bool q_stringlistmodel_insert_rows(void* self, int row, int count, void* parent)
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, int row, int count, QModelIndex* parent)
+///
 void q_stringlistmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#insertRows)
@@ -239,6 +274,7 @@ void q_stringlistmodel_on_insert_rows(void* self, bool (*callback)(void*, int, i
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#removeRows)
@@ -247,6 +283,7 @@ bool q_stringlistmodel_qbase_insert_rows(void* self, int row, int count, void* p
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#removeRows)
@@ -255,6 +292,7 @@ bool q_stringlistmodel_remove_rows(void* self, int row, int count, void* parent)
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, int row, int count, QModelIndex* parent)
+///
 void q_stringlistmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#removeRows)
@@ -265,6 +303,7 @@ void q_stringlistmodel_on_remove_rows(void* self, bool (*callback)(void*, int, i
 /// @param row int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#moveRows)
@@ -275,6 +314,7 @@ bool q_stringlistmodel_qbase_remove_rows(void* self, int row, int count, void* p
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_stringlistmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#moveRows)
@@ -283,6 +323,7 @@ bool q_stringlistmodel_move_rows(void* self, void* sourceParent, int sourceRow, 
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_stringlistmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#moveRows)
@@ -295,12 +336,14 @@ void q_stringlistmodel_on_move_rows(void* self, bool (*callback)(void*, void*, i
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_stringlistmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#itemData)
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_stringlistmodel_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#itemData)
@@ -309,6 +352,7 @@ libqt_map /* of int to QVariant* */ q_stringlistmodel_item_data(void* self, void
 ///
 /// @param self QStringListModel*
 /// @param callback libqt_map /* of int to QVariant* */ func(QStringListModel* self, QModelIndex* index)
+///
 void q_stringlistmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#itemData)
@@ -317,6 +361,7 @@ void q_stringlistmodel_on_item_data(void* self, libqt_map /* of int to QVariant*
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 libqt_map /* of int to QVariant* */ q_stringlistmodel_qbase_item_data(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setItemData)
@@ -324,6 +369,7 @@ libqt_map /* of int to QVariant* */ q_stringlistmodel_qbase_item_data(void* self
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_stringlistmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setItemData)
@@ -332,6 +378,7 @@ bool q_stringlistmodel_set_item_data(void* self, void* index, libqt_map /* of in
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+///
 void q_stringlistmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setItemData)
@@ -341,6 +388,7 @@ void q_stringlistmodel_on_set_item_data(void* self, bool (*callback)(void*, void
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 /// @param roles libqt_map /* of int to QVariant* */
+///
 bool q_stringlistmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sort)
@@ -348,6 +396,7 @@ bool q_stringlistmodel_qbase_set_item_data(void* self, void* index, libqt_map /*
 /// @param self QStringListModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_stringlistmodel_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sort)
@@ -356,6 +405,7 @@ void q_stringlistmodel_sort(void* self, int column, int32_t order);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, int column, enum Qt__SortOrder order)
+///
 void q_stringlistmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sort)
@@ -365,6 +415,7 @@ void q_stringlistmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)
 /// @param self QStringListModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
+///
 void q_stringlistmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#stringList)
@@ -372,12 +423,14 @@ void q_stringlistmodel_qbase_sort(void* self, int column, int32_t order);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringListModel*
+///
 const char** q_stringlistmodel_string_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setStringList)
 ///
 /// @param self QStringListModel*
 /// @param strings const char**
+///
 void q_stringlistmodel_set_string_list(void* self, const char* strings[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#supportedDropActions)
@@ -385,6 +438,7 @@ void q_stringlistmodel_set_string_list(void* self, const char* strings[static 1]
 /// @param self QStringListModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_stringlistmodel_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#supportedDropActions)
@@ -393,6 +447,7 @@ int32_t q_stringlistmodel_supported_drop_actions(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func()
+///
 void q_stringlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#supportedDropActions)
@@ -402,6 +457,7 @@ void q_stringlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)
 /// @param self QStringListModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_stringlistmodel_qbase_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -410,6 +466,7 @@ int32_t q_stringlistmodel_qbase_supported_drop_actions(void* self);
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* q_stringlistmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -419,6 +476,7 @@ const char* q_stringlistmodel_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* q_stringlistmodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractItemModel
@@ -428,6 +486,7 @@ const char* q_stringlistmodel_tr3(const char* s, const char* c, int n);
 /// @param self QStringListModel*
 /// @param row int
 /// @param column int
+///
 bool q_stringlistmodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -436,6 +495,7 @@ bool q_stringlistmodel_has_index(void* self, int row, int column);
 ///
 /// @param self QStringListModel*
 /// @param child QModelIndex*
+///
 QModelIndex* q_stringlistmodel_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
@@ -446,6 +506,7 @@ QModelIndex* q_stringlistmodel_parent(void* self, void* child);
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, QModelIndex* child)
+///
 void q_stringlistmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -456,6 +517,7 @@ void q_stringlistmodel_on_parent(void* self, QModelIndex* (*callback)(void*, voi
 ///
 /// @param self QStringListModel*
 /// @param child QModelIndex*
+///
 QModelIndex* q_stringlistmodel_qbase_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
@@ -464,6 +526,7 @@ QModelIndex* q_stringlistmodel_qbase_parent(void* self, void* child);
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 int32_t q_stringlistmodel_column_count(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -474,6 +537,7 @@ int32_t q_stringlistmodel_column_count(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func(QStringListModel* self, QModelIndex* parent)
+///
 void q_stringlistmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -484,6 +548,7 @@ void q_stringlistmodel_on_column_count(void* self, int32_t (*callback)(void*, vo
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 int32_t q_stringlistmodel_qbase_column_count(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -492,6 +557,7 @@ int32_t q_stringlistmodel_qbase_column_count(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -502,6 +568,7 @@ bool q_stringlistmodel_has_children(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* parent)
+///
 void q_stringlistmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -512,6 +579,7 @@ void q_stringlistmodel_on_has_children(void* self, bool (*callback)(void*, void*
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -520,6 +588,7 @@ bool q_stringlistmodel_qbase_has_children(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param row int
+///
 bool q_stringlistmodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -528,6 +597,7 @@ bool q_stringlistmodel_insert_row(void* self, int row);
 ///
 /// @param self QStringListModel*
 /// @param column int
+///
 bool q_stringlistmodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -536,6 +606,7 @@ bool q_stringlistmodel_insert_column(void* self, int column);
 ///
 /// @param self QStringListModel*
 /// @param row int
+///
 bool q_stringlistmodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
@@ -544,6 +615,7 @@ bool q_stringlistmodel_remove_row(void* self, int row);
 ///
 /// @param self QStringListModel*
 /// @param column int
+///
 bool q_stringlistmodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
@@ -555,6 +627,7 @@ bool q_stringlistmodel_remove_column(void* self, int column);
 /// @param sourceRow int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_stringlistmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -566,6 +639,7 @@ bool q_stringlistmodel_move_row(void* self, void* sourceParent, int sourceRow, v
 /// @param sourceColumn int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_stringlistmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -574,6 +648,7 @@ bool q_stringlistmodel_move_column(void* self, void* sourceParent, int sourceCol
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 bool q_stringlistmodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -583,6 +658,7 @@ bool q_stringlistmodel_check_index(void* self, void* index);
 /// @param self QStringListModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
+///
 void q_stringlistmodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
@@ -591,6 +667,7 @@ void q_stringlistmodel_data_changed(void* self, void* topLeft, void* bottomRight
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
+///
 void q_stringlistmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -601,6 +678,7 @@ void q_stringlistmodel_on_data_changed(void* self, void (*callback)(void*, void*
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -609,6 +687,7 @@ void q_stringlistmodel_header_data_changed(void* self, int32_t orientation, int 
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, enum Qt__Orientation orientation, int first, int last)
+///
 void q_stringlistmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -616,6 +695,7 @@ void q_stringlistmodel_on_header_data_changed(void* self, void (*callback)(void*
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -624,6 +704,7 @@ void q_stringlistmodel_layout_changed(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self)
+///
 void q_stringlistmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -631,6 +712,7 @@ void q_stringlistmodel_on_layout_changed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -639,6 +721,7 @@ void q_stringlistmodel_layout_about_to_be_changed(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self)
+///
 void q_stringlistmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -649,6 +732,7 @@ void q_stringlistmodel_on_layout_about_to_be_changed(void* self, void (*callback
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -658,6 +742,7 @@ bool q_stringlistmodel_has_index3(void* self, int row, int column, void* parent)
 /// @param self QStringListModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -667,6 +752,7 @@ bool q_stringlistmodel_insert_row2(void* self, int row, void* parent);
 /// @param self QStringListModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -676,6 +762,7 @@ bool q_stringlistmodel_insert_column2(void* self, int column, void* parent);
 /// @param self QStringListModel*
 /// @param row int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -685,6 +772,7 @@ bool q_stringlistmodel_remove_row2(void* self, int row, void* parent);
 /// @param self QStringListModel*
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -694,6 +782,7 @@ bool q_stringlistmodel_remove_column2(void* self, int column, void* parent);
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
+///
 bool q_stringlistmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
@@ -704,6 +793,7 @@ bool q_stringlistmodel_check_index2(void* self, void* index, int32_t options);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list /* of int */
+///
 void q_stringlistmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
@@ -712,6 +802,7 @@ void q_stringlistmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+///
 void q_stringlistmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -720,6 +811,7 @@ void q_stringlistmodel_on_data_changed3(void* self, void (*callback)(void*, void
 ///
 /// @param self QStringListModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_stringlistmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -728,6 +820,7 @@ void q_stringlistmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QPersistentModelIndex** parents)
+///
 void q_stringlistmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -737,6 +830,7 @@ void q_stringlistmodel_on_layout_changed1(void* self, void (*callback)(void*, QP
 /// @param self QStringListModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -745,6 +839,7 @@ void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int32_t h
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_stringlistmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -753,6 +848,7 @@ void q_stringlistmodel_on_layout_changed2(void* self, void (*callback)(void*, QP
 ///
 /// @param self QStringListModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
+///
 void q_stringlistmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
@@ -761,6 +857,7 @@ void q_stringlistmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QPersistentModelIndex** parents)
+///
 void q_stringlistmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -770,6 +867,7 @@ void q_stringlistmodel_on_layout_about_to_be_changed1(void* self, void (*callbac
 /// @param self QStringListModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
+///
 void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
@@ -778,6 +876,7 @@ void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+///
 void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
@@ -787,6 +886,7 @@ void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*callbac
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringListModel*
+///
 const char* q_stringlistmodel_object_name(void* self);
 
 /// Inherited from QObject
@@ -795,6 +895,7 @@ const char* q_stringlistmodel_object_name(void* self);
 ///
 /// @param self QStringListModel*
 /// @param name char*
+///
 void q_stringlistmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -802,6 +903,7 @@ void q_stringlistmodel_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self QStringListModel*
+///
 bool q_stringlistmodel_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -809,6 +911,7 @@ bool q_stringlistmodel_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self QStringListModel*
+///
 bool q_stringlistmodel_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -816,6 +919,7 @@ bool q_stringlistmodel_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self QStringListModel*
+///
 bool q_stringlistmodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -823,6 +927,7 @@ bool q_stringlistmodel_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self QStringListModel*
+///
 bool q_stringlistmodel_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -831,6 +936,7 @@ bool q_stringlistmodel_signals_blocked(void* self);
 ///
 /// @param self QStringListModel*
 /// @param b bool
+///
 bool q_stringlistmodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -838,6 +944,7 @@ bool q_stringlistmodel_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self QStringListModel*
+///
 QThread* q_stringlistmodel_thread(void* self);
 
 /// Inherited from QObject
@@ -846,6 +953,7 @@ QThread* q_stringlistmodel_thread(void* self);
 ///
 /// @param self QStringListModel*
 /// @param thread QThread*
+///
 bool q_stringlistmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -854,6 +962,7 @@ bool q_stringlistmodel_move_to_thread(void* self, void* thread);
 ///
 /// @param self QStringListModel*
 /// @param interval int
+///
 int32_t q_stringlistmodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -862,6 +971,7 @@ int32_t q_stringlistmodel_start_timer(void* self, int interval);
 ///
 /// @param self QStringListModel*
 /// @param id int
+///
 void q_stringlistmodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -870,6 +980,7 @@ void q_stringlistmodel_kill_timer(void* self, int id);
 ///
 /// @param self QStringListModel*
 /// @param id enum Qt__TimerId
+///
 void q_stringlistmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -877,6 +988,7 @@ void q_stringlistmodel_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self QStringListModel*
+///
 libqt_list /* of QObject* */ q_stringlistmodel_children(void* self);
 
 /// Inherited from QObject
@@ -885,6 +997,7 @@ libqt_list /* of QObject* */ q_stringlistmodel_children(void* self);
 ///
 /// @param self QStringListModel*
 /// @param parent QObject*
+///
 void q_stringlistmodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -893,6 +1006,7 @@ void q_stringlistmodel_set_parent(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param filterObj QObject*
+///
 void q_stringlistmodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -901,6 +1015,7 @@ void q_stringlistmodel_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self QStringListModel*
 /// @param obj QObject*
+///
 void q_stringlistmodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -911,6 +1026,7 @@ void q_stringlistmodel_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* q_stringlistmodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -921,6 +1037,7 @@ QMetaObject__Connection* q_stringlistmodel_connect(void* sender, void* signal, v
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* q_stringlistmodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -931,6 +1048,7 @@ QMetaObject__Connection* q_stringlistmodel_connect2(void* self, void* sender, co
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool q_stringlistmodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -938,6 +1056,7 @@ bool q_stringlistmodel_disconnect(void* sender, void* signal, void* receiver, vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool q_stringlistmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -945,6 +1064,7 @@ bool q_stringlistmodel_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -952,6 +1072,7 @@ void q_stringlistmodel_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -961,6 +1082,7 @@ void q_stringlistmodel_dump_object_info(void* self);
 /// @param self QStringListModel*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool q_stringlistmodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -969,6 +1091,7 @@ bool q_stringlistmodel_set_property(void* self, const char* name, void* value);
 ///
 /// @param self QStringListModel*
 /// @param name const char*
+///
 QVariant* q_stringlistmodel_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -978,6 +1101,7 @@ QVariant* q_stringlistmodel_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringListModel*
+///
 const char** q_stringlistmodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -985,6 +1109,7 @@ const char** q_stringlistmodel_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStringListModel*
+///
 QBindingStorage* q_stringlistmodel_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -992,6 +1117,7 @@ QBindingStorage* q_stringlistmodel_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self QStringListModel*
+///
 const QBindingStorage* q_stringlistmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -999,6 +1125,7 @@ const QBindingStorage* q_stringlistmodel_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_destroyed(void* self);
 
 /// Inherited from QObject
@@ -1007,6 +1134,7 @@ void q_stringlistmodel_destroyed(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self)
+///
 void q_stringlistmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1015,6 +1143,7 @@ void q_stringlistmodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// @param self QStringListModel*
 /// @param classname const char*
+///
 bool q_stringlistmodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -1022,6 +1151,7 @@ bool q_stringlistmodel_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_delete_later(void* self);
 
 /// Inherited from QObject
@@ -1031,6 +1161,7 @@ void q_stringlistmodel_delete_later(void* self);
 /// @param self QStringListModel*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool q_stringlistmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -1040,6 +1171,7 @@ bool q_stringlistmodel_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QStringListModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t q_stringlistmodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -1051,6 +1183,7 @@ int32_t q_stringlistmodel_start_timer22(void* self, int interval, int32_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_stringlistmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -1062,6 +1195,7 @@ QMetaObject__Connection* q_stringlistmodel_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* q_stringlistmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -1070,6 +1204,7 @@ QMetaObject__Connection* q_stringlistmodel_connect4(void* self, void* sender, co
 ///
 /// @param self QStringListModel*
 /// @param param1 QObject*
+///
 void q_stringlistmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -1078,6 +1213,7 @@ void q_stringlistmodel_destroyed1(void* self, void* param1);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QObject* param1)
+///
 void q_stringlistmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractListModel
@@ -1090,6 +1226,7 @@ void q_stringlistmodel_on_destroyed1(void* self, void (*callback)(void*, void*))
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_stringlistmodel_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -1102,6 +1239,7 @@ QModelIndex* q_stringlistmodel_index(void* self, int row, int column, void* pare
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 QModelIndex* q_stringlistmodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -1112,6 +1250,7 @@ QModelIndex* q_stringlistmodel_qbase_index(void* self, int row, int column, void
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, int row, int column, QModelIndex* parent)
+///
 void q_stringlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -1126,6 +1265,7 @@ void q_stringlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int,
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -1140,6 +1280,7 @@ bool q_stringlistmodel_drop_mime_data(void* self, void* data, int32_t action, in
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
@@ -1150,6 +1291,7 @@ bool q_stringlistmodel_qbase_drop_mime_data(void* self, void* data, int32_t acti
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_stringlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1162,6 +1304,7 @@ void q_stringlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, voi
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_stringlistmodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1174,6 +1317,7 @@ QVariant* q_stringlistmodel_header_data(void* self, int section, int32_t orienta
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
+///
 QVariant* q_stringlistmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1184,6 +1328,7 @@ QVariant* q_stringlistmodel_qbase_header_data(void* self, int section, int32_t o
 ///
 /// @param self QStringListModel*
 /// @param callback QVariant* func(QStringListModel* self, int section, enum Qt__Orientation orientation, int role)
+///
 void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -1197,6 +1342,7 @@ void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, i
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_stringlistmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1210,6 +1356,7 @@ bool q_stringlistmodel_set_header_data(void* self, int section, int32_t orientat
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
+///
 bool q_stringlistmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -1220,6 +1367,7 @@ bool q_stringlistmodel_qbase_set_header_data(void* self, int section, int32_t or
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
+///
 void q_stringlistmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1231,6 +1379,7 @@ void q_stringlistmodel_on_set_header_data(void* self, bool (*callback)(void*, in
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 const char** q_stringlistmodel_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1242,6 +1391,7 @@ const char** q_stringlistmodel_mime_types(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 const char** q_stringlistmodel_qbase_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1252,6 +1402,7 @@ const char** q_stringlistmodel_qbase_mime_types(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback const char** func()
+///
 void q_stringlistmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1262,6 +1413,7 @@ void q_stringlistmodel_on_mime_types(void* self, const char** (*callback)());
 ///
 /// @param self QStringListModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_stringlistmodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -1272,6 +1424,7 @@ QMimeData* q_stringlistmodel_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self QStringListModel*
 /// @param indexes libqt_list /* of QModelIndex* */
+///
 QMimeData* q_stringlistmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
@@ -1282,6 +1435,7 @@ QMimeData* q_stringlistmodel_qbase_mime_data(void* self, libqt_list indexes);
 ///
 /// @param self QStringListModel*
 /// @param callback QMimeData* func(QStringListModel* self, QModelIndex** indexes)
+///
 void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -1296,6 +1450,7 @@ void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QM
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1310,6 +1465,7 @@ bool q_stringlistmodel_can_drop_mime_data(void* self, void* data, int32_t action
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1320,6 +1476,7 @@ bool q_stringlistmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t 
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
+///
 void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1331,6 +1488,7 @@ void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
 /// @param self QStringListModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_stringlistmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1342,6 +1500,7 @@ int32_t q_stringlistmodel_supported_drag_actions(void* self);
 /// @param self QStringListModel*
 ///
 /// @return flag of enum Qt__DropAction
+///
 int32_t q_stringlistmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1352,6 +1511,7 @@ int32_t q_stringlistmodel_qbase_supported_drag_actions(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func()
+///
 void q_stringlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1364,6 +1524,7 @@ void q_stringlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1376,6 +1537,7 @@ bool q_stringlistmodel_insert_columns(void* self, int column, int count, void* p
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1386,6 +1548,7 @@ bool q_stringlistmodel_qbase_insert_columns(void* self, int column, int count, v
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, int column, int count, QModelIndex* parent)
+///
 void q_stringlistmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1398,6 +1561,7 @@ void q_stringlistmodel_on_insert_columns(void* self, bool (*callback)(void*, int
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1410,6 +1574,7 @@ bool q_stringlistmodel_remove_columns(void* self, int column, int count, void* p
 /// @param column int
 /// @param count int
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1420,6 +1585,7 @@ bool q_stringlistmodel_qbase_remove_columns(void* self, int column, int count, v
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, int column, int count, QModelIndex* parent)
+///
 void q_stringlistmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1434,6 +1600,7 @@ void q_stringlistmodel_on_remove_columns(void* self, bool (*callback)(void*, int
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_stringlistmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1448,6 +1615,7 @@ bool q_stringlistmodel_move_columns(void* self, void* sourceParent, int sourceCo
 /// @param count int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
+///
 bool q_stringlistmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1458,6 +1626,7 @@ bool q_stringlistmodel_qbase_move_columns(void* self, void* sourceParent, int so
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
+///
 void q_stringlistmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1468,6 +1637,7 @@ void q_stringlistmodel_on_move_columns(void* self, bool (*callback)(void*, void*
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 void q_stringlistmodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1478,6 +1648,7 @@ void q_stringlistmodel_fetch_more(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 void q_stringlistmodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1488,6 +1659,7 @@ void q_stringlistmodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent)
+///
 void q_stringlistmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1498,6 +1670,7 @@ void q_stringlistmodel_on_fetch_more(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1508,6 +1681,7 @@ bool q_stringlistmodel_can_fetch_more(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param parent QModelIndex*
+///
 bool q_stringlistmodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1518,6 +1692,7 @@ bool q_stringlistmodel_qbase_can_fetch_more(void* self, void* parent);
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* parent)
+///
 void q_stringlistmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1528,6 +1703,7 @@ void q_stringlistmodel_on_can_fetch_more(void* self, bool (*callback)(void*, voi
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_stringlistmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1538,6 +1714,7 @@ QModelIndex* q_stringlistmodel_buddy(void* self, void* index);
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 QModelIndex* q_stringlistmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1548,6 +1725,7 @@ QModelIndex* q_stringlistmodel_qbase_buddy(void* self, void* index);
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, QModelIndex* index)
+///
 void q_stringlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1562,6 +1740,7 @@ void q_stringlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_stringlistmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1576,6 +1755,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_match(void* self, void* start
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
+///
 libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1586,6 +1766,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_match(void* self, void*
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex** func(QStringListModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+///
 void q_stringlistmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1596,6 +1777,7 @@ void q_stringlistmodel_on_match(void* self, QModelIndex** (*callback)(void*, voi
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 QSize* q_stringlistmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1606,6 +1788,7 @@ QSize* q_stringlistmodel_span(void* self, void* index);
 ///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
+///
 QSize* q_stringlistmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1616,6 +1799,7 @@ QSize* q_stringlistmodel_qbase_span(void* self, void* index);
 ///
 /// @param self QStringListModel*
 /// @param callback QSize* func(QStringListModel* self, QModelIndex* index)
+///
 void q_stringlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1625,6 +1809,7 @@ void q_stringlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 libqt_map /* of int to char* */ q_stringlistmodel_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1634,6 +1819,7 @@ libqt_map /* of int to char* */ q_stringlistmodel_role_names(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 libqt_map /* of int to char* */ q_stringlistmodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1644,6 +1830,7 @@ libqt_map /* of int to char* */ q_stringlistmodel_qbase_role_names(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback libqt_map /* of int to char* */ func()
+///
 void q_stringlistmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1655,6 +1842,7 @@ void q_stringlistmodel_on_role_names(void* self, libqt_map /* of int to char* */
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_stringlistmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1666,6 +1854,7 @@ void q_stringlistmodel_multi_data(void* self, void* index, void* roleDataSpan);
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
+///
 void q_stringlistmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1676,6 +1865,7 @@ void q_stringlistmodel_qbase_multi_data(void* self, void* index, void* roleDataS
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
+///
 void q_stringlistmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1685,6 +1875,7 @@ void q_stringlistmodel_on_multi_data(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 bool q_stringlistmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1694,6 +1885,7 @@ bool q_stringlistmodel_submit(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 bool q_stringlistmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1704,6 +1896,7 @@ bool q_stringlistmodel_qbase_submit(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback bool func()
+///
 void q_stringlistmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1713,6 +1906,7 @@ void q_stringlistmodel_on_submit(void* self, bool (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1722,6 +1916,7 @@ void q_stringlistmodel_revert(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1732,6 +1927,7 @@ void q_stringlistmodel_qbase_revert(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1741,6 +1937,7 @@ void q_stringlistmodel_on_revert(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1750,6 +1947,7 @@ void q_stringlistmodel_reset_internal_data(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1760,6 +1958,7 @@ void q_stringlistmodel_qbase_reset_internal_data(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1770,6 +1969,7 @@ void q_stringlistmodel_on_reset_internal_data(void* self, void (*callback)());
 ///
 /// @param self QStringListModel*
 /// @param event QEvent*
+///
 bool q_stringlistmodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1780,6 +1980,7 @@ bool q_stringlistmodel_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param event QEvent*
+///
 bool q_stringlistmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1790,6 +1991,7 @@ bool q_stringlistmodel_qbase_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QEvent* event)
+///
 void q_stringlistmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1801,6 +2003,7 @@ void q_stringlistmodel_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QStringListModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_stringlistmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1812,6 +2015,7 @@ bool q_stringlistmodel_event_filter(void* self, void* watched, void* event);
 /// @param self QStringListModel*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool q_stringlistmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1822,6 +2026,7 @@ bool q_stringlistmodel_qbase_event_filter(void* self, void* watched, void* event
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QObject* watched, QEvent* event)
+///
 void q_stringlistmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1832,6 +2037,7 @@ void q_stringlistmodel_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 /// @param self QStringListModel*
 /// @param event QTimerEvent*
+///
 void q_stringlistmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1842,6 +2048,7 @@ void q_stringlistmodel_timer_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param event QTimerEvent*
+///
 void q_stringlistmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1852,6 +2059,7 @@ void q_stringlistmodel_qbase_timer_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QTimerEvent* event)
+///
 void q_stringlistmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1862,6 +2070,7 @@ void q_stringlistmodel_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QStringListModel*
 /// @param event QChildEvent*
+///
 void q_stringlistmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1872,6 +2081,7 @@ void q_stringlistmodel_child_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param event QChildEvent*
+///
 void q_stringlistmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1882,6 +2092,7 @@ void q_stringlistmodel_qbase_child_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QChildEvent* event)
+///
 void q_stringlistmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1892,6 +2103,7 @@ void q_stringlistmodel_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QStringListModel*
 /// @param event QEvent*
+///
 void q_stringlistmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1902,6 +2114,7 @@ void q_stringlistmodel_custom_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param event QEvent*
+///
 void q_stringlistmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1912,6 +2125,7 @@ void q_stringlistmodel_qbase_custom_event(void* self, void* event);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QEvent* event)
+///
 void q_stringlistmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1922,6 +2136,7 @@ void q_stringlistmodel_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 /// @param self QStringListModel*
 /// @param signal QMetaMethod*
+///
 void q_stringlistmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1932,6 +2147,7 @@ void q_stringlistmodel_connect_notify(void* self, void* signal);
 ///
 /// @param self QStringListModel*
 /// @param signal QMetaMethod*
+///
 void q_stringlistmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1942,6 +2158,7 @@ void q_stringlistmodel_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QMetaMethod* signal)
+///
 void q_stringlistmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1952,6 +2169,7 @@ void q_stringlistmodel_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 /// @param self QStringListModel*
 /// @param signal QMetaMethod*
+///
 void q_stringlistmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1962,6 +2180,7 @@ void q_stringlistmodel_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStringListModel*
 /// @param signal QMetaMethod*
+///
 void q_stringlistmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1972,6 +2191,7 @@ void q_stringlistmodel_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QMetaMethod* signal)
+///
 void q_stringlistmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1983,6 +2203,7 @@ void q_stringlistmodel_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param self QStringListModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_stringlistmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1994,6 +2215,7 @@ QModelIndex* q_stringlistmodel_create_index(void* self, int row, int column);
 /// @param self QStringListModel*
 /// @param row int
 /// @param column int
+///
 QModelIndex* q_stringlistmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -2004,6 +2226,7 @@ QModelIndex* q_stringlistmodel_qbase_create_index(void* self, int row, int colum
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, int row, int column)
+///
 void q_stringlistmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2015,6 +2238,7 @@ void q_stringlistmodel_on_create_index(void* self, QModelIndex* (*callback)(void
 /// @param self QStringListModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_stringlistmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2026,6 +2250,7 @@ void q_stringlistmodel_encode_data(void* self, libqt_list indexes, void* stream)
 /// @param self QStringListModel*
 /// @param indexes libqt_list /* of QModelIndex* */
 /// @param stream QDataStream*
+///
 void q_stringlistmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2036,6 +2261,7 @@ void q_stringlistmodel_qbase_encode_data(void* self, libqt_list indexes, void* s
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex** indexes, QDataStream* stream)
+///
 void q_stringlistmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2049,6 +2275,7 @@ void q_stringlistmodel_on_encode_data(void* self, void (*callback)(void*, QModel
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_stringlistmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2062,6 +2289,7 @@ bool q_stringlistmodel_decode_data(void* self, int row, int column, void* parent
 /// @param column int
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
+///
 bool q_stringlistmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -2072,6 +2300,7 @@ bool q_stringlistmodel_qbase_decode_data(void* self, int row, int column, void* 
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
+///
 void q_stringlistmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2084,6 +2313,7 @@ void q_stringlistmodel_on_decode_data(void* self, bool (*callback)(void*, int, i
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2096,6 +2326,7 @@ void q_stringlistmodel_begin_insert_rows(void* self, void* parent, int first, in
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2106,6 +2337,7 @@ void q_stringlistmodel_qbase_begin_insert_rows(void* self, void* parent, int fir
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2115,6 +2347,7 @@ void q_stringlistmodel_on_begin_insert_rows(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2124,6 +2357,7 @@ void q_stringlistmodel_end_insert_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2134,6 +2368,7 @@ void q_stringlistmodel_qbase_end_insert_rows(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2146,6 +2381,7 @@ void q_stringlistmodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2158,6 +2394,7 @@ void q_stringlistmodel_begin_remove_rows(void* self, void* parent, int first, in
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2168,6 +2405,7 @@ void q_stringlistmodel_qbase_begin_remove_rows(void* self, void* parent, int fir
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2177,6 +2415,7 @@ void q_stringlistmodel_on_begin_remove_rows(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2186,6 +2425,7 @@ void q_stringlistmodel_end_remove_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2196,6 +2436,7 @@ void q_stringlistmodel_qbase_end_remove_rows(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2210,6 +2451,7 @@ void q_stringlistmodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_stringlistmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2224,6 +2466,7 @@ bool q_stringlistmodel_begin_move_rows(void* self, void* sourceParent, int sourc
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
+///
 bool q_stringlistmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2234,6 +2477,7 @@ bool q_stringlistmodel_qbase_begin_move_rows(void* self, void* sourceParent, int
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
+///
 void q_stringlistmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2243,6 +2487,7 @@ void q_stringlistmodel_on_begin_move_rows(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2252,6 +2497,7 @@ void q_stringlistmodel_end_move_rows(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2262,6 +2508,7 @@ void q_stringlistmodel_qbase_end_move_rows(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2274,6 +2521,7 @@ void q_stringlistmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2286,6 +2534,7 @@ void q_stringlistmodel_begin_insert_columns(void* self, void* parent, int first,
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2296,6 +2545,7 @@ void q_stringlistmodel_qbase_begin_insert_columns(void* self, void* parent, int 
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2305,6 +2555,7 @@ void q_stringlistmodel_on_begin_insert_columns(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2314,6 +2565,7 @@ void q_stringlistmodel_end_insert_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2324,6 +2576,7 @@ void q_stringlistmodel_qbase_end_insert_columns(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2336,6 +2589,7 @@ void q_stringlistmodel_on_end_insert_columns(void* self, void (*callback)());
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2348,6 +2602,7 @@ void q_stringlistmodel_begin_remove_columns(void* self, void* parent, int first,
 /// @param parent QModelIndex*
 /// @param first int
 /// @param last int
+///
 void q_stringlistmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2358,6 +2613,7 @@ void q_stringlistmodel_qbase_begin_remove_columns(void* self, void* parent, int 
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2367,6 +2623,7 @@ void q_stringlistmodel_on_begin_remove_columns(void* self, void (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2376,6 +2633,7 @@ void q_stringlistmodel_end_remove_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2386,6 +2644,7 @@ void q_stringlistmodel_qbase_end_remove_columns(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2400,6 +2659,7 @@ void q_stringlistmodel_on_end_remove_columns(void* self, void (*callback)());
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_stringlistmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2414,6 +2674,7 @@ bool q_stringlistmodel_begin_move_columns(void* self, void* sourceParent, int so
 /// @param sourceLast int
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
+///
 bool q_stringlistmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2424,6 +2685,7 @@ bool q_stringlistmodel_qbase_begin_move_columns(void* self, void* sourceParent, 
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_stringlistmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2433,6 +2695,7 @@ void q_stringlistmodel_on_begin_move_columns(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2442,6 +2705,7 @@ void q_stringlistmodel_end_move_columns(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2452,6 +2716,7 @@ void q_stringlistmodel_qbase_end_move_columns(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2461,6 +2726,7 @@ void q_stringlistmodel_on_end_move_columns(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2470,6 +2736,7 @@ void q_stringlistmodel_begin_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2480,6 +2747,7 @@ void q_stringlistmodel_qbase_begin_reset_model(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2489,6 +2757,7 @@ void q_stringlistmodel_on_begin_reset_model(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2498,6 +2767,7 @@ void q_stringlistmodel_end_reset_model(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2508,6 +2778,7 @@ void q_stringlistmodel_qbase_end_reset_model(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback void func()
+///
 void q_stringlistmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2519,6 +2790,7 @@ void q_stringlistmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param self QStringListModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_stringlistmodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2530,6 +2802,7 @@ void q_stringlistmodel_change_persistent_index(void* self, void* from, void* to)
 /// @param self QStringListModel*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
+///
 void q_stringlistmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2540,6 +2813,7 @@ void q_stringlistmodel_qbase_change_persistent_index(void* self, void* from, voi
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* from, QModelIndex* to)
+///
 void q_stringlistmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2551,6 +2825,7 @@ void q_stringlistmodel_on_change_persistent_index(void* self, void (*callback)(v
 /// @param self QStringListModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_stringlistmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2562,6 +2837,7 @@ void q_stringlistmodel_change_persistent_index_list(void* self, libqt_list from,
 /// @param self QStringListModel*
 /// @param from libqt_list /* of QModelIndex* */
 /// @param to libqt_list /* of QModelIndex* */
+///
 void q_stringlistmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2572,6 +2848,7 @@ void q_stringlistmodel_qbase_change_persistent_index_list(void* self, libqt_list
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex** from, QModelIndex** to)
+///
 void q_stringlistmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
@@ -2581,6 +2858,7 @@ void q_stringlistmodel_on_change_persistent_index_list(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 libqt_list /* of QModelIndex* */ q_stringlistmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2590,6 +2868,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_persistent_index_list(void* s
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2600,6 +2879,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_persistent_index_list(v
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex** func()
+///
 void q_stringlistmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
@@ -2609,6 +2889,7 @@ void q_stringlistmodel_on_persistent_index_list(void* self, QModelIndex** (*call
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 QObject* q_stringlistmodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2618,6 +2899,7 @@ QObject* q_stringlistmodel_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 QObject* q_stringlistmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2628,6 +2910,7 @@ QObject* q_stringlistmodel_qbase_sender(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback QObject* func()
+///
 void q_stringlistmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2637,6 +2920,7 @@ void q_stringlistmodel_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 int32_t q_stringlistmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2646,6 +2930,7 @@ int32_t q_stringlistmodel_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStringListModel*
+///
 int32_t q_stringlistmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2656,6 +2941,7 @@ int32_t q_stringlistmodel_qbase_sender_signal_index(void* self);
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func()
+///
 void q_stringlistmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2666,6 +2952,7 @@ void q_stringlistmodel_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 /// @param self QStringListModel*
 /// @param signal const char*
+///
 int32_t q_stringlistmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2676,6 +2963,7 @@ int32_t q_stringlistmodel_receivers(void* self, const char* signal);
 ///
 /// @param self QStringListModel*
 /// @param signal const char*
+///
 int32_t q_stringlistmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2686,6 +2974,7 @@ int32_t q_stringlistmodel_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t func(QStringListModel* self, const char* signal)
+///
 void q_stringlistmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2696,6 +2985,7 @@ void q_stringlistmodel_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 /// @param self QStringListModel*
 /// @param signal QMetaMethod*
+///
 bool q_stringlistmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2706,6 +2996,7 @@ bool q_stringlistmodel_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStringListModel*
 /// @param signal QMetaMethod*
+///
 bool q_stringlistmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2716,6 +3007,7 @@ bool q_stringlistmodel_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self QStringListModel*
 /// @param callback bool func(QStringListModel* self, QMetaMethod* signal)
+///
 void q_stringlistmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2726,6 +3018,7 @@ void q_stringlistmodel_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2736,6 +3029,7 @@ void q_stringlistmodel_on_rows_about_to_be_inserted(void* self, void (*callback)
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2746,6 +3040,7 @@ void q_stringlistmodel_on_rows_inserted(void* self, void (*callback)(void*, void
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2756,6 +3051,7 @@ void q_stringlistmodel_on_rows_about_to_be_removed(void* self, void (*callback)(
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2766,6 +3062,7 @@ void q_stringlistmodel_on_rows_removed(void* self, void (*callback)(void*, void*
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2776,6 +3073,7 @@ void q_stringlistmodel_on_columns_about_to_be_inserted(void* self, void (*callba
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2786,6 +3084,7 @@ void q_stringlistmodel_on_columns_inserted(void* self, void (*callback)(void*, v
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2796,6 +3095,7 @@ void q_stringlistmodel_on_columns_about_to_be_removed(void* self, void (*callbac
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
+///
 void q_stringlistmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2806,6 +3106,7 @@ void q_stringlistmodel_on_columns_removed(void* self, void (*callback)(void*, vo
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self)
+///
 void q_stringlistmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2816,6 +3117,7 @@ void q_stringlistmodel_on_model_about_to_be_reset(void* self, void (*callback)(v
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self)
+///
 void q_stringlistmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2826,6 +3128,7 @@ void q_stringlistmodel_on_model_reset(void* self, void (*callback)(void*));
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_stringlistmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2836,6 +3139,7 @@ void q_stringlistmodel_on_rows_about_to_be_moved(void* self, void (*callback)(vo
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
+///
 void q_stringlistmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2846,6 +3150,7 @@ void q_stringlistmodel_on_rows_moved(void* self, void (*callback)(void*, void*, 
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_stringlistmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2856,6 +3161,7 @@ void q_stringlistmodel_on_columns_about_to_be_moved(void* self, void (*callback)
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
+///
 void q_stringlistmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2866,6 +3172,7 @@ void q_stringlistmodel_on_columns_moved(void* self, void (*callback)(void*, void
 ///
 /// @param self QStringListModel*
 /// @param callback void func(QStringListModel* self, const char* objectName)
+///
 void q_stringlistmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#dtor.QStringListModel)
@@ -2873,6 +3180,7 @@ void q_stringlistmodel_on_object_name_changed(void* self, void (*callback)(void*
 /// Delete this object from C++ memory.
 ///
 /// @param self QStringListModel*
+///
 void q_stringlistmodel_delete(void* self);
 
 #endif

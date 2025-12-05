@@ -11,32 +11,37 @@
 
 #include "../qtlibc.h"
 
-/// https://api.kde.org/kfilecopytomenu.html
+/// [Upstream resources](https://api.kde.org/kfilecopytomenu.html)
 
 /// k_filecopytomenu_new constructs a new KFileCopyToMenu object.
 ///
 /// @param parentWidget QWidget*
+///
 KFileCopyToMenu* k_filecopytomenu_new(void* parentWidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFileCopyToMenu*
+///
 const QMetaObject* k_filecopytomenu_meta_object(void* self);
 
 /// @param self KFileCopyToMenu*
 /// @param param1 const char*
+///
 void* k_filecopytomenu_metacast(void* self, const char* param1);
 
 /// @param self KFileCopyToMenu*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_filecopytomenu_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback int32_t func(KFileCopyToMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
 void k_filecopytomenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -45,6 +50,7 @@ void k_filecopytomenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
+///
 int32_t k_filecopytomenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -52,30 +58,35 @@ int32_t k_filecopytomenu_qbase_metacall(void* self, int32_t param1, int param2, 
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
+///
 const char* k_filecopytomenu_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#setUrls)
 ///
 /// @param self KFileCopyToMenu*
 /// @param urls libqt_list /* of QUrl* */
+///
 void k_filecopytomenu_set_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#setReadOnly)
 ///
 /// @param self KFileCopyToMenu*
 /// @param ro bool
+///
 void k_filecopytomenu_set_read_only(void* self, bool ro);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#addActionsTo)
 ///
 /// @param self KFileCopyToMenu*
 /// @param menu QMenu*
+///
 void k_filecopytomenu_add_actions_to(void* self, void* menu);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#setAutoErrorHandlingEnabled)
 ///
 /// @param self KFileCopyToMenu*
 /// @param b bool
+///
 void k_filecopytomenu_set_auto_error_handling_enabled(void* self, bool b);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#error)
@@ -83,12 +94,14 @@ void k_filecopytomenu_set_auto_error_handling_enabled(void* self, bool b);
 /// @param self KFileCopyToMenu*
 /// @param errorCode int
 /// @param message const char*
+///
 void k_filecopytomenu_error(void* self, int errorCode, const char* message);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#error)
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, int errorCode, const char* message)
+///
 void k_filecopytomenu_on_error(void* self, void (*callback)(void*, int, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -97,6 +110,7 @@ void k_filecopytomenu_on_error(void* self, void (*callback)(void*, int, const ch
 ///
 /// @param s const char*
 /// @param c const char*
+///
 const char* k_filecopytomenu_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -106,6 +120,7 @@ const char* k_filecopytomenu_tr2(const char* s, const char* c);
 /// @param s const char*
 /// @param c const char*
 /// @param n int
+///
 const char* k_filecopytomenu_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
@@ -115,6 +130,7 @@ const char* k_filecopytomenu_tr3(const char* s, const char* c, int n);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileCopyToMenu*
+///
 const char* k_filecopytomenu_object_name(void* self);
 
 /// Inherited from QObject
@@ -123,6 +139,7 @@ const char* k_filecopytomenu_object_name(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param name char*
+///
 void k_filecopytomenu_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
@@ -130,6 +147,7 @@ void k_filecopytomenu_set_object_name(void* self, char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
 /// @param self KFileCopyToMenu*
+///
 bool k_filecopytomenu_is_widget_type(void* self);
 
 /// Inherited from QObject
@@ -137,6 +155,7 @@ bool k_filecopytomenu_is_widget_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
 /// @param self KFileCopyToMenu*
+///
 bool k_filecopytomenu_is_window_type(void* self);
 
 /// Inherited from QObject
@@ -144,6 +163,7 @@ bool k_filecopytomenu_is_window_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
 /// @param self KFileCopyToMenu*
+///
 bool k_filecopytomenu_is_quick_item_type(void* self);
 
 /// Inherited from QObject
@@ -151,6 +171,7 @@ bool k_filecopytomenu_is_quick_item_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
 /// @param self KFileCopyToMenu*
+///
 bool k_filecopytomenu_signals_blocked(void* self);
 
 /// Inherited from QObject
@@ -159,6 +180,7 @@ bool k_filecopytomenu_signals_blocked(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param b bool
+///
 bool k_filecopytomenu_block_signals(void* self, bool b);
 
 /// Inherited from QObject
@@ -166,6 +188,7 @@ bool k_filecopytomenu_block_signals(void* self, bool b);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
 /// @param self KFileCopyToMenu*
+///
 QThread* k_filecopytomenu_thread(void* self);
 
 /// Inherited from QObject
@@ -174,6 +197,7 @@ QThread* k_filecopytomenu_thread(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param thread QThread*
+///
 bool k_filecopytomenu_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
@@ -182,6 +206,7 @@ bool k_filecopytomenu_move_to_thread(void* self, void* thread);
 ///
 /// @param self KFileCopyToMenu*
 /// @param interval int
+///
 int32_t k_filecopytomenu_start_timer(void* self, int interval);
 
 /// Inherited from QObject
@@ -190,6 +215,7 @@ int32_t k_filecopytomenu_start_timer(void* self, int interval);
 ///
 /// @param self KFileCopyToMenu*
 /// @param id int
+///
 void k_filecopytomenu_kill_timer(void* self, int id);
 
 /// Inherited from QObject
@@ -198,6 +224,7 @@ void k_filecopytomenu_kill_timer(void* self, int id);
 ///
 /// @param self KFileCopyToMenu*
 /// @param id enum Qt__TimerId
+///
 void k_filecopytomenu_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
@@ -205,6 +232,7 @@ void k_filecopytomenu_kill_timer2(void* self, int32_t id);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// @param self KFileCopyToMenu*
+///
 libqt_list /* of QObject* */ k_filecopytomenu_children(void* self);
 
 /// Inherited from QObject
@@ -213,6 +241,7 @@ libqt_list /* of QObject* */ k_filecopytomenu_children(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param parent QObject*
+///
 void k_filecopytomenu_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
@@ -221,6 +250,7 @@ void k_filecopytomenu_set_parent(void* self, void* parent);
 ///
 /// @param self KFileCopyToMenu*
 /// @param filterObj QObject*
+///
 void k_filecopytomenu_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
@@ -229,6 +259,7 @@ void k_filecopytomenu_install_event_filter(void* self, void* filterObj);
 ///
 /// @param self KFileCopyToMenu*
 /// @param obj QObject*
+///
 void k_filecopytomenu_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
@@ -239,6 +270,7 @@ void k_filecopytomenu_remove_event_filter(void* self, void* obj);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
+///
 QMetaObject__Connection* k_filecopytomenu_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
@@ -249,6 +281,7 @@ QMetaObject__Connection* k_filecopytomenu_connect(void* sender, void* signal, vo
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
+///
 QMetaObject__Connection* k_filecopytomenu_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
@@ -259,6 +292,7 @@ QMetaObject__Connection* k_filecopytomenu_connect2(void* self, void* sender, con
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
+///
 bool k_filecopytomenu_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
@@ -266,6 +300,7 @@ bool k_filecopytomenu_disconnect(void* sender, void* signal, void* receiver, voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// @param param1 QMetaObject__Connection*
+///
 bool k_filecopytomenu_disconnect2(void* param1);
 
 /// Inherited from QObject
@@ -273,6 +308,7 @@ bool k_filecopytomenu_disconnect2(void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
 /// @param self KFileCopyToMenu*
+///
 void k_filecopytomenu_dump_object_tree(void* self);
 
 /// Inherited from QObject
@@ -280,6 +316,7 @@ void k_filecopytomenu_dump_object_tree(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
 /// @param self KFileCopyToMenu*
+///
 void k_filecopytomenu_dump_object_info(void* self);
 
 /// Inherited from QObject
@@ -289,6 +326,7 @@ void k_filecopytomenu_dump_object_info(void* self);
 /// @param self KFileCopyToMenu*
 /// @param name const char*
 /// @param value QVariant*
+///
 bool k_filecopytomenu_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
@@ -297,6 +335,7 @@ bool k_filecopytomenu_set_property(void* self, const char* name, void* value);
 ///
 /// @param self KFileCopyToMenu*
 /// @param name const char*
+///
 QVariant* k_filecopytomenu_property(void* self, const char* name);
 
 /// Inherited from QObject
@@ -306,6 +345,7 @@ QVariant* k_filecopytomenu_property(void* self, const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileCopyToMenu*
+///
 const char** k_filecopytomenu_dynamic_property_names(void* self);
 
 /// Inherited from QObject
@@ -313,6 +353,7 @@ const char** k_filecopytomenu_dynamic_property_names(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KFileCopyToMenu*
+///
 QBindingStorage* k_filecopytomenu_binding_storage(void* self);
 
 /// Inherited from QObject
@@ -320,6 +361,7 @@ QBindingStorage* k_filecopytomenu_binding_storage(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// @param self KFileCopyToMenu*
+///
 const QBindingStorage* k_filecopytomenu_binding_storage2(void* self);
 
 /// Inherited from QObject
@@ -327,6 +369,7 @@ const QBindingStorage* k_filecopytomenu_binding_storage2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFileCopyToMenu*
+///
 void k_filecopytomenu_destroyed(void* self);
 
 /// Inherited from QObject
@@ -335,6 +378,7 @@ void k_filecopytomenu_destroyed(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self)
+///
 void k_filecopytomenu_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -342,6 +386,7 @@ void k_filecopytomenu_on_destroyed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
 /// @param self KFileCopyToMenu*
+///
 QObject* k_filecopytomenu_parent(void* self);
 
 /// Inherited from QObject
@@ -350,6 +395,7 @@ QObject* k_filecopytomenu_parent(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param classname const char*
+///
 bool k_filecopytomenu_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
@@ -357,6 +403,7 @@ bool k_filecopytomenu_inherits(void* self, const char* classname);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
 /// @param self KFileCopyToMenu*
+///
 void k_filecopytomenu_delete_later(void* self);
 
 /// Inherited from QObject
@@ -366,6 +413,7 @@ void k_filecopytomenu_delete_later(void* self);
 /// @param self KFileCopyToMenu*
 /// @param thread QThread*
 /// @param param2 Disambiguated_t*
+///
 bool k_filecopytomenu_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
@@ -375,6 +423,7 @@ bool k_filecopytomenu_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self KFileCopyToMenu*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
+///
 int32_t k_filecopytomenu_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
@@ -386,6 +435,7 @@ int32_t k_filecopytomenu_start_timer22(void* self, int interval, int32_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_filecopytomenu_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
@@ -397,6 +447,7 @@ QMetaObject__Connection* k_filecopytomenu_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
+///
 QMetaObject__Connection* k_filecopytomenu_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
@@ -405,6 +456,7 @@ QMetaObject__Connection* k_filecopytomenu_connect4(void* self, void* sender, con
 ///
 /// @param self KFileCopyToMenu*
 /// @param param1 QObject*
+///
 void k_filecopytomenu_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
@@ -413,6 +465,7 @@ void k_filecopytomenu_destroyed1(void* self, void* param1);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, QObject* param1)
+///
 void k_filecopytomenu_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -423,6 +476,7 @@ void k_filecopytomenu_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QEvent*
+///
 bool k_filecopytomenu_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -433,6 +487,7 @@ bool k_filecopytomenu_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QEvent*
+///
 bool k_filecopytomenu_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -443,6 +498,7 @@ bool k_filecopytomenu_qbase_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback bool func(KFileCopyToMenu* self, QEvent* event)
+///
 void k_filecopytomenu_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -454,6 +510,7 @@ void k_filecopytomenu_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KFileCopyToMenu*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_filecopytomenu_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -465,6 +522,7 @@ bool k_filecopytomenu_event_filter(void* self, void* watched, void* event);
 /// @param self KFileCopyToMenu*
 /// @param watched QObject*
 /// @param event QEvent*
+///
 bool k_filecopytomenu_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -475,6 +533,7 @@ bool k_filecopytomenu_qbase_event_filter(void* self, void* watched, void* event)
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback bool func(KFileCopyToMenu* self, QObject* watched, QEvent* event)
+///
 void k_filecopytomenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -485,6 +544,7 @@ void k_filecopytomenu_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QTimerEvent*
+///
 void k_filecopytomenu_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -495,6 +555,7 @@ void k_filecopytomenu_timer_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QTimerEvent*
+///
 void k_filecopytomenu_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -505,6 +566,7 @@ void k_filecopytomenu_qbase_timer_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, QTimerEvent* event)
+///
 void k_filecopytomenu_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -515,6 +577,7 @@ void k_filecopytomenu_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QChildEvent*
+///
 void k_filecopytomenu_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -525,6 +588,7 @@ void k_filecopytomenu_child_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QChildEvent*
+///
 void k_filecopytomenu_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -535,6 +599,7 @@ void k_filecopytomenu_qbase_child_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, QChildEvent* event)
+///
 void k_filecopytomenu_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -545,6 +610,7 @@ void k_filecopytomenu_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QEvent*
+///
 void k_filecopytomenu_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -555,6 +621,7 @@ void k_filecopytomenu_custom_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param event QEvent*
+///
 void k_filecopytomenu_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -565,6 +632,7 @@ void k_filecopytomenu_qbase_custom_event(void* self, void* event);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, QEvent* event)
+///
 void k_filecopytomenu_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -575,6 +643,7 @@ void k_filecopytomenu_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal QMetaMethod*
+///
 void k_filecopytomenu_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -585,6 +654,7 @@ void k_filecopytomenu_connect_notify(void* self, void* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal QMetaMethod*
+///
 void k_filecopytomenu_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -595,6 +665,7 @@ void k_filecopytomenu_qbase_connect_notify(void* self, void* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, QMetaMethod* signal)
+///
 void k_filecopytomenu_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -605,6 +676,7 @@ void k_filecopytomenu_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal QMetaMethod*
+///
 void k_filecopytomenu_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -615,6 +687,7 @@ void k_filecopytomenu_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal QMetaMethod*
+///
 void k_filecopytomenu_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -625,6 +698,7 @@ void k_filecopytomenu_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, QMetaMethod* signal)
+///
 void k_filecopytomenu_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -634,6 +708,7 @@ void k_filecopytomenu_on_disconnect_notify(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFileCopyToMenu*
+///
 QObject* k_filecopytomenu_sender(void* self);
 
 /// Inherited from QObject
@@ -643,6 +718,7 @@ QObject* k_filecopytomenu_sender(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFileCopyToMenu*
+///
 QObject* k_filecopytomenu_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -653,6 +729,7 @@ QObject* k_filecopytomenu_qbase_sender(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback QObject* func()
+///
 void k_filecopytomenu_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -662,6 +739,7 @@ void k_filecopytomenu_on_sender(void* self, QObject* (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFileCopyToMenu*
+///
 int32_t k_filecopytomenu_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -671,6 +749,7 @@ int32_t k_filecopytomenu_sender_signal_index(void* self);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFileCopyToMenu*
+///
 int32_t k_filecopytomenu_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -681,6 +760,7 @@ int32_t k_filecopytomenu_qbase_sender_signal_index(void* self);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback int32_t func()
+///
 void k_filecopytomenu_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -691,6 +771,7 @@ void k_filecopytomenu_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal const char*
+///
 int32_t k_filecopytomenu_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -701,6 +782,7 @@ int32_t k_filecopytomenu_receivers(void* self, const char* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal const char*
+///
 int32_t k_filecopytomenu_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -711,6 +793,7 @@ int32_t k_filecopytomenu_qbase_receivers(void* self, const char* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback int32_t func(KFileCopyToMenu* self, const char* signal)
+///
 void k_filecopytomenu_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -721,6 +804,7 @@ void k_filecopytomenu_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal QMetaMethod*
+///
 bool k_filecopytomenu_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -731,6 +815,7 @@ bool k_filecopytomenu_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param signal QMetaMethod*
+///
 bool k_filecopytomenu_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -741,6 +826,7 @@ bool k_filecopytomenu_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback bool func(KFileCopyToMenu* self, QMetaMethod* signal)
+///
 void k_filecopytomenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -751,6 +837,7 @@ void k_filecopytomenu_on_is_signal_connected(void* self, bool (*callback)(void*,
 ///
 /// @param self KFileCopyToMenu*
 /// @param callback void func(KFileCopyToMenu* self, const char* objectName)
+///
 void k_filecopytomenu_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#dtor.KFileCopyToMenu)
@@ -758,6 +845,7 @@ void k_filecopytomenu_on_object_name_changed(void* self, void (*callback)(void*,
 /// Delete this object from C++ memory.
 ///
 /// @param self KFileCopyToMenu*
+///
 void k_filecopytomenu_delete(void* self);
 
 #endif
