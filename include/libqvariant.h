@@ -729,6 +729,49 @@ QVariant* q_variant_from_meta_type2(void* type, void* copyVal);
 ///
 void q_variant_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariantconstpointer.html)
+
+/// q_variantconstpointer_new constructs a new QVariantConstPointer object.
+///
+/// @param variant QVariant*
+///
+QVariantConstPointer* q_variantconstpointer_new(void* variant);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariantconstpointer.html)
+
+/// q_variantconstpointer_new2 constructs a new QVariantConstPointer object.
+///
+/// @param param1 QVariantConstPointer*
+///
+QVariantConstPointer* q_variantconstpointer_new2(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator-2a)
+///
+/// @param self QVariantConstPointer*
+///
+QVariant* q_variantconstpointer_operator_multiply(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator--gt)
+///
+/// @param self QVariantConstPointer*
+///
+const QVariant* q_variantconstpointer_operator_minus_greater(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator-eq)
+///
+/// @param self QVariantConstPointer*
+/// @param param1 QVariantConstPointer*
+///
+void q_variantconstpointer_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariantconstpointer.html#dtor.QVariantConstPointer)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self QVariantConstPointer*
+///
+void q_variantconstpointer_delete(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#public-types)
 
 typedef enum {

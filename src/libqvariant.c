@@ -471,3 +471,27 @@ QVariant* q_variant_from_meta_type2(void* type, void* copyVal) {
 void q_variant_delete(void* self) {
     QVariant_Delete((QVariant*)(self));
 }
+
+QVariantConstPointer* q_variantconstpointer_new(void* variant) {
+    return QVariantConstPointer_new((QVariant*)variant);
+}
+
+QVariantConstPointer* q_variantconstpointer_new2(void* param1) {
+    return QVariantConstPointer_new2((QVariantConstPointer*)param1);
+}
+
+QVariant* q_variantconstpointer_operator_multiply(void* self) {
+    return QVariantConstPointer_OperatorMultiply((QVariantConstPointer*)self);
+}
+
+const QVariant* q_variantconstpointer_operator_minus_greater(void* self) {
+    return QVariantConstPointer_OperatorMinusGreater((QVariantConstPointer*)self);
+}
+
+void q_variantconstpointer_operator_assign(void* self, void* param1) {
+    QVariantConstPointer_OperatorAssign((QVariantConstPointer*)self, (QVariantConstPointer*)param1);
+}
+
+void q_variantconstpointer_delete(void* self) {
+    QVariantConstPointer_Delete((QVariantConstPointer*)(self));
+}
