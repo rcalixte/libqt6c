@@ -1691,6 +1691,7 @@ typedef struct QValidator QValidator;
 typedef struct QValueAxis QValueAxis;
 typedef struct QVariant QVariant;
 typedef struct QVariantAnimation QVariantAnimation;
+typedef struct QVariantConstPointer QVariantConstPointer;
 typedef struct QVector2D QVector2D;
 typedef struct QVector3D QVector3D;
 typedef struct QVector4D QVector4D;
