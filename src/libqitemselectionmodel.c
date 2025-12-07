@@ -18,6 +18,10 @@ QItemSelectionRange* q_itemselectionrange_new3(void* index) {
     return QItemSelectionRange_new3((QModelIndex*)index);
 }
 
+QItemSelectionRange* q_itemselectionrange_new4(void* param1) {
+    return QItemSelectionRange_new4((QItemSelectionRange*)param1);
+}
+
 void q_itemselectionrange_swap(void* self, void* other) {
     QItemSelectionRange_Swap((QItemSelectionRange*)self, (QItemSelectionRange*)other);
 }

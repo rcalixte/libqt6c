@@ -13,6 +13,10 @@ QModelRoleData* q_modelroledata_new(int role) {
     return QModelRoleData_new(role);
 }
 
+QModelRoleData* q_modelroledata_new2(void* param1) {
+    return QModelRoleData_new2((QModelRoleData*)param1);
+}
+
 int32_t q_modelroledata_role(void* self) {
     return QModelRoleData_Role((QModelRoleData*)self);
 }

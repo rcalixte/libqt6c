@@ -84,6 +84,10 @@ QDBusVariant* q_dbusvariant_new2(void* variant) {
     return QDBusVariant_new2((QVariant*)variant);
 }
 
+QDBusVariant* q_dbusvariant_new3(void* param1) {
+    return QDBusVariant_new3((QDBusVariant*)param1);
+}
+
 void q_dbusvariant_swap(void* self, void* other) {
     QDBusVariant_Swap((QDBusVariant*)self, (QDBusVariant*)other);
 }

@@ -470,6 +470,10 @@ QTextLayout__FormatRange* q_textlayout__formatrange_new() {
     return QTextLayout__FormatRange_new();
 }
 
+QTextLayout__FormatRange* q_textlayout__formatrange_new2(void* param1) {
+    return QTextLayout__FormatRange_new2((QTextLayout__FormatRange*)param1);
+}
+
 int32_t q_textlayout__formatrange_start(void* self) {
     return QTextLayout__FormatRange_Start((QTextLayout__FormatRange*)self);
 }

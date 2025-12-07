@@ -143,6 +143,17 @@ QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new2();
 ///
 QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new3(void* param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionunexported.html)
+
+/// q_operatingsystemversionunexported_new4 constructs a new QOperatingSystemVersionUnexported object.
+///
+/// @param param1 enum QOperatingSystemVersionBase__OSType
+/// @param param2 int
+/// @param param3 int
+/// @param param4 int
+///
+QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new4(int32_t param1, int param2, int param3, int param4);
+
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#current)

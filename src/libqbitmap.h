@@ -54,10 +54,18 @@ QBitmap* q_bitmap_new5(const char* fileName);
 
 /// q_bitmap_new6 constructs a new QBitmap object.
 ///
+/// @param param1 QBitmap*
+///
+QBitmap* q_bitmap_new6(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html)
+
+/// q_bitmap_new7 constructs a new QBitmap object.
+///
 /// @param fileName const char*
 /// @param format const char*
 ///
-QBitmap* q_bitmap_new6(const char* fileName, const char* format);
+QBitmap* q_bitmap_new7(const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html#operator-eq)
 ///

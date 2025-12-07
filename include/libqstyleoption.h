@@ -199,6 +199,13 @@ QColor* q_styleoptionfocusrect_background_color(void* self);
 ///
 void q_styleoptionfocusrect_set_background_color(void* self, void* backgroundColor);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionfocusrect.html#operator-eq)
+///
+/// @param self QStyleOptionFocusRect*
+/// @param param1 QStyleOptionFocusRect*
+///
+void q_styleoptionfocusrect_operator_assign(void* self, void* param1);
+
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
@@ -348,15 +355,6 @@ void q_styleoptionfocusrect_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionfocusrect_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionFocusRect*
-/// @param other QStyleOption*
-///
-void q_styleoptionfocusrect_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionfocusrect.html#dtor.QStyleOptionFocusRect)
 ///
 /// Delete this object from C++ memory.
@@ -434,6 +432,13 @@ int32_t q_styleoptionframe_frame_shape(void* self);
 /// @param frameShape enum QFrame__Shape
 ///
 void q_styleoptionframe_set_frame_shape(void* self, int32_t frameShape);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#operator-eq)
+///
+/// @param self QStyleOptionFrame*
+/// @param param1 QStyleOptionFrame*
+///
+void q_styleoptionframe_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -584,15 +589,6 @@ void q_styleoptionframe_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionframe_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionFrame*
-/// @param other QStyleOption*
-///
-void q_styleoptionframe_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#dtor.QStyleOptionFrame)
 ///
 /// Delete this object from C++ memory.
@@ -720,6 +716,13 @@ QRect* q_styleoptiontabwidgetframe_selected_tab_rect(void* self);
 /// @param selectedTabRect QRect*
 ///
 void q_styleoptiontabwidgetframe_set_selected_tab_rect(void* self, void* selectedTabRect);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#operator-eq)
+///
+/// @param self QStyleOptionTabWidgetFrame*
+/// @param param1 QStyleOptionTabWidgetFrame*
+///
+void q_styleoptiontabwidgetframe_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -870,15 +873,6 @@ void q_styleoptiontabwidgetframe_set_style_object(void* self, void* styleObject)
 ///
 void q_styleoptiontabwidgetframe_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionTabWidgetFrame*
-/// @param other QStyleOption*
-///
-void q_styleoptiontabwidgetframe_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#dtor.QStyleOptionTabWidgetFrame)
 ///
 /// Delete this object from C++ memory.
@@ -954,6 +948,13 @@ bool q_styleoptiontabbarbase_document_mode(void* self);
 /// @param documentMode bool
 ///
 void q_styleoptiontabbarbase_set_document_mode(void* self, bool documentMode);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#operator-eq)
+///
+/// @param self QStyleOptionTabBarBase*
+/// @param param1 QStyleOptionTabBarBase*
+///
+void q_styleoptiontabbarbase_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -1103,15 +1104,6 @@ void q_styleoptiontabbarbase_set_style_object(void* self, void* styleObject);
 /// @param w QWidget*
 ///
 void q_styleoptiontabbarbase_init_from(void* self, void* w);
-
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionTabBarBase*
-/// @param other QStyleOption*
-///
-void q_styleoptiontabbarbase_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#dtor.QStyleOptionTabBarBase)
 ///
@@ -1266,6 +1258,13 @@ int32_t q_styleoptionheader_orientation(void* self);
 ///
 void q_styleoptionheader_set_orientation(void* self, int32_t orientation);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#operator-eq)
+///
+/// @param self QStyleOptionHeader*
+/// @param param1 QStyleOptionHeader*
+///
+void q_styleoptionheader_operator_assign(void* self, void* param1);
+
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
@@ -1415,15 +1414,6 @@ void q_styleoptionheader_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionheader_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionHeader*
-/// @param other QStyleOption*
-///
-void q_styleoptionheader_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#dtor.QStyleOptionHeader)
 ///
 /// Delete this object from C++ memory.
@@ -1445,6 +1435,13 @@ QStyleOptionHeaderV2* q_styleoptionheaderv2_new();
 /// @param other QStyleOptionHeaderV2*
 ///
 QStyleOptionHeaderV2* q_styleoptionheaderv2_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#operator-eq)
+///
+/// @param self QStyleOptionHeaderV2*
+/// @param param1 QStyleOptionHeaderV2*
+///
+void q_styleoptionheaderv2_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#textElideMode-var)
 ///
@@ -1803,15 +1800,6 @@ void q_styleoptionheaderv2_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionheaderv2_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionHeaderV2*
-/// @param other QStyleOption*
-///
-void q_styleoptionheaderv2_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#dtor.QStyleOptionHeaderV2)
 ///
 /// Delete this object from C++ memory.
@@ -1889,6 +1877,13 @@ QSize* q_styleoptionbutton_icon_size(void* self);
 /// @param iconSize QSize*
 ///
 void q_styleoptionbutton_set_icon_size(void* self, void* iconSize);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#operator-eq)
+///
+/// @param self QStyleOptionButton*
+/// @param param1 QStyleOptionButton*
+///
+void q_styleoptionbutton_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -2038,15 +2033,6 @@ void q_styleoptionbutton_set_style_object(void* self, void* styleObject);
 /// @param w QWidget*
 ///
 void q_styleoptionbutton_init_from(void* self, void* w);
-
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionButton*
-/// @param other QStyleOption*
-///
-void q_styleoptionbutton_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#dtor.QStyleOptionButton)
 ///
@@ -2251,6 +2237,13 @@ int32_t q_styleoptiontab_tab_index(void* self);
 ///
 void q_styleoptiontab_set_tab_index(void* self, int tabIndex);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#operator-eq)
+///
+/// @param self QStyleOptionTab*
+/// @param param1 QStyleOptionTab*
+///
+void q_styleoptiontab_operator_assign(void* self, void* param1);
+
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
@@ -2400,15 +2393,6 @@ void q_styleoptiontab_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptiontab_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionTab*
-/// @param other QStyleOption*
-///
-void q_styleoptiontab_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#dtor.QStyleOptionTab)
 ///
 /// Delete this object from C++ memory.
@@ -2516,6 +2500,13 @@ int32_t q_styleoptiontoolbar_mid_line_width(void* self);
 /// @param midLineWidth int
 ///
 void q_styleoptiontoolbar_set_mid_line_width(void* self, int midLineWidth);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#operator-eq)
+///
+/// @param self QStyleOptionToolBar*
+/// @param param1 QStyleOptionToolBar*
+///
+void q_styleoptiontoolbar_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -2666,15 +2657,6 @@ void q_styleoptiontoolbar_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptiontoolbar_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionToolBar*
-/// @param other QStyleOption*
-///
-void q_styleoptiontoolbar_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#dtor.QStyleOptionToolBar)
 ///
 /// Delete this object from C++ memory.
@@ -2804,6 +2786,13 @@ bool q_styleoptionprogressbar_bottom_to_top(void* self);
 /// @param bottomToTop bool
 ///
 void q_styleoptionprogressbar_set_bottom_to_top(void* self, bool bottomToTop);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#operator-eq)
+///
+/// @param self QStyleOptionProgressBar*
+/// @param param1 QStyleOptionProgressBar*
+///
+void q_styleoptionprogressbar_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -2953,15 +2942,6 @@ void q_styleoptionprogressbar_set_style_object(void* self, void* styleObject);
 /// @param w QWidget*
 ///
 void q_styleoptionprogressbar_init_from(void* self, void* w);
-
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionProgressBar*
-/// @param other QStyleOption*
-///
-void q_styleoptionprogressbar_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#dtor.QStyleOptionProgressBar)
 ///
@@ -3121,6 +3101,13 @@ QFont* q_styleoptionmenuitem_font(void* self);
 ///
 void q_styleoptionmenuitem_set_font(void* self, void* font);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#operator-eq)
+///
+/// @param self QStyleOptionMenuItem*
+/// @param param1 QStyleOptionMenuItem*
+///
+void q_styleoptionmenuitem_operator_assign(void* self, void* param1);
+
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
@@ -3270,15 +3257,6 @@ void q_styleoptionmenuitem_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionmenuitem_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionMenuItem*
-/// @param other QStyleOption*
-///
-void q_styleoptionmenuitem_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#dtor.QStyleOptionMenuItem)
 ///
 /// Delete this object from C++ memory.
@@ -3367,6 +3345,13 @@ bool q_styleoptiondockwidget_vertical_title_bar(void* self);
 /// @param verticalTitleBar bool
 ///
 void q_styleoptiondockwidget_set_vertical_title_bar(void* self, bool verticalTitleBar);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#operator-eq)
+///
+/// @param self QStyleOptionDockWidget*
+/// @param param1 QStyleOptionDockWidget*
+///
+void q_styleoptiondockwidget_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -3516,15 +3501,6 @@ void q_styleoptiondockwidget_set_style_object(void* self, void* styleObject);
 /// @param w QWidget*
 ///
 void q_styleoptiondockwidget_init_from(void* self, void* w);
-
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionDockWidget*
-/// @param other QStyleOption*
-///
-void q_styleoptiondockwidget_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#dtor.QStyleOptionDockWidget)
 ///
@@ -3772,6 +3748,13 @@ QBrush* q_styleoptionviewitem_background_brush(void* self);
 ///
 void q_styleoptionviewitem_set_background_brush(void* self, void* backgroundBrush);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#operator-eq)
+///
+/// @param self QStyleOptionViewItem*
+/// @param param1 QStyleOptionViewItem*
+///
+void q_styleoptionviewitem_operator_assign(void* self, void* param1);
+
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
@@ -3921,15 +3904,6 @@ void q_styleoptionviewitem_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionviewitem_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionViewItem*
-/// @param other QStyleOption*
-///
-void q_styleoptionviewitem_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#dtor.QStyleOptionViewItem)
 ///
 /// Delete this object from C++ memory.
@@ -4009,6 +3983,13 @@ int32_t q_styleoptiontoolbox_selected_position(void* self);
 /// @param selectedPosition enum QStyleOptionToolBox__SelectedPosition
 ///
 void q_styleoptiontoolbox_set_selected_position(void* self, int32_t selectedPosition);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#operator-eq)
+///
+/// @param self QStyleOptionToolBox*
+/// @param param1 QStyleOptionToolBox*
+///
+void q_styleoptiontoolbox_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -4159,15 +4140,6 @@ void q_styleoptiontoolbox_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptiontoolbox_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionToolBox*
-/// @param other QStyleOption*
-///
-void q_styleoptiontoolbox_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#dtor.QStyleOptionToolBox)
 ///
 /// Delete this object from C++ memory.
@@ -4217,6 +4189,13 @@ bool q_styleoptionrubberband_opaque(void* self);
 /// @param opaque bool
 ///
 void q_styleoptionrubberband_set_opaque(void* self, bool opaque);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#operator-eq)
+///
+/// @param self QStyleOptionRubberBand*
+/// @param param1 QStyleOptionRubberBand*
+///
+void q_styleoptionrubberband_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -4367,15 +4346,6 @@ void q_styleoptionrubberband_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionrubberband_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionRubberBand*
-/// @param other QStyleOption*
-///
-void q_styleoptionrubberband_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#dtor.QStyleOptionRubberBand)
 ///
 /// Delete this object from C++ memory.
@@ -4444,6 +4414,13 @@ int64_t q_styleoptioncomplex_active_sub_controls(void* self);
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
 void q_styleoptioncomplex_set_active_sub_controls(void* self, int64_t activeSubControls);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#operator-eq)
+///
+/// @param self QStyleOptionComplex*
+/// @param param1 QStyleOptionComplex*
+///
+void q_styleoptioncomplex_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOption
 ///
@@ -4593,15 +4570,6 @@ void q_styleoptioncomplex_set_style_object(void* self, void* styleObject);
 /// @param w QWidget*
 ///
 void q_styleoptioncomplex_init_from(void* self, void* w);
-
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionComplex*
-/// @param other QStyleOption*
-///
-void q_styleoptioncomplex_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#dtor.QStyleOptionComplex)
 ///
@@ -4800,6 +4768,13 @@ int64_t q_styleoptionslider_keyboard_modifiers(void* self);
 ///
 void q_styleoptionslider_set_keyboard_modifiers(void* self, int64_t keyboardModifiers);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#operator-eq)
+///
+/// @param self QStyleOptionSlider*
+/// @param param1 QStyleOptionSlider*
+///
+void q_styleoptionslider_operator_assign(void* self, void* param1);
+
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
@@ -4987,15 +4962,6 @@ void q_styleoptionslider_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionslider_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionSlider*
-/// @param other QStyleOption*
-///
-void q_styleoptionslider_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#dtor.QStyleOptionSlider)
 ///
 /// Delete this object from C++ memory.
@@ -5060,6 +5026,13 @@ bool q_styleoptionspinbox_frame(void* self);
 /// @param frame bool
 ///
 void q_styleoptionspinbox_set_frame(void* self, bool frame);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#operator-eq)
+///
+/// @param self QStyleOptionSpinBox*
+/// @param param1 QStyleOptionSpinBox*
+///
+void q_styleoptionspinbox_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5248,15 +5221,6 @@ void q_styleoptionspinbox_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionspinbox_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionSpinBox*
-/// @param other QStyleOption*
-///
-void q_styleoptionspinbox_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#dtor.QStyleOptionSpinBox)
 ///
 /// Delete this object from C++ memory.
@@ -5390,6 +5354,13 @@ QFont* q_styleoptiontoolbutton_font(void* self);
 /// @param font QFont*
 ///
 void q_styleoptiontoolbutton_set_font(void* self, void* font);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#operator-eq)
+///
+/// @param self QStyleOptionToolButton*
+/// @param param1 QStyleOptionToolButton*
+///
+void q_styleoptiontoolbutton_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5578,15 +5549,6 @@ void q_styleoptiontoolbutton_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptiontoolbutton_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionToolButton*
-/// @param other QStyleOption*
-///
-void q_styleoptiontoolbutton_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#dtor.QStyleOptionToolButton)
 ///
 /// Delete this object from C++ memory.
@@ -5703,6 +5665,13 @@ int32_t q_styleoptioncombobox_text_alignment(void* self);
 /// @param textAlignment flag of enum Qt__AlignmentFlag
 ///
 void q_styleoptioncombobox_set_text_alignment(void* self, int32_t textAlignment);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#operator-eq)
+///
+/// @param self QStyleOptionComboBox*
+/// @param param1 QStyleOptionComboBox*
+///
+void q_styleoptioncombobox_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5891,15 +5860,6 @@ void q_styleoptioncombobox_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptioncombobox_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionComboBox*
-/// @param other QStyleOption*
-///
-void q_styleoptioncombobox_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#dtor.QStyleOptionComboBox)
 ///
 /// Delete this object from C++ memory.
@@ -5977,6 +5937,13 @@ int64_t q_styleoptiontitlebar_title_bar_flags(void* self);
 /// @param titleBarFlags flag of enum Qt__WindowType
 ///
 void q_styleoptiontitlebar_set_title_bar_flags(void* self, int64_t titleBarFlags);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#operator-eq)
+///
+/// @param self QStyleOptionTitleBar*
+/// @param param1 QStyleOptionTitleBar*
+///
+void q_styleoptiontitlebar_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6165,15 +6132,6 @@ void q_styleoptiontitlebar_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptiontitlebar_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionTitleBar*
-/// @param other QStyleOption*
-///
-void q_styleoptiontitlebar_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#dtor.QStyleOptionTitleBar)
 ///
 /// Delete this object from C++ memory.
@@ -6279,6 +6237,13 @@ int32_t q_styleoptiongroupbox_mid_line_width(void* self);
 /// @param midLineWidth int
 ///
 void q_styleoptiongroupbox_set_mid_line_width(void* self, int midLineWidth);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#operator-eq)
+///
+/// @param self QStyleOptionGroupBox*
+/// @param param1 QStyleOptionGroupBox*
+///
+void q_styleoptiongroupbox_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6467,15 +6432,6 @@ void q_styleoptiongroupbox_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptiongroupbox_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionGroupBox*
-/// @param other QStyleOption*
-///
-void q_styleoptiongroupbox_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#dtor.QStyleOptionGroupBox)
 ///
 /// Delete this object from C++ memory.
@@ -6512,6 +6468,13 @@ int32_t q_styleoptionsizegrip_corner(void* self);
 /// @param corner enum Qt__Corner
 ///
 void q_styleoptionsizegrip_set_corner(void* self, int32_t corner);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionsizegrip.html#operator-eq)
+///
+/// @param self QStyleOptionSizeGrip*
+/// @param param1 QStyleOptionSizeGrip*
+///
+void q_styleoptionsizegrip_operator_assign(void* self, void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6700,15 +6663,6 @@ void q_styleoptionsizegrip_set_style_object(void* self, void* styleObject);
 ///
 void q_styleoptionsizegrip_init_from(void* self, void* w);
 
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionSizeGrip*
-/// @param other QStyleOption*
-///
-void q_styleoptionsizegrip_operator_assign(void* self, void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionsizegrip.html#dtor.QStyleOptionSizeGrip)
 ///
 /// Delete this object from C++ memory.
@@ -6743,6 +6697,13 @@ QRectF* q_styleoptiongraphicsitem_exposed_rect(void* self);
 /// @param exposedRect QRectF*
 ///
 void q_styleoptiongraphicsitem_set_exposed_rect(void* self, void* exposedRect);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#operator-eq)
+///
+/// @param self QStyleOptionGraphicsItem*
+/// @param param1 QStyleOptionGraphicsItem*
+///
+void q_styleoptiongraphicsitem_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#levelOfDetailFromTransform)
 ///
@@ -6898,15 +6859,6 @@ void q_styleoptiongraphicsitem_set_style_object(void* self, void* styleObject);
 /// @param w QWidget*
 ///
 void q_styleoptiongraphicsitem_init_from(void* self, void* w);
-
-/// Inherited from QStyleOption
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
-///
-/// @param self QStyleOptionGraphicsItem*
-/// @param other QStyleOption*
-///
-void q_styleoptiongraphicsitem_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#dtor.QStyleOptionGraphicsItem)
 ///

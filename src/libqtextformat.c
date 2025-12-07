@@ -291,6 +291,10 @@ QTextCharFormat* q_textcharformat_new() {
     return QTextCharFormat_new();
 }
 
+QTextCharFormat* q_textcharformat_new2(void* param1) {
+    return QTextCharFormat_new2((QTextCharFormat*)param1);
+}
+
 bool q_textcharformat_is_valid(void* self) {
     return QTextCharFormat_IsValid((QTextCharFormat*)self);
 }
@@ -825,6 +829,10 @@ QTextBlockFormat* q_textblockformat_new() {
     return QTextBlockFormat_new();
 }
 
+QTextBlockFormat* q_textblockformat_new2(void* param1) {
+    return QTextBlockFormat_new2((QTextBlockFormat*)param1);
+}
+
 bool q_textblockformat_is_valid(void* self) {
     return QTextBlockFormat_IsValid((QTextBlockFormat*)self);
 }
@@ -1154,6 +1162,10 @@ QTextListFormat* q_textlistformat_new() {
     return QTextListFormat_new();
 }
 
+QTextListFormat* q_textlistformat_new2(void* param1) {
+    return QTextListFormat_new2((QTextListFormat*)param1);
+}
+
 bool q_textlistformat_is_valid(void* self) {
     return QTextListFormat_IsValid((QTextListFormat*)self);
 }
@@ -1414,6 +1426,10 @@ void q_textlistformat_delete(void* self) {
 
 QTextImageFormat* q_textimageformat_new() {
     return QTextImageFormat_new();
+}
+
+QTextImageFormat* q_textimageformat_new2(void* param1) {
+    return QTextImageFormat_new2((QTextImageFormat*)param1);
 }
 
 bool q_textimageformat_is_valid(void* self) {
@@ -1997,6 +2013,10 @@ QTextFrameFormat* q_textframeformat_new() {
     return QTextFrameFormat_new();
 }
 
+QTextFrameFormat* q_textframeformat_new2(void* param1) {
+    return QTextFrameFormat_new2((QTextFrameFormat*)param1);
+}
+
 bool q_textframeformat_is_valid(void* self) {
     return QTextFrameFormat_IsValid((QTextFrameFormat*)self);
 }
@@ -2323,6 +2343,10 @@ void q_textframeformat_delete(void* self) {
 
 QTextTableFormat* q_texttableformat_new() {
     return QTextTableFormat_new();
+}
+
+QTextTableFormat* q_texttableformat_new2(void* param1) {
+    return QTextTableFormat_new2((QTextTableFormat*)param1);
 }
 
 bool q_texttableformat_is_valid(void* self) {
@@ -2712,6 +2736,10 @@ void q_texttableformat_delete(void* self) {
 
 QTextTableCellFormat* q_texttablecellformat_new() {
     return QTextTableCellFormat_new();
+}
+
+QTextTableCellFormat* q_texttablecellformat_new2(void* param1) {
+    return QTextTableCellFormat_new2((QTextTableCellFormat*)param1);
 }
 
 bool q_texttablecellformat_is_valid(void* self) {

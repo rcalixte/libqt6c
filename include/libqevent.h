@@ -11057,6 +11057,14 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int32_t typ, int
 ///
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int32_t typ, int s, int l);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html)
+
+/// q_inputmethodevent__attribute_new3 constructs a new QInputMethodEvent::Attribute object.
+///
+/// @param param1 QInputMethodEvent__Attribute*
+///
+QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new3(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#type-var)
 ///
 /// @param self QInputMethodEvent__Attribute*

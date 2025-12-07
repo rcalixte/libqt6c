@@ -5233,6 +5233,10 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int32_t typ, in
     return QInputMethodEvent__Attribute_new2(typ, s, l);
 }
 
+QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new3(void* param1) {
+    return QInputMethodEvent__Attribute_new3((QInputMethodEvent__Attribute*)param1);
+}
+
 int32_t q_inputmethodevent__attribute_type(void* self) {
     return QInputMethodEvent__Attribute_Type((QInputMethodEvent__Attribute*)self);
 }

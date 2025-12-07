@@ -24797,20 +24797,18 @@ QCPScatterStyle* q_cpscatterstyle_new7(void* customPath, void* pen);
 
 /// q_cpscatterstyle_new8 constructs a new QCPScatterStyle object.
 ///
-/// @param shape enum QCPScatterStyle__ScatterShape
-/// @param size double
+/// @param param1 QCPScatterStyle*
 ///
-QCPScatterStyle* q_cpscatterstyle_new8(int32_t shape, double size);
+QCPScatterStyle* q_cpscatterstyle_new8(void* param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPScatterStyle.html)
 
 /// q_cpscatterstyle_new9 constructs a new QCPScatterStyle object.
 ///
-/// @param customPath QPainterPath*
-/// @param pen QPen*
-/// @param brush QBrush*
+/// @param shape enum QCPScatterStyle__ScatterShape
+/// @param size double
 ///
-QCPScatterStyle* q_cpscatterstyle_new9(void* customPath, void* pen, void* brush);
+QCPScatterStyle* q_cpscatterstyle_new9(int32_t shape, double size);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPScatterStyle.html)
 
@@ -24819,9 +24817,19 @@ QCPScatterStyle* q_cpscatterstyle_new9(void* customPath, void* pen, void* brush)
 /// @param customPath QPainterPath*
 /// @param pen QPen*
 /// @param brush QBrush*
+///
+QCPScatterStyle* q_cpscatterstyle_new10(void* customPath, void* pen, void* brush);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPScatterStyle.html)
+
+/// q_cpscatterstyle_new11 constructs a new QCPScatterStyle object.
+///
+/// @param customPath QPainterPath*
+/// @param pen QPen*
+/// @param brush QBrush*
 /// @param size double
 ///
-QCPScatterStyle* q_cpscatterstyle_new10(void* customPath, void* pen, void* brush, double size);
+QCPScatterStyle* q_cpscatterstyle_new11(void* customPath, void* pen, void* brush, double size);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPScatterStyle.html)
 ///

@@ -12,6 +12,10 @@ KBookmark* k_bookmark_new2(void* elem) {
     return KBookmark_new2((QDomElement*)elem);
 }
 
+KBookmark* k_bookmark_new3(void* param1) {
+    return KBookmark_new3((KBookmark*)param1);
+}
+
 KBookmark* k_bookmark_standalone_bookmark(const char* text, void* url, const char* icon) {
     return KBookmark_StandaloneBookmark(qstring(text), (QUrl*)url, qstring(icon));
 }

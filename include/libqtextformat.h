@@ -485,6 +485,14 @@ void q_textformat_delete(void* self);
 ///
 QTextCharFormat* q_textcharformat_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html)
+
+/// q_textcharformat_new2 constructs a new QTextCharFormat object.
+///
+/// @param param1 QTextCharFormat*
+///
+QTextCharFormat* q_textcharformat_new2(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#isValid)
 ///
 /// @param self QTextCharFormat*
@@ -1402,6 +1410,14 @@ void q_textcharformat_delete(void* self);
 ///
 QTextBlockFormat* q_textblockformat_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html)
+
+/// q_textblockformat_new2 constructs a new QTextBlockFormat object.
+///
+/// @param param1 QTextBlockFormat*
+///
+QTextBlockFormat* q_textblockformat_new2(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#isValid)
 ///
 /// @param self QTextBlockFormat*
@@ -2042,6 +2058,14 @@ void q_textblockformat_delete(void* self);
 ///
 QTextListFormat* q_textlistformat_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html)
+
+/// q_textlistformat_new2 constructs a new QTextListFormat object.
+///
+/// @param param1 QTextListFormat*
+///
+QTextListFormat* q_textlistformat_new2(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#isValid)
 ///
 /// @param self QTextListFormat*
@@ -2562,6 +2586,14 @@ void q_textlistformat_delete(void* self);
 /// q_textimageformat_new constructs a new QTextImageFormat object.
 ///
 QTextImageFormat* q_textimageformat_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html)
+
+/// q_textimageformat_new2 constructs a new QTextImageFormat object.
+///
+/// @param param1 QTextImageFormat*
+///
+QTextImageFormat* q_textimageformat_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#isValid)
 ///
@@ -3689,6 +3721,14 @@ void q_textimageformat_delete(void* self);
 ///
 QTextFrameFormat* q_textframeformat_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html)
+
+/// q_textframeformat_new2 constructs a new QTextFrameFormat object.
+///
+/// @param param1 QTextFrameFormat*
+///
+QTextFrameFormat* q_textframeformat_new2(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#isValid)
 ///
 /// @param self QTextFrameFormat*
@@ -4327,6 +4367,14 @@ void q_textframeformat_delete(void* self);
 /// q_texttableformat_new constructs a new QTextTableFormat object.
 ///
 QTextTableFormat* q_texttableformat_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html)
+
+/// q_texttableformat_new2 constructs a new QTextTableFormat object.
+///
+/// @param param1 QTextTableFormat*
+///
+QTextTableFormat* q_texttableformat_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#isValid)
 ///
@@ -5121,6 +5169,14 @@ void q_texttableformat_delete(void* self);
 /// q_texttablecellformat_new constructs a new QTextTableCellFormat object.
 ///
 QTextTableCellFormat* q_texttablecellformat_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html)
+
+/// q_texttablecellformat_new2 constructs a new QTextTableCellFormat object.
+///
+/// @param param1 QTextTableCellFormat*
+///
+QTextTableCellFormat* q_texttablecellformat_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#isValid)
 ///
