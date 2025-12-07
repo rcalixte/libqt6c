@@ -34,6 +34,14 @@ QItemSelectionRange* q_itemselectionrange_new2(void* topL, void* bottomR);
 ///
 QItemSelectionRange* q_itemselectionrange_new3(void* index);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionrange.html)
+
+/// q_itemselectionrange_new4 constructs a new QItemSelectionRange object.
+///
+/// @param param1 QItemSelectionRange*
+///
+QItemSelectionRange* q_itemselectionrange_new4(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionrange.html#swap)
 ///
 /// @param self QItemSelectionRange*

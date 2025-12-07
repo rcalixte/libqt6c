@@ -80,6 +80,10 @@ QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new3(void*
     return QOperatingSystemVersionUnexported_new3((QOperatingSystemVersionUnexported*)param1);
 }
 
+QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new4(int32_t param1, int param2, int param3, int param4) {
+    return QOperatingSystemVersionUnexported_new4(param1, param2, param3, param4);
+}
+
 QOperatingSystemVersionBase* q_operatingsystemversionunexported_current() {
     return QOperatingSystemVersionBase_Current();
 }

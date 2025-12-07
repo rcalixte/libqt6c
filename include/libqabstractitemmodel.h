@@ -19,6 +19,14 @@
 ///
 QModelRoleData* q_modelroledata_new(int role);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledata.html)
+
+/// q_modelroledata_new2 constructs a new QModelRoleData object.
+///
+/// @param param1 QModelRoleData*
+///
+QModelRoleData* q_modelroledata_new2(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledata.html#role)
 ///
 /// @param self QModelRoleData*

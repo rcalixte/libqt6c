@@ -52,6 +52,14 @@ QVersionNumber* q_versionnumber_new4(int maj, int min);
 ///
 QVersionNumber* q_versionnumber_new5(int maj, int min, int mic);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html)
+
+/// q_versionnumber_new6 constructs a new QVersionNumber object.
+///
+/// @param param1 QVersionNumber*
+///
+QVersionNumber* q_versionnumber_new6(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isNull)
 ///
 /// @param self QVersionNumber*

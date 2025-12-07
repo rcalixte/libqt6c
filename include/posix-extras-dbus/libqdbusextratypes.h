@@ -151,6 +151,14 @@ QDBusVariant* q_dbusvariant_new();
 ///
 QDBusVariant* q_dbusvariant_new2(void* variant);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html)
+
+/// q_dbusvariant_new3 constructs a new QDBusVariant object.
+///
+/// @param param1 QDBusVariant*
+///
+QDBusVariant* q_dbusvariant_new3(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#swap)
 ///
 /// @param self QDBusVariant*

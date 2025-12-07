@@ -622,8 +622,12 @@ void q_textobjectinterface_delete(void* self) {
     QTextObjectInterface_Delete((QTextObjectInterface*)(self));
 }
 
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new() {
-    return QAbstractTextDocumentLayout__Selection_new();
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new(void* param1) {
+    return QAbstractTextDocumentLayout__Selection_new((QAbstractTextDocumentLayout__Selection*)param1);
+}
+
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2() {
+    return QAbstractTextDocumentLayout__Selection_new2();
 }
 
 QTextCursor* q_abstracttextdocumentlayout__selection_cursor(void* self) {
@@ -652,6 +656,10 @@ void q_abstracttextdocumentlayout__selection_delete(void* self) {
 
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new() {
     return QAbstractTextDocumentLayout__PaintContext_new();
+}
+
+QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new2(void* param1) {
+    return QAbstractTextDocumentLayout__PaintContext_new2((QAbstractTextDocumentLayout__PaintContext*)param1);
 }
 
 int32_t q_abstracttextdocumentlayout__paintcontext_cursor_position(void* self) {

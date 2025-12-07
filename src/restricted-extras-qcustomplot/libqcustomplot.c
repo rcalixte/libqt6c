@@ -11411,16 +11411,20 @@ QCPScatterStyle* q_cpscatterstyle_new7(void* customPath, void* pen) {
     return QCPScatterStyle_new7((QPainterPath*)customPath, (QPen*)pen);
 }
 
-QCPScatterStyle* q_cpscatterstyle_new8(int32_t shape, double size) {
-    return QCPScatterStyle_new8(shape, size);
+QCPScatterStyle* q_cpscatterstyle_new8(void* param1) {
+    return QCPScatterStyle_new8((QCPScatterStyle*)param1);
 }
 
-QCPScatterStyle* q_cpscatterstyle_new9(void* customPath, void* pen, void* brush) {
-    return QCPScatterStyle_new9((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush);
+QCPScatterStyle* q_cpscatterstyle_new9(int32_t shape, double size) {
+    return QCPScatterStyle_new9(shape, size);
 }
 
-QCPScatterStyle* q_cpscatterstyle_new10(void* customPath, void* pen, void* brush, double size) {
-    return QCPScatterStyle_new10((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush, size);
+QCPScatterStyle* q_cpscatterstyle_new10(void* customPath, void* pen, void* brush) {
+    return QCPScatterStyle_new10((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush);
+}
+
+QCPScatterStyle* q_cpscatterstyle_new11(void* customPath, void* pen, void* brush, double size) {
+    return QCPScatterStyle_new11((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush, size);
 }
 
 double q_cpscatterstyle_size(void* self) {

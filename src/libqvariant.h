@@ -221,34 +221,138 @@ QVariant* q_variant_new26(void* url);
 
 /// q_variant_new27 constructs a new QVariant object.
 ///
-/// @param size QSize*
+/// @param jsonValue QJsonValue*
 ///
-QVariant* q_variant_new27(void* size);
+QVariant* q_variant_new27(void* jsonValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
 /// q_variant_new28 constructs a new QVariant object.
 ///
-/// @param pt QPoint*
+/// @param modelIndex QModelIndex*
 ///
-QVariant* q_variant_new28(void* pt);
+QVariant* q_variant_new28(void* modelIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
 /// q_variant_new29 constructs a new QVariant object.
 ///
-/// @param type enum QVariant__Type
+/// @param uuid QUuid*
 ///
-QVariant* q_variant_new29(int64_t type);
+QVariant* q_variant_new29(void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
 /// q_variant_new30 constructs a new QVariant object.
 ///
+/// @param size QSize*
+///
+QVariant* q_variant_new30(void* size);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new31 constructs a new QVariant object.
+///
+/// @param size QSizeF*
+///
+QVariant* q_variant_new31(void* size);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new32 constructs a new QVariant object.
+///
+/// @param pt QPoint*
+///
+QVariant* q_variant_new32(void* pt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new33 constructs a new QVariant object.
+///
+/// @param pt QPointF*
+///
+QVariant* q_variant_new33(void* pt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new34 constructs a new QVariant object.
+///
+/// @param line QLine*
+///
+QVariant* q_variant_new34(void* line);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new35 constructs a new QVariant object.
+///
+/// @param line QLineF*
+///
+QVariant* q_variant_new35(void* line);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new36 constructs a new QVariant object.
+///
+/// @param rect QRect*
+///
+QVariant* q_variant_new36(void* rect);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new37 constructs a new QVariant object.
+///
+/// @param rect QRectF*
+///
+QVariant* q_variant_new37(void* rect);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new38 constructs a new QVariant object.
+///
+/// @param easing QEasingCurve*
+///
+QVariant* q_variant_new38(void* easing);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new39 constructs a new QVariant object.
+///
+/// @param jsonDocument QJsonDocument*
+///
+QVariant* q_variant_new39(void* jsonDocument);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new40 constructs a new QVariant object.
+///
+/// @param modelIndex QPersistentModelIndex*
+///
+QVariant* q_variant_new40(void* modelIndex);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new41 constructs a new QVariant object.
+///
+/// @param str const char*
+///
+QVariant* q_variant_new41(const char* str);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new42 constructs a new QVariant object.
+///
+/// @param type enum QVariant__Type
+///
+QVariant* q_variant_new42(int64_t type);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new43 constructs a new QVariant object.
+///
 /// @param type QMetaType*
 /// @param copyVal void*
 ///
-QVariant* q_variant_new30(void* type, void* copyVal);
+QVariant* q_variant_new43(void* type, void* copyVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#operator-eq)
 ///

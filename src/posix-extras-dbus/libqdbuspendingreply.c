@@ -2,6 +2,10 @@
 #include "libqdbuspendingreply.hpp"
 #include "libqdbuspendingreply.h"
 
+QDBusPendingReplyBase* q_dbuspendingreplybase_new(void* param1) {
+    return QDBusPendingReplyBase_new((QDBusPendingReplyBase*)param1);
+}
+
 void q_dbuspendingreplybase_operator_assign(void* self, void* other) {
     QDBusPendingCall_OperatorAssign((QDBusPendingCall*)self, (QDBusPendingCall*)other);
 }

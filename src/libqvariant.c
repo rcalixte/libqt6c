@@ -138,20 +138,72 @@ QVariant* q_variant_new26(void* url) {
     return QVariant_new26((QUrl*)url);
 }
 
-QVariant* q_variant_new27(void* size) {
-    return QVariant_new27((QSize*)size);
+QVariant* q_variant_new27(void* jsonValue) {
+    return QVariant_new27((QJsonValue*)jsonValue);
 }
 
-QVariant* q_variant_new28(void* pt) {
-    return QVariant_new28((QPoint*)pt);
+QVariant* q_variant_new28(void* modelIndex) {
+    return QVariant_new28((QModelIndex*)modelIndex);
 }
 
-QVariant* q_variant_new29(int64_t type) {
-    return QVariant_new29(type);
+QVariant* q_variant_new29(void* uuid) {
+    return QVariant_new29((QUuid*)uuid);
 }
 
-QVariant* q_variant_new30(void* type, void* copyVal) {
-    return QVariant_new30((QMetaType*)type, copyVal);
+QVariant* q_variant_new30(void* size) {
+    return QVariant_new30((QSize*)size);
+}
+
+QVariant* q_variant_new31(void* size) {
+    return QVariant_new31((QSizeF*)size);
+}
+
+QVariant* q_variant_new32(void* pt) {
+    return QVariant_new32((QPoint*)pt);
+}
+
+QVariant* q_variant_new33(void* pt) {
+    return QVariant_new33((QPointF*)pt);
+}
+
+QVariant* q_variant_new34(void* line) {
+    return QVariant_new34((QLine*)line);
+}
+
+QVariant* q_variant_new35(void* line) {
+    return QVariant_new35((QLineF*)line);
+}
+
+QVariant* q_variant_new36(void* rect) {
+    return QVariant_new36((QRect*)rect);
+}
+
+QVariant* q_variant_new37(void* rect) {
+    return QVariant_new37((QRectF*)rect);
+}
+
+QVariant* q_variant_new38(void* easing) {
+    return QVariant_new38((QEasingCurve*)easing);
+}
+
+QVariant* q_variant_new39(void* jsonDocument) {
+    return QVariant_new39((QJsonDocument*)jsonDocument);
+}
+
+QVariant* q_variant_new40(void* modelIndex) {
+    return QVariant_new40((QPersistentModelIndex*)modelIndex);
+}
+
+QVariant* q_variant_new41(const char* str) {
+    return QVariant_new41(str);
+}
+
+QVariant* q_variant_new42(int64_t type) {
+    return QVariant_new42(type);
+}
+
+QVariant* q_variant_new43(void* type, void* copyVal) {
+    return QVariant_new43((QMetaType*)type, copyVal);
 }
 
 void q_variant_operator_assign(void* self, void* other) {

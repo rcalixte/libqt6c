@@ -22,6 +22,10 @@ QVersionNumber* q_versionnumber_new5(int maj, int min, int mic) {
     return QVersionNumber_new5(maj, min, mic);
 }
 
+QVersionNumber* q_versionnumber_new6(void* param1) {
+    return QVersionNumber_new6((QVersionNumber*)param1);
+}
+
 bool q_versionnumber_is_null(void* self) {
     return QVersionNumber_IsNull((QVersionNumber*)self);
 }

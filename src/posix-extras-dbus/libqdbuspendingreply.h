@@ -13,6 +13,12 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingreplybase.html)
 
+/// q_dbuspendingreplybase_new constructs a new QDBusPendingReplyBase object.
+///
+/// @param param1 QDBusPendingReplyBase*
+///
+QDBusPendingReplyBase* q_dbuspendingreplybase_new(void* param1);
+
 /// Inherited from QDBusPendingCall
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#operator-eq)

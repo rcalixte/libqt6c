@@ -25,6 +25,14 @@ KBookmark* k_bookmark_new();
 ///
 KBookmark* k_bookmark_new2(void* elem);
 
+/// [Upstream resources](https://api.kde.org/kbookmark.html)
+
+/// k_bookmark_new3 constructs a new KBookmark object.
+///
+/// @param param1 KBookmark*
+///
+KBookmark* k_bookmark_new3(void* param1);
+
 /// [Upstream resources](https://api.kde.org/kbookmark.html#standaloneBookmark)
 ///
 /// @param text const char*

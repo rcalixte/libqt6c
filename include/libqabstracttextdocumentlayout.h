@@ -1316,7 +1316,15 @@ void q_textobjectinterface_delete(void* self);
 
 /// q_abstracttextdocumentlayout__selection_new constructs a new QAbstractTextDocumentLayout::Selection object.
 ///
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new();
+/// @param param1 QAbstractTextDocumentLayout__Selection*
+///
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html)
+
+/// q_abstracttextdocumentlayout__selection_new2 constructs a new QAbstractTextDocumentLayout::Selection object.
+///
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html#cursor-var)
 ///
@@ -1362,6 +1370,14 @@ void q_abstracttextdocumentlayout__selection_delete(void* self);
 /// q_abstracttextdocumentlayout__paintcontext_new constructs a new QAbstractTextDocumentLayout::PaintContext object.
 ///
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html)
+
+/// q_abstracttextdocumentlayout__paintcontext_new2 constructs a new QAbstractTextDocumentLayout::PaintContext object.
+///
+/// @param param1 QAbstractTextDocumentLayout__PaintContext*
+///
+QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#cursorPosition-var)
 ///

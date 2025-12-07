@@ -30,8 +30,12 @@ QBitmap* q_bitmap_new5(const char* fileName) {
     return QBitmap_new5(qstring(fileName));
 }
 
-QBitmap* q_bitmap_new6(const char* fileName, const char* format) {
-    return QBitmap_new6(qstring(fileName), format);
+QBitmap* q_bitmap_new6(void* param1) {
+    return QBitmap_new6((QBitmap*)param1);
+}
+
+QBitmap* q_bitmap_new7(const char* fileName, const char* format) {
+    return QBitmap_new7(qstring(fileName), format);
 }
 
 void q_bitmap_operator_assign(void* self, void* param1) {

@@ -784,6 +784,14 @@ void q_textline_delete(void* self);
 ///
 QTextLayout__FormatRange* q_textlayout__formatrange_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout-formatrange.html)
+
+/// q_textlayout__formatrange_new2 constructs a new QTextLayout::FormatRange object.
+///
+/// @param param1 QTextLayout__FormatRange*
+///
+QTextLayout__FormatRange* q_textlayout__formatrange_new2(void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout-formatrange.html#start-var)
 ///
 /// @param self QTextLayout__FormatRange*
