@@ -1,0 +1,1021 @@
+#pragma once
+#ifndef SRC_EXTRAS_KARCHIVE_QT6C_LIBKAR_H
+#define SRC_EXTRAS_KARCHIVE_QT6C_LIBKAR_H
+
+#include <stdbool.h>
+#include <stddef.h>
+
+#include "../libqttypedefs.h"
+
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
+#include "../qtlibc.h"
+
+/// [Upstream resources](https://api.kde.org/kar.html)
+
+/// k_ar_new constructs a new KAr object.
+///
+/// @param filename const char*
+///
+KAr* k_ar_new(const char* filename);
+
+/// [Upstream resources](https://api.kde.org/kar.html)
+
+/// k_ar_new2 constructs a new KAr object.
+///
+/// @param dev QIODevice*
+///
+KAr* k_ar_new2(void* dev);
+
+/// [Upstream resources](https://api.kde.org/kar.html)
+
+/// k_ar_new3 constructs a new KAr object.
+///
+/// @param param1 KAr*
+///
+KAr* k_ar_new3(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param sourceText const char*
+///
+const char* k_ar_tr(const char* sourceText);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doPrepareWriting)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param size long long
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doPrepareWriting)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, const char* name, const char* user, const char* group, long long size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
+///
+void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, long long, mode_t, void*, void*, void*));
+
+/// [Upstream resources](https://api.kde.org/kar.html#doPrepareWriting)
+///
+/// Base class method implementation
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param size long long
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doFinishWriting)
+///
+/// @param self KAr*
+/// @param size long long
+///
+bool k_ar_do_finish_writing(void* self, long long size);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doFinishWriting)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, long long size)
+///
+void k_ar_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
+
+/// [Upstream resources](https://api.kde.org/kar.html#doFinishWriting)
+///
+/// Base class method implementation
+///
+/// @param self KAr*
+/// @param size long long
+///
+bool k_ar_qbase_do_finish_writing(void* self, long long size);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doWriteDir)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doWriteDir)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, const char* name, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
+///
+void k_ar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+
+/// [Upstream resources](https://api.kde.org/kar.html#doWriteDir)
+///
+/// Base class method implementation
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doWriteSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// [Upstream resources](https://api.kde.org/kar.html#doWriteSymLink)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
+///
+void k_ar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+
+/// [Upstream resources](https://api.kde.org/kar.html#doWriteSymLink)
+///
+/// Base class method implementation
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// [Upstream resources](https://api.kde.org/kar.html#openArchive)
+///
+/// @param self KAr*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
+bool k_ar_open_archive(void* self, int32_t mode);
+
+/// [Upstream resources](https://api.kde.org/kar.html#openArchive)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, flag of enum QIODeviceBase__OpenModeFlag mode)
+///
+void k_ar_on_open_archive(void* self, bool (*callback)(void*, int32_t));
+
+/// [Upstream resources](https://api.kde.org/kar.html#openArchive)
+///
+/// Base class method implementation
+///
+/// @param self KAr*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
+bool k_ar_qbase_open_archive(void* self, int32_t mode);
+
+/// [Upstream resources](https://api.kde.org/kar.html#closeArchive)
+///
+/// @param self KAr*
+///
+bool k_ar_close_archive(void* self);
+
+/// [Upstream resources](https://api.kde.org/kar.html#closeArchive)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAr*
+/// @param callback bool func()
+///
+void k_ar_on_close_archive(void* self, bool (*callback)());
+
+/// [Upstream resources](https://api.kde.org/kar.html#closeArchive)
+///
+/// Base class method implementation
+///
+/// @param self KAr*
+///
+bool k_ar_qbase_close_archive(void* self);
+
+/// [Upstream resources](https://api.kde.org/kar.html#virtual_hook)
+///
+/// @param self KAr*
+/// @param id int
+/// @param data void*
+///
+void k_ar_virtual_hook(void* self, int id, void* data);
+
+/// [Upstream resources](https://api.kde.org/kar.html#virtual_hook)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAr*
+/// @param callback void func(KAr* self, int id, void* data)
+///
+void k_ar_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
+
+/// [Upstream resources](https://api.kde.org/kar.html#virtual_hook)
+///
+/// Base class method implementation
+///
+/// @param self KAr*
+/// @param id int
+/// @param data void*
+///
+void k_ar_qbase_virtual_hook(void* self, int id, void* data);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param sourceText const char*
+/// @param disambiguation const char*
+///
+const char* k_ar_tr2(const char* sourceText, const char* disambiguation);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param sourceText const char*
+/// @param disambiguation const char*
+/// @param n int
+///
+const char* k_ar_tr3(const char* sourceText, const char* disambiguation, int n);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#errorString)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self KAr*
+///
+const char* k_ar_error_string(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#isOpen)
+///
+/// @param self KAr*
+///
+bool k_ar_is_open(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#mode)
+///
+/// @param self KAr*
+///
+/// @return flag of enum QIODeviceBase__OpenModeFlag
+///
+int32_t k_ar_mode(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#device)
+///
+/// @param self KAr*
+///
+QIODevice* k_ar_device(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#fileName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self KAr*
+///
+const char* k_ar_file_name(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#directory)
+///
+/// @param self KAr*
+///
+const KArchiveDirectory* k_ar_directory(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#addLocalFile)
+///
+/// @param self KAr*
+/// @param fileName const char*
+/// @param destName const char*
+///
+bool k_ar_add_local_file(void* self, const char* fileName, const char* destName);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#addLocalDirectory)
+///
+/// @param self KAr*
+/// @param path const char*
+/// @param destName const char*
+///
+bool k_ar_add_local_directory(void* self, const char* path, const char* destName);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
+///
+/// @param self KAr*
+/// @param name const char*
+///
+bool k_ar_write_dir(void* self, const char* name);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+///
+bool k_ar_write_sym_link(void* self, const char* name, const char* target);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param data const char*
+///
+bool k_ar_write_file(void* self, const char* name, const char* data);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param size long long
+///
+bool k_ar_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeData)
+///
+/// @param self KAr*
+/// @param data const char*
+/// @param size long long
+///
+bool k_ar_write_data(void* self, const char* data, long long size);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeData)
+///
+/// @param self KAr*
+/// @param data const char*
+///
+bool k_ar_write_data2(void* self, const char* data);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#finishWriting)
+///
+/// @param self KAr*
+/// @param size long long
+///
+bool k_ar_finish_writing(void* self, long long size);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+///
+bool k_ar_write_dir2(void* self, const char* name, const char* user);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+///
+bool k_ar_write_dir3(void* self, const char* name, const char* user, const char* group);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+///
+bool k_ar_write_dir4(void* self, const char* name, const char* user, const char* group, mode_t perm);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+///
+bool k_ar_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+///
+bool k_ar_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+///
+bool k_ar_write_sym_link3(void* self, const char* name, const char* target, const char* user);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+/// @param group const char*
+///
+bool k_ar_write_sym_link4(void* self, const char* name, const char* target, const char* user, const char* group);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+///
+bool k_ar_write_sym_link5(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+///
+bool k_ar_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+///
+bool k_ar_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param target const char*
+/// @param user const char*
+/// @param group const char*
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param data const char*
+/// @param perm mode_t
+///
+bool k_ar_write_file3(void* self, const char* name, const char* data, mode_t perm);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param data const char*
+/// @param perm mode_t
+/// @param user const char*
+///
+bool k_ar_write_file4(void* self, const char* name, const char* data, mode_t perm, const char* user);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param data const char*
+/// @param perm mode_t
+/// @param user const char*
+/// @param group const char*
+///
+bool k_ar_write_file5(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param data const char*
+/// @param perm mode_t
+/// @param user const char*
+/// @param group const char*
+/// @param atime QDateTime*
+///
+bool k_ar_write_file6(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group, void* atime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param data const char*
+/// @param perm mode_t
+/// @param user const char*
+/// @param group const char*
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+///
+bool k_ar_write_file7(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param data const char*
+/// @param perm mode_t
+/// @param user const char*
+/// @param group const char*
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_write_file8(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param size long long
+/// @param perm mode_t
+///
+bool k_ar_prepare_writing5(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param size long long
+/// @param perm mode_t
+/// @param atime QDateTime*
+///
+bool k_ar_prepare_writing6(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param size long long
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+///
+bool k_ar_prepare_writing7(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
+///
+/// @param self KAr*
+/// @param name const char*
+/// @param user const char*
+/// @param group const char*
+/// @param size long long
+/// @param perm mode_t
+/// @param atime QDateTime*
+/// @param mtime QDateTime*
+/// @param ctime QDateTime*
+///
+bool k_ar_prepare_writing8(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#open)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
+bool k_ar_open(void* self, int32_t mode);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#open)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
+bool k_ar_qbase_open(void* self, int32_t mode);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#open)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, flag of enum QIODeviceBase__OpenModeFlag mode)
+///
+void k_ar_on_open(void* self, bool (*callback)(void*, int32_t));
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#close)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+///
+bool k_ar_close(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#close)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+///
+bool k_ar_qbase_close(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#close)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback bool func()
+///
+void k_ar_on_close(void* self, bool (*callback)());
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#rootDir)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+///
+KArchiveDirectory* k_ar_root_dir(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#rootDir)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+///
+KArchiveDirectory* k_ar_qbase_root_dir(void* self);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#rootDir)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback KArchiveDirectory* func()
+///
+void k_ar_on_root_dir(void* self, KArchiveDirectory* (*callback)());
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#doWriteData)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+/// @param data const char*
+/// @param size long long
+///
+bool k_ar_do_write_data(void* self, const char* data, long long size);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#doWriteData)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+/// @param data const char*
+/// @param size long long
+///
+bool k_ar_qbase_do_write_data(void* self, const char* data, long long size);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#doWriteData)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, const char* data, long long size)
+///
+void k_ar_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long));
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#createDevice)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
+bool k_ar_create_device(void* self, int32_t mode);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#createDevice)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
+///
+bool k_ar_qbase_create_device(void* self, int32_t mode);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#createDevice)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback bool func(KAr* self, flag of enum QIODeviceBase__OpenModeFlag mode)
+///
+void k_ar_on_create_device(void* self, bool (*callback)(void*, int32_t));
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setErrorString)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+/// @param errorStr const char*
+///
+void k_ar_set_error_string(void* self, const char* errorStr);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setErrorString)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+/// @param errorStr const char*
+///
+void k_ar_qbase_set_error_string(void* self, const char* errorStr);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setErrorString)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback void func(KAr* self, const char* errorStr)
+///
+void k_ar_on_set_error_string(void* self, void (*callback)(void*, const char*));
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#findOrCreate)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+/// @param path const char*
+///
+KArchiveDirectory* k_ar_find_or_create(void* self, const char* path);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#findOrCreate)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+/// @param path const char*
+///
+KArchiveDirectory* k_ar_qbase_find_or_create(void* self, const char* path);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#findOrCreate)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback KArchiveDirectory* func(KAr* self, const char* path)
+///
+void k_ar_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, const char*));
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setDevice)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+/// @param dev QIODevice*
+///
+void k_ar_set_device(void* self, void* dev);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setDevice)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+/// @param dev QIODevice*
+///
+void k_ar_qbase_set_device(void* self, void* dev);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setDevice)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback void func(KAr* self, QIODevice* dev)
+///
+void k_ar_on_set_device(void* self, void (*callback)(void*, void*));
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setRootDir)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAr*
+/// @param rootDir KArchiveDirectory*
+///
+void k_ar_set_root_dir(void* self, void* rootDir);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setRootDir)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAr*
+/// @param rootDir KArchiveDirectory*
+///
+void k_ar_qbase_set_root_dir(void* self, void* rootDir);
+
+/// Inherited from KArchive
+///
+/// [Upstream resources](https://api.kde.org/karchive.html#setRootDir)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAr*
+/// @param callback void func(KAr* self, KArchiveDirectory* rootDir)
+///
+void k_ar_on_set_root_dir(void* self, void (*callback)(void*, void*));
+
+/// [Upstream resources](https://api.kde.org/kar.html#dtor.KAr)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self KAr*
+///
+void k_ar_delete(void* self);
+
+#endif
