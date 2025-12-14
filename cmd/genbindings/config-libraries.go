@@ -198,6 +198,17 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 
 		// extras
 
+		// KArchive
+		// Depends on Qt Core
+		{
+			path: "extras-karchive",
+			dirs: []string{
+				"/usr/include/KF6/KArchive",
+			},
+			allowHeader: AllowAllHeaders,
+			cflags:      "--std=c++17 -I/usr/include/KF6/KArchive " + pkgConfigCflags("Qt6Core"),
+		},
+
 		// Attica
 		// Depends on Qt Core, Network
 		{
@@ -353,7 +364,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KJobWidgets",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17  -I/usr/include/KF6/KJobWidgets -I/usr/include/KF6/KCoreAddons " + pkgConfigCflags("Qt6Core"),
+			cflags:      "--std=c++17 -I/usr/include/KF6/KJobWidgets -I/usr/include/KF6/KCoreAddons " + pkgConfigCflags("Qt6Core"),
 		},
 
 		// KNewStuff
@@ -400,7 +411,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/Solid/solid",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17  -I/usr/include/KF6/Solid " + pkgConfigCflags("Qt6Core"),
+			cflags:      "--std=c++17 -I/usr/include/KF6/Solid " + pkgConfigCflags("Qt6Core"),
 		},
 
 		// Sonnet
@@ -481,7 +492,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KConfigWidgets",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17 -I/usr/include/KF6/KConfigWidgets  -I/usr/include/KF6/KColorScheme -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KConfigGui -I/usr/include/KF6/KGuiAddons -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets"),
+			cflags:      "--std=c++17 -I/usr/include/KF6/KConfigWidgets -I/usr/include/KF6/KColorScheme -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KConfigGui -I/usr/include/KF6/KGuiAddons -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets"),
 		},
 
 		// KBookmarks
@@ -493,7 +504,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KBookmarksWidgets",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17  -I/usr/include/KF6/KBookmarks -I/usr/include/KF6/KBookmarksWidgets -I/usr/include/KF6/KConfigWidgets -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets") + pkgConfigCflags("Qt6Xml"),
+			cflags:      "--std=c++17 -I/usr/include/KF6/KBookmarks -I/usr/include/KF6/KBookmarksWidgets -I/usr/include/KF6/KConfigWidgets -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets") + pkgConfigCflags("Qt6Xml"),
 		},
 
 		// KNotifications
@@ -504,7 +515,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KNotifications",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17  -I/usr/include/KF6/KNotifications -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KConfigGui " + pkgConfigCflags("Qt6Gui"),
+			cflags:      "--std=c++17 -I/usr/include/KF6/KNotifications -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KConfigGui " + pkgConfigCflags("Qt6Gui"),
 		},
 
 		// KIconThemes
