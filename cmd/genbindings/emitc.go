@@ -1735,9 +1735,15 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	// workaround for tr
 	switch headerName {
-	case "libkcharsets.h",
+	case "libk7zip.h",
+		"libkar.h",
+		"libkarchive.h",
+		"libkcharsets.h",
 		"libkconfigloader.h",
 		"libkencodingprober.h",
+		"libkrcc.h",
+		"libktar.h",
+		"libkzip.h",
 		"libqcommandlineparser.h",
 		"libqimagereader.h",
 		"libqimagewriter.h",
