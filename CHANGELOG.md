@@ -1,4 +1,8 @@
 
+### 6.8.2 rev49 (16 December 2025)
+
+* Add [Qt Positioning](https://doc.qt.io/qt-6/qtpositioning-index.html) (#89)
+
 ### 6.8.2 rev48 (14 December 2025)
 
 * Add [KArchive](https://api.kde.org/karchive-index.html) (#88)
