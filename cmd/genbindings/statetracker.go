@@ -89,7 +89,7 @@ func (e CppEnum) getEnumTypeC() (string, string) {
 func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	for _, c := range parsed.Classes {
 		if parsed.Filename != "" {
-			KnownIncludes[c.ClassName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
+			KnownIncludes[c.ClassName] = lookupResultInclude{packageName, strings.ReplaceAll(filepath.Base(parsed.Filename), "-", "_")}
 		}
 
 		KnownClassnames[c.ClassName] = lookupResultClass{packageName, c /* copy */}
@@ -145,7 +145,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	for _, en := range parsed.Enums {
 		if parsed.Filename != "" && en.EnumName != "" {
 			// enum classes... in Qt 6, these are found in qcborcommon.h, qdtls.h, qlogging.h, qmetatype.h, qocspresponse.h
-			KnownIncludes[en.EnumName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
+			KnownIncludes[en.EnumName] = lookupResultInclude{packageName, strings.ReplaceAll(filepath.Base(parsed.Filename), "-", "_")}
 		}
 
 		enumCABI := en.UnderlyingType.RenderTypeCabi(false)
@@ -173,7 +173,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 			// Some headers only have enums we can process, e.g. QSsl, QtVideo
 			// We also need to check for enums in scoped classes
 			includeName := en.EnumValueName()
-			KnownIncludes[includeName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
+			KnownIncludes[includeName] = lookupResultInclude{packageName, strings.ReplaceAll(filepath.Base(parsed.Filename), "-", "_")}
 		}
 	}
 }
