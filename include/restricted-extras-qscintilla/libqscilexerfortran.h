@@ -61,7 +61,7 @@ int32_t q_scilexerfortran_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* q_scilexerfortran_tr(const char* s);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerFortran*
 ///
@@ -77,7 +77,7 @@ const char* q_scilexerfortran_language(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerFortran*
 ///
@@ -85,7 +85,7 @@ const char* q_scilexerfortran_lexer(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerFortran*
 /// @param set int
@@ -94,7 +94,7 @@ const char* q_scilexerfortran_keywords(void* self, int set);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -103,7 +103,7 @@ const char* q_scilexerfortran_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -343,7 +343,7 @@ bool q_scilexerfortran_write_settings2(void* self, void* qs, const char* prefix)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerFortran*
 ///
@@ -558,7 +558,7 @@ QVariant* q_scilexerfortran_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QsciLexerFortran*
 ///
@@ -752,7 +752,7 @@ void q_scilexerfortran_on_lexer_id(void* self, int32_t (*callback)());
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -764,7 +764,7 @@ const char* q_scilexerfortran_auto_completion_fillups(void* self);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -787,7 +787,7 @@ void q_scilexerfortran_on_auto_completion_fillups(void* self, const char* (*call
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -799,7 +799,7 @@ const char** q_scilexerfortran_auto_completion_word_separators(void* self);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -822,7 +822,7 @@ void q_scilexerfortran_on_auto_completion_word_separators(void* self, const char
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -835,7 +835,7 @@ const char* q_scilexerfortran_block_end(void* self, int* style);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -890,7 +890,7 @@ void q_scilexerfortran_on_block_lookback(void* self, int32_t (*callback)());
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -903,7 +903,7 @@ const char* q_scilexerfortran_block_start(void* self, int* style);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -927,7 +927,7 @@ void q_scilexerfortran_on_block_start(void* self, const char* (*callback)(void*,
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -940,7 +940,7 @@ const char* q_scilexerfortran_block_start_keyword(void* self, int* style);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1187,7 +1187,7 @@ void q_scilexerfortran_on_default_style(void* self, int32_t (*callback)());
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1200,7 +1200,7 @@ const char* q_scilexerfortran_description(void* self, int style);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1484,7 +1484,7 @@ void q_scilexerfortran_on_style_bits_needed(void* self, int32_t (*callback)());
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1496,7 +1496,7 @@ const char* q_scilexerfortran_word_characters(void* self);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1995,7 +1995,7 @@ void q_scilexerfortran_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2008,7 +2008,7 @@ char* q_scilexerfortran_text_as_bytes(void* self, const char* text);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2032,7 +2032,7 @@ void q_scilexerfortran_on_text_as_bytes(void* self, char* (*callback)(void*, con
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2046,7 +2046,7 @@ const char* q_scilexerfortran_bytes_as_text(void* self, const char* bytes, int s
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

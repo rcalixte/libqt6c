@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/ktexttohtml.html#convertToHtml)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 flag of enum KTextToHTML__Option

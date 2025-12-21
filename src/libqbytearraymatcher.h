@@ -89,7 +89,7 @@ int64_t q_bytearraymatcher_index_in2(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#pattern)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayMatcher*
 ///

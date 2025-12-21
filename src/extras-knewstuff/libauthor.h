@@ -41,7 +41,7 @@ void k_nscore__author_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Author*
 ///
@@ -56,7 +56,7 @@ void k_nscore__author_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Author*
 ///
@@ -71,7 +71,7 @@ void k_nscore__author_set_email(void* self, const char* email);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#email)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Author*
 ///
@@ -86,7 +86,7 @@ void k_nscore__author_set_jabber(void* self, const char* jabber);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#jabber)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Author*
 ///
@@ -101,7 +101,7 @@ void k_nscore__author_set_homepage(void* self, const char* homepage);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#homepage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Author*
 ///
@@ -116,7 +116,7 @@ void k_nscore__author_set_profilepage(void* self, const char* profilepage);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#profilepage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Author*
 ///
@@ -137,7 +137,7 @@ QUrl* k_nscore__author_avatar_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Author*
 ///

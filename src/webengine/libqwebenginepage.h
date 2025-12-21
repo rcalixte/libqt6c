@@ -78,7 +78,7 @@ int32_t q_webenginepage_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -98,7 +98,7 @@ bool q_webenginepage_has_selection(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#selectedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEnginePage*
 ///
@@ -219,7 +219,7 @@ void q_webenginepage_set_content(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#title)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEnginePage*
 ///
@@ -386,7 +386,7 @@ QWebEnginePage* q_webenginepage_dev_tools_page(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#devToolsId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEnginePage*
 ///
@@ -1065,7 +1065,7 @@ QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEnginePage*
 /// @param mode enum QWebEnginePage__FileSelectionMode
@@ -1210,7 +1210,7 @@ bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1219,7 +1219,7 @@ const char* q_webenginepage_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1297,7 +1297,7 @@ void q_webenginepage_print_to_pdf3(void* self, const char* filePath, void* layou
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEnginePage*
 ///
@@ -1512,7 +1512,7 @@ QVariant* q_webenginepage_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEnginePage*
 ///

@@ -29,7 +29,7 @@ KRcc* k_rcc_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 ///
@@ -252,7 +252,7 @@ void k_rcc_qbase_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -261,7 +261,7 @@ const char* k_rcc_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -273,7 +273,7 @@ const char* k_rcc_tr3(const char* sourceText, const char* disambiguation, int n)
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRcc*
 ///
@@ -309,7 +309,7 @@ QIODevice* k_rcc_device(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRcc*
 ///

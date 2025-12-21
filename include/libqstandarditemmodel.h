@@ -136,7 +136,7 @@ void q_standarditem_clear_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
 ///
@@ -164,7 +164,7 @@ void q_standarditem_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
 ///
@@ -179,7 +179,7 @@ void q_standarditem_set_tool_tip(void* self, const char* toolTip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
 ///
@@ -194,7 +194,7 @@ void q_standarditem_set_status_tip(void* self, const char* statusTip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
 ///
@@ -291,7 +291,7 @@ void q_standarditem_set_check_state(void* self, int32_t checkState);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#accessibleText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
 ///
@@ -306,7 +306,7 @@ void q_standarditem_set_accessible_text(void* self, const char* accessibleText);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItem*
 ///
@@ -928,7 +928,7 @@ int32_t q_standarditemmodel_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -1749,7 +1749,7 @@ void q_standarditemmodel_set_sort_role(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItemModel*
 ///
@@ -1846,7 +1846,7 @@ void q_standarditemmodel_on_item_changed(void* self, void (*callback)(void*, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1855,7 +1855,7 @@ const char* q_standarditemmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2185,7 +2185,7 @@ void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*callb
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItemModel*
 ///
@@ -2400,7 +2400,7 @@ QVariant* q_standarditemmodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStandardItemModel*
 ///

@@ -61,7 +61,7 @@ int32_t q_sctpserver_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -113,7 +113,7 @@ void q_sctpserver_qbase_incoming_connection(void* self, intptr_t handle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -122,7 +122,7 @@ const char* q_sctpserver_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -243,7 +243,7 @@ int32_t q_sctpserver_server_error(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpServer*
 ///
@@ -359,7 +359,7 @@ bool q_sctpserver_wait_for_new_connection2(void* self, int msec, bool* timedOut)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpServer*
 ///
@@ -574,7 +574,7 @@ QVariant* q_sctpserver_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSctpServer*
 ///

@@ -72,7 +72,7 @@ int32_t k_richtextwidget_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -149,7 +149,7 @@ void k_richtextwidget_qbase_mouse_release_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -158,7 +158,7 @@ const char* k_richtextwidget_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -188,7 +188,7 @@ int32_t k_richtextwidget_text_mode(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/krichtextedit.html#textOrHtml)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -207,7 +207,7 @@ void k_richtextwidget_set_text_or_html(void* self, const char* text);
 ///
 /// [Upstream resources](https://api.kde.org/krichtextedit.html#currentLinkText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -217,7 +217,7 @@ const char* k_richtextwidget_current_link_text(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/krichtextedit.html#currentLinkUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -440,7 +440,7 @@ void k_richtextwidget_switch_to_plain_text(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/krichtextedit.html#toCleanHtml)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -539,7 +539,7 @@ void k_richtextwidget_enable_find_replace(void* self, bool enabled);
 ///
 /// [Upstream resources](https://api.kde.org/ktextedit.html#spellCheckingLanguage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -785,7 +785,7 @@ void k_richtextwidget_set_placeholder_text(void* self, const char* placeholderTe
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#placeholderText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -847,7 +847,7 @@ double k_richtextwidget_font_point_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontFamily)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -986,7 +986,7 @@ void k_richtextwidget_set_document_title(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#documentTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -1086,7 +1086,7 @@ bool k_richtextwidget_find2(void* self, void* exp);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#toPlainText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -1096,7 +1096,7 @@ const char* k_richtextwidget_to_plain_text(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#toHtml)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -1106,7 +1106,7 @@ const char* k_richtextwidget_to_html(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#toMarkdown)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -1167,7 +1167,7 @@ QRect* k_richtextwidget_cursor_rect2(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#anchorAt)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 /// @param pos QPoint*
@@ -1649,7 +1649,7 @@ bool k_richtextwidget_find23(void* self, void* exp, int32_t options);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#toMarkdown)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 /// @param features flag of enum QTextDocument__MarkdownFeature
@@ -2802,7 +2802,7 @@ void k_richtextwidget_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2812,7 +2812,7 @@ const char* k_richtextwidget_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2848,7 +2848,7 @@ void k_richtextwidget_set_window_icon_text(void* self, const char* windowIconTex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2867,7 +2867,7 @@ void k_richtextwidget_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2886,7 +2886,7 @@ void k_richtextwidget_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2930,7 +2930,7 @@ void k_richtextwidget_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2966,7 +2966,7 @@ void k_richtextwidget_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2985,7 +2985,7 @@ void k_richtextwidget_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -2995,7 +2995,7 @@ const char* k_richtextwidget_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -3014,7 +3014,7 @@ void k_richtextwidget_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -3553,7 +3553,7 @@ void k_richtextwidget_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -4351,7 +4351,7 @@ QWidget* k_richtextwidget_create_window_container3(void* window, void* parent, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///
@@ -4557,7 +4557,7 @@ QVariant* k_richtextwidget_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KRichTextWidget*
 ///

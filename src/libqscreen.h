@@ -33,7 +33,7 @@ int32_t q_screen_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -41,7 +41,7 @@ const char* q_screen_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScreen*
 ///
@@ -49,7 +49,7 @@ const char* q_screen_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#manufacturer)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScreen*
 ///
@@ -57,7 +57,7 @@ const char* q_screen_manufacturer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#model)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScreen*
 ///
@@ -65,7 +65,7 @@ const char* q_screen_model(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#serialNumber)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScreen*
 ///
@@ -390,7 +390,7 @@ void q_screen_on_refresh_rate_changed(void* self, void (*callback)(void*, double
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -399,7 +399,7 @@ const char* q_screen_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -475,7 +475,7 @@ bool q_screen_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScreen*
 ///
@@ -690,7 +690,7 @@ QVariant* q_screen_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScreen*
 ///

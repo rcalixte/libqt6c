@@ -73,7 +73,7 @@ void q_geoshape_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoShape*
 ///

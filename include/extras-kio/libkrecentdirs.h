@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/krecentdirs.html#list)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -23,7 +23,7 @@ const char** k_recentdirs_list(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/krecentdirs.html#dir)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///

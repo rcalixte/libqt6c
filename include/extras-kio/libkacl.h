@@ -186,7 +186,7 @@ bool k_acl_set_a_c_l(void* self, const char* aclStr);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#asString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KACL*
 ///

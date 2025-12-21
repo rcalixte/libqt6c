@@ -33,7 +33,7 @@ int32_t q_futurewatcherbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -59,7 +59,7 @@ int32_t q_futurewatcherbase_progress_maximum(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFutureWatcherBase*
 ///
@@ -342,7 +342,7 @@ void q_futurewatcherbase_toggle_paused(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -351,7 +351,7 @@ const char* q_futurewatcherbase_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -373,7 +373,7 @@ bool q_futurewatcherbase_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFutureWatcherBase*
 ///
@@ -588,7 +588,7 @@ QVariant* q_futurewatcherbase_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFutureWatcherBase*
 ///

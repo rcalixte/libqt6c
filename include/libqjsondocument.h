@@ -43,7 +43,7 @@ void q_jsonparseerror_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QJsonParseError*
 ///
@@ -149,7 +149,7 @@ QJsonDocument* q_jsondocument_from_json(const char* json);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QJsonDocument*
 ///
@@ -228,7 +228,7 @@ QJsonDocument* q_jsondocument_from_json2(const char* json, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QJsonDocument*
 /// @param format enum QJsonDocument__JsonFormat

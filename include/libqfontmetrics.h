@@ -234,7 +234,7 @@ QRect* q_fontmetrics_tight_bounding_rect2(void* self, const char* text, void* te
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#elidedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFontMetrics*
 /// @param text const char*
@@ -364,7 +364,7 @@ QSize* q_fontmetrics_size4(void* self, int flags, const char* str, int tabstops,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#elidedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFontMetrics*
 /// @param text const char*
@@ -608,7 +608,7 @@ QRectF* q_fontmetricsf_tight_bounding_rect2(void* self, const char* text, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#elidedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFontMetricsF*
 /// @param text const char*
@@ -711,7 +711,7 @@ QSizeF* q_fontmetricsf_size4(void* self, int flags, const char* str, int tabstop
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetricsf.html#elidedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFontMetricsF*
 /// @param text const char*

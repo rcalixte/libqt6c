@@ -61,7 +61,7 @@ int32_t k_viewstateserializer_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -95,7 +95,7 @@ void k_viewstateserializer_set_selection_model(void* self, void* selectionModel)
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#selectionKeys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 ///
@@ -103,7 +103,7 @@ const char** k_viewstateserializer_selection_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#expansionKeys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 ///
@@ -111,7 +111,7 @@ const char** k_viewstateserializer_expansion_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#currentIndexKey)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 ///
@@ -181,7 +181,7 @@ QModelIndex* k_viewstateserializer_qbase_index_from_config_string(void* self, vo
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 /// @param index QModelIndex*
@@ -231,7 +231,7 @@ void k_viewstateserializer_qbase_restore_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -240,7 +240,7 @@ const char* k_viewstateserializer_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -252,7 +252,7 @@ const char* k_viewstateserializer_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 ///
@@ -467,7 +467,7 @@ QVariant* k_viewstateserializer_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 ///

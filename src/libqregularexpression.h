@@ -73,7 +73,7 @@ void q_regularexpression_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#pattern)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpression*
 ///
@@ -100,7 +100,7 @@ int64_t q_regularexpression_pattern_error_offset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpression*
 ///
@@ -114,7 +114,7 @@ int32_t q_regularexpression_capture_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#namedCaptureGroups)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpression*
 ///
@@ -142,7 +142,7 @@ void q_regularexpression_optimize(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#escape)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param str const char*
 ///
@@ -150,7 +150,7 @@ const char* q_regularexpression_escape(const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param str const char*
 ///
@@ -158,7 +158,7 @@ const char* q_regularexpression_wildcard_to_regular_expression(const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#anchoredPattern)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param expression const char*
 ///
@@ -220,7 +220,7 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param str const char*
 /// @param options flag of enum QRegularExpression__WildcardConversionOption
@@ -325,7 +325,7 @@ bool q_regularexpressionmatch_has_captured2(void* self, int nth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpressionMatch*
 ///
@@ -333,7 +333,7 @@ const char* q_regularexpressionmatch_captured(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpressionMatch*
 /// @param name char*
@@ -342,7 +342,7 @@ const char* q_regularexpressionmatch_captured2(void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedTexts)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpressionMatch*
 ///
@@ -389,7 +389,7 @@ int64_t q_regularexpressionmatch_captured_end2(void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRegularExpressionMatch*
 /// @param nth int

@@ -57,7 +57,7 @@ void q_bytearrayview_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toByteArray)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -71,7 +71,7 @@ int64_t q_bytearrayview_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#data)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -79,7 +79,7 @@ const char* q_bytearrayview_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#constData)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -101,7 +101,7 @@ char q_bytearrayview_at(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#first)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param n int64_t
@@ -110,7 +110,7 @@ const char* q_bytearrayview_first(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#last)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param n int64_t
@@ -119,7 +119,7 @@ const char* q_bytearrayview_last(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#sliced)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param pos int64_t
@@ -128,7 +128,7 @@ const char* q_bytearrayview_sliced(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#sliced)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param pos int64_t
@@ -138,7 +138,7 @@ const char* q_bytearrayview_sliced2(void* self, int64_t pos, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#slice)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param pos int64_t
@@ -147,7 +147,7 @@ const char* q_bytearrayview_slice(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#slice)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param pos int64_t
@@ -157,7 +157,7 @@ const char* q_bytearrayview_slice2(void* self, int64_t pos, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#chopped)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param lenVal int64_t
@@ -166,7 +166,7 @@ const char* q_bytearrayview_chopped(void* self, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#left)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param n int64_t
@@ -175,7 +175,7 @@ const char* q_bytearrayview_left(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#right)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param n int64_t
@@ -184,7 +184,7 @@ const char* q_bytearrayview_right(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#mid)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param pos int64_t
@@ -207,7 +207,7 @@ void q_bytearrayview_chop(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#trimmed)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -380,7 +380,7 @@ bool q_bytearrayview_is_valid_utf8(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#begin)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -388,7 +388,7 @@ const char* q_bytearrayview_begin(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#end)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -396,7 +396,7 @@ const char* q_bytearrayview_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#cbegin)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -404,7 +404,7 @@ const char* q_bytearrayview_cbegin(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#cend)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 ///
@@ -470,7 +470,7 @@ int64_t q_bytearrayview_max_size2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#mid)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QByteArrayView*
 /// @param pos int64_t

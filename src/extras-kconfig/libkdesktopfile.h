@@ -42,7 +42,7 @@ bool k_desktopfile_is_authorized_desktop_file(const char* path);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#locateLocal)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param path const char*
 ///
@@ -56,7 +56,7 @@ KConfigGroup* k_desktopfile_desktop_group(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -64,7 +64,7 @@ const char* k_desktopfile_read_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readIcon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -72,7 +72,7 @@ const char* k_desktopfile_read_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -80,7 +80,7 @@ const char* k_desktopfile_read_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readComment)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -88,7 +88,7 @@ const char* k_desktopfile_read_comment(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readGenericName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -96,7 +96,7 @@ const char* k_desktopfile_read_generic_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -104,7 +104,7 @@ const char* k_desktopfile_read_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -112,7 +112,7 @@ const char* k_desktopfile_read_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readActions)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -120,7 +120,7 @@ const char** k_desktopfile_read_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readMimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -173,7 +173,7 @@ bool k_desktopfile_try_exec(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#readDocPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -194,7 +194,7 @@ KDesktopFile* k_desktopfile_copy_to(void* self, const char* file);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfile.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -220,7 +220,7 @@ int32_t k_desktopfile_location_type(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -284,7 +284,7 @@ void k_desktopfile_add_config_sources(void* self, const char* sources[static 1])
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#additionalConfigSources)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -294,7 +294,7 @@ const char** k_desktopfile_additional_config_sources(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#locale)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDesktopFile*
 ///
@@ -346,7 +346,7 @@ void k_desktopfile_set_main_config_name(const char* str);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#mainConfigName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* k_desktopfile_main_config_name();
 
@@ -556,7 +556,7 @@ void k_desktopfile_on_is_immutable(void* self, bool (*callback)());
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -568,7 +568,7 @@ const char** k_desktopfile_group_list(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

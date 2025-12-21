@@ -61,7 +61,7 @@ int32_t k_descendantsproxymodel_qbase_metacall(void* self, int32_t param1, int p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -114,7 +114,7 @@ void k_descendantsproxymodel_set_ancestor_separator(void* self, const char* sepa
 
 /// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#ancestorSeparator)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDescendantsProxyModel*
 ///
@@ -307,7 +307,7 @@ QMimeData* k_descendantsproxymodel_qbase_mime_data(void* self, libqt_list indexe
 
 /// [Upstream resources](https://api.kde.org/kdescendantsproxymodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDescendantsProxyModel*
 ///
@@ -641,7 +641,7 @@ void k_descendantsproxymodel_on_source_index_collapsed(void* self, void (*callba
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -650,7 +650,7 @@ const char* k_descendantsproxymodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -977,7 +977,7 @@ void k_descendantsproxymodel_on_layout_about_to_be_changed2(void* self, void (*c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDescendantsProxyModel*
 ///
@@ -1192,7 +1192,7 @@ QVariant* k_descendantsproxymodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KDescendantsProxyModel*
 ///

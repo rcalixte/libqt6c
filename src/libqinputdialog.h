@@ -70,7 +70,7 @@ int32_t q_inputdialog_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -100,7 +100,7 @@ void q_inputdialog_set_label_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#labelText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -144,7 +144,7 @@ void q_inputdialog_set_text_value(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#textValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -187,7 +187,7 @@ void q_inputdialog_set_combo_box_items(void* self, const char* items[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#comboBoxItems)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -322,7 +322,7 @@ void q_inputdialog_set_ok_button_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#okButtonText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -337,7 +337,7 @@ void q_inputdialog_set_cancel_button_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#cancelButtonText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -416,7 +416,7 @@ void q_inputdialog_qbase_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -426,7 +426,7 @@ const char* q_inputdialog_get_text(void* parent, const char* title, const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -436,7 +436,7 @@ const char* q_inputdialog_get_multi_line_text(void* parent, const char* title, c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -585,7 +585,7 @@ void q_inputdialog_qbase_done(void* self, int result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -594,7 +594,7 @@ const char* q_inputdialog_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -612,7 +612,7 @@ void q_inputdialog_set_option2(void* self, int32_t option, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -623,7 +623,7 @@ const char* q_inputdialog_get_text4(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -635,7 +635,7 @@ const char* q_inputdialog_get_text5(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -648,7 +648,7 @@ const char* q_inputdialog_get_text6(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -662,7 +662,7 @@ const char* q_inputdialog_get_text7(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -677,7 +677,7 @@ const char* q_inputdialog_get_text8(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -688,7 +688,7 @@ const char* q_inputdialog_get_multi_line_text4(void* parent, const char* title, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -700,7 +700,7 @@ const char* q_inputdialog_get_multi_line_text5(void* parent, const char* title, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -713,7 +713,7 @@ const char* q_inputdialog_get_multi_line_text6(void* parent, const char* title, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -727,7 +727,7 @@ const char* q_inputdialog_get_multi_line_text7(void* parent, const char* title, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -739,7 +739,7 @@ const char* q_inputdialog_get_item5(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -752,7 +752,7 @@ const char* q_inputdialog_get_item6(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -766,7 +766,7 @@ const char* q_inputdialog_get_item7(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -781,7 +781,7 @@ const char* q_inputdialog_get_item8(void* parent, const char* title, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param parent QWidget*
 /// @param title const char*
@@ -1904,7 +1904,7 @@ void q_inputdialog_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -1914,7 +1914,7 @@ const char* q_inputdialog_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -1950,7 +1950,7 @@ void q_inputdialog_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -1969,7 +1969,7 @@ void q_inputdialog_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -1988,7 +1988,7 @@ void q_inputdialog_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -2032,7 +2032,7 @@ void q_inputdialog_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -2068,7 +2068,7 @@ void q_inputdialog_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -2087,7 +2087,7 @@ void q_inputdialog_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -2097,7 +2097,7 @@ const char* q_inputdialog_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -2116,7 +2116,7 @@ void q_inputdialog_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -2655,7 +2655,7 @@ void q_inputdialog_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -3461,7 +3461,7 @@ QWidget* q_inputdialog_create_window_container3(void* window, void* parent, int6
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///
@@ -3667,7 +3667,7 @@ QVariant* q_inputdialog_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QInputDialog*
 ///

@@ -67,7 +67,7 @@ bool k_bookmark_has_parent(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmark*
 ///
@@ -75,7 +75,7 @@ const char* k_bookmark_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#fullText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmark*
 ///
@@ -103,7 +103,7 @@ void k_bookmark_set_url(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmark*
 ///
@@ -118,7 +118,7 @@ void k_bookmark_set_icon(void* self, const char* icon);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmark*
 ///
@@ -133,7 +133,7 @@ void k_bookmark_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#mimeType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmark*
 ///
@@ -173,7 +173,7 @@ KBookmarkGroup* k_bookmark_to_group(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#address)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmark*
 ///
@@ -199,7 +199,7 @@ void k_bookmark_update_access_metadata(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#parentAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param address const char*
 ///
@@ -213,7 +213,7 @@ uint32_t k_bookmark_position_in_parent2(const char* address);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#previousAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param address const char*
 ///
@@ -221,7 +221,7 @@ const char* k_bookmark_previous_address(const char* address);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#nextAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param address const char*
 ///
@@ -229,7 +229,7 @@ const char* k_bookmark_next_address(const char* address);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#commonParent)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param A const char*
 /// @param B const char*
@@ -246,7 +246,7 @@ QDomNode* k_bookmark_meta_data(void* self, const char* owner, bool create);
 
 /// [Upstream resources](https://api.kde.org/kbookmark.html#metaDataItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmark*
 /// @param key const char*
@@ -447,7 +447,7 @@ bool k_bookmarkgroup_has_parent(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkGroup*
 ///
@@ -457,7 +457,7 @@ const char* k_bookmarkgroup_text(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#fullText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkGroup*
 ///
@@ -493,7 +493,7 @@ void k_bookmarkgroup_set_url(void* self, void* url);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkGroup*
 ///
@@ -512,7 +512,7 @@ void k_bookmarkgroup_set_icon(void* self, const char* icon);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkGroup*
 ///
@@ -531,7 +531,7 @@ void k_bookmarkgroup_set_description(void* self, const char* description);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#mimeType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkGroup*
 ///
@@ -583,7 +583,7 @@ KBookmarkGroup* k_bookmarkgroup_to_group(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#address)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkGroup*
 ///
@@ -617,7 +617,7 @@ void k_bookmarkgroup_update_access_metadata(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#parentAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param address const char*
 ///
@@ -635,7 +635,7 @@ uint32_t k_bookmarkgroup_position_in_parent2(const char* address);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#previousAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param address const char*
 ///
@@ -645,7 +645,7 @@ const char* k_bookmarkgroup_previous_address(const char* address);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#nextAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param address const char*
 ///
@@ -655,7 +655,7 @@ const char* k_bookmarkgroup_next_address(const char* address);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#commonParent)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param A const char*
 /// @param B const char*
@@ -676,7 +676,7 @@ QDomNode* k_bookmarkgroup_meta_data(void* self, const char* owner, bool create);
 ///
 /// [Upstream resources](https://api.kde.org/kbookmark.html#metaDataItem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkGroup*
 /// @param key const char*
@@ -751,7 +751,7 @@ bool k_bookmark__list_can_decode(void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kbookmark-list.html#mimeDataTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_bookmark__list_mime_data_types();
 

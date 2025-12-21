@@ -57,7 +57,7 @@ int32_t k_toolbarpopupaction_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -111,7 +111,7 @@ QWidget* k_toolbarpopupaction_qbase_create_widget(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -120,7 +120,7 @@ const char* k_toolbarpopupaction_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -218,7 +218,7 @@ void k_toolbarpopupaction_set_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -237,7 +237,7 @@ void k_toolbarpopupaction_set_icon_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -256,7 +256,7 @@ void k_toolbarpopupaction_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -275,7 +275,7 @@ void k_toolbarpopupaction_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -294,7 +294,7 @@ void k_toolbarpopupaction_set_whats_this(void* self, const char* what);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -781,7 +781,7 @@ void k_toolbarpopupaction_on_triggered1(void* self, void (*callback)(void*, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KToolBarPopupAction*
 ///
@@ -996,7 +996,7 @@ QVariant* k_toolbarpopupaction_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KToolBarPopupAction*
 ///

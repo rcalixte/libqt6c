@@ -104,7 +104,7 @@ int32_t k_codecaction_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -112,7 +112,7 @@ const char* k_codecaction_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kcodecaction.html#currentCodecName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -179,7 +179,7 @@ void k_codecaction_qbase_slot_action_triggered(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -188,7 +188,7 @@ const char* k_codecaction_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -262,7 +262,7 @@ int32_t k_codecaction_current_item(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#currentText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -362,7 +362,7 @@ void k_codecaction_set_items(void* self, const char* lst[static 1]);
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#items)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -618,7 +618,7 @@ void k_codecaction_set_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -637,7 +637,7 @@ void k_codecaction_set_icon_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -656,7 +656,7 @@ void k_codecaction_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -675,7 +675,7 @@ void k_codecaction_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -694,7 +694,7 @@ void k_codecaction_set_whats_this(void* self, const char* what);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -1181,7 +1181,7 @@ void k_codecaction_on_triggered1(void* self, void (*callback)(void*, bool));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///
@@ -1396,7 +1396,7 @@ QVariant* k_codecaction_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 ///

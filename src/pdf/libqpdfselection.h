@@ -41,7 +41,7 @@ bool q_pdfselection_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfselection.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfSelection*
 ///

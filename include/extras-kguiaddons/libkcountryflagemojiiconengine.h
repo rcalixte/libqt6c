@@ -44,7 +44,7 @@ QIconEngine* k_countryflagemojiiconengine_qbase_clone(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 ///
@@ -405,7 +405,7 @@ void k_countryflagemojiiconengine_on_available_sizes(void* self, QSize** (*callb
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -417,7 +417,7 @@ const char* k_countryflagemojiiconengine_icon_name(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

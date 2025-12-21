@@ -106,7 +106,7 @@ int32_t q_sqlquery_at(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#lastQuery)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlQuery*
 ///
@@ -317,7 +317,7 @@ libqt_list /* of QVariant* */ q_sqlquery_bound_values(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#boundValueNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlQuery*
 ///
@@ -325,7 +325,7 @@ const char** q_sqlquery_bound_value_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#boundValueName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlQuery*
 /// @param pos int
@@ -334,7 +334,7 @@ const char* q_sqlquery_bound_value_name(void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#executedQuery)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlQuery*
 ///

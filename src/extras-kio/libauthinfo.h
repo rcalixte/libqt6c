@@ -60,7 +60,7 @@ void k_io__authinfo_set_url(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#username-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///
@@ -75,7 +75,7 @@ void k_io__authinfo_set_username(void* self, const char* username);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#password-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///
@@ -90,7 +90,7 @@ void k_io__authinfo_set_password(void* self, const char* password);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#prompt-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///
@@ -105,7 +105,7 @@ void k_io__authinfo_set_prompt(void* self, const char* prompt);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#caption-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///
@@ -120,7 +120,7 @@ void k_io__authinfo_set_caption(void* self, const char* caption);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#comment-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///
@@ -135,7 +135,7 @@ void k_io__authinfo_set_comment(void* self, const char* comment);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#commentLabel-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///
@@ -150,7 +150,7 @@ void k_io__authinfo_set_comment_label(void* self, const char* commentLabel);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#realmValue-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///
@@ -165,7 +165,7 @@ void k_io__authinfo_set_realm_value(void* self, const char* realmValue);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#digestInfo-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__AuthInfo*
 ///

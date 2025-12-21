@@ -73,7 +73,7 @@ void k_parts__openurlarguments_set_y_offset(void* self, int y);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#mimeType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KParts__OpenUrlArguments*
 ///

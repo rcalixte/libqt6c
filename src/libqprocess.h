@@ -89,7 +89,7 @@ void q_processenvironment_remove(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#value)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcessEnvironment*
 /// @param name const char*
@@ -98,7 +98,7 @@ const char* q_processenvironment_value(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#toStringList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcessEnvironment*
 ///
@@ -106,7 +106,7 @@ const char** q_processenvironment_to_string_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#keys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcessEnvironment*
 ///
@@ -125,7 +125,7 @@ QProcessEnvironment* q_processenvironment_system_environment();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#value)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcessEnvironment*
 /// @param name const char*
@@ -191,7 +191,7 @@ int32_t q_process_qbase_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -250,7 +250,7 @@ bool q_process_qbase_open(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#program)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -265,7 +265,7 @@ void q_process_set_program(void* self, const char* program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#arguments)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -393,7 +393,7 @@ void q_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#workingDirectory)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -415,7 +415,7 @@ void q_process_set_environment(void* self, const char* environment[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#environment)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -520,7 +520,7 @@ bool q_process_wait_for_finished(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readAllStandardOutput)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -528,7 +528,7 @@ char* q_process_read_all_standard_output(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readAllStandardError)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -631,13 +631,13 @@ bool q_process_start_detached2(const char* program);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#systemEnvironment)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_process_system_environment();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#nullDevice)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_process_null_device();
 
@@ -762,7 +762,7 @@ long long q_process_qbase_write_data(void* self, const char* data, long long len
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -771,7 +771,7 @@ const char* q_process_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1017,7 +1017,7 @@ long long q_process_read(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 /// @param maxlen long long
@@ -1028,7 +1028,7 @@ char* q_process_read2(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -1048,7 +1048,7 @@ long long q_process_read_line(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -1128,7 +1128,7 @@ long long q_process_peek(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 /// @param maxlen long long
@@ -1175,7 +1175,7 @@ bool q_process_get_char(void* self, char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -1291,7 +1291,7 @@ void q_process_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 /// @param maxlen long long
@@ -1302,7 +1302,7 @@ char* q_process_read_line1(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///
@@ -1517,7 +1517,7 @@ QVariant* q_process_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QProcess*
 ///

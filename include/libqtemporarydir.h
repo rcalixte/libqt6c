@@ -40,7 +40,7 @@ bool q_temporarydir_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTemporaryDir*
 ///
@@ -67,7 +67,7 @@ bool q_temporarydir_remove(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#path)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTemporaryDir*
 ///
@@ -75,7 +75,7 @@ const char* q_temporarydir_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTemporaryDir*
 /// @param fileName const char*

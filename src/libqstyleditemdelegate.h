@@ -61,7 +61,7 @@ int32_t q_styleditemdelegate_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -252,7 +252,7 @@ void q_styleditemdelegate_set_item_editor_factory(void* self, void* factory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#displayText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStyledItemDelegate*
 /// @param value QVariant*
@@ -366,7 +366,7 @@ bool q_styleditemdelegate_qbase_editor_event(void* self, void* event, void* mode
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -375,7 +375,7 @@ const char* q_styleditemdelegate_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -460,7 +460,7 @@ void q_styleditemdelegate_on_close_editor2(void* self, void (*callback)(void*, v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStyledItemDelegate*
 ///
@@ -675,7 +675,7 @@ QVariant* q_styleditemdelegate_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStyledItemDelegate*
 ///

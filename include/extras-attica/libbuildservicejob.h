@@ -41,7 +41,7 @@ void k_attica__buildservicejob_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejob.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildServiceJob*
 ///
@@ -56,7 +56,7 @@ void k_attica__buildservicejob_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejob.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildServiceJob*
 ///
@@ -71,7 +71,7 @@ void k_attica__buildservicejob_set_url(void* self, const char* url);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejob.html#url)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildServiceJob*
 ///
@@ -86,7 +86,7 @@ void k_attica__buildservicejob_set_project_id(void* self, const char* projectId)
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejob.html#projectId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildServiceJob*
 ///
@@ -101,7 +101,7 @@ void k_attica__buildservicejob_set_build_service_id(void* self, const char* buil
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejob.html#buildServiceId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildServiceJob*
 ///
@@ -116,7 +116,7 @@ void k_attica__buildservicejob_set_message(void* self, const char* message);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejob.html#message)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildServiceJob*
 ///
@@ -131,7 +131,7 @@ void k_attica__buildservicejob_set_target(void* self, const char* target);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejob.html#target)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildServiceJob*
 ///

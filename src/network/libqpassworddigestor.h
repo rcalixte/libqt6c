@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf1)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCryptographicHash__Algorithm
 /// @param param2 const char*
@@ -27,7 +27,7 @@ char* q_passworddigestor_derive_key_pbkdf1(int32_t param1, const char* param2, c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpassworddigestor.html#deriveKeyPbkdf2)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCryptographicHash__Algorithm
 /// @param param2 const char*

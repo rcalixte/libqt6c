@@ -61,7 +61,7 @@ bool k_lazylocalizedstring_is_empty(void* self);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#untranslatedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLazyLocalizedString*
 ///
@@ -69,7 +69,7 @@ const char* k_lazylocalizedstring_untranslated_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLazyLocalizedString*
 ///
@@ -77,7 +77,7 @@ const char* k_lazylocalizedstring_to_string(void* self);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLazyLocalizedString*
 /// @param languages const char**
@@ -86,7 +86,7 @@ const char* k_lazylocalizedstring_to_string2(void* self, const char* languages[s
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLazyLocalizedString*
 /// @param domain const char*
@@ -95,7 +95,7 @@ const char* k_lazylocalizedstring_to_string3(void* self, const char* domain);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLazyLocalizedString*
 /// @param format enum Kuit__VisualFormat

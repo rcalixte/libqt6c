@@ -61,7 +61,7 @@ int32_t k_svg__svg_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -223,7 +223,7 @@ void k_svg__svg_qbase_set_image_path(void* self, const char* svgFilePath);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#imagePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSvg__Svg*
 ///
@@ -422,7 +422,7 @@ void k_svg__svg_on_image_set_changed(void* self, void (*callback)(void*, void*))
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -431,7 +431,7 @@ const char* k_svg__svg_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -531,7 +531,7 @@ bool k_svg__svg_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSvg__Svg*
 ///
@@ -746,7 +746,7 @@ QVariant* k_svg__svg_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSvg__Svg*
 ///

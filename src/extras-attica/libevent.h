@@ -41,7 +41,7 @@ void k_attica__event_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Event*
 ///
@@ -56,7 +56,7 @@ void k_attica__event_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Event*
 ///
@@ -71,7 +71,7 @@ void k_attica__event_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Event*
 ///
@@ -86,7 +86,7 @@ void k_attica__event_set_user(void* self, const char* user);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#user)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Event*
 ///
@@ -166,7 +166,7 @@ void k_attica__event_set_country(void* self, const char* country);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#country)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Event*
 ///
@@ -181,7 +181,7 @@ void k_attica__event_set_city(void* self, const char* city);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#city)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Event*
 ///
@@ -197,7 +197,7 @@ void k_attica__event_add_extended_attribute(void* self, const char* key, const c
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#extendedAttribute)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Event*
 /// @param key const char*

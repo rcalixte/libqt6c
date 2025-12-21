@@ -227,7 +227,7 @@ QDateTime* q_date_end_of_day3(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDate*
 ///
@@ -235,7 +235,7 @@ const char* q_date_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDate*
 /// @param format const char*
@@ -244,7 +244,7 @@ const char* q_date_to_string2(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDate*
 /// @param format const char*
@@ -409,7 +409,7 @@ QDateTime* q_date_end_of_day22(void* self, int32_t spec, int offsetSeconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDate*
 /// @param format enum Qt__DateFormat
@@ -551,7 +551,7 @@ int32_t q_time_msec(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTime*
 ///
@@ -559,7 +559,7 @@ const char* q_time_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTime*
 /// @param format const char*
@@ -642,7 +642,7 @@ bool q_time_is_valid2(int h, int m, int s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTime*
 /// @param f enum Qt__DateFormat
@@ -824,7 +824,7 @@ QTimeZone* q_datetime_time_zone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#timeZoneAbbreviation)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTime*
 ///
@@ -899,7 +899,7 @@ void q_datetime_set_secs_since_epoch(void* self, long long secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTime*
 ///
@@ -907,7 +907,7 @@ const char* q_datetime_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTime*
 /// @param format const char*
@@ -916,7 +916,7 @@ const char* q_datetime_to_string2(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTime*
 /// @param format const char*
@@ -1131,7 +1131,7 @@ void q_datetime_set_time_zone2(void* self, void* toZone, int32_t resolve);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTime*
 /// @param format enum Qt__DateFormat

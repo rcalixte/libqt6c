@@ -226,7 +226,7 @@ void q_dbusargument_append_variant(void* self, void* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#currentSignature)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusArgument*
 ///

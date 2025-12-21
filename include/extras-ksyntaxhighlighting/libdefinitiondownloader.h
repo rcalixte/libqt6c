@@ -64,7 +64,7 @@ int32_t k_syntaxhighlighting__definitiondownloader_qbase_metacall(void* self, in
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -105,7 +105,7 @@ void k_syntaxhighlighting__definitiondownloader_on_done(void* self, void (*callb
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -114,7 +114,7 @@ const char* k_syntaxhighlighting__definitiondownloader_tr2(const char* s, const 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -126,7 +126,7 @@ const char* k_syntaxhighlighting__definitiondownloader_tr3(const char* s, const 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 ///
@@ -341,7 +341,7 @@ QVariant* k_syntaxhighlighting__definitiondownloader_property(void* self, const 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 ///

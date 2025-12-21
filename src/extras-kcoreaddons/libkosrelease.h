@@ -27,7 +27,7 @@ KOSRelease* k_osrelease_new2(const char* filePath);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -35,7 +35,7 @@ const char* k_osrelease_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#version)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -43,7 +43,7 @@ const char* k_osrelease_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -51,7 +51,7 @@ const char* k_osrelease_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#idLike)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -59,7 +59,7 @@ const char** k_osrelease_id_like(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#versionCodename)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -67,7 +67,7 @@ const char* k_osrelease_version_codename(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#versionId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -75,7 +75,7 @@ const char* k_osrelease_version_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#prettyName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -83,7 +83,7 @@ const char* k_osrelease_pretty_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#ansiColor)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -91,7 +91,7 @@ const char* k_osrelease_ansi_color(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#cpeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -99,7 +99,7 @@ const char* k_osrelease_cpe_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#homeUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -107,7 +107,7 @@ const char* k_osrelease_home_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#documentationUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -115,7 +115,7 @@ const char* k_osrelease_documentation_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#supportUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -123,7 +123,7 @@ const char* k_osrelease_support_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#bugReportUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -131,7 +131,7 @@ const char* k_osrelease_bug_report_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#privacyPolicyUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -139,7 +139,7 @@ const char* k_osrelease_privacy_policy_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#buildId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -147,7 +147,7 @@ const char* k_osrelease_build_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#variant)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -155,7 +155,7 @@ const char* k_osrelease_variant(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#variantId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -163,7 +163,7 @@ const char* k_osrelease_variant_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#logo)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -171,7 +171,7 @@ const char* k_osrelease_logo(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#extraKeys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 ///
@@ -179,7 +179,7 @@ const char** k_osrelease_extra_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#extraValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KOSRelease*
 /// @param key const char*

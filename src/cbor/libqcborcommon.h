@@ -38,7 +38,7 @@ int32_t q_cborerror_to_q_cbor_error___code(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCborError*
 ///

@@ -61,7 +61,7 @@ int32_t q_localsocket_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -95,7 +95,7 @@ void q_localsocket_set_server_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#serverName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 ///
@@ -103,7 +103,7 @@ const char* q_localsocket_server_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#fullServerName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 ///
@@ -548,7 +548,7 @@ long long q_localsocket_qbase_write_data(void* self, const char* param1, long lo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -557,7 +557,7 @@ const char* q_localsocket_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -726,7 +726,7 @@ long long q_localsocket_read(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 /// @param maxlen long long
@@ -737,7 +737,7 @@ char* q_localsocket_read2(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 ///
@@ -757,7 +757,7 @@ long long q_localsocket_read_line(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 ///
@@ -837,7 +837,7 @@ long long q_localsocket_peek(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 /// @param maxlen long long
@@ -884,7 +884,7 @@ bool q_localsocket_get_char(void* self, char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 ///
@@ -1000,7 +1000,7 @@ void q_localsocket_on_read_channel_finished(void* self, void (*callback)(void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 /// @param maxlen long long
@@ -1011,7 +1011,7 @@ char* q_localsocket_read_line1(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 ///
@@ -1226,7 +1226,7 @@ QVariant* q_localsocket_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalSocket*
 ///

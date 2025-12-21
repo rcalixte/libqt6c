@@ -102,7 +102,7 @@ bool k_pluginmetadata_is_hidden(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -116,7 +116,7 @@ QJsonObject* k_pluginmetadata_raw_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -124,7 +124,7 @@ const char* k_pluginmetadata_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -150,7 +150,7 @@ libqt_list /* of KAboutPerson* */ k_pluginmetadata_other_contributors(void* self
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#category)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -158,7 +158,7 @@ const char* k_pluginmetadata_category(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#iconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -166,7 +166,7 @@ const char* k_pluginmetadata_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#license)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -174,7 +174,7 @@ const char* k_pluginmetadata_license(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#licenseText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -182,7 +182,7 @@ const char* k_pluginmetadata_license_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#copyrightText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -190,7 +190,7 @@ const char* k_pluginmetadata_copyright_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#pluginId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -198,7 +198,7 @@ const char* k_pluginmetadata_plugin_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#version)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -206,7 +206,7 @@ const char* k_pluginmetadata_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#website)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -214,7 +214,7 @@ const char* k_pluginmetadata_website(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#bugReportUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -222,7 +222,7 @@ const char* k_pluginmetadata_bug_report_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -237,7 +237,7 @@ bool k_pluginmetadata_supports_mime_type(void* self, const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#formFactors)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 ///
@@ -251,7 +251,7 @@ bool k_pluginmetadata_is_enabled_by_default(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 /// @param key const char*
@@ -276,7 +276,7 @@ int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 /// @param key const char*
@@ -314,7 +314,7 @@ KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, cons
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluginMetaData*
 /// @param key const char*

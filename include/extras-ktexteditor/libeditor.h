@@ -33,7 +33,7 @@ int32_t k_texteditor__editor_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -92,7 +92,7 @@ const KAboutData* k_texteditor__editor_about_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-editor.html#defaultEncoding)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__Editor*
 ///
@@ -180,7 +180,7 @@ libqt_list /* of KTextEditor__Command* */ k_texteditor__editor_commands(void* se
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-editor.html#commandList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__Editor*
 ///
@@ -204,7 +204,7 @@ bool k_texteditor__editor_expand_variable(void* self, const char* variable, void
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-editor.html#expandText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__Editor*
 /// @param text const char*
@@ -221,7 +221,7 @@ void k_texteditor__editor_add_variable_expansion(void* self, libqt_list widgets)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -230,7 +230,7 @@ const char* k_texteditor__editor_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -269,7 +269,7 @@ bool k_texteditor__editor_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__Editor*
 ///
@@ -484,7 +484,7 @@ QVariant* k_texteditor__editor_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__Editor*
 ///

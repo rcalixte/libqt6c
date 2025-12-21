@@ -85,7 +85,7 @@ void k_zipfileentry_set_c_r_c32(void* self, uint64_t crc32);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#path)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KZipFileEntry*
 ///
@@ -93,7 +93,7 @@ const char* k_zipfileentry_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KZipFileEntry*
 ///
@@ -185,7 +185,7 @@ QDateTime* k_zipfileentry_date(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KZipFileEntry*
 ///
@@ -203,7 +203,7 @@ mode_t k_zipfileentry_permissions(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#user)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KZipFileEntry*
 ///
@@ -213,7 +213,7 @@ const char* k_zipfileentry_user(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#group)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KZipFileEntry*
 ///
@@ -223,7 +223,7 @@ const char* k_zipfileentry_group(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#symLinkTarget)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KZipFileEntry*
 ///

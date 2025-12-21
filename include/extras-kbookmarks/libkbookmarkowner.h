@@ -19,7 +19,7 @@ KBookmarkOwner* k_bookmarkowner_new();
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkOwner*
 ///
@@ -67,7 +67,7 @@ QUrl* k_bookmarkowner_qbase_current_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentIcon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkOwner*
 ///
@@ -300,7 +300,7 @@ void k_bookmarkowner__futurebookmark_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner-futurebookmark.html#title)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkOwner__FutureBookmark*
 ///
@@ -314,7 +314,7 @@ QUrl* k_bookmarkowner__futurebookmark_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner-futurebookmark.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBookmarkOwner__FutureBookmark*
 ///

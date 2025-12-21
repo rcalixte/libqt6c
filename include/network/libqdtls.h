@@ -61,7 +61,7 @@ int32_t q_dtlsclientverifier_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -92,7 +92,7 @@ bool q_dtlsclientverifier_verify_client(void* self, void* socket, const char* dg
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier.html#verifiedHello)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtlsClientVerifier*
 ///
@@ -108,7 +108,7 @@ uint8_t q_dtlsclientverifier_dtls_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier.html#dtlsErrorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtlsClientVerifier*
 ///
@@ -116,7 +116,7 @@ const char* q_dtlsclientverifier_dtls_error_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -125,7 +125,7 @@ const char* q_dtlsclientverifier_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -137,7 +137,7 @@ const char* q_dtlsclientverifier_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtlsClientVerifier*
 ///
@@ -352,7 +352,7 @@ QVariant* q_dtlsclientverifier_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtlsClientVerifier*
 ///
@@ -911,7 +911,7 @@ int32_t q_dtls_qbase_metacall(void* self, int32_t param1, int param2, void* para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -946,7 +946,7 @@ unsigned short q_dtls_peer_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#peerVerificationName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtls*
 ///
@@ -1072,7 +1072,7 @@ long long q_dtls_write_datagram_encrypted(void* self, void* socket, const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#decryptDatagram)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtls*
 /// @param socket QUdpSocket*
@@ -1090,7 +1090,7 @@ uint8_t q_dtls_dtls_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#dtlsErrorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtls*
 ///
@@ -1138,7 +1138,7 @@ void q_dtls_on_handshake_timeout(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1147,7 +1147,7 @@ const char* q_dtls_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1176,7 +1176,7 @@ bool q_dtls_do_handshake2(void* self, void* socket, const char* dgram);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtls*
 ///
@@ -1391,7 +1391,7 @@ QVariant* q_dtls_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtls*
 ///
@@ -1937,7 +1937,7 @@ void q_dtlsclientverifier__generatorparameters_set_hash(void* self, int32_t hash
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#secret-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDtlsClientVerifier__GeneratorParameters*
 ///

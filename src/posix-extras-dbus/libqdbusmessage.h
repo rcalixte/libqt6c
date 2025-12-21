@@ -123,7 +123,7 @@ QDBusMessage* q_dbusmessage_create_error_reply3(void* self, int32_t type, const 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#service)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
 ///
@@ -131,7 +131,7 @@ const char* q_dbusmessage_service(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#path)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
 ///
@@ -139,7 +139,7 @@ const char* q_dbusmessage_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#interface)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
 ///
@@ -147,7 +147,7 @@ const char* q_dbusmessage_interface(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#member)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
 ///
@@ -155,7 +155,7 @@ const char* q_dbusmessage_member(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#errorName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
 ///
@@ -163,7 +163,7 @@ const char* q_dbusmessage_error_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#errorMessage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
 ///
@@ -179,7 +179,7 @@ int32_t q_dbusmessage_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#signature)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusMessage*
 ///

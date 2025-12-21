@@ -43,7 +43,7 @@ void q_fontinfo_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#family)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFontInfo*
 ///
@@ -51,7 +51,7 @@ const char* q_fontinfo_family(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#styleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFontInfo*
 ///

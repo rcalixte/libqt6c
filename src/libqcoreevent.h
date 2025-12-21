@@ -519,7 +519,7 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_qbase_clone(void* self
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#propertyName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDynamicPropertyChangeEvent*
 ///

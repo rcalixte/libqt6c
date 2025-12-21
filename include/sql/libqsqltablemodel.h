@@ -70,7 +70,7 @@ int32_t q_sqltablemodel_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -103,7 +103,7 @@ void q_sqltablemodel_qbase_set_table(void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#tableName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlTableModel*
 ///
@@ -405,7 +405,7 @@ void q_sqltablemodel_qbase_set_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#filter)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlTableModel*
 ///
@@ -832,7 +832,7 @@ bool q_sqltablemodel_qbase_delete_row_from_table(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#orderByClause)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlTableModel*
 ///
@@ -857,7 +857,7 @@ const char* q_sqltablemodel_qbase_order_by_clause(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#selectStatement)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlTableModel*
 ///
@@ -957,7 +957,7 @@ QSqlRecord* q_sqltablemodel_qbase_primary_values(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -966,7 +966,7 @@ const char* q_sqltablemodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1400,7 +1400,7 @@ void q_sqltablemodel_on_layout_about_to_be_changed2(void* self, void (*callback)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlTableModel*
 ///
@@ -1615,7 +1615,7 @@ QVariant* q_sqltablemodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlTableModel*
 ///
@@ -2157,7 +2157,7 @@ void q_sqltablemodel_on_set_item_data(void* self, bool (*callback)(void*, void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2169,7 +2169,7 @@ const char** q_sqltablemodel_mime_types(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

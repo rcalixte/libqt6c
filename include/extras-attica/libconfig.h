@@ -34,7 +34,7 @@ void k_attica__config_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#contact)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Config*
 ///
@@ -42,7 +42,7 @@ const char* k_attica__config_contact(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#host)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Config*
 ///
@@ -50,7 +50,7 @@ const char* k_attica__config_host(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#version)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Config*
 ///
@@ -64,7 +64,7 @@ bool k_attica__config_ssl(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#website)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Config*
 ///

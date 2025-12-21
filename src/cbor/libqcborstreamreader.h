@@ -385,7 +385,7 @@ long long q_cborstreamreader_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCborStreamReader*
 ///
@@ -393,7 +393,7 @@ const char* q_cborstreamreader_read_all_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllUtf8String)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCborStreamReader*
 ///
@@ -401,7 +401,7 @@ char* q_cborstreamreader_read_all_utf8_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllByteArray)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCborStreamReader*
 ///

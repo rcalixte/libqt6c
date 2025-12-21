@@ -76,7 +76,7 @@ KTextEditor__LineRange* k_texteditor__linerange_invalid();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__LineRange*
 ///

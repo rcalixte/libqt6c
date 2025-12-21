@@ -55,7 +55,7 @@ QOperatingSystemVersionBase* q_operatingsystemversionbase_current();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param osversion QOperatingSystemVersionBase*
 ///
@@ -107,7 +107,7 @@ int32_t q_operatingsystemversionbase_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOperatingSystemVersionBase*
 ///
@@ -164,7 +164,7 @@ QOperatingSystemVersionBase* q_operatingsystemversionunexported_current();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param osversion QOperatingSystemVersionBase*
 ///
@@ -232,7 +232,7 @@ int32_t q_operatingsystemversionunexported_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOperatingSystemVersionUnexported*
 ///
@@ -316,7 +316,7 @@ QOperatingSystemVersionBase* q_operatingsystemversion_current();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param osversion QOperatingSystemVersionBase*
 ///
@@ -366,7 +366,7 @@ int32_t q_operatingsystemversion_segment_count(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOperatingSystemVersion*
 ///

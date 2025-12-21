@@ -35,7 +35,7 @@ int32_t k_attica__achievement_string_to_achievement_type(const char* achievement
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#achievementTypeToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Attica__Achievement__Type
 ///
@@ -51,7 +51,7 @@ int32_t k_attica__achievement_string_to_achievement_visibility(const char* achie
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#achievementVisibilityToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param visibility enum Attica__Achievement__Visibility
 ///
@@ -73,7 +73,7 @@ void k_attica__achievement_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Achievement*
 ///
@@ -88,7 +88,7 @@ void k_attica__achievement_set_content_id(void* self, const char* contentId);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#contentId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Achievement*
 ///
@@ -103,7 +103,7 @@ void k_attica__achievement_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Achievement*
 ///
@@ -118,7 +118,7 @@ void k_attica__achievement_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Achievement*
 ///
@@ -133,7 +133,7 @@ void k_attica__achievement_set_explanation(void* self, const char* explanation);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#explanation)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Achievement*
 ///
@@ -188,7 +188,7 @@ void k_attica__achievement_remove_dependency(void* self, const char* dependency)
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#dependencies)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Achievement*
 ///
@@ -247,7 +247,7 @@ void k_attica__achievement_remove_option(void* self, const char* option);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#options)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Achievement*
 ///

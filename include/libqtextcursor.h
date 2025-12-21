@@ -212,7 +212,7 @@ int32_t q_textcursor_selection_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcursor.html#selectedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextCursor*
 ///

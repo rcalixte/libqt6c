@@ -83,7 +83,7 @@ int32_t k_io__openurljob_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -207,7 +207,7 @@ bool k_io__openurljob_qbase_do_kill(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -216,7 +216,7 @@ const char* k_io__openurljob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -303,7 +303,7 @@ int32_t k_io__openurljob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__OpenUrlJob*
 ///
@@ -501,7 +501,7 @@ void k_io__openurljob_set_finished_notification_hidden1(void* self, bool hide);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__OpenUrlJob*
 ///
@@ -716,7 +716,7 @@ QVariant* k_io__openurljob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__OpenUrlJob*
 ///
@@ -1009,7 +1009,7 @@ void k_io__openurljob_on_do_resume(void* self, bool (*callback)());
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1021,7 +1021,7 @@ const char* k_io__openurljob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

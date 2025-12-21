@@ -104,7 +104,7 @@ KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_qbase_u
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#filterString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__CodeCompletionModelControllerInterface*
 /// @param view KTextEditor__View*

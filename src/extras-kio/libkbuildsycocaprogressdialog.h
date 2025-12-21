@@ -33,7 +33,7 @@ int32_t k_buildsycocaprogressdialog_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -47,7 +47,7 @@ void k_buildsycocaprogressdialog_rebuild_k_sycoca(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -56,7 +56,7 @@ const char* k_buildsycocaprogressdialog_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -135,7 +135,7 @@ QSize* k_buildsycocaprogressdialog_size_hint(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#labelText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1302,7 +1302,7 @@ void k_buildsycocaprogressdialog_set_style_sheet(void* self, const char* styleSh
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1312,7 +1312,7 @@ const char* k_buildsycocaprogressdialog_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1348,7 +1348,7 @@ void k_buildsycocaprogressdialog_set_window_icon_text(void* self, const char* wi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1367,7 +1367,7 @@ void k_buildsycocaprogressdialog_set_window_role(void* self, const char* windowR
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1386,7 +1386,7 @@ void k_buildsycocaprogressdialog_set_window_file_path(void* self, const char* fi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1430,7 +1430,7 @@ void k_buildsycocaprogressdialog_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1466,7 +1466,7 @@ void k_buildsycocaprogressdialog_set_status_tip(void* self, const char* statusTi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1485,7 +1485,7 @@ void k_buildsycocaprogressdialog_set_whats_this(void* self, const char* whatsThi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1495,7 +1495,7 @@ const char* k_buildsycocaprogressdialog_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -1514,7 +1514,7 @@ void k_buildsycocaprogressdialog_set_accessible_name(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -2053,7 +2053,7 @@ void k_buildsycocaprogressdialog_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -2893,7 +2893,7 @@ QWidget* k_buildsycocaprogressdialog_create_window_container3(void* window, void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///
@@ -3099,7 +3099,7 @@ QVariant* k_buildsycocaprogressdialog_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KBuildSycocaProgressDialog*
 ///

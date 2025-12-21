@@ -61,7 +61,7 @@ int32_t k_urlcompletion_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* k_urlcompletion_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#makeCompletion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 /// @param text const char*
@@ -338,7 +338,7 @@ void k_urlcompletion_qbase_set_replace_home(void* self, bool replace);
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replacedPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 /// @param text const char*
@@ -347,7 +347,7 @@ const char* k_urlcompletion_replaced_path(void* self, const char* text);
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replacedPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param text const char*
 /// @param replaceHome bool
@@ -363,7 +363,7 @@ void k_urlcompletion_set_mime_type_filters(void* self, const char* mimeTypes[sta
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#mimeTypeFilters)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 ///
@@ -421,7 +421,7 @@ void k_urlcompletion_qbase_post_process_matches2(void* self, void* matches);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -430,7 +430,7 @@ const char* k_urlcompletion_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -440,7 +440,7 @@ const char* k_urlcompletion_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replacedPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param text const char*
 /// @param replaceHome bool
@@ -452,7 +452,7 @@ const char* k_urlcompletion_replaced_path3(const char* text, bool replaceHome, b
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#substringCompletion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 /// @param stringVal const char*
@@ -463,7 +463,7 @@ const char** k_urlcompletion_substring_completion(void* self, const char* string
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#items)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 ///
@@ -517,7 +517,7 @@ bool k_urlcompletion_should_auto_suggest(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#allMatches)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 ///
@@ -527,7 +527,7 @@ const char** k_urlcompletion_all_matches(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#allMatches)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 /// @param stringVal const char*
@@ -571,7 +571,7 @@ bool k_urlcompletion_has_multiple_matches(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#previousMatch)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 ///
@@ -581,7 +581,7 @@ const char* k_urlcompletion_previous_match(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#nextMatch)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 ///
@@ -681,7 +681,7 @@ void k_urlcompletion_on_multiple_matches(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 ///
@@ -896,7 +896,7 @@ QVariant* k_urlcompletion_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlCompletion*
 ///
@@ -1026,7 +1026,7 @@ void k_urlcompletion_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1038,7 +1038,7 @@ const char* k_urlcompletion_last_match(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

@@ -3,7 +3,7 @@
 #include "liberror.hpp"
 #include "libprovider_2.hpp"
 #include "libservice.hpp"
-#include "libservice-type.hpp"
+#include "libservice_type.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"

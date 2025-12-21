@@ -107,7 +107,7 @@ int32_t q_textdocument_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -214,7 +214,7 @@ void q_textdocument_set_meta_information(void* self, int32_t info, const char* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#metaInformation)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 /// @param info enum QTextDocument__MetaInformation
@@ -223,7 +223,7 @@ const char* q_textdocument_meta_information(void* self, int32_t info);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toHtml)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 ///
@@ -238,7 +238,7 @@ void q_textdocument_set_html(void* self, const char* html);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toMarkdown)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 ///
@@ -253,7 +253,7 @@ void q_textdocument_set_markdown(void* self, const char* markdown);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toRawText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 ///
@@ -261,7 +261,7 @@ const char* q_textdocument_to_raw_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toPlainText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 ///
@@ -615,7 +615,7 @@ void q_textdocument_set_default_style_sheet(void* self, const char* sheet);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#defaultStyleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 ///
@@ -913,7 +913,7 @@ QVariant* q_textdocument_qbase_load_resource(void* self, int type, void* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -922,7 +922,7 @@ const char* q_textdocument_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -939,7 +939,7 @@ QTextDocument* q_textdocument_clone1(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toMarkdown)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 /// @param features flag of enum QTextDocument__MarkdownFeature
@@ -1032,7 +1032,7 @@ void q_textdocument_set_modified1(void* self, bool m);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 ///
@@ -1247,7 +1247,7 @@ QVariant* q_textdocument_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextDocument*
 ///

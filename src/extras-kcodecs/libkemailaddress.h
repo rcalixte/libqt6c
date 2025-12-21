@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddressList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -62,7 +62,7 @@ int32_t k_emailaddress_is_valid_address_list(const char* param1, const char* par
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#emailParseResultToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KEmailAddress__EmailParseResult
 ///
@@ -76,13 +76,13 @@ bool k_emailaddress_is_valid_simple_address(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#simpleEmailAddressErrorMsg)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* k_emailaddress_simple_email_address_error_msg();
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -90,7 +90,7 @@ char* k_emailaddress_extract_email_address(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 const char*
@@ -99,7 +99,7 @@ char* k_emailaddress_extract_email_address2(const char* param1, const char* para
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -107,7 +107,7 @@ const char* k_emailaddress_extract_email_address3(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 const char*
@@ -116,7 +116,7 @@ const char* k_emailaddress_extract_email_address4(const char* param1, const char
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -124,7 +124,7 @@ char* k_emailaddress_first_email_address(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 const char*
@@ -133,7 +133,7 @@ char* k_emailaddress_first_email_address2(const char* param1, const char* param2
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -141,7 +141,7 @@ const char* k_emailaddress_first_email_address3(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 const char*
@@ -166,7 +166,7 @@ bool k_emailaddress_compare_email(const char* param1, const char* param2, bool p
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizedAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 const char*
@@ -176,7 +176,7 @@ const char* k_emailaddress_normalized_address(const char* param1, const char* pa
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#fromIdn)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -184,7 +184,7 @@ const char* k_emailaddress_from_idn(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#toIdn)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -192,7 +192,7 @@ const char* k_emailaddress_to_idn(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizeAddressesAndDecodeIdn)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -200,7 +200,7 @@ const char* k_emailaddress_normalize_addresses_and_decode_idn(const char* param1
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizeAddressesAndEncodeIdn)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -208,7 +208,7 @@ const char* k_emailaddress_normalize_addresses_and_encode_idn(const char* param1
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#quoteNameIfNecessary)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -222,7 +222,7 @@ QUrl* k_emailaddress_encode_mailto_url(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#decodeMailtoUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
 ///

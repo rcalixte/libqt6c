@@ -41,7 +41,7 @@ void q_geoaddress_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -56,7 +56,7 @@ void q_geoaddress_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#country)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -71,7 +71,7 @@ void q_geoaddress_set_country(void* self, const char* country);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#countryCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -86,7 +86,7 @@ void q_geoaddress_set_country_code(void* self, const char* countryCode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#state)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -101,7 +101,7 @@ void q_geoaddress_set_state(void* self, const char* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#county)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -116,7 +116,7 @@ void q_geoaddress_set_county(void* self, const char* county);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#city)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -131,7 +131,7 @@ void q_geoaddress_set_city(void* self, const char* city);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#district)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -146,7 +146,7 @@ void q_geoaddress_set_district(void* self, const char* district);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#postalCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -161,7 +161,7 @@ void q_geoaddress_set_postal_code(void* self, const char* postalCode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#street)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///
@@ -176,7 +176,7 @@ void q_geoaddress_set_street(void* self, const char* street);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress.html#streetNumber)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAddress*
 ///

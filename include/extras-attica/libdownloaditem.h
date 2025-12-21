@@ -54,7 +54,7 @@ void k_attica__downloaditem_set_mime_type(void* self, const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#mimeType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__DownloadItem*
 ///
@@ -69,7 +69,7 @@ void k_attica__downloaditem_set_package_name(void* self, const char* packageName
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#packageName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__DownloadItem*
 ///
@@ -84,7 +84,7 @@ void k_attica__downloaditem_set_package_repository(void* self, const char* packa
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#packageRepository)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__DownloadItem*
 ///
@@ -99,7 +99,7 @@ void k_attica__downloaditem_set_gpg_fingerprint(void* self, const char* gpgFinge
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#gpgFingerprint)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__DownloadItem*
 ///
@@ -114,7 +114,7 @@ void k_attica__downloaditem_set_gpg_signature(void* self, const char* gpgSignatu
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#gpgSignature)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__DownloadItem*
 ///

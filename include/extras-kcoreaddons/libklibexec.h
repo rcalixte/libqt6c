@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/klibexec.html#pathFromAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 void*
@@ -24,7 +24,7 @@ const char* k_libexec_path_from_address(const char* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/klibexec.html#pathCandidates)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -32,7 +32,7 @@ const char** k_libexec_path_candidates(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/klibexec.html#path)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -40,7 +40,7 @@ const char* k_libexec_path(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/klibexec.html#kdeFrameworksPaths)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///

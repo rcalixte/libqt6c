@@ -70,7 +70,7 @@ int32_t k_selectionproxymodel_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -366,7 +366,7 @@ QMimeData* k_selectionproxymodel_qbase_mime_data(void* self, libqt_list indexes)
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSelectionProxyModel*
 ///
@@ -611,7 +611,7 @@ libqt_list /* of QPersistentModelIndex* */ k_selectionproxymodel_qbase_source_ro
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -620,7 +620,7 @@ const char* k_selectionproxymodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -947,7 +947,7 @@ void k_selectionproxymodel_on_layout_about_to_be_changed2(void* self, void (*cal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSelectionProxyModel*
 ///
@@ -1162,7 +1162,7 @@ QVariant* k_selectionproxymodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSelectionProxyModel*
 ///

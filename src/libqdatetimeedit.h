@@ -112,7 +112,7 @@ int32_t q_datetimeedit_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -360,7 +360,7 @@ void q_datetimeedit_set_selected_section(void* self, int32_t section);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 /// @param section enum QDateTimeEdit__Section
@@ -369,7 +369,7 @@ const char* q_datetimeedit_section_text(void* self, int32_t section);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#displayFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -765,7 +765,7 @@ QDateTime* q_datetimeedit_qbase_date_time_from_text(void* self, const char* text
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 /// @param dt QDateTime*
@@ -894,7 +894,7 @@ void q_datetimeedit_qbase_init_style_option(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -903,7 +903,7 @@ const char* q_datetimeedit_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -961,7 +961,7 @@ bool q_datetimeedit_has_acceptable_input(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -971,7 +971,7 @@ const char* q_datetimeedit_text(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2017,7 +2017,7 @@ void q_datetimeedit_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2027,7 +2027,7 @@ const char* q_datetimeedit_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2063,7 +2063,7 @@ void q_datetimeedit_set_window_icon_text(void* self, const char* windowIconText)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2082,7 +2082,7 @@ void q_datetimeedit_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2101,7 +2101,7 @@ void q_datetimeedit_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2145,7 +2145,7 @@ void q_datetimeedit_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2181,7 +2181,7 @@ void q_datetimeedit_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2200,7 +2200,7 @@ void q_datetimeedit_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2210,7 +2210,7 @@ const char* q_datetimeedit_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2229,7 +2229,7 @@ void q_datetimeedit_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -2768,7 +2768,7 @@ void q_datetimeedit_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -3574,7 +3574,7 @@ QWidget* q_datetimeedit_create_window_container3(void* window, void* parent, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -3780,7 +3780,7 @@ QVariant* q_datetimeedit_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateTimeEdit*
 ///
@@ -5760,7 +5760,7 @@ int32_t q_timeedit_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -5782,7 +5782,7 @@ void q_timeedit_on_user_time_changed(void* self, void (*callback)(void*, void*))
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -5791,7 +5791,7 @@ const char* q_timeedit_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -6115,7 +6115,7 @@ void q_timeedit_set_selected_section(void* self, int32_t section);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 /// @param section enum QDateTimeEdit__Section
@@ -6126,7 +6126,7 @@ const char* q_timeedit_section_text(void* self, int32_t section);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#displayFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -6325,7 +6325,7 @@ bool q_timeedit_has_acceptable_input(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -6335,7 +6335,7 @@ const char* q_timeedit_text(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7381,7 +7381,7 @@ void q_timeedit_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7391,7 +7391,7 @@ const char* q_timeedit_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7427,7 +7427,7 @@ void q_timeedit_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7446,7 +7446,7 @@ void q_timeedit_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7465,7 +7465,7 @@ void q_timeedit_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7509,7 +7509,7 @@ void q_timeedit_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7545,7 +7545,7 @@ void q_timeedit_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7564,7 +7564,7 @@ void q_timeedit_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7574,7 +7574,7 @@ const char* q_timeedit_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -7593,7 +7593,7 @@ void q_timeedit_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -8132,7 +8132,7 @@ void q_timeedit_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -8938,7 +8938,7 @@ QWidget* q_timeedit_create_window_container3(void* window, void* parent, int64_t
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -9144,7 +9144,7 @@ QVariant* q_timeedit_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTimeEdit*
 ///
@@ -9742,7 +9742,7 @@ void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -9755,7 +9755,7 @@ const char* q_timeedit_text_from_date_time(void* self, void* dt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -11660,7 +11660,7 @@ int32_t q_dateedit_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -11682,7 +11682,7 @@ void q_dateedit_on_user_date_changed(void* self, void (*callback)(void*, void*))
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -11691,7 +11691,7 @@ const char* q_dateedit_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -12015,7 +12015,7 @@ void q_dateedit_set_selected_section(void* self, int32_t section);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 /// @param section enum QDateTimeEdit__Section
@@ -12026,7 +12026,7 @@ const char* q_dateedit_section_text(void* self, int32_t section);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#displayFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -12225,7 +12225,7 @@ bool q_dateedit_has_acceptable_input(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -12235,7 +12235,7 @@ const char* q_dateedit_text(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13281,7 +13281,7 @@ void q_dateedit_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13291,7 +13291,7 @@ const char* q_dateedit_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13327,7 +13327,7 @@ void q_dateedit_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13346,7 +13346,7 @@ void q_dateedit_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13365,7 +13365,7 @@ void q_dateedit_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13409,7 +13409,7 @@ void q_dateedit_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13445,7 +13445,7 @@ void q_dateedit_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13464,7 +13464,7 @@ void q_dateedit_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13474,7 +13474,7 @@ const char* q_dateedit_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -13493,7 +13493,7 @@ void q_dateedit_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -14032,7 +14032,7 @@ void q_dateedit_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -14838,7 +14838,7 @@ QWidget* q_dateedit_create_window_container3(void* window, void* parent, int64_t
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -15044,7 +15044,7 @@ QVariant* q_dateedit_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDateEdit*
 ///
@@ -15642,7 +15642,7 @@ void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -15655,7 +15655,7 @@ const char* q_dateedit_text_from_date_time(void* self, void* dt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

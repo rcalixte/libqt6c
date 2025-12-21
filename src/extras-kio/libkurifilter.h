@@ -27,7 +27,7 @@ KUriFilterSearchProvider* k_urifiltersearchprovider_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#desktopEntryName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 ///
@@ -35,7 +35,7 @@ const char* k_urifiltersearchprovider_desktop_entry_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 ///
@@ -43,7 +43,7 @@ const char* k_urifiltersearchprovider_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 ///
@@ -68,7 +68,7 @@ const char* k_urifiltersearchprovider_qbase_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#keys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 ///
@@ -76,7 +76,7 @@ const char** k_urifiltersearchprovider_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#defaultKey)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterSearchProvider*
 ///
@@ -235,7 +235,7 @@ QUrl* k_urifilterdata_uri(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#errorMsg)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -251,7 +251,7 @@ int32_t k_urifilterdata_uri_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#absolutePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -265,7 +265,7 @@ bool k_urifilterdata_has_absolute_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#argsAndOptions)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -285,7 +285,7 @@ bool k_urifilterdata_check_for_executables(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#typedString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -293,7 +293,7 @@ const char* k_urifilterdata_typed_string(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchTerm)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -307,7 +307,7 @@ QChar* k_urifilterdata_search_term_separator(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchProvider)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -315,7 +315,7 @@ const char* k_urifilterdata_search_provider(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#preferredSearchProviders)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -330,7 +330,7 @@ KUriFilterSearchProvider* k_urifilterdata_query_for_search_provider(void* self, 
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#queryForPreferredSearchProvider)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 /// @param provider const char*
@@ -339,7 +339,7 @@ const char* k_urifilterdata_query_for_preferred_search_provider(void* self, cons
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#allQueriesForSearchProvider)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 /// @param provider const char*
@@ -348,7 +348,7 @@ const char** k_urifilterdata_all_queries_for_search_provider(void* self, const c
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#iconNameForPreferredSearchProvider)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 /// @param provider const char*
@@ -357,7 +357,7 @@ const char* k_urifilterdata_icon_name_for_preferred_search_provider(void* self, 
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#alternateSearchProviders)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -365,7 +365,7 @@ const char** k_urifilterdata_alternate_search_providers(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#alternateDefaultSearchProvider)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -373,7 +373,7 @@ const char* k_urifilterdata_alternate_default_search_provider(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#defaultUrlScheme)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -389,7 +389,7 @@ int32_t k_urifilterdata_search_filtering_options(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#iconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilterData*
 ///
@@ -509,7 +509,7 @@ QUrl* k_urifilter_filtered_uri(void* self, void* uri);
 
 /// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilter*
 /// @param uri const char*
@@ -526,7 +526,7 @@ bool k_urifilter_filter_search_uri(void* self, void* data, int32_t types);
 
 /// [Upstream resources](https://api.kde.org/kurifilter.html#pluginNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilter*
 ///
@@ -566,7 +566,7 @@ QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[stat
 
 /// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUriFilter*
 /// @param uri const char*

@@ -61,7 +61,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_metacall(void* self, int32_t par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -217,7 +217,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_compare_categories(void* self, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -226,7 +226,7 @@ const char* k_categorizedsortfilterproxymodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -906,7 +906,7 @@ void k_categorizedsortfilterproxymodel_on_layout_about_to_be_changed2(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 ///
@@ -1121,7 +1121,7 @@ QVariant* k_categorizedsortfilterproxymodel_property(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 ///
@@ -2264,7 +2264,7 @@ void k_categorizedsortfilterproxymodel_on_span(void* self, QSize* (*callback)(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2276,7 +2276,7 @@ const char** k_categorizedsortfilterproxymodel_mime_types(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

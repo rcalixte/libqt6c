@@ -95,7 +95,7 @@ int32_t q_completer_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -272,7 +272,7 @@ QModelIndex* q_completer_current_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#currentCompletion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCompleter*
 ///
@@ -286,7 +286,7 @@ QAbstractItemModel* q_completer_completion_model(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#completionPrefix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCompleter*
 ///
@@ -314,7 +314,7 @@ void q_completer_set_wrap_around(void* self, bool wrap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#pathFromIndex)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCompleter*
 /// @param index QModelIndex*
@@ -341,7 +341,7 @@ const char* q_completer_qbase_path_from_index(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCompleter*
 /// @param path const char*
@@ -448,7 +448,7 @@ void q_completer_highlighted2(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -457,7 +457,7 @@ const char* q_completer_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -476,7 +476,7 @@ void q_completer_complete1(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCompleter*
 ///
@@ -691,7 +691,7 @@ QVariant* q_completer_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCompleter*
 ///

@@ -41,7 +41,7 @@ void k_attica__message_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Message*
 ///
@@ -56,7 +56,7 @@ void k_attica__message_set_from(void* self, const char* from);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#from)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Message*
 ///
@@ -71,7 +71,7 @@ void k_attica__message_set_to(void* self, const char* to);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#to)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Message*
 ///
@@ -114,7 +114,7 @@ void k_attica__message_set_subject(void* self, const char* subject);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#subject)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Message*
 ///
@@ -129,7 +129,7 @@ void k_attica__message_set_body(void* self, const char* body);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#body)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Message*
 ///

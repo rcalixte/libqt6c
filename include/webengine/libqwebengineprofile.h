@@ -78,7 +78,7 @@ int32_t q_webengineprofile_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -86,7 +86,7 @@ const char* q_webengineprofile_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#storageName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -100,7 +100,7 @@ bool q_webengineprofile_is_off_the_record(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#persistentStoragePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -115,7 +115,7 @@ void q_webengineprofile_set_persistent_storage_path(void* self, const char* path
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#cachePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -130,7 +130,7 @@ void q_webengineprofile_set_cache_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#httpUserAgent)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -167,7 +167,7 @@ void q_webengineprofile_set_http_accept_language(void* self, const char* httpAcc
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#httpAcceptLanguage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -317,7 +317,7 @@ void q_webengineprofile_set_spell_check_languages(void* self, const char* langua
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#spellCheckLanguages)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -338,7 +338,7 @@ bool q_webengineprofile_is_spell_check_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#downloadPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -431,7 +431,7 @@ void q_webengineprofile_on_clear_http_cache_completed(void* self, void (*callbac
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -440,7 +440,7 @@ const char* q_webengineprofile_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -452,7 +452,7 @@ const char* q_webengineprofile_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///
@@ -667,7 +667,7 @@ QVariant* q_webengineprofile_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineProfile*
 ///

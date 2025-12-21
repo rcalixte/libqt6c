@@ -99,7 +99,7 @@ int64_t q_stringmatcher_index_in2(void* self, void* str, int64_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#pattern)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringMatcher*
 ///

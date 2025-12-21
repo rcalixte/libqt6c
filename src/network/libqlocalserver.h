@@ -61,7 +61,7 @@ int32_t q_localserver_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -88,7 +88,7 @@ void q_localserver_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalServer*
 ///
@@ -168,7 +168,7 @@ QLocalSocket* q_localserver_qbase_next_pending_connection(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#serverName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalServer*
 ///
@@ -176,7 +176,7 @@ const char* q_localserver_server_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#fullServerName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalServer*
 ///
@@ -295,7 +295,7 @@ void q_localserver_qbase_add_pending_connection(void* self, void* socket);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -304,7 +304,7 @@ const char* q_localserver_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -331,7 +331,7 @@ bool q_localserver_wait_for_new_connection2(void* self, int msec, bool* timedOut
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalServer*
 ///
@@ -546,7 +546,7 @@ QVariant* q_localserver_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocalServer*
 ///

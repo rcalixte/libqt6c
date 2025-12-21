@@ -449,7 +449,7 @@ void q_accessibleobject_on_index_of_child(void* self, int32_t (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -462,7 +462,7 @@ const char* q_accessibleobject_text(void* self, int32_t t);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -828,7 +828,7 @@ QAccessibleInterface* q_accessibleapplication_qbase_child(void* self, int index)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleapplication.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAccessibleApplication*
 /// @param t enum QAccessible__Text

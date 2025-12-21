@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#groupList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigBase*
 ///

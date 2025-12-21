@@ -75,7 +75,7 @@ void q_urlquery_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#query)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 ///
@@ -90,7 +90,7 @@ void q_urlquery_set_query(void* self, const char* queryString);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 ///
@@ -146,7 +146,7 @@ void q_urlquery_remove_query_item(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryItemValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 /// @param key const char*
@@ -155,7 +155,7 @@ const char* q_urlquery_query_item_value(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#allQueryItemValues)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 /// @param key const char*
@@ -171,7 +171,7 @@ void q_urlquery_remove_all_query_items(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#query)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
@@ -180,7 +180,7 @@ const char* q_urlquery_query1(void* self, uint32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
@@ -196,7 +196,7 @@ libqt_list /* of libqt_pair  tuple of const char* and const char*  */ q_urlquery
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryItemValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 /// @param key const char*
@@ -206,7 +206,7 @@ const char* q_urlquery_query_item_value2(void* self, const char* key, uint32_t e
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#allQueryItemValues)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUrlQuery*
 /// @param key const char*

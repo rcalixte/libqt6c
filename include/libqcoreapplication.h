@@ -66,7 +66,7 @@ int32_t q_coreapplication_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -74,7 +74,7 @@ const char* q_coreapplication_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#arguments)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_coreapplication_arguments();
 
@@ -98,7 +98,7 @@ void q_coreapplication_set_organization_domain(const char* orgDomain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_coreapplication_organization_domain();
 
@@ -110,7 +110,7 @@ void q_coreapplication_set_organization_name(const char* orgName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_coreapplication_organization_name();
 
@@ -122,7 +122,7 @@ void q_coreapplication_set_application_name(const char* application);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_coreapplication_application_name();
 
@@ -134,7 +134,7 @@ void q_coreapplication_set_application_version(const char* version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_coreapplication_application_version();
 
@@ -245,13 +245,13 @@ bool q_coreapplication_closing_down();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationDirPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_coreapplication_application_dir_path();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_coreapplication_application_file_path();
 
@@ -276,7 +276,7 @@ void q_coreapplication_set_library_paths(const char* libraryPaths[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#libraryPaths)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_coreapplication_library_paths();
 
@@ -306,7 +306,7 @@ bool q_coreapplication_remove_translator(void* messageFile);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param context const char*
 /// @param key const char*
@@ -465,7 +465,7 @@ bool q_coreapplication_qbase_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -474,7 +474,7 @@ const char* q_coreapplication_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -525,7 +525,7 @@ void q_coreapplication_remove_posted_events2(void* receiver, int eventType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param context const char*
 /// @param key const char*
@@ -535,7 +535,7 @@ const char* q_coreapplication_translate3(const char* context, const char* key, c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param context const char*
 /// @param key const char*
@@ -554,7 +554,7 @@ void q_coreapplication_exit1(int retcode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCoreApplication*
 ///
@@ -769,7 +769,7 @@ QVariant* q_coreapplication_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCoreApplication*
 ///

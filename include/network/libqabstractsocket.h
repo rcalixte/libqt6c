@@ -56,7 +56,7 @@ int32_t q_abstractsocket_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -275,7 +275,7 @@ QHostAddress* q_abstractsocket_peer_address(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#peerName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 ///
@@ -613,7 +613,7 @@ QNetworkProxy* q_abstractsocket_proxy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#protocolTag)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 ///
@@ -991,7 +991,7 @@ void q_abstractsocket_qbase_set_peer_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1000,7 +1000,7 @@ const char* q_abstractsocket_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1147,7 +1147,7 @@ long long q_abstractsocket_read(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 /// @param maxlen long long
@@ -1158,7 +1158,7 @@ char* q_abstractsocket_read2(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 ///
@@ -1178,7 +1178,7 @@ long long q_abstractsocket_read_line(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 ///
@@ -1258,7 +1258,7 @@ long long q_abstractsocket_peek(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 /// @param maxlen long long
@@ -1305,7 +1305,7 @@ bool q_abstractsocket_get_char(void* self, char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 ///
@@ -1421,7 +1421,7 @@ void q_abstractsocket_on_read_channel_finished(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 /// @param maxlen long long
@@ -1432,7 +1432,7 @@ char* q_abstractsocket_read_line1(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 ///
@@ -1647,7 +1647,7 @@ QVariant* q_abstractsocket_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractSocket*
 ///

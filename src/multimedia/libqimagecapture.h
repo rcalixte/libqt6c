@@ -61,7 +61,7 @@ int32_t q_imagecapture_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -89,7 +89,7 @@ int32_t q_imagecapture_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagecapture.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageCapture*
 ///
@@ -124,7 +124,7 @@ libqt_list /* of int32_t */ q_imagecapture_supported_formats();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param c enum QImageCapture__FileFormat
 ///
@@ -132,7 +132,7 @@ const char* q_imagecapture_file_format_name(int32_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param c enum QImageCapture__FileFormat
 ///
@@ -377,7 +377,7 @@ void q_imagecapture_on_image_saved(void* self, void (*callback)(void*, int, cons
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -386,7 +386,7 @@ const char* q_imagecapture_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -405,7 +405,7 @@ int32_t q_imagecapture_capture_to_file1(void* self, const char* location);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageCapture*
 ///
@@ -620,7 +620,7 @@ QVariant* q_imagecapture_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageCapture*
 ///

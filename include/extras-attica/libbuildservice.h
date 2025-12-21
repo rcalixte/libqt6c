@@ -21,7 +21,7 @@ Attica__Target* k_attica__target_new(void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-target.html#id-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Target*
 ///
@@ -36,7 +36,7 @@ void k_attica__target_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-target.html#name-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Target*
 ///
@@ -92,7 +92,7 @@ void k_attica__buildservice_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildService*
 ///
@@ -107,7 +107,7 @@ void k_attica__buildservice_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildService*
 ///
@@ -122,7 +122,7 @@ void k_attica__buildservice_set_url(void* self, const char* url);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#url)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__BuildService*
 ///

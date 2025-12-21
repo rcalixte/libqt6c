@@ -382,7 +382,7 @@ int32_t q_variant_type_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#typeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QVariant*
 ///
@@ -509,7 +509,7 @@ double q_variant_to_real(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toByteArray)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QVariant*
 ///
@@ -523,7 +523,7 @@ QBitArray* q_variant_to_bit_array(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QVariant*
 ///
@@ -531,7 +531,7 @@ const char* q_variant_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toStringList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QVariant*
 ///
@@ -717,7 +717,7 @@ int64_t q_variant_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#typeToName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param typeId int
 ///

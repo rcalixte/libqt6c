@@ -49,7 +49,7 @@ SignOn__SessionData* q_signon__sessiondata_operator_plus_assign(void* self, void
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SessionData*
 ///
@@ -64,7 +64,7 @@ const QVariant* q_signon__sessiondata_get_property(void* self, const char* prope
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SessionData*
 ///
@@ -85,7 +85,7 @@ void q_signon__sessiondata_set_secret(void* self, const char* value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SessionData*
 ///
@@ -100,7 +100,7 @@ void q_signon__sessiondata_set_user_name(void* self, const char* value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SessionData*
 ///
@@ -115,7 +115,7 @@ void q_signon__sessiondata_set_realm(void* self, const char* value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SessionData*
 ///
@@ -130,7 +130,7 @@ void q_signon__sessiondata_set_network_proxy(void* self, const char* value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SessionData*
 ///
@@ -158,7 +158,7 @@ void q_signon__sessiondata_set_caption(void* self, const char* value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self SignOn__SessionData*
 ///

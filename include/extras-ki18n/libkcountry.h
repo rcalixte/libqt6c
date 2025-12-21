@@ -62,7 +62,7 @@ bool k_country_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#alpha2)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountry*
 ///
@@ -70,7 +70,7 @@ const char* k_country_alpha2(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#alpha3)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountry*
 ///
@@ -78,7 +78,7 @@ const char* k_country_alpha3(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountry*
 ///
@@ -86,7 +86,7 @@ const char* k_country_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#emojiFlag)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountry*
 ///
@@ -108,7 +108,7 @@ libqt_list /* of const char* */ k_country_time_zone_ids(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#currencyCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountry*
 ///

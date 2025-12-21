@@ -61,7 +61,7 @@ int32_t k_localizedtranslator_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* k_localizedtranslator_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/klocalizedtranslator.html#translate)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedTranslator*
 /// @param context const char*
@@ -123,7 +123,7 @@ void k_localizedtranslator_remove_context_to_monitor(void* self, const char* con
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -132,7 +132,7 @@ const char* k_localizedtranslator_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -144,7 +144,7 @@ const char* k_localizedtranslator_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#language)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedTranslator*
 ///
@@ -154,7 +154,7 @@ const char* k_localizedtranslator_language(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedTranslator*
 ///
@@ -273,7 +273,7 @@ bool k_localizedtranslator_load34(void* self, unsigned char* data, int lenVal, c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedTranslator*
 ///
@@ -488,7 +488,7 @@ QVariant* k_localizedtranslator_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedTranslator*
 ///

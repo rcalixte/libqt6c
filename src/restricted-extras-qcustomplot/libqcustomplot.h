@@ -21,7 +21,7 @@ const QMetaObject* q_cp_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__ExportPen
 ///
@@ -35,7 +35,7 @@ const QMetaObject* q_cp_get_enum_meta_object2(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__ResolutionUnit
 ///
@@ -49,7 +49,7 @@ const QMetaObject* q_cp_get_enum_meta_object3(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__SignDomain
 ///
@@ -63,7 +63,7 @@ const QMetaObject* q_cp_get_enum_meta_object4(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__MarginSide
 ///
@@ -77,7 +77,7 @@ const QMetaObject* q_cp_get_enum_meta_object5(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 flag of enum QCP__MarginSide
 ///
@@ -91,7 +91,7 @@ const QMetaObject* q_cp_get_enum_meta_object6(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__AntialiasedElement
 ///
@@ -105,7 +105,7 @@ const QMetaObject* q_cp_get_enum_meta_object7(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 flag of enum QCP__AntialiasedElement
 ///
@@ -119,7 +119,7 @@ const QMetaObject* q_cp_get_enum_meta_object8(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__PlottingHint
 ///
@@ -133,7 +133,7 @@ const QMetaObject* q_cp_get_enum_meta_object9(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 flag of enum QCP__PlottingHint
 ///
@@ -147,7 +147,7 @@ const QMetaObject* q_cp_get_enum_meta_object10(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__Interaction
 ///
@@ -161,7 +161,7 @@ const QMetaObject* q_cp_get_enum_meta_object11(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 flag of enum QCP__Interaction
 ///
@@ -175,7 +175,7 @@ const QMetaObject* q_cp_get_enum_meta_object12(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__SelectionRectMode
 ///
@@ -189,7 +189,7 @@ const QMetaObject* q_cp_get_enum_meta_object13(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QCP__SelectionType
 ///
@@ -3253,7 +3253,7 @@ int32_t q_cplayer_qbase_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -3267,7 +3267,7 @@ QCustomPlot* q_cplayer_parent_plot(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayer.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayer*
 ///
@@ -3421,7 +3421,7 @@ void q_cplayer_qbase_remove_child(void* self, void* layerable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -3430,7 +3430,7 @@ const char* q_cplayer_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -3442,7 +3442,7 @@ const char* q_cplayer_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayer*
 ///
@@ -3649,7 +3649,7 @@ QVariant* q_cplayer_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayer*
 ///
@@ -4218,7 +4218,7 @@ int32_t q_cplayerable_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -4753,7 +4753,7 @@ void q_cplayerable_qbase_apply_antialiasing_hint(void* self, void* painter, bool
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -4762,7 +4762,7 @@ const char* q_cplayerable_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -4774,7 +4774,7 @@ const char* q_cplayerable_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayerable*
 ///
@@ -4989,7 +4989,7 @@ QVariant* q_cplayerable_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayerable*
 ///
@@ -6099,7 +6099,7 @@ int32_t q_cpselectionrect_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -6367,7 +6367,7 @@ void q_cpselectionrect_qbase_draw(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -6376,7 +6376,7 @@ const char* q_cpselectionrect_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -6490,7 +6490,7 @@ void q_cpselectionrect_on_layer_changed(void* self, void (*callback)(void*, void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPSelectionRect*
 ///
@@ -6705,7 +6705,7 @@ QVariant* q_cpselectionrect_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPSelectionRect*
 ///
@@ -7774,7 +7774,7 @@ int32_t q_cpmargingroup_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -7880,7 +7880,7 @@ void q_cpmargingroup_qbase_remove_child(void* self, int32_t side, void* element)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -7889,7 +7889,7 @@ const char* q_cpmargingroup_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -7901,7 +7901,7 @@ const char* q_cpmargingroup_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPMarginGroup*
 ///
@@ -8116,7 +8116,7 @@ QVariant* q_cpmargingroup_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPMarginGroup*
 ///
@@ -8672,7 +8672,7 @@ int32_t q_cplayoutelement_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -9072,7 +9072,7 @@ void q_cplayoutelement_qbase_parent_plot_initialized(void* self, void* parentPlo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -9081,7 +9081,7 @@ const char* q_cplayoutelement_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -9195,7 +9195,7 @@ void q_cplayoutelement_on_layer_changed(void* self, void (*callback)(void*, void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayoutElement*
 ///
@@ -9410,7 +9410,7 @@ QVariant* q_cplayoutelement_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayoutElement*
 ///
@@ -10407,7 +10407,7 @@ int32_t q_cplayout_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -10733,7 +10733,7 @@ libqt_list /* of int */ q_cplayout_qbase_get_section_sizes(void* self, libqt_lis
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -10742,7 +10742,7 @@ const char* q_cplayout_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -11042,7 +11042,7 @@ void q_cplayout_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayout*
 ///
@@ -11257,7 +11257,7 @@ QVariant* q_cplayout_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayout*
 ///
@@ -12516,7 +12516,7 @@ int32_t q_cplayoutgrid_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -12972,7 +12972,7 @@ void q_cplayoutgrid_qbase_get_maximum_row_col_sizes(void* self, libqt_list maxCo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -12981,7 +12981,7 @@ const char* q_cplayoutgrid_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -13315,7 +13315,7 @@ void q_cplayoutgrid_on_layer_changed(void* self, void (*callback)(void*, void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayoutGrid*
 ///
@@ -13530,7 +13530,7 @@ QVariant* q_cplayoutgrid_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayoutGrid*
 ///
@@ -14896,7 +14896,7 @@ int32_t q_cplayoutinset_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -15142,7 +15142,7 @@ void q_cplayoutinset_add_element2(void* self, void* element, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -15151,7 +15151,7 @@ const char* q_cplayoutinset_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -15477,7 +15477,7 @@ void q_cplayoutinset_on_layer_changed(void* self, void (*callback)(void*, void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayoutInset*
 ///
@@ -15692,7 +15692,7 @@ QVariant* q_cplayoutinset_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLayoutInset*
 ///
@@ -17384,7 +17384,7 @@ int32_t q_cpaxisticker_qbase_get_sub_tick_count(void* self, double tickStep);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTicker*
 /// @param tick double
@@ -17471,7 +17471,7 @@ libqt_list /* of double */ q_cpaxisticker_qbase_create_sub_tick_vector(void* sel
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTicker*
 /// @param ticks libqt_list /* of double */
@@ -17651,7 +17651,7 @@ QCPAxisTickerDateTime* q_cpaxistickerdatetime_new();
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerDateTime*
 ///
@@ -17776,7 +17776,7 @@ int32_t q_cpaxistickerdatetime_qbase_get_sub_tick_count(void* self, double tickS
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerDateTime*
 /// @param tick double
@@ -17969,7 +17969,7 @@ void q_cpaxistickerdatetime_on_create_sub_tick_vector(void* self, libqt_list /* 
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -17985,7 +17985,7 @@ const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list t
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -18162,7 +18162,7 @@ QCPAxisTickerTime* q_cpaxistickertime_new();
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerTime.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerTime*
 ///
@@ -18242,7 +18242,7 @@ int32_t q_cpaxistickertime_qbase_get_sub_tick_count(void* self, double tickStep)
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerTime.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerTime*
 /// @param tick double
@@ -18474,7 +18474,7 @@ void q_cpaxistickertime_on_create_sub_tick_vector(void* self, libqt_list /* of d
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -18490,7 +18490,7 @@ const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list ticks
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -18853,7 +18853,7 @@ void q_cpaxistickerfixed_on_get_sub_tick_count(void* self, int32_t (*callback)(v
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -18869,7 +18869,7 @@ const char* q_cpaxistickerfixed_get_tick_label(void* self, double tick, void* lo
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -18966,7 +18966,7 @@ void q_cpaxistickerfixed_on_create_sub_tick_vector(void* self, libqt_list /* of 
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -18982,7 +18982,7 @@ const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list tick
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -19272,7 +19272,7 @@ int32_t q_cpaxistickertext_qbase_get_sub_tick_count(void* self, double tickStep)
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerText*
 /// @param tick double
@@ -19467,7 +19467,7 @@ void q_cpaxistickertext_on_create_sub_tick_vector(void* self, libqt_list /* of d
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -19483,7 +19483,7 @@ const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list ticks
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -19660,7 +19660,7 @@ QCPAxisTickerPi* q_cpaxistickerpi_new();
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerPi*
 ///
@@ -19766,7 +19766,7 @@ int32_t q_cpaxistickerpi_qbase_get_sub_tick_count(void* self, double tickStep);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerPi*
 /// @param tick double
@@ -19826,7 +19826,7 @@ void q_cpaxistickerpi_qbase_simplify_fraction(void* self, int* numerator, int* d
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerPi*
 /// @param numerator int
@@ -19855,7 +19855,7 @@ const char* q_cpaxistickerpi_qbase_fraction_to_string(void* self, int numerator,
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerPi*
 /// @param numerator int
@@ -19884,7 +19884,7 @@ const char* q_cpaxistickerpi_qbase_unicode_fraction(void* self, int numerator, i
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerPi*
 /// @param number int
@@ -19911,7 +19911,7 @@ const char* q_cpaxistickerpi_qbase_unicode_superscript(void* self, int number);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisTickerPi*
 /// @param number int
@@ -20108,7 +20108,7 @@ void q_cpaxistickerpi_on_create_sub_tick_vector(void* self, libqt_list /* of dou
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -20124,7 +20124,7 @@ const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list ticks, 
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -20512,7 +20512,7 @@ void q_cpaxistickerlog_on_get_tick_step(void* self, double (*callback)(void*, vo
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -20528,7 +20528,7 @@ const char* q_cpaxistickerlog_get_tick_label(void* self, double tick, void* loca
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -20590,7 +20590,7 @@ void q_cpaxistickerlog_on_create_sub_tick_vector(void* self, libqt_list /* of do
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -20606,7 +20606,7 @@ const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list ticks,
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -20819,7 +20819,7 @@ int32_t q_cpgrid_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -21005,7 +21005,7 @@ void q_cpgrid_qbase_draw_sub_grid_lines(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -21014,7 +21014,7 @@ const char* q_cpgrid_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -21128,7 +21128,7 @@ void q_cpgrid_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPGrid*
 ///
@@ -21343,7 +21343,7 @@ QVariant* q_cpgrid_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPGrid*
 ///
@@ -22413,7 +22413,7 @@ int32_t q_cpaxis_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -22499,7 +22499,7 @@ int32_t q_cpaxis_tick_label_side(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxis*
 ///
@@ -22519,7 +22519,7 @@ libqt_list /* of double */ q_cpaxis_tick_vector(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxis*
 ///
@@ -22587,7 +22587,7 @@ QColor* q_cpaxis_label_color(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxis*
 ///
@@ -23618,7 +23618,7 @@ QColor* q_cpaxis_qbase_get_label_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -23627,7 +23627,7 @@ const char* q_cpaxis_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -23772,7 +23772,7 @@ void q_cpaxis_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxis*
 ///
@@ -23987,7 +23987,7 @@ QVariant* q_cpaxis_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxis*
 ///
@@ -25189,7 +25189,7 @@ int32_t q_cpabstractplottable_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -25197,7 +25197,7 @@ const char* q_cpabstractplottable_tr(const char* s);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAbstractPlottable*
 ///
@@ -25780,7 +25780,7 @@ void q_cpabstractplottable_qbase_apply_scatters_antialiasing_hint(void* self, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -25789,7 +25789,7 @@ const char* q_cpabstractplottable_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -25932,7 +25932,7 @@ void q_cpabstractplottable_on_layer_changed(void* self, void (*callback)(void*, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAbstractPlottable*
 ///
@@ -26147,7 +26147,7 @@ QVariant* q_cpabstractplottable_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAbstractPlottable*
 ///
@@ -27020,7 +27020,7 @@ QCPItemAnchor* q_cpitemanchor_new2(void* parentPlot, void* parentItem, const cha
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemAnchor*
 ///
@@ -27421,7 +27421,7 @@ bool q_cpitemposition_set_parent_anchor_y2(void* self, void* parentAnchor, bool 
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemPosition*
 ///
@@ -27611,7 +27611,7 @@ int32_t q_cpabstractitem_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -28023,7 +28023,7 @@ QCPItemAnchor* q_cpabstractitem_qbase_create_anchor(void* self, const char* name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -28032,7 +28032,7 @@ const char* q_cpabstractitem_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -28146,7 +28146,7 @@ void q_cpabstractitem_on_layer_changed(void* self, void (*callback)(void*, void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAbstractItem*
 ///
@@ -28361,7 +28361,7 @@ QVariant* q_cpabstractitem_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAbstractItem*
 ///
@@ -29261,7 +29261,7 @@ int32_t q_customplot_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -30894,7 +30894,7 @@ void q_customplot_qbase_free_open_gl(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -30903,7 +30903,7 @@ const char* q_customplot_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -32279,7 +32279,7 @@ void q_customplot_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32289,7 +32289,7 @@ const char* q_customplot_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32325,7 +32325,7 @@ void q_customplot_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32344,7 +32344,7 @@ void q_customplot_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32363,7 +32363,7 @@ void q_customplot_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32407,7 +32407,7 @@ void q_customplot_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32443,7 +32443,7 @@ void q_customplot_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32462,7 +32462,7 @@ void q_customplot_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32472,7 +32472,7 @@ const char* q_customplot_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -32491,7 +32491,7 @@ void q_customplot_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -33030,7 +33030,7 @@ void q_customplot_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -33836,7 +33836,7 @@ QWidget* q_customplot_create_window_container3(void* window, void* parent, int64
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -34042,7 +34042,7 @@ QVariant* q_customplot_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCustomPlot*
 ///
@@ -36630,7 +36630,7 @@ int32_t q_cpaxisrect_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -37295,7 +37295,7 @@ void q_cpaxisrect_qbase_update_axes_offset(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -37304,7 +37304,7 @@ const char* q_cpaxisrect_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -37636,7 +37636,7 @@ void q_cpaxisrect_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisRect*
 ///
@@ -37851,7 +37851,7 @@ QVariant* q_cpaxisrect_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAxisRect*
 ///
@@ -38844,7 +38844,7 @@ int32_t q_cpabstractlegenditem_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -39149,7 +39149,7 @@ void q_cpabstractlegenditem_qbase_deselect_event(void* self, bool* selectionStat
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -39158,7 +39158,7 @@ const char* q_cpabstractlegenditem_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -39458,7 +39458,7 @@ void q_cpabstractlegenditem_on_layer_changed(void* self, void (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAbstractLegendItem*
 ///
@@ -39673,7 +39673,7 @@ QVariant* q_cpabstractlegenditem_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPAbstractLegendItem*
 ///
@@ -40760,7 +40760,7 @@ int32_t q_cpplottablelegenditem_qbase_metacall(void* self, int32_t param1, int p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -40891,7 +40891,7 @@ QFont* q_cpplottablelegenditem_qbase_get_font(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -40900,7 +40900,7 @@ const char* q_cpplottablelegenditem_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -41346,7 +41346,7 @@ void q_cpplottablelegenditem_on_layer_changed(void* self, void (*callback)(void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPlottableLegendItem*
 ///
@@ -41561,7 +41561,7 @@ QVariant* q_cpplottablelegenditem_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPlottableLegendItem*
 ///
@@ -42822,7 +42822,7 @@ int32_t q_cplegend_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -43352,7 +43352,7 @@ QBrush* q_cplegend_qbase_get_brush(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -43361,7 +43361,7 @@ const char* q_cplegend_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -43926,7 +43926,7 @@ void q_cplegend_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLegend*
 ///
@@ -44141,7 +44141,7 @@ QVariant* q_cplegend_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPLegend*
 ///
@@ -45663,7 +45663,7 @@ int32_t q_cptextelement_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -45671,7 +45671,7 @@ const char* q_cptextelement_tr(const char* s);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPTextElement*
 ///
@@ -46141,7 +46141,7 @@ QColor* q_cptextelement_qbase_main_text_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -46150,7 +46150,7 @@ const char* q_cptextelement_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -46450,7 +46450,7 @@ void q_cptextelement_on_layer_changed(void* self, void (*callback)(void*, void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPTextElement*
 ///
@@ -46665,7 +46665,7 @@ QVariant* q_cptextelement_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPTextElement*
 ///
@@ -47650,7 +47650,7 @@ int32_t q_cpcolorscale_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -47692,7 +47692,7 @@ QCPColorGradient* q_cpcolorscale_gradient(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPColorScale*
 ///
@@ -47985,7 +47985,7 @@ void q_cpcolorscale_qbase_wheel_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -47994,7 +47994,7 @@ const char* q_cpcolorscale_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -48294,7 +48294,7 @@ void q_cpcolorscale_on_layer_changed(void* self, void (*callback)(void*, void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPColorScale*
 ///
@@ -48509,7 +48509,7 @@ QVariant* q_cpcolorscale_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPColorScale*
 ///
@@ -49754,7 +49754,7 @@ int32_t q_cpgraph_qbase_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -50503,7 +50503,7 @@ int32_t q_cpgraph_qbase_find_index_above_y(void* self, libqt_list data, double y
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -50512,7 +50512,7 @@ const char* q_cpgraph_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -50551,7 +50551,7 @@ void q_cpgraph_operator_assign(void* self, void* param1);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPGraph*
 ///
@@ -51002,7 +51002,7 @@ void q_cpgraph_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPGraph*
 ///
@@ -51217,7 +51217,7 @@ QVariant* q_cpgraph_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPGraph*
 ///
@@ -52847,7 +52847,7 @@ int32_t q_cpcurve_qbase_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -53426,7 +53426,7 @@ void q_cpcurve_qbase_get_traverse_corner_points(void* self, int prevRegion, int 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -53435,7 +53435,7 @@ const char* q_cpcurve_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -53476,7 +53476,7 @@ void q_cpcurve_operator_assign(void* self, void* param1);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPCurve*
 ///
@@ -53927,7 +53927,7 @@ void q_cpcurve_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPCurve*
 ///
@@ -54142,7 +54142,7 @@ QVariant* q_cpcurve_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPCurve*
 ///
@@ -55636,7 +55636,7 @@ int32_t q_cpbarsgroup_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -55836,7 +55836,7 @@ double q_cpbarsgroup_qbase_get_pixel_spacing(void* self, void* bars, double keyC
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -55845,7 +55845,7 @@ const char* q_cpbarsgroup_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -55857,7 +55857,7 @@ const char* q_cpbarsgroup_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPBarsGroup*
 ///
@@ -56072,7 +56072,7 @@ QVariant* q_cpbarsgroup_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPBarsGroup*
 ///
@@ -56744,7 +56744,7 @@ int32_t q_cpbars_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -57168,7 +57168,7 @@ void q_cpbars_qbase_connect_bars(void* self, void* lower, void* upper);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -57177,7 +57177,7 @@ const char* q_cpbars_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -57216,7 +57216,7 @@ void q_cpbars_operator_assign(void* self, void* param1);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPBars*
 ///
@@ -57667,7 +57667,7 @@ void q_cpbars_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPBars*
 ///
@@ -57882,7 +57882,7 @@ QVariant* q_cpbars_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPBars*
 ///
@@ -59483,7 +59483,7 @@ int32_t q_cpstatisticalbox_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -59782,7 +59782,7 @@ void q_cpstatisticalbox_qbase_draw_legend_icon(void* self, void* painter, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -59791,7 +59791,7 @@ const char* q_cpstatisticalbox_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -59851,7 +59851,7 @@ void q_cpstatisticalbox_operator_assign(void* self, void* param1);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPStatisticalBox*
 ///
@@ -60302,7 +60302,7 @@ void q_cpstatisticalbox_on_layer_changed(void* self, void (*callback)(void*, voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPStatisticalBox*
 ///
@@ -60517,7 +60517,7 @@ QVariant* q_cpstatisticalbox_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPStatisticalBox*
 ///
@@ -62194,7 +62194,7 @@ int32_t q_cpcolormap_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -62509,7 +62509,7 @@ void q_cpcolormap_qbase_draw_legend_icon(void* self, void* painter, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -62518,7 +62518,7 @@ const char* q_cpcolormap_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -62560,7 +62560,7 @@ void q_cpcolormap_update_legend_icon2(void* self, int32_t transformMode, void* t
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPColorMap*
 ///
@@ -63011,7 +63011,7 @@ void q_cpcolormap_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPColorMap*
 ///
@@ -63226,7 +63226,7 @@ QVariant* q_cpcolormap_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPColorMap*
 ///
@@ -64552,7 +64552,7 @@ int32_t q_cpfinancial_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -64892,7 +64892,7 @@ double q_cpfinancial_qbase_get_pixel_width(void* self, double key, double keyPix
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -64901,7 +64901,7 @@ const char* q_cpfinancial_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -64946,7 +64946,7 @@ void q_cpfinancial_operator_assign(void* self, void* param1);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPFinancial*
 ///
@@ -65397,7 +65397,7 @@ void q_cpfinancial_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPFinancial*
 ///
@@ -65612,7 +65612,7 @@ QVariant* q_cpfinancial_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPFinancial*
 ///
@@ -67167,7 +67167,7 @@ int32_t q_cperrorbars_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -67765,7 +67765,7 @@ bool q_cperrorbars_qbase_rect_intersects_line(void* self, void* pixelRect, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -67774,7 +67774,7 @@ const char* q_cperrorbars_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -67786,7 +67786,7 @@ const char* q_cperrorbars_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPErrorBars*
 ///
@@ -68237,7 +68237,7 @@ void q_cperrorbars_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPErrorBars*
 ///
@@ -68452,7 +68452,7 @@ QVariant* q_cperrorbars_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPErrorBars*
 ///
@@ -69592,7 +69592,7 @@ int32_t q_cpitemstraightline_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69744,7 +69744,7 @@ QPen* q_cpitemstraightline_qbase_main_pen(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -69753,7 +69753,7 @@ const char* q_cpitemstraightline_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -70014,7 +70014,7 @@ void q_cpitemstraightline_on_layer_changed(void* self, void (*callback)(void*, v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemStraightLine*
 ///
@@ -70229,7 +70229,7 @@ QVariant* q_cpitemstraightline_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemStraightLine*
 ///
@@ -71432,7 +71432,7 @@ int32_t q_cpitemline_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -71610,7 +71610,7 @@ QPen* q_cpitemline_qbase_main_pen(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -71619,7 +71619,7 @@ const char* q_cpitemline_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -71880,7 +71880,7 @@ void q_cpitemline_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemLine*
 ///
@@ -72095,7 +72095,7 @@ QVariant* q_cpitemline_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemLine*
 ///
@@ -73298,7 +73298,7 @@ int32_t q_cpitemcurve_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -73459,7 +73459,7 @@ QPen* q_cpitemcurve_qbase_main_pen(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -73468,7 +73468,7 @@ const char* q_cpitemcurve_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -73729,7 +73729,7 @@ void q_cpitemcurve_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemCurve*
 ///
@@ -73944,7 +73944,7 @@ QVariant* q_cpitemcurve_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemCurve*
 ///
@@ -75147,7 +75147,7 @@ int32_t q_cpitemrect_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -75380,7 +75380,7 @@ QBrush* q_cpitemrect_qbase_main_brush(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -75389,7 +75389,7 @@ const char* q_cpitemrect_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -75650,7 +75650,7 @@ void q_cpitemrect_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemRect*
 ///
@@ -75865,7 +75865,7 @@ QVariant* q_cpitemrect_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemRect*
 ///
@@ -77035,7 +77035,7 @@ int32_t q_cpitemtext_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -77091,7 +77091,7 @@ QFont* q_cpitemtext_selected_font(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemText*
 ///
@@ -77472,7 +77472,7 @@ QBrush* q_cpitemtext_qbase_main_brush(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -77481,7 +77481,7 @@ const char* q_cpitemtext_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -77733,7 +77733,7 @@ void q_cpitemtext_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemText*
 ///
@@ -77948,7 +77948,7 @@ QVariant* q_cpitemtext_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemText*
 ///
@@ -79118,7 +79118,7 @@ int32_t q_cpitemellipse_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -79369,7 +79369,7 @@ QBrush* q_cpitemellipse_qbase_main_brush(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -79378,7 +79378,7 @@ const char* q_cpitemellipse_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -79639,7 +79639,7 @@ void q_cpitemellipse_on_layer_changed(void* self, void (*callback)(void*, void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemEllipse*
 ///
@@ -79854,7 +79854,7 @@ QVariant* q_cpitemellipse_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemEllipse*
 ///
@@ -81024,7 +81024,7 @@ int32_t q_cpitempixmap_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -81296,7 +81296,7 @@ QPen* q_cpitempixmap_qbase_main_pen(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -81305,7 +81305,7 @@ const char* q_cpitempixmap_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -81716,7 +81716,7 @@ void q_cpitempixmap_on_layer_changed(void* self, void (*callback)(void*, void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemPixmap*
 ///
@@ -81931,7 +81931,7 @@ QVariant* q_cpitempixmap_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemPixmap*
 ///
@@ -83101,7 +83101,7 @@ int32_t q_cpitemtracer_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -83340,7 +83340,7 @@ QBrush* q_cpitemtracer_qbase_main_brush(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -83349,7 +83349,7 @@ const char* q_cpitemtracer_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -83601,7 +83601,7 @@ void q_cpitemtracer_on_layer_changed(void* self, void (*callback)(void*, void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemTracer*
 ///
@@ -83816,7 +83816,7 @@ QVariant* q_cpitemtracer_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemTracer*
 ///
@@ -85019,7 +85019,7 @@ int32_t q_cpitembracket_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -85201,7 +85201,7 @@ QPen* q_cpitembracket_qbase_main_pen(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -85210,7 +85210,7 @@ const char* q_cpitembracket_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -85471,7 +85471,7 @@ void q_cpitembracket_on_layer_changed(void* self, void (*callback)(void*, void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemBracket*
 ///
@@ -85686,7 +85686,7 @@ QVariant* q_cpitembracket_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPItemBracket*
 ///
@@ -86856,7 +86856,7 @@ int32_t q_cppolaraxisradial_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -86966,7 +86966,7 @@ int32_t q_cppolaraxisradial_tick_label_mode(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisRadial*
 ///
@@ -86992,7 +86992,7 @@ libqt_list /* of double */ q_cppolaraxisradial_sub_tick_vector(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisRadial*
 ///
@@ -87060,7 +87060,7 @@ QColor* q_cppolaraxisradial_label_color(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisRadial*
 ///
@@ -88026,7 +88026,7 @@ QColor* q_cppolaraxisradial_qbase_get_label_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -88035,7 +88035,7 @@ const char* q_cppolaraxisradial_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -88172,7 +88172,7 @@ void q_cppolaraxisradial_on_layer_changed(void* self, void (*callback)(void*, vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisRadial*
 ///
@@ -88387,7 +88387,7 @@ QVariant* q_cppolaraxisradial_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisRadial*
 ///
@@ -89174,7 +89174,7 @@ int32_t q_cppolaraxisangular_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -89288,7 +89288,7 @@ int32_t q_cppolaraxisangular_tick_label_mode(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisAngular*
 ///
@@ -89308,7 +89308,7 @@ libqt_list /* of double */ q_cppolaraxisangular_tick_vector(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisAngular*
 ///
@@ -89376,7 +89376,7 @@ QColor* q_cppolaraxisangular_label_color(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisAngular*
 ///
@@ -90512,7 +90512,7 @@ QColor* q_cppolaraxisangular_qbase_get_label_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -90521,7 +90521,7 @@ const char* q_cppolaraxisangular_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -90867,7 +90867,7 @@ void q_cppolaraxisangular_on_layer_changed(void* self, void (*callback)(void*, v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisAngular*
 ///
@@ -91082,7 +91082,7 @@ QVariant* q_cppolaraxisangular_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarAxisAngular*
 ///
@@ -92067,7 +92067,7 @@ int32_t q_cppolargrid_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -92323,7 +92323,7 @@ void q_cppolargrid_qbase_draw_angular_grid(void* self, void* painter, void* cent
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -92332,7 +92332,7 @@ const char* q_cppolargrid_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -92479,7 +92479,7 @@ void q_cppolargrid_on_layer_changed(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarGrid*
 ///
@@ -92694,7 +92694,7 @@ QVariant* q_cppolargrid_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarGrid*
 ///
@@ -93764,7 +93764,7 @@ int32_t q_cppolarlegenditem_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -93895,7 +93895,7 @@ QFont* q_cppolarlegenditem_qbase_get_font(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -93904,7 +93904,7 @@ const char* q_cppolarlegenditem_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -94350,7 +94350,7 @@ void q_cppolarlegenditem_on_layer_changed(void* self, void (*callback)(void*, vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarLegendItem*
 ///
@@ -94565,7 +94565,7 @@ QVariant* q_cppolarlegenditem_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarLegendItem*
 ///
@@ -95829,7 +95829,7 @@ int32_t q_cppolargraph_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -95837,7 +95837,7 @@ const char* q_cppolargraph_tr(const char* s);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarGraph*
 ///
@@ -96711,7 +96711,7 @@ libqt_list /* of QPointF* */ q_cppolargraph_qbase_data_to_lines(void* self, libq
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -96720,7 +96720,7 @@ const char* q_cppolargraph_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -96881,7 +96881,7 @@ void q_cppolargraph_on_layer_changed(void* self, void (*callback)(void*, void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarGraph*
 ///
@@ -97096,7 +97096,7 @@ QVariant* q_cppolargraph_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCPPolarGraph*
 ///

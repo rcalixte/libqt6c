@@ -27,7 +27,7 @@ Attica__Comment* k_attica__comment_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#commentTypeToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Attica__Comment__Type
 ///
@@ -49,7 +49,7 @@ void k_attica__comment_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Comment*
 ///
@@ -64,7 +64,7 @@ void k_attica__comment_set_subject(void* self, const char* subject);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#subject)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Comment*
 ///
@@ -79,7 +79,7 @@ void k_attica__comment_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Comment*
 ///
@@ -107,7 +107,7 @@ void k_attica__comment_set_user(void* self, const char* user);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#user)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Comment*
 ///

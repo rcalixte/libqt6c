@@ -41,7 +41,7 @@ void q_pdfoutputintent_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputConditionIdentifier)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfOutputIntent*
 ///
@@ -56,7 +56,7 @@ void q_pdfoutputintent_set_output_condition_identifier(void* self, const char* i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputCondition)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfOutputIntent*
 ///

@@ -33,7 +33,7 @@ int32_t k_solid__opticaldisc_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -87,7 +87,7 @@ uint64_t k_solid__opticaldisc_capacity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -96,7 +96,7 @@ const char* k_solid__opticaldisc_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -126,7 +126,7 @@ int32_t k_solid__opticaldisc_usage(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#fsType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__OpticalDisc*
 ///
@@ -136,7 +136,7 @@ const char* k_solid__opticaldisc_fs_type(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#label)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__OpticalDisc*
 ///
@@ -146,7 +146,7 @@ const char* k_solid__opticaldisc_label(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#uuid)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__OpticalDisc*
 ///
@@ -172,7 +172,7 @@ bool k_solid__opticaldisc_is_valid(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -192,7 +192,7 @@ int32_t k_solid__opticaldisc_string_to_type(const char* type);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -221,7 +221,7 @@ bool k_solid__opticaldisc_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__OpticalDisc*
 ///
@@ -436,7 +436,7 @@ QVariant* k_solid__opticaldisc_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__OpticalDisc*
 ///

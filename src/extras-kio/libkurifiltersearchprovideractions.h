@@ -61,7 +61,7 @@ int32_t k_io__kurifiltersearchprovideractions_qbase_metacall(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* k_io__kurifiltersearchprovideractions_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kio-kurifiltersearchprovideractions.html#selectedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__KUriFilterSearchProviderActions*
 ///
@@ -91,7 +91,7 @@ void k_io__kurifiltersearchprovideractions_add_web_shortcuts_to_menu(void* self,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -100,7 +100,7 @@ const char* k_io__kurifiltersearchprovideractions_tr2(const char* s, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -112,7 +112,7 @@ const char* k_io__kurifiltersearchprovideractions_tr3(const char* s, const char*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__KUriFilterSearchProviderActions*
 ///
@@ -327,7 +327,7 @@ QVariant* k_io__kurifiltersearchprovideractions_property(void* self, const char*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__KUriFilterSearchProviderActions*
 ///

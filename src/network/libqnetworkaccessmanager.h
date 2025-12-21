@@ -61,7 +61,7 @@ int32_t q_networkaccessmanager_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* q_networkaccessmanager_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkAccessManager*
 ///
@@ -496,7 +496,7 @@ QNetworkReply* q_networkaccessmanager_qbase_create_request(void* self, int32_t o
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemesImplementation)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkAccessManager*
 ///
@@ -521,7 +521,7 @@ const char** q_networkaccessmanager_qbase_supported_schemes_implementation(void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -530,7 +530,7 @@ const char* q_networkaccessmanager_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -584,7 +584,7 @@ void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, u
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkAccessManager*
 ///
@@ -799,7 +799,7 @@ QVariant* q_networkaccessmanager_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkAccessManager*
 ///

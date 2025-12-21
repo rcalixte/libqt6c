@@ -170,7 +170,7 @@ int32_t q_calendar_maximum_months_in_year(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 ///
@@ -216,7 +216,7 @@ int32_t q_calendar_day_of_week(void* self, void* date);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#monthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -226,7 +226,7 @@ const char* q_calendar_month_name(void* self, void* locale, int month);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -236,7 +236,7 @@ const char* q_calendar_standalone_month_name(void* self, void* locale, int month
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#weekDayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -246,7 +246,7 @@ const char* q_calendar_week_day_name(void* self, void* locale, int day);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneWeekDayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -256,7 +256,7 @@ const char* q_calendar_standalone_week_day_name(void* self, void* locale, int da
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#availableCalendars)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_calendar_available_calendars();
 
@@ -270,7 +270,7 @@ int32_t q_calendar_days_in_month2(void* self, int month, int year);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#monthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -281,7 +281,7 @@ const char* q_calendar_month_name3(void* self, void* locale, int month, int year
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#monthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -293,7 +293,7 @@ const char* q_calendar_month_name4(void* self, void* locale, int month, int year
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -304,7 +304,7 @@ const char* q_calendar_standalone_month_name3(void* self, void* locale, int mont
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -316,7 +316,7 @@ const char* q_calendar_standalone_month_name4(void* self, void* locale, int mont
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#weekDayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*
@@ -327,7 +327,7 @@ const char* q_calendar_week_day_name3(void* self, void* locale, int day, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#standaloneWeekDayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCalendar*
 /// @param locale QLocale*

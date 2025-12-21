@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfactoryinterface.html#keys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFactoryInterface*
 ///

@@ -67,7 +67,7 @@ QSystemSemaphore* q_systemsemaphore_new6(const char* key, int initialValue, int3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 ///
@@ -102,7 +102,7 @@ void q_systemsemaphore_set_key(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemsemaphore.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSystemSemaphore*
 ///
@@ -130,7 +130,7 @@ int32_t q_systemsemaphore_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemsemaphore.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSystemSemaphore*
 ///
@@ -156,7 +156,7 @@ QNativeIpcKey* q_systemsemaphore_legacy_native_key(const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -165,7 +165,7 @@ const char* q_systemsemaphore_tr2(const char* sourceText, const char* disambigua
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*

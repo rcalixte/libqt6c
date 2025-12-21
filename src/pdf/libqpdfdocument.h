@@ -61,7 +61,7 @@ int32_t q_pdfdocument_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -100,7 +100,7 @@ void q_pdfdocument_set_password(void* self, const char* password);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocument.html#password)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfDocument*
 ///
@@ -142,7 +142,7 @@ QSizeF* q_pdfdocument_page_point_size(void* self, int page);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocument.html#pageLabel)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfDocument*
 /// @param page int
@@ -264,7 +264,7 @@ void q_pdfdocument_on_page_model_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -273,7 +273,7 @@ const char* q_pdfdocument_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -294,7 +294,7 @@ QImage* q_pdfdocument_render3(void* self, int page, void* imageSize, void* optio
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfDocument*
 ///
@@ -509,7 +509,7 @@ QVariant* q_pdfdocument_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPdfDocument*
 ///

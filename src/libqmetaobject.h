@@ -57,7 +57,7 @@ void q_metamethod_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#methodSignature)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
 ///
@@ -65,7 +65,7 @@ char* q_metamethod_method_signature(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
 ///
@@ -73,7 +73,7 @@ char* q_metamethod_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#typeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
 ///
@@ -120,7 +120,7 @@ void q_metamethod_get_parameter_types(void* self, int* types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
 ///
@@ -128,7 +128,7 @@ const char** q_metamethod_parameter_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterTypeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
 /// @param index int
@@ -137,7 +137,7 @@ char* q_metamethod_parameter_type_name(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
 ///
@@ -145,7 +145,7 @@ const char** q_metamethod_parameter_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#tag)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethod*
 ///
@@ -1088,7 +1088,7 @@ void q_metaenum_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
 ///
@@ -1096,7 +1096,7 @@ const char* q_metaenum_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#enumName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
 ///
@@ -1128,7 +1128,7 @@ int32_t q_metaenum_key_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
 /// @param index int
@@ -1144,7 +1144,7 @@ int32_t q_metaenum_value(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#scope)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
 ///
@@ -1159,7 +1159,7 @@ int32_t q_metaenum_key_to_value(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#valueToKey)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
 /// @param value int
@@ -1175,7 +1175,7 @@ int32_t q_metaenum_keys_to_value(void* self, const char* keys);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#valueToKeys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaEnum*
 /// @param value int
@@ -1256,7 +1256,7 @@ void q_metaproperty_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaProperty*
 ///
@@ -1264,7 +1264,7 @@ const char* q_metaproperty_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#typeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaProperty*
 ///
@@ -1545,7 +1545,7 @@ void q_metaclassinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaClassInfo*
 ///
@@ -1553,7 +1553,7 @@ const char* q_metaclassinfo_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#value)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaClassInfo*
 ///

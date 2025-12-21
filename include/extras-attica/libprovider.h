@@ -60,7 +60,7 @@ void k_attica__provider_set_additional_agent_information(void* self, const char*
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#additionalAgentInformation)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -74,7 +74,7 @@ QUrl* k_attica__provider_base_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -94,7 +94,7 @@ bool k_attica__provider_has_person_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#personServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -108,7 +108,7 @@ bool k_attica__provider_has_friend_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#friendServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -122,7 +122,7 @@ bool k_attica__provider_has_message_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#messageServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -136,7 +136,7 @@ bool k_attica__provider_has_achievement_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#achievementServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -150,7 +150,7 @@ bool k_attica__provider_has_activity_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#activityServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -164,7 +164,7 @@ bool k_attica__provider_has_content_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#contentServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -178,7 +178,7 @@ bool k_attica__provider_has_fan_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#fanServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -192,7 +192,7 @@ bool k_attica__provider_has_forum_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#forumServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -206,7 +206,7 @@ bool k_attica__provider_has_knowledgebase_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#knowledgebaseServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -220,7 +220,7 @@ bool k_attica__provider_has_comment_service(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#commentServiceVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///
@@ -531,7 +531,7 @@ Attica__PostJob* k_attica__provider_post_topic(void* self, const char* forumId, 
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#getRegisterAccountUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Provider*
 ///

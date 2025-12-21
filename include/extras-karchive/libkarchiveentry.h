@@ -33,7 +33,7 @@ QDateTime* k_archiveentry_date(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KArchiveEntry*
 ///
@@ -47,7 +47,7 @@ mode_t k_archiveentry_permissions(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#user)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KArchiveEntry*
 ///
@@ -55,7 +55,7 @@ const char* k_archiveentry_user(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#group)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KArchiveEntry*
 ///
@@ -63,7 +63,7 @@ const char* k_archiveentry_group(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#symLinkTarget)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KArchiveEntry*
 ///

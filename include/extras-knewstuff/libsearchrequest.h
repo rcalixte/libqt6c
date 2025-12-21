@@ -21,7 +21,7 @@ const QMetaObject* k_nscore_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/knscore.html#qt_getEnumName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KNSCore__SortMode
 ///
@@ -35,7 +35,7 @@ const QMetaObject* k_nscore_get_enum_meta_object2(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/knscore.html#qt_getEnumName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KNSCore__Filter
 ///
@@ -136,7 +136,7 @@ int32_t k_nscore__searchrequest_filter(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#searchTerm)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchRequest*
 ///
@@ -144,7 +144,7 @@ const char* k_nscore__searchrequest_search_term(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#categories)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__SearchRequest*
 ///

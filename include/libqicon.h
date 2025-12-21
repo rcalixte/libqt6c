@@ -124,7 +124,7 @@ QSize* q_icon_actual_size2(void* self, void* window, void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QIcon*
 ///
@@ -246,7 +246,7 @@ bool q_icon_has_theme_icon2(int32_t icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#themeSearchPaths)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_icon_theme_search_paths();
 
@@ -258,7 +258,7 @@ void q_icon_set_theme_search_paths(const char* searchpath[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#fallbackSearchPaths)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_icon_fallback_search_paths();
 
@@ -270,7 +270,7 @@ void q_icon_set_fallback_search_paths(const char* paths[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#themeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_icon_theme_name();
 
@@ -282,7 +282,7 @@ void q_icon_set_theme_name(const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#fallbackThemeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_icon_fallback_theme_name();
 

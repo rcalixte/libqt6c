@@ -55,7 +55,7 @@ int32_t k_newfilemenu_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -103,7 +103,7 @@ void k_newfilemenu_set_supported_mime_types(void* self, const char* mime[static 
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#supportedMimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///
@@ -292,7 +292,7 @@ void k_newfilemenu_qbase_slot_result(void* self, void* job);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -301,7 +301,7 @@ const char* k_newfilemenu_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -463,7 +463,7 @@ void k_newfilemenu_set_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///
@@ -482,7 +482,7 @@ void k_newfilemenu_set_icon_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///
@@ -501,7 +501,7 @@ void k_newfilemenu_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///
@@ -520,7 +520,7 @@ void k_newfilemenu_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///
@@ -539,7 +539,7 @@ void k_newfilemenu_set_whats_this(void* self, const char* what);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///
@@ -1026,7 +1026,7 @@ void k_newfilemenu_on_triggered1(void* self, void (*callback)(void*, bool));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///
@@ -1241,7 +1241,7 @@ QVariant* k_newfilemenu_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewFileMenu*
 ///

@@ -33,7 +33,7 @@ int32_t q_webengineurlrequestjob_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -47,7 +47,7 @@ QUrl* q_webengineurlrequestjob_request_url(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestMethod)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineUrlRequestJob*
 ///
@@ -89,7 +89,7 @@ void q_webengineurlrequestjob_redirect(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -98,7 +98,7 @@ const char* q_webengineurlrequestjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -129,7 +129,7 @@ bool q_webengineurlrequestjob_event_filter(void* self, void* watched, void* even
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineUrlRequestJob*
 ///
@@ -344,7 +344,7 @@ QVariant* q_webengineurlrequestjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineUrlRequestJob*
 ///

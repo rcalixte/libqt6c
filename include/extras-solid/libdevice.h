@@ -76,7 +76,7 @@ bool k_solid__device_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#udi)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///
@@ -84,7 +84,7 @@ const char* k_solid__device_udi(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#parentUdi)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///
@@ -98,7 +98,7 @@ Solid__Device* k_solid__device_parent(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#vendor)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///
@@ -106,7 +106,7 @@ const char* k_solid__device_vendor(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#product)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///
@@ -114,7 +114,7 @@ const char* k_solid__device_product(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///
@@ -122,7 +122,7 @@ const char* k_solid__device_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#emblems)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///
@@ -130,7 +130,7 @@ const char** k_solid__device_emblems(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#displayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///
@@ -138,7 +138,7 @@ const char* k_solid__device_display_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__Device*
 ///

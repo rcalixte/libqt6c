@@ -33,7 +33,7 @@ int32_t q_webenginewebauthuxrequest_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -41,7 +41,7 @@ const char* q_webenginewebauthuxrequest_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#userNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineWebAuthUxRequest*
 ///
@@ -49,7 +49,7 @@ const char** q_webenginewebauthuxrequest_user_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#relyingPartyId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineWebAuthUxRequest*
 ///
@@ -119,7 +119,7 @@ void q_webenginewebauthuxrequest_set_pin(void* self, const char* pin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -128,7 +128,7 @@ const char* q_webenginewebauthuxrequest_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -159,7 +159,7 @@ bool q_webenginewebauthuxrequest_event_filter(void* self, void* watched, void* e
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineWebAuthUxRequest*
 ///
@@ -374,7 +374,7 @@ QVariant* q_webenginewebauthuxrequest_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineWebAuthUxRequest*
 ///

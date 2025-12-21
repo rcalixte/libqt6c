@@ -55,7 +55,7 @@ int32_t k_sonnet__configwidget_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -76,7 +76,7 @@ void k_sonnet__configwidget_set_language(void* self, const char* language);
 
 /// [Upstream resources](https://api.kde.org/sonnet-configwidget.html#language)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -162,7 +162,7 @@ void k_sonnet__configwidget_on_config_changed(void* self, void (*callback)(void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -171,7 +171,7 @@ const char* k_sonnet__configwidget_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1040,7 +1040,7 @@ void k_sonnet__configwidget_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1050,7 +1050,7 @@ const char* k_sonnet__configwidget_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1086,7 +1086,7 @@ void k_sonnet__configwidget_set_window_icon_text(void* self, const char* windowI
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1105,7 +1105,7 @@ void k_sonnet__configwidget_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1124,7 +1124,7 @@ void k_sonnet__configwidget_set_window_file_path(void* self, const char* filePat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1168,7 +1168,7 @@ void k_sonnet__configwidget_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1204,7 +1204,7 @@ void k_sonnet__configwidget_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1223,7 +1223,7 @@ void k_sonnet__configwidget_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1233,7 +1233,7 @@ const char* k_sonnet__configwidget_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1252,7 +1252,7 @@ void k_sonnet__configwidget_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -1791,7 +1791,7 @@ void k_sonnet__configwidget_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -2597,7 +2597,7 @@ QWidget* k_sonnet__configwidget_create_window_container3(void* window, void* par
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///
@@ -2803,7 +2803,7 @@ QVariant* k_sonnet__configwidget_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 ///

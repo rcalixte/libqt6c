@@ -61,7 +61,7 @@ int32_t k_sonnet__settings_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -76,7 +76,7 @@ void k_sonnet__settings_set_default_language(void* self, const char* lang);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#defaultLanguage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 ///
@@ -91,7 +91,7 @@ void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[sta
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#preferredLanguages)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 ///
@@ -106,7 +106,7 @@ void k_sonnet__settings_set_default_client(void* self, const char* client);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#defaultClient)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 ///
@@ -186,7 +186,7 @@ void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#currentIgnoreList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 ///
@@ -194,7 +194,7 @@ const char** k_sonnet__settings_current_ignore_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#clients)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 ///
@@ -220,7 +220,7 @@ void k_sonnet__settings_save(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#defaultIgnoreList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_sonnet__settings_default_ignore_list();
 
@@ -246,13 +246,13 @@ bool k_sonnet__settings_defaukt_skip_run_together();
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#defaultDefaultLanguage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* k_sonnet__settings_default_default_language();
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#defaultPreferredLanguages)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_sonnet__settings_default_preferred_languages();
 
@@ -388,7 +388,7 @@ void k_sonnet__settings_on_modified_changed(void* self, void (*callback)(void*))
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -397,7 +397,7 @@ const char* k_sonnet__settings_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -409,7 +409,7 @@ const char* k_sonnet__settings_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 ///
@@ -624,7 +624,7 @@ QVariant* k_sonnet__settings_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 ///

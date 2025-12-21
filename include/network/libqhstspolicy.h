@@ -69,7 +69,7 @@ void q_hstspolicy_set_host(void* self, const char* host);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#host)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QHstsPolicy*
 ///
@@ -117,7 +117,7 @@ void q_hstspolicy_set_host2(void* self, const char* host, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#host)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QHstsPolicy*
 /// @param options flag of enum QUrl__ComponentFormattingOption

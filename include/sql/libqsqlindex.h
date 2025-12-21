@@ -65,7 +65,7 @@ void q_sqlindex_set_cursor_name(void* self, const char* cursorName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlindex.html#cursorName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlIndex*
 ///
@@ -80,7 +80,7 @@ void q_sqlindex_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlindex.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlIndex*
 ///
@@ -221,7 +221,7 @@ int32_t q_sqlindex_index_of(void* self, char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#fieldName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlIndex*
 /// @param i int

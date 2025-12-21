@@ -489,9 +489,10 @@ class VirtualKExtendableItemDelegate final : public KExtendableItemDelegate {
         } else if (kextendableitemdelegate_paintingroles_callback != nullptr) {
             int* callback_ret = kextendableitemdelegate_paintingroles_callback();
             QList<int> callback_ret_QList;
-            for (int* ptr = callback_ret; *ptr != 0; ++ptr) {
+            for (int* ptr = callback_ret; *ptr != -1; ++ptr) {
                 callback_ret_QList.push_back(*ptr);
             }
+            free(callback_ret);
             return callback_ret_QList;
         } else {
             return KExtendableItemDelegate::paintingRoles();

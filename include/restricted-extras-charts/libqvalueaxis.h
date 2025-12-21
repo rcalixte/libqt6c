@@ -61,7 +61,7 @@ int32_t q_valueaxis_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -204,7 +204,7 @@ void q_valueaxis_set_label_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#labelFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QValueAxis*
 ///
@@ -345,7 +345,7 @@ void q_valueaxis_on_tick_type_changed(void* self, void (*callback)(void*, int32_
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -354,7 +354,7 @@ const char* q_valueaxis_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -691,7 +691,7 @@ void q_valueaxis_set_title_text(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QValueAxis*
 ///
@@ -1455,7 +1455,7 @@ void q_valueaxis_set_truncate_labels1(void* self, bool truncateLabels);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QValueAxis*
 ///
@@ -1670,7 +1670,7 @@ QVariant* q_valueaxis_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QValueAxis*
 ///

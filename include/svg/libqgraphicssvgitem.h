@@ -78,7 +78,7 @@ int32_t q_graphicssvgitem_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -106,7 +106,7 @@ void q_graphicssvgitem_set_element_id(void* self, const char* id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssvgitem.html#elementId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsSvgItem*
 ///
@@ -215,7 +215,7 @@ int32_t q_graphicssvgitem_qbase_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -224,7 +224,7 @@ const char* q_graphicssvgitem_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -468,7 +468,7 @@ void q_graphicssvgitem_grab_gesture2(void* self, int64_t type, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsSvgItem*
 ///
@@ -683,7 +683,7 @@ QVariant* q_graphicssvgitem_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsSvgItem*
 ///
@@ -1025,7 +1025,7 @@ bool q_graphicssvgitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsSvgItem*
 ///

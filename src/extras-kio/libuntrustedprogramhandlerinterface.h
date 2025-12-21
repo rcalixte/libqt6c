@@ -33,7 +33,7 @@ int32_t k_io__untrustedprogramhandlerinterface_metacall(void* self, int32_t para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -79,7 +79,7 @@ void k_io__untrustedprogramhandlerinterface_on_result(void* self, void (*callbac
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -88,7 +88,7 @@ const char* k_io__untrustedprogramhandlerinterface_tr2(const char* s, const char
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -119,7 +119,7 @@ bool k_io__untrustedprogramhandlerinterface_event_filter(void* self, void* watch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__UntrustedProgramHandlerInterface*
 ///
@@ -334,7 +334,7 @@ QVariant* k_io__untrustedprogramhandlerinterface_property(void* self, const char
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__UntrustedProgramHandlerInterface*
 ///

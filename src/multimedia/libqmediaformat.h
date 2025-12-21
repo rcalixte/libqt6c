@@ -134,7 +134,7 @@ libqt_list /* of int32_t */ q_mediaformat_supported_audio_codecs(void* self, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#fileFormatName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param fileFormat enum QMediaFormat__FileFormat
 ///
@@ -142,7 +142,7 @@ const char* q_mediaformat_file_format_name(int32_t fileFormat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#audioCodecName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__AudioCodec
 ///
@@ -150,7 +150,7 @@ const char* q_mediaformat_audio_codec_name(int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#videoCodecName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__VideoCodec
 ///
@@ -158,7 +158,7 @@ const char* q_mediaformat_video_codec_name(int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#fileFormatDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param fileFormat enum QMediaFormat__FileFormat
 ///
@@ -166,7 +166,7 @@ const char* q_mediaformat_file_format_description(int32_t fileFormat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#audioCodecDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__AudioCodec
 ///
@@ -174,7 +174,7 @@ const char* q_mediaformat_audio_codec_description(int32_t codec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#videoCodecDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__VideoCodec
 ///

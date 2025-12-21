@@ -33,7 +33,7 @@ int32_t k_io__filesystemfreespacejob_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -53,7 +53,7 @@ uint64_t k_io__filesystemfreespacejob_available_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -62,7 +62,7 @@ const char* k_io__filesystemfreespacejob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -148,7 +148,7 @@ void k_io__filesystemfreespacejob_set_ui_delegate_extension(void* self, void* ex
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
@@ -158,7 +158,7 @@ const char* k_io__filesystemfreespacejob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
@@ -238,7 +238,7 @@ KIO__MetaData* k_io__filesystemfreespacejob_meta_data(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#queryMetaData)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param key const char*
@@ -267,7 +267,7 @@ void k_io__filesystemfreespacejob_on_connected(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param reqUrl QUrl*
@@ -278,7 +278,7 @@ const char** k_io__filesystemfreespacejob_detailed_error_strings1(void* self, vo
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param reqUrl QUrl*
@@ -365,7 +365,7 @@ int32_t k_io__filesystemfreespacejob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
@@ -582,7 +582,7 @@ bool k_io__filesystemfreespacejob_event_filter(void* self, void* watched, void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
@@ -797,7 +797,7 @@ QVariant* k_io__filesystemfreespacejob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///

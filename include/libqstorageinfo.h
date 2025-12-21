@@ -64,7 +64,7 @@ void q_storageinfo_set_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#rootPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStorageInfo*
 ///
@@ -72,7 +72,7 @@ const char* q_storageinfo_root_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#device)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStorageInfo*
 ///
@@ -80,7 +80,7 @@ char* q_storageinfo_device(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#subvolume)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStorageInfo*
 ///
@@ -88,7 +88,7 @@ char* q_storageinfo_subvolume(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#fileSystemType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStorageInfo*
 ///
@@ -96,7 +96,7 @@ char* q_storageinfo_file_system_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStorageInfo*
 ///
@@ -104,7 +104,7 @@ const char* q_storageinfo_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#displayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStorageInfo*
 ///

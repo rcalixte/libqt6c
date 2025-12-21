@@ -96,7 +96,7 @@ QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[stati
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#next)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 ///
@@ -116,7 +116,7 @@ bool q_diriterator_has_next(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 ///
@@ -124,7 +124,7 @@ const char* q_diriterator_file_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 ///
@@ -138,7 +138,7 @@ QFileInfo* q_diriterator_file_info(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#path)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirIterator*
 ///

@@ -835,7 +835,7 @@ void q_image_set_offset(void* self, void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#textKeys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImage*
 ///
@@ -843,7 +843,7 @@ const char** q_image_text_keys(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImage*
 ///
@@ -1392,7 +1392,7 @@ QImage* q_image_from_data23(const char* data, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImage*
 /// @param key const char*

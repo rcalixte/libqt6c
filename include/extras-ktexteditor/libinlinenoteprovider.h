@@ -53,7 +53,7 @@ int32_t k_texteditor__inlinenoteprovider_qbase_metacall(void* self, int32_t para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -275,7 +275,7 @@ void k_texteditor__inlinenoteprovider_on_inline_notes_changed(void* self, void (
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -284,7 +284,7 @@ const char* k_texteditor__inlinenoteprovider_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -296,7 +296,7 @@ const char* k_texteditor__inlinenoteprovider_tr3(const char* s, const char* c, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__InlineNoteProvider*
 ///
@@ -511,7 +511,7 @@ QVariant* k_texteditor__inlinenoteprovider_property(void* self, const char* name
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__InlineNoteProvider*
 ///

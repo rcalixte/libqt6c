@@ -55,7 +55,7 @@ int32_t k_notificationreplyaction_qbase_metacall(void* self, int32_t param1, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -63,7 +63,7 @@ const char* k_notificationreplyaction_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/knotificationreplyaction.html#label)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNotificationReplyAction*
 ///
@@ -78,7 +78,7 @@ void k_notificationreplyaction_set_label(void* self, const char* label);
 
 /// [Upstream resources](https://api.kde.org/knotificationreplyaction.html#placeholderText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNotificationReplyAction*
 ///
@@ -93,7 +93,7 @@ void k_notificationreplyaction_set_placeholder_text(void* self, const char* plac
 
 /// [Upstream resources](https://api.kde.org/knotificationreplyaction.html#submitButtonText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNotificationReplyAction*
 ///
@@ -108,7 +108,7 @@ void k_notificationreplyaction_set_submit_button_text(void* self, const char* su
 
 /// [Upstream resources](https://api.kde.org/knotificationreplyaction.html#submitButtonIconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNotificationReplyAction*
 ///
@@ -230,7 +230,7 @@ void k_notificationreplyaction_on_fallback_behavior_changed(void* self, void (*c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -239,7 +239,7 @@ const char* k_notificationreplyaction_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -251,7 +251,7 @@ const char* k_notificationreplyaction_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNotificationReplyAction*
 ///
@@ -466,7 +466,7 @@ QVariant* k_notificationreplyaction_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNotificationReplyAction*
 ///

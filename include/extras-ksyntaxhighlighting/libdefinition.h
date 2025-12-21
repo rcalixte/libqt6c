@@ -54,7 +54,7 @@ bool k_syntaxhighlighting__definition_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -62,7 +62,7 @@ const char* k_syntaxhighlighting__definition_file_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -70,7 +70,7 @@ const char* k_syntaxhighlighting__definition_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#alternativeNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -78,7 +78,7 @@ const char** k_syntaxhighlighting__definition_alternative_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#translatedName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -86,7 +86,7 @@ const char* k_syntaxhighlighting__definition_translated_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#section)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -94,7 +94,7 @@ const char* k_syntaxhighlighting__definition_section(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#translatedSection)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -102,7 +102,7 @@ const char* k_syntaxhighlighting__definition_translated_section(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -110,7 +110,7 @@ const char** k_syntaxhighlighting__definition_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#extensions)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -136,7 +136,7 @@ bool k_syntaxhighlighting__definition_is_hidden(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#style)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -144,7 +144,7 @@ const char* k_syntaxhighlighting__definition_style(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#indenter)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -152,7 +152,7 @@ const char* k_syntaxhighlighting__definition_indenter(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#author)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -160,7 +160,7 @@ const char* k_syntaxhighlighting__definition_author(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#license)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -194,7 +194,7 @@ bool k_syntaxhighlighting__definition_indentation_based_folding_enabled(void* se
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#foldingIgnoreList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -202,7 +202,7 @@ const char** k_syntaxhighlighting__definition_folding_ignore_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#keywordLists)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
@@ -210,7 +210,7 @@ const char** k_syntaxhighlighting__definition_keyword_lists(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#keywordList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 /// @param name const char*
@@ -239,7 +239,7 @@ libqt_list /* of KSyntaxHighlighting__Definition* */ k_syntaxhighlighting__defin
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#singleLineCommentMarker)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///

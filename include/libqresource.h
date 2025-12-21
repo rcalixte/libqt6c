@@ -43,7 +43,7 @@ void q_resource_set_file_name(void* self, const char* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QResource*
 ///
@@ -51,7 +51,7 @@ const char* q_resource_file_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#absoluteFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QResource*
 ///
@@ -104,7 +104,7 @@ long long q_resource_uncompressed_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#uncompressedData)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QResource*
 ///
