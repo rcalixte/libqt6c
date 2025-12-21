@@ -61,7 +61,7 @@ int32_t q_scatterseries_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -297,7 +297,7 @@ void q_scatterseries_on_marker_size_changed(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -306,7 +306,7 @@ const char* q_scatterseries_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -546,7 +546,7 @@ void q_scatterseries_set_point_labels_format(void* self, const char* format);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScatterSeries*
 ///
@@ -1402,7 +1402,7 @@ void q_scatterseries_set_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScatterSeries*
 ///
@@ -1597,7 +1597,7 @@ void q_scatterseries_set_use_open_g_l1(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScatterSeries*
 ///
@@ -1812,7 +1812,7 @@ QVariant* q_scatterseries_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QScatterSeries*
 ///

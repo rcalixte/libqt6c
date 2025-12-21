@@ -119,7 +119,7 @@ void q_font_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#family)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFont*
 ///
@@ -134,7 +134,7 @@ void q_font_set_family(void* self, const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#families)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFont*
 ///
@@ -149,7 +149,7 @@ void q_font_set_families(void* self, const char* families[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#styleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFont*
 ///
@@ -561,7 +561,7 @@ bool q_font_is_copy_of(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFont*
 ///
@@ -569,7 +569,7 @@ const char* q_font_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFont*
 ///
@@ -584,7 +584,7 @@ bool q_font_from_string(void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#substitute)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -592,7 +592,7 @@ const char* q_font_substitute(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#substitutes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -600,7 +600,7 @@ const char** q_font_substitutes(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#substitutions)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_font_substitutions();
 
@@ -638,7 +638,7 @@ void q_font_cache_statistics();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#defaultFamily)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFont*
 ///
@@ -751,7 +751,7 @@ uint32_t q_font__tag_value(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QFont__Tag*
 ///

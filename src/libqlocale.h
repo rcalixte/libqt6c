@@ -117,7 +117,7 @@ uint16_t q_locale_country(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -125,7 +125,7 @@ const char* q_locale_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#bcp47Name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -133,7 +133,7 @@ const char* q_locale_bcp47_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#nativeLanguageName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -141,7 +141,7 @@ const char* q_locale_native_language_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#nativeTerritoryName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -149,7 +149,7 @@ const char* q_locale_native_territory_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#nativeCountryName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -227,7 +227,7 @@ double q_locale_to_double(void* self, const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i long long
@@ -236,7 +236,7 @@ const char* q_locale_to_string(void* self, long long i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i uint64_t
@@ -245,7 +245,7 @@ const char* q_locale_to_string2(void* self, uint64_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i int64_t
@@ -254,7 +254,7 @@ const char* q_locale_to_string3(void* self, int64_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i uint64_t
@@ -263,7 +263,7 @@ const char* q_locale_to_string4(void* self, uint64_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i short
@@ -272,7 +272,7 @@ const char* q_locale_to_string5(void* self, short i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i unsigned short
@@ -281,7 +281,7 @@ const char* q_locale_to_string6(void* self, unsigned short i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i int
@@ -290,7 +290,7 @@ const char* q_locale_to_string7(void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i uint32_t
@@ -299,7 +299,7 @@ const char* q_locale_to_string8(void* self, uint32_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param f double
@@ -308,7 +308,7 @@ const char* q_locale_to_string9(void* self, double f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param f float
@@ -317,7 +317,7 @@ const char* q_locale_to_string10(void* self, float f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param date QDate*
@@ -327,7 +327,7 @@ const char* q_locale_to_string11(void* self, void* date, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param time QTime*
@@ -337,7 +337,7 @@ const char* q_locale_to_string12(void* self, void* time, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param dateTime QDateTime*
@@ -347,7 +347,7 @@ const char* q_locale_to_string13(void* self, void* dateTime, const char* format)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param date QDate*
@@ -356,7 +356,7 @@ const char* q_locale_to_string17(void* self, void* date);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param time QTime*
@@ -365,7 +365,7 @@ const char* q_locale_to_string18(void* self, void* time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param dateTime QDateTime*
@@ -374,7 +374,7 @@ const char* q_locale_to_string19(void* self, void* dateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param date QDate*
@@ -385,7 +385,7 @@ const char* q_locale_to_string21(void* self, void* date, int32_t format, void* c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param dateTime QDateTime*
@@ -396,7 +396,7 @@ const char* q_locale_to_string22(void* self, void* dateTime, int32_t format, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#dateFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -404,7 +404,7 @@ const char* q_locale_date_format(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#timeFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -412,7 +412,7 @@ const char* q_locale_time_format(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#dateTimeFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -501,7 +501,7 @@ QDateTime* q_locale_to_date_time4(void* self, const char* stringVal, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#decimalPoint)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -509,7 +509,7 @@ const char* q_locale_decimal_point(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#groupSeparator)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -517,7 +517,7 @@ const char* q_locale_group_separator(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#percent)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -525,7 +525,7 @@ const char* q_locale_percent(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#zeroDigit)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -533,7 +533,7 @@ const char* q_locale_zero_digit(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#negativeSign)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -541,7 +541,7 @@ const char* q_locale_negative_sign(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#positiveSign)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -549,7 +549,7 @@ const char* q_locale_positive_sign(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#exponential)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -557,7 +557,7 @@ const char* q_locale_exponential(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#monthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -566,7 +566,7 @@ const char* q_locale_month_name(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#standaloneMonthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -575,7 +575,7 @@ const char* q_locale_standalone_month_name(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#dayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -584,7 +584,7 @@ const char* q_locale_day_name(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#standaloneDayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -609,7 +609,7 @@ libqt_list /* of int32_t */ q_locale_weekdays(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#amText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -617,7 +617,7 @@ const char* q_locale_am_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#pmText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -647,7 +647,7 @@ int32_t q_locale_text_direction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toUpper)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param str const char*
@@ -656,7 +656,7 @@ const char* q_locale_to_upper(void* self, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toLower)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param str const char*
@@ -665,7 +665,7 @@ const char* q_locale_to_lower(void* self, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#currencySymbol)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -673,7 +673,7 @@ const char* q_locale_currency_symbol(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 long long
@@ -682,7 +682,7 @@ const char* q_locale_to_currency_string(void* self, long long param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 uint64_t
@@ -691,7 +691,7 @@ const char* q_locale_to_currency_string2(void* self, uint64_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i short
@@ -700,7 +700,7 @@ const char* q_locale_to_currency_string3(void* self, short i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i unsigned short
@@ -709,7 +709,7 @@ const char* q_locale_to_currency_string4(void* self, unsigned short i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i int
@@ -718,7 +718,7 @@ const char* q_locale_to_currency_string5(void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i uint32_t
@@ -727,7 +727,7 @@ const char* q_locale_to_currency_string6(void* self, uint32_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 double
@@ -736,7 +736,7 @@ const char* q_locale_to_currency_string7(void* self, double param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i float
@@ -745,7 +745,7 @@ const char* q_locale_to_currency_string8(void* self, float i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#formattedDataSize)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param bytes long long
@@ -754,7 +754,7 @@ const char* q_locale_formatted_data_size(void* self, long long bytes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#uiLanguages)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 ///
@@ -762,7 +762,7 @@ const char** q_locale_ui_languages(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#languageToCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param language enum QLocale__Language
 ///
@@ -770,7 +770,7 @@ const char* q_locale_language_to_code(uint16_t language);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#territoryToCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param territory enum QLocale__Country
 ///
@@ -778,7 +778,7 @@ const char* q_locale_territory_to_code(uint16_t territory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#countryToCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param country enum QLocale__Country
 ///
@@ -786,7 +786,7 @@ const char* q_locale_country_to_code(uint16_t country);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#scriptToCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param script enum QLocale__Script
 ///
@@ -794,7 +794,7 @@ const char* q_locale_script_to_code(uint16_t script);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#languageToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param language enum QLocale__Language
 ///
@@ -802,7 +802,7 @@ const char* q_locale_language_to_string(uint16_t language);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#territoryToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param territory enum QLocale__Country
 ///
@@ -810,7 +810,7 @@ const char* q_locale_territory_to_string(uint16_t territory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#countryToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param country enum QLocale__Country
 ///
@@ -818,7 +818,7 @@ const char* q_locale_country_to_string(uint16_t country);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#scriptToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param script enum QLocale__Script
 ///
@@ -871,7 +871,7 @@ int32_t q_locale_number_options(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#quoteString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param str const char*
@@ -880,7 +880,7 @@ const char* q_locale_quote_string(void* self, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#createSeparatedList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param strl const char**
@@ -889,7 +889,7 @@ const char* q_locale_create_separated_list(void* self, const char* strl[static 1
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param separator enum QLocale__TagSeparator
@@ -898,7 +898,7 @@ const char* q_locale_name1(void* self, int8_t separator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#bcp47Name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param separator enum QLocale__TagSeparator
@@ -987,7 +987,7 @@ double q_locale_to_double22(void* self, const char* s, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param f double
@@ -997,7 +997,7 @@ const char* q_locale_to_string24(void* self, double f, char format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param f double
@@ -1008,7 +1008,7 @@ const char* q_locale_to_string32(void* self, double f, char format, int precisio
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param f float
@@ -1018,7 +1018,7 @@ const char* q_locale_to_string25(void* self, float f, char format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param f float
@@ -1029,7 +1029,7 @@ const char* q_locale_to_string33(void* self, float f, char format, int precision
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param date QDate*
@@ -1039,7 +1039,7 @@ const char* q_locale_to_string26(void* self, void* date, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param time QTime*
@@ -1049,7 +1049,7 @@ const char* q_locale_to_string27(void* self, void* time, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param dateTime QDateTime*
@@ -1059,7 +1059,7 @@ const char* q_locale_to_string28(void* self, void* dateTime, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#dateFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param format enum QLocale__FormatType
@@ -1068,7 +1068,7 @@ const char* q_locale_date_format1(void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#timeFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param format enum QLocale__FormatType
@@ -1077,7 +1077,7 @@ const char* q_locale_time_format1(void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#dateTimeFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param format enum QLocale__FormatType
@@ -1186,7 +1186,7 @@ QDateTime* q_locale_to_date_time43(void* self, const char* stringVal, const char
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#monthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -1196,7 +1196,7 @@ const char* q_locale_month_name2(void* self, int param1, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#standaloneMonthName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -1206,7 +1206,7 @@ const char* q_locale_standalone_month_name2(void* self, int param1, int32_t form
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#dayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -1216,7 +1216,7 @@ const char* q_locale_day_name2(void* self, int param1, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#standaloneDayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 int
@@ -1226,7 +1226,7 @@ const char* q_locale_standalone_day_name2(void* self, int param1, int32_t format
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#currencySymbol)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 enum QLocale__CurrencySymbolFormat
@@ -1235,7 +1235,7 @@ const char* q_locale_currency_symbol1(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 long long
@@ -1245,7 +1245,7 @@ const char* q_locale_to_currency_string22(void* self, long long param1, const ch
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 uint64_t
@@ -1255,7 +1255,7 @@ const char* q_locale_to_currency_string23(void* self, uint64_t param1, const cha
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i short
@@ -1265,7 +1265,7 @@ const char* q_locale_to_currency_string24(void* self, short i, const char* symbo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i unsigned short
@@ -1275,7 +1275,7 @@ const char* q_locale_to_currency_string25(void* self, unsigned short i, const ch
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i int
@@ -1285,7 +1285,7 @@ const char* q_locale_to_currency_string26(void* self, int i, const char* symbol)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i uint32_t
@@ -1295,7 +1295,7 @@ const char* q_locale_to_currency_string27(void* self, uint32_t i, const char* sy
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 double
@@ -1305,7 +1305,7 @@ const char* q_locale_to_currency_string28(void* self, double param1, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param param1 double
@@ -1316,7 +1316,7 @@ const char* q_locale_to_currency_string32(void* self, double param1, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i float
@@ -1326,7 +1326,7 @@ const char* q_locale_to_currency_string29(void* self, float i, const char* symbo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param i float
@@ -1337,7 +1337,7 @@ const char* q_locale_to_currency_string33(void* self, float i, const char* symbo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#formattedDataSize)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param bytes long long
@@ -1347,7 +1347,7 @@ const char* q_locale_formatted_data_size2(void* self, long long bytes, int preci
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#formattedDataSize)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param bytes long long
@@ -1358,7 +1358,7 @@ const char* q_locale_formatted_data_size3(void* self, long long bytes, int preci
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#uiLanguages)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param separator enum QLocale__TagSeparator
@@ -1367,7 +1367,7 @@ const char** q_locale_ui_languages1(void* self, int8_t separator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#languageToCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param language enum QLocale__Language
 /// @param codeTypes flag of enum QLocale__LanguageCodeType
@@ -1376,7 +1376,7 @@ const char* q_locale_language_to_code2(uint16_t language, int32_t codeTypes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#quoteString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLocale*
 /// @param str const char*

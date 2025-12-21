@@ -253,7 +253,7 @@ QAccessibleInterface* q_accessiblewidget_qbase_child(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAccessibleWidget*
 /// @param t enum QAccessible__Text
@@ -401,7 +401,7 @@ void* q_accessiblewidget_qbase_interface_cast(void* self, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#actionNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAccessibleWidget*
 ///
@@ -451,7 +451,7 @@ void q_accessiblewidget_qbase_do_action(void* self, const char* actionName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#keyBindingsForAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAccessibleWidget*
 /// @param actionName const char*
@@ -631,7 +631,7 @@ QAccessibleAttributesInterface* q_accessiblewidget_attributes_interface(void* se
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 ///
@@ -641,7 +641,7 @@ const char* q_accessiblewidget_tr(const char* sourceText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#pressAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_press_action();
 
@@ -649,7 +649,7 @@ const char* q_accessiblewidget_press_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#increaseAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_increase_action();
 
@@ -657,7 +657,7 @@ const char* q_accessiblewidget_increase_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#decreaseAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_decrease_action();
 
@@ -665,7 +665,7 @@ const char* q_accessiblewidget_decrease_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#showMenuAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_show_menu_action();
 
@@ -673,7 +673,7 @@ const char* q_accessiblewidget_show_menu_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#setFocusAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_set_focus_action();
 
@@ -681,7 +681,7 @@ const char* q_accessiblewidget_set_focus_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#toggleAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_toggle_action();
 
@@ -689,7 +689,7 @@ const char* q_accessiblewidget_toggle_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollLeftAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_scroll_left_action();
 
@@ -697,7 +697,7 @@ const char* q_accessiblewidget_scroll_left_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollRightAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_scroll_right_action();
 
@@ -705,7 +705,7 @@ const char* q_accessiblewidget_scroll_right_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollUpAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_scroll_up_action();
 
@@ -713,7 +713,7 @@ const char* q_accessiblewidget_scroll_up_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollDownAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_scroll_down_action();
 
@@ -721,7 +721,7 @@ const char* q_accessiblewidget_scroll_down_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#nextPageAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_next_page_action();
 
@@ -729,7 +729,7 @@ const char* q_accessiblewidget_next_page_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#previousPageAction)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_accessiblewidget_previous_page_action();
 
@@ -737,7 +737,7 @@ const char* q_accessiblewidget_previous_page_action();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -748,7 +748,7 @@ const char* q_accessiblewidget_tr2(const char* sourceText, const char* disambigu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -896,7 +896,7 @@ void q_accessiblewidget_on_virtual_hook(void* self, void (*callback)(void*, int,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -909,7 +909,7 @@ const char* q_accessiblewidget_localized_action_name(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -933,7 +933,7 @@ void q_accessiblewidget_on_localized_action_name(void* self, const char* (*callb
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -946,7 +946,7 @@ const char* q_accessiblewidget_localized_action_description(void* self, const ch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

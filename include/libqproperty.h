@@ -71,7 +71,7 @@ void q_propertybindingsourcelocation_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPropertyBindingSourceLocation*
 ///
@@ -86,7 +86,7 @@ void q_propertybindingsourcelocation_set_file_name(void* self, const char* fileN
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPropertyBindingSourceLocation*
 ///
@@ -187,7 +187,7 @@ int32_t q_propertybindingerror_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPropertyBindingError*
 ///

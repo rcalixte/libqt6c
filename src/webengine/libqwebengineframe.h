@@ -27,7 +27,7 @@ bool q_webengineframe_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineFrame*
 ///
@@ -35,7 +35,7 @@ const char* q_webengineframe_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#htmlName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineFrame*
 ///

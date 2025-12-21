@@ -33,7 +33,7 @@ int32_t k_solid__deviceinterface_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -47,7 +47,7 @@ bool k_solid__deviceinterface_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -63,7 +63,7 @@ int32_t k_solid__deviceinterface_string_to_type(const char* type);
 
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -71,7 +71,7 @@ const char* k_solid__deviceinterface_type_description(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -80,7 +80,7 @@ const char* k_solid__deviceinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -111,7 +111,7 @@ bool k_solid__deviceinterface_event_filter(void* self, void* watched, void* even
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__DeviceInterface*
 ///
@@ -326,7 +326,7 @@ QVariant* k_solid__deviceinterface_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__DeviceInterface*
 ///

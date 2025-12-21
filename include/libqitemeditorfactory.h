@@ -22,7 +22,7 @@ QWidget* q_itemeditorcreatorbase_create_widget(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#valuePropertyName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QItemEditorCreatorBase*
 ///
@@ -86,7 +86,7 @@ QWidget* q_itemeditorfactory_qbase_create_editor(void* self, int userType, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QItemEditorFactory*
 /// @param userType int

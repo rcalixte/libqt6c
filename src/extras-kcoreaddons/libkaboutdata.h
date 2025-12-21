@@ -92,7 +92,7 @@ void k_aboutperson_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 ///
@@ -100,7 +100,7 @@ const char* k_aboutperson_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#task)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 ///
@@ -108,7 +108,7 @@ const char* k_aboutperson_task(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#emailAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 ///
@@ -116,7 +116,7 @@ const char* k_aboutperson_email_address(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#webAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutPerson*
 ///
@@ -165,7 +165,7 @@ void k_aboutlicense_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutLicense*
 ///
@@ -173,7 +173,7 @@ const char* k_aboutlicense_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutLicense*
 ///
@@ -189,7 +189,7 @@ int32_t k_aboutlicense_key(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#spdx)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutLicense*
 ///
@@ -203,7 +203,7 @@ KAboutLicense* k_aboutlicense_by_keyword(const char* keyword);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutLicense*
 /// @param formatName enum KAboutLicense__NameFormat
@@ -303,7 +303,7 @@ void k_aboutcomponent_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 ///
@@ -311,7 +311,7 @@ const char* k_aboutcomponent_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 ///
@@ -319,7 +319,7 @@ const char* k_aboutcomponent_description(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#version)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 ///
@@ -327,7 +327,7 @@ const char* k_aboutcomponent_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#webAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutComponent*
 ///
@@ -695,7 +695,7 @@ KAboutData* k_aboutdata_set_product_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#componentName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -703,7 +703,7 @@ const char* k_aboutdata_component_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#productName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -711,7 +711,7 @@ const char* k_aboutdata_product_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProductName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -719,7 +719,7 @@ const char* k_aboutdata_internal_product_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#displayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -727,7 +727,7 @@ const char* k_aboutdata_display_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#organizationDomain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -735,7 +735,7 @@ const char* k_aboutdata_organization_domain(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProgramName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -749,7 +749,7 @@ QVariant* k_aboutdata_program_logo(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#version)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -757,7 +757,7 @@ const char* k_aboutdata_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalVersion)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -765,7 +765,7 @@ const char* k_aboutdata_internal_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#shortDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -773,7 +773,7 @@ const char* k_aboutdata_short_description(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#homepage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -781,7 +781,7 @@ const char* k_aboutdata_homepage(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#bugAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -789,7 +789,7 @@ const char* k_aboutdata_bug_address(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalBugAddress)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -815,7 +815,7 @@ libqt_list /* of KAboutPerson* */ k_aboutdata_translators(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#aboutTranslationTeam)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* k_aboutdata_about_translation_team();
 
@@ -827,7 +827,7 @@ libqt_list /* of KAboutComponent* */ k_aboutdata_components(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#otherText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -841,7 +841,7 @@ libqt_list /* of KAboutLicense* */ k_aboutdata_licenses(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#copyrightStatement)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -849,7 +849,7 @@ const char* k_aboutdata_copyright_statement(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorPlainText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -857,7 +857,7 @@ const char* k_aboutdata_custom_author_plain_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorRichText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///
@@ -906,7 +906,7 @@ KAboutData* k_aboutdata_set_desktop_file_name(void* self, const char* desktopFil
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#desktopFileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KAboutData*
 ///

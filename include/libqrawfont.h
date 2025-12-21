@@ -99,7 +99,7 @@ bool q_rawfont_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#familyName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRawFont*
 ///
@@ -107,7 +107,7 @@ const char* q_rawfont_family_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#styleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRawFont*
 ///
@@ -322,7 +322,7 @@ libqt_list /* of int32_t */ q_rawfont_supported_writing_systems(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRawFont*
 /// @param tagName const char*
@@ -331,7 +331,7 @@ char* q_rawfont_font_table(void* self, const char* tagName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QRawFont*
 /// @param tag QFont__Tag*

@@ -64,7 +64,7 @@ int32_t k_startupinfo_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -95,13 +95,13 @@ void k_startupinfo_set_new_startup_id(void* window, const char* startup_id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#createNewStartupId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 char* k_startupinfo_create_new_startup_id();
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#createNewStartupIdForTimestamp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param timestamp uint32_t
 ///
@@ -230,7 +230,7 @@ void k_startupinfo_set_timeout(void* self, uint32_t secs);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#windowStartupId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param w uintptr_t
 ///
@@ -308,7 +308,7 @@ void k_startupinfo_qbase_custom_event(void* self, void* e_P);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -317,7 +317,7 @@ const char* k_startupinfo_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -329,7 +329,7 @@ const char* k_startupinfo_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfo*
 ///
@@ -544,7 +544,7 @@ QVariant* k_startupinfo_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfo*
 ///
@@ -1059,7 +1059,7 @@ void k_startupinfoid_init_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoId*
 ///
@@ -1129,7 +1129,7 @@ void k_startupinfodata_set_bin(void* self, const char* bin);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#bin)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1144,7 +1144,7 @@ void k_startupinfodata_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#findName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1152,7 +1152,7 @@ const char* k_startupinfodata_find_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1167,7 +1167,7 @@ void k_startupinfodata_set_description(void* self, const char* descr);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#findDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1175,7 +1175,7 @@ const char* k_startupinfodata_find_description(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1190,7 +1190,7 @@ void k_startupinfodata_set_icon(void* self, const char* icon);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#findIcon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1198,7 +1198,7 @@ const char* k_startupinfodata_find_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1226,7 +1226,7 @@ void k_startupinfodata_set_w_m_class(void* self, const char* wmclass);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#findWMClass)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1234,7 +1234,7 @@ const char* k_startupinfodata_find_w_m_class(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#WMClass)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1268,7 +1268,7 @@ void k_startupinfodata_set_hostname(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#hostname)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///
@@ -1317,7 +1317,7 @@ void k_startupinfodata_set_xinerama(void* self, int xinerama);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#applicationId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStartupInfoData*
 ///

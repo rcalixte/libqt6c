@@ -302,7 +302,7 @@ int32_t k_texteditor__abstractannotationitemdelegate_metacall(void* self, int32_
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -362,7 +362,7 @@ void k_texteditor__abstractannotationitemdelegate_on_size_hint_changed(void* sel
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -371,7 +371,7 @@ const char* k_texteditor__abstractannotationitemdelegate_tr2(const char* s, cons
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -402,7 +402,7 @@ bool k_texteditor__abstractannotationitemdelegate_event_filter(void* self, void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__AbstractAnnotationItemDelegate*
 ///
@@ -617,7 +617,7 @@ QVariant* k_texteditor__abstractannotationitemdelegate_property(void* self, cons
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__AbstractAnnotationItemDelegate*
 ///

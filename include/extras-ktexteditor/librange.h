@@ -106,7 +106,7 @@ KTextEditor__Range* k_texteditor__range_invalid();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-range.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__Range*
 ///

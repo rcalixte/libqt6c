@@ -61,7 +61,7 @@ int32_t q_translator_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* q_translator_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#translate)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTranslator*
 /// @param context const char*
@@ -125,7 +125,7 @@ bool q_translator_qbase_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#language)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTranslator*
 ///
@@ -133,7 +133,7 @@ const char* q_translator_language(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTranslator*
 ///
@@ -164,7 +164,7 @@ bool q_translator_load3(void* self, unsigned char* data, int lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -173,7 +173,7 @@ const char* q_translator_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -251,7 +251,7 @@ bool q_translator_load34(void* self, unsigned char* data, int lenVal, const char
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTranslator*
 ///
@@ -466,7 +466,7 @@ QVariant* q_translator_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTranslator*
 ///

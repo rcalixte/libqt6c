@@ -176,7 +176,7 @@ int32_t q_sslkey_algorithm(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toPem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslKey*
 ///
@@ -184,7 +184,7 @@ char* q_sslkey_to_pem(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toDer)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslKey*
 ///
@@ -212,7 +212,7 @@ bool q_sslkey_operator_not_equal(void* self, void* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toPem)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslKey*
 /// @param passPhrase const char*
@@ -221,7 +221,7 @@ char* q_sslkey_to_pem1(void* self, const char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toDer)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslKey*
 /// @param passPhrase const char*

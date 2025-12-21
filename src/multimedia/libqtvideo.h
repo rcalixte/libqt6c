@@ -21,7 +21,7 @@ const QMetaObject* q_tvideo_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtvideo.html#qt_getEnumName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum QtVideo__Rotation
 ///

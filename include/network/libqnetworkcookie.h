@@ -132,7 +132,7 @@ void q_networkcookie_set_expiration_date(void* self, void* date);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#domain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkCookie*
 ///
@@ -147,7 +147,7 @@ void q_networkcookie_set_domain(void* self, const char* domain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#path)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkCookie*
 ///
@@ -162,7 +162,7 @@ void q_networkcookie_set_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkCookie*
 ///
@@ -177,7 +177,7 @@ void q_networkcookie_set_name(void* self, const char* cookieName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#value)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkCookie*
 ///
@@ -192,7 +192,7 @@ void q_networkcookie_set_value(void* self, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkCookie*
 ///
@@ -220,7 +220,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* co
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNetworkCookie*
 /// @param form enum QNetworkCookie__RawForm

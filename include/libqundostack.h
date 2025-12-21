@@ -90,7 +90,7 @@ void q_undocommand_qbase_redo(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoCommand*
 ///
@@ -98,7 +98,7 @@ const char* q_undocommand_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#actionText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoCommand*
 ///
@@ -243,7 +243,7 @@ int32_t q_undostack_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -276,7 +276,7 @@ bool q_undostack_can_redo(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#undoText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoStack*
 ///
@@ -284,7 +284,7 @@ const char* q_undostack_undo_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#redoText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoStack*
 ///
@@ -304,7 +304,7 @@ int32_t q_undostack_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoStack*
 /// @param idx int
@@ -499,7 +499,7 @@ void q_undostack_on_redo_text_changed(void* self, void (*callback)(void*, const 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -508,7 +508,7 @@ const char* q_undostack_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -543,7 +543,7 @@ void q_undostack_set_active1(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoStack*
 ///
@@ -758,7 +758,7 @@ QVariant* q_undostack_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoStack*
 ///

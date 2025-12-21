@@ -33,7 +33,7 @@ bool q_stringconverter_has_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QStringConverter*
 ///
@@ -41,7 +41,7 @@ const char* q_stringconverter_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param e enum QStringConverter__Encoding
 ///
@@ -49,7 +49,7 @@ const char* q_stringconverter_name_for_encoding(int32_t e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_stringconverter_available_codecs();
 

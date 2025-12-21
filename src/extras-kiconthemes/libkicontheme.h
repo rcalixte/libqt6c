@@ -40,7 +40,7 @@ KIconTheme* k_icontheme_new3(const char* name, const char* appName, const char* 
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -48,7 +48,7 @@ const char* k_icontheme_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#internalName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -56,7 +56,7 @@ const char* k_icontheme_internal_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -64,7 +64,7 @@ const char* k_icontheme_description(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#example)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -72,7 +72,7 @@ const char* k_icontheme_example(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#screenshot)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -80,7 +80,7 @@ const char* k_icontheme_screenshot(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#dir)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -88,7 +88,7 @@ const char* k_icontheme_dir(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#inherits)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -128,7 +128,7 @@ libqt_list /* of int */ k_icontheme_query_sizes(void* self, int32_t group);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIcons)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 ///
@@ -136,7 +136,7 @@ const char** k_icontheme_query_icons(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIcons)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param size int
@@ -145,7 +145,7 @@ const char** k_icontheme_query_icons2(void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIconsByContext)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param size int
@@ -154,7 +154,7 @@ const char** k_icontheme_query_icons_by_context(void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param name const char*
@@ -165,7 +165,7 @@ const char* k_icontheme_icon_path(void* self, const char* name, int size, int32_
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param name const char*
@@ -177,7 +177,7 @@ const char* k_icontheme_icon_path2(void* self, const char* name, int size, int32
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPathByName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param name const char*
@@ -188,7 +188,7 @@ const char* k_icontheme_icon_path_by_name(void* self, const char* name, int size
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPathByName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param name const char*
@@ -213,13 +213,13 @@ bool k_icontheme_follows_color_scheme(void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#list)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_icontheme_list();
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#current)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* k_icontheme_current();
 
@@ -235,7 +235,7 @@ void k_icontheme_reconfigure();
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#defaultThemeName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* k_icontheme_default_theme_name();
 
@@ -245,7 +245,7 @@ void k_icontheme_init_theme();
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIcons)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param size int
@@ -255,7 +255,7 @@ const char** k_icontheme_query_icons22(void* self, int size, int32_t context);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIconsByContext)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconTheme*
 /// @param size int

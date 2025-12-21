@@ -37,7 +37,7 @@ void k_configskeletonitem_set_group(void* self, const char* _group);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#group)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -66,7 +66,7 @@ void k_configskeletonitem_set_key(void* self, const char* _key);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -81,7 +81,7 @@ void k_configskeletonitem_set_name(void* self, const char* _name);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -96,7 +96,7 @@ void k_configskeletonitem_set_label(void* self, const char* l);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#label)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -111,7 +111,7 @@ void k_configskeletonitem_set_tool_tip(void* self, const char* t);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -126,7 +126,7 @@ void k_configskeletonitem_set_whats_this(void* self, const char* w);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -669,7 +669,7 @@ void k_propertyskeletonitem_set_group(void* self, const char* _group);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#group)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPropertySkeletonItem*
 ///
@@ -706,7 +706,7 @@ void k_propertyskeletonitem_set_key(void* self, const char* _key);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPropertySkeletonItem*
 ///
@@ -725,7 +725,7 @@ void k_propertyskeletonitem_set_name(void* self, const char* _name);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPropertySkeletonItem*
 ///
@@ -744,7 +744,7 @@ void k_propertyskeletonitem_set_label(void* self, const char* l);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#label)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPropertySkeletonItem*
 ///
@@ -763,7 +763,7 @@ void k_propertyskeletonitem_set_tool_tip(void* self, const char* t);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPropertySkeletonItem*
 ///
@@ -782,7 +782,7 @@ void k_propertyskeletonitem_set_whats_this(void* self, const char* w);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPropertySkeletonItem*
 ///
@@ -1042,7 +1042,7 @@ KConfigGroup* k_configcompilersignallingitem_config_group(void* self, void* conf
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#group)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigCompilerSignallingItem*
 ///
@@ -1070,7 +1070,7 @@ void k_configcompilersignallingitem_set_key(void* self, const char* _key);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigCompilerSignallingItem*
 ///
@@ -1089,7 +1089,7 @@ void k_configcompilersignallingitem_set_name(void* self, const char* _name);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigCompilerSignallingItem*
 ///
@@ -1108,7 +1108,7 @@ void k_configcompilersignallingitem_set_label(void* self, const char* l);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#label)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigCompilerSignallingItem*
 ///
@@ -1127,7 +1127,7 @@ void k_configcompilersignallingitem_set_tool_tip(void* self, const char* t);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigCompilerSignallingItem*
 ///
@@ -1146,7 +1146,7 @@ void k_configcompilersignallingitem_set_whats_this(void* self, const char* w);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigCompilerSignallingItem*
 ///
@@ -1251,7 +1251,7 @@ int32_t k_coreconfigskeleton_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -1313,7 +1313,7 @@ void k_coreconfigskeleton_set_current_group(void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#currentGroup)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton*
 ///
@@ -1663,7 +1663,7 @@ bool k_coreconfigskeleton_qbase_usr_save(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1672,7 +1672,7 @@ const char* k_coreconfigskeleton_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2053,7 +2053,7 @@ KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list4(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton*
 ///
@@ -2268,7 +2268,7 @@ QVariant* k_coreconfigskeleton_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton*
 ///
@@ -4088,7 +4088,7 @@ KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_ne
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#name-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum__Choice*
 ///
@@ -4103,7 +4103,7 @@ void k_coreconfigskeleton__itemenum__choice_set_name(void* self, const char* nam
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#label-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum__Choice*
 ///
@@ -4118,7 +4118,7 @@ void k_coreconfigskeleton__itemenum__choice_set_label(void* self, const char* la
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#toolTip-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum__Choice*
 ///
@@ -4133,7 +4133,7 @@ void k_coreconfigskeleton__itemenum__choice_set_tool_tip(void* self, const char*
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#whatsThis-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum__Choice*
 ///
@@ -4148,7 +4148,7 @@ void k_coreconfigskeleton__itemenum__choice_set_whats_this(void* self, const cha
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#value-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum__Choice*
 ///
@@ -4255,7 +4255,7 @@ void k_coreconfigskeleton__itemenum_qbase_write_config(void* self, void* config)
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#valueForChoice)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param name const char*

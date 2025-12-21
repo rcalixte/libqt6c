@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 ///
@@ -27,7 +27,7 @@ KCharsets* k_charsets_charsets();
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#toEntity)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param ch QChar*
 ///
@@ -35,7 +35,7 @@ const char* k_charsets_to_entity(void* ch);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#resolveEntities)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param text const char*
 ///
@@ -43,7 +43,7 @@ const char* k_charsets_resolve_entities(const char* text);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#availableEncodingNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharsets*
 ///
@@ -51,7 +51,7 @@ const char** k_charsets_available_encoding_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#descriptiveEncodingNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharsets*
 ///
@@ -65,7 +65,7 @@ libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#encodingForName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCharsets*
 /// @param descriptiveName const char*
@@ -74,7 +74,7 @@ const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -83,7 +83,7 @@ const char* k_charsets_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*

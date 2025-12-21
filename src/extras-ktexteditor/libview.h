@@ -33,7 +33,7 @@ int32_t k_texteditor__view_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -55,7 +55,7 @@ int32_t k_texteditor__view_view_mode(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#viewModeHuman)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -78,7 +78,7 @@ int32_t k_texteditor__view_view_input_mode(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#viewInputModeHuman)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -357,7 +357,7 @@ libqt_list /* of KTextEditor__Range* */ k_texteditor__view_selection_ranges(void
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#selectionText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -560,7 +560,7 @@ void k_texteditor__view_on_config_changed(void* self, void (*callback)(void*, vo
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#configKeys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -796,7 +796,7 @@ KSyntaxHighlighting__Theme* k_texteditor__view_theme(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -805,7 +805,7 @@ const char* k_texteditor__view_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1705,7 +1705,7 @@ void k_texteditor__view_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1715,7 +1715,7 @@ const char* k_texteditor__view_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1751,7 +1751,7 @@ void k_texteditor__view_set_window_icon_text(void* self, const char* windowIconT
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1770,7 +1770,7 @@ void k_texteditor__view_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1789,7 +1789,7 @@ void k_texteditor__view_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1833,7 +1833,7 @@ void k_texteditor__view_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1869,7 +1869,7 @@ void k_texteditor__view_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1888,7 +1888,7 @@ void k_texteditor__view_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1898,7 +1898,7 @@ const char* k_texteditor__view_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -1917,7 +1917,7 @@ void k_texteditor__view_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -2465,7 +2465,7 @@ void k_texteditor__view_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -3331,7 +3331,7 @@ bool k_texteditor__view_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -3537,7 +3537,7 @@ QVariant* k_texteditor__view_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -3796,7 +3796,7 @@ KActionCollection* k_texteditor__view_action_collection(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -3814,7 +3814,7 @@ QDomDocument* k_texteditor__view_dom_document(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -3824,7 +3824,7 @@ const char* k_texteditor__view_xml_file(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEditor__View*
 ///
@@ -3946,7 +3946,7 @@ void k_texteditor__view_unplug_action_list(void* self, const char* name);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param files const char**
 /// @param doc const char*
@@ -4022,7 +4022,7 @@ void k_texteditor__view_replace_x_m_l_file(void* self, const char* xmlfile, cons
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param xml const char*
 ///

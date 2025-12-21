@@ -61,7 +61,7 @@ int32_t k_localizedqmlcontext_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* k_localizedqmlcontext_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#translationDomain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 ///
@@ -84,7 +84,7 @@ void k_localizedqmlcontext_set_translation_domain(void* self, const char* domain
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -93,7 +93,7 @@ const char* k_localizedqmlcontext_i18n(void* self, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -103,7 +103,7 @@ const char* k_localizedqmlcontext_i18nc(void* self, const char* context, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -113,7 +113,7 @@ const char* k_localizedqmlcontext_i18np(void* self, const char* singular, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -124,7 +124,7 @@ const char* k_localizedqmlcontext_i18ncp(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -134,7 +134,7 @@ const char* k_localizedqmlcontext_i18nd(void* self, const char* domain, const ch
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -145,7 +145,7 @@ const char* k_localizedqmlcontext_i18ndc(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -156,7 +156,7 @@ const char* k_localizedqmlcontext_i18ndp(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -168,7 +168,7 @@ const char* k_localizedqmlcontext_i18ndcp(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -177,7 +177,7 @@ const char* k_localizedqmlcontext_xi18n(void* self, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -187,7 +187,7 @@ const char* k_localizedqmlcontext_xi18nc(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -197,7 +197,7 @@ const char* k_localizedqmlcontext_xi18np(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -208,7 +208,7 @@ const char* k_localizedqmlcontext_xi18ncp(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -218,7 +218,7 @@ const char* k_localizedqmlcontext_xi18nd(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -229,7 +229,7 @@ const char* k_localizedqmlcontext_xi18ndc(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -240,7 +240,7 @@ const char* k_localizedqmlcontext_xi18ndp(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -266,7 +266,7 @@ void k_localizedqmlcontext_on_translation_domain_changed(void* self, void (*call
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -275,7 +275,7 @@ const char* k_localizedqmlcontext_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -285,7 +285,7 @@ const char* k_localizedqmlcontext_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -295,7 +295,7 @@ const char* k_localizedqmlcontext_i18n2(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -306,7 +306,7 @@ const char* k_localizedqmlcontext_i18n3(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -318,7 +318,7 @@ const char* k_localizedqmlcontext_i18n4(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -331,7 +331,7 @@ const char* k_localizedqmlcontext_i18n5(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -345,7 +345,7 @@ const char* k_localizedqmlcontext_i18n6(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -360,7 +360,7 @@ const char* k_localizedqmlcontext_i18n7(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -376,7 +376,7 @@ const char* k_localizedqmlcontext_i18n8(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -393,7 +393,7 @@ const char* k_localizedqmlcontext_i18n9(void* self, const char* message, void* p
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -411,7 +411,7 @@ const char* k_localizedqmlcontext_i18n10(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -430,7 +430,7 @@ const char* k_localizedqmlcontext_i18n11(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -441,7 +441,7 @@ const char* k_localizedqmlcontext_i18nc3(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -453,7 +453,7 @@ const char* k_localizedqmlcontext_i18nc4(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -466,7 +466,7 @@ const char* k_localizedqmlcontext_i18nc5(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -480,7 +480,7 @@ const char* k_localizedqmlcontext_i18nc6(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -495,7 +495,7 @@ const char* k_localizedqmlcontext_i18nc7(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -511,7 +511,7 @@ const char* k_localizedqmlcontext_i18nc8(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -528,7 +528,7 @@ const char* k_localizedqmlcontext_i18nc9(void* self, const char* context, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -546,7 +546,7 @@ const char* k_localizedqmlcontext_i18nc10(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -565,7 +565,7 @@ const char* k_localizedqmlcontext_i18nc11(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -585,7 +585,7 @@ const char* k_localizedqmlcontext_i18nc12(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -596,7 +596,7 @@ const char* k_localizedqmlcontext_i18np3(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -608,7 +608,7 @@ const char* k_localizedqmlcontext_i18np4(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -621,7 +621,7 @@ const char* k_localizedqmlcontext_i18np5(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -635,7 +635,7 @@ const char* k_localizedqmlcontext_i18np6(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -650,7 +650,7 @@ const char* k_localizedqmlcontext_i18np7(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -666,7 +666,7 @@ const char* k_localizedqmlcontext_i18np8(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -683,7 +683,7 @@ const char* k_localizedqmlcontext_i18np9(void* self, const char* singular, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -701,7 +701,7 @@ const char* k_localizedqmlcontext_i18np10(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -720,7 +720,7 @@ const char* k_localizedqmlcontext_i18np11(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -740,7 +740,7 @@ const char* k_localizedqmlcontext_i18np12(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -752,7 +752,7 @@ const char* k_localizedqmlcontext_i18ncp4(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -765,7 +765,7 @@ const char* k_localizedqmlcontext_i18ncp5(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -779,7 +779,7 @@ const char* k_localizedqmlcontext_i18ncp6(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -794,7 +794,7 @@ const char* k_localizedqmlcontext_i18ncp7(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -810,7 +810,7 @@ const char* k_localizedqmlcontext_i18ncp8(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -827,7 +827,7 @@ const char* k_localizedqmlcontext_i18ncp9(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -845,7 +845,7 @@ const char* k_localizedqmlcontext_i18ncp10(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -864,7 +864,7 @@ const char* k_localizedqmlcontext_i18ncp11(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -884,7 +884,7 @@ const char* k_localizedqmlcontext_i18ncp12(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -905,7 +905,7 @@ const char* k_localizedqmlcontext_i18ncp13(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -916,7 +916,7 @@ const char* k_localizedqmlcontext_i18nd3(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -928,7 +928,7 @@ const char* k_localizedqmlcontext_i18nd4(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -941,7 +941,7 @@ const char* k_localizedqmlcontext_i18nd5(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -955,7 +955,7 @@ const char* k_localizedqmlcontext_i18nd6(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -970,7 +970,7 @@ const char* k_localizedqmlcontext_i18nd7(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -986,7 +986,7 @@ const char* k_localizedqmlcontext_i18nd8(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1003,7 +1003,7 @@ const char* k_localizedqmlcontext_i18nd9(void* self, const char* domain, const c
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1021,7 +1021,7 @@ const char* k_localizedqmlcontext_i18nd10(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1040,7 +1040,7 @@ const char* k_localizedqmlcontext_i18nd11(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1060,7 +1060,7 @@ const char* k_localizedqmlcontext_i18nd12(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1072,7 +1072,7 @@ const char* k_localizedqmlcontext_i18ndc4(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1085,7 +1085,7 @@ const char* k_localizedqmlcontext_i18ndc5(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1099,7 +1099,7 @@ const char* k_localizedqmlcontext_i18ndc6(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1114,7 +1114,7 @@ const char* k_localizedqmlcontext_i18ndc7(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1130,7 +1130,7 @@ const char* k_localizedqmlcontext_i18ndc8(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1147,7 +1147,7 @@ const char* k_localizedqmlcontext_i18ndc9(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1165,7 +1165,7 @@ const char* k_localizedqmlcontext_i18ndc10(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1184,7 +1184,7 @@ const char* k_localizedqmlcontext_i18ndc11(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1204,7 +1204,7 @@ const char* k_localizedqmlcontext_i18ndc12(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1225,7 +1225,7 @@ const char* k_localizedqmlcontext_i18ndc13(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1237,7 +1237,7 @@ const char* k_localizedqmlcontext_i18ndp4(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1250,7 +1250,7 @@ const char* k_localizedqmlcontext_i18ndp5(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1264,7 +1264,7 @@ const char* k_localizedqmlcontext_i18ndp6(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1279,7 +1279,7 @@ const char* k_localizedqmlcontext_i18ndp7(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1295,7 +1295,7 @@ const char* k_localizedqmlcontext_i18ndp8(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1312,7 +1312,7 @@ const char* k_localizedqmlcontext_i18ndp9(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1330,7 +1330,7 @@ const char* k_localizedqmlcontext_i18ndp10(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1349,7 +1349,7 @@ const char* k_localizedqmlcontext_i18ndp11(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1369,7 +1369,7 @@ const char* k_localizedqmlcontext_i18ndp12(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1390,7 +1390,7 @@ const char* k_localizedqmlcontext_i18ndp13(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1403,7 +1403,7 @@ const char* k_localizedqmlcontext_i18ndcp5(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1417,7 +1417,7 @@ const char* k_localizedqmlcontext_i18ndcp6(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1432,7 +1432,7 @@ const char* k_localizedqmlcontext_i18ndcp7(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1448,7 +1448,7 @@ const char* k_localizedqmlcontext_i18ndcp8(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1465,7 +1465,7 @@ const char* k_localizedqmlcontext_i18ndcp9(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1483,7 +1483,7 @@ const char* k_localizedqmlcontext_i18ndcp10(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1502,7 +1502,7 @@ const char* k_localizedqmlcontext_i18ndcp11(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1522,7 +1522,7 @@ const char* k_localizedqmlcontext_i18ndcp12(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1543,7 +1543,7 @@ const char* k_localizedqmlcontext_i18ndcp13(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#i18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -1565,7 +1565,7 @@ const char* k_localizedqmlcontext_i18ndcp14(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1575,7 +1575,7 @@ const char* k_localizedqmlcontext_xi18n2(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1586,7 +1586,7 @@ const char* k_localizedqmlcontext_xi18n3(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1598,7 +1598,7 @@ const char* k_localizedqmlcontext_xi18n4(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1611,7 +1611,7 @@ const char* k_localizedqmlcontext_xi18n5(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1625,7 +1625,7 @@ const char* k_localizedqmlcontext_xi18n6(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1640,7 +1640,7 @@ const char* k_localizedqmlcontext_xi18n7(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1656,7 +1656,7 @@ const char* k_localizedqmlcontext_xi18n8(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1673,7 +1673,7 @@ const char* k_localizedqmlcontext_xi18n9(void* self, const char* message, void* 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1691,7 +1691,7 @@ const char* k_localizedqmlcontext_xi18n10(void* self, const char* message, void*
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18n)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param message const char*
@@ -1710,7 +1710,7 @@ const char* k_localizedqmlcontext_xi18n11(void* self, const char* message, void*
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1721,7 +1721,7 @@ const char* k_localizedqmlcontext_xi18nc3(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1733,7 +1733,7 @@ const char* k_localizedqmlcontext_xi18nc4(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1746,7 +1746,7 @@ const char* k_localizedqmlcontext_xi18nc5(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1760,7 +1760,7 @@ const char* k_localizedqmlcontext_xi18nc6(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1775,7 +1775,7 @@ const char* k_localizedqmlcontext_xi18nc7(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1791,7 +1791,7 @@ const char* k_localizedqmlcontext_xi18nc8(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1808,7 +1808,7 @@ const char* k_localizedqmlcontext_xi18nc9(void* self, const char* context, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1826,7 +1826,7 @@ const char* k_localizedqmlcontext_xi18nc10(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1845,7 +1845,7 @@ const char* k_localizedqmlcontext_xi18nc11(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -1865,7 +1865,7 @@ const char* k_localizedqmlcontext_xi18nc12(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1876,7 +1876,7 @@ const char* k_localizedqmlcontext_xi18np3(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1888,7 +1888,7 @@ const char* k_localizedqmlcontext_xi18np4(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1901,7 +1901,7 @@ const char* k_localizedqmlcontext_xi18np5(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1915,7 +1915,7 @@ const char* k_localizedqmlcontext_xi18np6(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1930,7 +1930,7 @@ const char* k_localizedqmlcontext_xi18np7(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1946,7 +1946,7 @@ const char* k_localizedqmlcontext_xi18np8(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1963,7 +1963,7 @@ const char* k_localizedqmlcontext_xi18np9(void* self, const char* singular, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -1981,7 +1981,7 @@ const char* k_localizedqmlcontext_xi18np10(void* self, const char* singular, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -2000,7 +2000,7 @@ const char* k_localizedqmlcontext_xi18np11(void* self, const char* singular, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18np)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param singular const char*
@@ -2020,7 +2020,7 @@ const char* k_localizedqmlcontext_xi18np12(void* self, const char* singular, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2032,7 +2032,7 @@ const char* k_localizedqmlcontext_xi18ncp4(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2045,7 +2045,7 @@ const char* k_localizedqmlcontext_xi18ncp5(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2059,7 +2059,7 @@ const char* k_localizedqmlcontext_xi18ncp6(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2074,7 +2074,7 @@ const char* k_localizedqmlcontext_xi18ncp7(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2090,7 +2090,7 @@ const char* k_localizedqmlcontext_xi18ncp8(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2107,7 +2107,7 @@ const char* k_localizedqmlcontext_xi18ncp9(void* self, const char* context, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2125,7 +2125,7 @@ const char* k_localizedqmlcontext_xi18ncp10(void* self, const char* context, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2144,7 +2144,7 @@ const char* k_localizedqmlcontext_xi18ncp11(void* self, const char* context, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2164,7 +2164,7 @@ const char* k_localizedqmlcontext_xi18ncp12(void* self, const char* context, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ncp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param context const char*
@@ -2185,7 +2185,7 @@ const char* k_localizedqmlcontext_xi18ncp13(void* self, const char* context, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2196,7 +2196,7 @@ const char* k_localizedqmlcontext_xi18nd3(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2208,7 +2208,7 @@ const char* k_localizedqmlcontext_xi18nd4(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2221,7 +2221,7 @@ const char* k_localizedqmlcontext_xi18nd5(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2235,7 +2235,7 @@ const char* k_localizedqmlcontext_xi18nd6(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2250,7 +2250,7 @@ const char* k_localizedqmlcontext_xi18nd7(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2266,7 +2266,7 @@ const char* k_localizedqmlcontext_xi18nd8(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2283,7 +2283,7 @@ const char* k_localizedqmlcontext_xi18nd9(void* self, const char* domain, const 
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2301,7 +2301,7 @@ const char* k_localizedqmlcontext_xi18nd10(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2320,7 +2320,7 @@ const char* k_localizedqmlcontext_xi18nd11(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18nd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2340,7 +2340,7 @@ const char* k_localizedqmlcontext_xi18nd12(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2352,7 +2352,7 @@ const char* k_localizedqmlcontext_xi18ndc4(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2365,7 +2365,7 @@ const char* k_localizedqmlcontext_xi18ndc5(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2379,7 +2379,7 @@ const char* k_localizedqmlcontext_xi18ndc6(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2394,7 +2394,7 @@ const char* k_localizedqmlcontext_xi18ndc7(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2410,7 +2410,7 @@ const char* k_localizedqmlcontext_xi18ndc8(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2427,7 +2427,7 @@ const char* k_localizedqmlcontext_xi18ndc9(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2445,7 +2445,7 @@ const char* k_localizedqmlcontext_xi18ndc10(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2464,7 +2464,7 @@ const char* k_localizedqmlcontext_xi18ndc11(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2484,7 +2484,7 @@ const char* k_localizedqmlcontext_xi18ndc12(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndc)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2505,7 +2505,7 @@ const char* k_localizedqmlcontext_xi18ndc13(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2517,7 +2517,7 @@ const char* k_localizedqmlcontext_xi18ndp4(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2530,7 +2530,7 @@ const char* k_localizedqmlcontext_xi18ndp5(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2544,7 +2544,7 @@ const char* k_localizedqmlcontext_xi18ndp6(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2559,7 +2559,7 @@ const char* k_localizedqmlcontext_xi18ndp7(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2575,7 +2575,7 @@ const char* k_localizedqmlcontext_xi18ndp8(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2592,7 +2592,7 @@ const char* k_localizedqmlcontext_xi18ndp9(void* self, const char* domain, const
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2610,7 +2610,7 @@ const char* k_localizedqmlcontext_xi18ndp10(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2629,7 +2629,7 @@ const char* k_localizedqmlcontext_xi18ndp11(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2649,7 +2649,7 @@ const char* k_localizedqmlcontext_xi18ndp12(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2670,7 +2670,7 @@ const char* k_localizedqmlcontext_xi18ndp13(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2683,7 +2683,7 @@ const char* k_localizedqmlcontext_xi18ndcp5(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2697,7 +2697,7 @@ const char* k_localizedqmlcontext_xi18ndcp6(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2712,7 +2712,7 @@ const char* k_localizedqmlcontext_xi18ndcp7(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2728,7 +2728,7 @@ const char* k_localizedqmlcontext_xi18ndcp8(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2745,7 +2745,7 @@ const char* k_localizedqmlcontext_xi18ndcp9(void* self, const char* domain, cons
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2763,7 +2763,7 @@ const char* k_localizedqmlcontext_xi18ndcp10(void* self, const char* domain, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2782,7 +2782,7 @@ const char* k_localizedqmlcontext_xi18ndcp11(void* self, const char* domain, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2802,7 +2802,7 @@ const char* k_localizedqmlcontext_xi18ndcp12(void* self, const char* domain, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2823,7 +2823,7 @@ const char* k_localizedqmlcontext_xi18ndcp13(void* self, const char* domain, con
 
 /// [Upstream resources](https://api.kde.org/klocalizedqmlcontext.html#xi18ndcp)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 /// @param domain const char*
@@ -2880,7 +2880,7 @@ bool k_localizedqmlcontext_qbase_event_filter(void* self, void* watched, void* e
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 ///
@@ -3095,7 +3095,7 @@ QVariant* k_localizedqmlcontext_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedQmlContext*
 ///

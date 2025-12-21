@@ -168,7 +168,7 @@ void q_iconengine_qbase_add_file(void* self, const char* fileName, void* size, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#key)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QIconEngine*
 ///
@@ -293,7 +293,7 @@ libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int32_
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QIconEngine*
 ///

@@ -33,7 +33,7 @@ int32_t q_webenginecontextmenurequest_metacall(void* self, int32_t param1, int p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -47,7 +47,7 @@ QPoint* q_webenginecontextmenurequest_position(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#selectedText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
@@ -55,7 +55,7 @@ const char* q_webenginecontextmenurequest_selected_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#linkText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
@@ -89,7 +89,7 @@ bool q_webenginecontextmenurequest_is_content_editable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#misspelledWord)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
@@ -97,7 +97,7 @@ const char* q_webenginecontextmenurequest_misspelled_word(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#spellCheckerSuggestions)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
@@ -134,7 +134,7 @@ int32_t q_webenginecontextmenurequest_edit_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -143,7 +143,7 @@ const char* q_webenginecontextmenurequest_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -174,7 +174,7 @@ bool q_webenginecontextmenurequest_event_filter(void* self, void* watched, void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
@@ -389,7 +389,7 @@ QVariant* q_webenginecontextmenurequest_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///

@@ -23,7 +23,7 @@ QJsonValue* k_jsonutils_read_translated_value(void* param1, const char* param2, 
 
 /// [Upstream resources](https://api.kde.org/kjsonutils.html#readTranslatedString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QJsonObject*
 /// @param param2 const char*

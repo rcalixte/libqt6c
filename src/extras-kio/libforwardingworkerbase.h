@@ -57,7 +57,7 @@ int32_t k_io__forwardingworkerbase_qbase_metacall(void* self, int32_t param1, in
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -491,7 +491,7 @@ QUrl* k_io__forwardingworkerbase_qbase_requested_url(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -500,7 +500,7 @@ const char* k_io__forwardingworkerbase_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -512,7 +512,7 @@ const char* k_io__forwardingworkerbase_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ForwardingWorkerBase*
 ///
@@ -727,7 +727,7 @@ QVariant* k_io__forwardingworkerbase_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ForwardingWorkerBase*
 ///
@@ -1081,7 +1081,7 @@ bool k_io__forwardingworkerbase_has_meta_data(void* self, const char* key);
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#metaData)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param key const char*
@@ -1128,7 +1128,7 @@ int32_t k_io__forwardingworkerbase_config_value2(void* self, const char* key, in
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param key const char*
@@ -1426,7 +1426,7 @@ int32_t k_io__forwardingworkerbase_message_box6(void* self, const char* text, in
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param key const char*

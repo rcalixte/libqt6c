@@ -33,7 +33,7 @@ int32_t q_keychain__job_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -60,7 +60,7 @@ void q_keychain__job_start(void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__Job*
 ///
@@ -76,7 +76,7 @@ int32_t q_keychain__job_error(void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__Job*
 ///
@@ -110,7 +110,7 @@ void q_keychain__job_set_insecure_fallback(void* self, bool insecureFallback);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__Job*
 ///
@@ -153,7 +153,7 @@ void q_keychain__job_on_finished(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -162,7 +162,7 @@ const char* q_keychain__job_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -193,7 +193,7 @@ bool q_keychain__job_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__Job*
 ///
@@ -408,7 +408,7 @@ QVariant* q_keychain__job_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__Job*
 ///
@@ -606,7 +606,7 @@ int32_t q_keychain__readpasswordjob_qbase_metacall(void* self, int32_t param1, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -614,7 +614,7 @@ const char* q_keychain__readpasswordjob_tr(const char* s);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
@@ -622,7 +622,7 @@ char* q_keychain__readpasswordjob_binary_data(void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
@@ -630,7 +630,7 @@ const char* q_keychain__readpasswordjob_text_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -639,7 +639,7 @@ const char* q_keychain__readpasswordjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -676,7 +676,7 @@ void q_keychain__readpasswordjob_start(void* self);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
@@ -696,7 +696,7 @@ int32_t q_keychain__readpasswordjob_error(void* self);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
@@ -740,7 +740,7 @@ void q_keychain__readpasswordjob_set_insecure_fallback(void* self, bool insecure
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
@@ -795,7 +795,7 @@ void q_keychain__readpasswordjob_on_finished(void* self, void (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
@@ -1010,7 +1010,7 @@ QVariant* q_keychain__readpasswordjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
@@ -1600,7 +1600,7 @@ int32_t q_keychain__writepasswordjob_qbase_metacall(void* self, int32_t param1, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -1622,7 +1622,7 @@ void q_keychain__writepasswordjob_set_text_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1631,7 +1631,7 @@ const char* q_keychain__writepasswordjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1668,7 +1668,7 @@ void q_keychain__writepasswordjob_start(void* self);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__WritePasswordJob*
 ///
@@ -1688,7 +1688,7 @@ int32_t q_keychain__writepasswordjob_error(void* self);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__WritePasswordJob*
 ///
@@ -1732,7 +1732,7 @@ void q_keychain__writepasswordjob_set_insecure_fallback(void* self, bool insecur
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__WritePasswordJob*
 ///
@@ -1787,7 +1787,7 @@ void q_keychain__writepasswordjob_on_finished(void* self, void (*callback)(void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__WritePasswordJob*
 ///
@@ -2002,7 +2002,7 @@ QVariant* q_keychain__writepasswordjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__WritePasswordJob*
 ///
@@ -2592,7 +2592,7 @@ int32_t q_keychain__deletepasswordjob_qbase_metacall(void* self, int32_t param1,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -2600,7 +2600,7 @@ const char* q_keychain__deletepasswordjob_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2609,7 +2609,7 @@ const char* q_keychain__deletepasswordjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2646,7 +2646,7 @@ void q_keychain__deletepasswordjob_start(void* self);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__DeletePasswordJob*
 ///
@@ -2666,7 +2666,7 @@ int32_t q_keychain__deletepasswordjob_error(void* self);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__DeletePasswordJob*
 ///
@@ -2710,7 +2710,7 @@ void q_keychain__deletepasswordjob_set_insecure_fallback(void* self, bool insecu
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__DeletePasswordJob*
 ///
@@ -2765,7 +2765,7 @@ void q_keychain__deletepasswordjob_on_finished(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__DeletePasswordJob*
 ///
@@ -2980,7 +2980,7 @@ QVariant* q_keychain__deletepasswordjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QKeychain__DeletePasswordJob*
 ///

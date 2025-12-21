@@ -21,7 +21,7 @@ bool k_io_can_paste_mime_data(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#pasteActionText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QMimeData*
 /// @param param2 bool*

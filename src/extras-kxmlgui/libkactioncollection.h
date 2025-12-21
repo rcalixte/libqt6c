@@ -64,7 +64,7 @@ int32_t k_actioncollection_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -115,7 +115,7 @@ void k_actioncollection_clear_associated_widgets(void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#configGroup)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 ///
@@ -220,7 +220,7 @@ void k_actioncollection_set_component_name(void* self, const char* componentName
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#componentName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 ///
@@ -235,7 +235,7 @@ void k_actioncollection_set_component_display_name(void* self, const char* displ
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#componentDisplayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 ///
@@ -427,7 +427,7 @@ void k_actioncollection_set_shortcuts_configurable(void* action, bool configurab
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -436,7 +436,7 @@ const char* k_actioncollection_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -487,7 +487,7 @@ void k_actioncollection_write_settings3(void* self, void* config, bool writeDefa
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 ///
@@ -702,7 +702,7 @@ QVariant* k_actioncollection_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 ///

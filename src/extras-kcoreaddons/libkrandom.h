@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/krandom.html#randomString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 int
 ///

@@ -428,9 +428,10 @@ class VirtualKWidgetItemDelegate : public KWidgetItemDelegate {
         } else if (kwidgetitemdelegate_paintingroles_callback != nullptr) {
             int* callback_ret = kwidgetitemdelegate_paintingroles_callback();
             QList<int> callback_ret_QList;
-            for (int* ptr = callback_ret; *ptr != 0; ++ptr) {
+            for (int* ptr = callback_ret; *ptr != -1; ++ptr) {
                 callback_ret_QList.push_back(*ptr);
             }
+            free(callback_ret);
             return callback_ret_QList;
         } else {
             return KWidgetItemDelegate::paintingRoles();
@@ -576,9 +577,10 @@ class VirtualKWidgetItemDelegate : public KWidgetItemDelegate {
 
             int* callback_ret = kwidgetitemdelegate_blockedeventtypes_callback(this, cbval1);
             QList<QEvent::Type> callback_ret_QList;
-            for (int* ptr = callback_ret; *ptr != 0; ++ptr) {
+            for (int* ptr = callback_ret; *ptr != -1; ++ptr) {
                 callback_ret_QList.push_back(static_cast<QEvent::Type>(*ptr));
             }
+            free(callback_ret);
             return callback_ret_QList;
         } else {
             return KWidgetItemDelegate::blockedEventTypes(widget);

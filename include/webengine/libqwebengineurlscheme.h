@@ -56,7 +56,7 @@ bool q_webengineurlscheme_operator_not_equal(void* self, void* that);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWebEngineUrlScheme*
 ///

@@ -70,7 +70,7 @@ int32_t q_graphicsproxywidget_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -938,7 +938,7 @@ QGraphicsProxyWidget* q_graphicsproxywidget_qbase_new_proxy_widget(void* self, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -947,7 +947,7 @@ const char* q_graphicsproxywidget_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1250,7 +1250,7 @@ void q_graphicsproxywidget_set_window_title(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsProxyWidget*
 ///
@@ -1719,7 +1719,7 @@ void q_graphicsproxywidget_grab_gesture2(void* self, int64_t type, int32_t flags
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsProxyWidget*
 ///
@@ -1934,7 +1934,7 @@ QVariant* q_graphicsproxywidget_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsProxyWidget*
 ///
@@ -2276,7 +2276,7 @@ bool q_graphicsproxywidget_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGraphicsProxyWidget*
 ///

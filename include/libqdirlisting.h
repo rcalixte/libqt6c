@@ -56,7 +56,7 @@ void q_dirlisting_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#iteratorPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing*
 ///
@@ -72,7 +72,7 @@ int32_t q_dirlisting_iterator_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#nameFilters)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing*
 ///
@@ -168,7 +168,7 @@ void q_dirlisting__direntry_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -176,7 +176,7 @@ const char* q_dirlisting__direntry_file_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#baseName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -184,7 +184,7 @@ const char* q_dirlisting__direntry_base_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#completeBaseName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -192,7 +192,7 @@ const char* q_dirlisting__direntry_complete_base_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#suffix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -200,7 +200,7 @@ const char* q_dirlisting__direntry_suffix(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#bundleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -208,7 +208,7 @@ const char* q_dirlisting__direntry_bundle_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#completeSuffix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -216,7 +216,7 @@ const char* q_dirlisting__direntry_complete_suffix(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -278,7 +278,7 @@ QFileInfo* q_dirlisting__direntry_file_info(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#canonicalFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -286,7 +286,7 @@ const char* q_dirlisting__direntry_canonical_file_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#absoluteFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///
@@ -294,7 +294,7 @@ const char* q_dirlisting__direntry_absolute_file_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#absolutePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDirListing__DirEntry*
 ///

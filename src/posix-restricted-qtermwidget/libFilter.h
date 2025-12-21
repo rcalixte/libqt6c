@@ -81,7 +81,7 @@ void k_onsole__filter_qbase_add_hot_spot(void* self, void* param1);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__Filter*
 ///
@@ -152,7 +152,7 @@ void* k_onsole__filter_metacast(void* self, const char* param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -162,7 +162,7 @@ const char* k_onsole__filter_tr(const char* s);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__Filter*
 ///
@@ -377,7 +377,7 @@ QVariant* k_onsole__filter_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__Filter*
 ///
@@ -445,7 +445,7 @@ void k_onsole__filter_delete_later(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -456,7 +456,7 @@ const char* k_onsole__filter_tr2(const char* s, const char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1051,7 +1051,7 @@ void* k_onsole__regexpfilter_metacast(void* self, const char* param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -1061,7 +1061,7 @@ const char* k_onsole__regexpfilter_tr(const char* s);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__RegExpFilter*
 ///
@@ -1276,7 +1276,7 @@ QVariant* k_onsole__regexpfilter_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__RegExpFilter*
 ///
@@ -1344,7 +1344,7 @@ void k_onsole__regexpfilter_delete_later(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1355,7 +1355,7 @@ const char* k_onsole__regexpfilter_tr2(const char* s, const char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1732,7 +1732,7 @@ void k_onsole__regexpfilter_on_add_hot_spot(void* self, void (*callback)(void*, 
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1744,7 +1744,7 @@ const char* k_onsole__regexpfilter_buffer(void* self);
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1987,7 +1987,7 @@ int32_t k_onsole__urlfilter_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -2041,7 +2041,7 @@ void k_onsole__urlfilter_on_activated(void* self, void (*callback)(void*, void*,
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2050,7 +2050,7 @@ const char* k_onsole__urlfilter_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2097,7 +2097,7 @@ Konsole__Filter__HotSpot* k_onsole__urlfilter_hot_spot_at(void* self, int line, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__UrlFilter*
 ///
@@ -2312,7 +2312,7 @@ QVariant* k_onsole__urlfilter_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__UrlFilter*
 ///
@@ -2739,7 +2739,7 @@ void k_onsole__urlfilter_on_add_hot_spot(void* self, void (*callback)(void*, voi
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2751,7 +2751,7 @@ const char* k_onsole__urlfilter_buffer(void* self);
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2996,7 +2996,7 @@ int32_t k_onsole__filterobject_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -3033,7 +3033,7 @@ void k_onsole__filterobject_on_activated(void* self, void (*callback)(void*, voi
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -3042,7 +3042,7 @@ const char* k_onsole__filterobject_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -3054,7 +3054,7 @@ const char* k_onsole__filterobject_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__FilterObject*
 ///
@@ -3269,7 +3269,7 @@ QVariant* k_onsole__filterobject_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__FilterObject*
 ///
@@ -4128,7 +4128,7 @@ void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* 
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
 ///
@@ -4324,7 +4324,7 @@ void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* tex
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
 ///

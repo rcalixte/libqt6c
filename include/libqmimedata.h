@@ -53,7 +53,7 @@ int32_t q_mimedata_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -80,7 +80,7 @@ bool q_mimedata_has_urls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMimeData*
 ///
@@ -101,7 +101,7 @@ bool q_mimedata_has_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#html)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMimeData*
 ///
@@ -160,7 +160,7 @@ bool q_mimedata_has_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#data)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMimeData*
 /// @param mimetype const char*
@@ -209,7 +209,7 @@ bool q_mimedata_qbase_has_format(void* self, const char* mimetype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#formats)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMimeData*
 ///
@@ -267,7 +267,7 @@ QVariant* q_mimedata_qbase_retrieve_data(void* self, const char* mimetype, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -276,7 +276,7 @@ const char* q_mimedata_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -288,7 +288,7 @@ const char* q_mimedata_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMimeData*
 ///
@@ -503,7 +503,7 @@ QVariant* q_mimedata_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMimeData*
 ///

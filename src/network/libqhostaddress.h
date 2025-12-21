@@ -179,7 +179,7 @@ QIPv6Address* q_hostaddress_to_i_pv6_address(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QHostAddress*
 ///
@@ -187,7 +187,7 @@ const char* q_hostaddress_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#scopeId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QHostAddress*
 ///

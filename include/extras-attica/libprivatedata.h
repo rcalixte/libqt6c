@@ -42,7 +42,7 @@ void k_attica__privatedata_set_attribute(void* self, const char* key, const char
 
 /// [Upstream resources](https://api.kde.org/attica-privatedata.html#attribute)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__PrivateData*
 /// @param key const char*
@@ -66,7 +66,7 @@ QDateTime* k_attica__privatedata_timestamp(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/attica-privatedata.html#keys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__PrivateData*
 ///

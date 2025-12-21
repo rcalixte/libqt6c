@@ -69,7 +69,7 @@ QIcon* q_abstractfileiconprovider_qbase_icon2(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 QFileInfo*

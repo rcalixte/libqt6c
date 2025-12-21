@@ -33,7 +33,7 @@ int32_t k_io__restorejob_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -41,7 +41,7 @@ const char* k_io__restorejob_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -50,7 +50,7 @@ const char* k_io__restorejob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -87,7 +87,7 @@ void k_io__restorejob_set_ui_delegate_extension(void* self, void* extension);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 ///
@@ -97,7 +97,7 @@ const char* k_io__restorejob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 ///
@@ -177,7 +177,7 @@ KIO__MetaData* k_io__restorejob_meta_data(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#queryMetaData)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 /// @param key const char*
@@ -206,7 +206,7 @@ void k_io__restorejob_on_connected(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 /// @param reqUrl QUrl*
@@ -217,7 +217,7 @@ const char** k_io__restorejob_detailed_error_strings1(void* self, void* reqUrl);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 /// @param reqUrl QUrl*
@@ -304,7 +304,7 @@ int32_t k_io__restorejob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 ///
@@ -521,7 +521,7 @@ bool k_io__restorejob_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 ///
@@ -736,7 +736,7 @@ QVariant* k_io__restorejob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__RestoreJob*
 ///

@@ -47,7 +47,7 @@ void k_attica__distribution_set_id(void* self, uint32_t id);
 
 /// [Upstream resources](https://api.kde.org/attica-distribution.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Distribution*
 ///

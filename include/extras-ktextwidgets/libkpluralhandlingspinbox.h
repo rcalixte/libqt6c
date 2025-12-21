@@ -61,7 +61,7 @@ int32_t k_pluralhandlingspinbox_qbase_metacall(void* self, int32_t param1, int p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -76,7 +76,7 @@ void k_pluralhandlingspinbox_set_suffix(void* self, void* suffix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -85,7 +85,7 @@ const char* k_pluralhandlingspinbox_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -105,7 +105,7 @@ int32_t k_pluralhandlingspinbox_value(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#prefix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -124,7 +124,7 @@ void k_pluralhandlingspinbox_set_prefix(void* self, const char* prefix);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#suffix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -134,7 +134,7 @@ const char* k_pluralhandlingspinbox_suffix(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#cleanText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -332,7 +332,7 @@ bool k_pluralhandlingspinbox_has_acceptable_input(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -342,7 +342,7 @@ const char* k_pluralhandlingspinbox_text(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1388,7 +1388,7 @@ void k_pluralhandlingspinbox_set_style_sheet(void* self, const char* styleSheet)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1398,7 +1398,7 @@ const char* k_pluralhandlingspinbox_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1434,7 +1434,7 @@ void k_pluralhandlingspinbox_set_window_icon_text(void* self, const char* window
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1453,7 +1453,7 @@ void k_pluralhandlingspinbox_set_window_role(void* self, const char* windowRole)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1472,7 +1472,7 @@ void k_pluralhandlingspinbox_set_window_file_path(void* self, const char* filePa
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1516,7 +1516,7 @@ void k_pluralhandlingspinbox_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1552,7 +1552,7 @@ void k_pluralhandlingspinbox_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1571,7 +1571,7 @@ void k_pluralhandlingspinbox_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1581,7 +1581,7 @@ const char* k_pluralhandlingspinbox_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -1600,7 +1600,7 @@ void k_pluralhandlingspinbox_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -2139,7 +2139,7 @@ void k_pluralhandlingspinbox_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -2945,7 +2945,7 @@ QWidget* k_pluralhandlingspinbox_create_window_container3(void* window, void* pa
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -3151,7 +3151,7 @@ QVariant* k_pluralhandlingspinbox_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
@@ -3489,7 +3489,7 @@ void k_pluralhandlingspinbox_on_value_from_text(void* self, int32_t (*callback)(
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3502,7 +3502,7 @@ const char* k_pluralhandlingspinbox_text_from_value(void* self, int val);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

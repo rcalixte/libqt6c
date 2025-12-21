@@ -218,7 +218,7 @@ void q_georectangle_operator_bitwise_or_assign(void* self, void* rectangle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoRectangle*
 ///

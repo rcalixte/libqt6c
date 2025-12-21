@@ -21,7 +21,7 @@ const QMetaObject* k_password_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kpassword.html#qt_getEnumName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KPassword__RevealMode
 ///

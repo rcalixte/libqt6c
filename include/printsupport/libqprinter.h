@@ -104,7 +104,7 @@ void q_printer_set_printer_name(void* self, const char* printerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printerName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPrinter*
 ///
@@ -125,7 +125,7 @@ void q_printer_set_output_file_name(void* self, const char* outputFileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#outputFileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPrinter*
 ///
@@ -140,7 +140,7 @@ void q_printer_set_print_program(void* self, const char* printProgram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printProgram)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPrinter*
 ///
@@ -155,7 +155,7 @@ void q_printer_set_doc_name(void* self, const char* docName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#docName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPrinter*
 ///
@@ -170,7 +170,7 @@ void q_printer_set_creator(void* self, const char* creator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#creator)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPrinter*
 ///
@@ -329,7 +329,7 @@ QRectF* q_printer_page_rect(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printerSelectionOption)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPrinter*
 ///

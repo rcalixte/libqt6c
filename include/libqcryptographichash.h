@@ -64,7 +64,7 @@ bool q_cryptographichash_add_data3(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#result)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCryptographicHash*
 ///
@@ -72,7 +72,7 @@ char* q_cryptographichash_result(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#resultView)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QCryptographicHash*
 ///
@@ -80,7 +80,7 @@ const char* q_cryptographichash_result_view(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hash)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param data const char*
 /// @param method enum QCryptographicHash__Algorithm
@@ -89,7 +89,7 @@ char* q_cryptographichash_hash(const char* data, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param buffer libqt_list /* of char */
 /// @param data const char*
@@ -99,7 +99,7 @@ const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param buffer libqt_list /* of unsigned char */
 /// @param data const char*
@@ -109,7 +109,7 @@ const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param buffer libqt_list /* of char */
 /// @param data libqt_list /* of const char* */
@@ -119,7 +119,7 @@ const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param buffer libqt_list /* of unsigned char */
 /// @param data libqt_list /* of const char* */

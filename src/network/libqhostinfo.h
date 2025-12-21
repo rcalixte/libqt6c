@@ -49,7 +49,7 @@ void q_hostinfo_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#hostName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QHostInfo*
 ///
@@ -92,7 +92,7 @@ void q_hostinfo_set_error(void* self, int32_t error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QHostInfo*
 ///
@@ -132,13 +132,13 @@ QHostInfo* q_hostinfo_from_name(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#localHostName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_hostinfo_local_host_name();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#localDomainName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_hostinfo_local_domain_name();
 

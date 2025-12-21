@@ -30,7 +30,7 @@ KServiceGroup* k_servicegroup_new2(const char* _fullpath, const char* _relpath);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#relPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -38,7 +38,7 @@ const char* k_servicegroup_rel_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#caption)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -46,7 +46,7 @@ const char* k_servicegroup_caption(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -54,7 +54,7 @@ const char* k_servicegroup_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#comment)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -139,7 +139,7 @@ void k_servicegroup_set_inline_value(void* self, int _val);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#suppressGenericNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -154,7 +154,7 @@ void k_servicegroup_set_layout_info(void* self, const char* layout[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#layoutInfo)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -162,7 +162,7 @@ const char** k_servicegroup_layout_info(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#baseGroupName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -170,7 +170,7 @@ const char* k_servicegroup_base_group_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservicegroup.html#directoryEntryPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -199,7 +199,7 @@ int32_t k_servicegroup_sycoca_type(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -209,7 +209,7 @@ const char* k_servicegroup_name(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#entryPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///
@@ -219,7 +219,7 @@ const char* k_servicegroup_entry_path(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#storageId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KServiceGroup*
 ///

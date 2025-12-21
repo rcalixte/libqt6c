@@ -92,7 +92,7 @@ bool k_user_is_super_user(void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#loginName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUser*
 ///
@@ -100,7 +100,7 @@ const char* k_user_login_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#homeDir)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUser*
 ///
@@ -108,7 +108,7 @@ const char* k_user_home_dir(void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#faceIconPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUser*
 ///
@@ -116,7 +116,7 @@ const char* k_user_face_icon_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#shell)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUser*
 ///
@@ -130,7 +130,7 @@ libqt_list /* of KUserGroup* */ k_user_groups(void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groupNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUser*
 ///
@@ -149,7 +149,7 @@ libqt_list /* of KUser* */ k_user_all_users();
 
 /// [Upstream resources](https://api.kde.org/kuser.html#allUserNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_user_all_user_names();
 
@@ -162,7 +162,7 @@ libqt_list /* of KUserGroup* */ k_user_groups1(void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groupNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUser*
 /// @param maxCount uint32_t
@@ -177,7 +177,7 @@ libqt_list /* of KUser* */ k_user_all_users1(uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#allUserNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param maxCount uint32_t
 ///
@@ -266,7 +266,7 @@ bool k_usergroup_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUserGroup*
 ///
@@ -280,7 +280,7 @@ libqt_list /* of KUser* */ k_usergroup_users(void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#userNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUserGroup*
 ///
@@ -292,7 +292,7 @@ libqt_list /* of KUserGroup* */ k_usergroup_all_groups();
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#allGroupNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_usergroup_all_group_names();
 
@@ -305,7 +305,7 @@ libqt_list /* of KUser* */ k_usergroup_users1(void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#userNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KUserGroup*
 /// @param maxCount uint32_t
@@ -320,7 +320,7 @@ libqt_list /* of KUserGroup* */ k_usergroup_all_groups1(uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#allGroupNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param maxCount uint32_t
 ///

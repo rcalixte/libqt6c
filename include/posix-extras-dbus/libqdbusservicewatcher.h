@@ -91,7 +91,7 @@ int32_t q_dbusservicewatcher_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -99,7 +99,7 @@ const char* q_dbusservicewatcher_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusservicewatcher.html#watchedServices)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusServiceWatcher*
 ///
@@ -200,7 +200,7 @@ void q_dbusservicewatcher_on_service_owner_changed(void* self, void (*callback)(
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -209,7 +209,7 @@ const char* q_dbusservicewatcher_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -221,7 +221,7 @@ const char* q_dbusservicewatcher_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusServiceWatcher*
 ///
@@ -436,7 +436,7 @@ QVariant* q_dbusservicewatcher_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QDBusServiceWatcher*
 ///

@@ -90,7 +90,7 @@ int32_t q_textboundaryfinder_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#string)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextBoundaryFinder*
 ///

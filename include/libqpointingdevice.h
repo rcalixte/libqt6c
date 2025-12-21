@@ -193,7 +193,7 @@ int32_t q_pointingdevice_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -276,7 +276,7 @@ void q_pointingdevice_on_grab_changed(void* self, void (*callback)(void*, void*,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -285,7 +285,7 @@ const char* q_pointingdevice_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -303,7 +303,7 @@ const QPointingDevice* q_pointingdevice_primary_pointing_device1(const char* sea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPointingDevice*
 ///
@@ -350,7 +350,7 @@ long long q_pointingdevice_system_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#seatName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPointingDevice*
 ///
@@ -368,7 +368,7 @@ QRect* q_pointingdevice_available_virtual_geometry(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#seatNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_pointingdevice_seat_names();
 
@@ -414,7 +414,7 @@ const QInputDevice* q_pointingdevice_primary_keyboard1(const char* seatName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPointingDevice*
 ///
@@ -629,7 +629,7 @@ QVariant* q_pointingdevice_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QPointingDevice*
 ///

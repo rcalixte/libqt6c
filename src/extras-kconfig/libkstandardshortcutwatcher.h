@@ -33,7 +33,7 @@ int32_t k_standardshortcut__standardshortcutwatcher_metacall(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -56,7 +56,7 @@ void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -65,7 +65,7 @@ const char* k_standardshortcut__standardshortcutwatcher_tr2(const char* s, const
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -96,7 +96,7 @@ bool k_standardshortcut__standardshortcutwatcher_event_filter(void* self, void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 ///
@@ -311,7 +311,7 @@ QVariant* k_standardshortcut__standardshortcutwatcher_property(void* self, const
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 ///

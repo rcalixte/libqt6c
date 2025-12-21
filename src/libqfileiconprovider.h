@@ -71,7 +71,7 @@ QIcon* q_fileiconprovider_qbase_icon2(void* self, void* info);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -84,7 +84,7 @@ const char* q_fileiconprovider_type(void* self, void* param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

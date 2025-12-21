@@ -70,7 +70,7 @@ int32_t k_nscore__question_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -107,7 +107,7 @@ void k_nscore__question_set_question(void* self, const char* newQuestion);
 
 /// [Upstream resources](https://api.kde.org/knscore-question.html#question)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Question*
 ///
@@ -122,7 +122,7 @@ void k_nscore__question_set_title(void* self, const char* newTitle);
 
 /// [Upstream resources](https://api.kde.org/knscore-question.html#title)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Question*
 ///
@@ -137,7 +137,7 @@ void k_nscore__question_set_list(void* self, const char* newList[static 1]);
 
 /// [Upstream resources](https://api.kde.org/knscore-question.html#list)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Question*
 ///
@@ -172,7 +172,7 @@ void k_nscore__question_set_response2(void* self, const char* response);
 
 /// [Upstream resources](https://api.kde.org/knscore-question.html#response)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Question*
 ///
@@ -180,7 +180,7 @@ const char* k_nscore__question_response(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -189,7 +189,7 @@ const char* k_nscore__question_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -208,7 +208,7 @@ void k_nscore__question_set_question_type1(void* self, int32_t newType);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Question*
 ///
@@ -423,7 +423,7 @@ QVariant* k_nscore__question_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KNSCore__Question*
 ///

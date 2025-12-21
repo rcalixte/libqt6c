@@ -434,7 +434,7 @@ void k_charmacroexpander_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
@@ -444,7 +444,7 @@ const char* k_macroexpander_expand_macros(const char* param1, libqt_map /* of QC
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
@@ -454,7 +454,7 @@ const char* k_macroexpander_expand_macros_shell_quote(const char* param1, libqt_
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */
@@ -464,7 +464,7 @@ const char* k_macroexpander_expand_macros2(const char* param1, libqt_map /* of c
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */
@@ -474,7 +474,7 @@ const char* k_macroexpander_expand_macros_shell_quote2(const char* param1, libqt
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
@@ -484,7 +484,7 @@ const char* k_macroexpander_expand_macros3(const char* param1, libqt_map /* of Q
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacros)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */
@@ -494,7 +494,7 @@ const char* k_macroexpander_expand_macros4(const char* param1, libqt_map /* of c
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of QChar* to const char* */
@@ -504,7 +504,7 @@ const char* k_macroexpander_expand_macros_shell_quote3(const char* param1, libqt
 
 /// [Upstream resources](https://api.kde.org/kmacroexpander.html#expandMacrosShellQuote)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 /// @param param2 libqt_map /* of const char* to const char* */

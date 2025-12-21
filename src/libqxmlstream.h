@@ -187,7 +187,7 @@ QXmlStreamEntityResolver* q_xmlstreamentityresolver_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXmlStreamEntityResolver*
 /// @param publicId const char*
@@ -216,7 +216,7 @@ const char* q_xmlstreamentityresolver_qbase_resolve_entity(void* self, const cha
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXmlStreamEntityResolver*
 /// @param name const char*
@@ -333,7 +333,7 @@ int32_t q_xmlstreamreader_token_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#tokenString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXmlStreamReader*
 ///
@@ -456,7 +456,7 @@ QXmlStreamAttributes* q_xmlstreamreader_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#readElementText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXmlStreamReader*
 ///
@@ -515,7 +515,7 @@ void q_xmlstreamreader_raise_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXmlStreamReader*
 ///
@@ -550,7 +550,7 @@ QXmlStreamEntityResolver* q_xmlstreamreader_entity_resolver(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#readElementText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXmlStreamReader*
 /// @param behaviour enum QXmlStreamReader__ReadElementTextBehaviour

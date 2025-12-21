@@ -70,7 +70,7 @@ void k_io__openwith__acceptresult_set_accept(void* self, bool accept);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#error-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__OpenWith__AcceptResult*
 ///

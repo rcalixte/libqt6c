@@ -69,7 +69,7 @@ QSslEllipticCurve* q_sslellipticcurve_from_long_name(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#shortName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslEllipticCurve*
 ///
@@ -77,7 +77,7 @@ const char* q_sslellipticcurve_short_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#longName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslEllipticCurve*
 ///

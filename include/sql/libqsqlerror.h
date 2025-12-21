@@ -93,7 +93,7 @@ void q_sqlerror_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#driverText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 ///
@@ -101,7 +101,7 @@ const char* q_sqlerror_driver_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#databaseText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 ///
@@ -117,7 +117,7 @@ int32_t q_sqlerror_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#nativeErrorCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 ///
@@ -125,7 +125,7 @@ const char* q_sqlerror_native_error_code(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlError*
 ///

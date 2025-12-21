@@ -430,7 +430,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 
 func (p CppParameter) returnAllocComment(returnType string) string {
 	if strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
-		return "\n/// Caller is responsible for freeing the returned memory\n///"
+		return "\n/// @warning Caller is responsible for freeing the returned memory\n///"
 	}
 	return ""
 }
@@ -783,8 +783,10 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			cfs.allocCleanups = []string{}
 		}
 		return rvalue + ";" + maybeCleanups
+
 	} else if (rt.ParameterType == "void" || rt.ParameterType == "GLvoid") && rt.Pointer {
 		return assignExpr + maybePointer + rvalue + ";"
+
 	} else if rt.ParameterType == "QString" || rt.ParameterType == "QStringView" ||
 		rt.ParameterType == "QByteArray" || rt.ParameterType == "QByteArrayView" ||
 		rt.ParameterType == "SignOn::MethodName" {
@@ -843,6 +845,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			cfs.allocCleanups = append(cfs.allocCleanups, "libqt_free("+namePrefix+"_ret);\n")
 
 			return shouldReturn + rvalue + ";\n" + maybeAllocCleanup + afterword
+
 		} else {
 			shouldReturn = "libqt_list " + namePrefix + "_arr = "
 			afterword += assignExpr + " " + namePrefix + "_arr;"
@@ -1042,8 +1045,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
 
-	dirRoot := strings.TrimPrefix(packageName, "src/")
-	dirRoot = strings.TrimPrefix(dirRoot, "src")
+	dirRoot := ifv(packageName == "src", "", strings.TrimPrefix(packageName, "src/"))
 
 	cfs := cFileState{
 		imports:            map[string]struct{}{},
@@ -1661,8 +1663,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 	var parentInclude string
 
 	srcFilename := filepath.Base(src.Filename)
-	dirRoot := strings.TrimPrefix(packageName, "src/")
-	dirRoot = strings.TrimPrefix(dirRoot, "src")
+	dirRoot := ifv(packageName == "src", "", strings.TrimPrefix(packageName, "src/"))
 
 	cfs := cFileState{
 		imports:            map[string]struct{}{},

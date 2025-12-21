@@ -75,7 +75,7 @@ void q_latin1string_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -83,7 +83,7 @@ const char* q_latin1string_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#latin1)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -97,7 +97,7 @@ int64_t q_latin1string_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#data)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -105,7 +105,7 @@ const char* q_latin1string_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#constData)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -113,7 +113,7 @@ const char* q_latin1string_const_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#constBegin)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -121,7 +121,7 @@ const char* q_latin1string_const_begin(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#constEnd)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -332,7 +332,7 @@ double q_latin1string_to_double(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#begin)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -340,7 +340,7 @@ const char* q_latin1string_begin(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#cbegin)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -348,7 +348,7 @@ const char* q_latin1string_cbegin(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#end)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///
@@ -356,7 +356,7 @@ const char* q_latin1string_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#cend)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QLatin1String*
 ///

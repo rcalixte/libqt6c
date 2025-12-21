@@ -70,7 +70,7 @@ int32_t k_treewidgetsearchlinewidget_qbase_metacall(void* self, int32_t param1, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -132,7 +132,7 @@ KTreeWidgetSearchLine* k_treewidgetsearchlinewidget_qbase_create_search_line(voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -141,7 +141,7 @@ const char* k_treewidgetsearchlinewidget_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1010,7 +1010,7 @@ void k_treewidgetsearchlinewidget_set_style_sheet(void* self, const char* styleS
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1020,7 +1020,7 @@ const char* k_treewidgetsearchlinewidget_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1056,7 +1056,7 @@ void k_treewidgetsearchlinewidget_set_window_icon_text(void* self, const char* w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1075,7 +1075,7 @@ void k_treewidgetsearchlinewidget_set_window_role(void* self, const char* window
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1094,7 +1094,7 @@ void k_treewidgetsearchlinewidget_set_window_file_path(void* self, const char* f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1138,7 +1138,7 @@ void k_treewidgetsearchlinewidget_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1174,7 +1174,7 @@ void k_treewidgetsearchlinewidget_set_status_tip(void* self, const char* statusT
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1193,7 +1193,7 @@ void k_treewidgetsearchlinewidget_set_whats_this(void* self, const char* whatsTh
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1203,7 +1203,7 @@ const char* k_treewidgetsearchlinewidget_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1222,7 +1222,7 @@ void k_treewidgetsearchlinewidget_set_accessible_name(void* self, const char* na
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -1761,7 +1761,7 @@ void k_treewidgetsearchlinewidget_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -2567,7 +2567,7 @@ QWidget* k_treewidgetsearchlinewidget_create_window_container3(void* window, voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///
@@ -2773,7 +2773,7 @@ QVariant* k_treewidgetsearchlinewidget_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 ///

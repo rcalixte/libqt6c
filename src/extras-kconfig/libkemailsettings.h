@@ -19,7 +19,7 @@ KEMailSettings* k_emailsettings_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 ///
@@ -27,7 +27,7 @@ const char* k_emailsettings_tr(const char* sourceText);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#profiles)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KEMailSettings*
 ///
@@ -42,7 +42,7 @@ void k_emailsettings_set_profile(void* self, const char* s);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#defaultProfileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KEMailSettings*
 ///
@@ -57,7 +57,7 @@ void k_emailsettings_set_default(void* self, const char* def);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#getSetting)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KEMailSettings*
 /// @param s enum KEMailSettings__Setting
@@ -74,7 +74,7 @@ void k_emailsettings_set_setting(void* self, int32_t s, const char* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -83,7 +83,7 @@ const char* k_emailsettings_tr2(const char* sourceText, const char* disambiguati
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*

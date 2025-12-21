@@ -97,7 +97,7 @@ bool k_fileitemlistproperties_is_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#mimeType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItemListProperties*
 ///
@@ -105,7 +105,7 @@ const char* k_fileitemlistproperties_mime_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#mimeGroup)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItemListProperties*
 ///

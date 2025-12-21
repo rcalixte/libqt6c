@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#suggestName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
 /// @param param2 const char*
@@ -24,7 +24,7 @@ const char* k_fileutils_suggest_name(void* param1, const char* param2);
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#makeSuggestedName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -32,7 +32,7 @@ const char* k_fileutils_make_suggested_name(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#findAllUniqueFiles)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char**
 /// @param param2 const char**

@@ -31,7 +31,7 @@ QAction* k_standardaction_k_create_internal(int32_t param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardAction__StandardAction
 ///
@@ -39,7 +39,7 @@ const char* k_standardaction_name(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#stdNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_standardaction_std_names();
 

@@ -33,7 +33,7 @@ int32_t k_sambashare_metacall(void* self, int32_t param1, int param2, void* para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -52,7 +52,7 @@ bool k_sambashare_is_directory_shared(void* self, const char* path);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#sharedDirectories)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShare*
 ///
@@ -67,7 +67,7 @@ bool k_sambashare_is_share_name_available(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#shareNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShare*
 ///
@@ -89,7 +89,7 @@ libqt_list /* of KSambaShareData* */ k_sambashare_get_shares_by_path(void* self,
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#lastSystemErrorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShare*
 ///
@@ -116,7 +116,7 @@ void k_sambashare_on_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -125,7 +125,7 @@ const char* k_sambashare_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -156,7 +156,7 @@ bool k_sambashare_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShare*
 ///
@@ -371,7 +371,7 @@ QVariant* k_sambashare_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSambaShare*
 ///

@@ -33,7 +33,7 @@ int32_t q_xyseries_metacall(void* self, int32_t param1, int param2, void* param3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -252,7 +252,7 @@ void q_xyseries_set_point_labels_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFormat)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXYSeries*
 ///
@@ -914,7 +914,7 @@ void q_xyseries_on_marker_size_changed(void* self, void (*callback)(void*, doubl
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -923,7 +923,7 @@ const char* q_xyseries_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -990,7 +990,7 @@ void q_xyseries_set_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXYSeries*
 ///
@@ -1204,7 +1204,7 @@ bool q_xyseries_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXYSeries*
 ///
@@ -1419,7 +1419,7 @@ QVariant* q_xyseries_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QXYSeries*
 ///

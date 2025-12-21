@@ -58,7 +58,7 @@ bool k_configgroup_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 ///
@@ -192,7 +192,7 @@ KConfigGroup* k_configgroup_parent(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 ///
@@ -217,7 +217,7 @@ const char** k_configgroup_qbase_group_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#keyList)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 ///
@@ -247,7 +247,7 @@ QVariant* k_configgroup_read_entry2(void* self, const char* key, void* aDefault)
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -257,7 +257,7 @@ const char* k_configgroup_read_entry3(void* self, const char* key, const char* a
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -267,7 +267,7 @@ const char* k_configgroup_read_entry4(void* self, const char* key, const char* a
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -276,7 +276,7 @@ const char* k_configgroup_read_entry5(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -301,7 +301,7 @@ libqt_list /* of QVariant* */ k_configgroup_read_entry8(void* self, const char* 
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -311,7 +311,7 @@ const char** k_configgroup_read_entry9(void* self, const char* key, const char* 
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -321,7 +321,7 @@ const char** k_configgroup_read_entry10(void* self, const char* key, const char*
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -330,7 +330,7 @@ const char** k_configgroup_read_xdg_list_entry(void* self, const char* pKey);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -339,7 +339,7 @@ const char** k_configgroup_read_xdg_list_entry2(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -349,7 +349,7 @@ const char* k_configgroup_read_path_entry(void* self, const char* pKey, const ch
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -359,7 +359,7 @@ const char* k_configgroup_read_path_entry2(void* self, const char* key, const ch
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -369,7 +369,7 @@ const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const 
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -379,7 +379,7 @@ const char** k_configgroup_read_path_entry4(void* self, const char* key, const c
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -388,7 +388,7 @@ const char* k_configgroup_read_entry_untranslated(void* self, const char* pKey);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -807,7 +807,7 @@ void k_configgroup_delete_group1(void* self, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -817,7 +817,7 @@ const char* k_configgroup_read_entry22(void* self, const char* key, const char* 
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -827,7 +827,7 @@ const char* k_configgroup_read_entry23(void* self, const char* key, const char* 
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -837,7 +837,7 @@ const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, c
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
@@ -847,7 +847,7 @@ const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, co
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
@@ -857,7 +857,7 @@ const char* k_configgroup_read_entry_untranslated22(void* self, const char* pKey
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigGroup*
 /// @param key const char*

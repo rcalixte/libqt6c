@@ -41,7 +41,7 @@ void k_attica__project_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -56,7 +56,7 @@ void k_attica__project_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -71,7 +71,7 @@ void k_attica__project_set_version(void* self, const char* version);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#version)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -86,7 +86,7 @@ void k_attica__project_set_url(void* self, const char* url);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#url)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -101,7 +101,7 @@ void k_attica__project_set_license(void* self, const char* license);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#license)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -116,7 +116,7 @@ void k_attica__project_set_summary(void* self, const char* summary);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#summary)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -131,7 +131,7 @@ void k_attica__project_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -146,7 +146,7 @@ void k_attica__project_set_developers(void* self, const char* developers[static 
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#developers)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -161,7 +161,7 @@ void k_attica__project_set_requirements(void* self, const char* requirements);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#requirements)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -176,7 +176,7 @@ void k_attica__project_set_spec_file(void* self, const char* specFile);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#specFile)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 ///
@@ -192,7 +192,7 @@ void k_attica__project_add_extended_attribute(void* self, const char* key, const
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#extendedAttribute)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Project*
 /// @param key const char*

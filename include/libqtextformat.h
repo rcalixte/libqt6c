@@ -239,7 +239,7 @@ double q_textformat_double_property(void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextFormat*
 /// @param propertyId int
@@ -521,7 +521,7 @@ void q_textcharformat_set_font_family(void* self, const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamily)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextCharFormat*
 ///
@@ -836,7 +836,7 @@ void q_textcharformat_set_tool_tip(void* self, const char* tip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextCharFormat*
 ///
@@ -903,7 +903,7 @@ void q_textcharformat_set_anchor_href(void* self, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorHref)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextCharFormat*
 ///
@@ -918,7 +918,7 @@ void q_textcharformat_set_anchor_names(void* self, const char* names[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextCharFormat*
 ///
@@ -1094,7 +1094,7 @@ double q_textcharformat_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextCharFormat*
 /// @param propertyId int
@@ -1742,7 +1742,7 @@ double q_textblockformat_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextBlockFormat*
 /// @param propertyId int
@@ -2109,7 +2109,7 @@ void q_textlistformat_set_number_prefix(void* self, const char* numberPrefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#numberPrefix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextListFormat*
 ///
@@ -2124,7 +2124,7 @@ void q_textlistformat_set_number_suffix(void* self, const char* numberSuffix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#numberSuffix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextListFormat*
 ///
@@ -2271,7 +2271,7 @@ double q_textlistformat_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextListFormat*
 /// @param propertyId int
@@ -2610,7 +2610,7 @@ void q_textimageformat_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextImageFormat*
 ///
@@ -2704,7 +2704,7 @@ void q_textimageformat_set_font_family(void* self, const char* family);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamily)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextImageFormat*
 ///
@@ -3111,7 +3111,7 @@ void q_textimageformat_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextImageFormat*
 ///
@@ -3198,7 +3198,7 @@ void q_textimageformat_set_anchor_href(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorHref)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextImageFormat*
 ///
@@ -3217,7 +3217,7 @@ void q_textimageformat_set_anchor_names(void* self, const char* names[static 1])
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextImageFormat*
 ///
@@ -3405,7 +3405,7 @@ double q_textimageformat_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextImageFormat*
 /// @param propertyId int
@@ -4052,7 +4052,7 @@ double q_textframeformat_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextFrameFormat*
 /// @param propertyId int
@@ -4854,7 +4854,7 @@ double q_texttableformat_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextTableFormat*
 /// @param propertyId int
@@ -5458,7 +5458,7 @@ void q_texttablecellformat_set_font_family(void* self, const char* family);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamily)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextTableCellFormat*
 ///
@@ -5865,7 +5865,7 @@ void q_texttablecellformat_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#toolTip)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextTableCellFormat*
 ///
@@ -5952,7 +5952,7 @@ void q_texttablecellformat_set_anchor_href(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorHref)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextTableCellFormat*
 ///
@@ -5971,7 +5971,7 @@ void q_texttablecellformat_set_anchor_names(void* self, const char* names[static
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextTableCellFormat*
 ///
@@ -6159,7 +6159,7 @@ double q_texttablecellformat_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QTextTableCellFormat*
 /// @param propertyId int

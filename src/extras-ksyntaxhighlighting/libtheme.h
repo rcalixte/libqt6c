@@ -40,7 +40,7 @@ bool k_syntaxhighlighting__theme_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
 ///
@@ -48,7 +48,7 @@ const char* k_syntaxhighlighting__theme_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#translatedName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
 ///
@@ -62,7 +62,7 @@ bool k_syntaxhighlighting__theme_is_read_only(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KSyntaxHighlighting__Theme*
 ///

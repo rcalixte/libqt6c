@@ -62,7 +62,7 @@ void k_attica__metadata_set_status_code(void* self, int code);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#statusString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Metadata*
 ///
@@ -77,7 +77,7 @@ void k_attica__metadata_set_status_string(void* self, const char* status);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#message)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Metadata*
 ///
@@ -118,7 +118,7 @@ void k_attica__metadata_set_items_per_page(void* self, int itemsPerPage);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#resultingId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Metadata*
 ///

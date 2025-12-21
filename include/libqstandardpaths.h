@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#writableLocation)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
 ///
@@ -23,7 +23,7 @@ const char* q_standardpaths_writable_location(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#standardLocations)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
 ///
@@ -31,7 +31,7 @@ const char** q_standardpaths_standard_locations(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#locate)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
@@ -40,7 +40,7 @@ const char* q_standardpaths_locate(int32_t type, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
@@ -49,7 +49,7 @@ const char** q_standardpaths_locate_all(int32_t type, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#displayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
 ///
@@ -57,7 +57,7 @@ const char* q_standardpaths_display_name(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param executableName const char*
 ///
@@ -75,7 +75,7 @@ bool q_standardpaths_is_test_mode_enabled();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#locate)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
@@ -85,7 +85,7 @@ const char* q_standardpaths_locate3(int32_t type, const char* fileName, int32_t 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum QStandardPaths__StandardLocation
 /// @param fileName const char*
@@ -95,7 +95,7 @@ const char** q_standardpaths_locate_all3(int32_t type, const char* fileName, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param executableName const char*
 /// @param paths const char**

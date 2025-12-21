@@ -61,7 +61,7 @@ int32_t q_sslsocket_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -301,7 +301,7 @@ void q_sslsocket_set_peer_verify_depth(void* self, int depth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#peerVerifyName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///
@@ -686,7 +686,7 @@ int64_t q_sslsocket_ssl_library_version_number();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#sslLibraryVersionString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_sslsocket_ssl_library_version_string();
 
@@ -696,19 +696,19 @@ int64_t q_sslsocket_ssl_library_build_version_number();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#sslLibraryBuildVersionString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_sslsocket_ssl_library_build_version_string();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#availableBackends)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_sslsocket_available_backends();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#activeBackend)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char* q_sslsocket_active_backend();
 
@@ -1008,7 +1008,7 @@ long long q_sslsocket_qbase_write_data(void* self, const char* data, long long l
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1017,7 +1017,7 @@ const char* q_sslsocket_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1246,7 +1246,7 @@ QHostAddress* q_sslsocket_peer_address(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#peerName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///
@@ -1327,7 +1327,7 @@ QNetworkProxy* q_sslsocket_proxy(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#protocolTag)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///
@@ -1593,7 +1593,7 @@ long long q_sslsocket_read(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 /// @param maxlen long long
@@ -1604,7 +1604,7 @@ char* q_sslsocket_read2(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///
@@ -1624,7 +1624,7 @@ long long q_sslsocket_read_line(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///
@@ -1704,7 +1704,7 @@ long long q_sslsocket_peek(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 /// @param maxlen long long
@@ -1751,7 +1751,7 @@ bool q_sslsocket_get_char(void* self, char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///
@@ -1867,7 +1867,7 @@ void q_sslsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 /// @param maxlen long long
@@ -1878,7 +1878,7 @@ char* q_sslsocket_read_line1(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///
@@ -2093,7 +2093,7 @@ QVariant* q_sslsocket_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSslSocket*
 ///

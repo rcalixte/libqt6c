@@ -36,7 +36,7 @@ void k_urlmimedata_set_meta_data(libqt_map /* of const char* to const char* */ p
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#mimeDataTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_urlmimedata_mime_data_types();
 

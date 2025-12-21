@@ -287,7 +287,7 @@ QImage* q_videoframe_to_image(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#subtitleText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QVideoFrame*
 ///

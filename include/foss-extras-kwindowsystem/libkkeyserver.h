@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#modToStringUser)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint32_t
 ///

@@ -183,7 +183,7 @@ void q_geopolygon_remove_coordinate2(void* self, int64_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoPolygon*
 ///

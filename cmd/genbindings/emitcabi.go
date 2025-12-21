@@ -25,6 +25,14 @@ func (p CppParameter) cParameterName() string {
 	return paramName
 }
 
+type CleanupType int
+
+const (
+	NoFree CleanupType = iota
+	QStringFree
+	QListFree
+)
+
 func getUnionType(t CppParameter) (unionType, castType, lParen, rParen string) {
 	if t.IntType() {
 		var fieldName string
@@ -62,9 +70,7 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 		if isSlot {
 			if innerType == "libqt_string" {
 				return "const char**"
-			} else if innerType == "int" {
-				return "int*"
-			} else if IsKnownClass(inner.ParameterType) {
+			} else if inner.IntType() || IsKnownClass(inner.ParameterType) {
 				return innerType + "*"
 			}
 		}
@@ -341,7 +347,7 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 
 		var maybePointer string
 		refType := "."
-		if isSlot && p.ByRef && listType.PointerCount > 0 {
+		if isSlot && p.ByRef {
 			refType = "->"
 			maybePointer = "*"
 		}
@@ -350,15 +356,26 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 
 		preamble += indent + containerQtType + maybePointer + " " + nameprefix + "_" + containerType + ";\n"
 
-		if isSlot && lType == "int" {
+		if isSlot && listType.IntType() {
 			var maybeCast, maybeCloseCast string
 			if listType.IsKnownEnum() {
 				maybeCast = "static_cast<" + listType.ParameterType + ">("
 				maybeCloseCast = ")"
 			}
-			preamble += indent + "for (int* ptr = " + p.ParameterName + "; *ptr != 0; ++ptr) {\n"
+
+			sentinel := "-1"
+			if lType == "double" {
+				sentinel = "-1.0"
+			} else if lType == "float" {
+				sentinel = "-1.0f"
+			} else if strings.Contains(lType, "uint") || strings.Contains(lType, "unsigned") {
+				sentinel = "0"
+			}
+
+			preamble += indent + "for (" + lType + "* ptr = " + p.ParameterName + "; *ptr != " + sentinel + "; ++ptr) {\n"
 			preamble += indent + "\t" + nameprefix + "_" + containerType + refType + "push_back(" + maybeCast + "*ptr" + maybeCloseCast + ");\n"
 			preamble += indent + "}\n"
+
 		} else {
 			dataField := ".data." + unionType
 			iterField := ".len"
@@ -384,7 +401,6 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 				preamble += indent + "for (" + lType + "* ptridx = " + nameprefix + "; *ptridx != nullptr; ptridx++) {\n"
 				preamble += indent + "\t" + nameprefix + "_" + containerType + refType + "push_back(" + maybeExtraDeref + "*ptridx);\n"
 				preamble += indent + "}\n"
-				preamble += indent + "free(" + nameprefix + ");\n"
 			} else {
 				preamble += indent + lType + "* " + nameprefix + "_arr = static_cast<" + lType + "*>(" + p.ParameterName + dataField + ");\n"
 				preamble += indent + "for(size_t i = 0; i < " + p.ParameterName + iterField + "; ++i) {\n"
@@ -396,6 +412,12 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 
 				preamble += indent + "}\n"
 			}
+
+		}
+
+		// TODO fully support native types and remove the prefix check
+		if isSlot && !strings.HasPrefix(p.RenderTypeCabi(true), "libqt_list") {
+			preamble += indent + "free(" + nameprefix + ");\n"
 		}
 
 		// Support passing QList<>* (very rare, but used in qnetwork)
@@ -549,10 +571,11 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 // Sample assignExpression: "return ", "auto foo = "
 // Sample rvalue: "foo", "foo(xyz)"
 // The return is a complete statement including trailing newline.
-func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string) string {
+func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string) (string, CleanupType) {
 
+	cleanupType := NoFree
 	shouldReturn := assignExpression // n.b. already has indent
-	var afterCall string
+	var afterCall, retExpr string
 	assignExpression = strings.TrimLeft(assignExpression, " \t")
 	indent := shouldReturn[0 : len(shouldReturn)-len(assignExpression)]
 	isSignal := strings.Contains(assignExpression, "sigval") || strings.Contains(assignExpression, "_sctr")
@@ -564,7 +587,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 
 	if p.Void() {
 		shouldReturn = ""
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" {
 
@@ -577,6 +600,8 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + "memcpy(" + namePrefix + "_str, " + namePrefix + "_b.data(), " + namePrefix + "_b.length());\n"
 			afterCall += indent + namePrefix + "_str[" + namePrefix + "_b.length()] = '\\0';\n"
 			afterCall += indent + assignExpression + namePrefix + "_str;\n"
+
+			cleanupType = QStringFree
 
 		} else {
 			if p.Pointer {
@@ -602,7 +627,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + assignExpression + namePrefix + "_str;\n"
 		}
 
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if p.ParameterType == "QAnyStringView" {
 
@@ -619,7 +644,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		afterCall += indent + "memcpy((void*)" + namePrefix + "_str.data, " + namePrefix + "_b.data(), " + namePrefix + "_str.len);\n"
 		afterCall += indent + "((char*)" + namePrefix + "_str.data)[" + namePrefix + "_str.len] = '\\0';\n"
 		afterCall += indent + assignExpression + "(char*)" + namePrefix + "_str.data;\n"
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
 
@@ -636,7 +661,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		afterCall += indent + "memcpy((void*)" + namePrefix + "_str.data, " + namePrefix + "_qb.data(), " + namePrefix + "_str.len);\n"
 		afterCall += indent + "((char*)" + namePrefix + "_str.data)[" + namePrefix + "_str.len] = '\\0';\n"
 		afterCall += indent + assignExpression + namePrefix + "_str" + maybeField + ";\n"
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if t, containerType, ok := p.QListOf(); ok {
 
@@ -685,22 +710,36 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + namePrefix + "_arr[" + namePrefix + "_ret" + memberRef + "size()] = nullptr;\n"
 			afterCall += indent + assignExpression + namePrefix + "_arr;\n"
 
-			return indent + shouldReturn + rvalue + ";\n" + afterCall
+			cleanupType = QListFree
+
+			return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 		} else {
 			afterCall += indent + "// Convert " + containerType + "<> from C++ memory to manually-managed C memory\n"
 			afterCall += indent + cType + "* " + namePrefix + "_arr = static_cast<" + cType + "*>(malloc(sizeof(" + cType + ") * (" + namePrefix + "_ret" + memberRef + "size() + 1)));\n"
 			afterCall += indent + "for (qsizetype i = 0; i < " + namePrefix + "_ret" + memberRef + "size(); ++i) {\n"
-			afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr[i] = ", t, maybeDerefOpen+namePrefix+"_ret"+maybeDerefClose+"[i]")
+
+			retExpr, cleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr[i] = ", t, maybeDerefOpen+namePrefix+"_ret"+maybeDerefClose+"[i]")
+			afterCall += retExpr
 			afterCall += indent + "}\n"
 		}
 
 		if isSignal {
-			if cType == "int" {
+			if t.IntType() {
+				sentinel := "-1"
+				if cType == "double" {
+					sentinel = "-1.0"
+				} else if cType == "float" {
+					sentinel = "-1.0f"
+				} else if strings.Contains(cType, "uint") || strings.Contains(cType, "unsigned") {
+					sentinel = "0"
+				}
+
 				afterCall += indent + "// Append sentinel value to the list\n"
-				afterCall += indent + namePrefix + "_arr[" + namePrefix + "_ret" + memberRef + "size()] = -1;\n"
+				afterCall += indent + namePrefix + "_arr[" + namePrefix + "_ret" + memberRef + "size()] = " + sentinel + ";\n"
 
 				afterCall += indent + assignExpression + namePrefix + "_arr;\n"
+
 			} else if IsKnownClass(t.ParameterType) {
 				afterCall += indent + "// Append sentinel value to the list\n"
 				afterCall += indent + namePrefix + "_arr[" + namePrefix + "_ret" + memberRef + "size()] = nullptr;\n"
@@ -709,6 +748,9 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 				assignExpression = cType + "* " + assignExpression[sigvalIndex:sigvalIndex+7] + " = "
 				afterCall += indent + assignExpression + namePrefix + "_arr;\n"
 			}
+
+			cleanupType = QListFree
+
 		} else {
 			afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
 			afterCall += indent + namePrefix + "_out.len = " + namePrefix + "_ret" + memberRef + "size();\n"
@@ -716,7 +758,8 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 
 			afterCall += indent + assignExpression + namePrefix + "_out;\n"
 		}
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if t, ok := p.QSetOf(); ok {
 
@@ -733,7 +776,9 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + "int " + namePrefix + "_sctr = 0;\n"
 			afterCall += indent + "QSetIterator<" + t.RenderTypeQtCpp() + "> " + namePrefix + "_itr(" + namePrefix + "_ret);\n"
 			afterCall += indent + "while (" + namePrefix + "_itr.hasNext()) {\n"
-			afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr["+namePrefix+"_sctr++] = ", t, namePrefix+"_itr.next()")
+
+			retExpr, cleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr["+namePrefix+"_sctr++] = ", t, namePrefix+"_itr.next()")
+			afterCall += retExpr
 			afterCall += indent + "}\n"
 
 			afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
@@ -741,14 +786,16 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + namePrefix + "_out.data.chars = (char*)" + namePrefix + "_arr;\n"
 
 			afterCall += indent + assignExpression + namePrefix + "_out;\n"
-			return indent + shouldReturn + rvalue + ";\n" + afterCall
+			return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 		} else {
 			afterCall += indent + "// Convert QSet<> from C++ memory to manually-managed C memory\n"
 			afterCall += indent + cType + "* " + namePrefix + "_arr = static_cast<" + cType + "*>(malloc(sizeof(" + cType + ") * " + namePrefix + "_ret.size()));\n"
 			afterCall += indent + "int " + namePrefix + "_ctr = 0;\n"
 			afterCall += indent + "QSetIterator<" + t.RenderTypeQtCpp() + "> " + namePrefix + "_itr(" + namePrefix + "_ret);\n"
 			afterCall += indent + "while (" + namePrefix + "_itr.hasNext()) {\n"
-			afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr["+namePrefix+"_ctr++] = ", t, namePrefix+"_itr.next()")
+
+			retExpr, cleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr["+namePrefix+"_ctr++] = ", t, namePrefix+"_itr.next()")
+			afterCall += retExpr
 			afterCall += indent + "}\n"
 
 			afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
@@ -756,7 +803,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + namePrefix + "_out.data." + unionType + " = " + castType + maybeLParen + namePrefix + "_arr" + maybeRParen + ";\n"
 
 			afterCall += indent + assignExpression + namePrefix + "_out;\n"
-			return indent + shouldReturn + rvalue + ";\n" + afterCall
+			return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 		}
 
 	} else if kType, vType, containerType, ok := p.QMapOf(); ok {
@@ -776,8 +823,13 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 
 		afterCall += indent + "int " + namePrefix + "_ctr = 0;\n"
 		afterCall += indent + "for (auto " + namePrefix + "_itr = " + namePrefix + "_ret" + memberRef + "keyValueBegin(); " + namePrefix + "_itr != " + namePrefix + "_ret" + memberRef + "keyValueEnd(); ++" + namePrefix + "_itr) {\n"
-		afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_karr["+namePrefix+"_ctr] = ", kType, namePrefix+"_itr->first")
-		afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_varr["+namePrefix+"_ctr] = ", vType, namePrefix+"_itr->second")
+
+		retExpr, cleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_karr["+namePrefix+"_ctr] = ", kType, namePrefix+"_itr->first")
+		afterCall += retExpr
+
+		valueCleanupType := NoFree
+		retExpr, valueCleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_varr["+namePrefix+"_ctr] = ", vType, namePrefix+"_itr->second")
+		afterCall += retExpr
 		afterCall += indent + "\t" + namePrefix + "_ctr++;\n"
 
 		afterCall += indent + "}\n"
@@ -788,7 +840,15 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		afterCall += indent + namePrefix + "_out" + memberRef + "values = static_cast<void*>(" + namePrefix + "_varr);\n"
 
 		afterCall += indent + assignExpression + namePrefix + "_out;\n"
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+
+		if valueCleanupType != NoFree {
+			if cleanupType != NoFree && cleanupType != valueCleanupType {
+				panic("QMap cleanup type mismatch")
+			}
+			cleanupType = valueCleanupType
+		}
+
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if kType, vType, ok := p.QPairOf(); ok {
 
@@ -802,19 +862,31 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		afterCall += indent + kTypeC + "* " + namePrefix + "_first = static_cast<" + kTypeC + "*>(malloc(sizeof(" + kTypeC + ")));\n"
 		afterCall += indent + vTypeC + "* " + namePrefix + "_second = static_cast<" + vTypeC + "*>(malloc(sizeof(" + vTypeC + ")));\n"
 
-		afterCall += emitAssignCppToCabi(indent+"*"+namePrefix+"_first = ", kType, namePrefix+"_ret.first")
-		afterCall += emitAssignCppToCabi(indent+"*"+namePrefix+"_second = ", vType, namePrefix+"_ret.second")
+		retExpr, cleanupType = emitAssignCppToCabi(indent+"*"+namePrefix+"_first = ", kType, namePrefix+"_ret.first")
+		afterCall += retExpr
+
+		valueCleanupType := NoFree
+		retExpr, valueCleanupType = emitAssignCppToCabi(indent+"*"+namePrefix+"_second = ", vType, namePrefix+"_ret.second")
+		afterCall += retExpr
 
 		afterCall += indent + "libqt_pair " + namePrefix + "_out;\n"
 		afterCall += indent + namePrefix + "_out.first = static_cast<void*>(" + namePrefix + "_first);\n"
 		afterCall += indent + namePrefix + "_out.second = static_cast<void*>(" + namePrefix + "_second);\n"
 		afterCall += indent + assignExpression + namePrefix + "_out;\n"
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+
+		if valueCleanupType != NoFree {
+			if cleanupType != NoFree && cleanupType != valueCleanupType {
+				panic("QPair cleanup type mismatch")
+			}
+			cleanupType = valueCleanupType
+		}
+
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if p.IntType() && p.ByRef && strings.Contains(rvalue, "->") {
 
 		// return type by reference
-		return indent + shouldReturn + "&(" + rvalue + ");\n" + afterCall
+		return indent + shouldReturn + "&(" + rvalue + ");\n" + afterCall, cleanupType
 
 	} else if p.QtClassType() && p.ByRef {
 
@@ -823,7 +895,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		if IsKnownClass(pCppType) {
 			// Cast returned value into pointer
 			shouldReturn += "new " + pCppType + "(" + rvalue + ");\n"
-			return indent + shouldReturn
+			return indent + shouldReturn, cleanupType
 		} else {
 			shouldReturn = pCppType + " " + namePrefix + "_ret = "
 			afterCall += indent + "// Cast returned reference into pointer\n"
@@ -838,12 +910,12 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 				afterCall += indent + assignExpression + "&" + namePrefix + "_ret;\n"
 			}
 		}
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if p.QtClassType() && !p.Pointer {
 
 		// Elide temporary and emit directly from the rvalue
-		return indent + assignExpression + "new " + p.ParameterType + "(" + rvalue + ");\n"
+		return indent + assignExpression + "new " + p.ParameterType + "(" + rvalue + ");\n", cleanupType
 
 	} else if p.IsFlagType() || p.IsKnownEnum() || p.QtCppOriginalType != nil {
 
@@ -859,14 +931,14 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + assignExpression + "reinterpret_cast<" + p.RenderTypeCabi(false) + ">(&" + rvalue + ");\n"
 		} else {
 			afterCall += indent + assignExpression + "static_cast<" + p.RenderTypeCabi(false) + ">(" + rvalue + ");\n"
-			return indent + afterCall
+			return indent + afterCall, cleanupType
 		}
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else if p.Const {
 
 		shouldReturn += "(" + p.RenderTypeCabi(false) + ") "
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 	} else {
 
@@ -876,7 +948,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			shouldReturn += "&"
 		}
 
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
+		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 	}
 }
 
@@ -1026,6 +1098,7 @@ var (
 		"QCameraPermission":             {},
 		"QCompleter":                    {},
 		"QContactsPermission":           {},
+		"QDesignerIntegrationInterface": {},
 		"QLocationPermission":           {},
 		"QMicrophonePermission":         {},
 		"QNativeInterface__QEGLContext": {},
@@ -1292,7 +1365,8 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 				}
 
 				for i, p := range m.Parameters {
-					signalCode += emitAssignCppToCabi(fmt.Sprintf("\t\t%s cbval%d = ", p.RenderTypeCabi(false), i+1), p, p.cParameterName())
+					retExpr, _ := emitAssignCppToCabi(fmt.Sprintf("\t\t%s cbval%d = ", p.RenderTypeCabi(false), i+1), p, p.cParameterName())
+					signalCode += retExpr
 					paramArgs = append(paramArgs, fmt.Sprintf("cbval%d", i+1))
 				}
 
@@ -1872,7 +1946,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = false
 			}
 
-			var maybeMacro, maybeEndMacro string
+			var maybeMacro, maybeEndMacro, retExpr string
 			maybeConst := ifv(m.IsConst, "const ", "")
 
 			if m.FossOnly {
@@ -1880,6 +1954,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				for _, p := range m.Parameters {
 					voidCasts += "\t(void)" + p.ParameterName + "; // Suppress unused parameter warning\n"
 				}
+				retExpr, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget)
 
 				ret.WriteString(fmt.Sprintf(
 					"%s %s_%s(%s) {\n"+
@@ -1892,22 +1967,23 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 						"}\n"+
 						"\n",
 					m.ReturnType.RenderTypeCabi(false), methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*"),
-					preamble,
-					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget),
-					voidCasts,
+					preamble, retExpr, voidCasts,
 				))
 
 			} else if m.BecomesNonConstInVersion != nil {
 
 				nonConstCallTarget := "const_cast<" + methodPrefixName + "*>(self)->" + m.CppCallTarget() + "(" + forwarding + ")"
 
+				retExpr, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget)
+				retExprNonConst, _ := emitAssignCppToCabi("\treturn ", m.ReturnType, nonConstCallTarget)
+
 				ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					preamble +
 					"// This method was changed from const to non-const in Qt " + *m.BecomesNonConstInVersion + "\n" +
 					"#if QT_VERSION < QT_VERSION_CHECK(" + strings.ReplaceAll(*m.BecomesNonConstInVersion, ".", ",") + ",0)\n" +
-					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget) +
+					retExpr +
 					"#else\n" +
-					emitAssignCppToCabi("\treturn ", m.ReturnType, nonConstCallTarget) +
+					retExprNonConst +
 					"#endif\n" +
 					"}\n" +
 					"\n",
@@ -1915,15 +1991,15 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 			} else if m.ReturnType.BecomesConstInVersion != nil {
 
+				retExpr, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget)
+
 				ret.WriteString("// This method's return type was changed from non-const to const in Qt " + *m.ReturnType.BecomesConstInVersion + "\n" +
 					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.ReplaceAll(*m.ReturnType.BecomesConstInVersion, ".", ",") + ",0)\n" +
 					"const " + m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					"#else\n" +
 					m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					"#endif\n" +
-					preamble +
-					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget) +
-					"}\n\n",
+					preamble + retExpr + "}\n\n",
 				)
 
 			} else {
@@ -1946,7 +2022,8 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					vVarTarget = vVar + "->" + m.CppCallTarget() + "(" + forwarding + ")"
 					virtualCallTarget += m.CppCallTarget() + "(" + forwarding + ")"
 					maybeElse = "\t} else {\n\t\t"
-					baseClose = emitAssignCppToCabi("\treturn ", m.ReturnType, virtualCallTarget) + "\n"
+					baseClose, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, virtualCallTarget)
+					baseClose += "\n"
 					if m.IsProtected {
 						maybeElse = ""
 						baseClose = ""
@@ -1967,14 +2044,16 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					if strings.HasPrefix(m.MethodName, "set") {
 						ret.WriteString(preamble + "self->" + m.VariableFieldName + " = " + forwarding + ";\n}\n\n")
 					} else {
-						ret.WriteString(emitAssignCppToCabi("\treturn ", m.ReturnType, "self->"+m.VariableFieldName) + "}\n\n")
+						retExpr, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, "self->"+m.VariableFieldName)
+						ret.WriteString(retExpr + "}\n\n")
 					}
 					continue
 				}
 
+				retExpr, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, returnCallTarget)
+
 				ret.WriteString(maybeMacro + returnCabi + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
-					preamble + virtualStart +
-					emitAssignCppToCabi("\treturn ", m.ReturnType, returnCallTarget) +
+					preamble + virtualStart + retExpr +
 					virtualClose + emptyReturn + "}\n" + maybeEndMacro + "\n\n")
 			}
 
@@ -2001,13 +2080,16 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				var bindingParams, sigParams []string
 
 				for i, p := range m.Parameters {
-					emitAssign := emitAssignCppToCabi(fmt.Sprintf("\t\t%s sigval%d = ", p.RenderTypeCabi(true), i+1), p, p.ParameterName)
+					emitAssign, cleanupType := emitAssignCppToCabi(fmt.Sprintf("\t\t%s sigval%d = ", p.RenderTypeCabi(true), i+1), p, p.ParameterName)
 					signalCode += emitAssign
-					if strings.Contains(emitAssign, "to UTF-8 chars") {
+
+					switch cleanupType {
+					case QStringFree:
 						sigCleanup += "\t\tfree(" + makeNamePrefix(p.ParameterName) + "_str);\n"
-					} else if strings.Contains(emitAssign, "Append sentinel") {
+					case QListFree:
 						sigCleanup += "\t\tfree(" + makeNamePrefix(p.ParameterName) + "_arr);\n"
 					}
+
 					sigCode += p.RenderTypeCabi(true)
 					sigParams = append(sigParams, p.RenderTypeCabi(true))
 					paramArgs = append(paramArgs, fmt.Sprintf("sigval%d", i+1))
@@ -2129,12 +2211,12 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				}
 
 				var elseReturn string
-				virtualReturn := emitAssignCppToCabi("\treturn ", m.ReturnType, vVar+"->"+vbCallTarget)
+				virtualReturn, _ := emitAssignCppToCabi("\treturn ", m.ReturnType, vVar+"->"+vbCallTarget)
 
 				if m.IsPrivate || m.IsProtected || m.IsPureVirtual || strings.HasPrefix(cppClassName, "QsciLexer") {
-					elseReturn = emitAssignCppToCabi("\treturn ", m.ReturnType, "((Virtual"+cppClassName+"*)self)->"+vbCallTarget)
+					elseReturn, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, "((Virtual"+cppClassName+"*)self)->"+vbCallTarget)
 				} else {
-					elseReturn = emitAssignCppToCabi("\treturn ", m.ReturnType, "self->"+c.ClassName+"::"+vbCallTarget)
+					elseReturn, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, "self->"+c.ClassName+"::"+vbCallTarget)
 				}
 
 				if !baseMethod {
@@ -2175,13 +2257,16 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			var bindingParams, sigParams []string
 
 			for i, p := range m.Parameters {
-				emitAssign := emitAssignCppToCabi(fmt.Sprintf("\t\t%s sigval%d = ", p.RenderTypeCabi(true), i+1), p, p.ParameterName)
+				emitAssign, cleanupType := emitAssignCppToCabi(fmt.Sprintf("\t\t%s sigval%d = ", p.RenderTypeCabi(true), i+1), p, p.ParameterName)
 				signalCode += emitAssign
-				if strings.Contains(emitAssign, "to UTF-8 chars") {
+
+				switch cleanupType {
+				case QStringFree:
 					sigCleanup += "\t\tfree(" + makeNamePrefix(p.ParameterName) + "_str);\n"
-				} else if strings.Contains(emitAssign, "Append sentinel") {
+				case QListFree:
 					sigCleanup += "\t\tfree(" + makeNamePrefix(p.ParameterName) + "_arr);\n"
 				}
+
 				sigCode += p.RenderTypeCabi(true)
 				sigParams = append(sigParams, p.RenderTypeCabi(true))
 				paramArgs = append(paramArgs, fmt.Sprintf("sigval%d", i+1))

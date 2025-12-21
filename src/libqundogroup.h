@@ -61,7 +61,7 @@ int32_t q_undogroup_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -121,7 +121,7 @@ bool q_undogroup_can_redo(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundogroup.html#undoText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoGroup*
 ///
@@ -129,7 +129,7 @@ const char* q_undogroup_undo_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundogroup.html#redoText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoGroup*
 ///
@@ -260,7 +260,7 @@ void q_undogroup_on_redo_text_changed(void* self, void (*callback)(void*, const 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -269,7 +269,7 @@ const char* q_undogroup_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -297,7 +297,7 @@ QAction* q_undogroup_create_redo_action2(void* self, void* parent, const char* p
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoGroup*
 ///
@@ -512,7 +512,7 @@ QVariant* q_undogroup_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QUndoGroup*
 ///

@@ -33,7 +33,7 @@ int32_t k_solid__portablemediaplayer_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -47,7 +47,7 @@ int32_t k_solid__portablemediaplayer_device_interface_type();
 
 /// [Upstream resources](https://api.kde.org/solid-portablemediaplayer.html#supportedProtocols)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__PortableMediaPlayer*
 ///
@@ -55,7 +55,7 @@ const char** k_solid__portablemediaplayer_supported_protocols(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-portablemediaplayer.html#supportedDrivers)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__PortableMediaPlayer*
 ///
@@ -70,7 +70,7 @@ QVariant* k_solid__portablemediaplayer_driver_handle(void* self, const char* dri
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -79,7 +79,7 @@ const char* k_solid__portablemediaplayer_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -89,7 +89,7 @@ const char* k_solid__portablemediaplayer_tr3(const char* s, const char* c, int n
 
 /// [Upstream resources](https://api.kde.org/solid-portablemediaplayer.html#supportedDrivers)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__PortableMediaPlayer*
 /// @param protocol const char*
@@ -108,7 +108,7 @@ bool k_solid__portablemediaplayer_is_valid(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeToString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -128,7 +128,7 @@ int32_t k_solid__portablemediaplayer_string_to_type(const char* type);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -157,7 +157,7 @@ bool k_solid__portablemediaplayer_event_filter(void* self, void* watched, void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__PortableMediaPlayer*
 ///
@@ -372,7 +372,7 @@ QVariant* k_solid__portablemediaplayer_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Solid__PortableMediaPlayer*
 ///

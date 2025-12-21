@@ -55,7 +55,7 @@ int32_t k_parts__listingnotificationextension_qbase_metacall(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -111,7 +111,7 @@ void k_parts__listingnotificationextension_on_listing_event(void* self, void (*c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -120,7 +120,7 @@ const char* k_parts__listingnotificationextension_tr2(const char* s, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -132,7 +132,7 @@ const char* k_parts__listingnotificationextension_tr3(const char* s, const char*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KParts__ListingNotificationExtension*
 ///
@@ -347,7 +347,7 @@ QVariant* k_parts__listingnotificationextension_property(void* self, const char*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KParts__ListingNotificationExtension*
 ///

@@ -1,0 +1,1882 @@
+#include "libabstractformeditor.hpp"
+#include "libabstractformwindowcursor.hpp"
+#include "libabstractformwindowtool.hpp"
+#include "../libqdir.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
+#include "../libqpaintdevice.hpp"
+#include "../libqpoint.hpp"
+#include "../libqundostack.hpp"
+#include "../libqwidget.hpp"
+#include "libabstractformwindow.hpp"
+#include "libabstractformwindow.h"
+
+const QMetaObject* q_designerformwindowinterface_meta_object(void* self) {
+    return QDesignerFormWindowInterface_MetaObject((QDesignerFormWindowInterface*)self);
+}
+
+void* q_designerformwindowinterface_metacast(void* self, const char* param1) {
+    return QDesignerFormWindowInterface_Metacast((QDesignerFormWindowInterface*)self, param1);
+}
+
+int32_t q_designerformwindowinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerFormWindowInterface_Metacall((QDesignerFormWindowInterface*)self, param1, param2, param3);
+}
+
+const char* q_designerformwindowinterface_tr(const char* s) {
+    libqt_string _str = QObject_Tr(s);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_designerformwindowinterface_file_name(void* self) {
+    libqt_string _str = QDesignerFormWindowInterface_FileName((QDesignerFormWindowInterface*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+QDir* q_designerformwindowinterface_absolute_dir(void* self) {
+    return QDesignerFormWindowInterface_AbsoluteDir((QDesignerFormWindowInterface*)self);
+}
+
+const char* q_designerformwindowinterface_contents(void* self) {
+    libqt_string _str = QDesignerFormWindowInterface_Contents((QDesignerFormWindowInterface*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char** q_designerformwindowinterface_check_contents(void* self) {
+    libqt_list _arr = QDesignerFormWindowInterface_CheckContents((QDesignerFormWindowInterface*)self);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_check_contents");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
+int32_t q_designerformwindowinterface_features(void* self) {
+    return QDesignerFormWindowInterface_Features((QDesignerFormWindowInterface*)self);
+}
+
+bool q_designerformwindowinterface_has_feature(void* self, int32_t f) {
+    return QDesignerFormWindowInterface_HasFeature((QDesignerFormWindowInterface*)self, f);
+}
+
+const char* q_designerformwindowinterface_author(void* self) {
+    libqt_string _str = QDesignerFormWindowInterface_Author((QDesignerFormWindowInterface*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_author(void* self, const char* author) {
+    QDesignerFormWindowInterface_SetAuthor((QDesignerFormWindowInterface*)self, qstring(author));
+}
+
+const char* q_designerformwindowinterface_comment(void* self) {
+    libqt_string _str = QDesignerFormWindowInterface_Comment((QDesignerFormWindowInterface*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_comment(void* self, const char* comment) {
+    QDesignerFormWindowInterface_SetComment((QDesignerFormWindowInterface*)self, qstring(comment));
+}
+
+void q_designerformwindowinterface_layout_default(void* self, int* margin, int* spacing) {
+    QDesignerFormWindowInterface_LayoutDefault((QDesignerFormWindowInterface*)self, margin, spacing);
+}
+
+void q_designerformwindowinterface_set_layout_default(void* self, int margin, int spacing) {
+    QDesignerFormWindowInterface_SetLayoutDefault((QDesignerFormWindowInterface*)self, margin, spacing);
+}
+
+void q_designerformwindowinterface_set_layout_function(void* self, const char* margin, const char* spacing) {
+    QDesignerFormWindowInterface_SetLayoutFunction((QDesignerFormWindowInterface*)self, qstring(margin), qstring(spacing));
+}
+
+const char* q_designerformwindowinterface_pixmap_function(void* self) {
+    libqt_string _str = QDesignerFormWindowInterface_PixmapFunction((QDesignerFormWindowInterface*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_pixmap_function(void* self, const char* pixmapFunction) {
+    QDesignerFormWindowInterface_SetPixmapFunction((QDesignerFormWindowInterface*)self, qstring(pixmapFunction));
+}
+
+const char* q_designerformwindowinterface_export_macro(void* self) {
+    libqt_string _str = QDesignerFormWindowInterface_ExportMacro((QDesignerFormWindowInterface*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_export_macro(void* self, const char* exportMacro) {
+    QDesignerFormWindowInterface_SetExportMacro((QDesignerFormWindowInterface*)self, qstring(exportMacro));
+}
+
+const char** q_designerformwindowinterface_include_hints(void* self) {
+    libqt_list _arr = QDesignerFormWindowInterface_IncludeHints((QDesignerFormWindowInterface*)self);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_include_hints");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_include_hints(void* self, const char* includeHints[static 1]) {
+    size_t includeHints_len = libqt_strv_length(includeHints);
+    libqt_string* includeHints_qstr = (libqt_string*)malloc(includeHints_len * sizeof(libqt_string));
+    if (includeHints_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_set_include_hints");
+        abort();
+    }
+    for (size_t i = 0; i < includeHints_len; ++i) {
+        includeHints_qstr[i] = qstring(includeHints[i]);
+    }
+    libqt_list includeHints_list = qlist(includeHints_qstr, includeHints_len);
+    QDesignerFormWindowInterface_SetIncludeHints((QDesignerFormWindowInterface*)self, includeHints_list);
+    free(includeHints_qstr);
+}
+
+int32_t q_designerformwindowinterface_resource_file_save_mode(void* self) {
+    return QDesignerFormWindowInterface_ResourceFileSaveMode((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_set_resource_file_save_mode(void* self, int32_t behaviour) {
+    QDesignerFormWindowInterface_SetResourceFileSaveMode((QDesignerFormWindowInterface*)self, behaviour);
+}
+
+const char** q_designerformwindowinterface_active_resource_file_paths(void* self) {
+    libqt_list _arr = QDesignerFormWindowInterface_ActiveResourceFilePaths((QDesignerFormWindowInterface*)self);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_active_resource_file_paths");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
+QDesignerFormEditorInterface* q_designerformwindowinterface_core(void* self) {
+    return QDesignerFormWindowInterface_Core((QDesignerFormWindowInterface*)self);
+}
+
+QDesignerFormWindowCursorInterface* q_designerformwindowinterface_cursor(void* self) {
+    return QDesignerFormWindowInterface_Cursor((QDesignerFormWindowInterface*)self);
+}
+
+int32_t q_designerformwindowinterface_tool_count(void* self) {
+    return QDesignerFormWindowInterface_ToolCount((QDesignerFormWindowInterface*)self);
+}
+
+int32_t q_designerformwindowinterface_current_tool(void* self) {
+    return QDesignerFormWindowInterface_CurrentTool((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_set_current_tool(void* self, int index) {
+    QDesignerFormWindowInterface_SetCurrentTool((QDesignerFormWindowInterface*)self, index);
+}
+
+QDesignerFormWindowToolInterface* q_designerformwindowinterface_tool(void* self, int index) {
+    return QDesignerFormWindowInterface_Tool((QDesignerFormWindowInterface*)self, index);
+}
+
+void q_designerformwindowinterface_register_tool(void* self, void* tool) {
+    QDesignerFormWindowInterface_RegisterTool((QDesignerFormWindowInterface*)self, (QDesignerFormWindowToolInterface*)tool);
+}
+
+QPoint* q_designerformwindowinterface_grid(void* self) {
+    return QDesignerFormWindowInterface_Grid((QDesignerFormWindowInterface*)self);
+}
+
+QWidget* q_designerformwindowinterface_main_container(void* self) {
+    return QDesignerFormWindowInterface_MainContainer((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_set_main_container(void* self, void* mainContainer) {
+    QDesignerFormWindowInterface_SetMainContainer((QDesignerFormWindowInterface*)self, (QWidget*)mainContainer);
+}
+
+QWidget* q_designerformwindowinterface_form_container(void* self) {
+    return QDesignerFormWindowInterface_FormContainer((QDesignerFormWindowInterface*)self);
+}
+
+bool q_designerformwindowinterface_is_managed(void* self, void* widget) {
+    return QDesignerFormWindowInterface_IsManaged((QDesignerFormWindowInterface*)self, (QWidget*)widget);
+}
+
+bool q_designerformwindowinterface_is_dirty(void* self) {
+    return QDesignerFormWindowInterface_IsDirty((QDesignerFormWindowInterface*)self);
+}
+
+QDesignerFormWindowInterface* q_designerformwindowinterface_find_form_window(void* w) {
+    return QDesignerFormWindowInterface_FindFormWindow((QWidget*)w);
+}
+
+QDesignerFormWindowInterface* q_designerformwindowinterface_find_form_window2(void* obj) {
+    return QDesignerFormWindowInterface_FindFormWindow2((QObject*)obj);
+}
+
+QUndoStack* q_designerformwindowinterface_command_history(void* self) {
+    return QDesignerFormWindowInterface_CommandHistory((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_begin_command(void* self, const char* description) {
+    QDesignerFormWindowInterface_BeginCommand((QDesignerFormWindowInterface*)self, qstring(description));
+}
+
+void q_designerformwindowinterface_end_command(void* self) {
+    QDesignerFormWindowInterface_EndCommand((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_simplify_selection(void* self, libqt_list widgets) {
+    QDesignerFormWindowInterface_SimplifySelection((QDesignerFormWindowInterface*)self, widgets);
+}
+
+void q_designerformwindowinterface_emit_selection_changed(void* self) {
+    QDesignerFormWindowInterface_EmitSelectionChanged((QDesignerFormWindowInterface*)self);
+}
+
+const char** q_designerformwindowinterface_resource_files(void* self) {
+    libqt_list _arr = QDesignerFormWindowInterface_ResourceFiles((QDesignerFormWindowInterface*)self);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_resource_files");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
+void q_designerformwindowinterface_add_resource_file(void* self, const char* path) {
+    QDesignerFormWindowInterface_AddResourceFile((QDesignerFormWindowInterface*)self, qstring(path));
+}
+
+void q_designerformwindowinterface_remove_resource_file(void* self, const char* path) {
+    QDesignerFormWindowInterface_RemoveResourceFile((QDesignerFormWindowInterface*)self, qstring(path));
+}
+
+void q_designerformwindowinterface_ensure_unique_object_name(void* self, void* object) {
+    QDesignerFormWindowInterface_EnsureUniqueObjectName((QDesignerFormWindowInterface*)self, (QObject*)object);
+}
+
+void q_designerformwindowinterface_manage_widget(void* self, void* widget) {
+    QDesignerFormWindowInterface_ManageWidget((QDesignerFormWindowInterface*)self, (QWidget*)widget);
+}
+
+void q_designerformwindowinterface_unmanage_widget(void* self, void* widget) {
+    QDesignerFormWindowInterface_UnmanageWidget((QDesignerFormWindowInterface*)self, (QWidget*)widget);
+}
+
+void q_designerformwindowinterface_set_features(void* self, int32_t f) {
+    QDesignerFormWindowInterface_SetFeatures((QDesignerFormWindowInterface*)self, f);
+}
+
+void q_designerformwindowinterface_set_dirty(void* self, bool dirty) {
+    QDesignerFormWindowInterface_SetDirty((QDesignerFormWindowInterface*)self, dirty);
+}
+
+void q_designerformwindowinterface_clear_selection(void* self, bool changePropertyDisplay) {
+    QDesignerFormWindowInterface_ClearSelection((QDesignerFormWindowInterface*)self, changePropertyDisplay);
+}
+
+void q_designerformwindowinterface_select_widget(void* self, void* w, bool selectVal) {
+    QDesignerFormWindowInterface_SelectWidget((QDesignerFormWindowInterface*)self, (QWidget*)w, selectVal);
+}
+
+void q_designerformwindowinterface_set_grid(void* self, void* grid) {
+    QDesignerFormWindowInterface_SetGrid((QDesignerFormWindowInterface*)self, (QPoint*)grid);
+}
+
+void q_designerformwindowinterface_set_file_name(void* self, const char* fileName) {
+    QDesignerFormWindowInterface_SetFileName((QDesignerFormWindowInterface*)self, qstring(fileName));
+}
+
+bool q_designerformwindowinterface_set_contents2(void* self, const char* contents) {
+    return QDesignerFormWindowInterface_SetContents2((QDesignerFormWindowInterface*)self, qstring(contents));
+}
+
+void q_designerformwindowinterface_edit_widgets(void* self) {
+    QDesignerFormWindowInterface_EditWidgets((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_activate_resource_file_paths(void* self, const char* paths[static 1]) {
+    size_t paths_len = libqt_strv_length(paths);
+    libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
+    if (paths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_activate_resource_file_paths");
+        abort();
+    }
+    for (size_t i = 0; i < paths_len; ++i) {
+        paths_qstr[i] = qstring(paths[i]);
+    }
+    libqt_list paths_list = qlist(paths_qstr, paths_len);
+    QDesignerFormWindowInterface_ActivateResourceFilePaths((QDesignerFormWindowInterface*)self, paths_list);
+    free(paths_qstr);
+}
+
+void q_designerformwindowinterface_main_container_changed(void* self, void* mainContainer) {
+    QDesignerFormWindowInterface_MainContainerChanged((QDesignerFormWindowInterface*)self, (QWidget*)mainContainer);
+}
+
+void q_designerformwindowinterface_on_main_container_changed(void* self, void (*callback)(void*, void*)) {
+    QDesignerFormWindowInterface_Connect_MainContainerChanged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_tool_changed(void* self, int toolIndex) {
+    QDesignerFormWindowInterface_ToolChanged((QDesignerFormWindowInterface*)self, toolIndex);
+}
+
+void q_designerformwindowinterface_on_tool_changed(void* self, void (*callback)(void*, int)) {
+    QDesignerFormWindowInterface_Connect_ToolChanged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_file_name_changed(void* self, const char* fileName) {
+    QDesignerFormWindowInterface_FileNameChanged((QDesignerFormWindowInterface*)self, qstring(fileName));
+}
+
+void q_designerformwindowinterface_on_file_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QDesignerFormWindowInterface_Connect_FileNameChanged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_feature_changed(void* self, int32_t f) {
+    QDesignerFormWindowInterface_FeatureChanged((QDesignerFormWindowInterface*)self, f);
+}
+
+void q_designerformwindowinterface_on_feature_changed(void* self, void (*callback)(void*, int32_t)) {
+    QDesignerFormWindowInterface_Connect_FeatureChanged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_selection_changed(void* self) {
+    QDesignerFormWindowInterface_SelectionChanged((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_on_selection_changed(void* self, void (*callback)(void*)) {
+    QDesignerFormWindowInterface_Connect_SelectionChanged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_geometry_changed(void* self) {
+    QDesignerFormWindowInterface_GeometryChanged((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_on_geometry_changed(void* self, void (*callback)(void*)) {
+    QDesignerFormWindowInterface_Connect_GeometryChanged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_resource_files_changed(void* self) {
+    QDesignerFormWindowInterface_ResourceFilesChanged((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_on_resource_files_changed(void* self, void (*callback)(void*)) {
+    QDesignerFormWindowInterface_Connect_ResourceFilesChanged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_widget_managed(void* self, void* widget) {
+    QDesignerFormWindowInterface_WidgetManaged((QDesignerFormWindowInterface*)self, (QWidget*)widget);
+}
+
+void q_designerformwindowinterface_on_widget_managed(void* self, void (*callback)(void*, void*)) {
+    QDesignerFormWindowInterface_Connect_WidgetManaged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_widget_unmanaged(void* self, void* widget) {
+    QDesignerFormWindowInterface_WidgetUnmanaged((QDesignerFormWindowInterface*)self, (QWidget*)widget);
+}
+
+void q_designerformwindowinterface_on_widget_unmanaged(void* self, void (*callback)(void*, void*)) {
+    QDesignerFormWindowInterface_Connect_WidgetUnmanaged((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_about_to_unmanage_widget(void* self, void* widget) {
+    QDesignerFormWindowInterface_AboutToUnmanageWidget((QDesignerFormWindowInterface*)self, (QWidget*)widget);
+}
+
+void q_designerformwindowinterface_on_about_to_unmanage_widget(void* self, void (*callback)(void*, void*)) {
+    QDesignerFormWindowInterface_Connect_AboutToUnmanageWidget((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_activated(void* self, void* widget) {
+    QDesignerFormWindowInterface_Activated((QDesignerFormWindowInterface*)self, (QWidget*)widget);
+}
+
+void q_designerformwindowinterface_on_activated(void* self, void (*callback)(void*, void*)) {
+    QDesignerFormWindowInterface_Connect_Activated((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_changed(void* self) {
+    QDesignerFormWindowInterface_Changed((QDesignerFormWindowInterface*)self);
+}
+
+void q_designerformwindowinterface_on_changed(void* self, void (*callback)(void*)) {
+    QDesignerFormWindowInterface_Connect_Changed((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_widget_removed(void* self, void* w) {
+    QDesignerFormWindowInterface_WidgetRemoved((QDesignerFormWindowInterface*)self, (QWidget*)w);
+}
+
+void q_designerformwindowinterface_on_widget_removed(void* self, void (*callback)(void*, void*)) {
+    QDesignerFormWindowInterface_Connect_WidgetRemoved((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_object_removed(void* self, void* o) {
+    QDesignerFormWindowInterface_ObjectRemoved((QDesignerFormWindowInterface*)self, (QObject*)o);
+}
+
+void q_designerformwindowinterface_on_object_removed(void* self, void (*callback)(void*, void*)) {
+    QDesignerFormWindowInterface_Connect_ObjectRemoved((QDesignerFormWindowInterface*)self, (intptr_t)callback);
+}
+
+const char* q_designerformwindowinterface_tr2(const char* s, const char* c) {
+    libqt_string _str = QObject_Tr2(s, c);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_designerformwindowinterface_tr3(const char* s, const char* c, int n) {
+    libqt_string _str = QObject_Tr3(s, c, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_activate_resource_file_paths2(void* self, const char* paths[static 1], int* errorCount) {
+    size_t paths_len = libqt_strv_length(paths);
+    libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
+    if (paths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_activate_resource_file_paths2");
+        abort();
+    }
+    for (size_t i = 0; i < paths_len; ++i) {
+        paths_qstr[i] = qstring(paths[i]);
+    }
+    libqt_list paths_list = qlist(paths_qstr, paths_len);
+    QDesignerFormWindowInterface_ActivateResourceFilePaths2((QDesignerFormWindowInterface*)self, paths_list, errorCount);
+    free(paths_qstr);
+}
+
+int32_t q_designerformwindowinterface_dev_type(void* self) {
+    return QWidget_DevType((QWidget*)self);
+}
+
+uintptr_t q_designerformwindowinterface_win_id(void* self) {
+    return QWidget_WinId((QWidget*)self);
+}
+
+void q_designerformwindowinterface_create_win_id(void* self) {
+    QWidget_CreateWinId((QWidget*)self);
+}
+
+uintptr_t q_designerformwindowinterface_internal_win_id(void* self) {
+    return QWidget_InternalWinId((QWidget*)self);
+}
+
+uintptr_t q_designerformwindowinterface_effective_win_id(void* self) {
+    return QWidget_EffectiveWinId((QWidget*)self);
+}
+
+QStyle* q_designerformwindowinterface_style(void* self) {
+    return QWidget_Style((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_style(void* self, void* style) {
+    QWidget_SetStyle((QWidget*)self, (QStyle*)style);
+}
+
+bool q_designerformwindowinterface_is_top_level(void* self) {
+    return QWidget_IsTopLevel((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_window(void* self) {
+    return QWidget_IsWindow((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_modal(void* self) {
+    return QWidget_IsModal((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_window_modality(void* self) {
+    return QWidget_WindowModality((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_window_modality(void* self, int32_t windowModality) {
+    QWidget_SetWindowModality((QWidget*)self, windowModality);
+}
+
+bool q_designerformwindowinterface_is_enabled(void* self) {
+    return QWidget_IsEnabled((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_enabled_to(void* self, void* param1) {
+    return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
+}
+
+void q_designerformwindowinterface_set_enabled(void* self, bool enabled) {
+    QWidget_SetEnabled((QWidget*)self, enabled);
+}
+
+void q_designerformwindowinterface_set_disabled(void* self, bool disabled) {
+    QWidget_SetDisabled((QWidget*)self, disabled);
+}
+
+void q_designerformwindowinterface_set_window_modified(void* self, bool windowModified) {
+    QWidget_SetWindowModified((QWidget*)self, windowModified);
+}
+
+QRect* q_designerformwindowinterface_frame_geometry(void* self) {
+    return QWidget_FrameGeometry((QWidget*)self);
+}
+
+const QRect* q_designerformwindowinterface_geometry(void* self) {
+    return QWidget_Geometry((QWidget*)self);
+}
+
+QRect* q_designerformwindowinterface_normal_geometry(void* self) {
+    return QWidget_NormalGeometry((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_x(void* self) {
+    return QWidget_X((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_y(void* self) {
+    return QWidget_Y((QWidget*)self);
+}
+
+QPoint* q_designerformwindowinterface_pos(void* self) {
+    return QWidget_Pos((QWidget*)self);
+}
+
+QSize* q_designerformwindowinterface_frame_size(void* self) {
+    return QWidget_FrameSize((QWidget*)self);
+}
+
+QSize* q_designerformwindowinterface_size(void* self) {
+    return QWidget_Size((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_width(void* self) {
+    return QWidget_Width((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_height(void* self) {
+    return QWidget_Height((QWidget*)self);
+}
+
+QRect* q_designerformwindowinterface_rect(void* self) {
+    return QWidget_Rect((QWidget*)self);
+}
+
+QRect* q_designerformwindowinterface_children_rect(void* self) {
+    return QWidget_ChildrenRect((QWidget*)self);
+}
+
+QRegion* q_designerformwindowinterface_children_region(void* self) {
+    return QWidget_ChildrenRegion((QWidget*)self);
+}
+
+QSize* q_designerformwindowinterface_minimum_size(void* self) {
+    return QWidget_MinimumSize((QWidget*)self);
+}
+
+QSize* q_designerformwindowinterface_maximum_size(void* self) {
+    return QWidget_MaximumSize((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_minimum_width(void* self) {
+    return QWidget_MinimumWidth((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_minimum_height(void* self) {
+    return QWidget_MinimumHeight((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_maximum_width(void* self) {
+    return QWidget_MaximumWidth((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_maximum_height(void* self) {
+    return QWidget_MaximumHeight((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_minimum_size(void* self, void* minimumSize) {
+    QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
+}
+
+void q_designerformwindowinterface_set_minimum_size2(void* self, int minw, int minh) {
+    QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
+}
+
+void q_designerformwindowinterface_set_maximum_size(void* self, void* maximumSize) {
+    QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
+}
+
+void q_designerformwindowinterface_set_maximum_size2(void* self, int maxw, int maxh) {
+    QWidget_SetMaximumSize2((QWidget*)self, maxw, maxh);
+}
+
+void q_designerformwindowinterface_set_minimum_width(void* self, int minw) {
+    QWidget_SetMinimumWidth((QWidget*)self, minw);
+}
+
+void q_designerformwindowinterface_set_minimum_height(void* self, int minh) {
+    QWidget_SetMinimumHeight((QWidget*)self, minh);
+}
+
+void q_designerformwindowinterface_set_maximum_width(void* self, int maxw) {
+    QWidget_SetMaximumWidth((QWidget*)self, maxw);
+}
+
+void q_designerformwindowinterface_set_maximum_height(void* self, int maxh) {
+    QWidget_SetMaximumHeight((QWidget*)self, maxh);
+}
+
+QSize* q_designerformwindowinterface_size_increment(void* self) {
+    return QWidget_SizeIncrement((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_size_increment(void* self, void* sizeIncrement) {
+    QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
+}
+
+void q_designerformwindowinterface_set_size_increment2(void* self, int w, int h) {
+    QWidget_SetSizeIncrement2((QWidget*)self, w, h);
+}
+
+QSize* q_designerformwindowinterface_base_size(void* self) {
+    return QWidget_BaseSize((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_base_size(void* self, void* baseSize) {
+    QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
+}
+
+void q_designerformwindowinterface_set_base_size2(void* self, int basew, int baseh) {
+    QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
+}
+
+void q_designerformwindowinterface_set_fixed_size(void* self, void* fixedSize) {
+    QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
+}
+
+void q_designerformwindowinterface_set_fixed_size2(void* self, int w, int h) {
+    QWidget_SetFixedSize2((QWidget*)self, w, h);
+}
+
+void q_designerformwindowinterface_set_fixed_width(void* self, int w) {
+    QWidget_SetFixedWidth((QWidget*)self, w);
+}
+
+void q_designerformwindowinterface_set_fixed_height(void* self, int h) {
+    QWidget_SetFixedHeight((QWidget*)self, h);
+}
+
+QPointF* q_designerformwindowinterface_map_to_global(void* self, void* param1) {
+    return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
+}
+
+QPoint* q_designerformwindowinterface_map_to_global2(void* self, void* param1) {
+    return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
+}
+
+QPointF* q_designerformwindowinterface_map_from_global(void* self, void* param1) {
+    return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
+}
+
+QPoint* q_designerformwindowinterface_map_from_global2(void* self, void* param1) {
+    return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
+}
+
+QPointF* q_designerformwindowinterface_map_to_parent(void* self, void* param1) {
+    return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
+}
+
+QPoint* q_designerformwindowinterface_map_to_parent2(void* self, void* param1) {
+    return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
+}
+
+QPointF* q_designerformwindowinterface_map_from_parent(void* self, void* param1) {
+    return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
+}
+
+QPoint* q_designerformwindowinterface_map_from_parent2(void* self, void* param1) {
+    return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
+}
+
+QPointF* q_designerformwindowinterface_map_to(void* self, void* param1, void* param2) {
+    return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
+}
+
+QPoint* q_designerformwindowinterface_map_to2(void* self, void* param1, void* param2) {
+    return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
+}
+
+QPointF* q_designerformwindowinterface_map_from(void* self, void* param1, void* param2) {
+    return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
+}
+
+QPoint* q_designerformwindowinterface_map_from2(void* self, void* param1, void* param2) {
+    return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
+}
+
+QWidget* q_designerformwindowinterface_window(void* self) {
+    return QWidget_Window((QWidget*)self);
+}
+
+QWidget* q_designerformwindowinterface_native_parent_widget(void* self) {
+    return QWidget_NativeParentWidget((QWidget*)self);
+}
+
+QWidget* q_designerformwindowinterface_top_level_widget(void* self) {
+    return QWidget_TopLevelWidget((QWidget*)self);
+}
+
+const QPalette* q_designerformwindowinterface_palette(void* self) {
+    return QWidget_Palette((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_palette(void* self, void* palette) {
+    QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
+}
+
+void q_designerformwindowinterface_set_background_role(void* self, int32_t backgroundRole) {
+    QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
+}
+
+int32_t q_designerformwindowinterface_background_role(void* self) {
+    return QWidget_BackgroundRole((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_foreground_role(void* self, int32_t foregroundRole) {
+    QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
+}
+
+int32_t q_designerformwindowinterface_foreground_role(void* self) {
+    return QWidget_ForegroundRole((QWidget*)self);
+}
+
+const QFont* q_designerformwindowinterface_font(void* self) {
+    return QWidget_Font((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_font(void* self, void* font) {
+    QWidget_SetFont((QWidget*)self, (QFont*)font);
+}
+
+QFontMetrics* q_designerformwindowinterface_font_metrics(void* self) {
+    return QWidget_FontMetrics((QWidget*)self);
+}
+
+QFontInfo* q_designerformwindowinterface_font_info(void* self) {
+    return QWidget_FontInfo((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_cursor(void* self, void* cursor) {
+    QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
+}
+
+void q_designerformwindowinterface_unset_cursor(void* self) {
+    QWidget_UnsetCursor((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_mouse_tracking(void* self, bool enable) {
+    QWidget_SetMouseTracking((QWidget*)self, enable);
+}
+
+bool q_designerformwindowinterface_has_mouse_tracking(void* self) {
+    return QWidget_HasMouseTracking((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_under_mouse(void* self) {
+    return QWidget_UnderMouse((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_tablet_tracking(void* self, bool enable) {
+    QWidget_SetTabletTracking((QWidget*)self, enable);
+}
+
+bool q_designerformwindowinterface_has_tablet_tracking(void* self) {
+    return QWidget_HasTabletTracking((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_mask(void* self, void* mask) {
+    QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
+}
+
+void q_designerformwindowinterface_set_mask2(void* self, void* mask) {
+    QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
+}
+
+QRegion* q_designerformwindowinterface_mask(void* self) {
+    return QWidget_Mask((QWidget*)self);
+}
+
+void q_designerformwindowinterface_clear_mask(void* self) {
+    QWidget_ClearMask((QWidget*)self);
+}
+
+void q_designerformwindowinterface_render(void* self, void* target) {
+    QWidget_Render((QWidget*)self, (QPaintDevice*)target);
+}
+
+void q_designerformwindowinterface_render2(void* self, void* painter) {
+    QWidget_Render2((QWidget*)self, (QPainter*)painter);
+}
+
+QPixmap* q_designerformwindowinterface_grab(void* self) {
+    return QWidget_Grab((QWidget*)self);
+}
+
+QGraphicsEffect* q_designerformwindowinterface_graphics_effect(void* self) {
+    return QWidget_GraphicsEffect((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_graphics_effect(void* self, void* effect) {
+    QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
+}
+
+void q_designerformwindowinterface_grab_gesture(void* self, int64_t type) {
+    QWidget_GrabGesture((QWidget*)self, type);
+}
+
+void q_designerformwindowinterface_ungrab_gesture(void* self, int64_t type) {
+    QWidget_UngrabGesture((QWidget*)self, type);
+}
+
+void q_designerformwindowinterface_set_window_title(void* self, const char* windowTitle) {
+    QWidget_SetWindowTitle((QWidget*)self, qstring(windowTitle));
+}
+
+void q_designerformwindowinterface_set_style_sheet(void* self, const char* styleSheet) {
+    QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
+}
+
+const char* q_designerformwindowinterface_style_sheet(void* self) {
+    libqt_string _str = QWidget_StyleSheet((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_designerformwindowinterface_window_title(void* self) {
+    libqt_string _str = QWidget_WindowTitle((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_window_icon(void* self, void* icon) {
+    QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
+}
+
+QIcon* q_designerformwindowinterface_window_icon(void* self) {
+    return QWidget_WindowIcon((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_window_icon_text(void* self, const char* windowIconText) {
+    QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
+}
+
+const char* q_designerformwindowinterface_window_icon_text(void* self) {
+    libqt_string _str = QWidget_WindowIconText((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_window_role(void* self, const char* windowRole) {
+    QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
+}
+
+const char* q_designerformwindowinterface_window_role(void* self) {
+    libqt_string _str = QWidget_WindowRole((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_window_file_path(void* self, const char* filePath) {
+    QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
+}
+
+const char* q_designerformwindowinterface_window_file_path(void* self) {
+    libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_window_opacity(void* self, double level) {
+    QWidget_SetWindowOpacity((QWidget*)self, level);
+}
+
+double q_designerformwindowinterface_window_opacity(void* self) {
+    return QWidget_WindowOpacity((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_window_modified(void* self) {
+    return QWidget_IsWindowModified((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_tool_tip(void* self, const char* toolTip) {
+    QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
+}
+
+const char* q_designerformwindowinterface_tool_tip(void* self) {
+    libqt_string _str = QWidget_ToolTip((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_tool_tip_duration(void* self, int msec) {
+    QWidget_SetToolTipDuration((QWidget*)self, msec);
+}
+
+int32_t q_designerformwindowinterface_tool_tip_duration(void* self) {
+    return QWidget_ToolTipDuration((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_status_tip(void* self, const char* statusTip) {
+    QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
+}
+
+const char* q_designerformwindowinterface_status_tip(void* self) {
+    libqt_string _str = QWidget_StatusTip((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_whats_this(void* self, const char* whatsThis) {
+    QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
+}
+
+const char* q_designerformwindowinterface_whats_this(void* self) {
+    libqt_string _str = QWidget_WhatsThis((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_designerformwindowinterface_accessible_name(void* self) {
+    libqt_string _str = QWidget_AccessibleName((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_accessible_name(void* self, const char* name) {
+    QWidget_SetAccessibleName((QWidget*)self, qstring(name));
+}
+
+const char* q_designerformwindowinterface_accessible_description(void* self) {
+    libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_accessible_description(void* self, const char* description) {
+    QWidget_SetAccessibleDescription((QWidget*)self, qstring(description));
+}
+
+void q_designerformwindowinterface_set_layout_direction(void* self, int32_t direction) {
+    QWidget_SetLayoutDirection((QWidget*)self, direction);
+}
+
+int32_t q_designerformwindowinterface_layout_direction(void* self) {
+    return QWidget_LayoutDirection((QWidget*)self);
+}
+
+void q_designerformwindowinterface_unset_layout_direction(void* self) {
+    QWidget_UnsetLayoutDirection((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_locale(void* self, void* locale) {
+    QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
+}
+
+QLocale* q_designerformwindowinterface_locale(void* self) {
+    return QWidget_Locale((QWidget*)self);
+}
+
+void q_designerformwindowinterface_unset_locale(void* self) {
+    QWidget_UnsetLocale((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_right_to_left(void* self) {
+    return QWidget_IsRightToLeft((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_left_to_right(void* self) {
+    return QWidget_IsLeftToRight((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_focus(void* self) {
+    QWidget_SetFocus((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_active_window(void* self) {
+    return QWidget_IsActiveWindow((QWidget*)self);
+}
+
+void q_designerformwindowinterface_activate_window(void* self) {
+    QWidget_ActivateWindow((QWidget*)self);
+}
+
+void q_designerformwindowinterface_clear_focus(void* self) {
+    QWidget_ClearFocus((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_focus2(void* self, int32_t reason) {
+    QWidget_SetFocus2((QWidget*)self, reason);
+}
+
+int32_t q_designerformwindowinterface_focus_policy(void* self) {
+    return QWidget_FocusPolicy((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_focus_policy(void* self, int32_t policy) {
+    QWidget_SetFocusPolicy((QWidget*)self, policy);
+}
+
+bool q_designerformwindowinterface_has_focus(void* self) {
+    return QWidget_HasFocus((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_tab_order(void* param1, void* param2) {
+    QWidget_SetTabOrder((QWidget*)param1, (QWidget*)param2);
+}
+
+void q_designerformwindowinterface_set_focus_proxy(void* self, void* focusProxy) {
+    QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
+}
+
+QWidget* q_designerformwindowinterface_focus_proxy(void* self) {
+    return QWidget_FocusProxy((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_context_menu_policy(void* self) {
+    return QWidget_ContextMenuPolicy((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_context_menu_policy(void* self, int32_t policy) {
+    QWidget_SetContextMenuPolicy((QWidget*)self, policy);
+}
+
+void q_designerformwindowinterface_grab_mouse(void* self) {
+    QWidget_GrabMouse((QWidget*)self);
+}
+
+void q_designerformwindowinterface_grab_mouse2(void* self, void* param1) {
+    QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
+}
+
+void q_designerformwindowinterface_release_mouse(void* self) {
+    QWidget_ReleaseMouse((QWidget*)self);
+}
+
+void q_designerformwindowinterface_grab_keyboard(void* self) {
+    QWidget_GrabKeyboard((QWidget*)self);
+}
+
+void q_designerformwindowinterface_release_keyboard(void* self) {
+    QWidget_ReleaseKeyboard((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_grab_shortcut(void* self, void* key) {
+    return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
+}
+
+void q_designerformwindowinterface_release_shortcut(void* self, int id) {
+    QWidget_ReleaseShortcut((QWidget*)self, id);
+}
+
+void q_designerformwindowinterface_set_shortcut_enabled(void* self, int id) {
+    QWidget_SetShortcutEnabled((QWidget*)self, id);
+}
+
+void q_designerformwindowinterface_set_shortcut_auto_repeat(void* self, int id) {
+    QWidget_SetShortcutAutoRepeat((QWidget*)self, id);
+}
+
+QWidget* q_designerformwindowinterface_mouse_grabber() {
+    return QWidget_MouseGrabber();
+}
+
+QWidget* q_designerformwindowinterface_keyboard_grabber() {
+    return QWidget_KeyboardGrabber();
+}
+
+bool q_designerformwindowinterface_updates_enabled(void* self) {
+    return QWidget_UpdatesEnabled((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_updates_enabled(void* self, bool enable) {
+    QWidget_SetUpdatesEnabled((QWidget*)self, enable);
+}
+
+QGraphicsProxyWidget* q_designerformwindowinterface_graphics_proxy_widget(void* self) {
+    return QWidget_GraphicsProxyWidget((QWidget*)self);
+}
+
+void q_designerformwindowinterface_update(void* self) {
+    QWidget_Update((QWidget*)self);
+}
+
+void q_designerformwindowinterface_repaint(void* self) {
+    QWidget_Repaint((QWidget*)self);
+}
+
+void q_designerformwindowinterface_update2(void* self, int x, int y, int w, int h) {
+    QWidget_Update2((QWidget*)self, x, y, w, h);
+}
+
+void q_designerformwindowinterface_update3(void* self, void* param1) {
+    QWidget_Update3((QWidget*)self, (QRect*)param1);
+}
+
+void q_designerformwindowinterface_update4(void* self, void* param1) {
+    QWidget_Update4((QWidget*)self, (QRegion*)param1);
+}
+
+void q_designerformwindowinterface_repaint2(void* self, int x, int y, int w, int h) {
+    QWidget_Repaint2((QWidget*)self, x, y, w, h);
+}
+
+void q_designerformwindowinterface_repaint3(void* self, void* param1) {
+    QWidget_Repaint3((QWidget*)self, (QRect*)param1);
+}
+
+void q_designerformwindowinterface_repaint4(void* self, void* param1) {
+    QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
+}
+
+void q_designerformwindowinterface_set_visible(void* self, bool visible) {
+    QWidget_SetVisible((QWidget*)self, visible);
+}
+
+void q_designerformwindowinterface_set_hidden(void* self, bool hidden) {
+    QWidget_SetHidden((QWidget*)self, hidden);
+}
+
+void q_designerformwindowinterface_show(void* self) {
+    QWidget_Show((QWidget*)self);
+}
+
+void q_designerformwindowinterface_hide(void* self) {
+    QWidget_Hide((QWidget*)self);
+}
+
+void q_designerformwindowinterface_show_minimized(void* self) {
+    QWidget_ShowMinimized((QWidget*)self);
+}
+
+void q_designerformwindowinterface_show_maximized(void* self) {
+    QWidget_ShowMaximized((QWidget*)self);
+}
+
+void q_designerformwindowinterface_show_full_screen(void* self) {
+    QWidget_ShowFullScreen((QWidget*)self);
+}
+
+void q_designerformwindowinterface_show_normal(void* self) {
+    QWidget_ShowNormal((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_close(void* self) {
+    return QWidget_Close((QWidget*)self);
+}
+
+void q_designerformwindowinterface_raise(void* self) {
+    QWidget_Raise((QWidget*)self);
+}
+
+void q_designerformwindowinterface_lower(void* self) {
+    QWidget_Lower((QWidget*)self);
+}
+
+void q_designerformwindowinterface_stack_under(void* self, void* param1) {
+    QWidget_StackUnder((QWidget*)self, (QWidget*)param1);
+}
+
+void q_designerformwindowinterface_move(void* self, int x, int y) {
+    QWidget_Move((QWidget*)self, x, y);
+}
+
+void q_designerformwindowinterface_move2(void* self, void* param1) {
+    QWidget_Move2((QWidget*)self, (QPoint*)param1);
+}
+
+void q_designerformwindowinterface_resize(void* self, int w, int h) {
+    QWidget_Resize((QWidget*)self, w, h);
+}
+
+void q_designerformwindowinterface_resize2(void* self, void* param1) {
+    QWidget_Resize2((QWidget*)self, (QSize*)param1);
+}
+
+void q_designerformwindowinterface_set_geometry(void* self, int x, int y, int w, int h) {
+    QWidget_SetGeometry((QWidget*)self, x, y, w, h);
+}
+
+void q_designerformwindowinterface_set_geometry2(void* self, void* geometry) {
+    QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
+}
+
+char* q_designerformwindowinterface_save_geometry(void* self) {
+    libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+bool q_designerformwindowinterface_restore_geometry(void* self, const char* geometry) {
+    return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
+}
+
+void q_designerformwindowinterface_adjust_size(void* self) {
+    QWidget_AdjustSize((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_visible(void* self) {
+    return QWidget_IsVisible((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_visible_to(void* self, void* param1) {
+    return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
+}
+
+bool q_designerformwindowinterface_is_hidden(void* self) {
+    return QWidget_IsHidden((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_minimized(void* self) {
+    return QWidget_IsMinimized((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_maximized(void* self) {
+    return QWidget_IsMaximized((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_full_screen(void* self) {
+    return QWidget_IsFullScreen((QWidget*)self);
+}
+
+int32_t q_designerformwindowinterface_window_state(void* self) {
+    return QWidget_WindowState((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_window_state(void* self, int32_t state) {
+    QWidget_SetWindowState((QWidget*)self, state);
+}
+
+void q_designerformwindowinterface_override_window_state(void* self, int32_t state) {
+    QWidget_OverrideWindowState((QWidget*)self, state);
+}
+
+QSize* q_designerformwindowinterface_size_hint(void* self) {
+    return QWidget_SizeHint((QWidget*)self);
+}
+
+QSize* q_designerformwindowinterface_minimum_size_hint(void* self) {
+    return QWidget_MinimumSizeHint((QWidget*)self);
+}
+
+QSizePolicy* q_designerformwindowinterface_size_policy(void* self) {
+    return QWidget_SizePolicy((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_size_policy(void* self, void* sizePolicy) {
+    QWidget_SetSizePolicy((QWidget*)self, (QSizePolicy*)sizePolicy);
+}
+
+void q_designerformwindowinterface_set_size_policy2(void* self, int32_t horizontal, int32_t vertical) {
+    QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
+}
+
+int32_t q_designerformwindowinterface_height_for_width(void* self, int param1) {
+    return QWidget_HeightForWidth((QWidget*)self, param1);
+}
+
+bool q_designerformwindowinterface_has_height_for_width(void* self) {
+    return QWidget_HasHeightForWidth((QWidget*)self);
+}
+
+QRegion* q_designerformwindowinterface_visible_region(void* self) {
+    return QWidget_VisibleRegion((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_contents_margins(void* self, int left, int top, int right, int bottom) {
+    QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
+}
+
+void q_designerformwindowinterface_set_contents_margins2(void* self, void* margins) {
+    QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
+}
+
+QMargins* q_designerformwindowinterface_contents_margins(void* self) {
+    return QWidget_ContentsMargins((QWidget*)self);
+}
+
+QRect* q_designerformwindowinterface_contents_rect(void* self) {
+    return QWidget_ContentsRect((QWidget*)self);
+}
+
+QLayout* q_designerformwindowinterface_layout(void* self) {
+    return QWidget_Layout((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_layout(void* self, void* layout) {
+    QWidget_SetLayout((QWidget*)self, (QLayout*)layout);
+}
+
+void q_designerformwindowinterface_update_geometry(void* self) {
+    QWidget_UpdateGeometry((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_parent(void* self, void* parent) {
+    QWidget_SetParent((QWidget*)self, (QWidget*)parent);
+}
+
+void q_designerformwindowinterface_set_parent2(void* self, void* parent, int64_t f) {
+    QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
+}
+
+void q_designerformwindowinterface_scroll(void* self, int dx, int dy) {
+    QWidget_Scroll((QWidget*)self, dx, dy);
+}
+
+void q_designerformwindowinterface_scroll2(void* self, int dx, int dy, void* param3) {
+    QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
+}
+
+QWidget* q_designerformwindowinterface_focus_widget(void* self) {
+    return QWidget_FocusWidget((QWidget*)self);
+}
+
+QWidget* q_designerformwindowinterface_next_in_focus_chain(void* self) {
+    return QWidget_NextInFocusChain((QWidget*)self);
+}
+
+QWidget* q_designerformwindowinterface_previous_in_focus_chain(void* self) {
+    return QWidget_PreviousInFocusChain((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_accept_drops(void* self) {
+    return QWidget_AcceptDrops((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_accept_drops(void* self, bool on) {
+    QWidget_SetAcceptDrops((QWidget*)self, on);
+}
+
+void q_designerformwindowinterface_add_action(void* self, void* action) {
+    QWidget_AddAction((QWidget*)self, (QAction*)action);
+}
+
+void q_designerformwindowinterface_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
+}
+
+void q_designerformwindowinterface_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
+}
+
+void q_designerformwindowinterface_insert_action(void* self, void* before, void* action) {
+    QWidget_InsertAction((QWidget*)self, (QAction*)before, (QAction*)action);
+}
+
+void q_designerformwindowinterface_remove_action(void* self, void* action) {
+    QWidget_RemoveAction((QWidget*)self, (QAction*)action);
+}
+
+libqt_list /* of QAction* */ q_designerformwindowinterface_actions(void* self) {
+    libqt_list _arr = QWidget_Actions((QWidget*)self);
+    return _arr;
+}
+
+QAction* q_designerformwindowinterface_add_action2(void* self, const char* text) {
+    return QWidget_AddAction2((QWidget*)self, qstring(text));
+}
+
+QAction* q_designerformwindowinterface_add_action3(void* self, void* icon, const char* text) {
+    return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
+}
+
+QAction* q_designerformwindowinterface_add_action4(void* self, const char* text, void* shortcut) {
+    return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
+}
+
+QAction* q_designerformwindowinterface_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+    return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
+}
+
+QWidget* q_designerformwindowinterface_parent_widget(void* self) {
+    return QWidget_ParentWidget((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_window_flags(void* self, int64_t type) {
+    QWidget_SetWindowFlags((QWidget*)self, type);
+}
+
+int64_t q_designerformwindowinterface_window_flags(void* self) {
+    return QWidget_WindowFlags((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_window_flag(void* self, int64_t param1) {
+    QWidget_SetWindowFlag((QWidget*)self, param1);
+}
+
+void q_designerformwindowinterface_override_window_flags(void* self, int64_t type) {
+    QWidget_OverrideWindowFlags((QWidget*)self, type);
+}
+
+int64_t q_designerformwindowinterface_window_type(void* self) {
+    return QWidget_WindowType((QWidget*)self);
+}
+
+QWidget* q_designerformwindowinterface_find(uint64_t param1) {
+    return QWidget_Find(param1);
+}
+
+QWidget* q_designerformwindowinterface_child_at(void* self, int x, int y) {
+    return QWidget_ChildAt((QWidget*)self, x, y);
+}
+
+QWidget* q_designerformwindowinterface_child_at2(void* self, void* p) {
+    return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
+}
+
+QWidget* q_designerformwindowinterface_child_at3(void* self, void* p) {
+    return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
+}
+
+void q_designerformwindowinterface_set_attribute(void* self, int32_t param1) {
+    QWidget_SetAttribute((QWidget*)self, param1);
+}
+
+bool q_designerformwindowinterface_test_attribute(void* self, int32_t param1) {
+    return QWidget_TestAttribute((QWidget*)self, param1);
+}
+
+QPaintEngine* q_designerformwindowinterface_paint_engine(void* self) {
+    return QWidget_PaintEngine((QWidget*)self);
+}
+
+void q_designerformwindowinterface_ensure_polished(void* self) {
+    QWidget_EnsurePolished((QWidget*)self);
+}
+
+bool q_designerformwindowinterface_is_ancestor_of(void* self, void* child) {
+    return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
+}
+
+bool q_designerformwindowinterface_auto_fill_background(void* self) {
+    return QWidget_AutoFillBackground((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_auto_fill_background(void* self, bool enabled) {
+    QWidget_SetAutoFillBackground((QWidget*)self, enabled);
+}
+
+QBackingStore* q_designerformwindowinterface_backing_store(void* self) {
+    return QWidget_BackingStore((QWidget*)self);
+}
+
+QWindow* q_designerformwindowinterface_window_handle(void* self) {
+    return QWidget_WindowHandle((QWidget*)self);
+}
+
+QScreen* q_designerformwindowinterface_screen(void* self) {
+    return QWidget_Screen((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_screen(void* self, void* screen) {
+    QWidget_SetScreen((QWidget*)self, (QScreen*)screen);
+}
+
+QWidget* q_designerformwindowinterface_create_window_container(void* window) {
+    return QWidget_CreateWindowContainer((QWindow*)window);
+}
+
+void q_designerformwindowinterface_window_title_changed(void* self, const char* title) {
+    QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
+}
+
+void q_designerformwindowinterface_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_window_icon_changed(void* self, void* icon) {
+    QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
+}
+
+void q_designerformwindowinterface_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_window_icon_text_changed(void* self, const char* iconText) {
+    QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
+}
+
+void q_designerformwindowinterface_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_custom_context_menu_requested(void* self, void* pos) {
+    QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
+}
+
+void q_designerformwindowinterface_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
+}
+
+QVariant* q_designerformwindowinterface_input_method_query(void* self, int64_t param1) {
+    return QWidget_InputMethodQuery((QWidget*)self, param1);
+}
+
+int64_t q_designerformwindowinterface_input_method_hints(void* self) {
+    return QWidget_InputMethodHints((QWidget*)self);
+}
+
+void q_designerformwindowinterface_set_input_method_hints(void* self, int64_t hints) {
+    QWidget_SetInputMethodHints((QWidget*)self, hints);
+}
+
+void q_designerformwindowinterface_render22(void* self, void* target, void* targetOffset) {
+    QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
+}
+
+void q_designerformwindowinterface_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+    QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
+}
+
+void q_designerformwindowinterface_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+    QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
+}
+
+void q_designerformwindowinterface_render23(void* self, void* painter, void* targetOffset) {
+    QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
+}
+
+void q_designerformwindowinterface_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+    QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
+}
+
+void q_designerformwindowinterface_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+    QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
+}
+
+QPixmap* q_designerformwindowinterface_grab1(void* self, void* rectangle) {
+    return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
+}
+
+void q_designerformwindowinterface_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QWidget_GrabGesture2((QWidget*)self, type, flags);
+}
+
+int32_t q_designerformwindowinterface_grab_shortcut2(void* self, void* key, int32_t context) {
+    return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
+}
+
+void q_designerformwindowinterface_set_shortcut_enabled2(void* self, int id, bool enable) {
+    QWidget_SetShortcutEnabled2((QWidget*)self, id, enable);
+}
+
+void q_designerformwindowinterface_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
+    QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
+}
+
+void q_designerformwindowinterface_set_window_flag2(void* self, int64_t param1, bool on) {
+    QWidget_SetWindowFlag2((QWidget*)self, param1, on);
+}
+
+void q_designerformwindowinterface_set_attribute2(void* self, int32_t param1, bool on) {
+    QWidget_SetAttribute2((QWidget*)self, param1, on);
+}
+
+QWidget* q_designerformwindowinterface_create_window_container2(void* window, void* parent) {
+    return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
+}
+
+QWidget* q_designerformwindowinterface_create_window_container3(void* window, void* parent, int64_t flags) {
+    return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
+}
+
+bool q_designerformwindowinterface_event_filter(void* self, void* watched, void* event) {
+    return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
+}
+
+const char* q_designerformwindowinterface_object_name(void* self) {
+    libqt_string _str = QObject_ObjectName((QObject*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_designerformwindowinterface_set_object_name(void* self, char* name) {
+    QObject_SetObjectName((QObject*)self, name);
+}
+
+bool q_designerformwindowinterface_is_widget_type(void* self) {
+    return QObject_IsWidgetType((QObject*)self);
+}
+
+bool q_designerformwindowinterface_is_window_type(void* self) {
+    return QObject_IsWindowType((QObject*)self);
+}
+
+bool q_designerformwindowinterface_is_quick_item_type(void* self) {
+    return QObject_IsQuickItemType((QObject*)self);
+}
+
+bool q_designerformwindowinterface_signals_blocked(void* self) {
+    return QObject_SignalsBlocked((QObject*)self);
+}
+
+bool q_designerformwindowinterface_block_signals(void* self, bool b) {
+    return QObject_BlockSignals((QObject*)self, b);
+}
+
+QThread* q_designerformwindowinterface_thread(void* self) {
+    return QObject_Thread((QObject*)self);
+}
+
+bool q_designerformwindowinterface_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
+}
+
+int32_t q_designerformwindowinterface_start_timer(void* self, int interval) {
+    return QObject_StartTimer((QObject*)self, interval);
+}
+
+void q_designerformwindowinterface_kill_timer(void* self, int id) {
+    QObject_KillTimer((QObject*)self, id);
+}
+
+void q_designerformwindowinterface_kill_timer2(void* self, int32_t id) {
+    QObject_KillTimer2((QObject*)self, id);
+}
+
+libqt_list /* of QObject* */ q_designerformwindowinterface_children(void* self) {
+    libqt_list _arr = QObject_Children((QObject*)self);
+    return _arr;
+}
+
+void q_designerformwindowinterface_install_event_filter(void* self, void* filterObj) {
+    QObject_InstallEventFilter((QObject*)self, (QObject*)filterObj);
+}
+
+void q_designerformwindowinterface_remove_event_filter(void* self, void* obj) {
+    QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
+}
+
+QMetaObject__Connection* q_designerformwindowinterface_connect(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+}
+
+QMetaObject__Connection* q_designerformwindowinterface_connect2(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+}
+
+bool q_designerformwindowinterface_disconnect(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_designerformwindowinterface_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+}
+
+void q_designerformwindowinterface_dump_object_tree(void* self) {
+    QObject_DumpObjectTree((QObject*)self);
+}
+
+void q_designerformwindowinterface_dump_object_info(void* self) {
+    QObject_DumpObjectInfo((QObject*)self);
+}
+
+bool q_designerformwindowinterface_set_property(void* self, const char* name, void* value) {
+    return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
+}
+
+QVariant* q_designerformwindowinterface_property(void* self, const char* name) {
+    return QObject_Property((QObject*)self, name);
+}
+
+const char** q_designerformwindowinterface_dynamic_property_names(void* self) {
+    libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
+QBindingStorage* q_designerformwindowinterface_binding_storage(void* self) {
+    return QObject_BindingStorage((QObject*)self);
+}
+
+const QBindingStorage* q_designerformwindowinterface_binding_storage2(void* self) {
+    return QObject_BindingStorage2((QObject*)self);
+}
+
+void q_designerformwindowinterface_destroyed(void* self) {
+    QObject_Destroyed((QObject*)self);
+}
+
+void q_designerformwindowinterface_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
+}
+
+QObject* q_designerformwindowinterface_parent(void* self) {
+    return QObject_Parent((QObject*)self);
+}
+
+bool q_designerformwindowinterface_inherits(void* self, const char* classname) {
+    return QObject_Inherits((QObject*)self, classname);
+}
+
+void q_designerformwindowinterface_delete_later(void* self) {
+    QObject_DeleteLater((QObject*)self);
+}
+
+bool q_designerformwindowinterface_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
+int32_t q_designerformwindowinterface_start_timer22(void* self, int interval, int32_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+QMetaObject__Connection* q_designerformwindowinterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+}
+
+QMetaObject__Connection* q_designerformwindowinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+void q_designerformwindowinterface_destroyed1(void* self, void* param1) {
+    QObject_Destroyed1((QObject*)self, (QObject*)param1);
+}
+
+void q_designerformwindowinterface_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
+}
+
+bool q_designerformwindowinterface_painting_active(void* self) {
+    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_width_m_m(void* self) {
+    return QPaintDevice_WidthMM((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_height_m_m(void* self) {
+    return QPaintDevice_HeightMM((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_logical_dpi_x(void* self) {
+    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_logical_dpi_y(void* self) {
+    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_physical_dpi_x(void* self) {
+    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_physical_dpi_y(void* self) {
+    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+}
+
+double q_designerformwindowinterface_device_pixel_ratio(void* self) {
+    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+}
+
+double q_designerformwindowinterface_device_pixel_ratio_f(void* self) {
+    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_color_count(void* self) {
+    return QPaintDevice_ColorCount((QPaintDevice*)self);
+}
+
+int32_t q_designerformwindowinterface_depth(void* self) {
+    return QPaintDevice_Depth((QPaintDevice*)self);
+}
+
+double q_designerformwindowinterface_device_pixel_ratio_f_scale() {
+    return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_designerformwindowinterface_encode_metric_f(int32_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
+}
+
+void q_designerformwindowinterface_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
+}
+
+void q_designerformwindowinterface_delete(void* self) {
+    QDesignerFormWindowInterface_Delete((QDesignerFormWindowInterface*)(self));
+}

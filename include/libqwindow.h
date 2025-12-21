@@ -69,7 +69,7 @@ int32_t q_window_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -250,7 +250,7 @@ int64_t q_window_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#title)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWindow*
 ///
@@ -564,7 +564,7 @@ void q_window_set_file_path(void* self, const char* filePath);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#filePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWindow*
 ///
@@ -1686,7 +1686,7 @@ bool q_window_qbase_native_event(void* self, const char* eventType, void* messag
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1695,7 +1695,7 @@ const char* q_window_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1730,7 +1730,7 @@ bool q_window_is_ancestor_of2(void* self, void* child, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWindow*
 ///
@@ -1936,7 +1936,7 @@ QVariant* q_window_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QWindow*
 ///

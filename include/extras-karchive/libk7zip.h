@@ -37,7 +37,7 @@ K7Zip* k_7zip_new3(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 ///
@@ -300,7 +300,7 @@ void k_7zip_qbase_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -309,7 +309,7 @@ const char* k_7zip_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -321,7 +321,7 @@ const char* k_7zip_tr3(const char* sourceText, const char* disambiguation, int n
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self K7Zip*
 ///
@@ -357,7 +357,7 @@ QIODevice* k_7zip_device(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self K7Zip*
 ///

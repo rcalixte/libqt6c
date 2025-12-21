@@ -64,7 +64,7 @@ int32_t q_openglshader_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -108,7 +108,7 @@ bool q_openglshader_compile_source_file(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#sourceCode)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOpenGLShader*
 ///
@@ -122,7 +122,7 @@ bool q_openglshader_is_compiled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#log)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOpenGLShader*
 ///
@@ -142,7 +142,7 @@ bool q_openglshader_has_open_g_l_shaders(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -151,7 +151,7 @@ const char* q_openglshader_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -170,7 +170,7 @@ bool q_openglshader_has_open_g_l_shaders2(int32_t type, void* context);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOpenGLShader*
 ///
@@ -385,7 +385,7 @@ QVariant* q_openglshader_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOpenGLShader*
 ///
@@ -941,7 +941,7 @@ int32_t q_openglshaderprogram_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -1068,7 +1068,7 @@ bool q_openglshaderprogram_is_linked(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#log)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOpenGLShaderProgram*
 ///
@@ -1905,7 +1905,7 @@ bool q_openglshaderprogram_has_open_g_l_shader_programs();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1914,7 +1914,7 @@ const char* q_openglshaderprogram_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2050,7 +2050,7 @@ bool q_openglshaderprogram_has_open_g_l_shader_programs1(void* context);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOpenGLShaderProgram*
 ///
@@ -2265,7 +2265,7 @@ QVariant* q_openglshaderprogram_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QOpenGLShaderProgram*
 ///

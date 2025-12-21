@@ -41,7 +41,7 @@ void k_attica__category_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-category.html#id)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Category*
 ///
@@ -56,7 +56,7 @@ void k_attica__category_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-category.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Category*
 ///
@@ -77,7 +77,7 @@ void k_attica__category_set_display_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-category.html#displayName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Attica__Category*
 ///

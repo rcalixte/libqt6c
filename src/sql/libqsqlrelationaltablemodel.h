@@ -44,7 +44,7 @@ void q_sqlrelation_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#tableName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelation*
 ///
@@ -52,7 +52,7 @@ const char* q_sqlrelation_table_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#indexColumn)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelation*
 ///
@@ -60,7 +60,7 @@ const char* q_sqlrelation_index_column(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#displayColumn)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelation*
 ///
@@ -139,7 +139,7 @@ int32_t q_sqlrelationaltablemodel_qbase_metacall(void* self, int32_t param1, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -394,7 +394,7 @@ void q_sqlrelationaltablemodel_qbase_revert_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#selectStatement)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
 ///
@@ -471,7 +471,7 @@ bool q_sqlrelationaltablemodel_qbase_insert_row_into_table(void* self, void* val
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#orderByClause)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
 ///
@@ -496,7 +496,7 @@ const char* q_sqlrelationaltablemodel_qbase_order_by_clause(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -505,7 +505,7 @@ const char* q_sqlrelationaltablemodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -517,7 +517,7 @@ const char* q_sqlrelationaltablemodel_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#tableName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
 ///
@@ -596,7 +596,7 @@ int32_t q_sqlrelationaltablemodel_field_index(void* self, const char* fieldName)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqltablemodel.html#filter)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
 ///
@@ -1138,7 +1138,7 @@ void q_sqlrelationaltablemodel_on_layout_about_to_be_changed2(void* self, void (
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
 ///
@@ -1353,7 +1353,7 @@ QVariant* q_sqlrelationaltablemodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlRelationalTableModel*
 ///
@@ -2406,7 +2406,7 @@ void q_sqlrelationaltablemodel_on_set_item_data(void* self, bool (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2418,7 +2418,7 @@ const char** q_sqlrelationaltablemodel_mime_types(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

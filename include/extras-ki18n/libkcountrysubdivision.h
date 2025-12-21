@@ -54,7 +54,7 @@ bool k_countrysubdivision_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountrysubdivision.html#code)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountrySubdivision*
 ///
@@ -62,7 +62,7 @@ const char* k_countrysubdivision_code(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountrysubdivision.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountrySubdivision*
 ///

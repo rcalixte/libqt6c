@@ -99,7 +99,7 @@ void q_nativeipckey_set_type(void* self, uint16_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#nativeKey)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNativeIpcKey*
 ///
@@ -114,7 +114,7 @@ void q_nativeipckey_set_native_key(void* self, const char* newKey);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#toString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QNativeIpcKey*
 ///

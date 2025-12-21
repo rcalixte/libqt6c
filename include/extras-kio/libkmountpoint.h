@@ -23,7 +23,7 @@ KMountPoint__List* k_mountpoint_current_mount_points();
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#mountedFrom)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 ///
@@ -43,7 +43,7 @@ dev_t k_mountpoint_device_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#realDeviceName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 ///
@@ -51,7 +51,7 @@ const char* k_mountpoint_real_device_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#mountPoint)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 ///
@@ -59,7 +59,7 @@ const char* k_mountpoint_mount_point(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#mountType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 ///
@@ -67,7 +67,7 @@ const char* k_mountpoint_mount_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#mountOptions)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KMountPoint*
 ///

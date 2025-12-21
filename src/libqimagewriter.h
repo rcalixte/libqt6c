@@ -45,7 +45,7 @@ QImageWriter* q_imagewriter_new4(const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 ///
@@ -60,7 +60,7 @@ void q_imagewriter_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#format)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageWriter*
 ///
@@ -88,7 +88,7 @@ void q_imagewriter_set_file_name(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#fileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageWriter*
 ///
@@ -129,7 +129,7 @@ void q_imagewriter_set_sub_type(void* self, const char* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#subType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageWriter*
 ///
@@ -137,7 +137,7 @@ char* q_imagewriter_sub_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#supportedSubTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageWriter*
 ///
@@ -215,7 +215,7 @@ int32_t q_imagewriter_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QImageWriter*
 ///
@@ -230,19 +230,19 @@ bool q_imagewriter_supports_option(void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#supportedImageFormats)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_imagewriter_supported_image_formats();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#supportedMimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_imagewriter_supported_mime_types();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#imageFormatsForMimeType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param mimeType const char*
 ///
@@ -250,7 +250,7 @@ const char** q_imagewriter_image_formats_for_mime_type(const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -259,7 +259,7 @@ const char* q_imagewriter_tr2(const char* sourceText, const char* disambiguation
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*

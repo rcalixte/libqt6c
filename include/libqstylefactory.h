@@ -43,7 +43,7 @@ void q_stylefactory_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylefactory.html#keys)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** q_stylefactory_keys();
 

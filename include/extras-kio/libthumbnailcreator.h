@@ -52,7 +52,7 @@ QSize* k_io__thumbnailrequest_target_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-thumbnailrequest.html#mimeType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ThumbnailRequest*
 ///
@@ -177,7 +177,7 @@ int32_t k_io__thumbnailcreator_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -210,7 +210,7 @@ KIO__ThumbnailResult* k_io__thumbnailcreator_qbase_create(void* self, void* requ
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -219,7 +219,7 @@ const char* k_io__thumbnailcreator_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -231,7 +231,7 @@ const char* k_io__thumbnailcreator_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ThumbnailCreator*
 ///
@@ -446,7 +446,7 @@ QVariant* k_io__thumbnailcreator_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ThumbnailCreator*
 ///

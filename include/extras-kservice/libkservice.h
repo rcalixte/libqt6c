@@ -62,7 +62,7 @@ bool k_service_is_application(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#exec)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -70,7 +70,7 @@ const char* k_service_exec(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -84,7 +84,7 @@ bool k_service_terminal(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#terminalOptions)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -104,7 +104,7 @@ bool k_service_substitute_uid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#username)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -112,7 +112,7 @@ const char* k_service_username(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#desktopEntryName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -120,7 +120,7 @@ const char* k_service_desktop_entry_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#menuId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -128,7 +128,7 @@ const char* k_service_menu_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#storageId)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -136,7 +136,7 @@ const char* k_service_storage_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#workingDirectory)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -144,7 +144,7 @@ const char* k_service_working_directory(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#comment)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -152,7 +152,7 @@ const char* k_service_comment(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#genericName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -160,7 +160,7 @@ const char* k_service_generic_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#untranslatedGenericName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -168,7 +168,7 @@ const char* k_service_untranslated_generic_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#untranslatedName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -176,7 +176,7 @@ const char* k_service_untranslated_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#keywords)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -184,7 +184,7 @@ const char** k_service_keywords(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#categories)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -192,7 +192,7 @@ const char** k_service_categories(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#mimeTypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -200,7 +200,7 @@ const char** k_service_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#schemeHandlers)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -208,7 +208,7 @@ const char** k_service_scheme_handlers(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#supportedProtocols)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -253,7 +253,7 @@ bool k_service_show_on_current_platform(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#docPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -261,7 +261,7 @@ const char* k_service_doc_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#locateLocal)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -304,7 +304,7 @@ void k_service_set_working_directory(void* self, const char* workingDir);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#newServicePath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param showInMenu bool
 /// @param suggestedName const char*
@@ -313,7 +313,7 @@ const char* k_service_new_service_path(bool showInMenu, const char* suggestedNam
 
 /// [Upstream resources](https://api.kde.org/kservice.html#aliasFor)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -342,7 +342,7 @@ int32_t k_service_sycoca_type(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///
@@ -352,7 +352,7 @@ const char* k_service_name(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#entryPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KService*
 ///

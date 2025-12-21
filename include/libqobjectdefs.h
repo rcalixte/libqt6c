@@ -80,7 +80,7 @@ void* q_genericargument_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGenericArgument*
 ///
@@ -167,7 +167,7 @@ void* q_genericreturnargument_data(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGenericReturnArgument*
 ///
@@ -185,7 +185,7 @@ void q_genericreturnargument_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodargument.html#name-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethodArgument*
 ///
@@ -210,7 +210,7 @@ void q_metamethodargument_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodreturnargument.html#name-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaMethodReturnArgument*
 ///
@@ -247,7 +247,7 @@ QMetaObject* q_metaobject_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#className)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaObject*
 ///
@@ -282,7 +282,7 @@ const QObject* q_metaobject_cast2(void* self, void* obj);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaObject*
 /// @param s const char*
@@ -456,7 +456,7 @@ bool q_metaobject_check_connect_args2(void* signal, void* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#normalizedSignature)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param method const char*
 ///
@@ -464,7 +464,7 @@ char* q_metaobject_normalized_signature(const char* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#normalizedType)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param type const char*
 ///
@@ -603,7 +603,7 @@ void q_metaobject_set_d(void* self, void* d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMetaObject*
 /// @param s const char*

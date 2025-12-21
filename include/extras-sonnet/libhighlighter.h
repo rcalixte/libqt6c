@@ -81,7 +81,7 @@ int32_t k_sonnet__highlighter_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -95,7 +95,7 @@ bool k_sonnet__highlighter_spell_checker_found(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#currentLanguage)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 ///
@@ -156,7 +156,7 @@ void k_sonnet__highlighter_ignore_word(void* self, const char* word);
 
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 /// @param word const char*
@@ -165,7 +165,7 @@ const char** k_sonnet__highlighter_suggestions_for_word(void* self, const char* 
 
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 /// @param word const char*
@@ -389,7 +389,7 @@ void k_sonnet__highlighter_slot_rehighlight(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -398,7 +398,7 @@ const char* k_sonnet__highlighter_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -408,7 +408,7 @@ const char* k_sonnet__highlighter_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 /// @param word const char*
@@ -418,7 +418,7 @@ const char** k_sonnet__highlighter_suggestions_for_word22(void* self, const char
 
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 /// @param word const char*
@@ -456,7 +456,7 @@ void k_sonnet__highlighter_rehighlight_block(void* self, void* block);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 ///
@@ -671,7 +671,7 @@ QVariant* k_sonnet__highlighter_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 ///

@@ -84,7 +84,7 @@ QMimeType* q_mimedatabase_mime_type_for_file_name_and_data2(void* self, const ch
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedatabase.html#suffixForFileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QMimeDatabase*
 /// @param fileName const char*

@@ -55,7 +55,7 @@ int32_t q_abstracttextdocumentlayout_qbase_metacall(void* self, int32_t param1, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -117,7 +117,7 @@ int32_t q_abstracttextdocumentlayout_qbase_hit_test(void* self, void* point, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#anchorAt)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param pos QPointF*
@@ -126,7 +126,7 @@ const char* q_abstracttextdocumentlayout_anchor_at(void* self, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#imageAt)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param pos QPointF*
@@ -511,7 +511,7 @@ QTextCharFormat* q_abstracttextdocumentlayout_qbase_format(void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -520,7 +520,7 @@ const char* q_abstracttextdocumentlayout_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -554,7 +554,7 @@ void q_abstracttextdocumentlayout_on_update1(void* self, void (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///
@@ -769,7 +769,7 @@ QVariant* q_abstracttextdocumentlayout_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///

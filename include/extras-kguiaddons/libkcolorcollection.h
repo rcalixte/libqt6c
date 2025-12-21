@@ -35,7 +35,7 @@ KColorCollection* k_colorcollection_new3(const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#installedCollections)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_colorcollection_installed_collections();
 
@@ -54,7 +54,7 @@ bool k_colorcollection_save(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#description)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorCollection*
 ///
@@ -69,7 +69,7 @@ void k_colorcollection_set_description(void* self, const char* desc);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorCollection*
 ///
@@ -119,7 +119,7 @@ int32_t k_colorcollection_find_color(void* self, void* color);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorCollection*
 /// @param index int
@@ -128,7 +128,7 @@ const char* k_colorcollection_name2(void* self, int index);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorCollection*
 /// @param color QColor*

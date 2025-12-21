@@ -33,7 +33,7 @@ int32_t k_io__listjob_metacall(void* self, int32_t param1, int param2, void* par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 ///
@@ -115,7 +115,7 @@ void k_io__listjob_on_permanent_redirection(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -124,7 +124,7 @@ const char* k_io__listjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 /// @param c const char*
@@ -210,7 +210,7 @@ void k_io__listjob_set_ui_delegate_extension(void* self, void* extension);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 ///
@@ -220,7 +220,7 @@ const char* k_io__listjob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 ///
@@ -300,7 +300,7 @@ KIO__MetaData* k_io__listjob_meta_data(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#queryMetaData)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 /// @param key const char*
@@ -329,7 +329,7 @@ void k_io__listjob_on_connected(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 /// @param reqUrl QUrl*
@@ -340,7 +340,7 @@ const char** k_io__listjob_detailed_error_strings1(void* self, void* reqUrl);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 /// @param reqUrl QUrl*
@@ -427,7 +427,7 @@ int32_t k_io__listjob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 ///
@@ -644,7 +644,7 @@ bool k_io__listjob_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 ///
@@ -859,7 +859,7 @@ QVariant* k_io__listjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KIO__ListJob*
 ///

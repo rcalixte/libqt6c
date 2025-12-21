@@ -152,7 +152,7 @@ mode_t k_fileitem_permissions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#permissionsString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -196,7 +196,7 @@ int32_t k_fileitem_group_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#user)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -204,7 +204,7 @@ const char* k_fileitem_user(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#group)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -260,7 +260,7 @@ bool k_fileitem_is_desktop_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#linkDest)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -274,7 +274,7 @@ QUrl* k_fileitem_target_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#localPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -301,7 +301,7 @@ QDateTime* k_fileitem_time(void* self, int32_t which);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#timeString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -315,7 +315,7 @@ bool k_fileitem_is_local_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#text)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -323,7 +323,7 @@ const char* k_fileitem_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -331,7 +331,7 @@ const char* k_fileitem_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#mimetype)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -363,7 +363,7 @@ bool k_fileitem_is_mime_type_known(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#mimeComment)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -371,7 +371,7 @@ const char* k_fileitem_mime_comment(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#iconName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -379,7 +379,7 @@ const char* k_fileitem_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#overlays)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -387,7 +387,7 @@ const char** k_fileitem_overlays(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#comment)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -395,7 +395,7 @@ const char* k_fileitem_comment(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#getStatusBarInfo)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -415,7 +415,7 @@ bool k_fileitem_is_regular_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#suffix)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 ///
@@ -494,7 +494,7 @@ bool k_fileitem_is_executable(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#timeString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 /// @param which enum KFileItem__FileTimes
@@ -503,7 +503,7 @@ const char* k_fileitem_time_string1(void* self, int32_t which);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KFileItem*
 /// @param lowerCase bool

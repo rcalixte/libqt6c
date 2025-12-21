@@ -49,7 +49,7 @@ void q_geoareamonitorinfo_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#name)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAreaMonitorInfo*
 ///
@@ -64,7 +64,7 @@ void q_geoareamonitorinfo_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#identifier)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self QGeoAreaMonitorInfo*
 ///

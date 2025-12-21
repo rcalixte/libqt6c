@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSize)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
 ///
@@ -23,7 +23,7 @@ const char* k_io_convert_size(uint64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#number)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
 ///
@@ -31,7 +31,7 @@ const char* k_io_number(uint64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSizeFromKiB)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint64_t
 ///
@@ -47,7 +47,7 @@ uint32_t k_io_calculate_remaining_seconds(uint64_t param1, uint64_t param2, uint
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSeconds)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint32_t
 ///
@@ -55,7 +55,7 @@ const char* k_io_convert_seconds(uint32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#itemsSummaryString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 uint32_t
 /// @param param2 uint32_t
@@ -67,7 +67,7 @@ const char* k_io_items_summary_string(uint32_t param1, uint32_t param2, uint32_t
 
 /// [Upstream resources](https://api.kde.org/kio.html#encodeFileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -75,7 +75,7 @@ const char* k_io_encode_file_name(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#decodeFileName)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 ///
@@ -91,7 +91,7 @@ int32_t k_io_parse_cache_control(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#getCacheControlString)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KIO__CacheControl
 ///
@@ -99,7 +99,7 @@ const char* k_io_get_cache_control_string(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#favIconForUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
 ///
@@ -115,7 +115,7 @@ int32_t k_io_convert_permissions(int param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#iconNameForUrl)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param param1 QUrl*
 ///

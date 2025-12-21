@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#protocols)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 const char** k_protocolinfo_protocols();
 
@@ -33,7 +33,7 @@ bool k_protocolinfo_is_known_protocol2(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#exec)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -71,7 +71,7 @@ bool k_protocolinfo_is_filter_protocol2(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#icon)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -79,7 +79,7 @@ const char* k_protocolinfo_icon(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#config)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -105,7 +105,7 @@ bool k_protocolinfo_determine_mimetype_from_extension(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#defaultMimetype)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -113,7 +113,7 @@ const char* k_protocolinfo_default_mimetype(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#docPath)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -121,7 +121,7 @@ const char* k_protocolinfo_doc_path(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#protocolClass)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -135,7 +135,7 @@ bool k_protocolinfo_show_file_preview(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#capabilities)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -143,7 +143,7 @@ const char** k_protocolinfo_capabilities(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#archiveMimetypes)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -151,7 +151,7 @@ const char** k_protocolinfo_archive_mimetypes(const char* protocol);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#proxiedBy)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param protocol const char*
 ///
@@ -197,7 +197,7 @@ KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new3(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo-extrafield.html#name-var)
 ///
-/// Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory
 ///
 /// @param self KProtocolInfo__ExtraField*
 ///
